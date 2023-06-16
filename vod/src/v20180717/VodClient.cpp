@@ -126,6 +126,49 @@ VodClient::AttachMediaSubtitlesOutcomeCallable VodClient::AttachMediaSubtitlesCa
     return task->get_future();
 }
 
+VodClient::CloneCDNDomainOutcome VodClient::CloneCDNDomain(const CloneCDNDomainRequest &request)
+{
+    auto outcome = MakeRequest(request, "CloneCDNDomain");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CloneCDNDomainResponse rsp = CloneCDNDomainResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CloneCDNDomainOutcome(rsp);
+        else
+            return CloneCDNDomainOutcome(o.GetError());
+    }
+    else
+    {
+        return CloneCDNDomainOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::CloneCDNDomainAsync(const CloneCDNDomainRequest& request, const CloneCDNDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CloneCDNDomain(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VodClient::CloneCDNDomainOutcomeCallable VodClient::CloneCDNDomainCallable(const CloneCDNDomainRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CloneCDNDomainOutcome()>>(
+        [this, request]()
+        {
+            return this->CloneCDNDomain(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 VodClient::CommitUploadOutcome VodClient::CommitUpload(const CommitUploadRequest &request)
 {
     auto outcome = MakeRequest(request, "CommitUpload");
@@ -420,6 +463,49 @@ VodClient::CreateAnimatedGraphicsTemplateOutcomeCallable VodClient::CreateAnimat
         [this, request]()
         {
             return this->CreateAnimatedGraphicsTemplate(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VodClient::CreateCDNDomainOutcome VodClient::CreateCDNDomain(const CreateCDNDomainRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateCDNDomain");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateCDNDomainResponse rsp = CreateCDNDomainResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateCDNDomainOutcome(rsp);
+        else
+            return CreateCDNDomainOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateCDNDomainOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::CreateCDNDomainAsync(const CreateCDNDomainRequest& request, const CreateCDNDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateCDNDomain(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VodClient::CreateCDNDomainOutcomeCallable VodClient::CreateCDNDomainCallable(const CreateCDNDomainRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateCDNDomainOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateCDNDomain(request);
         }
     );
 
@@ -1373,6 +1459,49 @@ VodClient::DeleteAnimatedGraphicsTemplateOutcomeCallable VodClient::DeleteAnimat
     return task->get_future();
 }
 
+VodClient::DeleteCDNDomainOutcome VodClient::DeleteCDNDomain(const DeleteCDNDomainRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteCDNDomain");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteCDNDomainResponse rsp = DeleteCDNDomainResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteCDNDomainOutcome(rsp);
+        else
+            return DeleteCDNDomainOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteCDNDomainOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::DeleteCDNDomainAsync(const DeleteCDNDomainRequest& request, const DeleteCDNDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteCDNDomain(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VodClient::DeleteCDNDomainOutcomeCallable VodClient::DeleteCDNDomainCallable(const DeleteCDNDomainRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteCDNDomainOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteCDNDomain(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 VodClient::DeleteClassOutcome VodClient::DeleteClass(const DeleteClassRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteClass");
@@ -2312,6 +2441,49 @@ VodClient::DescribeAnimatedGraphicsTemplatesOutcomeCallable VodClient::DescribeA
         [this, request]()
         {
             return this->DescribeAnimatedGraphicsTemplates(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VodClient::DescribeCDNDomainsOutcome VodClient::DescribeCDNDomains(const DescribeCDNDomainsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCDNDomains");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCDNDomainsResponse rsp = DescribeCDNDomainsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCDNDomainsOutcome(rsp);
+        else
+            return DescribeCDNDomainsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCDNDomainsOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::DescribeCDNDomainsAsync(const DescribeCDNDomainsRequest& request, const DescribeCDNDomainsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeCDNDomains(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VodClient::DescribeCDNDomainsOutcomeCallable VodClient::DescribeCDNDomainsCallable(const DescribeCDNDomainsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeCDNDomainsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeCDNDomains(request);
         }
     );
 
@@ -4168,6 +4340,49 @@ VodClient::ModifyAnimatedGraphicsTemplateOutcomeCallable VodClient::ModifyAnimat
     return task->get_future();
 }
 
+VodClient::ModifyCDNDomainConfigOutcome VodClient::ModifyCDNDomainConfig(const ModifyCDNDomainConfigRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyCDNDomainConfig");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyCDNDomainConfigResponse rsp = ModifyCDNDomainConfigResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyCDNDomainConfigOutcome(rsp);
+        else
+            return ModifyCDNDomainConfigOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyCDNDomainConfigOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::ModifyCDNDomainConfigAsync(const ModifyCDNDomainConfigRequest& request, const ModifyCDNDomainConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyCDNDomainConfig(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VodClient::ModifyCDNDomainConfigOutcomeCallable VodClient::ModifyCDNDomainConfigCallable(const ModifyCDNDomainConfigRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyCDNDomainConfigOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyCDNDomainConfig(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 VodClient::ModifyClassOutcome VodClient::ModifyClass(const ModifyClassRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyClass");
@@ -5795,6 +6010,49 @@ VodClient::SimpleHlsClipOutcomeCallable VodClient::SimpleHlsClipCallable(const S
         [this, request]()
         {
             return this->SimpleHlsClip(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VodClient::StartCDNDomainOutcome VodClient::StartCDNDomain(const StartCDNDomainRequest &request)
+{
+    auto outcome = MakeRequest(request, "StartCDNDomain");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        StartCDNDomainResponse rsp = StartCDNDomainResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return StartCDNDomainOutcome(rsp);
+        else
+            return StartCDNDomainOutcome(o.GetError());
+    }
+    else
+    {
+        return StartCDNDomainOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::StartCDNDomainAsync(const StartCDNDomainRequest& request, const StartCDNDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->StartCDNDomain(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VodClient::StartCDNDomainOutcomeCallable VodClient::StartCDNDomainCallable(const StartCDNDomainRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<StartCDNDomainOutcome()>>(
+        [this, request]()
+        {
+            return this->StartCDNDomain(request);
         }
     );
 

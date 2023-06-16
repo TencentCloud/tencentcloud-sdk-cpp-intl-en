@@ -27,6 +27,8 @@
 #include <tencentcloud/vod/v20180717/model/ApplyUploadResponse.h>
 #include <tencentcloud/vod/v20180717/model/AttachMediaSubtitlesRequest.h>
 #include <tencentcloud/vod/v20180717/model/AttachMediaSubtitlesResponse.h>
+#include <tencentcloud/vod/v20180717/model/CloneCDNDomainRequest.h>
+#include <tencentcloud/vod/v20180717/model/CloneCDNDomainResponse.h>
 #include <tencentcloud/vod/v20180717/model/CommitUploadRequest.h>
 #include <tencentcloud/vod/v20180717/model/CommitUploadResponse.h>
 #include <tencentcloud/vod/v20180717/model/ComposeMediaRequest.h>
@@ -41,6 +43,8 @@
 #include <tencentcloud/vod/v20180717/model/CreateAdaptiveDynamicStreamingTemplateResponse.h>
 #include <tencentcloud/vod/v20180717/model/CreateAnimatedGraphicsTemplateRequest.h>
 #include <tencentcloud/vod/v20180717/model/CreateAnimatedGraphicsTemplateResponse.h>
+#include <tencentcloud/vod/v20180717/model/CreateCDNDomainRequest.h>
+#include <tencentcloud/vod/v20180717/model/CreateCDNDomainResponse.h>
 #include <tencentcloud/vod/v20180717/model/CreateClassRequest.h>
 #include <tencentcloud/vod/v20180717/model/CreateClassResponse.h>
 #include <tencentcloud/vod/v20180717/model/CreateContentReviewTemplateRequest.h>
@@ -85,6 +89,8 @@
 #include <tencentcloud/vod/v20180717/model/DeleteAdaptiveDynamicStreamingTemplateResponse.h>
 #include <tencentcloud/vod/v20180717/model/DeleteAnimatedGraphicsTemplateRequest.h>
 #include <tencentcloud/vod/v20180717/model/DeleteAnimatedGraphicsTemplateResponse.h>
+#include <tencentcloud/vod/v20180717/model/DeleteCDNDomainRequest.h>
+#include <tencentcloud/vod/v20180717/model/DeleteCDNDomainResponse.h>
 #include <tencentcloud/vod/v20180717/model/DeleteClassRequest.h>
 #include <tencentcloud/vod/v20180717/model/DeleteClassResponse.h>
 #include <tencentcloud/vod/v20180717/model/DeleteContentReviewTemplateRequest.h>
@@ -129,6 +135,8 @@
 #include <tencentcloud/vod/v20180717/model/DescribeAllClassResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeAnimatedGraphicsTemplatesRequest.h>
 #include <tencentcloud/vod/v20180717/model/DescribeAnimatedGraphicsTemplatesResponse.h>
+#include <tencentcloud/vod/v20180717/model/DescribeCDNDomainsRequest.h>
+#include <tencentcloud/vod/v20180717/model/DescribeCDNDomainsResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeCDNStatDetailsRequest.h>
 #include <tencentcloud/vod/v20180717/model/DescribeCDNStatDetailsResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeCDNUsageDataRequest.h>
@@ -215,6 +223,8 @@
 #include <tencentcloud/vod/v20180717/model/ModifyAdaptiveDynamicStreamingTemplateResponse.h>
 #include <tencentcloud/vod/v20180717/model/ModifyAnimatedGraphicsTemplateRequest.h>
 #include <tencentcloud/vod/v20180717/model/ModifyAnimatedGraphicsTemplateResponse.h>
+#include <tencentcloud/vod/v20180717/model/ModifyCDNDomainConfigRequest.h>
+#include <tencentcloud/vod/v20180717/model/ModifyCDNDomainConfigResponse.h>
 #include <tencentcloud/vod/v20180717/model/ModifyClassRequest.h>
 #include <tencentcloud/vod/v20180717/model/ModifyClassResponse.h>
 #include <tencentcloud/vod/v20180717/model/ModifyContentReviewTemplateRequest.h>
@@ -291,6 +301,8 @@
 #include <tencentcloud/vod/v20180717/model/SetDrmKeyProviderInfoResponse.h>
 #include <tencentcloud/vod/v20180717/model/SimpleHlsClipRequest.h>
 #include <tencentcloud/vod/v20180717/model/SimpleHlsClipResponse.h>
+#include <tencentcloud/vod/v20180717/model/StartCDNDomainRequest.h>
+#include <tencentcloud/vod/v20180717/model/StartCDNDomainResponse.h>
 
 
 namespace TencentCloud
@@ -311,6 +323,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::AttachMediaSubtitlesResponse> AttachMediaSubtitlesOutcome;
                 typedef std::future<AttachMediaSubtitlesOutcome> AttachMediaSubtitlesOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::AttachMediaSubtitlesRequest&, AttachMediaSubtitlesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AttachMediaSubtitlesAsyncHandler;
+                typedef Outcome<Core::Error, Model::CloneCDNDomainResponse> CloneCDNDomainOutcome;
+                typedef std::future<CloneCDNDomainOutcome> CloneCDNDomainOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::CloneCDNDomainRequest&, CloneCDNDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CloneCDNDomainAsyncHandler;
                 typedef Outcome<Core::Error, Model::CommitUploadResponse> CommitUploadOutcome;
                 typedef std::future<CommitUploadOutcome> CommitUploadOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::CommitUploadRequest&, CommitUploadOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CommitUploadAsyncHandler;
@@ -332,6 +347,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateAnimatedGraphicsTemplateResponse> CreateAnimatedGraphicsTemplateOutcome;
                 typedef std::future<CreateAnimatedGraphicsTemplateOutcome> CreateAnimatedGraphicsTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::CreateAnimatedGraphicsTemplateRequest&, CreateAnimatedGraphicsTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAnimatedGraphicsTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateCDNDomainResponse> CreateCDNDomainOutcome;
+                typedef std::future<CreateCDNDomainOutcome> CreateCDNDomainOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::CreateCDNDomainRequest&, CreateCDNDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCDNDomainAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateClassResponse> CreateClassOutcome;
                 typedef std::future<CreateClassOutcome> CreateClassOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::CreateClassRequest&, CreateClassOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateClassAsyncHandler;
@@ -398,6 +416,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteAnimatedGraphicsTemplateResponse> DeleteAnimatedGraphicsTemplateOutcome;
                 typedef std::future<DeleteAnimatedGraphicsTemplateOutcome> DeleteAnimatedGraphicsTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DeleteAnimatedGraphicsTemplateRequest&, DeleteAnimatedGraphicsTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAnimatedGraphicsTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteCDNDomainResponse> DeleteCDNDomainOutcome;
+                typedef std::future<DeleteCDNDomainOutcome> DeleteCDNDomainOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::DeleteCDNDomainRequest&, DeleteCDNDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteCDNDomainAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteClassResponse> DeleteClassOutcome;
                 typedef std::future<DeleteClassOutcome> DeleteClassOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DeleteClassRequest&, DeleteClassOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteClassAsyncHandler;
@@ -464,6 +485,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeAnimatedGraphicsTemplatesResponse> DescribeAnimatedGraphicsTemplatesOutcome;
                 typedef std::future<DescribeAnimatedGraphicsTemplatesOutcome> DescribeAnimatedGraphicsTemplatesOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeAnimatedGraphicsTemplatesRequest&, DescribeAnimatedGraphicsTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAnimatedGraphicsTemplatesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCDNDomainsResponse> DescribeCDNDomainsOutcome;
+                typedef std::future<DescribeCDNDomainsOutcome> DescribeCDNDomainsOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::DescribeCDNDomainsRequest&, DescribeCDNDomainsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCDNDomainsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeCDNStatDetailsResponse> DescribeCDNStatDetailsOutcome;
                 typedef std::future<DescribeCDNStatDetailsOutcome> DescribeCDNStatDetailsOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeCDNStatDetailsRequest&, DescribeCDNStatDetailsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCDNStatDetailsAsyncHandler;
@@ -593,6 +617,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyAnimatedGraphicsTemplateResponse> ModifyAnimatedGraphicsTemplateOutcome;
                 typedef std::future<ModifyAnimatedGraphicsTemplateOutcome> ModifyAnimatedGraphicsTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ModifyAnimatedGraphicsTemplateRequest&, ModifyAnimatedGraphicsTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAnimatedGraphicsTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyCDNDomainConfigResponse> ModifyCDNDomainConfigOutcome;
+                typedef std::future<ModifyCDNDomainConfigOutcome> ModifyCDNDomainConfigOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::ModifyCDNDomainConfigRequest&, ModifyCDNDomainConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyCDNDomainConfigAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyClassResponse> ModifyClassOutcome;
                 typedef std::future<ModifyClassOutcome> ModifyClassOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ModifyClassRequest&, ModifyClassOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyClassAsyncHandler;
@@ -707,6 +734,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::SimpleHlsClipResponse> SimpleHlsClipOutcome;
                 typedef std::future<SimpleHlsClipOutcome> SimpleHlsClipOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::SimpleHlsClipRequest&, SimpleHlsClipOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SimpleHlsClipAsyncHandler;
+                typedef Outcome<Core::Error, Model::StartCDNDomainResponse> StartCDNDomainOutcome;
+                typedef std::future<StartCDNDomainOutcome> StartCDNDomainOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::StartCDNDomainRequest&, StartCDNDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StartCDNDomainAsyncHandler;
 
 
 
@@ -728,6 +758,15 @@ namespace TencentCloud
                 AttachMediaSubtitlesOutcome AttachMediaSubtitles(const Model::AttachMediaSubtitlesRequest &request);
                 void AttachMediaSubtitlesAsync(const Model::AttachMediaSubtitlesRequest& request, const AttachMediaSubtitlesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 AttachMediaSubtitlesOutcomeCallable AttachMediaSubtitlesCallable(const Model::AttachMediaSubtitlesRequest& request);
+
+                /**
+                 *CloneCDNDomain.
+                 * @param req CloneCDNDomainRequest
+                 * @return CloneCDNDomainOutcome
+                 */
+                CloneCDNDomainOutcome CloneCDNDomain(const Model::CloneCDNDomainRequest &request);
+                void CloneCDNDomainAsync(const Model::CloneCDNDomainRequest& request, const CloneCDNDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CloneCDNDomainOutcomeCallable CloneCDNDomainCallable(const Model::CloneCDNDomainRequest& request);
 
                 /**
                  *This API is used to confirm the result of uploading a media file (and cover file) to VOD, store the media information, and return the playback address and ID of the file.
@@ -804,6 +843,15 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
                 CreateAnimatedGraphicsTemplateOutcome CreateAnimatedGraphicsTemplate(const Model::CreateAnimatedGraphicsTemplateRequest &request);
                 void CreateAnimatedGraphicsTemplateAsync(const Model::CreateAnimatedGraphicsTemplateRequest& request, const CreateAnimatedGraphicsTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateAnimatedGraphicsTemplateOutcomeCallable CreateAnimatedGraphicsTemplateCallable(const Model::CreateAnimatedGraphicsTemplateRequest& request);
+
+                /**
+                 *This interface is used to add domain names to VOD, and a user can add at most 20 domains. 1. After the domain name is successfully added, VOD will deploy the domain name. It takes about 2 minutes for the domain name to change from the deployed state to the online state.
+                 * @param req CreateCDNDomainRequest
+                 * @return CreateCDNDomainOutcome
+                 */
+                CreateCDNDomainOutcome CreateCDNDomain(const Model::CreateCDNDomainRequest &request);
+                void CreateCDNDomainAsync(const Model::CreateCDNDomainRequest& request, const CreateCDNDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateCDNDomainOutcomeCallable CreateCDNDomainCallable(const Model::CreateCDNDomainRequest& request);
 
                 /**
                  ** This API is used to categorize media assets for management;
@@ -1017,6 +1065,15 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DeleteAnimatedGraphicsTemplateOutcomeCallable DeleteAnimatedGraphicsTemplateCallable(const Model::DeleteAnimatedGraphicsTemplateRequest& request);
 
                 /**
+                 *DeleteCDNDomain.
+                 * @param req DeleteCDNDomainRequest
+                 * @return DeleteCDNDomainOutcome
+                 */
+                DeleteCDNDomainOutcome DeleteCDNDomain(const Model::DeleteCDNDomainRequest &request);
+                void DeleteCDNDomainAsync(const Model::DeleteCDNDomainRequest& request, const DeleteCDNDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteCDNDomainOutcomeCallable DeleteCDNDomainCallable(const Model::DeleteCDNDomainRequest& request);
+
+                /**
                  ** A category can be deleted only if it has no subcategories and associated media files;
 * Otherwise, [delete the media files](https://intl.cloud.tencent.com/document/product/266/31764?from_cn_redirect=1) and subcategories first before deleting the category.
                  * @param req DeleteClassRequest
@@ -1221,6 +1278,15 @@ This API is used to delete a player configuration.
                 DescribeAnimatedGraphicsTemplatesOutcome DescribeAnimatedGraphicsTemplates(const Model::DescribeAnimatedGraphicsTemplatesRequest &request);
                 void DescribeAnimatedGraphicsTemplatesAsync(const Model::DescribeAnimatedGraphicsTemplatesRequest& request, const DescribeAnimatedGraphicsTemplatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeAnimatedGraphicsTemplatesOutcomeCallable DescribeAnimatedGraphicsTemplatesCallable(const Model::DescribeAnimatedGraphicsTemplatesRequest& request);
+
+                /**
+                 *DescribeCDNDomains.
+                 * @param req DescribeCDNDomainsRequest
+                 * @return DescribeCDNDomainsOutcome
+                 */
+                DescribeCDNDomainsOutcome DescribeCDNDomains(const Model::DescribeCDNDomainsRequest &request);
+                void DescribeCDNDomainsAsync(const Model::DescribeCDNDomainsRequest& request, const DescribeCDNDomainsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCDNDomainsOutcomeCallable DescribeCDNDomainsCallable(const Model::DescribeCDNDomainsRequest& request);
 
                 /**
                  *This API is used to query CDN bandwidth, traffic, and other data of VOD domain names.
@@ -1699,6 +1765,15 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
                 ModifyAnimatedGraphicsTemplateOutcomeCallable ModifyAnimatedGraphicsTemplateCallable(const Model::ModifyAnimatedGraphicsTemplateRequest& request);
 
                 /**
+                 *ModifyCDNDomainConfig.
+                 * @param req ModifyCDNDomainConfigRequest
+                 * @return ModifyCDNDomainConfigOutcome
+                 */
+                ModifyCDNDomainConfigOutcome ModifyCDNDomainConfig(const Model::ModifyCDNDomainConfigRequest &request);
+                void ModifyCDNDomainConfigAsync(const Model::ModifyCDNDomainConfigRequest& request, const ModifyCDNDomainConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyCDNDomainConfigOutcomeCallable ModifyCDNDomainConfigCallable(const Model::ModifyCDNDomainConfigRequest& request);
+
+                /**
                  *This API is used to modify the category of a media file.
                  * @param req ModifyClassRequest
                  * @return ModifyClassOutcome
@@ -2145,6 +2220,15 @@ Clipping for temporary sharing is lightweight and incurs no additional storage f
                 SimpleHlsClipOutcome SimpleHlsClip(const Model::SimpleHlsClipRequest &request);
                 void SimpleHlsClipAsync(const Model::SimpleHlsClipRequest& request, const SimpleHlsClipAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 SimpleHlsClipOutcomeCallable SimpleHlsClipCallable(const Model::SimpleHlsClipRequest& request);
+
+                /**
+                 *This interface is used to enable/disable CDN accelerated domain names.
+                 * @param req StartCDNDomainRequest
+                 * @return StartCDNDomainOutcome
+                 */
+                StartCDNDomainOutcome StartCDNDomain(const Model::StartCDNDomainRequest &request);
+                void StartCDNDomainAsync(const Model::StartCDNDomainRequest& request, const StartCDNDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                StartCDNDomainOutcomeCallable StartCDNDomainCallable(const Model::StartCDNDomainRequest& request);
 
             };
         }
