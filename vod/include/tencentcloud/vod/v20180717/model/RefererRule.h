@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Referer blacklist/whitelist configuration rules, which is effective for specific resources.
                 */
                 class RefererRule : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return RuleType 
+                     * 获取Rule types: <li>all: Apply to all files.</li> <li>file: Apply to files with the specified suffixes.</li> <li>directory: Apply to specified paths.</li> <li>path: Apply to specified absolute paths.</li>
+                     * @return RuleType Rule types: <li>all: Apply to all files.</li> <li>file: Apply to files with the specified suffixes.</li> <li>directory: Apply to specified paths.</li> <li>path: Apply to specified absolute paths.</li>
                      * 
                      */
                     std::string GetRuleType() const;
 
                     /**
-                     * 设置
-                     * @param _ruleType 
+                     * 设置Rule types: <li>all: Apply to all files.</li> <li>file: Apply to files with the specified suffixes.</li> <li>directory: Apply to specified paths.</li> <li>path: Apply to specified absolute paths.</li>
+                     * @param _ruleType Rule types: <li>all: Apply to all files.</li> <li>file: Apply to files with the specified suffixes.</li> <li>directory: Apply to specified paths.</li> <li>path: Apply to specified absolute paths.</li>
                      * 
                      */
                     void SetRuleType(const std::string& _ruleType);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool RuleTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RulePaths 
+                     * 获取Content for each RuleType:<li>For all, enter a wildcard *.</li> <li>For file, enter a suffix, e.g., jpg or txt.</li> <li>For directory, enter a path, e.g., /xxx/test/.</li> <li>For path, enter an absolute path, e.g., /xxx/test.html.</li>
+                     * @return RulePaths Content for each RuleType:<li>For all, enter a wildcard *.</li> <li>For file, enter a suffix, e.g., jpg or txt.</li> <li>For directory, enter a path, e.g., /xxx/test/.</li> <li>For path, enter an absolute path, e.g., /xxx/test.html.</li>
                      * 
                      */
                     std::vector<std::string> GetRulePaths() const;
 
                     /**
-                     * 设置
-                     * @param _rulePaths 
+                     * 设置Content for each RuleType:<li>For all, enter a wildcard *.</li> <li>For file, enter a suffix, e.g., jpg or txt.</li> <li>For directory, enter a path, e.g., /xxx/test/.</li> <li>For path, enter an absolute path, e.g., /xxx/test.html.</li>
+                     * @param _rulePaths Content for each RuleType:<li>For all, enter a wildcard *.</li> <li>For file, enter a suffix, e.g., jpg or txt.</li> <li>For directory, enter a path, e.g., /xxx/test/.</li> <li>For path, enter an absolute path, e.g., /xxx/test.html.</li>
                      * 
                      */
                     void SetRulePaths(const std::vector<std::string>& _rulePaths);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool RulePathsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RefererType 
+                     * 获取Referer configuration types:<li>whitelist：Allowlist;</li> <li>blacklist:Blocklist.</li>
+                     * @return RefererType Referer configuration types:<li>whitelist：Allowlist;</li> <li>blacklist:Blocklist.</li>
                      * 
                      */
                     std::string GetRefererType() const;
 
                     /**
-                     * 设置
-                     * @param _refererType 
+                     * 设置Referer configuration types:<li>whitelist：Allowlist;</li> <li>blacklist:Blocklist.</li>
+                     * @param _refererType Referer configuration types:<li>whitelist：Allowlist;</li> <li>blacklist:Blocklist.</li>
                      * 
                      */
                     void SetRefererType(const std::string& _refererType);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool RefererTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Referers 
+                     * 获取Referer content list
+                     * @return Referers Referer content list
                      * 
                      */
                     std::vector<std::string> GetReferers() const;
 
                     /**
-                     * 设置
-                     * @param _referers 
+                     * 设置Referer content list
+                     * @param _referers Referer content list
                      * 
                      */
                     void SetReferers(const std::vector<std::string>& _referers);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool ReferersHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AllowEmpty 
+                     * 获取Whether to allow empty referer：true: Allow empty referer when RefererType = whitelist; false: Reject empty refer when RefererType = blacklist.
+                     * @return AllowEmpty Whether to allow empty referer：true: Allow empty referer when RefererType = whitelist; false: Reject empty refer when RefererType = blacklist.
                      * 
                      */
                     bool GetAllowEmpty() const;
 
                     /**
-                     * 设置
-                     * @param _allowEmpty 
+                     * 设置Whether to allow empty referer：true: Allow empty referer when RefererType = whitelist; false: Reject empty refer when RefererType = blacklist.
+                     * @param _allowEmpty Whether to allow empty referer：true: Allow empty referer when RefererType = whitelist; false: Reject empty refer when RefererType = blacklist.
                      * 
                      */
                     void SetAllowEmpty(const bool& _allowEmpty);
@@ -154,31 +154,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Rule types: <li>all: Apply to all files.</li> <li>file: Apply to files with the specified suffixes.</li> <li>directory: Apply to specified paths.</li> <li>path: Apply to specified absolute paths.</li>
                      */
                     std::string m_ruleType;
                     bool m_ruleTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Content for each RuleType:<li>For all, enter a wildcard *.</li> <li>For file, enter a suffix, e.g., jpg or txt.</li> <li>For directory, enter a path, e.g., /xxx/test/.</li> <li>For path, enter an absolute path, e.g., /xxx/test.html.</li>
                      */
                     std::vector<std::string> m_rulePaths;
                     bool m_rulePathsHasBeenSet;
 
                     /**
-                     * 
+                     * Referer configuration types:<li>whitelist：Allowlist;</li> <li>blacklist:Blocklist.</li>
                      */
                     std::string m_refererType;
                     bool m_refererTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Referer content list
                      */
                     std::vector<std::string> m_referers;
                     bool m_referersHasBeenSet;
 
                     /**
-                     * 
+                     * Whether to allow empty referer：true: Allow empty referer when RefererType = whitelist; false: Reject empty refer when RefererType = blacklist.
                      */
                     bool m_allowEmpty;
                     bool m_allowEmptyHasBeenSet;

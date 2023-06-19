@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Access authentication for Huawei Cloud OBS origin
                 */
                 class HwPrivateAccess : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Huawei Cloud OBS origin authentication configuration switch, the values are: <li>on:Enable;</li> <li>off: Disable.</li>
+                     * @return Switch Huawei Cloud OBS origin authentication configuration switch, the values are: <li>on:Enable;</li> <li>off: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置Huawei Cloud OBS origin authentication configuration switch, the values are: <li>on:Enable;</li> <li>off: Disable.</li>
+                     * @param _switch Huawei Cloud OBS origin authentication configuration switch, the values are: <li>on:Enable;</li> <li>off: Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AccessKey 
+                     * 获取Access ID
+                     * @return AccessKey Access ID
                      * 
                      */
                     std::string GetAccessKey() const;
 
                     /**
-                     * 设置
-                     * @param _accessKey 
+                     * 设置Access ID
+                     * @param _accessKey Access ID
                      * 
                      */
                     void SetAccessKey(const std::string& _accessKey);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool AccessKeyHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SecretKey 
+                     * 获取Key
+                     * @return SecretKey Key
                      * 
                      */
                     std::string GetSecretKey() const;
 
                     /**
-                     * 设置
-                     * @param _secretKey 
+                     * 设置Key
+                     * @param _secretKey Key
                      * 
                      */
                     void SetSecretKey(const std::string& _secretKey);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool SecretKeyHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Bucket 
+                     * 获取BucketName
+                     * @return Bucket BucketName
                      * 
                      */
                     std::string GetBucket() const;
 
                     /**
-                     * 设置
-                     * @param _bucket 
+                     * 设置BucketName
+                     * @param _bucket BucketName
                      * 
                      */
                     void SetBucket(const std::string& _bucket);
@@ -133,25 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Huawei Cloud OBS origin authentication configuration switch, the values are: <li>on:Enable;</li> <li>off: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * Access ID
                      */
                     std::string m_accessKey;
                     bool m_accessKeyHasBeenSet;
 
                     /**
-                     * 
+                     * Key
                      */
                     std::string m_secretKey;
                     bool m_secretKeyHasBeenSet;
 
                     /**
-                     * 
+                     * BucketName
                      */
                     std::string m_bucket;
                     bool m_bucketHasBeenSet;

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Path cache configuration follows the origin server configuration.
                 */
                 class CacheConfigFollowOrigin : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Follow origin server switch configuration: <li>on: Enable.</li> <li>off: Disable.</li>
+                     * @return Switch Follow origin server switch configuration: <li>on: Enable.</li> <li>off: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置Follow origin server switch configuration: <li>on: Enable.</li> <li>off: Disable.</li>
+                     * @param _switch Follow origin server switch configuration: <li>on: Enable.</li> <li>off: Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HeuristicCache 
+                     * 获取Heuristic cache configuration
+                     * @return HeuristicCache Heuristic cache configuration
                      * 
                      */
                     HeuristicCache GetHeuristicCache() const;
 
                     /**
-                     * 设置
-                     * @param _heuristicCache 
+                     * 设置Heuristic cache configuration
+                     * @param _heuristicCache Heuristic cache configuration
                      * 
                      */
                     void SetHeuristicCache(const HeuristicCache& _heuristicCache);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Follow origin server switch configuration: <li>on: Enable.</li> <li>off: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * Heuristic cache configuration
                      */
                     HeuristicCache m_heuristicCache;
                     bool m_heuristicCacheHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Back to the source 301/302 status code automatically follows the configuration, the default is off
                 */
                 class FollowRedirect : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Access forced redirect configuration switch <li>on：Enable;</li> <li>off：Disable.</li>
+                     * @return Switch Access forced redirect configuration switch <li>on：Enable;</li> <li>off：Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置Access forced redirect configuration switch <li>on：Enable;</li> <li>off：Disable.</li>
+                     * @param _switch Access forced redirect configuration switch <li>on：Enable;</li> <li>off：Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Access forced redirect configuration switch <li>on：Enable;</li> <li>off：Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

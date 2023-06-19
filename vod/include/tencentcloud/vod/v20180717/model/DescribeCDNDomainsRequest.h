@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of domain names. If this field is left blank, all domain name information will be listed by default.
-                     * @return Domains List of domain names. If this field is left blank, all domain name information will be listed by default.
+                     * 获取List of domain. If this field is left blank, all domain information will be listed by default.
+                     * @return Domains List of domain. If this field is left blank, all domain information will be listed by default.
                      * 
                      */
                     std::vector<std::string> GetDomains() const;
 
                     /**
-                     * 设置List of domain names. If this field is left blank, all domain name information will be listed by default.
-                     * @param _domains List of domain names. If this field is left blank, all domain name information will be listed by default.
+                     * 设置List of domain. If this field is left blank, all domain information will be listed by default.
+                     * @param _domains List of domain. If this field is left blank, all domain information will be listed by default.
                      * 
                      */
                     void SetDomains(const std::vector<std::string>& _domains);
@@ -129,7 +129,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of domain names. If this field is left blank, all domain name information will be listed by default.
+                     * List of domain. If this field is left blank, all domain information will be listed by default.
                      */
                     std::vector<std::string> m_domains;
                     bool m_domainsHasBeenSet;

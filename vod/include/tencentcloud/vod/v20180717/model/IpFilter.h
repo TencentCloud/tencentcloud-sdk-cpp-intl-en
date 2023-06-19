@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * IP blocklist/allowlist configuration. This is disabled by default.
                 */
                 class IpFilter : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取IP blocklist/allowlist configuration switch :<li>on：Enable;</li> <li>off：Disable.</li>
+                     * @return Switch IP blocklist/allowlist configuration switch :<li>on：Enable;</li> <li>off：Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置IP blocklist/allowlist configuration switch :<li>on：Enable;</li> <li>off：Disable.</li>
+                     * @param _switch IP blocklist/allowlist configuration switch :<li>on：Enable;</li> <li>off：Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FilterType 
+                     * 获取IP blocklist/allowlist type <li>whitelist: IP allowlist;</li> <li>blacklist:IP blocklist.</li>
+                     * @return FilterType IP blocklist/allowlist type <li>whitelist: IP allowlist;</li> <li>blacklist:IP blocklist.</li>
                      * 
                      */
                     std::string GetFilterType() const;
 
                     /**
-                     * 设置
-                     * @param _filterType 
+                     * 设置IP blocklist/allowlist type <li>whitelist: IP allowlist;</li> <li>blacklist:IP blocklist.</li>
+                     * @param _filterType IP blocklist/allowlist type <li>whitelist: IP allowlist;</li> <li>blacklist:IP blocklist.</li>
                      * 
                      */
                     void SetFilterType(const std::string& _filterType);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool FilterTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Filters 
+                     * 获取IP blocklist/allowlist Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format. Up to 50 whitelists or blacklists can be entered
+                     * @return Filters IP blocklist/allowlist Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format. Up to 50 whitelists or blacklists can be entered
                      * 
                      */
                     std::vector<std::string> GetFilters() const;
 
                     /**
-                     * 设置
-                     * @param _filters 
+                     * 设置IP blocklist/allowlist Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format. Up to 50 whitelists or blacklists can be entered
+                     * @param _filters IP blocklist/allowlist Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format. Up to 50 whitelists or blacklists can be entered
                      * 
                      */
                     void SetFilters(const std::vector<std::string>& _filters);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FilterRules 
+                     * 获取IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
+                     * @return FilterRules IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
                      * 
                      */
                     std::vector<IpFilterPathRule> GetFilterRules() const;
 
                     /**
-                     * 设置
-                     * @param _filterRules 
+                     * 设置IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
+                     * @param _filterRules IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
                      * 
                      */
                     void SetFilterRules(const std::vector<IpFilterPathRule>& _filterRules);
@@ -134,25 +134,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * IP blocklist/allowlist configuration switch :<li>on：Enable;</li> <li>off：Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * IP blocklist/allowlist type <li>whitelist: IP allowlist;</li> <li>blacklist:IP blocklist.</li>
                      */
                     std::string m_filterType;
                     bool m_filterTypeHasBeenSet;
 
                     /**
-                     * 
+                     * IP blocklist/allowlist Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format. Up to 50 whitelists or blacklists can be entered
                      */
                     std::vector<std::string> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * 
+                     * IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
                      */
                     std::vector<IpFilterPathRule> m_filterRules;
                     bool m_filterRulesHasBeenSet;

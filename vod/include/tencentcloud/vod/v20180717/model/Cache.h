@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Node cache expiration time configuration.
                 */
                 class Cache : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return RuleCache 
+                     * 获取Advanced path cache configuration.
+                     * @return RuleCache Advanced path cache configuration.
                      * 
                      */
                     std::vector<RuleCache> GetRuleCache() const;
 
                     /**
-                     * 设置
-                     * @param _ruleCache 
+                     * 设置Advanced path cache configuration.
+                     * @param _ruleCache Advanced path cache configuration.
                      * 
                      */
                     void SetRuleCache(const std::vector<RuleCache>& _ruleCache);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Advanced path cache configuration.
                      */
                     std::vector<RuleCache> m_ruleCache;
                     bool m_ruleCacheHasBeenSet;

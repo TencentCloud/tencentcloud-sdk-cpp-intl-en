@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Custom response header configuration. This is disabled by default.
                 */
                 class ResponseHeader : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Custom response header switch: <li>on：Enable;</li> <li>off：Disable.</li>
+                     * @return Switch Custom response header switch: <li>on：Enable;</li> <li>off：Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置Custom response header switch: <li>on：Enable;</li> <li>off：Disable.</li>
+                     * @param _switch Custom response header switch: <li>on：Enable;</li> <li>off：Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HeaderRules 
+                     * 获取Custom response header rules
+                     * @return HeaderRules Custom response header rules
                      * 
                      */
                     std::vector<HttpHeaderPathRule> GetHeaderRules() const;
 
                     /**
-                     * 设置
-                     * @param _headerRules 
+                     * 设置Custom response header rules
+                     * @param _headerRules Custom response header rules
                      * 
                      */
                     void SetHeaderRules(const std::vector<HttpHeaderPathRule>& _headerRules);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Custom response header switch: <li>on：Enable;</li> <li>off：Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * Custom response header rules
                      */
                     std::vector<HttpHeaderPathRule> m_headerRules;
                     bool m_headerRulesHasBeenSet;

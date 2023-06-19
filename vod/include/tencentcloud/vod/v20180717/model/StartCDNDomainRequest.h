@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Domain name.
-                     * @return Domain Domain name.
+                     * 获取Domain.
+                     * @return Domain Domain.
                      * 
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置Domain name.
-                     * @param _domain Domain name.
+                     * 设置Domain.
+                     * @param _domain Domain.
                      * 
                      */
                     void SetDomain(const std::string& _domain);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取Domain name operation, value: <li>start: enable;</li> <li>stop: disable. </li>
-                     * @return Operation Domain name operation, value: <li>start: enable;</li> <li>stop: disable. </li>
+                     * 获取Domain operation, value: <li>start: enable;</li> <li>stop: disable. </li>
+                     * @return Operation Domain operation, value: <li>start: enable;</li> <li>stop: disable. </li>
                      * 
                      */
                     std::string GetOperation() const;
 
                     /**
-                     * 设置Domain name operation, value: <li>start: enable;</li> <li>stop: disable. </li>
-                     * @param _operation Domain name operation, value: <li>start: enable;</li> <li>stop: disable. </li>
+                     * 设置Domain operation, value: <li>start: enable;</li> <li>stop: disable. </li>
+                     * @param _operation Domain operation, value: <li>start: enable;</li> <li>stop: disable. </li>
                      * 
                      */
                     void SetOperation(const std::string& _operation);
@@ -108,13 +108,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Domain name.
+                     * Domain.
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
 
                     /**
-                     * Domain name operation, value: <li>start: enable;</li> <li>stop: disable. </li>
+                     * Domain operation, value: <li>start: enable;</li> <li>stop: disable. </li>
                      */
                     std::string m_operation;
                     bool m_operationHasBeenSet;

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Domain name HTTPS acceleration configuration. This is disabled by default.
                 */
                 class Https : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取HTTPS configuration switch: <li>on:Enable;</li> <li>off:Disable.</li>
+                     * @return Switch HTTPS configuration switch: <li>on:Enable;</li> <li>off:Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置HTTPS configuration switch: <li>on:Enable;</li> <li>off:Disable.</li>
+                     * @param _switch HTTPS configuration switch: <li>on:Enable;</li> <li>off:Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Http2 
+                     * 获取Whether to enable HTTP2: <li>on:Enable;</li> <li>off:Disable.</li>
+                     * @return Http2 Whether to enable HTTP2: <li>on:Enable;</li> <li>off:Disable.</li>
                      * 
                      */
                     std::string GetHttp2() const;
 
                     /**
-                     * 设置
-                     * @param _http2 
+                     * 设置Whether to enable HTTP2: <li>on:Enable;</li> <li>off:Disable.</li>
+                     * @param _http2 Whether to enable HTTP2: <li>on:Enable;</li> <li>off:Disable.</li>
                      * 
                      */
                     void SetHttp2(const std::string& _http2);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool Http2HasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CertInfo 
+                     * 获取Server certificate configuration information
+                     * @return CertInfo Server certificate configuration information
                      * 
                      */
                     CDNCertInfo GetCertInfo() const;
 
                     /**
-                     * 设置
-                     * @param _certInfo 
+                     * 设置Server certificate configuration information
+                     * @param _certInfo Server certificate configuration information
                      * 
                      */
                     void SetCertInfo(const CDNCertInfo& _certInfo);
@@ -113,19 +113,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * HTTPS configuration switch: <li>on:Enable;</li> <li>off:Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * Whether to enable HTTP2: <li>on:Enable;</li> <li>off:Disable.</li>
                      */
                     std::string m_http2;
                     bool m_http2HasBeenSet;
 
                     /**
-                     * 
+                     * Server certificate configuration information
                      */
                     CDNCertInfo m_certInfo;
                     bool m_certInfoHasBeenSet;

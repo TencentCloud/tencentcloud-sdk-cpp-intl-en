@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Domain name.
-                     * @return Domain Domain name.
+                     * 获取Domain
+                     * @return Domain Domain
                      * 
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置Domain name.
-                     * @param _domain Domain name.
+                     * 设置Domain
+                     * @param _domain Domain
                      * 
                      */
                     void SetDomain(const std::string& _domain);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取The cloned domain name.
-                     * @return ReferenceDomain The cloned domain name.
+                     * 获取The cloned domain.
+                     * @return ReferenceDomain The cloned domain.
                      * 
                      */
                     std::string GetReferenceDomain() const;
 
                     /**
-                     * 设置The cloned domain name.
-                     * @param _referenceDomain The cloned domain name.
+                     * 设置The cloned domain.
+                     * @param _referenceDomain The cloned domain.
                      * 
                      */
                     void SetReferenceDomain(const std::string& _referenceDomain);
@@ -108,13 +108,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Domain name.
+                     * Domain
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
 
                     /**
-                     * The cloned domain name.
+                     * The cloned domain.
                      */
                     std::string m_referenceDomain;
                     bool m_referenceDomainHasBeenSet;

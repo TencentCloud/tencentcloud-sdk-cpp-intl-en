@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Path cache configuration
                 */
                 class CacheConfigCache : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Cache configuration switch: <li>on:enable；</li> <li>off: disable.</li>
+                     * @return Switch Cache configuration switch: <li>on:enable；</li> <li>off: disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置Cache configuration switch: <li>on:enable；</li> <li>off: disable.</li>
+                     * @param _switch Cache configuration switch: <li>on:enable；</li> <li>off: disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CacheTime 
+                     * 获取Cache expiration time settings<li>Unit: second. The maximum value is 365 days.</li>
+                     * @return CacheTime Cache expiration time settings<li>Unit: second. The maximum value is 365 days.</li>
                      * 
                      */
                     uint64_t GetCacheTime() const;
 
                     /**
-                     * 设置
-                     * @param _cacheTime 
+                     * 设置Cache expiration time settings<li>Unit: second. The maximum value is 365 days.</li>
+                     * @param _cacheTime Cache expiration time settings<li>Unit: second. The maximum value is 365 days.</li>
                      * 
                      */
                     void SetCacheTime(const uint64_t& _cacheTime);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool CacheTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CompareMaxAge 
+                     * 获取Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node: <li>on: Enable;</li> <li>off: Disable.</li>
+                     * @return CompareMaxAge Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node: <li>on: Enable;</li> <li>off: Disable.</li>
                      * 
                      */
                     std::string GetCompareMaxAge() const;
 
                     /**
-                     * 设置
-                     * @param _compareMaxAge 
+                     * 设置Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node: <li>on: Enable;</li> <li>off: Disable.</li>
+                     * @param _compareMaxAge Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node: <li>on: Enable;</li> <li>off: Disable.</li>
                      * 
                      */
                     void SetCompareMaxAge(const std::string& _compareMaxAge);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool CompareMaxAgeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IgnoreCacheControl 
+                     * 获取Force cache: <li>on: Enable;</li> <li>off: Disable.</li>
+                     * @return IgnoreCacheControl Force cache: <li>on: Enable;</li> <li>off: Disable.</li>
                      * 
                      */
                     std::string GetIgnoreCacheControl() const;
 
                     /**
-                     * 设置
-                     * @param _ignoreCacheControl 
+                     * 设置Force cache: <li>on: Enable;</li> <li>off: Disable.</li>
+                     * @param _ignoreCacheControl Force cache: <li>on: Enable;</li> <li>off: Disable.</li>
                      * 
                      */
                     void SetIgnoreCacheControl(const std::string& _ignoreCacheControl);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool IgnoreCacheControlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IgnoreSetCookie 
+                     * 获取Whether to ignore the header and body on cache nodes if the origin server returns the header Set-Cookie. <li>on: Ignore; do not cache the header and body.</li> <li>off: Do not ignore; follow the custom cache rules of cache nodes.</li>
+                     * @return IgnoreSetCookie Whether to ignore the header and body on cache nodes if the origin server returns the header Set-Cookie. <li>on: Ignore; do not cache the header and body.</li> <li>off: Do not ignore; follow the custom cache rules of cache nodes.</li>
                      * 
                      */
                     std::string GetIgnoreSetCookie() const;
 
                     /**
-                     * 设置
-                     * @param _ignoreSetCookie 
+                     * 设置Whether to ignore the header and body on cache nodes if the origin server returns the header Set-Cookie. <li>on: Ignore; do not cache the header and body.</li> <li>off: Do not ignore; follow the custom cache rules of cache nodes.</li>
+                     * @param _ignoreSetCookie Whether to ignore the header and body on cache nodes if the origin server returns the header Set-Cookie. <li>on: Ignore; do not cache the header and body.</li> <li>off: Do not ignore; follow the custom cache rules of cache nodes.</li>
                      * 
                      */
                     void SetIgnoreSetCookie(const std::string& _ignoreSetCookie);
@@ -154,31 +154,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Cache configuration switch: <li>on:enable；</li> <li>off: disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * Cache expiration time settings<li>Unit: second. The maximum value is 365 days.</li>
                      */
                     uint64_t m_cacheTime;
                     bool m_cacheTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node: <li>on: Enable;</li> <li>off: Disable.</li>
                      */
                     std::string m_compareMaxAge;
                     bool m_compareMaxAgeHasBeenSet;
 
                     /**
-                     * 
+                     * Force cache: <li>on: Enable;</li> <li>off: Disable.</li>
                      */
                     std::string m_ignoreCacheControl;
                     bool m_ignoreCacheControlHasBeenSet;
 
                     /**
-                     * 
+                     * Whether to ignore the header and body on cache nodes if the origin server returns the header Set-Cookie. <li>on: Ignore; do not cache the header and body.</li> <li>off: Do not ignore; follow the custom cache rules of cache nodes.</li>
                      */
                     std::string m_ignoreSetCookie;
                     bool m_ignoreSetCookieHasBeenSet;

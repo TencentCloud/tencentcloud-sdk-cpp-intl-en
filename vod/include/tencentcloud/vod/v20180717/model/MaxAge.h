@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Browser cache rule configuration, which is used to set the default value of MaxAge and is disabled by default.
                 */
                 class MaxAge : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return MaxAgeRules 
+                     * 获取MaxAge rule.
+                     * @return MaxAgeRules MaxAge rule.
                      * 
                      */
                     std::vector<MaxAgeRule> GetMaxAgeRules() const;
 
                     /**
-                     * 设置
-                     * @param _maxAgeRules 
+                     * 设置MaxAge rule.
+                     * @param _maxAgeRules MaxAge rule.
                      * 
                      */
                     void SetMaxAgeRules(const std::vector<MaxAgeRule>& _maxAgeRules);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * MaxAge rule.
                      */
                     std::vector<MaxAgeRule> m_maxAgeRules;
                     bool m_maxAgeRulesHasBeenSet;

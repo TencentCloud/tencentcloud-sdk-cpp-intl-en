@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * MaxAge rules configuration
                 */
                 class MaxAgeRule : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return MaxAgeType 
+                     * 获取Rule types: <li>all: effective for all files.</li> <li>file: effective for specified file suffixes.</li> <li>directory: effective for specified paths.</li> <li>path: effective for specified absolute paths.</li>
+                     * @return MaxAgeType Rule types: <li>all: effective for all files.</li> <li>file: effective for specified file suffixes.</li> <li>directory: effective for specified paths.</li> <li>path: effective for specified absolute paths.</li>
                      * 
                      */
                     std::string GetMaxAgeType() const;
 
                     /**
-                     * 设置
-                     * @param _maxAgeType 
+                     * 设置Rule types: <li>all: effective for all files.</li> <li>file: effective for specified file suffixes.</li> <li>directory: effective for specified paths.</li> <li>path: effective for specified absolute paths.</li>
+                     * @param _maxAgeType Rule types: <li>all: effective for all files.</li> <li>file: effective for specified file suffixes.</li> <li>directory: effective for specified paths.</li> <li>path: effective for specified absolute paths.</li>
                      * 
                      */
                     void SetMaxAgeType(const std::string& _maxAgeType);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool MaxAgeTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MaxAgeContents 
+                     * 获取Content for each MaxAgeType: <li>For all, enter a wildcard *.</li> <li>For file, enter the suffix, e.g., jpg or txt.</li> <li>For directory, enter the path, e.g., /xxx/test/.</li> <li>For path, enter the absolute path, e.g., /xxx/test.html.</li> <b>Note: the all rule cannot be deleted, and it follows the origin site by default, which can be modified.</b>
+                     * @return MaxAgeContents Content for each MaxAgeType: <li>For all, enter a wildcard *.</li> <li>For file, enter the suffix, e.g., jpg or txt.</li> <li>For directory, enter the path, e.g., /xxx/test/.</li> <li>For path, enter the absolute path, e.g., /xxx/test.html.</li> <b>Note: the all rule cannot be deleted, and it follows the origin site by default, which can be modified.</b>
                      * 
                      */
                     std::vector<std::string> GetMaxAgeContents() const;
 
                     /**
-                     * 设置
-                     * @param _maxAgeContents 
+                     * 设置Content for each MaxAgeType: <li>For all, enter a wildcard *.</li> <li>For file, enter the suffix, e.g., jpg or txt.</li> <li>For directory, enter the path, e.g., /xxx/test/.</li> <li>For path, enter the absolute path, e.g., /xxx/test.html.</li> <b>Note: the all rule cannot be deleted, and it follows the origin site by default, which can be modified.</b>
+                     * @param _maxAgeContents Content for each MaxAgeType: <li>For all, enter a wildcard *.</li> <li>For file, enter the suffix, e.g., jpg or txt.</li> <li>For directory, enter the path, e.g., /xxx/test/.</li> <li>For path, enter the absolute path, e.g., /xxx/test.html.</li> <b>Note: the all rule cannot be deleted, and it follows the origin site by default, which can be modified.</b>
                      * 
                      */
                     void SetMaxAgeContents(const std::vector<std::string>& _maxAgeContents);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool MaxAgeContentsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MaxAgeTime 
+                     * 获取Note: The value 0 means not to cache. <b>Note: The value 0 means not to cache.</b>
+                     * @return MaxAgeTime Note: The value 0 means not to cache. <b>Note: The value 0 means not to cache.</b>
                      * 
                      */
                     uint64_t GetMaxAgeTime() const;
 
                     /**
-                     * 设置
-                     * @param _maxAgeTime 
+                     * 设置Note: The value 0 means not to cache. <b>Note: The value 0 means not to cache.</b>
+                     * @param _maxAgeTime Note: The value 0 means not to cache. <b>Note: The value 0 means not to cache.</b>
                      * 
                      */
                     void SetMaxAgeTime(const uint64_t& _maxAgeTime);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool MaxAgeTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FollowOrigin 
+                     * 获取Whether to follow the origin server. Valid values: on and off. If it's on, MaxAgeTime is ignored.
+                     * @return FollowOrigin Whether to follow the origin server. Valid values: on and off. If it's on, MaxAgeTime is ignored.
                      * 
                      */
                     std::string GetFollowOrigin() const;
 
                     /**
-                     * 设置
-                     * @param _followOrigin 
+                     * 设置Whether to follow the origin server. Valid values: on and off. If it's on, MaxAgeTime is ignored.
+                     * @param _followOrigin Whether to follow the origin server. Valid values: on and off. If it's on, MaxAgeTime is ignored.
                      * 
                      */
                     void SetFollowOrigin(const std::string& _followOrigin);
@@ -133,25 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Rule types: <li>all: effective for all files.</li> <li>file: effective for specified file suffixes.</li> <li>directory: effective for specified paths.</li> <li>path: effective for specified absolute paths.</li>
                      */
                     std::string m_maxAgeType;
                     bool m_maxAgeTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Content for each MaxAgeType: <li>For all, enter a wildcard *.</li> <li>For file, enter the suffix, e.g., jpg or txt.</li> <li>For directory, enter the path, e.g., /xxx/test/.</li> <li>For path, enter the absolute path, e.g., /xxx/test.html.</li> <b>Note: the all rule cannot be deleted, and it follows the origin site by default, which can be modified.</b>
                      */
                     std::vector<std::string> m_maxAgeContents;
                     bool m_maxAgeContentsHasBeenSet;
 
                     /**
-                     * 
+                     * Note: The value 0 means not to cache. <b>Note: The value 0 means not to cache.</b>
                      */
                     uint64_t m_maxAgeTime;
                     bool m_maxAgeTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Whether to follow the origin server. Valid values: on and off. If it's on, MaxAgeTime is ignored.
                      */
                     std::string m_followOrigin;
                     bool m_followOriginHasBeenSet;

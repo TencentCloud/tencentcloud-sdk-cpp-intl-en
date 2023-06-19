@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Heuristic cache configuration
                 */
                 class HeuristicCacheConfig : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return HeuristicCacheTimeSwitch 
+                     * 获取Heuristic cache configuration switch:<li>on:Enable.</li> <li>off: Disable.</li>
+                     * @return HeuristicCacheTimeSwitch Heuristic cache configuration switch:<li>on:Enable.</li> <li>off: Disable.</li>
                      * 
                      */
                     std::string GetHeuristicCacheTimeSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _heuristicCacheTimeSwitch 
+                     * 设置Heuristic cache configuration switch:<li>on:Enable.</li> <li>off: Disable.</li>
+                     * @param _heuristicCacheTimeSwitch Heuristic cache configuration switch:<li>on:Enable.</li> <li>off: Disable.</li>
                      * 
                      */
                     void SetHeuristicCacheTimeSwitch(const std::string& _heuristicCacheTimeSwitch);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool HeuristicCacheTimeSwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HeuristicCacheTime 
+                     * 获取Unit: seconds.
+                     * @return HeuristicCacheTime Unit: seconds.
                      * 
                      */
                     uint64_t GetHeuristicCacheTime() const;
 
                     /**
-                     * 设置
-                     * @param _heuristicCacheTime 
+                     * 设置Unit: seconds.
+                     * @param _heuristicCacheTime Unit: seconds.
                      * 
                      */
                     void SetHeuristicCacheTime(const uint64_t& _heuristicCacheTime);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Heuristic cache configuration switch:<li>on:Enable.</li> <li>off: Disable.</li>
                      */
                     std::string m_heuristicCacheTimeSwitch;
                     bool m_heuristicCacheTimeSwitchHasBeenSet;
 
                     /**
-                     * 
+                     * Unit: seconds.
                      */
                     uint64_t m_heuristicCacheTime;
                     bool m_heuristicCacheTimeHasBeenSet;

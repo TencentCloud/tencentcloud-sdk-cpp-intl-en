@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * QUIC configuration item
                 */
                 class Quic : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Quic function configuration switch, the values are: <li>on:Enable;</li> <li>off: Disable.</li>
+                     * @return Switch Quic function configuration switch, the values are: <li>on:Enable;</li> <li>off: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置Quic function configuration switch, the values are: <li>on:Enable;</li> <li>off: Disable.</li>
+                     * @param _switch Quic function configuration switch, the values are: <li>on:Enable;</li> <li>off: Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Quic function configuration switch, the values are: <li>on:Enable;</li> <li>off: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
