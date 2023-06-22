@@ -403,6 +403,69 @@ namespace TencentCloud
                      */
                     bool TransactionLivingTimeSectionHasBeenSet() const;
 
+                    /**
+                     * 获取Thread ID
+                     * @return ThreadId Thread ID
+                     * 
+                     */
+                    std::vector<std::string> GetThreadId() const;
+
+                    /**
+                     * 设置Thread ID
+                     * @param _threadId Thread ID
+                     * 
+                     */
+                    void SetThreadId(const std::vector<std::string>& _threadId);
+
+                    /**
+                     * 判断参数 ThreadId 是否已赋值
+                     * @return ThreadId 是否已赋值
+                     * 
+                     */
+                    bool ThreadIdHasBeenSet() const;
+
+                    /**
+                     * 获取Number of returned rows,  which is used to filter the audit log with affected rows greater than this value.
+                     * @return SentRows Number of returned rows,  which is used to filter the audit log with affected rows greater than this value.
+                     * 
+                     */
+                    int64_t GetSentRows() const;
+
+                    /**
+                     * 设置Number of returned rows,  which is used to filter the audit log with affected rows greater than this value.
+                     * @param _sentRows Number of returned rows,  which is used to filter the audit log with affected rows greater than this value.
+                     * 
+                     */
+                    void SetSentRows(const int64_t& _sentRows);
+
+                    /**
+                     * 判断参数 SentRows 是否已赋值
+                     * @return SentRows 是否已赋值
+                     * 
+                     */
+                    bool SentRowsHasBeenSet() const;
+
+                    /**
+                     * 获取MySQL error codes
+                     * @return ErrCode MySQL error codes
+                     * 
+                     */
+                    std::vector<int64_t> GetErrCode() const;
+
+                    /**
+                     * 设置MySQL error codes
+                     * @param _errCode MySQL error codes
+                     * 
+                     */
+                    void SetErrCode(const std::vector<int64_t>& _errCode);
+
+                    /**
+                     * 判断参数 ErrCode 是否已赋值
+                     * @return ErrCode 是否已赋值
+                     * 
+                     */
+                    bool ErrCodeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -506,6 +569,24 @@ namespace TencentCloud
                      */
                     std::string m_transactionLivingTimeSection;
                     bool m_transactionLivingTimeSectionHasBeenSet;
+
+                    /**
+                     * Thread ID
+                     */
+                    std::vector<std::string> m_threadId;
+                    bool m_threadIdHasBeenSet;
+
+                    /**
+                     * Number of returned rows,  which is used to filter the audit log with affected rows greater than this value.
+                     */
+                    int64_t m_sentRows;
+                    bool m_sentRowsHasBeenSet;
+
+                    /**
+                     * MySQL error codes
+                     */
+                    std::vector<int64_t> m_errCode;
+                    bool m_errCodeHasBeenSet;
 
                 };
             }

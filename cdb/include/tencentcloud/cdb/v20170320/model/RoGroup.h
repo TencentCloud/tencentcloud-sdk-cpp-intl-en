@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool WeightModeHasBeenSet() const;
 
                     /**
-                     * 获取Weight value.
-                     * @return Weight Weight value.
+                     * 获取This field has been disused. To view the weight of a read-only instance, check the `Weight` value in the `RoInstances` field.
+                     * @return Weight This field has been disused. To view the weight of a read-only instance, check the `Weight` value in the `RoInstances` field.
                      * 
                      */
                     int64_t GetWeight() const;
 
                     /**
-                     * 设置Weight value.
-                     * @param _weight Weight value.
+                     * 设置This field has been disused. To view the weight of a read-only instance, check the `Weight` value in the `RoInstances` field.
+                     * @param _weight This field has been disused. To view the weight of a read-only instance, check the `Weight` value in the `RoInstances` field.
                      * 
                      */
                     void SetWeight(const int64_t& _weight);
@@ -448,7 +448,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_weightModeHasBeenSet;
 
                     /**
-                     * Weight value.
+                     * This field has been disused. To view the weight of a read-only instance, check the `Weight` value in the `RoInstances` field.
                      */
                     int64_t m_weight;
                     bool m_weightHasBeenSet;

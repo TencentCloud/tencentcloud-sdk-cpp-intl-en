@@ -43,19 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Target mobile number in the E.164 standard in the format of +[country/region code][mobile number]. Up to 200 mobile numbers are supported in one request (which should be all Chinese mainland mobile numbers or all global mobile numbers).
-For example, +60198890000, which has a + sign followed by 60 (country/region code) and then by 198890000 (mobile number).
-                     * @return PhoneNumberSet Target mobile number in the E.164 standard in the format of +[country/region code][mobile number]. Up to 200 mobile numbers are supported in one request (which should be all Chinese mainland mobile numbers or all global mobile numbers).
-For example, +60198890000, which has a + sign followed by 60 (country/region code) and then by 198890000 (mobile number).
+                     * 获取Target mobile number in the E.164 standard in the format of +[country/region code][mobile number]. Up to 200 mobile numbers are supported in one request (which should be all Chinese mainland mobile numbers or all global mobile numbers). For example, +60198890000, which has a + sign followed by 60 (country/region code) and then by 198890000 (mobile number).
+                     * @return PhoneNumberSet Target mobile number in the E.164 standard in the format of +[country/region code][mobile number]. Up to 200 mobile numbers are supported in one request (which should be all Chinese mainland mobile numbers or all global mobile numbers). For example, +60198890000, which has a + sign followed by 60 (country/region code) and then by 198890000 (mobile number).
                      * 
                      */
                     std::vector<std::string> GetPhoneNumberSet() const;
 
                     /**
-                     * 设置Target mobile number in the E.164 standard in the format of +[country/region code][mobile number]. Up to 200 mobile numbers are supported in one request (which should be all Chinese mainland mobile numbers or all global mobile numbers).
-For example, +60198890000, which has a + sign followed by 60 (country/region code) and then by 198890000 (mobile number).
-                     * @param _phoneNumberSet Target mobile number in the E.164 standard in the format of +[country/region code][mobile number]. Up to 200 mobile numbers are supported in one request (which should be all Chinese mainland mobile numbers or all global mobile numbers).
-For example, +60198890000, which has a + sign followed by 60 (country/region code) and then by 198890000 (mobile number).
+                     * 设置Target mobile number in the E.164 standard in the format of +[country/region code][mobile number]. Up to 200 mobile numbers are supported in one request (which should be all Chinese mainland mobile numbers or all global mobile numbers). For example, +60198890000, which has a + sign followed by 60 (country/region code) and then by 198890000 (mobile number).
+                     * @param _phoneNumberSet Target mobile number in the E.164 standard in the format of +[country/region code][mobile number]. Up to 200 mobile numbers are supported in one request (which should be all Chinese mainland mobile numbers or all global mobile numbers). For example, +60198890000, which has a + sign followed by 60 (country/region code) and then by 198890000 (mobile number).
                      * 
                      */
                     void SetPhoneNumberSet(const std::vector<std::string>& _phoneNumberSet);
@@ -68,15 +64,15 @@ For example, +60198890000, which has a + sign followed by 60 (country/region cod
                     bool PhoneNumberSetHasBeenSet() const;
 
                     /**
-                     * 获取The SMS `SdkAppId` generated after an application is added in the [SMS console](https://console.cloud.tencent.com/smsv2/app-manage), such as 1400006666.
-                     * @return SmsSdkAppId The SMS `SdkAppId` generated after an application is added in the [SMS console](https://console.cloud.tencent.com/smsv2/app-manage), such as 1400006666.
+                     * 获取The SMS `SdkAppId` generated after an application is added in the [SMS console](https://console.cloud.tencent.com/smsv2/app-manage), such as 2400006666.
+                     * @return SmsSdkAppId The SMS `SdkAppId` generated after an application is added in the [SMS console](https://console.cloud.tencent.com/smsv2/app-manage), such as 2400006666.
                      * 
                      */
                     std::string GetSmsSdkAppId() const;
 
                     /**
-                     * 设置The SMS `SdkAppId` generated after an application is added in the [SMS console](https://console.cloud.tencent.com/smsv2/app-manage), such as 1400006666.
-                     * @param _smsSdkAppId The SMS `SdkAppId` generated after an application is added in the [SMS console](https://console.cloud.tencent.com/smsv2/app-manage), such as 1400006666.
+                     * 设置The SMS `SdkAppId` generated after an application is added in the [SMS console](https://console.cloud.tencent.com/smsv2/app-manage), such as 2400006666.
+                     * @param _smsSdkAppId The SMS `SdkAppId` generated after an application is added in the [SMS console](https://console.cloud.tencent.com/smsv2/app-manage), such as 2400006666.
                      * 
                      */
                     void SetSmsSdkAppId(const std::string& _smsSdkAppId);
@@ -177,15 +173,15 @@ For example, +60198890000, which has a + sign followed by 60 (country/region cod
                     bool ExtendCodeHasBeenSet() const;
 
                     /**
-                     * 获取User session content, which can carry context information such as user-side ID and will be returned as-is by the server.
-                     * @return SessionContext User session content, which can carry context information such as user-side ID and will be returned as-is by the server.
+                     * 获取User session content, which can carry context information such as user-side ID and will be returned as-is by the server. Note that the length must be less than 512 bytes.
+                     * @return SessionContext User session content, which can carry context information such as user-side ID and will be returned as-is by the server. Note that the length must be less than 512 bytes.
                      * 
                      */
                     std::string GetSessionContext() const;
 
                     /**
-                     * 设置User session content, which can carry context information such as user-side ID and will be returned as-is by the server.
-                     * @param _sessionContext User session content, which can carry context information such as user-side ID and will be returned as-is by the server.
+                     * 设置User session content, which can carry context information such as user-side ID and will be returned as-is by the server. Note that the length must be less than 512 bytes.
+                     * @param _sessionContext User session content, which can carry context information such as user-side ID and will be returned as-is by the server. Note that the length must be less than 512 bytes.
                      * 
                      */
                     void SetSessionContext(const std::string& _sessionContext);
@@ -225,14 +221,13 @@ Note: If your monthly usage reaches the specified threshold, you can apply for a
                 private:
 
                     /**
-                     * Target mobile number in the E.164 standard in the format of +[country/region code][mobile number]. Up to 200 mobile numbers are supported in one request (which should be all Chinese mainland mobile numbers or all global mobile numbers).
-For example, +60198890000, which has a + sign followed by 60 (country/region code) and then by 198890000 (mobile number).
+                     * Target mobile number in the E.164 standard in the format of +[country/region code][mobile number]. Up to 200 mobile numbers are supported in one request (which should be all Chinese mainland mobile numbers or all global mobile numbers). For example, +60198890000, which has a + sign followed by 60 (country/region code) and then by 198890000 (mobile number).
                      */
                     std::vector<std::string> m_phoneNumberSet;
                     bool m_phoneNumberSetHasBeenSet;
 
                     /**
-                     * The SMS `SdkAppId` generated after an application is added in the [SMS console](https://console.cloud.tencent.com/smsv2/app-manage), such as 1400006666.
+                     * The SMS `SdkAppId` generated after an application is added in the [SMS console](https://console.cloud.tencent.com/smsv2/app-manage), such as 2400006666.
                      */
                     std::string m_smsSdkAppId;
                     bool m_smsSdkAppIdHasBeenSet;
@@ -263,7 +258,7 @@ For example, +60198890000, which has a + sign followed by 60 (country/region cod
                     bool m_extendCodeHasBeenSet;
 
                     /**
-                     * User session content, which can carry context information such as user-side ID and will be returned as-is by the server.
+                     * User session content, which can carry context information such as user-side ID and will be returned as-is by the server. Note that the length must be less than 512 bytes.
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;

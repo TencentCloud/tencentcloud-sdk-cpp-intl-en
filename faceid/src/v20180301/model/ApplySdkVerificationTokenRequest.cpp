@@ -24,7 +24,10 @@ using namespace std;
 
 ApplySdkVerificationTokenRequest::ApplySdkVerificationTokenRequest() :
     m_needVerifyIdCardHasBeenSet(false),
+    m_checkModeHasBeenSet(false),
+    m_securityLevelHasBeenSet(false),
     m_idCardTypeHasBeenSet(false),
+    m_compareImageHasBeenSet(false),
     m_disableChangeOcrResultHasBeenSet(false),
     m_disableCheckOcrWarningsHasBeenSet(false),
     m_extraHasBeenSet(false)
@@ -46,12 +49,36 @@ string ApplySdkVerificationTokenRequest::ToJsonString() const
         d.AddMember(iKey, m_needVerifyIdCard, allocator);
     }
 
+    if (m_checkModeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CheckMode";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_checkMode, allocator);
+    }
+
+    if (m_securityLevelHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SecurityLevel";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_securityLevel, allocator);
+    }
+
     if (m_idCardTypeHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IdCardType";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_idCardType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_compareImageHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CompareImage";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_compareImage.c_str(), allocator).Move(), allocator);
     }
 
     if (m_disableChangeOcrResultHasBeenSet)
@@ -102,6 +129,38 @@ bool ApplySdkVerificationTokenRequest::NeedVerifyIdCardHasBeenSet() const
     return m_needVerifyIdCardHasBeenSet;
 }
 
+int64_t ApplySdkVerificationTokenRequest::GetCheckMode() const
+{
+    return m_checkMode;
+}
+
+void ApplySdkVerificationTokenRequest::SetCheckMode(const int64_t& _checkMode)
+{
+    m_checkMode = _checkMode;
+    m_checkModeHasBeenSet = true;
+}
+
+bool ApplySdkVerificationTokenRequest::CheckModeHasBeenSet() const
+{
+    return m_checkModeHasBeenSet;
+}
+
+int64_t ApplySdkVerificationTokenRequest::GetSecurityLevel() const
+{
+    return m_securityLevel;
+}
+
+void ApplySdkVerificationTokenRequest::SetSecurityLevel(const int64_t& _securityLevel)
+{
+    m_securityLevel = _securityLevel;
+    m_securityLevelHasBeenSet = true;
+}
+
+bool ApplySdkVerificationTokenRequest::SecurityLevelHasBeenSet() const
+{
+    return m_securityLevelHasBeenSet;
+}
+
 string ApplySdkVerificationTokenRequest::GetIdCardType() const
 {
     return m_idCardType;
@@ -116,6 +175,22 @@ void ApplySdkVerificationTokenRequest::SetIdCardType(const string& _idCardType)
 bool ApplySdkVerificationTokenRequest::IdCardTypeHasBeenSet() const
 {
     return m_idCardTypeHasBeenSet;
+}
+
+string ApplySdkVerificationTokenRequest::GetCompareImage() const
+{
+    return m_compareImage;
+}
+
+void ApplySdkVerificationTokenRequest::SetCompareImage(const string& _compareImage)
+{
+    m_compareImage = _compareImage;
+    m_compareImageHasBeenSet = true;
+}
+
+bool ApplySdkVerificationTokenRequest::CompareImageHasBeenSet() const
+{
+    return m_compareImageHasBeenSet;
 }
 
 bool ApplySdkVerificationTokenRequest::GetDisableChangeOcrResult() const

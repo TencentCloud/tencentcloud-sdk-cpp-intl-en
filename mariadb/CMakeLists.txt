@@ -49,6 +49,7 @@ set(mariadb_public_header_model
   include/tencentcloud/mariadb/v20170312/model/ModifyDBEncryptAttributesResponse.h
   include/tencentcloud/mariadb/v20170312/model/DatabaseView.h
   include/tencentcloud/mariadb/v20170312/model/DescribeDBLogFilesRequest.h
+  include/tencentcloud/mariadb/v20170312/model/UpgradeDedicatedDBInstanceResponse.h
   include/tencentcloud/mariadb/v20170312/model/NodeInfo.h
   include/tencentcloud/mariadb/v20170312/model/DescribeOrdersResponse.h
   include/tencentcloud/mariadb/v20170312/model/ModifySyncTaskAttributeResponse.h
@@ -71,6 +72,7 @@ set(mariadb_public_header_model
   include/tencentcloud/mariadb/v20170312/model/DescribeDatabaseObjectsRequest.h
   include/tencentcloud/mariadb/v20170312/model/CreateDBInstanceResponse.h
   include/tencentcloud/mariadb/v20170312/model/DescribeDBEncryptAttributesResponse.h
+  include/tencentcloud/mariadb/v20170312/model/UpgradeDedicatedDBInstanceRequest.h
   include/tencentcloud/mariadb/v20170312/model/DestroyDBInstanceRequest.h
   include/tencentcloud/mariadb/v20170312/model/DatabaseTable.h
   include/tencentcloud/mariadb/v20170312/model/DescribeDBInstanceDetailRequest.h
@@ -101,6 +103,7 @@ set(mariadb_public_header_model
   include/tencentcloud/mariadb/v20170312/model/GrantAccountPrivilegesResponse.h
   include/tencentcloud/mariadb/v20170312/model/CancelDcnJobRequest.h
   include/tencentcloud/mariadb/v20170312/model/ModifyInstanceVipRequest.h
+  include/tencentcloud/mariadb/v20170312/model/ReservedNetResource.h
   include/tencentcloud/mariadb/v20170312/model/DatabasePrivilege.h
   include/tencentcloud/mariadb/v20170312/model/CloseDBExtranetAccessResponse.h
   include/tencentcloud/mariadb/v20170312/model/FunctionPrivilege.h
@@ -180,6 +183,7 @@ set(mariadb_src
   src/v20170312/model/ModifyDBEncryptAttributesResponse.cpp
   src/v20170312/model/DatabaseView.cpp
   src/v20170312/model/DescribeDBLogFilesRequest.cpp
+  src/v20170312/model/UpgradeDedicatedDBInstanceResponse.cpp
   src/v20170312/model/NodeInfo.cpp
   src/v20170312/model/DescribeOrdersResponse.cpp
   src/v20170312/model/ModifySyncTaskAttributeResponse.cpp
@@ -202,6 +206,7 @@ set(mariadb_src
   src/v20170312/model/DescribeDatabaseObjectsRequest.cpp
   src/v20170312/model/CreateDBInstanceResponse.cpp
   src/v20170312/model/DescribeDBEncryptAttributesResponse.cpp
+  src/v20170312/model/UpgradeDedicatedDBInstanceRequest.cpp
   src/v20170312/model/DestroyDBInstanceRequest.cpp
   src/v20170312/model/DatabaseTable.cpp
   src/v20170312/model/DescribeDBInstanceDetailRequest.cpp
@@ -232,6 +237,7 @@ set(mariadb_src
   src/v20170312/model/GrantAccountPrivilegesResponse.cpp
   src/v20170312/model/CancelDcnJobRequest.cpp
   src/v20170312/model/ModifyInstanceVipRequest.cpp
+  src/v20170312/model/ReservedNetResource.cpp
   src/v20170312/model/DatabasePrivilege.cpp
   src/v20170312/model/CloseDBExtranetAccessResponse.cpp
   src/v20170312/model/FunctionPrivilege.cpp

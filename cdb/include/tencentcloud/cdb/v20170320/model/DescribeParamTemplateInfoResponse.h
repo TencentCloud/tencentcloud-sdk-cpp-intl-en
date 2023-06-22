@@ -142,6 +142,22 @@ namespace TencentCloud
                      */
                     bool TemplateTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Parameter template engine.  Valid values: `InnoDB`, `RocksDB`. 
+Note:  This field may return null, indicating that no valid values can be obtained.
+                     * @return EngineType Parameter template engine.  Valid values: `InnoDB`, `RocksDB`. 
+Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetEngineType() const;
+
+                    /**
+                     * 判断参数 EngineType 是否已赋值
+                     * @return EngineType 是否已赋值
+                     * 
+                     */
+                    bool EngineTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -185,6 +201,13 @@ namespace TencentCloud
                      */
                     std::string m_templateType;
                     bool m_templateTypeHasBeenSet;
+
+                    /**
+                     * Parameter template engine.  Valid values: `InnoDB`, `RocksDB`. 
+Note:  This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_engineType;
+                    bool m_engineTypeHasBeenSet;
 
                 };
             }

@@ -277,6 +277,27 @@ namespace TencentCloud
                      */
                     bool MinFuncHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the parameter can be modified Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IsNotSupportEdit Whether the parameter can be modified Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    bool GetIsNotSupportEdit() const;
+
+                    /**
+                     * 设置Whether the parameter can be modified Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _isNotSupportEdit Whether the parameter can be modified Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetIsNotSupportEdit(const bool& _isNotSupportEdit);
+
+                    /**
+                     * 判断参数 IsNotSupportEdit 是否已赋值
+                     * @return IsNotSupportEdit 是否已赋值
+                     * 
+                     */
+                    bool IsNotSupportEditHasBeenSet() const;
+
                 private:
 
                     /**
@@ -344,6 +365,12 @@ namespace TencentCloud
                      */
                     std::string m_minFunc;
                     bool m_minFuncHasBeenSet;
+
+                    /**
+                     * Whether the parameter can be modified Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    bool m_isNotSupportEdit;
+                    bool m_isNotSupportEditHasBeenSet;
 
                 };
             }

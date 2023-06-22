@@ -487,7 +487,7 @@ namespace TencentCloud
                 DescribeSlowLogUserHostStatsOutcomeCallable DescribeSlowLogUserHostStatsCallable(const Model::DescribeSlowLogUserHostStatsRequest& request);
 
                 /**
-                 *This API is used to obtain the slow query log details of a SQL template in a specified time period.
+                 *This API is used to obtain the slow log details of a SQL template in a specified time period.
                  * @param req DescribeSlowLogsRequest
                  * @return DescribeSlowLogsOutcome
                  */

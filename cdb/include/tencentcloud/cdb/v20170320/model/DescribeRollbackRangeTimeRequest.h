@@ -63,6 +63,48 @@ namespace TencentCloud
                      */
                     bool InstanceIdsHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the clone instance and the source instance are in one AZ. Valid values: `true` (yes), `false` (no).
+                     * @return IsRemoteZone Whether the clone instance and the source instance are in one AZ. Valid values: `true` (yes), `false` (no).
+                     * 
+                     */
+                    std::string GetIsRemoteZone() const;
+
+                    /**
+                     * 设置Whether the clone instance and the source instance are in one AZ. Valid values: `true` (yes), `false` (no).
+                     * @param _isRemoteZone Whether the clone instance and the source instance are in one AZ. Valid values: `true` (yes), `false` (no).
+                     * 
+                     */
+                    void SetIsRemoteZone(const std::string& _isRemoteZone);
+
+                    /**
+                     * 判断参数 IsRemoteZone 是否已赋值
+                     * @return IsRemoteZone 是否已赋值
+                     * 
+                     */
+                    bool IsRemoteZoneHasBeenSet() const;
+
+                    /**
+                     * 获取The region of the clone instance, such as `ap-guangzhou`.
+                     * @return BackupRegion The region of the clone instance, such as `ap-guangzhou`.
+                     * 
+                     */
+                    std::string GetBackupRegion() const;
+
+                    /**
+                     * 设置The region of the clone instance, such as `ap-guangzhou`.
+                     * @param _backupRegion The region of the clone instance, such as `ap-guangzhou`.
+                     * 
+                     */
+                    void SetBackupRegion(const std::string& _backupRegion);
+
+                    /**
+                     * 判断参数 BackupRegion 是否已赋值
+                     * @return BackupRegion 是否已赋值
+                     * 
+                     */
+                    bool BackupRegionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -70,6 +112,18 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;
+
+                    /**
+                     * Whether the clone instance and the source instance are in one AZ. Valid values: `true` (yes), `false` (no).
+                     */
+                    std::string m_isRemoteZone;
+                    bool m_isRemoteZoneHasBeenSet;
+
+                    /**
+                     * The region of the clone instance, such as `ap-guangzhou`.
+                     */
+                    std::string m_backupRegion;
+                    bool m_backupRegionHasBeenSet;
 
                 };
             }

@@ -49,19 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Sync object type. Valid value: `Partial` (default).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Mode Sync object type. Valid value: `Partial` (default).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Sync object type. Valid value: `Partial` (Partial objects). Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Mode Sync object type. Valid value: `Partial` (Partial objects). Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetMode() const;
 
                     /**
-                     * 设置Sync object type. Valid value: `Partial` (default).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _mode Sync object type. Valid value: `Partial` (default).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Sync object type. Valid value: `Partial` (Partial objects). Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _mode Sync object type. Valid value: `Partial` (Partial objects). Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMode(const std::string& _mode);
@@ -99,19 +95,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DatabasesHasBeenSet() const;
 
                     /**
-                     * 获取Advanced object type, such as function and procedure. If you need to sync advanced objects, the initialization type must include structure initialization; that is, `Options.InitType` must be `Structure` or `Full`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AdvancedObjects Advanced object type, such as function and procedure. If you need to sync advanced objects, the initialization type must include structure initialization; that is, `Options.InitType` must be `Structure` or `Full`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Advanced object type, such as functions and procedures. If you need to sync advanced objects, the initialization type must include structure initialization, that is, `Options.InitType` must be `Structure` or `Full`. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AdvancedObjects Advanced object type, such as functions and procedures. If you need to sync advanced objects, the initialization type must include structure initialization, that is, `Options.InitType` must be `Structure` or `Full`. Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetAdvancedObjects() const;
 
                     /**
-                     * 设置Advanced object type, such as function and procedure. If you need to sync advanced objects, the initialization type must include structure initialization; that is, `Options.InitType` must be `Structure` or `Full`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _advancedObjects Advanced object type, such as function and procedure. If you need to sync advanced objects, the initialization type must include structure initialization; that is, `Options.InitType` must be `Structure` or `Full`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Advanced object type, such as functions and procedures. If you need to sync advanced objects, the initialization type must include structure initialization, that is, `Options.InitType` must be `Structure` or `Full`. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _advancedObjects Advanced object type, such as functions and procedures. If you need to sync advanced objects, the initialization type must include structure initialization, that is, `Options.InitType` must be `Structure` or `Full`. Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAdvancedObjects(const std::vector<std::string>& _advancedObjects);
@@ -151,8 +143,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Sync object type. Valid value: `Partial` (default).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Sync object type. Valid value: `Partial` (Partial objects). Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_mode;
                     bool m_modeHasBeenSet;
@@ -165,8 +156,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_databasesHasBeenSet;
 
                     /**
-                     * Advanced object type, such as function and procedure. If you need to sync advanced objects, the initialization type must include structure initialization; that is, `Options.InitType` must be `Structure` or `Full`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Advanced object type, such as functions and procedures. If you need to sync advanced objects, the initialization type must include structure initialization, that is, `Options.InitType` must be `Structure` or `Full`. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_advancedObjects;
                     bool m_advancedObjectsHasBeenSet;

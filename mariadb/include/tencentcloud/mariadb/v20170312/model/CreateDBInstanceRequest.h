@@ -372,15 +372,15 @@ namespace TencentCloud
                     bool AutoRenewFlagHasBeenSet() const;
 
                     /**
-                     * 获取Whether IPv6 is supported.
-                     * @return Ipv6Flag Whether IPv6 is supported.
+                     * 获取Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
+                     * @return Ipv6Flag Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
                      * 
                      */
                     int64_t GetIpv6Flag() const;
 
                     /**
-                     * 设置Whether IPv6 is supported.
-                     * @param _ipv6Flag Whether IPv6 is supported.
+                     * 设置Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
+                     * @param _ipv6Flag Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
                      * 
                      */
                     void SetIpv6Flag(const int64_t& _ipv6Flag);
@@ -572,7 +572,7 @@ namespace TencentCloud
                     bool m_autoRenewFlagHasBeenSet;
 
                     /**
-                     * Whether IPv6 is supported.
+                     * Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
                      */
                     int64_t m_ipv6Flag;
                     bool m_ipv6FlagHasBeenSet;

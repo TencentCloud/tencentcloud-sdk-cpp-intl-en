@@ -119,6 +119,8 @@
 #include <tencentcloud/mariadb/v20170312/model/ResetAccountPasswordResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/TerminateDedicatedDBInstanceRequest.h>
 #include <tencentcloud/mariadb/v20170312/model/TerminateDedicatedDBInstanceResponse.h>
+#include <tencentcloud/mariadb/v20170312/model/UpgradeDedicatedDBInstanceRequest.h>
+#include <tencentcloud/mariadb/v20170312/model/UpgradeDedicatedDBInstanceResponse.h>
 
 
 namespace TencentCloud
@@ -277,6 +279,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::TerminateDedicatedDBInstanceResponse> TerminateDedicatedDBInstanceOutcome;
                 typedef std::future<TerminateDedicatedDBInstanceOutcome> TerminateDedicatedDBInstanceOutcomeCallable;
                 typedef std::function<void(const MariadbClient*, const Model::TerminateDedicatedDBInstanceRequest&, TerminateDedicatedDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> TerminateDedicatedDBInstanceAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpgradeDedicatedDBInstanceResponse> UpgradeDedicatedDBInstanceOutcome;
+                typedef std::future<UpgradeDedicatedDBInstanceOutcome> UpgradeDedicatedDBInstanceOutcomeCallable;
+                typedef std::function<void(const MariadbClient*, const Model::UpgradeDedicatedDBInstanceRequest&, UpgradeDedicatedDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpgradeDedicatedDBInstanceAsyncHandler;
 
 
 
@@ -336,7 +341,7 @@ Note: accounts with the same username but different hosts are different accounts
                 CreateAccountOutcomeCallable CreateAccountCallable(const Model::CreateAccountRequest& request);
 
                 /**
-                 *This API is used to create a monthly subscribed TencentDB instance by passing in information such as instance specifications, database version number, validity period, and quantity.
+                 *This API is used to create a monthly subscribed TencentDB for MariaDB instance by passing in information such as instance specifications, database version number, validity period, and quantity.
                  * @param req CreateDBInstanceRequest
                  * @return CreateDBInstanceOutcome
                  */
@@ -345,7 +350,7 @@ Note: accounts with the same username but different hosts are different accounts
                 CreateDBInstanceOutcomeCallable CreateDBInstanceCallable(const Model::CreateDBInstanceRequest& request);
 
                 /**
-                 *This API is used to create pay-as-you-go instances.
+                 *This API is used to create a pay-as-you-go TencentDB for MariaDB instance.
                  * @param req CreateHourDBInstanceRequest
                  * @return CreateHourDBInstanceOutcome
                  */
@@ -554,7 +559,7 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
                 DestroyDBInstanceOutcomeCallable DestroyDBInstanceCallable(const Model::DestroyDBInstanceRequest& request);
 
                 /**
-                 *This API is used to terminate a pay-as-you-go instance.
+                 *This API is used to terminate a pay-as-you-go TencentDB for MariaDB instance.
                  * @param req DestroyHourDBInstanceRequest
                  * @return DestroyHourDBInstanceOutcome
                  */
@@ -582,7 +587,7 @@ Note: accounts with the same username but different hosts are different accounts
                 GrantAccountPrivilegesOutcomeCallable GrantAccountPrivilegesCallable(const Model::GrantAccountPrivilegesRequest& request);
 
                 /**
-                 *This API is used to isolate a monthly subscribed TencentDB instance, which will no longer be accessible via IP and port. The isolated instance can be started up in the recycle bin. If it is isolated due to overdue payments, top up your account as soon as possible.
+                 *This API is used to isolate a monthly subscribed TencentDB for MariaDB instance, which will no longer be accessible via IP and port.  The isolated instance can be started up in the recycle bin.  If it is isolated due to overdue payments, top up your account as soon as possible.
                  * @param req IsolateDBInstanceRequest
                  * @return IsolateDBInstanceOutcome
                  */
@@ -619,12 +624,7 @@ Note: accounts with the same username but different hosts are different accounts
                 ModifyAccountDescriptionOutcomeCallable ModifyAccountDescriptionCallable(const Model::ModifyAccountDescriptionRequest& request);
 
                 /**
-                 *This API is used to modify the permissions of a TencentDB instance account.
-
-**Notes**
-- Only the SELECT permission (that is, set the permission parameter to `["SELECT"]`) of the system database `mysql` can be granted.
-- An error will be reported if read-write permissions are granted to a read-only account.
-- If the parameter of permissions at a level is left empty, no change will be made to the permissions at the level that have been granted. To clear granted permissions at a level, set `GlobalPrivileges.N` or `Privileges` to an empty array.
+                 *This API is used to modify the permissions of a TencentDB instance account. \n\n**Note**\n-Only the SELECT permission (that is, set the permission parameter to `["SELECT"]`) of the system database `mysql` can be granted.An error will be reported if read-write permissions are granted to a read-only account. If the parameter is not passed in, no change will be made to the granted table permissions. To clear the granted view permissions, set `Privileges` to an empty array.
                  * @param req ModifyAccountPrivilegesRequest
                  * @return ModifyAccountPrivilegesOutcome
                  */
@@ -722,6 +722,15 @@ Note: accounts with the same username but different hosts are different accounts
                 TerminateDedicatedDBInstanceOutcome TerminateDedicatedDBInstance(const Model::TerminateDedicatedDBInstanceRequest &request);
                 void TerminateDedicatedDBInstanceAsync(const Model::TerminateDedicatedDBInstanceRequest& request, const TerminateDedicatedDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 TerminateDedicatedDBInstanceOutcomeCallable TerminateDedicatedDBInstanceCallable(const Model::TerminateDedicatedDBInstanceRequest& request);
+
+                /**
+                 *This API is used to expand the dedicated TencentDB instance.
+                 * @param req UpgradeDedicatedDBInstanceRequest
+                 * @return UpgradeDedicatedDBInstanceOutcome
+                 */
+                UpgradeDedicatedDBInstanceOutcome UpgradeDedicatedDBInstance(const Model::UpgradeDedicatedDBInstanceRequest &request);
+                void UpgradeDedicatedDBInstanceAsync(const Model::UpgradeDedicatedDBInstanceRequest& request, const UpgradeDedicatedDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpgradeDedicatedDBInstanceOutcomeCallable UpgradeDedicatedDBInstanceCallable(const Model::UpgradeDedicatedDBInstanceRequest& request);
 
             };
         }

@@ -147,6 +147,27 @@ namespace TencentCloud
                      */
                     bool ProductHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to record the thread killing history. The default value is `true`, indicating “yes”. You can set it to `false` (“no”) to speed up the killing process.
+                     * @return RecordHistory Whether to record the thread killing history. The default value is `true`, indicating “yes”. You can set it to `false` (“no”) to speed up the killing process.
+                     * 
+                     */
+                    bool GetRecordHistory() const;
+
+                    /**
+                     * 设置Whether to record the thread killing history. The default value is `true`, indicating “yes”. You can set it to `false` (“no”) to speed up the killing process.
+                     * @param _recordHistory Whether to record the thread killing history. The default value is `true`, indicating “yes”. You can set it to `false` (“no”) to speed up the killing process.
+                     * 
+                     */
+                    void SetRecordHistory(const bool& _recordHistory);
+
+                    /**
+                     * 判断参数 RecordHistory 是否已赋值
+                     * @return RecordHistory 是否已赋值
+                     * 
+                     */
+                    bool RecordHistoryHasBeenSet() const;
+
                 private:
 
                     /**
@@ -178,6 +199,12 @@ namespace TencentCloud
                      */
                     std::string m_product;
                     bool m_productHasBeenSet;
+
+                    /**
+                     * Whether to record the thread killing history. The default value is `true`, indicating “yes”. You can set it to `false` (“no”) to speed up the killing process.
+                     */
+                    bool m_recordHistory;
+                    bool m_recordHistoryHasBeenSet;
 
                 };
             }

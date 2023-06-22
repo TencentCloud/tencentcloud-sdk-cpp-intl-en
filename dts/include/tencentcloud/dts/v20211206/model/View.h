@@ -72,19 +72,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ViewNameHasBeenSet() const;
 
                     /**
-                     * 获取New view name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return NewViewName New view name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Reserved field. Currently, a view cannot be renamed. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return NewViewName Reserved field. Currently, a view cannot be renamed. Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetNewViewName() const;
 
                     /**
-                     * 设置New view name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _newViewName New view name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Reserved field. Currently, a view cannot be renamed. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _newViewName Reserved field. Currently, a view cannot be renamed. Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetNewViewName(const std::string& _newViewName);
@@ -106,8 +102,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_viewNameHasBeenSet;
 
                     /**
-                     * New view name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Reserved field. Currently, a view cannot be renamed. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_newViewName;
                     bool m_newViewNameHasBeenSet;

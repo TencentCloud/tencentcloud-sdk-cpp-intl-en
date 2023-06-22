@@ -64,15 +64,129 @@ namespace TencentCloud
                     bool NeedVerifyIdCardHasBeenSet() const;
 
                     /**
-                     * 获取The identity document type. Valid values: `HK` (identity card of Hong Kong (China)) (default), `ML` (Malaysian identity card), `IndonesiaIDCard` (Indonesian identity card), `PhilippinesVoteID` (Philippine voters ID card), `PhilippinesDrivingLicense` (Philippine driver's license), `PhilippinesTinID` (Philippine TIN ID card), `PhilippinesSSSID` (Philippine SSS ID card), and `MLIDPassport` (passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions).
-                     * @return IdCardType The identity document type. Valid values: `HK` (identity card of Hong Kong (China)) (default), `ML` (Malaysian identity card), `IndonesiaIDCard` (Indonesian identity card), `PhilippinesVoteID` (Philippine voters ID card), `PhilippinesDrivingLicense` (Philippine driver's license), `PhilippinesTinID` (Philippine TIN ID card), `PhilippinesSSSID` (Philippine SSS ID card), and `MLIDPassport` (passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions).
+                     * 获取The verification mode. Valid values:
+1: OCR + liveness detection + face comparison
+2: Liveness detection + face comparison
+3: Liveness detection
+Default value: 1
+                     * @return CheckMode The verification mode. Valid values:
+1: OCR + liveness detection + face comparison
+2: Liveness detection + face comparison
+3: Liveness detection
+Default value: 1
+                     * 
+                     */
+                    int64_t GetCheckMode() const;
+
+                    /**
+                     * 设置The verification mode. Valid values:
+1: OCR + liveness detection + face comparison
+2: Liveness detection + face comparison
+3: Liveness detection
+Default value: 1
+                     * @param _checkMode The verification mode. Valid values:
+1: OCR + liveness detection + face comparison
+2: Liveness detection + face comparison
+3: Liveness detection
+Default value: 1
+                     * 
+                     */
+                    void SetCheckMode(const int64_t& _checkMode);
+
+                    /**
+                     * 判断参数 CheckMode 是否已赋值
+                     * @return CheckMode 是否已赋值
+                     * 
+                     */
+                    bool CheckModeHasBeenSet() const;
+
+                    /**
+                     * 获取The security level of the verification. Valid values:
+1: Video-based liveness detection
+2: Motion-based liveness detection
+3: Reflection-based liveness detection
+4: Motion- and reflection-based liveness detection
+Default value: 4
+                     * @return SecurityLevel The security level of the verification. Valid values:
+1: Video-based liveness detection
+2: Motion-based liveness detection
+3: Reflection-based liveness detection
+4: Motion- and reflection-based liveness detection
+Default value: 4
+                     * 
+                     */
+                    int64_t GetSecurityLevel() const;
+
+                    /**
+                     * 设置The security level of the verification. Valid values:
+1: Video-based liveness detection
+2: Motion-based liveness detection
+3: Reflection-based liveness detection
+4: Motion- and reflection-based liveness detection
+Default value: 4
+                     * @param _securityLevel The security level of the verification. Valid values:
+1: Video-based liveness detection
+2: Motion-based liveness detection
+3: Reflection-based liveness detection
+4: Motion- and reflection-based liveness detection
+Default value: 4
+                     * 
+                     */
+                    void SetSecurityLevel(const int64_t& _securityLevel);
+
+                    /**
+                     * 判断参数 SecurityLevel 是否已赋值
+                     * @return SecurityLevel 是否已赋值
+                     * 
+                     */
+                    bool SecurityLevelHasBeenSet() const;
+
+                    /**
+                     * 获取The identity document type. Valid values: 
+1. `HK` (default): Identity card of Hong Kong (China)
+2. `ML`: Malaysian identity card
+3. `IndonesiaIDCard`: Indonesian identity card
+4. `PhilippinesVoteID`: Philippine voters ID card
+5. `PhilippinesDrivingLicense`: Philippine driver's license
+6. `PhilippinesTinID`: Philippine TIN ID card
+7. `PhilippinesSSSID`: Philippine SSS ID card
+8. `PhilippinesUMID`: Philippine UMID card
+9. `MLIDPassport`: Passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions
+                     * @return IdCardType The identity document type. Valid values: 
+1. `HK` (default): Identity card of Hong Kong (China)
+2. `ML`: Malaysian identity card
+3. `IndonesiaIDCard`: Indonesian identity card
+4. `PhilippinesVoteID`: Philippine voters ID card
+5. `PhilippinesDrivingLicense`: Philippine driver's license
+6. `PhilippinesTinID`: Philippine TIN ID card
+7. `PhilippinesSSSID`: Philippine SSS ID card
+8. `PhilippinesUMID`: Philippine UMID card
+9. `MLIDPassport`: Passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions
                      * 
                      */
                     std::string GetIdCardType() const;
 
                     /**
-                     * 设置The identity document type. Valid values: `HK` (identity card of Hong Kong (China)) (default), `ML` (Malaysian identity card), `IndonesiaIDCard` (Indonesian identity card), `PhilippinesVoteID` (Philippine voters ID card), `PhilippinesDrivingLicense` (Philippine driver's license), `PhilippinesTinID` (Philippine TIN ID card), `PhilippinesSSSID` (Philippine SSS ID card), and `MLIDPassport` (passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions).
-                     * @param _idCardType The identity document type. Valid values: `HK` (identity card of Hong Kong (China)) (default), `ML` (Malaysian identity card), `IndonesiaIDCard` (Indonesian identity card), `PhilippinesVoteID` (Philippine voters ID card), `PhilippinesDrivingLicense` (Philippine driver's license), `PhilippinesTinID` (Philippine TIN ID card), `PhilippinesSSSID` (Philippine SSS ID card), and `MLIDPassport` (passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions).
+                     * 设置The identity document type. Valid values: 
+1. `HK` (default): Identity card of Hong Kong (China)
+2. `ML`: Malaysian identity card
+3. `IndonesiaIDCard`: Indonesian identity card
+4. `PhilippinesVoteID`: Philippine voters ID card
+5. `PhilippinesDrivingLicense`: Philippine driver's license
+6. `PhilippinesTinID`: Philippine TIN ID card
+7. `PhilippinesSSSID`: Philippine SSS ID card
+8. `PhilippinesUMID`: Philippine UMID card
+9. `MLIDPassport`: Passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions
+                     * @param _idCardType The identity document type. Valid values: 
+1. `HK` (default): Identity card of Hong Kong (China)
+2. `ML`: Malaysian identity card
+3. `IndonesiaIDCard`: Indonesian identity card
+4. `PhilippinesVoteID`: Philippine voters ID card
+5. `PhilippinesDrivingLicense`: Philippine driver's license
+6. `PhilippinesTinID`: Philippine TIN ID card
+7. `PhilippinesSSSID`: Philippine SSS ID card
+8. `PhilippinesUMID`: Philippine UMID card
+9. `MLIDPassport`: Passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions
                      * 
                      */
                     void SetIdCardType(const std::string& _idCardType);
@@ -85,15 +199,36 @@ namespace TencentCloud
                     bool IdCardTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed).
-                     * @return DisableChangeOcrResult Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed).
+                     * 获取The Base64-encoded value of the photo to compare, which is required only when `CheckMode` is set to `2`.
+                     * @return CompareImage The Base64-encoded value of the photo to compare, which is required only when `CheckMode` is set to `2`.
+                     * 
+                     */
+                    std::string GetCompareImage() const;
+
+                    /**
+                     * 设置The Base64-encoded value of the photo to compare, which is required only when `CheckMode` is set to `2`.
+                     * @param _compareImage The Base64-encoded value of the photo to compare, which is required only when `CheckMode` is set to `2`.
+                     * 
+                     */
+                    void SetCompareImage(const std::string& _compareImage);
+
+                    /**
+                     * 判断参数 CompareImage 是否已赋值
+                     * @return CompareImage 是否已赋值
+                     * 
+                     */
+                    bool CompareImageHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). (Currently, this parameter is not applied.)
+                     * @return DisableChangeOcrResult Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). (Currently, this parameter is not applied.)
                      * 
                      */
                     bool GetDisableChangeOcrResult() const;
 
                     /**
-                     * 设置Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed).
-                     * @param _disableChangeOcrResult Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed).
+                     * 设置Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). (Currently, this parameter is not applied.)
+                     * @param _disableChangeOcrResult Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). (Currently, this parameter is not applied.)
                      * 
                      */
                     void SetDisableChangeOcrResult(const bool& _disableChangeOcrResult);
@@ -106,15 +241,19 @@ namespace TencentCloud
                     bool DisableChangeOcrResultHasBeenSet() const;
 
                     /**
-                     * 获取Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning. If `NeedVerifyIdCard` is set to `true`, this parameter must also be set to `true`.
-                     * @return DisableCheckOcrWarnings Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning. If `NeedVerifyIdCard` is set to `true`, this parameter must also be set to `true`.
+                     * 获取Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning.
+This feature applies only to Hong Kong (China) identity cards, Malaysian identity cards, and passports.
+                     * @return DisableCheckOcrWarnings Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning.
+This feature applies only to Hong Kong (China) identity cards, Malaysian identity cards, and passports.
                      * 
                      */
                     bool GetDisableCheckOcrWarnings() const;
 
                     /**
-                     * 设置Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning. If `NeedVerifyIdCard` is set to `true`, this parameter must also be set to `true`.
-                     * @param _disableCheckOcrWarnings Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning. If `NeedVerifyIdCard` is set to `true`, this parameter must also be set to `true`.
+                     * 设置Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning.
+This feature applies only to Hong Kong (China) identity cards, Malaysian identity cards, and passports.
+                     * @param _disableCheckOcrWarnings Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning.
+This feature applies only to Hong Kong (China) identity cards, Malaysian identity cards, and passports.
                      * 
                      */
                     void SetDisableCheckOcrWarnings(const bool& _disableCheckOcrWarnings);
@@ -156,19 +295,56 @@ namespace TencentCloud
                     bool m_needVerifyIdCardHasBeenSet;
 
                     /**
-                     * The identity document type. Valid values: `HK` (identity card of Hong Kong (China)) (default), `ML` (Malaysian identity card), `IndonesiaIDCard` (Indonesian identity card), `PhilippinesVoteID` (Philippine voters ID card), `PhilippinesDrivingLicense` (Philippine driver's license), `PhilippinesTinID` (Philippine TIN ID card), `PhilippinesSSSID` (Philippine SSS ID card), and `MLIDPassport` (passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions).
+                     * The verification mode. Valid values:
+1: OCR + liveness detection + face comparison
+2: Liveness detection + face comparison
+3: Liveness detection
+Default value: 1
+                     */
+                    int64_t m_checkMode;
+                    bool m_checkModeHasBeenSet;
+
+                    /**
+                     * The security level of the verification. Valid values:
+1: Video-based liveness detection
+2: Motion-based liveness detection
+3: Reflection-based liveness detection
+4: Motion- and reflection-based liveness detection
+Default value: 4
+                     */
+                    int64_t m_securityLevel;
+                    bool m_securityLevelHasBeenSet;
+
+                    /**
+                     * The identity document type. Valid values: 
+1. `HK` (default): Identity card of Hong Kong (China)
+2. `ML`: Malaysian identity card
+3. `IndonesiaIDCard`: Indonesian identity card
+4. `PhilippinesVoteID`: Philippine voters ID card
+5. `PhilippinesDrivingLicense`: Philippine driver's license
+6. `PhilippinesTinID`: Philippine TIN ID card
+7. `PhilippinesSSSID`: Philippine SSS ID card
+8. `PhilippinesUMID`: Philippine UMID card
+9. `MLIDPassport`: Passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions
                      */
                     std::string m_idCardType;
                     bool m_idCardTypeHasBeenSet;
 
                     /**
-                     * Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed).
+                     * The Base64-encoded value of the photo to compare, which is required only when `CheckMode` is set to `2`.
+                     */
+                    std::string m_compareImage;
+                    bool m_compareImageHasBeenSet;
+
+                    /**
+                     * Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). (Currently, this parameter is not applied.)
                      */
                     bool m_disableChangeOcrResult;
                     bool m_disableChangeOcrResultHasBeenSet;
 
                     /**
-                     * Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning. If `NeedVerifyIdCard` is set to `true`, this parameter must also be set to `true`.
+                     * Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning.
+This feature applies only to Hong Kong (China) identity cards, Malaysian identity cards, and passports.
                      */
                     bool m_disableCheckOcrWarnings;
                     bool m_disableCheckOcrWarningsHasBeenSet;

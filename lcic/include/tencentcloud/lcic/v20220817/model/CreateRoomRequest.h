@@ -399,6 +399,35 @@ namespace TencentCloud
                      */
                     bool GroupIdHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the teacher/teaching assistant can control students' cameras/microphones without the students' consent. Valid values: 
+`0` (default): No (consent required)
+`1`: Yes (no consent required)
+                     * @return EnableDirectControl Whether the teacher/teaching assistant can control students' cameras/microphones without the students' consent. Valid values: 
+`0` (default): No (consent required)
+`1`: Yes (no consent required)
+                     * 
+                     */
+                    uint64_t GetEnableDirectControl() const;
+
+                    /**
+                     * 设置Whether the teacher/teaching assistant can control students' cameras/microphones without the students' consent. Valid values: 
+`0` (default): No (consent required)
+`1`: Yes (no consent required)
+                     * @param _enableDirectControl Whether the teacher/teaching assistant can control students' cameras/microphones without the students' consent. Valid values: 
+`0` (default): No (consent required)
+`1`: Yes (no consent required)
+                     * 
+                     */
+                    void SetEnableDirectControl(const uint64_t& _enableDirectControl);
+
+                    /**
+                     * 判断参数 EnableDirectControl 是否已赋值
+                     * @return EnableDirectControl 是否已赋值
+                     * 
+                     */
+                    bool EnableDirectControlHasBeenSet() const;
+
                 private:
 
                     /**
@@ -502,6 +531,14 @@ namespace TencentCloud
                      */
                     std::string m_groupId;
                     bool m_groupIdHasBeenSet;
+
+                    /**
+                     * Whether the teacher/teaching assistant can control students' cameras/microphones without the students' consent. Valid values: 
+`0` (default): No (consent required)
+`1`: Yes (no consent required)
+                     */
+                    uint64_t m_enableDirectControl;
+                    bool m_enableDirectControlHasBeenSet;
 
                 };
             }

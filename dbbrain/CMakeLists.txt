@@ -21,6 +21,7 @@ set(dbbrain_public_header
 
 set(dbbrain_public_header_model
   include/tencentcloud/dbbrain/v20210527/model/SchemaSpaceTimeSeries.h
+  include/tencentcloud/dbbrain/v20210527/model/SlowLogUser.h
   include/tencentcloud/dbbrain/v20210527/model/HealthReportTask.h
   include/tencentcloud/dbbrain/v20210527/model/CreateDBDiagReportTaskRequest.h
   include/tencentcloud/dbbrain/v20210527/model/TableSpaceTimeSeries.h
@@ -209,6 +210,7 @@ set(dbbrain_src
   src/v20210527/DbbrainClient.cpp
   src/v20191016/DbbrainClient.cpp
   src/v20210527/model/SchemaSpaceTimeSeries.cpp
+  src/v20210527/model/SlowLogUser.cpp
   src/v20210527/model/HealthReportTask.cpp
   src/v20210527/model/CreateDBDiagReportTaskRequest.cpp
   src/v20210527/model/TableSpaceTimeSeries.cpp

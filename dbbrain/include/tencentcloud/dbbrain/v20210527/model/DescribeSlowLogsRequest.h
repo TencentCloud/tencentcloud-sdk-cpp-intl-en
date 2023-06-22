@@ -253,15 +253,15 @@ namespace TencentCloud
                     bool UserHasBeenSet() const;
 
                     /**
-                     * 获取ip
-                     * @return Ip ip
+                     * 获取IP
+                     * @return Ip IP
                      * 
                      */
                     std::vector<std::string> GetIp() const;
 
                     /**
-                     * 设置ip
-                     * @param _ip ip
+                     * 设置IP
+                     * @param _ip IP
                      * 
                      */
                     void SetIp(const std::vector<std::string>& _ip);
@@ -357,7 +357,7 @@ namespace TencentCloud
                     bool m_userHasBeenSet;
 
                     /**
-                     * ip
+                     * IP
                      */
                     std::vector<std::string> m_ip;
                     bool m_ipHasBeenSet;

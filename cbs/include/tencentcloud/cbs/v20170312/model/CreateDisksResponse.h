@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of IDs of the created cloud disks.
-                     * @return DiskIdSet List of IDs of the created cloud disks.
+                     * 获取ID list of the created cloud disks. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DiskIdSet ID list of the created cloud disks. Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetDiskIdSet() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of IDs of the created cloud disks.
+                     * ID list of the created cloud disks. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_diskIdSet;
                     bool m_diskIdSetHasBeenSet;

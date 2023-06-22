@@ -969,6 +969,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ErrorPromptHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the cloud disk has enabled disk bursting. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return BurstPerformance Whether the cloud disk has enabled disk bursting. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    bool GetBurstPerformance() const;
+
+                    /**
+                     * 设置Whether the cloud disk has enabled disk bursting. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _burstPerformance Whether the cloud disk has enabled disk bursting. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetBurstPerformance(const bool& _burstPerformance);
+
+                    /**
+                     * 判断参数 BurstPerformance 是否已赋值
+                     * @return BurstPerformance 是否已赋值
+                     * 
+                     */
+                    bool BurstPerformanceHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1231,6 +1252,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_errorPrompt;
                     bool m_errorPromptHasBeenSet;
+
+                    /**
+                     * Whether the cloud disk has enabled disk bursting. Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    bool m_burstPerformance;
+                    bool m_burstPerformanceHasBeenSet;
 
                 };
             }

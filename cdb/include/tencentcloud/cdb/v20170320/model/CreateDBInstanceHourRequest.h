@@ -256,15 +256,15 @@ namespace TencentCloud
                     bool InstanceRoleHasBeenSet() const;
 
                     /**
-                     * 获取AZ information of the source instance, which is required for purchasing disaster recovery instances and read-only instances.
-                     * @return MasterRegion AZ information of the source instance, which is required for purchasing disaster recovery instances and read-only instances.
+                     * 获取Region information of the source instance, which is required when purchasing a read-only or disaster recovery instance.
+                     * @return MasterRegion Region information of the source instance, which is required when purchasing a read-only or disaster recovery instance.
                      * 
                      */
                     std::string GetMasterRegion() const;
 
                     /**
-                     * 设置AZ information of the source instance, which is required for purchasing disaster recovery instances and read-only instances.
-                     * @param _masterRegion AZ information of the source instance, which is required for purchasing disaster recovery instances and read-only instances.
+                     * 设置Region information of the source instance, which is required when purchasing a read-only or disaster recovery instance.
+                     * @param _masterRegion Region information of the source instance, which is required when purchasing a read-only or disaster recovery instance.
                      * 
                      */
                     void SetMasterRegion(const std::string& _masterRegion);
@@ -487,15 +487,15 @@ namespace TencentCloud
                     bool AutoRenewFlagHasBeenSet() const;
 
                     /**
-                     * 获取Instance name. For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, their instance name is db1, db2 respectively.
-                     * @return InstanceName Instance name. For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, their instance name is db1, db2 respectively.
+                     * 获取Instance name For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, and their instance names are db1, db2, and db3, respectively.
+                     * @return InstanceName Instance name For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, and their instance names are db1, db2, and db3, respectively.
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Instance name. For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, their instance name is db1, db2 respectively.
-                     * @param _instanceName Instance name. For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, their instance name is db1, db2 respectively.
+                     * 设置Instance name For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, and their instance names are db1, db2, and db3, respectively.
+                     * @param _instanceName Instance name For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, and their instance names are db1, db2, and db3, respectively.
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -613,15 +613,15 @@ namespace TencentCloud
                     bool ParamTemplateIdHasBeenSet() const;
 
                     /**
-                     * 获取Array of alarm policy IDs, which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
-                     * @return AlarmPolicyList Array of alarm policy IDs, which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
+                     * 获取Array of alarm policy IDs,  which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
+                     * @return AlarmPolicyList Array of alarm policy IDs,  which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
                      * 
                      */
                     std::vector<int64_t> GetAlarmPolicyList() const;
 
                     /**
-                     * 设置Array of alarm policy IDs, which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
-                     * @param _alarmPolicyList Array of alarm policy IDs, which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
+                     * 设置Array of alarm policy IDs,  which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
+                     * @param _alarmPolicyList Array of alarm policy IDs,  which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
                      * 
                      */
                     void SetAlarmPolicyList(const std::vector<int64_t>& _alarmPolicyList);
@@ -885,7 +885,7 @@ namespace TencentCloud
                     bool m_instanceRoleHasBeenSet;
 
                     /**
-                     * AZ information of the source instance, which is required for purchasing disaster recovery instances and read-only instances.
+                     * Region information of the source instance, which is required when purchasing a read-only or disaster recovery instance.
                      */
                     std::string m_masterRegion;
                     bool m_masterRegionHasBeenSet;
@@ -951,7 +951,7 @@ namespace TencentCloud
                     bool m_autoRenewFlagHasBeenSet;
 
                     /**
-                     * Instance name. For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, their instance name is db1, db2 respectively.
+                     * Instance name For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, and their instance names are db1, db2, and db3, respectively.
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
@@ -987,7 +987,7 @@ namespace TencentCloud
                     bool m_paramTemplateIdHasBeenSet;
 
                     /**
-                     * Array of alarm policy IDs, which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
+                     * Array of alarm policy IDs,  which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
                      */
                     std::vector<int64_t> m_alarmPolicyList;
                     bool m_alarmPolicyListHasBeenSet;

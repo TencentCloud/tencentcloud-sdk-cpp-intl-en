@@ -152,6 +152,27 @@ namespace TencentCloud
                     bool DirHasBeenSet() const;
 
                     /**
+                     * 获取Address module
+                     * @return AddressModule Address module
+                     * 
+                     */
+                    std::string GetAddressModule() const;
+
+                    /**
+                     * 设置Address module
+                     * @param _addressModule Address module
+                     * 
+                     */
+                    void SetAddressModule(const std::string& _addressModule);
+
+                    /**
+                     * 判断参数 AddressModule 是否已赋值
+                     * @return AddressModule 是否已赋值
+                     * 
+                     */
+                    bool AddressModuleHasBeenSet() const;
+
+                    /**
                      * 获取Rule description
                      * @return Desc Rule description
                      * 
@@ -203,6 +224,12 @@ namespace TencentCloud
                      */
                     std::string m_dir;
                     bool m_dirHasBeenSet;
+
+                    /**
+                     * Address module
+                     */
+                    std::string m_addressModule;
+                    bool m_addressModuleHasBeenSet;
 
                     /**
                      * Rule description

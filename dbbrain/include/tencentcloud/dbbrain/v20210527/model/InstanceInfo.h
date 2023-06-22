@@ -636,18 +636,18 @@ namespace TencentCloud
                     bool AuditRunningStatusHasBeenSet() const;
 
                     /**
-                     * 获取Private VIP
+                     * 获取Private VIP 
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InternalVip Private VIP
+                     * @return InternalVip Private VIP 
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetInternalVip() const;
 
                     /**
-                     * 设置Private VIP
+                     * 设置Private VIP 
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _internalVip Private VIP
+                     * @param _internalVip Private VIP 
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -661,18 +661,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InternalVipHasBeenSet() const;
 
                     /**
-                     * 获取Private network port
+                     * 获取Private network port 
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InternalVport Private network port
+                     * @return InternalVport Private network port 
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetInternalVport() const;
 
                     /**
-                     * 设置Private network port
+                     * 设置Private network port 
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _internalVport Private network port
+                     * @param _internalVport Private network port 
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -705,6 +705,56 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool CreateTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Cluster ID. This field is only required for cluster database products like TDSQL-C. 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ClusterId Cluster ID. This field is only required for cluster database products like TDSQL-C. 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetClusterId() const;
+
+                    /**
+                     * 设置Cluster ID. This field is only required for cluster database products like TDSQL-C. 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _clusterId Cluster ID. This field is only required for cluster database products like TDSQL-C. 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetClusterId(const std::string& _clusterId);
+
+                    /**
+                     * 判断参数 ClusterId 是否已赋值
+                     * @return ClusterId 是否已赋值
+                     * 
+                     */
+                    bool ClusterIdHasBeenSet() const;
+
+                    /**
+                     * 获取Cluster name. This field is only required for cluster database products like TDSQL-C. 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ClusterName Cluster name. This field is only required for cluster database products like TDSQL-C. 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetClusterName() const;
+
+                    /**
+                     * 设置Cluster name. This field is only required for cluster database products like TDSQL-C. 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _clusterName Cluster name. This field is only required for cluster database products like TDSQL-C. 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetClusterName(const std::string& _clusterName);
+
+                    /**
+                     * 判断参数 ClusterName 是否已赋值
+                     * @return ClusterName 是否已赋值
+                     * 
+                     */
+                    bool ClusterNameHasBeenSet() const;
 
                 private:
 
@@ -877,14 +927,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_auditRunningStatusHasBeenSet;
 
                     /**
-                     * Private VIP
+                     * Private VIP 
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_internalVip;
                     bool m_internalVipHasBeenSet;
 
                     /**
-                     * Private network port
+                     * Private network port 
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_internalVport;
@@ -895,6 +945,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
+
+                    /**
+                     * Cluster ID. This field is only required for cluster database products like TDSQL-C. 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_clusterId;
+                    bool m_clusterIdHasBeenSet;
+
+                    /**
+                     * Cluster name. This field is only required for cluster database products like TDSQL-C. 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_clusterName;
+                    bool m_clusterNameHasBeenSet;
 
                 };
             }

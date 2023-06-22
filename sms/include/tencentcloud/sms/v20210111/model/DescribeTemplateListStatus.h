@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool InternationalHasBeenSet() const;
 
                     /**
-                     * 获取Template application status. Valid values: 0: approved; 1: under review; -1: application rejected or failed.
-                     * @return StatusCode Template application status. Valid values: 0: approved; 1: under review; -1: application rejected or failed.
+                     * 获取Template application status. Valid values: 0: approved and effective; 1: under review; 2: approved but to be effective; -1: application rejected or failed.
+                     * @return StatusCode Template application status. Valid values: 0: approved and effective; 1: under review; 2: approved but to be effective; -1: application rejected or failed.
                      * 
                      */
                     int64_t GetStatusCode() const;
 
                     /**
-                     * 设置Template application status. Valid values: 0: approved; 1: under review; -1: application rejected or failed.
-                     * @param _statusCode Template application status. Valid values: 0: approved; 1: under review; -1: application rejected or failed.
+                     * 设置Template application status. Valid values: 0: approved and effective; 1: under review; 2: approved but to be effective; -1: application rejected or failed.
+                     * @param _statusCode Template application status. Valid values: 0: approved and effective; 1: under review; 2: approved but to be effective; -1: application rejected or failed.
                      * 
                      */
                     void SetStatusCode(const int64_t& _statusCode);
@@ -208,7 +208,7 @@ namespace TencentCloud
                     bool m_internationalHasBeenSet;
 
                     /**
-                     * Template application status. Valid values: 0: approved; 1: under review; -1: application rejected or failed.
+                     * Template application status. Valid values: 0: approved and effective; 1: under review; 2: approved but to be effective; -1: application rejected or failed.
                      */
                     int64_t m_statusCode;
                     bool m_statusCodeHasBeenSet;

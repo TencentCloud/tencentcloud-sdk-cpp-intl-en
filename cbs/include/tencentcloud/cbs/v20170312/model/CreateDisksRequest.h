@@ -382,6 +382,27 @@ namespace TencentCloud
                      */
                     bool DiskBackupQuotaHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies whether to enable disk bursting.
+                     * @return BurstPerformance Specifies whether to enable disk bursting.
+                     * 
+                     */
+                    bool GetBurstPerformance() const;
+
+                    /**
+                     * 设置Specifies whether to enable disk bursting.
+                     * @param _burstPerformance Specifies whether to enable disk bursting.
+                     * 
+                     */
+                    void SetBurstPerformance(const bool& _burstPerformance);
+
+                    /**
+                     * 判断参数 BurstPerformance 是否已赋值
+                     * @return BurstPerformance 是否已赋值
+                     * 
+                     */
+                    bool BurstPerformanceHasBeenSet() const;
+
                 private:
 
                     /**
@@ -479,6 +500,12 @@ namespace TencentCloud
                      */
                     uint64_t m_diskBackupQuota;
                     bool m_diskBackupQuotaHasBeenSet;
+
+                    /**
+                     * Specifies whether to enable disk bursting.
+                     */
+                    bool m_burstPerformance;
+                    bool m_burstPerformanceHasBeenSet;
 
                 };
             }

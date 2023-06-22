@@ -329,6 +329,56 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool RecordUrlHasBeenSet() const;
 
+                    /**
+                     * 获取The maximum number of users allowed (including teachers) in the room. The default value is `0`, which indicates that no limit is set. 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MaxMicNumber The maximum number of users allowed (including teachers) in the room. The default value is `0`, which indicates that no limit is set. 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    uint64_t GetMaxMicNumber() const;
+
+                    /**
+                     * 设置The maximum number of users allowed (including teachers) in the room. The default value is `0`, which indicates that no limit is set. 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _maxMicNumber The maximum number of users allowed (including teachers) in the room. The default value is `0`, which indicates that no limit is set. 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetMaxMicNumber(const uint64_t& _maxMicNumber);
+
+                    /**
+                     * 判断参数 MaxMicNumber 是否已赋值
+                     * @return MaxMicNumber 是否已赋值
+                     * 
+                     */
+                    bool MaxMicNumberHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the students' consent is required to control their cameras/microphones.
+Note: This field may return null, indicating that no valid value was found.
+                     * @return EnableDirectControl Whether the students' consent is required to control their cameras/microphones.
+Note: This field may return null, indicating that no valid value was found.
+                     * 
+                     */
+                    uint64_t GetEnableDirectControl() const;
+
+                    /**
+                     * 设置Whether the students' consent is required to control their cameras/microphones.
+Note: This field may return null, indicating that no valid value was found.
+                     * @param _enableDirectControl Whether the students' consent is required to control their cameras/microphones.
+Note: This field may return null, indicating that no valid value was found.
+                     * 
+                     */
+                    void SetEnableDirectControl(const uint64_t& _enableDirectControl);
+
+                    /**
+                     * 判断参数 EnableDirectControl 是否已赋值
+                     * @return EnableDirectControl 是否已赋值
+                     * 
+                     */
+                    bool EnableDirectControlHasBeenSet() const;
+
                 private:
 
                     /**
@@ -409,6 +459,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_recordUrl;
                     bool m_recordUrlHasBeenSet;
+
+                    /**
+                     * The maximum number of users allowed (including teachers) in the room. The default value is `0`, which indicates that no limit is set. 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_maxMicNumber;
+                    bool m_maxMicNumberHasBeenSet;
+
+                    /**
+                     * Whether the students' consent is required to control their cameras/microphones.
+Note: This field may return null, indicating that no valid value was found.
+                     */
+                    uint64_t m_enableDirectControl;
+                    bool m_enableDirectControlHasBeenSet;
 
                 };
             }

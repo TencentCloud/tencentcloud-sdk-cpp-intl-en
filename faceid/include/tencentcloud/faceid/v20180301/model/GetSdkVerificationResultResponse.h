@@ -46,8 +46,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The result of the entire verification process.
-                     * @return Result The result of the entire verification process.
+                     * 获取The result code of the verification result.
+                     * @return Result The result code of the verification result.
                      * 
                      */
                     std::string GetResult() const;
@@ -60,8 +60,8 @@ namespace TencentCloud
                     bool ResultHasBeenSet() const;
 
                     /**
-                     * 获取The result description.
-                     * @return Description The result description.
+                     * 获取The verification result description.
+                     * @return Description The verification result description.
                      * 
                      */
                     std::string GetDescription() const;
@@ -88,8 +88,8 @@ namespace TencentCloud
                     bool ChargeCountHasBeenSet() const;
 
                     /**
-                     * 获取The results of multiple OCR processes (in order). The result of the final process is taken as the valid result.
-                     * @return CardVerifyResults The results of multiple OCR processes (in order). The result of the final process is taken as the valid result.
+                     * 获取The results of multiple OCR processes (in order). The result of the final process is used as the valid result.
+                     * @return CardVerifyResults The results of multiple OCR processes (in order). The result of the final process is used as the valid result.
                      * 
                      */
                     std::vector<CardVerifyResult> GetCardVerifyResults() const;
@@ -102,8 +102,8 @@ namespace TencentCloud
                     bool CardVerifyResultsHasBeenSet() const;
 
                     /**
-                     * 获取The results of multiple liveness detection processes (in order). The result of the final process is taken as the valid result.
-                     * @return CompareResults The results of multiple liveness detection processes (in order). The result of the final process is taken as the valid result.
+                     * 获取The results of multiple liveness detection processes (in order). The result of the final process is used as the valid result.
+                     * @return CompareResults The results of multiple liveness detection processes (in order). The result of the final process is used as the valid result.
                      * 
                      */
                     std::vector<CompareResult> GetCompareResults() const;
@@ -116,8 +116,8 @@ namespace TencentCloud
                     bool CompareResultsHasBeenSet() const;
 
                     /**
-                     * 获取Info passed in the process of getting the token.
-                     * @return Extra Info passed in the process of getting the token.
+                     * 获取Data passed through in the process of getting the token.
+                     * @return Extra Data passed through in the process of getting the token.
                      * 
                      */
                     std::string GetExtra() const;
@@ -132,13 +132,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The result of the entire verification process.
+                     * The result code of the verification result.
                      */
                     std::string m_result;
                     bool m_resultHasBeenSet;
 
                     /**
-                     * The result description.
+                     * The verification result description.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
@@ -150,19 +150,19 @@ namespace TencentCloud
                     bool m_chargeCountHasBeenSet;
 
                     /**
-                     * The results of multiple OCR processes (in order). The result of the final process is taken as the valid result.
+                     * The results of multiple OCR processes (in order). The result of the final process is used as the valid result.
                      */
                     std::vector<CardVerifyResult> m_cardVerifyResults;
                     bool m_cardVerifyResultsHasBeenSet;
 
                     /**
-                     * The results of multiple liveness detection processes (in order). The result of the final process is taken as the valid result.
+                     * The results of multiple liveness detection processes (in order). The result of the final process is used as the valid result.
                      */
                     std::vector<CompareResult> m_compareResults;
                     bool m_compareResultsHasBeenSet;
 
                     /**
-                     * Info passed in the process of getting the token.
+                     * Data passed through in the process of getting the token.
                      */
                     std::string m_extra;
                     bool m_extraHasBeenSet;

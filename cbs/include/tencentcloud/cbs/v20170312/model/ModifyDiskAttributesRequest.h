@@ -64,27 +64,6 @@ namespace TencentCloud
                     bool DiskIdsHasBeenSet() const;
 
                     /**
-                     * 获取The new project ID of the cloud disk. Only the project ID of elastic cloud disk can be modified. The available projects and their IDs can be queried via the API [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1).
-                     * @return ProjectId The new project ID of the cloud disk. Only the project ID of elastic cloud disk can be modified. The available projects and their IDs can be queried via the API [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1).
-                     * 
-                     */
-                    uint64_t GetProjectId() const;
-
-                    /**
-                     * 设置The new project ID of the cloud disk. Only the project ID of elastic cloud disk can be modified. The available projects and their IDs can be queried via the API [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1).
-                     * @param _projectId The new project ID of the cloud disk. Only the project ID of elastic cloud disk can be modified. The available projects and their IDs can be queried via the API [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1).
-                     * 
-                     */
-                    void SetProjectId(const uint64_t& _projectId);
-
-                    /**
-                     * 判断参数 ProjectId 是否已赋值
-                     * @return ProjectId 是否已赋值
-                     * 
-                     */
-                    bool ProjectIdHasBeenSet() const;
-
-                    /**
                      * 获取Name of new cloud disk.
                      * @return DiskName Name of new cloud disk.
                      * 
@@ -125,6 +104,27 @@ namespace TencentCloud
                      * 
                      */
                     bool PortableHasBeenSet() const;
+
+                    /**
+                     * 获取The new project ID of the cloud disk. Only the project ID of elastic cloud disk can be modified. The available projects and their IDs can be queried via the API [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1).
+                     * @return ProjectId The new project ID of the cloud disk. Only the project ID of elastic cloud disk can be modified. The available projects and their IDs can be queried via the API [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1).
+                     * 
+                     */
+                    uint64_t GetProjectId() const;
+
+                    /**
+                     * 设置The new project ID of the cloud disk. Only the project ID of elastic cloud disk can be modified. The available projects and their IDs can be queried via the API [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1).
+                     * @param _projectId The new project ID of the cloud disk. Only the project ID of elastic cloud disk can be modified. The available projects and their IDs can be queried via the API [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1).
+                     * 
+                     */
+                    void SetProjectId(const uint64_t& _projectId);
+
+                    /**
+                     * 判断参数 ProjectId 是否已赋值
+                     * @return ProjectId 是否已赋值
+                     * 
+                     */
+                    bool ProjectIdHasBeenSet() const;
 
                     /**
                      * 获取Whether the cloud disk is terminated with the CVM after it has been successfully mounted. `TRUE` indicates that it is terminated with the CVM. `FALSE` indicates that it is not terminated with the CVM. This is only supported for cloud disks and data disks that are pay-as-you-go.
@@ -168,6 +168,27 @@ namespace TencentCloud
                      */
                     bool DiskTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Enable/disable disk bursting.
+                     * @return BurstPerformanceOperation Enable/disable disk bursting.
+                     * 
+                     */
+                    std::string GetBurstPerformanceOperation() const;
+
+                    /**
+                     * 设置Enable/disable disk bursting.
+                     * @param _burstPerformanceOperation Enable/disable disk bursting.
+                     * 
+                     */
+                    void SetBurstPerformanceOperation(const std::string& _burstPerformanceOperation);
+
+                    /**
+                     * 判断参数 BurstPerformanceOperation 是否已赋值
+                     * @return BurstPerformanceOperation 是否已赋值
+                     * 
+                     */
+                    bool BurstPerformanceOperationHasBeenSet() const;
+
                 private:
 
                     /**
@@ -175,12 +196,6 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_diskIds;
                     bool m_diskIdsHasBeenSet;
-
-                    /**
-                     * The new project ID of the cloud disk. Only the project ID of elastic cloud disk can be modified. The available projects and their IDs can be queried via the API [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1).
-                     */
-                    uint64_t m_projectId;
-                    bool m_projectIdHasBeenSet;
 
                     /**
                      * Name of new cloud disk.
@@ -195,6 +210,12 @@ namespace TencentCloud
                     bool m_portableHasBeenSet;
 
                     /**
+                     * The new project ID of the cloud disk. Only the project ID of elastic cloud disk can be modified. The available projects and their IDs can be queried via the API [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1).
+                     */
+                    uint64_t m_projectId;
+                    bool m_projectIdHasBeenSet;
+
+                    /**
                      * Whether the cloud disk is terminated with the CVM after it has been successfully mounted. `TRUE` indicates that it is terminated with the CVM. `FALSE` indicates that it is not terminated with the CVM. This is only supported for cloud disks and data disks that are pay-as-you-go.
                      */
                     bool m_deleteWithInstance;
@@ -205,6 +226,12 @@ namespace TencentCloud
                      */
                     std::string m_diskType;
                     bool m_diskTypeHasBeenSet;
+
+                    /**
+                     * Enable/disable disk bursting.
+                     */
+                    std::string m_burstPerformanceOperation;
+                    bool m_burstPerformanceOperationHasBeenSet;
 
                 };
             }

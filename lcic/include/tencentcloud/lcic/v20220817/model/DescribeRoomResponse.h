@@ -253,6 +253,20 @@ namespace TencentCloud
                      */
                     bool GroupIdHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the students' consent is required to control their cameras/microphones.
+                     * @return EnableDirectControl Whether the students' consent is required to control their cameras/microphones.
+                     * 
+                     */
+                    uint64_t GetEnableDirectControl() const;
+
+                    /**
+                     * 判断参数 EnableDirectControl 是否已赋值
+                     * @return EnableDirectControl 是否已赋值
+                     * 
+                     */
+                    bool EnableDirectControlHasBeenSet() const;
+
                 private:
 
                     /**
@@ -344,6 +358,12 @@ namespace TencentCloud
                      */
                     std::string m_groupId;
                     bool m_groupIdHasBeenSet;
+
+                    /**
+                     * Whether the students' consent is required to control their cameras/microphones.
+                     */
+                    uint64_t m_enableDirectControl;
+                    bool m_enableDirectControlHasBeenSet;
 
                 };
             }

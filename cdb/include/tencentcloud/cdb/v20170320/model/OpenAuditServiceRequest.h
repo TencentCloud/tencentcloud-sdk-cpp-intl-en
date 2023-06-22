@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cdb/v20170320/model/AuditRuleFilters.h>
 
 
 namespace TencentCloud
@@ -64,39 +65,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Retention period of audit logs. Valid values:
-7: seven days (a week);
-30: 30 days (a month);
-180: 180 days (six months);
-365: 365 days (a year);
-1095: 1095 days (three years);
-1825: 1825 days (five years).
-                     * @return LogExpireDay Retention period of audit logs. Valid values:
-7: seven days (a week);
-30: 30 days (a month);
-180: 180 days (six months);
-365: 365 days (a year);
-1095: 1095 days (three years);
-1825: 1825 days (five years).
+                     * 获取Retention period of the audit log. Valid values:  `7` (one week), `30` (one month), `90` (three months), `180` (six months), `365` (one year), `1095` (three years), `1825` (five years).
+                     * @return LogExpireDay Retention period of the audit log. Valid values:  `7` (one week), `30` (one month), `90` (three months), `180` (six months), `365` (one year), `1095` (three years), `1825` (five years).
                      * 
                      */
                     uint64_t GetLogExpireDay() const;
 
                     /**
-                     * 设置Retention period of audit logs. Valid values:
-7: seven days (a week);
-30: 30 days (a month);
-180: 180 days (six months);
-365: 365 days (a year);
-1095: 1095 days (three years);
-1825: 1825 days (five years).
-                     * @param _logExpireDay Retention period of audit logs. Valid values:
-7: seven days (a week);
-30: 30 days (a month);
-180: 180 days (six months);
-365: 365 days (a year);
-1095: 1095 days (three years);
-1825: 1825 days (five years).
+                     * 设置Retention period of the audit log. Valid values:  `7` (one week), `30` (one month), `90` (three months), `180` (six months), `365` (one year), `1095` (three years), `1825` (five years).
+                     * @param _logExpireDay Retention period of the audit log. Valid values:  `7` (one week), `30` (one month), `90` (three months), `180` (six months), `365` (one year), `1095` (three years), `1825` (five years).
                      * 
                      */
                     void SetLogExpireDay(const uint64_t& _logExpireDay);
@@ -109,39 +86,15 @@ namespace TencentCloud
                     bool LogExpireDayHasBeenSet() const;
 
                     /**
-                     * 获取Retention period of high-frequency audit logs. Valid values:
-7: seven days (a week);
-30: 30 days (a month);
-180: 180 days (six months);
-365: 365 days (a year);
-1095: 1095 days (three years);
-1825: 1825 days (five years).
-                     * @return HighLogExpireDay Retention period of high-frequency audit logs. Valid values:
-7: seven days (a week);
-30: 30 days (a month);
-180: 180 days (six months);
-365: 365 days (a year);
-1095: 1095 days (three years);
-1825: 1825 days (five years).
+                     * 获取Retention period of high-frequency audit logs. Valid values:  `7` (one week), `30` (one month).
+                     * @return HighLogExpireDay Retention period of high-frequency audit logs. Valid values:  `7` (one week), `30` (one month).
                      * 
                      */
                     uint64_t GetHighLogExpireDay() const;
 
                     /**
-                     * 设置Retention period of high-frequency audit logs. Valid values:
-7: seven days (a week);
-30: 30 days (a month);
-180: 180 days (six months);
-365: 365 days (a year);
-1095: 1095 days (three years);
-1825: 1825 days (five years).
-                     * @param _highLogExpireDay Retention period of high-frequency audit logs. Valid values:
-7: seven days (a week);
-30: 30 days (a month);
-180: 180 days (six months);
-365: 365 days (a year);
-1095: 1095 days (three years);
-1825: 1825 days (five years).
+                     * 设置Retention period of high-frequency audit logs. Valid values:  `7` (one week), `30` (one month).
+                     * @param _highLogExpireDay Retention period of high-frequency audit logs. Valid values:  `7` (one week), `30` (one month).
                      * 
                      */
                     void SetHighLogExpireDay(const uint64_t& _highLogExpireDay);
@@ -153,6 +106,48 @@ namespace TencentCloud
                      */
                     bool HighLogExpireDayHasBeenSet() const;
 
+                    /**
+                     * 获取Audit rule If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
+                     * @return AuditRuleFilters Audit rule If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
+                     * 
+                     */
+                    std::vector<AuditRuleFilters> GetAuditRuleFilters() const;
+
+                    /**
+                     * 设置Audit rule If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
+                     * @param _auditRuleFilters Audit rule If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
+                     * 
+                     */
+                    void SetAuditRuleFilters(const std::vector<AuditRuleFilters>& _auditRuleFilters);
+
+                    /**
+                     * 判断参数 AuditRuleFilters 是否已赋值
+                     * @return AuditRuleFilters 是否已赋值
+                     * 
+                     */
+                    bool AuditRuleFiltersHasBeenSet() const;
+
+                    /**
+                     * 获取Rule template ID If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied.
+                     * @return RuleTemplateIds Rule template ID If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied.
+                     * 
+                     */
+                    std::vector<std::string> GetRuleTemplateIds() const;
+
+                    /**
+                     * 设置Rule template ID If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied.
+                     * @param _ruleTemplateIds Rule template ID If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied.
+                     * 
+                     */
+                    void SetRuleTemplateIds(const std::vector<std::string>& _ruleTemplateIds);
+
+                    /**
+                     * 判断参数 RuleTemplateIds 是否已赋值
+                     * @return RuleTemplateIds 是否已赋值
+                     * 
+                     */
+                    bool RuleTemplateIdsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -162,28 +157,28 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Retention period of audit logs. Valid values:
-7: seven days (a week);
-30: 30 days (a month);
-180: 180 days (six months);
-365: 365 days (a year);
-1095: 1095 days (three years);
-1825: 1825 days (five years).
+                     * Retention period of the audit log. Valid values:  `7` (one week), `30` (one month), `90` (three months), `180` (six months), `365` (one year), `1095` (three years), `1825` (five years).
                      */
                     uint64_t m_logExpireDay;
                     bool m_logExpireDayHasBeenSet;
 
                     /**
-                     * Retention period of high-frequency audit logs. Valid values:
-7: seven days (a week);
-30: 30 days (a month);
-180: 180 days (six months);
-365: 365 days (a year);
-1095: 1095 days (three years);
-1825: 1825 days (five years).
+                     * Retention period of high-frequency audit logs. Valid values:  `7` (one week), `30` (one month).
                      */
                     uint64_t m_highLogExpireDay;
                     bool m_highLogExpireDayHasBeenSet;
+
+                    /**
+                     * Audit rule If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
+                     */
+                    std::vector<AuditRuleFilters> m_auditRuleFilters;
+                    bool m_auditRuleFiltersHasBeenSet;
+
+                    /**
+                     * Rule template ID If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied.
+                     */
+                    std::vector<std::string> m_ruleTemplateIds;
+                    bool m_ruleTemplateIdsHasBeenSet;
 
                 };
             }

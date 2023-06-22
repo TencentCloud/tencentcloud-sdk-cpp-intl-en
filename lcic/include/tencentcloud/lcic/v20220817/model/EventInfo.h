@@ -69,19 +69,51 @@ namespace TencentCloud
                     bool TimestampHasBeenSet() const;
 
                     /**
-                     * 获取The event type. Valid values:
+                     * 获取The event type. Valid values: 
 `RoomStart`: The class started. `RoomEnd`: The class ended. `MemberJoin`: A user joined. `MemberQuit`: A user left. `RecordFinish`: Recording is finished.
-                     * @return EventType The event type. Valid values:
+·Camera0n·: The camera is turned on.
+`Camera0ff`: The camera is turned off.
+`MicOn`: The mic is turned on.
+`MicOff`: The mic is turned off.
+`ScreenOn`: Screen sharing is enabled.
+`ScreenOff`: Screen sharing is disabled.
+`VisibleOn`: The page is visible.
+`VisibleOff`: The page is invisible.
+                     * @return EventType The event type. Valid values: 
 `RoomStart`: The class started. `RoomEnd`: The class ended. `MemberJoin`: A user joined. `MemberQuit`: A user left. `RecordFinish`: Recording is finished.
+·Camera0n·: The camera is turned on.
+`Camera0ff`: The camera is turned off.
+`MicOn`: The mic is turned on.
+`MicOff`: The mic is turned off.
+`ScreenOn`: Screen sharing is enabled.
+`ScreenOff`: Screen sharing is disabled.
+`VisibleOn`: The page is visible.
+`VisibleOff`: The page is invisible.
                      * 
                      */
                     std::string GetEventType() const;
 
                     /**
-                     * 设置The event type. Valid values:
+                     * 设置The event type. Valid values: 
 `RoomStart`: The class started. `RoomEnd`: The class ended. `MemberJoin`: A user joined. `MemberQuit`: A user left. `RecordFinish`: Recording is finished.
-                     * @param _eventType The event type. Valid values:
+·Camera0n·: The camera is turned on.
+`Camera0ff`: The camera is turned off.
+`MicOn`: The mic is turned on.
+`MicOff`: The mic is turned off.
+`ScreenOn`: Screen sharing is enabled.
+`ScreenOff`: Screen sharing is disabled.
+`VisibleOn`: The page is visible.
+`VisibleOff`: The page is invisible.
+                     * @param _eventType The event type. Valid values: 
 `RoomStart`: The class started. `RoomEnd`: The class ended. `MemberJoin`: A user joined. `MemberQuit`: A user left. `RecordFinish`: Recording is finished.
+·Camera0n·: The camera is turned on.
+`Camera0ff`: The camera is turned off.
+`MicOn`: The mic is turned on.
+`MicOff`: The mic is turned off.
+`ScreenOn`: Screen sharing is enabled.
+`ScreenOff`: Screen sharing is disabled.
+`VisibleOn`: The page is visible.
+`VisibleOff`: The page is invisible.
                      * 
                      */
                     void SetEventType(const std::string& _eventType);
@@ -127,8 +159,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_timestampHasBeenSet;
 
                     /**
-                     * The event type. Valid values:
+                     * The event type. Valid values: 
 `RoomStart`: The class started. `RoomEnd`: The class ended. `MemberJoin`: A user joined. `MemberQuit`: A user left. `RecordFinish`: Recording is finished.
+·Camera0n·: The camera is turned on.
+`Camera0ff`: The camera is turned off.
+`MicOn`: The mic is turned on.
+`MicOff`: The mic is turned off.
+`ScreenOn`: Screen sharing is enabled.
+`ScreenOff`: Screen sharing is disabled.
+`VisibleOn`: The page is visible.
+`VisibleOff`: The page is invisible.
                      */
                     std::string m_eventType;
                     bool m_eventTypeHasBeenSet;

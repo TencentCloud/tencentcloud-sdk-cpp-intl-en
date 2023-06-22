@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the new snapshot.
-                     * @return SnapshotId ID of the new snapshot.
+                     * 获取ID of the created snapshot <br/>Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SnapshotId ID of the created snapshot <br/>Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSnapshotId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the new snapshot.
+                     * ID of the created snapshot <br/>Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_snapshotId;
                     bool m_snapshotIdHasBeenSet;

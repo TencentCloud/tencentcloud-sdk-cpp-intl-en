@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/dbbrain/v20210527/model/SlowLogHost.h>
+#include <tencentcloud/dbbrain/v20210527/model/SlowLogUser.h>
 
 
 namespace TencentCloud
@@ -72,6 +73,34 @@ namespace TencentCloud
                      */
                     bool ItemsHasBeenSet() const;
 
+                    /**
+                     * 获取Detailed list of the percentages of slow logs from different source usernames
+                     * @return UserNameItems Detailed list of the percentages of slow logs from different source usernames
+                     * 
+                     */
+                    std::vector<SlowLogUser> GetUserNameItems() const;
+
+                    /**
+                     * 判断参数 UserNameItems 是否已赋值
+                     * @return UserNameItems 是否已赋值
+                     * 
+                     */
+                    bool UserNameItemsHasBeenSet() const;
+
+                    /**
+                     * 获取The number of source users
+                     * @return UserTotalCount The number of source users
+                     * 
+                     */
+                    int64_t GetUserTotalCount() const;
+
+                    /**
+                     * 判断参数 UserTotalCount 是否已赋值
+                     * @return UserTotalCount 是否已赋值
+                     * 
+                     */
+                    bool UserTotalCountHasBeenSet() const;
+
                 private:
 
                     /**
@@ -85,6 +114,18 @@ namespace TencentCloud
                      */
                     std::vector<SlowLogHost> m_items;
                     bool m_itemsHasBeenSet;
+
+                    /**
+                     * Detailed list of the percentages of slow logs from different source usernames
+                     */
+                    std::vector<SlowLogUser> m_userNameItems;
+                    bool m_userNameItemsHasBeenSet;
+
+                    /**
+                     * The number of source users
+                     */
+                    int64_t m_userTotalCount;
+                    bool m_userTotalCountHasBeenSet;
 
                 };
             }

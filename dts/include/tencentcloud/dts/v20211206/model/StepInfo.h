@@ -223,19 +223,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool WarningsHasBeenSet() const;
 
                     /**
-                     * 获取Progress of the current step. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Progress Progress of the current step. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Current step progress. Value range: 0-100. The value `-1` indicates that the progress of the current step is unavailable. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Progress Current step progress. Value range: 0-100. The value `-1` indicates that the progress of the current step is unavailable. Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetProgress() const;
 
                     /**
-                     * 设置Progress of the current step. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _progress Progress of the current step. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Current step progress. Value range: 0-100. The value `-1` indicates that the progress of the current step is unavailable. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _progress Current step progress. Value range: 0-100. The value `-1` indicates that the progress of the current step is unavailable. Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetProgress(const int64_t& _progress);
@@ -299,8 +295,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_warningsHasBeenSet;
 
                     /**
-                     * Progress of the current step. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Current step progress. Value range: 0-100. The value `-1` indicates that the progress of the current step is unavailable. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_progress;
                     bool m_progressHasBeenSet;

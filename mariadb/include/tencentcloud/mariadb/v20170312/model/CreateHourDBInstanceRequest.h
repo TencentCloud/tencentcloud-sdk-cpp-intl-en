@@ -276,15 +276,15 @@ namespace TencentCloud
                     bool SecurityGroupIdsHasBeenSet() const;
 
                     /**
-                     * 获取Whether IPv6 is supported.
-                     * @return Ipv6Flag Whether IPv6 is supported.
+                     * 获取Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
+                     * @return Ipv6Flag Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
                      * 
                      */
                     int64_t GetIpv6Flag() const;
 
                     /**
-                     * 设置Whether IPv6 is supported.
-                     * @param _ipv6Flag Whether IPv6 is supported.
+                     * 设置Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
+                     * @param _ipv6Flag Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
                      * 
                      */
                     void SetIpv6Flag(const int64_t& _ipv6Flag);
@@ -389,15 +389,15 @@ namespace TencentCloud
                     bool InitParamsHasBeenSet() const;
 
                     /**
-                     * 获取ID of the instance whose backup data will be rolled back to the new instance you create.
-                     * @return RollbackInstanceId ID of the instance whose backup data will be rolled back to the new instance you create.
+                     * 获取ID of the instance to be rolled back, such as “2021-11-22 00:00:00”.
+                     * @return RollbackInstanceId ID of the instance to be rolled back, such as “2021-11-22 00:00:00”.
                      * 
                      */
                     std::string GetRollbackInstanceId() const;
 
                     /**
-                     * 设置ID of the instance whose backup data will be rolled back to the new instance you create.
-                     * @param _rollbackInstanceId ID of the instance whose backup data will be rolled back to the new instance you create.
+                     * 设置ID of the instance to be rolled back, such as “2021-11-22 00:00:00”.
+                     * @param _rollbackInstanceId ID of the instance to be rolled back, such as “2021-11-22 00:00:00”.
                      * 
                      */
                     void SetRollbackInstanceId(const std::string& _rollbackInstanceId);
@@ -499,7 +499,7 @@ namespace TencentCloud
                     bool m_securityGroupIdsHasBeenSet;
 
                     /**
-                     * Whether IPv6 is supported.
+                     * Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
                      */
                     int64_t m_ipv6Flag;
                     bool m_ipv6FlagHasBeenSet;
@@ -531,7 +531,7 @@ namespace TencentCloud
                     bool m_initParamsHasBeenSet;
 
                     /**
-                     * ID of the instance whose backup data will be rolled back to the new instance you create.
+                     * ID of the instance to be rolled back, such as “2021-11-22 00:00:00”.
                      */
                     std::string m_rollbackInstanceId;
                     bool m_rollbackInstanceIdHasBeenSet;

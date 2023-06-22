@@ -24,11 +24,12 @@ using namespace std;
 
 ModifyDiskAttributesRequest::ModifyDiskAttributesRequest() :
     m_diskIdsHasBeenSet(false),
-    m_projectIdHasBeenSet(false),
     m_diskNameHasBeenSet(false),
     m_portableHasBeenSet(false),
+    m_projectIdHasBeenSet(false),
     m_deleteWithInstanceHasBeenSet(false),
-    m_diskTypeHasBeenSet(false)
+    m_diskTypeHasBeenSet(false),
+    m_burstPerformanceOperationHasBeenSet(false)
 {
 }
 
@@ -52,14 +53,6 @@ string ModifyDiskAttributesRequest::ToJsonString() const
         }
     }
 
-    if (m_projectIdHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "ProjectId";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, m_projectId, allocator);
-    }
-
     if (m_diskNameHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -76,6 +69,14 @@ string ModifyDiskAttributesRequest::ToJsonString() const
         d.AddMember(iKey, m_portable, allocator);
     }
 
+    if (m_projectIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ProjectId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_projectId, allocator);
+    }
+
     if (m_deleteWithInstanceHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -90,6 +91,14 @@ string ModifyDiskAttributesRequest::ToJsonString() const
         string key = "DiskType";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_diskType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_burstPerformanceOperationHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BurstPerformanceOperation";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_burstPerformanceOperation.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -114,22 +123,6 @@ void ModifyDiskAttributesRequest::SetDiskIds(const vector<string>& _diskIds)
 bool ModifyDiskAttributesRequest::DiskIdsHasBeenSet() const
 {
     return m_diskIdsHasBeenSet;
-}
-
-uint64_t ModifyDiskAttributesRequest::GetProjectId() const
-{
-    return m_projectId;
-}
-
-void ModifyDiskAttributesRequest::SetProjectId(const uint64_t& _projectId)
-{
-    m_projectId = _projectId;
-    m_projectIdHasBeenSet = true;
-}
-
-bool ModifyDiskAttributesRequest::ProjectIdHasBeenSet() const
-{
-    return m_projectIdHasBeenSet;
 }
 
 string ModifyDiskAttributesRequest::GetDiskName() const
@@ -164,6 +157,22 @@ bool ModifyDiskAttributesRequest::PortableHasBeenSet() const
     return m_portableHasBeenSet;
 }
 
+uint64_t ModifyDiskAttributesRequest::GetProjectId() const
+{
+    return m_projectId;
+}
+
+void ModifyDiskAttributesRequest::SetProjectId(const uint64_t& _projectId)
+{
+    m_projectId = _projectId;
+    m_projectIdHasBeenSet = true;
+}
+
+bool ModifyDiskAttributesRequest::ProjectIdHasBeenSet() const
+{
+    return m_projectIdHasBeenSet;
+}
+
 bool ModifyDiskAttributesRequest::GetDeleteWithInstance() const
 {
     return m_deleteWithInstance;
@@ -194,6 +203,22 @@ void ModifyDiskAttributesRequest::SetDiskType(const string& _diskType)
 bool ModifyDiskAttributesRequest::DiskTypeHasBeenSet() const
 {
     return m_diskTypeHasBeenSet;
+}
+
+string ModifyDiskAttributesRequest::GetBurstPerformanceOperation() const
+{
+    return m_burstPerformanceOperation;
+}
+
+void ModifyDiskAttributesRequest::SetBurstPerformanceOperation(const string& _burstPerformanceOperation)
+{
+    m_burstPerformanceOperation = _burstPerformanceOperation;
+    m_burstPerformanceOperationHasBeenSet = true;
+}
+
+bool ModifyDiskAttributesRequest::BurstPerformanceOperationHasBeenSet() const
+{
+    return m_burstPerformanceOperationHasBeenSet;
 }
 
 

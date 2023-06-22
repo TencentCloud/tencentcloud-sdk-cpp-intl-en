@@ -105,6 +105,8 @@
 #include <tencentcloud/lcic/v20220817/model/GetRoomsResponse.h>
 #include <tencentcloud/lcic/v20220817/model/GetWatermarkRequest.h>
 #include <tencentcloud/lcic/v20220817/model/GetWatermarkResponse.h>
+#include <tencentcloud/lcic/v20220817/model/KickUserFromRoomRequest.h>
+#include <tencentcloud/lcic/v20220817/model/KickUserFromRoomResponse.h>
 #include <tencentcloud/lcic/v20220817/model/LoginOriginIdRequest.h>
 #include <tencentcloud/lcic/v20220817/model/LoginOriginIdResponse.h>
 #include <tencentcloud/lcic/v20220817/model/LoginUserRequest.h>
@@ -264,6 +266,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::GetWatermarkResponse> GetWatermarkOutcome;
                 typedef std::future<GetWatermarkOutcome> GetWatermarkOutcomeCallable;
                 typedef std::function<void(const LcicClient*, const Model::GetWatermarkRequest&, GetWatermarkOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetWatermarkAsyncHandler;
+                typedef Outcome<Core::Error, Model::KickUserFromRoomResponse> KickUserFromRoomOutcome;
+                typedef std::future<KickUserFromRoomOutcome> KickUserFromRoomOutcomeCallable;
+                typedef std::function<void(const LcicClient*, const Model::KickUserFromRoomRequest&, KickUserFromRoomOutcome, const std::shared_ptr<const AsyncCallerContext>&)> KickUserFromRoomAsyncHandler;
                 typedef Outcome<Core::Error, Model::LoginOriginIdResponse> LoginOriginIdOutcome;
                 typedef std::future<LoginOriginIdOutcome> LoginOriginIdOutcomeCallable;
                 typedef std::function<void(const LcicClient*, const Model::LoginOriginIdRequest&, LoginOriginIdOutcome, const std::shared_ptr<const AsyncCallerContext>&)> LoginOriginIdAsyncHandler;
@@ -522,7 +527,7 @@ A maximum of 20 requests can be initiated per second for this API.
                 DescribeCurrentMemberListOutcomeCallable DescribeCurrentMemberListCallable(const Model::DescribeCurrentMemberListRequest& request);
 
                 /**
-                 *This API is used to get the developer information.
+                 *This API is used to get developer information.
                  * @param req DescribeDeveloperRequest
                  * @return DescribeDeveloperOutcome
                  */
@@ -695,6 +700,15 @@ A maximum of 20 requests can be initiated per second for this API.
                 GetWatermarkOutcome GetWatermark(const Model::GetWatermarkRequest &request);
                 void GetWatermarkAsync(const Model::GetWatermarkRequest& request, const GetWatermarkAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 GetWatermarkOutcomeCallable GetWatermarkCallable(const Model::GetWatermarkRequest& request);
+
+                /**
+                 *This API is used to remove a user from the room.
+                 * @param req KickUserFromRoomRequest
+                 * @return KickUserFromRoomOutcome
+                 */
+                KickUserFromRoomOutcome KickUserFromRoom(const Model::KickUserFromRoomRequest &request);
+                void KickUserFromRoomAsync(const Model::KickUserFromRoomRequest& request, const KickUserFromRoomAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                KickUserFromRoomOutcomeCallable KickUserFromRoomCallable(const Model::KickUserFromRoomRequest& request);
 
                 /**
                  *This API is used to log in with an origin account, which is the `originId` entered during registration.
