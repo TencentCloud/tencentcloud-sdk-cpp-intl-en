@@ -57,6 +57,7 @@ set(emr_public_header_model
   include/tencentcloud/emr/v20190103/model/PodParameter.h
   include/tencentcloud/emr/v20190103/model/AllNodeResourceSpec.h
   include/tencentcloud/emr/v20190103/model/DescribeUsersForUserManagerRequest.h
+  include/tencentcloud/emr/v20190103/model/StrategyConfig.h
   include/tencentcloud/emr/v20190103/model/StartStopServiceOrMonitorResponse.h
   include/tencentcloud/emr/v20190103/model/MultiDisk.h
   include/tencentcloud/emr/v20190103/model/PodNewParameter.h
@@ -164,6 +165,7 @@ set(emr_src
   src/v20190103/model/PodParameter.cpp
   src/v20190103/model/AllNodeResourceSpec.cpp
   src/v20190103/model/DescribeUsersForUserManagerRequest.cpp
+  src/v20190103/model/StrategyConfig.cpp
   src/v20190103/model/StartStopServiceOrMonitorResponse.cpp
   src/v20190103/model/MultiDisk.cpp
   src/v20190103/model/PodNewParameter.cpp

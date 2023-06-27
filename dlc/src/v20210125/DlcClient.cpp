@@ -40,6 +40,49 @@ DlcClient::DlcClient(const Credential &credential, const string &region, const C
 }
 
 
+DlcClient::CancelSparkSessionBatchSQLOutcome DlcClient::CancelSparkSessionBatchSQL(const CancelSparkSessionBatchSQLRequest &request)
+{
+    auto outcome = MakeRequest(request, "CancelSparkSessionBatchSQL");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CancelSparkSessionBatchSQLResponse rsp = CancelSparkSessionBatchSQLResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CancelSparkSessionBatchSQLOutcome(rsp);
+        else
+            return CancelSparkSessionBatchSQLOutcome(o.GetError());
+    }
+    else
+    {
+        return CancelSparkSessionBatchSQLOutcome(outcome.GetError());
+    }
+}
+
+void DlcClient::CancelSparkSessionBatchSQLAsync(const CancelSparkSessionBatchSQLRequest& request, const CancelSparkSessionBatchSQLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CancelSparkSessionBatchSQL(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DlcClient::CancelSparkSessionBatchSQLOutcomeCallable DlcClient::CancelSparkSessionBatchSQLCallable(const CancelSparkSessionBatchSQLRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CancelSparkSessionBatchSQLOutcome()>>(
+        [this, request]()
+        {
+            return this->CancelSparkSessionBatchSQL(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 DlcClient::CancelTaskOutcome DlcClient::CancelTask(const CancelTaskRequest &request)
 {
     auto outcome = MakeRequest(request, "CancelTask");
@@ -291,6 +334,49 @@ DlcClient::CreateSparkAppTaskOutcomeCallable DlcClient::CreateSparkAppTaskCallab
         [this, request]()
         {
             return this->CreateSparkAppTask(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DlcClient::CreateSparkSessionBatchSQLOutcome DlcClient::CreateSparkSessionBatchSQL(const CreateSparkSessionBatchSQLRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateSparkSessionBatchSQL");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateSparkSessionBatchSQLResponse rsp = CreateSparkSessionBatchSQLResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateSparkSessionBatchSQLOutcome(rsp);
+        else
+            return CreateSparkSessionBatchSQLOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateSparkSessionBatchSQLOutcome(outcome.GetError());
+    }
+}
+
+void DlcClient::CreateSparkSessionBatchSQLAsync(const CreateSparkSessionBatchSQLRequest& request, const CreateSparkSessionBatchSQLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateSparkSessionBatchSQL(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DlcClient::CreateSparkSessionBatchSQLOutcomeCallable DlcClient::CreateSparkSessionBatchSQLCallable(const CreateSparkSessionBatchSQLRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateSparkSessionBatchSQLOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateSparkSessionBatchSQL(request);
         }
     );
 
@@ -771,6 +857,49 @@ DlcClient::DescribeSparkAppTasksOutcomeCallable DlcClient::DescribeSparkAppTasks
     return task->get_future();
 }
 
+DlcClient::DescribeSparkSessionBatchSqlLogOutcome DlcClient::DescribeSparkSessionBatchSqlLog(const DescribeSparkSessionBatchSqlLogRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeSparkSessionBatchSqlLog");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeSparkSessionBatchSqlLogResponse rsp = DescribeSparkSessionBatchSqlLogResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeSparkSessionBatchSqlLogOutcome(rsp);
+        else
+            return DescribeSparkSessionBatchSqlLogOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeSparkSessionBatchSqlLogOutcome(outcome.GetError());
+    }
+}
+
+void DlcClient::DescribeSparkSessionBatchSqlLogAsync(const DescribeSparkSessionBatchSqlLogRequest& request, const DescribeSparkSessionBatchSqlLogAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeSparkSessionBatchSqlLog(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DlcClient::DescribeSparkSessionBatchSqlLogOutcomeCallable DlcClient::DescribeSparkSessionBatchSqlLogCallable(const DescribeSparkSessionBatchSqlLogRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeSparkSessionBatchSqlLogOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeSparkSessionBatchSqlLog(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 DlcClient::DescribeTaskResultOutcome DlcClient::DescribeTaskResult(const DescribeTaskResultRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeTaskResult");
@@ -979,6 +1108,49 @@ DlcClient::ModifySparkAppOutcomeCallable DlcClient::ModifySparkAppCallable(const
         [this, request]()
         {
             return this->ModifySparkApp(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DlcClient::ModifySparkAppBatchOutcome DlcClient::ModifySparkAppBatch(const ModifySparkAppBatchRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifySparkAppBatch");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifySparkAppBatchResponse rsp = ModifySparkAppBatchResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifySparkAppBatchOutcome(rsp);
+        else
+            return ModifySparkAppBatchOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifySparkAppBatchOutcome(outcome.GetError());
+    }
+}
+
+void DlcClient::ModifySparkAppBatchAsync(const ModifySparkAppBatchRequest& request, const ModifySparkAppBatchAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifySparkAppBatch(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DlcClient::ModifySparkAppBatchOutcomeCallable DlcClient::ModifySparkAppBatchCallable(const ModifySparkAppBatchRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifySparkAppBatchOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifySparkAppBatch(request);
         }
     );
 

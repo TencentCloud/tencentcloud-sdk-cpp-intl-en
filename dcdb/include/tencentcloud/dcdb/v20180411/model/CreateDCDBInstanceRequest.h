@@ -376,15 +376,15 @@ The current purchasable AZ needs be pulled through `DescribeDCDBSaleInfo` API.
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取Whether IPv6 is supported
-                     * @return Ipv6Flag Whether IPv6 is supported
+                     * 获取Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
+                     * @return Ipv6Flag Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
                      * 
                      */
                     int64_t GetIpv6Flag() const;
 
                     /**
-                     * 设置Whether IPv6 is supported
-                     * @param _ipv6Flag Whether IPv6 is supported
+                     * 设置Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
+                     * @param _ipv6Flag Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
                      * 
                      */
                     void SetIpv6Flag(const int64_t& _ipv6Flag);
@@ -481,15 +481,15 @@ The current purchasable AZ needs be pulled through `DescribeDCDBSaleInfo` API.
                     bool DcnInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Renewal mode. Valid values: `0` (Manual renewal, which is the default mode), `1` (Auto-renewal), `2` (Manual renewal, which is specified by users). If no renewal is required, set it to `0`.
-                     * @return AutoRenewFlag Renewal mode. Valid values: `0` (Manual renewal, which is the default mode), `1` (Auto-renewal), `2` (Manual renewal, which is specified by users). If no renewal is required, set it to `0`.
+                     * 获取Renewal mode. Valid values: `0` (manual renewal, which is the default mode), `1` (auto-renewal), `2` (manual renewal, which is specified by users).  If no renewal is required, set it to `0`.
+                     * @return AutoRenewFlag Renewal mode. Valid values: `0` (manual renewal, which is the default mode), `1` (auto-renewal), `2` (manual renewal, which is specified by users).  If no renewal is required, set it to `0`.
                      * 
                      */
                     int64_t GetAutoRenewFlag() const;
 
                     /**
-                     * 设置Renewal mode. Valid values: `0` (Manual renewal, which is the default mode), `1` (Auto-renewal), `2` (Manual renewal, which is specified by users). If no renewal is required, set it to `0`.
-                     * @param _autoRenewFlag Renewal mode. Valid values: `0` (Manual renewal, which is the default mode), `1` (Auto-renewal), `2` (Manual renewal, which is specified by users). If no renewal is required, set it to `0`.
+                     * 设置Renewal mode. Valid values: `0` (manual renewal, which is the default mode), `1` (auto-renewal), `2` (manual renewal, which is specified by users).  If no renewal is required, set it to `0`.
+                     * @param _autoRenewFlag Renewal mode. Valid values: `0` (manual renewal, which is the default mode), `1` (auto-renewal), `2` (manual renewal, which is specified by users).  If no renewal is required, set it to `0`.
                      * 
                      */
                     void SetAutoRenewFlag(const int64_t& _autoRenewFlag);
@@ -619,7 +619,7 @@ The current purchasable AZ needs be pulled through `DescribeDCDBSaleInfo` API.
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * Whether IPv6 is supported
+                     * Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
                      */
                     int64_t m_ipv6Flag;
                     bool m_ipv6FlagHasBeenSet;
@@ -649,7 +649,7 @@ The current purchasable AZ needs be pulled through `DescribeDCDBSaleInfo` API.
                     bool m_dcnInstanceIdHasBeenSet;
 
                     /**
-                     * Renewal mode. Valid values: `0` (Manual renewal, which is the default mode), `1` (Auto-renewal), `2` (Manual renewal, which is specified by users). If no renewal is required, set it to `0`.
+                     * Renewal mode. Valid values: `0` (manual renewal, which is the default mode), `1` (auto-renewal), `2` (manual renewal, which is specified by users).  If no renewal is required, set it to `0`.
                      */
                     int64_t m_autoRenewFlag;
                     bool m_autoRenewFlagHasBeenSet;

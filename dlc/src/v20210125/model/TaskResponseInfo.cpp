@@ -52,7 +52,15 @@ TaskResponseInfo::TaskResponseInfo() :
     m_sparkJobFileHasBeenSet(false),
     m_uiUrlHasBeenSet(false),
     m_totalTimeHasBeenSet(false),
-    m_cmdArgsHasBeenSet(false)
+    m_cmdArgsHasBeenSet(false),
+    m_imageVersionHasBeenSet(false),
+    m_driverSizeHasBeenSet(false),
+    m_executorSizeHasBeenSet(false),
+    m_executorNumsHasBeenSet(false),
+    m_executorMaxNumbersHasBeenSet(false),
+    m_commonMetricsHasBeenSet(false),
+    m_sparkMonitorMetricsHasBeenSet(false),
+    m_prestoMonitorMetricsHasBeenSet(false)
 {
 }
 
@@ -381,6 +389,107 @@ CoreInternalOutcome TaskResponseInfo::Deserialize(const rapidjson::Value &value)
         m_cmdArgsHasBeenSet = true;
     }
 
+    if (value.HasMember("ImageVersion") && !value["ImageVersion"].IsNull())
+    {
+        if (!value["ImageVersion"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `TaskResponseInfo.ImageVersion` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_imageVersion = string(value["ImageVersion"].GetString());
+        m_imageVersionHasBeenSet = true;
+    }
+
+    if (value.HasMember("DriverSize") && !value["DriverSize"].IsNull())
+    {
+        if (!value["DriverSize"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `TaskResponseInfo.DriverSize` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_driverSize = string(value["DriverSize"].GetString());
+        m_driverSizeHasBeenSet = true;
+    }
+
+    if (value.HasMember("ExecutorSize") && !value["ExecutorSize"].IsNull())
+    {
+        if (!value["ExecutorSize"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `TaskResponseInfo.ExecutorSize` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_executorSize = string(value["ExecutorSize"].GetString());
+        m_executorSizeHasBeenSet = true;
+    }
+
+    if (value.HasMember("ExecutorNums") && !value["ExecutorNums"].IsNull())
+    {
+        if (!value["ExecutorNums"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `TaskResponseInfo.ExecutorNums` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_executorNums = value["ExecutorNums"].GetUint64();
+        m_executorNumsHasBeenSet = true;
+    }
+
+    if (value.HasMember("ExecutorMaxNumbers") && !value["ExecutorMaxNumbers"].IsNull())
+    {
+        if (!value["ExecutorMaxNumbers"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `TaskResponseInfo.ExecutorMaxNumbers` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_executorMaxNumbers = value["ExecutorMaxNumbers"].GetUint64();
+        m_executorMaxNumbersHasBeenSet = true;
+    }
+
+    if (value.HasMember("CommonMetrics") && !value["CommonMetrics"].IsNull())
+    {
+        if (!value["CommonMetrics"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `TaskResponseInfo.CommonMetrics` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_commonMetrics.Deserialize(value["CommonMetrics"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_commonMetricsHasBeenSet = true;
+    }
+
+    if (value.HasMember("SparkMonitorMetrics") && !value["SparkMonitorMetrics"].IsNull())
+    {
+        if (!value["SparkMonitorMetrics"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `TaskResponseInfo.SparkMonitorMetrics` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_sparkMonitorMetrics.Deserialize(value["SparkMonitorMetrics"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_sparkMonitorMetricsHasBeenSet = true;
+    }
+
+    if (value.HasMember("PrestoMonitorMetrics") && !value["PrestoMonitorMetrics"].IsNull())
+    {
+        if (!value["PrestoMonitorMetrics"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `TaskResponseInfo.PrestoMonitorMetrics` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_prestoMonitorMetrics.Deserialize(value["PrestoMonitorMetrics"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_prestoMonitorMetricsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -642,6 +751,73 @@ void TaskResponseInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document
         string key = "CmdArgs";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_cmdArgs.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_imageVersionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ImageVersion";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_imageVersion.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_driverSizeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DriverSize";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_driverSize.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_executorSizeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ExecutorSize";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_executorSize.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_executorNumsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ExecutorNums";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_executorNums, allocator);
+    }
+
+    if (m_executorMaxNumbersHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ExecutorMaxNumbers";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_executorMaxNumbers, allocator);
+    }
+
+    if (m_commonMetricsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CommonMetrics";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_commonMetrics.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_sparkMonitorMetricsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SparkMonitorMetrics";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_sparkMonitorMetrics.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_prestoMonitorMetricsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PrestoMonitorMetrics";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_prestoMonitorMetrics.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -1157,5 +1333,133 @@ void TaskResponseInfo::SetCmdArgs(const string& _cmdArgs)
 bool TaskResponseInfo::CmdArgsHasBeenSet() const
 {
     return m_cmdArgsHasBeenSet;
+}
+
+string TaskResponseInfo::GetImageVersion() const
+{
+    return m_imageVersion;
+}
+
+void TaskResponseInfo::SetImageVersion(const string& _imageVersion)
+{
+    m_imageVersion = _imageVersion;
+    m_imageVersionHasBeenSet = true;
+}
+
+bool TaskResponseInfo::ImageVersionHasBeenSet() const
+{
+    return m_imageVersionHasBeenSet;
+}
+
+string TaskResponseInfo::GetDriverSize() const
+{
+    return m_driverSize;
+}
+
+void TaskResponseInfo::SetDriverSize(const string& _driverSize)
+{
+    m_driverSize = _driverSize;
+    m_driverSizeHasBeenSet = true;
+}
+
+bool TaskResponseInfo::DriverSizeHasBeenSet() const
+{
+    return m_driverSizeHasBeenSet;
+}
+
+string TaskResponseInfo::GetExecutorSize() const
+{
+    return m_executorSize;
+}
+
+void TaskResponseInfo::SetExecutorSize(const string& _executorSize)
+{
+    m_executorSize = _executorSize;
+    m_executorSizeHasBeenSet = true;
+}
+
+bool TaskResponseInfo::ExecutorSizeHasBeenSet() const
+{
+    return m_executorSizeHasBeenSet;
+}
+
+uint64_t TaskResponseInfo::GetExecutorNums() const
+{
+    return m_executorNums;
+}
+
+void TaskResponseInfo::SetExecutorNums(const uint64_t& _executorNums)
+{
+    m_executorNums = _executorNums;
+    m_executorNumsHasBeenSet = true;
+}
+
+bool TaskResponseInfo::ExecutorNumsHasBeenSet() const
+{
+    return m_executorNumsHasBeenSet;
+}
+
+uint64_t TaskResponseInfo::GetExecutorMaxNumbers() const
+{
+    return m_executorMaxNumbers;
+}
+
+void TaskResponseInfo::SetExecutorMaxNumbers(const uint64_t& _executorMaxNumbers)
+{
+    m_executorMaxNumbers = _executorMaxNumbers;
+    m_executorMaxNumbersHasBeenSet = true;
+}
+
+bool TaskResponseInfo::ExecutorMaxNumbersHasBeenSet() const
+{
+    return m_executorMaxNumbersHasBeenSet;
+}
+
+CommonMetrics TaskResponseInfo::GetCommonMetrics() const
+{
+    return m_commonMetrics;
+}
+
+void TaskResponseInfo::SetCommonMetrics(const CommonMetrics& _commonMetrics)
+{
+    m_commonMetrics = _commonMetrics;
+    m_commonMetricsHasBeenSet = true;
+}
+
+bool TaskResponseInfo::CommonMetricsHasBeenSet() const
+{
+    return m_commonMetricsHasBeenSet;
+}
+
+SparkMonitorMetrics TaskResponseInfo::GetSparkMonitorMetrics() const
+{
+    return m_sparkMonitorMetrics;
+}
+
+void TaskResponseInfo::SetSparkMonitorMetrics(const SparkMonitorMetrics& _sparkMonitorMetrics)
+{
+    m_sparkMonitorMetrics = _sparkMonitorMetrics;
+    m_sparkMonitorMetricsHasBeenSet = true;
+}
+
+bool TaskResponseInfo::SparkMonitorMetricsHasBeenSet() const
+{
+    return m_sparkMonitorMetricsHasBeenSet;
+}
+
+PrestoMonitorMetrics TaskResponseInfo::GetPrestoMonitorMetrics() const
+{
+    return m_prestoMonitorMetrics;
+}
+
+void TaskResponseInfo::SetPrestoMonitorMetrics(const PrestoMonitorMetrics& _prestoMonitorMetrics)
+{
+    m_prestoMonitorMetrics = _prestoMonitorMetrics;
+    m_prestoMonitorMetricsHasBeenSet = true;
+}
+
+bool TaskResponseInfo::PrestoMonitorMetricsHasBeenSet() const
+{
+    return m_prestoMonitorMetricsHasBeenSet;
 }
 

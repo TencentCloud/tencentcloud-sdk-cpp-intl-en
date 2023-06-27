@@ -130,6 +130,27 @@ namespace TencentCloud
                      */
                     bool PropertiesHasBeenSet() const;
 
+                    /**
+                     * 获取The Upsert key for a v2 table (in Upsert mode).
+                     * @return UpsertKeys The Upsert key for a v2 table (in Upsert mode).
+                     * 
+                     */
+                    std::vector<std::string> GetUpsertKeys() const;
+
+                    /**
+                     * 设置The Upsert key for a v2 table (in Upsert mode).
+                     * @param _upsertKeys The Upsert key for a v2 table (in Upsert mode).
+                     * 
+                     */
+                    void SetUpsertKeys(const std::vector<std::string>& _upsertKeys);
+
+                    /**
+                     * 判断参数 UpsertKeys 是否已赋值
+                     * @return UpsertKeys 是否已赋值
+                     * 
+                     */
+                    bool UpsertKeysHasBeenSet() const;
+
                 private:
 
                     /**
@@ -155,6 +176,12 @@ namespace TencentCloud
                      */
                     std::vector<Property> m_properties;
                     bool m_propertiesHasBeenSet;
+
+                    /**
+                     * The Upsert key for a v2 table (in Upsert mode).
+                     */
+                    std::vector<std::string> m_upsertKeys;
+                    bool m_upsertKeysHasBeenSet;
 
                 };
             }

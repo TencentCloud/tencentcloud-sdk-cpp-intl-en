@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/chdfs/v20201112/model/Transition.h>
+#include <tencentcloud/chdfs/v20201112/model/Summary.h>
 
 
 namespace TencentCloud
@@ -173,6 +174,48 @@ namespace TencentCloud
                      */
                     bool CreateTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Detailed storage usage of the current lifecycle rule path
+                     * @return Summary Detailed storage usage of the current lifecycle rule path
+                     * 
+                     */
+                    Summary GetSummary() const;
+
+                    /**
+                     * 设置Detailed storage usage of the current lifecycle rule path
+                     * @param _summary Detailed storage usage of the current lifecycle rule path
+                     * 
+                     */
+                    void SetSummary(const Summary& _summary);
+
+                    /**
+                     * 判断参数 Summary 是否已赋值
+                     * @return Summary 是否已赋值
+                     * 
+                     */
+                    bool SummaryHasBeenSet() const;
+
+                    /**
+                     * 获取Update time of `Summary`
+                     * @return LastSummaryTime Update time of `Summary`
+                     * 
+                     */
+                    std::string GetLastSummaryTime() const;
+
+                    /**
+                     * 设置Update time of `Summary`
+                     * @param _lastSummaryTime Update time of `Summary`
+                     * 
+                     */
+                    void SetLastSummaryTime(const std::string& _lastSummaryTime);
+
+                    /**
+                     * 判断参数 LastSummaryTime 是否已赋值
+                     * @return LastSummaryTime 是否已赋值
+                     * 
+                     */
+                    bool LastSummaryTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -210,6 +253,18 @@ namespace TencentCloud
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
+
+                    /**
+                     * Detailed storage usage of the current lifecycle rule path
+                     */
+                    Summary m_summary;
+                    bool m_summaryHasBeenSet;
+
+                    /**
+                     * Update time of `Summary`
+                     */
+                    std::string m_lastSummaryTime;
+                    bool m_lastSummaryTimeHasBeenSet;
 
                 };
             }

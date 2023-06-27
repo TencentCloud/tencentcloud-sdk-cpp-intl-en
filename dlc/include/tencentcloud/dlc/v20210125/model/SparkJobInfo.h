@@ -877,15 +877,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SessionIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DataEngineClusterType 
+                     * 获取`spark_emr_livy` indicates to create an EMR cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DataEngineClusterType `spark_emr_livy` indicates to create an EMR cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDataEngineClusterType() const;
 
                     /**
-                     * 设置
-                     * @param _dataEngineClusterType 
+                     * 设置`spark_emr_livy` indicates to create an EMR cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _dataEngineClusterType `spark_emr_livy` indicates to create an EMR cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDataEngineClusterType(const std::string& _dataEngineClusterType);
@@ -898,15 +902,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DataEngineClusterTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DataEngineImageVersion 
+                     * 获取`Spark 3.2-EMR` indicates to use the Spark 3.2 image.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DataEngineImageVersion `Spark 3.2-EMR` indicates to use the Spark 3.2 image.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDataEngineImageVersion() const;
 
                     /**
-                     * 设置
-                     * @param _dataEngineImageVersion 
+                     * 设置`Spark 3.2-EMR` indicates to use the Spark 3.2 image.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _dataEngineImageVersion `Spark 3.2-EMR` indicates to use the Spark 3.2 image.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDataEngineImageVersion(const std::string& _dataEngineImageVersion);
@@ -917,6 +925,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool DataEngineImageVersionHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the task resource configuration is inherited from the cluster template. Valid values: `0` (default): No; `1`: Yes.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IsInherit Whether the task resource configuration is inherited from the cluster template. Valid values: `0` (default): No; `1`: Yes.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    uint64_t GetIsInherit() const;
+
+                    /**
+                     * 设置Whether the task resource configuration is inherited from the cluster template. Valid values: `0` (default): No; `1`: Yes.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _isInherit Whether the task resource configuration is inherited from the cluster template. Valid values: `0` (default): No; `1`: Yes.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetIsInherit(const uint64_t& _isInherit);
+
+                    /**
+                     * 判断参数 IsInherit 是否已赋值
+                     * @return IsInherit 是否已赋值
+                     * 
+                     */
+                    bool IsInheritHasBeenSet() const;
 
                 private:
 
@@ -1156,16 +1189,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_sessionIdHasBeenSet;
 
                     /**
-                     * 
+                     * `spark_emr_livy` indicates to create an EMR cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_dataEngineClusterType;
                     bool m_dataEngineClusterTypeHasBeenSet;
 
                     /**
-                     * 
+                     * `Spark 3.2-EMR` indicates to use the Spark 3.2 image.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_dataEngineImageVersion;
                     bool m_dataEngineImageVersionHasBeenSet;
+
+                    /**
+                     * Whether the task resource configuration is inherited from the cluster template. Valid values: `0` (default): No; `1`: Yes.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_isInherit;
+                    bool m_isInheritHasBeenSet;
 
                 };
             }

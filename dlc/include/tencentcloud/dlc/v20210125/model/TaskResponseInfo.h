@@ -24,6 +24,9 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/dlc/v20210125/model/CommonMetrics.h>
+#include <tencentcloud/dlc/v20210125/model/SparkMonitorMetrics.h>
+#include <tencentcloud/dlc/v20210125/model/PrestoMonitorMetrics.h>
 
 
 namespace TencentCloud
@@ -786,6 +789,210 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool CmdArgsHasBeenSet() const;
 
+                    /**
+                     * 获取The image version of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ImageVersion The image version of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetImageVersion() const;
+
+                    /**
+                     * 设置The image version of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _imageVersion The image version of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetImageVersion(const std::string& _imageVersion);
+
+                    /**
+                     * 判断参数 ImageVersion 是否已赋值
+                     * @return ImageVersion 是否已赋值
+                     * 
+                     */
+                    bool ImageVersionHasBeenSet() const;
+
+                    /**
+                     * 获取The driver size.
+Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
+Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DriverSize The driver size.
+Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
+Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetDriverSize() const;
+
+                    /**
+                     * 设置The driver size.
+Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
+Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _driverSize The driver size.
+Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
+Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetDriverSize(const std::string& _driverSize);
+
+                    /**
+                     * 判断参数 DriverSize 是否已赋值
+                     * @return DriverSize 是否已赋值
+                     * 
+                     */
+                    bool DriverSizeHasBeenSet() const;
+
+                    /**
+                     * 获取The executor size.
+Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
+Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ExecutorSize The executor size.
+Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
+Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetExecutorSize() const;
+
+                    /**
+                     * 设置The executor size.
+Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
+Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _executorSize The executor size.
+Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
+Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetExecutorSize(const std::string& _executorSize);
+
+                    /**
+                     * 判断参数 ExecutorSize 是否已赋值
+                     * @return ExecutorSize 是否已赋值
+                     * 
+                     */
+                    bool ExecutorSizeHasBeenSet() const;
+
+                    /**
+                     * 获取The executor count. The minimum value is 1 and the maximum value is less than the cluster specification.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ExecutorNums The executor count. The minimum value is 1 and the maximum value is less than the cluster specification.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    uint64_t GetExecutorNums() const;
+
+                    /**
+                     * 设置The executor count. The minimum value is 1 and the maximum value is less than the cluster specification.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _executorNums The executor count. The minimum value is 1 and the maximum value is less than the cluster specification.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetExecutorNums(const uint64_t& _executorNums);
+
+                    /**
+                     * 判断参数 ExecutorNums 是否已赋值
+                     * @return ExecutorNums 是否已赋值
+                     * 
+                     */
+                    bool ExecutorNumsHasBeenSet() const;
+
+                    /**
+                     * 获取The maximum executor count (in dynamic mode). The minimum value is 1 and the maximum value is less than the cluster specification. If you set `ExecutorMaxNumbers` to a value smaller than that of `ExecutorNums`, the value of `ExecutorMaxNumbers` is automatically changed to that of `ExecutorNums`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ExecutorMaxNumbers The maximum executor count (in dynamic mode). The minimum value is 1 and the maximum value is less than the cluster specification. If you set `ExecutorMaxNumbers` to a value smaller than that of `ExecutorNums`, the value of `ExecutorMaxNumbers` is automatically changed to that of `ExecutorNums`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    uint64_t GetExecutorMaxNumbers() const;
+
+                    /**
+                     * 设置The maximum executor count (in dynamic mode). The minimum value is 1 and the maximum value is less than the cluster specification. If you set `ExecutorMaxNumbers` to a value smaller than that of `ExecutorNums`, the value of `ExecutorMaxNumbers` is automatically changed to that of `ExecutorNums`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _executorMaxNumbers The maximum executor count (in dynamic mode). The minimum value is 1 and the maximum value is less than the cluster specification. If you set `ExecutorMaxNumbers` to a value smaller than that of `ExecutorNums`, the value of `ExecutorMaxNumbers` is automatically changed to that of `ExecutorNums`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetExecutorMaxNumbers(const uint64_t& _executorMaxNumbers);
+
+                    /**
+                     * 判断参数 ExecutorMaxNumbers 是否已赋值
+                     * @return ExecutorMaxNumbers 是否已赋值
+                     * 
+                     */
+                    bool ExecutorMaxNumbersHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return CommonMetrics 
+                     * 
+                     */
+                    CommonMetrics GetCommonMetrics() const;
+
+                    /**
+                     * 设置
+                     * @param _commonMetrics 
+                     * 
+                     */
+                    void SetCommonMetrics(const CommonMetrics& _commonMetrics);
+
+                    /**
+                     * 判断参数 CommonMetrics 是否已赋值
+                     * @return CommonMetrics 是否已赋值
+                     * 
+                     */
+                    bool CommonMetricsHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return SparkMonitorMetrics 
+                     * 
+                     */
+                    SparkMonitorMetrics GetSparkMonitorMetrics() const;
+
+                    /**
+                     * 设置
+                     * @param _sparkMonitorMetrics 
+                     * 
+                     */
+                    void SetSparkMonitorMetrics(const SparkMonitorMetrics& _sparkMonitorMetrics);
+
+                    /**
+                     * 判断参数 SparkMonitorMetrics 是否已赋值
+                     * @return SparkMonitorMetrics 是否已赋值
+                     * 
+                     */
+                    bool SparkMonitorMetricsHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return PrestoMonitorMetrics 
+                     * 
+                     */
+                    PrestoMonitorMetrics GetPrestoMonitorMetrics() const;
+
+                    /**
+                     * 设置
+                     * @param _prestoMonitorMetrics 
+                     * 
+                     */
+                    void SetPrestoMonitorMetrics(const PrestoMonitorMetrics& _prestoMonitorMetrics);
+
+                    /**
+                     * 判断参数 PrestoMonitorMetrics 是否已赋值
+                     * @return PrestoMonitorMetrics 是否已赋值
+                     * 
+                     */
+                    bool PrestoMonitorMetricsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -996,6 +1203,63 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_cmdArgs;
                     bool m_cmdArgsHasBeenSet;
+
+                    /**
+                     * The image version of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_imageVersion;
+                    bool m_imageVersionHasBeenSet;
+
+                    /**
+                     * The driver size.
+Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
+Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_driverSize;
+                    bool m_driverSizeHasBeenSet;
+
+                    /**
+                     * The executor size.
+Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
+Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_executorSize;
+                    bool m_executorSizeHasBeenSet;
+
+                    /**
+                     * The executor count. The minimum value is 1 and the maximum value is less than the cluster specification.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_executorNums;
+                    bool m_executorNumsHasBeenSet;
+
+                    /**
+                     * The maximum executor count (in dynamic mode). The minimum value is 1 and the maximum value is less than the cluster specification. If you set `ExecutorMaxNumbers` to a value smaller than that of `ExecutorNums`, the value of `ExecutorMaxNumbers` is automatically changed to that of `ExecutorNums`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_executorMaxNumbers;
+                    bool m_executorMaxNumbersHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    CommonMetrics m_commonMetrics;
+                    bool m_commonMetricsHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    SparkMonitorMetrics m_sparkMonitorMetrics;
+                    bool m_sparkMonitorMetricsHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    PrestoMonitorMetrics m_prestoMonitorMetrics;
+                    bool m_prestoMonitorMetricsHasBeenSet;
 
                 };
             }

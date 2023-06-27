@@ -630,6 +630,27 @@ namespace TencentCloud
                      */
                     bool SessionIdHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to inherit the task resource configuration from the cluster configuration template. Valid values: `0` (default): No; `1`: Yes.
+                     * @return IsInherit Whether to inherit the task resource configuration from the cluster configuration template. Valid values: `0` (default): No; `1`: Yes.
+                     * 
+                     */
+                    uint64_t GetIsInherit() const;
+
+                    /**
+                     * 设置Whether to inherit the task resource configuration from the cluster configuration template. Valid values: `0` (default): No; `1`: Yes.
+                     * @param _isInherit Whether to inherit the task resource configuration from the cluster configuration template. Valid values: `0` (default): No; `1`: Yes.
+                     * 
+                     */
+                    void SetIsInherit(const uint64_t& _isInherit);
+
+                    /**
+                     * 判断参数 IsInherit 是否已赋值
+                     * @return IsInherit 是否已赋值
+                     * 
+                     */
+                    bool IsInheritHasBeenSet() const;
+
                 private:
 
                     /**
@@ -799,6 +820,12 @@ namespace TencentCloud
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;
+
+                    /**
+                     * Whether to inherit the task resource configuration from the cluster configuration template. Valid values: `0` (default): No; `1`: Yes.
+                     */
+                    uint64_t m_isInherit;
+                    bool m_isInheritHasBeenSet;
 
                 };
             }

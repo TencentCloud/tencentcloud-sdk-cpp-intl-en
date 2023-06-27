@@ -218,6 +218,27 @@ Set this parameter to a value above 10. This parameter takes effect when `ReadOn
                      */
                     bool SlaveConstHasBeenSet() const;
 
+                    /**
+                     * 获取Maximum number of connections. `0` indicates no limit.	
+                     * @return MaxUserConnections Maximum number of connections. `0` indicates no limit.	
+                     * 
+                     */
+                    int64_t GetMaxUserConnections() const;
+
+                    /**
+                     * 设置Maximum number of connections. `0` indicates no limit.	
+                     * @param _maxUserConnections Maximum number of connections. `0` indicates no limit.	
+                     * 
+                     */
+                    void SetMaxUserConnections(const int64_t& _maxUserConnections);
+
+                    /**
+                     * 判断参数 MaxUserConnections 是否已赋值
+                     * @return MaxUserConnections 是否已赋值
+                     * 
+                     */
+                    bool MaxUserConnectionsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -268,6 +289,12 @@ Set this parameter to a value above 10. This parameter takes effect when `ReadOn
                      */
                     int64_t m_slaveConst;
                     bool m_slaveConstHasBeenSet;
+
+                    /**
+                     * Maximum number of connections. `0` indicates no limit.	
+                     */
+                    int64_t m_maxUserConnections;
+                    bool m_maxUserConnectionsHasBeenSet;
 
                 };
             }

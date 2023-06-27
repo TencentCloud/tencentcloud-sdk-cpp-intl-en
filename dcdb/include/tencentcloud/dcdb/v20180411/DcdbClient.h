@@ -49,6 +49,8 @@
 #include <tencentcloud/dcdb/v20180411/model/DescribeAccountsResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeBackupFilesRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeBackupFilesResponse.h>
+#include <tencentcloud/dcdb/v20180411/model/DescribeDBEncryptAttributesRequest.h>
+#include <tencentcloud/dcdb/v20180411/model/DescribeDBEncryptAttributesResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeDBLogFilesRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeDBLogFilesResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeDBParametersRequest.h>
@@ -95,12 +97,16 @@
 #include <tencentcloud/dcdb/v20180411/model/GrantAccountPrivilegesResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/InitDCDBInstancesRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/InitDCDBInstancesResponse.h>
+#include <tencentcloud/dcdb/v20180411/model/IsolateDCDBInstanceRequest.h>
+#include <tencentcloud/dcdb/v20180411/model/IsolateDCDBInstanceResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/IsolateDedicatedDBInstanceRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/IsolateDedicatedDBInstanceResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/IsolateHourDCDBInstanceRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/IsolateHourDCDBInstanceResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/KillSessionRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/KillSessionResponse.h>
+#include <tencentcloud/dcdb/v20180411/model/ModifyAccountConfigRequest.h>
+#include <tencentcloud/dcdb/v20180411/model/ModifyAccountConfigResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/ModifyAccountDescriptionRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/ModifyAccountDescriptionResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/ModifyAccountPrivilegesRequest.h>
@@ -184,6 +190,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeBackupFilesResponse> DescribeBackupFilesOutcome;
                 typedef std::future<DescribeBackupFilesOutcome> DescribeBackupFilesOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::DescribeBackupFilesRequest&, DescribeBackupFilesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBackupFilesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDBEncryptAttributesResponse> DescribeDBEncryptAttributesOutcome;
+                typedef std::future<DescribeDBEncryptAttributesOutcome> DescribeDBEncryptAttributesOutcomeCallable;
+                typedef std::function<void(const DcdbClient*, const Model::DescribeDBEncryptAttributesRequest&, DescribeDBEncryptAttributesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBEncryptAttributesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDBLogFilesResponse> DescribeDBLogFilesOutcome;
                 typedef std::future<DescribeDBLogFilesOutcome> DescribeDBLogFilesOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::DescribeDBLogFilesRequest&, DescribeDBLogFilesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBLogFilesAsyncHandler;
@@ -253,6 +262,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::InitDCDBInstancesResponse> InitDCDBInstancesOutcome;
                 typedef std::future<InitDCDBInstancesOutcome> InitDCDBInstancesOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::InitDCDBInstancesRequest&, InitDCDBInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InitDCDBInstancesAsyncHandler;
+                typedef Outcome<Core::Error, Model::IsolateDCDBInstanceResponse> IsolateDCDBInstanceOutcome;
+                typedef std::future<IsolateDCDBInstanceOutcome> IsolateDCDBInstanceOutcomeCallable;
+                typedef std::function<void(const DcdbClient*, const Model::IsolateDCDBInstanceRequest&, IsolateDCDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> IsolateDCDBInstanceAsyncHandler;
                 typedef Outcome<Core::Error, Model::IsolateDedicatedDBInstanceResponse> IsolateDedicatedDBInstanceOutcome;
                 typedef std::future<IsolateDedicatedDBInstanceOutcome> IsolateDedicatedDBInstanceOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::IsolateDedicatedDBInstanceRequest&, IsolateDedicatedDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> IsolateDedicatedDBInstanceAsyncHandler;
@@ -262,6 +274,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::KillSessionResponse> KillSessionOutcome;
                 typedef std::future<KillSessionOutcome> KillSessionOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::KillSessionRequest&, KillSessionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> KillSessionAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyAccountConfigResponse> ModifyAccountConfigOutcome;
+                typedef std::future<ModifyAccountConfigOutcome> ModifyAccountConfigOutcomeCallable;
+                typedef std::function<void(const DcdbClient*, const Model::ModifyAccountConfigRequest&, ModifyAccountConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAccountConfigAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyAccountDescriptionResponse> ModifyAccountDescriptionOutcome;
                 typedef std::future<ModifyAccountDescriptionOutcome> ModifyAccountDescriptionOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::ModifyAccountDescriptionRequest&, ModifyAccountDescriptionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAccountDescriptionAsyncHandler;
@@ -311,7 +326,7 @@ namespace TencentCloud
 
 
                 /**
-                 *This API is used to remove the isolation of a pay-as-you-go TDSQL for MySQL instance.
+                 *This API is used to remove a pay-as-you-go TDSQL instance from isolation.
                  * @param req ActiveHourDCDBInstanceRequest
                  * @return ActiveHourDCDBInstanceOutcome
                  */
@@ -375,7 +390,7 @@ Note: Accounts with the same username but different hosts are different accounts
                 CreateAccountOutcomeCallable CreateAccountCallable(const Model::CreateAccountRequest& request);
 
                 /**
-                 *This API is used to create a monthly subscribed TencentDB instance by passing in information such as instance specifications, database version number, and purchased duration.
+                 *This API is used to create a monthly subscribed TDSQL instance by passing in information such as instance specifications, database version number, and purchased duration.
                  * @param req CreateDCDBInstanceRequest
                  * @return CreateDCDBInstanceOutcome
                  */
@@ -384,7 +399,7 @@ Note: Accounts with the same username but different hosts are different accounts
                 CreateDCDBInstanceOutcomeCallable CreateDCDBInstanceCallable(const Model::CreateDCDBInstanceRequest& request);
 
                 /**
-                 *This API is used to create pay-as-you-go TDSQL for MySQL instances.
+                 *This API is used to create a pay-as-you-go TDSQL instance.
                  * @param req CreateHourDCDBInstanceRequest
                  * @return CreateHourDCDBInstanceOutcome
                  */
@@ -428,6 +443,15 @@ Note: Accounts with the same username but different hosts are considered as diff
                 DescribeBackupFilesOutcome DescribeBackupFiles(const Model::DescribeBackupFilesRequest &request);
                 void DescribeBackupFilesAsync(const Model::DescribeBackupFilesRequest& request, const DescribeBackupFilesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeBackupFilesOutcomeCallable DescribeBackupFilesCallable(const Model::DescribeBackupFilesRequest& request);
+
+                /**
+                 *This API is used to query the encryption status of the instance data.
+                 * @param req DescribeDBEncryptAttributesRequest
+                 * @return DescribeDBEncryptAttributesOutcome
+                 */
+                DescribeDBEncryptAttributesOutcome DescribeDBEncryptAttributes(const Model::DescribeDBEncryptAttributesRequest &request);
+                void DescribeDBEncryptAttributesAsync(const Model::DescribeDBEncryptAttributesRequest& request, const DescribeDBEncryptAttributesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDBEncryptAttributesOutcomeCallable DescribeDBEncryptAttributesCallable(const Model::DescribeDBEncryptAttributesRequest& request);
 
                 /**
                  *This API is used to get the list of various logs of a database, including cold backups, binlogs, errlogs, and slowlogs.
@@ -593,7 +617,7 @@ If no filter is specified, 10 instances will be returned by default. Up to 100 i
                 DescribeProjectSecurityGroupsOutcomeCallable DescribeProjectSecurityGroupsCallable(const Model::DescribeProjectSecurityGroupsRequest& request);
 
                 /**
-                 *This API is used to terminate an isolated monthly-subscribed instance.
+                 *This API is used to terminate an isolated monthly subscribed TDSQL instance.
                  * @param req DestroyDCDBInstanceRequest
                  * @return DestroyDCDBInstanceOutcome
                  */
@@ -602,7 +626,7 @@ If no filter is specified, 10 instances will be returned by default. Up to 100 i
                 DestroyDCDBInstanceOutcomeCallable DestroyDCDBInstanceCallable(const Model::DestroyDCDBInstanceRequest& request);
 
                 /**
-                 *This API is used to terminate a pay-as-you-go instance.
+                 *This API is used to terminate a pay-as-you-go TDSQL instance.
                  * @param req DestroyHourDCDBInstanceRequest
                  * @return DestroyHourDCDBInstanceOutcome
                  */
@@ -639,6 +663,15 @@ Note: accounts with the same username but different hosts are different accounts
                 InitDCDBInstancesOutcomeCallable InitDCDBInstancesCallable(const Model::InitDCDBInstancesRequest& request);
 
                 /**
+                 *This API is used to isolate a monthly subscribed TDSQL instance, which will no longer be accessible via IP and port.  The isolated instance can be started up in the recycle bin.  If it is isolated due to overdue payments, top up your account as soon as possible.
+                 * @param req IsolateDCDBInstanceRequest
+                 * @return IsolateDCDBInstanceOutcome
+                 */
+                IsolateDCDBInstanceOutcome IsolateDCDBInstance(const Model::IsolateDCDBInstanceRequest &request);
+                void IsolateDCDBInstanceAsync(const Model::IsolateDCDBInstanceRequest& request, const IsolateDCDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                IsolateDCDBInstanceOutcomeCallable IsolateDCDBInstanceCallable(const Model::IsolateDCDBInstanceRequest& request);
+
+                /**
                  *This API is used to isolate a dedicated TencentDB instance.
                  * @param req IsolateDedicatedDBInstanceRequest
                  * @return IsolateDedicatedDBInstanceOutcome
@@ -648,7 +681,7 @@ Note: accounts with the same username but different hosts are different accounts
                 IsolateDedicatedDBInstanceOutcomeCallable IsolateDedicatedDBInstanceCallable(const Model::IsolateDedicatedDBInstanceRequest& request);
 
                 /**
-                 *This API is used to isolate pay-as-you-go TDSQL for MySQL instances.
+                 *This API is used to isolate a pay-as-you-go TDSQL instance.
                  * @param req IsolateHourDCDBInstanceRequest
                  * @return IsolateHourDCDBInstanceOutcome
                  */
@@ -666,6 +699,15 @@ Note: accounts with the same username but different hosts are different accounts
                 KillSessionOutcomeCallable KillSessionCallable(const Model::KillSessionRequest& request);
 
                 /**
+                 *This API is used to modify the configurations of an account, such as `max_user_connections`.
+                 * @param req ModifyAccountConfigRequest
+                 * @return ModifyAccountConfigOutcome
+                 */
+                ModifyAccountConfigOutcome ModifyAccountConfig(const Model::ModifyAccountConfigRequest &request);
+                void ModifyAccountConfigAsync(const Model::ModifyAccountConfigRequest& request, const ModifyAccountConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyAccountConfigOutcomeCallable ModifyAccountConfigCallable(const Model::ModifyAccountConfigRequest& request);
+
+                /**
                  *This API is used to modify the remarks of a TencentDB account.
 Note: accounts with the same username but different hosts are different accounts.
                  * @param req ModifyAccountDescriptionRequest
@@ -676,12 +718,7 @@ Note: accounts with the same username but different hosts are different accounts
                 ModifyAccountDescriptionOutcomeCallable ModifyAccountDescriptionCallable(const Model::ModifyAccountDescriptionRequest& request);
 
                 /**
-                 *This API is used to modify the permissions of a TencentDB instance account.
-
-**Notes**
-- Only the SELECT permission (that is, set the permission parameter to `["SELECT"]`) of the system database `mysql` can be granted.
-- An error will be reported if read-write permissions are granted to a read-only account.
-- If the parameter is not passed in, no change will be made to the granted table permissions. To clear the granted table permissions, set `Privileges` to an empty array.
+                 *This API is used to modify the permissions of a TencentDB instance account. \n\n**Note**\n-Only the SELECT permission (that is, set the permission parameter to `["SELECT"]`) of the system database `mysql` can be granted. An error will be reported if read-write permissions are granted to a read-only account. If the parameter is not passed in, no change will be made to the granted table permissions. To clear the granted view permissions, set `Privileges` to an empty array.
                  * @param req ModifyAccountPrivilegesRequest
                  * @return ModifyAccountPrivilegesOutcome
                  */
@@ -799,7 +836,7 @@ Note: accounts with the same username but different hosts are different accounts
                 TerminateDedicatedDBInstanceOutcomeCallable TerminateDedicatedDBInstanceCallable(const Model::TerminateDedicatedDBInstanceRequest& request);
 
                 /**
-                 *This API is used to upgrade a pay-as-you-go TDSQL for MySQL instance.
+                 *This API is used to upgrade a pay-as-you-go TDSQL instance.
                  * @param req UpgradeHourDCDBInstanceRequest
                  * @return UpgradeHourDCDBInstanceOutcome
                  */

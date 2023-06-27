@@ -24,6 +24,7 @@
 #include <tencentcloud/dlc/v20210125/model/TagInfo.h>
 #include <tencentcloud/dlc/v20210125/model/CrontabResumeSuspendStrategy.h>
 #include <tencentcloud/dlc/v20210125/model/DataEngineConfigPair.h>
+#include <tencentcloud/dlc/v20210125/model/SessionResourceTemplate.h>
 
 
 namespace TencentCloud
@@ -654,6 +655,27 @@ namespace TencentCloud
                      */
                     bool ElasticLimitHasBeenSet() const;
 
+                    /**
+                     * 获取The session resource configuration template for a Spark job cluster.
+                     * @return SessionResourceTemplate The session resource configuration template for a Spark job cluster.
+                     * 
+                     */
+                    SessionResourceTemplate GetSessionResourceTemplate() const;
+
+                    /**
+                     * 设置The session resource configuration template for a Spark job cluster.
+                     * @param _sessionResourceTemplate The session resource configuration template for a Spark job cluster.
+                     * 
+                     */
+                    void SetSessionResourceTemplate(const SessionResourceTemplate& _sessionResourceTemplate);
+
+                    /**
+                     * 判断参数 SessionResourceTemplate 是否已赋值
+                     * @return SessionResourceTemplate 是否已赋值
+                     * 
+                     */
+                    bool SessionResourceTemplateHasBeenSet() const;
+
                 private:
 
                     /**
@@ -829,6 +851,12 @@ namespace TencentCloud
                      */
                     int64_t m_elasticLimit;
                     bool m_elasticLimitHasBeenSet;
+
+                    /**
+                     * The session resource configuration template for a Spark job cluster.
+                     */
+                    SessionResourceTemplate m_sessionResourceTemplate;
+                    bool m_sessionResourceTemplateHasBeenSet;
 
                 };
             }

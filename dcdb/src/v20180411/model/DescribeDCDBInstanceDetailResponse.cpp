@@ -73,7 +73,9 @@ DescribeDCDBInstanceDetailResponse::DescribeDCDBInstanceDetailResponse() :
     m_dbVersionIdHasBeenSet(false),
     m_encryptStatusHasBeenSet(false),
     m_exclusterTypeHasBeenSet(false),
-    m_rsAccessStrategyHasBeenSet(false)
+    m_rsAccessStrategyHasBeenSet(false),
+    m_reservedNetResourcesHasBeenSet(false),
+    m_isPhysicalReplicationSupportedHasBeenSet(false)
 {
 }
 
@@ -634,6 +636,36 @@ CoreInternalOutcome DescribeDCDBInstanceDetailResponse::Deserialize(const string
         m_rsAccessStrategyHasBeenSet = true;
     }
 
+    if (rsp.HasMember("ReservedNetResources") && !rsp["ReservedNetResources"].IsNull())
+    {
+        if (!rsp["ReservedNetResources"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `ReservedNetResources` is not array type"));
+
+        const rapidjson::Value &tmpValue = rsp["ReservedNetResources"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            ReservedNetResource item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_reservedNetResources.push_back(item);
+        }
+        m_reservedNetResourcesHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("IsPhysicalReplicationSupported") && !rsp["IsPhysicalReplicationSupported"].IsNull())
+    {
+        if (!rsp["IsPhysicalReplicationSupported"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `IsPhysicalReplicationSupported` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_isPhysicalReplicationSupported = rsp["IsPhysicalReplicationSupported"].GetBool();
+        m_isPhysicalReplicationSupportedHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -1061,6 +1093,29 @@ string DescribeDCDBInstanceDetailResponse::ToJsonString() const
         string key = "RsAccessStrategy";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_rsAccessStrategy, allocator);
+    }
+
+    if (m_reservedNetResourcesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ReservedNetResources";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_reservedNetResources.begin(); itr != m_reservedNetResources.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_isPhysicalReplicationSupportedHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsPhysicalReplicationSupported";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_isPhysicalReplicationSupported, allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -1573,6 +1628,26 @@ int64_t DescribeDCDBInstanceDetailResponse::GetRsAccessStrategy() const
 bool DescribeDCDBInstanceDetailResponse::RsAccessStrategyHasBeenSet() const
 {
     return m_rsAccessStrategyHasBeenSet;
+}
+
+vector<ReservedNetResource> DescribeDCDBInstanceDetailResponse::GetReservedNetResources() const
+{
+    return m_reservedNetResources;
+}
+
+bool DescribeDCDBInstanceDetailResponse::ReservedNetResourcesHasBeenSet() const
+{
+    return m_reservedNetResourcesHasBeenSet;
+}
+
+bool DescribeDCDBInstanceDetailResponse::GetIsPhysicalReplicationSupported() const
+{
+    return m_isPhysicalReplicationSupported;
+}
+
+bool DescribeDCDBInstanceDetailResponse::IsPhysicalReplicationSupportedHasBeenSet() const
+{
+    return m_isPhysicalReplicationSupportedHasBeenSet;
 }
 
 

@@ -334,15 +334,15 @@ namespace TencentCloud
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取Whether IPv6 is supported
-                     * @return Ipv6Flag Whether IPv6 is supported
+                     * 获取Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
+                     * @return Ipv6Flag Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
                      * 
                      */
                     int64_t GetIpv6Flag() const;
 
                     /**
-                     * 设置Whether IPv6 is supported
-                     * @param _ipv6Flag Whether IPv6 is supported
+                     * 设置Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
+                     * @param _ipv6Flag Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
                      * 
                      */
                     void SetIpv6Flag(const int64_t& _ipv6Flag);
@@ -460,15 +460,15 @@ namespace TencentCloud
                     bool RollbackInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Rollback time
-                     * @return RollbackTime Rollback time
+                     * 获取Rollback time, such as "2021-11-22 00:00:00".
+                     * @return RollbackTime Rollback time, such as "2021-11-22 00:00:00".
                      * 
                      */
                     std::string GetRollbackTime() const;
 
                     /**
-                     * 设置Rollback time
-                     * @param _rollbackTime Rollback time
+                     * 设置Rollback time, such as "2021-11-22 00:00:00".
+                     * @param _rollbackTime Rollback time, such as "2021-11-22 00:00:00".
                      * 
                      */
                     void SetRollbackTime(const std::string& _rollbackTime);
@@ -586,7 +586,7 @@ namespace TencentCloud
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * Whether IPv6 is supported
+                     * Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
                      */
                     int64_t m_ipv6Flag;
                     bool m_ipv6FlagHasBeenSet;
@@ -622,7 +622,7 @@ namespace TencentCloud
                     bool m_rollbackInstanceIdHasBeenSet;
 
                     /**
-                     * Rollback time
+                     * Rollback time, such as "2021-11-22 00:00:00".
                      */
                     std::string m_rollbackTime;
                     bool m_rollbackTimeHasBeenSet;

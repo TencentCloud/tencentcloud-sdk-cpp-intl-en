@@ -86,27 +86,15 @@ namespace TencentCloud
                     bool MaxFinishTimeHasBeenSet() const;
 
                     /**
-                     * 获取Filter instances using one or more criteria. Valid filter names:
-db-instance-id: Filter by instance ID (in string format).
-db-instance-name: Filter by instance name (in string format).
-db-instance-ip: Filter by instance VPC IP (in string format).
-                     * @return Filters Filter instances using one or more criteria. Valid filter names:
-db-instance-id: Filter by instance ID (in string format).
-db-instance-name: Filter by instance name (in string format).
-db-instance-ip: Filter by instance VPC IP (in string format).
+                     * 获取Filter instances by using one or more filters. Valid values:  `db-instance-idFilter` (filter by instance ID in string),  `db-instance-name` (filter by instance name in string),  `db-instance-ip` (filter by instance VPC IP address in string),  `base-backup-id` (filter by backup set ID in string), 
+                     * @return Filters Filter instances by using one or more filters. Valid values:  `db-instance-idFilter` (filter by instance ID in string),  `db-instance-name` (filter by instance name in string),  `db-instance-ip` (filter by instance VPC IP address in string),  `base-backup-id` (filter by backup set ID in string), 
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter instances using one or more criteria. Valid filter names:
-db-instance-id: Filter by instance ID (in string format).
-db-instance-name: Filter by instance name (in string format).
-db-instance-ip: Filter by instance VPC IP (in string format).
-                     * @param _filters Filter instances using one or more criteria. Valid filter names:
-db-instance-id: Filter by instance ID (in string format).
-db-instance-name: Filter by instance name (in string format).
-db-instance-ip: Filter by instance VPC IP (in string format).
+                     * 设置Filter instances by using one or more filters. Valid values:  `db-instance-idFilter` (filter by instance ID in string),  `db-instance-name` (filter by instance name in string),  `db-instance-ip` (filter by instance VPC IP address in string),  `base-backup-id` (filter by backup set ID in string), 
+                     * @param _filters Filter instances by using one or more filters. Valid values:  `db-instance-idFilter` (filter by instance ID in string),  `db-instance-name` (filter by instance name in string),  `db-instance-ip` (filter by instance VPC IP address in string),  `base-backup-id` (filter by backup set ID in string), 
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -217,10 +205,7 @@ db-instance-ip: Filter by instance VPC IP (in string format).
                     bool m_maxFinishTimeHasBeenSet;
 
                     /**
-                     * Filter instances using one or more criteria. Valid filter names:
-db-instance-id: Filter by instance ID (in string format).
-db-instance-name: Filter by instance name (in string format).
-db-instance-ip: Filter by instance VPC IP (in string format).
+                     * Filter instances by using one or more filters. Valid values:  `db-instance-idFilter` (filter by instance ID in string),  `db-instance-name` (filter by instance name in string),  `db-instance-ip` (filter by instance VPC IP address in string),  `base-backup-id` (filter by backup set ID in string), 
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

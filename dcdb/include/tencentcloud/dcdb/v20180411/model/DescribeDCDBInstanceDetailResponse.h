@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/dcdb/v20180411/model/ShardBriefInfo.h>
 #include <tencentcloud/dcdb/v20180411/model/ResourceTag.h>
+#include <tencentcloud/dcdb/v20180411/model/ReservedNetResource.h>
 
 
 namespace TencentCloud
@@ -779,6 +780,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool RsAccessStrategyHasBeenSet() const;
 
+                    /**
+                     * 获取Unclaimed network resource
+                     * @return ReservedNetResources Unclaimed network resource
+                     * 
+                     */
+                    std::vector<ReservedNetResource> GetReservedNetResources() const;
+
+                    /**
+                     * 判断参数 ReservedNetResources 是否已赋值
+                     * @return ReservedNetResources 是否已赋值
+                     * 
+                     */
+                    bool ReservedNetResourcesHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return IsPhysicalReplicationSupported 
+                     * 
+                     */
+                    bool GetIsPhysicalReplicationSupported() const;
+
+                    /**
+                     * 判断参数 IsPhysicalReplicationSupported 是否已赋值
+                     * @return IsPhysicalReplicationSupported 是否已赋值
+                     * 
+                     */
+                    bool IsPhysicalReplicationSupportedHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1097,6 +1126,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_rsAccessStrategy;
                     bool m_rsAccessStrategyHasBeenSet;
+
+                    /**
+                     * Unclaimed network resource
+                     */
+                    std::vector<ReservedNetResource> m_reservedNetResources;
+                    bool m_reservedNetResourcesHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_isPhysicalReplicationSupported;
+                    bool m_isPhysicalReplicationSupportedHasBeenSet;
 
                 };
             }

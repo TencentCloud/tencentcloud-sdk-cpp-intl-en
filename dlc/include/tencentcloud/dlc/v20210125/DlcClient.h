@@ -23,6 +23,8 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
+#include <tencentcloud/dlc/v20210125/model/CancelSparkSessionBatchSQLRequest.h>
+#include <tencentcloud/dlc/v20210125/model/CancelSparkSessionBatchSQLResponse.h>
 #include <tencentcloud/dlc/v20210125/model/CancelTaskRequest.h>
 #include <tencentcloud/dlc/v20210125/model/CancelTaskResponse.h>
 #include <tencentcloud/dlc/v20210125/model/CreateDataEngineRequest.h>
@@ -35,6 +37,8 @@
 #include <tencentcloud/dlc/v20210125/model/CreateSparkAppResponse.h>
 #include <tencentcloud/dlc/v20210125/model/CreateSparkAppTaskRequest.h>
 #include <tencentcloud/dlc/v20210125/model/CreateSparkAppTaskResponse.h>
+#include <tencentcloud/dlc/v20210125/model/CreateSparkSessionBatchSQLRequest.h>
+#include <tencentcloud/dlc/v20210125/model/CreateSparkSessionBatchSQLResponse.h>
 #include <tencentcloud/dlc/v20210125/model/CreateTaskRequest.h>
 #include <tencentcloud/dlc/v20210125/model/CreateTaskResponse.h>
 #include <tencentcloud/dlc/v20210125/model/CreateTasksRequest.h>
@@ -57,6 +61,8 @@
 #include <tencentcloud/dlc/v20210125/model/DescribeSparkAppJobsResponse.h>
 #include <tencentcloud/dlc/v20210125/model/DescribeSparkAppTasksRequest.h>
 #include <tencentcloud/dlc/v20210125/model/DescribeSparkAppTasksResponse.h>
+#include <tencentcloud/dlc/v20210125/model/DescribeSparkSessionBatchSqlLogRequest.h>
+#include <tencentcloud/dlc/v20210125/model/DescribeSparkSessionBatchSqlLogResponse.h>
 #include <tencentcloud/dlc/v20210125/model/DescribeTaskResultRequest.h>
 #include <tencentcloud/dlc/v20210125/model/DescribeTaskResultResponse.h>
 #include <tencentcloud/dlc/v20210125/model/DescribeTasksRequest.h>
@@ -67,6 +73,8 @@
 #include <tencentcloud/dlc/v20210125/model/ModifyGovernEventRuleResponse.h>
 #include <tencentcloud/dlc/v20210125/model/ModifySparkAppRequest.h>
 #include <tencentcloud/dlc/v20210125/model/ModifySparkAppResponse.h>
+#include <tencentcloud/dlc/v20210125/model/ModifySparkAppBatchRequest.h>
+#include <tencentcloud/dlc/v20210125/model/ModifySparkAppBatchResponse.h>
 #include <tencentcloud/dlc/v20210125/model/SuspendResumeDataEngineRequest.h>
 #include <tencentcloud/dlc/v20210125/model/SuspendResumeDataEngineResponse.h>
 #include <tencentcloud/dlc/v20210125/model/SwitchDataEngineRequest.h>
@@ -87,6 +95,9 @@ namespace TencentCloud
                 DlcClient(const Credential &credential, const std::string &region);
                 DlcClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
+                typedef Outcome<Core::Error, Model::CancelSparkSessionBatchSQLResponse> CancelSparkSessionBatchSQLOutcome;
+                typedef std::future<CancelSparkSessionBatchSQLOutcome> CancelSparkSessionBatchSQLOutcomeCallable;
+                typedef std::function<void(const DlcClient*, const Model::CancelSparkSessionBatchSQLRequest&, CancelSparkSessionBatchSQLOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CancelSparkSessionBatchSQLAsyncHandler;
                 typedef Outcome<Core::Error, Model::CancelTaskResponse> CancelTaskOutcome;
                 typedef std::future<CancelTaskOutcome> CancelTaskOutcomeCallable;
                 typedef std::function<void(const DlcClient*, const Model::CancelTaskRequest&, CancelTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CancelTaskAsyncHandler;
@@ -105,6 +116,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateSparkAppTaskResponse> CreateSparkAppTaskOutcome;
                 typedef std::future<CreateSparkAppTaskOutcome> CreateSparkAppTaskOutcomeCallable;
                 typedef std::function<void(const DlcClient*, const Model::CreateSparkAppTaskRequest&, CreateSparkAppTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateSparkAppTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateSparkSessionBatchSQLResponse> CreateSparkSessionBatchSQLOutcome;
+                typedef std::future<CreateSparkSessionBatchSQLOutcome> CreateSparkSessionBatchSQLOutcomeCallable;
+                typedef std::function<void(const DlcClient*, const Model::CreateSparkSessionBatchSQLRequest&, CreateSparkSessionBatchSQLOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateSparkSessionBatchSQLAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateTaskResponse> CreateTaskOutcome;
                 typedef std::future<CreateTaskOutcome> CreateTaskOutcomeCallable;
                 typedef std::function<void(const DlcClient*, const Model::CreateTaskRequest&, CreateTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateTaskAsyncHandler;
@@ -138,6 +152,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeSparkAppTasksResponse> DescribeSparkAppTasksOutcome;
                 typedef std::future<DescribeSparkAppTasksOutcome> DescribeSparkAppTasksOutcomeCallable;
                 typedef std::function<void(const DlcClient*, const Model::DescribeSparkAppTasksRequest&, DescribeSparkAppTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSparkAppTasksAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeSparkSessionBatchSqlLogResponse> DescribeSparkSessionBatchSqlLogOutcome;
+                typedef std::future<DescribeSparkSessionBatchSqlLogOutcome> DescribeSparkSessionBatchSqlLogOutcomeCallable;
+                typedef std::function<void(const DlcClient*, const Model::DescribeSparkSessionBatchSqlLogRequest&, DescribeSparkSessionBatchSqlLogOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSparkSessionBatchSqlLogAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeTaskResultResponse> DescribeTaskResultOutcome;
                 typedef std::future<DescribeTaskResultOutcome> DescribeTaskResultOutcomeCallable;
                 typedef std::function<void(const DlcClient*, const Model::DescribeTaskResultRequest&, DescribeTaskResultOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTaskResultAsyncHandler;
@@ -153,6 +170,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifySparkAppResponse> ModifySparkAppOutcome;
                 typedef std::future<ModifySparkAppOutcome> ModifySparkAppOutcomeCallable;
                 typedef std::function<void(const DlcClient*, const Model::ModifySparkAppRequest&, ModifySparkAppOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifySparkAppAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifySparkAppBatchResponse> ModifySparkAppBatchOutcome;
+                typedef std::future<ModifySparkAppBatchOutcome> ModifySparkAppBatchOutcomeCallable;
+                typedef std::function<void(const DlcClient*, const Model::ModifySparkAppBatchRequest&, ModifySparkAppBatchOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifySparkAppBatchAsyncHandler;
                 typedef Outcome<Core::Error, Model::SuspendResumeDataEngineResponse> SuspendResumeDataEngineOutcome;
                 typedef std::future<SuspendResumeDataEngineOutcome> SuspendResumeDataEngineOutcomeCallable;
                 typedef std::function<void(const DlcClient*, const Model::SuspendResumeDataEngineRequest&, SuspendResumeDataEngineOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SuspendResumeDataEngineAsyncHandler;
@@ -164,6 +184,15 @@ namespace TencentCloud
                 typedef std::function<void(const DlcClient*, const Model::UpdateRowFilterRequest&, UpdateRowFilterOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateRowFilterAsyncHandler;
 
 
+
+                /**
+                 *This API is used to cancel a Spark SQL batch task.
+                 * @param req CancelSparkSessionBatchSQLRequest
+                 * @return CancelSparkSessionBatchSQLOutcome
+                 */
+                CancelSparkSessionBatchSQLOutcome CancelSparkSessionBatchSQL(const Model::CancelSparkSessionBatchSQLRequest &request);
+                void CancelSparkSessionBatchSQLAsync(const Model::CancelSparkSessionBatchSQLRequest& request, const CancelSparkSessionBatchSQLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CancelSparkSessionBatchSQLOutcomeCallable CancelSparkSessionBatchSQLCallable(const Model::CancelSparkSessionBatchSQLRequest& request);
 
                 /**
                  *This API is used to cancel a task.
@@ -218,6 +247,15 @@ namespace TencentCloud
                 CreateSparkAppTaskOutcome CreateSparkAppTask(const Model::CreateSparkAppTaskRequest &request);
                 void CreateSparkAppTaskAsync(const Model::CreateSparkAppTaskRequest& request, const CreateSparkAppTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateSparkAppTaskOutcomeCallable CreateSparkAppTaskCallable(const Model::CreateSparkAppTaskRequest& request);
+
+                /**
+                 *This API is used to submit a Spark SQL batch task.
+                 * @param req CreateSparkSessionBatchSQLRequest
+                 * @return CreateSparkSessionBatchSQLOutcome
+                 */
+                CreateSparkSessionBatchSQLOutcome CreateSparkSessionBatchSQL(const Model::CreateSparkSessionBatchSQLRequest &request);
+                void CreateSparkSessionBatchSQLAsync(const Model::CreateSparkSessionBatchSQLRequest& request, const CreateSparkSessionBatchSQLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateSparkSessionBatchSQLOutcomeCallable CreateSparkSessionBatchSQLCallable(const Model::CreateSparkSessionBatchSQLRequest& request);
 
                 /**
                  *This API is used to create a SQL query task. (We recommend you use the `CreateTasks` API instead.)
@@ -319,6 +357,15 @@ namespace TencentCloud
                 DescribeSparkAppTasksOutcomeCallable DescribeSparkAppTasksCallable(const Model::DescribeSparkAppTasksRequest& request);
 
                 /**
+                 *This API is used to obtain the logs of a Spark SQL batch task.
+                 * @param req DescribeSparkSessionBatchSqlLogRequest
+                 * @return DescribeSparkSessionBatchSqlLogOutcome
+                 */
+                DescribeSparkSessionBatchSqlLogOutcome DescribeSparkSessionBatchSqlLog(const Model::DescribeSparkSessionBatchSqlLogRequest &request);
+                void DescribeSparkSessionBatchSqlLogAsync(const Model::DescribeSparkSessionBatchSqlLogRequest& request, const DescribeSparkSessionBatchSqlLogAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeSparkSessionBatchSqlLogOutcomeCallable DescribeSparkSessionBatchSqlLogCallable(const Model::DescribeSparkSessionBatchSqlLogRequest& request);
+
+                /**
                  *This API is used to query the result of a task.
                  * @param req DescribeTaskResultRequest
                  * @return DescribeTaskResultOutcome
@@ -362,6 +409,15 @@ namespace TencentCloud
                 ModifySparkAppOutcome ModifySparkApp(const Model::ModifySparkAppRequest &request);
                 void ModifySparkAppAsync(const Model::ModifySparkAppRequest& request, const ModifySparkAppAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifySparkAppOutcomeCallable ModifySparkAppCallable(const Model::ModifySparkAppRequest& request);
+
+                /**
+                 *This API is used to modify Spark job parameters in batches.
+                 * @param req ModifySparkAppBatchRequest
+                 * @return ModifySparkAppBatchOutcome
+                 */
+                ModifySparkAppBatchOutcome ModifySparkAppBatch(const Model::ModifySparkAppBatchRequest &request);
+                void ModifySparkAppBatchAsync(const Model::ModifySparkAppBatchRequest& request, const ModifySparkAppBatchAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifySparkAppBatchOutcomeCallable ModifySparkAppBatchCallable(const Model::ModifySparkAppBatchRequest& request);
 
                 /**
                  *This API is used to suspend or resume a data engine.

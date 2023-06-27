@@ -67,6 +67,8 @@
 #include <tencentcloud/postgres/v20170312/model/DescribeAccountsResponse.h>
 #include <tencentcloud/postgres/v20170312/model/DescribeAvailableRecoveryTimeRequest.h>
 #include <tencentcloud/postgres/v20170312/model/DescribeAvailableRecoveryTimeResponse.h>
+#include <tencentcloud/postgres/v20170312/model/DescribeBackupDownloadRestrictionRequest.h>
+#include <tencentcloud/postgres/v20170312/model/DescribeBackupDownloadRestrictionResponse.h>
 #include <tencentcloud/postgres/v20170312/model/DescribeBackupDownloadURLRequest.h>
 #include <tencentcloud/postgres/v20170312/model/DescribeBackupDownloadURLResponse.h>
 #include <tencentcloud/postgres/v20170312/model/DescribeBackupOverviewRequest.h>
@@ -145,10 +147,14 @@
 #include <tencentcloud/postgres/v20170312/model/IsolateDBInstancesResponse.h>
 #include <tencentcloud/postgres/v20170312/model/ModifyAccountRemarkRequest.h>
 #include <tencentcloud/postgres/v20170312/model/ModifyAccountRemarkResponse.h>
+#include <tencentcloud/postgres/v20170312/model/ModifyBackupDownloadRestrictionRequest.h>
+#include <tencentcloud/postgres/v20170312/model/ModifyBackupDownloadRestrictionResponse.h>
 #include <tencentcloud/postgres/v20170312/model/ModifyBackupPlanRequest.h>
 #include <tencentcloud/postgres/v20170312/model/ModifyBackupPlanResponse.h>
 #include <tencentcloud/postgres/v20170312/model/ModifyBaseBackupExpireTimeRequest.h>
 #include <tencentcloud/postgres/v20170312/model/ModifyBaseBackupExpireTimeResponse.h>
+#include <tencentcloud/postgres/v20170312/model/ModifyDBInstanceChargeTypeRequest.h>
+#include <tencentcloud/postgres/v20170312/model/ModifyDBInstanceChargeTypeResponse.h>
 #include <tencentcloud/postgres/v20170312/model/ModifyDBInstanceDeploymentRequest.h>
 #include <tencentcloud/postgres/v20170312/model/ModifyDBInstanceDeploymentResponse.h>
 #include <tencentcloud/postgres/v20170312/model/ModifyDBInstanceNameRequest.h>
@@ -269,6 +275,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeAvailableRecoveryTimeResponse> DescribeAvailableRecoveryTimeOutcome;
                 typedef std::future<DescribeAvailableRecoveryTimeOutcome> DescribeAvailableRecoveryTimeOutcomeCallable;
                 typedef std::function<void(const PostgresClient*, const Model::DescribeAvailableRecoveryTimeRequest&, DescribeAvailableRecoveryTimeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAvailableRecoveryTimeAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBackupDownloadRestrictionResponse> DescribeBackupDownloadRestrictionOutcome;
+                typedef std::future<DescribeBackupDownloadRestrictionOutcome> DescribeBackupDownloadRestrictionOutcomeCallable;
+                typedef std::function<void(const PostgresClient*, const Model::DescribeBackupDownloadRestrictionRequest&, DescribeBackupDownloadRestrictionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBackupDownloadRestrictionAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeBackupDownloadURLResponse> DescribeBackupDownloadURLOutcome;
                 typedef std::future<DescribeBackupDownloadURLOutcome> DescribeBackupDownloadURLOutcomeCallable;
                 typedef std::function<void(const PostgresClient*, const Model::DescribeBackupDownloadURLRequest&, DescribeBackupDownloadURLOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBackupDownloadURLAsyncHandler;
@@ -386,12 +395,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyAccountRemarkResponse> ModifyAccountRemarkOutcome;
                 typedef std::future<ModifyAccountRemarkOutcome> ModifyAccountRemarkOutcomeCallable;
                 typedef std::function<void(const PostgresClient*, const Model::ModifyAccountRemarkRequest&, ModifyAccountRemarkOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAccountRemarkAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyBackupDownloadRestrictionResponse> ModifyBackupDownloadRestrictionOutcome;
+                typedef std::future<ModifyBackupDownloadRestrictionOutcome> ModifyBackupDownloadRestrictionOutcomeCallable;
+                typedef std::function<void(const PostgresClient*, const Model::ModifyBackupDownloadRestrictionRequest&, ModifyBackupDownloadRestrictionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyBackupDownloadRestrictionAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyBackupPlanResponse> ModifyBackupPlanOutcome;
                 typedef std::future<ModifyBackupPlanOutcome> ModifyBackupPlanOutcomeCallable;
                 typedef std::function<void(const PostgresClient*, const Model::ModifyBackupPlanRequest&, ModifyBackupPlanOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyBackupPlanAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyBaseBackupExpireTimeResponse> ModifyBaseBackupExpireTimeOutcome;
                 typedef std::future<ModifyBaseBackupExpireTimeOutcome> ModifyBaseBackupExpireTimeOutcomeCallable;
                 typedef std::function<void(const PostgresClient*, const Model::ModifyBaseBackupExpireTimeRequest&, ModifyBaseBackupExpireTimeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyBaseBackupExpireTimeAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyDBInstanceChargeTypeResponse> ModifyDBInstanceChargeTypeOutcome;
+                typedef std::future<ModifyDBInstanceChargeTypeOutcome> ModifyDBInstanceChargeTypeOutcomeCallable;
+                typedef std::function<void(const PostgresClient*, const Model::ModifyDBInstanceChargeTypeRequest&, ModifyDBInstanceChargeTypeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDBInstanceChargeTypeAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyDBInstanceDeploymentResponse> ModifyDBInstanceDeploymentOutcome;
                 typedef std::future<ModifyDBInstanceDeploymentOutcome> ModifyDBInstanceDeploymentOutcomeCallable;
                 typedef std::function<void(const PostgresClient*, const Model::ModifyDBInstanceDeploymentRequest&, ModifyDBInstanceDeploymentOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDBInstanceDeploymentAsyncHandler;
@@ -652,6 +667,15 @@ namespace TencentCloud
                 DescribeAvailableRecoveryTimeOutcome DescribeAvailableRecoveryTime(const Model::DescribeAvailableRecoveryTimeRequest &request);
                 void DescribeAvailableRecoveryTimeAsync(const Model::DescribeAvailableRecoveryTimeRequest& request, const DescribeAvailableRecoveryTimeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeAvailableRecoveryTimeOutcomeCallable DescribeAvailableRecoveryTimeCallable(const Model::DescribeAvailableRecoveryTimeRequest& request);
+
+                /**
+                 *This API is used to query the backup download restrictions.
+                 * @param req DescribeBackupDownloadRestrictionRequest
+                 * @return DescribeBackupDownloadRestrictionOutcome
+                 */
+                DescribeBackupDownloadRestrictionOutcome DescribeBackupDownloadRestriction(const Model::DescribeBackupDownloadRestrictionRequest &request);
+                void DescribeBackupDownloadRestrictionAsync(const Model::DescribeBackupDownloadRestrictionRequest& request, const DescribeBackupDownloadRestrictionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBackupDownloadRestrictionOutcomeCallable DescribeBackupDownloadRestrictionCallable(const Model::DescribeBackupDownloadRestrictionRequest& request);
 
                 /**
                  *This API is used to get the download URL of a backup.
@@ -1005,6 +1029,15 @@ namespace TencentCloud
                 ModifyAccountRemarkOutcomeCallable ModifyAccountRemarkCallable(const Model::ModifyAccountRemarkRequest& request);
 
                 /**
+                 *This API is used to modify the backup download restrictions.
+                 * @param req ModifyBackupDownloadRestrictionRequest
+                 * @return ModifyBackupDownloadRestrictionOutcome
+                 */
+                ModifyBackupDownloadRestrictionOutcome ModifyBackupDownloadRestriction(const Model::ModifyBackupDownloadRestrictionRequest &request);
+                void ModifyBackupDownloadRestrictionAsync(const Model::ModifyBackupDownloadRestrictionRequest& request, const ModifyBackupDownloadRestrictionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyBackupDownloadRestrictionOutcomeCallable ModifyBackupDownloadRestrictionCallable(const Model::ModifyBackupDownloadRestrictionRequest& request);
+
+                /**
                  *This API is used to modify the backup plan of an instance, such as modifying the backup start time. By default, a full backup starts at midnight every day and the generated backup files will be retained for seven days.
                  * @param req ModifyBackupPlanRequest
                  * @return ModifyBackupPlanOutcome
@@ -1021,6 +1054,15 @@ namespace TencentCloud
                 ModifyBaseBackupExpireTimeOutcome ModifyBaseBackupExpireTime(const Model::ModifyBaseBackupExpireTimeRequest &request);
                 void ModifyBaseBackupExpireTimeAsync(const Model::ModifyBaseBackupExpireTimeRequest& request, const ModifyBaseBackupExpireTimeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyBaseBackupExpireTimeOutcomeCallable ModifyBaseBackupExpireTimeCallable(const Model::ModifyBaseBackupExpireTimeRequest& request);
+
+                /**
+                 *This API is used to switch the instance billing mode from pay-as-you-go to monthly subscription.
+                 * @param req ModifyDBInstanceChargeTypeRequest
+                 * @return ModifyDBInstanceChargeTypeOutcome
+                 */
+                ModifyDBInstanceChargeTypeOutcome ModifyDBInstanceChargeType(const Model::ModifyDBInstanceChargeTypeRequest &request);
+                void ModifyDBInstanceChargeTypeAsync(const Model::ModifyDBInstanceChargeTypeRequest& request, const ModifyDBInstanceChargeTypeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyDBInstanceChargeTypeOutcomeCallable ModifyDBInstanceChargeTypeCallable(const Model::ModifyDBInstanceChargeTypeRequest& request);
 
                 /**
                  *This API is used to modify the AZs where the nodes of a source instance reside.

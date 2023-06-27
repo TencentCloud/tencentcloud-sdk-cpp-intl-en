@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/emr/v20190103/model/OpScope.h>
+#include <tencentcloud/emr/v20190103/model/StrategyConfig.h>
 
 
 namespace TencentCloud
@@ -66,34 +67,34 @@ namespace TencentCloud
 
                     /**
                      * 获取The operation type. Valid values:
-<li>`StartService`: Start services.</li>
-<li>`StopService`: Stop services.</li>
-<li>`StartMonitor`: Start the monitor.</li>
-<li>`StopMonitor`: Stop the monitor.</li>
-
+<li>StartService: Start service</li>
+<li>StopService: Stop service</li>
+<li>StartMonitor: Start maintenance</li>
+<li>StopMonitor: Stop maintenance</li>
+<li>RestartService: Restart service. If this type is selected, "StrategyConfig" is required.</li>
                      * @return OpType The operation type. Valid values:
-<li>`StartService`: Start services.</li>
-<li>`StopService`: Stop services.</li>
-<li>`StartMonitor`: Start the monitor.</li>
-<li>`StopMonitor`: Stop the monitor.</li>
-
+<li>StartService: Start service</li>
+<li>StopService: Stop service</li>
+<li>StartMonitor: Start maintenance</li>
+<li>StopMonitor: Stop maintenance</li>
+<li>RestartService: Restart service. If this type is selected, "StrategyConfig" is required.</li>
                      * 
                      */
                     std::string GetOpType() const;
 
                     /**
                      * 设置The operation type. Valid values:
-<li>`StartService`: Start services.</li>
-<li>`StopService`: Stop services.</li>
-<li>`StartMonitor`: Start the monitor.</li>
-<li>`StopMonitor`: Stop the monitor.</li>
-
+<li>StartService: Start service</li>
+<li>StopService: Stop service</li>
+<li>StartMonitor: Start maintenance</li>
+<li>StopMonitor: Stop maintenance</li>
+<li>RestartService: Restart service. If this type is selected, "StrategyConfig" is required.</li>
                      * @param _opType The operation type. Valid values:
-<li>`StartService`: Start services.</li>
-<li>`StopService`: Stop services.</li>
-<li>`StartMonitor`: Start the monitor.</li>
-<li>`StopMonitor`: Stop the monitor.</li>
-
+<li>StartService: Start service</li>
+<li>StopService: Stop service</li>
+<li>StartMonitor: Start maintenance</li>
+<li>StopMonitor: Stop maintenance</li>
+<li>RestartService: Restart service. If this type is selected, "StrategyConfig" is required.</li>
                      * 
                      */
                     void SetOpType(const std::string& _opType);
@@ -126,6 +127,27 @@ namespace TencentCloud
                      */
                     bool OpScopeHasBeenSet() const;
 
+                    /**
+                     * 获取The operation policy.
+                     * @return StrategyConfig The operation policy.
+                     * 
+                     */
+                    StrategyConfig GetStrategyConfig() const;
+
+                    /**
+                     * 设置The operation policy.
+                     * @param _strategyConfig The operation policy.
+                     * 
+                     */
+                    void SetStrategyConfig(const StrategyConfig& _strategyConfig);
+
+                    /**
+                     * 判断参数 StrategyConfig 是否已赋值
+                     * @return StrategyConfig 是否已赋值
+                     * 
+                     */
+                    bool StrategyConfigHasBeenSet() const;
+
                 private:
 
                     /**
@@ -136,11 +158,11 @@ namespace TencentCloud
 
                     /**
                      * The operation type. Valid values:
-<li>`StartService`: Start services.</li>
-<li>`StopService`: Stop services.</li>
-<li>`StartMonitor`: Start the monitor.</li>
-<li>`StopMonitor`: Stop the monitor.</li>
-
+<li>StartService: Start service</li>
+<li>StopService: Stop service</li>
+<li>StartMonitor: Start maintenance</li>
+<li>StopMonitor: Stop maintenance</li>
+<li>RestartService: Restart service. If this type is selected, "StrategyConfig" is required.</li>
                      */
                     std::string m_opType;
                     bool m_opTypeHasBeenSet;
@@ -150,6 +172,12 @@ namespace TencentCloud
                      */
                     OpScope m_opScope;
                     bool m_opScopeHasBeenSet;
+
+                    /**
+                     * The operation policy.
+                     */
+                    StrategyConfig m_strategyConfig;
+                    bool m_strategyConfigHasBeenSet;
 
                 };
             }

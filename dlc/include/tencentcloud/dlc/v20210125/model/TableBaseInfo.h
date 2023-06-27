@@ -264,6 +264,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool GovernPolicyHasBeenSet() const;
 
+                    /**
+                     * 获取Whether database data governance is disabled. Valid values: `true` (disabled) and `false` (not disabled).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DbGovernPolicyIsDisable Whether database data governance is disabled. Valid values: `true` (disabled) and `false` (not disabled).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetDbGovernPolicyIsDisable() const;
+
+                    /**
+                     * 设置Whether database data governance is disabled. Valid values: `true` (disabled) and `false` (not disabled).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _dbGovernPolicyIsDisable Whether database data governance is disabled. Valid values: `true` (disabled) and `false` (not disabled).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetDbGovernPolicyIsDisable(const std::string& _dbGovernPolicyIsDisable);
+
+                    /**
+                     * 判断参数 DbGovernPolicyIsDisable 是否已赋值
+                     * @return DbGovernPolicyIsDisable 是否已赋值
+                     * 
+                     */
+                    bool DbGovernPolicyIsDisableHasBeenSet() const;
+
                 private:
 
                     /**
@@ -326,6 +351,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     DataGovernPolicy m_governPolicy;
                     bool m_governPolicyHasBeenSet;
+
+                    /**
+                     * Whether database data governance is disabled. Valid values: `true` (disabled) and `false` (not disabled).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_dbGovernPolicyIsDisable;
+                    bool m_dbGovernPolicyIsDisableHasBeenSet;
 
                 };
             }
