@@ -29,6 +29,8 @@
 #include <tencentcloud/billing/v20180709/model/DescribeBillDetailResponse.h>
 #include <tencentcloud/billing/v20180709/model/DescribeBillResourceSummaryRequest.h>
 #include <tencentcloud/billing/v20180709/model/DescribeBillResourceSummaryResponse.h>
+#include <tencentcloud/billing/v20180709/model/DescribeBillSummaryRequest.h>
+#include <tencentcloud/billing/v20180709/model/DescribeBillSummaryResponse.h>
 #include <tencentcloud/billing/v20180709/model/DescribeBillSummaryByPayModeRequest.h>
 #include <tencentcloud/billing/v20180709/model/DescribeBillSummaryByPayModeResponse.h>
 #include <tencentcloud/billing/v20180709/model/DescribeBillSummaryByProductRequest.h>
@@ -68,6 +70,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeBillResourceSummaryResponse> DescribeBillResourceSummaryOutcome;
                 typedef std::future<DescribeBillResourceSummaryOutcome> DescribeBillResourceSummaryOutcomeCallable;
                 typedef std::function<void(const BillingClient*, const Model::DescribeBillResourceSummaryRequest&, DescribeBillResourceSummaryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBillResourceSummaryAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBillSummaryResponse> DescribeBillSummaryOutcome;
+                typedef std::future<DescribeBillSummaryOutcome> DescribeBillSummaryOutcomeCallable;
+                typedef std::function<void(const BillingClient*, const Model::DescribeBillSummaryRequest&, DescribeBillSummaryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBillSummaryAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeBillSummaryByPayModeResponse> DescribeBillSummaryByPayModeOutcome;
                 typedef std::future<DescribeBillSummaryByPayModeOutcome> DescribeBillSummaryByPayModeOutcomeCallable;
                 typedef std::function<void(const BillingClient*, const Model::DescribeBillSummaryByPayModeRequest&, DescribeBillSummaryByPayModeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBillSummaryByPayModeAsyncHandler;
@@ -105,7 +110,8 @@ namespace TencentCloud
                 DescribeAccountBalanceOutcomeCallable DescribeAccountBalanceCallable(const Model::DescribeAccountBalanceRequest& request);
 
                 /**
-                 *This API is used to query bill details.
+                 *This API is used to get bill details. 
+Notes: 1. The API request may fail due to network instability or other exceptions. In this case, we recommend you manually retry the request when the API request fails. 2. If the volume of your bill data is high (for example, if over 200 thousand bill entries are generated for a month), bill data query via APIs may be slow. We recommend you enable bill storage so that you can obtain bill files from COS buckets for analysis. For details, see [Saving Bills to COS](https://intl.cloud.tencent.com/document/product/555/61275?from_cn_redirect=1).
                  * @param req DescribeBillDetailRequest
                  * @return DescribeBillDetailOutcome
                  */
@@ -123,7 +129,16 @@ namespace TencentCloud
                 DescribeBillResourceSummaryOutcomeCallable DescribeBillResourceSummaryCallable(const Model::DescribeBillResourceSummaryRequest& request);
 
                 /**
-                 *Gets the bill summarized according to billing mode
+                 *This API is used to get bill details by product, project, region, billing mode, and tag through passing in parameters.
+                 * @param req DescribeBillSummaryRequest
+                 * @return DescribeBillSummaryOutcome
+                 */
+                DescribeBillSummaryOutcome DescribeBillSummary(const Model::DescribeBillSummaryRequest &request);
+                void DescribeBillSummaryAsync(const Model::DescribeBillSummaryRequest& request, const DescribeBillSummaryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBillSummaryOutcomeCallable DescribeBillSummaryCallable(const Model::DescribeBillSummaryRequest& request);
+
+                /**
+                 *This API is used to get the bill summarized by billing mode.
                  * @param req DescribeBillSummaryByPayModeRequest
                  * @return DescribeBillSummaryByPayModeOutcome
                  */

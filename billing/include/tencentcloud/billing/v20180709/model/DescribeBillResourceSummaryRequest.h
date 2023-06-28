@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Offset
-                     * @return Offset Offset
+                     * 获取Pagination offset. If `Offset` is `0`, it indicates the first page. If `Limit` is `100`, "`Offset` = `100`" indicates the second page, then "`Offset` = `200`" indicates the third page, and so on.
+                     * @return Offset Pagination offset. If `Offset` is `0`, it indicates the first page. If `Limit` is `100`, "`Offset` = `100`" indicates the second page, then "`Offset` = `200`" indicates the third page, and so on.
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Offset
-                     * @param _offset Offset
+                     * 设置Pagination offset. If `Offset` is `0`, it indicates the first page. If `Limit` is `100`, "`Offset` = `100`" indicates the second page, then "`Offset` = `200`" indicates the third page, and so on.
+                     * @param _offset Pagination offset. If `Offset` is `0`, it indicates the first page. If `Limit` is `100`, "`Offset` = `100`" indicates the second page, then "`Offset` = `200`" indicates the third page, and so on.
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Month; format: yyyy-mm. This value cannot be earlier than the month when Bill 2.0 is enabled. Last 24 months data are available.
-                     * @return Month Month; format: yyyy-mm. This value cannot be earlier than the month when Bill 2.0 is enabled. Last 24 months data are available.
+                     * 获取Bill month in the format of "yyyy-mm".  This value must be no earlier than March 2019, when Bill 2.0 was launched.
+                     * @return Month Bill month in the format of "yyyy-mm".  This value must be no earlier than March 2019, when Bill 2.0 was launched.
                      * 
                      */
                     std::string GetMonth() const;
 
                     /**
-                     * 设置Month; format: yyyy-mm. This value cannot be earlier than the month when Bill 2.0 is enabled. Last 24 months data are available.
-                     * @param _month Month; format: yyyy-mm. This value cannot be earlier than the month when Bill 2.0 is enabled. Last 24 months data are available.
+                     * 设置Bill month in the format of "yyyy-mm".  This value must be no earlier than March 2019, when Bill 2.0 was launched.
+                     * @param _month Bill month in the format of "yyyy-mm".  This value must be no earlier than March 2019, when Bill 2.0 was launched.
                      * 
                      */
                     void SetMonth(const std::string& _month);
@@ -315,10 +315,31 @@ Note: To query the product codes used in the current month, call <a href="https:
                      */
                     bool BusinessCodeHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return PayerUin 
+                     * 
+                     */
+                    std::string GetPayerUin() const;
+
+                    /**
+                     * 设置
+                     * @param _payerUin 
+                     * 
+                     */
+                    void SetPayerUin(const std::string& _payerUin);
+
+                    /**
+                     * 判断参数 PayerUin 是否已赋值
+                     * @return PayerUin 是否已赋值
+                     * 
+                     */
+                    bool PayerUinHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Offset
+                     * Pagination offset. If `Offset` is `0`, it indicates the first page. If `Limit` is `100`, "`Offset` = `100`" indicates the second page, then "`Offset` = `200`" indicates the third page, and so on.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
@@ -330,7 +351,7 @@ Note: To query the product codes used in the current month, call <a href="https:
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Month; format: yyyy-mm. This value cannot be earlier than the month when Bill 2.0 is enabled. Last 24 months data are available.
+                     * Bill month in the format of "yyyy-mm".  This value must be no earlier than March 2019, when Bill 2.0 was launched.
                      */
                     std::string m_month;
                     bool m_monthHasBeenSet;
@@ -391,6 +412,12 @@ Note: To query the product codes used in the current month, call <a href="https:
                      */
                     std::string m_businessCode;
                     bool m_businessCodeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_payerUin;
+                    bool m_payerUinHasBeenSet;
 
                 };
             }

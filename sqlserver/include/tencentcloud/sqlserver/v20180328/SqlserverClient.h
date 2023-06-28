@@ -37,6 +37,10 @@
 #include <tencentcloud/sqlserver/v20180328/model/CreateBusinessDBInstancesResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/CreateBusinessIntelligenceFileRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/CreateBusinessIntelligenceFileResponse.h>
+#include <tencentcloud/sqlserver/v20180328/model/CreateCloudDBInstancesRequest.h>
+#include <tencentcloud/sqlserver/v20180328/model/CreateCloudDBInstancesResponse.h>
+#include <tencentcloud/sqlserver/v20180328/model/CreateCloudReadOnlyDBInstancesRequest.h>
+#include <tencentcloud/sqlserver/v20180328/model/CreateCloudReadOnlyDBInstancesResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/CreateDBRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/CreateDBResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/CreateDBInstancesRequest.h>
@@ -204,6 +208,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateBusinessIntelligenceFileResponse> CreateBusinessIntelligenceFileOutcome;
                 typedef std::future<CreateBusinessIntelligenceFileOutcome> CreateBusinessIntelligenceFileOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::CreateBusinessIntelligenceFileRequest&, CreateBusinessIntelligenceFileOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateBusinessIntelligenceFileAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateCloudDBInstancesResponse> CreateCloudDBInstancesOutcome;
+                typedef std::future<CreateCloudDBInstancesOutcome> CreateCloudDBInstancesOutcomeCallable;
+                typedef std::function<void(const SqlserverClient*, const Model::CreateCloudDBInstancesRequest&, CreateCloudDBInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCloudDBInstancesAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateCloudReadOnlyDBInstancesResponse> CreateCloudReadOnlyDBInstancesOutcome;
+                typedef std::future<CreateCloudReadOnlyDBInstancesOutcome> CreateCloudReadOnlyDBInstancesOutcomeCallable;
+                typedef std::function<void(const SqlserverClient*, const Model::CreateCloudReadOnlyDBInstancesRequest&, CreateCloudReadOnlyDBInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCloudReadOnlyDBInstancesAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateDBResponse> CreateDBOutcome;
                 typedef std::future<CreateDBOutcome> CreateDBOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::CreateDBRequest&, CreateDBOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDBAsyncHandler;
@@ -467,6 +477,24 @@ namespace TencentCloud
                 CreateBusinessIntelligenceFileOutcome CreateBusinessIntelligenceFile(const Model::CreateBusinessIntelligenceFileRequest &request);
                 void CreateBusinessIntelligenceFileAsync(const Model::CreateBusinessIntelligenceFileRequest& request, const CreateBusinessIntelligenceFileAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateBusinessIntelligenceFileOutcomeCallable CreateBusinessIntelligenceFileCallable(const Model::CreateBusinessIntelligenceFileRequest& request);
+
+                /**
+                 *This API is used to create a high-availability instance of cloud disk edition.
+                 * @param req CreateCloudDBInstancesRequest
+                 * @return CreateCloudDBInstancesOutcome
+                 */
+                CreateCloudDBInstancesOutcome CreateCloudDBInstances(const Model::CreateCloudDBInstancesRequest &request);
+                void CreateCloudDBInstancesAsync(const Model::CreateCloudDBInstancesRequest& request, const CreateCloudDBInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateCloudDBInstancesOutcomeCallable CreateCloudDBInstancesCallable(const Model::CreateCloudDBInstancesRequest& request);
+
+                /**
+                 *This API is used to add a read-only replica instance of cloud disk edition.
+                 * @param req CreateCloudReadOnlyDBInstancesRequest
+                 * @return CreateCloudReadOnlyDBInstancesOutcome
+                 */
+                CreateCloudReadOnlyDBInstancesOutcome CreateCloudReadOnlyDBInstances(const Model::CreateCloudReadOnlyDBInstancesRequest &request);
+                void CreateCloudReadOnlyDBInstancesAsync(const Model::CreateCloudReadOnlyDBInstancesRequest& request, const CreateCloudReadOnlyDBInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateCloudReadOnlyDBInstancesOutcomeCallable CreateCloudReadOnlyDBInstancesCallable(const Model::CreateCloudReadOnlyDBInstancesRequest& request);
 
                 /**
                  *This API is used to create a database.

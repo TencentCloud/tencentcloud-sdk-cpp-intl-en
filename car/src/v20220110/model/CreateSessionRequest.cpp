@@ -26,7 +26,10 @@ CreateSessionRequest::CreateSessionRequest() :
     m_userIdHasBeenSet(false),
     m_userIpHasBeenSet(false),
     m_clientSessionHasBeenSet(false),
-    m_runModeHasBeenSet(false)
+    m_runModeHasBeenSet(false),
+    m_applicationParametersHasBeenSet(false),
+    m_hostUserIdHasBeenSet(false),
+    m_roleHasBeenSet(false)
 {
 }
 
@@ -67,6 +70,30 @@ string CreateSessionRequest::ToJsonString() const
         string key = "RunMode";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_runMode.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_applicationParametersHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ApplicationParameters";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_applicationParameters.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_hostUserIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "HostUserId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_hostUserId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_roleHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Role";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_role.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -139,6 +166,54 @@ void CreateSessionRequest::SetRunMode(const string& _runMode)
 bool CreateSessionRequest::RunModeHasBeenSet() const
 {
     return m_runModeHasBeenSet;
+}
+
+string CreateSessionRequest::GetApplicationParameters() const
+{
+    return m_applicationParameters;
+}
+
+void CreateSessionRequest::SetApplicationParameters(const string& _applicationParameters)
+{
+    m_applicationParameters = _applicationParameters;
+    m_applicationParametersHasBeenSet = true;
+}
+
+bool CreateSessionRequest::ApplicationParametersHasBeenSet() const
+{
+    return m_applicationParametersHasBeenSet;
+}
+
+string CreateSessionRequest::GetHostUserId() const
+{
+    return m_hostUserId;
+}
+
+void CreateSessionRequest::SetHostUserId(const string& _hostUserId)
+{
+    m_hostUserId = _hostUserId;
+    m_hostUserIdHasBeenSet = true;
+}
+
+bool CreateSessionRequest::HostUserIdHasBeenSet() const
+{
+    return m_hostUserIdHasBeenSet;
+}
+
+string CreateSessionRequest::GetRole() const
+{
+    return m_role;
+}
+
+void CreateSessionRequest::SetRole(const string& _role)
+{
+    m_role = _role;
+    m_roleHasBeenSet = true;
+}
+
+bool CreateSessionRequest::RoleHasBeenSet() const
+{
+    return m_roleHasBeenSet;
 }
 
 

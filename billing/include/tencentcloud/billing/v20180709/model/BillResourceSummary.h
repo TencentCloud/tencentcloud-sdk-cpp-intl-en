@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Product name: major categories of Tencent Cloud services, e.g. CVM and TencentDB for MySQL
-                     * @return BusinessCodeName Product name: major categories of Tencent Cloud services, e.g. CVM and TencentDB for MySQL
+                     * 获取Product name:  The name of a Tencent Cloud product purchased by the user, such as  CVM.
+                     * @return BusinessCodeName Product name:  The name of a Tencent Cloud product purchased by the user, such as  CVM.
                      * 
                      */
                     std::string GetBusinessCodeName() const;
 
                     /**
-                     * 设置Product name: major categories of Tencent Cloud services, e.g. CVM and TencentDB for MySQL
-                     * @param _businessCodeName Product name: major categories of Tencent Cloud services, e.g. CVM and TencentDB for MySQL
+                     * 设置Product name:  The name of a Tencent Cloud product purchased by the user, such as  CVM.
+                     * @param _businessCodeName Product name:  The name of a Tencent Cloud product purchased by the user, such as  CVM.
                      * 
                      */
                     void SetBusinessCodeName(const std::string& _businessCodeName);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool BusinessCodeNameHasBeenSet() const;
 
                     /**
-                     * 获取Subproduct name, which is the subcategory of a Tencent Cloud product, such as CVM-Standard S1. If no subproduct name can be obtained, `-` is returned.
-                     * @return ProductCodeName Subproduct name, which is the subcategory of a Tencent Cloud product, such as CVM-Standard S1. If no subproduct name can be obtained, `-` is returned.
+                     * 获取Subproduct name:  The subcategory of a Tencent Cloud product purchased by the user, such as  CVM – Standard S1.
+                     * @return ProductCodeName Subproduct name:  The subcategory of a Tencent Cloud product purchased by the user, such as  CVM – Standard S1.
                      * 
                      */
                     std::string GetProductCodeName() const;
 
                     /**
-                     * 设置Subproduct name, which is the subcategory of a Tencent Cloud product, such as CVM-Standard S1. If no subproduct name can be obtained, `-` is returned.
-                     * @param _productCodeName Subproduct name, which is the subcategory of a Tencent Cloud product, such as CVM-Standard S1. If no subproduct name can be obtained, `-` is returned.
+                     * 设置Subproduct name:  The subcategory of a Tencent Cloud product purchased by the user, such as  CVM – Standard S1.
+                     * @param _productCodeName Subproduct name:  The subcategory of a Tencent Cloud product purchased by the user, such as  CVM – Standard S1.
                      * 
                      */
                     void SetProductCodeName(const std::string& _productCodeName);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool ProductCodeNameHasBeenSet() const;
 
                     /**
-                     * 获取Billing mode
-                     * @return PayModeName Billing mode
+                     * 获取Billing mode,  which can be monthly subscription or pay-as-you-go.
+                     * @return PayModeName Billing mode,  which can be monthly subscription or pay-as-you-go.
                      * 
                      */
                     std::string GetPayModeName() const;
 
                     /**
-                     * 设置Billing mode
-                     * @param _payModeName Billing mode
+                     * 设置Billing mode,  which can be monthly subscription or pay-as-you-go.
+                     * @param _payModeName Billing mode,  which can be monthly subscription or pay-as-you-go.
                      * 
                      */
                     void SetPayModeName(const std::string& _payModeName);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool PayModeNameHasBeenSet() const;
 
                     /**
-                     * 获取Project
-                     * @return ProjectName Project
+                     * 获取Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+                     * @return ProjectName Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
                      * 
                      */
                     std::string GetProjectName() const;
 
                     /**
-                     * 设置Project
-                     * @param _projectName Project
+                     * 设置Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+                     * @param _projectName Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
                      * 
                      */
                     void SetProjectName(const std::string& _projectName);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool ProjectNameHasBeenSet() const;
 
                     /**
-                     * 获取Region
-                     * @return RegionName Region
+                     * 获取Region:  The region to which a resource belongs, such as South China (Guangzhou).
+                     * @return RegionName Region:  The region to which a resource belongs, such as South China (Guangzhou).
                      * 
                      */
                     std::string GetRegionName() const;
 
                     /**
-                     * 设置Region
-                     * @param _regionName Region
+                     * 设置Region:  The region to which a resource belongs, such as South China (Guangzhou).
+                     * @param _regionName Region:  The region to which a resource belongs, such as South China (Guangzhou).
                      * 
                      */
                     void SetRegionName(const std::string& _regionName);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool RegionNameHasBeenSet() const;
 
                     /**
-                     * 获取Availability zone
-                     * @return ZoneName Availability zone
+                     * 获取Availability zone:  The availability zone to which a resource belongs, such as Guangzhou Zone 3.
+                     * @return ZoneName Availability zone:  The availability zone to which a resource belongs, such as Guangzhou Zone 3.
                      * 
                      */
                     std::string GetZoneName() const;
 
                     /**
-                     * 设置Availability zone
-                     * @param _zoneName Availability zone
+                     * 设置Availability zone:  The availability zone to which a resource belongs, such as Guangzhou Zone 3.
+                     * @param _zoneName Availability zone:  The availability zone to which a resource belongs, such as Guangzhou Zone 3.
                      * 
                      */
                     void SetZoneName(const std::string& _zoneName);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool ZoneNameHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID
-                     * @return ResourceId Instance ID
+                     * 获取Instance ID:  The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products.	
+                     * @return ResourceId Instance ID:  The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products.	
                      * 
                      */
                     std::string GetResourceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _resourceId Instance ID
+                     * 设置Instance ID:  The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products.	
+                     * @param _resourceId Instance ID:  The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products.	
                      * 
                      */
                     void SetResourceId(const std::string& _resourceId);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool ResourceIdHasBeenSet() const;
 
                     /**
-                     * 获取Resource instance namDeduction timee
-                     * @return ResourceName Resource instance namDeduction timee
+                     * 获取Instance name:  The resource name set by the user in the console. If it is not set, it will be empty by default.
+                     * @return ResourceName Instance name:  The resource name set by the user in the console. If it is not set, it will be empty by default.
                      * 
                      */
                     std::string GetResourceName() const;
 
                     /**
-                     * 设置Resource instance namDeduction timee
-                     * @param _resourceName Resource instance namDeduction timee
+                     * 设置Instance name:  The resource name set by the user in the console. If it is not set, it will be empty by default.
+                     * @param _resourceName Instance name:  The resource name set by the user in the console. If it is not set, it will be empty by default.
                      * 
                      */
                     void SetResourceName(const std::string& _resourceName);
@@ -216,15 +216,15 @@ namespace TencentCloud
                     bool ResourceNameHasBeenSet() const;
 
                     /**
-                     * 获取Transaction type
-                     * @return ActionTypeName Transaction type
+                     * 获取Transaction type,  which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
+                     * @return ActionTypeName Transaction type,  which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
                      * 
                      */
                     std::string GetActionTypeName() const;
 
                     /**
-                     * 设置Transaction type
-                     * @param _actionTypeName Transaction type
+                     * 设置Transaction type,  which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
+                     * @param _actionTypeName Transaction type,  which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
                      * 
                      */
                     void SetActionTypeName(const std::string& _actionTypeName);
@@ -237,15 +237,15 @@ namespace TencentCloud
                     bool ActionTypeNameHasBeenSet() const;
 
                     /**
-                     * 获取Order ID
-                     * @return OrderId Order ID
+                     * 获取Order ID:  The order number for a monthly subscription purchase
+                     * @return OrderId Order ID:  The order number for a monthly subscription purchase
                      * 
                      */
                     std::string GetOrderId() const;
 
                     /**
-                     * 设置Order ID
-                     * @param _orderId Order ID
+                     * 设置Order ID:  The order number for a monthly subscription purchase
+                     * @param _orderId Order ID:  The order number for a monthly subscription purchase
                      * 
                      */
                     void SetOrderId(const std::string& _orderId);
@@ -258,15 +258,15 @@ namespace TencentCloud
                     bool OrderIdHasBeenSet() const;
 
                     /**
-                     * 获取Payment time
-                     * @return PayTime Payment time
+                     * 获取Transaction time:  The time at which a payment was deducted
+                     * @return PayTime Transaction time:  The time at which a payment was deducted
                      * 
                      */
                     std::string GetPayTime() const;
 
                     /**
-                     * 设置Payment time
-                     * @param _payTime Payment time
+                     * 设置Transaction time:  The time at which a payment was deducted
+                     * @param _payTime Transaction time:  The time at which a payment was deducted
                      * 
                      */
                     void SetPayTime(const std::string& _payTime);
@@ -279,15 +279,15 @@ namespace TencentCloud
                     bool PayTimeHasBeenSet() const;
 
                     /**
-                     * 获取Service start time
-                     * @return FeeBeginTime Service start time
+                     * 获取Usage start time:  The time at which product or service usage starts
+                     * @return FeeBeginTime Usage start time:  The time at which product or service usage starts
                      * 
                      */
                     std::string GetFeeBeginTime() const;
 
                     /**
-                     * 设置Service start time
-                     * @param _feeBeginTime Service start time
+                     * 设置Usage start time:  The time at which product or service usage starts
+                     * @param _feeBeginTime Usage start time:  The time at which product or service usage starts
                      * 
                      */
                     void SetFeeBeginTime(const std::string& _feeBeginTime);
@@ -300,15 +300,15 @@ namespace TencentCloud
                     bool FeeBeginTimeHasBeenSet() const;
 
                     /**
-                     * 获取Service end time
-                     * @return FeeEndTime Service end time
+                     * 获取Usage end time:  The time at which product or service usage ends
+                     * @return FeeEndTime Usage end time:  The time at which product or service usage ends
                      * 
                      */
                     std::string GetFeeEndTime() const;
 
                     /**
-                     * 设置Service end time
-                     * @param _feeEndTime Service end time
+                     * 设置Usage end time:  The time at which product or service usage ends
+                     * @param _feeEndTime Usage end time:  The time at which product or service usage ends
                      * 
                      */
                     void SetFeeEndTime(const std::string& _feeEndTime);
@@ -321,15 +321,15 @@ namespace TencentCloud
                     bool FeeEndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Configuration description
-                     * @return ConfigDesc Configuration description
+                     * 获取Configuration description:  The billable item names and usage of a resource, which are displayed on the resource bill only.
+                     * @return ConfigDesc Configuration description:  The billable item names and usage of a resource, which are displayed on the resource bill only.
                      * 
                      */
                     std::string GetConfigDesc() const;
 
                     /**
-                     * 设置Configuration description
-                     * @param _configDesc Configuration description
+                     * 设置Configuration description:  The billable item names and usage of a resource, which are displayed on the resource bill only.
+                     * @param _configDesc Configuration description:  The billable item names and usage of a resource, which are displayed on the resource bill only.
                      * 
                      */
                     void SetConfigDesc(const std::string& _configDesc);
@@ -342,15 +342,15 @@ namespace TencentCloud
                     bool ConfigDescHasBeenSet() const;
 
                     /**
-                     * 获取Extension field 1
-                     * @return ExtendField1 Extension field 1
+                     * 获取Extended field 1:  Extended attribute information of a product, which is displayed on the resource bill only.
+                     * @return ExtendField1 Extended field 1:  Extended attribute information of a product, which is displayed on the resource bill only.
                      * 
                      */
                     std::string GetExtendField1() const;
 
                     /**
-                     * 设置Extension field 1
-                     * @param _extendField1 Extension field 1
+                     * 设置Extended field 1:  Extended attribute information of a product, which is displayed on the resource bill only.
+                     * @param _extendField1 Extended field 1:  Extended attribute information of a product, which is displayed on the resource bill only.
                      * 
                      */
                     void SetExtendField1(const std::string& _extendField1);
@@ -363,15 +363,15 @@ namespace TencentCloud
                     bool ExtendField1HasBeenSet() const;
 
                     /**
-                     * 获取Extension field 2
-                     * @return ExtendField2 Extension field 2
+                     * 获取Extended field 2:  Extended attribute information of a product, which is displayed on the resource bill only.
+                     * @return ExtendField2 Extended field 2:  Extended attribute information of a product, which is displayed on the resource bill only.
                      * 
                      */
                     std::string GetExtendField2() const;
 
                     /**
-                     * 设置Extension field 2
-                     * @param _extendField2 Extension field 2
+                     * 设置Extended field 2:  Extended attribute information of a product, which is displayed on the resource bill only.
+                     * @param _extendField2 Extended field 2:  Extended attribute information of a product, which is displayed on the resource bill only.
                      * 
                      */
                     void SetExtendField2(const std::string& _extendField2);
@@ -384,15 +384,15 @@ namespace TencentCloud
                     bool ExtendField2HasBeenSet() const;
 
                     /**
-                     * 获取Cost, in USD
-                     * @return TotalCost Cost, in USD
+                     * 获取Original cost:  The original cost of a resource, which is "List price x Usage x Usage duration". If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
+                     * @return TotalCost Original cost:  The original cost of a resource, which is "List price x Usage x Usage duration". If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
                      * 
                      */
                     std::string GetTotalCost() const;
 
                     /**
-                     * 设置Cost, in USD
-                     * @param _totalCost Cost, in USD
+                     * 设置Original cost:  The original cost of a resource, which is "List price x Usage x Usage duration". If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
+                     * @param _totalCost Original cost:  The original cost of a resource, which is "List price x Usage x Usage duration". If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
                      * 
                      */
                     void SetTotalCost(const std::string& _totalCost);
@@ -405,19 +405,15 @@ namespace TencentCloud
                     bool TotalCostHasBeenSet() const;
 
                     /**
-                     * 获取Discount
-If different discounts or contract prices are applied, `-` will be returned for this parameter.
-                     * @return Discount Discount
-If different discounts or contract prices are applied, `-` will be returned for this parameter.
+                     * 获取Discount multiplier:  The discount multiplier applied to the cost of the resource. If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
+                     * @return Discount Discount multiplier:  The discount multiplier applied to the cost of the resource. If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
                      * 
                      */
                     std::string GetDiscount() const;
 
                     /**
-                     * 设置Discount
-If different discounts or contract prices are applied, `-` will be returned for this parameter.
-                     * @param _discount Discount
-If different discounts or contract prices are applied, `-` will be returned for this parameter.
+                     * 设置Discount multiplier:  The discount multiplier applied to the cost of the resource. If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
+                     * @param _discount Discount multiplier:  The discount multiplier applied to the cost of the resource. If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
                      * 
                      */
                     void SetDiscount(const std::string& _discount);
@@ -451,15 +447,15 @@ If different discounts or contract prices are applied, `-` will be returned for 
                     bool ReduceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Total cost after discount, in USD
-                     * @return RealTotalCost Total cost after discount, in USD
+                     * 获取Total amount after discount
+                     * @return RealTotalCost Total amount after discount
                      * 
                      */
                     std::string GetRealTotalCost() const;
 
                     /**
-                     * 设置Total cost after discount, in USD
-                     * @param _realTotalCost Total cost after discount, in USD
+                     * 设置Total amount after discount
+                     * @param _realTotalCost Total amount after discount
                      * 
                      */
                     void SetRealTotalCost(const std::string& _realTotalCost);
@@ -472,15 +468,15 @@ If different discounts or contract prices are applied, `-` will be returned for 
                     bool RealTotalCostHasBeenSet() const;
 
                     /**
-                     * 获取Amount paid in voucher, in USD
-                     * @return VoucherPayAmount Amount paid in voucher, in USD
+                     * 获取Voucher payment:  The voucher deduction amount
+                     * @return VoucherPayAmount Voucher payment:  The voucher deduction amount
                      * 
                      */
                     std::string GetVoucherPayAmount() const;
 
                     /**
-                     * 设置Amount paid in voucher, in USD
-                     * @param _voucherPayAmount Amount paid in voucher, in USD
+                     * 设置Voucher payment:  The voucher deduction amount
+                     * @param _voucherPayAmount Voucher payment:  The voucher deduction amount
                      * 
                      */
                     void SetVoucherPayAmount(const std::string& _voucherPayAmount);
@@ -493,15 +489,15 @@ If different discounts or contract prices are applied, `-` will be returned for 
                     bool VoucherPayAmountHasBeenSet() const;
 
                     /**
-                     * 获取Amount paid in cash, in USD
-                     * @return CashPayAmount Amount paid in cash, in USD
+                     * 获取Cash credit:  The amount paid from the user’s cash account
+                     * @return CashPayAmount Cash credit:  The amount paid from the user’s cash account
                      * 
                      */
                     std::string GetCashPayAmount() const;
 
                     /**
-                     * 设置Amount paid in cash, in USD
-                     * @param _cashPayAmount Amount paid in cash, in USD
+                     * 设置Cash credit:  The amount paid from the user’s cash account
+                     * @param _cashPayAmount Cash credit:  The amount paid from the user’s cash account
                      * 
                      */
                     void SetCashPayAmount(const std::string& _cashPayAmount);
@@ -514,15 +510,15 @@ If different discounts or contract prices are applied, `-` will be returned for 
                     bool CashPayAmountHasBeenSet() const;
 
                     /**
-                     * 获取Amount paid in trial credit, in USD
-                     * @return IncentivePayAmount Amount paid in trial credit, in USD
+                     * 获取Free credit:  The amount paid by the user’s free credit
+                     * @return IncentivePayAmount Free credit:  The amount paid by the user’s free credit
                      * 
                      */
                     std::string GetIncentivePayAmount() const;
 
                     /**
-                     * 设置Amount paid in trial credit, in USD
-                     * @param _incentivePayAmount Amount paid in trial credit, in USD
+                     * 设置Free credit:  The amount paid by the user’s free credit
+                     * @param _incentivePayAmount Free credit:  The amount paid by the user’s free credit
                      * 
                      */
                     void SetIncentivePayAmount(const std::string& _incentivePayAmount);
@@ -535,15 +531,36 @@ If different discounts or contract prices are applied, `-` will be returned for 
                     bool IncentivePayAmountHasBeenSet() const;
 
                     /**
-                     * 获取Extension field 3
-                     * @return ExtendField3 Extension field 3
+                     * 获取Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+                     * @return TransferPayAmount Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetTransferPayAmount() const;
+
+                    /**
+                     * 设置Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+                     * @param _transferPayAmount Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetTransferPayAmount(const std::string& _transferPayAmount);
+
+                    /**
+                     * 判断参数 TransferPayAmount 是否已赋值
+                     * @return TransferPayAmount 是否已赋值
+                     * 
+                     */
+                    bool TransferPayAmountHasBeenSet() const;
+
+                    /**
+                     * 获取Extended field 3:  Extended attribute information of a product, which is displayed on the resource bill only.
+                     * @return ExtendField3 Extended field 3:  Extended attribute information of a product, which is displayed on the resource bill only.
                      * 
                      */
                     std::string GetExtendField3() const;
 
                     /**
-                     * 设置Extension field 3
-                     * @param _extendField3 Extension field 3
+                     * 设置Extended field 3:  Extended attribute information of a product, which is displayed on the resource bill only.
+                     * @param _extendField3 Extended field 3:  Extended attribute information of a product, which is displayed on the resource bill only.
                      * 
                      */
                     void SetExtendField3(const std::string& _extendField3);
@@ -556,15 +573,15 @@ If different discounts or contract prices are applied, `-` will be returned for 
                     bool ExtendField3HasBeenSet() const;
 
                     /**
-                     * 获取Extension field 4
-                     * @return ExtendField4 Extension field 4
+                     * 获取Extended field 4:  Extended attribute information of a product, which is displayed on the resource bill only.
+                     * @return ExtendField4 Extended field 4:  Extended attribute information of a product, which is displayed on the resource bill only.
                      * 
                      */
                     std::string GetExtendField4() const;
 
                     /**
-                     * 设置Extension field 4
-                     * @param _extendField4 Extension field 4
+                     * 设置Extended field 4:  Extended attribute information of a product, which is displayed on the resource bill only.
+                     * @param _extendField4 Extended field 4:  Extended attribute information of a product, which is displayed on the resource bill only.
                      * 
                      */
                     void SetExtendField4(const std::string& _extendField4);
@@ -577,15 +594,15 @@ If different discounts or contract prices are applied, `-` will be returned for 
                     bool ExtendField4HasBeenSet() const;
 
                     /**
-                     * 获取Extension field 5
-                     * @return ExtendField5 Extension field 5
+                     * 获取Extended field 5:  Extended attribute information of a product, which is displayed on the resource bill only.
+                     * @return ExtendField5 Extended field 5:  Extended attribute information of a product, which is displayed on the resource bill only.
                      * 
                      */
                     std::string GetExtendField5() const;
 
                     /**
-                     * 设置Extension field 5
-                     * @param _extendField5 Extension field 5
+                     * 设置Extended field 5:  Extended attribute information of a product, which is displayed on the resource bill only.
+                     * @param _extendField5 Extended field 5:  Extended attribute information of a product, which is displayed on the resource bill only.
                      * 
                      */
                     void SetExtendField5(const std::string& _extendField5);
@@ -598,19 +615,15 @@ If different discounts or contract prices are applied, `-` will be returned for 
                     bool ExtendField5HasBeenSet() const;
 
                     /**
-                     * 获取Tag information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Tags Tag information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Tag information. Note:  This field may return null, indicating that no valid values can be obtained.
+                     * @return Tags Tag information. Note:  This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<BillTagInfo> GetTags() const;
 
                     /**
-                     * 设置Tag information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tags Tag information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Tag information. Note:  This field may return null, indicating that no valid values can be obtained.
+                     * @param _tags Tag information. Note:  This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTags(const std::vector<BillTagInfo>& _tags);
@@ -623,15 +636,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Payer UIN
-                     * @return PayerUin Payer UIN
+                     * 获取Payer account ID:  The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
+                     * @return PayerUin Payer account ID:  The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
                      * 
                      */
                     std::string GetPayerUin() const;
 
                     /**
-                     * 设置Payer UIN
-                     * @param _payerUin Payer UIN
+                     * 设置Payer account ID:  The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
+                     * @param _payerUin Payer account ID:  The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
                      * 
                      */
                     void SetPayerUin(const std::string& _payerUin);
@@ -644,15 +657,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PayerUinHasBeenSet() const;
 
                     /**
-                     * 获取Resource owner UIN; '-' is returned if no value is obtained
-                     * @return OwnerUin Resource owner UIN; '-' is returned if no value is obtained
+                     * 获取Owner account ID:  The account ID of the actual resource user
+                     * @return OwnerUin Owner account ID:  The account ID of the actual resource user
                      * 
                      */
                     std::string GetOwnerUin() const;
 
                     /**
-                     * 设置Resource owner UIN; '-' is returned if no value is obtained
-                     * @param _ownerUin Resource owner UIN; '-' is returned if no value is obtained
+                     * 设置Owner account ID:  The account ID of the actual resource user
+                     * @param _ownerUin Owner account ID:  The account ID of the actual resource user
                      * 
                      */
                     void SetOwnerUin(const std::string& _ownerUin);
@@ -665,15 +678,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OwnerUinHasBeenSet() const;
 
                     /**
-                     * 获取Operator UIN; '-' is returned if no value is obtained
-                     * @return OperateUin Operator UIN; '-' is returned if no value is obtained
+                     * 获取Operator account ID:  The account or role ID of the operator who purchases or activates a resource.
+                     * @return OperateUin Operator account ID:  The account or role ID of the operator who purchases or activates a resource.
                      * 
                      */
                     std::string GetOperateUin() const;
 
                     /**
-                     * 设置Operator UIN; '-' is returned if no value is obtained
-                     * @param _operateUin Operator UIN; '-' is returned if no value is obtained
+                     * 设置Operator account ID:  The account or role ID of the operator who purchases or activates a resource.
+                     * @param _operateUin Operator account ID:  The account or role ID of the operator who purchases or activates a resource.
                      * 
                      */
                     void SetOperateUin(const std::string& _operateUin);
@@ -728,15 +741,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProductCodeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RegionId 
+                     * 获取Region ID
+                     * @return RegionId Region ID
                      * 
                      */
                     int64_t GetRegionId() const;
 
                     /**
-                     * 设置
-                     * @param _regionId 
+                     * 设置Region ID
+                     * @param _regionId Region ID
                      * 
                      */
                     void SetRegionId(const int64_t& _regionId);
@@ -749,47 +762,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RegionIdHasBeenSet() const;
 
                     /**
-                     * 获取The special instance (resource pack, reserved instance, savings plan, or spot instance) that is applied to deduction. Valid values:
-
-ri=Standard RI
-
-svp=Savings Plan
-
-si=Spot Instances
-
-rp=Resource Pack
-                     * @return InstanceType The special instance (resource pack, reserved instance, savings plan, or spot instance) that is applied to deduction. Valid values:
-
-ri=Standard RI
-
-svp=Savings Plan
-
-si=Spot Instances
-
-rp=Resource Pack
+                     * 获取Instance type:  The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default.
+                     * @return InstanceType Instance type:  The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default.
                      * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置The special instance (resource pack, reserved instance, savings plan, or spot instance) that is applied to deduction. Valid values:
-
-ri=Standard RI
-
-svp=Savings Plan
-
-si=Spot Instances
-
-rp=Resource Pack
-                     * @param _instanceType The special instance (resource pack, reserved instance, savings plan, or spot instance) that is applied to deduction. Valid values:
-
-ri=Standard RI
-
-svp=Savings Plan
-
-si=Spot Instances
-
-rp=Resource Pack
+                     * 设置Instance type:  The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default.
+                     * @param _instanceType Instance type:  The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default.
                      * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
@@ -802,15 +783,15 @@ rp=Resource Pack
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取The amount deducted by a reserved instance based on the original component cost.
-                     * @return OriginalCostWithRI The amount deducted by a reserved instance based on the original component cost.
+                     * 获取RI deduction (cost):  The amount deducted from the original cost by RI	
+                     * @return OriginalCostWithRI RI deduction (cost):  The amount deducted from the original cost by RI	
                      * 
                      */
                     std::string GetOriginalCostWithRI() const;
 
                     /**
-                     * 设置The amount deducted by a reserved instance based on the original component cost.
-                     * @param _originalCostWithRI The amount deducted by a reserved instance based on the original component cost.
+                     * 设置RI deduction (cost):  The amount deducted from the original cost by RI	
+                     * @param _originalCostWithRI RI deduction (cost):  The amount deducted from the original cost by RI	
                      * 
                      */
                     void SetOriginalCostWithRI(const std::string& _originalCostWithRI);
@@ -823,36 +804,36 @@ rp=Resource Pack
                     bool OriginalCostWithRIHasBeenSet() const;
 
                     /**
-                     * 获取The savings plan deduction amount.
-                     * @return SPDeduction The savings plan deduction amount.
-                     * 
+                     * 获取Cost deduction by SP. This parameter has been deprecated.
+                     * @return SPDeduction Cost deduction by SP. This parameter has been deprecated.
+                     * @deprecated
                      */
                     std::string GetSPDeduction() const;
 
                     /**
-                     * 设置The savings plan deduction amount.
-                     * @param _sPDeduction The savings plan deduction amount.
-                     * 
+                     * 设置Cost deduction by SP. This parameter has been deprecated.
+                     * @param _sPDeduction Cost deduction by SP. This parameter has been deprecated.
+                     * @deprecated
                      */
                     void SetSPDeduction(const std::string& _sPDeduction);
 
                     /**
                      * 判断参数 SPDeduction 是否已赋值
                      * @return SPDeduction 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool SPDeductionHasBeenSet() const;
 
                     /**
-                     * 获取The amount deducted by a savings plan based on the original component cost.
-                     * @return OriginalCostWithSP The amount deducted by a savings plan based on the original component cost.
+                     * 获取SP deduction (cost):  SP deduction (cost) = Cost deduction by SP / SP deduction rate	
+                     * @return OriginalCostWithSP SP deduction (cost):  SP deduction (cost) = Cost deduction by SP / SP deduction rate	
                      * 
                      */
                     std::string GetOriginalCostWithSP() const;
 
                     /**
-                     * 设置The amount deducted by a savings plan based on the original component cost.
-                     * @param _originalCostWithSP The amount deducted by a savings plan based on the original component cost.
+                     * 设置SP deduction (cost):  SP deduction (cost) = Cost deduction by SP / SP deduction rate	
+                     * @param _originalCostWithSP SP deduction (cost):  SP deduction (cost) = Cost deduction by SP / SP deduction rate	
                      * 
                      */
                     void SetOriginalCostWithSP(const std::string& _originalCostWithSP);
@@ -867,110 +848,109 @@ rp=Resource Pack
                 private:
 
                     /**
-                     * Product name: major categories of Tencent Cloud services, e.g. CVM and TencentDB for MySQL
+                     * Product name:  The name of a Tencent Cloud product purchased by the user, such as  CVM.
                      */
                     std::string m_businessCodeName;
                     bool m_businessCodeNameHasBeenSet;
 
                     /**
-                     * Subproduct name, which is the subcategory of a Tencent Cloud product, such as CVM-Standard S1. If no subproduct name can be obtained, `-` is returned.
+                     * Subproduct name:  The subcategory of a Tencent Cloud product purchased by the user, such as  CVM – Standard S1.
                      */
                     std::string m_productCodeName;
                     bool m_productCodeNameHasBeenSet;
 
                     /**
-                     * Billing mode
+                     * Billing mode,  which can be monthly subscription or pay-as-you-go.
                      */
                     std::string m_payModeName;
                     bool m_payModeNameHasBeenSet;
 
                     /**
-                     * Project
+                     * Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
                      */
                     std::string m_projectName;
                     bool m_projectNameHasBeenSet;
 
                     /**
-                     * Region
+                     * Region:  The region to which a resource belongs, such as South China (Guangzhou).
                      */
                     std::string m_regionName;
                     bool m_regionNameHasBeenSet;
 
                     /**
-                     * Availability zone
+                     * Availability zone:  The availability zone to which a resource belongs, such as Guangzhou Zone 3.
                      */
                     std::string m_zoneName;
                     bool m_zoneNameHasBeenSet;
 
                     /**
-                     * Instance ID
+                     * Instance ID:  The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products.	
                      */
                     std::string m_resourceId;
                     bool m_resourceIdHasBeenSet;
 
                     /**
-                     * Resource instance namDeduction timee
+                     * Instance name:  The resource name set by the user in the console. If it is not set, it will be empty by default.
                      */
                     std::string m_resourceName;
                     bool m_resourceNameHasBeenSet;
 
                     /**
-                     * Transaction type
+                     * Transaction type,  which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
                      */
                     std::string m_actionTypeName;
                     bool m_actionTypeNameHasBeenSet;
 
                     /**
-                     * Order ID
+                     * Order ID:  The order number for a monthly subscription purchase
                      */
                     std::string m_orderId;
                     bool m_orderIdHasBeenSet;
 
                     /**
-                     * Payment time
+                     * Transaction time:  The time at which a payment was deducted
                      */
                     std::string m_payTime;
                     bool m_payTimeHasBeenSet;
 
                     /**
-                     * Service start time
+                     * Usage start time:  The time at which product or service usage starts
                      */
                     std::string m_feeBeginTime;
                     bool m_feeBeginTimeHasBeenSet;
 
                     /**
-                     * Service end time
+                     * Usage end time:  The time at which product or service usage ends
                      */
                     std::string m_feeEndTime;
                     bool m_feeEndTimeHasBeenSet;
 
                     /**
-                     * Configuration description
+                     * Configuration description:  The billable item names and usage of a resource, which are displayed on the resource bill only.
                      */
                     std::string m_configDesc;
                     bool m_configDescHasBeenSet;
 
                     /**
-                     * Extension field 1
+                     * Extended field 1:  Extended attribute information of a product, which is displayed on the resource bill only.
                      */
                     std::string m_extendField1;
                     bool m_extendField1HasBeenSet;
 
                     /**
-                     * Extension field 2
+                     * Extended field 2:  Extended attribute information of a product, which is displayed on the resource bill only.
                      */
                     std::string m_extendField2;
                     bool m_extendField2HasBeenSet;
 
                     /**
-                     * Cost, in USD
+                     * Original cost:  The original cost of a resource, which is "List price x Usage x Usage duration". If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
                      */
                     std::string m_totalCost;
                     bool m_totalCostHasBeenSet;
 
                     /**
-                     * Discount
-If different discounts or contract prices are applied, `-` will be returned for this parameter.
+                     * Discount multiplier:  The discount multiplier applied to the cost of the resource. If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
                      */
                     std::string m_discount;
                     bool m_discountHasBeenSet;
@@ -982,68 +962,73 @@ If different discounts or contract prices are applied, `-` will be returned for 
                     bool m_reduceTypeHasBeenSet;
 
                     /**
-                     * Total cost after discount, in USD
+                     * Total amount after discount
                      */
                     std::string m_realTotalCost;
                     bool m_realTotalCostHasBeenSet;
 
                     /**
-                     * Amount paid in voucher, in USD
+                     * Voucher payment:  The voucher deduction amount
                      */
                     std::string m_voucherPayAmount;
                     bool m_voucherPayAmountHasBeenSet;
 
                     /**
-                     * Amount paid in cash, in USD
+                     * Cash credit:  The amount paid from the user’s cash account
                      */
                     std::string m_cashPayAmount;
                     bool m_cashPayAmountHasBeenSet;
 
                     /**
-                     * Amount paid in trial credit, in USD
+                     * Free credit:  The amount paid by the user’s free credit
                      */
                     std::string m_incentivePayAmount;
                     bool m_incentivePayAmountHasBeenSet;
 
                     /**
-                     * Extension field 3
+                     * Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_transferPayAmount;
+                    bool m_transferPayAmountHasBeenSet;
+
+                    /**
+                     * Extended field 3:  Extended attribute information of a product, which is displayed on the resource bill only.
                      */
                     std::string m_extendField3;
                     bool m_extendField3HasBeenSet;
 
                     /**
-                     * Extension field 4
+                     * Extended field 4:  Extended attribute information of a product, which is displayed on the resource bill only.
                      */
                     std::string m_extendField4;
                     bool m_extendField4HasBeenSet;
 
                     /**
-                     * Extension field 5
+                     * Extended field 5:  Extended attribute information of a product, which is displayed on the resource bill only.
                      */
                     std::string m_extendField5;
                     bool m_extendField5HasBeenSet;
 
                     /**
-                     * Tag information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Tag information. Note:  This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<BillTagInfo> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Payer UIN
+                     * Payer account ID:  The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
                      */
                     std::string m_payerUin;
                     bool m_payerUinHasBeenSet;
 
                     /**
-                     * Resource owner UIN; '-' is returned if no value is obtained
+                     * Owner account ID:  The account ID of the actual resource user
                      */
                     std::string m_ownerUin;
                     bool m_ownerUinHasBeenSet;
 
                     /**
-                     * Operator UIN; '-' is returned if no value is obtained
+                     * Operator account ID:  The account or role ID of the operator who purchases or activates a resource.
                      */
                     std::string m_operateUin;
                     bool m_operateUinHasBeenSet;
@@ -1061,39 +1046,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_productCodeHasBeenSet;
 
                     /**
-                     * 
+                     * Region ID
                      */
                     int64_t m_regionId;
                     bool m_regionIdHasBeenSet;
 
                     /**
-                     * The special instance (resource pack, reserved instance, savings plan, or spot instance) that is applied to deduction. Valid values:
-
-ri=Standard RI
-
-svp=Savings Plan
-
-si=Spot Instances
-
-rp=Resource Pack
+                     * Instance type:  The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default.
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * The amount deducted by a reserved instance based on the original component cost.
+                     * RI deduction (cost):  The amount deducted from the original cost by RI	
                      */
                     std::string m_originalCostWithRI;
                     bool m_originalCostWithRIHasBeenSet;
 
                     /**
-                     * The savings plan deduction amount.
+                     * Cost deduction by SP. This parameter has been deprecated.
                      */
                     std::string m_sPDeduction;
                     bool m_sPDeductionHasBeenSet;
 
                     /**
-                     * The amount deducted by a savings plan based on the original component cost.
+                     * SP deduction (cost):  SP deduction (cost) = Cost deduction by SP / SP deduction rate	
                      */
                     std::string m_originalCostWithSP;
                     bool m_originalCostWithSPHasBeenSet;

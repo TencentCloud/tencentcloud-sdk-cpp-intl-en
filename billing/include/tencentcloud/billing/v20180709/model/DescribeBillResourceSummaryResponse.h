@@ -59,10 +59,8 @@ namespace TencentCloud
                     bool ResourceSummarySetHasBeenSet() const;
 
                     /**
-                     * 获取Total number of resource summary lists
-Note: This field may return null, indicating that no valid value was found.
-                     * @return Total Total number of resource summary lists
-Note: This field may return null, indicating that no valid value was found.
+                     * 获取Total number of resource summary lists, which will not be returned when `NeedRecordNum` is `0`. This field may return null, indicating that no valid values can be obtained.
+                     * @return Total Total number of resource summary lists, which will not be returned when `NeedRecordNum` is `0`. This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetTotal() const;
@@ -83,8 +81,7 @@ Note: This field may return null, indicating that no valid value was found.
                     bool m_resourceSummarySetHasBeenSet;
 
                     /**
-                     * Total number of resource summary lists
-Note: This field may return null, indicating that no valid value was found.
+                     * Total number of resource summary lists, which will not be returned when `NeedRecordNum` is `0`. This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_total;
                     bool m_totalHasBeenSet;

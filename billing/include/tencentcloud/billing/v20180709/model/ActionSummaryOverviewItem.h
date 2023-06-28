@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Transaction type
-                     * @return ActionType Transaction type
+                     * 获取Transaction type code
+                     * @return ActionType Transaction type code
                      * 
                      */
                     std::string GetActionType() const;
 
                     /**
-                     * 设置Transaction type
-                     * @param _actionType Transaction type
+                     * 设置Transaction type code
+                     * @param _actionType Transaction type code
                      * 
                      */
                     void SetActionType(const std::string& _actionType);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ActionTypeHasBeenSet() const;
 
                     /**
-                     * 获取Transaction type name
-                     * @return ActionTypeName Transaction type name
+                     * 获取Transaction type,  which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
+                     * @return ActionTypeName Transaction type,  which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
                      * 
                      */
                     std::string GetActionTypeName() const;
 
                     /**
-                     * 设置Transaction type name
-                     * @param _actionTypeName Transaction type name
+                     * 设置Transaction type,  which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
+                     * @param _actionTypeName Transaction type,  which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
                      * 
                      */
                     void SetActionTypeName(const std::string& _actionTypeName);
@@ -87,27 +87,6 @@ namespace TencentCloud
                      * 
                      */
                     bool ActionTypeNameHasBeenSet() const;
-
-                    /**
-                     * 获取Actual cost
-                     * @return RealTotalCost Actual cost
-                     * 
-                     */
-                    std::string GetRealTotalCost() const;
-
-                    /**
-                     * 设置Actual cost
-                     * @param _realTotalCost Actual cost
-                     * 
-                     */
-                    void SetRealTotalCost(const std::string& _realTotalCost);
-
-                    /**
-                     * 判断参数 RealTotalCost 是否已赋值
-                     * @return RealTotalCost 是否已赋值
-                     * 
-                     */
-                    bool RealTotalCostHasBeenSet() const;
 
                     /**
                      * 获取Cost ratio, to two decimal points
@@ -131,15 +110,36 @@ namespace TencentCloud
                     bool RealTotalCostRatioHasBeenSet() const;
 
                     /**
-                     * 获取Cash amount
-                     * @return CashPayAmount Cash amount
+                     * 获取Total amount after discount
+                     * @return RealTotalCost Total amount after discount
+                     * 
+                     */
+                    std::string GetRealTotalCost() const;
+
+                    /**
+                     * 设置Total amount after discount
+                     * @param _realTotalCost Total amount after discount
+                     * 
+                     */
+                    void SetRealTotalCost(const std::string& _realTotalCost);
+
+                    /**
+                     * 判断参数 RealTotalCost 是否已赋值
+                     * @return RealTotalCost 是否已赋值
+                     * 
+                     */
+                    bool RealTotalCostHasBeenSet() const;
+
+                    /**
+                     * 获取Cash credit:  The amount paid from the user’s cash account
+                     * @return CashPayAmount Cash credit:  The amount paid from the user’s cash account
                      * 
                      */
                     std::string GetCashPayAmount() const;
 
                     /**
-                     * 设置Cash amount
-                     * @param _cashPayAmount Cash amount
+                     * 设置Cash credit:  The amount paid from the user’s cash account
+                     * @param _cashPayAmount Cash credit:  The amount paid from the user’s cash account
                      * 
                      */
                     void SetCashPayAmount(const std::string& _cashPayAmount);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool CashPayAmountHasBeenSet() const;
 
                     /**
-                     * 获取Trial credit amount
-                     * @return IncentivePayAmount Trial credit amount
+                     * 获取Free credit:  The amount paid by the user’s free credit
+                     * @return IncentivePayAmount Free credit:  The amount paid by the user’s free credit
                      * 
                      */
                     std::string GetIncentivePayAmount() const;
 
                     /**
-                     * 设置Trial credit amount
-                     * @param _incentivePayAmount Trial credit amount
+                     * 设置Free credit:  The amount paid by the user’s free credit
+                     * @param _incentivePayAmount Free credit:  The amount paid by the user’s free credit
                      * 
                      */
                     void SetIncentivePayAmount(const std::string& _incentivePayAmount);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool IncentivePayAmountHasBeenSet() const;
 
                     /**
-                     * 获取Voucher amount
-                     * @return VoucherPayAmount Voucher amount
+                     * 获取Voucher payment:  The voucher deduction amount
+                     * @return VoucherPayAmount Voucher payment:  The voucher deduction amount
                      * 
                      */
                     std::string GetVoucherPayAmount() const;
 
                     /**
-                     * 设置Voucher amount
-                     * @param _voucherPayAmount Voucher amount
+                     * 设置Voucher payment:  The voucher deduction amount
+                     * @param _voucherPayAmount Voucher payment:  The voucher deduction amount
                      * 
                      */
                     void SetVoucherPayAmount(const std::string& _voucherPayAmount);
@@ -192,6 +192,27 @@ namespace TencentCloud
                      * 
                      */
                     bool VoucherPayAmountHasBeenSet() const;
+
+                    /**
+                     * 获取Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+                     * @return TransferPayAmount Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetTransferPayAmount() const;
+
+                    /**
+                     * 设置Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+                     * @param _transferPayAmount Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetTransferPayAmount(const std::string& _transferPayAmount);
+
+                    /**
+                     * 判断参数 TransferPayAmount 是否已赋值
+                     * @return TransferPayAmount 是否已赋值
+                     * 
+                     */
+                    bool TransferPayAmountHasBeenSet() const;
 
                     /**
                      * 获取Billing month, e.g. `2019-08`
@@ -238,22 +259,16 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Transaction type
+                     * Transaction type code
                      */
                     std::string m_actionType;
                     bool m_actionTypeHasBeenSet;
 
                     /**
-                     * Transaction type name
+                     * Transaction type,  which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
                      */
                     std::string m_actionTypeName;
                     bool m_actionTypeNameHasBeenSet;
-
-                    /**
-                     * Actual cost
-                     */
-                    std::string m_realTotalCost;
-                    bool m_realTotalCostHasBeenSet;
 
                     /**
                      * Cost ratio, to two decimal points
@@ -262,22 +277,34 @@ namespace TencentCloud
                     bool m_realTotalCostRatioHasBeenSet;
 
                     /**
-                     * Cash amount
+                     * Total amount after discount
+                     */
+                    std::string m_realTotalCost;
+                    bool m_realTotalCostHasBeenSet;
+
+                    /**
+                     * Cash credit:  The amount paid from the user’s cash account
                      */
                     std::string m_cashPayAmount;
                     bool m_cashPayAmountHasBeenSet;
 
                     /**
-                     * Trial credit amount
+                     * Free credit:  The amount paid by the user’s free credit
                      */
                     std::string m_incentivePayAmount;
                     bool m_incentivePayAmountHasBeenSet;
 
                     /**
-                     * Voucher amount
+                     * Voucher payment:  The voucher deduction amount
                      */
                     std::string m_voucherPayAmount;
                     bool m_voucherPayAmountHasBeenSet;
+
+                    /**
+                     * Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_transferPayAmount;
+                    bool m_transferPayAmountHasBeenSet;
 
                     /**
                      * Billing month, e.g. `2019-08`

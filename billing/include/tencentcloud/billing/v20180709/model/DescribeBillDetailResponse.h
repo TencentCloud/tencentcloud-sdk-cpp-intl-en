@@ -59,10 +59,10 @@ namespace TencentCloud
                     bool DetailSetHasBeenSet() const;
 
                     /**
-                     * 获取Total number of records
-Note: This field may return null, indicating that no valid value was found.
-                     * @return Total Total number of records
-Note: This field may return null, indicating that no valid value was found.
+                     * 获取
+Note:  This field may return null, indicating that no valid values can be obtained.
+                     * @return Total 
+Note:  This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetTotal() const;
@@ -74,6 +74,20 @@ Note: This field may return null, indicating that no valid value was found.
                      */
                     bool TotalHasBeenSet() const;
 
+                    /**
+                     * 获取Context information returned by this request, and the value can be passed in as the value of parameters in the next request to accelerate queries. Note:  This field may return null, indicating that no valid values can be obtained.
+                     * @return Context Context information returned by this request, and the value can be passed in as the value of parameters in the next request to accelerate queries. Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetContext() const;
+
+                    /**
+                     * 判断参数 Context 是否已赋值
+                     * @return Context 是否已赋值
+                     * 
+                     */
+                    bool ContextHasBeenSet() const;
+
                 private:
 
                     /**
@@ -83,11 +97,17 @@ Note: This field may return null, indicating that no valid value was found.
                     bool m_detailSetHasBeenSet;
 
                     /**
-                     * Total number of records
-Note: This field may return null, indicating that no valid value was found.
+                     * 
+Note:  This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_total;
                     bool m_totalHasBeenSet;
+
+                    /**
+                     * Context information returned by this request, and the value can be passed in as the value of parameters in the next request to accelerate queries. Note:  This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_context;
+                    bool m_contextHasBeenSet;
 
                 };
             }

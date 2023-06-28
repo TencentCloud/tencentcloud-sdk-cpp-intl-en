@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool UserIpHasBeenSet() const;
 
                     /**
-                     * 获取The client-side session data, which is obtained from the SDK.
-                     * @return ClientSession The client-side session data, which is obtained from the SDK.
+                     * 获取The client-side session data, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be null.
+                     * @return ClientSession The client-side session data, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be null.
                      * 
                      */
                     std::string GetClientSession() const;
 
                     /**
-                     * 设置The client-side session data, which is obtained from the SDK.
-                     * @param _clientSession The client-side session data, which is obtained from the SDK.
+                     * 设置The client-side session data, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be null.
+                     * @param _clientSession The client-side session data, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be null.
                      * 
                      */
                     void SetClientSession(const std::string& _clientSession);
@@ -134,6 +134,89 @@ Empty string (default): Keep the application running on the cloud only when ther
                      */
                     bool RunModeHasBeenSet() const;
 
+                    /**
+                     * 获取Application startup parameter.
+If the user requests a multi-application project or a prelaunch-disabled single-application project, this parameter takes effect.
+If the user requests a prelaunch-enabled single-application project, this parameter is invalid.
+                     * @return ApplicationParameters Application startup parameter.
+If the user requests a multi-application project or a prelaunch-disabled single-application project, this parameter takes effect.
+If the user requests a prelaunch-enabled single-application project, this parameter is invalid.
+                     * 
+                     */
+                    std::string GetApplicationParameters() const;
+
+                    /**
+                     * 设置Application startup parameter.
+If the user requests a multi-application project or a prelaunch-disabled single-application project, this parameter takes effect.
+If the user requests a prelaunch-enabled single-application project, this parameter is invalid.
+                     * @param _applicationParameters Application startup parameter.
+If the user requests a multi-application project or a prelaunch-disabled single-application project, this parameter takes effect.
+If the user requests a prelaunch-enabled single-application project, this parameter is invalid.
+                     * 
+                     */
+                    void SetApplicationParameters(const std::string& _applicationParameters);
+
+                    /**
+                     * 判断参数 ApplicationParameters 是否已赋值
+                     * @return ApplicationParameters 是否已赋值
+                     * 
+                     */
+                    bool ApplicationParametersHasBeenSet() const;
+
+                    /**
+                     * 获取The user ID of the host in **multi-person interaction** scenarios, which is required.
+If the current user is the host, `HostUserId` must be the same as their `UserId`; otherwise, `HostUserId` should be the host's `UserId`.
+                     * @return HostUserId The user ID of the host in **multi-person interaction** scenarios, which is required.
+If the current user is the host, `HostUserId` must be the same as their `UserId`; otherwise, `HostUserId` should be the host's `UserId`.
+                     * 
+                     */
+                    std::string GetHostUserId() const;
+
+                    /**
+                     * 设置The user ID of the host in **multi-person interaction** scenarios, which is required.
+If the current user is the host, `HostUserId` must be the same as their `UserId`; otherwise, `HostUserId` should be the host's `UserId`.
+                     * @param _hostUserId The user ID of the host in **multi-person interaction** scenarios, which is required.
+If the current user is the host, `HostUserId` must be the same as their `UserId`; otherwise, `HostUserId` should be the host's `UserId`.
+                     * 
+                     */
+                    void SetHostUserId(const std::string& _hostUserId);
+
+                    /**
+                     * 判断参数 HostUserId 是否已赋值
+                     * @return HostUserId 是否已赋值
+                     * 
+                     */
+                    bool HostUserIdHasBeenSet() const;
+
+                    /**
+                     * 获取The role in **multi-person interaction** scenarios. Valid values:
+`Player`: A user who can operate an application by using a keyboard and mouse
+`Viewer`: A user who can only watch the video in the room but cannot operate the application
+                     * @return Role The role in **multi-person interaction** scenarios. Valid values:
+`Player`: A user who can operate an application by using a keyboard and mouse
+`Viewer`: A user who can only watch the video in the room but cannot operate the application
+                     * 
+                     */
+                    std::string GetRole() const;
+
+                    /**
+                     * 设置The role in **multi-person interaction** scenarios. Valid values:
+`Player`: A user who can operate an application by using a keyboard and mouse
+`Viewer`: A user who can only watch the video in the room but cannot operate the application
+                     * @param _role The role in **multi-person interaction** scenarios. Valid values:
+`Player`: A user who can operate an application by using a keyboard and mouse
+`Viewer`: A user who can only watch the video in the room but cannot operate the application
+                     * 
+                     */
+                    void SetRole(const std::string& _role);
+
+                    /**
+                     * 判断参数 Role 是否已赋值
+                     * @return Role 是否已赋值
+                     * 
+                     */
+                    bool RoleHasBeenSet() const;
+
                 private:
 
                     /**
@@ -149,7 +232,7 @@ Empty string (default): Keep the application running on the cloud only when ther
                     bool m_userIpHasBeenSet;
 
                     /**
-                     * The client-side session data, which is obtained from the SDK.
+                     * The client-side session data, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be null.
                      */
                     std::string m_clientSession;
                     bool m_clientSessionHasBeenSet;
@@ -161,6 +244,29 @@ Empty string (default): Keep the application running on the cloud only when ther
                      */
                     std::string m_runMode;
                     bool m_runModeHasBeenSet;
+
+                    /**
+                     * Application startup parameter.
+If the user requests a multi-application project or a prelaunch-disabled single-application project, this parameter takes effect.
+If the user requests a prelaunch-enabled single-application project, this parameter is invalid.
+                     */
+                    std::string m_applicationParameters;
+                    bool m_applicationParametersHasBeenSet;
+
+                    /**
+                     * The user ID of the host in **multi-person interaction** scenarios, which is required.
+If the current user is the host, `HostUserId` must be the same as their `UserId`; otherwise, `HostUserId` should be the host's `UserId`.
+                     */
+                    std::string m_hostUserId;
+                    bool m_hostUserIdHasBeenSet;
+
+                    /**
+                     * The role in **multi-person interaction** scenarios. Valid values:
+`Player`: A user who can operate an application by using a keyboard and mouse
+`Viewer`: A user who can only watch the video in the room but cannot operate the application
+                     */
+                    std::string m_role;
+                    bool m_roleHasBeenSet;
 
                 };
             }

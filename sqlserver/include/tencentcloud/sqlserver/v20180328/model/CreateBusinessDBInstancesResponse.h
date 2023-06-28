@@ -57,6 +57,34 @@ namespace TencentCloud
                      */
                     bool DealNameHasBeenSet() const;
 
+                    /**
+                     * 获取Process ID Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return FlowId Process ID Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetFlowId() const;
+
+                    /**
+                     * 判断参数 FlowId 是否已赋值
+                     * @return FlowId 是否已赋值
+                     * 
+                     */
+                    bool FlowIdHasBeenSet() const;
+
+                    /**
+                     * 获取IDs of instances Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return InstanceIdSet IDs of instances Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<std::string> GetInstanceIdSet() const;
+
+                    /**
+                     * 判断参数 InstanceIdSet 是否已赋值
+                     * @return InstanceIdSet 是否已赋值
+                     * 
+                     */
+                    bool InstanceIdSetHasBeenSet() const;
+
                 private:
 
                     /**
@@ -64,6 +92,18 @@ namespace TencentCloud
                      */
                     std::string m_dealName;
                     bool m_dealNameHasBeenSet;
+
+                    /**
+                     * Process ID Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_flowId;
+                    bool m_flowIdHasBeenSet;
+
+                    /**
+                     * IDs of instances Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_instanceIdSet;
+                    bool m_instanceIdSetHasBeenSet;
 
                 };
             }

@@ -14,27 +14,25 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/billing/v20180709/model/BusinessSummaryOverviewItem.h>
+#include <tencentcloud/billing/v20180709/model/BusinessSummaryInfo.h>
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Billing::V20180709::Model;
 using namespace std;
 
-BusinessSummaryOverviewItem::BusinessSummaryOverviewItem() :
+BusinessSummaryInfo::BusinessSummaryInfo() :
     m_businessCodeHasBeenSet(false),
     m_businessCodeNameHasBeenSet(false),
-    m_realTotalCostRatioHasBeenSet(false),
+    m_totalCostHasBeenSet(false),
     m_realTotalCostHasBeenSet(false),
     m_cashPayAmountHasBeenSet(false),
     m_incentivePayAmountHasBeenSet(false),
     m_voucherPayAmountHasBeenSet(false),
-    m_transferPayAmountHasBeenSet(false),
-    m_billMonthHasBeenSet(false),
-    m_totalCostHasBeenSet(false)
+    m_transferPayAmountHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome BusinessSummaryOverviewItem::Deserialize(const rapidjson::Value &value)
+CoreInternalOutcome BusinessSummaryInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -43,7 +41,7 @@ CoreInternalOutcome BusinessSummaryOverviewItem::Deserialize(const rapidjson::Va
     {
         if (!value["BusinessCode"].IsString())
         {
-            return CoreInternalOutcome(Core::Error("response `BusinessSummaryOverviewItem.BusinessCode` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BusinessSummaryInfo.BusinessCode` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_businessCode = string(value["BusinessCode"].GetString());
         m_businessCodeHasBeenSet = true;
@@ -53,27 +51,27 @@ CoreInternalOutcome BusinessSummaryOverviewItem::Deserialize(const rapidjson::Va
     {
         if (!value["BusinessCodeName"].IsString())
         {
-            return CoreInternalOutcome(Core::Error("response `BusinessSummaryOverviewItem.BusinessCodeName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BusinessSummaryInfo.BusinessCodeName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_businessCodeName = string(value["BusinessCodeName"].GetString());
         m_businessCodeNameHasBeenSet = true;
     }
 
-    if (value.HasMember("RealTotalCostRatio") && !value["RealTotalCostRatio"].IsNull())
+    if (value.HasMember("TotalCost") && !value["TotalCost"].IsNull())
     {
-        if (!value["RealTotalCostRatio"].IsString())
+        if (!value["TotalCost"].IsString())
         {
-            return CoreInternalOutcome(Core::Error("response `BusinessSummaryOverviewItem.RealTotalCostRatio` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BusinessSummaryInfo.TotalCost` IsString=false incorrectly").SetRequestId(requestId));
         }
-        m_realTotalCostRatio = string(value["RealTotalCostRatio"].GetString());
-        m_realTotalCostRatioHasBeenSet = true;
+        m_totalCost = string(value["TotalCost"].GetString());
+        m_totalCostHasBeenSet = true;
     }
 
     if (value.HasMember("RealTotalCost") && !value["RealTotalCost"].IsNull())
     {
         if (!value["RealTotalCost"].IsString())
         {
-            return CoreInternalOutcome(Core::Error("response `BusinessSummaryOverviewItem.RealTotalCost` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BusinessSummaryInfo.RealTotalCost` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_realTotalCost = string(value["RealTotalCost"].GetString());
         m_realTotalCostHasBeenSet = true;
@@ -83,7 +81,7 @@ CoreInternalOutcome BusinessSummaryOverviewItem::Deserialize(const rapidjson::Va
     {
         if (!value["CashPayAmount"].IsString())
         {
-            return CoreInternalOutcome(Core::Error("response `BusinessSummaryOverviewItem.CashPayAmount` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BusinessSummaryInfo.CashPayAmount` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_cashPayAmount = string(value["CashPayAmount"].GetString());
         m_cashPayAmountHasBeenSet = true;
@@ -93,7 +91,7 @@ CoreInternalOutcome BusinessSummaryOverviewItem::Deserialize(const rapidjson::Va
     {
         if (!value["IncentivePayAmount"].IsString())
         {
-            return CoreInternalOutcome(Core::Error("response `BusinessSummaryOverviewItem.IncentivePayAmount` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BusinessSummaryInfo.IncentivePayAmount` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_incentivePayAmount = string(value["IncentivePayAmount"].GetString());
         m_incentivePayAmountHasBeenSet = true;
@@ -103,7 +101,7 @@ CoreInternalOutcome BusinessSummaryOverviewItem::Deserialize(const rapidjson::Va
     {
         if (!value["VoucherPayAmount"].IsString())
         {
-            return CoreInternalOutcome(Core::Error("response `BusinessSummaryOverviewItem.VoucherPayAmount` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BusinessSummaryInfo.VoucherPayAmount` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_voucherPayAmount = string(value["VoucherPayAmount"].GetString());
         m_voucherPayAmountHasBeenSet = true;
@@ -113,37 +111,17 @@ CoreInternalOutcome BusinessSummaryOverviewItem::Deserialize(const rapidjson::Va
     {
         if (!value["TransferPayAmount"].IsString())
         {
-            return CoreInternalOutcome(Core::Error("response `BusinessSummaryOverviewItem.TransferPayAmount` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BusinessSummaryInfo.TransferPayAmount` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_transferPayAmount = string(value["TransferPayAmount"].GetString());
         m_transferPayAmountHasBeenSet = true;
-    }
-
-    if (value.HasMember("BillMonth") && !value["BillMonth"].IsNull())
-    {
-        if (!value["BillMonth"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `BusinessSummaryOverviewItem.BillMonth` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_billMonth = string(value["BillMonth"].GetString());
-        m_billMonthHasBeenSet = true;
-    }
-
-    if (value.HasMember("TotalCost") && !value["TotalCost"].IsNull())
-    {
-        if (!value["TotalCost"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `BusinessSummaryOverviewItem.TotalCost` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_totalCost = string(value["TotalCost"].GetString());
-        m_totalCostHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void BusinessSummaryOverviewItem::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
+void BusinessSummaryInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_businessCodeHasBeenSet)
@@ -162,12 +140,12 @@ void BusinessSummaryOverviewItem::ToJsonObject(rapidjson::Value &value, rapidjso
         value.AddMember(iKey, rapidjson::Value(m_businessCodeName.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_realTotalCostRatioHasBeenSet)
+    if (m_totalCostHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "RealTotalCostRatio";
+        string key = "TotalCost";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_realTotalCostRatio.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_totalCost.c_str(), allocator).Move(), allocator);
     }
 
     if (m_realTotalCostHasBeenSet)
@@ -210,182 +188,134 @@ void BusinessSummaryOverviewItem::ToJsonObject(rapidjson::Value &value, rapidjso
         value.AddMember(iKey, rapidjson::Value(m_transferPayAmount.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_billMonthHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "BillMonth";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_billMonth.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_totalCostHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "TotalCost";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_totalCost.c_str(), allocator).Move(), allocator);
-    }
-
 }
 
 
-string BusinessSummaryOverviewItem::GetBusinessCode() const
+string BusinessSummaryInfo::GetBusinessCode() const
 {
     return m_businessCode;
 }
 
-void BusinessSummaryOverviewItem::SetBusinessCode(const string& _businessCode)
+void BusinessSummaryInfo::SetBusinessCode(const string& _businessCode)
 {
     m_businessCode = _businessCode;
     m_businessCodeHasBeenSet = true;
 }
 
-bool BusinessSummaryOverviewItem::BusinessCodeHasBeenSet() const
+bool BusinessSummaryInfo::BusinessCodeHasBeenSet() const
 {
     return m_businessCodeHasBeenSet;
 }
 
-string BusinessSummaryOverviewItem::GetBusinessCodeName() const
+string BusinessSummaryInfo::GetBusinessCodeName() const
 {
     return m_businessCodeName;
 }
 
-void BusinessSummaryOverviewItem::SetBusinessCodeName(const string& _businessCodeName)
+void BusinessSummaryInfo::SetBusinessCodeName(const string& _businessCodeName)
 {
     m_businessCodeName = _businessCodeName;
     m_businessCodeNameHasBeenSet = true;
 }
 
-bool BusinessSummaryOverviewItem::BusinessCodeNameHasBeenSet() const
+bool BusinessSummaryInfo::BusinessCodeNameHasBeenSet() const
 {
     return m_businessCodeNameHasBeenSet;
 }
 
-string BusinessSummaryOverviewItem::GetRealTotalCostRatio() const
-{
-    return m_realTotalCostRatio;
-}
-
-void BusinessSummaryOverviewItem::SetRealTotalCostRatio(const string& _realTotalCostRatio)
-{
-    m_realTotalCostRatio = _realTotalCostRatio;
-    m_realTotalCostRatioHasBeenSet = true;
-}
-
-bool BusinessSummaryOverviewItem::RealTotalCostRatioHasBeenSet() const
-{
-    return m_realTotalCostRatioHasBeenSet;
-}
-
-string BusinessSummaryOverviewItem::GetRealTotalCost() const
-{
-    return m_realTotalCost;
-}
-
-void BusinessSummaryOverviewItem::SetRealTotalCost(const string& _realTotalCost)
-{
-    m_realTotalCost = _realTotalCost;
-    m_realTotalCostHasBeenSet = true;
-}
-
-bool BusinessSummaryOverviewItem::RealTotalCostHasBeenSet() const
-{
-    return m_realTotalCostHasBeenSet;
-}
-
-string BusinessSummaryOverviewItem::GetCashPayAmount() const
-{
-    return m_cashPayAmount;
-}
-
-void BusinessSummaryOverviewItem::SetCashPayAmount(const string& _cashPayAmount)
-{
-    m_cashPayAmount = _cashPayAmount;
-    m_cashPayAmountHasBeenSet = true;
-}
-
-bool BusinessSummaryOverviewItem::CashPayAmountHasBeenSet() const
-{
-    return m_cashPayAmountHasBeenSet;
-}
-
-string BusinessSummaryOverviewItem::GetIncentivePayAmount() const
-{
-    return m_incentivePayAmount;
-}
-
-void BusinessSummaryOverviewItem::SetIncentivePayAmount(const string& _incentivePayAmount)
-{
-    m_incentivePayAmount = _incentivePayAmount;
-    m_incentivePayAmountHasBeenSet = true;
-}
-
-bool BusinessSummaryOverviewItem::IncentivePayAmountHasBeenSet() const
-{
-    return m_incentivePayAmountHasBeenSet;
-}
-
-string BusinessSummaryOverviewItem::GetVoucherPayAmount() const
-{
-    return m_voucherPayAmount;
-}
-
-void BusinessSummaryOverviewItem::SetVoucherPayAmount(const string& _voucherPayAmount)
-{
-    m_voucherPayAmount = _voucherPayAmount;
-    m_voucherPayAmountHasBeenSet = true;
-}
-
-bool BusinessSummaryOverviewItem::VoucherPayAmountHasBeenSet() const
-{
-    return m_voucherPayAmountHasBeenSet;
-}
-
-string BusinessSummaryOverviewItem::GetTransferPayAmount() const
-{
-    return m_transferPayAmount;
-}
-
-void BusinessSummaryOverviewItem::SetTransferPayAmount(const string& _transferPayAmount)
-{
-    m_transferPayAmount = _transferPayAmount;
-    m_transferPayAmountHasBeenSet = true;
-}
-
-bool BusinessSummaryOverviewItem::TransferPayAmountHasBeenSet() const
-{
-    return m_transferPayAmountHasBeenSet;
-}
-
-string BusinessSummaryOverviewItem::GetBillMonth() const
-{
-    return m_billMonth;
-}
-
-void BusinessSummaryOverviewItem::SetBillMonth(const string& _billMonth)
-{
-    m_billMonth = _billMonth;
-    m_billMonthHasBeenSet = true;
-}
-
-bool BusinessSummaryOverviewItem::BillMonthHasBeenSet() const
-{
-    return m_billMonthHasBeenSet;
-}
-
-string BusinessSummaryOverviewItem::GetTotalCost() const
+string BusinessSummaryInfo::GetTotalCost() const
 {
     return m_totalCost;
 }
 
-void BusinessSummaryOverviewItem::SetTotalCost(const string& _totalCost)
+void BusinessSummaryInfo::SetTotalCost(const string& _totalCost)
 {
     m_totalCost = _totalCost;
     m_totalCostHasBeenSet = true;
 }
 
-bool BusinessSummaryOverviewItem::TotalCostHasBeenSet() const
+bool BusinessSummaryInfo::TotalCostHasBeenSet() const
 {
     return m_totalCostHasBeenSet;
+}
+
+string BusinessSummaryInfo::GetRealTotalCost() const
+{
+    return m_realTotalCost;
+}
+
+void BusinessSummaryInfo::SetRealTotalCost(const string& _realTotalCost)
+{
+    m_realTotalCost = _realTotalCost;
+    m_realTotalCostHasBeenSet = true;
+}
+
+bool BusinessSummaryInfo::RealTotalCostHasBeenSet() const
+{
+    return m_realTotalCostHasBeenSet;
+}
+
+string BusinessSummaryInfo::GetCashPayAmount() const
+{
+    return m_cashPayAmount;
+}
+
+void BusinessSummaryInfo::SetCashPayAmount(const string& _cashPayAmount)
+{
+    m_cashPayAmount = _cashPayAmount;
+    m_cashPayAmountHasBeenSet = true;
+}
+
+bool BusinessSummaryInfo::CashPayAmountHasBeenSet() const
+{
+    return m_cashPayAmountHasBeenSet;
+}
+
+string BusinessSummaryInfo::GetIncentivePayAmount() const
+{
+    return m_incentivePayAmount;
+}
+
+void BusinessSummaryInfo::SetIncentivePayAmount(const string& _incentivePayAmount)
+{
+    m_incentivePayAmount = _incentivePayAmount;
+    m_incentivePayAmountHasBeenSet = true;
+}
+
+bool BusinessSummaryInfo::IncentivePayAmountHasBeenSet() const
+{
+    return m_incentivePayAmountHasBeenSet;
+}
+
+string BusinessSummaryInfo::GetVoucherPayAmount() const
+{
+    return m_voucherPayAmount;
+}
+
+void BusinessSummaryInfo::SetVoucherPayAmount(const string& _voucherPayAmount)
+{
+    m_voucherPayAmount = _voucherPayAmount;
+    m_voucherPayAmountHasBeenSet = true;
+}
+
+bool BusinessSummaryInfo::VoucherPayAmountHasBeenSet() const
+{
+    return m_voucherPayAmountHasBeenSet;
+}
+
+string BusinessSummaryInfo::GetTransferPayAmount() const
+{
+    return m_transferPayAmount;
+}
+
+void BusinessSummaryInfo::SetTransferPayAmount(const string& _transferPayAmount)
+{
+    m_transferPayAmount = _transferPayAmount;
+    m_transferPayAmountHasBeenSet = true;
+}
+
+bool BusinessSummaryInfo::TransferPayAmountHasBeenSet() const
+{
+    return m_transferPayAmountHasBeenSet;
 }
 

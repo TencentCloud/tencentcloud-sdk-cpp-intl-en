@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_BILLING_V20180709_MODEL_PROJECTSUMMARYOVERVIEWITEM_H_
-#define TENCENTCLOUD_BILLING_V20180709_MODEL_PROJECTSUMMARYOVERVIEWITEM_H_
+#ifndef TENCENTCLOUD_BILLING_V20180709_MODEL_BUSINESSSUMMARYINFO_H_
+#define TENCENTCLOUD_BILLING_V20180709_MODEL_BUSINESSSUMMARYINFO_H_
 
 #include <string>
 #include <vector>
@@ -35,79 +35,83 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Detailed summary of purchases by project
+                * Detailed summary of products
                 */
-                class ProjectSummaryOverviewItem : public AbstractModel
+                class BusinessSummaryInfo : public AbstractModel
                 {
                 public:
-                    ProjectSummaryOverviewItem();
-                    ~ProjectSummaryOverviewItem() = default;
+                    BusinessSummaryInfo();
+                    ~BusinessSummaryInfo() = default;
                     void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
 
                     /**
-                     * 获取Project ID
-                     * @return ProjectId Project ID
+                     * 获取Product code
+                     * @return BusinessCode Product code
                      * 
                      */
-                    std::string GetProjectId() const;
+                    std::string GetBusinessCode() const;
 
                     /**
-                     * 设置Project ID
-                     * @param _projectId Project ID
+                     * 设置Product code
+                     * @param _businessCode Product code
                      * 
                      */
-                    void SetProjectId(const std::string& _projectId);
+                    void SetBusinessCode(const std::string& _businessCode);
 
                     /**
-                     * 判断参数 ProjectId 是否已赋值
-                     * @return ProjectId 是否已赋值
+                     * 判断参数 BusinessCode 是否已赋值
+                     * @return BusinessCode 是否已赋值
                      * 
                      */
-                    bool ProjectIdHasBeenSet() const;
+                    bool BusinessCodeHasBeenSet() const;
 
                     /**
-                     * 获取Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
-                     * @return ProjectName Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+                     * 获取Product name:  The name of a Tencent Cloud product purchased by the user, such as  CVM.
+                     * @return BusinessCodeName Product name:  The name of a Tencent Cloud product purchased by the user, such as  CVM.
                      * 
                      */
-                    std::string GetProjectName() const;
+                    std::string GetBusinessCodeName() const;
 
                     /**
-                     * 设置Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
-                     * @param _projectName Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+                     * 设置Product name:  The name of a Tencent Cloud product purchased by the user, such as  CVM.
+                     * @param _businessCodeName Product name:  The name of a Tencent Cloud product purchased by the user, such as  CVM.
                      * 
                      */
-                    void SetProjectName(const std::string& _projectName);
+                    void SetBusinessCodeName(const std::string& _businessCodeName);
 
                     /**
-                     * 判断参数 ProjectName 是否已赋值
-                     * @return ProjectName 是否已赋值
+                     * 判断参数 BusinessCodeName 是否已赋值
+                     * @return BusinessCodeName 是否已赋值
                      * 
                      */
-                    bool ProjectNameHasBeenSet() const;
+                    bool BusinessCodeNameHasBeenSet() const;
 
                     /**
-                     * 获取Cost ratio, to two decimal points
-                     * @return RealTotalCostRatio Cost ratio, to two decimal points
+                     * 获取Original cost in USD.  This parameter has become valid since Bill 3.0 took effect in May 2021, and before that `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter. 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TotalCost Original cost in USD.  This parameter has become valid since Bill 3.0 took effect in May 2021, and before that `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter. 
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    std::string GetRealTotalCostRatio() const;
+                    std::string GetTotalCost() const;
 
                     /**
-                     * 设置Cost ratio, to two decimal points
-                     * @param _realTotalCostRatio Cost ratio, to two decimal points
+                     * 设置Original cost in USD.  This parameter has become valid since Bill 3.0 took effect in May 2021, and before that `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter. 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _totalCost Original cost in USD.  This parameter has become valid since Bill 3.0 took effect in May 2021, and before that `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter. 
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    void SetRealTotalCostRatio(const std::string& _realTotalCostRatio);
+                    void SetTotalCost(const std::string& _totalCost);
 
                     /**
-                     * 判断参数 RealTotalCostRatio 是否已赋值
-                     * @return RealTotalCostRatio 是否已赋值
+                     * 判断参数 TotalCost 是否已赋值
+                     * @return TotalCost 是否已赋值
                      * 
                      */
-                    bool RealTotalCostRatioHasBeenSet() const;
+                    bool TotalCostHasBeenSet() const;
 
                     /**
                      * 获取Total amount after discount
@@ -194,15 +198,15 @@ namespace TencentCloud
                     bool VoucherPayAmountHasBeenSet() const;
 
                     /**
-                     * 获取Commission credit:  The amount paid by the user’s commission credit.
-                     * @return TransferPayAmount Commission credit:  The amount paid by the user’s commission credit.
+                     * 获取Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+                     * @return TransferPayAmount Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTransferPayAmount() const;
 
                     /**
-                     * 设置Commission credit:  The amount paid by the user’s commission credit.
-                     * @param _transferPayAmount Commission credit:  The amount paid by the user’s commission credit.
+                     * 设置Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+                     * @param _transferPayAmount Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTransferPayAmount(const std::string& _transferPayAmount);
@@ -214,67 +218,26 @@ namespace TencentCloud
                      */
                     bool TransferPayAmountHasBeenSet() const;
 
-                    /**
-                     * 获取Billing month, e.g. `2019-08`
-                     * @return BillMonth Billing month, e.g. `2019-08`
-                     * 
-                     */
-                    std::string GetBillMonth() const;
-
-                    /**
-                     * 设置Billing month, e.g. `2019-08`
-                     * @param _billMonth Billing month, e.g. `2019-08`
-                     * 
-                     */
-                    void SetBillMonth(const std::string& _billMonth);
-
-                    /**
-                     * 判断参数 BillMonth 是否已赋值
-                     * @return BillMonth 是否已赋值
-                     * 
-                     */
-                    bool BillMonthHasBeenSet() const;
-
-                    /**
-                     * 获取The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-                     * @return TotalCost The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-                     * 
-                     */
-                    std::string GetTotalCost() const;
-
-                    /**
-                     * 设置The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-                     * @param _totalCost The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-                     * 
-                     */
-                    void SetTotalCost(const std::string& _totalCost);
-
-                    /**
-                     * 判断参数 TotalCost 是否已赋值
-                     * @return TotalCost 是否已赋值
-                     * 
-                     */
-                    bool TotalCostHasBeenSet() const;
-
                 private:
 
                     /**
-                     * Project ID
+                     * Product code
                      */
-                    std::string m_projectId;
-                    bool m_projectIdHasBeenSet;
+                    std::string m_businessCode;
+                    bool m_businessCodeHasBeenSet;
 
                     /**
-                     * Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+                     * Product name:  The name of a Tencent Cloud product purchased by the user, such as  CVM.
                      */
-                    std::string m_projectName;
-                    bool m_projectNameHasBeenSet;
+                    std::string m_businessCodeName;
+                    bool m_businessCodeNameHasBeenSet;
 
                     /**
-                     * Cost ratio, to two decimal points
+                     * Original cost in USD.  This parameter has become valid since Bill 3.0 took effect in May 2021, and before that `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter. 
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    std::string m_realTotalCostRatio;
-                    bool m_realTotalCostRatioHasBeenSet;
+                    std::string m_totalCost;
+                    bool m_totalCostHasBeenSet;
 
                     /**
                      * Total amount after discount
@@ -301,22 +264,10 @@ namespace TencentCloud
                     bool m_voucherPayAmountHasBeenSet;
 
                     /**
-                     * Commission credit:  The amount paid by the user’s commission credit.
+                     * Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_transferPayAmount;
                     bool m_transferPayAmountHasBeenSet;
-
-                    /**
-                     * Billing month, e.g. `2019-08`
-                     */
-                    std::string m_billMonth;
-                    bool m_billMonthHasBeenSet;
-
-                    /**
-                     * The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-                     */
-                    std::string m_totalCost;
-                    bool m_totalCostHasBeenSet;
 
                 };
             }
@@ -324,4 +275,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_BILLING_V20180709_MODEL_PROJECTSUMMARYOVERVIEWITEM_H_
+#endif // !TENCENTCLOUD_BILLING_V20180709_MODEL_BUSINESSSUMMARYINFO_H_

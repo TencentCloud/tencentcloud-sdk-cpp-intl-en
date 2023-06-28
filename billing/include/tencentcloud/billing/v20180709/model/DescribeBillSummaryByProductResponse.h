@@ -46,8 +46,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Indicates whether or not the data is ready. 0 = not ready, 1 = ready.
-                     * @return Ready Indicates whether or not the data is ready. 0 = not ready, 1 = ready.
+                     * 获取Indicates whether the data is ready. `0`: Not ready. `1`: Ready. If `Ready` is `0`, it indicates the current UIN is initializing for the first billing. Wait for 5-10 minutes and try again.
+                     * @return Ready Indicates whether the data is ready. `0`: Not ready. `1`: Ready. If `Ready` is `0`, it indicates the current UIN is initializing for the first billing. Wait for 5-10 minutes and try again.
                      * 
                      */
                     uint64_t GetReady() const;
@@ -94,7 +94,7 @@ Note: This field may return null, indicating that no valid value was found.
                 private:
 
                     /**
-                     * Indicates whether or not the data is ready. 0 = not ready, 1 = ready.
+                     * Indicates whether the data is ready. `0`: Not ready. `1`: Ready. If `Ready` is `0`, it indicates the current UIN is initializing for the first billing. Wait for 5-10 minutes and try again.
                      */
                     uint64_t m_ready;
                     bool m_readyHasBeenSet;

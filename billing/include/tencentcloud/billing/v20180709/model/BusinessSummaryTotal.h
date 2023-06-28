@@ -47,15 +47,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total cost
-                     * @return RealTotalCost Total cost
+                     * 获取Total amount after discount
+
+                     * @return RealTotalCost Total amount after discount
+
                      * 
                      */
                     std::string GetRealTotalCost() const;
 
                     /**
-                     * 设置Total cost
-                     * @param _realTotalCost Total cost
+                     * 设置Total amount after discount
+
+                     * @param _realTotalCost Total amount after discount
+
                      * 
                      */
                     void SetRealTotalCost(const std::string& _realTotalCost);
@@ -68,15 +72,15 @@ namespace TencentCloud
                     bool RealTotalCostHasBeenSet() const;
 
                     /**
-                     * 获取Voucher amount
-                     * @return VoucherPayAmount Voucher amount
+                     * 获取Voucher payment:  The voucher deduction amount
+                     * @return VoucherPayAmount Voucher payment:  The voucher deduction amount
                      * 
                      */
                     std::string GetVoucherPayAmount() const;
 
                     /**
-                     * 设置Voucher amount
-                     * @param _voucherPayAmount Voucher amount
+                     * 设置Voucher payment:  The voucher deduction amount
+                     * @param _voucherPayAmount Voucher payment:  The voucher deduction amount
                      * 
                      */
                     void SetVoucherPayAmount(const std::string& _voucherPayAmount);
@@ -89,15 +93,15 @@ namespace TencentCloud
                     bool VoucherPayAmountHasBeenSet() const;
 
                     /**
-                     * 获取Trial credit amount
-                     * @return IncentivePayAmount Trial credit amount
+                     * 获取Free credit:  The amount paid by the user’s free credit
+                     * @return IncentivePayAmount Free credit:  The amount paid by the user’s free credit
                      * 
                      */
                     std::string GetIncentivePayAmount() const;
 
                     /**
-                     * 设置Trial credit amount
-                     * @param _incentivePayAmount Trial credit amount
+                     * 设置Free credit:  The amount paid by the user’s free credit
+                     * @param _incentivePayAmount Free credit:  The amount paid by the user’s free credit
                      * 
                      */
                     void SetIncentivePayAmount(const std::string& _incentivePayAmount);
@@ -110,15 +114,15 @@ namespace TencentCloud
                     bool IncentivePayAmountHasBeenSet() const;
 
                     /**
-                     * 获取Cash amount
-                     * @return CashPayAmount Cash amount
+                     * 获取Cash credit:  The amount paid from the user’s cash account
+                     * @return CashPayAmount Cash credit:  The amount paid from the user’s cash account
                      * 
                      */
                     std::string GetCashPayAmount() const;
 
                     /**
-                     * 设置Cash amount
-                     * @param _cashPayAmount Cash amount
+                     * 设置Cash credit:  The amount paid from the user’s cash account
+                     * @param _cashPayAmount Cash credit:  The amount paid from the user’s cash account
                      * 
                      */
                     void SetCashPayAmount(const std::string& _cashPayAmount);
@@ -129,6 +133,27 @@ namespace TencentCloud
                      * 
                      */
                     bool CashPayAmountHasBeenSet() const;
+
+                    /**
+                     * 获取Commission credit:  The amount paid by the user’s commission credit.
+                     * @return TransferPayAmount Commission credit:  The amount paid by the user’s commission credit.
+                     * 
+                     */
+                    std::string GetTransferPayAmount() const;
+
+                    /**
+                     * 设置Commission credit:  The amount paid by the user’s commission credit.
+                     * @param _transferPayAmount Commission credit:  The amount paid by the user’s commission credit.
+                     * 
+                     */
+                    void SetTransferPayAmount(const std::string& _transferPayAmount);
+
+                    /**
+                     * 判断参数 TransferPayAmount 是否已赋值
+                     * @return TransferPayAmount 是否已赋值
+                     * 
+                     */
+                    bool TransferPayAmountHasBeenSet() const;
 
                     /**
                      * 获取The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
@@ -151,64 +176,44 @@ namespace TencentCloud
                      */
                     bool TotalCostHasBeenSet() const;
 
-                    /**
-                     * 获取Payment by commission credits
-                     * @return TransferPayAmount Payment by commission credits
-                     * 
-                     */
-                    std::string GetTransferPayAmount() const;
-
-                    /**
-                     * 设置Payment by commission credits
-                     * @param _transferPayAmount Payment by commission credits
-                     * 
-                     */
-                    void SetTransferPayAmount(const std::string& _transferPayAmount);
-
-                    /**
-                     * 判断参数 TransferPayAmount 是否已赋值
-                     * @return TransferPayAmount 是否已赋值
-                     * 
-                     */
-                    bool TransferPayAmountHasBeenSet() const;
-
                 private:
 
                     /**
-                     * Total cost
+                     * Total amount after discount
+
                      */
                     std::string m_realTotalCost;
                     bool m_realTotalCostHasBeenSet;
 
                     /**
-                     * Voucher amount
+                     * Voucher payment:  The voucher deduction amount
                      */
                     std::string m_voucherPayAmount;
                     bool m_voucherPayAmountHasBeenSet;
 
                     /**
-                     * Trial credit amount
+                     * Free credit:  The amount paid by the user’s free credit
                      */
                     std::string m_incentivePayAmount;
                     bool m_incentivePayAmountHasBeenSet;
 
                     /**
-                     * Cash amount
+                     * Cash credit:  The amount paid from the user’s cash account
                      */
                     std::string m_cashPayAmount;
                     bool m_cashPayAmountHasBeenSet;
+
+                    /**
+                     * Commission credit:  The amount paid by the user’s commission credit.
+                     */
+                    std::string m_transferPayAmount;
+                    bool m_transferPayAmountHasBeenSet;
 
                     /**
                      * The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
                      */
                     std::string m_totalCost;
                     bool m_totalCostHasBeenSet;
-
-                    /**
-                     * Payment by commission credits
-                     */
-                    std::string m_transferPayAmount;
-                    bool m_transferPayAmountHasBeenSet;
 
                 };
             }

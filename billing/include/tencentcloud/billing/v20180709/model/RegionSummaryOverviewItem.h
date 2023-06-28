@@ -72,15 +72,15 @@ Note: This field may return null, indicating that no valid value was found.
                     bool RegionIdHasBeenSet() const;
 
                     /**
-                     * 获取Region name
-                     * @return RegionName Region name
+                     * 获取Region:  The region to which a resource belongs, such as South China (Guangzhou).
+                     * @return RegionName Region:  The region to which a resource belongs, such as South China (Guangzhou).
                      * 
                      */
                     std::string GetRegionName() const;
 
                     /**
-                     * 设置Region name
-                     * @param _regionName Region name
+                     * 设置Region:  The region to which a resource belongs, such as South China (Guangzhou).
+                     * @param _regionName Region:  The region to which a resource belongs, such as South China (Guangzhou).
                      * 
                      */
                     void SetRegionName(const std::string& _regionName);
@@ -91,27 +91,6 @@ Note: This field may return null, indicating that no valid value was found.
                      * 
                      */
                     bool RegionNameHasBeenSet() const;
-
-                    /**
-                     * 获取Actual cost
-                     * @return RealTotalCost Actual cost
-                     * 
-                     */
-                    std::string GetRealTotalCost() const;
-
-                    /**
-                     * 设置Actual cost
-                     * @param _realTotalCost Actual cost
-                     * 
-                     */
-                    void SetRealTotalCost(const std::string& _realTotalCost);
-
-                    /**
-                     * 判断参数 RealTotalCost 是否已赋值
-                     * @return RealTotalCost 是否已赋值
-                     * 
-                     */
-                    bool RealTotalCostHasBeenSet() const;
 
                     /**
                      * 获取Cost ratio, to two decimal points
@@ -135,15 +114,36 @@ Note: This field may return null, indicating that no valid value was found.
                     bool RealTotalCostRatioHasBeenSet() const;
 
                     /**
-                     * 获取Cash amount
-                     * @return CashPayAmount Cash amount
+                     * 获取Total amount after discount
+                     * @return RealTotalCost Total amount after discount
+                     * 
+                     */
+                    std::string GetRealTotalCost() const;
+
+                    /**
+                     * 设置Total amount after discount
+                     * @param _realTotalCost Total amount after discount
+                     * 
+                     */
+                    void SetRealTotalCost(const std::string& _realTotalCost);
+
+                    /**
+                     * 判断参数 RealTotalCost 是否已赋值
+                     * @return RealTotalCost 是否已赋值
+                     * 
+                     */
+                    bool RealTotalCostHasBeenSet() const;
+
+                    /**
+                     * 获取Cash credit:  The amount paid from the user’s cash account
+                     * @return CashPayAmount Cash credit:  The amount paid from the user’s cash account
                      * 
                      */
                     std::string GetCashPayAmount() const;
 
                     /**
-                     * 设置Cash amount
-                     * @param _cashPayAmount Cash amount
+                     * 设置Cash credit:  The amount paid from the user’s cash account
+                     * @param _cashPayAmount Cash credit:  The amount paid from the user’s cash account
                      * 
                      */
                     void SetCashPayAmount(const std::string& _cashPayAmount);
@@ -156,15 +156,15 @@ Note: This field may return null, indicating that no valid value was found.
                     bool CashPayAmountHasBeenSet() const;
 
                     /**
-                     * 获取Trial credit amount
-                     * @return IncentivePayAmount Trial credit amount
+                     * 获取Free credit:  The amount paid by the user’s free credit
+                     * @return IncentivePayAmount Free credit:  The amount paid by the user’s free credit
                      * 
                      */
                     std::string GetIncentivePayAmount() const;
 
                     /**
-                     * 设置Trial credit amount
-                     * @param _incentivePayAmount Trial credit amount
+                     * 设置Free credit:  The amount paid by the user’s free credit
+                     * @param _incentivePayAmount Free credit:  The amount paid by the user’s free credit
                      * 
                      */
                     void SetIncentivePayAmount(const std::string& _incentivePayAmount);
@@ -177,15 +177,15 @@ Note: This field may return null, indicating that no valid value was found.
                     bool IncentivePayAmountHasBeenSet() const;
 
                     /**
-                     * 获取Voucher amount
-                     * @return VoucherPayAmount Voucher amount
+                     * 获取Voucher payment:  The voucher deduction amount
+                     * @return VoucherPayAmount Voucher payment:  The voucher deduction amount
                      * 
                      */
                     std::string GetVoucherPayAmount() const;
 
                     /**
-                     * 设置Voucher amount
-                     * @param _voucherPayAmount Voucher amount
+                     * 设置Voucher payment:  The voucher deduction amount
+                     * @param _voucherPayAmount Voucher payment:  The voucher deduction amount
                      * 
                      */
                     void SetVoucherPayAmount(const std::string& _voucherPayAmount);
@@ -196,6 +196,27 @@ Note: This field may return null, indicating that no valid value was found.
                      * 
                      */
                     bool VoucherPayAmountHasBeenSet() const;
+
+                    /**
+                     * 获取Commission credit:  The amount paid by the user’s commission credit.
+                     * @return TransferPayAmount Commission credit:  The amount paid by the user’s commission credit.
+                     * 
+                     */
+                    std::string GetTransferPayAmount() const;
+
+                    /**
+                     * 设置Commission credit:  The amount paid by the user’s commission credit.
+                     * @param _transferPayAmount Commission credit:  The amount paid by the user’s commission credit.
+                     * 
+                     */
+                    void SetTransferPayAmount(const std::string& _transferPayAmount);
+
+                    /**
+                     * 判断参数 TransferPayAmount 是否已赋值
+                     * @return TransferPayAmount 是否已赋值
+                     * 
+                     */
+                    bool TransferPayAmountHasBeenSet() const;
 
                     /**
                      * 获取Billing month, e.g. `2019-08`
@@ -239,27 +260,6 @@ Note: This field may return null, indicating that no valid value was found.
                      */
                     bool TotalCostHasBeenSet() const;
 
-                    /**
-                     * 获取Payment by commission credits
-                     * @return TransferPayAmount Payment by commission credits
-                     * 
-                     */
-                    std::string GetTransferPayAmount() const;
-
-                    /**
-                     * 设置Payment by commission credits
-                     * @param _transferPayAmount Payment by commission credits
-                     * 
-                     */
-                    void SetTransferPayAmount(const std::string& _transferPayAmount);
-
-                    /**
-                     * 判断参数 TransferPayAmount 是否已赋值
-                     * @return TransferPayAmount 是否已赋值
-                     * 
-                     */
-                    bool TransferPayAmountHasBeenSet() const;
-
                 private:
 
                     /**
@@ -270,16 +270,10 @@ Note: This field may return null, indicating that no valid value was found.
                     bool m_regionIdHasBeenSet;
 
                     /**
-                     * Region name
+                     * Region:  The region to which a resource belongs, such as South China (Guangzhou).
                      */
                     std::string m_regionName;
                     bool m_regionNameHasBeenSet;
-
-                    /**
-                     * Actual cost
-                     */
-                    std::string m_realTotalCost;
-                    bool m_realTotalCostHasBeenSet;
 
                     /**
                      * Cost ratio, to two decimal points
@@ -288,22 +282,34 @@ Note: This field may return null, indicating that no valid value was found.
                     bool m_realTotalCostRatioHasBeenSet;
 
                     /**
-                     * Cash amount
+                     * Total amount after discount
+                     */
+                    std::string m_realTotalCost;
+                    bool m_realTotalCostHasBeenSet;
+
+                    /**
+                     * Cash credit:  The amount paid from the user’s cash account
                      */
                     std::string m_cashPayAmount;
                     bool m_cashPayAmountHasBeenSet;
 
                     /**
-                     * Trial credit amount
+                     * Free credit:  The amount paid by the user’s free credit
                      */
                     std::string m_incentivePayAmount;
                     bool m_incentivePayAmountHasBeenSet;
 
                     /**
-                     * Voucher amount
+                     * Voucher payment:  The voucher deduction amount
                      */
                     std::string m_voucherPayAmount;
                     bool m_voucherPayAmountHasBeenSet;
+
+                    /**
+                     * Commission credit:  The amount paid by the user’s commission credit.
+                     */
+                    std::string m_transferPayAmount;
+                    bool m_transferPayAmountHasBeenSet;
 
                     /**
                      * Billing month, e.g. `2019-08`
@@ -316,12 +322,6 @@ Note: This field may return null, indicating that no valid value was found.
                      */
                     std::string m_totalCost;
                     bool m_totalCostHasBeenSet;
-
-                    /**
-                     * Payment by commission credits
-                     */
-                    std::string m_transferPayAmount;
-                    bool m_transferPayAmountHasBeenSet;
 
                 };
             }

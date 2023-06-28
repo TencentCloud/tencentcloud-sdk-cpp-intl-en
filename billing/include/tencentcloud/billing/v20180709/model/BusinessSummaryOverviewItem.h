@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Product code
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @return BusinessCode Product code
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * 获取Product code. Note:  This field may return null, indicating that no valid values can be obtained.
+                     * @return BusinessCode Product code. Note:  This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetBusinessCode() const;
 
                     /**
-                     * 设置Product code
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param _businessCode Product code
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * 设置Product code. Note:  This field may return null, indicating that no valid values can be obtained.
+                     * @param _businessCode Product code. Note:  This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetBusinessCode(const std::string& _businessCode);
@@ -72,15 +68,15 @@ Note: This field may return `null`, indicating that no valid value can be found.
                     bool BusinessCodeHasBeenSet() const;
 
                     /**
-                     * 获取Product name: major categories of Tencent Cloud services, e.g. CVM and TencentDB for MySQL
-                     * @return BusinessCodeName Product name: major categories of Tencent Cloud services, e.g. CVM and TencentDB for MySQL
+                     * 获取Product name:  The name of a Tencent Cloud product purchased by the user, such as  CVM.
+                     * @return BusinessCodeName Product name:  The name of a Tencent Cloud product purchased by the user, such as  CVM.
                      * 
                      */
                     std::string GetBusinessCodeName() const;
 
                     /**
-                     * 设置Product name: major categories of Tencent Cloud services, e.g. CVM and TencentDB for MySQL
-                     * @param _businessCodeName Product name: major categories of Tencent Cloud services, e.g. CVM and TencentDB for MySQL
+                     * 设置Product name:  The name of a Tencent Cloud product purchased by the user, such as  CVM.
+                     * @param _businessCodeName Product name:  The name of a Tencent Cloud product purchased by the user, such as  CVM.
                      * 
                      */
                     void SetBusinessCodeName(const std::string& _businessCodeName);
@@ -91,27 +87,6 @@ Note: This field may return `null`, indicating that no valid value can be found.
                      * 
                      */
                     bool BusinessCodeNameHasBeenSet() const;
-
-                    /**
-                     * 获取Actual cost
-                     * @return RealTotalCost Actual cost
-                     * 
-                     */
-                    std::string GetRealTotalCost() const;
-
-                    /**
-                     * 设置Actual cost
-                     * @param _realTotalCost Actual cost
-                     * 
-                     */
-                    void SetRealTotalCost(const std::string& _realTotalCost);
-
-                    /**
-                     * 判断参数 RealTotalCost 是否已赋值
-                     * @return RealTotalCost 是否已赋值
-                     * 
-                     */
-                    bool RealTotalCostHasBeenSet() const;
 
                     /**
                      * 获取Cost ratio, to two decimal points
@@ -135,15 +110,36 @@ Note: This field may return `null`, indicating that no valid value can be found.
                     bool RealTotalCostRatioHasBeenSet() const;
 
                     /**
-                     * 获取Cash amount
-                     * @return CashPayAmount Cash amount
+                     * 获取Total amount after discount
+                     * @return RealTotalCost Total amount after discount
+                     * 
+                     */
+                    std::string GetRealTotalCost() const;
+
+                    /**
+                     * 设置Total amount after discount
+                     * @param _realTotalCost Total amount after discount
+                     * 
+                     */
+                    void SetRealTotalCost(const std::string& _realTotalCost);
+
+                    /**
+                     * 判断参数 RealTotalCost 是否已赋值
+                     * @return RealTotalCost 是否已赋值
+                     * 
+                     */
+                    bool RealTotalCostHasBeenSet() const;
+
+                    /**
+                     * 获取Cash credit:  The amount paid from the user’s cash account
+                     * @return CashPayAmount Cash credit:  The amount paid from the user’s cash account
                      * 
                      */
                     std::string GetCashPayAmount() const;
 
                     /**
-                     * 设置Cash amount
-                     * @param _cashPayAmount Cash amount
+                     * 设置Cash credit:  The amount paid from the user’s cash account
+                     * @param _cashPayAmount Cash credit:  The amount paid from the user’s cash account
                      * 
                      */
                     void SetCashPayAmount(const std::string& _cashPayAmount);
@@ -156,15 +152,15 @@ Note: This field may return `null`, indicating that no valid value can be found.
                     bool CashPayAmountHasBeenSet() const;
 
                     /**
-                     * 获取Trial credit amount
-                     * @return IncentivePayAmount Trial credit amount
+                     * 获取Free credit:  The amount paid by the user’s free credit
+                     * @return IncentivePayAmount Free credit:  The amount paid by the user’s free credit
                      * 
                      */
                     std::string GetIncentivePayAmount() const;
 
                     /**
-                     * 设置Trial credit amount
-                     * @param _incentivePayAmount Trial credit amount
+                     * 设置Free credit:  The amount paid by the user’s free credit
+                     * @param _incentivePayAmount Free credit:  The amount paid by the user’s free credit
                      * 
                      */
                     void SetIncentivePayAmount(const std::string& _incentivePayAmount);
@@ -177,15 +173,15 @@ Note: This field may return `null`, indicating that no valid value can be found.
                     bool IncentivePayAmountHasBeenSet() const;
 
                     /**
-                     * 获取Voucher amount
-                     * @return VoucherPayAmount Voucher amount
+                     * 获取Voucher payment:  The voucher deduction amount
+                     * @return VoucherPayAmount Voucher payment:  The voucher deduction amount
                      * 
                      */
                     std::string GetVoucherPayAmount() const;
 
                     /**
-                     * 设置Voucher amount
-                     * @param _voucherPayAmount Voucher amount
+                     * 设置Voucher payment:  The voucher deduction amount
+                     * @param _voucherPayAmount Voucher payment:  The voucher deduction amount
                      * 
                      */
                     void SetVoucherPayAmount(const std::string& _voucherPayAmount);
@@ -196,6 +192,27 @@ Note: This field may return `null`, indicating that no valid value can be found.
                      * 
                      */
                     bool VoucherPayAmountHasBeenSet() const;
+
+                    /**
+                     * 获取Commission credit:  The amount paid by the user’s commission credit.
+                     * @return TransferPayAmount Commission credit:  The amount paid by the user’s commission credit.
+                     * 
+                     */
+                    std::string GetTransferPayAmount() const;
+
+                    /**
+                     * 设置Commission credit:  The amount paid by the user’s commission credit.
+                     * @param _transferPayAmount Commission credit:  The amount paid by the user’s commission credit.
+                     * 
+                     */
+                    void SetTransferPayAmount(const std::string& _transferPayAmount);
+
+                    /**
+                     * 判断参数 TransferPayAmount 是否已赋值
+                     * @return TransferPayAmount 是否已赋值
+                     * 
+                     */
+                    bool TransferPayAmountHasBeenSet() const;
 
                     /**
                      * 获取Billing month, e.g. `2019-08`
@@ -239,47 +256,19 @@ Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     bool TotalCostHasBeenSet() const;
 
-                    /**
-                     * 获取Payment by commission credits
-                     * @return TransferPayAmount Payment by commission credits
-                     * 
-                     */
-                    std::string GetTransferPayAmount() const;
-
-                    /**
-                     * 设置Payment by commission credits
-                     * @param _transferPayAmount Payment by commission credits
-                     * 
-                     */
-                    void SetTransferPayAmount(const std::string& _transferPayAmount);
-
-                    /**
-                     * 判断参数 TransferPayAmount 是否已赋值
-                     * @return TransferPayAmount 是否已赋值
-                     * 
-                     */
-                    bool TransferPayAmountHasBeenSet() const;
-
                 private:
 
                     /**
-                     * Product code
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * Product code. Note:  This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_businessCode;
                     bool m_businessCodeHasBeenSet;
 
                     /**
-                     * Product name: major categories of Tencent Cloud services, e.g. CVM and TencentDB for MySQL
+                     * Product name:  The name of a Tencent Cloud product purchased by the user, such as  CVM.
                      */
                     std::string m_businessCodeName;
                     bool m_businessCodeNameHasBeenSet;
-
-                    /**
-                     * Actual cost
-                     */
-                    std::string m_realTotalCost;
-                    bool m_realTotalCostHasBeenSet;
 
                     /**
                      * Cost ratio, to two decimal points
@@ -288,22 +277,34 @@ Note: This field may return `null`, indicating that no valid value can be found.
                     bool m_realTotalCostRatioHasBeenSet;
 
                     /**
-                     * Cash amount
+                     * Total amount after discount
+                     */
+                    std::string m_realTotalCost;
+                    bool m_realTotalCostHasBeenSet;
+
+                    /**
+                     * Cash credit:  The amount paid from the user’s cash account
                      */
                     std::string m_cashPayAmount;
                     bool m_cashPayAmountHasBeenSet;
 
                     /**
-                     * Trial credit amount
+                     * Free credit:  The amount paid by the user’s free credit
                      */
                     std::string m_incentivePayAmount;
                     bool m_incentivePayAmountHasBeenSet;
 
                     /**
-                     * Voucher amount
+                     * Voucher payment:  The voucher deduction amount
                      */
                     std::string m_voucherPayAmount;
                     bool m_voucherPayAmountHasBeenSet;
+
+                    /**
+                     * Commission credit:  The amount paid by the user’s commission credit.
+                     */
+                    std::string m_transferPayAmount;
+                    bool m_transferPayAmountHasBeenSet;
 
                     /**
                      * Billing month, e.g. `2019-08`
@@ -316,12 +317,6 @@ Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     std::string m_totalCost;
                     bool m_totalCostHasBeenSet;
-
-                    /**
-                     * Payment by commission credits
-                     */
-                    std::string m_transferPayAmount;
-                    bool m_transferPayAmountHasBeenSet;
 
                 };
             }

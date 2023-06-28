@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total cost
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return RealTotalCost Total cost
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Total amount after discount. Note:  This field may return null, indicating that no valid values can be obtained.
+                     * @return RealTotalCost Total amount after discount. Note:  This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRealTotalCost() const;
 
                     /**
-                     * 设置Total cost
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _realTotalCost Total cost
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Total amount after discount. Note:  This field may return null, indicating that no valid values can be obtained.
+                     * @param _realTotalCost Total amount after discount. Note:  This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRealTotalCost(const std::string& _realTotalCost);
@@ -99,8 +95,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * Total cost
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Total amount after discount. Note:  This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_realTotalCost;
                     bool m_realTotalCostHasBeenSet;

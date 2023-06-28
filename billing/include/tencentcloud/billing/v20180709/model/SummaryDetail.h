@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_BILLING_V20180709_MODEL_PROJECTSUMMARYOVERVIEWITEM_H_
-#define TENCENTCLOUD_BILLING_V20180709_MODEL_PROJECTSUMMARYOVERVIEWITEM_H_
+#ifndef TENCENTCLOUD_BILLING_V20180709_MODEL_SUMMARYDETAIL_H_
+#define TENCENTCLOUD_BILLING_V20180709_MODEL_SUMMARYDETAIL_H_
 
 #include <string>
 #include <vector>
@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/billing/v20180709/model/BusinessSummaryInfo.h>
 
 
 namespace TencentCloud
@@ -35,79 +36,79 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Detailed summary of purchases by project
+                * Detailed summary of costs by multiple dimensions
                 */
-                class ProjectSummaryOverviewItem : public AbstractModel
+                class SummaryDetail : public AbstractModel
                 {
                 public:
-                    ProjectSummaryOverviewItem();
-                    ~ProjectSummaryOverviewItem() = default;
+                    SummaryDetail();
+                    ~SummaryDetail() = default;
                     void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
 
                     /**
-                     * 获取Project ID
-                     * @return ProjectId Project ID
+                     * 获取Bill dimension code. Note:  This field may return null, indicating that no valid values can be obtained.
+                     * @return GroupKey Bill dimension code. Note:  This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    std::string GetProjectId() const;
+                    std::string GetGroupKey() const;
 
                     /**
-                     * 设置Project ID
-                     * @param _projectId Project ID
+                     * 设置Bill dimension code. Note:  This field may return null, indicating that no valid values can be obtained.
+                     * @param _groupKey Bill dimension code. Note:  This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    void SetProjectId(const std::string& _projectId);
+                    void SetGroupKey(const std::string& _groupKey);
 
                     /**
-                     * 判断参数 ProjectId 是否已赋值
-                     * @return ProjectId 是否已赋值
+                     * 判断参数 GroupKey 是否已赋值
+                     * @return GroupKey 是否已赋值
                      * 
                      */
-                    bool ProjectIdHasBeenSet() const;
+                    bool GroupKeyHasBeenSet() const;
 
                     /**
-                     * 获取Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
-                     * @return ProjectName Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+                     * 获取Bill dimension value. Note:  This field may return null, indicating that no valid values can be obtained.
+                     * @return GroupValue Bill dimension value. Note:  This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    std::string GetProjectName() const;
+                    std::string GetGroupValue() const;
 
                     /**
-                     * 设置Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
-                     * @param _projectName Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+                     * 设置Bill dimension value. Note:  This field may return null, indicating that no valid values can be obtained.
+                     * @param _groupValue Bill dimension value. Note:  This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    void SetProjectName(const std::string& _projectName);
+                    void SetGroupValue(const std::string& _groupValue);
 
                     /**
-                     * 判断参数 ProjectName 是否已赋值
-                     * @return ProjectName 是否已赋值
+                     * 判断参数 GroupValue 是否已赋值
+                     * @return GroupValue 是否已赋值
                      * 
                      */
-                    bool ProjectNameHasBeenSet() const;
+                    bool GroupValueHasBeenSet() const;
 
                     /**
-                     * 获取Cost ratio, to two decimal points
-                     * @return RealTotalCostRatio Cost ratio, to two decimal points
+                     * 获取Original cost in USD. This parameter has become valid since Bill 3.0 took effect in May 2021, and before that `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter.
+                     * @return TotalCost Original cost in USD. This parameter has become valid since Bill 3.0 took effect in May 2021, and before that `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter.
                      * 
                      */
-                    std::string GetRealTotalCostRatio() const;
+                    std::string GetTotalCost() const;
 
                     /**
-                     * 设置Cost ratio, to two decimal points
-                     * @param _realTotalCostRatio Cost ratio, to two decimal points
+                     * 设置Original cost in USD. This parameter has become valid since Bill 3.0 took effect in May 2021, and before that `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter.
+                     * @param _totalCost Original cost in USD. This parameter has become valid since Bill 3.0 took effect in May 2021, and before that `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter.
                      * 
                      */
-                    void SetRealTotalCostRatio(const std::string& _realTotalCostRatio);
+                    void SetTotalCost(const std::string& _totalCost);
 
                     /**
-                     * 判断参数 RealTotalCostRatio 是否已赋值
-                     * @return RealTotalCostRatio 是否已赋值
+                     * 判断参数 TotalCost 是否已赋值
+                     * @return TotalCost 是否已赋值
                      * 
                      */
-                    bool RealTotalCostRatioHasBeenSet() const;
+                    bool TotalCostHasBeenSet() const;
 
                     /**
                      * 获取Total amount after discount
@@ -194,15 +195,15 @@ namespace TencentCloud
                     bool VoucherPayAmountHasBeenSet() const;
 
                     /**
-                     * 获取Commission credit:  The amount paid by the user’s commission credit.
-                     * @return TransferPayAmount Commission credit:  The amount paid by the user’s commission credit.
+                     * 获取Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+                     * @return TransferPayAmount Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTransferPayAmount() const;
 
                     /**
-                     * 设置Commission credit:  The amount paid by the user’s commission credit.
-                     * @param _transferPayAmount Commission credit:  The amount paid by the user’s commission credit.
+                     * 设置Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+                     * @param _transferPayAmount Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTransferPayAmount(const std::string& _transferPayAmount);
@@ -215,66 +216,45 @@ namespace TencentCloud
                     bool TransferPayAmountHasBeenSet() const;
 
                     /**
-                     * 获取Billing month, e.g. `2019-08`
-                     * @return BillMonth Billing month, e.g. `2019-08`
+                     * 获取Detailed summary of products. Note:  This field may return null, indicating that no valid values can be obtained.
+                     * @return Business Detailed summary of products. Note:  This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    std::string GetBillMonth() const;
+                    std::vector<BusinessSummaryInfo> GetBusiness() const;
 
                     /**
-                     * 设置Billing month, e.g. `2019-08`
-                     * @param _billMonth Billing month, e.g. `2019-08`
+                     * 设置Detailed summary of products. Note:  This field may return null, indicating that no valid values can be obtained.
+                     * @param _business Detailed summary of products. Note:  This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    void SetBillMonth(const std::string& _billMonth);
+                    void SetBusiness(const std::vector<BusinessSummaryInfo>& _business);
 
                     /**
-                     * 判断参数 BillMonth 是否已赋值
-                     * @return BillMonth 是否已赋值
+                     * 判断参数 Business 是否已赋值
+                     * @return Business 是否已赋值
                      * 
                      */
-                    bool BillMonthHasBeenSet() const;
-
-                    /**
-                     * 获取The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-                     * @return TotalCost The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-                     * 
-                     */
-                    std::string GetTotalCost() const;
-
-                    /**
-                     * 设置The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-                     * @param _totalCost The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-                     * 
-                     */
-                    void SetTotalCost(const std::string& _totalCost);
-
-                    /**
-                     * 判断参数 TotalCost 是否已赋值
-                     * @return TotalCost 是否已赋值
-                     * 
-                     */
-                    bool TotalCostHasBeenSet() const;
+                    bool BusinessHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Project ID
+                     * Bill dimension code. Note:  This field may return null, indicating that no valid values can be obtained.
                      */
-                    std::string m_projectId;
-                    bool m_projectIdHasBeenSet;
+                    std::string m_groupKey;
+                    bool m_groupKeyHasBeenSet;
 
                     /**
-                     * Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+                     * Bill dimension value. Note:  This field may return null, indicating that no valid values can be obtained.
                      */
-                    std::string m_projectName;
-                    bool m_projectNameHasBeenSet;
+                    std::string m_groupValue;
+                    bool m_groupValueHasBeenSet;
 
                     /**
-                     * Cost ratio, to two decimal points
+                     * Original cost in USD. This parameter has become valid since Bill 3.0 took effect in May 2021, and before that `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter.
                      */
-                    std::string m_realTotalCostRatio;
-                    bool m_realTotalCostRatioHasBeenSet;
+                    std::string m_totalCost;
+                    bool m_totalCostHasBeenSet;
 
                     /**
                      * Total amount after discount
@@ -301,22 +281,16 @@ namespace TencentCloud
                     bool m_voucherPayAmountHasBeenSet;
 
                     /**
-                     * Commission credit:  The amount paid by the user’s commission credit.
+                     * Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_transferPayAmount;
                     bool m_transferPayAmountHasBeenSet;
 
                     /**
-                     * Billing month, e.g. `2019-08`
+                     * Detailed summary of products. Note:  This field may return null, indicating that no valid values can be obtained.
                      */
-                    std::string m_billMonth;
-                    bool m_billMonthHasBeenSet;
-
-                    /**
-                     * The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-                     */
-                    std::string m_totalCost;
-                    bool m_totalCostHasBeenSet;
+                    std::vector<BusinessSummaryInfo> m_business;
+                    bool m_businessHasBeenSet;
 
                 };
             }
@@ -324,4 +298,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_BILLING_V20180709_MODEL_PROJECTSUMMARYOVERVIEWITEM_H_
+#endif // !TENCENTCLOUD_BILLING_V20180709_MODEL_SUMMARYDETAIL_H_

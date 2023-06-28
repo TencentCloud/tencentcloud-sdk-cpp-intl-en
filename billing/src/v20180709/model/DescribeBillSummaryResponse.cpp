@@ -14,23 +14,22 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/sqlserver/v20180328/model/CreateBusinessDBInstancesResponse.h>
+#include <tencentcloud/billing/v20180709/model/DescribeBillSummaryResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using TencentCloud::CoreInternalOutcome;
-using namespace TencentCloud::Sqlserver::V20180328::Model;
+using namespace TencentCloud::Billing::V20180709::Model;
 using namespace std;
 
-CreateBusinessDBInstancesResponse::CreateBusinessDBInstancesResponse() :
-    m_dealNameHasBeenSet(false),
-    m_flowIdHasBeenSet(false),
-    m_instanceIdSetHasBeenSet(false)
+DescribeBillSummaryResponse::DescribeBillSummaryResponse() :
+    m_readyHasBeenSet(false),
+    m_summaryDetailHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome CreateBusinessDBInstancesResponse::Deserialize(const string &payload)
+CoreInternalOutcome DescribeBillSummaryResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -64,75 +63,66 @@ CoreInternalOutcome CreateBusinessDBInstancesResponse::Deserialize(const string 
     }
 
 
-    if (rsp.HasMember("DealName") && !rsp["DealName"].IsNull())
+    if (rsp.HasMember("Ready") && !rsp["Ready"].IsNull())
     {
-        if (!rsp["DealName"].IsString())
+        if (!rsp["Ready"].IsUint64())
         {
-            return CoreInternalOutcome(Core::Error("response `DealName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Ready` IsUint64=false incorrectly").SetRequestId(requestId));
         }
-        m_dealName = string(rsp["DealName"].GetString());
-        m_dealNameHasBeenSet = true;
+        m_ready = rsp["Ready"].GetUint64();
+        m_readyHasBeenSet = true;
     }
 
-    if (rsp.HasMember("FlowId") && !rsp["FlowId"].IsNull())
+    if (rsp.HasMember("SummaryDetail") && !rsp["SummaryDetail"].IsNull())
     {
-        if (!rsp["FlowId"].IsInt64())
-        {
-            return CoreInternalOutcome(Core::Error("response `FlowId` IsInt64=false incorrectly").SetRequestId(requestId));
-        }
-        m_flowId = rsp["FlowId"].GetInt64();
-        m_flowIdHasBeenSet = true;
-    }
+        if (!rsp["SummaryDetail"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `SummaryDetail` is not array type"));
 
-    if (rsp.HasMember("InstanceIdSet") && !rsp["InstanceIdSet"].IsNull())
-    {
-        if (!rsp["InstanceIdSet"].IsArray())
-            return CoreInternalOutcome(Core::Error("response `InstanceIdSet` is not array type"));
-
-        const rapidjson::Value &tmpValue = rsp["InstanceIdSet"];
+        const rapidjson::Value &tmpValue = rsp["SummaryDetail"];
         for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
-            m_instanceIdSet.push_back((*itr).GetString());
+            SummaryDetail item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_summaryDetail.push_back(item);
         }
-        m_instanceIdSetHasBeenSet = true;
+        m_summaryDetailHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string CreateBusinessDBInstancesResponse::ToJsonString() const
+string DescribeBillSummaryResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_dealNameHasBeenSet)
+    if (m_readyHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "DealName";
+        string key = "Ready";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_dealName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, m_ready, allocator);
     }
 
-    if (m_flowIdHasBeenSet)
+    if (m_summaryDetailHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "FlowId";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_flowId, allocator);
-    }
-
-    if (m_instanceIdSetHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "InstanceIdSet";
+        string key = "SummaryDetail";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
-        for (auto itr = m_instanceIdSet.begin(); itr != m_instanceIdSet.end(); ++itr)
+        int i=0;
+        for (auto itr = m_summaryDetail.begin(); itr != m_summaryDetail.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
@@ -148,34 +138,24 @@ string CreateBusinessDBInstancesResponse::ToJsonString() const
 }
 
 
-string CreateBusinessDBInstancesResponse::GetDealName() const
+uint64_t DescribeBillSummaryResponse::GetReady() const
 {
-    return m_dealName;
+    return m_ready;
 }
 
-bool CreateBusinessDBInstancesResponse::DealNameHasBeenSet() const
+bool DescribeBillSummaryResponse::ReadyHasBeenSet() const
 {
-    return m_dealNameHasBeenSet;
+    return m_readyHasBeenSet;
 }
 
-int64_t CreateBusinessDBInstancesResponse::GetFlowId() const
+vector<SummaryDetail> DescribeBillSummaryResponse::GetSummaryDetail() const
 {
-    return m_flowId;
+    return m_summaryDetail;
 }
 
-bool CreateBusinessDBInstancesResponse::FlowIdHasBeenSet() const
+bool DescribeBillSummaryResponse::SummaryDetailHasBeenSet() const
 {
-    return m_flowIdHasBeenSet;
-}
-
-vector<string> CreateBusinessDBInstancesResponse::GetInstanceIdSet() const
-{
-    return m_instanceIdSet;
-}
-
-bool CreateBusinessDBInstancesResponse::InstanceIdSetHasBeenSet() const
-{
-    return m_instanceIdSetHasBeenSet;
+    return m_summaryDetailHasBeenSet;
 }
 
 

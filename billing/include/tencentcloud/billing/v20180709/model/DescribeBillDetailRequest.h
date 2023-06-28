@@ -451,6 +451,48 @@ Note: To query the product codes used in the current month, call <a href="https:
                      */
                     bool BusinessCodeHasBeenSet() const;
 
+                    /**
+                     * 获取Context information returned by the last request. You can set `Month` to `2023-05` for query by page to accelerate queries. We recommend users whose data volume is over 100 thousand entries use the paginated query feature, which can help greatly speed up your queries.
+                     * @return Context Context information returned by the last request. You can set `Month` to `2023-05` for query by page to accelerate queries. We recommend users whose data volume is over 100 thousand entries use the paginated query feature, which can help greatly speed up your queries.
+                     * 
+                     */
+                    std::string GetContext() const;
+
+                    /**
+                     * 设置Context information returned by the last request. You can set `Month` to `2023-05` for query by page to accelerate queries. We recommend users whose data volume is over 100 thousand entries use the paginated query feature, which can help greatly speed up your queries.
+                     * @param _context Context information returned by the last request. You can set `Month` to `2023-05` for query by page to accelerate queries. We recommend users whose data volume is over 100 thousand entries use the paginated query feature, which can help greatly speed up your queries.
+                     * 
+                     */
+                    void SetContext(const std::string& _context);
+
+                    /**
+                     * 判断参数 Context 是否已赋值
+                     * @return Context 是否已赋值
+                     * 
+                     */
+                    bool ContextHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return PayerUin 
+                     * 
+                     */
+                    std::string GetPayerUin() const;
+
+                    /**
+                     * 设置
+                     * @param _payerUin 
+                     * 
+                     */
+                    void SetPayerUin(const std::string& _payerUin);
+
+                    /**
+                     * 判断参数 PayerUin 是否已赋值
+                     * @return PayerUin 是否已赋值
+                     * 
+                     */
+                    bool PayerUinHasBeenSet() const;
+
                 private:
 
                     /**
@@ -564,6 +606,18 @@ Note: To query the product codes used in the current month, call <a href="https:
                      */
                     std::string m_businessCode;
                     bool m_businessCodeHasBeenSet;
+
+                    /**
+                     * Context information returned by the last request. You can set `Month` to `2023-05` for query by page to accelerate queries. We recommend users whose data volume is over 100 thousand entries use the paginated query feature, which can help greatly speed up your queries.
+                     */
+                    std::string m_context;
+                    bool m_contextHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_payerUin;
+                    bool m_payerUinHasBeenSet;
 
                 };
             }
