@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
-                     * @return ProjectName Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+                     * 获取Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+                     * @return ProjectName Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
                      * 
                      */
                     std::string GetProjectName() const;
 
                     /**
-                     * 设置Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
-                     * @param _projectName Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+                     * 设置Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+                     * @param _projectName Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
                      * 
                      */
                     void SetProjectName(const std::string& _projectName);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool RealTotalCostHasBeenSet() const;
 
                     /**
-                     * 获取Cash credit:  The amount paid from the user’s cash account
-                     * @return CashPayAmount Cash credit:  The amount paid from the user’s cash account
+                     * 获取Cash credit: The amount paid from the user’s cash account
+                     * @return CashPayAmount Cash credit: The amount paid from the user’s cash account
                      * 
                      */
                     std::string GetCashPayAmount() const;
 
                     /**
-                     * 设置Cash credit:  The amount paid from the user’s cash account
-                     * @param _cashPayAmount Cash credit:  The amount paid from the user’s cash account
+                     * 设置Cash credit: The amount paid from the user’s cash account
+                     * @param _cashPayAmount Cash credit: The amount paid from the user’s cash account
                      * 
                      */
                     void SetCashPayAmount(const std::string& _cashPayAmount);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool CashPayAmountHasBeenSet() const;
 
                     /**
-                     * 获取Free credit:  The amount paid by the user’s free credit
-                     * @return IncentivePayAmount Free credit:  The amount paid by the user’s free credit
+                     * 获取Free credit: The amount paid with the user’s free credit
+                     * @return IncentivePayAmount Free credit: The amount paid with the user’s free credit
                      * 
                      */
                     std::string GetIncentivePayAmount() const;
 
                     /**
-                     * 设置Free credit:  The amount paid by the user’s free credit
-                     * @param _incentivePayAmount Free credit:  The amount paid by the user’s free credit
+                     * 设置Free credit: The amount paid with the user’s free credit
+                     * @param _incentivePayAmount Free credit: The amount paid with the user’s free credit
                      * 
                      */
                     void SetIncentivePayAmount(const std::string& _incentivePayAmount);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool IncentivePayAmountHasBeenSet() const;
 
                     /**
-                     * 获取Voucher payment:  The voucher deduction amount
-                     * @return VoucherPayAmount Voucher payment:  The voucher deduction amount
+                     * 获取Voucher payment: The voucher deduction amount
+                     * @return VoucherPayAmount Voucher payment: The voucher deduction amount
                      * 
                      */
                     std::string GetVoucherPayAmount() const;
 
                     /**
-                     * 设置Voucher payment:  The voucher deduction amount
-                     * @param _voucherPayAmount Voucher payment:  The voucher deduction amount
+                     * 设置Voucher payment: The voucher deduction amount
+                     * @param _voucherPayAmount Voucher payment: The voucher deduction amount
                      * 
                      */
                     void SetVoucherPayAmount(const std::string& _voucherPayAmount);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool VoucherPayAmountHasBeenSet() const;
 
                     /**
-                     * 获取Commission credit:  The amount paid by the user’s commission credit.
-                     * @return TransferPayAmount Commission credit:  The amount paid by the user’s commission credit.
+                     * 获取Commission credit: The amount paid with the user’s commission credit.
+                     * @return TransferPayAmount Commission credit: The amount paid with the user’s commission credit.
                      * 
                      */
                     std::string GetTransferPayAmount() const;
 
                     /**
-                     * 设置Commission credit:  The amount paid by the user’s commission credit.
-                     * @param _transferPayAmount Commission credit:  The amount paid by the user’s commission credit.
+                     * 设置Commission credit: The amount paid with the user’s commission credit.
+                     * @param _transferPayAmount Commission credit: The amount paid with the user’s commission credit.
                      * 
                      */
                     void SetTransferPayAmount(const std::string& _transferPayAmount);
@@ -265,7 +265,7 @@ namespace TencentCloud
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+                     * Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
                      */
                     std::string m_projectName;
                     bool m_projectNameHasBeenSet;
@@ -283,25 +283,25 @@ namespace TencentCloud
                     bool m_realTotalCostHasBeenSet;
 
                     /**
-                     * Cash credit:  The amount paid from the user’s cash account
+                     * Cash credit: The amount paid from the user’s cash account
                      */
                     std::string m_cashPayAmount;
                     bool m_cashPayAmountHasBeenSet;
 
                     /**
-                     * Free credit:  The amount paid by the user’s free credit
+                     * Free credit: The amount paid with the user’s free credit
                      */
                     std::string m_incentivePayAmount;
                     bool m_incentivePayAmountHasBeenSet;
 
                     /**
-                     * Voucher payment:  The voucher deduction amount
+                     * Voucher payment: The voucher deduction amount
                      */
                     std::string m_voucherPayAmount;
                     bool m_voucherPayAmountHasBeenSet;
 
                     /**
-                     * Commission credit:  The amount paid by the user’s commission credit.
+                     * Commission credit: The amount paid with the user’s commission credit.
                      */
                     std::string m_transferPayAmount;
                     bool m_transferPayAmountHasBeenSet;

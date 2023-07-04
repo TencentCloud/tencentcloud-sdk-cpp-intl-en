@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Bill month in the format of "2023-04"
-                     * @return Month Bill month in the format of "2023-04"
+                     * 获取Bill month in the format of "yyyy-mm"
+                     * @return Month Bill month in the format of "yyyy-mm"
                      * 
                      */
                     std::string GetMonth() const;
 
                     /**
-                     * 设置Bill month in the format of "2023-04"
-                     * @param _month Bill month in the format of "2023-04"
+                     * 设置Bill month in the format of "yyyy-mm"
+                     * @param _month Bill month in the format of "yyyy-mm"
                      * 
                      */
                     void SetMonth(const std::string& _month);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool MonthHasBeenSet() const;
 
                     /**
-                     * 获取Bill dimension. Valid values:  `business`, `project`, `region`, `payMode`, and `tag`
-                     * @return GroupType Bill dimension. Valid values:  `business`, `project`, `region`, `payMode`, and `tag`
+                     * 获取Bill dimension. Valid values: `business`, `project`, `region`, `payMode`, and `tag`
+                     * @return GroupType Bill dimension. Valid values: `business`, `project`, `region`, `payMode`, and `tag`
                      * 
                      */
                     std::string GetGroupType() const;
 
                     /**
-                     * 设置Bill dimension. Valid values:  `business`, `project`, `region`, `payMode`, and `tag`
-                     * @param _groupType Bill dimension. Valid values:  `business`, `project`, `region`, `payMode`, and `tag`
+                     * 设置Bill dimension. Valid values: `business`, `project`, `region`, `payMode`, and `tag`
+                     * @param _groupType Bill dimension. Valid values: `business`, `project`, `region`, `payMode`, and `tag`
                      * 
                      */
                     void SetGroupType(const std::string& _groupType);
@@ -108,13 +108,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Bill month in the format of "2023-04"
+                     * Bill month in the format of "yyyy-mm"
                      */
                     std::string m_month;
                     bool m_monthHasBeenSet;
 
                     /**
-                     * Bill dimension. Valid values:  `business`, `project`, `region`, `payMode`, and `tag`
+                     * Bill dimension. Valid values: `business`, `project`, `region`, `payMode`, and `tag`
                      */
                     std::string m_groupType;
                     bool m_groupTypeHasBeenSet;

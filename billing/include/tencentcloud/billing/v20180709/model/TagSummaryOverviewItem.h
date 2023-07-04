@@ -97,15 +97,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RealTotalCostRatioHasBeenSet() const;
 
                     /**
-                     * 获取Total amount after discount. Note:  This field may return null, indicating that no valid values can be obtained.
-                     * @return RealTotalCost Total amount after discount. Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 获取Total amount after discount. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RealTotalCost Total amount after discount. Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRealTotalCost() const;
 
                     /**
-                     * 设置Total amount after discount. Note:  This field may return null, indicating that no valid values can be obtained.
-                     * @param _realTotalCost Total amount after discount. Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 设置Total amount after discount. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _realTotalCost Total amount after discount. Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRealTotalCost(const std::string& _realTotalCost);
@@ -118,15 +118,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RealTotalCostHasBeenSet() const;
 
                     /**
-                     * 获取Cash credit:  The amount paid from the user’s cash account. Note:  This field may return null, indicating that no valid values can be obtained.
-                     * @return CashPayAmount Cash credit:  The amount paid from the user’s cash account. Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 获取Cash credit: The amount paid from the user’s cash account. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CashPayAmount Cash credit: The amount paid from the user’s cash account. Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCashPayAmount() const;
 
                     /**
-                     * 设置Cash credit:  The amount paid from the user’s cash account. Note:  This field may return null, indicating that no valid values can be obtained.
-                     * @param _cashPayAmount Cash credit:  The amount paid from the user’s cash account. Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 设置Cash credit: The amount paid from the user’s cash account. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _cashPayAmount Cash credit: The amount paid from the user’s cash account. Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCashPayAmount(const std::string& _cashPayAmount);
@@ -139,15 +139,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CashPayAmountHasBeenSet() const;
 
                     /**
-                     * 获取Free credit:  The amount paid by the user’s free credit. Note:  This field may return null, indicating that no valid values can be obtained.
-                     * @return IncentivePayAmount Free credit:  The amount paid by the user’s free credit. Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 获取Free credit: The amount paid with the user’s free credit. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IncentivePayAmount Free credit: The amount paid with the user’s free credit. Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetIncentivePayAmount() const;
 
                     /**
-                     * 设置Free credit:  The amount paid by the user’s free credit. Note:  This field may return null, indicating that no valid values can be obtained.
-                     * @param _incentivePayAmount Free credit:  The amount paid by the user’s free credit. Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 设置Free credit: The amount paid with the user’s free credit. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _incentivePayAmount Free credit: The amount paid with the user’s free credit. Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIncentivePayAmount(const std::string& _incentivePayAmount);
@@ -160,15 +160,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IncentivePayAmountHasBeenSet() const;
 
                     /**
-                     * 获取Voucher payment:  The voucher deduction amount. Note:  This field may return null, indicating that no valid values can be obtained.
-                     * @return VoucherPayAmount Voucher payment:  The voucher deduction amount. Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 获取Voucher payment: The amount deducted by using vouchers. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return VoucherPayAmount Voucher payment: The amount deducted by using vouchers. Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetVoucherPayAmount() const;
 
                     /**
-                     * 设置Voucher payment:  The voucher deduction amount. Note:  This field may return null, indicating that no valid values can be obtained.
-                     * @param _voucherPayAmount Voucher payment:  The voucher deduction amount. Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 设置Voucher payment: The amount deducted by using vouchers. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _voucherPayAmount Voucher payment: The amount deducted by using vouchers. Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetVoucherPayAmount(const std::string& _voucherPayAmount);
@@ -181,15 +181,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VoucherPayAmountHasBeenSet() const;
 
                     /**
-                     * 获取Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
-                     * @return TransferPayAmount Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 获取Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TransferPayAmount Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTransferPayAmount() const;
 
                     /**
-                     * 设置Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
-                     * @param _transferPayAmount Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 设置Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _transferPayAmount Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTransferPayAmount(const std::string& _transferPayAmount);
@@ -243,31 +243,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_realTotalCostRatioHasBeenSet;
 
                     /**
-                     * Total amount after discount. Note:  This field may return null, indicating that no valid values can be obtained.
+                     * Total amount after discount. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_realTotalCost;
                     bool m_realTotalCostHasBeenSet;
 
                     /**
-                     * Cash credit:  The amount paid from the user’s cash account. Note:  This field may return null, indicating that no valid values can be obtained.
+                     * Cash credit: The amount paid from the user’s cash account. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_cashPayAmount;
                     bool m_cashPayAmountHasBeenSet;
 
                     /**
-                     * Free credit:  The amount paid by the user’s free credit. Note:  This field may return null, indicating that no valid values can be obtained.
+                     * Free credit: The amount paid with the user’s free credit. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_incentivePayAmount;
                     bool m_incentivePayAmountHasBeenSet;
 
                     /**
-                     * Voucher payment:  The voucher deduction amount. Note:  This field may return null, indicating that no valid values can be obtained.
+                     * Voucher payment: The amount deducted by using vouchers. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_voucherPayAmount;
                     bool m_voucherPayAmountHasBeenSet;
 
                     /**
-                     * Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+                     * Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_transferPayAmount;
                     bool m_transferPayAmountHasBeenSet;
