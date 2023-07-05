@@ -320,6 +320,31 @@ namespace TencentCloud
                      */
                     bool TagsHasBeenSet() const;
 
+                    /**
+                     * 获取Snapshot type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SnapshotType Snapshot type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetSnapshotType() const;
+
+                    /**
+                     * 设置Snapshot type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _snapshotType Snapshot type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetSnapshotType(const std::string& _snapshotType);
+
+                    /**
+                     * 判断参数 SnapshotType 是否已赋值
+                     * @return SnapshotType 是否已赋值
+                     * 
+                     */
+                    bool SnapshotTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -399,6 +424,13 @@ namespace TencentCloud
                      */
                     std::vector<TagInfo> m_tags;
                     bool m_tagsHasBeenSet;
+
+                    /**
+                     * Snapshot type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_snapshotType;
+                    bool m_snapshotTypeHasBeenSet;
 
                 };
             }

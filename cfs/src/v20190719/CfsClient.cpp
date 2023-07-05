@@ -298,6 +298,49 @@ CfsClient::CreateCfsSnapshotOutcomeCallable CfsClient::CreateCfsSnapshotCallable
     return task->get_future();
 }
 
+CfsClient::CreateMigrationTaskOutcome CfsClient::CreateMigrationTask(const CreateMigrationTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateMigrationTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateMigrationTaskResponse rsp = CreateMigrationTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateMigrationTaskOutcome(rsp);
+        else
+            return CreateMigrationTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateMigrationTaskOutcome(outcome.GetError());
+    }
+}
+
+void CfsClient::CreateMigrationTaskAsync(const CreateMigrationTaskRequest& request, const CreateMigrationTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateMigrationTask(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CfsClient::CreateMigrationTaskOutcomeCallable CfsClient::CreateMigrationTaskCallable(const CreateMigrationTaskRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateMigrationTaskOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateMigrationTask(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CfsClient::DeleteAutoSnapshotPolicyOutcome CfsClient::DeleteAutoSnapshotPolicy(const DeleteAutoSnapshotPolicyRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteAutoSnapshotPolicy");
@@ -513,6 +556,49 @@ CfsClient::DeleteCfsSnapshotOutcomeCallable CfsClient::DeleteCfsSnapshotCallable
     return task->get_future();
 }
 
+CfsClient::DeleteMigrationTaskOutcome CfsClient::DeleteMigrationTask(const DeleteMigrationTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteMigrationTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteMigrationTaskResponse rsp = DeleteMigrationTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteMigrationTaskOutcome(rsp);
+        else
+            return DeleteMigrationTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteMigrationTaskOutcome(outcome.GetError());
+    }
+}
+
+void CfsClient::DeleteMigrationTaskAsync(const DeleteMigrationTaskRequest& request, const DeleteMigrationTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteMigrationTask(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CfsClient::DeleteMigrationTaskOutcomeCallable CfsClient::DeleteMigrationTaskCallable(const DeleteMigrationTaskRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteMigrationTaskOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteMigrationTask(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CfsClient::DeleteMountTargetOutcome CfsClient::DeleteMountTarget(const DeleteMountTargetRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteMountTarget");
@@ -635,6 +721,49 @@ CfsClient::DescribeAvailableZoneInfoOutcomeCallable CfsClient::DescribeAvailable
         [this, request]()
         {
             return this->DescribeAvailableZoneInfo(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CfsClient::DescribeBucketListOutcome CfsClient::DescribeBucketList(const DescribeBucketListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeBucketList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeBucketListResponse rsp = DescribeBucketListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeBucketListOutcome(rsp);
+        else
+            return DescribeBucketListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeBucketListOutcome(outcome.GetError());
+    }
+}
+
+void CfsClient::DescribeBucketListAsync(const DescribeBucketListRequest& request, const DescribeBucketListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeBucketList(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CfsClient::DescribeBucketListOutcomeCallable CfsClient::DescribeBucketListCallable(const DescribeBucketListRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeBucketListOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeBucketList(request);
         }
     );
 
@@ -943,6 +1072,49 @@ CfsClient::DescribeCfsSnapshotsOutcomeCallable CfsClient::DescribeCfsSnapshotsCa
     return task->get_future();
 }
 
+CfsClient::DescribeMigrationTasksOutcome CfsClient::DescribeMigrationTasks(const DescribeMigrationTasksRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMigrationTasks");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMigrationTasksResponse rsp = DescribeMigrationTasksResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMigrationTasksOutcome(rsp);
+        else
+            return DescribeMigrationTasksOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMigrationTasksOutcome(outcome.GetError());
+    }
+}
+
+void CfsClient::DescribeMigrationTasksAsync(const DescribeMigrationTasksRequest& request, const DescribeMigrationTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeMigrationTasks(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CfsClient::DescribeMigrationTasksOutcomeCallable CfsClient::DescribeMigrationTasksCallable(const DescribeMigrationTasksRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeMigrationTasksOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeMigrationTasks(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CfsClient::DescribeMountTargetsOutcome CfsClient::DescribeMountTargets(const DescribeMountTargetsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeMountTargets");
@@ -1029,6 +1201,92 @@ CfsClient::DescribeSnapshotOperationLogsOutcomeCallable CfsClient::DescribeSnaps
     return task->get_future();
 }
 
+CfsClient::ModifyFileSystemAutoScaleUpRuleOutcome CfsClient::ModifyFileSystemAutoScaleUpRule(const ModifyFileSystemAutoScaleUpRuleRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyFileSystemAutoScaleUpRule");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyFileSystemAutoScaleUpRuleResponse rsp = ModifyFileSystemAutoScaleUpRuleResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyFileSystemAutoScaleUpRuleOutcome(rsp);
+        else
+            return ModifyFileSystemAutoScaleUpRuleOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyFileSystemAutoScaleUpRuleOutcome(outcome.GetError());
+    }
+}
+
+void CfsClient::ModifyFileSystemAutoScaleUpRuleAsync(const ModifyFileSystemAutoScaleUpRuleRequest& request, const ModifyFileSystemAutoScaleUpRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyFileSystemAutoScaleUpRule(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CfsClient::ModifyFileSystemAutoScaleUpRuleOutcomeCallable CfsClient::ModifyFileSystemAutoScaleUpRuleCallable(const ModifyFileSystemAutoScaleUpRuleRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyFileSystemAutoScaleUpRuleOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyFileSystemAutoScaleUpRule(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CfsClient::ScaleUpFileSystemOutcome CfsClient::ScaleUpFileSystem(const ScaleUpFileSystemRequest &request)
+{
+    auto outcome = MakeRequest(request, "ScaleUpFileSystem");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ScaleUpFileSystemResponse rsp = ScaleUpFileSystemResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ScaleUpFileSystemOutcome(rsp);
+        else
+            return ScaleUpFileSystemOutcome(o.GetError());
+    }
+    else
+    {
+        return ScaleUpFileSystemOutcome(outcome.GetError());
+    }
+}
+
+void CfsClient::ScaleUpFileSystemAsync(const ScaleUpFileSystemRequest& request, const ScaleUpFileSystemAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ScaleUpFileSystem(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CfsClient::ScaleUpFileSystemOutcomeCallable CfsClient::ScaleUpFileSystemCallable(const ScaleUpFileSystemRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ScaleUpFileSystemOutcome()>>(
+        [this, request]()
+        {
+            return this->ScaleUpFileSystem(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CfsClient::SignUpCfsServiceOutcome CfsClient::SignUpCfsService(const SignUpCfsServiceRequest &request)
 {
     auto outcome = MakeRequest(request, "SignUpCfsService");
@@ -1065,6 +1323,49 @@ CfsClient::SignUpCfsServiceOutcomeCallable CfsClient::SignUpCfsServiceCallable(c
         [this, request]()
         {
             return this->SignUpCfsService(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CfsClient::StopMigrationTaskOutcome CfsClient::StopMigrationTask(const StopMigrationTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "StopMigrationTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        StopMigrationTaskResponse rsp = StopMigrationTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return StopMigrationTaskOutcome(rsp);
+        else
+            return StopMigrationTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return StopMigrationTaskOutcome(outcome.GetError());
+    }
+}
+
+void CfsClient::StopMigrationTaskAsync(const StopMigrationTaskRequest& request, const StopMigrationTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->StopMigrationTask(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CfsClient::StopMigrationTaskOutcomeCallable CfsClient::StopMigrationTaskCallable(const StopMigrationTaskRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<StopMigrationTaskOutcome()>>(
+        [this, request]()
+        {
+            return this->StopMigrationTask(request);
         }
     );
 

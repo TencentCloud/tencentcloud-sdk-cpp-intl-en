@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool AliveDaysHasBeenSet() const;
 
                     /**
-                     * 获取The specific day (day 1 to day 31) of the month on which to create a snapshot.
-                     * @return DayOfMonth The specific day (day 1 to day 31) of the month on which to create a snapshot.
+                     * 获取The specific day (day 1 to day 31) of the month on which to automatically create a snapshot.
+                     * @return DayOfMonth The specific day (day 1 to day 31) of the month on which to automatically create a snapshot.
                      * 
                      */
                     std::string GetDayOfMonth() const;
 
                     /**
-                     * 设置The specific day (day 1 to day 31) of the month on which to create a snapshot.
-                     * @param _dayOfMonth The specific day (day 1 to day 31) of the month on which to create a snapshot.
+                     * 设置The specific day (day 1 to day 31) of the month on which to automatically create a snapshot.
+                     * @param _dayOfMonth The specific day (day 1 to day 31) of the month on which to automatically create a snapshot.
                      * 
                      */
                     void SetDayOfMonth(const std::string& _dayOfMonth);
@@ -195,7 +195,7 @@ namespace TencentCloud
                     bool m_aliveDaysHasBeenSet;
 
                     /**
-                     * The specific day (day 1 to day 31) of the month on which to create a snapshot.
+                     * The specific day (day 1 to day 31) of the month on which to automatically create a snapshot.
                      */
                     std::string m_dayOfMonth;
                     bool m_dayOfMonthHasBeenSet;

@@ -113,15 +113,39 @@ namespace TencentCloud
                     bool FileSystemIdHasBeenSet() const;
 
                     /**
-                     * 获取File system status
-                     * @return LifeCycleState File system status
+                     * 获取File system status. Valid values:
+- creating
+- mounting
+- create_failed
+- available
+- unserviced
+- upgrading
+                     * @return LifeCycleState File system status. Valid values:
+- creating
+- mounting
+- create_failed
+- available
+- unserviced
+- upgrading
                      * 
                      */
                     std::string GetLifeCycleState() const;
 
                     /**
-                     * 设置File system status
-                     * @param _lifeCycleState File system status
+                     * 设置File system status. Valid values:
+- creating
+- mounting
+- create_failed
+- available
+- unserviced
+- upgrading
+                     * @param _lifeCycleState File system status. Valid values:
+- creating
+- mounting
+- create_failed
+- available
+- unserviced
+- upgrading
                      * 
                      */
                     void SetLifeCycleState(const std::string& _lifeCycleState);
@@ -536,7 +560,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_fileSystemIdHasBeenSet;
 
                     /**
-                     * File system status
+                     * File system status. Valid values:
+- creating
+- mounting
+- create_failed
+- available
+- unserviced
+- upgrading
                      */
                     std::string m_lifeCycleState;
                     bool m_lifeCycleStateHasBeenSet;

@@ -35,6 +35,8 @@
 #include <tencentcloud/cfs/v20190719/model/CreateCfsRuleResponse.h>
 #include <tencentcloud/cfs/v20190719/model/CreateCfsSnapshotRequest.h>
 #include <tencentcloud/cfs/v20190719/model/CreateCfsSnapshotResponse.h>
+#include <tencentcloud/cfs/v20190719/model/CreateMigrationTaskRequest.h>
+#include <tencentcloud/cfs/v20190719/model/CreateMigrationTaskResponse.h>
 #include <tencentcloud/cfs/v20190719/model/DeleteAutoSnapshotPolicyRequest.h>
 #include <tencentcloud/cfs/v20190719/model/DeleteAutoSnapshotPolicyResponse.h>
 #include <tencentcloud/cfs/v20190719/model/DeleteCfsFileSystemRequest.h>
@@ -45,12 +47,16 @@
 #include <tencentcloud/cfs/v20190719/model/DeleteCfsRuleResponse.h>
 #include <tencentcloud/cfs/v20190719/model/DeleteCfsSnapshotRequest.h>
 #include <tencentcloud/cfs/v20190719/model/DeleteCfsSnapshotResponse.h>
+#include <tencentcloud/cfs/v20190719/model/DeleteMigrationTaskRequest.h>
+#include <tencentcloud/cfs/v20190719/model/DeleteMigrationTaskResponse.h>
 #include <tencentcloud/cfs/v20190719/model/DeleteMountTargetRequest.h>
 #include <tencentcloud/cfs/v20190719/model/DeleteMountTargetResponse.h>
 #include <tencentcloud/cfs/v20190719/model/DescribeAutoSnapshotPoliciesRequest.h>
 #include <tencentcloud/cfs/v20190719/model/DescribeAutoSnapshotPoliciesResponse.h>
 #include <tencentcloud/cfs/v20190719/model/DescribeAvailableZoneInfoRequest.h>
 #include <tencentcloud/cfs/v20190719/model/DescribeAvailableZoneInfoResponse.h>
+#include <tencentcloud/cfs/v20190719/model/DescribeBucketListRequest.h>
+#include <tencentcloud/cfs/v20190719/model/DescribeBucketListResponse.h>
 #include <tencentcloud/cfs/v20190719/model/DescribeCfsFileSystemClientsRequest.h>
 #include <tencentcloud/cfs/v20190719/model/DescribeCfsFileSystemClientsResponse.h>
 #include <tencentcloud/cfs/v20190719/model/DescribeCfsFileSystemsRequest.h>
@@ -65,12 +71,20 @@
 #include <tencentcloud/cfs/v20190719/model/DescribeCfsSnapshotOverviewResponse.h>
 #include <tencentcloud/cfs/v20190719/model/DescribeCfsSnapshotsRequest.h>
 #include <tencentcloud/cfs/v20190719/model/DescribeCfsSnapshotsResponse.h>
+#include <tencentcloud/cfs/v20190719/model/DescribeMigrationTasksRequest.h>
+#include <tencentcloud/cfs/v20190719/model/DescribeMigrationTasksResponse.h>
 #include <tencentcloud/cfs/v20190719/model/DescribeMountTargetsRequest.h>
 #include <tencentcloud/cfs/v20190719/model/DescribeMountTargetsResponse.h>
 #include <tencentcloud/cfs/v20190719/model/DescribeSnapshotOperationLogsRequest.h>
 #include <tencentcloud/cfs/v20190719/model/DescribeSnapshotOperationLogsResponse.h>
+#include <tencentcloud/cfs/v20190719/model/ModifyFileSystemAutoScaleUpRuleRequest.h>
+#include <tencentcloud/cfs/v20190719/model/ModifyFileSystemAutoScaleUpRuleResponse.h>
+#include <tencentcloud/cfs/v20190719/model/ScaleUpFileSystemRequest.h>
+#include <tencentcloud/cfs/v20190719/model/ScaleUpFileSystemResponse.h>
 #include <tencentcloud/cfs/v20190719/model/SignUpCfsServiceRequest.h>
 #include <tencentcloud/cfs/v20190719/model/SignUpCfsServiceResponse.h>
+#include <tencentcloud/cfs/v20190719/model/StopMigrationTaskRequest.h>
+#include <tencentcloud/cfs/v20190719/model/StopMigrationTaskResponse.h>
 #include <tencentcloud/cfs/v20190719/model/UnbindAutoSnapshotPolicyRequest.h>
 #include <tencentcloud/cfs/v20190719/model/UnbindAutoSnapshotPolicyResponse.h>
 #include <tencentcloud/cfs/v20190719/model/UpdateAutoSnapshotPolicyRequest.h>
@@ -119,6 +133,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateCfsSnapshotResponse> CreateCfsSnapshotOutcome;
                 typedef std::future<CreateCfsSnapshotOutcome> CreateCfsSnapshotOutcomeCallable;
                 typedef std::function<void(const CfsClient*, const Model::CreateCfsSnapshotRequest&, CreateCfsSnapshotOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCfsSnapshotAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateMigrationTaskResponse> CreateMigrationTaskOutcome;
+                typedef std::future<CreateMigrationTaskOutcome> CreateMigrationTaskOutcomeCallable;
+                typedef std::function<void(const CfsClient*, const Model::CreateMigrationTaskRequest&, CreateMigrationTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateMigrationTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteAutoSnapshotPolicyResponse> DeleteAutoSnapshotPolicyOutcome;
                 typedef std::future<DeleteAutoSnapshotPolicyOutcome> DeleteAutoSnapshotPolicyOutcomeCallable;
                 typedef std::function<void(const CfsClient*, const Model::DeleteAutoSnapshotPolicyRequest&, DeleteAutoSnapshotPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAutoSnapshotPolicyAsyncHandler;
@@ -134,6 +151,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteCfsSnapshotResponse> DeleteCfsSnapshotOutcome;
                 typedef std::future<DeleteCfsSnapshotOutcome> DeleteCfsSnapshotOutcomeCallable;
                 typedef std::function<void(const CfsClient*, const Model::DeleteCfsSnapshotRequest&, DeleteCfsSnapshotOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteCfsSnapshotAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteMigrationTaskResponse> DeleteMigrationTaskOutcome;
+                typedef std::future<DeleteMigrationTaskOutcome> DeleteMigrationTaskOutcomeCallable;
+                typedef std::function<void(const CfsClient*, const Model::DeleteMigrationTaskRequest&, DeleteMigrationTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteMigrationTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteMountTargetResponse> DeleteMountTargetOutcome;
                 typedef std::future<DeleteMountTargetOutcome> DeleteMountTargetOutcomeCallable;
                 typedef std::function<void(const CfsClient*, const Model::DeleteMountTargetRequest&, DeleteMountTargetOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteMountTargetAsyncHandler;
@@ -143,6 +163,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeAvailableZoneInfoResponse> DescribeAvailableZoneInfoOutcome;
                 typedef std::future<DescribeAvailableZoneInfoOutcome> DescribeAvailableZoneInfoOutcomeCallable;
                 typedef std::function<void(const CfsClient*, const Model::DescribeAvailableZoneInfoRequest&, DescribeAvailableZoneInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAvailableZoneInfoAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBucketListResponse> DescribeBucketListOutcome;
+                typedef std::future<DescribeBucketListOutcome> DescribeBucketListOutcomeCallable;
+                typedef std::function<void(const CfsClient*, const Model::DescribeBucketListRequest&, DescribeBucketListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBucketListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeCfsFileSystemClientsResponse> DescribeCfsFileSystemClientsOutcome;
                 typedef std::future<DescribeCfsFileSystemClientsOutcome> DescribeCfsFileSystemClientsOutcomeCallable;
                 typedef std::function<void(const CfsClient*, const Model::DescribeCfsFileSystemClientsRequest&, DescribeCfsFileSystemClientsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCfsFileSystemClientsAsyncHandler;
@@ -164,15 +187,27 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeCfsSnapshotsResponse> DescribeCfsSnapshotsOutcome;
                 typedef std::future<DescribeCfsSnapshotsOutcome> DescribeCfsSnapshotsOutcomeCallable;
                 typedef std::function<void(const CfsClient*, const Model::DescribeCfsSnapshotsRequest&, DescribeCfsSnapshotsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCfsSnapshotsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMigrationTasksResponse> DescribeMigrationTasksOutcome;
+                typedef std::future<DescribeMigrationTasksOutcome> DescribeMigrationTasksOutcomeCallable;
+                typedef std::function<void(const CfsClient*, const Model::DescribeMigrationTasksRequest&, DescribeMigrationTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMigrationTasksAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeMountTargetsResponse> DescribeMountTargetsOutcome;
                 typedef std::future<DescribeMountTargetsOutcome> DescribeMountTargetsOutcomeCallable;
                 typedef std::function<void(const CfsClient*, const Model::DescribeMountTargetsRequest&, DescribeMountTargetsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMountTargetsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeSnapshotOperationLogsResponse> DescribeSnapshotOperationLogsOutcome;
                 typedef std::future<DescribeSnapshotOperationLogsOutcome> DescribeSnapshotOperationLogsOutcomeCallable;
                 typedef std::function<void(const CfsClient*, const Model::DescribeSnapshotOperationLogsRequest&, DescribeSnapshotOperationLogsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSnapshotOperationLogsAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyFileSystemAutoScaleUpRuleResponse> ModifyFileSystemAutoScaleUpRuleOutcome;
+                typedef std::future<ModifyFileSystemAutoScaleUpRuleOutcome> ModifyFileSystemAutoScaleUpRuleOutcomeCallable;
+                typedef std::function<void(const CfsClient*, const Model::ModifyFileSystemAutoScaleUpRuleRequest&, ModifyFileSystemAutoScaleUpRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyFileSystemAutoScaleUpRuleAsyncHandler;
+                typedef Outcome<Core::Error, Model::ScaleUpFileSystemResponse> ScaleUpFileSystemOutcome;
+                typedef std::future<ScaleUpFileSystemOutcome> ScaleUpFileSystemOutcomeCallable;
+                typedef std::function<void(const CfsClient*, const Model::ScaleUpFileSystemRequest&, ScaleUpFileSystemOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ScaleUpFileSystemAsyncHandler;
                 typedef Outcome<Core::Error, Model::SignUpCfsServiceResponse> SignUpCfsServiceOutcome;
                 typedef std::future<SignUpCfsServiceOutcome> SignUpCfsServiceOutcomeCallable;
                 typedef std::function<void(const CfsClient*, const Model::SignUpCfsServiceRequest&, SignUpCfsServiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SignUpCfsServiceAsyncHandler;
+                typedef Outcome<Core::Error, Model::StopMigrationTaskResponse> StopMigrationTaskOutcome;
+                typedef std::future<StopMigrationTaskOutcome> StopMigrationTaskOutcomeCallable;
+                typedef std::function<void(const CfsClient*, const Model::StopMigrationTaskRequest&, StopMigrationTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StopMigrationTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::UnbindAutoSnapshotPolicyResponse> UnbindAutoSnapshotPolicyOutcome;
                 typedef std::future<UnbindAutoSnapshotPolicyOutcome> UnbindAutoSnapshotPolicyOutcomeCallable;
                 typedef std::function<void(const CfsClient*, const Model::UnbindAutoSnapshotPolicyRequest&, UnbindAutoSnapshotPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UnbindAutoSnapshotPolicyAsyncHandler;
@@ -255,6 +290,16 @@ namespace TencentCloud
                 CreateCfsSnapshotOutcomeCallable CreateCfsSnapshotCallable(const Model::CreateCfsSnapshotRequest& request);
 
                 /**
+                 *This API is used to create a migration task.
+To use this API, submit a ticket for us to add you to the allowlist.
+                 * @param req CreateMigrationTaskRequest
+                 * @return CreateMigrationTaskOutcome
+                 */
+                CreateMigrationTaskOutcome CreateMigrationTask(const Model::CreateMigrationTaskRequest &request);
+                void CreateMigrationTaskAsync(const Model::CreateMigrationTaskRequest& request, const CreateMigrationTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateMigrationTaskOutcomeCallable CreateMigrationTaskCallable(const Model::CreateMigrationTaskRequest& request);
+
+                /**
                  *This API is used to delete a scheduled snapshot policy.
                  * @param req DeleteAutoSnapshotPolicyRequest
                  * @return DeleteAutoSnapshotPolicyOutcome
@@ -300,6 +345,16 @@ namespace TencentCloud
                 DeleteCfsSnapshotOutcomeCallable DeleteCfsSnapshotCallable(const Model::DeleteCfsSnapshotRequest& request);
 
                 /**
+                 *This API is used to delete a migration task.
+To use this API, submit a ticket for us to add you to the allowlist.
+                 * @param req DeleteMigrationTaskRequest
+                 * @return DeleteMigrationTaskOutcome
+                 */
+                DeleteMigrationTaskOutcome DeleteMigrationTask(const Model::DeleteMigrationTaskRequest &request);
+                void DeleteMigrationTaskAsync(const Model::DeleteMigrationTaskRequest& request, const DeleteMigrationTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteMigrationTaskOutcomeCallable DeleteMigrationTaskCallable(const Model::DeleteMigrationTaskRequest& request);
+
+                /**
                  *This API is used to delete a mount target.
                  * @param req DeleteMountTargetRequest
                  * @return DeleteMountTargetOutcome
@@ -325,6 +380,16 @@ namespace TencentCloud
                 DescribeAvailableZoneInfoOutcome DescribeAvailableZoneInfo(const Model::DescribeAvailableZoneInfoRequest &request);
                 void DescribeAvailableZoneInfoAsync(const Model::DescribeAvailableZoneInfoRequest& request, const DescribeAvailableZoneInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeAvailableZoneInfoOutcomeCallable DescribeAvailableZoneInfoCallable(const Model::DescribeAvailableZoneInfoRequest& request);
+
+                /**
+                 *This API is used to get the list of data source buckets.
+To use this API, submit a ticket for us to add you to the allowlist.
+                 * @param req DescribeBucketListRequest
+                 * @return DescribeBucketListOutcome
+                 */
+                DescribeBucketListOutcome DescribeBucketList(const Model::DescribeBucketListRequest &request);
+                void DescribeBucketListAsync(const Model::DescribeBucketListRequest& request, const DescribeBucketListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBucketListOutcomeCallable DescribeBucketListCallable(const Model::DescribeBucketListRequest& request);
 
                 /**
                  *This API is used to query clients on which this file system is mounted. To do so, the client needs to have the CFS monitoring plugin installed.
@@ -390,6 +455,16 @@ namespace TencentCloud
                 DescribeCfsSnapshotsOutcomeCallable DescribeCfsSnapshotsCallable(const Model::DescribeCfsSnapshotsRequest& request);
 
                 /**
+                 *This API is used to get the list of migration tasks.
+To use this API, submit a ticket for us to add you to the allowlist.
+                 * @param req DescribeMigrationTasksRequest
+                 * @return DescribeMigrationTasksOutcome
+                 */
+                DescribeMigrationTasksOutcome DescribeMigrationTasks(const Model::DescribeMigrationTasksRequest &request);
+                void DescribeMigrationTasksAsync(const Model::DescribeMigrationTasksRequest& request, const DescribeMigrationTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMigrationTasksOutcomeCallable DescribeMigrationTasksCallable(const Model::DescribeMigrationTasksRequest& request);
+
+                /**
                  *This API is used to query the mount targets of a file system.
                  * @param req DescribeMountTargetsRequest
                  * @return DescribeMountTargetsOutcome
@@ -408,6 +483,24 @@ namespace TencentCloud
                 DescribeSnapshotOperationLogsOutcomeCallable DescribeSnapshotOperationLogsCallable(const Model::DescribeSnapshotOperationLogsRequest& request);
 
                 /**
+                 *This API is used to modify the scaling policy of a file system.
+                 * @param req ModifyFileSystemAutoScaleUpRuleRequest
+                 * @return ModifyFileSystemAutoScaleUpRuleOutcome
+                 */
+                ModifyFileSystemAutoScaleUpRuleOutcome ModifyFileSystemAutoScaleUpRule(const Model::ModifyFileSystemAutoScaleUpRuleRequest &request);
+                void ModifyFileSystemAutoScaleUpRuleAsync(const Model::ModifyFileSystemAutoScaleUpRuleRequest& request, const ModifyFileSystemAutoScaleUpRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyFileSystemAutoScaleUpRuleOutcomeCallable ModifyFileSystemAutoScaleUpRuleCallable(const Model::ModifyFileSystemAutoScaleUpRuleRequest& request);
+
+                /**
+                 *This API is used to scale up a Turbo file system.
+                 * @param req ScaleUpFileSystemRequest
+                 * @return ScaleUpFileSystemOutcome
+                 */
+                ScaleUpFileSystemOutcome ScaleUpFileSystem(const Model::ScaleUpFileSystemRequest &request);
+                void ScaleUpFileSystemAsync(const Model::ScaleUpFileSystemRequest& request, const ScaleUpFileSystemAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ScaleUpFileSystemOutcomeCallable ScaleUpFileSystemCallable(const Model::ScaleUpFileSystemRequest& request);
+
+                /**
                  *This API is used to activate the CFS service.
                  * @param req SignUpCfsServiceRequest
                  * @return SignUpCfsServiceOutcome
@@ -415,6 +508,16 @@ namespace TencentCloud
                 SignUpCfsServiceOutcome SignUpCfsService(const Model::SignUpCfsServiceRequest &request);
                 void SignUpCfsServiceAsync(const Model::SignUpCfsServiceRequest& request, const SignUpCfsServiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 SignUpCfsServiceOutcomeCallable SignUpCfsServiceCallable(const Model::SignUpCfsServiceRequest& request);
+
+                /**
+                 *This API is used to stop a migration task.
+To use this API, submit a ticket for us to add you to the allowlist.
+                 * @param req StopMigrationTaskRequest
+                 * @return StopMigrationTaskOutcome
+                 */
+                StopMigrationTaskOutcome StopMigrationTask(const Model::StopMigrationTaskRequest &request);
+                void StopMigrationTaskAsync(const Model::StopMigrationTaskRequest& request, const StopMigrationTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                StopMigrationTaskOutcomeCallable StopMigrationTaskCallable(const Model::StopMigrationTaskRequest& request);
 
                 /**
                  *This API is used to unbind a snapshot policy from a file system.

@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Network type. Valid values: `VPC` (private network), `BASIC` (classic network), `CCN` (Cloud Connect Network). You must set this parameter to `CCN` if you use the Turbo series. Classic network will be phased out and is not recommended.
-                     * @return NetInterface Network type. Valid values: `VPC` (private network), `BASIC` (classic network), `CCN` (Cloud Connect Network). You must set this parameter to `CCN` if you use the Turbo series. Classic network will be phased out and is not recommended.
+                     * 获取Network type. Valid values: `VPC` and `CCN`. Select `VPC` for a Standard or High-Performance file system, and `CCN` for a Standard Turbo or High-Performance Turbo one.
+                     * @return NetInterface Network type. Valid values: `VPC` and `CCN`. Select `VPC` for a Standard or High-Performance file system, and `CCN` for a Standard Turbo or High-Performance Turbo one.
                      * 
                      */
                     std::string GetNetInterface() const;
 
                     /**
-                     * 设置Network type. Valid values: `VPC` (private network), `BASIC` (classic network), `CCN` (Cloud Connect Network). You must set this parameter to `CCN` if you use the Turbo series. Classic network will be phased out and is not recommended.
-                     * @param _netInterface Network type. Valid values: `VPC` (private network), `BASIC` (classic network), `CCN` (Cloud Connect Network). You must set this parameter to `CCN` if you use the Turbo series. Classic network will be phased out and is not recommended.
+                     * 设置Network type. Valid values: `VPC` and `CCN`. Select `VPC` for a Standard or High-Performance file system, and `CCN` for a Standard Turbo or High-Performance Turbo one.
+                     * @param _netInterface Network type. Valid values: `VPC` and `CCN`. Select `VPC` for a Standard or High-Performance file system, and `CCN` for a Standard Turbo or High-Performance Turbo one.
                      * 
                      */
                     void SetNetInterface(const std::string& _netInterface);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool NetInterfaceHasBeenSet() const;
 
                     /**
-                     * 获取Permission group ID (required for Standard and High-Performance). For the Turbo series, set it to `pgroupbasic`.
-                     * @return PGroupId Permission group ID (required for Standard and High-Performance). For the Turbo series, set it to `pgroupbasic`.
+                     * 获取Permission group ID
+                     * @return PGroupId Permission group ID
                      * 
                      */
                     std::string GetPGroupId() const;
 
                     /**
-                     * 设置Permission group ID (required for Standard and High-Performance). For the Turbo series, set it to `pgroupbasic`.
-                     * @param _pGroupId Permission group ID (required for Standard and High-Performance). For the Turbo series, set it to `pgroupbasic`.
+                     * 设置Permission group ID
+                     * @param _pGroupId Permission group ID
                      * 
                      */
                     void SetPGroupId(const std::string& _pGroupId);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取Storage class of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), `TP` (High-Performance Turbo)
-                     * @return StorageType Storage class of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), `TP` (High-Performance Turbo)
+                     * 获取Storage type of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), and `TP` (High-Performance Turbo). Default value: `SD`.
+                     * @return StorageType Storage type of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), and `TP` (High-Performance Turbo). Default value: `SD`.
                      * 
                      */
                     std::string GetStorageType() const;
 
                     /**
-                     * 设置Storage class of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), `TP` (High-Performance Turbo)
-                     * @param _storageType Storage class of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), `TP` (High-Performance Turbo)
+                     * 设置Storage type of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), and `TP` (High-Performance Turbo). Default value: `SD`.
+                     * @param _storageType Storage type of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), and `TP` (High-Performance Turbo). Default value: `SD`.
                      * 
                      */
                     void SetStorageType(const std::string& _storageType);
@@ -346,13 +346,13 @@ namespace TencentCloud
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Network type. Valid values: `VPC` (private network), `BASIC` (classic network), `CCN` (Cloud Connect Network). You must set this parameter to `CCN` if you use the Turbo series. Classic network will be phased out and is not recommended.
+                     * Network type. Valid values: `VPC` and `CCN`. Select `VPC` for a Standard or High-Performance file system, and `CCN` for a Standard Turbo or High-Performance Turbo one.
                      */
                     std::string m_netInterface;
                     bool m_netInterfaceHasBeenSet;
 
                     /**
-                     * Permission group ID (required for Standard and High-Performance). For the Turbo series, set it to `pgroupbasic`.
+                     * Permission group ID
                      */
                     std::string m_pGroupId;
                     bool m_pGroupIdHasBeenSet;
@@ -364,7 +364,7 @@ namespace TencentCloud
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * Storage class of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), `TP` (High-Performance Turbo)
+                     * Storage type of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), and `TP` (High-Performance Turbo). Default value: `SD`.
                      */
                     std::string m_storageType;
                     bool m_storageTypeHasBeenSet;

@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_CFS_V20190719_MODEL_TIERINGDETAILINFO_H_
-#define TENCENTCLOUD_CFS_V20190719_MODEL_TIERINGDETAILINFO_H_
+#ifndef TENCENTCLOUD_CFS_V20190719_MODEL_BUCKETINFO_H_
+#define TENCENTCLOUD_CFS_V20190719_MODEL_BUCKETINFO_H_
 
 #include <string>
 #include <vector>
@@ -35,50 +35,77 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The details about tiered storage.
+                * Bucket information
                 */
-                class TieringDetailInfo : public AbstractModel
+                class BucketInfo : public AbstractModel
                 {
                 public:
-                    TieringDetailInfo();
-                    ~TieringDetailInfo() = default;
+                    BucketInfo();
+                    ~BucketInfo() = default;
                     void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
 
                     /**
-                     * 获取STANDARD_IA storage usage
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TieringSizeInBytes STANDARD_IA storage usage
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Bucket name
+                     * @return Name Bucket name
                      * 
                      */
-                    int64_t GetTieringSizeInBytes() const;
+                    std::string GetName() const;
 
                     /**
-                     * 设置STANDARD_IA storage usage
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tieringSizeInBytes STANDARD_IA storage usage
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Bucket name
+                     * @param _name Bucket name
                      * 
                      */
-                    void SetTieringSizeInBytes(const int64_t& _tieringSizeInBytes);
+                    void SetName(const std::string& _name);
 
                     /**
-                     * 判断参数 TieringSizeInBytes 是否已赋值
-                     * @return TieringSizeInBytes 是否已赋值
+                     * 判断参数 Name 是否已赋值
+                     * @return Name 是否已赋值
                      * 
                      */
-                    bool TieringSizeInBytesHasBeenSet() const;
+                    bool NameHasBeenSet() const;
+
+                    /**
+                     * 获取Bucket region
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Region Bucket region
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetRegion() const;
+
+                    /**
+                     * 设置Bucket region
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _region Bucket region
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetRegion(const std::string& _region);
+
+                    /**
+                     * 判断参数 Region 是否已赋值
+                     * @return Region 是否已赋值
+                     * 
+                     */
+                    bool RegionHasBeenSet() const;
 
                 private:
 
                     /**
-                     * STANDARD_IA storage usage
+                     * Bucket name
+                     */
+                    std::string m_name;
+                    bool m_nameHasBeenSet;
+
+                    /**
+                     * Bucket region
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    int64_t m_tieringSizeInBytes;
-                    bool m_tieringSizeInBytesHasBeenSet;
+                    std::string m_region;
+                    bool m_regionHasBeenSet;
 
                 };
             }
@@ -86,4 +113,4 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 }
 
-#endif // !TENCENTCLOUD_CFS_V20190719_MODEL_TIERINGDETAILINFO_H_
+#endif // !TENCENTCLOUD_CFS_V20190719_MODEL_BUCKETINFO_H_
