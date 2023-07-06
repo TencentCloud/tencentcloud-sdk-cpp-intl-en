@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/ckafka/v20190819/model/CreateInstancePostRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/CreatePostPaidInstanceRequest.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -22,9 +22,8 @@
 using namespace TencentCloud::Ckafka::V20190819::Model;
 using namespace std;
 
-CreateInstancePostRequest::CreateInstancePostRequest() :
+CreatePostPaidInstanceRequest::CreatePostPaidInstanceRequest() :
     m_instanceNameHasBeenSet(false),
-    m_bandWidthHasBeenSet(false),
     m_vpcIdHasBeenSet(false),
     m_subnetIdHasBeenSet(false),
     m_instanceTypeHasBeenSet(false),
@@ -33,6 +32,7 @@ CreateInstancePostRequest::CreateInstancePostRequest() :
     m_kafkaVersionHasBeenSet(false),
     m_specificationsTypeHasBeenSet(false),
     m_diskTypeHasBeenSet(false),
+    m_bandWidthHasBeenSet(false),
     m_diskSizeHasBeenSet(false),
     m_partitionHasBeenSet(false),
     m_topicNumHasBeenSet(false),
@@ -44,7 +44,7 @@ CreateInstancePostRequest::CreateInstancePostRequest() :
 {
 }
 
-string CreateInstancePostRequest::ToJsonString() const
+string CreatePostPaidInstanceRequest::ToJsonString() const
 {
     rapidjson::Document d;
     d.SetObject();
@@ -57,14 +57,6 @@ string CreateInstancePostRequest::ToJsonString() const
         string key = "InstanceName";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_instanceName.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_bandWidthHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "BandWidth";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, m_bandWidth, allocator);
     }
 
     if (m_vpcIdHasBeenSet)
@@ -129,6 +121,14 @@ string CreateInstancePostRequest::ToJsonString() const
         string key = "DiskType";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_diskType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_bandWidthHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BandWidth";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_bandWidth, allocator);
     }
 
     if (m_diskSizeHasBeenSet)
@@ -208,290 +208,290 @@ string CreateInstancePostRequest::ToJsonString() const
 }
 
 
-string CreateInstancePostRequest::GetInstanceName() const
+string CreatePostPaidInstanceRequest::GetInstanceName() const
 {
     return m_instanceName;
 }
 
-void CreateInstancePostRequest::SetInstanceName(const string& _instanceName)
+void CreatePostPaidInstanceRequest::SetInstanceName(const string& _instanceName)
 {
     m_instanceName = _instanceName;
     m_instanceNameHasBeenSet = true;
 }
 
-bool CreateInstancePostRequest::InstanceNameHasBeenSet() const
+bool CreatePostPaidInstanceRequest::InstanceNameHasBeenSet() const
 {
     return m_instanceNameHasBeenSet;
 }
 
-int64_t CreateInstancePostRequest::GetBandWidth() const
-{
-    return m_bandWidth;
-}
-
-void CreateInstancePostRequest::SetBandWidth(const int64_t& _bandWidth)
-{
-    m_bandWidth = _bandWidth;
-    m_bandWidthHasBeenSet = true;
-}
-
-bool CreateInstancePostRequest::BandWidthHasBeenSet() const
-{
-    return m_bandWidthHasBeenSet;
-}
-
-string CreateInstancePostRequest::GetVpcId() const
+string CreatePostPaidInstanceRequest::GetVpcId() const
 {
     return m_vpcId;
 }
 
-void CreateInstancePostRequest::SetVpcId(const string& _vpcId)
+void CreatePostPaidInstanceRequest::SetVpcId(const string& _vpcId)
 {
     m_vpcId = _vpcId;
     m_vpcIdHasBeenSet = true;
 }
 
-bool CreateInstancePostRequest::VpcIdHasBeenSet() const
+bool CreatePostPaidInstanceRequest::VpcIdHasBeenSet() const
 {
     return m_vpcIdHasBeenSet;
 }
 
-string CreateInstancePostRequest::GetSubnetId() const
+string CreatePostPaidInstanceRequest::GetSubnetId() const
 {
     return m_subnetId;
 }
 
-void CreateInstancePostRequest::SetSubnetId(const string& _subnetId)
+void CreatePostPaidInstanceRequest::SetSubnetId(const string& _subnetId)
 {
     m_subnetId = _subnetId;
     m_subnetIdHasBeenSet = true;
 }
 
-bool CreateInstancePostRequest::SubnetIdHasBeenSet() const
+bool CreatePostPaidInstanceRequest::SubnetIdHasBeenSet() const
 {
     return m_subnetIdHasBeenSet;
 }
 
-int64_t CreateInstancePostRequest::GetInstanceType() const
+int64_t CreatePostPaidInstanceRequest::GetInstanceType() const
 {
     return m_instanceType;
 }
 
-void CreateInstancePostRequest::SetInstanceType(const int64_t& _instanceType)
+void CreatePostPaidInstanceRequest::SetInstanceType(const int64_t& _instanceType)
 {
     m_instanceType = _instanceType;
     m_instanceTypeHasBeenSet = true;
 }
 
-bool CreateInstancePostRequest::InstanceTypeHasBeenSet() const
+bool CreatePostPaidInstanceRequest::InstanceTypeHasBeenSet() const
 {
     return m_instanceTypeHasBeenSet;
 }
 
-int64_t CreateInstancePostRequest::GetMsgRetentionTime() const
+int64_t CreatePostPaidInstanceRequest::GetMsgRetentionTime() const
 {
     return m_msgRetentionTime;
 }
 
-void CreateInstancePostRequest::SetMsgRetentionTime(const int64_t& _msgRetentionTime)
+void CreatePostPaidInstanceRequest::SetMsgRetentionTime(const int64_t& _msgRetentionTime)
 {
     m_msgRetentionTime = _msgRetentionTime;
     m_msgRetentionTimeHasBeenSet = true;
 }
 
-bool CreateInstancePostRequest::MsgRetentionTimeHasBeenSet() const
+bool CreatePostPaidInstanceRequest::MsgRetentionTimeHasBeenSet() const
 {
     return m_msgRetentionTimeHasBeenSet;
 }
 
-int64_t CreateInstancePostRequest::GetClusterId() const
+int64_t CreatePostPaidInstanceRequest::GetClusterId() const
 {
     return m_clusterId;
 }
 
-void CreateInstancePostRequest::SetClusterId(const int64_t& _clusterId)
+void CreatePostPaidInstanceRequest::SetClusterId(const int64_t& _clusterId)
 {
     m_clusterId = _clusterId;
     m_clusterIdHasBeenSet = true;
 }
 
-bool CreateInstancePostRequest::ClusterIdHasBeenSet() const
+bool CreatePostPaidInstanceRequest::ClusterIdHasBeenSet() const
 {
     return m_clusterIdHasBeenSet;
 }
 
-string CreateInstancePostRequest::GetKafkaVersion() const
+string CreatePostPaidInstanceRequest::GetKafkaVersion() const
 {
     return m_kafkaVersion;
 }
 
-void CreateInstancePostRequest::SetKafkaVersion(const string& _kafkaVersion)
+void CreatePostPaidInstanceRequest::SetKafkaVersion(const string& _kafkaVersion)
 {
     m_kafkaVersion = _kafkaVersion;
     m_kafkaVersionHasBeenSet = true;
 }
 
-bool CreateInstancePostRequest::KafkaVersionHasBeenSet() const
+bool CreatePostPaidInstanceRequest::KafkaVersionHasBeenSet() const
 {
     return m_kafkaVersionHasBeenSet;
 }
 
-string CreateInstancePostRequest::GetSpecificationsType() const
+string CreatePostPaidInstanceRequest::GetSpecificationsType() const
 {
     return m_specificationsType;
 }
 
-void CreateInstancePostRequest::SetSpecificationsType(const string& _specificationsType)
+void CreatePostPaidInstanceRequest::SetSpecificationsType(const string& _specificationsType)
 {
     m_specificationsType = _specificationsType;
     m_specificationsTypeHasBeenSet = true;
 }
 
-bool CreateInstancePostRequest::SpecificationsTypeHasBeenSet() const
+bool CreatePostPaidInstanceRequest::SpecificationsTypeHasBeenSet() const
 {
     return m_specificationsTypeHasBeenSet;
 }
 
-string CreateInstancePostRequest::GetDiskType() const
+string CreatePostPaidInstanceRequest::GetDiskType() const
 {
     return m_diskType;
 }
 
-void CreateInstancePostRequest::SetDiskType(const string& _diskType)
+void CreatePostPaidInstanceRequest::SetDiskType(const string& _diskType)
 {
     m_diskType = _diskType;
     m_diskTypeHasBeenSet = true;
 }
 
-bool CreateInstancePostRequest::DiskTypeHasBeenSet() const
+bool CreatePostPaidInstanceRequest::DiskTypeHasBeenSet() const
 {
     return m_diskTypeHasBeenSet;
 }
 
-int64_t CreateInstancePostRequest::GetDiskSize() const
+int64_t CreatePostPaidInstanceRequest::GetBandWidth() const
+{
+    return m_bandWidth;
+}
+
+void CreatePostPaidInstanceRequest::SetBandWidth(const int64_t& _bandWidth)
+{
+    m_bandWidth = _bandWidth;
+    m_bandWidthHasBeenSet = true;
+}
+
+bool CreatePostPaidInstanceRequest::BandWidthHasBeenSet() const
+{
+    return m_bandWidthHasBeenSet;
+}
+
+int64_t CreatePostPaidInstanceRequest::GetDiskSize() const
 {
     return m_diskSize;
 }
 
-void CreateInstancePostRequest::SetDiskSize(const int64_t& _diskSize)
+void CreatePostPaidInstanceRequest::SetDiskSize(const int64_t& _diskSize)
 {
     m_diskSize = _diskSize;
     m_diskSizeHasBeenSet = true;
 }
 
-bool CreateInstancePostRequest::DiskSizeHasBeenSet() const
+bool CreatePostPaidInstanceRequest::DiskSizeHasBeenSet() const
 {
     return m_diskSizeHasBeenSet;
 }
 
-int64_t CreateInstancePostRequest::GetPartition() const
+int64_t CreatePostPaidInstanceRequest::GetPartition() const
 {
     return m_partition;
 }
 
-void CreateInstancePostRequest::SetPartition(const int64_t& _partition)
+void CreatePostPaidInstanceRequest::SetPartition(const int64_t& _partition)
 {
     m_partition = _partition;
     m_partitionHasBeenSet = true;
 }
 
-bool CreateInstancePostRequest::PartitionHasBeenSet() const
+bool CreatePostPaidInstanceRequest::PartitionHasBeenSet() const
 {
     return m_partitionHasBeenSet;
 }
 
-int64_t CreateInstancePostRequest::GetTopicNum() const
+int64_t CreatePostPaidInstanceRequest::GetTopicNum() const
 {
     return m_topicNum;
 }
 
-void CreateInstancePostRequest::SetTopicNum(const int64_t& _topicNum)
+void CreatePostPaidInstanceRequest::SetTopicNum(const int64_t& _topicNum)
 {
     m_topicNum = _topicNum;
     m_topicNumHasBeenSet = true;
 }
 
-bool CreateInstancePostRequest::TopicNumHasBeenSet() const
+bool CreatePostPaidInstanceRequest::TopicNumHasBeenSet() const
 {
     return m_topicNumHasBeenSet;
 }
 
-int64_t CreateInstancePostRequest::GetZoneId() const
+int64_t CreatePostPaidInstanceRequest::GetZoneId() const
 {
     return m_zoneId;
 }
 
-void CreateInstancePostRequest::SetZoneId(const int64_t& _zoneId)
+void CreatePostPaidInstanceRequest::SetZoneId(const int64_t& _zoneId)
 {
     m_zoneId = _zoneId;
     m_zoneIdHasBeenSet = true;
 }
 
-bool CreateInstancePostRequest::ZoneIdHasBeenSet() const
+bool CreatePostPaidInstanceRequest::ZoneIdHasBeenSet() const
 {
     return m_zoneIdHasBeenSet;
 }
 
-bool CreateInstancePostRequest::GetMultiZoneFlag() const
+bool CreatePostPaidInstanceRequest::GetMultiZoneFlag() const
 {
     return m_multiZoneFlag;
 }
 
-void CreateInstancePostRequest::SetMultiZoneFlag(const bool& _multiZoneFlag)
+void CreatePostPaidInstanceRequest::SetMultiZoneFlag(const bool& _multiZoneFlag)
 {
     m_multiZoneFlag = _multiZoneFlag;
     m_multiZoneFlagHasBeenSet = true;
 }
 
-bool CreateInstancePostRequest::MultiZoneFlagHasBeenSet() const
+bool CreatePostPaidInstanceRequest::MultiZoneFlagHasBeenSet() const
 {
     return m_multiZoneFlagHasBeenSet;
 }
 
-vector<int64_t> CreateInstancePostRequest::GetZoneIds() const
+vector<int64_t> CreatePostPaidInstanceRequest::GetZoneIds() const
 {
     return m_zoneIds;
 }
 
-void CreateInstancePostRequest::SetZoneIds(const vector<int64_t>& _zoneIds)
+void CreatePostPaidInstanceRequest::SetZoneIds(const vector<int64_t>& _zoneIds)
 {
     m_zoneIds = _zoneIds;
     m_zoneIdsHasBeenSet = true;
 }
 
-bool CreateInstancePostRequest::ZoneIdsHasBeenSet() const
+bool CreatePostPaidInstanceRequest::ZoneIdsHasBeenSet() const
 {
     return m_zoneIdsHasBeenSet;
 }
 
-int64_t CreateInstancePostRequest::GetInstanceNum() const
+int64_t CreatePostPaidInstanceRequest::GetInstanceNum() const
 {
     return m_instanceNum;
 }
 
-void CreateInstancePostRequest::SetInstanceNum(const int64_t& _instanceNum)
+void CreatePostPaidInstanceRequest::SetInstanceNum(const int64_t& _instanceNum)
 {
     m_instanceNum = _instanceNum;
     m_instanceNumHasBeenSet = true;
 }
 
-bool CreateInstancePostRequest::InstanceNumHasBeenSet() const
+bool CreatePostPaidInstanceRequest::InstanceNumHasBeenSet() const
 {
     return m_instanceNumHasBeenSet;
 }
 
-int64_t CreateInstancePostRequest::GetPublicNetworkMonthly() const
+int64_t CreatePostPaidInstanceRequest::GetPublicNetworkMonthly() const
 {
     return m_publicNetworkMonthly;
 }
 
-void CreateInstancePostRequest::SetPublicNetworkMonthly(const int64_t& _publicNetworkMonthly)
+void CreatePostPaidInstanceRequest::SetPublicNetworkMonthly(const int64_t& _publicNetworkMonthly)
 {
     m_publicNetworkMonthly = _publicNetworkMonthly;
     m_publicNetworkMonthlyHasBeenSet = true;
 }
 
-bool CreateInstancePostRequest::PublicNetworkMonthlyHasBeenSet() const
+bool CreatePostPaidInstanceRequest::PublicNetworkMonthlyHasBeenSet() const
 {
     return m_publicNetworkMonthlyHasBeenSet;
 }

@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_CKAFKA_V20190819_MODEL_CREATEINSTANCEPOSTREQUEST_H_
-#define TENCENTCLOUD_CKAFKA_V20190819_MODEL_CREATEINSTANCEPOSTREQUEST_H_
+#ifndef TENCENTCLOUD_CKAFKA_V20190819_MODEL_CREATEPOSTPAIDINSTANCEREQUEST_H_
+#define TENCENTCLOUD_CKAFKA_V20190819_MODEL_CREATEPOSTPAIDINSTANCEREQUEST_H_
 
 #include <string>
 #include <vector>
@@ -32,26 +32,26 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * CreateInstancePost request structure.
+                * CreatePostPaidInstance request structure.
                 */
-                class CreateInstancePostRequest : public AbstractModel
+                class CreatePostPaidInstanceRequest : public AbstractModel
                 {
                 public:
-                    CreateInstancePostRequest();
-                    ~CreateInstancePostRequest() = default;
+                    CreatePostPaidInstanceRequest();
+                    ~CreatePostPaidInstanceRequest() = default;
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Instance name, which is a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
-                     * @return InstanceName Instance name, which is a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+                     * 获取Instance name, which is a string of up to 64 letters, digits, and hyphens (-). It must start with a letter.
+                     * @return InstanceName Instance name, which is a string of up to 64 letters, digits, and hyphens (-). It must start with a letter.
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Instance name, which is a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
-                     * @param _instanceName Instance name, which is a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+                     * 设置Instance name, which is a string of up to 64 letters, digits, and hyphens (-). It must start with a letter.
+                     * @param _instanceName Instance name, which is a string of up to 64 letters, digits, and hyphens (-). It must start with a letter.
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -62,27 +62,6 @@ namespace TencentCloud
                      * 
                      */
                     bool InstanceNameHasBeenSet() const;
-
-                    /**
-                     * 获取Private network peak bandwidth of an instance  in MB/sec.  If you create a Standard Edition instance, pass in the corresponding peak bandwidth for the current instance specification.  If you create a Pro Edition instance, configure the peak bandwidth, partition count, and other parameters as required by Pro Edition.
-                     * @return BandWidth Private network peak bandwidth of an instance  in MB/sec.  If you create a Standard Edition instance, pass in the corresponding peak bandwidth for the current instance specification.  If you create a Pro Edition instance, configure the peak bandwidth, partition count, and other parameters as required by Pro Edition.
-                     * 
-                     */
-                    int64_t GetBandWidth() const;
-
-                    /**
-                     * 设置Private network peak bandwidth of an instance  in MB/sec.  If you create a Standard Edition instance, pass in the corresponding peak bandwidth for the current instance specification.  If you create a Pro Edition instance, configure the peak bandwidth, partition count, and other parameters as required by Pro Edition.
-                     * @param _bandWidth Private network peak bandwidth of an instance  in MB/sec.  If you create a Standard Edition instance, pass in the corresponding peak bandwidth for the current instance specification.  If you create a Pro Edition instance, configure the peak bandwidth, partition count, and other parameters as required by Pro Edition.
-                     * 
-                     */
-                    void SetBandWidth(const int64_t& _bandWidth);
-
-                    /**
-                     * 判断参数 BandWidth 是否已赋值
-                     * @return BandWidth 是否已赋值
-                     * 
-                     */
-                    bool BandWidthHasBeenSet() const;
 
                     /**
                      * 获取ID of the VPC where the default access point of the created instance resides.  This parameter is required as instances cannot be created in the classic network currently.
@@ -106,15 +85,15 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取ID of the subnet  where the default access point of the created instance resides. 
-                     * @return SubnetId ID of the subnet  where the default access point of the created instance resides. 
+                     * 获取ID of the subnet  where the default access point of the created instance resides.
+                     * @return SubnetId ID of the subnet  where the default access point of the created instance resides.
                      * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置ID of the subnet  where the default access point of the created instance resides. 
-                     * @param _subnetId ID of the subnet  where the default access point of the created instance resides. 
+                     * 设置ID of the subnet  where the default access point of the created instance resides.
+                     * @param _subnetId ID of the subnet  where the default access point of the created instance resides.
                      * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
@@ -211,15 +190,15 @@ namespace TencentCloud
                     bool KafkaVersionHasBeenSet() const;
 
                     /**
-                     * 获取Instance type. Valid values: `standard` (Standard Edition),  `profession`  (Pro Edition)
-                     * @return SpecificationsType Instance type. Valid values: `standard` (Standard Edition),  `profession`  (Pro Edition)
+                     * 获取Instance type. `standard` (Standard Edition),  `profession`  (Pro Edition)
+                     * @return SpecificationsType Instance type. `standard` (Standard Edition),  `profession`  (Pro Edition)
                      * 
                      */
                     std::string GetSpecificationsType() const;
 
                     /**
-                     * 设置Instance type. Valid values: `standard` (Standard Edition),  `profession`  (Pro Edition)
-                     * @param _specificationsType Instance type. Valid values: `standard` (Standard Edition),  `profession`  (Pro Edition)
+                     * 设置Instance type. `standard` (Standard Edition),  `profession`  (Pro Edition)
+                     * @param _specificationsType Instance type. `standard` (Standard Edition),  `profession`  (Pro Edition)
                      * 
                      */
                     void SetSpecificationsType(const std::string& _specificationsType);
@@ -232,15 +211,15 @@ namespace TencentCloud
                     bool SpecificationsTypeHasBeenSet() const;
 
                     /**
-                     * 获取Instance disk type. Valid values:  `CLOUD_BASIC` (Premium Cloud Storage),  `CLOUD_SSD` (SSD).  If this parameter is left empty, the default value `CLOUD_BASIC` will be used.
-                     * @return DiskType Instance disk type. Valid values:  `CLOUD_BASIC` (Premium Cloud Storage),  `CLOUD_SSD` (SSD).  If this parameter is left empty, the default value `CLOUD_BASIC` will be used.
+                     * 获取Instance disk type.  `CLOUD_BASIC` (Premium Cloud Storage),  `CLOUD_SSD` (SSD).  If this parameter is left empty, the default value `CLOUD_BASIC` will be used.
+                     * @return DiskType Instance disk type.  `CLOUD_BASIC` (Premium Cloud Storage),  `CLOUD_SSD` (SSD).  If this parameter is left empty, the default value `CLOUD_BASIC` will be used.
                      * 
                      */
                     std::string GetDiskType() const;
 
                     /**
-                     * 设置Instance disk type. Valid values:  `CLOUD_BASIC` (Premium Cloud Storage),  `CLOUD_SSD` (SSD).  If this parameter is left empty, the default value `CLOUD_BASIC` will be used.
-                     * @param _diskType Instance disk type. Valid values:  `CLOUD_BASIC` (Premium Cloud Storage),  `CLOUD_SSD` (SSD).  If this parameter is left empty, the default value `CLOUD_BASIC` will be used.
+                     * 设置Instance disk type.  `CLOUD_BASIC` (Premium Cloud Storage),  `CLOUD_SSD` (SSD).  If this parameter is left empty, the default value `CLOUD_BASIC` will be used.
+                     * @param _diskType Instance disk type.  `CLOUD_BASIC` (Premium Cloud Storage),  `CLOUD_SSD` (SSD).  If this parameter is left empty, the default value `CLOUD_BASIC` will be used.
                      * 
                      */
                     void SetDiskType(const std::string& _diskType);
@@ -251,6 +230,27 @@ namespace TencentCloud
                      * 
                      */
                     bool DiskTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Private network peak bandwidth of an instance  in MB/sec.  If you create a Standard Edition instance, pass in the corresponding peak bandwidth for the current instance specification.  If you create a Pro Edition instance, configure the peak bandwidth, partition count, and other parameters as required by Pro Edition.
+                     * @return BandWidth Private network peak bandwidth of an instance  in MB/sec.  If you create a Standard Edition instance, pass in the corresponding peak bandwidth for the current instance specification.  If you create a Pro Edition instance, configure the peak bandwidth, partition count, and other parameters as required by Pro Edition.
+                     * 
+                     */
+                    int64_t GetBandWidth() const;
+
+                    /**
+                     * 设置Private network peak bandwidth of an instance  in MB/sec.  If you create a Standard Edition instance, pass in the corresponding peak bandwidth for the current instance specification.  If you create a Pro Edition instance, configure the peak bandwidth, partition count, and other parameters as required by Pro Edition.
+                     * @param _bandWidth Private network peak bandwidth of an instance  in MB/sec.  If you create a Standard Edition instance, pass in the corresponding peak bandwidth for the current instance specification.  If you create a Pro Edition instance, configure the peak bandwidth, partition count, and other parameters as required by Pro Edition.
+                     * 
+                     */
+                    void SetBandWidth(const int64_t& _bandWidth);
+
+                    /**
+                     * 判断参数 BandWidth 是否已赋值
+                     * @return BandWidth 是否已赋值
+                     * 
+                     */
+                    bool BandWidthHasBeenSet() const;
 
                     /**
                      * 获取Instance disk size, which must meet the requirement of the instance’s specification.
@@ -400,15 +400,15 @@ namespace TencentCloud
                     bool InstanceNumHasBeenSet() const;
 
                     /**
-                     * 获取Public network bandwidth in Mbps.  The 3 Mbps of free bandwidth is not included here by default.  For example, if you need 3 Mbps of public network bandwidth, pass in `0`; if you need 6 Mbps, pass in `3`. The value must be an integer multiple of 3.
-                     * @return PublicNetworkMonthly Public network bandwidth in Mbps.  The 3 Mbps of free bandwidth is not included here by default.  For example, if you need 3 Mbps of public network bandwidth, pass in `0`; if you need 6 Mbps, pass in `3`. The value must be an integer multiple of 3.
+                     * 获取Public network bandwidth in Mbps.  The 3 Mbps of free bandwidth is not included here by default.  For example, if you need 3 Mbps of public network bandwidth, pass in `0`; if you need 6 Mbps, pass in `3`.  The value must be an integer multiple of 3.
+                     * @return PublicNetworkMonthly Public network bandwidth in Mbps.  The 3 Mbps of free bandwidth is not included here by default.  For example, if you need 3 Mbps of public network bandwidth, pass in `0`; if you need 6 Mbps, pass in `3`.  The value must be an integer multiple of 3.
                      * 
                      */
                     int64_t GetPublicNetworkMonthly() const;
 
                     /**
-                     * 设置Public network bandwidth in Mbps.  The 3 Mbps of free bandwidth is not included here by default.  For example, if you need 3 Mbps of public network bandwidth, pass in `0`; if you need 6 Mbps, pass in `3`. The value must be an integer multiple of 3.
-                     * @param _publicNetworkMonthly Public network bandwidth in Mbps.  The 3 Mbps of free bandwidth is not included here by default.  For example, if you need 3 Mbps of public network bandwidth, pass in `0`; if you need 6 Mbps, pass in `3`. The value must be an integer multiple of 3.
+                     * 设置Public network bandwidth in Mbps.  The 3 Mbps of free bandwidth is not included here by default.  For example, if you need 3 Mbps of public network bandwidth, pass in `0`; if you need 6 Mbps, pass in `3`.  The value must be an integer multiple of 3.
+                     * @param _publicNetworkMonthly Public network bandwidth in Mbps.  The 3 Mbps of free bandwidth is not included here by default.  For example, if you need 3 Mbps of public network bandwidth, pass in `0`; if you need 6 Mbps, pass in `3`.  The value must be an integer multiple of 3.
                      * 
                      */
                     void SetPublicNetworkMonthly(const int64_t& _publicNetworkMonthly);
@@ -423,16 +423,10 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance name, which is a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+                     * Instance name, which is a string of up to 64 letters, digits, and hyphens (-). It must start with a letter.
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
-
-                    /**
-                     * Private network peak bandwidth of an instance  in MB/sec.  If you create a Standard Edition instance, pass in the corresponding peak bandwidth for the current instance specification.  If you create a Pro Edition instance, configure the peak bandwidth, partition count, and other parameters as required by Pro Edition.
-                     */
-                    int64_t m_bandWidth;
-                    bool m_bandWidthHasBeenSet;
 
                     /**
                      * ID of the VPC where the default access point of the created instance resides.  This parameter is required as instances cannot be created in the classic network currently.
@@ -441,7 +435,7 @@ namespace TencentCloud
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * ID of the subnet  where the default access point of the created instance resides. 
+                     * ID of the subnet  where the default access point of the created instance resides.
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
@@ -471,16 +465,22 @@ namespace TencentCloud
                     bool m_kafkaVersionHasBeenSet;
 
                     /**
-                     * Instance type. Valid values: `standard` (Standard Edition),  `profession`  (Pro Edition)
+                     * Instance type. `standard` (Standard Edition),  `profession`  (Pro Edition)
                      */
                     std::string m_specificationsType;
                     bool m_specificationsTypeHasBeenSet;
 
                     /**
-                     * Instance disk type. Valid values:  `CLOUD_BASIC` (Premium Cloud Storage),  `CLOUD_SSD` (SSD).  If this parameter is left empty, the default value `CLOUD_BASIC` will be used.
+                     * Instance disk type.  `CLOUD_BASIC` (Premium Cloud Storage),  `CLOUD_SSD` (SSD).  If this parameter is left empty, the default value `CLOUD_BASIC` will be used.
                      */
                     std::string m_diskType;
                     bool m_diskTypeHasBeenSet;
+
+                    /**
+                     * Private network peak bandwidth of an instance  in MB/sec.  If you create a Standard Edition instance, pass in the corresponding peak bandwidth for the current instance specification.  If you create a Pro Edition instance, configure the peak bandwidth, partition count, and other parameters as required by Pro Edition.
+                     */
+                    int64_t m_bandWidth;
+                    bool m_bandWidthHasBeenSet;
 
                     /**
                      * Instance disk size, which must meet the requirement of the instance’s specification.
@@ -525,7 +525,7 @@ namespace TencentCloud
                     bool m_instanceNumHasBeenSet;
 
                     /**
-                     * Public network bandwidth in Mbps.  The 3 Mbps of free bandwidth is not included here by default.  For example, if you need 3 Mbps of public network bandwidth, pass in `0`; if you need 6 Mbps, pass in `3`. The value must be an integer multiple of 3.
+                     * Public network bandwidth in Mbps.  The 3 Mbps of free bandwidth is not included here by default.  For example, if you need 3 Mbps of public network bandwidth, pass in `0`; if you need 6 Mbps, pass in `3`.  The value must be an integer multiple of 3.
                      */
                     int64_t m_publicNetworkMonthly;
                     bool m_publicNetworkMonthlyHasBeenSet;
@@ -536,4 +536,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_CKAFKA_V20190819_MODEL_CREATEINSTANCEPOSTREQUEST_H_
+#endif // !TENCENTCLOUD_CKAFKA_V20190819_MODEL_CREATEPOSTPAIDINSTANCEREQUEST_H_

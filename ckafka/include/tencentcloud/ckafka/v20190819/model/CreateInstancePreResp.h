@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Response structure of creating a prepaid instance
+                * Data structure returned by monthly subscribed instance APIs
                 */
                 class CreateInstancePreResp : public AbstractModel
                 {
@@ -115,27 +115,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool DataHasBeenSet() const;
 
                     /**
-                     * 获取Deletion time.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return DeleteRouteTimestamp Deletion time.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * 
+                     * 获取Deletion time.  This parameter has been deprecated and will be deleted.  Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DeleteRouteTimestamp Deletion time.  This parameter has been deprecated and will be deleted.  Note: This field may return null, indicating that no valid values can be obtained.
+                     * @deprecated
                      */
                     std::string GetDeleteRouteTimestamp() const;
 
                     /**
-                     * 设置Deletion time.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _deleteRouteTimestamp Deletion time.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * 
+                     * 设置Deletion time.  This parameter has been deprecated and will be deleted.  Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _deleteRouteTimestamp Deletion time.  This parameter has been deprecated and will be deleted.  Note: This field may return null, indicating that no valid values can be obtained.
+                     * @deprecated
                      */
                     void SetDeleteRouteTimestamp(const std::string& _deleteRouteTimestamp);
 
                     /**
                      * 判断参数 DeleteRouteTimestamp 是否已赋值
                      * @return DeleteRouteTimestamp 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool DeleteRouteTimestampHasBeenSet() const;
 
@@ -161,8 +157,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_dataHasBeenSet;
 
                     /**
-                     * Deletion time.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Deletion time.  This parameter has been deprecated and will be deleted.  Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_deleteRouteTimestamp;
                     bool m_deleteRouteTimestampHasBeenSet;

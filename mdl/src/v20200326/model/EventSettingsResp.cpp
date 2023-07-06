@@ -25,7 +25,10 @@ EventSettingsResp::EventSettingsResp() :
     m_inputAttachmentHasBeenSet(false),
     m_outputGroupNameHasBeenSet(false),
     m_manifestNameHasBeenSet(false),
-    m_destinationsHasBeenSet(false)
+    m_destinationsHasBeenSet(false),
+    m_sCTE35SegmentationDescriptorHasBeenSet(false),
+    m_spliceEventIDHasBeenSet(false),
+    m_spliceDurationHasBeenSet(false)
 {
 }
 
@@ -94,6 +97,46 @@ CoreInternalOutcome EventSettingsResp::Deserialize(const rapidjson::Value &value
         m_destinationsHasBeenSet = true;
     }
 
+    if (value.HasMember("SCTE35SegmentationDescriptor") && !value["SCTE35SegmentationDescriptor"].IsNull())
+    {
+        if (!value["SCTE35SegmentationDescriptor"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `EventSettingsResp.SCTE35SegmentationDescriptor` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["SCTE35SegmentationDescriptor"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            SegmentationDescriptorRespInfo item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_sCTE35SegmentationDescriptor.push_back(item);
+        }
+        m_sCTE35SegmentationDescriptorHasBeenSet = true;
+    }
+
+    if (value.HasMember("SpliceEventID") && !value["SpliceEventID"].IsNull())
+    {
+        if (!value["SpliceEventID"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `EventSettingsResp.SpliceEventID` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_spliceEventID = value["SpliceEventID"].GetUint64();
+        m_spliceEventIDHasBeenSet = true;
+    }
+
+    if (value.HasMember("SpliceDuration") && !value["SpliceDuration"].IsNull())
+    {
+        if (!value["SpliceDuration"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `EventSettingsResp.SpliceDuration` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_spliceDuration = string(value["SpliceDuration"].GetString());
+        m_spliceDurationHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -146,6 +189,37 @@ void EventSettingsResp::ToJsonObject(rapidjson::Value &value, rapidjson::Documen
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_sCTE35SegmentationDescriptorHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SCTE35SegmentationDescriptor";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_sCTE35SegmentationDescriptor.begin(); itr != m_sCTE35SegmentationDescriptor.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_spliceEventIDHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SpliceEventID";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_spliceEventID, allocator);
+    }
+
+    if (m_spliceDurationHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SpliceDuration";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_spliceDuration.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -229,5 +303,53 @@ void EventSettingsResp::SetDestinations(const vector<EventSettingsDestinationRes
 bool EventSettingsResp::DestinationsHasBeenSet() const
 {
     return m_destinationsHasBeenSet;
+}
+
+vector<SegmentationDescriptorRespInfo> EventSettingsResp::GetSCTE35SegmentationDescriptor() const
+{
+    return m_sCTE35SegmentationDescriptor;
+}
+
+void EventSettingsResp::SetSCTE35SegmentationDescriptor(const vector<SegmentationDescriptorRespInfo>& _sCTE35SegmentationDescriptor)
+{
+    m_sCTE35SegmentationDescriptor = _sCTE35SegmentationDescriptor;
+    m_sCTE35SegmentationDescriptorHasBeenSet = true;
+}
+
+bool EventSettingsResp::SCTE35SegmentationDescriptorHasBeenSet() const
+{
+    return m_sCTE35SegmentationDescriptorHasBeenSet;
+}
+
+uint64_t EventSettingsResp::GetSpliceEventID() const
+{
+    return m_spliceEventID;
+}
+
+void EventSettingsResp::SetSpliceEventID(const uint64_t& _spliceEventID)
+{
+    m_spliceEventID = _spliceEventID;
+    m_spliceEventIDHasBeenSet = true;
+}
+
+bool EventSettingsResp::SpliceEventIDHasBeenSet() const
+{
+    return m_spliceEventIDHasBeenSet;
+}
+
+string EventSettingsResp::GetSpliceDuration() const
+{
+    return m_spliceDuration;
+}
+
+void EventSettingsResp::SetSpliceDuration(const string& _spliceDuration)
+{
+    m_spliceDuration = _spliceDuration;
+    m_spliceDurationHasBeenSet = true;
+}
+
+bool EventSettingsResp::SpliceDurationHasBeenSet() const
+{
+    return m_spliceDurationHasBeenSet;
 }
 

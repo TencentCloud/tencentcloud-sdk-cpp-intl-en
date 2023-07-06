@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/ckafka/v20190819/model/DescribeRouteRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/DescribeTaskStatusRequest.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -22,33 +22,24 @@
 using namespace TencentCloud::Ckafka::V20190819::Model;
 using namespace std;
 
-DescribeRouteRequest::DescribeRouteRequest() :
-    m_instanceIdHasBeenSet(false),
-    m_routeIdHasBeenSet(false)
+DescribeTaskStatusRequest::DescribeTaskStatusRequest() :
+    m_flowIdHasBeenSet(false)
 {
 }
 
-string DescribeRouteRequest::ToJsonString() const
+string DescribeTaskStatusRequest::ToJsonString() const
 {
     rapidjson::Document d;
     d.SetObject();
     rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
-    if (m_instanceIdHasBeenSet)
+    if (m_flowIdHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "InstanceId";
+        string key = "FlowId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_routeIdHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "RouteId";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, m_routeId, allocator);
+        d.AddMember(iKey, m_flowId, allocator);
     }
 
 
@@ -59,36 +50,20 @@ string DescribeRouteRequest::ToJsonString() const
 }
 
 
-string DescribeRouteRequest::GetInstanceId() const
+int64_t DescribeTaskStatusRequest::GetFlowId() const
 {
-    return m_instanceId;
+    return m_flowId;
 }
 
-void DescribeRouteRequest::SetInstanceId(const string& _instanceId)
+void DescribeTaskStatusRequest::SetFlowId(const int64_t& _flowId)
 {
-    m_instanceId = _instanceId;
-    m_instanceIdHasBeenSet = true;
+    m_flowId = _flowId;
+    m_flowIdHasBeenSet = true;
 }
 
-bool DescribeRouteRequest::InstanceIdHasBeenSet() const
+bool DescribeTaskStatusRequest::FlowIdHasBeenSet() const
 {
-    return m_instanceIdHasBeenSet;
-}
-
-int64_t DescribeRouteRequest::GetRouteId() const
-{
-    return m_routeId;
-}
-
-void DescribeRouteRequest::SetRouteId(const int64_t& _routeId)
-{
-    m_routeId = _routeId;
-    m_routeIdHasBeenSet = true;
-}
-
-bool DescribeRouteRequest::RouteIdHasBeenSet() const
-{
-    return m_routeIdHasBeenSet;
+    return m_flowIdHasBeenSet;
 }
 
 

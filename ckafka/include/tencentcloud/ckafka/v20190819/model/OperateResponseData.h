@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/ckafka/v20190819/model/RouteDTO.h>
 
 
 namespace TencentCloud
@@ -71,6 +72,27 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool FlowIdHasBeenSet() const;
 
+                    /**
+                     * 获取RouteIdDto Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RouteDTO RouteIdDto Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    RouteDTO GetRouteDTO() const;
+
+                    /**
+                     * 设置RouteIdDto Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _routeDTO RouteIdDto Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetRouteDTO(const RouteDTO& _routeDTO);
+
+                    /**
+                     * 判断参数 RouteDTO 是否已赋值
+                     * @return RouteDTO 是否已赋值
+                     * 
+                     */
+                    bool RouteDTOHasBeenSet() const;
+
                 private:
 
                     /**
@@ -79,6 +101,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_flowId;
                     bool m_flowIdHasBeenSet;
+
+                    /**
+                     * RouteIdDto Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    RouteDTO m_routeDTO;
+                    bool m_routeDTOHasBeenSet;
 
                 };
             }

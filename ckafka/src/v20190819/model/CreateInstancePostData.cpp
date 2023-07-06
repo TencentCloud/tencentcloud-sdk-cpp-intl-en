@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/ckafka/v20190819/model/CreateInstancePreData.h>
+#include <tencentcloud/ckafka/v20190819/model/CreateInstancePostData.h>
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Ckafka::V20190819::Model;
 using namespace std;
 
-CreateInstancePreData::CreateInstancePreData() :
+CreateInstancePostData::CreateInstancePostData() :
     m_flowIdHasBeenSet(false),
     m_dealNamesHasBeenSet(false),
     m_instanceIdHasBeenSet(false),
@@ -28,7 +28,7 @@ CreateInstancePreData::CreateInstancePreData() :
 {
 }
 
-CoreInternalOutcome CreateInstancePreData::Deserialize(const rapidjson::Value &value)
+CoreInternalOutcome CreateInstancePostData::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +37,7 @@ CoreInternalOutcome CreateInstancePreData::Deserialize(const rapidjson::Value &v
     {
         if (!value["FlowId"].IsInt64())
         {
-            return CoreInternalOutcome(Core::Error("response `CreateInstancePreData.FlowId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CreateInstancePostData.FlowId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_flowId = value["FlowId"].GetInt64();
         m_flowIdHasBeenSet = true;
@@ -46,7 +46,7 @@ CoreInternalOutcome CreateInstancePreData::Deserialize(const rapidjson::Value &v
     if (value.HasMember("DealNames") && !value["DealNames"].IsNull())
     {
         if (!value["DealNames"].IsArray())
-            return CoreInternalOutcome(Core::Error("response `CreateInstancePreData.DealNames` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `CreateInstancePostData.DealNames` is not array type"));
 
         const rapidjson::Value &tmpValue = value["DealNames"];
         for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
@@ -60,7 +60,7 @@ CoreInternalOutcome CreateInstancePreData::Deserialize(const rapidjson::Value &v
     {
         if (!value["InstanceId"].IsString())
         {
-            return CoreInternalOutcome(Core::Error("response `CreateInstancePreData.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CreateInstancePostData.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceId = string(value["InstanceId"].GetString());
         m_instanceIdHasBeenSet = true;
@@ -69,7 +69,7 @@ CoreInternalOutcome CreateInstancePreData::Deserialize(const rapidjson::Value &v
     if (value.HasMember("DealNameInstanceIdMapping") && !value["DealNameInstanceIdMapping"].IsNull())
     {
         if (!value["DealNameInstanceIdMapping"].IsArray())
-            return CoreInternalOutcome(Core::Error("response `CreateInstancePreData.DealNameInstanceIdMapping` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `CreateInstancePostData.DealNameInstanceIdMapping` is not array type"));
 
         const rapidjson::Value &tmpValue = value["DealNameInstanceIdMapping"];
         for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
@@ -90,7 +90,7 @@ CoreInternalOutcome CreateInstancePreData::Deserialize(const rapidjson::Value &v
     return CoreInternalOutcome(true);
 }
 
-void CreateInstancePreData::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
+void CreateInstancePostData::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_flowIdHasBeenSet)
@@ -140,66 +140,66 @@ void CreateInstancePreData::ToJsonObject(rapidjson::Value &value, rapidjson::Doc
 }
 
 
-int64_t CreateInstancePreData::GetFlowId() const
+int64_t CreateInstancePostData::GetFlowId() const
 {
     return m_flowId;
 }
 
-void CreateInstancePreData::SetFlowId(const int64_t& _flowId)
+void CreateInstancePostData::SetFlowId(const int64_t& _flowId)
 {
     m_flowId = _flowId;
     m_flowIdHasBeenSet = true;
 }
 
-bool CreateInstancePreData::FlowIdHasBeenSet() const
+bool CreateInstancePostData::FlowIdHasBeenSet() const
 {
     return m_flowIdHasBeenSet;
 }
 
-vector<string> CreateInstancePreData::GetDealNames() const
+vector<string> CreateInstancePostData::GetDealNames() const
 {
     return m_dealNames;
 }
 
-void CreateInstancePreData::SetDealNames(const vector<string>& _dealNames)
+void CreateInstancePostData::SetDealNames(const vector<string>& _dealNames)
 {
     m_dealNames = _dealNames;
     m_dealNamesHasBeenSet = true;
 }
 
-bool CreateInstancePreData::DealNamesHasBeenSet() const
+bool CreateInstancePostData::DealNamesHasBeenSet() const
 {
     return m_dealNamesHasBeenSet;
 }
 
-string CreateInstancePreData::GetInstanceId() const
+string CreateInstancePostData::GetInstanceId() const
 {
     return m_instanceId;
 }
 
-void CreateInstancePreData::SetInstanceId(const string& _instanceId)
+void CreateInstancePostData::SetInstanceId(const string& _instanceId)
 {
     m_instanceId = _instanceId;
     m_instanceIdHasBeenSet = true;
 }
 
-bool CreateInstancePreData::InstanceIdHasBeenSet() const
+bool CreateInstancePostData::InstanceIdHasBeenSet() const
 {
     return m_instanceIdHasBeenSet;
 }
 
-vector<DealInstanceDTO> CreateInstancePreData::GetDealNameInstanceIdMapping() const
+vector<DealInstanceDTO> CreateInstancePostData::GetDealNameInstanceIdMapping() const
 {
     return m_dealNameInstanceIdMapping;
 }
 
-void CreateInstancePreData::SetDealNameInstanceIdMapping(const vector<DealInstanceDTO>& _dealNameInstanceIdMapping)
+void CreateInstancePostData::SetDealNameInstanceIdMapping(const vector<DealInstanceDTO>& _dealNameInstanceIdMapping)
 {
     m_dealNameInstanceIdMapping = _dealNameInstanceIdMapping;
     m_dealNameInstanceIdMappingHasBeenSet = true;
 }
 
-bool CreateInstancePreData::DealNameInstanceIdMappingHasBeenSet() const
+bool CreateInstancePostData::DealNameInstanceIdMappingHasBeenSet() const
 {
     return m_dealNameInstanceIdMappingHasBeenSet;
 }

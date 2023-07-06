@@ -14,12 +14,15 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_CKAFKA_V20190819_MODEL_DESCRIBEROUTEREQUEST_H_
-#define TENCENTCLOUD_CKAFKA_V20190819_MODEL_DESCRIBEROUTEREQUEST_H_
+#ifndef TENCENTCLOUD_CKAFKA_V20190819_MODEL_ROUTEDTO_H_
+#define TENCENTCLOUD_CKAFKA_V20190819_MODEL_ROUTEDTO_H_
 
 #include <string>
 #include <vector>
 #include <map>
+#include <tencentcloud/core/utils/rapidjson/document.h>
+#include <tencentcloud/core/utils/rapidjson/writer.h>
+#include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 
 
@@ -32,47 +35,27 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * DescribeRoute request structure.
+                * RouteDTO
                 */
-                class DescribeRouteRequest : public AbstractModel
+                class RouteDTO : public AbstractModel
                 {
                 public:
-                    DescribeRouteRequest();
-                    ~DescribeRouteRequest() = default;
-                    std::string ToJsonString() const;
+                    RouteDTO();
+                    ~RouteDTO() = default;
+                    void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
+                    CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
 
                     /**
-                     * 获取Unique instance ID
-                     * @return InstanceId Unique instance ID
-                     * 
-                     */
-                    std::string GetInstanceId() const;
-
-                    /**
-                     * 设置Unique instance ID
-                     * @param _instanceId Unique instance ID
-                     * 
-                     */
-                    void SetInstanceId(const std::string& _instanceId);
-
-                    /**
-                     * 判断参数 InstanceId 是否已赋值
-                     * @return InstanceId 是否已赋值
-                     * 
-                     */
-                    bool InstanceIdHasBeenSet() const;
-
-                    /**
-                     * 获取Route ID
-                     * @return RouteId Route ID
+                     * 获取RouteId11 Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RouteId RouteId11 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetRouteId() const;
 
                     /**
-                     * 设置Route ID
-                     * @param _routeId Route ID
+                     * 设置RouteId11 Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _routeId RouteId11 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRouteId(const int64_t& _routeId);
@@ -87,13 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Unique instance ID
-                     */
-                    std::string m_instanceId;
-                    bool m_instanceIdHasBeenSet;
-
-                    /**
-                     * Route ID
+                     * RouteId11 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_routeId;
                     bool m_routeIdHasBeenSet;
@@ -104,4 +81,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_CKAFKA_V20190819_MODEL_DESCRIBEROUTEREQUEST_H_
+#endif // !TENCENTCLOUD_CKAFKA_V20190819_MODEL_ROUTEDTO_H_

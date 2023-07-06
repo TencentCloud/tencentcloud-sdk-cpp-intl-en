@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mdl/v20200326/model/EventSettingsDestinationReq.h>
+#include <tencentcloud/mdl/v20200326/model/SegmentationDescriptorInfo.h>
 
 
 namespace TencentCloud
@@ -152,6 +153,69 @@ namespace TencentCloud
                      */
                     bool DestinationsHasBeenSet() const;
 
+                    /**
+                     * 获取SCTE-35 configuration information.
+                     * @return SCTE35SegmentationDescriptor SCTE-35 configuration information.
+                     * 
+                     */
+                    std::vector<SegmentationDescriptorInfo> GetSCTE35SegmentationDescriptor() const;
+
+                    /**
+                     * 设置SCTE-35 configuration information.
+                     * @param _sCTE35SegmentationDescriptor SCTE-35 configuration information.
+                     * 
+                     */
+                    void SetSCTE35SegmentationDescriptor(const std::vector<SegmentationDescriptorInfo>& _sCTE35SegmentationDescriptor);
+
+                    /**
+                     * 判断参数 SCTE35SegmentationDescriptor 是否已赋值
+                     * @return SCTE35SegmentationDescriptor 是否已赋值
+                     * 
+                     */
+                    bool SCTE35SegmentationDescriptorHasBeenSet() const;
+
+                    /**
+                     * 获取A 32-bit unique segmentation event identifier.Only one occurrence of a given segmentation_event_id value shall be active at any one time.
+                     * @return SpliceEventID A 32-bit unique segmentation event identifier.Only one occurrence of a given segmentation_event_id value shall be active at any one time.
+                     * 
+                     */
+                    uint64_t GetSpliceEventID() const;
+
+                    /**
+                     * 设置A 32-bit unique segmentation event identifier.Only one occurrence of a given segmentation_event_id value shall be active at any one time.
+                     * @param _spliceEventID A 32-bit unique segmentation event identifier.Only one occurrence of a given segmentation_event_id value shall be active at any one time.
+                     * 
+                     */
+                    void SetSpliceEventID(const uint64_t& _spliceEventID);
+
+                    /**
+                     * 判断参数 SpliceEventID 是否已赋值
+                     * @return SpliceEventID 是否已赋值
+                     * 
+                     */
+                    bool SpliceEventIDHasBeenSet() const;
+
+                    /**
+                     * 获取The duration of the segment in 90kHz ticks.It used to  give the splicer an indication of when the break will be over and when the network In Point will occur. If not specifyed,the splice_insert will continue when enter a return_to_network to end the splice_insert at the appropriate time.
+                     * @return SpliceDuration The duration of the segment in 90kHz ticks.It used to  give the splicer an indication of when the break will be over and when the network In Point will occur. If not specifyed,the splice_insert will continue when enter a return_to_network to end the splice_insert at the appropriate time.
+                     * 
+                     */
+                    uint64_t GetSpliceDuration() const;
+
+                    /**
+                     * 设置The duration of the segment in 90kHz ticks.It used to  give the splicer an indication of when the break will be over and when the network In Point will occur. If not specifyed,the splice_insert will continue when enter a return_to_network to end the splice_insert at the appropriate time.
+                     * @param _spliceDuration The duration of the segment in 90kHz ticks.It used to  give the splicer an indication of when the break will be over and when the network In Point will occur. If not specifyed,the splice_insert will continue when enter a return_to_network to end the splice_insert at the appropriate time.
+                     * 
+                     */
+                    void SetSpliceDuration(const uint64_t& _spliceDuration);
+
+                    /**
+                     * 判断参数 SpliceDuration 是否已赋值
+                     * @return SpliceDuration 是否已赋值
+                     * 
+                     */
+                    bool SpliceDurationHasBeenSet() const;
+
                 private:
 
                     /**
@@ -183,6 +247,24 @@ namespace TencentCloud
                      */
                     std::vector<EventSettingsDestinationReq> m_destinations;
                     bool m_destinationsHasBeenSet;
+
+                    /**
+                     * SCTE-35 configuration information.
+                     */
+                    std::vector<SegmentationDescriptorInfo> m_sCTE35SegmentationDescriptor;
+                    bool m_sCTE35SegmentationDescriptorHasBeenSet;
+
+                    /**
+                     * A 32-bit unique segmentation event identifier.Only one occurrence of a given segmentation_event_id value shall be active at any one time.
+                     */
+                    uint64_t m_spliceEventID;
+                    bool m_spliceEventIDHasBeenSet;
+
+                    /**
+                     * The duration of the segment in 90kHz ticks.It used to  give the splicer an indication of when the break will be over and when the network In Point will occur. If not specifyed,the splice_insert will continue when enter a return_to_network to end the splice_insert at the appropriate time.
+                     */
+                    uint64_t m_spliceDuration;
+                    bool m_spliceDurationHasBeenSet;
 
                 };
             }
