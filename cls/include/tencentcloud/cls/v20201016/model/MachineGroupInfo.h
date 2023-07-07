@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cls/v20201016/model/MachineGroupTypeInfo.h>
 #include <tencentcloud/cls/v20201016/model/Tag.h>
+#include <tencentcloud/cls/v20201016/model/MetaTagInfo.h>
 
 
 namespace TencentCloud
@@ -257,6 +258,27 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool ServiceLoggingHasBeenSet() const;
 
+                    /**
+                     * 获取Metadata information list of a machine group
+                     * @return MetaTags Metadata information list of a machine group
+                     * 
+                     */
+                    std::vector<MetaTagInfo> GetMetaTags() const;
+
+                    /**
+                     * 设置Metadata information list of a machine group
+                     * @param _metaTags Metadata information list of a machine group
+                     * 
+                     */
+                    void SetMetaTags(const std::vector<MetaTagInfo>& _metaTags);
+
+                    /**
+                     * 判断参数 MetaTags 是否已赋值
+                     * @return MetaTags 是否已赋值
+                     * 
+                     */
+                    bool MetaTagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -317,6 +339,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool m_serviceLogging;
                     bool m_serviceLoggingHasBeenSet;
+
+                    /**
+                     * Metadata information list of a machine group
+                     */
+                    std::vector<MetaTagInfo> m_metaTags;
+                    bool m_metaTagsHasBeenSet;
 
                 };
             }

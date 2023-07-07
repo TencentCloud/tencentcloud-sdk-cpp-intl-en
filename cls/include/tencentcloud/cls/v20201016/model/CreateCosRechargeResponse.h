@@ -43,7 +43,30 @@ namespace TencentCloud
                     std::string ToJsonString() const;
 
 
+                    /**
+                     * 获取cos_recharge record ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Id cos_recharge record ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetId() const;
+
+                    /**
+                     * 判断参数 Id 是否已赋值
+                     * @return Id 是否已赋值
+                     * 
+                     */
+                    bool IdHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * cos_recharge record ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_id;
+                    bool m_idHasBeenSet;
 
                 };
             }

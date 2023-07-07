@@ -359,6 +359,151 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool FilenameModeHasBeenSet() const;
 
+                    /**
+                     * 获取Start time for data shipping
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return StartTime Start time for data shipping
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetStartTime() const;
+
+                    /**
+                     * 设置Start time for data shipping
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _startTime Start time for data shipping
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetStartTime(const int64_t& _startTime);
+
+                    /**
+                     * 判断参数 StartTime 是否已赋值
+                     * @return StartTime 是否已赋值
+                     * 
+                     */
+                    bool StartTimeHasBeenSet() const;
+
+                    /**
+                     * 获取End time for data shipping
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return EndTime End time for data shipping
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetEndTime() const;
+
+                    /**
+                     * 设置End time for data shipping
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _endTime End time for data shipping
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetEndTime(const int64_t& _endTime);
+
+                    /**
+                     * 判断参数 EndTime 是否已赋值
+                     * @return EndTime 是否已赋值
+                     * 
+                     */
+                    bool EndTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Progress of historical data shipping (valid only when the selected data scope contains historical data)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Progress Progress of historical data shipping (valid only when the selected data scope contains historical data)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    double GetProgress() const;
+
+                    /**
+                     * 设置Progress of historical data shipping (valid only when the selected data scope contains historical data)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _progress Progress of historical data shipping (valid only when the selected data scope contains historical data)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetProgress(const double& _progress);
+
+                    /**
+                     * 判断参数 Progress 是否已赋值
+                     * @return Progress 是否已赋值
+                     * 
+                     */
+                    bool ProgressHasBeenSet() const;
+
+                    /**
+                     * 获取Remaining time required for shipping all historical data (valid only when the selected data scope contains historical data)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RemainTime Remaining time required for shipping all historical data (valid only when the selected data scope contains historical data)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetRemainTime() const;
+
+                    /**
+                     * 设置Remaining time required for shipping all historical data (valid only when the selected data scope contains historical data)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _remainTime Remaining time required for shipping all historical data (valid only when the selected data scope contains historical data)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetRemainTime(const int64_t& _remainTime);
+
+                    /**
+                     * 判断参数 RemainTime 是否已赋值
+                     * @return RemainTime 是否已赋值
+                     * 
+                     */
+                    bool RemainTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Status of historical data shipping. Valid values:
+0: Real-time data is being shipped.
+1: The system is preparing for historical data shipping.
+2: Historical data is being shipped.
+3: An error occurred while shipping historical data.
+4: Historical data shipping ended.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return HistoryStatus Status of historical data shipping. Valid values:
+0: Real-time data is being shipped.
+1: The system is preparing for historical data shipping.
+2: Historical data is being shipped.
+3: An error occurred while shipping historical data.
+4: Historical data shipping ended.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetHistoryStatus() const;
+
+                    /**
+                     * 设置Status of historical data shipping. Valid values:
+0: Real-time data is being shipped.
+1: The system is preparing for historical data shipping.
+2: Historical data is being shipped.
+3: An error occurred while shipping historical data.
+4: Historical data shipping ended.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _historyStatus Status of historical data shipping. Valid values:
+0: Real-time data is being shipped.
+1: The system is preparing for historical data shipping.
+2: Historical data is being shipped.
+3: An error occurred while shipping historical data.
+4: Historical data shipping ended.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetHistoryStatus(const int64_t& _historyStatus);
+
+                    /**
+                     * 判断参数 HistoryStatus 是否已赋值
+                     * @return HistoryStatus 是否已赋值
+                     * 
+                     */
+                    bool HistoryStatusHasBeenSet() const;
+
                 private:
 
                     /**
@@ -448,6 +593,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     uint64_t m_filenameMode;
                     bool m_filenameModeHasBeenSet;
+
+                    /**
+                     * Start time for data shipping
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_startTime;
+                    bool m_startTimeHasBeenSet;
+
+                    /**
+                     * End time for data shipping
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_endTime;
+                    bool m_endTimeHasBeenSet;
+
+                    /**
+                     * Progress of historical data shipping (valid only when the selected data scope contains historical data)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    double m_progress;
+                    bool m_progressHasBeenSet;
+
+                    /**
+                     * Remaining time required for shipping all historical data (valid only when the selected data scope contains historical data)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_remainTime;
+                    bool m_remainTimeHasBeenSet;
+
+                    /**
+                     * Status of historical data shipping. Valid values:
+0: Real-time data is being shipped.
+1: The system is preparing for historical data shipping.
+2: Historical data is being shipped.
+3: An error occurred while shipping historical data.
+4: Historical data shipping ended.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_historyStatus;
+                    bool m_historyStatusHasBeenSet;
 
                 };
             }

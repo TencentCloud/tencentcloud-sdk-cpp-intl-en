@@ -20,6 +20,7 @@ set(gme_public_header
 
 set(gme_public_header_model
   include/tencentcloud/gme/v20180711/model/StatisticsItem.h
+  include/tencentcloud/gme/v20180711/model/DescribeRecordInfoResponse.h
   include/tencentcloud/gme/v20180711/model/AppStatisticsItem.h
   include/tencentcloud/gme/v20180711/model/DeleteRoomMemberRequest.h
   include/tencentcloud/gme/v20180711/model/ModifyAppStatusRequest.h
@@ -46,12 +47,13 @@ set(gme_public_header_model
   include/tencentcloud/gme/v20180711/model/RecordInfo.h
   include/tencentcloud/gme/v20180711/model/SubscribeRecordUserIds.h
   include/tencentcloud/gme/v20180711/model/RealtimeTextStatisticsItem.h
+  include/tencentcloud/gme/v20180711/model/SceneInfo.h
   include/tencentcloud/gme/v20180711/model/DeleteResult.h
   include/tencentcloud/gme/v20180711/model/OverseaTextStatisticsItem.h
   include/tencentcloud/gme/v20180711/model/DescribeTaskInfoRequest.h
   include/tencentcloud/gme/v20180711/model/RealtimeSpeechConf.h
   include/tencentcloud/gme/v20180711/model/DescribeAppStatisticsResp.h
-  include/tencentcloud/gme/v20180711/model/DescribeRecordInfoResponse.h
+  include/tencentcloud/gme/v20180711/model/AsrConf.h
   include/tencentcloud/gme/v20180711/model/CreateAppResponse.h
   include/tencentcloud/gme/v20180711/model/StopRecordRequest.h
   include/tencentcloud/gme/v20180711/model/StopRecordResponse.h
@@ -64,6 +66,7 @@ set(gme_public_header_model
 set(gme_src
   src/v20180711/GmeClient.cpp
   src/v20180711/model/StatisticsItem.cpp
+  src/v20180711/model/DescribeRecordInfoResponse.cpp
   src/v20180711/model/AppStatisticsItem.cpp
   src/v20180711/model/DeleteRoomMemberRequest.cpp
   src/v20180711/model/ModifyAppStatusRequest.cpp
@@ -90,12 +93,13 @@ set(gme_src
   src/v20180711/model/RecordInfo.cpp
   src/v20180711/model/SubscribeRecordUserIds.cpp
   src/v20180711/model/RealtimeTextStatisticsItem.cpp
+  src/v20180711/model/SceneInfo.cpp
   src/v20180711/model/DeleteResult.cpp
   src/v20180711/model/OverseaTextStatisticsItem.cpp
   src/v20180711/model/DescribeTaskInfoRequest.cpp
   src/v20180711/model/RealtimeSpeechConf.cpp
   src/v20180711/model/DescribeAppStatisticsResp.cpp
-  src/v20180711/model/DescribeRecordInfoResponse.cpp
+  src/v20180711/model/AsrConf.cpp
   src/v20180711/model/CreateAppResponse.cpp
   src/v20180711/model/StopRecordRequest.cpp
   src/v20180711/model/StopRecordResponse.cpp

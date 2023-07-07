@@ -402,6 +402,31 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool ProjectStatusHasBeenSet() const;
 
+                    /**
+                     * 获取Log access point, which can be ignored. 
+Note:  This field may return null, indicating that no valid values can be obtained.
+                     * @return AccessPoint Log access point, which can be ignored. 
+Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetAccessPoint() const;
+
+                    /**
+                     * 设置Log access point, which can be ignored. 
+Note:  This field may return null, indicating that no valid values can be obtained.
+                     * @param _accessPoint Log access point, which can be ignored. 
+Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetAccessPoint(const std::string& _accessPoint);
+
+                    /**
+                     * 判断参数 AccessPoint 是否已赋值
+                     * @return AccessPoint 是否已赋值
+                     * 
+                     */
+                    bool AccessPointHasBeenSet() const;
+
                 private:
 
                     /**
@@ -504,6 +529,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     int64_t m_projectStatus;
                     bool m_projectStatusHasBeenSet;
+
+                    /**
+                     * Log access point, which can be ignored. 
+Note:  This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_accessPoint;
+                    bool m_accessPointHasBeenSet;
 
                 };
             }

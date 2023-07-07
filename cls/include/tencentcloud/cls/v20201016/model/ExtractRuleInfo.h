@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cls/v20201016/model/KeyRegexInfo.h>
+#include <tencentcloud/cls/v20201016/model/MetaTagInfo.h>
 
 
 namespace TencentCloud
@@ -442,6 +443,89 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ParseProtocolHasBeenSet() const;
 
+                    /**
+                     * 获取Metadata type. Valid values:
+0: Do not use metadata.
+1: Use machine group metadata.
+2: Use user-defined metadata.
+3: Use the collection path to extract metadata.
+                     * @return MetadataType Metadata type. Valid values:
+0: Do not use metadata.
+1: Use machine group metadata.
+2: Use user-defined metadata.
+3: Use the collection path to extract metadata.
+                     * 
+                     */
+                    int64_t GetMetadataType() const;
+
+                    /**
+                     * 设置Metadata type. Valid values:
+0: Do not use metadata.
+1: Use machine group metadata.
+2: Use user-defined metadata.
+3: Use the collection path to extract metadata.
+                     * @param _metadataType Metadata type. Valid values:
+0: Do not use metadata.
+1: Use machine group metadata.
+2: Use user-defined metadata.
+3: Use the collection path to extract metadata.
+                     * 
+                     */
+                    void SetMetadataType(const int64_t& _metadataType);
+
+                    /**
+                     * 判断参数 MetadataType 是否已赋值
+                     * @return MetadataType 是否已赋值
+                     * 
+                     */
+                    bool MetadataTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Regular expression of the collection path, which is required when `MetadataType` is set to `3`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return PathRegex Regular expression of the collection path, which is required when `MetadataType` is set to `3`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetPathRegex() const;
+
+                    /**
+                     * 设置Regular expression of the collection path, which is required when `MetadataType` is set to `3`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _pathRegex Regular expression of the collection path, which is required when `MetadataType` is set to `3`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetPathRegex(const std::string& _pathRegex);
+
+                    /**
+                     * 判断参数 PathRegex 是否已赋值
+                     * @return PathRegex 是否已赋值
+                     * 
+                     */
+                    bool PathRegexHasBeenSet() const;
+
+                    /**
+                     * 获取User-defined metadata, which is required when `MetadataType` is set to `2`.
+                     * @return MetaTags User-defined metadata, which is required when `MetadataType` is set to `2`.
+                     * 
+                     */
+                    std::vector<MetaTagInfo> GetMetaTags() const;
+
+                    /**
+                     * 设置User-defined metadata, which is required when `MetadataType` is set to `2`.
+                     * @param _metaTags User-defined metadata, which is required when `MetadataType` is set to `2`.
+                     * 
+                     */
+                    void SetMetaTags(const std::vector<MetaTagInfo>& _metaTags);
+
+                    /**
+                     * 判断参数 MetaTags 是否已赋值
+                     * @return MetaTags 是否已赋值
+                     * 
+                     */
+                    bool MetaTagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -553,6 +637,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_parseProtocol;
                     bool m_parseProtocolHasBeenSet;
+
+                    /**
+                     * Metadata type. Valid values:
+0: Do not use metadata.
+1: Use machine group metadata.
+2: Use user-defined metadata.
+3: Use the collection path to extract metadata.
+                     */
+                    int64_t m_metadataType;
+                    bool m_metadataTypeHasBeenSet;
+
+                    /**
+                     * Regular expression of the collection path, which is required when `MetadataType` is set to `3`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_pathRegex;
+                    bool m_pathRegexHasBeenSet;
+
+                    /**
+                     * User-defined metadata, which is required when `MetadataType` is set to `2`.
+                     */
+                    std::vector<MetaTagInfo> m_metaTags;
+                    bool m_metaTagsHasBeenSet;
 
                 };
             }

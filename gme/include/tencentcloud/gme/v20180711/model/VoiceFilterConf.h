@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/gme/v20180711/model/SceneInfo.h>
 
 
 namespace TencentCloud
@@ -67,6 +68,31 @@ namespace TencentCloud
                      */
                     bool StatusHasBeenSet() const;
 
+                    /**
+                     * 获取Scenario configuration information, such as status and callback URL.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return SceneInfos Scenario configuration information, such as status and callback URL.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<SceneInfo> GetSceneInfos() const;
+
+                    /**
+                     * 设置Scenario configuration information, such as status and callback URL.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param _sceneInfos Scenario configuration information, such as status and callback URL.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetSceneInfos(const std::vector<SceneInfo>& _sceneInfos);
+
+                    /**
+                     * 判断参数 SceneInfos 是否已赋值
+                     * @return SceneInfos 是否已赋值
+                     * 
+                     */
+                    bool SceneInfosHasBeenSet() const;
+
                 private:
 
                     /**
@@ -74,6 +100,13 @@ namespace TencentCloud
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
+
+                    /**
+                     * Scenario configuration information, such as status and callback URL.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<SceneInfo> m_sceneInfos;
+                    bool m_sceneInfosHasBeenSet;
 
                 };
             }

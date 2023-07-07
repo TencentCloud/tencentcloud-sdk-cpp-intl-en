@@ -169,6 +169,49 @@ CynosdbClient::AddInstancesOutcomeCallable CynosdbClient::AddInstancesCallable(c
     return task->get_future();
 }
 
+CynosdbClient::BindClusterResourcePackagesOutcome CynosdbClient::BindClusterResourcePackages(const BindClusterResourcePackagesRequest &request)
+{
+    auto outcome = MakeRequest(request, "BindClusterResourcePackages");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        BindClusterResourcePackagesResponse rsp = BindClusterResourcePackagesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return BindClusterResourcePackagesOutcome(rsp);
+        else
+            return BindClusterResourcePackagesOutcome(o.GetError());
+    }
+    else
+    {
+        return BindClusterResourcePackagesOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::BindClusterResourcePackagesAsync(const BindClusterResourcePackagesRequest& request, const BindClusterResourcePackagesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->BindClusterResourcePackages(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::BindClusterResourcePackagesOutcomeCallable CynosdbClient::BindClusterResourcePackagesCallable(const BindClusterResourcePackagesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<BindClusterResourcePackagesOutcome()>>(
+        [this, request]()
+        {
+            return this->BindClusterResourcePackages(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CynosdbClient::CloseAuditServiceOutcome CynosdbClient::CloseAuditService(const CloseAuditServiceRequest &request)
 {
     auto outcome = MakeRequest(request, "CloseAuditService");
@@ -205,6 +248,135 @@ CynosdbClient::CloseAuditServiceOutcomeCallable CynosdbClient::CloseAuditService
         [this, request]()
         {
             return this->CloseAuditService(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CynosdbClient::CloseClusterPasswordComplexityOutcome CynosdbClient::CloseClusterPasswordComplexity(const CloseClusterPasswordComplexityRequest &request)
+{
+    auto outcome = MakeRequest(request, "CloseClusterPasswordComplexity");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CloseClusterPasswordComplexityResponse rsp = CloseClusterPasswordComplexityResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CloseClusterPasswordComplexityOutcome(rsp);
+        else
+            return CloseClusterPasswordComplexityOutcome(o.GetError());
+    }
+    else
+    {
+        return CloseClusterPasswordComplexityOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::CloseClusterPasswordComplexityAsync(const CloseClusterPasswordComplexityRequest& request, const CloseClusterPasswordComplexityAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CloseClusterPasswordComplexity(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::CloseClusterPasswordComplexityOutcomeCallable CynosdbClient::CloseClusterPasswordComplexityCallable(const CloseClusterPasswordComplexityRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CloseClusterPasswordComplexityOutcome()>>(
+        [this, request]()
+        {
+            return this->CloseClusterPasswordComplexity(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CynosdbClient::CloseWanOutcome CynosdbClient::CloseWan(const CloseWanRequest &request)
+{
+    auto outcome = MakeRequest(request, "CloseWan");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CloseWanResponse rsp = CloseWanResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CloseWanOutcome(rsp);
+        else
+            return CloseWanOutcome(o.GetError());
+    }
+    else
+    {
+        return CloseWanOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::CloseWanAsync(const CloseWanRequest& request, const CloseWanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CloseWan(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::CloseWanOutcomeCallable CynosdbClient::CloseWanCallable(const CloseWanRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CloseWanOutcome()>>(
+        [this, request]()
+        {
+            return this->CloseWan(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CynosdbClient::CopyClusterPasswordComplexityOutcome CynosdbClient::CopyClusterPasswordComplexity(const CopyClusterPasswordComplexityRequest &request)
+{
+    auto outcome = MakeRequest(request, "CopyClusterPasswordComplexity");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CopyClusterPasswordComplexityResponse rsp = CopyClusterPasswordComplexityResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CopyClusterPasswordComplexityOutcome(rsp);
+        else
+            return CopyClusterPasswordComplexityOutcome(o.GetError());
+    }
+    else
+    {
+        return CopyClusterPasswordComplexityOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::CopyClusterPasswordComplexityAsync(const CopyClusterPasswordComplexityRequest& request, const CopyClusterPasswordComplexityAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CopyClusterPasswordComplexity(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::CopyClusterPasswordComplexityOutcomeCallable CynosdbClient::CopyClusterPasswordComplexityCallable(const CopyClusterPasswordComplexityRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CopyClusterPasswordComplexityOutcome()>>(
+        [this, request]()
+        {
+            return this->CopyClusterPasswordComplexity(request);
         }
     );
 
@@ -341,6 +513,49 @@ CynosdbClient::CreateBackupOutcomeCallable CynosdbClient::CreateBackupCallable(c
     return task->get_future();
 }
 
+CynosdbClient::CreateClusterDatabaseOutcome CynosdbClient::CreateClusterDatabase(const CreateClusterDatabaseRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateClusterDatabase");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateClusterDatabaseResponse rsp = CreateClusterDatabaseResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateClusterDatabaseOutcome(rsp);
+        else
+            return CreateClusterDatabaseOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateClusterDatabaseOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::CreateClusterDatabaseAsync(const CreateClusterDatabaseRequest& request, const CreateClusterDatabaseAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateClusterDatabase(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::CreateClusterDatabaseOutcomeCallable CynosdbClient::CreateClusterDatabaseCallable(const CreateClusterDatabaseRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateClusterDatabaseOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateClusterDatabase(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CynosdbClient::CreateClustersOutcome CynosdbClient::CreateClusters(const CreateClustersRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateClusters");
@@ -377,6 +592,135 @@ CynosdbClient::CreateClustersOutcomeCallable CynosdbClient::CreateClustersCallab
         [this, request]()
         {
             return this->CreateClusters(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CynosdbClient::CreateParamTemplateOutcome CynosdbClient::CreateParamTemplate(const CreateParamTemplateRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateParamTemplate");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateParamTemplateResponse rsp = CreateParamTemplateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateParamTemplateOutcome(rsp);
+        else
+            return CreateParamTemplateOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateParamTemplateOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::CreateParamTemplateAsync(const CreateParamTemplateRequest& request, const CreateParamTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateParamTemplate(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::CreateParamTemplateOutcomeCallable CynosdbClient::CreateParamTemplateCallable(const CreateParamTemplateRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateParamTemplateOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateParamTemplate(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CynosdbClient::CreateResourcePackageOutcome CynosdbClient::CreateResourcePackage(const CreateResourcePackageRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateResourcePackage");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateResourcePackageResponse rsp = CreateResourcePackageResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateResourcePackageOutcome(rsp);
+        else
+            return CreateResourcePackageOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateResourcePackageOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::CreateResourcePackageAsync(const CreateResourcePackageRequest& request, const CreateResourcePackageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateResourcePackage(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::CreateResourcePackageOutcomeCallable CynosdbClient::CreateResourcePackageCallable(const CreateResourcePackageRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateResourcePackageOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateResourcePackage(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CynosdbClient::DeleteAccountsOutcome CynosdbClient::DeleteAccounts(const DeleteAccountsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteAccounts");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteAccountsResponse rsp = DeleteAccountsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteAccountsOutcome(rsp);
+        else
+            return DeleteAccountsOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteAccountsOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::DeleteAccountsAsync(const DeleteAccountsRequest& request, const DeleteAccountsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteAccounts(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::DeleteAccountsOutcomeCallable CynosdbClient::DeleteAccountsCallable(const DeleteAccountsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteAccountsOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteAccounts(request);
         }
     );
 
@@ -463,6 +807,135 @@ CynosdbClient::DeleteBackupOutcomeCallable CynosdbClient::DeleteBackupCallable(c
         [this, request]()
         {
             return this->DeleteBackup(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CynosdbClient::DeleteClusterDatabaseOutcome CynosdbClient::DeleteClusterDatabase(const DeleteClusterDatabaseRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteClusterDatabase");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteClusterDatabaseResponse rsp = DeleteClusterDatabaseResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteClusterDatabaseOutcome(rsp);
+        else
+            return DeleteClusterDatabaseOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteClusterDatabaseOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::DeleteClusterDatabaseAsync(const DeleteClusterDatabaseRequest& request, const DeleteClusterDatabaseAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteClusterDatabase(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::DeleteClusterDatabaseOutcomeCallable CynosdbClient::DeleteClusterDatabaseCallable(const DeleteClusterDatabaseRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteClusterDatabaseOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteClusterDatabase(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CynosdbClient::DeleteParamTemplateOutcome CynosdbClient::DeleteParamTemplate(const DeleteParamTemplateRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteParamTemplate");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteParamTemplateResponse rsp = DeleteParamTemplateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteParamTemplateOutcome(rsp);
+        else
+            return DeleteParamTemplateOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteParamTemplateOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::DeleteParamTemplateAsync(const DeleteParamTemplateRequest& request, const DeleteParamTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteParamTemplate(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::DeleteParamTemplateOutcomeCallable CynosdbClient::DeleteParamTemplateCallable(const DeleteParamTemplateRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteParamTemplateOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteParamTemplate(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CynosdbClient::DescribeAccountPrivilegesOutcome CynosdbClient::DescribeAccountPrivileges(const DescribeAccountPrivilegesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAccountPrivileges");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAccountPrivilegesResponse rsp = DescribeAccountPrivilegesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAccountPrivilegesOutcome(rsp);
+        else
+            return DescribeAccountPrivilegesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAccountPrivilegesOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::DescribeAccountPrivilegesAsync(const DescribeAccountPrivilegesRequest& request, const DescribeAccountPrivilegesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeAccountPrivileges(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::DescribeAccountPrivilegesOutcomeCallable CynosdbClient::DescribeAccountPrivilegesCallable(const DescribeAccountPrivilegesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeAccountPrivilegesOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeAccountPrivileges(request);
         }
     );
 
@@ -900,6 +1373,49 @@ CynosdbClient::DescribeClusterDetailOutcomeCallable CynosdbClient::DescribeClust
     return task->get_future();
 }
 
+CynosdbClient::DescribeClusterDetailDatabasesOutcome CynosdbClient::DescribeClusterDetailDatabases(const DescribeClusterDetailDatabasesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeClusterDetailDatabases");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeClusterDetailDatabasesResponse rsp = DescribeClusterDetailDatabasesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeClusterDetailDatabasesOutcome(rsp);
+        else
+            return DescribeClusterDetailDatabasesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeClusterDetailDatabasesOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::DescribeClusterDetailDatabasesAsync(const DescribeClusterDetailDatabasesRequest& request, const DescribeClusterDetailDatabasesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeClusterDetailDatabases(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::DescribeClusterDetailDatabasesOutcomeCallable CynosdbClient::DescribeClusterDetailDatabasesCallable(const DescribeClusterDetailDatabasesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeClusterDetailDatabasesOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeClusterDetailDatabases(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CynosdbClient::DescribeClusterInstanceGrpsOutcome CynosdbClient::DescribeClusterInstanceGrps(const DescribeClusterInstanceGrpsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeClusterInstanceGrps");
@@ -979,6 +1495,49 @@ CynosdbClient::DescribeClusterParamsOutcomeCallable CynosdbClient::DescribeClust
         [this, request]()
         {
             return this->DescribeClusterParams(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CynosdbClient::DescribeClusterPasswordComplexityOutcome CynosdbClient::DescribeClusterPasswordComplexity(const DescribeClusterPasswordComplexityRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeClusterPasswordComplexity");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeClusterPasswordComplexityResponse rsp = DescribeClusterPasswordComplexityResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeClusterPasswordComplexityOutcome(rsp);
+        else
+            return DescribeClusterPasswordComplexityOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeClusterPasswordComplexityOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::DescribeClusterPasswordComplexityAsync(const DescribeClusterPasswordComplexityRequest& request, const DescribeClusterPasswordComplexityAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeClusterPasswordComplexity(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::DescribeClusterPasswordComplexityOutcomeCallable CynosdbClient::DescribeClusterPasswordComplexityCallable(const DescribeClusterPasswordComplexityRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeClusterPasswordComplexityOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeClusterPasswordComplexity(request);
         }
     );
 
@@ -1158,6 +1717,92 @@ CynosdbClient::DescribeInstanceDetailOutcomeCallable CynosdbClient::DescribeInst
     return task->get_future();
 }
 
+CynosdbClient::DescribeInstanceErrorLogsOutcome CynosdbClient::DescribeInstanceErrorLogs(const DescribeInstanceErrorLogsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeInstanceErrorLogs");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeInstanceErrorLogsResponse rsp = DescribeInstanceErrorLogsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeInstanceErrorLogsOutcome(rsp);
+        else
+            return DescribeInstanceErrorLogsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeInstanceErrorLogsOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::DescribeInstanceErrorLogsAsync(const DescribeInstanceErrorLogsRequest& request, const DescribeInstanceErrorLogsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeInstanceErrorLogs(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::DescribeInstanceErrorLogsOutcomeCallable CynosdbClient::DescribeInstanceErrorLogsCallable(const DescribeInstanceErrorLogsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeInstanceErrorLogsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeInstanceErrorLogs(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CynosdbClient::DescribeInstanceParamsOutcome CynosdbClient::DescribeInstanceParams(const DescribeInstanceParamsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeInstanceParams");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeInstanceParamsResponse rsp = DescribeInstanceParamsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeInstanceParamsOutcome(rsp);
+        else
+            return DescribeInstanceParamsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeInstanceParamsOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::DescribeInstanceParamsAsync(const DescribeInstanceParamsRequest& request, const DescribeInstanceParamsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeInstanceParams(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::DescribeInstanceParamsOutcomeCallable CynosdbClient::DescribeInstanceParamsCallable(const DescribeInstanceParamsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeInstanceParamsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeInstanceParams(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CynosdbClient::DescribeInstanceSlowQueriesOutcome CynosdbClient::DescribeInstanceSlowQueries(const DescribeInstanceSlowQueriesRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeInstanceSlowQueries");
@@ -1330,6 +1975,49 @@ CynosdbClient::DescribeMaintainPeriodOutcomeCallable CynosdbClient::DescribeMain
     return task->get_future();
 }
 
+CynosdbClient::DescribeParamTemplateDetailOutcome CynosdbClient::DescribeParamTemplateDetail(const DescribeParamTemplateDetailRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeParamTemplateDetail");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeParamTemplateDetailResponse rsp = DescribeParamTemplateDetailResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeParamTemplateDetailOutcome(rsp);
+        else
+            return DescribeParamTemplateDetailOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeParamTemplateDetailOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::DescribeParamTemplateDetailAsync(const DescribeParamTemplateDetailRequest& request, const DescribeParamTemplateDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeParamTemplateDetail(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::DescribeParamTemplateDetailOutcomeCallable CynosdbClient::DescribeParamTemplateDetailCallable(const DescribeParamTemplateDetailRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeParamTemplateDetailOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeParamTemplateDetail(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CynosdbClient::DescribeParamTemplatesOutcome CynosdbClient::DescribeParamTemplates(const DescribeParamTemplatesRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeParamTemplates");
@@ -1409,6 +2097,135 @@ CynosdbClient::DescribeProjectSecurityGroupsOutcomeCallable CynosdbClient::Descr
         [this, request]()
         {
             return this->DescribeProjectSecurityGroups(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CynosdbClient::DescribeResourcePackageDetailOutcome CynosdbClient::DescribeResourcePackageDetail(const DescribeResourcePackageDetailRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeResourcePackageDetail");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeResourcePackageDetailResponse rsp = DescribeResourcePackageDetailResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeResourcePackageDetailOutcome(rsp);
+        else
+            return DescribeResourcePackageDetailOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeResourcePackageDetailOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::DescribeResourcePackageDetailAsync(const DescribeResourcePackageDetailRequest& request, const DescribeResourcePackageDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeResourcePackageDetail(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::DescribeResourcePackageDetailOutcomeCallable CynosdbClient::DescribeResourcePackageDetailCallable(const DescribeResourcePackageDetailRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeResourcePackageDetailOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeResourcePackageDetail(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CynosdbClient::DescribeResourcePackageListOutcome CynosdbClient::DescribeResourcePackageList(const DescribeResourcePackageListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeResourcePackageList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeResourcePackageListResponse rsp = DescribeResourcePackageListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeResourcePackageListOutcome(rsp);
+        else
+            return DescribeResourcePackageListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeResourcePackageListOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::DescribeResourcePackageListAsync(const DescribeResourcePackageListRequest& request, const DescribeResourcePackageListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeResourcePackageList(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::DescribeResourcePackageListOutcomeCallable CynosdbClient::DescribeResourcePackageListCallable(const DescribeResourcePackageListRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeResourcePackageListOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeResourcePackageList(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CynosdbClient::DescribeResourcePackageSaleSpecOutcome CynosdbClient::DescribeResourcePackageSaleSpec(const DescribeResourcePackageSaleSpecRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeResourcePackageSaleSpec");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeResourcePackageSaleSpecResponse rsp = DescribeResourcePackageSaleSpecResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeResourcePackageSaleSpecOutcome(rsp);
+        else
+            return DescribeResourcePackageSaleSpecOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeResourcePackageSaleSpecOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::DescribeResourcePackageSaleSpecAsync(const DescribeResourcePackageSaleSpecRequest& request, const DescribeResourcePackageSaleSpecAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeResourcePackageSaleSpec(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::DescribeResourcePackageSaleSpecOutcomeCallable CynosdbClient::DescribeResourcePackageSaleSpecCallable(const DescribeResourcePackageSaleSpecRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeResourcePackageSaleSpecOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeResourcePackageSaleSpec(request);
         }
     );
 
@@ -1581,6 +2398,49 @@ CynosdbClient::DescribeZonesOutcomeCallable CynosdbClient::DescribeZonesCallable
         [this, request]()
         {
             return this->DescribeZones(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CynosdbClient::ExportInstanceErrorLogsOutcome CynosdbClient::ExportInstanceErrorLogs(const ExportInstanceErrorLogsRequest &request)
+{
+    auto outcome = MakeRequest(request, "ExportInstanceErrorLogs");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ExportInstanceErrorLogsResponse rsp = ExportInstanceErrorLogsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ExportInstanceErrorLogsOutcome(rsp);
+        else
+            return ExportInstanceErrorLogsOutcome(o.GetError());
+    }
+    else
+    {
+        return ExportInstanceErrorLogsOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::ExportInstanceErrorLogsAsync(const ExportInstanceErrorLogsRequest& request, const ExportInstanceErrorLogsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ExportInstanceErrorLogs(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::ExportInstanceErrorLogsOutcomeCallable CynosdbClient::ExportInstanceErrorLogsCallable(const ExportInstanceErrorLogsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ExportInstanceErrorLogsOutcome()>>(
+        [this, request]()
+        {
+            return this->ExportInstanceErrorLogs(request);
         }
     );
 
@@ -1803,6 +2663,135 @@ CynosdbClient::IsolateInstanceOutcomeCallable CynosdbClient::IsolateInstanceCall
     return task->get_future();
 }
 
+CynosdbClient::ModifyAccountDescriptionOutcome CynosdbClient::ModifyAccountDescription(const ModifyAccountDescriptionRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyAccountDescription");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyAccountDescriptionResponse rsp = ModifyAccountDescriptionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyAccountDescriptionOutcome(rsp);
+        else
+            return ModifyAccountDescriptionOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyAccountDescriptionOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::ModifyAccountDescriptionAsync(const ModifyAccountDescriptionRequest& request, const ModifyAccountDescriptionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyAccountDescription(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::ModifyAccountDescriptionOutcomeCallable CynosdbClient::ModifyAccountDescriptionCallable(const ModifyAccountDescriptionRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyAccountDescriptionOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyAccountDescription(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CynosdbClient::ModifyAccountHostOutcome CynosdbClient::ModifyAccountHost(const ModifyAccountHostRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyAccountHost");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyAccountHostResponse rsp = ModifyAccountHostResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyAccountHostOutcome(rsp);
+        else
+            return ModifyAccountHostOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyAccountHostOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::ModifyAccountHostAsync(const ModifyAccountHostRequest& request, const ModifyAccountHostAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyAccountHost(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::ModifyAccountHostOutcomeCallable CynosdbClient::ModifyAccountHostCallable(const ModifyAccountHostRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyAccountHostOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyAccountHost(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CynosdbClient::ModifyAccountPrivilegesOutcome CynosdbClient::ModifyAccountPrivileges(const ModifyAccountPrivilegesRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyAccountPrivileges");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyAccountPrivilegesResponse rsp = ModifyAccountPrivilegesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyAccountPrivilegesOutcome(rsp);
+        else
+            return ModifyAccountPrivilegesOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyAccountPrivilegesOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::ModifyAccountPrivilegesAsync(const ModifyAccountPrivilegesRequest& request, const ModifyAccountPrivilegesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyAccountPrivileges(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::ModifyAccountPrivilegesOutcomeCallable CynosdbClient::ModifyAccountPrivilegesCallable(const ModifyAccountPrivilegesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyAccountPrivilegesOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyAccountPrivileges(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CynosdbClient::ModifyAuditRuleTemplatesOutcome CynosdbClient::ModifyAuditRuleTemplates(const ModifyAuditRuleTemplatesRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyAuditRuleTemplates");
@@ -1975,6 +2964,92 @@ CynosdbClient::ModifyBackupNameOutcomeCallable CynosdbClient::ModifyBackupNameCa
     return task->get_future();
 }
 
+CynosdbClient::ModifyBinlogSaveDaysOutcome CynosdbClient::ModifyBinlogSaveDays(const ModifyBinlogSaveDaysRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyBinlogSaveDays");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyBinlogSaveDaysResponse rsp = ModifyBinlogSaveDaysResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyBinlogSaveDaysOutcome(rsp);
+        else
+            return ModifyBinlogSaveDaysOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyBinlogSaveDaysOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::ModifyBinlogSaveDaysAsync(const ModifyBinlogSaveDaysRequest& request, const ModifyBinlogSaveDaysAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyBinlogSaveDays(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::ModifyBinlogSaveDaysOutcomeCallable CynosdbClient::ModifyBinlogSaveDaysCallable(const ModifyBinlogSaveDaysRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyBinlogSaveDaysOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyBinlogSaveDays(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CynosdbClient::ModifyClusterDatabaseOutcome CynosdbClient::ModifyClusterDatabase(const ModifyClusterDatabaseRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyClusterDatabase");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyClusterDatabaseResponse rsp = ModifyClusterDatabaseResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyClusterDatabaseOutcome(rsp);
+        else
+            return ModifyClusterDatabaseOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyClusterDatabaseOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::ModifyClusterDatabaseAsync(const ModifyClusterDatabaseRequest& request, const ModifyClusterDatabaseAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyClusterDatabase(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::ModifyClusterDatabaseOutcomeCallable CynosdbClient::ModifyClusterDatabaseCallable(const ModifyClusterDatabaseRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyClusterDatabaseOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyClusterDatabase(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CynosdbClient::ModifyClusterNameOutcome CynosdbClient::ModifyClusterName(const ModifyClusterNameRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyClusterName");
@@ -2054,6 +3129,49 @@ CynosdbClient::ModifyClusterParamOutcomeCallable CynosdbClient::ModifyClusterPar
         [this, request]()
         {
             return this->ModifyClusterParam(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CynosdbClient::ModifyClusterPasswordComplexityOutcome CynosdbClient::ModifyClusterPasswordComplexity(const ModifyClusterPasswordComplexityRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyClusterPasswordComplexity");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyClusterPasswordComplexityResponse rsp = ModifyClusterPasswordComplexityResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyClusterPasswordComplexityOutcome(rsp);
+        else
+            return ModifyClusterPasswordComplexityOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyClusterPasswordComplexityOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::ModifyClusterPasswordComplexityAsync(const ModifyClusterPasswordComplexityRequest& request, const ModifyClusterPasswordComplexityAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyClusterPasswordComplexity(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::ModifyClusterPasswordComplexityOutcomeCallable CynosdbClient::ModifyClusterPasswordComplexityCallable(const ModifyClusterPasswordComplexityRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyClusterPasswordComplexityOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyClusterPasswordComplexity(request);
         }
     );
 
@@ -2190,6 +3308,49 @@ CynosdbClient::ModifyInstanceNameOutcomeCallable CynosdbClient::ModifyInstanceNa
     return task->get_future();
 }
 
+CynosdbClient::ModifyInstanceParamOutcome CynosdbClient::ModifyInstanceParam(const ModifyInstanceParamRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyInstanceParam");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyInstanceParamResponse rsp = ModifyInstanceParamResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyInstanceParamOutcome(rsp);
+        else
+            return ModifyInstanceParamOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyInstanceParamOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::ModifyInstanceParamAsync(const ModifyInstanceParamRequest& request, const ModifyInstanceParamAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyInstanceParam(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::ModifyInstanceParamOutcomeCallable CynosdbClient::ModifyInstanceParamCallable(const ModifyInstanceParamRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyInstanceParamOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyInstanceParam(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CynosdbClient::ModifyMaintainPeriodConfigOutcome CynosdbClient::ModifyMaintainPeriodConfig(const ModifyMaintainPeriodConfigRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyMaintainPeriodConfig");
@@ -2226,6 +3387,135 @@ CynosdbClient::ModifyMaintainPeriodConfigOutcomeCallable CynosdbClient::ModifyMa
         [this, request]()
         {
             return this->ModifyMaintainPeriodConfig(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CynosdbClient::ModifyParamTemplateOutcome CynosdbClient::ModifyParamTemplate(const ModifyParamTemplateRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyParamTemplate");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyParamTemplateResponse rsp = ModifyParamTemplateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyParamTemplateOutcome(rsp);
+        else
+            return ModifyParamTemplateOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyParamTemplateOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::ModifyParamTemplateAsync(const ModifyParamTemplateRequest& request, const ModifyParamTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyParamTemplate(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::ModifyParamTemplateOutcomeCallable CynosdbClient::ModifyParamTemplateCallable(const ModifyParamTemplateRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyParamTemplateOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyParamTemplate(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CynosdbClient::ModifyResourcePackageClustersOutcome CynosdbClient::ModifyResourcePackageClusters(const ModifyResourcePackageClustersRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyResourcePackageClusters");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyResourcePackageClustersResponse rsp = ModifyResourcePackageClustersResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyResourcePackageClustersOutcome(rsp);
+        else
+            return ModifyResourcePackageClustersOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyResourcePackageClustersOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::ModifyResourcePackageClustersAsync(const ModifyResourcePackageClustersRequest& request, const ModifyResourcePackageClustersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyResourcePackageClusters(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::ModifyResourcePackageClustersOutcomeCallable CynosdbClient::ModifyResourcePackageClustersCallable(const ModifyResourcePackageClustersRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyResourcePackageClustersOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyResourcePackageClusters(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CynosdbClient::ModifyResourcePackageNameOutcome CynosdbClient::ModifyResourcePackageName(const ModifyResourcePackageNameRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyResourcePackageName");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyResourcePackageNameResponse rsp = ModifyResourcePackageNameResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyResourcePackageNameOutcome(rsp);
+        else
+            return ModifyResourcePackageNameOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyResourcePackageNameOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::ModifyResourcePackageNameAsync(const ModifyResourcePackageNameRequest& request, const ModifyResourcePackageNameAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyResourcePackageName(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::ModifyResourcePackageNameOutcomeCallable CynosdbClient::ModifyResourcePackageNameCallable(const ModifyResourcePackageNameRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyResourcePackageNameOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyResourcePackageName(request);
         }
     );
 
@@ -2405,6 +3695,135 @@ CynosdbClient::OpenAuditServiceOutcomeCallable CynosdbClient::OpenAuditServiceCa
     return task->get_future();
 }
 
+CynosdbClient::OpenClusterPasswordComplexityOutcome CynosdbClient::OpenClusterPasswordComplexity(const OpenClusterPasswordComplexityRequest &request)
+{
+    auto outcome = MakeRequest(request, "OpenClusterPasswordComplexity");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        OpenClusterPasswordComplexityResponse rsp = OpenClusterPasswordComplexityResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return OpenClusterPasswordComplexityOutcome(rsp);
+        else
+            return OpenClusterPasswordComplexityOutcome(o.GetError());
+    }
+    else
+    {
+        return OpenClusterPasswordComplexityOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::OpenClusterPasswordComplexityAsync(const OpenClusterPasswordComplexityRequest& request, const OpenClusterPasswordComplexityAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->OpenClusterPasswordComplexity(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::OpenClusterPasswordComplexityOutcomeCallable CynosdbClient::OpenClusterPasswordComplexityCallable(const OpenClusterPasswordComplexityRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<OpenClusterPasswordComplexityOutcome()>>(
+        [this, request]()
+        {
+            return this->OpenClusterPasswordComplexity(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CynosdbClient::OpenReadOnlyInstanceExclusiveAccessOutcome CynosdbClient::OpenReadOnlyInstanceExclusiveAccess(const OpenReadOnlyInstanceExclusiveAccessRequest &request)
+{
+    auto outcome = MakeRequest(request, "OpenReadOnlyInstanceExclusiveAccess");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        OpenReadOnlyInstanceExclusiveAccessResponse rsp = OpenReadOnlyInstanceExclusiveAccessResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return OpenReadOnlyInstanceExclusiveAccessOutcome(rsp);
+        else
+            return OpenReadOnlyInstanceExclusiveAccessOutcome(o.GetError());
+    }
+    else
+    {
+        return OpenReadOnlyInstanceExclusiveAccessOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::OpenReadOnlyInstanceExclusiveAccessAsync(const OpenReadOnlyInstanceExclusiveAccessRequest& request, const OpenReadOnlyInstanceExclusiveAccessAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->OpenReadOnlyInstanceExclusiveAccess(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::OpenReadOnlyInstanceExclusiveAccessOutcomeCallable CynosdbClient::OpenReadOnlyInstanceExclusiveAccessCallable(const OpenReadOnlyInstanceExclusiveAccessRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<OpenReadOnlyInstanceExclusiveAccessOutcome()>>(
+        [this, request]()
+        {
+            return this->OpenReadOnlyInstanceExclusiveAccess(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CynosdbClient::OpenWanOutcome CynosdbClient::OpenWan(const OpenWanRequest &request)
+{
+    auto outcome = MakeRequest(request, "OpenWan");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        OpenWanResponse rsp = OpenWanResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return OpenWanOutcome(rsp);
+        else
+            return OpenWanOutcome(o.GetError());
+    }
+    else
+    {
+        return OpenWanOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::OpenWanAsync(const OpenWanRequest& request, const OpenWanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->OpenWan(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::OpenWanOutcomeCallable CynosdbClient::OpenWanCallable(const OpenWanRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<OpenWanOutcome()>>(
+        [this, request]()
+        {
+            return this->OpenWan(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CynosdbClient::PauseServerlessOutcome CynosdbClient::PauseServerless(const PauseServerlessRequest &request)
 {
     auto outcome = MakeRequest(request, "PauseServerless");
@@ -2441,6 +3860,49 @@ CynosdbClient::PauseServerlessOutcomeCallable CynosdbClient::PauseServerlessCall
         [this, request]()
         {
             return this->PauseServerless(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CynosdbClient::RefundResourcePackageOutcome CynosdbClient::RefundResourcePackage(const RefundResourcePackageRequest &request)
+{
+    auto outcome = MakeRequest(request, "RefundResourcePackage");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RefundResourcePackageResponse rsp = RefundResourcePackageResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RefundResourcePackageOutcome(rsp);
+        else
+            return RefundResourcePackageOutcome(o.GetError());
+    }
+    else
+    {
+        return RefundResourcePackageOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::RefundResourcePackageAsync(const RefundResourcePackageRequest& request, const RefundResourcePackageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->RefundResourcePackage(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::RefundResourcePackageOutcomeCallable CynosdbClient::RefundResourcePackageCallable(const RefundResourcePackageRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<RefundResourcePackageOutcome()>>(
+        [this, request]()
+        {
+            return this->RefundResourcePackage(request);
         }
     );
 
@@ -2871,6 +4333,92 @@ CynosdbClient::SwitchProxyVpcOutcomeCallable CynosdbClient::SwitchProxyVpcCallab
         [this, request]()
         {
             return this->SwitchProxyVpc(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CynosdbClient::UnbindClusterResourcePackagesOutcome CynosdbClient::UnbindClusterResourcePackages(const UnbindClusterResourcePackagesRequest &request)
+{
+    auto outcome = MakeRequest(request, "UnbindClusterResourcePackages");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UnbindClusterResourcePackagesResponse rsp = UnbindClusterResourcePackagesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UnbindClusterResourcePackagesOutcome(rsp);
+        else
+            return UnbindClusterResourcePackagesOutcome(o.GetError());
+    }
+    else
+    {
+        return UnbindClusterResourcePackagesOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::UnbindClusterResourcePackagesAsync(const UnbindClusterResourcePackagesRequest& request, const UnbindClusterResourcePackagesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->UnbindClusterResourcePackages(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::UnbindClusterResourcePackagesOutcomeCallable CynosdbClient::UnbindClusterResourcePackagesCallable(const UnbindClusterResourcePackagesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<UnbindClusterResourcePackagesOutcome()>>(
+        [this, request]()
+        {
+            return this->UnbindClusterResourcePackages(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CynosdbClient::UpgradeClusterVersionOutcome CynosdbClient::UpgradeClusterVersion(const UpgradeClusterVersionRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpgradeClusterVersion");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpgradeClusterVersionResponse rsp = UpgradeClusterVersionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpgradeClusterVersionOutcome(rsp);
+        else
+            return UpgradeClusterVersionOutcome(o.GetError());
+    }
+    else
+    {
+        return UpgradeClusterVersionOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::UpgradeClusterVersionAsync(const UpgradeClusterVersionRequest& request, const UpgradeClusterVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->UpgradeClusterVersion(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::UpgradeClusterVersionOutcomeCallable CynosdbClient::UpgradeClusterVersionCallable(const UpgradeClusterVersionRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<UpgradeClusterVersionOutcome()>>(
+        [this, request]()
+        {
+            return this->UpgradeClusterVersion(request);
         }
     );
 

@@ -24,6 +24,7 @@
 #include <tencentcloud/gme/v20180711/model/RealtimeSpeechConf.h>
 #include <tencentcloud/gme/v20180711/model/VoiceMessageConf.h>
 #include <tencentcloud/gme/v20180711/model/VoiceFilterConf.h>
+#include <tencentcloud/gme/v20180711/model/AsrConf.h>
 #include <tencentcloud/gme/v20180711/model/Tag.h>
 
 
@@ -89,15 +90,19 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取List of engines to be supported. All values are selected by default.
-                     * @return EngineList List of engines to be supported. All values are selected by default.
+                     * 获取List of engines to be supported.
+Valid values: `android`, `ios`, `unity`, `cocos`, `unreal`, `windows`. All values are selected by default.
+                     * @return EngineList List of engines to be supported.
+Valid values: `android`, `ios`, `unity`, `cocos`, `unreal`, `windows`. All values are selected by default.
                      * 
                      */
                     std::vector<std::string> GetEngineList() const;
 
                     /**
-                     * 设置List of engines to be supported. All values are selected by default.
-                     * @param _engineList List of engines to be supported. All values are selected by default.
+                     * 设置List of engines to be supported.
+Valid values: `android`, `ios`, `unity`, `cocos`, `unreal`, `windows`. All values are selected by default.
+                     * @param _engineList List of engines to be supported.
+Valid values: `android`, `ios`, `unity`, `cocos`, `unreal`, `windows`. All values are selected by default.
                      * 
                      */
                     void SetEngineList(const std::vector<std::string>& _engineList);
@@ -110,15 +115,19 @@ namespace TencentCloud
                     bool EngineListHasBeenSet() const;
 
                     /**
-                     * 获取Service region list. All values are selected by default.
-                     * @return RegionList Service region list. All values are selected by default.
+                     * 获取List of regions.
+Valid values: `mainland` (Chinese mainland), `hmt` (Hong Kong, Macao and Taiwan (China)), `sea` (Southeast Asia), `na` (North America), `eu` (Europe), `jpkr` (Japan, Korea and Asia Pacific), `sa` (South America), `oc` (Oceania), `me` (Middle East). All values are selected by default.
+                     * @return RegionList List of regions.
+Valid values: `mainland` (Chinese mainland), `hmt` (Hong Kong, Macao and Taiwan (China)), `sea` (Southeast Asia), `na` (North America), `eu` (Europe), `jpkr` (Japan, Korea and Asia Pacific), `sa` (South America), `oc` (Oceania), `me` (Middle East). All values are selected by default.
                      * 
                      */
                     std::vector<std::string> GetRegionList() const;
 
                     /**
-                     * 设置Service region list. All values are selected by default.
-                     * @param _regionList Service region list. All values are selected by default.
+                     * 设置List of regions.
+Valid values: `mainland` (Chinese mainland), `hmt` (Hong Kong, Macao and Taiwan (China)), `sea` (Southeast Asia), `na` (North America), `eu` (Europe), `jpkr` (Japan, Korea and Asia Pacific), `sa` (South America), `oc` (Oceania), `me` (Middle East). All values are selected by default.
+                     * @param _regionList List of regions.
+Valid values: `mainland` (Chinese mainland), `hmt` (Hong Kong, Macao and Taiwan (China)), `sea` (Southeast Asia), `na` (North America), `eu` (Europe), `jpkr` (Japan, Korea and Asia Pacific), `sa` (South America), `oc` (Oceania), `me` (Middle East). All values are selected by default.
                      * 
                      */
                     void SetRegionList(const std::vector<std::string>& _regionList);
@@ -152,15 +161,15 @@ namespace TencentCloud
                     bool RealtimeSpeechConfHasBeenSet() const;
 
                     /**
-                     * 获取Configuration information of Voice Message Service
-                     * @return VoiceMessageConf Configuration information of Voice Message Service
+                     * 获取Configuration information of Voice Messaging
+                     * @return VoiceMessageConf Configuration information of Voice Messaging
                      * 
                      */
                     VoiceMessageConf GetVoiceMessageConf() const;
 
                     /**
-                     * 设置Configuration information of Voice Message Service
-                     * @param _voiceMessageConf Configuration information of Voice Message Service
+                     * 设置Configuration information of Voice Messaging
+                     * @param _voiceMessageConf Configuration information of Voice Messaging
                      * 
                      */
                     void SetVoiceMessageConf(const VoiceMessageConf& _voiceMessageConf);
@@ -192,6 +201,27 @@ namespace TencentCloud
                      * 
                      */
                     bool VoiceFilterConfHasBeenSet() const;
+
+                    /**
+                     * 获取Configuration information of Speech-to-Text
+                     * @return AsrConf Configuration information of Speech-to-Text
+                     * 
+                     */
+                    AsrConf GetAsrConf() const;
+
+                    /**
+                     * 设置Configuration information of Speech-to-Text
+                     * @param _asrConf Configuration information of Speech-to-Text
+                     * 
+                     */
+                    void SetAsrConf(const AsrConf& _asrConf);
+
+                    /**
+                     * 判断参数 AsrConf 是否已赋值
+                     * @return AsrConf 是否已赋值
+                     * 
+                     */
+                    bool AsrConfHasBeenSet() const;
 
                     /**
                      * 获取List of tags to be added
@@ -229,13 +259,15 @@ namespace TencentCloud
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * List of engines to be supported. All values are selected by default.
+                     * List of engines to be supported.
+Valid values: `android`, `ios`, `unity`, `cocos`, `unreal`, `windows`. All values are selected by default.
                      */
                     std::vector<std::string> m_engineList;
                     bool m_engineListHasBeenSet;
 
                     /**
-                     * Service region list. All values are selected by default.
+                     * List of regions.
+Valid values: `mainland` (Chinese mainland), `hmt` (Hong Kong, Macao and Taiwan (China)), `sea` (Southeast Asia), `na` (North America), `eu` (Europe), `jpkr` (Japan, Korea and Asia Pacific), `sa` (South America), `oc` (Oceania), `me` (Middle East). All values are selected by default.
                      */
                     std::vector<std::string> m_regionList;
                     bool m_regionListHasBeenSet;
@@ -247,7 +279,7 @@ namespace TencentCloud
                     bool m_realtimeSpeechConfHasBeenSet;
 
                     /**
-                     * Configuration information of Voice Message Service
+                     * Configuration information of Voice Messaging
                      */
                     VoiceMessageConf m_voiceMessageConf;
                     bool m_voiceMessageConfHasBeenSet;
@@ -257,6 +289,12 @@ namespace TencentCloud
                      */
                     VoiceFilterConf m_voiceFilterConf;
                     bool m_voiceFilterConfHasBeenSet;
+
+                    /**
+                     * Configuration information of Speech-to-Text
+                     */
+                    AsrConf m_asrConf;
+                    bool m_asrConfHasBeenSet;
 
                     /**
                      * List of tags to be added

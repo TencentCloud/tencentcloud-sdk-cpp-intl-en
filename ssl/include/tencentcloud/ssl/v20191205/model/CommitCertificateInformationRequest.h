@@ -63,6 +63,27 @@ namespace TencentCloud
                      */
                     bool CertificateIdHasBeenSet() const;
 
+                    /**
+                     * 获取Domain validation method
+                     * @return VerifyType Domain validation method
+                     * 
+                     */
+                    std::string GetVerifyType() const;
+
+                    /**
+                     * 设置Domain validation method
+                     * @param _verifyType Domain validation method
+                     * 
+                     */
+                    void SetVerifyType(const std::string& _verifyType);
+
+                    /**
+                     * 判断参数 VerifyType 是否已赋值
+                     * @return VerifyType 是否已赋值
+                     * 
+                     */
+                    bool VerifyTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -70,6 +91,12 @@ namespace TencentCloud
                      */
                     std::string m_certificateId;
                     bool m_certificateIdHasBeenSet;
+
+                    /**
+                     * Domain validation method
+                     */
+                    std::string m_verifyType;
+                    bool m_verifyTypeHasBeenSet;
 
                 };
             }

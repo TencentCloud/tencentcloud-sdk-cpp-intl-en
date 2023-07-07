@@ -34,12 +34,14 @@ set(ssl_public_header_model
   include/tencentcloud/ssl/v20191205/model/OperationLog.h
   include/tencentcloud/ssl/v20191205/model/RootCertificates.h
   include/tencentcloud/ssl/v20191205/model/UploadCertificateRequest.h
+  include/tencentcloud/ssl/v20191205/model/UploadConfirmLetterRequest.h
   include/tencentcloud/ssl/v20191205/model/DescribeCertificateDetailRequest.h
   include/tencentcloud/ssl/v20191205/model/Tags.h
   include/tencentcloud/ssl/v20191205/model/ApplyCertificateRequest.h
   include/tencentcloud/ssl/v20191205/model/ReplaceCertificateRequest.h
+  include/tencentcloud/ssl/v20191205/model/CreateCertificateResponse.h
   include/tencentcloud/ssl/v20191205/model/DeleteCertificateResponse.h
-  include/tencentcloud/ssl/v20191205/model/DvAuthDetail.h
+  include/tencentcloud/ssl/v20191205/model/DescribeCertificateDetailResponse.h
   include/tencentcloud/ssl/v20191205/model/ModifyCertificateProjectRequest.h
   include/tencentcloud/ssl/v20191205/model/DvAuths.h
   include/tencentcloud/ssl/v20191205/model/ModifyCertificateAliasRequest.h
@@ -47,15 +49,17 @@ set(ssl_public_header_model
   include/tencentcloud/ssl/v20191205/model/ProjectInfo.h
   include/tencentcloud/ssl/v20191205/model/DescribeCertificateOperateLogsRequest.h
   include/tencentcloud/ssl/v20191205/model/CancelCertificateOrderResponse.h
-  include/tencentcloud/ssl/v20191205/model/SubmitCertificateInformationResponse.h
+  include/tencentcloud/ssl/v20191205/model/CreateCertificateRequest.h
   include/tencentcloud/ssl/v20191205/model/DescribeCertificatesResponse.h
   include/tencentcloud/ssl/v20191205/model/DownloadCertificateResponse.h
+  include/tencentcloud/ssl/v20191205/model/UploadConfirmLetterResponse.h
   include/tencentcloud/ssl/v20191205/model/UploadCertificateResponse.h
-  include/tencentcloud/ssl/v20191205/model/DescribeCertificateDetailResponse.h
+  include/tencentcloud/ssl/v20191205/model/DvAuthDetail.h
   include/tencentcloud/ssl/v20191205/model/ModifyCertificateAliasResponse.h
   include/tencentcloud/ssl/v20191205/model/SubmitCertificateInformationRequest.h
   include/tencentcloud/ssl/v20191205/model/SubmittedData.h
   include/tencentcloud/ssl/v20191205/model/DescribeCertificatesRequest.h
+  include/tencentcloud/ssl/v20191205/model/SubmitCertificateInformationResponse.h
   include/tencentcloud/ssl/v20191205/model/PreAuditInfo.h
   )
 
@@ -76,12 +80,14 @@ set(ssl_src
   src/v20191205/model/OperationLog.cpp
   src/v20191205/model/RootCertificates.cpp
   src/v20191205/model/UploadCertificateRequest.cpp
+  src/v20191205/model/UploadConfirmLetterRequest.cpp
   src/v20191205/model/DescribeCertificateDetailRequest.cpp
   src/v20191205/model/Tags.cpp
   src/v20191205/model/ApplyCertificateRequest.cpp
   src/v20191205/model/ReplaceCertificateRequest.cpp
+  src/v20191205/model/CreateCertificateResponse.cpp
   src/v20191205/model/DeleteCertificateResponse.cpp
-  src/v20191205/model/DvAuthDetail.cpp
+  src/v20191205/model/DescribeCertificateDetailResponse.cpp
   src/v20191205/model/ModifyCertificateProjectRequest.cpp
   src/v20191205/model/DvAuths.cpp
   src/v20191205/model/ModifyCertificateAliasRequest.cpp
@@ -89,15 +95,17 @@ set(ssl_src
   src/v20191205/model/ProjectInfo.cpp
   src/v20191205/model/DescribeCertificateOperateLogsRequest.cpp
   src/v20191205/model/CancelCertificateOrderResponse.cpp
-  src/v20191205/model/SubmitCertificateInformationResponse.cpp
+  src/v20191205/model/CreateCertificateRequest.cpp
   src/v20191205/model/DescribeCertificatesResponse.cpp
   src/v20191205/model/DownloadCertificateResponse.cpp
+  src/v20191205/model/UploadConfirmLetterResponse.cpp
   src/v20191205/model/UploadCertificateResponse.cpp
-  src/v20191205/model/DescribeCertificateDetailResponse.cpp
+  src/v20191205/model/DvAuthDetail.cpp
   src/v20191205/model/ModifyCertificateAliasResponse.cpp
   src/v20191205/model/SubmitCertificateInformationRequest.cpp
   src/v20191205/model/SubmittedData.cpp
   src/v20191205/model/DescribeCertificatesRequest.cpp
+  src/v20191205/model/SubmitCertificateInformationResponse.cpp
   src/v20191205/model/PreAuditInfo.cpp
   )
 

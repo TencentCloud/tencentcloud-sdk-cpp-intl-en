@@ -296,6 +296,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool WanStatusHasBeenSet() const;
 
+                    /**
+                     * 获取Instance group ID Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return InstanceGroupId Instance group ID Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetInstanceGroupId() const;
+
+                    /**
+                     * 设置Instance group ID Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _instanceGroupId Instance group ID Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetInstanceGroupId(const std::string& _instanceGroupId);
+
+                    /**
+                     * 判断参数 InstanceGroupId 是否已赋值
+                     * @return InstanceGroupId 是否已赋值
+                     * 
+                     */
+                    bool InstanceGroupIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -367,6 +388,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_wanStatus;
                     bool m_wanStatusHasBeenSet;
+
+                    /**
+                     * Instance group ID Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_instanceGroupId;
+                    bool m_instanceGroupIdHasBeenSet;
 
                 };
             }

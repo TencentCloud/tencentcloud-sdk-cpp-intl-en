@@ -28,6 +28,7 @@
 #include <tencentcloud/cynosdb/v20190107/model/Tag.h>
 #include <tencentcloud/cynosdb/v20190107/model/NetAddr.h>
 #include <tencentcloud/cynosdb/v20190107/model/Ability.h>
+#include <tencentcloud/cynosdb/v20190107/model/ResourcePackage.h>
 
 
 namespace TencentCloud
@@ -1112,6 +1113,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool AbilityHasBeenSet() const;
 
+                    /**
+                     * 获取Information of the resource pack bound to an instance when `packageType` is `DISK`. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ResourcePackages Information of the resource pack bound to an instance when `packageType` is `DISK`. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<ResourcePackage> GetResourcePackages() const;
+
+                    /**
+                     * 设置Information of the resource pack bound to an instance when `packageType` is `DISK`. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _resourcePackages Information of the resource pack bound to an instance when `packageType` is `DISK`. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetResourcePackages(const std::vector<ResourcePackage>& _resourcePackages);
+
+                    /**
+                     * 判断参数 ResourcePackages 是否已赋值
+                     * @return ResourcePackages 是否已赋值
+                     * 
+                     */
+                    bool ResourcePackagesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1410,6 +1432,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     Ability m_ability;
                     bool m_abilityHasBeenSet;
+
+                    /**
+                     * Information of the resource pack bound to an instance when `packageType` is `DISK`. Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<ResourcePackage> m_resourcePackages;
+                    bool m_resourcePackagesHasBeenSet;
 
                 };
             }

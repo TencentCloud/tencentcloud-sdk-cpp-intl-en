@@ -190,15 +190,15 @@ namespace TencentCloud
                     bool ValidityPeriodHasBeenSet() const;
 
                     /**
-                     * 获取Encryption algorithm. Only RSA is supported.
-                     * @return CsrEncryptAlgo Encryption algorithm. Only RSA is supported.
+                     * 获取Encryption algorithm. RSA and ECC are supported.
+                     * @return CsrEncryptAlgo Encryption algorithm. RSA and ECC are supported.
                      * 
                      */
                     std::string GetCsrEncryptAlgo() const;
 
                     /**
-                     * 设置Encryption algorithm. Only RSA is supported.
-                     * @param _csrEncryptAlgo Encryption algorithm. Only RSA is supported.
+                     * 设置Encryption algorithm. RSA and ECC are supported.
+                     * @param _csrEncryptAlgo Encryption algorithm. RSA and ECC are supported.
                      * 
                      */
                     void SetCsrEncryptAlgo(const std::string& _csrEncryptAlgo);
@@ -211,15 +211,15 @@ namespace TencentCloud
                     bool CsrEncryptAlgoHasBeenSet() const;
 
                     /**
-                     * 获取Key pair parameter. Only the 2048-bit key pair is supported.
-                     * @return CsrKeyParameter Key pair parameter. Only the 2048-bit key pair is supported.
+                     * 获取Key pair parameter. RSA supports only the 2048-bit key and ECC supports only prime256v1.
+                     * @return CsrKeyParameter Key pair parameter. RSA supports only the 2048-bit key and ECC supports only prime256v1.
                      * 
                      */
                     std::string GetCsrKeyParameter() const;
 
                     /**
-                     * 设置Key pair parameter. Only the 2048-bit key pair is supported.
-                     * @param _csrKeyParameter Key pair parameter. Only the 2048-bit key pair is supported.
+                     * 设置Key pair parameter. RSA supports only the 2048-bit key and ECC supports only prime256v1.
+                     * @param _csrKeyParameter Key pair parameter. RSA supports only the 2048-bit key and ECC supports only prime256v1.
                      * 
                      */
                     void SetCsrKeyParameter(const std::string& _csrKeyParameter);
@@ -381,13 +381,13 @@ namespace TencentCloud
                     bool m_validityPeriodHasBeenSet;
 
                     /**
-                     * Encryption algorithm. Only RSA is supported.
+                     * Encryption algorithm. RSA and ECC are supported.
                      */
                     std::string m_csrEncryptAlgo;
                     bool m_csrEncryptAlgoHasBeenSet;
 
                     /**
-                     * Key pair parameter. Only the 2048-bit key pair is supported.
+                     * Key pair parameter. RSA supports only the 2048-bit key and ECC supports only prime256v1.
                      */
                     std::string m_csrKeyParameter;
                     bool m_csrKeyParameterHasBeenSet;

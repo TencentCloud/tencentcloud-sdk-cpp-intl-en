@@ -44,135 +44,95 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<br><li> logsetName
+                     * 获取logsetName
+- Filter by **logset name**
+- Type: String
+- Required: No
 
-Filter by **logset name**.
-Type: String
+logsetId
+- Filter by **logset ID**
+- Type: String
+- Required: No
 
-Required: no
+tagKey
+- Filter by **tag key**
+- Type: String
+- Required: No
 
-<br><li> logsetId
+tag:tagKey
+- Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
+- Type: String
+- Required: No
 
-Filter by **logset ID**.
-Type: String
+Each request can have up to 10 `Filters` and 5 `Filter.Values`.
+                     * @return Filters logsetName
+- Filter by **logset name**
+- Type: String
+- Required: No
 
-Required: no
+logsetId
+- Filter by **logset ID**
+- Type: String
+- Required: No
 
-<br><li> tagKey
+tagKey
+- Filter by **tag key**
+- Type: String
+- Required: No
 
-Filter by **tag key**.
+tag:tagKey
+- Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
+- Type: String
+- Required: No
 
-Type: String
-
-Required: no
-
-<br><li> tag:tagKey
-
-Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
-Type: String
-
-Required: no
-
-
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
-                     * @return Filters <br><li> logsetName
-
-Filter by **logset name**.
-Type: String
-
-Required: no
-
-<br><li> logsetId
-
-Filter by **logset ID**.
-Type: String
-
-Required: no
-
-<br><li> tagKey
-
-Filter by **tag key**.
-
-Type: String
-
-Required: no
-
-<br><li> tag:tagKey
-
-Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
-Type: String
-
-Required: no
-
-
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+Each request can have up to 10 `Filters` and 5 `Filter.Values`.
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置<br><li> logsetName
+                     * 设置logsetName
+- Filter by **logset name**
+- Type: String
+- Required: No
 
-Filter by **logset name**.
-Type: String
+logsetId
+- Filter by **logset ID**
+- Type: String
+- Required: No
 
-Required: no
+tagKey
+- Filter by **tag key**
+- Type: String
+- Required: No
 
-<br><li> logsetId
+tag:tagKey
+- Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
+- Type: String
+- Required: No
 
-Filter by **logset ID**.
-Type: String
+Each request can have up to 10 `Filters` and 5 `Filter.Values`.
+                     * @param _filters logsetName
+- Filter by **logset name**
+- Type: String
+- Required: No
 
-Required: no
+logsetId
+- Filter by **logset ID**
+- Type: String
+- Required: No
 
-<br><li> tagKey
+tagKey
+- Filter by **tag key**
+- Type: String
+- Required: No
 
-Filter by **tag key**.
+tag:tagKey
+- Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
+- Type: String
+- Required: No
 
-Type: String
-
-Required: no
-
-<br><li> tag:tagKey
-
-Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
-Type: String
-
-Required: no
-
-
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
-                     * @param _filters <br><li> logsetName
-
-Filter by **logset name**.
-Type: String
-
-Required: no
-
-<br><li> logsetId
-
-Filter by **logset ID**.
-Type: String
-
-Required: no
-
-<br><li> tagKey
-
-Filter by **tag key**.
-
-Type: String
-
-Required: no
-
-<br><li> tag:tagKey
-
-Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
-Type: String
-
-Required: no
-
-
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+Each request can have up to 10 `Filters` and 5 `Filter.Values`.
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -229,37 +189,27 @@ Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
                 private:
 
                     /**
-                     * <br><li> logsetName
+                     * logsetName
+- Filter by **logset name**
+- Type: String
+- Required: No
 
-Filter by **logset name**.
-Type: String
+logsetId
+- Filter by **logset ID**
+- Type: String
+- Required: No
 
-Required: no
+tagKey
+- Filter by **tag key**
+- Type: String
+- Required: No
 
-<br><li> logsetId
+tag:tagKey
+- Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
+- Type: String
+- Required: No
 
-Filter by **logset ID**.
-Type: String
-
-Required: no
-
-<br><li> tagKey
-
-Filter by **tag key**.
-
-Type: String
-
-Required: no
-
-<br><li> tag:tagKey
-
-Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
-Type: String
-
-Required: no
-
-
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+Each request can have up to 10 `Filters` and 5 `Filter.Values`.
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

@@ -23,11 +23,12 @@ using namespace TencentCloud::Cls::V20201016::Model;
 using namespace std;
 
 DescribeLogHistogramRequest::DescribeLogHistogramRequest() :
-    m_topicIdHasBeenSet(false),
     m_fromHasBeenSet(false),
     m_toHasBeenSet(false),
     m_queryHasBeenSet(false),
-    m_intervalHasBeenSet(false)
+    m_topicIdHasBeenSet(false),
+    m_intervalHasBeenSet(false),
+    m_syntaxRuleHasBeenSet(false)
 {
 }
 
@@ -37,14 +38,6 @@ string DescribeLogHistogramRequest::ToJsonString() const
     d.SetObject();
     rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
-
-    if (m_topicIdHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "TopicId";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_topicId.c_str(), allocator).Move(), allocator);
-    }
 
     if (m_fromHasBeenSet)
     {
@@ -70,12 +63,28 @@ string DescribeLogHistogramRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_query.c_str(), allocator).Move(), allocator);
     }
 
+    if (m_topicIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TopicId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_topicId.c_str(), allocator).Move(), allocator);
+    }
+
     if (m_intervalHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Interval";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_interval, allocator);
+    }
+
+    if (m_syntaxRuleHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SyntaxRule";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_syntaxRule, allocator);
     }
 
 
@@ -85,22 +94,6 @@ string DescribeLogHistogramRequest::ToJsonString() const
     return buffer.GetString();
 }
 
-
-string DescribeLogHistogramRequest::GetTopicId() const
-{
-    return m_topicId;
-}
-
-void DescribeLogHistogramRequest::SetTopicId(const string& _topicId)
-{
-    m_topicId = _topicId;
-    m_topicIdHasBeenSet = true;
-}
-
-bool DescribeLogHistogramRequest::TopicIdHasBeenSet() const
-{
-    return m_topicIdHasBeenSet;
-}
 
 int64_t DescribeLogHistogramRequest::GetFrom() const
 {
@@ -150,6 +143,22 @@ bool DescribeLogHistogramRequest::QueryHasBeenSet() const
     return m_queryHasBeenSet;
 }
 
+string DescribeLogHistogramRequest::GetTopicId() const
+{
+    return m_topicId;
+}
+
+void DescribeLogHistogramRequest::SetTopicId(const string& _topicId)
+{
+    m_topicId = _topicId;
+    m_topicIdHasBeenSet = true;
+}
+
+bool DescribeLogHistogramRequest::TopicIdHasBeenSet() const
+{
+    return m_topicIdHasBeenSet;
+}
+
 int64_t DescribeLogHistogramRequest::GetInterval() const
 {
     return m_interval;
@@ -164,6 +173,22 @@ void DescribeLogHistogramRequest::SetInterval(const int64_t& _interval)
 bool DescribeLogHistogramRequest::IntervalHasBeenSet() const
 {
     return m_intervalHasBeenSet;
+}
+
+uint64_t DescribeLogHistogramRequest::GetSyntaxRule() const
+{
+    return m_syntaxRule;
+}
+
+void DescribeLogHistogramRequest::SetSyntaxRule(const uint64_t& _syntaxRule)
+{
+    m_syntaxRule = _syntaxRule;
+    m_syntaxRuleHasBeenSet = true;
+}
+
+bool DescribeLogHistogramRequest::SyntaxRuleHasBeenSet() const
+{
+    return m_syntaxRuleHasBeenSet;
 }
 
 

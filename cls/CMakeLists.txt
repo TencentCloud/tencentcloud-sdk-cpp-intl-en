@@ -56,6 +56,7 @@ set(cls_public_header_model
   include/tencentcloud/cls/v20201016/model/CreateLogsetResponse.h
   include/tencentcloud/cls/v20201016/model/DeleteMachineGroupResponse.h
   include/tencentcloud/cls/v20201016/model/Tag.h
+  include/tencentcloud/cls/v20201016/model/MetaTagInfo.h
   include/tencentcloud/cls/v20201016/model/DescribeExportsRequest.h
   include/tencentcloud/cls/v20201016/model/ExtractRuleInfo.h
   include/tencentcloud/cls/v20201016/model/TopicInfo.h
@@ -235,6 +236,7 @@ set(cls_src
   src/v20201016/model/CreateLogsetResponse.cpp
   src/v20201016/model/DeleteMachineGroupResponse.cpp
   src/v20201016/model/Tag.cpp
+  src/v20201016/model/MetaTagInfo.cpp
   src/v20201016/model/DescribeExportsRequest.cpp
   src/v20201016/model/ExtractRuleInfo.cpp
   src/v20201016/model/TopicInfo.cpp

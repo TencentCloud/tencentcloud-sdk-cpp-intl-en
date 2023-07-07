@@ -27,6 +27,7 @@
 #include <tencentcloud/gme/v20180711/model/RealtimeSpeechConf.h>
 #include <tencentcloud/gme/v20180711/model/VoiceMessageConf.h>
 #include <tencentcloud/gme/v20180711/model/VoiceFilterConf.h>
+#include <tencentcloud/gme/v20180711/model/AsrConf.h>
 
 
 namespace TencentCloud
@@ -176,15 +177,15 @@ namespace TencentCloud
                     bool RealtimeSpeechConfHasBeenSet() const;
 
                     /**
-                     * 获取Configuration information of Voice Message Service
-                     * @return VoiceMessageConf Configuration information of Voice Message Service
+                     * 获取Configuration information of Voice Messaging
+                     * @return VoiceMessageConf Configuration information of Voice Messaging
                      * 
                      */
                     VoiceMessageConf GetVoiceMessageConf() const;
 
                     /**
-                     * 设置Configuration information of Voice Message Service
-                     * @param _voiceMessageConf Configuration information of Voice Message Service
+                     * 设置Configuration information of Voice Messaging
+                     * @param _voiceMessageConf Configuration information of Voice Messaging
                      * 
                      */
                     void SetVoiceMessageConf(const VoiceMessageConf& _voiceMessageConf);
@@ -216,6 +217,27 @@ namespace TencentCloud
                      * 
                      */
                     bool VoiceFilterConfHasBeenSet() const;
+
+                    /**
+                     * 获取Configuration information of Speech-to-Text
+                     * @return AsrConf Configuration information of Speech-to-Text
+                     * 
+                     */
+                    AsrConf GetAsrConf() const;
+
+                    /**
+                     * 设置Configuration information of Speech-to-Text
+                     * @param _asrConf Configuration information of Speech-to-Text
+                     * 
+                     */
+                    void SetAsrConf(const AsrConf& _asrConf);
+
+                    /**
+                     * 判断参数 AsrConf 是否已赋值
+                     * @return AsrConf 是否已赋值
+                     * 
+                     */
+                    bool AsrConfHasBeenSet() const;
 
                 private:
 
@@ -256,7 +278,7 @@ namespace TencentCloud
                     bool m_realtimeSpeechConfHasBeenSet;
 
                     /**
-                     * Configuration information of Voice Message Service
+                     * Configuration information of Voice Messaging
                      */
                     VoiceMessageConf m_voiceMessageConf;
                     bool m_voiceMessageConfHasBeenSet;
@@ -266,6 +288,12 @@ namespace TencentCloud
                      */
                     VoiceFilterConf m_voiceFilterConf;
                     bool m_voiceFilterConfHasBeenSet;
+
+                    /**
+                     * Configuration information of Speech-to-Text
+                     */
+                    AsrConf m_asrConf;
+                    bool m_asrConfHasBeenSet;
 
                 };
             }

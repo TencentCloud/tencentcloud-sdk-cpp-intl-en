@@ -169,6 +169,49 @@ SslClient::CommitCertificateInformationOutcomeCallable SslClient::CommitCertific
     return task->get_future();
 }
 
+SslClient::CreateCertificateOutcome SslClient::CreateCertificate(const CreateCertificateRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateCertificate");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateCertificateResponse rsp = CreateCertificateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateCertificateOutcome(rsp);
+        else
+            return CreateCertificateOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateCertificateOutcome(outcome.GetError());
+    }
+}
+
+void SslClient::CreateCertificateAsync(const CreateCertificateRequest& request, const CreateCertificateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateCertificate(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SslClient::CreateCertificateOutcomeCallable SslClient::CreateCertificateCallable(const CreateCertificateRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateCertificateOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateCertificate(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 SslClient::DeleteCertificateOutcome SslClient::DeleteCertificate(const DeleteCertificateRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteCertificate");
@@ -635,6 +678,49 @@ SslClient::UploadCertificateOutcomeCallable SslClient::UploadCertificateCallable
         [this, request]()
         {
             return this->UploadCertificate(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SslClient::UploadConfirmLetterOutcome SslClient::UploadConfirmLetter(const UploadConfirmLetterRequest &request)
+{
+    auto outcome = MakeRequest(request, "UploadConfirmLetter");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UploadConfirmLetterResponse rsp = UploadConfirmLetterResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UploadConfirmLetterOutcome(rsp);
+        else
+            return UploadConfirmLetterOutcome(o.GetError());
+    }
+    else
+    {
+        return UploadConfirmLetterOutcome(outcome.GetError());
+    }
+}
+
+void SslClient::UploadConfirmLetterAsync(const UploadConfirmLetterRequest& request, const UploadConfirmLetterAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->UploadConfirmLetter(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SslClient::UploadConfirmLetterOutcomeCallable SslClient::UploadConfirmLetterCallable(const UploadConfirmLetterRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<UploadConfirmLetterOutcome()>>(
+        [this, request]()
+        {
+            return this->UploadConfirmLetter(request);
         }
     );
 

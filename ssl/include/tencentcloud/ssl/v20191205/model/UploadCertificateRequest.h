@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool CertificatePrivateKeyHasBeenSet() const;
 
                     /**
-                     * 获取Certificate type. `CA`: client certificate; `SVR`: server certificate. The default value is SVR.
-                     * @return CertificateType Certificate type. `CA`: client certificate; `SVR`: server certificate. The default value is SVR.
+                     * 获取Certificate type. Valid values: `CA` (CA certificate) and `SVR` (server certificate). Default value: `SVR`
+                     * @return CertificateType Certificate type. Valid values: `CA` (CA certificate) and `SVR` (server certificate). Default value: `SVR`
                      * 
                      */
                     std::string GetCertificateType() const;
 
                     /**
-                     * 设置Certificate type. `CA`: client certificate; `SVR`: server certificate. The default value is SVR.
-                     * @param _certificateType Certificate type. `CA`: client certificate; `SVR`: server certificate. The default value is SVR.
+                     * 设置Certificate type. Valid values: `CA` (CA certificate) and `SVR` (server certificate). Default value: `SVR`
+                     * @param _certificateType Certificate type. Valid values: `CA` (CA certificate) and `SVR` (server certificate). Default value: `SVR`
                      * 
                      */
                     void SetCertificateType(const std::string& _certificateType);
@@ -204,7 +204,7 @@ namespace TencentCloud
                     bool m_certificatePrivateKeyHasBeenSet;
 
                     /**
-                     * Certificate type. `CA`: client certificate; `SVR`: server certificate. The default value is SVR.
+                     * Certificate type. Valid values: `CA` (CA certificate) and `SVR` (server certificate). Default value: `SVR`
                      */
                     std::string m_certificateType;
                     bool m_certificateTypeHasBeenSet;

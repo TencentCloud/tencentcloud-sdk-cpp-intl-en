@@ -29,6 +29,8 @@
 #include <tencentcloud/ssl/v20191205/model/CancelCertificateOrderResponse.h>
 #include <tencentcloud/ssl/v20191205/model/CommitCertificateInformationRequest.h>
 #include <tencentcloud/ssl/v20191205/model/CommitCertificateInformationResponse.h>
+#include <tencentcloud/ssl/v20191205/model/CreateCertificateRequest.h>
+#include <tencentcloud/ssl/v20191205/model/CreateCertificateResponse.h>
 #include <tencentcloud/ssl/v20191205/model/DeleteCertificateRequest.h>
 #include <tencentcloud/ssl/v20191205/model/DeleteCertificateResponse.h>
 #include <tencentcloud/ssl/v20191205/model/DescribeCertificateRequest.h>
@@ -51,6 +53,8 @@
 #include <tencentcloud/ssl/v20191205/model/SubmitCertificateInformationResponse.h>
 #include <tencentcloud/ssl/v20191205/model/UploadCertificateRequest.h>
 #include <tencentcloud/ssl/v20191205/model/UploadCertificateResponse.h>
+#include <tencentcloud/ssl/v20191205/model/UploadConfirmLetterRequest.h>
+#include <tencentcloud/ssl/v20191205/model/UploadConfirmLetterResponse.h>
 
 
 namespace TencentCloud
@@ -74,6 +78,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CommitCertificateInformationResponse> CommitCertificateInformationOutcome;
                 typedef std::future<CommitCertificateInformationOutcome> CommitCertificateInformationOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::CommitCertificateInformationRequest&, CommitCertificateInformationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CommitCertificateInformationAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateCertificateResponse> CreateCertificateOutcome;
+                typedef std::future<CreateCertificateOutcome> CreateCertificateOutcomeCallable;
+                typedef std::function<void(const SslClient*, const Model::CreateCertificateRequest&, CreateCertificateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCertificateAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteCertificateResponse> DeleteCertificateOutcome;
                 typedef std::future<DeleteCertificateOutcome> DeleteCertificateOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::DeleteCertificateRequest&, DeleteCertificateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteCertificateAsyncHandler;
@@ -107,6 +114,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::UploadCertificateResponse> UploadCertificateOutcome;
                 typedef std::future<UploadCertificateOutcome> UploadCertificateOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::UploadCertificateRequest&, UploadCertificateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UploadCertificateAsyncHandler;
+                typedef Outcome<Core::Error, Model::UploadConfirmLetterResponse> UploadConfirmLetterOutcome;
+                typedef std::future<UploadConfirmLetterOutcome> UploadConfirmLetterOutcomeCallable;
+                typedef std::function<void(const SslClient*, const Model::UploadConfirmLetterRequest&, UploadConfirmLetterOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UploadConfirmLetterAsyncHandler;
 
 
 
@@ -136,6 +146,15 @@ namespace TencentCloud
                 CommitCertificateInformationOutcome CommitCertificateInformation(const Model::CommitCertificateInformationRequest &request);
                 void CommitCertificateInformationAsync(const Model::CommitCertificateInformationRequest& request, const CommitCertificateInformationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CommitCertificateInformationOutcomeCallable CommitCertificateInformationCallable(const Model::CommitCertificateInformationRequest& request);
+
+                /**
+                 *This API is used to purchase a certificate.
+                 * @param req CreateCertificateRequest
+                 * @return CreateCertificateOutcome
+                 */
+                CreateCertificateOutcome CreateCertificate(const Model::CreateCertificateRequest &request);
+                void CreateCertificateAsync(const Model::CreateCertificateRequest& request, const CreateCertificateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateCertificateOutcomeCallable CreateCertificateCallable(const Model::CreateCertificateRequest& request);
 
                 /**
                  *This API is used to delete a certificate.
@@ -235,6 +254,15 @@ namespace TencentCloud
                 UploadCertificateOutcome UploadCertificate(const Model::UploadCertificateRequest &request);
                 void UploadCertificateAsync(const Model::UploadCertificateRequest& request, const UploadCertificateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 UploadCertificateOutcomeCallable UploadCertificateCallable(const Model::UploadCertificateRequest& request);
+
+                /**
+                 *This API is used to upload the confirmation letter for a certificate.
+                 * @param req UploadConfirmLetterRequest
+                 * @return UploadConfirmLetterOutcome
+                 */
+                UploadConfirmLetterOutcome UploadConfirmLetter(const Model::UploadConfirmLetterRequest &request);
+                void UploadConfirmLetterAsync(const Model::UploadConfirmLetterRequest& request, const UploadConfirmLetterAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UploadConfirmLetterOutcomeCallable UploadConfirmLetterCallable(const Model::UploadConfirmLetterRequest& request);
 
             };
         }

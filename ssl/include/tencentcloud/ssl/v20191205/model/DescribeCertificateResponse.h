@@ -559,6 +559,54 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool TagsHasBeenSet() const;
 
+                    /**
+                     * 获取All encryption algorithms of a CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CAEncryptAlgorithms All encryption algorithms of a CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<std::string> GetCAEncryptAlgorithms() const;
+
+                    /**
+                     * 判断参数 CAEncryptAlgorithms 是否已赋值
+                     * @return CAEncryptAlgorithms 是否已赋值
+                     * 
+                     */
+                    bool CAEncryptAlgorithmsHasBeenSet() const;
+
+                    /**
+                     * 获取All common names of a CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CACommonNames All common names of a CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<std::string> GetCACommonNames() const;
+
+                    /**
+                     * 判断参数 CACommonNames 是否已赋值
+                     * @return CACommonNames 是否已赋值
+                     * 
+                     */
+                    bool CACommonNamesHasBeenSet() const;
+
+                    /**
+                     * 获取All expiration time of a CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CAEndTimes All expiration time of a CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<std::string> GetCAEndTimes() const;
+
+                    /**
+                     * 判断参数 CAEndTimes 是否已赋值
+                     * @return CAEndTimes 是否已赋值
+                     * 
+                     */
+                    bool CAEndTimesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -784,6 +832,27 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     std::vector<Tags> m_tags;
                     bool m_tagsHasBeenSet;
+
+                    /**
+                     * All encryption algorithms of a CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_cAEncryptAlgorithms;
+                    bool m_cAEncryptAlgorithmsHasBeenSet;
+
+                    /**
+                     * All common names of a CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_cACommonNames;
+                    bool m_cACommonNamesHasBeenSet;
+
+                    /**
+                     * All expiration time of a CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_cAEndTimes;
+                    bool m_cAEndTimesHasBeenSet;
 
                 };
             }

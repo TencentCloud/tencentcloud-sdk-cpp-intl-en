@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Voice Chat sound quality. Valid value: `high`.
-                     * @return Quality Voice Chat sound quality. Valid value: `high`.
+                     * 获取Voice Chat sound quality type. Valid values: `high` (HD), `ordinary` (SD).
+                     * @return Quality Voice Chat sound quality type. Valid values: `high` (HD), `ordinary` (SD).
                      * 
                      */
                     std::string GetQuality() const;
 
                     /**
-                     * 设置Voice Chat sound quality. Valid value: `high`.
-                     * @param _quality Voice Chat sound quality. Valid value: `high`.
+                     * 设置Voice Chat sound quality type. Valid values: `high` (HD), `ordinary` (SD).
+                     * @param _quality Voice Chat sound quality type. Valid values: `high` (HD), `ordinary` (SD).
                      * 
                      */
                     void SetQuality(const std::string& _quality);
@@ -97,7 +97,7 @@ namespace TencentCloud
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Voice Chat sound quality. Valid value: `high`.
+                     * Voice Chat sound quality type. Valid values: `high` (HD), `ordinary` (SD).
                      */
                     std::string m_quality;
                     bool m_qualityHasBeenSet;

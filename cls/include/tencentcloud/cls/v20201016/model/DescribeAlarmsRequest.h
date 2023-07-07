@@ -44,143 +44,99 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<br><li> name
+                     * 获取name
+- Filter by **alarm policy name**
+- Type: String
+- Required: No
 
-Filter by **alarm policy name**
-Type: string
+alarmId
+- Filter by **alarm policy ID**
+- Type: String
+- Required: No
 
-Required: no
+topicId
+- Filter by **log topic ID**
+- Type: String
+- Required: No
 
-<br><li> alarmId
+enable
+- Filter by **enablement status**
+- Type: String
+- Note: The valid values of `enable` include `1`, `t`, `T`, `TRUE`, `true`, `True`, `0`, `f`, `F`, `FALSE`, `false`, and `False`. If other values are entered, an "invalid parameter" error will be returned.
+- Required: No
 
-Filter by **alarm policy ID**
-Type: string
+Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+                     * @return Filters name
+- Filter by **alarm policy name**
+- Type: String
+- Required: No
 
-Required: no
+alarmId
+- Filter by **alarm policy ID**
+- Type: String
+- Required: No
 
-<br><li> topicId
+topicId
+- Filter by **log topic ID**
+- Type: String
+- Required: No
 
-Filter by **log topic ID**
+enable
+- Filter by **enablement status**
+- Type: String
+- Note: The valid values of `enable` include `1`, `t`, `T`, `TRUE`, `true`, `True`, `0`, `f`, `F`, `FALSE`, `false`, and `False`. If other values are entered, an "invalid parameter" error will be returned.
+- Required: No
 
-Type: string
-
-Required: no
-
-<br><li> enable
-
-Filter by **enablement status**
-
-Type: string
-
-Note: The valid values of `enable` include `1`, `t`, `T`, `TRUE`, `true`, `True`, `0`, `f`, `F`, `FALSE`, `false`, and `False`. If other values are entered, an “invalid parameter” error will be returned.
-
-Required: no
-
-Each request can have up to 10 `Filters` and 5 `Filter.Values`.
-                     * @return Filters <br><li> name
-
-Filter by **alarm policy name**
-Type: string
-
-Required: no
-
-<br><li> alarmId
-
-Filter by **alarm policy ID**
-Type: string
-
-Required: no
-
-<br><li> topicId
-
-Filter by **log topic ID**
-
-Type: string
-
-Required: no
-
-<br><li> enable
-
-Filter by **enablement status**
-
-Type: string
-
-Note: The valid values of `enable` include `1`, `t`, `T`, `TRUE`, `true`, `True`, `0`, `f`, `F`, `FALSE`, `false`, and `False`. If other values are entered, an “invalid parameter” error will be returned.
-
-Required: no
-
-Each request can have up to 10 `Filters` and 5 `Filter.Values`.
+Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置<br><li> name
+                     * 设置name
+- Filter by **alarm policy name**
+- Type: String
+- Required: No
 
-Filter by **alarm policy name**
-Type: string
+alarmId
+- Filter by **alarm policy ID**
+- Type: String
+- Required: No
 
-Required: no
+topicId
+- Filter by **log topic ID**
+- Type: String
+- Required: No
 
-<br><li> alarmId
+enable
+- Filter by **enablement status**
+- Type: String
+- Note: The valid values of `enable` include `1`, `t`, `T`, `TRUE`, `true`, `True`, `0`, `f`, `F`, `FALSE`, `false`, and `False`. If other values are entered, an "invalid parameter" error will be returned.
+- Required: No
 
-Filter by **alarm policy ID**
-Type: string
+Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+                     * @param _filters name
+- Filter by **alarm policy name**
+- Type: String
+- Required: No
 
-Required: no
+alarmId
+- Filter by **alarm policy ID**
+- Type: String
+- Required: No
 
-<br><li> topicId
+topicId
+- Filter by **log topic ID**
+- Type: String
+- Required: No
 
-Filter by **log topic ID**
+enable
+- Filter by **enablement status**
+- Type: String
+- Note: The valid values of `enable` include `1`, `t`, `T`, `TRUE`, `true`, `True`, `0`, `f`, `F`, `FALSE`, `false`, and `False`. If other values are entered, an "invalid parameter" error will be returned.
+- Required: No
 
-Type: string
-
-Required: no
-
-<br><li> enable
-
-Filter by **enablement status**
-
-Type: string
-
-Note: The valid values of `enable` include `1`, `t`, `T`, `TRUE`, `true`, `True`, `0`, `f`, `F`, `FALSE`, `false`, and `False`. If other values are entered, an “invalid parameter” error will be returned.
-
-Required: no
-
-Each request can have up to 10 `Filters` and 5 `Filter.Values`.
-                     * @param _filters <br><li> name
-
-Filter by **alarm policy name**
-Type: string
-
-Required: no
-
-<br><li> alarmId
-
-Filter by **alarm policy ID**
-Type: string
-
-Required: no
-
-<br><li> topicId
-
-Filter by **log topic ID**
-
-Type: string
-
-Required: no
-
-<br><li> enable
-
-Filter by **enablement status**
-
-Type: string
-
-Note: The valid values of `enable` include `1`, `t`, `T`, `TRUE`, `true`, `True`, `0`, `f`, `F`, `FALSE`, `false`, and `False`. If other values are entered, an “invalid parameter” error will be returned.
-
-Required: no
-
-Each request can have up to 10 `Filters` and 5 `Filter.Values`.
+Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -237,39 +193,28 @@ Each request can have up to 10 `Filters` and 5 `Filter.Values`.
                 private:
 
                     /**
-                     * <br><li> name
+                     * name
+- Filter by **alarm policy name**
+- Type: String
+- Required: No
 
-Filter by **alarm policy name**
-Type: string
+alarmId
+- Filter by **alarm policy ID**
+- Type: String
+- Required: No
 
-Required: no
+topicId
+- Filter by **log topic ID**
+- Type: String
+- Required: No
 
-<br><li> alarmId
+enable
+- Filter by **enablement status**
+- Type: String
+- Note: The valid values of `enable` include `1`, `t`, `T`, `TRUE`, `true`, `True`, `0`, `f`, `F`, `FALSE`, `false`, and `False`. If other values are entered, an "invalid parameter" error will be returned.
+- Required: No
 
-Filter by **alarm policy ID**
-Type: string
-
-Required: no
-
-<br><li> topicId
-
-Filter by **log topic ID**
-
-Type: string
-
-Required: no
-
-<br><li> enable
-
-Filter by **enablement status**
-
-Type: string
-
-Note: The valid values of `enable` include `1`, `t`, `T`, `TRUE`, `true`, `True`, `0`, `f`, `F`, `FALSE`, `false`, and `False`. If other values are entered, an “invalid parameter” error will be returned.
-
-Required: no
-
-Each request can have up to 10 `Filters` and 5 `Filter.Values`.
+Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

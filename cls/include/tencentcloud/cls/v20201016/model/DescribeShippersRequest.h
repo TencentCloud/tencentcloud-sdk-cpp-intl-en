@@ -44,103 +44,31 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<br><li> shipperName
+                     * 获取- shipperName: Filter by **shipping rule name**. Type: String. Required: No.
+- shipperId: Filter by **shipping rule ID**. Type: String. Required: No.
+- topicId: Filter by **log topic**. Type: String. Required: No.
 
-Filter by **shipping rule name**.
-Type: String
+Each request can have up to 10 `Filters` and 100 `Filter.Values`.
+                     * @return Filters - shipperName: Filter by **shipping rule name**. Type: String. Required: No.
+- shipperId: Filter by **shipping rule ID**. Type: String. Required: No.
+- topicId: Filter by **log topic**. Type: String. Required: No.
 
-Required: no
-
-<br><li> shipperId
-
-Filter by **shipping rule ID**.
-Type: String
-
-Required: no
-
-<br><li> topicId
-
-Filter by **log topic**.
-
-Type: String
-
-Required: no
-
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
-                     * @return Filters <br><li> shipperName
-
-Filter by **shipping rule name**.
-Type: String
-
-Required: no
-
-<br><li> shipperId
-
-Filter by **shipping rule ID**.
-Type: String
-
-Required: no
-
-<br><li> topicId
-
-Filter by **log topic**.
-
-Type: String
-
-Required: no
-
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+Each request can have up to 10 `Filters` and 100 `Filter.Values`.
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置<br><li> shipperName
+                     * 设置- shipperName: Filter by **shipping rule name**. Type: String. Required: No.
+- shipperId: Filter by **shipping rule ID**. Type: String. Required: No.
+- topicId: Filter by **log topic**. Type: String. Required: No.
 
-Filter by **shipping rule name**.
-Type: String
+Each request can have up to 10 `Filters` and 100 `Filter.Values`.
+                     * @param _filters - shipperName: Filter by **shipping rule name**. Type: String. Required: No.
+- shipperId: Filter by **shipping rule ID**. Type: String. Required: No.
+- topicId: Filter by **log topic**. Type: String. Required: No.
 
-Required: no
-
-<br><li> shipperId
-
-Filter by **shipping rule ID**.
-Type: String
-
-Required: no
-
-<br><li> topicId
-
-Filter by **log topic**.
-
-Type: String
-
-Required: no
-
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
-                     * @param _filters <br><li> shipperName
-
-Filter by **shipping rule name**.
-Type: String
-
-Required: no
-
-<br><li> shipperId
-
-Filter by **shipping rule ID**.
-Type: String
-
-Required: no
-
-<br><li> topicId
-
-Filter by **log topic**.
-
-Type: String
-
-Required: no
-
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+Each request can have up to 10 `Filters` and 100 `Filter.Values`.
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -197,29 +125,11 @@ Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
                 private:
 
                     /**
-                     * <br><li> shipperName
+                     * - shipperName: Filter by **shipping rule name**. Type: String. Required: No.
+- shipperId: Filter by **shipping rule ID**. Type: String. Required: No.
+- topicId: Filter by **log topic**. Type: String. Required: No.
 
-Filter by **shipping rule name**.
-Type: String
-
-Required: no
-
-<br><li> shipperId
-
-Filter by **shipping rule ID**.
-Type: String
-
-Required: no
-
-<br><li> topicId
-
-Filter by **log topic**.
-
-Type: String
-
-Required: no
-
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+Each request can have up to 10 `Filters` and 100 `Filter.Values`.
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

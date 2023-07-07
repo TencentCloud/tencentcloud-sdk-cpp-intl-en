@@ -92,6 +92,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool MetaFieldsHasBeenSet() const;
 
+                    /**
+                     * 获取JSON format for shipping. `0`: String format; `1`: Structured format.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return JsonType JSON format for shipping. `0`: String format; `1`: Structured format.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetJsonType() const;
+
+                    /**
+                     * 设置JSON format for shipping. `0`: String format; `1`: Structured format.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _jsonType JSON format for shipping. `0`: String format; `1`: Structured format.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetJsonType(const int64_t& _jsonType);
+
+                    /**
+                     * 判断参数 JsonType 是否已赋值
+                     * @return JsonType 是否已赋值
+                     * 
+                     */
+                    bool JsonTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -106,6 +131,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<std::string> m_metaFields;
                     bool m_metaFieldsHasBeenSet;
+
+                    /**
+                     * JSON format for shipping. `0`: String format; `1`: Structured format.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_jsonType;
+                    bool m_jsonTypeHasBeenSet;
 
                 };
             }

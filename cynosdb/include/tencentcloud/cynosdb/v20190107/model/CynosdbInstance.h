@@ -27,6 +27,7 @@
 #include <tencentcloud/cynosdb/v20190107/model/ObjectTask.h>
 #include <tencentcloud/cynosdb/v20190107/model/Tag.h>
 #include <tencentcloud/cynosdb/v20190107/model/InstanceNetInfo.h>
+#include <tencentcloud/cynosdb/v20190107/model/ResourcePackage.h>
 
 
 namespace TencentCloud
@@ -279,6 +280,27 @@ namespace TencentCloud
                      * 
                      */
                     bool StatusDescHasBeenSet() const;
+
+                    /**
+                     * 获取Instance type, which is used to indicate whether it is a serverless instance.
+                     * @return DbMode Instance type, which is used to indicate whether it is a serverless instance.
+                     * 
+                     */
+                    std::string GetDbMode() const;
+
+                    /**
+                     * 设置Instance type, which is used to indicate whether it is a serverless instance.
+                     * @param _dbMode Instance type, which is used to indicate whether it is a serverless instance.
+                     * 
+                     */
+                    void SetDbMode(const std::string& _dbMode);
+
+                    /**
+                     * 判断参数 DbMode 是否已赋值
+                     * @return DbMode 是否已赋值
+                     * 
+                     */
+                    bool DbModeHasBeenSet() const;
 
                     /**
                      * 获取Database type
@@ -1139,6 +1161,27 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool InstanceNetInfoHasBeenSet() const;
 
+                    /**
+                     * 获取Information of the resource pack bound to an instance when `packageType` is `CCU`. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ResourcePackages Information of the resource pack bound to an instance when `packageType` is `CCU`. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<ResourcePackage> GetResourcePackages() const;
+
+                    /**
+                     * 设置Information of the resource pack bound to an instance when `packageType` is `CCU`. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _resourcePackages Information of the resource pack bound to an instance when `packageType` is `CCU`. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetResourcePackages(const std::vector<ResourcePackage>& _resourcePackages);
+
+                    /**
+                     * 判断参数 ResourcePackages 是否已赋值
+                     * @return ResourcePackages 是否已赋值
+                     * 
+                     */
+                    bool ResourcePackagesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1206,6 +1249,12 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     std::string m_statusDesc;
                     bool m_statusDescHasBeenSet;
+
+                    /**
+                     * Instance type, which is used to indicate whether it is a serverless instance.
+                     */
+                    std::string m_dbMode;
+                    bool m_dbModeHasBeenSet;
 
                     /**
                      * Database type
@@ -1450,6 +1499,12 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     std::vector<InstanceNetInfo> m_instanceNetInfo;
                     bool m_instanceNetInfoHasBeenSet;
+
+                    /**
+                     * Information of the resource pack bound to an instance when `packageType` is `CCU`. Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<ResourcePackage> m_resourcePackages;
+                    bool m_resourcePackagesHasBeenSet;
 
                 };
             }

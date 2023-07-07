@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Offset.
-                     * @return Offset Offset.
+                     * 获取Offset.  It must be an integer multiple of the value of `Limit`.  Default value: `0`.
+                     * @return Offset Offset.  It must be an integer multiple of the value of `Limit`.  Default value: `0`.
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Offset.
-                     * @param _offset Offset.
+                     * 设置Offset.  It must be an integer multiple of the value of `Limit`.  Default value: `0`.
+                     * @param _offset Offset.  It must be an integer multiple of the value of `Limit`.  Default value: `0`.
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of returned results. Maximum value: `50`.
-                     * @return Limit Maximum number of returned results. Maximum value: `50`.
+                     * 获取The limit for the number of query results.  Value range:  1-50.  Default value:  `10`.
+                     * @return Limit The limit for the number of query results.  Value range:  1-50.  Default value:  `10`.
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Maximum number of returned results. Maximum value: `50`.
-                     * @param _limit Maximum number of returned results. Maximum value: `50`.
+                     * 设置The limit for the number of query results.  Value range:  1-50.  Default value:  `10`.
+                     * @param _limit The limit for the number of query results.  Value range:  1-50.  Default value:  `10`.
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -126,16 +126,37 @@ namespace TencentCloud
                      */
                     bool IdentityIdHasBeenSet() const;
 
+                    /**
+                     * 获取Identity type.  Valid values: `1` (Preset), `2` (Custom).
+                     * @return IdentityType Identity type.  Valid values: `1` (Preset), `2` (Custom).
+                     * 
+                     */
+                    uint64_t GetIdentityType() const;
+
+                    /**
+                     * 设置Identity type.  Valid values: `1` (Preset), `2` (Custom).
+                     * @param _identityType Identity type.  Valid values: `1` (Preset), `2` (Custom).
+                     * 
+                     */
+                    void SetIdentityType(const uint64_t& _identityType);
+
+                    /**
+                     * 判断参数 IdentityType 是否已赋值
+                     * @return IdentityType 是否已赋值
+                     * 
+                     */
+                    bool IdentityTypeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Offset.
+                     * Offset.  It must be an integer multiple of the value of `Limit`.  Default value: `0`.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Maximum number of returned results. Maximum value: `50`.
+                     * The limit for the number of query results.  Value range:  1-50.  Default value:  `10`.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
@@ -151,6 +172,12 @@ namespace TencentCloud
                      */
                     uint64_t m_identityId;
                     bool m_identityIdHasBeenSet;
+
+                    /**
+                     * Identity type.  Valid values: `1` (Preset), `2` (Custom).
+                     */
+                    uint64_t m_identityType;
+                    bool m_identityTypeHasBeenSet;
 
                 };
             }

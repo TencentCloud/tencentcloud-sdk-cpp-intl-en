@@ -43,27 +43,6 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the log topic to be queried
-                     * @return TopicId ID of the log topic to be queried
-                     * 
-                     */
-                    std::string GetTopicId() const;
-
-                    /**
-                     * 设置ID of the log topic to be queried
-                     * @param _topicId ID of the log topic to be queried
-                     * 
-                     */
-                    void SetTopicId(const std::string& _topicId);
-
-                    /**
-                     * 判断参数 TopicId 是否已赋值
-                     * @return TopicId 是否已赋值
-                     * 
-                     */
-                    bool TopicIdHasBeenSet() const;
-
-                    /**
                      * 获取Start time of the log to be queried, which is a Unix timestamp in milliseconds
                      * @return From Start time of the log to be queried, which is a Unix timestamp in milliseconds
                      * 
@@ -127,6 +106,27 @@ namespace TencentCloud
                     bool QueryHasBeenSet() const;
 
                     /**
+                     * 获取ID of the log topic to be queried
+                     * @return TopicId ID of the log topic to be queried
+                     * 
+                     */
+                    std::string GetTopicId() const;
+
+                    /**
+                     * 设置ID of the log topic to be queried
+                     * @param _topicId ID of the log topic to be queried
+                     * 
+                     */
+                    void SetTopicId(const std::string& _topicId);
+
+                    /**
+                     * 判断参数 TopicId 是否已赋值
+                     * @return TopicId 是否已赋值
+                     * 
+                     */
+                    bool TopicIdHasBeenSet() const;
+
+                    /**
                      * 获取Interval in milliseconds. Condition: (To – From) / Interval ≤ 200
                      * @return Interval Interval in milliseconds. Condition: (To – From) / Interval ≤ 200
                      * 
@@ -147,13 +147,36 @@ namespace TencentCloud
                      */
                     bool IntervalHasBeenSet() const;
 
-                private:
+                    /**
+                     * 获取Search syntax. Valid values:
+`0` (default): Lucene; `1`: CQL
+For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Syntax</a>.
+                     * @return SyntaxRule Search syntax. Valid values:
+`0` (default): Lucene; `1`: CQL
+For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Syntax</a>.
+                     * 
+                     */
+                    uint64_t GetSyntaxRule() const;
 
                     /**
-                     * ID of the log topic to be queried
+                     * 设置Search syntax. Valid values:
+`0` (default): Lucene; `1`: CQL
+For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Syntax</a>.
+                     * @param _syntaxRule Search syntax. Valid values:
+`0` (default): Lucene; `1`: CQL
+For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Syntax</a>.
+                     * 
                      */
-                    std::string m_topicId;
-                    bool m_topicIdHasBeenSet;
+                    void SetSyntaxRule(const uint64_t& _syntaxRule);
+
+                    /**
+                     * 判断参数 SyntaxRule 是否已赋值
+                     * @return SyntaxRule 是否已赋值
+                     * 
+                     */
+                    bool SyntaxRuleHasBeenSet() const;
+
+                private:
 
                     /**
                      * Start time of the log to be queried, which is a Unix timestamp in milliseconds
@@ -174,10 +197,24 @@ namespace TencentCloud
                     bool m_queryHasBeenSet;
 
                     /**
+                     * ID of the log topic to be queried
+                     */
+                    std::string m_topicId;
+                    bool m_topicIdHasBeenSet;
+
+                    /**
                      * Interval in milliseconds. Condition: (To – From) / Interval ≤ 200
                      */
                     int64_t m_interval;
                     bool m_intervalHasBeenSet;
+
+                    /**
+                     * Search syntax. Valid values:
+`0` (default): Lucene; `1`: CQL
+For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Syntax</a>.
+                     */
+                    uint64_t m_syntaxRule;
+                    bool m_syntaxRuleHasBeenSet;
 
                 };
             }

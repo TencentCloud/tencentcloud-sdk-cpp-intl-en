@@ -36,7 +36,7 @@ namespace TencentCloud
             {
                 /**
                 * Information about the recording task in a room.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                 */
                 class RecordInfo : public AbstractModel
                 {

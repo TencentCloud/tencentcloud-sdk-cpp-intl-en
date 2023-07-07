@@ -172,6 +172,35 @@ namespace TencentCloud
                      */
                     bool LogsetIdHasBeenSet() const;
 
+                    /**
+                     * 获取Search syntax. Valid values:
+`0` (default): Lucene; `1`: CQL
+For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Syntax</a>.
+                     * @return SyntaxRule Search syntax. Valid values:
+`0` (default): Lucene; `1`: CQL
+For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Syntax</a>.
+                     * 
+                     */
+                    uint64_t GetSyntaxRule() const;
+
+                    /**
+                     * 设置Search syntax. Valid values:
+`0` (default): Lucene; `1`: CQL
+For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Syntax</a>.
+                     * @param _syntaxRule Search syntax. Valid values:
+`0` (default): Lucene; `1`: CQL
+For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Syntax</a>.
+                     * 
+                     */
+                    void SetSyntaxRule(const uint64_t& _syntaxRule);
+
+                    /**
+                     * 判断参数 SyntaxRule 是否已赋值
+                     * @return SyntaxRule 是否已赋值
+                     * 
+                     */
+                    bool SyntaxRuleHasBeenSet() const;
+
                 private:
 
                     /**
@@ -209,6 +238,14 @@ namespace TencentCloud
                      */
                     std::string m_logsetId;
                     bool m_logsetIdHasBeenSet;
+
+                    /**
+                     * Search syntax. Valid values:
+`0` (default): Lucene; `1`: CQL
+For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Syntax</a>.
+                     */
+                    uint64_t m_syntaxRule;
+                    bool m_syntaxRuleHasBeenSet;
 
                 };
             }

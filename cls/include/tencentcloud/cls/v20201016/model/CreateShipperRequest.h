@@ -276,6 +276,48 @@ namespace TencentCloud
                      */
                     bool FilenameModeHasBeenSet() const;
 
+                    /**
+                     * 获取Start time for data shipping, which cannot be earlier than the lifecycle start time of the log topic. If you do not specify this parameter, it will be set to the time when you create the data shipping task.
+                     * @return StartTime Start time for data shipping, which cannot be earlier than the lifecycle start time of the log topic. If you do not specify this parameter, it will be set to the time when you create the data shipping task.
+                     * 
+                     */
+                    int64_t GetStartTime() const;
+
+                    /**
+                     * 设置Start time for data shipping, which cannot be earlier than the lifecycle start time of the log topic. If you do not specify this parameter, it will be set to the time when you create the data shipping task.
+                     * @param _startTime Start time for data shipping, which cannot be earlier than the lifecycle start time of the log topic. If you do not specify this parameter, it will be set to the time when you create the data shipping task.
+                     * 
+                     */
+                    void SetStartTime(const int64_t& _startTime);
+
+                    /**
+                     * 判断参数 StartTime 是否已赋值
+                     * @return StartTime 是否已赋值
+                     * 
+                     */
+                    bool StartTimeHasBeenSet() const;
+
+                    /**
+                     * 获取End time for data shipping, which cannot be set to a future time. If you do not specify this parameter, it indicates continuous data shipping.
+                     * @return EndTime End time for data shipping, which cannot be set to a future time. If you do not specify this parameter, it indicates continuous data shipping.
+                     * 
+                     */
+                    int64_t GetEndTime() const;
+
+                    /**
+                     * 设置End time for data shipping, which cannot be set to a future time. If you do not specify this parameter, it indicates continuous data shipping.
+                     * @param _endTime End time for data shipping, which cannot be set to a future time. If you do not specify this parameter, it indicates continuous data shipping.
+                     * 
+                     */
+                    void SetEndTime(const int64_t& _endTime);
+
+                    /**
+                     * 判断参数 EndTime 是否已赋值
+                     * @return EndTime 是否已赋值
+                     * 
+                     */
+                    bool EndTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -343,6 +385,18 @@ namespace TencentCloud
                      */
                     uint64_t m_filenameMode;
                     bool m_filenameModeHasBeenSet;
+
+                    /**
+                     * Start time for data shipping, which cannot be earlier than the lifecycle start time of the log topic. If you do not specify this parameter, it will be set to the time when you create the data shipping task.
+                     */
+                    int64_t m_startTime;
+                    bool m_startTimeHasBeenSet;
+
+                    /**
+                     * End time for data shipping, which cannot be set to a future time. If you do not specify this parameter, it indicates continuous data shipping.
+                     */
+                    int64_t m_endTime;
+                    bool m_endTimeHasBeenSet;
 
                 };
             }
