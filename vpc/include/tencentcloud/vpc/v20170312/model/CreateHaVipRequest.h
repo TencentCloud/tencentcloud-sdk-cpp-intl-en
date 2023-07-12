@@ -126,6 +126,27 @@ namespace TencentCloud
                      */
                     bool VipHasBeenSet() const;
 
+                    /**
+                     * 获取The ID of the ENI associated with the HAVIP.
+                     * @return NetworkInterfaceId The ID of the ENI associated with the HAVIP.
+                     * 
+                     */
+                    std::string GetNetworkInterfaceId() const;
+
+                    /**
+                     * 设置The ID of the ENI associated with the HAVIP.
+                     * @param _networkInterfaceId The ID of the ENI associated with the HAVIP.
+                     * 
+                     */
+                    void SetNetworkInterfaceId(const std::string& _networkInterfaceId);
+
+                    /**
+                     * 判断参数 NetworkInterfaceId 是否已赋值
+                     * @return NetworkInterfaceId 是否已赋值
+                     * 
+                     */
+                    bool NetworkInterfaceIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -151,6 +172,12 @@ namespace TencentCloud
                      */
                     std::string m_vip;
                     bool m_vipHasBeenSet;
+
+                    /**
+                     * The ID of the ENI associated with the HAVIP.
+                     */
+                    std::string m_networkInterfaceId;
+                    bool m_networkInterfaceIdHasBeenSet;
 
                 };
             }

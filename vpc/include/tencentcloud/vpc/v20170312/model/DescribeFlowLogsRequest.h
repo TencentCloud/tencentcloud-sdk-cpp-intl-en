@@ -296,23 +296,23 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Filter condition. `FlowLogIds` and `Filters` cannot be specified at the same time.
-<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
-<li> tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key should be replaced with a specified tag key.</li>
-                     * @return Filters Filter condition. `FlowLogIds` and `Filters` cannot be specified at the same time.
-<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
-<li> tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key should be replaced with a specified tag key.</li>
+                     * 获取Filter condition. `FlowLogId` and `Filters` cannot be specified at the same time.
+<li> `tag-key` - String - Optional - Filter by the tag key.</li>
+<li> `tag:tag-key` - String - Optional - Filter by the tag key-value pair. The tag-key should be replaced with a specified tag key.</li>
+                     * @return Filters Filter condition. `FlowLogId` and `Filters` cannot be specified at the same time.
+<li> `tag-key` - String - Optional - Filter by the tag key.</li>
+<li> `tag:tag-key` - String - Optional - Filter by the tag key-value pair. The tag-key should be replaced with a specified tag key.</li>
                      * 
                      */
                     Filter GetFilters() const;
 
                     /**
-                     * 设置Filter condition. `FlowLogIds` and `Filters` cannot be specified at the same time.
-<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
-<li> tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key should be replaced with a specified tag key.</li>
-                     * @param _filters Filter condition. `FlowLogIds` and `Filters` cannot be specified at the same time.
-<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
-<li> tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key should be replaced with a specified tag key.</li>
+                     * 设置Filter condition. `FlowLogId` and `Filters` cannot be specified at the same time.
+<li> `tag-key` - String - Optional - Filter by the tag key.</li>
+<li> `tag:tag-key` - String - Optional - Filter by the tag key-value pair. The tag-key should be replaced with a specified tag key.</li>
+                     * @param _filters Filter condition. `FlowLogId` and `Filters` cannot be specified at the same time.
+<li> `tag-key` - String - Optional - Filter by the tag key.</li>
+<li> `tag:tag-key` - String - Optional - Filter by the tag key-value pair. The tag-key should be replaced with a specified tag key.</li>
                      * 
                      */
                     void SetFilters(const Filter& _filters);
@@ -420,9 +420,9 @@ namespace TencentCloud
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Filter condition. `FlowLogIds` and `Filters` cannot be specified at the same time.
-<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
-<li> tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key should be replaced with a specified tag key.</li>
+                     * Filter condition. `FlowLogId` and `Filters` cannot be specified at the same time.
+<li> `tag-key` - String - Optional - Filter by the tag key.</li>
+<li> `tag:tag-key` - String - Optional - Filter by the tag key-value pair. The tag-key should be replaced with a specified tag key.</li>
                      */
                     Filter m_filters;
                     bool m_filtersHasBeenSet;

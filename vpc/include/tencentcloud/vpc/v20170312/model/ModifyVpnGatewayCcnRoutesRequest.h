@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The ID of the VPN gateway instance.
-                     * @return VpnGatewayId The ID of the VPN gateway instance.
+                     * 获取Instance ID of the VPN gateway
+                     * @return VpnGatewayId Instance ID of the VPN gateway
                      * 
                      */
                     std::string GetVpnGatewayId() const;
 
                     /**
-                     * 设置The ID of the VPN gateway instance.
-                     * @param _vpnGatewayId The ID of the VPN gateway instance.
+                     * 设置Instance ID of the VPN gateway
+                     * @param _vpnGatewayId Instance ID of the VPN gateway
                      * 
                      */
                     void SetVpnGatewayId(const std::string& _vpnGatewayId);
@@ -88,7 +88,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The ID of the VPN gateway instance.
+                     * Instance ID of the VPN gateway
                      */
                     std::string m_vpnGatewayId;
                     bool m_vpnGatewayIdHasBeenSet;

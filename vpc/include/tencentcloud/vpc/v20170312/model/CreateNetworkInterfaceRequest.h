@@ -129,15 +129,15 @@ namespace TencentCloud
                     bool NetworkInterfaceDescriptionHasBeenSet() const;
 
                     /**
-                     * 获取The number of private IP addresses that is newly applied for. The total number of private IP addresses cannot exceed the quota.
-                     * @return SecondaryPrivateIpAddressCount The number of private IP addresses that is newly applied for. The total number of private IP addresses cannot exceed the quota.
+                     * 获取The number of private IP addresses you apply for. The total number of private IP addresses cannot exceed the quota.
+                     * @return SecondaryPrivateIpAddressCount The number of private IP addresses you apply for. The total number of private IP addresses cannot exceed the quota.
                      * 
                      */
                     uint64_t GetSecondaryPrivateIpAddressCount() const;
 
                     /**
-                     * 设置The number of private IP addresses that is newly applied for. The total number of private IP addresses cannot exceed the quota.
-                     * @param _secondaryPrivateIpAddressCount The number of private IP addresses that is newly applied for. The total number of private IP addresses cannot exceed the quota.
+                     * 设置The number of private IP addresses you apply for. The total number of private IP addresses cannot exceed the quota.
+                     * @param _secondaryPrivateIpAddressCount The number of private IP addresses you apply for. The total number of private IP addresses cannot exceed the quota.
                      * 
                      */
                     void SetSecondaryPrivateIpAddressCount(const uint64_t& _secondaryPrivateIpAddressCount);
@@ -281,7 +281,7 @@ namespace TencentCloud
                     bool m_networkInterfaceDescriptionHasBeenSet;
 
                     /**
-                     * The number of private IP addresses that is newly applied for. The total number of private IP addresses cannot exceed the quota.
+                     * The number of private IP addresses you apply for. The total number of private IP addresses cannot exceed the quota.
                      */
                     uint64_t m_secondaryPrivateIpAddressCount;
                     bool m_secondaryPrivateIpAddressCountHasBeenSet;

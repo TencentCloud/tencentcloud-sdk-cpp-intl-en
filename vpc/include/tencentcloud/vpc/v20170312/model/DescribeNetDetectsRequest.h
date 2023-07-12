@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The array of network detection instance `IDs`, such as [`netd-12345678`].
-                     * @return NetDetectIds The array of network detection instance `IDs`, such as [`netd-12345678`].
+                     * 获取The array of network probe IDs, such as [`netd-12345678`].
+                     * @return NetDetectIds The array of network probe IDs, such as [`netd-12345678`].
                      * 
                      */
                     std::vector<std::string> GetNetDetectIds() const;
 
                     /**
-                     * 设置The array of network detection instance `IDs`, such as [`netd-12345678`].
-                     * @param _netDetectIds The array of network detection instance `IDs`, such as [`netd-12345678`].
+                     * 设置The array of network probe IDs, such as [`netd-12345678`].
+                     * @param _netDetectIds The array of network probe IDs, such as [`netd-12345678`].
                      * 
                      */
                     void SetNetDetectIds(const std::vector<std::string>& _netDetectIds);
@@ -146,7 +146,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The array of network detection instance `IDs`, such as [`netd-12345678`].
+                     * The array of network probe IDs, such as [`netd-12345678`].
                      */
                     std::vector<std::string> m_netDetectIds;
                     bool m_netDetectIdsHasBeenSet;

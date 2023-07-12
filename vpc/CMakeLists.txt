@@ -91,6 +91,7 @@ set(vpc_public_header_model
   include/tencentcloud/vpc/v20170312/model/DescribeRouteTablesResponse.h
   include/tencentcloud/vpc/v20170312/model/DeleteVpcEndPointServiceWhiteListRequest.h
   include/tencentcloud/vpc/v20170312/model/DetachSnapshotInstancesResponse.h
+  include/tencentcloud/vpc/v20170312/model/ReplaceSecurityGroupPoliciesRequest.h
   include/tencentcloud/vpc/v20170312/model/DeleteVpcEndPointServiceRequest.h
   include/tencentcloud/vpc/v20170312/model/DeleteCcnResponse.h
   include/tencentcloud/vpc/v20170312/model/ServiceTemplate.h
@@ -100,6 +101,7 @@ set(vpc_public_header_model
   include/tencentcloud/vpc/v20170312/model/DescribeNatGatewaysRequest.h
   include/tencentcloud/vpc/v20170312/model/ModifyFlowLogAttributeResponse.h
   include/tencentcloud/vpc/v20170312/model/DescribeBandwidthPackagesResponse.h
+  include/tencentcloud/vpc/v20170312/model/ReplaceSecurityGroupPoliciesResponse.h
   include/tencentcloud/vpc/v20170312/model/DescribeDirectConnectGatewaysRequest.h
   include/tencentcloud/vpc/v20170312/model/DisassociateVpcEndPointSecurityGroupsRequest.h
   include/tencentcloud/vpc/v20170312/model/AttachSnapshotInstancesRequest.h
@@ -705,6 +707,7 @@ set(vpc_src
   src/v20170312/model/DescribeRouteTablesResponse.cpp
   src/v20170312/model/DeleteVpcEndPointServiceWhiteListRequest.cpp
   src/v20170312/model/DetachSnapshotInstancesResponse.cpp
+  src/v20170312/model/ReplaceSecurityGroupPoliciesRequest.cpp
   src/v20170312/model/DeleteVpcEndPointServiceRequest.cpp
   src/v20170312/model/DeleteCcnResponse.cpp
   src/v20170312/model/ServiceTemplate.cpp
@@ -714,6 +717,7 @@ set(vpc_src
   src/v20170312/model/DescribeNatGatewaysRequest.cpp
   src/v20170312/model/ModifyFlowLogAttributeResponse.cpp
   src/v20170312/model/DescribeBandwidthPackagesResponse.cpp
+  src/v20170312/model/ReplaceSecurityGroupPoliciesResponse.cpp
   src/v20170312/model/DescribeDirectConnectGatewaysRequest.cpp
   src/v20170312/model/DisassociateVpcEndPointSecurityGroupsRequest.cpp
   src/v20170312/model/AttachSnapshotInstancesRequest.cpp

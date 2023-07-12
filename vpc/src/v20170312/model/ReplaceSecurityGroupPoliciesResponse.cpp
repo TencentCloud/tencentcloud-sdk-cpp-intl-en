@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/vpc/v20170312/model/DescribeVpnGatewayRoutesResponse.h>
+#include <tencentcloud/vpc/v20170312/model/ReplaceSecurityGroupPoliciesResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -23,13 +23,11 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vpc::V20170312::Model;
 using namespace std;
 
-DescribeVpnGatewayRoutesResponse::DescribeVpnGatewayRoutesResponse() :
-    m_routesHasBeenSet(false),
-    m_totalCountHasBeenSet(false)
+ReplaceSecurityGroupPoliciesResponse::ReplaceSecurityGroupPoliciesResponse()
 {
 }
 
-CoreInternalOutcome DescribeVpnGatewayRoutesResponse::Deserialize(const string &payload)
+CoreInternalOutcome ReplaceSecurityGroupPoliciesResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -63,68 +61,15 @@ CoreInternalOutcome DescribeVpnGatewayRoutesResponse::Deserialize(const string &
     }
 
 
-    if (rsp.HasMember("Routes") && !rsp["Routes"].IsNull())
-    {
-        if (!rsp["Routes"].IsArray())
-            return CoreInternalOutcome(Core::Error("response `Routes` is not array type"));
-
-        const rapidjson::Value &tmpValue = rsp["Routes"];
-        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
-        {
-            VpnGatewayRoute item;
-            CoreInternalOutcome outcome = item.Deserialize(*itr);
-            if (!outcome.IsSuccess())
-            {
-                outcome.GetError().SetRequestId(requestId);
-                return outcome;
-            }
-            m_routes.push_back(item);
-        }
-        m_routesHasBeenSet = true;
-    }
-
-    if (rsp.HasMember("TotalCount") && !rsp["TotalCount"].IsNull())
-    {
-        if (!rsp["TotalCount"].IsUint64())
-        {
-            return CoreInternalOutcome(Core::Error("response `TotalCount` IsUint64=false incorrectly").SetRequestId(requestId));
-        }
-        m_totalCount = rsp["TotalCount"].GetUint64();
-        m_totalCountHasBeenSet = true;
-    }
-
 
     return CoreInternalOutcome(true);
 }
 
-string DescribeVpnGatewayRoutesResponse::ToJsonString() const
+string ReplaceSecurityGroupPoliciesResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
-
-    if (m_routesHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Routes";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
-
-        int i=0;
-        for (auto itr = m_routes.begin(); itr != m_routes.end(); ++itr, ++i)
-        {
-            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
-            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
-        }
-    }
-
-    if (m_totalCountHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "TotalCount";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_totalCount, allocator);
-    }
 
     rapidjson::Value iKey(rapidjson::kStringType);
     string key = "RequestId";
@@ -137,25 +82,5 @@ string DescribeVpnGatewayRoutesResponse::ToJsonString() const
     return buffer.GetString();
 }
 
-
-vector<VpnGatewayRoute> DescribeVpnGatewayRoutesResponse::GetRoutes() const
-{
-    return m_routes;
-}
-
-bool DescribeVpnGatewayRoutesResponse::RoutesHasBeenSet() const
-{
-    return m_routesHasBeenSet;
-}
-
-uint64_t DescribeVpnGatewayRoutesResponse::GetTotalCount() const
-{
-    return m_totalCount;
-}
-
-bool DescribeVpnGatewayRoutesResponse::TotalCountHasBeenSet() const
-{
-    return m_totalCountHasBeenSet;
-}
 
 

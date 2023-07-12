@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Default VpcId
-                     * @return VpcId Default VpcId
+                     * 获取Default VPC ID
+                     * @return VpcId Default VPC ID
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置Default VpcId
-                     * @param _vpcId Default VpcId
+                     * 设置Default VPC ID
+                     * @param _vpcId Default VPC ID
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Default SubnetId
-                     * @return SubnetId Default SubnetId
+                     * 获取Default subnet ID
+                     * @return SubnetId Default subnet ID
                      * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置Default SubnetId
-                     * @param _subnetId Default SubnetId
+                     * 设置Default subnet ID
+                     * @param _subnetId Default subnet ID
                      * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
@@ -88,19 +88,100 @@ namespace TencentCloud
                      */
                     bool SubnetIdHasBeenSet() const;
 
+                    /**
+                     * 获取Default VPC name
+                     * @return VpcName Default VPC name
+                     * 
+                     */
+                    std::string GetVpcName() const;
+
+                    /**
+                     * 设置Default VPC name
+                     * @param _vpcName Default VPC name
+                     * 
+                     */
+                    void SetVpcName(const std::string& _vpcName);
+
+                    /**
+                     * 判断参数 VpcName 是否已赋值
+                     * @return VpcName 是否已赋值
+                     * 
+                     */
+                    bool VpcNameHasBeenSet() const;
+
+                    /**
+                     * 获取Default subnet name
+                     * @return SubnetName Default subnet name
+                     * 
+                     */
+                    std::string GetSubnetName() const;
+
+                    /**
+                     * 设置Default subnet name
+                     * @param _subnetName Default subnet name
+                     * 
+                     */
+                    void SetSubnetName(const std::string& _subnetName);
+
+                    /**
+                     * 判断参数 SubnetName 是否已赋值
+                     * @return SubnetName 是否已赋值
+                     * 
+                     */
+                    bool SubnetNameHasBeenSet() const;
+
+                    /**
+                     * 获取Default subnet IP range
+                     * @return CidrBlock Default subnet IP range
+                     * 
+                     */
+                    std::string GetCidrBlock() const;
+
+                    /**
+                     * 设置Default subnet IP range
+                     * @param _cidrBlock Default subnet IP range
+                     * 
+                     */
+                    void SetCidrBlock(const std::string& _cidrBlock);
+
+                    /**
+                     * 判断参数 CidrBlock 是否已赋值
+                     * @return CidrBlock 是否已赋值
+                     * 
+                     */
+                    bool CidrBlockHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Default VpcId
+                     * Default VPC ID
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Default SubnetId
+                     * Default subnet ID
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
+
+                    /**
+                     * Default VPC name
+                     */
+                    std::string m_vpcName;
+                    bool m_vpcNameHasBeenSet;
+
+                    /**
+                     * Default subnet name
+                     */
+                    std::string m_subnetName;
+                    bool m_subnetNameHasBeenSet;
+
+                    /**
+                     * Default subnet IP range
+                     */
+                    std::string m_cidrBlock;
+                    bool m_cidrBlockHasBeenSet;
 
                 };
             }

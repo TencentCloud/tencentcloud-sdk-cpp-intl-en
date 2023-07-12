@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The array of network detection instance `IDs`, such as [`netd-12345678`].
-                     * @return NetDetectIds The array of network detection instance `IDs`, such as [`netd-12345678`].
+                     * 获取The array of network probe IDs, such as [`netd-12345678`].
+                     * @return NetDetectIds The array of network probe IDs, such as [`netd-12345678`].
                      * 
                      */
                     std::vector<std::string> GetNetDetectIds() const;
 
                     /**
-                     * 设置The array of network detection instance `IDs`, such as [`netd-12345678`].
-                     * @param _netDetectIds The array of network detection instance `IDs`, such as [`netd-12345678`].
+                     * 设置The array of network probe IDs, such as [`netd-12345678`].
+                     * @param _netDetectIds The array of network probe IDs, such as [`netd-12345678`].
                      * 
                      */
                     void SetNetDetectIds(const std::vector<std::string>& _netDetectIds);
@@ -66,18 +66,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Filter conditions. `NetDetectIds` and `Filters` cannot be specified at the same time.
-<li>net-detect-id - String - (Filter condition) The network detection instance ID, such as netd-12345678.</li>
+<li>`net-detect-id` - String - The network probe ID, such as `netd-12345678`.</li>
                      * @return Filters Filter conditions. `NetDetectIds` and `Filters` cannot be specified at the same time.
-<li>net-detect-id - String - (Filter condition) The network detection instance ID, such as netd-12345678.</li>
+<li>`net-detect-id` - String - The network probe ID, such as `netd-12345678`.</li>
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置Filter conditions. `NetDetectIds` and `Filters` cannot be specified at the same time.
-<li>net-detect-id - String - (Filter condition) The network detection instance ID, such as netd-12345678.</li>
+<li>`net-detect-id` - String - The network probe ID, such as `netd-12345678`.</li>
                      * @param _filters Filter conditions. `NetDetectIds` and `Filters` cannot be specified at the same time.
-<li>net-detect-id - String - (Filter condition) The network detection instance ID, such as netd-12345678.</li>
+<li>`net-detect-id` - String - The network probe ID, such as `netd-12345678`.</li>
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -134,14 +134,14 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The array of network detection instance `IDs`, such as [`netd-12345678`].
+                     * The array of network probe IDs, such as [`netd-12345678`].
                      */
                     std::vector<std::string> m_netDetectIds;
                     bool m_netDetectIdsHasBeenSet;
 
                     /**
                      * Filter conditions. `NetDetectIds` and `Filters` cannot be specified at the same time.
-<li>net-detect-id - String - (Filter condition) The network detection instance ID, such as netd-12345678.</li>
+<li>`net-detect-id` - String - The network probe ID, such as `netd-12345678`.</li>
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

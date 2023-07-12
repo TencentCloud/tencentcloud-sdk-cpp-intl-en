@@ -150,15 +150,15 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取The description of the flow log instance
-                     * @return FlowLogDescription The description of the flow log instance
+                     * 获取The description of the flow log.
+                     * @return FlowLogDescription The description of the flow log.
                      * 
                      */
                     std::string GetFlowLogDescription() const;
 
                     /**
-                     * 设置The description of the flow log instance
-                     * @param _flowLogDescription The description of the flow log instance
+                     * 设置The description of the flow log.
+                     * @param _flowLogDescription The description of the flow log.
                      * 
                      */
                     void SetFlowLogDescription(const std::string& _flowLogDescription);
@@ -192,15 +192,15 @@ namespace TencentCloud
                     bool CloudLogIdHasBeenSet() const;
 
                     /**
-                     * 获取Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
-                     * @return Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
+                     * 获取Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+                     * @return Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
-                     * @param _tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
+                     * 设置Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+                     * @param _tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -308,7 +308,7 @@ namespace TencentCloud
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * The description of the flow log instance
+                     * The description of the flow log.
                      */
                     std::string m_flowLogDescription;
                     bool m_flowLogDescriptionHasBeenSet;
@@ -320,7 +320,7 @@ namespace TencentCloud
                     bool m_cloudLogIdHasBeenSet;
 
                     /**
-                     * Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
+                     * Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;

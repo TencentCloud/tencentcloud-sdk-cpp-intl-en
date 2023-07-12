@@ -115,15 +115,15 @@ namespace TencentCloud
                     bool SortedByHasBeenSet() const;
 
                     /**
-                     * 获取The offset.
-                     * @return Offset The offset.
+                     * 获取Offset
+                     * @return Offset Offset
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置The offset.
-                     * @param _offset The offset.
+                     * 设置Offset
+                     * @param _offset Offset
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -136,15 +136,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取The returned quantity.
-                     * @return Limit The returned quantity.
+                     * 获取Quantity of returned items
+                     * @return Limit Quantity of returned items
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置The returned quantity.
-                     * @param _limit The returned quantity.
+                     * 设置Quantity of returned items
+                     * @param _limit Quantity of returned items
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -200,13 +200,13 @@ namespace TencentCloud
                     bool m_sortedByHasBeenSet;
 
                     /**
-                     * The offset.
+                     * Offset
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * The returned quantity.
+                     * Quantity of returned items
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;

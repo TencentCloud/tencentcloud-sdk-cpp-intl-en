@@ -47,15 +47,57 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start address
-                     * @return From Start address
+                     * 获取ipm-xxxxxxxx
+                     * @return AddressTemplateId ipm-xxxxxxxx
+                     * 
+                     */
+                    std::string GetAddressTemplateId() const;
+
+                    /**
+                     * 设置ipm-xxxxxxxx
+                     * @param _addressTemplateId ipm-xxxxxxxx
+                     * 
+                     */
+                    void SetAddressTemplateId(const std::string& _addressTemplateId);
+
+                    /**
+                     * 判断参数 AddressTemplateId 是否已赋值
+                     * @return AddressTemplateId 是否已赋值
+                     * 
+                     */
+                    bool AddressTemplateIdHasBeenSet() const;
+
+                    /**
+                     * 获取IP template name
+                     * @return AddressTemplateName IP template name
+                     * 
+                     */
+                    std::string GetAddressTemplateName() const;
+
+                    /**
+                     * 设置IP template name
+                     * @param _addressTemplateName IP template name
+                     * 
+                     */
+                    void SetAddressTemplateName(const std::string& _addressTemplateName);
+
+                    /**
+                     * 判断参数 AddressTemplateName 是否已赋值
+                     * @return AddressTemplateName 是否已赋值
+                     * 
+                     */
+                    bool AddressTemplateNameHasBeenSet() const;
+
+                    /**
+                     * 获取Disused
+                     * @return From Disused
                      * 
                      */
                     std::string GetFrom() const;
 
                     /**
-                     * 设置Start address
-                     * @param _from Start address
+                     * 设置Disused
+                     * @param _from Disused
                      * 
                      */
                     void SetFrom(const std::string& _from);
@@ -68,15 +110,15 @@ namespace TencentCloud
                     bool FromHasBeenSet() const;
 
                     /**
-                     * 获取End address
-                     * @return To End address
+                     * 获取Disused
+                     * @return To Disused
                      * 
                      */
                     std::string GetTo() const;
 
                     /**
-                     * 设置End address
-                     * @param _to End address
+                     * 设置Disused
+                     * @param _to Disused
                      * 
                      */
                     void SetTo(const std::string& _to);
@@ -91,13 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Start address
+                     * ipm-xxxxxxxx
+                     */
+                    std::string m_addressTemplateId;
+                    bool m_addressTemplateIdHasBeenSet;
+
+                    /**
+                     * IP template name
+                     */
+                    std::string m_addressTemplateName;
+                    bool m_addressTemplateNameHasBeenSet;
+
+                    /**
+                     * Disused
                      */
                     std::string m_from;
                     bool m_fromHasBeenSet;
 
                     /**
-                     * End address
+                     * Disused
                      */
                     std::string m_to;
                     bool m_toHasBeenSet;

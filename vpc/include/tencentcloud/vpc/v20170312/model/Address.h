@@ -499,6 +499,77 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool TagSetHasBeenSet() const;
 
+                    /**
+                     * 获取The expiration time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return DeadlineDate The expiration time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetDeadlineDate() const;
+
+                    /**
+                     * 设置The expiration time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param _deadlineDate The expiration time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetDeadlineDate(const std::string& _deadlineDate);
+
+                    /**
+                     * 判断参数 DeadlineDate 是否已赋值
+                     * @return DeadlineDate 是否已赋值
+                     * 
+                     */
+                    bool DeadlineDateHasBeenSet() const;
+
+                    /**
+                     * 获取The type of instance bound with the EIP
+Note: this field may return `null`, indicating that no valid value was found.
+                     * @return InstanceType The type of instance bound with the EIP
+Note: this field may return `null`, indicating that no valid value was found.
+                     * 
+                     */
+                    std::string GetInstanceType() const;
+
+                    /**
+                     * 设置The type of instance bound with the EIP
+Note: this field may return `null`, indicating that no valid value was found.
+                     * @param _instanceType The type of instance bound with the EIP
+Note: this field may return `null`, indicating that no valid value was found.
+                     * 
+                     */
+                    void SetInstanceType(const std::string& _instanceType);
+
+                    /**
+                     * 判断参数 InstanceType 是否已赋值
+                     * @return InstanceType 是否已赋值
+                     * 
+                     */
+                    bool InstanceTypeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return AntiDDoSPackageId 
+                     * 
+                     */
+                    std::string GetAntiDDoSPackageId() const;
+
+                    /**
+                     * 设置
+                     * @param _antiDDoSPackageId 
+                     * 
+                     */
+                    void SetAntiDDoSPackageId(const std::string& _antiDDoSPackageId);
+
+                    /**
+                     * 判断参数 AntiDDoSPackageId 是否已赋值
+                     * @return AntiDDoSPackageId 是否已赋值
+                     * 
+                     */
+                    bool AntiDDoSPackageIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -627,6 +698,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     std::vector<Tag> m_tagSet;
                     bool m_tagSetHasBeenSet;
+
+                    /**
+                     * The expiration time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_deadlineDate;
+                    bool m_deadlineDateHasBeenSet;
+
+                    /**
+                     * The type of instance bound with the EIP
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string m_instanceType;
+                    bool m_instanceTypeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_antiDDoSPackageId;
+                    bool m_antiDDoSPackageIdHasBeenSet;
 
                 };
             }

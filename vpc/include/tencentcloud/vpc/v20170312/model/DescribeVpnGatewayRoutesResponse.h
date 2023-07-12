@@ -58,6 +58,22 @@ namespace TencentCloud
                      */
                     bool RoutesHasBeenSet() const;
 
+                    /**
+                     * 获取
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TotalCount 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    uint64_t GetTotalCount() const;
+
+                    /**
+                     * 判断参数 TotalCount 是否已赋值
+                     * @return TotalCount 是否已赋值
+                     * 
+                     */
+                    bool TotalCountHasBeenSet() const;
+
                 private:
 
                     /**
@@ -65,6 +81,13 @@ namespace TencentCloud
                      */
                     std::vector<VpnGatewayRoute> m_routes;
                     bool m_routesHasBeenSet;
+
+                    /**
+                     * 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_totalCount;
+                    bool m_totalCountHasBeenSet;
 
                 };
             }

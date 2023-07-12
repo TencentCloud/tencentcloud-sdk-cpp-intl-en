@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Creation time
-                     * @return CreateTime Creation time
+                     * 获取The creation time.
+                     * @return CreateTime The creation time.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time
-                     * @param _createTime Creation time
+                     * 设置The creation time.
+                     * @param _createTime The creation time.
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Update time
-                     * @return UpdateTime Update time
+                     * 获取The update time.
+                     * @return UpdateTime The update time.
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Update time
-                     * @param _updateTime Update time
+                     * 设置The update time.
+                     * @param _updateTime The update time.
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -280,13 +280,13 @@ namespace TencentCloud
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Creation time
+                     * The creation time.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Update time
+                     * The update time.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;

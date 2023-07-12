@@ -46,9 +46,9 @@ namespace TencentCloud
 
                     /**
                      * 获取The outbound bandwidth limits of regions in a CCN instance.
-Note: this field may return null, indicating that no valid value was found.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CcnBandwidthSet The outbound bandwidth limits of regions in a CCN instance.
-Note: this field may return null, indicating that no valid value was found.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<CcnBandwidthInfo> GetCcnBandwidthSet() const;
@@ -80,7 +80,7 @@ Note: this field may return null, indicating that no valid value was found.
 
                     /**
                      * The outbound bandwidth limits of regions in a CCN instance.
-Note: this field may return null, indicating that no valid value was found.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<CcnBandwidthInfo> m_ccnBandwidthSet;
                     bool m_ccnBandwidthSetHasBeenSet;

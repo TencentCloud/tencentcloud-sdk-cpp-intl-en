@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取VPC instance ID, which can be obtained from the `VpcId` field returned by `DescribeVpcs` API.
-                     * @return VpcId VPC instance ID, which can be obtained from the `VpcId` field returned by `DescribeVpcs` API.
+                     * 获取VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
+                     * @return VpcId VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置VPC instance ID, which can be obtained from the `VpcId` field returned by `DescribeVpcs` API.
-                     * @param _vpcId VPC instance ID, which can be obtained from the `VpcId` field returned by `DescribeVpcs` API.
+                     * 设置VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
+                     * @param _vpcId VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -130,7 +130,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * VPC instance ID, which can be obtained from the `VpcId` field returned by `DescribeVpcs` API.
+                     * VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;

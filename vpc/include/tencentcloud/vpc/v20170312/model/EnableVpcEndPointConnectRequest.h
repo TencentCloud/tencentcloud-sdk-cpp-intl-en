@@ -86,14 +86,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Whether to accept the request of connecting with an endpoint
+
                      * @return AcceptFlag Whether to accept the request of connecting with an endpoint
+
                      * 
                      */
                     bool GetAcceptFlag() const;
 
                     /**
                      * 设置Whether to accept the request of connecting with an endpoint
+
                      * @param _acceptFlag Whether to accept the request of connecting with an endpoint
+
                      * 
                      */
                     void SetAcceptFlag(const bool& _acceptFlag);
@@ -121,6 +125,7 @@ namespace TencentCloud
 
                     /**
                      * Whether to accept the request of connecting with an endpoint
+
                      */
                     bool m_acceptFlag;
                     bool m_acceptFlagHasBeenSet;

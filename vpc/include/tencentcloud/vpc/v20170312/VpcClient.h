@@ -495,6 +495,8 @@
 #include <tencentcloud/vpc/v20170312/model/ReplaceRouteTableAssociationResponse.h>
 #include <tencentcloud/vpc/v20170312/model/ReplaceRoutesRequest.h>
 #include <tencentcloud/vpc/v20170312/model/ReplaceRoutesResponse.h>
+#include <tencentcloud/vpc/v20170312/model/ReplaceSecurityGroupPoliciesRequest.h>
+#include <tencentcloud/vpc/v20170312/model/ReplaceSecurityGroupPoliciesResponse.h>
 #include <tencentcloud/vpc/v20170312/model/ReplaceSecurityGroupPolicyRequest.h>
 #include <tencentcloud/vpc/v20170312/model/ReplaceSecurityGroupPolicyResponse.h>
 #include <tencentcloud/vpc/v20170312/model/ResetAttachCcnInstancesRequest.h>
@@ -1249,6 +1251,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ReplaceRoutesResponse> ReplaceRoutesOutcome;
                 typedef std::future<ReplaceRoutesOutcome> ReplaceRoutesOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::ReplaceRoutesRequest&, ReplaceRoutesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ReplaceRoutesAsyncHandler;
+                typedef Outcome<Core::Error, Model::ReplaceSecurityGroupPoliciesResponse> ReplaceSecurityGroupPoliciesOutcome;
+                typedef std::future<ReplaceSecurityGroupPoliciesOutcome> ReplaceSecurityGroupPoliciesOutcomeCallable;
+                typedef std::function<void(const VpcClient*, const Model::ReplaceSecurityGroupPoliciesRequest&, ReplaceSecurityGroupPoliciesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ReplaceSecurityGroupPoliciesAsyncHandler;
                 typedef Outcome<Core::Error, Model::ReplaceSecurityGroupPolicyResponse> ReplaceSecurityGroupPolicyOutcome;
                 typedef std::future<ReplaceSecurityGroupPolicyOutcome> ReplaceSecurityGroupPolicyOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::ReplaceSecurityGroupPolicyRequest&, ReplaceSecurityGroupPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ReplaceSecurityGroupPolicyAsyncHandler;
@@ -1603,15 +1608,15 @@ This API is completed asynchronously. If you need to query the execution result 
                 CreateCustomerGatewayOutcomeCallable CreateCustomerGatewayCallable(const Model::CreateCustomerGatewayRequest& request);
 
                 /**
-                 *This API is used to create a default VPC.
+                 *This API is used to create a VPC with default settings.
 
-The default VPC is suitable for getting started with and launching public instances, and it can be used like any other VPCs. To create a standard VPC, for which you need to specify a VPC name, VPC IP range, subnet IP range, and subnet availability zone, use the regular CreateVpc API.
+To create a VPC with custom settings, such as VPC name, IP range, subnet IP range, and subnet availability zone, use `CreateVpc` instead.
 
-Under normal circumstances, this API may not create a default VPC. It depends on the network attributes (DescribeAccountAttributes) of your account.
-* If both basic network and VPC are supported, the returned VpcId is 0.
+This API may not create a default VPC. It depends on the network attributes (`DescribeAccountAttributes`) of your account.
+* If both basic network and VPC are supported, the returned `VpcId` is 0.
 * If only VPC is supported, the default VPC information is returned.
 
-You can also use the Force parameter to forcibly return a default VPC.
+You can also use the `Force` parameter to forcibly return a default VPC.
                  * @param req CreateDefaultVpcRequest
                  * @return CreateDefaultVpcOutcome
                  */
@@ -1647,7 +1652,7 @@ You can also use the Force parameter to forcibly return a default VPC.
                 CreateFlowLogOutcomeCallable CreateFlowLogCallable(const Model::CreateFlowLogRequest& request);
 
                 /**
-                 *This API (CreateHaVip) is used to create a highly available virtual IP (HAVIP)
+                 *This API is used to create a highly available virtual IP (HAVIP).
                  * @param req CreateHaVipRequest
                  * @return CreateHaVipOutcome
                  */
@@ -1693,7 +1698,7 @@ Before taking actions on a NAT gateway, ensure that it has been successfully cre
                 CreateNatGatewaySourceIpTranslationNatRuleOutcomeCallable CreateNatGatewaySourceIpTranslationNatRuleCallable(const Model::CreateNatGatewaySourceIpTranslationNatRuleRequest& request);
 
                 /**
-                 *This API is used to create a network detection instance.
+                 *This API is used to create a network probe.
                  * @param req CreateNetDetectRequest
                  * @return CreateNetDetectOutcome
                  */
@@ -2074,7 +2079,7 @@ When a NAT gateway is deleted, all routes containing this gateway are deleted au
                 DeleteNatGatewaySourceIpTranslationNatRuleOutcomeCallable DeleteNatGatewaySourceIpTranslationNatRuleCallable(const Model::DeleteNatGatewaySourceIpTranslationNatRuleRequest& request);
 
                 /**
-                 *This API (DeleteNetDetect) is used to delete a network detection instance.
+                 *This API is used to delete a network probe.
                  * @param req DeleteNetDetectRequest
                  * @return DeleteNetDetectOutcome
                  */
@@ -2249,7 +2254,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
                 DeleteVpnGatewayOutcomeCallable DeleteVpnGatewayCallable(const Model::DeleteVpnGatewayRequest& request);
 
                 /**
-                 *This API is used to delete routes of a VPN gateway.
+                 *This API is used to delete routes of a VPN gateway. 
                  * @param req DeleteVpnGatewayRoutesRequest
                  * @return DeleteVpnGatewayRoutesOutcome
                  */
@@ -2489,6 +2494,7 @@ A service provider can query all review requests created by any `APPID` under it
 
                 /**
                  *This API is used to obtain the download link of an IP location database.
+<font color="#FF0000">This API will be discontinued soon and is only available for existing users.</font>
                  * @param req DescribeIpGeolocationDatabaseUrlRequest
                  * @return DescribeIpGeolocationDatabaseUrlOutcome
                  */
@@ -2498,7 +2504,7 @@ A service provider can query all review requests created by any `APPID` under it
 
                 /**
                  *This API is used to query the location and network information of one or more IP addresses.
-This API is only available for existing customers. For any questions, please [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=6&level2_id=660&source=0&data_title=%E5%BC%B9%E6%80%A7%E5%85%AC%E7%BD%91%20EIP&level3_id=662&queue=96&scene_code=16400&step=2).
+<font color="#FF0000">This API will be discontinued soon and is only available for existing users.</font>
                  * @param req DescribeIpGeolocationInfosRequest
                  * @return DescribeIpGeolocationInfosOutcome
                  */
@@ -2843,7 +2849,7 @@ This API is used to query only the information of IP addresses that are already 
                 DescribeVpnConnectionsOutcomeCallable DescribeVpnConnectionsCallable(const Model::DescribeVpnConnectionsRequest& request);
 
                 /**
-                 *This API (DescribeVpnGatewayCcnRoutes) is used to query VPN gateway-based CCN routes.
+                 *This API is used to query VPN gateway-based CCN routes.
                  * @param req DescribeVpnGatewayCcnRoutesRequest
                  * @return DescribeVpnGatewayCcnRoutesOutcome
                  */
@@ -2852,7 +2858,7 @@ This API is used to query only the information of IP addresses that are already 
                 DescribeVpnGatewayCcnRoutesOutcomeCallable DescribeVpnGatewayCcnRoutesCallable(const Model::DescribeVpnGatewayCcnRoutesRequest& request);
 
                 /**
-                 *This API is used to query destination routes of a route-based VPN gateway.
+                 *This API is used to query VPN gateway routes.
                  * @param req DescribeVpnGatewayRoutesRequest
                  * @return DescribeVpnGatewayRoutesOutcome
                  */
@@ -3004,7 +3010,7 @@ This API is completed asynchronously. If you need to query the execution result 
                 DisassociateVpcEndPointSecurityGroupsOutcomeCallable DisassociateVpcEndPointSecurityGroupsCallable(const Model::DisassociateVpcEndPointSecurityGroupsRequest& request);
 
                 /**
-                 *This API (DownloadCustomerGatewayConfiguration) is used to download a VPN tunnel configuration.
+                 *This API is used to download VPN tunnel configurations.
                  * @param req DownloadCustomerGatewayConfigurationRequest
                  * @return DownloadCustomerGatewayConfigurationOutcome
                  */
@@ -3511,7 +3517,7 @@ This API is completed asynchronously. If you need to query the execution result 
                 ModifyVpnGatewayAttributeOutcomeCallable ModifyVpnGatewayAttributeCallable(const Model::ModifyVpnGatewayAttributeRequest& request);
 
                 /**
-                 *This API (ModifyVpnGatewayCcnRoutes) is used to modify VPN gateway-based CCN routes.
+                 *This API is used to modify VPN gateway-based CCN routes.
                  * @param req ModifyVpnGatewayCcnRoutesRequest
                  * @return ModifyVpnGatewayCcnRoutesOutcome
                  */
@@ -3520,7 +3526,7 @@ This API is completed asynchronously. If you need to query the execution result 
                 ModifyVpnGatewayCcnRoutesOutcomeCallable ModifyVpnGatewayCcnRoutesCallable(const Model::ModifyVpnGatewayCcnRoutesRequest& request);
 
                 /**
-                 *This API is used to modify the route status of a VPN gateway.
+                 *This API is used to modify VPN gateway routes.
                  * @param req ModifyVpnGatewayRoutesRequest
                  * @return ModifyVpnGatewayRoutesOutcome
                  */
@@ -3614,6 +3620,16 @@ This API is completed asynchronously. If you need to query the execution result 
                 ReplaceRoutesOutcomeCallable ReplaceRoutesCallable(const Model::ReplaceRoutesRequest& request);
 
                 /**
+                 *This API is used to batch modify security group policies.
+Policies to modify must be in the same direction. `PolicyIndex` must be specified.
+                 * @param req ReplaceSecurityGroupPoliciesRequest
+                 * @return ReplaceSecurityGroupPoliciesOutcome
+                 */
+                ReplaceSecurityGroupPoliciesOutcome ReplaceSecurityGroupPolicies(const Model::ReplaceSecurityGroupPoliciesRequest &request);
+                void ReplaceSecurityGroupPoliciesAsync(const Model::ReplaceSecurityGroupPoliciesRequest& request, const ReplaceSecurityGroupPoliciesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ReplaceSecurityGroupPoliciesOutcomeCallable ReplaceSecurityGroupPoliciesCallable(const Model::ReplaceSecurityGroupPoliciesRequest& request);
+
+                /**
                  *This API (ReplaceSecurityGroupPolicy) is used to replace a single security group policy (SecurityGroupPolicy).
 Only one policy in a single direction can be replaced in each request, and the PolicyIndex parameter must be specified.
                  * @param req ReplaceSecurityGroupPolicyRequest
@@ -3698,7 +3714,7 @@ Note: Starting from Dec 15, 2022, CAM authorization is required for a sub-accoun
                 SetCcnRegionBandwidthLimitsOutcomeCallable SetCcnRegionBandwidthLimitsCallable(const Model::SetCcnRegionBandwidthLimitsRequest& request);
 
                 /**
-                 *This API is used to specify whether to enable auto-renewal for the VPN gateway.
+                 *This API is used set the auto-renewal configuration of a VPN gateway.
                  * @param req SetVpnGatewaysRenewFlagRequest
                  * @return SetVpnGatewaysRenewFlagOutcome
                  */

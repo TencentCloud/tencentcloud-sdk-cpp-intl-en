@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/vpc/v20170312/model/CcnRegionBandwidthLimit.h>
+#include <tencentcloud/vpc/v20170312/model/Tag.h>
 
 
 namespace TencentCloud
@@ -222,6 +223,31 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool MarketIdHasBeenSet() const;
 
+                    /**
+                     * 获取The list of tags to be bound.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return TagSet The list of tags to be bound.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<Tag> GetTagSet() const;
+
+                    /**
+                     * 设置The list of tags to be bound.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param _tagSet The list of tags to be bound.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetTagSet(const std::vector<Tag>& _tagSet);
+
+                    /**
+                     * 判断参数 TagSet 是否已赋值
+                     * @return TagSet 是否已赋值
+                     * 
+                     */
+                    bool TagSetHasBeenSet() const;
+
                 private:
 
                     /**
@@ -272,6 +298,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     std::string m_marketId;
                     bool m_marketIdHasBeenSet;
+
+                    /**
+                     * The list of tags to be bound.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<Tag> m_tagSet;
+                    bool m_tagSetHasBeenSet;
 
                 };
             }

@@ -98,15 +98,15 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取The Offset. The default value is 0. For more information about Offset, see the relevant section in the API Introduction.
-                     * @return Offset The Offset. The default value is 0. For more information about Offset, see the relevant section in the API Introduction.
+                     * 获取Offset. Default value: 0. For more information on Offset, see the relevant section in the API [Introduction](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
+                     * @return Offset Offset. Default value: 0. For more information on Offset, see the relevant section in the API [Introduction](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置The Offset. The default value is 0. For more information about Offset, see the relevant section in the API Introduction.
-                     * @param _offset The Offset. The default value is 0. For more information about Offset, see the relevant section in the API Introduction.
+                     * 设置Offset. Default value: 0. For more information on Offset, see the relevant section in the API [Introduction](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
+                     * @param _offset Offset. Default value: 0. For more information on Offset, see the relevant section in the API [Introduction](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -157,7 +157,7 @@ namespace TencentCloud
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * The Offset. The default value is 0. For more information about Offset, see the relevant section in the API Introduction.
+                     * Offset. Default value: 0. For more information on Offset, see the relevant section in the API [Introduction](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
