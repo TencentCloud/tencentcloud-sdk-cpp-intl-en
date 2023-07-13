@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Only `INPUT_SWITCH` is supported currently.
-                     * @return EventType Only `INPUT_SWITCH` is supported currently.
+                     * 获取Valid values: INPUT_SWITCH, TIMED_RECORD, SCTE35_TIME_SIGNAL, SCTE35_SPLICE_INSERT, SCTE35_RETURN_TO_NETWORK.
+                     * @return EventType Valid values: INPUT_SWITCH, TIMED_RECORD, SCTE35_TIME_SIGNAL, SCTE35_SPLICE_INSERT, SCTE35_RETURN_TO_NETWORK.
                      * 
                      */
                     std::string GetEventType() const;
 
                     /**
-                     * 设置Only `INPUT_SWITCH` is supported currently.
-                     * @param _eventType Only `INPUT_SWITCH` is supported currently.
+                     * 设置Valid values: INPUT_SWITCH, TIMED_RECORD, SCTE35_TIME_SIGNAL, SCTE35_SPLICE_INSERT, SCTE35_RETURN_TO_NETWORK.
+                     * @param _eventType Valid values: INPUT_SWITCH, TIMED_RECORD, SCTE35_TIME_SIGNAL, SCTE35_SPLICE_INSERT, SCTE35_RETURN_TO_NETWORK.
                      * 
                      */
                     void SetEventType(const std::string& _eventType);
@@ -219,7 +219,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Only `INPUT_SWITCH` is supported currently.
+                     * Valid values: INPUT_SWITCH, TIMED_RECORD, SCTE35_TIME_SIGNAL, SCTE35_SPLICE_INSERT, SCTE35_RETURN_TO_NETWORK.
                      */
                     std::string m_eventType;
                     bool m_eventTypeHasBeenSet;
