@@ -85,6 +85,8 @@
 #include <tencentcloud/gaap/v20180529/model/DescribeAccessRegionsResponse.h>
 #include <tencentcloud/gaap/v20180529/model/DescribeAccessRegionsByDestRegionRequest.h>
 #include <tencentcloud/gaap/v20180529/model/DescribeAccessRegionsByDestRegionResponse.h>
+#include <tencentcloud/gaap/v20180529/model/DescribeAuthSignatureRequest.h>
+#include <tencentcloud/gaap/v20180529/model/DescribeAuthSignatureResponse.h>
 #include <tencentcloud/gaap/v20180529/model/DescribeBlackHeaderRequest.h>
 #include <tencentcloud/gaap/v20180529/model/DescribeBlackHeaderResponse.h>
 #include <tencentcloud/gaap/v20180529/model/DescribeCertificateDetailRequest.h>
@@ -304,6 +306,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeAccessRegionsByDestRegionResponse> DescribeAccessRegionsByDestRegionOutcome;
                 typedef std::future<DescribeAccessRegionsByDestRegionOutcome> DescribeAccessRegionsByDestRegionOutcomeCallable;
                 typedef std::function<void(const GaapClient*, const Model::DescribeAccessRegionsByDestRegionRequest&, DescribeAccessRegionsByDestRegionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAccessRegionsByDestRegionAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAuthSignatureResponse> DescribeAuthSignatureOutcome;
+                typedef std::future<DescribeAuthSignatureOutcome> DescribeAuthSignatureOutcomeCallable;
+                typedef std::function<void(const GaapClient*, const Model::DescribeAuthSignatureRequest&, DescribeAuthSignatureOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAuthSignatureAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeBlackHeaderResponse> DescribeBlackHeaderOutcome;
                 typedef std::future<DescribeBlackHeaderOutcome> DescribeBlackHeaderOutcomeCallable;
                 typedef std::function<void(const GaapClient*, const Model::DescribeBlackHeaderRequest&, DescribeBlackHeaderOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBlackHeaderAsyncHandler;
@@ -755,6 +760,15 @@ This API only supports connections of version 3.0.
                 DescribeAccessRegionsByDestRegionOutcome DescribeAccessRegionsByDestRegion(const Model::DescribeAccessRegionsByDestRegionRequest &request);
                 void DescribeAccessRegionsByDestRegionAsync(const Model::DescribeAccessRegionsByDestRegionRequest& request, const DescribeAccessRegionsByDestRegionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeAccessRegionsByDestRegionOutcomeCallable DescribeAccessRegionsByDestRegionCallable(const Model::DescribeAccessRegionsByDestRegionRequest& request);
+
+                /**
+                 *This API is used to get a request signature that can prevent parameter tampering in the process of triggering orders, getting quotes, or activating subscription services.
+                 * @param req DescribeAuthSignatureRequest
+                 * @return DescribeAuthSignatureOutcome
+                 */
+                DescribeAuthSignatureOutcome DescribeAuthSignature(const Model::DescribeAuthSignatureRequest &request);
+                void DescribeAuthSignatureAsync(const Model::DescribeAuthSignatureRequest& request, const DescribeAuthSignatureAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAuthSignatureOutcomeCallable DescribeAuthSignatureCallable(const Model::DescribeAuthSignatureRequest& request);
 
                 /**
                  *This API is used to query names of blocked custom headers.

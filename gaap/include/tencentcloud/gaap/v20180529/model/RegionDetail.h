@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/gaap/v20180529/model/SupportFeature.h>
 
 
 namespace TencentCloud
@@ -216,6 +217,31 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool FeatureBitmapHasBeenSet() const;
 
+                    /**
+                     * 获取Network support 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SupportFeature Network support 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    SupportFeature GetSupportFeature() const;
+
+                    /**
+                     * 设置Network support 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _supportFeature Network support 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetSupportFeature(const SupportFeature& _supportFeature);
+
+                    /**
+                     * 判断参数 SupportFeature 是否已赋值
+                     * @return SupportFeature 是否已赋值
+                     * 
+                     */
+                    bool SupportFeatureHasBeenSet() const;
+
                 private:
 
                     /**
@@ -264,6 +290,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     uint64_t m_featureBitmap;
                     bool m_featureBitmapHasBeenSet;
+
+                    /**
+                     * Network support 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    SupportFeature m_supportFeature;
+                    bool m_supportFeatureHasBeenSet;
 
                 };
             }
