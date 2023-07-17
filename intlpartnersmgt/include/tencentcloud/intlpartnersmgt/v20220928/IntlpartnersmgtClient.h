@@ -37,12 +37,20 @@
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerBillDetailResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerBillSummaryRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerBillSummaryResponse.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerInfoRequest.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerInfoResponse.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerUinRequest.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerUinResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/GetCountryCodesRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/GetCountryCodesResponse.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/QueryAccountVerificationStatusRequest.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/QueryAccountVerificationStatusResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryCreditAllocationHistoryRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryCreditAllocationHistoryResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryCreditByUinListRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryCreditByUinListResponse.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/QueryCreditQuotaRequest.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/QueryCreditQuotaResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryCustomersCreditRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryCustomersCreditResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryDirectCustomersCreditRequest.h>
@@ -90,15 +98,27 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeCustomerBillSummaryResponse> DescribeCustomerBillSummaryOutcome;
                 typedef std::future<DescribeCustomerBillSummaryOutcome> DescribeCustomerBillSummaryOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::DescribeCustomerBillSummaryRequest&, DescribeCustomerBillSummaryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCustomerBillSummaryAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCustomerInfoResponse> DescribeCustomerInfoOutcome;
+                typedef std::future<DescribeCustomerInfoOutcome> DescribeCustomerInfoOutcomeCallable;
+                typedef std::function<void(const IntlpartnersmgtClient*, const Model::DescribeCustomerInfoRequest&, DescribeCustomerInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCustomerInfoAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCustomerUinResponse> DescribeCustomerUinOutcome;
+                typedef std::future<DescribeCustomerUinOutcome> DescribeCustomerUinOutcomeCallable;
+                typedef std::function<void(const IntlpartnersmgtClient*, const Model::DescribeCustomerUinRequest&, DescribeCustomerUinOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCustomerUinAsyncHandler;
                 typedef Outcome<Core::Error, Model::GetCountryCodesResponse> GetCountryCodesOutcome;
                 typedef std::future<GetCountryCodesOutcome> GetCountryCodesOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::GetCountryCodesRequest&, GetCountryCodesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetCountryCodesAsyncHandler;
+                typedef Outcome<Core::Error, Model::QueryAccountVerificationStatusResponse> QueryAccountVerificationStatusOutcome;
+                typedef std::future<QueryAccountVerificationStatusOutcome> QueryAccountVerificationStatusOutcomeCallable;
+                typedef std::function<void(const IntlpartnersmgtClient*, const Model::QueryAccountVerificationStatusRequest&, QueryAccountVerificationStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryAccountVerificationStatusAsyncHandler;
                 typedef Outcome<Core::Error, Model::QueryCreditAllocationHistoryResponse> QueryCreditAllocationHistoryOutcome;
                 typedef std::future<QueryCreditAllocationHistoryOutcome> QueryCreditAllocationHistoryOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::QueryCreditAllocationHistoryRequest&, QueryCreditAllocationHistoryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryCreditAllocationHistoryAsyncHandler;
                 typedef Outcome<Core::Error, Model::QueryCreditByUinListResponse> QueryCreditByUinListOutcome;
                 typedef std::future<QueryCreditByUinListOutcome> QueryCreditByUinListOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::QueryCreditByUinListRequest&, QueryCreditByUinListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryCreditByUinListAsyncHandler;
+                typedef Outcome<Core::Error, Model::QueryCreditQuotaResponse> QueryCreditQuotaOutcome;
+                typedef std::future<QueryCreditQuotaOutcome> QueryCreditQuotaOutcomeCallable;
+                typedef std::function<void(const IntlpartnersmgtClient*, const Model::QueryCreditQuotaRequest&, QueryCreditQuotaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryCreditQuotaAsyncHandler;
                 typedef Outcome<Core::Error, Model::QueryCustomersCreditResponse> QueryCustomersCreditOutcome;
                 typedef std::future<QueryCustomersCreditOutcome> QueryCustomersCreditOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::QueryCustomersCreditRequest&, QueryCustomersCreditOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryCustomersCreditAsyncHandler;
@@ -192,6 +212,24 @@ Notes:<br>
                 DescribeCustomerBillSummaryOutcomeCallable DescribeCustomerBillSummaryCallable(const Model::DescribeCustomerBillSummaryRequest& request);
 
                 /**
+                 *This API is used to query the customer information.
+                 * @param req DescribeCustomerInfoRequest
+                 * @return DescribeCustomerInfoOutcome
+                 */
+                DescribeCustomerInfoOutcome DescribeCustomerInfo(const Model::DescribeCustomerInfoRequest &request);
+                void DescribeCustomerInfoAsync(const Model::DescribeCustomerInfoRequest& request, const DescribeCustomerInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCustomerInfoOutcomeCallable DescribeCustomerInfoCallable(const Model::DescribeCustomerInfoRequest& request);
+
+                /**
+                 *This API is used to query the list of customer UINs.
+                 * @param req DescribeCustomerUinRequest
+                 * @return DescribeCustomerUinOutcome
+                 */
+                DescribeCustomerUinOutcome DescribeCustomerUin(const Model::DescribeCustomerUinRequest &request);
+                void DescribeCustomerUinAsync(const Model::DescribeCustomerUinRequest& request, const DescribeCustomerUinAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCustomerUinOutcomeCallable DescribeCustomerUinCallable(const Model::DescribeCustomerUinRequest& request);
+
+                /**
                  *This API is used to obtain country/region codes.
                  * @param req GetCountryCodesRequest
                  * @return GetCountryCodesOutcome
@@ -199,6 +237,15 @@ Notes:<br>
                 GetCountryCodesOutcome GetCountryCodes(const Model::GetCountryCodesRequest &request);
                 void GetCountryCodesAsync(const Model::GetCountryCodesRequest& request, const GetCountryCodesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 GetCountryCodesOutcomeCallable GetCountryCodesCallable(const Model::GetCountryCodesRequest& request);
+
+                /**
+                 *This API is used to query the account verification status.
+                 * @param req QueryAccountVerificationStatusRequest
+                 * @return QueryAccountVerificationStatusOutcome
+                 */
+                QueryAccountVerificationStatusOutcome QueryAccountVerificationStatus(const Model::QueryAccountVerificationStatusRequest &request);
+                void QueryAccountVerificationStatusAsync(const Model::QueryAccountVerificationStatusRequest& request, const QueryAccountVerificationStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                QueryAccountVerificationStatusOutcomeCallable QueryAccountVerificationStatusCallable(const Model::QueryAccountVerificationStatusRequest& request);
 
                 /**
                  *This API is used to query all the credit allocation records of a single customer.
@@ -217,6 +264,15 @@ Notes:<br>
                 QueryCreditByUinListOutcome QueryCreditByUinList(const Model::QueryCreditByUinListRequest &request);
                 void QueryCreditByUinListAsync(const Model::QueryCreditByUinListRequest& request, const QueryCreditByUinListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 QueryCreditByUinListOutcomeCallable QueryCreditByUinListCallable(const Model::QueryCreditByUinListRequest& request);
+
+                /**
+                 *This API is used to query customer credits.
+                 * @param req QueryCreditQuotaRequest
+                 * @return QueryCreditQuotaOutcome
+                 */
+                QueryCreditQuotaOutcome QueryCreditQuota(const Model::QueryCreditQuotaRequest &request);
+                void QueryCreditQuotaAsync(const Model::QueryCreditQuotaRequest& request, const QueryCreditQuotaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                QueryCreditQuotaOutcomeCallable QueryCreditQuotaCallable(const Model::QueryCreditQuotaRequest& request);
 
                 /**
                  *This API is used for a partner to the credits and basic information of cutomers.

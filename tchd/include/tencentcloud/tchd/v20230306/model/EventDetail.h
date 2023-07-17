@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Describes information on an event
+                * Describes information on an event.
                 */
                 class EventDetail : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Product ID
-                     * @return ProductId Product ID
+                     * 获取Product ID.
+                     * @return ProductId Product ID.
                      * 
                      */
                     std::string GetProductId() const;
 
                     /**
-                     * 设置Product ID
-                     * @param _productId Product ID
+                     * 设置Product ID.
+                     * @param _productId Product ID.
                      * 
                      */
                     void SetProductId(const std::string& _productId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ProductIdHasBeenSet() const;
 
                     /**
-                     * 获取Product name
-                     * @return ProductName Product name
+                     * 获取Product name.
+                     * @return ProductName Product name.
                      * 
                      */
                     std::string GetProductName() const;
 
                     /**
-                     * 设置Product name
-                     * @param _productName Product name
+                     * 设置Product name.
+                     * @param _productName Product name.
                      * 
                      */
                     void SetProductName(const std::string& _productName);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ProductNameHasBeenSet() const;
 
                     /**
-                     * 获取Region ID
-                     * @return RegionId Region ID
+                     * 获取Region ID.
+                     * @return RegionId Region ID.
                      * 
                      */
                     std::string GetRegionId() const;
 
                     /**
-                     * 设置Region ID
-                     * @param _regionId Region ID
+                     * 设置Region ID.
+                     * @param _regionId Region ID.
                      * 
                      */
                     void SetRegionId(const std::string& _regionId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool RegionIdHasBeenSet() const;
 
                     /**
-                     * 获取Region name
-                     * @return RegionName Region name
+                     * 获取Region name.
+                     * @return RegionName Region name.
                      * 
                      */
                     std::string GetRegionName() const;
 
                     /**
-                     * 设置Region name
-                     * @param _regionName Region name
+                     * 设置Region name.
+                     * @param _regionName Region name.
                      * 
                      */
                     void SetRegionName(const std::string& _regionName);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool RegionNameHasBeenSet() const;
 
                     /**
-                     * 获取Event start time
-                     * @return StartTime Event start time
+                     * 获取Event start time.
+                     * @return StartTime Event start time.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Event start time
-                     * @param _startTime Event start time
+                     * 设置Event start time.
+                     * @param _startTime Event start time.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Current status: Normally, Informational, Degradation
-                     * @return CurrentStatus Current status: Normally, Informational, Degradation
+                     * 获取Current status: Normally, Informational, Degradation.
+                     * @return CurrentStatus Current status: Normally, Informational, Degradation.
                      * 
                      */
                     std::string GetCurrentStatus() const;
 
                     /**
-                     * 设置Current status: Normally, Informational, Degradation
-                     * @param _currentStatus Current status: Normally, Informational, Degradation
+                     * 设置Current status: Normally, Informational, Degradation.
+                     * @param _currentStatus Current status: Normally, Informational, Degradation.
                      * 
                      */
                     void SetCurrentStatus(const std::string& _currentStatus);
@@ -196,31 +196,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Product ID
+                     * Product ID.
                      */
                     std::string m_productId;
                     bool m_productIdHasBeenSet;
 
                     /**
-                     * Product name
+                     * Product name.
                      */
                     std::string m_productName;
                     bool m_productNameHasBeenSet;
 
                     /**
-                     * Region ID
+                     * Region ID.
                      */
                     std::string m_regionId;
                     bool m_regionIdHasBeenSet;
 
                     /**
-                     * Region name
+                     * Region name.
                      */
                     std::string m_regionName;
                     bool m_regionNameHasBeenSet;
 
                     /**
-                     * Event start time
+                     * Event start time.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
@@ -232,7 +232,7 @@ namespace TencentCloud
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Current status: Normally, Informational, Degradation
+                     * Current status: Normally, Informational, Degradation.
                      */
                     std::string m_currentStatus;
                     bool m_currentStatusHasBeenSet;

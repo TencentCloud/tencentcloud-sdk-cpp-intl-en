@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_TCHD_V20230306_MODEL_PRODUCTEVENTLIST_H_
-#define TENCENTCLOUD_TCHD_V20230306_MODEL_PRODUCTEVENTLIST_H_
+#ifndef TENCENTCLOUD_INTLPARTNERSMGT_V20220928_MODEL_DESCRIBECUSTOMERUINDATA_H_
+#define TENCENTCLOUD_INTLPARTNERSMGT_V20220928_MODEL_DESCRIBECUSTOMERUINDATA_H_
 
 #include <string>
 #include <vector>
@@ -24,62 +24,56 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/tchd/v20230306/model/EventDetail.h>
 
 
 namespace TencentCloud
 {
-    namespace Tchd
+    namespace Intlpartnersmgt
     {
-        namespace V20230306
+        namespace V20220928
         {
             namespace Model
             {
                 /**
-                * Detailed event information.
+                * List of customer UINs
                 */
-                class ProductEventList : public AbstractModel
+                class DescribeCustomerUinData : public AbstractModel
                 {
                 public:
-                    ProductEventList();
-                    ~ProductEventList() = default;
+                    DescribeCustomerUinData();
+                    ~DescribeCustomerUinData() = default;
                     void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
 
                     /**
-                     * 获取Detailed event information.
-Note: this field may return null, indicating that no valid value is obtained.
-                     * @return EventList Detailed event information.
-Note: this field may return null, indicating that no valid value is obtained.
+                     * 获取Customer UIN Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CustomerUin Customer UIN Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    std::vector<EventDetail> GetEventList() const;
+                    std::string GetCustomerUin() const;
 
                     /**
-                     * 设置Detailed event information.
-Note: this field may return null, indicating that no valid value is obtained.
-                     * @param _eventList Detailed event information.
-Note: this field may return null, indicating that no valid value is obtained.
+                     * 设置Customer UIN Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _customerUin Customer UIN Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    void SetEventList(const std::vector<EventDetail>& _eventList);
+                    void SetCustomerUin(const std::string& _customerUin);
 
                     /**
-                     * 判断参数 EventList 是否已赋值
-                     * @return EventList 是否已赋值
+                     * 判断参数 CustomerUin 是否已赋值
+                     * @return CustomerUin 是否已赋值
                      * 
                      */
-                    bool EventListHasBeenSet() const;
+                    bool CustomerUinHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Detailed event information.
-Note: this field may return null, indicating that no valid value is obtained.
+                     * Customer UIN Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    std::vector<EventDetail> m_eventList;
-                    bool m_eventListHasBeenSet;
+                    std::string m_customerUin;
+                    bool m_customerUinHasBeenSet;
 
                 };
             }
@@ -87,4 +81,4 @@ Note: this field may return null, indicating that no valid value is obtained.
     }
 }
 
-#endif // !TENCENTCLOUD_TCHD_V20230306_MODEL_PRODUCTEVENTLIST_H_
+#endif // !TENCENTCLOUD_INTLPARTNERSMGT_V20220928_MODEL_DESCRIBECUSTOMERUINDATA_H_

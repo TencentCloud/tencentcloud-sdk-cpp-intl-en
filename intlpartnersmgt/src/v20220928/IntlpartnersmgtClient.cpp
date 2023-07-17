@@ -341,6 +341,92 @@ IntlpartnersmgtClient::DescribeCustomerBillSummaryOutcomeCallable Intlpartnersmg
     return task->get_future();
 }
 
+IntlpartnersmgtClient::DescribeCustomerInfoOutcome IntlpartnersmgtClient::DescribeCustomerInfo(const DescribeCustomerInfoRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCustomerInfo");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCustomerInfoResponse rsp = DescribeCustomerInfoResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCustomerInfoOutcome(rsp);
+        else
+            return DescribeCustomerInfoOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCustomerInfoOutcome(outcome.GetError());
+    }
+}
+
+void IntlpartnersmgtClient::DescribeCustomerInfoAsync(const DescribeCustomerInfoRequest& request, const DescribeCustomerInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeCustomerInfo(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+IntlpartnersmgtClient::DescribeCustomerInfoOutcomeCallable IntlpartnersmgtClient::DescribeCustomerInfoCallable(const DescribeCustomerInfoRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeCustomerInfoOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeCustomerInfo(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+IntlpartnersmgtClient::DescribeCustomerUinOutcome IntlpartnersmgtClient::DescribeCustomerUin(const DescribeCustomerUinRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCustomerUin");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCustomerUinResponse rsp = DescribeCustomerUinResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCustomerUinOutcome(rsp);
+        else
+            return DescribeCustomerUinOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCustomerUinOutcome(outcome.GetError());
+    }
+}
+
+void IntlpartnersmgtClient::DescribeCustomerUinAsync(const DescribeCustomerUinRequest& request, const DescribeCustomerUinAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeCustomerUin(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+IntlpartnersmgtClient::DescribeCustomerUinOutcomeCallable IntlpartnersmgtClient::DescribeCustomerUinCallable(const DescribeCustomerUinRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeCustomerUinOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeCustomerUin(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 IntlpartnersmgtClient::GetCountryCodesOutcome IntlpartnersmgtClient::GetCountryCodes(const GetCountryCodesRequest &request)
 {
     auto outcome = MakeRequest(request, "GetCountryCodes");
@@ -377,6 +463,49 @@ IntlpartnersmgtClient::GetCountryCodesOutcomeCallable IntlpartnersmgtClient::Get
         [this, request]()
         {
             return this->GetCountryCodes(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+IntlpartnersmgtClient::QueryAccountVerificationStatusOutcome IntlpartnersmgtClient::QueryAccountVerificationStatus(const QueryAccountVerificationStatusRequest &request)
+{
+    auto outcome = MakeRequest(request, "QueryAccountVerificationStatus");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        QueryAccountVerificationStatusResponse rsp = QueryAccountVerificationStatusResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return QueryAccountVerificationStatusOutcome(rsp);
+        else
+            return QueryAccountVerificationStatusOutcome(o.GetError());
+    }
+    else
+    {
+        return QueryAccountVerificationStatusOutcome(outcome.GetError());
+    }
+}
+
+void IntlpartnersmgtClient::QueryAccountVerificationStatusAsync(const QueryAccountVerificationStatusRequest& request, const QueryAccountVerificationStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->QueryAccountVerificationStatus(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+IntlpartnersmgtClient::QueryAccountVerificationStatusOutcomeCallable IntlpartnersmgtClient::QueryAccountVerificationStatusCallable(const QueryAccountVerificationStatusRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<QueryAccountVerificationStatusOutcome()>>(
+        [this, request]()
+        {
+            return this->QueryAccountVerificationStatus(request);
         }
     );
 
@@ -463,6 +592,49 @@ IntlpartnersmgtClient::QueryCreditByUinListOutcomeCallable IntlpartnersmgtClient
         [this, request]()
         {
             return this->QueryCreditByUinList(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+IntlpartnersmgtClient::QueryCreditQuotaOutcome IntlpartnersmgtClient::QueryCreditQuota(const QueryCreditQuotaRequest &request)
+{
+    auto outcome = MakeRequest(request, "QueryCreditQuota");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        QueryCreditQuotaResponse rsp = QueryCreditQuotaResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return QueryCreditQuotaOutcome(rsp);
+        else
+            return QueryCreditQuotaOutcome(o.GetError());
+    }
+    else
+    {
+        return QueryCreditQuotaOutcome(outcome.GetError());
+    }
+}
+
+void IntlpartnersmgtClient::QueryCreditQuotaAsync(const QueryCreditQuotaRequest& request, const QueryCreditQuotaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->QueryCreditQuota(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+IntlpartnersmgtClient::QueryCreditQuotaOutcomeCallable IntlpartnersmgtClient::QueryCreditQuotaCallable(const QueryCreditQuotaRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<QueryCreditQuotaOutcome()>>(
+        [this, request]()
+        {
+            return this->QueryCreditQuota(request);
         }
     );
 

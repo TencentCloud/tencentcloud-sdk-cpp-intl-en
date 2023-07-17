@@ -85,23 +85,19 @@ namespace TencentCloud
                     bool ProductIdsHasBeenSet() const;
 
                     /**
-                     * 获取1. Query by Region ID(s). Region ID examples: ap-guangzhou、ap-shanghai、ap-singapore.
-2. The region ID for non-region-specific products should be set to "non-regional".
-
-                     * @return RegionIds 1. Query by Region ID(s). Region ID examples: ap-guangzhou、ap-shanghai、ap-singapore.
-2. The region ID for non-region-specific products should be set to "non-regional".
-
+                     * 获取 1. Query by Region ID(s). Region ID examples: ap-guangzhou、ap-shanghai、ap-singapore.
+2. The region ID for non-region-specific products should be set to non-regional.
+                     * @return RegionIds  1. Query by Region ID(s). Region ID examples: ap-guangzhou、ap-shanghai、ap-singapore.
+2. The region ID for non-region-specific products should be set to non-regional.
                      * 
                      */
                     std::vector<std::string> GetRegionIds() const;
 
                     /**
-                     * 设置1. Query by Region ID(s). Region ID examples: ap-guangzhou、ap-shanghai、ap-singapore.
-2. The region ID for non-region-specific products should be set to "non-regional".
-
-                     * @param _regionIds 1. Query by Region ID(s). Region ID examples: ap-guangzhou、ap-shanghai、ap-singapore.
-2. The region ID for non-region-specific products should be set to "non-regional".
-
+                     * 设置 1. Query by Region ID(s). Region ID examples: ap-guangzhou、ap-shanghai、ap-singapore.
+2. The region ID for non-region-specific products should be set to non-regional.
+                     * @param _regionIds  1. Query by Region ID(s). Region ID examples: ap-guangzhou、ap-shanghai、ap-singapore.
+2. The region ID for non-region-specific products should be set to non-regional.
                      * 
                      */
                     void SetRegionIds(const std::vector<std::string>& _regionIds);
@@ -128,9 +124,8 @@ namespace TencentCloud
                     bool m_productIdsHasBeenSet;
 
                     /**
-                     * 1. Query by Region ID(s). Region ID examples: ap-guangzhou、ap-shanghai、ap-singapore.
-2. The region ID for non-region-specific products should be set to "non-regional".
-
+                     *  1. Query by Region ID(s). Region ID examples: ap-guangzhou、ap-shanghai、ap-singapore.
+2. The region ID for non-region-specific products should be set to non-regional.
                      */
                     std::vector<std::string> m_regionIds;
                     bool m_regionIdsHasBeenSet;
