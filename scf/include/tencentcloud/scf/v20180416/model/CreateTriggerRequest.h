@@ -210,6 +210,27 @@ namespace TencentCloud
                      */
                     bool CustomArgumentHasBeenSet() const;
 
+                    /**
+                     * 获取Trigger description
+                     * @return Description Trigger description
+                     * 
+                     */
+                    std::string GetDescription() const;
+
+                    /**
+                     * 设置Trigger description
+                     * @param _description Trigger description
+                     * 
+                     */
+                    void SetDescription(const std::string& _description);
+
+                    /**
+                     * 判断参数 Description 是否已赋值
+                     * @return Description 是否已赋值
+                     * 
+                     */
+                    bool DescriptionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -259,6 +280,12 @@ namespace TencentCloud
                      */
                     std::string m_customArgument;
                     bool m_customArgumentHasBeenSet;
+
+                    /**
+                     * Trigger description
+                     */
+                    std::string m_description;
+                    bool m_descriptionHasBeenSet;
 
                 };
             }

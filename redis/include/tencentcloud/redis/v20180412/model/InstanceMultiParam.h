@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ParamNameHasBeenSet() const;
 
                     /**
-                     * 获取Parameter type: Multi
-                     * @return ValueType Parameter type: Multi
+                     * 获取Parameter Type such as  `MULTI`
+                     * @return ValueType Parameter Type such as  `MULTI`
                      * 
                      */
                     std::string GetValueType() const;
 
                     /**
-                     * 设置Parameter type: Multi
-                     * @param _valueType Parameter type: Multi
+                     * 设置Parameter Type such as  `MULTI`
+                     * @param _valueType Parameter Type such as  `MULTI`
                      * 
                      */
                     void SetValueType(const std::string& _valueType);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ValueTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether restart is required after a modification is made. Valid values: true, false
-                     * @return NeedRestart Whether restart is required after a modification is made. Valid values: true, false
+                     * 获取Whether to restart the database after modifying the parameter. Valid values:  - `true` (required) - `false` (not required)
+                     * @return NeedRestart Whether to restart the database after modifying the parameter. Valid values:  - `true` (required) - `false` (not required)
                      * 
                      */
                     std::string GetNeedRestart() const;
 
                     /**
-                     * 设置Whether restart is required after a modification is made. Valid values: true, false
-                     * @param _needRestart Whether restart is required after a modification is made. Valid values: true, false
+                     * 设置Whether to restart the database after modifying the parameter. Valid values:  - `true` (required) - `false` (not required)
+                     * @param _needRestart Whether to restart the database after modifying the parameter. Valid values:  - `true` (required) - `false` (not required)
                      * 
                      */
                     void SetNeedRestart(const std::string& _needRestart);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool CurrentValueHasBeenSet() const;
 
                     /**
-                     * 获取Parameter description
-                     * @return Tips Parameter description
+                     * 获取Description
+                     * @return Tips Description
                      * 
                      */
                     std::string GetTips() const;
 
                     /**
-                     * 设置Parameter description
-                     * @param _tips Parameter description
+                     * 设置Description
+                     * @param _tips Description
                      * 
                      */
                     void SetTips(const std::string& _tips);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool TipsHasBeenSet() const;
 
                     /**
-                     * 获取Parameter description
-                     * @return EnumValue Parameter description
+                     * 获取Description
+                     * @return EnumValue Description
                      * 
                      */
                     std::vector<std::string> GetEnumValue() const;
 
                     /**
-                     * 设置Parameter description
-                     * @param _enumValue Parameter description
+                     * 设置Description
+                     * @param _enumValue Description
                      * 
                      */
                     void SetEnumValue(const std::vector<std::string>& _enumValue);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool EnumValueHasBeenSet() const;
 
                     /**
-                     * 获取Parameter status. 1: modifying; 2: modified
-                     * @return Status Parameter status. 1: modifying; 2: modified
+                     * 获取Parameter modification status. Valid values: - `1` (modifying) - `2` (modified)
+                     * @return Status Parameter modification status. Valid values: - `1` (modifying) - `2` (modified)
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Parameter status. 1: modifying; 2: modified
-                     * @param _status Parameter status. 1: modifying; 2: modified
+                     * 设置Parameter modification status. Valid values: - `1` (modifying) - `2` (modified)
+                     * @param _status Parameter modification status. Valid values: - `1` (modifying) - `2` (modified)
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -223,13 +223,13 @@ namespace TencentCloud
                     bool m_paramNameHasBeenSet;
 
                     /**
-                     * Parameter type: Multi
+                     * Parameter Type such as  `MULTI`
                      */
                     std::string m_valueType;
                     bool m_valueTypeHasBeenSet;
 
                     /**
-                     * Whether restart is required after a modification is made. Valid values: true, false
+                     * Whether to restart the database after modifying the parameter. Valid values:  - `true` (required) - `false` (not required)
                      */
                     std::string m_needRestart;
                     bool m_needRestartHasBeenSet;
@@ -247,19 +247,19 @@ namespace TencentCloud
                     bool m_currentValueHasBeenSet;
 
                     /**
-                     * Parameter description
+                     * Description
                      */
                     std::string m_tips;
                     bool m_tipsHasBeenSet;
 
                     /**
-                     * Parameter description
+                     * Description
                      */
                     std::vector<std::string> m_enumValue;
                     bool m_enumValueHasBeenSet;
 
                     /**
-                     * Parameter status. 1: modifying; 2: modified
+                     * Parameter modification status. Valid values: - `1` (modifying) - `2` (modified)
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;

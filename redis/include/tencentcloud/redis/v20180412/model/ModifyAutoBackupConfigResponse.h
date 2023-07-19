@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Automatic backup type: 1 (scheduled rollback)
-                     * @return AutoBackupType Automatic backup type: 1 (scheduled rollback)
+                     * 获取Automatic backup type.  Valid value:  `1` (scheduled backup).
+                     * @return AutoBackupType Automatic backup type.  Valid value:  `1` (scheduled backup).
                      * 
                      */
                     int64_t GetAutoBackupType() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool WeekDaysHasBeenSet() const;
 
                     /**
-                     * 获取Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
-                     * @return TimePeriod Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
+                     * 获取Time period for automatic scheduled backup  in the format of  “00:00-01:00, 01:00-02:00...... 23:00-00:00”.
+                     * @return TimePeriod Time period for automatic scheduled backup  in the format of  “00:00-01:00, 01:00-02:00...... 23:00-00:00”.
                      * 
                      */
                     std::string GetTimePeriod() const;
@@ -102,7 +102,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Automatic backup type: 1 (scheduled rollback)
+                     * Automatic backup type.  Valid value:  `1` (scheduled backup).
                      */
                     int64_t m_autoBackupType;
                     bool m_autoBackupTypeHasBeenSet;
@@ -114,7 +114,7 @@ namespace TencentCloud
                     bool m_weekDaysHasBeenSet;
 
                     /**
-                     * Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
+                     * Time period for automatic scheduled backup  in the format of  “00:00-01:00, 01:00-02:00...... 23:00-00:00”.
                      */
                     std::string m_timePeriod;
                     bool m_timePeriodHasBeenSet;

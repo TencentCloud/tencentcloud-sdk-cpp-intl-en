@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Backup type. Automatic backup type: 1 (scheduled rollback)
-                     * @return AutoBackupType Backup type. Automatic backup type: 1 (scheduled rollback)
+                     * 获取This parameter is retained due to compatibility and can be ignored.
+                     * @return AutoBackupType This parameter is retained due to compatibility and can be ignored.
                      * 
                      */
                     int64_t GetAutoBackupType() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool AutoBackupTypeHasBeenSet() const;
 
                     /**
-                     * 获取Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.
-                     * @return WeekDays Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.
+                     * 获取Backup cycle, which will be daily by default. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`.
+                     * @return WeekDays Backup cycle, which will be daily by default. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`.
                      * 
                      */
                     std::vector<std::string> GetWeekDays() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool WeekDaysHasBeenSet() const;
 
                     /**
-                     * 获取Time period.
-                     * @return TimePeriod Time period.
+                     * 获取Time period for backup task initialization
+                     * @return TimePeriod Time period for backup task initialization
                      * 
                      */
                     std::string GetTimePeriod() const;
@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool TimePeriodHasBeenSet() const;
 
                     /**
-                     * 获取Number of days to retain full backup files
-                     * @return BackupStorageDays Number of days to retain full backup files
+                     * 获取Retention time of full backup files in days.  Default value: `7`.  To retain the files for more days, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application.
+                     * @return BackupStorageDays Retention time of full backup files in days.  Default value: `7`.  To retain the files for more days, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application.
                      * 
                      */
                     int64_t GetBackupStorageDays() const;
@@ -100,8 +100,8 @@ namespace TencentCloud
                     bool BackupStorageDaysHasBeenSet() const;
 
                     /**
-                     * 获取Number of days to retain Tendis binlog backup files
-                     * @return BinlogStorageDays Number of days to retain Tendis binlog backup files
+                     * 获取This parameter has been disused.
+                     * @return BinlogStorageDays This parameter has been disused.
                      * 
                      */
                     int64_t GetBinlogStorageDays() const;
@@ -116,31 +116,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Backup type. Automatic backup type: 1 (scheduled rollback)
+                     * This parameter is retained due to compatibility and can be ignored.
                      */
                     int64_t m_autoBackupType;
                     bool m_autoBackupTypeHasBeenSet;
 
                     /**
-                     * Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.
+                     * Backup cycle, which will be daily by default. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`.
                      */
                     std::vector<std::string> m_weekDays;
                     bool m_weekDaysHasBeenSet;
 
                     /**
-                     * Time period.
+                     * Time period for backup task initialization
                      */
                     std::string m_timePeriod;
                     bool m_timePeriodHasBeenSet;
 
                     /**
-                     * Number of days to retain full backup files
+                     * Retention time of full backup files in days.  Default value: `7`.  To retain the files for more days, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application.
                      */
                     int64_t m_backupStorageDays;
                     bool m_backupStorageDaysHasBeenSet;
 
                     /**
-                     * Number of days to retain Tendis binlog backup files
+                     * This parameter has been disused.
                      */
                     int64_t m_binlogStorageDays;
                     bool m_binlogStorageDaysHasBeenSet;

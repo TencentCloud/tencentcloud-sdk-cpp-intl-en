@@ -91,15 +91,19 @@ namespace TencentCloud
                     bool AddTimeHasBeenSet() const;
 
                     /**
-                     * 获取Running
-                     * @return Runtime Running
+                     * 获取Runtime 
+Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * @return Runtime Runtime 
+Note: This parameter may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRuntime() const;
 
                     /**
-                     * 设置Running
-                     * @param _runtime Running
+                     * 设置Runtime 
+Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * @param _runtime Runtime 
+Note: This parameter may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRuntime(const std::string& _runtime);
@@ -407,7 +411,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_addTimeHasBeenSet;
 
                     /**
-                     * Running
+                     * Runtime 
+Note: This parameter may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_runtime;
                     bool m_runtimeHasBeenSet;

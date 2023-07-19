@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Security group information
-                     * @return SecurityGroupDetails Security group information
+                     * 获取Security group information, which includes  security group ID, name, outbound and inbound rules.
+                     * @return SecurityGroupDetails Security group information, which includes  security group ID, name, outbound and inbound rules.
                      * 
                      */
                     std::vector<SecurityGroupDetail> GetSecurityGroupDetails() const;
 
                     /**
-                     * 设置Security group information
-                     * @param _securityGroupDetails Security group information
+                     * 设置Security group information, which includes  security group ID, name, outbound and inbound rules.
+                     * @param _securityGroupDetails Security group information, which includes  security group ID, name, outbound and inbound rules.
                      * 
                      */
                     void SetSecurityGroupDetails(const std::vector<SecurityGroupDetail>& _securityGroupDetails);
@@ -98,7 +98,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Security group information
+                     * Security group information, which includes  security group ID, name, outbound and inbound rules.
                      */
                     std::vector<SecurityGroupDetail> m_securityGroupDetails;
                     bool m_securityGroupDetailsHasBeenSet;

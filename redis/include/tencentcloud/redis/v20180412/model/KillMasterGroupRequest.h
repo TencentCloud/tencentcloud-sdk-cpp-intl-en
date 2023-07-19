@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+                     * @return InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+                     * @param _instanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,39 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
-2. It cannot start with a slash (/).
-3. It must contain characters in at least two of the following types:
-    a. Lowercase letters (a–z)
-    b. Uppercase letters (A–Z)
-    c. Digits (0–9)
-    d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
-                     * @return Password 1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
-2. It cannot start with a slash (/).
-3. It must contain characters in at least two of the following types:
-    a. Lowercase letters (a–z)
-    b. Uppercase letters (A–Z)
-    c. Digits (0–9)
-    d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
+                     * 获取A parameter used to configure the access password for a specified instance. If password-free authentication is enabled, this parameter will not be required. Required password strength. - It must contains 8-30 characters. We recommend that you use a password of more than 12 characters. - It must contain at least two of the following types: lowercase letters, uppercase letters, digits, and symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/), and it cannot start with a slash (/).
+                     * @return Password A parameter used to configure the access password for a specified instance. If password-free authentication is enabled, this parameter will not be required. Required password strength. - It must contains 8-30 characters. We recommend that you use a password of more than 12 characters. - It must contain at least two of the following types: lowercase letters, uppercase letters, digits, and symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/), and it cannot start with a slash (/).
                      * 
                      */
                     std::string GetPassword() const;
 
                     /**
-                     * 设置1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
-2. It cannot start with a slash (/).
-3. It must contain characters in at least two of the following types:
-    a. Lowercase letters (a–z)
-    b. Uppercase letters (A–Z)
-    c. Digits (0–9)
-    d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
-                     * @param _password 1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
-2. It cannot start with a slash (/).
-3. It must contain characters in at least two of the following types:
-    a. Lowercase letters (a–z)
-    b. Uppercase letters (A–Z)
-    c. Digits (0–9)
-    d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
+                     * 设置A parameter used to configure the access password for a specified instance. If password-free authentication is enabled, this parameter will not be required. Required password strength. - It must contains 8-30 characters. We recommend that you use a password of more than 12 characters. - It must contain at least two of the following types: lowercase letters, uppercase letters, digits, and symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/), and it cannot start with a slash (/).
+                     * @param _password A parameter used to configure the access password for a specified instance. If password-free authentication is enabled, this parameter will not be required. Required password strength. - It must contains 8-30 characters. We recommend that you use a password of more than 12 characters. - It must contain at least two of the following types: lowercase letters, uppercase letters, digits, and symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/), and it cannot start with a slash (/).
                      * 
                      */
                     void SetPassword(const std::string& _password);
@@ -109,15 +85,15 @@ namespace TencentCloud
                     bool PasswordHasBeenSet() const;
 
                     /**
-                     * 获取Node information of a single-AZ deployed instance
-                     * @return ShardIds Node information of a single-AZ deployed instance
+                     * 获取Shard ID of a sharded cluster
+                     * @return ShardIds Shard ID of a sharded cluster
                      * 
                      */
                     std::vector<int64_t> GetShardIds() const;
 
                     /**
-                     * 设置Node information of a single-AZ deployed instance
-                     * @param _shardIds Node information of a single-AZ deployed instance
+                     * 设置Shard ID of a sharded cluster
+                     * @param _shardIds Shard ID of a sharded cluster
                      * 
                      */
                     void SetShardIds(const std::vector<int64_t>& _shardIds);
@@ -132,25 +108,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * 1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
-2. It cannot start with a slash (/).
-3. It must contain characters in at least two of the following types:
-    a. Lowercase letters (a–z)
-    b. Uppercase letters (A–Z)
-    c. Digits (0–9)
-    d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
+                     * A parameter used to configure the access password for a specified instance. If password-free authentication is enabled, this parameter will not be required. Required password strength. - It must contains 8-30 characters. We recommend that you use a password of more than 12 characters. - It must contain at least two of the following types: lowercase letters, uppercase letters, digits, and symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/), and it cannot start with a slash (/).
                      */
                     std::string m_password;
                     bool m_passwordHasBeenSet;
 
                     /**
-                     * Node information of a single-AZ deployed instance
+                     * Shard ID of a sharded cluster
                      */
                     std::vector<int64_t> m_shardIds;
                     bool m_shardIdsHasBeenSet;

@@ -47,19 +47,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceId Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Instance ID 
+Note:  This field may return null, indicating that no valid values can be obtained.
+                     * @return InstanceId Instance ID 
+Note:  This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceId Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Instance ID 
+Note:  This field may return null, indicating that no valid values can be obtained.
+                     * @param _instanceId Instance ID 
+Note:  This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -72,19 +72,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Account name (`root` for a root account)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AccountName Account name (`root` for a root account)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Account name 
+Note:  This field may return null, indicating that no valid values can be obtained.
+                     * @return AccountName Account name 
+Note:  This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetAccountName() const;
 
                     /**
-                     * 设置Account name (`root` for a root account)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _accountName Account name (`root` for a root account)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Account name 
+Note:  This field may return null, indicating that no valid values can be obtained.
+                     * @param _accountName Account name 
+Note:  This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAccountName(const std::string& _accountName);
@@ -97,19 +97,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AccountNameHasBeenSet() const;
 
                     /**
-                     * 获取Account description information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Remark Account description information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Account description information 
+Note:  This field may return null, indicating that no valid values can be obtained.
+                     * @return Remark Account description information 
+Note:  This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRemark() const;
 
                     /**
-                     * 设置Account description information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _remark Account description information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Account description information 
+Note:  This field may return null, indicating that no valid values can be obtained.
+                     * @param _remark Account description information 
+Note:  This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRemark(const std::string& _remark);
@@ -122,19 +122,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取Read/write policy. r: read-only; w: write-only; rw: read/write
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Privilege Read/write policy. r: read-only; w: write-only; rw: read/write
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Read/write permission policy. Valid values: `r` (read-only),  `w` (write-only),  `rw`  (read/write). 
+Note:  This field may return null, indicating that no valid values can be obtained.
+                     * @return Privilege Read/write permission policy. Valid values: `r` (read-only),  `w` (write-only),  `rw`  (read/write). 
+Note:  This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetPrivilege() const;
 
                     /**
-                     * 设置Read/write policy. r: read-only; w: write-only; rw: read/write
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _privilege Read/write policy. r: read-only; w: write-only; rw: read/write
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Read/write permission policy. Valid values: `r` (read-only),  `w` (write-only),  `rw`  (read/write). 
+Note:  This field may return null, indicating that no valid values can be obtained.
+                     * @param _privilege Read/write permission policy. Valid values: `r` (read-only),  `w` (write-only),  `rw`  (read/write). 
+Note:  This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetPrivilege(const std::string& _privilege);
@@ -147,19 +147,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PrivilegeHasBeenSet() const;
 
                     /**
-                     * 获取Routing policy. master: master node; replication: secondary node
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ReadonlyPolicy Routing policy. master: master node; replication: secondary node
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Read-only routing policy. Valid values: `master` (master node),  `replication`  (replica node). 
+Note:  This field may return null, indicating that no valid values can be obtained.
+                     * @return ReadonlyPolicy Read-only routing policy. Valid values: `master` (master node),  `replication`  (replica node). 
+Note:  This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetReadonlyPolicy() const;
 
                     /**
-                     * 设置Routing policy. master: master node; replication: secondary node
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _readonlyPolicy Routing policy. master: master node; replication: secondary node
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Read-only routing policy. Valid values: `master` (master node),  `replication`  (replica node). 
+Note:  This field may return null, indicating that no valid values can be obtained.
+                     * @param _readonlyPolicy Read-only routing policy. Valid values: `master` (master node),  `replication`  (replica node). 
+Note:  This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetReadonlyPolicy(const std::vector<std::string>& _readonlyPolicy);
@@ -172,19 +172,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ReadonlyPolicyHasBeenSet() const;
 
                     /**
-                     * 获取Sub-account status. 1: account is being changed; 2: account is valid; -4: account has been deleted
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status Sub-account status. 1: account is being changed; 2: account is valid; -4: account has been deleted
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Sub-account status. Valid values:  `1` (being changed),  `2` (valid). `4` (deleted). 
+Note:  This field may return null, indicating that no valid values can be obtained.
+                     * @return Status Sub-account status. Valid values:  `1` (being changed),  `2` (valid). `4` (deleted). 
+Note:  This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Sub-account status. 1: account is being changed; 2: account is valid; -4: account has been deleted
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _status Sub-account status. 1: account is being changed; 2: account is valid; -4: account has been deleted
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Sub-account status. Valid values:  `1` (being changed),  `2` (valid). `4` (deleted). 
+Note:  This field may return null, indicating that no valid values can be obtained.
+                     * @param _status Sub-account status. Valid values:  `1` (being changed),  `2` (valid). `4` (deleted). 
+Note:  This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -199,43 +199,43 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Instance ID 
+Note:  This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Account name (`root` for a root account)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Account name 
+Note:  This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_accountName;
                     bool m_accountNameHasBeenSet;
 
                     /**
-                     * Account description information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Account description information 
+Note:  This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * Read/write policy. r: read-only; w: write-only; rw: read/write
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Read/write permission policy. Valid values: `r` (read-only),  `w` (write-only),  `rw`  (read/write). 
+Note:  This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_privilege;
                     bool m_privilegeHasBeenSet;
 
                     /**
-                     * Routing policy. master: master node; replication: secondary node
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Read-only routing policy. Valid values: `master` (master node),  `replication`  (replica node). 
+Note:  This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_readonlyPolicy;
                     bool m_readonlyPolicyHasBeenSet;
 
                     /**
-                     * Sub-account status. 1: account is being changed; 2: account is valid; -4: account has been deleted
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Sub-account status. Valid values:  `1` (being changed),  `2` (valid). `4` (deleted). 
+Note:  This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;

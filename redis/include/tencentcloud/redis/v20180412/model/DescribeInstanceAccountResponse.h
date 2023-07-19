@@ -45,10 +45,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Account details
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Accounts Account details
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Account details 
+Note:  This field may return null, indicating that no valid values can be obtained.
+                     * @return Accounts Account details 
+Note:  This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<Account> GetAccounts() const;
@@ -61,10 +61,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AccountsHasBeenSet() const;
 
                     /**
-                     * 获取Number of accounts
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TotalCount Number of accounts
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of accounts 
+Note:  This field may return null, indicating that no valid values can be obtained.
+                     * @return TotalCount Number of accounts 
+Note:  This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -79,15 +79,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Account details
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Account details 
+Note:  This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<Account> m_accounts;
                     bool m_accountsHasBeenSet;
 
                     /**
-                     * Number of accounts
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of accounts 
+Note:  This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

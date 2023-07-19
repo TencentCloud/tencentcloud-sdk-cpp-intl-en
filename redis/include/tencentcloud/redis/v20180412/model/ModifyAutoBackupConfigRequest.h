@@ -43,15 +43,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+
+                     * @return InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+
+                     * @param _instanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -106,15 +110,15 @@ namespace TencentCloud
                     bool TimePeriodHasBeenSet() const;
 
                     /**
-                     * 获取Automatic backup type. `1`: Scheduled rollback.
-                     * @return AutoBackupType Automatic backup type. `1`: Scheduled rollback.
+                     * 获取Automatic backup type.  Valid value:  `1` (scheduled backup).
+                     * @return AutoBackupType Automatic backup type.  Valid value:  `1` (scheduled backup).
                      * 
                      */
                     int64_t GetAutoBackupType() const;
 
                     /**
-                     * 设置Automatic backup type. `1`: Scheduled rollback.
-                     * @param _autoBackupType Automatic backup type. `1`: Scheduled rollback.
+                     * 设置Automatic backup type.  Valid value:  `1` (scheduled backup).
+                     * @param _autoBackupType Automatic backup type.  Valid value:  `1` (scheduled backup).
                      * 
                      */
                     void SetAutoBackupType(const int64_t& _autoBackupType);
@@ -129,7 +133,8 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -147,7 +152,7 @@ namespace TencentCloud
                     bool m_timePeriodHasBeenSet;
 
                     /**
-                     * Automatic backup type. `1`: Scheduled rollback.
+                     * Automatic backup type.  Valid value:  `1` (scheduled backup).
                      */
                     int64_t m_autoBackupType;
                     bool m_autoBackupTypeHasBeenSet;

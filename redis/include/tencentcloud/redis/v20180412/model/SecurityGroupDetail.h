@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取Creation time
-                     * @return CreateTime Creation time
+                     * 获取Security group creation time
+                     * @return CreateTime Security group creation time
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time
-                     * @param _createTime Creation time
+                     * 设置Security group creation time
+                     * @param _createTime Security group creation time
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool SecurityGroupRemarkHasBeenSet() const;
 
                     /**
-                     * 获取Security group inbound rule
-                     * @return InboundRule Security group inbound rule
+                     * 获取Inbound rules of the security group, which control the access source to the database.
+                     * @return InboundRule Inbound rules of the security group, which control the access source to the database.
                      * 
                      */
                     std::vector<SecurityGroupsInboundAndOutbound> GetInboundRule() const;
 
                     /**
-                     * 设置Security group inbound rule
-                     * @param _inboundRule Security group inbound rule
+                     * 设置Inbound rules of the security group, which control the access source to the database.
+                     * @param _inboundRule Inbound rules of the security group, which control the access source to the database.
                      * 
                      */
                     void SetInboundRule(const std::vector<SecurityGroupsInboundAndOutbound>& _inboundRule);
@@ -203,7 +203,7 @@ namespace TencentCloud
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * Creation time
+                     * Security group creation time
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
@@ -227,7 +227,7 @@ namespace TencentCloud
                     bool m_securityGroupRemarkHasBeenSet;
 
                     /**
-                     * Security group inbound rule
+                     * Inbound rules of the security group, which control the access source to the database.
                      */
                     std::vector<SecurityGroupsInboundAndOutbound> m_inboundRule;
                     bool m_inboundRuleHasBeenSet;

@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool GroupsHasBeenSet() const;
 
                     /**
-                     * 获取Private IP for which the security group takes effect
-                     * @return VIP Private IP for which the security group takes effect
+                     * 获取Private IPv4 address of an instance
+                     * @return VIP Private IPv4 address of an instance
                      * 
                      */
                     std::string GetVIP() const;
@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool VIPHasBeenSet() const;
 
                     /**
-                     * 获取Private port for which the security group takes effect
-                     * @return VPort Private port for which the security group takes effect
+                     * 获取Private network port
+                     * @return VPort Private network port
                      * 
                      */
                     std::string GetVPort() const;
@@ -95,13 +95,13 @@ namespace TencentCloud
                     bool m_groupsHasBeenSet;
 
                     /**
-                     * Private IP for which the security group takes effect
+                     * Private IPv4 address of an instance
                      */
                     std::string m_vIP;
                     bool m_vIPHasBeenSet;
 
                     /**
-                     * Private port for which the security group takes effect
+                     * Private network port
                      */
                     std::string m_vPort;
                     bool m_vPortHasBeenSet;

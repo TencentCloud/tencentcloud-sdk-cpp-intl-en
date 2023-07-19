@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Instance node information
+                * Information of the instance node group
                 */
                 class ReplicaGroup : public AbstractModel
                 {

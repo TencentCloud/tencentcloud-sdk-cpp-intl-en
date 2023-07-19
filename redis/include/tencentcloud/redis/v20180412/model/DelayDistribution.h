@@ -47,39 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Delay distribution. The mapping between delay range and `Ladder` value is as follows:
-[0ms,1ms]: 1;
-[1ms,5ms]: 5;
-[5ms,10ms]: 10;
-[10ms,50ms]: 50;
-[50ms,200ms]: 200;
-[200ms,∞]: -1.
-                     * @return Ladder Delay distribution. The mapping between delay range and `Ladder` value is as follows:
-[0ms,1ms]: 1;
-[1ms,5ms]: 5;
-[5ms,10ms]: 10;
-[10ms,50ms]: 50;
-[50ms,200ms]: 200;
-[200ms,∞]: -1.
+                     * 获取The delay distribution. The mapping between delay range and `Ladder` value is as follows:  - `1`: [0ms,1ms]. - `5`: [1ms,5ms]. - `10`: [5ms,10ms]. - `50`: [10ms,50ms]. - `200`:  [50ms,200ms]. - `-1`: [200ms,∞].
+                     * @return Ladder The delay distribution. The mapping between delay range and `Ladder` value is as follows:  - `1`: [0ms,1ms]. - `5`: [1ms,5ms]. - `10`: [5ms,10ms]. - `50`: [10ms,50ms]. - `200`:  [50ms,200ms]. - `-1`: [200ms,∞].
                      * 
                      */
                     int64_t GetLadder() const;
 
                     /**
-                     * 设置Delay distribution. The mapping between delay range and `Ladder` value is as follows:
-[0ms,1ms]: 1;
-[1ms,5ms]: 5;
-[5ms,10ms]: 10;
-[10ms,50ms]: 50;
-[50ms,200ms]: 200;
-[200ms,∞]: -1.
-                     * @param _ladder Delay distribution. The mapping between delay range and `Ladder` value is as follows:
-[0ms,1ms]: 1;
-[1ms,5ms]: 5;
-[5ms,10ms]: 10;
-[10ms,50ms]: 50;
-[50ms,200ms]: 200;
-[200ms,∞]: -1.
+                     * 设置The delay distribution. The mapping between delay range and `Ladder` value is as follows:  - `1`: [0ms,1ms]. - `5`: [1ms,5ms]. - `10`: [5ms,10ms]. - `50`: [10ms,50ms]. - `200`:  [50ms,200ms]. - `-1`: [200ms,∞].
+                     * @param _ladder The delay distribution. The mapping between delay range and `Ladder` value is as follows:  - `1`: [0ms,1ms]. - `5`: [1ms,5ms]. - `10`: [5ms,10ms]. - `50`: [10ms,50ms]. - `200`:  [50ms,200ms]. - `-1`: [200ms,∞].
                      * 
                      */
                     void SetLadder(const int64_t& _ladder);
@@ -92,15 +68,15 @@ namespace TencentCloud
                     bool LadderHasBeenSet() const;
 
                     /**
-                     * 获取The number of commands whose delay falls within the current delay range
-                     * @return Size The number of commands whose delay falls within the current delay range
+                     * 获取The number of commands with delay falling within the current delay range -
+                     * @return Size The number of commands with delay falling within the current delay range -
                      * 
                      */
                     int64_t GetSize() const;
 
                     /**
-                     * 设置The number of commands whose delay falls within the current delay range
-                     * @param _size The number of commands whose delay falls within the current delay range
+                     * 设置The number of commands with delay falling within the current delay range -
+                     * @param _size The number of commands with delay falling within the current delay range -
                      * 
                      */
                     void SetSize(const int64_t& _size);
@@ -136,19 +112,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Delay distribution. The mapping between delay range and `Ladder` value is as follows:
-[0ms,1ms]: 1;
-[1ms,5ms]: 5;
-[5ms,10ms]: 10;
-[10ms,50ms]: 50;
-[50ms,200ms]: 200;
-[200ms,∞]: -1.
+                     * The delay distribution. The mapping between delay range and `Ladder` value is as follows:  - `1`: [0ms,1ms]. - `5`: [1ms,5ms]. - `10`: [5ms,10ms]. - `50`: [10ms,50ms]. - `200`:  [50ms,200ms]. - `-1`: [200ms,∞].
                      */
                     int64_t m_ladder;
                     bool m_ladderHasBeenSet;
 
                     /**
-                     * The number of commands whose delay falls within the current delay range
+                     * The number of commands with delay falling within the current delay range -
                      */
                     int64_t m_size;
                     bool m_sizeHasBeenSet;

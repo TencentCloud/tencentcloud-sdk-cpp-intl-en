@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+                     * @return InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+                     * @param _instanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether to filter out the replica node information
-                     * @return FilterSlave Whether to filter out the replica node information
+                     * 获取Whether to filter out the replica node information. Valid values: `true` (yes),  `false` (no).
+                     * @return FilterSlave Whether to filter out the replica node information. Valid values: `true` (yes),  `false` (no).
                      * 
                      */
                     bool GetFilterSlave() const;
 
                     /**
-                     * 设置Whether to filter out the replica node information
-                     * @param _filterSlave Whether to filter out the replica node information
+                     * 设置Whether to filter out the replica node information. Valid values: `true` (yes),  `false` (no).
+                     * @param _filterSlave Whether to filter out the replica node information. Valid values: `true` (yes),  `false` (no).
                      * 
                      */
                     void SetFilterSlave(const bool& _filterSlave);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Whether to filter out the replica node information
+                     * Whether to filter out the replica node information. Valid values: `true` (yes),  `false` (no).
                      */
                     bool m_filterSlave;
                     bool m_filterSlaveHasBeenSet;

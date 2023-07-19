@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+                     * @return InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+                     * @param _instanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of results returned per page. Default value: 20. Maximum value: 100.
-                     * @return Limit Maximum number of results returned per page. Default value: 20. Maximum value: 100.
+                     * 获取Number of taskss returned per page.  Default value: `20`. Maximum value: `100`.
+                     * @return Limit Number of taskss returned per page.  Default value: `20`. Maximum value: `100`.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Maximum number of results returned per page. Default value: 20. Maximum value: 100.
-                     * @param _limit Maximum number of results returned per page. Default value: 20. Maximum value: 100.
+                     * 设置Number of taskss returned per page.  Default value: `20`. Maximum value: `100`.
+                     * @param _limit Number of taskss returned per page.  Default value: `20`. Maximum value: `100`.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset, which is an integral multiple of `Limit` (rounded down automatically).
-                     * @return Offset Offset, which is an integral multiple of `Limit` (rounded down automatically).
+                     * 获取Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
+                     * @return Offset Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset, which is an integral multiple of `Limit` (rounded down automatically).
-                     * @param _offset Offset, which is an integral multiple of `Limit` (rounded down automatically).
+                     * 设置Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
+                     * @param _offset Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Project ID
-                     * @return ProjectIds Project ID
+                     * 获取Project ID Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), go to the account information menu in the top-right corner, and select **Project Management** to query the project ID.
+                     * @return ProjectIds Project ID Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), go to the account information menu in the top-right corner, and select **Project Management** to query the project ID.
                      * 
                      */
                     std::vector<int64_t> GetProjectIds() const;
 
                     /**
-                     * 设置Project ID
-                     * @param _projectIds Project ID
+                     * 设置Project ID Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), go to the account information menu in the top-right corner, and select **Project Management** to query the project ID.
+                     * @param _projectIds Project ID Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), go to the account information menu in the top-right corner, and select **Project Management** to query the project ID.
                      * 
                      */
                     void SetProjectIds(const std::vector<int64_t>& _projectIds);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool ProjectIdsHasBeenSet() const;
 
                     /**
-                     * 获取Task type
-                     * @return TaskTypes Task type
+                     * 获取Task type. Valid values:  - `FLOW_CREATE`: Create an instance. - `FLOW_MODIFYCONNECTIONCONFIG`: Adjust the number of bandwidth connections. - `FLOW_MODIFYINSTANCEPASSWORDFREE`: Modify the process of password-free access. - `FLOW_CLEARNETWORK`: Returning VPC - `FLOW_SETPWD`: Set the access password. - `FLOW_EXPORSHR`: Expand or reduce the capacity. - `FLOW_UpgradeArch`: Upgrade the instance architecture. - `FLOW_MODIFYINSTANCEPARAMS`: Modify the instance parameters. - `FLOW_MODIFYINSTACEREADONLY`: Modify read-only process. - `FLOW_CLOSE`: Disable the instance. - `FLOW_DELETE`: Delete the instance. - `FLOW_OPEN_WAN`: Enable the public network. - `FLOW_FLOW_CLEAN`: Clear the instance. - `FLOW_MODIFYINSTANCEACCOUNT`: Modify the instance account. - `FLOW_ENABLEINSTANCE_REPLICATE`: Enable the replica read-only feature. - `FLOW_DISABLEINSTANCE_REPLICATE`: Disable the replica read-only feature. - `FLOW_SWITCHINSTANCEVIP`: Swap the VIPs of instances. - FLOW_CHANGE_REPLICA_TO_MSTER: Promote the replica node to the mater node. - `FLOW_BACKUPINSTANCE`: Back up an instance.
+                     * @return TaskTypes Task type. Valid values:  - `FLOW_CREATE`: Create an instance. - `FLOW_MODIFYCONNECTIONCONFIG`: Adjust the number of bandwidth connections. - `FLOW_MODIFYINSTANCEPASSWORDFREE`: Modify the process of password-free access. - `FLOW_CLEARNETWORK`: Returning VPC - `FLOW_SETPWD`: Set the access password. - `FLOW_EXPORSHR`: Expand or reduce the capacity. - `FLOW_UpgradeArch`: Upgrade the instance architecture. - `FLOW_MODIFYINSTANCEPARAMS`: Modify the instance parameters. - `FLOW_MODIFYINSTACEREADONLY`: Modify read-only process. - `FLOW_CLOSE`: Disable the instance. - `FLOW_DELETE`: Delete the instance. - `FLOW_OPEN_WAN`: Enable the public network. - `FLOW_FLOW_CLEAN`: Clear the instance. - `FLOW_MODIFYINSTANCEACCOUNT`: Modify the instance account. - `FLOW_ENABLEINSTANCE_REPLICATE`: Enable the replica read-only feature. - `FLOW_DISABLEINSTANCE_REPLICATE`: Disable the replica read-only feature. - `FLOW_SWITCHINSTANCEVIP`: Swap the VIPs of instances. - FLOW_CHANGE_REPLICA_TO_MSTER: Promote the replica node to the mater node. - `FLOW_BACKUPINSTANCE`: Back up an instance.
                      * 
                      */
                     std::vector<std::string> GetTaskTypes() const;
 
                     /**
-                     * 设置Task type
-                     * @param _taskTypes Task type
+                     * 设置Task type. Valid values:  - `FLOW_CREATE`: Create an instance. - `FLOW_MODIFYCONNECTIONCONFIG`: Adjust the number of bandwidth connections. - `FLOW_MODIFYINSTANCEPASSWORDFREE`: Modify the process of password-free access. - `FLOW_CLEARNETWORK`: Returning VPC - `FLOW_SETPWD`: Set the access password. - `FLOW_EXPORSHR`: Expand or reduce the capacity. - `FLOW_UpgradeArch`: Upgrade the instance architecture. - `FLOW_MODIFYINSTANCEPARAMS`: Modify the instance parameters. - `FLOW_MODIFYINSTACEREADONLY`: Modify read-only process. - `FLOW_CLOSE`: Disable the instance. - `FLOW_DELETE`: Delete the instance. - `FLOW_OPEN_WAN`: Enable the public network. - `FLOW_FLOW_CLEAN`: Clear the instance. - `FLOW_MODIFYINSTANCEACCOUNT`: Modify the instance account. - `FLOW_ENABLEINSTANCE_REPLICATE`: Enable the replica read-only feature. - `FLOW_DISABLEINSTANCE_REPLICATE`: Disable the replica read-only feature. - `FLOW_SWITCHINSTANCEVIP`: Swap the VIPs of instances. - FLOW_CHANGE_REPLICA_TO_MSTER: Promote the replica node to the mater node. - `FLOW_BACKUPINSTANCE`: Back up an instance.
+                     * @param _taskTypes Task type. Valid values:  - `FLOW_CREATE`: Create an instance. - `FLOW_MODIFYCONNECTIONCONFIG`: Adjust the number of bandwidth connections. - `FLOW_MODIFYINSTANCEPASSWORDFREE`: Modify the process of password-free access. - `FLOW_CLEARNETWORK`: Returning VPC - `FLOW_SETPWD`: Set the access password. - `FLOW_EXPORSHR`: Expand or reduce the capacity. - `FLOW_UpgradeArch`: Upgrade the instance architecture. - `FLOW_MODIFYINSTANCEPARAMS`: Modify the instance parameters. - `FLOW_MODIFYINSTACEREADONLY`: Modify read-only process. - `FLOW_CLOSE`: Disable the instance. - `FLOW_DELETE`: Delete the instance. - `FLOW_OPEN_WAN`: Enable the public network. - `FLOW_FLOW_CLEAN`: Clear the instance. - `FLOW_MODIFYINSTANCEACCOUNT`: Modify the instance account. - `FLOW_ENABLEINSTANCE_REPLICATE`: Enable the replica read-only feature. - `FLOW_DISABLEINSTANCE_REPLICATE`: Disable the replica read-only feature. - `FLOW_SWITCHINSTANCEVIP`: Swap the VIPs of instances. - FLOW_CHANGE_REPLICA_TO_MSTER: Promote the replica node to the mater node. - `FLOW_BACKUPINSTANCE`: Back up an instance.
                      * 
                      */
                     void SetTaskTypes(const std::vector<std::string>& _taskTypes);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool TaskTypesHasBeenSet() const;
 
                     /**
-                     * 获取Start time
-                     * @return BeginTime Start time
+                     * 获取Start time for executing a task,  in the format of  “2020-10-12 00:00:00”.
+                     * @return BeginTime Start time for executing a task,  in the format of  “2020-10-12 00:00:00”.
                      * 
                      */
                     std::string GetBeginTime() const;
 
                     /**
-                     * 设置Start time
-                     * @param _beginTime Start time
+                     * 设置Start time for executing a task,  in the format of  “2020-10-12 00:00:00”.
+                     * @param _beginTime Start time for executing a task,  in the format of  “2020-10-12 00:00:00”.
                      * 
                      */
                     void SetBeginTime(const std::string& _beginTime);
@@ -190,15 +190,15 @@ namespace TencentCloud
                     bool BeginTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time
-                     * @return EndTime End time
+                     * 获取End time for executing a task,  in the format of  “2021-12-30 20:59:35”.
+                     * @return EndTime End time for executing a task,  in the format of  “2021-12-30 20:59:35”.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End time
-                     * @param _endTime End time
+                     * 设置End time for executing a task,  in the format of  “2021-12-30 20:59:35”.
+                     * @param _endTime End time for executing a task,  in the format of  “2021-12-30 20:59:35”.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -211,15 +211,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Task status
-                     * @return TaskStatus Task status
+                     * 获取This parameter is only for internal use and can be ignored.
+                     * @return TaskStatus This parameter is only for internal use and can be ignored.
                      * 
                      */
                     std::vector<int64_t> GetTaskStatus() const;
 
                     /**
-                     * 设置Task status
-                     * @param _taskStatus Task status
+                     * 设置This parameter is only for internal use and can be ignored.
+                     * @param _taskStatus This parameter is only for internal use and can be ignored.
                      * 
                      */
                     void SetTaskStatus(const std::vector<int64_t>& _taskStatus);
@@ -232,15 +232,15 @@ namespace TencentCloud
                     bool TaskStatusHasBeenSet() const;
 
                     /**
-                     * 获取Task status
-                     * @return Result Task status
+                     * 获取Task execution status. Valid values: - `0` (initilized) - `1` (executing) - `2` (completed) - `4` (failed)
+                     * @return Result Task execution status. Valid values: - `0` (initilized) - `1` (executing) - `2` (completed) - `4` (failed)
                      * 
                      */
                     std::vector<int64_t> GetResult() const;
 
                     /**
-                     * 设置Task status
-                     * @param _result Task status
+                     * 设置Task execution status. Valid values: - `0` (initilized) - `1` (executing) - `2` (completed) - `4` (failed)
+                     * @param _result Task execution status. Valid values: - `0` (initilized) - `1` (executing) - `2` (completed) - `4` (failed)
                      * 
                      */
                     void SetResult(const std::vector<int64_t>& _result);
@@ -274,15 +274,15 @@ namespace TencentCloud
                     bool OperatorUinHasBeenSet() const;
 
                     /**
-                     * 获取Operator Uin
-                     * @return OperateUin Operator Uin
+                     * 获取Operator account ID or UIN
+                     * @return OperateUin Operator account ID or UIN
                      * 
                      */
                     std::vector<std::string> GetOperateUin() const;
 
                     /**
-                     * 设置Operator Uin
-                     * @param _operateUin Operator Uin
+                     * 设置Operator account ID or UIN
+                     * @param _operateUin Operator account ID or UIN
                      * 
                      */
                     void SetOperateUin(const std::vector<std::string>& _operateUin);
@@ -297,7 +297,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -309,49 +309,49 @@ namespace TencentCloud
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * Maximum number of results returned per page. Default value: 20. Maximum value: 100.
+                     * Number of taskss returned per page.  Default value: `20`. Maximum value: `100`.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset, which is an integral multiple of `Limit` (rounded down automatically).
+                     * Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Project ID
+                     * Project ID Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), go to the account information menu in the top-right corner, and select **Project Management** to query the project ID.
                      */
                     std::vector<int64_t> m_projectIds;
                     bool m_projectIdsHasBeenSet;
 
                     /**
-                     * Task type
+                     * Task type. Valid values:  - `FLOW_CREATE`: Create an instance. - `FLOW_MODIFYCONNECTIONCONFIG`: Adjust the number of bandwidth connections. - `FLOW_MODIFYINSTANCEPASSWORDFREE`: Modify the process of password-free access. - `FLOW_CLEARNETWORK`: Returning VPC - `FLOW_SETPWD`: Set the access password. - `FLOW_EXPORSHR`: Expand or reduce the capacity. - `FLOW_UpgradeArch`: Upgrade the instance architecture. - `FLOW_MODIFYINSTANCEPARAMS`: Modify the instance parameters. - `FLOW_MODIFYINSTACEREADONLY`: Modify read-only process. - `FLOW_CLOSE`: Disable the instance. - `FLOW_DELETE`: Delete the instance. - `FLOW_OPEN_WAN`: Enable the public network. - `FLOW_FLOW_CLEAN`: Clear the instance. - `FLOW_MODIFYINSTANCEACCOUNT`: Modify the instance account. - `FLOW_ENABLEINSTANCE_REPLICATE`: Enable the replica read-only feature. - `FLOW_DISABLEINSTANCE_REPLICATE`: Disable the replica read-only feature. - `FLOW_SWITCHINSTANCEVIP`: Swap the VIPs of instances. - FLOW_CHANGE_REPLICA_TO_MSTER: Promote the replica node to the mater node. - `FLOW_BACKUPINSTANCE`: Back up an instance.
                      */
                     std::vector<std::string> m_taskTypes;
                     bool m_taskTypesHasBeenSet;
 
                     /**
-                     * Start time
+                     * Start time for executing a task,  in the format of  “2020-10-12 00:00:00”.
                      */
                     std::string m_beginTime;
                     bool m_beginTimeHasBeenSet;
 
                     /**
-                     * End time
+                     * End time for executing a task,  in the format of  “2021-12-30 20:59:35”.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Task status
+                     * This parameter is only for internal use and can be ignored.
                      */
                     std::vector<int64_t> m_taskStatus;
                     bool m_taskStatusHasBeenSet;
 
                     /**
-                     * Task status
+                     * Task execution status. Valid values: - `0` (initilized) - `1` (executing) - `2` (completed) - `4` (failed)
                      */
                     std::vector<int64_t> m_result;
                     bool m_resultHasBeenSet;
@@ -363,7 +363,7 @@ namespace TencentCloud
                     bool m_operatorUinHasBeenSet;
 
                     /**
-                     * Operator Uin
+                     * Operator account ID or UIN
                      */
                     std::vector<std::string> m_operateUin;
                     bool m_operateUinHasBeenSet;

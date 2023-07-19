@@ -43,15 +43,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+
+                     * @return InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+
+                     * @param _instanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +68,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取The start time
-                     * @return BeginTime The start time
+                     * 获取Start time for prequerying a slow log
+                     * @return BeginTime Start time for prequerying a slow log
                      * 
                      */
                     std::string GetBeginTime() const;
 
                     /**
-                     * 设置The start time
-                     * @param _beginTime The start time
+                     * 设置Start time for prequerying a slow log
+                     * @param _beginTime Start time for prequerying a slow log
                      * 
                      */
                     void SetBeginTime(const std::string& _beginTime);
@@ -85,15 +89,15 @@ namespace TencentCloud
                     bool BeginTimeHasBeenSet() const;
 
                     /**
-                     * 获取The end time
-                     * @return EndTime The end time
+                     * 获取End time for prequerying a slow log
+                     * @return EndTime End time for prequerying a slow log
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置The end time
-                     * @param _endTime The end time
+                     * 设置End time for prequerying a slow log
+                     * @param _endTime End time for prequerying a slow log
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -106,15 +110,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取The average execution time threshold of slow query in ms.
-                     * @return MinQueryTime The average execution time threshold of slow query in ms.
+                     * 获取The average execution time threshold of slow query  in microseconds
+                     * @return MinQueryTime The average execution time threshold of slow query  in microseconds
                      * 
                      */
                     int64_t GetMinQueryTime() const;
 
                     /**
-                     * 设置The average execution time threshold of slow query in ms.
-                     * @param _minQueryTime The average execution time threshold of slow query in ms.
+                     * 设置The average execution time threshold of slow query  in microseconds
+                     * @param _minQueryTime The average execution time threshold of slow query  in microseconds
                      * 
                      */
                     void SetMinQueryTime(const int64_t& _minQueryTime);
@@ -127,15 +131,15 @@ namespace TencentCloud
                     bool MinQueryTimeHasBeenSet() const;
 
                     /**
-                     * 获取Number of slow queries displayed per page. Default value: `20`.
-                     * @return Limit Number of slow queries displayed per page. Default value: `20`.
+                     * 获取Number of slow queries displayed per page. Default value: `20`. Value range:  [20,1000].
+                     * @return Limit Number of slow queries displayed per page. Default value: `20`. Value range:  [20,1000].
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of slow queries displayed per page. Default value: `20`.
-                     * @param _limit Number of slow queries displayed per page. Default value: `20`.
+                     * 设置Number of slow queries displayed per page. Default value: `20`. Value range:  [20,1000].
+                     * @param _limit Number of slow queries displayed per page. Default value: `20`. Value range:  [20,1000].
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -148,15 +152,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Slow query offset, which is an integral multiple of `Limit`.
-                     * @return Offset Slow query offset, which is an integral multiple of `Limit`.
+                     * 获取Slow query offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
+                     * @return Offset Slow query offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Slow query offset, which is an integral multiple of `Limit`.
-                     * @param _offset Slow query offset, which is an integral multiple of `Limit`.
+                     * 设置Slow query offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
+                     * @param _offset Slow query offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -192,37 +196,38 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * The start time
+                     * Start time for prequerying a slow log
                      */
                     std::string m_beginTime;
                     bool m_beginTimeHasBeenSet;
 
                     /**
-                     * The end time
+                     * End time for prequerying a slow log
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * The average execution time threshold of slow query in ms.
+                     * The average execution time threshold of slow query  in microseconds
                      */
                     int64_t m_minQueryTime;
                     bool m_minQueryTimeHasBeenSet;
 
                     /**
-                     * Number of slow queries displayed per page. Default value: `20`.
+                     * Number of slow queries displayed per page. Default value: `20`. Value range:  [20,1000].
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Slow query offset, which is an integral multiple of `Limit`.
+                     * Slow query offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;

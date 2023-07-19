@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Action to be executed
-                     * @return Action Action to be executed
+                     * 获取Identify whether the IP and port for accessing the database are allowed
+                     * @return Action Identify whether the IP and port for accessing the database are allowed
                      * 
                      */
                     std::string GetAction() const;
 
                     /**
-                     * 设置Action to be executed
-                     * @param _action Action to be executed
+                     * 设置Identify whether the IP and port for accessing the database are allowed
+                     * @param _action Identify whether the IP and port for accessing the database are allowed
                      * 
                      */
                     void SetAction(const std::string& _action);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ActionHasBeenSet() const;
 
                     /**
-                     * 获取IP addresses
-                     * @return Ip IP addresses
+                     * 获取IP address for accessing the database
+                     * @return Ip IP address for accessing the database
                      * 
                      */
                     std::string GetIp() const;
 
                     /**
-                     * 设置IP addresses
-                     * @param _ip IP addresses
+                     * 设置IP address for accessing the database
+                     * @param _ip IP address for accessing the database
                      * 
                      */
                     void SetIp(const std::string& _ip);
@@ -133,13 +133,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Action to be executed
+                     * Identify whether the IP and port for accessing the database are allowed
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;
 
                     /**
-                     * IP addresses
+                     * IP address for accessing the database
                      */
                     std::string m_ip;
                     bool m_ipHasBeenSet;

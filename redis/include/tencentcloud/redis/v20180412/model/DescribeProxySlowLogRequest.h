@@ -43,15 +43,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+
+                     * @return InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+
+                     * @param _instanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +68,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Start time
-                     * @return BeginTime Start time
+                     * 获取Start time of slow query
+                     * @return BeginTime Start time of slow query
                      * 
                      */
                     std::string GetBeginTime() const;
 
                     /**
-                     * 设置Start time
-                     * @param _beginTime Start time
+                     * 设置Start time of slow query
+                     * @param _beginTime Start time of slow query
                      * 
                      */
                     void SetBeginTime(const std::string& _beginTime);
@@ -85,15 +89,15 @@ namespace TencentCloud
                     bool BeginTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time
-                     * @return EndTime End time
+                     * 获取End time of slow query
+                     * @return EndTime End time of slow query
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End time
-                     * @param _endTime End time
+                     * 设置End time of slow query
+                     * @param _endTime End time of slow query
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -106,15 +110,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Slow query threshold in milliseconds
-                     * @return MinQueryTime Slow query threshold in milliseconds
+                     * 获取Slow query threshold  in milliseconds
+                     * @return MinQueryTime Slow query threshold  in milliseconds
                      * 
                      */
                     int64_t GetMinQueryTime() const;
 
                     /**
-                     * 设置Slow query threshold in milliseconds
-                     * @param _minQueryTime Slow query threshold in milliseconds
+                     * 设置Slow query threshold  in milliseconds
+                     * @param _minQueryTime Slow query threshold  in milliseconds
                      * 
                      */
                     void SetMinQueryTime(const int64_t& _minQueryTime);
@@ -127,15 +131,15 @@ namespace TencentCloud
                     bool MinQueryTimeHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of results returned per page
-                     * @return Limit Maximum number of results returned per page
+                     * 获取Number of results per page.  Default value: `20`. Value range: [20,1000].
+                     * @return Limit Number of results per page.  Default value: `20`. Value range: [20,1000].
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Maximum number of results returned per page
-                     * @param _limit Maximum number of results returned per page
+                     * 设置Number of results per page.  Default value: `20`. Value range: [20,1000].
+                     * @param _limit Number of results per page.  Default value: `20`. Value range: [20,1000].
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -171,31 +175,32 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Start time
+                     * Start time of slow query
                      */
                     std::string m_beginTime;
                     bool m_beginTimeHasBeenSet;
 
                     /**
-                     * End time
+                     * End time of slow query
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Slow query threshold in milliseconds
+                     * Slow query threshold  in milliseconds
                      */
                     int64_t m_minQueryTime;
                     bool m_minQueryTimeHasBeenSet;
 
                     /**
-                     * Maximum number of results returned per page
+                     * Number of results per page.  Default value: `20`. Value range: [20,1000].
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

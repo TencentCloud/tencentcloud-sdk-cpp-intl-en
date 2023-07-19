@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取ID of the runtime node of the instance
-                     * @return RunId ID of the runtime node of the instance
+                     * 获取ID of the runtime node of an instance
+                     * @return RunId ID of the runtime node of an instance
                      * 
                      */
                     std::string GetRunId() const;
 
                     /**
-                     * 设置ID of the runtime node of the instance
-                     * @param _runId ID of the runtime node of the instance
+                     * 设置ID of the runtime node of an instance
+                     * @param _runId ID of the runtime node of an instance
                      * 
                      */
                     void SetRunId(const std::string& _runId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool RunIdHasBeenSet() const;
 
                     /**
-                     * 获取Cluster role. 0: master; 1: replica
-                     * @return Role Cluster role. 0: master; 1: replica
+                     * 获取Cluster role. Valid values:  - `0` (master) - `1` (replica)
+                     * @return Role Cluster role. Valid values:  - `0` (master) - `1` (replica)
                      * 
                      */
                     int64_t GetRole() const;
 
                     /**
-                     * 设置Cluster role. 0: master; 1: replica
-                     * @param _role Cluster role. 0: master; 1: replica
+                     * 设置Cluster role. Valid values:  - `0` (master) - `1` (replica)
+                     * @param _role Cluster role. Valid values:  - `0` (master) - `1` (replica)
                      * 
                      */
                     void SetRole(const int64_t& _role);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool RoleHasBeenSet() const;
 
                     /**
-                     * 获取Node status. 0: readwrite; 1: read; 2: backup
-                     * @return Status Node status. 0: readwrite; 1: read; 2: backup
+                     * 获取Node status. Valid values:  - `0` (read/write) - `1` (read) - `2` (backup)
+                     * @return Status Node status. Valid values:  - `0` (read/write) - `1` (read) - `2` (backup)
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Node status. 0: readwrite; 1: read; 2: backup
-                     * @param _status Node status. 0: readwrite; 1: read; 2: backup
+                     * 设置Node status. Valid values:  - `0` (read/write) - `1` (read) - `2` (backup)
+                     * @param _status Node status. Valid values:  - `0` (read/write) - `1` (read) - `2` (backup)
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Service status. 0: down; 1: on
-                     * @return Connected Service status. 0: down; 1: on
+                     * 获取Service status. Valid values: `0` (down), `1` (on).
+                     * @return Connected Service status. Valid values: `0` (down), `1` (on).
                      * 
                      */
                     int64_t GetConnected() const;
 
                     /**
-                     * 设置Service status. 0: down; 1: on
-                     * @param _connected Service status. 0: down; 1: on
+                     * 设置Service status. Valid values: `0` (down), `1` (on).
+                     * @param _connected Service status. Valid values: `0` (down), `1` (on).
                      * 
                      */
                     void SetConnected(const int64_t& _connected);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool DownTimeHasBeenSet() const;
 
                     /**
-                     * 获取Distribution of node slots
-                     * @return Slots Distribution of node slots
+                     * 获取Node slot distribution range
+                     * @return Slots Node slot distribution range
                      * 
                      */
                     std::string GetSlots() const;
 
                     /**
-                     * 设置Distribution of node slots
-                     * @param _slots Distribution of node slots
+                     * 设置Node slot distribution range
+                     * @param _slots Node slot distribution range
                      * 
                      */
                     void SetSlots(const std::string& _slots);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool KeysHasBeenSet() const;
 
                     /**
-                     * 获取Node QPS
-                     * @return Qps Node QPS
+                     * 获取Node QPS Number of executions per second on sharded nodes Unit: Counts/sec
+                     * @return Qps Node QPS Number of executions per second on sharded nodes Unit: Counts/sec
                      * 
                      */
                     int64_t GetQps() const;
 
                     /**
-                     * 设置Node QPS
-                     * @param _qps Node QPS
+                     * 设置Node QPS Number of executions per second on sharded nodes Unit: Counts/sec
+                     * @param _qps Node QPS Number of executions per second on sharded nodes Unit: Counts/sec
                      * 
                      */
                     void SetQps(const int64_t& _qps);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool QpsHasBeenSet() const;
 
                     /**
-                     * 获取Node QPS slope
-                     * @return QpsSlope Node QPS slope
+                     * 获取QPS slope of a node
+                     * @return QpsSlope QPS slope of a node
                      * 
                      */
                     double GetQpsSlope() const;
 
                     /**
-                     * 设置Node QPS slope
-                     * @param _qpsSlope Node QPS slope
+                     * 设置QPS slope of a node
+                     * @param _qpsSlope QPS slope of a node
                      * 
                      */
                     void SetQpsSlope(const double& _qpsSlope);
@@ -328,25 +328,25 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * ID of the runtime node of the instance
+                     * ID of the runtime node of an instance
                      */
                     std::string m_runId;
                     bool m_runIdHasBeenSet;
 
                     /**
-                     * Cluster role. 0: master; 1: replica
+                     * Cluster role. Valid values:  - `0` (master) - `1` (replica)
                      */
                     int64_t m_role;
                     bool m_roleHasBeenSet;
 
                     /**
-                     * Node status. 0: readwrite; 1: read; 2: backup
+                     * Node status. Valid values:  - `0` (read/write) - `1` (read) - `2` (backup)
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Service status. 0: down; 1: on
+                     * Service status. Valid values: `0` (down), `1` (on).
                      */
                     int64_t m_connected;
                     bool m_connectedHasBeenSet;
@@ -364,7 +364,7 @@ namespace TencentCloud
                     bool m_downTimeHasBeenSet;
 
                     /**
-                     * Distribution of node slots
+                     * Node slot distribution range
                      */
                     std::string m_slots;
                     bool m_slotsHasBeenSet;
@@ -376,13 +376,13 @@ namespace TencentCloud
                     bool m_keysHasBeenSet;
 
                     /**
-                     * Node QPS
+                     * Node QPS Number of executions per second on sharded nodes Unit: Counts/sec
                      */
                     int64_t m_qps;
                     bool m_qpsHasBeenSet;
 
                     /**
-                     * Node QPS slope
+                     * QPS slope of a node
                      */
                     double m_qpsSlope;
                     bool m_qpsSlopeHasBeenSet;

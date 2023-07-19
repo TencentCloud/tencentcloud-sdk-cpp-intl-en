@@ -170,19 +170,23 @@ namespace TencentCloud
                     bool OrderHasBeenSet() const;
 
                     /**
-                     * 获取* Qualifier:
-Function version, alias
-                     * @return Filters * Qualifier:
-Function version, alias
+                     * 获取* Qualifier: Version/Alias of trigger function 
+*TriggerName: Name of the trigger 
+*Description: Function trigger description
+                     * @return Filters * Qualifier: Version/Alias of trigger function 
+*TriggerName: Name of the trigger 
+*Description: Function trigger description
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置* Qualifier:
-Function version, alias
-                     * @param _filters * Qualifier:
-Function version, alias
+                     * 设置* Qualifier: Version/Alias of trigger function 
+*TriggerName: Name of the trigger 
+*Description: Function trigger description
+                     * @param _filters * Qualifier: Version/Alias of trigger function 
+*TriggerName: Name of the trigger 
+*Description: Function trigger description
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -233,8 +237,9 @@ Function version, alias
                     bool m_orderHasBeenSet;
 
                     /**
-                     * * Qualifier:
-Function version, alias
+                     * * Qualifier: Version/Alias of trigger function 
+*TriggerName: Name of the trigger 
+*Description: Function trigger description
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

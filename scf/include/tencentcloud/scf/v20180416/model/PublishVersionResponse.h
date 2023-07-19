@@ -128,8 +128,10 @@ namespace TencentCloud
                     bool TimeoutHasBeenSet() const;
 
                     /**
-                     * 获取Function running environment
-                     * @return Runtime Function running environment
+                     * 获取Function running environment 
+Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * @return Runtime Function running environment 
+Note: This parameter may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRuntime() const;
@@ -194,7 +196,8 @@ namespace TencentCloud
                     bool m_timeoutHasBeenSet;
 
                     /**
-                     * Function running environment
+                     * Function running environment 
+Note: This parameter may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_runtime;
                     bool m_runtimeHasBeenSet;

@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Information list of instance shards
-                     * @return InstanceShards Information list of instance shards
+                     * 获取List information of the instance shards, which includes  node information, node ID, key count, used capacity, and capacity slope.
+                     * @return InstanceShards List information of the instance shards, which includes  node information, node ID, key count, used capacity, and capacity slope.
                      * 
                      */
                     std::vector<InstanceClusterShard> GetInstanceShards() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool InstanceShardsHasBeenSet() const;
 
                     /**
-                     * 获取Total number of instance shard nodes
-                     * @return TotalCount Total number of instance shard nodes
+                     * 获取Number of instance shard nodes
+                     * @return TotalCount Number of instance shard nodes
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Information list of instance shards
+                     * List information of the instance shards, which includes  node information, node ID, key count, used capacity, and capacity slope.
                      */
                     std::vector<InstanceClusterShard> m_instanceShards;
                     bool m_instanceShardsHasBeenSet;
 
                     /**
-                     * Total number of instance shard nodes
+                     * Number of instance shard nodes
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

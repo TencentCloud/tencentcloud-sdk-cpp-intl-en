@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Backup ID
-                     * @return BackupId Backup ID
+                     * 获取Backup task ID
+                     * @return BackupId Backup task ID
                      * 
                      */
                     std::string GetBackupId() const;
 
                     /**
-                     * 设置Backup ID
-                     * @param _backupId Backup ID
+                     * 设置Backup task ID
+                     * @param _backupId Backup task ID
                      * 
                      */
                     void SetBackupId(const std::string& _backupId);
@@ -89,27 +89,15 @@ namespace TencentCloud
                     bool BackupIdHasBeenSet() const;
 
                     /**
-                     * 获取Backup type
-
-- `1`: Manual backup initiated by the user.
-- `0`: Automatic backup in the early morning initiated by the system.
-                     * @return BackupType Backup type
-
-- `1`: Manual backup initiated by the user.
-- `0`: Automatic backup in the early morning initiated by the system.
+                     * 获取Backup type. Valid values:  `1` (Automatic backup in the early morning initiated by the system.) `0`: Manual backup initiated by the user.
+                     * @return BackupType Backup type. Valid values:  `1` (Automatic backup in the early morning initiated by the system.) `0`: Manual backup initiated by the user.
                      * 
                      */
                     std::string GetBackupType() const;
 
                     /**
-                     * 设置Backup type
-
-- `1`: Manual backup initiated by the user.
-- `0`: Automatic backup in the early morning initiated by the system.
-                     * @param _backupType Backup type
-
-- `1`: Manual backup initiated by the user.
-- `0`: Automatic backup in the early morning initiated by the system.
+                     * 设置Backup type. Valid values:  `1` (Automatic backup in the early morning initiated by the system.) `0`: Manual backup initiated by the user.
+                     * @param _backupType Backup type. Valid values:  `1` (Automatic backup in the early morning initiated by the system.) `0`: Manual backup initiated by the user.
                      * 
                      */
                     void SetBackupType(const std::string& _backupType);
@@ -122,39 +110,15 @@ namespace TencentCloud
                     bool BackupTypeHasBeenSet() const;
 
                     /**
-                     * 获取Backup status 
-
-- `1`: The backup is locked by another process.
-- `2`: The backup is normal and not locked by any process.
-- `-1`: The backup expired.
-- `3`: The backup is being exported.
-- `4`: The backup was exported successfully.
-                     * @return Status Backup status 
-
-- `1`: The backup is locked by another process.
-- `2`: The backup is normal and not locked by any process.
-- `-1`: The backup expired.
-- `3`: The backup is being exported.
-- `4`: The backup was exported successfully.
+                     * 获取Backup status. Valid values:  - `1`: The backup is locked by another process. - `2`: The backup is normal and not locked by any process. - `-1`: The backup is expired. - `3`: The backup is being exported. - `4`: Exported the backup successfully.
+                     * @return Status Backup status. Valid values:  - `1`: The backup is locked by another process. - `2`: The backup is normal and not locked by any process. - `-1`: The backup is expired. - `3`: The backup is being exported. - `4`: Exported the backup successfully.
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Backup status 
-
-- `1`: The backup is locked by another process.
-- `2`: The backup is normal and not locked by any process.
-- `-1`: The backup expired.
-- `3`: The backup is being exported.
-- `4`: The backup was exported successfully.
-                     * @param _status Backup status 
-
-- `1`: The backup is locked by another process.
-- `2`: The backup is normal and not locked by any process.
-- `-1`: The backup expired.
-- `3`: The backup is being exported.
-- `4`: The backup was exported successfully.
+                     * 设置Backup status. Valid values:  - `1`: The backup is locked by another process. - `2`: The backup is normal and not locked by any process. - `-1`: The backup is expired. - `3`: The backup is being exported. - `4`: Exported the backup successfully.
+                     * @param _status Backup status. Valid values:  - `1`: The backup is locked by another process. - `2`: The backup is normal and not locked by any process. - `-1`: The backup is expired. - `3`: The backup is being exported. - `4`: Exported the backup successfully.
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -188,27 +152,15 @@ namespace TencentCloud
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取Whether the backup is locked
-
-- `0`: Not locked.
-- `1`: Locked.
-                     * @return Locked Whether the backup is locked
-
-- `0`: Not locked.
-- `1`: Locked.
+                     * 获取Whether the backup is locked. Valid values:  - `0` (no) - `1` (yes)
+                     * @return Locked Whether the backup is locked. Valid values:  - `0` (no) - `1` (yes)
                      * 
                      */
                     int64_t GetLocked() const;
 
                     /**
-                     * 设置Whether the backup is locked
-
-- `0`: Not locked.
-- `1`: Locked.
-                     * @param _locked Whether the backup is locked
-
-- `0`: Not locked.
-- `1`: Locked.
+                     * 设置Whether the backup is locked. Valid values:  - `0` (no) - `1` (yes)
+                     * @param _locked Whether the backup is locked. Valid values:  - `0` (no) - `1` (yes)
                      * 
                      */
                     void SetLocked(const int64_t& _locked);
@@ -430,28 +382,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Backup ID
+                     * Backup task ID
                      */
                     std::string m_backupId;
                     bool m_backupIdHasBeenSet;
 
                     /**
-                     * Backup type
-
-- `1`: Manual backup initiated by the user.
-- `0`: Automatic backup in the early morning initiated by the system.
+                     * Backup type. Valid values:  `1` (Automatic backup in the early morning initiated by the system.) `0`: Manual backup initiated by the user.
                      */
                     std::string m_backupType;
                     bool m_backupTypeHasBeenSet;
 
                     /**
-                     * Backup status 
-
-- `1`: The backup is locked by another process.
-- `2`: The backup is normal and not locked by any process.
-- `-1`: The backup expired.
-- `3`: The backup is being exported.
-- `4`: The backup was exported successfully.
+                     * Backup status. Valid values:  - `1`: The backup is locked by another process. - `2`: The backup is normal and not locked by any process. - `-1`: The backup is expired. - `3`: The backup is being exported. - `4`: Exported the backup successfully.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
@@ -463,10 +406,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * Whether the backup is locked
-
-- `0`: Not locked.
-- `1`: Locked.
+                     * Whether the backup is locked. Valid values:  - `0` (no) - `1` (yes)
                      */
                     int64_t m_locked;
                     bool m_lockedHasBeenSet;

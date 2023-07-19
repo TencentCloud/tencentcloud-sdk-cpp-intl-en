@@ -521,7 +521,7 @@ namespace TencentCloud
                 ChangeMasterInstanceOutcomeCallable ChangeMasterInstanceCallable(const Model::ChangeMasterInstanceRequest& request);
 
                 /**
-                 *This API is used to promote a replica node group of a multi-AZ deployed instance to master node group or a replica node of a single-AZ deployed instance to master node.
+                 *This API is used to promote a replica node group to a master node group or a replica node to a master node for an instance.
                  * @param req ChangeReplicaToMasterRequest
                  * @return ChangeReplicaToMasterOutcome
                  */
@@ -611,7 +611,7 @@ namespace TencentCloud
                 DeleteParamTemplateOutcomeCallable DeleteParamTemplateCallable(const Model::DeleteParamTemplateRequest& request);
 
                 /**
-                 *This API is used to get the backup configuration.
+                 *This API is used to get the configuration rules for an automatic backup.
                  * @param req DescribeAutoBackupConfigRequest
                  * @return DescribeAutoBackupConfigOutcome
                  */
@@ -665,7 +665,7 @@ namespace TencentCloud
                 DescribeDBSecurityGroupsOutcomeCallable DescribeDBSecurityGroupsCallable(const Model::DescribeDBSecurityGroupsRequest& request);
 
                 /**
-                 *This API is used to view instance sub-account information.
+                 *This API is used to query the information of an instance sub-account.
                  * @param req DescribeInstanceAccountRequest
                  * @return DescribeInstanceAccountOutcome
                  */
@@ -773,7 +773,7 @@ namespace TencentCloud
                 DescribeInstanceMonitorTopNCmdTookOutcomeCallable DescribeInstanceMonitorTopNCmdTookCallable(const Model::DescribeInstanceMonitorTopNCmdTookRequest& request);
 
                 /**
-                 *This API is used to query instance node information.
+                 *This API is used to query the information of an instance node.
                  * @param req DescribeInstanceNodeInfoRequest
                  * @return DescribeInstanceNodeInfoOutcome
                  */
@@ -791,7 +791,7 @@ namespace TencentCloud
                 DescribeInstanceParamRecordsOutcomeCallable DescribeInstanceParamRecordsCallable(const Model::DescribeInstanceParamRecordsRequest& request);
 
                 /**
-                 *This API is used to query the list of instance parameters.
+                 *This API is used to query the parameter list of an instance.
                  * @param req DescribeInstanceParamsRequest
                  * @return DescribeInstanceParamsOutcome
                  */
@@ -809,7 +809,7 @@ namespace TencentCloud
                 DescribeInstanceSecurityGroupOutcomeCallable DescribeInstanceSecurityGroupCallable(const Model::DescribeInstanceSecurityGroupRequest& request);
 
                 /**
-                 *This API is used to get the information of Cluster Edition instance shards.
+                 *This API is used to get the shard information of the instance on cluster architecture.
                  * @param req DescribeInstanceShardsRequest
                  * @return DescribeInstanceShardsOutcome
                  */
@@ -818,7 +818,7 @@ namespace TencentCloud
                 DescribeInstanceShardsOutcomeCallable DescribeInstanceShardsCallable(const Model::DescribeInstanceShardsRequest& request);
 
                 /**
-                 *This API is used to query the Redis node details.
+                 *This API is used to query the details of a Redis node.
                  * @param req DescribeInstanceZoneInfoRequest
                  * @return DescribeInstanceZoneInfoOutcome
                  */
@@ -935,7 +935,7 @@ namespace TencentCloud
                 DescribeTaskInfoOutcomeCallable DescribeTaskInfoCallable(const Model::DescribeTaskInfoRequest& request);
 
                 /**
-                 *This API is used to query the list of tasks.
+                 *This API is used to query the task list information of a specified instance.
                  * @param req DescribeTaskListRequest
                  * @return DescribeTaskListOutcome
                  */
@@ -1016,7 +1016,7 @@ namespace TencentCloud
                 InquiryPriceUpgradeInstanceOutcomeCallable InquiryPriceUpgradeInstanceCallable(const Model::InquiryPriceUpgradeInstanceRequest& request);
 
                 /**
-                 *This API is used to perform a failure simulation.
+                 *This API is used to simulate the failure.
                  * @param req KillMasterGroupRequest
                  * @return KillMasterGroupOutcome
                  */
@@ -1043,7 +1043,7 @@ namespace TencentCloud
                 ModfiyInstancePasswordOutcomeCallable ModfiyInstancePasswordCallable(const Model::ModfiyInstancePasswordRequest& request);
 
                 /**
-                 *This API is used to configure automatic backup.
+                 *This API is used to set the configuration for an automatic backup.
                  * @param req ModifyAutoBackupConfigRequest
                  * @return ModifyAutoBackupConfigOutcome
                  */

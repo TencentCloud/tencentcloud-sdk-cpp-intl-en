@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of keys on the node
-                     * @return Keys Number of keys on the node
+                     * 获取Number of keys on Redis nodes
+                     * @return Keys Number of keys on Redis nodes
                      * 
                      */
                     int64_t GetKeys() const;
 
                     /**
-                     * 设置Number of keys on the node
-                     * @param _keys Number of keys on the node
+                     * 设置Number of keys on Redis nodes
+                     * @param _keys Number of keys on Redis nodes
                      * 
                      */
                     void SetKeys(const int64_t& _keys);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool KeysHasBeenSet() const;
 
                     /**
-                     * 获取Distribution of node slots
-                     * @return Slot Distribution of node slots
+                     * 获取Slot distribution range for Redis node.  Value range:  0-5460.
+                     * @return Slot Slot distribution range for Redis node.  Value range:  0-5460.
                      * 
                      */
                     std::string GetSlot() const;
 
                     /**
-                     * 设置Distribution of node slots
-                     * @param _slot Distribution of node slots
+                     * 设置Slot distribution range for Redis node.  Value range:  0-5460.
+                     * @param _slot Slot distribution range for Redis node.  Value range:  0-5460.
                      * 
                      */
                     void SetSlot(const std::string& _slot);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool SlotHasBeenSet() const;
 
                     /**
-                     * 获取Node ID
-                     * @return NodeId Node ID
+                     * 获取Node sequence ID
+                     * @return NodeId Node sequence ID
                      * 
                      */
                     std::string GetNodeId() const;
 
                     /**
-                     * 设置Node ID
-                     * @param _nodeId Node ID
+                     * 设置Node sequence ID
+                     * @param _nodeId Node sequence ID
                      * 
                      */
                     void SetNodeId(const std::string& _nodeId);
@@ -154,19 +154,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of keys on the node
+                     * Number of keys on Redis nodes
                      */
                     int64_t m_keys;
                     bool m_keysHasBeenSet;
 
                     /**
-                     * Distribution of node slots
+                     * Slot distribution range for Redis node.  Value range:  0-5460.
                      */
                     std::string m_slot;
                     bool m_slotHasBeenSet;
 
                     /**
-                     * Node ID
+                     * Node sequence ID
                      */
                     std::string m_nodeId;
                     bool m_nodeIdHasBeenSet;

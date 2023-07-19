@@ -217,63 +217,63 @@ namespace TencentCloud
                     /**
                      * 获取Minimum resource ID of trigger
                      * @return ResourceId Minimum resource ID of trigger
-                     * 
+                     * @deprecated
                      */
                     std::string GetResourceId() const;
 
                     /**
                      * 设置Minimum resource ID of trigger
                      * @param _resourceId Minimum resource ID of trigger
-                     * 
+                     * @deprecated
                      */
                     void SetResourceId(const std::string& _resourceId);
 
                     /**
                      * 判断参数 ResourceId 是否已赋值
                      * @return ResourceId 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool ResourceIdHasBeenSet() const;
 
                     /**
                      * 获取Trigger-Function binding status
                      * @return BindStatus Trigger-Function binding status
-                     * 
+                     * @deprecated
                      */
                     std::string GetBindStatus() const;
 
                     /**
                      * 设置Trigger-Function binding status
                      * @param _bindStatus Trigger-Function binding status
-                     * 
+                     * @deprecated
                      */
                     void SetBindStatus(const std::string& _bindStatus);
 
                     /**
                      * 判断参数 BindStatus 是否已赋值
                      * @return BindStatus 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool BindStatusHasBeenSet() const;
 
                     /**
                      * 获取Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
                      * @return TriggerAttribute Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
-                     * 
+                     * @deprecated
                      */
                     std::string GetTriggerAttribute() const;
 
                     /**
                      * 设置Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
                      * @param _triggerAttribute Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
-                     * 
+                     * @deprecated
                      */
                     void SetTriggerAttribute(const std::string& _triggerAttribute);
 
                     /**
                      * 判断参数 TriggerAttribute 是否已赋值
                      * @return TriggerAttribute 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool TriggerAttributeHasBeenSet() const;
 
@@ -297,6 +297,27 @@ namespace TencentCloud
                      * 
                      */
                     bool QualifierHasBeenSet() const;
+
+                    /**
+                     * 获取Trigger description
+                     * @return Description Trigger description
+                     * 
+                     */
+                    std::string GetDescription() const;
+
+                    /**
+                     * 设置Trigger description
+                     * @param _description Trigger description
+                     * 
+                     */
+                    void SetDescription(const std::string& _description);
+
+                    /**
+                     * 判断参数 Description 是否已赋值
+                     * @return Description 是否已赋值
+                     * 
+                     */
+                    bool DescriptionHasBeenSet() const;
 
                 private:
 
@@ -371,6 +392,12 @@ namespace TencentCloud
                      */
                     std::string m_qualifier;
                     bool m_qualifierHasBeenSet;
+
+                    /**
+                     * Trigger description
+                     */
+                    std::string m_description;
+                    bool m_descriptionHasBeenSet;
 
                 };
             }
