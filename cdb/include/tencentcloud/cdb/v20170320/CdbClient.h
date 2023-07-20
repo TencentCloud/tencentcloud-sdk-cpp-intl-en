@@ -59,6 +59,8 @@
 #include <tencentcloud/cdb/v20170320/model/CreateDBInstanceResponse.h>
 #include <tencentcloud/cdb/v20170320/model/CreateDBInstanceHourRequest.h>
 #include <tencentcloud/cdb/v20170320/model/CreateDBInstanceHourResponse.h>
+#include <tencentcloud/cdb/v20170320/model/CreateDatabaseRequest.h>
+#include <tencentcloud/cdb/v20170320/model/CreateDatabaseResponse.h>
 #include <tencentcloud/cdb/v20170320/model/CreateParamTemplateRequest.h>
 #include <tencentcloud/cdb/v20170320/model/CreateParamTemplateResponse.h>
 #include <tencentcloud/cdb/v20170320/model/CreateRoInstanceIpRequest.h>
@@ -357,6 +359,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateDBInstanceHourResponse> CreateDBInstanceHourOutcome;
                 typedef std::future<CreateDBInstanceHourOutcome> CreateDBInstanceHourOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::CreateDBInstanceHourRequest&, CreateDBInstanceHourOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDBInstanceHourAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateDatabaseResponse> CreateDatabaseOutcome;
+                typedef std::future<CreateDatabaseOutcome> CreateDatabaseOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::CreateDatabaseRequest&, CreateDatabaseOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDatabaseAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateParamTemplateResponse> CreateParamTemplateOutcome;
                 typedef std::future<CreateParamTemplateOutcome> CreateParamTemplateOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::CreateParamTemplateRequest&, CreateParamTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateParamTemplateAsyncHandler;
@@ -885,6 +890,15 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
                 CreateDBInstanceHourOutcome CreateDBInstanceHour(const Model::CreateDBInstanceHourRequest &request);
                 void CreateDBInstanceHourAsync(const Model::CreateDBInstanceHourRequest& request, const CreateDBInstanceHourAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateDBInstanceHourOutcomeCallable CreateDBInstanceHourCallable(const Model::CreateDBInstanceHourRequest& request);
+
+                /**
+                 *This API is used to create a database in a TencentDB instance.
+                 * @param req CreateDatabaseRequest
+                 * @return CreateDatabaseOutcome
+                 */
+                CreateDatabaseOutcome CreateDatabase(const Model::CreateDatabaseRequest &request);
+                void CreateDatabaseAsync(const Model::CreateDatabaseRequest& request, const CreateDatabaseAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateDatabaseOutcomeCallable CreateDatabaseCallable(const Model::CreateDatabaseRequest& request);
 
                 /**
                  *This API is used to create a parameter template. The common request parameter `Region` can only be set to `ap-guangzhou`.
@@ -1554,7 +1568,7 @@ Note that when modifying account permissions, you need to pass in the full permi
                 ModifyBackupDownloadRestrictionOutcomeCallable ModifyBackupDownloadRestrictionCallable(const Model::ModifyBackupDownloadRestrictionRequest& request);
 
                 /**
-                 *This API is used to set the default encryption status of an instance backup. 
+                 *This API is used to set the encryption status of an instance backup.
                  * @param req ModifyBackupEncryptionStatusRequest
                  * @return ModifyBackupEncryptionStatusOutcome
                  */

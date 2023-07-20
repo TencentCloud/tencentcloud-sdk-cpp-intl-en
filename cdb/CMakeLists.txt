@@ -37,6 +37,7 @@ set(cdb_public_header_model
   include/tencentcloud/cdb/v20170320/model/ModifyDBInstanceProjectResponse.h
   include/tencentcloud/cdb/v20170320/model/DescribeDataBackupOverviewResponse.h
   include/tencentcloud/cdb/v20170320/model/BackupSummaryItem.h
+  include/tencentcloud/cdb/v20170320/model/CreateDatabaseRequest.h
   include/tencentcloud/cdb/v20170320/model/ModifyInstanceParamRequest.h
   include/tencentcloud/cdb/v20170320/model/CreateParamTemplateRequest.h
   include/tencentcloud/cdb/v20170320/model/DescribeSupportedPrivilegesRequest.h
@@ -128,6 +129,7 @@ set(cdb_public_header_model
   include/tencentcloud/cdb/v20170320/model/ModifyAccountPasswordResponse.h
   include/tencentcloud/cdb/v20170320/model/ReleaseIsolatedDBInstancesRequest.h
   include/tencentcloud/cdb/v20170320/model/BinlogInfo.h
+  include/tencentcloud/cdb/v20170320/model/CreateDatabaseResponse.h
   include/tencentcloud/cdb/v20170320/model/DescribeErrorLogDataResponse.h
   include/tencentcloud/cdb/v20170320/model/AddTimeWindowRequest.h
   include/tencentcloud/cdb/v20170320/model/ImportRecord.h
@@ -403,6 +405,7 @@ set(cdb_src
   src/v20170320/model/ModifyDBInstanceProjectResponse.cpp
   src/v20170320/model/DescribeDataBackupOverviewResponse.cpp
   src/v20170320/model/BackupSummaryItem.cpp
+  src/v20170320/model/CreateDatabaseRequest.cpp
   src/v20170320/model/ModifyInstanceParamRequest.cpp
   src/v20170320/model/CreateParamTemplateRequest.cpp
   src/v20170320/model/DescribeSupportedPrivilegesRequest.cpp
@@ -494,6 +497,7 @@ set(cdb_src
   src/v20170320/model/ModifyAccountPasswordResponse.cpp
   src/v20170320/model/ReleaseIsolatedDBInstancesRequest.cpp
   src/v20170320/model/BinlogInfo.cpp
+  src/v20170320/model/CreateDatabaseResponse.cpp
   src/v20170320/model/DescribeErrorLogDataResponse.cpp
   src/v20170320/model/AddTimeWindowRequest.cpp
   src/v20170320/model/ImportRecord.cpp

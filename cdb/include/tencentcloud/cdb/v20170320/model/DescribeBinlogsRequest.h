@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Earliest Binlog start time in the format of  2016-03-17 02:10:37
-                     * @return MinStartTime Earliest Binlog start time in the format of  2016-03-17 02:10:37
+                     * 获取The earliest start time of binlog  in the format of 2016-03-17 02:10:37.
+                     * @return MinStartTime The earliest start time of binlog  in the format of 2016-03-17 02:10:37.
                      * 
                      */
                     std::string GetMinStartTime() const;
 
                     /**
-                     * 设置Earliest Binlog start time in the format of  2016-03-17 02:10:37
-                     * @param _minStartTime Earliest Binlog start time in the format of  2016-03-17 02:10:37
+                     * 设置The earliest start time of binlog  in the format of 2016-03-17 02:10:37.
+                     * @param _minStartTime The earliest start time of binlog  in the format of 2016-03-17 02:10:37.
                      * 
                      */
                     void SetMinStartTime(const std::string& _minStartTime);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool MinStartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Latest binlog start time in the format of  2016-03-17 02:10:37
-                     * @return MaxStartTime Latest binlog start time in the format of  2016-03-17 02:10:37
+                     * 获取The latest start time of binlog  in the format of 2016-03-17 02:10:37.
+                     * @return MaxStartTime The latest start time of binlog  in the format of 2016-03-17 02:10:37.
                      * 
                      */
                     std::string GetMaxStartTime() const;
 
                     /**
-                     * 设置Latest binlog start time in the format of  2016-03-17 02:10:37
-                     * @param _maxStartTime Latest binlog start time in the format of  2016-03-17 02:10:37
+                     * 设置The latest start time of binlog  in the format of 2016-03-17 02:10:37.
+                     * @param _maxStartTime The latest start time of binlog  in the format of 2016-03-17 02:10:37.
                      * 
                      */
                     void SetMaxStartTime(const std::string& _maxStartTime);
@@ -168,13 +168,13 @@ namespace TencentCloud
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Earliest Binlog start time in the format of  2016-03-17 02:10:37
+                     * The earliest start time of binlog  in the format of 2016-03-17 02:10:37.
                      */
                     std::string m_minStartTime;
                     bool m_minStartTimeHasBeenSet;
 
                     /**
-                     * Latest binlog start time in the format of  2016-03-17 02:10:37
+                     * The latest start time of binlog  in the format of 2016-03-17 02:10:37.
                      */
                     std::string m_maxStartTime;
                     bool m_maxStartTimeHasBeenSet;

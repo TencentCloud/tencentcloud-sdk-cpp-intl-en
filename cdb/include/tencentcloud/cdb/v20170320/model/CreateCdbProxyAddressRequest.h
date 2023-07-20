@@ -401,15 +401,15 @@ namespace TencentCloud
                     bool SecurityGroupHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ConnectionPoolType 
+                     * 获取Connection pool type, which will take effect only when `ConnectionPool` is `true`. Valid values:  `transaction` (transaction-level), `connection` (session-level).
+                     * @return ConnectionPoolType Connection pool type, which will take effect only when `ConnectionPool` is `true`. Valid values:  `transaction` (transaction-level), `connection` (session-level).
                      * 
                      */
                     std::string GetConnectionPoolType() const;
 
                     /**
-                     * 设置
-                     * @param _connectionPoolType 
+                     * 设置Connection pool type, which will take effect only when `ConnectionPool` is `true`. Valid values:  `transaction` (transaction-level), `connection` (session-level).
+                     * @param _connectionPoolType Connection pool type, which will take effect only when `ConnectionPool` is `true`. Valid values:  `transaction` (transaction-level), `connection` (session-level).
                      * 
                      */
                     void SetConnectionPoolType(const std::string& _connectionPoolType);
@@ -526,7 +526,7 @@ namespace TencentCloud
                     bool m_securityGroupHasBeenSet;
 
                     /**
-                     * 
+                     * Connection pool type, which will take effect only when `ConnectionPool` is `true`. Valid values:  `transaction` (transaction-level), `connection` (session-level).
                      */
                     std::string m_connectionPoolType;
                     bool m_connectionPoolTypeHasBeenSet;

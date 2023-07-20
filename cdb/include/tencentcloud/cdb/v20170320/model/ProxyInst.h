@@ -89,18 +89,18 @@ namespace TencentCloud
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取Instance type Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceType Instance type Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Instance type. Valid values:  `master` (source instance), `ro` (read-only instance), `dr` (disaster recovery instance), `sdr` (disaster recovery instance of small specifications). Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return InstanceType Instance type. Valid values:  `master` (source instance), `ro` (read-only instance), `dr` (disaster recovery instance), `sdr` (disaster recovery instance of small specifications). Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    std::string GetInstanceType() const;
+                    int64_t GetInstanceType() const;
 
                     /**
-                     * 设置Instance type Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceType Instance type Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Instance type. Valid values:  `master` (source instance), `ro` (read-only instance), `dr` (disaster recovery instance), `sdr` (disaster recovery instance of small specifications). Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _instanceType Instance type. Valid values:  `master` (source instance), `ro` (read-only instance), `dr` (disaster recovery instance), `sdr` (disaster recovery instance of small specifications). Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    void SetInstanceType(const std::string& _instanceType);
+                    void SetInstanceType(const int64_t& _instanceType);
 
                     /**
                      * 判断参数 InstanceType 是否已赋值
@@ -208,9 +208,9 @@ namespace TencentCloud
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * Instance type Note: This field may return null, indicating that no valid values can be obtained.
+                     * Instance type. Valid values:  `master` (source instance), `ro` (read-only instance), `dr` (disaster recovery instance), `sdr` (disaster recovery instance of small specifications). Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    std::string m_instanceType;
+                    int64_t m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
