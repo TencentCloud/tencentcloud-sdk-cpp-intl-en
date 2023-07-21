@@ -127,18 +127,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+
+Note: This feature is currently in a beta test. To use it, please contact technical support.
+Note: this field may return null, indicating that no valid values can be obtained.
                      * @return DynamicIndex Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+
+Note: This feature is currently in a beta test. To use it, please contact technical support.
+Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     DynamicIndex GetDynamicIndex() const;
 
                     /**
                      * 设置Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+
+Note: This feature is currently in a beta test. To use it, please contact technical support.
+Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _dynamicIndex Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+
+Note: This feature is currently in a beta test. To use it, please contact technical support.
+Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDynamicIndex(const DynamicIndex& _dynamicIndex);
@@ -175,7 +183,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+
+Note: This feature is currently in a beta test. To use it, please contact technical support.
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     DynamicIndex m_dynamicIndex;
                     bool m_dynamicIndexHasBeenSet;

@@ -174,19 +174,19 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool BeginRegexHasBeenSet() const;
 
                     /**
-                     * 获取Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Keys Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself. A maximum of 100 keys are supported.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Keys Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself. A maximum of 100 keys are supported.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetKeys() const;
 
                     /**
-                     * 设置Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _keys Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself. A maximum of 100 keys are supported.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _keys Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself. A maximum of 100 keys are supported.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetKeys(const std::vector<std::string>& _keys);
@@ -481,18 +481,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MetadataTypeHasBeenSet() const;
 
                     /**
-                     * 获取Regular expression of the collection path, which is required when `MetadataType` is set to `3`.
+                     * 获取Regular expression of the collection configuration path, which is required when `MetadataType` is set to `3`
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PathRegex Regular expression of the collection path, which is required when `MetadataType` is set to `3`.
+                     * @return PathRegex Regular expression of the collection configuration path, which is required when `MetadataType` is set to `3`
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetPathRegex() const;
 
                     /**
-                     * 设置Regular expression of the collection path, which is required when `MetadataType` is set to `3`.
+                     * 设置Regular expression of the collection configuration path, which is required when `MetadataType` is set to `3`
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _pathRegex Regular expression of the collection path, which is required when `MetadataType` is set to `3`.
+                     * @param _pathRegex Regular expression of the collection configuration path, which is required when `MetadataType` is set to `3`
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -564,8 +564,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_beginRegexHasBeenSet;
 
                     /**
-                     * Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself. A maximum of 100 keys are supported.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_keys;
                     bool m_keysHasBeenSet;
@@ -649,7 +649,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_metadataTypeHasBeenSet;
 
                     /**
-                     * Regular expression of the collection path, which is required when `MetadataType` is set to `3`.
+                     * Regular expression of the collection configuration path, which is required when `MetadataType` is set to `3`
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_pathRegex;

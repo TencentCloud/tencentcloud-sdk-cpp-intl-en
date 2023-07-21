@@ -36,6 +36,8 @@ namespace TencentCloud
             {
                 /**
                 * Dynamic index configuration
+
+Note: This feature is currently in a beta test. To use it, please contact technical support.
                 */
                 class DynamicIndex : public AbstractModel
                 {

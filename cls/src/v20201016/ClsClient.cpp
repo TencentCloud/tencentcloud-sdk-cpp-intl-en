@@ -126,6 +126,49 @@ ClsClient::ApplyConfigToMachineGroupOutcomeCallable ClsClient::ApplyConfigToMach
     return task->get_future();
 }
 
+ClsClient::CheckRechargeKafkaServerOutcome ClsClient::CheckRechargeKafkaServer(const CheckRechargeKafkaServerRequest &request)
+{
+    auto outcome = MakeRequest(request, "CheckRechargeKafkaServer");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CheckRechargeKafkaServerResponse rsp = CheckRechargeKafkaServerResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CheckRechargeKafkaServerOutcome(rsp);
+        else
+            return CheckRechargeKafkaServerOutcome(o.GetError());
+    }
+    else
+    {
+        return CheckRechargeKafkaServerOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::CheckRechargeKafkaServerAsync(const CheckRechargeKafkaServerRequest& request, const CheckRechargeKafkaServerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CheckRechargeKafkaServer(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+ClsClient::CheckRechargeKafkaServerOutcomeCallable ClsClient::CheckRechargeKafkaServerCallable(const CheckRechargeKafkaServerRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CheckRechargeKafkaServerOutcome()>>(
+        [this, request]()
+        {
+            return this->CheckRechargeKafkaServer(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 ClsClient::CloseKafkaConsumerOutcome ClsClient::CloseKafkaConsumer(const CloseKafkaConsumerRequest &request)
 {
     auto outcome = MakeRequest(request, "CloseKafkaConsumer");
@@ -384,6 +427,49 @@ ClsClient::CreateCosRechargeOutcomeCallable ClsClient::CreateCosRechargeCallable
     return task->get_future();
 }
 
+ClsClient::CreateDataTransformOutcome ClsClient::CreateDataTransform(const CreateDataTransformRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateDataTransform");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateDataTransformResponse rsp = CreateDataTransformResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateDataTransformOutcome(rsp);
+        else
+            return CreateDataTransformOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateDataTransformOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::CreateDataTransformAsync(const CreateDataTransformRequest& request, const CreateDataTransformAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateDataTransform(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+ClsClient::CreateDataTransformOutcomeCallable ClsClient::CreateDataTransformCallable(const CreateDataTransformRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateDataTransformOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateDataTransform(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 ClsClient::CreateExportOutcome ClsClient::CreateExport(const CreateExportRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateExport");
@@ -463,6 +549,49 @@ ClsClient::CreateIndexOutcomeCallable ClsClient::CreateIndexCallable(const Creat
         [this, request]()
         {
             return this->CreateIndex(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+ClsClient::CreateKafkaRechargeOutcome ClsClient::CreateKafkaRecharge(const CreateKafkaRechargeRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateKafkaRecharge");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateKafkaRechargeResponse rsp = CreateKafkaRechargeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateKafkaRechargeOutcome(rsp);
+        else
+            return CreateKafkaRechargeOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateKafkaRechargeOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::CreateKafkaRechargeAsync(const CreateKafkaRechargeRequest& request, const CreateKafkaRechargeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateKafkaRecharge(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+ClsClient::CreateKafkaRechargeOutcomeCallable ClsClient::CreateKafkaRechargeCallable(const CreateKafkaRechargeRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateKafkaRechargeOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateKafkaRecharge(request);
         }
     );
 
@@ -857,6 +986,49 @@ ClsClient::DeleteConsumerOutcomeCallable ClsClient::DeleteConsumerCallable(const
     return task->get_future();
 }
 
+ClsClient::DeleteDataTransformOutcome ClsClient::DeleteDataTransform(const DeleteDataTransformRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteDataTransform");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteDataTransformResponse rsp = DeleteDataTransformResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteDataTransformOutcome(rsp);
+        else
+            return DeleteDataTransformOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteDataTransformOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DeleteDataTransformAsync(const DeleteDataTransformRequest& request, const DeleteDataTransformAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteDataTransform(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+ClsClient::DeleteDataTransformOutcomeCallable ClsClient::DeleteDataTransformCallable(const DeleteDataTransformRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteDataTransformOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteDataTransform(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 ClsClient::DeleteExportOutcome ClsClient::DeleteExport(const DeleteExportRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteExport");
@@ -936,6 +1108,49 @@ ClsClient::DeleteIndexOutcomeCallable ClsClient::DeleteIndexCallable(const Delet
         [this, request]()
         {
             return this->DeleteIndex(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+ClsClient::DeleteKafkaRechargeOutcome ClsClient::DeleteKafkaRecharge(const DeleteKafkaRechargeRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteKafkaRecharge");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteKafkaRechargeResponse rsp = DeleteKafkaRechargeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteKafkaRechargeOutcome(rsp);
+        else
+            return DeleteKafkaRechargeOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteKafkaRechargeOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DeleteKafkaRechargeAsync(const DeleteKafkaRechargeRequest& request, const DeleteKafkaRechargeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteKafkaRecharge(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+ClsClient::DeleteKafkaRechargeOutcomeCallable ClsClient::DeleteKafkaRechargeCallable(const DeleteKafkaRechargeRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteKafkaRechargeOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteKafkaRecharge(request);
         }
     );
 
@@ -1459,6 +1674,49 @@ ClsClient::DescribeCosRechargesOutcomeCallable ClsClient::DescribeCosRechargesCa
     return task->get_future();
 }
 
+ClsClient::DescribeDataTransformInfoOutcome ClsClient::DescribeDataTransformInfo(const DescribeDataTransformInfoRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDataTransformInfo");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDataTransformInfoResponse rsp = DescribeDataTransformInfoResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDataTransformInfoOutcome(rsp);
+        else
+            return DescribeDataTransformInfoOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDataTransformInfoOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DescribeDataTransformInfoAsync(const DescribeDataTransformInfoRequest& request, const DescribeDataTransformInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeDataTransformInfo(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+ClsClient::DescribeDataTransformInfoOutcomeCallable ClsClient::DescribeDataTransformInfoCallable(const DescribeDataTransformInfoRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeDataTransformInfoOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeDataTransformInfo(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 ClsClient::DescribeExportsOutcome ClsClient::DescribeExports(const DescribeExportsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeExports");
@@ -1538,6 +1796,49 @@ ClsClient::DescribeIndexOutcomeCallable ClsClient::DescribeIndexCallable(const D
         [this, request]()
         {
             return this->DescribeIndex(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+ClsClient::DescribeKafkaRechargesOutcome ClsClient::DescribeKafkaRecharges(const DescribeKafkaRechargesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeKafkaRecharges");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeKafkaRechargesResponse rsp = DescribeKafkaRechargesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeKafkaRechargesOutcome(rsp);
+        else
+            return DescribeKafkaRechargesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeKafkaRechargesOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DescribeKafkaRechargesAsync(const DescribeKafkaRechargesRequest& request, const DescribeKafkaRechargesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeKafkaRecharges(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+ClsClient::DescribeKafkaRechargesOutcomeCallable ClsClient::DescribeKafkaRechargesCallable(const DescribeKafkaRechargesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeKafkaRechargesOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeKafkaRecharges(request);
         }
     );
 
@@ -2276,6 +2577,49 @@ ClsClient::ModifyCosRechargeOutcomeCallable ClsClient::ModifyCosRechargeCallable
     return task->get_future();
 }
 
+ClsClient::ModifyDataTransformOutcome ClsClient::ModifyDataTransform(const ModifyDataTransformRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyDataTransform");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyDataTransformResponse rsp = ModifyDataTransformResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyDataTransformOutcome(rsp);
+        else
+            return ModifyDataTransformOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyDataTransformOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::ModifyDataTransformAsync(const ModifyDataTransformRequest& request, const ModifyDataTransformAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyDataTransform(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+ClsClient::ModifyDataTransformOutcomeCallable ClsClient::ModifyDataTransformCallable(const ModifyDataTransformRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyDataTransformOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyDataTransform(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 ClsClient::ModifyIndexOutcome ClsClient::ModifyIndex(const ModifyIndexRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyIndex");
@@ -2312,6 +2656,49 @@ ClsClient::ModifyIndexOutcomeCallable ClsClient::ModifyIndexCallable(const Modif
         [this, request]()
         {
             return this->ModifyIndex(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+ClsClient::ModifyKafkaRechargeOutcome ClsClient::ModifyKafkaRecharge(const ModifyKafkaRechargeRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyKafkaRecharge");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyKafkaRechargeResponse rsp = ModifyKafkaRechargeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyKafkaRechargeOutcome(rsp);
+        else
+            return ModifyKafkaRechargeOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyKafkaRechargeOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::ModifyKafkaRechargeAsync(const ModifyKafkaRechargeRequest& request, const ModifyKafkaRechargeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyKafkaRecharge(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+ClsClient::ModifyKafkaRechargeOutcomeCallable ClsClient::ModifyKafkaRechargeCallable(const ModifyKafkaRechargeRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyKafkaRechargeOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyKafkaRecharge(request);
         }
     );
 
@@ -2527,6 +2914,49 @@ ClsClient::OpenKafkaConsumerOutcomeCallable ClsClient::OpenKafkaConsumerCallable
         [this, request]()
         {
             return this->OpenKafkaConsumer(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+ClsClient::PreviewKafkaRechargeOutcome ClsClient::PreviewKafkaRecharge(const PreviewKafkaRechargeRequest &request)
+{
+    auto outcome = MakeRequest(request, "PreviewKafkaRecharge");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        PreviewKafkaRechargeResponse rsp = PreviewKafkaRechargeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return PreviewKafkaRechargeOutcome(rsp);
+        else
+            return PreviewKafkaRechargeOutcome(o.GetError());
+    }
+    else
+    {
+        return PreviewKafkaRechargeOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::PreviewKafkaRechargeAsync(const PreviewKafkaRechargeRequest& request, const PreviewKafkaRechargeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->PreviewKafkaRecharge(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+ClsClient::PreviewKafkaRechargeOutcomeCallable ClsClient::PreviewKafkaRechargeCallable(const PreviewKafkaRechargeRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<PreviewKafkaRechargeOutcome()>>(
+        [this, request]()
+        {
+            return this->PreviewKafkaRecharge(request);
         }
     );
 

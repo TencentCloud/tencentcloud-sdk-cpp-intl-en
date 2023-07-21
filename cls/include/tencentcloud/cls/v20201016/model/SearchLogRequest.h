@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cls/v20201016/model/MultiTopicSearchInformation.h>
 
 
 namespace TencentCloud
@@ -114,15 +115,19 @@ Queries all logs using * or an empty string
                     bool QueryHasBeenSet() const;
 
                     /**
-                     * 获取ID of the log topic to be searched
-                     * @return TopicId ID of the log topic to be searched
+                     * 获取- The ID of the log topic to be searched for. Only one log topic can be specified.
+- To search for multiple log topics at a time, use the `Topics` parameter.
+                     * @return TopicId - The ID of the log topic to be searched for. Only one log topic can be specified.
+- To search for multiple log topics at a time, use the `Topics` parameter.
                      * 
                      */
                     std::string GetTopicId() const;
 
                     /**
-                     * 设置ID of the log topic to be searched
-                     * @param _topicId ID of the log topic to be searched
+                     * 设置- The ID of the log topic to be searched for. Only one log topic can be specified.
+- To search for multiple log topics at a time, use the `Topics` parameter.
+                     * @param _topicId - The ID of the log topic to be searched for. Only one log topic can be specified.
+- To search for multiple log topics at a time, use the `Topics` parameter.
                      * 
                      */
                     void SetTopicId(const std::string& _topicId);
@@ -332,6 +337,35 @@ For more information, see <a href="https://intl.cloud.tencent.com/document/produ
                      */
                     bool SyntaxRuleHasBeenSet() const;
 
+                    /**
+                     * 获取- The IDs of the log topics (up to 20) to be searched for.
+- To search for a single log topic, use the `TopicId` parameter.
+- You cannot use both `TopicId` and `Topics`.
+                     * @return Topics - The IDs of the log topics (up to 20) to be searched for.
+- To search for a single log topic, use the `TopicId` parameter.
+- You cannot use both `TopicId` and `Topics`.
+                     * 
+                     */
+                    std::vector<MultiTopicSearchInformation> GetTopics() const;
+
+                    /**
+                     * 设置- The IDs of the log topics (up to 20) to be searched for.
+- To search for a single log topic, use the `TopicId` parameter.
+- You cannot use both `TopicId` and `Topics`.
+                     * @param _topics - The IDs of the log topics (up to 20) to be searched for.
+- To search for a single log topic, use the `TopicId` parameter.
+- You cannot use both `TopicId` and `Topics`.
+                     * 
+                     */
+                    void SetTopics(const std::vector<MultiTopicSearchInformation>& _topics);
+
+                    /**
+                     * 判断参数 Topics 是否已赋值
+                     * @return Topics 是否已赋值
+                     * 
+                     */
+                    bool TopicsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -355,7 +389,8 @@ Queries all logs using * or an empty string
                     bool m_queryHasBeenSet;
 
                     /**
-                     * ID of the log topic to be searched
+                     * - The ID of the log topic to be searched for. Only one log topic can be specified.
+- To search for multiple log topics at a time, use the `Topics` parameter.
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;
@@ -413,6 +448,14 @@ For more information, see <a href="https://intl.cloud.tencent.com/document/produ
                      */
                     uint64_t m_syntaxRule;
                     bool m_syntaxRuleHasBeenSet;
+
+                    /**
+                     * - The IDs of the log topics (up to 20) to be searched for.
+- To search for a single log topic, use the `TopicId` parameter.
+- You cannot use both `TopicId` and `Topics`.
+                     */
+                    std::vector<MultiTopicSearchInformation> m_topics;
+                    bool m_topicsHasBeenSet;
 
                 };
             }

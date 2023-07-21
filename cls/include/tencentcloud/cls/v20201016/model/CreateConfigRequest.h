@@ -191,6 +191,27 @@ namespace TencentCloud
                      */
                     bool UserDefineRuleHasBeenSet() const;
 
+                    /**
+                     * 获取Advanced collection configuration
+                     * @return AdvancedConfig Advanced collection configuration
+                     * 
+                     */
+                    std::string GetAdvancedConfig() const;
+
+                    /**
+                     * 设置Advanced collection configuration
+                     * @param _advancedConfig Advanced collection configuration
+                     * 
+                     */
+                    void SetAdvancedConfig(const std::string& _advancedConfig);
+
+                    /**
+                     * 判断参数 AdvancedConfig 是否已赋值
+                     * @return AdvancedConfig 是否已赋值
+                     * 
+                     */
+                    bool AdvancedConfigHasBeenSet() const;
+
                 private:
 
                     /**
@@ -234,6 +255,12 @@ namespace TencentCloud
                      */
                     std::string m_userDefineRule;
                     bool m_userDefineRuleHasBeenSet;
+
+                    /**
+                     * Advanced collection configuration
+                     */
+                    std::string m_advancedConfig;
+                    bool m_advancedConfigHasBeenSet;
 
                 };
             }

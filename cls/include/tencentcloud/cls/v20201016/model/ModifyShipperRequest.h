@@ -172,15 +172,15 @@ namespace TencentCloud
                     bool IntervalHasBeenSet() const;
 
                     /**
-                     * 获取Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 100–256
-                     * @return MaxSize Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 100–256
+                     * 获取Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 5-256
+                     * @return MaxSize Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 5-256
                      * 
                      */
                     uint64_t GetMaxSize() const;
 
                     /**
-                     * 设置Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 100–256
-                     * @param _maxSize Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 100–256
+                     * 设置Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 5-256
+                     * @param _maxSize Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 5-256
                      * 
                      */
                     void SetMaxSize(const uint64_t& _maxSize);
@@ -336,7 +336,7 @@ namespace TencentCloud
                     bool m_intervalHasBeenSet;
 
                     /**
-                     * Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 100–256
+                     * Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 5-256
                      */
                     uint64_t m_maxSize;
                     bool m_maxSizeHasBeenSet;
