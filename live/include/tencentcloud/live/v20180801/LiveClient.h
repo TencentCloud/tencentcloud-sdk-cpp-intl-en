@@ -189,6 +189,8 @@
 #include <tencentcloud/live/v20180801/model/DescribePlayErrorCodeSumInfoListResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeProvinceIspPlayInfoListRequest.h>
 #include <tencentcloud/live/v20180801/model/DescribeProvinceIspPlayInfoListResponse.h>
+#include <tencentcloud/live/v20180801/model/DescribeRecordTaskRequest.h>
+#include <tencentcloud/live/v20180801/model/DescribeRecordTaskResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeScreenShotSheetNumListRequest.h>
 #include <tencentcloud/live/v20180801/model/DescribeScreenShotSheetNumListResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeStreamDayPlayInfoListRequest.h>
@@ -514,6 +516,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeProvinceIspPlayInfoListResponse> DescribeProvinceIspPlayInfoListOutcome;
                 typedef std::future<DescribeProvinceIspPlayInfoListOutcome> DescribeProvinceIspPlayInfoListOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeProvinceIspPlayInfoListRequest&, DescribeProvinceIspPlayInfoListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeProvinceIspPlayInfoListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRecordTaskResponse> DescribeRecordTaskOutcome;
+                typedef std::future<DescribeRecordTaskOutcome> DescribeRecordTaskOutcomeCallable;
+                typedef std::function<void(const LiveClient*, const Model::DescribeRecordTaskRequest&, DescribeRecordTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRecordTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeScreenShotSheetNumListResponse> DescribeScreenShotSheetNumListOutcome;
                 typedef std::future<DescribeScreenShotSheetNumListOutcome> DescribeScreenShotSheetNumListOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeScreenShotSheetNumListRequest&, DescribeScreenShotSheetNumListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeScreenShotSheetNumListAsyncHandler;
@@ -1442,6 +1447,18 @@ If the start time and end time are not on the same day or if the data of specifi
                 DescribeProvinceIspPlayInfoListOutcome DescribeProvinceIspPlayInfoList(const Model::DescribeProvinceIspPlayInfoListRequest &request);
                 void DescribeProvinceIspPlayInfoListAsync(const Model::DescribeProvinceIspPlayInfoListRequest& request, const DescribeProvinceIspPlayInfoListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeProvinceIspPlayInfoListOutcomeCallable DescribeProvinceIspPlayInfoListCallable(const Model::DescribeProvinceIspPlayInfoListRequest& request);
+
+                /**
+                 *This API is used to retrieve a list of recording tasks that were started and ended within a specified time range. 
+- Prerequisites: 
+1. This API is only used to query recording tasks created by the CreateRecordTask interface. 
+2. It cannot retrieve recording tasks that have been deleted by the DeleteRecordTask interface or tasks that have expired (platform retains for 3 months).
+                 * @param req DescribeRecordTaskRequest
+                 * @return DescribeRecordTaskOutcome
+                 */
+                DescribeRecordTaskOutcome DescribeRecordTask(const Model::DescribeRecordTaskRequest &request);
+                void DescribeRecordTaskAsync(const Model::DescribeRecordTaskRequest& request, const DescribeRecordTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRecordTaskOutcomeCallable DescribeRecordTaskCallable(const Model::DescribeRecordTaskRequest& request);
 
                 /**
                  *The API is used to query the number of screenshots as an LVB value-added service.

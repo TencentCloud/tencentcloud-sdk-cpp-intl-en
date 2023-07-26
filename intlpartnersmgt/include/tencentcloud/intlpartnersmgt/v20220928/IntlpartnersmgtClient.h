@@ -27,6 +27,8 @@
 #include <tencentcloud/intlpartnersmgt/v20220928/model/AllocateCustomerCreditResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/CreateAccountRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/CreateAccountResponse.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillDetailRequest.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillDetailResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillSummaryByPayModeRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillSummaryByPayModeResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillSummaryByProductRequest.h>
@@ -83,6 +85,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateAccountResponse> CreateAccountOutcome;
                 typedef std::future<CreateAccountOutcome> CreateAccountOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::CreateAccountRequest&, CreateAccountOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAccountAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBillDetailResponse> DescribeBillDetailOutcome;
+                typedef std::future<DescribeBillDetailOutcome> DescribeBillDetailOutcomeCallable;
+                typedef std::function<void(const IntlpartnersmgtClient*, const Model::DescribeBillDetailRequest&, DescribeBillDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBillDetailAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeBillSummaryByPayModeResponse> DescribeBillSummaryByPayModeOutcome;
                 typedef std::future<DescribeBillSummaryByPayModeOutcome> DescribeBillSummaryByPayModeOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::DescribeBillSummaryByPayModeRequest&, DescribeBillSummaryByPayModeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBillSummaryByPayModeAsyncHandler;
@@ -165,6 +170,15 @@ Notes:<br>
                 CreateAccountOutcome CreateAccount(const Model::CreateAccountRequest &request);
                 void CreateAccountAsync(const Model::CreateAccountRequest& request, const CreateAccountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateAccountOutcomeCallable CreateAccountCallable(const Model::CreateAccountRequest& request);
+
+                /**
+                 *This API is used to query the customer bill details.
+                 * @param req DescribeBillDetailRequest
+                 * @return DescribeBillDetailOutcome
+                 */
+                DescribeBillDetailOutcome DescribeBillDetail(const Model::DescribeBillDetailRequest &request);
+                void DescribeBillDetailAsync(const Model::DescribeBillDetailRequest& request, const DescribeBillDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBillDetailOutcomeCallable DescribeBillDetailCallable(const Model::DescribeBillDetailRequest& request);
 
                 /**
                  *This API is used to obtain the total amount of customer bills by payment mode.

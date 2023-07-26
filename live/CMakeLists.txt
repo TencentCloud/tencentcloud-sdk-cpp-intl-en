@@ -109,6 +109,7 @@ set(live_public_header_model
   include/tencentcloud/live/v20180801/model/RuleInfo.h
   include/tencentcloud/live/v20180801/model/UpdateLiveWatermarkResponse.h
   include/tencentcloud/live/v20180801/model/ModifyLiveDomainCertBindingsRequest.h
+  include/tencentcloud/live/v20180801/model/DescribeRecordTaskRequest.h
   include/tencentcloud/live/v20180801/model/CreateLiveTranscodeTemplateResponse.h
   include/tencentcloud/live/v20180801/model/TimeShiftTemplate.h
   include/tencentcloud/live/v20180801/model/LiveCertDomainInfo.h
@@ -120,6 +121,7 @@ set(live_public_header_model
   include/tencentcloud/live/v20180801/model/DescribeLiveDomainCertBindingsResponse.h
   include/tencentcloud/live/v20180801/model/DescribeConcurrentRecordStreamNumResponse.h
   include/tencentcloud/live/v20180801/model/DescribeLiveTimeShiftBillInfoListRequest.h
+  include/tencentcloud/live/v20180801/model/RecordTask.h
   include/tencentcloud/live/v20180801/model/DescribeLiveCertsResponse.h
   include/tencentcloud/live/v20180801/model/CommonMixInputParam.h
   include/tencentcloud/live/v20180801/model/WatermarkInfo.h
@@ -173,6 +175,7 @@ set(live_public_header_model
   include/tencentcloud/live/v20180801/model/DescribeLiveForbidStreamListResponse.h
   include/tencentcloud/live/v20180801/model/DescribeStreamPushInfoListRequest.h
   include/tencentcloud/live/v20180801/model/DeleteLiveTimeShiftTemplateResponse.h
+  include/tencentcloud/live/v20180801/model/ModifyLivePushAuthKeyResponse.h
   include/tencentcloud/live/v20180801/model/DescribeLiveWatermarkResponse.h
   include/tencentcloud/live/v20180801/model/ResumeLiveStreamResponse.h
   include/tencentcloud/live/v20180801/model/DescribeLiveStreamOnlineListResponse.h
@@ -204,7 +207,7 @@ set(live_public_header_model
   include/tencentcloud/live/v20180801/model/CancelCommonMixStreamRequest.h
   include/tencentcloud/live/v20180801/model/UpdateLiveWatermarkRequest.h
   include/tencentcloud/live/v20180801/model/CertInfo.h
-  include/tencentcloud/live/v20180801/model/ModifyLivePushAuthKeyResponse.h
+  include/tencentcloud/live/v20180801/model/DescribeRecordTaskResponse.h
   include/tencentcloud/live/v20180801/model/DescribeLiveDelayInfoListResponse.h
   include/tencentcloud/live/v20180801/model/DeleteLiveTranscodeTemplateRequest.h
   include/tencentcloud/live/v20180801/model/DescribeLiveCallbackRulesRequest.h
@@ -401,6 +404,7 @@ set(live_src
   src/v20180801/model/RuleInfo.cpp
   src/v20180801/model/UpdateLiveWatermarkResponse.cpp
   src/v20180801/model/ModifyLiveDomainCertBindingsRequest.cpp
+  src/v20180801/model/DescribeRecordTaskRequest.cpp
   src/v20180801/model/CreateLiveTranscodeTemplateResponse.cpp
   src/v20180801/model/TimeShiftTemplate.cpp
   src/v20180801/model/LiveCertDomainInfo.cpp
@@ -412,6 +416,7 @@ set(live_src
   src/v20180801/model/DescribeLiveDomainCertBindingsResponse.cpp
   src/v20180801/model/DescribeConcurrentRecordStreamNumResponse.cpp
   src/v20180801/model/DescribeLiveTimeShiftBillInfoListRequest.cpp
+  src/v20180801/model/RecordTask.cpp
   src/v20180801/model/DescribeLiveCertsResponse.cpp
   src/v20180801/model/CommonMixInputParam.cpp
   src/v20180801/model/WatermarkInfo.cpp
@@ -465,6 +470,7 @@ set(live_src
   src/v20180801/model/DescribeLiveForbidStreamListResponse.cpp
   src/v20180801/model/DescribeStreamPushInfoListRequest.cpp
   src/v20180801/model/DeleteLiveTimeShiftTemplateResponse.cpp
+  src/v20180801/model/ModifyLivePushAuthKeyResponse.cpp
   src/v20180801/model/DescribeLiveWatermarkResponse.cpp
   src/v20180801/model/ResumeLiveStreamResponse.cpp
   src/v20180801/model/DescribeLiveStreamOnlineListResponse.cpp
@@ -496,7 +502,7 @@ set(live_src
   src/v20180801/model/CancelCommonMixStreamRequest.cpp
   src/v20180801/model/UpdateLiveWatermarkRequest.cpp
   src/v20180801/model/CertInfo.cpp
-  src/v20180801/model/ModifyLivePushAuthKeyResponse.cpp
+  src/v20180801/model/DescribeRecordTaskResponse.cpp
   src/v20180801/model/DescribeLiveDelayInfoListResponse.cpp
   src/v20180801/model/DeleteLiveTranscodeTemplateRequest.cpp
   src/v20180801/model/DescribeLiveCallbackRulesRequest.cpp
