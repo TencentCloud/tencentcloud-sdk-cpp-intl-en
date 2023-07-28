@@ -473,15 +473,15 @@ Note: To query the product codes used in the current month, call <a href="https:
                     bool ContextHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PayerUin 
+                     * 获取The account ID of the payer, which is the unique identifier of a Tencent Cloud user. This account is allowed to query its own bills by default. If an organization admin account needs to query the self-pay bills of members, this field should be specified as the member account ID.
+                     * @return PayerUin The account ID of the payer, which is the unique identifier of a Tencent Cloud user. This account is allowed to query its own bills by default. If an organization admin account needs to query the self-pay bills of members, this field should be specified as the member account ID.
                      * 
                      */
                     std::string GetPayerUin() const;
 
                     /**
-                     * 设置
-                     * @param _payerUin 
+                     * 设置The account ID of the payer, which is the unique identifier of a Tencent Cloud user. This account is allowed to query its own bills by default. If an organization admin account needs to query the self-pay bills of members, this field should be specified as the member account ID.
+                     * @param _payerUin The account ID of the payer, which is the unique identifier of a Tencent Cloud user. This account is allowed to query its own bills by default. If an organization admin account needs to query the self-pay bills of members, this field should be specified as the member account ID.
                      * 
                      */
                     void SetPayerUin(const std::string& _payerUin);
@@ -614,7 +614,7 @@ Note: To query the product codes used in the current month, call <a href="https:
                     bool m_contextHasBeenSet;
 
                     /**
-                     * 
+                     * The account ID of the payer, which is the unique identifier of a Tencent Cloud user. This account is allowed to query its own bills by default. If an organization admin account needs to query the self-pay bills of members, this field should be specified as the member account ID.
                      */
                     std::string m_payerUin;
                     bool m_payerUinHasBeenSet;

@@ -137,6 +137,27 @@ namespace TencentCloud
                      */
                     bool SubtitleFormatHasBeenSet() const;
 
+                    /**
+                     * 获取Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li><font color=red>Note：</font> If it fills in an empty string or leave this parameter blank, it will be automatically recognized (it is recommended to fill in the language corresponding to the media to improve the recognition accuracy).
+                     * @return SrcLanguage Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li><font color=red>Note：</font> If it fills in an empty string or leave this parameter blank, it will be automatically recognized (it is recommended to fill in the language corresponding to the media to improve the recognition accuracy).
+                     * 
+                     */
+                    std::string GetSrcLanguage() const;
+
+                    /**
+                     * 设置Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li><font color=red>Note：</font> If it fills in an empty string or leave this parameter blank, it will be automatically recognized (it is recommended to fill in the language corresponding to the media to improve the recognition accuracy).
+                     * @param _srcLanguage Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li><font color=red>Note：</font> If it fills in an empty string or leave this parameter blank, it will be automatically recognized (it is recommended to fill in the language corresponding to the media to improve the recognition accuracy).
+                     * 
+                     */
+                    void SetSrcLanguage(const std::string& _srcLanguage);
+
+                    /**
+                     * 判断参数 SrcLanguage 是否已赋值
+                     * @return SrcLanguage 是否已赋值
+                     * 
+                     */
+                    bool SrcLanguageHasBeenSet() const;
+
                 private:
 
                     /**
@@ -163,6 +184,12 @@ namespace TencentCloud
                      */
                     std::string m_subtitleFormat;
                     bool m_subtitleFormatHasBeenSet;
+
+                    /**
+                     * Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li><font color=red>Note：</font> If it fills in an empty string or leave this parameter blank, it will be automatically recognized (it is recommended to fill in the language corresponding to the media to improve the recognition accuracy).
+                     */
+                    std::string m_srcLanguage;
+                    bool m_srcLanguageHasBeenSet;
 
                 };
             }

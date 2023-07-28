@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool UsedAmountUnitHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RealTotalMeasure 
+                     * 获取Raw usage/duration: The raw usage/duration of a component before deduction. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RealTotalMeasure Raw usage/duration: The raw usage/duration of a component before deduction. Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRealTotalMeasure() const;
 
                     /**
-                     * 设置
-                     * @param _realTotalMeasure 
+                     * 设置Raw usage/duration: The raw usage/duration of a component before deduction. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _realTotalMeasure Raw usage/duration: The raw usage/duration of a component before deduction. Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRealTotalMeasure(const std::string& _realTotalMeasure);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool RealTotalMeasureHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DeductedMeasure 
+                     * 获取Deducted usage/duration (including packages): The usage/duration deducted with a package. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DeductedMeasure Deducted usage/duration (including packages): The usage/duration deducted with a package. Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDeductedMeasure() const;
 
                     /**
-                     * 设置
-                     * @param _deductedMeasure 
+                     * 设置Deducted usage/duration (including packages): The usage/duration deducted with a package. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _deductedMeasure Deducted usage/duration (including packages): The usage/duration deducted with a package. Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDeductedMeasure(const std::string& _deductedMeasure);
@@ -700,13 +700,13 @@ namespace TencentCloud
                     bool m_usedAmountUnitHasBeenSet;
 
                     /**
-                     * 
+                     * Raw usage/duration: The raw usage/duration of a component before deduction. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_realTotalMeasure;
                     bool m_realTotalMeasureHasBeenSet;
 
                     /**
-                     * 
+                     * Deducted usage/duration (including packages): The usage/duration deducted with a package. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_deductedMeasure;
                     bool m_deductedMeasureHasBeenSet;

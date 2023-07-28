@@ -130,6 +130,27 @@ namespace TencentCloud
                      */
                     bool SubtitleFormatHasBeenSet() const;
 
+                    /**
+                     * 获取Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li>
+                     * @return SrcLanguage Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li>
+                     * 
+                     */
+                    std::string GetSrcLanguage() const;
+
+                    /**
+                     * 设置Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li>
+                     * @param _srcLanguage Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li>
+                     * 
+                     */
+                    void SetSrcLanguage(const std::string& _srcLanguage);
+
+                    /**
+                     * 判断参数 SrcLanguage 是否已赋值
+                     * @return SrcLanguage 是否已赋值
+                     * 
+                     */
+                    bool SrcLanguageHasBeenSet() const;
+
                 private:
 
                     /**
@@ -154,6 +175,12 @@ namespace TencentCloud
                      */
                     std::string m_subtitleFormat;
                     bool m_subtitleFormatHasBeenSet;
+
+                    /**
+                     * Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li>
+                     */
+                    std::string m_srcLanguage;
+                    bool m_srcLanguageHasBeenSet;
 
                 };
             }
