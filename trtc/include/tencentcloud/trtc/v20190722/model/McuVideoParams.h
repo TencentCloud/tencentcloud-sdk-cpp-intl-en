@@ -182,6 +182,27 @@ Grey: 0x999999
                      */
                     bool WaterMarkListHasBeenSet() const;
 
+                    /**
+                     * 获取Background image display mode during output: 0 for crop, 1 for scale and display with black background, 2 for proportional scaling. The backend default is proportional scaling.
+                     * @return BackgroundRenderMode Background image display mode during output: 0 for crop, 1 for scale and display with black background, 2 for proportional scaling. The backend default is proportional scaling.
+                     * 
+                     */
+                    uint64_t GetBackgroundRenderMode() const;
+
+                    /**
+                     * 设置Background image display mode during output: 0 for crop, 1 for scale and display with black background, 2 for proportional scaling. The backend default is proportional scaling.
+                     * @param _backgroundRenderMode Background image display mode during output: 0 for crop, 1 for scale and display with black background, 2 for proportional scaling. The backend default is proportional scaling.
+                     * 
+                     */
+                    void SetBackgroundRenderMode(const uint64_t& _backgroundRenderMode);
+
+                    /**
+                     * 判断参数 BackgroundRenderMode 是否已赋值
+                     * @return BackgroundRenderMode 是否已赋值
+                     * 
+                     */
+                    bool BackgroundRenderModeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -220,6 +241,12 @@ Grey: 0x999999
                      */
                     std::vector<McuWaterMarkParams> m_waterMarkList;
                     bool m_waterMarkListHasBeenSet;
+
+                    /**
+                     * Background image display mode during output: 0 for crop, 1 for scale and display with black background, 2 for proportional scaling. The backend default is proportional scaling.
+                     */
+                    uint64_t m_backgroundRenderMode;
+                    bool m_backgroundRenderModeHasBeenSet;
 
                 };
             }

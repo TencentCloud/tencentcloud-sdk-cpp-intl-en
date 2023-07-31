@@ -286,6 +286,27 @@ Grey: `0x999999`
                      */
                     bool CustomCropHasBeenSet() const;
 
+                    /**
+                     * 获取The display mode of the sub-background image during output: 0 for cropping, 1 for scaling and displaying the background, 2 for scaling and displaying the black background, 3 for proportional scaling. If not filled in, the default is 3.
+                     * @return BackgroundRenderMode The display mode of the sub-background image during output: 0 for cropping, 1 for scaling and displaying the background, 2 for scaling and displaying the black background, 3 for proportional scaling. If not filled in, the default is 3.
+                     * 
+                     */
+                    uint64_t GetBackgroundRenderMode() const;
+
+                    /**
+                     * 设置The display mode of the sub-background image during output: 0 for cropping, 1 for scaling and displaying the background, 2 for scaling and displaying the black background, 3 for proportional scaling. If not filled in, the default is 3.
+                     * @param _backgroundRenderMode The display mode of the sub-background image during output: 0 for cropping, 1 for scaling and displaying the background, 2 for scaling and displaying the black background, 3 for proportional scaling. If not filled in, the default is 3.
+                     * 
+                     */
+                    void SetBackgroundRenderMode(const uint64_t& _backgroundRenderMode);
+
+                    /**
+                     * 判断参数 BackgroundRenderMode 是否已赋值
+                     * @return BackgroundRenderMode 是否已赋值
+                     * 
+                     */
+                    bool BackgroundRenderModeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -354,6 +375,12 @@ Grey: `0x999999`
                      */
                     McuCustomCrop m_customCrop;
                     bool m_customCropHasBeenSet;
+
+                    /**
+                     * The display mode of the sub-background image during output: 0 for cropping, 1 for scaling and displaying the background, 2 for scaling and displaying the black background, 3 for proportional scaling. If not filled in, the default is 3.
+                     */
+                    uint64_t m_backgroundRenderMode;
+                    bool m_backgroundRenderModeHasBeenSet;
 
                 };
             }

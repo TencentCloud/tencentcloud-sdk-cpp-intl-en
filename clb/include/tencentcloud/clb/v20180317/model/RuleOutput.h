@@ -457,19 +457,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool WafDomainIdHasBeenSet() const;
 
                     /**
-                     * 获取TRPC callee server route, which is valid when `ForwardType` is `TRPC`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TrpcCallee TRPC callee server route, which is valid when `ForwardType` is `TRPC`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取TRPC callee server route, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TrpcCallee TRPC callee server route, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTrpcCallee() const;
 
                     /**
-                     * 设置TRPC callee server route, which is valid when `ForwardType` is `TRPC`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _trpcCallee TRPC callee server route, which is valid when `ForwardType` is `TRPC`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置TRPC callee server route, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _trpcCallee TRPC callee server route, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTrpcCallee(const std::string& _trpcCallee);
@@ -482,19 +482,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TrpcCalleeHasBeenSet() const;
 
                     /**
-                     * 获取TRPC calling service API, which is valid when `ForwardType` is `TRPC`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TrpcFunc TRPC calling service API, which is valid when `ForwardType` is `TRPC`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取TRPC calling service API, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TrpcFunc TRPC calling service API, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTrpcFunc() const;
 
                     /**
-                     * 设置TRPC calling service API, which is valid when `ForwardType` is `TRPC`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _trpcFunc TRPC calling service API, which is valid when `ForwardType` is `TRPC`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置TRPC calling service API, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _trpcFunc TRPC calling service API, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTrpcFunc(const std::string& _trpcFunc);
@@ -699,15 +699,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_wafDomainIdHasBeenSet;
 
                     /**
-                     * TRPC callee server route, which is valid when `ForwardType` is `TRPC`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * TRPC callee server route, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_trpcCallee;
                     bool m_trpcCalleeHasBeenSet;
 
                     /**
-                     * TRPC calling service API, which is valid when `ForwardType` is `TRPC`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * TRPC calling service API, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_trpcFunc;
                     bool m_trpcFuncHasBeenSet;

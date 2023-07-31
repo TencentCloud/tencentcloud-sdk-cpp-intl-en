@@ -86,6 +86,7 @@ set(clb_public_header_model
   include/tencentcloud/clb/v20180317/model/DescribeTaskStatusResponse.h
   include/tencentcloud/clb/v20180317/model/BatchRegisterTargetsResponse.h
   include/tencentcloud/clb/v20180317/model/ModifyLoadBalancerAttributesRequest.h
+  include/tencentcloud/clb/v20180317/model/TypeInfo.h
   include/tencentcloud/clb/v20180317/model/DescribeLBListenersRequest.h
   include/tencentcloud/clb/v20180317/model/SlaUpdateParam.h
   include/tencentcloud/clb/v20180317/model/Target.h
@@ -96,6 +97,7 @@ set(clb_public_header_model
   include/tencentcloud/clb/v20180317/model/DescribeClsLogSetRequest.h
   include/tencentcloud/clb/v20180317/model/Listener.h
   include/tencentcloud/clb/v20180317/model/LoadBalancerTraffic.h
+  include/tencentcloud/clb/v20180317/model/SpecAvailability.h
   include/tencentcloud/clb/v20180317/model/ConfigListItem.h
   include/tencentcloud/clb/v20180317/model/RegisterTargetsWithClassicalLBRequest.h
   include/tencentcloud/clb/v20180317/model/ModifyDomainAttributesResponse.h
@@ -304,6 +306,7 @@ set(clb_src
   src/v20180317/model/DescribeTaskStatusResponse.cpp
   src/v20180317/model/BatchRegisterTargetsResponse.cpp
   src/v20180317/model/ModifyLoadBalancerAttributesRequest.cpp
+  src/v20180317/model/TypeInfo.cpp
   src/v20180317/model/DescribeLBListenersRequest.cpp
   src/v20180317/model/SlaUpdateParam.cpp
   src/v20180317/model/Target.cpp
@@ -314,6 +317,7 @@ set(clb_src
   src/v20180317/model/DescribeClsLogSetRequest.cpp
   src/v20180317/model/Listener.cpp
   src/v20180317/model/LoadBalancerTraffic.cpp
+  src/v20180317/model/SpecAvailability.cpp
   src/v20180317/model/ConfigListItem.cpp
   src/v20180317/model/RegisterTargetsWithClassicalLBRequest.cpp
   src/v20180317/model/ModifyDomainAttributesResponse.cpp

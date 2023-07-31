@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/clb/v20180317/model/ResourceAvailability.h>
+#include <tencentcloud/clb/v20180317/model/TypeInfo.h>
 
 
 namespace TencentCloud
@@ -114,6 +115,31 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool AvailabilitySetHasBeenSet() const;
 
+                    /**
+                     * 获取ISP Type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TypeSet ISP Type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<TypeInfo> GetTypeSet() const;
+
+                    /**
+                     * 设置ISP Type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _typeSet ISP Type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetTypeSet(const std::vector<TypeInfo>& _typeSet);
+
+                    /**
+                     * 判断参数 TypeSet 是否已赋值
+                     * @return TypeSet 是否已赋值
+                     * 
+                     */
+                    bool TypeSetHasBeenSet() const;
+
                 private:
 
                     /**
@@ -134,6 +160,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     std::vector<ResourceAvailability> m_availabilitySet;
                     bool m_availabilitySetHasBeenSet;
+
+                    /**
+                     * ISP Type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<TypeInfo> m_typeSet;
+                    bool m_typeSetHasBeenSet;
 
                 };
             }

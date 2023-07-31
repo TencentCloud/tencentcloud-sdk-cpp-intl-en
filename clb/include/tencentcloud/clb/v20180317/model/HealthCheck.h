@@ -94,18 +94,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TimeOutHasBeenSet() const;
 
                     /**
-                     * 获取Health check interval in seconds. Value range: 5-300. Default value: 5.
+                     * 获取Health check probing interval period. It defaults to `5`. For IPv4 CLB instances, the range is 2-300. u200dFor IPv6 CLB instances, the range is 5-300. Unit: second
+Note: For some IPv4 CLB instances created long ago, the range is 5-300.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IntervalTime Health check interval in seconds. Value range: 5-300. Default value: 5.
+                     * @return IntervalTime Health check probing interval period. It defaults to `5`. For IPv4 CLB instances, the range is 2-300. u200dFor IPv6 CLB instances, the range is 5-300. Unit: second
+Note: For some IPv4 CLB instances created long ago, the range is 5-300.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetIntervalTime() const;
 
                     /**
-                     * 设置Health check interval in seconds. Value range: 5-300. Default value: 5.
+                     * 设置Health check probing interval period. It defaults to `5`. For IPv4 CLB instances, the range is 2-300. u200dFor IPv6 CLB instances, the range is 5-300. Unit: second
+Note: For some IPv4 CLB instances created long ago, the range is 5-300.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _intervalTime Health check interval in seconds. Value range: 5-300. Default value: 5.
+                     * @param _intervalTime Health check probing interval period. It defaults to `5`. For IPv4 CLB instances, the range is 2-300. u200dFor IPv6 CLB instances, the range is 5-300. Unit: second
+Note: For some IPv4 CLB instances created long ago, the range is 5-300.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -488,7 +492,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_timeOutHasBeenSet;
 
                     /**
-                     * Health check interval in seconds. Value range: 5-300. Default value: 5.
+                     * Health check probing interval period. It defaults to `5`. For IPv4 CLB instances, the range is 2-300. u200dFor IPv6 CLB instances, the range is 5-300. Unit: second
+Note: For some IPv4 CLB instances created long ago, the range is 5-300.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_intervalTime;

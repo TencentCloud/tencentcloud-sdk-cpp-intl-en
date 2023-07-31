@@ -216,15 +216,15 @@ They represent weighted round robin, least connections, and IP hash, respectivel
                     bool ForwardTypeHasBeenSet() const;
 
                     /**
-                     * 获取TRPC callee server route, which is required when `ForwardType` is "TRPC".
-                     * @return TrpcCallee TRPC callee server route, which is required when `ForwardType` is "TRPC".
+                     * 获取TRPC callee server route, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
+                     * @return TrpcCallee TRPC callee server route, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
                      * 
                      */
                     std::string GetTrpcCallee() const;
 
                     /**
-                     * 设置TRPC callee server route, which is required when `ForwardType` is "TRPC".
-                     * @param _trpcCallee TRPC callee server route, which is required when `ForwardType` is "TRPC".
+                     * 设置TRPC callee server route, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
+                     * @param _trpcCallee TRPC callee server route, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
                      * 
                      */
                     void SetTrpcCallee(const std::string& _trpcCallee);
@@ -237,15 +237,15 @@ They represent weighted round robin, least connections, and IP hash, respectivel
                     bool TrpcCalleeHasBeenSet() const;
 
                     /**
-                     * 获取TRPC calling service API, which is required when `ForwardType` is "TRPC".
-                     * @return TrpcFunc TRPC calling service API, which is required when `ForwardType` is "TRPC".
+                     * 获取TRPC calling service API, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
+                     * @return TrpcFunc TRPC calling service API, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
                      * 
                      */
                     std::string GetTrpcFunc() const;
 
                     /**
-                     * 设置TRPC calling service API, which is required when `ForwardType` is "TRPC".
-                     * @param _trpcFunc TRPC calling service API, which is required when `ForwardType` is "TRPC".
+                     * 设置TRPC calling service API, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
+                     * @param _trpcFunc TRPC calling service API, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
                      * 
                      */
                     void SetTrpcFunc(const std::string& _trpcFunc);
@@ -309,13 +309,13 @@ They represent weighted round robin, least connections, and IP hash, respectivel
                     bool m_forwardTypeHasBeenSet;
 
                     /**
-                     * TRPC callee server route, which is required when `ForwardType` is "TRPC".
+                     * TRPC callee server route, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
                      */
                     std::string m_trpcCallee;
                     bool m_trpcCalleeHasBeenSet;
 
                     /**
-                     * TRPC calling service API, which is required when `ForwardType` is "TRPC".
+                     * TRPC calling service API, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
                      */
                     std::string m_trpcFunc;
                     bool m_trpcFuncHasBeenSet;

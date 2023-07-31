@@ -191,6 +191,27 @@ namespace TencentCloud
                      */
                     bool DeleteProtectHasBeenSet() const;
 
+                    /**
+                     * 获取Modifies the second-level domain name of CLB from mycloud.com to tencentclb.com. Note that the sub-domain names will be changed as well. After the modification, mycloud.com will be invalidated. 
+                     * @return ModifyClassicDomain Modifies the second-level domain name of CLB from mycloud.com to tencentclb.com. Note that the sub-domain names will be changed as well. After the modification, mycloud.com will be invalidated. 
+                     * 
+                     */
+                    bool GetModifyClassicDomain() const;
+
+                    /**
+                     * 设置Modifies the second-level domain name of CLB from mycloud.com to tencentclb.com. Note that the sub-domain names will be changed as well. After the modification, mycloud.com will be invalidated. 
+                     * @param _modifyClassicDomain Modifies the second-level domain name of CLB from mycloud.com to tencentclb.com. Note that the sub-domain names will be changed as well. After the modification, mycloud.com will be invalidated. 
+                     * 
+                     */
+                    void SetModifyClassicDomain(const bool& _modifyClassicDomain);
+
+                    /**
+                     * 判断参数 ModifyClassicDomain 是否已赋值
+                     * @return ModifyClassicDomain 是否已赋值
+                     * 
+                     */
+                    bool ModifyClassicDomainHasBeenSet() const;
+
                 private:
 
                     /**
@@ -234,6 +255,12 @@ namespace TencentCloud
                      */
                     bool m_deleteProtect;
                     bool m_deleteProtectHasBeenSet;
+
+                    /**
+                     * Modifies the second-level domain name of CLB from mycloud.com to tencentclb.com. Note that the sub-domain names will be changed as well. After the modification, mycloud.com will be invalidated. 
+                     */
+                    bool m_modifyClassicDomain;
+                    bool m_modifyClassicDomainHasBeenSet;
 
                 };
             }

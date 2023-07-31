@@ -152,23 +152,23 @@ namespace TencentCloud
                     bool HealthStatusDetailHasBeenSet() const;
 
                     /**
-                     * 获取Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status. This parameter will be discarded soon. We recommend that you use the HealthStatusDetail parameter.
-                     * @return HealthStatusDetial Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status. This parameter will be discarded soon. We recommend that you use the HealthStatusDetail parameter.
-                     * 
+                     * 获取(**This parameter will be disused soon. Please use `HealthStatusDetail` instead.**) Details of the current health status. Values: `Alive` (healthy), `Dead` (abnormal), `Unknown` (Health check not started/checking/unknown status)
+                     * @return HealthStatusDetial (**This parameter will be disused soon. Please use `HealthStatusDetail` instead.**) Details of the current health status. Values: `Alive` (healthy), `Dead` (abnormal), `Unknown` (Health check not started/checking/unknown status)
+                     * @deprecated
                      */
                     std::string GetHealthStatusDetial() const;
 
                     /**
-                     * 设置Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status. This parameter will be discarded soon. We recommend that you use the HealthStatusDetail parameter.
-                     * @param _healthStatusDetial Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status. This parameter will be discarded soon. We recommend that you use the HealthStatusDetail parameter.
-                     * 
+                     * 设置(**This parameter will be disused soon. Please use `HealthStatusDetail` instead.**) Details of the current health status. Values: `Alive` (healthy), `Dead` (abnormal), `Unknown` (Health check not started/checking/unknown status)
+                     * @param _healthStatusDetial (**This parameter will be disused soon. Please use `HealthStatusDetail` instead.**) Details of the current health status. Values: `Alive` (healthy), `Dead` (abnormal), `Unknown` (Health check not started/checking/unknown status)
+                     * @deprecated
                      */
                     void SetHealthStatusDetial(const std::string& _healthStatusDetial);
 
                     /**
                      * 判断参数 HealthStatusDetial 是否已赋值
                      * @return HealthStatusDetial 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool HealthStatusDetialHasBeenSet() const;
 
@@ -205,7 +205,7 @@ namespace TencentCloud
                     bool m_healthStatusDetailHasBeenSet;
 
                     /**
-                     * Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status. This parameter will be discarded soon. We recommend that you use the HealthStatusDetail parameter.
+                     * (**This parameter will be disused soon. Please use `HealthStatusDetail` instead.**) Details of the current health status. Values: `Alive` (healthy), `Dead` (abnormal), `Unknown` (Health check not started/checking/unknown status)
                      */
                     std::string m_healthStatusDetial;
                     bool m_healthStatusDetialHasBeenSet;

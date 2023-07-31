@@ -180,15 +180,15 @@ They represent weighted round robin, least connections, and IP hash, respectivel
                     bool SchedulerHasBeenSet() const;
 
                     /**
-                     * 获取Forwarding protocol between the CLB instance and real server. Currently, HTTP/HTTPS/TRPC are supported.
-                     * @return ForwardType Forwarding protocol between the CLB instance and real server. Currently, HTTP/HTTPS/TRPC are supported.
+                     * 获取Forwarding protocol between the CLB instance and real server. HTTP/HTTPS/TRPC are supported. TRPC is now only available for internal usage.
+                     * @return ForwardType Forwarding protocol between the CLB instance and real server. HTTP/HTTPS/TRPC are supported. TRPC is now only available for internal usage.
                      * 
                      */
                     std::string GetForwardType() const;
 
                     /**
-                     * 设置Forwarding protocol between the CLB instance and real server. Currently, HTTP/HTTPS/TRPC are supported.
-                     * @param _forwardType Forwarding protocol between the CLB instance and real server. Currently, HTTP/HTTPS/TRPC are supported.
+                     * 设置Forwarding protocol between the CLB instance and real server. HTTP/HTTPS/TRPC are supported. TRPC is now only available for internal usage.
+                     * @param _forwardType Forwarding protocol between the CLB instance and real server. HTTP/HTTPS/TRPC are supported. TRPC is now only available for internal usage.
                      * 
                      */
                     void SetForwardType(const std::string& _forwardType);
@@ -264,15 +264,15 @@ They represent weighted round robin, least connections, and IP hash, respectivel
                     bool TargetTypeHasBeenSet() const;
 
                     /**
-                     * 获取TRPC callee server route, which is required when `ForwardType` is `TRPC`.
-                     * @return TrpcCallee TRPC callee server route, which is required when `ForwardType` is `TRPC`.
+                     * 获取TRPC callee server route, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
+                     * @return TrpcCallee TRPC callee server route, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
                      * 
                      */
                     std::string GetTrpcCallee() const;
 
                     /**
-                     * 设置TRPC callee server route, which is required when `ForwardType` is `TRPC`.
-                     * @param _trpcCallee TRPC callee server route, which is required when `ForwardType` is `TRPC`.
+                     * 设置TRPC callee server route, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
+                     * @param _trpcCallee TRPC callee server route, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
                      * 
                      */
                     void SetTrpcCallee(const std::string& _trpcCallee);
@@ -285,15 +285,15 @@ They represent weighted round robin, least connections, and IP hash, respectivel
                     bool TrpcCalleeHasBeenSet() const;
 
                     /**
-                     * 获取TRPC calling service API, which is required when `ForwardType` is `TRPC`.
-                     * @return TrpcFunc TRPC calling service API, which is required when `ForwardType` is `TRPC`.
+                     * 获取TRPC calling service API, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
+                     * @return TrpcFunc TRPC calling service API, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
                      * 
                      */
                     std::string GetTrpcFunc() const;
 
                     /**
-                     * 设置TRPC calling service API, which is required when `ForwardType` is `TRPC`.
-                     * @param _trpcFunc TRPC calling service API, which is required when `ForwardType` is `TRPC`.
+                     * 设置TRPC calling service API, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
+                     * @param _trpcFunc TRPC calling service API, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
                      * 
                      */
                     void SetTrpcFunc(const std::string& _trpcFunc);
@@ -408,7 +408,7 @@ They represent weighted round robin, least connections, and IP hash, respectivel
                     bool m_schedulerHasBeenSet;
 
                     /**
-                     * Forwarding protocol between the CLB instance and real server. Currently, HTTP/HTTPS/TRPC are supported.
+                     * Forwarding protocol between the CLB instance and real server. HTTP/HTTPS/TRPC are supported. TRPC is now only available for internal usage.
                      */
                     std::string m_forwardType;
                     bool m_forwardTypeHasBeenSet;
@@ -432,13 +432,13 @@ They represent weighted round robin, least connections, and IP hash, respectivel
                     bool m_targetTypeHasBeenSet;
 
                     /**
-                     * TRPC callee server route, which is required when `ForwardType` is `TRPC`.
+                     * TRPC callee server route, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
                      */
                     std::string m_trpcCallee;
                     bool m_trpcCalleeHasBeenSet;
 
                     /**
-                     * TRPC calling service API, which is required when `ForwardType` is `TRPC`.
+                     * TRPC calling service API, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
                      */
                     std::string m_trpcFunc;
                     bool m_trpcFuncHasBeenSet;
