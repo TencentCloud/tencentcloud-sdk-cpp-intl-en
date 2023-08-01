@@ -402,11 +402,11 @@ Note: If the specified VIP is occupied or is not within the IP range of the spec
                      * 获取Creates an LCU-supported instance.
 <ul><li>To create an LCU-supported instance, set this parameter to `SLA`, which indicates that an LCU-supported instance is created with the default specification in pay-as-you-go mode.
 <ul><li>The default specification is Super Large 1.
-<li>If you have enabled Super u200dLarge LCU-supported instances, `SLA` corresponds to the Super Large 4 specification. Super u200dLarge LCU-supported specification is in beta now. u200cu200dTo join the beta, [submit a ticket](https://console.cloud.tencent.com/workorder/category). </li></ul></li><li>It’s not required for a shared CLB instance. </li></ul>
+<li>If you have enabled Super Large LCU-supported instances, `SLA` corresponds to the Super Large 4 specification. Super Large LCU-supported specification is in beta now. To join the beta, [submit a ticket](https://console.cloud.tencent.com/workorder/category). </li></ul></li><li>It’s not required for a shared CLB instance. </li></ul>
                      * @return SlaType Creates an LCU-supported instance.
 <ul><li>To create an LCU-supported instance, set this parameter to `SLA`, which indicates that an LCU-supported instance is created with the default specification in pay-as-you-go mode.
 <ul><li>The default specification is Super Large 1.
-<li>If you have enabled Super u200dLarge LCU-supported instances, `SLA` corresponds to the Super Large 4 specification. Super u200dLarge LCU-supported specification is in beta now. u200cu200dTo join the beta, [submit a ticket](https://console.cloud.tencent.com/workorder/category). </li></ul></li><li>It’s not required for a shared CLB instance. </li></ul>
+<li>If you have enabled Super Large LCU-supported instances, `SLA` corresponds to the Super Large 4 specification. Super Large LCU-supported specification is in beta now. To join the beta, [submit a ticket](https://console.cloud.tencent.com/workorder/category). </li></ul></li><li>It’s not required for a shared CLB instance. </li></ul>
                      * 
                      */
                     std::string GetSlaType() const;
@@ -415,11 +415,11 @@ Note: If the specified VIP is occupied or is not within the IP range of the spec
                      * 设置Creates an LCU-supported instance.
 <ul><li>To create an LCU-supported instance, set this parameter to `SLA`, which indicates that an LCU-supported instance is created with the default specification in pay-as-you-go mode.
 <ul><li>The default specification is Super Large 1.
-<li>If you have enabled Super u200dLarge LCU-supported instances, `SLA` corresponds to the Super Large 4 specification. Super u200dLarge LCU-supported specification is in beta now. u200cu200dTo join the beta, [submit a ticket](https://console.cloud.tencent.com/workorder/category). </li></ul></li><li>It’s not required for a shared CLB instance. </li></ul>
+<li>If you have enabled Super Large LCU-supported instances, `SLA` corresponds to the Super Large 4 specification. Super Large LCU-supported specification is in beta now. To join the beta, [submit a ticket](https://console.cloud.tencent.com/workorder/category). </li></ul></li><li>It’s not required for a shared CLB instance. </li></ul>
                      * @param _slaType Creates an LCU-supported instance.
 <ul><li>To create an LCU-supported instance, set this parameter to `SLA`, which indicates that an LCU-supported instance is created with the default specification in pay-as-you-go mode.
 <ul><li>The default specification is Super Large 1.
-<li>If you have enabled Super u200dLarge LCU-supported instances, `SLA` corresponds to the Super Large 4 specification. Super u200dLarge LCU-supported specification is in beta now. u200cu200dTo join the beta, [submit a ticket](https://console.cloud.tencent.com/workorder/category). </li></ul></li><li>It’s not required for a shared CLB instance. </li></ul>
+<li>If you have enabled Super Large LCU-supported instances, `SLA` corresponds to the Super Large 4 specification. Super Large LCU-supported specification is in beta now. To join the beta, [submit a ticket](https://console.cloud.tencent.com/workorder/category). </li></ul></li><li>It’s not required for a shared CLB instance. </li></ul>
                      * 
                      */
                     void SetSlaType(const std::string& _slaType);
@@ -709,7 +709,7 @@ Note: If the specified VIP is occupied or is not within the IP range of the spec
                      * Creates an LCU-supported instance.
 <ul><li>To create an LCU-supported instance, set this parameter to `SLA`, which indicates that an LCU-supported instance is created with the default specification in pay-as-you-go mode.
 <ul><li>The default specification is Super Large 1.
-<li>If you have enabled Super u200dLarge LCU-supported instances, `SLA` corresponds to the Super Large 4 specification. Super u200dLarge LCU-supported specification is in beta now. u200cu200dTo join the beta, [submit a ticket](https://console.cloud.tencent.com/workorder/category). </li></ul></li><li>It’s not required for a shared CLB instance. </li></ul>
+<li>If you have enabled Super Large LCU-supported instances, `SLA` corresponds to the Super Large 4 specification. Super Large LCU-supported specification is in beta now. To join the beta, [submit a ticket](https://console.cloud.tencent.com/workorder/category). </li></ul></li><li>It’s not required for a shared CLB instance. </li></ul>
                      */
                     std::string m_slaType;
                     bool m_slaTypeHasBeenSet;
