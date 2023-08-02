@@ -91,14 +91,18 @@ namespace TencentCloud
 
                     /**
                      * 获取API description
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ApiDesc API description
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetApiDesc() const;
 
                     /**
                      * 设置API description
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _apiDesc API description
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetApiDesc(const std::string& _apiDesc);
@@ -399,7 +403,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return RelationBuniessApiIds List of business APIs associated with authorization API.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * 
+                     * @deprecated
                      */
                     std::vector<std::string> GetRelationBuniessApiIds() const;
 
@@ -408,14 +412,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _relationBuniessApiIds List of business APIs associated with authorization API.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * 
+                     * @deprecated
                      */
                     void SetRelationBuniessApiIds(const std::vector<std::string>& _relationBuniessApiIds);
 
                     /**
                      * 判断参数 RelationBuniessApiIds 是否已赋值
                      * @return RelationBuniessApiIds 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool RelationBuniessApiIdsHasBeenSet() const;
 
@@ -485,6 +489,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * API description
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_apiDesc;
                     bool m_apiDescHasBeenSet;

@@ -48,14 +48,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Whether health check is enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IsHealthCheck Whether health check is enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     bool GetIsHealthCheck() const;
 
                     /**
                      * 设置Whether health check is enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _isHealthCheck Whether health check is enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIsHealthCheck(const bool& _isHealthCheck);
@@ -68,15 +72,19 @@ namespace TencentCloud
                     bool IsHealthCheckHasBeenSet() const;
 
                     /**
-                     * 获取Health check threshold.
-                     * @return RequestVolumeThreshold Health check threshold.
+                     * 获取Health check threshold. 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RequestVolumeThreshold Health check threshold. 
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetRequestVolumeThreshold() const;
 
                     /**
-                     * 设置Health check threshold.
-                     * @param _requestVolumeThreshold Health check threshold.
+                     * 设置Health check threshold. 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _requestVolumeThreshold Health check threshold. 
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRequestVolumeThreshold(const int64_t& _requestVolumeThreshold);
@@ -89,15 +97,19 @@ namespace TencentCloud
                     bool RequestVolumeThresholdHasBeenSet() const;
 
                     /**
-                     * 获取Window size.
-                     * @return SleepWindowInMilliseconds Window size.
+                     * 获取Window size. 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SleepWindowInMilliseconds Window size. 
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetSleepWindowInMilliseconds() const;
 
                     /**
-                     * 设置Window size.
-                     * @param _sleepWindowInMilliseconds Window size.
+                     * 设置Window size. 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _sleepWindowInMilliseconds Window size. 
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSleepWindowInMilliseconds(const int64_t& _sleepWindowInMilliseconds);
@@ -111,14 +123,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Threshold percentage.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ErrorThresholdPercentage Threshold percentage.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetErrorThresholdPercentage() const;
 
                     /**
                      * 设置Threshold percentage.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _errorThresholdPercentage Threshold percentage.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetErrorThresholdPercentage(const int64_t& _errorThresholdPercentage);
@@ -134,24 +150,28 @@ namespace TencentCloud
 
                     /**
                      * Whether health check is enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     bool m_isHealthCheck;
                     bool m_isHealthCheckHasBeenSet;
 
                     /**
-                     * Health check threshold.
+                     * Health check threshold. 
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_requestVolumeThreshold;
                     bool m_requestVolumeThresholdHasBeenSet;
 
                     /**
-                     * Window size.
+                     * Window size. 
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_sleepWindowInMilliseconds;
                     bool m_sleepWindowInMillisecondsHasBeenSet;
 
                     /**
                      * Threshold percentage.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_errorThresholdPercentage;
                     bool m_errorThresholdPercentageHasBeenSet;

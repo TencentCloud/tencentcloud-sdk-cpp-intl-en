@@ -110,15 +110,19 @@ namespace TencentCloud
                     bool UsagePlanNameHasBeenSet() const;
 
                     /**
-                     * 获取Usage plan description.
-                     * @return UsagePlanDesc Usage plan description.
+                     * 获取Usage plan description. 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return UsagePlanDesc Usage plan description. 
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUsagePlanDesc() const;
 
                     /**
-                     * 设置Usage plan description.
-                     * @param _usagePlanDesc Usage plan description.
+                     * 设置Usage plan description. 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _usagePlanDesc Usage plan description. 
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUsagePlanDesc(const std::string& _usagePlanDesc);
@@ -214,7 +218,8 @@ namespace TencentCloud
                     bool m_usagePlanNameHasBeenSet;
 
                     /**
-                     * Usage plan description.
+                     * Usage plan description. 
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_usagePlanDesc;
                     bool m_usagePlanDescHasBeenSet;

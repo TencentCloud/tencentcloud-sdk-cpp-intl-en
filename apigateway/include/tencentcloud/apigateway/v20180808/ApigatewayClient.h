@@ -157,8 +157,6 @@
 #include <tencentcloud/apigateway/v20180808/model/DisableApiKeyResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/EnableApiKeyRequest.h>
 #include <tencentcloud/apigateway/v20180808/model/EnableApiKeyResponse.h>
-#include <tencentcloud/apigateway/v20180808/model/GenerateApiDocumentRequest.h>
-#include <tencentcloud/apigateway/v20180808/model/GenerateApiDocumentResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/ImportOpenApiRequest.h>
 #include <tencentcloud/apigateway/v20180808/model/ImportOpenApiResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/ModifyAPIDocRequest.h>
@@ -422,9 +420,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::EnableApiKeyResponse> EnableApiKeyOutcome;
                 typedef std::future<EnableApiKeyOutcome> EnableApiKeyOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::EnableApiKeyRequest&, EnableApiKeyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EnableApiKeyAsyncHandler;
-                typedef Outcome<Core::Error, Model::GenerateApiDocumentResponse> GenerateApiDocumentOutcome;
-                typedef std::future<GenerateApiDocumentOutcome> GenerateApiDocumentOutcomeCallable;
-                typedef std::function<void(const ApigatewayClient*, const Model::GenerateApiDocumentRequest&, GenerateApiDocumentOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GenerateApiDocumentAsyncHandler;
                 typedef Outcome<Core::Error, Model::ImportOpenApiResponse> ImportOpenApiOutcome;
                 typedef std::future<ImportOpenApiOutcome> ImportOpenApiOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::ImportOpenApiRequest&, ImportOpenApiOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ImportOpenApiAsyncHandler;
@@ -1123,15 +1118,6 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
                 EnableApiKeyOutcomeCallable EnableApiKeyCallable(const Model::EnableApiKeyRequest& request);
 
                 /**
-                 *This API is used to automatically generate API documents and SDKs. One document and one SDK will be generated for each environment under each service, respectively.
-                 * @param req GenerateApiDocumentRequest
-                 * @return GenerateApiDocumentOutcome
-                 */
-                GenerateApiDocumentOutcome GenerateApiDocument(const Model::GenerateApiDocumentRequest &request);
-                void GenerateApiDocumentAsync(const Model::GenerateApiDocumentRequest& request, const GenerateApiDocumentAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                GenerateApiDocumentOutcomeCallable GenerateApiDocumentCallable(const Model::GenerateApiDocumentRequest& request);
-
-                /**
                  *This API is used to import an OpenAPI to API gateway. 
                  * @param req ImportOpenApiRequest
                  * @return ImportOpenApiOutcome
@@ -1342,7 +1328,7 @@ Only after a service is published to an environment can its APIs be called. You 
                 UpdateApiKeyOutcomeCallable UpdateApiKeyCallable(const Model::UpdateApiKeyRequest& request);
 
                 /**
-                 *This API is used to switch the running version of a service published in an environment to a specified version. After you create a service by using API Gateway and publish it to an environment, multiple versions will be generated during development. In this case, you can call this API to switch versions.
+                 *u200dThis API is used to switch the running version of a service published in an environment to a specified version. After you create a service by using API Gateway and publish it to an environment, multiple versions will be generated during development. In this case, you can call this API to switch versions.
                  * @param req UpdateServiceRequest
                  * @return UpdateServiceOutcome
                  */
