@@ -76,19 +76,19 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Header name of ClientIpCountry. This field is valid only when `Switch=on`.
-If it is left empty, the default value `EO-Client-IPCountry` will be used.
-                     * @return HeaderName Header name of ClientIpCountry. This field is valid only when `Switch=on`.
-If it is left empty, the default value `EO-Client-IPCountry` will be used.
+                     * 获取Name of the request header that contains the client IP region. It is valid when `Switch=on`. 
+The default value `EO-Client-IPCountry` is used when it is not specified.
+                     * @return HeaderName Name of the request header that contains the client IP region. It is valid when `Switch=on`. 
+The default value `EO-Client-IPCountry` is used when it is not specified.
                      * 
                      */
                     std::string GetHeaderName() const;
 
                     /**
-                     * 设置Header name of ClientIpCountry. This field is valid only when `Switch=on`.
-If it is left empty, the default value `EO-Client-IPCountry` will be used.
-                     * @param _headerName Header name of ClientIpCountry. This field is valid only when `Switch=on`.
-If it is left empty, the default value `EO-Client-IPCountry` will be used.
+                     * 设置Name of the request header that contains the client IP region. It is valid when `Switch=on`. 
+The default value `EO-Client-IPCountry` is used when it is not specified.
+                     * @param _headerName Name of the request header that contains the client IP region. It is valid when `Switch=on`. 
+The default value `EO-Client-IPCountry` is used when it is not specified.
                      * 
                      */
                     void SetHeaderName(const std::string& _headerName);
@@ -111,8 +111,8 @@ If it is left empty, the default value `EO-Client-IPCountry` will be used.
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Header name of ClientIpCountry. This field is valid only when `Switch=on`.
-If it is left empty, the default value `EO-Client-IPCountry` will be used.
+                     * Name of the request header that contains the client IP region. It is valid when `Switch=on`. 
+The default value `EO-Client-IPCountry` is used when it is not specified.
                      */
                     std::string m_headerName;
                     bool m_headerNameHasBeenSet;

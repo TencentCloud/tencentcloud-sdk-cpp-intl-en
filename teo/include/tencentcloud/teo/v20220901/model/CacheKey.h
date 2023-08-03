@@ -114,19 +114,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IgnoreCaseHasBeenSet() const;
 
                     /**
-                     * 获取Request parameter contained in `CacheKey`
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return QueryString Request parameter contained in `CacheKey`
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Request parameter contained in `CacheKey`. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return QueryString Request parameter contained in `CacheKey`. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     QueryString GetQueryString() const;
 
                     /**
-                     * 设置Request parameter contained in `CacheKey`
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _queryString Request parameter contained in `CacheKey`
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Request parameter contained in `CacheKey`. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param _queryString Request parameter contained in `CacheKey`. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetQueryString(const QueryString& _queryString);
@@ -159,8 +159,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_ignoreCaseHasBeenSet;
 
                     /**
-                     * Request parameter contained in `CacheKey`
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Request parameter contained in `CacheKey`. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     QueryString m_queryString;
                     bool m_queryStringHasBeenSet;

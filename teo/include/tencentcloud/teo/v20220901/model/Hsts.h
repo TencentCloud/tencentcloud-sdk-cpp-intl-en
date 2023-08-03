@@ -76,19 +76,19 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取The MaxAge value in seconds. Maximum value: `86400` (one day)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MaxAge The MaxAge value in seconds. Maximum value: `86400` (one day)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取MaxAge (in seconds). The maximum value is 1 day. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return MaxAge MaxAge (in seconds). The maximum value is 1 day. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetMaxAge() const;
 
                     /**
-                     * 设置The MaxAge value in seconds. Maximum value: `86400` (one day)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _maxAge The MaxAge value in seconds. Maximum value: `86400` (one day)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置MaxAge (in seconds). The maximum value is 1 day. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param _maxAge MaxAge (in seconds). The maximum value is 1 day. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMaxAge(const int64_t& _maxAge);
@@ -177,8 +177,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_switchHasBeenSet;
 
                     /**
-                     * The MaxAge value in seconds. Maximum value: `86400` (one day)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * MaxAge (in seconds). The maximum value is 1 day. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     int64_t m_maxAge;
                     bool m_maxAgeHasBeenSet;

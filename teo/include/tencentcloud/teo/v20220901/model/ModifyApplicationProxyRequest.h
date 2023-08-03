@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/teo/v20220901/model/Ipv6.h>
+#include <tencentcloud/teo/v20220901/model/AccelerateMainland.h>
 
 
 namespace TencentCloud
@@ -44,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The site ID.
-                     * @return ZoneId The site ID.
+                     * 获取Site ID.
+                     * @return ZoneId Site ID.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置The site ID.
-                     * @param _zoneId The site ID.
+                     * 设置Site ID.
+                     * @param _zoneId Site ID.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -65,15 +66,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取The proxy ID.
-                     * @return ProxyId The proxy ID.
+                     * 获取Proxy ID.
+                     * @return ProxyId Proxy ID.
                      * 
                      */
                     std::string GetProxyId() const;
 
                     /**
-                     * 设置The proxy ID.
-                     * @param _proxyId The proxy ID.
+                     * 设置Proxy ID.
+                     * @param _proxyId Proxy ID.
                      * 
                      */
                     void SetProxyId(const std::string& _proxyId);
@@ -86,19 +87,19 @@ namespace TencentCloud
                     bool ProxyIdHasBeenSet() const;
 
                     /**
-                     * 获取The domain name or subdomain name when `ProxyType=hostname`.
-The instance name when `ProxyType=instance`.
-                     * @return ProxyName The domain name or subdomain name when `ProxyType=hostname`.
-The instance name when `ProxyType=instance`.
+                     * 获取Domain name or subdomain name when `ProxyType=hostname`; 
+Instance name when `ProxyType=instance`.
+                     * @return ProxyName Domain name or subdomain name when `ProxyType=hostname`; 
+Instance name when `ProxyType=instance`.
                      * 
                      */
                     std::string GetProxyName() const;
 
                     /**
-                     * 设置The domain name or subdomain name when `ProxyType=hostname`.
-The instance name when `ProxyType=instance`.
-                     * @param _proxyName The domain name or subdomain name when `ProxyType=hostname`.
-The instance name when `ProxyType=instance`.
+                     * 设置Domain name or subdomain name when `ProxyType=hostname`; 
+Instance name when `ProxyType=instance`.
+                     * @param _proxyName Domain name or subdomain name when `ProxyType=hostname`; 
+Instance name when `ProxyType=instance`.
                      * 
                      */
                     void SetProxyName(const std::string& _proxyName);
@@ -165,15 +166,15 @@ The original configuration will apply if this field is not specified.
                     bool ProxyTypeHasBeenSet() const;
 
                     /**
-                     * 获取The IPv6 access configuration. The original configuration will apply if this field is not specified.
-                     * @return Ipv6 The IPv6 access configuration. The original configuration will apply if this field is not specified.
+                     * 获取IPv6 access configuration. The original configuration will apply if it is not specified.
+                     * @return Ipv6 IPv6 access configuration. The original configuration will apply if it is not specified.
                      * 
                      */
                     Ipv6 GetIpv6() const;
 
                     /**
-                     * 设置The IPv6 access configuration. The original configuration will apply if this field is not specified.
-                     * @param _ipv6 The IPv6 access configuration. The original configuration will apply if this field is not specified.
+                     * 设置IPv6 access configuration. The original configuration will apply if it is not specified.
+                     * @param _ipv6 IPv6 access configuration. The original configuration will apply if it is not specified.
                      * 
                      */
                     void SetIpv6(const Ipv6& _ipv6);
@@ -185,23 +186,44 @@ The original configuration will apply if this field is not specified.
                      */
                     bool Ipv6HasBeenSet() const;
 
+                    /**
+                     * 获取Cross-MLC-border acceleration. The original configuration will apply if it is not specified.
+                     * @return AccelerateMainland Cross-MLC-border acceleration. The original configuration will apply if it is not specified.
+                     * 
+                     */
+                    AccelerateMainland GetAccelerateMainland() const;
+
+                    /**
+                     * 设置Cross-MLC-border acceleration. The original configuration will apply if it is not specified.
+                     * @param _accelerateMainland Cross-MLC-border acceleration. The original configuration will apply if it is not specified.
+                     * 
+                     */
+                    void SetAccelerateMainland(const AccelerateMainland& _accelerateMainland);
+
+                    /**
+                     * 判断参数 AccelerateMainland 是否已赋值
+                     * @return AccelerateMainland 是否已赋值
+                     * 
+                     */
+                    bool AccelerateMainlandHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The site ID.
+                     * Site ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * The proxy ID.
+                     * Proxy ID.
                      */
                     std::string m_proxyId;
                     bool m_proxyIdHasBeenSet;
 
                     /**
-                     * The domain name or subdomain name when `ProxyType=hostname`.
-The instance name when `ProxyType=instance`.
+                     * Domain name or subdomain name when `ProxyType=hostname`; 
+Instance name when `ProxyType=instance`.
                      */
                     std::string m_proxyName;
                     bool m_proxyNameHasBeenSet;
@@ -222,10 +244,16 @@ The original configuration will apply if this field is not specified.
                     bool m_proxyTypeHasBeenSet;
 
                     /**
-                     * The IPv6 access configuration. The original configuration will apply if this field is not specified.
+                     * IPv6 access configuration. The original configuration will apply if it is not specified.
                      */
                     Ipv6 m_ipv6;
                     bool m_ipv6HasBeenSet;
+
+                    /**
+                     * Cross-MLC-border acceleration. The original configuration will apply if it is not specified.
+                     */
+                    AccelerateMainland m_accelerateMainland;
+                    bool m_accelerateMainlandHasBeenSet;
 
                 };
             }

@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/teo/v20220901/model/Ipv6.h>
 #include <tencentcloud/teo/v20220901/model/ApplicationProxyRule.h>
+#include <tencentcloud/teo/v20220901/model/AccelerateMainland.h>
 
 
 namespace TencentCloud
@@ -45,15 +46,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The site ID.
-                     * @return ZoneId The site ID.
+                     * 获取Site ID.
+                     * @return ZoneId Site ID.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置The site ID.
-                     * @param _zoneId The site ID.
+                     * 设置Site ID.
+                     * @param _zoneId Site ID.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -66,19 +67,19 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取When `ProxyType=hostname`, this field indicates a domain name or subdomain name.
-When `ProxyType=instance`, it indicates a proxy instance.
-                     * @return ProxyName When `ProxyType=hostname`, this field indicates a domain name or subdomain name.
-When `ProxyType=instance`, it indicates a proxy instance.
+                     * 获取Domain name or subdomain name when `ProxyType=hostname`; 
+Instance name when `ProxyType=instance`.
+                     * @return ProxyName Domain name or subdomain name when `ProxyType=hostname`; 
+Instance name when `ProxyType=instance`.
                      * 
                      */
                     std::string GetProxyName() const;
 
                     /**
-                     * 设置When `ProxyType=hostname`, this field indicates a domain name or subdomain name.
-When `ProxyType=instance`, it indicates a proxy instance.
-                     * @param _proxyName When `ProxyType=hostname`, this field indicates a domain name or subdomain name.
-When `ProxyType=instance`, it indicates a proxy instance.
+                     * 设置Domain name or subdomain name when `ProxyType=hostname`; 
+Instance name when `ProxyType=instance`.
+                     * @param _proxyName Domain name or subdomain name when `ProxyType=hostname`; 
+Instance name when `ProxyType=instance`.
                      * 
                      */
                     void SetProxyName(const std::string& _proxyName);
@@ -232,19 +233,19 @@ If not specified, this field uses the default value 600.
                     bool SessionPersistTimeHasBeenSet() const;
 
                     /**
-                     * 获取The IPv6 access configuration.
-If this field is not specified, IPv6 access will be disabled.
-                     * @return Ipv6 The IPv6 access configuration.
-If this field is not specified, IPv6 access will be disabled.
+                     * 获取Ipv6 access configuration. 
+IPv6 access is disabled if it is not specified.
+                     * @return Ipv6 Ipv6 access configuration. 
+IPv6 access is disabled if it is not specified.
                      * 
                      */
                     Ipv6 GetIpv6() const;
 
                     /**
-                     * 设置The IPv6 access configuration.
-If this field is not specified, IPv6 access will be disabled.
-                     * @param _ipv6 The IPv6 access configuration.
-If this field is not specified, IPv6 access will be disabled.
+                     * 设置Ipv6 access configuration. 
+IPv6 access is disabled if it is not specified.
+                     * @param _ipv6 Ipv6 access configuration. 
+IPv6 access is disabled if it is not specified.
                      * 
                      */
                     void SetIpv6(const Ipv6& _ipv6);
@@ -281,17 +282,38 @@ If this field is not specified, an application proxy rule will not be created.
                      */
                     bool ApplicationProxyRulesHasBeenSet() const;
 
+                    /**
+                     * 获取Cross-MLC-border acceleration. It is disabled if this parameter is not specified.
+                     * @return AccelerateMainland Cross-MLC-border acceleration. It is disabled if this parameter is not specified.
+                     * 
+                     */
+                    AccelerateMainland GetAccelerateMainland() const;
+
+                    /**
+                     * 设置Cross-MLC-border acceleration. It is disabled if this parameter is not specified.
+                     * @param _accelerateMainland Cross-MLC-border acceleration. It is disabled if this parameter is not specified.
+                     * 
+                     */
+                    void SetAccelerateMainland(const AccelerateMainland& _accelerateMainland);
+
+                    /**
+                     * 判断参数 AccelerateMainland 是否已赋值
+                     * @return AccelerateMainland 是否已赋值
+                     * 
+                     */
+                    bool AccelerateMainlandHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The site ID.
+                     * Site ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * When `ProxyType=hostname`, this field indicates a domain name or subdomain name.
-When `ProxyType=instance`, it indicates a proxy instance.
+                     * Domain name or subdomain name when `ProxyType=hostname`; 
+Instance name when `ProxyType=instance`.
                      */
                     std::string m_proxyName;
                     bool m_proxyNameHasBeenSet;
@@ -336,8 +358,8 @@ If not specified, this field uses the default value 600.
                     bool m_sessionPersistTimeHasBeenSet;
 
                     /**
-                     * The IPv6 access configuration.
-If this field is not specified, IPv6 access will be disabled.
+                     * Ipv6 access configuration. 
+IPv6 access is disabled if it is not specified.
                      */
                     Ipv6 m_ipv6;
                     bool m_ipv6HasBeenSet;
@@ -348,6 +370,12 @@ If this field is not specified, an application proxy rule will not be created.
                      */
                     std::vector<ApplicationProxyRule> m_applicationProxyRules;
                     bool m_applicationProxyRulesHasBeenSet;
+
+                    /**
+                     * Cross-MLC-border acceleration. It is disabled if this parameter is not specified.
+                     */
+                    AccelerateMainland m_accelerateMainland;
+                    bool m_accelerateMainlandHasBeenSet;
 
                 };
             }

@@ -44,6 +44,7 @@
 #include <tencentcloud/teo/v20220901/model/Grpc.h>
 #include <tencentcloud/teo/v20220901/model/ImageOptimize.h>
 #include <tencentcloud/teo/v20220901/model/AccelerateMainland.h>
+#include <tencentcloud/teo/v20220901/model/StandardDebug.h>
 
 
 namespace TencentCloud
@@ -592,15 +593,19 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool ImageOptimizeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AccelerateMainland 
+                     * 获取Cross-MLC-border acceleration. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return AccelerateMainland Cross-MLC-border acceleration. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     AccelerateMainland GetAccelerateMainland() const;
 
                     /**
-                     * 设置
-                     * @param _accelerateMainland 
+                     * 设置Cross-MLC-border acceleration. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param _accelerateMainland Cross-MLC-border acceleration. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAccelerateMainland(const AccelerateMainland& _accelerateMainland);
@@ -611,6 +616,27 @@ Note: This field may return `null`, indicating that no valid value was found.
                      * 
                      */
                     bool AccelerateMainlandHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return StandardDebug 
+                     * 
+                     */
+                    StandardDebug GetStandardDebug() const;
+
+                    /**
+                     * 设置
+                     * @param _standardDebug 
+                     * 
+                     */
+                    void SetStandardDebug(const StandardDebug& _standardDebug);
+
+                    /**
+                     * 判断参数 StandardDebug 是否已赋值
+                     * @return StandardDebug 是否已赋值
+                     * 
+                     */
+                    bool StandardDebugHasBeenSet() const;
 
                 private:
 
@@ -762,10 +788,17 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool m_imageOptimizeHasBeenSet;
 
                     /**
-                     * 
+                     * Cross-MLC-border acceleration. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     AccelerateMainland m_accelerateMainland;
                     bool m_accelerateMainlandHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    StandardDebug m_standardDebug;
+                    bool m_standardDebugHasBeenSet;
 
                 };
             }

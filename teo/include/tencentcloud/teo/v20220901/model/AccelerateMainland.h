@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Cross-MLC-border acceleration.
                 */
                 class AccelerateMainland : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Whether to enable Cross-MLC-border acceleration. Valid values: 
+<li>`on`: Enable;</li>
+<li>`off`: Disable.</li>
+                     * @return Switch Whether to enable Cross-MLC-border acceleration. Valid values: 
+<li>`on`: Enable;</li>
+<li>`off`: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置Whether to enable Cross-MLC-border acceleration. Valid values: 
+<li>`on`: Enable;</li>
+<li>`off`: Disable.</li>
+                     * @param _switch Whether to enable Cross-MLC-border acceleration. Valid values: 
+<li>`on`: Enable;</li>
+<li>`off`: Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -70,7 +78,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Whether to enable Cross-MLC-border acceleration. Valid values: 
+<li>`on`: Enable;</li>
+<li>`off`: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

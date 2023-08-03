@@ -65,19 +65,23 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取List of resources to be pre-warmed, for example:
-http://www.example.com/example.txt
-                     * @return Targets List of resources to be pre-warmed, for example:
-http://www.example.com/example.txt
+                     * 获取Resources to be pre-warmed, for example: 
+http://www.example.com/example.txt 
+Note: The number of submitted tasks is limited by the quota of the plan. For details, see [Billing Overview](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
+                     * @return Targets Resources to be pre-warmed, for example: 
+http://www.example.com/example.txt 
+Note: The number of submitted tasks is limited by the quota of the plan. For details, see [Billing Overview](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
                      * 
                      */
                     std::vector<std::string> GetTargets() const;
 
                     /**
-                     * 设置List of resources to be pre-warmed, for example:
-http://www.example.com/example.txt
-                     * @param _targets List of resources to be pre-warmed, for example:
-http://www.example.com/example.txt
+                     * 设置Resources to be pre-warmed, for example: 
+http://www.example.com/example.txt 
+Note: The number of submitted tasks is limited by the quota of the plan. For details, see [Billing Overview](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
+                     * @param _targets Resources to be pre-warmed, for example: 
+http://www.example.com/example.txt 
+Note: The number of submitted tasks is limited by the quota of the plan. For details, see [Billing Overview](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
                      * 
                      */
                     void SetTargets(const std::vector<std::string>& _targets);
@@ -140,8 +144,9 @@ http://www.example.com/example.txt
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * List of resources to be pre-warmed, for example:
-http://www.example.com/example.txt
+                     * Resources to be pre-warmed, for example: 
+http://www.example.com/example.txt 
+Note: The number of submitted tasks is limited by the quota of the plan. For details, see [Billing Overview](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
                      */
                     std::vector<std::string> m_targets;
                     bool m_targetsHasBeenSet;

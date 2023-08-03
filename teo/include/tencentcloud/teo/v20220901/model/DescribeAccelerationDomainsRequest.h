@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Site ID of the accelerated domain name. If it’s not specified, all accelerated domain names under the site are returned.
-                     * @return ZoneId Site ID of the accelerated domain name. If it’s not specified, all accelerated domain names under the site are returned.
+                     * 获取ID of the site related with the accelerated domain name.
+                     * @return ZoneId ID of the site related with the accelerated domain name.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Site ID of the accelerated domain name. If it’s not specified, all accelerated domain names under the site are returned.
-                     * @param _zoneId Site ID of the accelerated domain name. If it’s not specified, all accelerated domain names under the site are returned.
+                     * 设置ID of the site related with the accelerated domain name.
+                     * @param _zoneId ID of the site related with the accelerated domain name.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -245,7 +245,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Site ID of the accelerated domain name. If it’s not specified, all accelerated domain names under the site are returned.
+                     * ID of the site related with the accelerated domain name.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;

@@ -115,35 +115,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OcspStaplingHasBeenSet() const;
 
                     /**
-                     * 获取TLS version. Values:
-<li>`TLSv1`: TLSv1 version</li>
-<li>`TLSV1.1`: TLSv1.1 version</li>
-<li>`TLSV1.2`: TLSv1.2 version</li>
-<li>`TLSv1.3`: TLSv1.3 version</li>Only consecutive versions can be enabled at the same time.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TlsVersion TLS version. Values:
-<li>`TLSv1`: TLSv1 version</li>
-<li>`TLSV1.1`: TLSv1.1 version</li>
-<li>`TLSV1.2`: TLSv1.2 version</li>
-<li>`TLSv1.3`: TLSv1.3 version</li>Only consecutive versions can be enabled at the same time.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取TLS version. Valid values: 
+<li>`TLSv1`: TLSv1 version;</li>
+<li>`TLSV1.1`: TLSv1.1 version;</li>
+<li>`TLSV1.2`: TLSv1.2 version;</li>
+<li>`TLSv1.3`: TLSv1.3 version.</li>Only consecutive versions can be enabled at the same time. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return TlsVersion TLS version. Valid values: 
+<li>`TLSv1`: TLSv1 version;</li>
+<li>`TLSV1.1`: TLSv1.1 version;</li>
+<li>`TLSV1.2`: TLSv1.2 version;</li>
+<li>`TLSv1.3`: TLSv1.3 version.</li>Only consecutive versions can be enabled at the same time. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetTlsVersion() const;
 
                     /**
-                     * 设置TLS version. Values:
-<li>`TLSv1`: TLSv1 version</li>
-<li>`TLSV1.1`: TLSv1.1 version</li>
-<li>`TLSV1.2`: TLSv1.2 version</li>
-<li>`TLSv1.3`: TLSv1.3 version</li>Only consecutive versions can be enabled at the same time.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tlsVersion TLS version. Values:
-<li>`TLSv1`: TLSv1 version</li>
-<li>`TLSV1.1`: TLSv1.1 version</li>
-<li>`TLSV1.2`: TLSv1.2 version</li>
-<li>`TLSv1.3`: TLSv1.3 version</li>Only consecutive versions can be enabled at the same time.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置TLS version. Valid values: 
+<li>`TLSv1`: TLSv1 version;</li>
+<li>`TLSV1.1`: TLSv1.1 version;</li>
+<li>`TLSV1.2`: TLSv1.2 version;</li>
+<li>`TLSv1.3`: TLSv1.3 version.</li>Only consecutive versions can be enabled at the same time. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param _tlsVersion TLS version. Valid values: 
+<li>`TLSv1`: TLSv1 version;</li>
+<li>`TLSV1.1`: TLSv1.1 version;</li>
+<li>`TLSV1.2`: TLSv1.2 version;</li>
+<li>`TLSv1.3`: TLSv1.3 version.</li>Only consecutive versions can be enabled at the same time. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTlsVersion(const std::vector<std::string>& _tlsVersion);
@@ -296,12 +296,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_ocspStaplingHasBeenSet;
 
                     /**
-                     * TLS version. Values:
-<li>`TLSv1`: TLSv1 version</li>
-<li>`TLSV1.1`: TLSv1.1 version</li>
-<li>`TLSV1.2`: TLSv1.2 version</li>
-<li>`TLSv1.3`: TLSv1.3 version</li>Only consecutive versions can be enabled at the same time.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * TLS version. Valid values: 
+<li>`TLSv1`: TLSv1 version;</li>
+<li>`TLSV1.1`: TLSv1.1 version;</li>
+<li>`TLSV1.2`: TLSv1.2 version;</li>
+<li>`TLSv1.3`: TLSv1.3 version.</li>Only consecutive versions can be enabled at the same time. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_tlsVersion;
                     bool m_tlsVersionHasBeenSet;

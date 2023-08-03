@@ -505,27 +505,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AliasZoneNameHasBeenSet() const;
 
                     /**
-                     * 获取Whether it’s a fake site. Values:
-<li>`0`: Non-fake site</li>
-<li>`1`: Fake site</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return IsFake Whether it’s a fake site. Values:
-<li>`0`: Non-fake site</li>
-<li>`1`: Fake site</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Whether it’s a fake site. Valid values: 
+<li>`0`: Non-fake site;</li>
+<li>`1`: Fake site.</li>
+                     * @return IsFake Whether it’s a fake site. Valid values: 
+<li>`0`: Non-fake site;</li>
+<li>`1`: Fake site.</li>
                      * 
                      */
                     int64_t GetIsFake() const;
 
                     /**
-                     * 设置Whether it’s a fake site. Values:
-<li>`0`: Non-fake site</li>
-<li>`1`: Fake site</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _isFake Whether it’s a fake site. Values:
-<li>`0`: Non-fake site</li>
-<li>`1`: Fake site</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Whether it’s a fake site. Valid values: 
+<li>`0`: Non-fake site;</li>
+<li>`1`: Fake site.</li>
+                     * @param _isFake Whether it’s a fake site. Valid values: 
+<li>`0`: Non-fake site;</li>
+<li>`1`: Fake site.</li>
                      * 
                      */
                     void SetIsFake(const int64_t& _isFake);
@@ -536,6 +532,27 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * 
                      */
                     bool IsFakeHasBeenSet() const;
+
+                    /**
+                     * 获取Lock status. Valid values: <li>`enable`: Normal. Modifying is allowed;</li><li>`disable`: Locked. Modifying is not allowed.</li>
+                     * @return LockStatus Lock status. Valid values: <li>`enable`: Normal. Modifying is allowed;</li><li>`disable`: Locked. Modifying is not allowed.</li>
+                     * 
+                     */
+                    std::string GetLockStatus() const;
+
+                    /**
+                     * 设置Lock status. Valid values: <li>`enable`: Normal. Modifying is allowed;</li><li>`disable`: Locked. Modifying is not allowed.</li>
+                     * @param _lockStatus Lock status. Valid values: <li>`enable`: Normal. Modifying is allowed;</li><li>`disable`: Locked. Modifying is not allowed.</li>
+                     * 
+                     */
+                    void SetLockStatus(const std::string& _lockStatus);
+
+                    /**
+                     * 判断参数 LockStatus 是否已赋值
+                     * @return LockStatus 是否已赋值
+                     * 
+                     */
+                    bool LockStatusHasBeenSet() const;
 
                 private:
 
@@ -667,13 +684,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_aliasZoneNameHasBeenSet;
 
                     /**
-                     * Whether it’s a fake site. Values:
-<li>`0`: Non-fake site</li>
-<li>`1`: Fake site</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Whether it’s a fake site. Valid values: 
+<li>`0`: Non-fake site;</li>
+<li>`1`: Fake site.</li>
                      */
                     int64_t m_isFake;
                     bool m_isFakeHasBeenSet;
+
+                    /**
+                     * Lock status. Valid values: <li>`enable`: Normal. Modifying is allowed;</li><li>`disable`: Locked. Modifying is not allowed.</li>
+                     */
+                    std::string m_lockStatus;
+                    bool m_lockStatusHasBeenSet;
 
                 };
             }

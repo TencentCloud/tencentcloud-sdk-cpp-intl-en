@@ -76,23 +76,23 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取The name of the HTTP header that contains the client IP, which is used for forwarding.
-If this field is not specified, the default value `X-Forwarded-IP` will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HeaderName The name of the HTTP header that contains the client IP, which is used for forwarding.
-If this field is not specified, the default value `X-Forwarded-IP` will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Name of the request header that contains the client IP for origin-pull. 
+The default value `X-Forwarded-IP` is used when it is not specified. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return HeaderName Name of the request header that contains the client IP for origin-pull. 
+The default value `X-Forwarded-IP` is used when it is not specified. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetHeaderName() const;
 
                     /**
-                     * 设置The name of the HTTP header that contains the client IP, which is used for forwarding.
-If this field is not specified, the default value `X-Forwarded-IP` will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _headerName The name of the HTTP header that contains the client IP, which is used for forwarding.
-If this field is not specified, the default value `X-Forwarded-IP` will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Name of the request header that contains the client IP for origin-pull. 
+The default value `X-Forwarded-IP` is used when it is not specified. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param _headerName Name of the request header that contains the client IP for origin-pull. 
+The default value `X-Forwarded-IP` is used when it is not specified. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHeaderName(const std::string& _headerName);
@@ -115,9 +115,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_switchHasBeenSet;
 
                     /**
-                     * The name of the HTTP header that contains the client IP, which is used for forwarding.
-If this field is not specified, the default value `X-Forwarded-IP` will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Name of the request header that contains the client IP for origin-pull. 
+The default value `X-Forwarded-IP` is used when it is not specified. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_headerName;
                     bool m_headerNameHasBeenSet;

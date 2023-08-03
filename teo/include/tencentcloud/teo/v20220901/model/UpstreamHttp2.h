@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable HTTP2 origin-pull. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-                     * @return Switch Whether to enable HTTP2 origin-pull. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * 获取Whether to enable HTTP2 origin-pull. Valid values: 
+<li>`on`: Enable;</li>
+<li>`off`: Disable.</li>
+                     * @return Switch Whether to enable HTTP2 origin-pull. Valid values: 
+<li>`on`: Enable;</li>
+<li>`off`: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable HTTP2 origin-pull. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-                     * @param _switch Whether to enable HTTP2 origin-pull. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * 设置Whether to enable HTTP2 origin-pull. Valid values: 
+<li>`on`: Enable;</li>
+<li>`off`: Disable.</li>
+                     * @param _switch Whether to enable HTTP2 origin-pull. Valid values: 
+<li>`on`: Enable;</li>
+<li>`off`: Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -78,9 +78,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to enable HTTP2 origin-pull. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * Whether to enable HTTP2 origin-pull. Valid values: 
+<li>`on`: Enable;</li>
+<li>`off`: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

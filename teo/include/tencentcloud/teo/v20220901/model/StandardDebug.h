@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_TEO_V20220901_MODEL_POSTMAXSIZE_H_
-#define TENCENTCLOUD_TEO_V20220901_MODEL_POSTMAXSIZE_H_
+#ifndef TENCENTCLOUD_TEO_V20220901_MODEL_STANDARDDEBUG_H_
+#define TENCENTCLOUD_TEO_V20220901_MODEL_STANDARDDEBUG_H_
 
 #include <string>
 #include <vector>
@@ -35,35 +35,27 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Maximum size of the file uploaded for streaming via a POST request
+                * 
                 */
-                class PostMaxSize : public AbstractModel
+                class StandardDebug : public AbstractModel
                 {
                 public:
-                    PostMaxSize();
-                    ~PostMaxSize() = default;
+                    StandardDebug();
+                    ~StandardDebug() = default;
                     void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
 
                     /**
-                     * 获取Whether to enable POST upload limit (default limit: 32 MB). Valid values: 
-<li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
-                     * @return Switch Whether to enable POST upload limit (default limit: 32 MB). Valid values: 
-<li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+                     * 获取
+                     * @return Switch 
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable POST upload limit (default limit: 32 MB). Valid values: 
-<li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
-                     * @param _switch Whether to enable POST upload limit (default limit: 32 MB). Valid values: 
-<li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+                     * 设置
+                     * @param _switch 
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -76,46 +68,66 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Maximum size. Value range: 1-500 MB.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MaxSize Maximum size. Value range: 1-500 MB.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return AllowClientIPList 
                      * 
                      */
-                    int64_t GetMaxSize() const;
+                    std::vector<std::string> GetAllowClientIPList() const;
 
                     /**
-                     * 设置Maximum size. Value range: 1-500 MB.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _maxSize Maximum size. Value range: 1-500 MB.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _allowClientIPList 
                      * 
                      */
-                    void SetMaxSize(const int64_t& _maxSize);
+                    void SetAllowClientIPList(const std::vector<std::string>& _allowClientIPList);
 
                     /**
-                     * 判断参数 MaxSize 是否已赋值
-                     * @return MaxSize 是否已赋值
+                     * 判断参数 AllowClientIPList 是否已赋值
+                     * @return AllowClientIPList 是否已赋值
                      * 
                      */
-                    bool MaxSizeHasBeenSet() const;
+                    bool AllowClientIPListHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ExpireTime 
+                     * 
+                     */
+                    std::string GetExpireTime() const;
+
+                    /**
+                     * 设置
+                     * @param _expireTime 
+                     * 
+                     */
+                    void SetExpireTime(const std::string& _expireTime);
+
+                    /**
+                     * 判断参数 ExpireTime 是否已赋值
+                     * @return ExpireTime 是否已赋值
+                     * 
+                     */
+                    bool ExpireTimeHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Whether to enable POST upload limit (default limit: 32 MB). Valid values: 
-<li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+                     * 
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Maximum size. Value range: 1-500 MB.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
-                    int64_t m_maxSize;
-                    bool m_maxSizeHasBeenSet;
+                    std::vector<std::string> m_allowClientIPList;
+                    bool m_allowClientIPListHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_expireTime;
+                    bool m_expireTimeHasBeenSet;
 
                 };
             }
@@ -123,4 +135,4 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 }
 
-#endif // !TENCENTCLOUD_TEO_V20220901_MODEL_POSTMAXSIZE_H_
+#endif // !TENCENTCLOUD_TEO_V20220901_MODEL_STANDARDDEBUG_H_

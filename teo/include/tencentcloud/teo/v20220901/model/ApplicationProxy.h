@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/teo/v20220901/model/Ipv6.h>
 #include <tencentcloud/teo/v20220901/model/ApplicationProxyRule.h>
+#include <tencentcloud/teo/v20220901/model/AccelerateMainland.h>
 
 
 namespace TencentCloud
@@ -493,6 +494,27 @@ This field indicates the unique ID of the subdomain name.
                      */
                     bool ApplicationProxyRulesHasBeenSet() const;
 
+                    /**
+                     * 获取Cross-MLC-border acceleration.
+                     * @return AccelerateMainland Cross-MLC-border acceleration.
+                     * 
+                     */
+                    AccelerateMainland GetAccelerateMainland() const;
+
+                    /**
+                     * 设置Cross-MLC-border acceleration.
+                     * @param _accelerateMainland Cross-MLC-border acceleration.
+                     * 
+                     */
+                    void SetAccelerateMainland(const AccelerateMainland& _accelerateMainland);
+
+                    /**
+                     * 判断参数 AccelerateMainland 是否已赋值
+                     * @return AccelerateMainland 是否已赋值
+                     * 
+                     */
+                    bool AccelerateMainlandHasBeenSet() const;
+
                 private:
 
                     /**
@@ -618,6 +640,12 @@ This field indicates the unique ID of the subdomain name.
                      */
                     std::vector<ApplicationProxyRule> m_applicationProxyRules;
                     bool m_applicationProxyRulesHasBeenSet;
+
+                    /**
+                     * Cross-MLC-border acceleration.
+                     */
+                    AccelerateMainland m_accelerateMainland;
+                    bool m_accelerateMainlandHasBeenSet;
 
                 };
             }

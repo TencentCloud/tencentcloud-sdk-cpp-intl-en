@@ -70,47 +70,51 @@ namespace TencentCloud
                     bool RuleNameHasBeenSet() const;
 
                     /**
-                     * 获取The action. Values:
-<li>`drop`: Block</li>
-<li>`monitor`: Observe</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`silence`: Drop w/o response</li>
-<li>`shortdelay`: Add short latency</li>
-<li>`longdelay`: Add long latency</li>
-                     * @return Action The action. Values:
-<li>`drop`: Block</li>
-<li>`monitor`: Observe</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`silence`: Drop w/o response</li>
-<li>`shortdelay`: Add short latency</li>
-<li>`longdelay`: Add long latency</li>
+                     * 获取Action. Valid values: 
+<li>`drop`: Block;</li>
+<li>`monitor`: Observe;</li>
+<li>`trans`: Allow;</li>
+<li>`alg`: JavaScript challenge;</li>
+<li>`captcha`: Managed challenge;</li>
+<li>`random`: Random action;</li>
+<li>`silence`: Silence;</li>
+<li>`shortdelay`: Add short latency;</li>
+<li>`longdelay`: Add long latency.</li>
+                     * @return Action Action. Valid values: 
+<li>`drop`: Block;</li>
+<li>`monitor`: Observe;</li>
+<li>`trans`: Allow;</li>
+<li>`alg`: JavaScript challenge;</li>
+<li>`captcha`: Managed challenge;</li>
+<li>`random`: Random action;</li>
+<li>`silence`: Silence;</li>
+<li>`shortdelay`: Add short latency;</li>
+<li>`longdelay`: Add long latency.</li>
                      * 
                      */
                     std::string GetAction() const;
 
                     /**
-                     * 设置The action. Values:
-<li>`drop`: Block</li>
-<li>`monitor`: Observe</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`silence`: Drop w/o response</li>
-<li>`shortdelay`: Add short latency</li>
-<li>`longdelay`: Add long latency</li>
-                     * @param _action The action. Values:
-<li>`drop`: Block</li>
-<li>`monitor`: Observe</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`silence`: Drop w/o response</li>
-<li>`shortdelay`: Add short latency</li>
-<li>`longdelay`: Add long latency</li>
+                     * 设置Action. Valid values: 
+<li>`drop`: Block;</li>
+<li>`monitor`: Observe;</li>
+<li>`trans`: Allow;</li>
+<li>`alg`: JavaScript challenge;</li>
+<li>`captcha`: Managed challenge;</li>
+<li>`random`: Random action;</li>
+<li>`silence`: Silence;</li>
+<li>`shortdelay`: Add short latency;</li>
+<li>`longdelay`: Add long latency.</li>
+                     * @param _action Action. Valid values: 
+<li>`drop`: Block;</li>
+<li>`monitor`: Observe;</li>
+<li>`trans`: Allow;</li>
+<li>`alg`: JavaScript challenge;</li>
+<li>`captcha`: Managed challenge;</li>
+<li>`random`: Random action;</li>
+<li>`silence`: Silence;</li>
+<li>`shortdelay`: Add short latency;</li>
+<li>`longdelay`: Add long latency.</li>
                      * 
                      */
                     void SetAction(const std::string& _action);
@@ -335,15 +339,16 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_ruleNameHasBeenSet;
 
                     /**
-                     * The action. Values:
-<li>`drop`: Block</li>
-<li>`monitor`: Observe</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`silence`: Drop w/o response</li>
-<li>`shortdelay`: Add short latency</li>
-<li>`longdelay`: Add long latency</li>
+                     * Action. Valid values: 
+<li>`drop`: Block;</li>
+<li>`monitor`: Observe;</li>
+<li>`trans`: Allow;</li>
+<li>`alg`: JavaScript challenge;</li>
+<li>`captcha`: Managed challenge;</li>
+<li>`random`: Random action;</li>
+<li>`silence`: Silence;</li>
+<li>`shortdelay`: Add short latency;</li>
+<li>`longdelay`: Add long latency.</li>
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;

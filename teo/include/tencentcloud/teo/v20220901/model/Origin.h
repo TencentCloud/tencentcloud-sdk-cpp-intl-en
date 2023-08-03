@@ -134,27 +134,27 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool OriginPullProtocolHasBeenSet() const;
 
                     /**
-                     * 获取Whether to allow private access to buckets when `OriginType=cos`. Values:
-<li>`on`: Allow private access.</li>
-<li>`off`: Allow public access.</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return CosPrivateAccess Whether to allow private access to buckets when `OriginType=cos`. Values:
-<li>`on`: Allow private access.</li>
-<li>`off`: Allow public access.</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Whether to allow private access to buckets when `OriginType=cos`. Valid values: 
+<li>`on`: Private access;</li>
+<li>`off`: Public access.</li>
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return CosPrivateAccess Whether to allow private access to buckets when `OriginType=cos`. Valid values: 
+<li>`on`: Private access;</li>
+<li>`off`: Public access.</li>
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCosPrivateAccess() const;
 
                     /**
-                     * 设置Whether to allow private access to buckets when `OriginType=cos`. Values:
-<li>`on`: Allow private access.</li>
-<li>`off`: Allow public access.</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _cosPrivateAccess Whether to allow private access to buckets when `OriginType=cos`. Values:
-<li>`on`: Allow private access.</li>
-<li>`off`: Allow public access.</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Whether to allow private access to buckets when `OriginType=cos`. Valid values: 
+<li>`on`: Private access;</li>
+<li>`off`: Public access.</li>
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param _cosPrivateAccess Whether to allow private access to buckets when `OriginType=cos`. Valid values: 
+<li>`on`: Private access;</li>
+<li>`off`: Public access.</li>
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCosPrivateAccess(const std::string& _cosPrivateAccess);
@@ -193,10 +193,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_originPullProtocolHasBeenSet;
 
                     /**
-                     * Whether to allow private access to buckets when `OriginType=cos`. Values:
-<li>`on`: Allow private access.</li>
-<li>`off`: Allow public access.</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Whether to allow private access to buckets when `OriginType=cos`. Valid values: 
+<li>`on`: Private access;</li>
+<li>`off`: Public access.</li>
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_cosPrivateAccess;
                     bool m_cosPrivateAccessHasBeenSet;
