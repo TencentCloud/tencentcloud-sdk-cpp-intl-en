@@ -559,15 +559,15 @@ It is disabled if this parameter is not specified.
                     bool ImageOptimizeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StandardDebug 
+                     * 获取Standard debugging configuration.
+                     * @return StandardDebug Standard debugging configuration.
                      * 
                      */
                     StandardDebug GetStandardDebug() const;
 
                     /**
-                     * 设置
-                     * @param _standardDebug 
+                     * 设置Standard debugging configuration.
+                     * @param _standardDebug Standard debugging configuration.
                      * 
                      */
                     void SetStandardDebug(const StandardDebug& _standardDebug);
@@ -721,7 +721,7 @@ It is disabled if this parameter is not specified.
                     bool m_imageOptimizeHasBeenSet;
 
                     /**
-                     * 
+                     * Standard debugging configuration.
                      */
                     StandardDebug m_standardDebug;
                     bool m_standardDebugHasBeenSet;

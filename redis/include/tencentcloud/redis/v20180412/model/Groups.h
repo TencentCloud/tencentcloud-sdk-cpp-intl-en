@@ -69,7 +69,7 @@ namespace TencentCloud
                     bool AppIdHasBeenSet() const;
 
                     /**
-                     * 获取Region ID
+                     * 获取Region ID. Valid values:
 - `1`: Guangzhou 
 - `4`: Shanghai 
 - `5`: Hong Kong (China) 
@@ -86,9 +86,8 @@ namespace TencentCloud
 - `21`: India 
 - `22`: Virginia (East US)
 - `23`: Thailand 
-- `24`: Russia 
 - `25`: Japan
-                     * @return RegionId Region ID
+                     * @return RegionId Region ID. Valid values:
 - `1`: Guangzhou 
 - `4`: Shanghai 
 - `5`: Hong Kong (China) 
@@ -105,14 +104,13 @@ namespace TencentCloud
 - `21`: India 
 - `22`: Virginia (East US)
 - `23`: Thailand 
-- `24`: Russia 
 - `25`: Japan
                      * 
                      */
                     int64_t GetRegionId() const;
 
                     /**
-                     * 设置Region ID
+                     * 设置Region ID. Valid values:
 - `1`: Guangzhou 
 - `4`: Shanghai 
 - `5`: Hong Kong (China) 
@@ -129,9 +127,8 @@ namespace TencentCloud
 - `21`: India 
 - `22`: Virginia (East US)
 - `23`: Thailand 
-- `24`: Russia 
 - `25`: Japan
-                     * @param _regionId Region ID
+                     * @param _regionId Region ID. Valid values:
 - `1`: Guangzhou 
 - `4`: Shanghai 
 - `5`: Hong Kong (China) 
@@ -148,7 +145,6 @@ namespace TencentCloud
 - `21`: India 
 - `22`: Virginia (East US)
 - `23`: Thailand 
-- `24`: Russia 
 - `25`: Japan
                      * 
                      */
@@ -328,7 +324,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_appIdHasBeenSet;
 
                     /**
-                     * Region ID
+                     * Region ID. Valid values:
 - `1`: Guangzhou 
 - `4`: Shanghai 
 - `5`: Hong Kong (China) 
@@ -345,7 +341,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 - `21`: India 
 - `22`: Virginia (East US)
 - `23`: Thailand 
-- `24`: Russia 
 - `25`: Japan
                      */
                     int64_t m_regionId;

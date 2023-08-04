@@ -132,15 +132,15 @@ OPEN: public network; INTERNAL: private network.
                     bool LoadBalancerNameHasBeenSet() const;
 
                     /**
-                     * 获取Domain name assigned to a CLB instance by Tencent Cloud. This parameter is meaningful only for the public network classic CLB.
-                     * @return Domain Domain name assigned to a CLB instance by Tencent Cloud. This parameter is meaningful only for the public network classic CLB.
+                     * 获取The domain name that Tencent Cloud assigned for the CLB instance.
+                     * @return Domain The domain name that Tencent Cloud assigned for the CLB instance.
                      * 
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置Domain name assigned to a CLB instance by Tencent Cloud. This parameter is meaningful only for the public network classic CLB.
-                     * @param _domain Domain name assigned to a CLB instance by Tencent Cloud. This parameter is meaningful only for the public network classic CLB.
+                     * 设置The domain name that Tencent Cloud assigned for the CLB instance.
+                     * @param _domain The domain name that Tencent Cloud assigned for the CLB instance.
                      * 
                      */
                     void SetDomain(const std::string& _domain);
@@ -482,7 +482,7 @@ OPEN: public network; INTERNAL: private network.
                     bool m_loadBalancerNameHasBeenSet;
 
                     /**
-                     * Domain name assigned to a CLB instance by Tencent Cloud. This parameter is meaningful only for the public network classic CLB.
+                     * The domain name that Tencent Cloud assigned for the CLB instance.
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;

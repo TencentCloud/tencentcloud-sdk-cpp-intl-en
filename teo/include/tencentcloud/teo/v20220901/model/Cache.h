@@ -107,33 +107,33 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * 获取Whether to enable force cache. Values:
 <li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`off`: Disable </li>
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * @return IgnoreCacheControl Whether to enable force cache. Values:
 <li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
+<li>`off`: Disable </li>
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @deprecated
                      */
                     std::string GetIgnoreCacheControl() const;
 
                     /**
                      * 设置Whether to enable force cache. Values:
 <li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`off`: Disable </li>
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * @param _ignoreCacheControl Whether to enable force cache. Values:
 <li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
+<li>`off`: Disable </li>
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @deprecated
                      */
                     void SetIgnoreCacheControl(const std::string& _ignoreCacheControl);
 
                     /**
                      * 判断参数 IgnoreCacheControl 是否已赋值
                      * @return IgnoreCacheControl 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool IgnoreCacheControlHasBeenSet() const;
 
@@ -158,8 +158,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * Whether to enable force cache. Values:
 <li>`on`: Enable</li>
-<li>`off`: Disable</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`off`: Disable </li>
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_ignoreCacheControl;
                     bool m_ignoreCacheControlHasBeenSet;

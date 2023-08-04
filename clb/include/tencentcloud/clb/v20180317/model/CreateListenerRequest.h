@@ -130,15 +130,15 @@ namespace TencentCloud
                     bool ListenerNamesHasBeenSet() const;
 
                     /**
-                     * 获取Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
-                     * @return HealthCheck Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
+                     * 获取Health check parameter. It is only applicable only to TCP, UDP, TCP_SSL and QUIC listeners.
+                     * @return HealthCheck Health check parameter. It is only applicable only to TCP, UDP, TCP_SSL and QUIC listeners.
                      * 
                      */
                     HealthCheck GetHealthCheck() const;
 
                     /**
-                     * 设置Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
-                     * @param _healthCheck Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
+                     * 设置Health check parameter. It is only applicable only to TCP, UDP, TCP_SSL and QUIC listeners.
+                     * @param _healthCheck Health check parameter. It is only applicable only to TCP, UDP, TCP_SSL and QUIC listeners.
                      * 
                      */
                     void SetHealthCheck(const HealthCheck& _healthCheck);
@@ -193,19 +193,19 @@ namespace TencentCloud
                     bool SessionExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取Forwarding method of a listener. Value range: WRR, LEAST_CONN.
-They represent weighted round robin and least connections, respectively. Default value: WRR. This parameter is applicable only to TCP/UDP/TCP_SSL listeners.
-                     * @return Scheduler Forwarding method of a listener. Value range: WRR, LEAST_CONN.
-They represent weighted round robin and least connections, respectively. Default value: WRR. This parameter is applicable only to TCP/UDP/TCP_SSL listeners.
+                     * 获取Listener forwarding mode. u200dValues: `WRR` (weighted round robin) and `LEAST_CONN` (least connections). 
+Default value: `WRR`. This parameter is only applicable to TCP, UDP, TCP_SSL and QUIC listeners.
+                     * @return Scheduler Listener forwarding mode. u200dValues: `WRR` (weighted round robin) and `LEAST_CONN` (least connections). 
+Default value: `WRR`. This parameter is only applicable to TCP, UDP, TCP_SSL and QUIC listeners.
                      * 
                      */
                     std::string GetScheduler() const;
 
                     /**
-                     * 设置Forwarding method of a listener. Value range: WRR, LEAST_CONN.
-They represent weighted round robin and least connections, respectively. Default value: WRR. This parameter is applicable only to TCP/UDP/TCP_SSL listeners.
-                     * @param _scheduler Forwarding method of a listener. Value range: WRR, LEAST_CONN.
-They represent weighted round robin and least connections, respectively. Default value: WRR. This parameter is applicable only to TCP/UDP/TCP_SSL listeners.
+                     * 设置Listener forwarding mode. u200dValues: `WRR` (weighted round robin) and `LEAST_CONN` (least connections). 
+Default value: `WRR`. This parameter is only applicable to TCP, UDP, TCP_SSL and QUIC listeners.
+                     * @param _scheduler Listener forwarding mode. u200dValues: `WRR` (weighted round robin) and `LEAST_CONN` (least connections). 
+Default value: `WRR`. This parameter is only applicable to TCP, UDP, TCP_SSL and QUIC listeners.
                      * 
                      */
                     void SetScheduler(const std::string& _scheduler);
@@ -454,7 +454,7 @@ They represent weighted round robin and least connections, respectively. Default
                     bool m_listenerNamesHasBeenSet;
 
                     /**
-                     * Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
+                     * Health check parameter. It is only applicable only to TCP, UDP, TCP_SSL and QUIC listeners.
                      */
                     HealthCheck m_healthCheck;
                     bool m_healthCheckHasBeenSet;
@@ -472,8 +472,8 @@ They represent weighted round robin and least connections, respectively. Default
                     bool m_sessionExpireTimeHasBeenSet;
 
                     /**
-                     * Forwarding method of a listener. Value range: WRR, LEAST_CONN.
-They represent weighted round robin and least connections, respectively. Default value: WRR. This parameter is applicable only to TCP/UDP/TCP_SSL listeners.
+                     * Listener forwarding mode. u200dValues: `WRR` (weighted round robin) and `LEAST_CONN` (least connections). 
+Default value: `WRR`. This parameter is only applicable to TCP, UDP, TCP_SSL and QUIC listeners.
                      */
                     std::string m_scheduler;
                     bool m_schedulerHasBeenSet;

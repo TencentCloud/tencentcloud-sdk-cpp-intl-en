@@ -180,15 +180,15 @@ They represent weighted round robin, least connections, and IP hash, respectivel
                     bool SchedulerHasBeenSet() const;
 
                     /**
-                     * 获取Forwarding protocol between the CLB instance and real server. HTTP/HTTPS/TRPC are supported. TRPC is now only available for internal usage.
-                     * @return ForwardType Forwarding protocol between the CLB instance and real server. HTTP/HTTPS/TRPC are supported. TRPC is now only available for internal usage.
+                     * 获取Forwarding protocol between the CLB instance and backend service. Values: `HTTP`, `HTTPS`, `GRPC` and `TRPC` (only for internal usage). It defaults to `HTTP`.
+                     * @return ForwardType Forwarding protocol between the CLB instance and backend service. Values: `HTTP`, `HTTPS`, `GRPC` and `TRPC` (only for internal usage). It defaults to `HTTP`.
                      * 
                      */
                     std::string GetForwardType() const;
 
                     /**
-                     * 设置Forwarding protocol between the CLB instance and real server. HTTP/HTTPS/TRPC are supported. TRPC is now only available for internal usage.
-                     * @param _forwardType Forwarding protocol between the CLB instance and real server. HTTP/HTTPS/TRPC are supported. TRPC is now only available for internal usage.
+                     * 设置Forwarding protocol between the CLB instance and backend service. Values: `HTTP`, `HTTPS`, `GRPC` and `TRPC` (only for internal usage). It defaults to `HTTP`.
+                     * @param _forwardType Forwarding protocol between the CLB instance and backend service. Values: `HTTP`, `HTTPS`, `GRPC` and `TRPC` (only for internal usage). It defaults to `HTTP`.
                      * 
                      */
                     void SetForwardType(const std::string& _forwardType);
@@ -408,7 +408,7 @@ They represent weighted round robin, least connections, and IP hash, respectivel
                     bool m_schedulerHasBeenSet;
 
                     /**
-                     * Forwarding protocol between the CLB instance and real server. HTTP/HTTPS/TRPC are supported. TRPC is now only available for internal usage.
+                     * Forwarding protocol between the CLB instance and backend service. Values: `HTTP`, `HTTPS`, `GRPC` and `TRPC` (only for internal usage). It defaults to `HTTP`.
                      */
                     std::string m_forwardType;
                     bool m_forwardTypeHasBeenSet;

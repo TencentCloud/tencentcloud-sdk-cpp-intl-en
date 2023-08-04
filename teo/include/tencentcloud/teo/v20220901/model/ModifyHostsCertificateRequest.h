@@ -108,22 +108,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Whether the certificate is managed by EdgeOne. Values:
-<li>`apply`: Managed by EdgeOne</li>
-<li>`none`: Not managed by EdgeOne</li>If it is left empty, the default value `apply` is used.
+<li>`apply`: Managed by EdgeOne.</li>
+<li>`none`: Not managed by EdgeOne.</li>If not specified, this field uses the default value `none`.
                      * @return ApplyType Whether the certificate is managed by EdgeOne. Values:
-<li>`apply`: Managed by EdgeOne</li>
-<li>`none`: Not managed by EdgeOne</li>If it is left empty, the default value `apply` is used.
+<li>`apply`: Managed by EdgeOne.</li>
+<li>`none`: Not managed by EdgeOne.</li>If not specified, this field uses the default value `none`.
                      * 
                      */
                     std::string GetApplyType() const;
 
                     /**
                      * 设置Whether the certificate is managed by EdgeOne. Values:
-<li>`apply`: Managed by EdgeOne</li>
-<li>`none`: Not managed by EdgeOne</li>If it is left empty, the default value `apply` is used.
+<li>`apply`: Managed by EdgeOne.</li>
+<li>`none`: Not managed by EdgeOne.</li>If not specified, this field uses the default value `none`.
                      * @param _applyType Whether the certificate is managed by EdgeOne. Values:
-<li>`apply`: Managed by EdgeOne</li>
-<li>`none`: Not managed by EdgeOne</li>If it is left empty, the default value `apply` is used.
+<li>`apply`: Managed by EdgeOne.</li>
+<li>`none`: Not managed by EdgeOne.</li>If not specified, this field uses the default value `none`.
                      * 
                      */
                     void SetApplyType(const std::string& _applyType);
@@ -157,8 +157,8 @@ namespace TencentCloud
 
                     /**
                      * Whether the certificate is managed by EdgeOne. Values:
-<li>`apply`: Managed by EdgeOne</li>
-<li>`none`: Not managed by EdgeOne</li>If it is left empty, the default value `apply` is used.
+<li>`apply`: Managed by EdgeOne.</li>
+<li>`none`: Not managed by EdgeOne.</li>If not specified, this field uses the default value `none`.
                      */
                     std::string m_applyType;
                     bool m_applyTypeHasBeenSet;

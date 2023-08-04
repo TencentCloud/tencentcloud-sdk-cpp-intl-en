@@ -48,31 +48,35 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The origin type. Values: 
+                     * 获取The origin type. Values:
 <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address</li>
-<li>`ORIGIN_GROUP`: Origin group</li>
-<li>`AWS_S3`: AWS S3 bucket address</li>
-                     * @return OriginType The origin type. Values: 
+<li>`COS`: COS bucket address </li>
+<li>`ORIGIN_GROUP`: Origin group </li>
+<li>`AWS_S3`: AWS S3 bucket address </li>
+<li>`SPACE`: EdgeOne Shield Space </li>
+                     * @return OriginType The origin type. Values:
 <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address</li>
-<li>`ORIGIN_GROUP`: Origin group</li>
-<li>`AWS_S3`: AWS S3 bucket address</li>
+<li>`COS`: COS bucket address </li>
+<li>`ORIGIN_GROUP`: Origin group </li>
+<li>`AWS_S3`: AWS S3 bucket address </li>
+<li>`SPACE`: EdgeOne Shield Space </li>
                      * 
                      */
                     std::string GetOriginType() const;
 
                     /**
-                     * 设置The origin type. Values: 
+                     * 设置The origin type. Values:
 <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address</li>
-<li>`ORIGIN_GROUP`: Origin group</li>
-<li>`AWS_S3`: AWS S3 bucket address</li>
-                     * @param _originType The origin type. Values: 
+<li>`COS`: COS bucket address </li>
+<li>`ORIGIN_GROUP`: Origin group </li>
+<li>`AWS_S3`: AWS S3 bucket address </li>
+<li>`SPACE`: EdgeOne Shield Space </li>
+                     * @param _originType The origin type. Values:
 <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address</li>
-<li>`ORIGIN_GROUP`: Origin group</li>
-<li>`AWS_S3`: AWS S3 bucket address</li>
+<li>`COS`: COS bucket address </li>
+<li>`ORIGIN_GROUP`: Origin group </li>
+<li>`AWS_S3`: AWS S3 bucket address </li>
+<li>`SPACE`: EdgeOne Shield Space </li>
                      * 
                      */
                     void SetOriginType(const std::string& _originType);
@@ -179,11 +183,12 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The origin type. Values: 
+                     * The origin type. Values:
 <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address</li>
-<li>`ORIGIN_GROUP`: Origin group</li>
-<li>`AWS_S3`: AWS S3 bucket address</li>
+<li>`COS`: COS bucket address </li>
+<li>`ORIGIN_GROUP`: Origin group </li>
+<li>`AWS_S3`: AWS S3 bucket address </li>
+<li>`SPACE`: EdgeOne Shield Space </li>
                      */
                     std::string m_originType;
                     bool m_originTypeHasBeenSet;

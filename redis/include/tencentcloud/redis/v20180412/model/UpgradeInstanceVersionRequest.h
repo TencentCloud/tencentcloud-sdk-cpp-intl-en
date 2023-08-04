@@ -43,15 +43,35 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Target instance type after the change, which is the same as the `Type` of the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
-                     * @return TargetInstanceType Target instance type after the change, which is the same as the `Type` of the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
+                     * 获取Target instance type after the change, which is the same as the `TypeId` of the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
+- For Redis 4.0 or later, a standard architecture instance can be upgraded to a cluster architecture instance on the same version; for example, you can upgrade from Redis 4.0 Standard Architecture to Redis 4.0 Cluster Architecture.
+- Cross-version architecture upgrade is not supported; for example, you cannot upgrade from Redis 4.0 Standard Architecture to Redis 5.0 Cluster Architecture.
+- The architecture of Redis 2.8 cannot be upgraded.
+- Cluster architecture cannot be downgraded to standard architecture.
+
+                     * @return TargetInstanceType Target instance type after the change, which is the same as the `TypeId` of the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
+- For Redis 4.0 or later, a standard architecture instance can be upgraded to a cluster architecture instance on the same version; for example, you can upgrade from Redis 4.0 Standard Architecture to Redis 4.0 Cluster Architecture.
+- Cross-version architecture upgrade is not supported; for example, you cannot upgrade from Redis 4.0 Standard Architecture to Redis 5.0 Cluster Architecture.
+- The architecture of Redis 2.8 cannot be upgraded.
+- Cluster architecture cannot be downgraded to standard architecture.
+
                      * 
                      */
                     std::string GetTargetInstanceType() const;
 
                     /**
-                     * 设置Target instance type after the change, which is the same as the `Type` of the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
-                     * @param _targetInstanceType Target instance type after the change, which is the same as the `Type` of the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
+                     * 设置Target instance type after the change, which is the same as the `TypeId` of the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
+- For Redis 4.0 or later, a standard architecture instance can be upgraded to a cluster architecture instance on the same version; for example, you can upgrade from Redis 4.0 Standard Architecture to Redis 4.0 Cluster Architecture.
+- Cross-version architecture upgrade is not supported; for example, you cannot upgrade from Redis 4.0 Standard Architecture to Redis 5.0 Cluster Architecture.
+- The architecture of Redis 2.8 cannot be upgraded.
+- Cluster architecture cannot be downgraded to standard architecture.
+
+                     * @param _targetInstanceType Target instance type after the change, which is the same as the `TypeId` of the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
+- For Redis 4.0 or later, a standard architecture instance can be upgraded to a cluster architecture instance on the same version; for example, you can upgrade from Redis 4.0 Standard Architecture to Redis 4.0 Cluster Architecture.
+- Cross-version architecture upgrade is not supported; for example, you cannot upgrade from Redis 4.0 Standard Architecture to Redis 5.0 Cluster Architecture.
+- The architecture of Redis 2.8 cannot be upgraded.
+- Cluster architecture cannot be downgraded to standard architecture.
+
                      * 
                      */
                     void SetTargetInstanceType(const std::string& _targetInstanceType);
@@ -64,15 +84,23 @@ namespace TencentCloud
                     bool TargetInstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Switch mode. Valid values: 1 (switch during the maintenance time), 2 (switch now).
-                     * @return SwitchOption Switch mode. Valid values: 1 (switch during the maintenance time), 2 (switch now).
+                     * 获取Switch time. Valid values:
+- `1`: Switch in the maintenance time.
+- `2` (default value): Switch now.
+                     * @return SwitchOption Switch time. Valid values:
+- `1`: Switch in the maintenance time.
+- `2` (default value): Switch now.
                      * 
                      */
                     int64_t GetSwitchOption() const;
 
                     /**
-                     * 设置Switch mode. Valid values: 1 (switch during the maintenance time), 2 (switch now).
-                     * @param _switchOption Switch mode. Valid values: 1 (switch during the maintenance time), 2 (switch now).
+                     * 设置Switch time. Valid values:
+- `1`: Switch in the maintenance time.
+- `2` (default value): Switch now.
+                     * @param _switchOption Switch time. Valid values:
+- `1`: Switch in the maintenance time.
+- `2` (default value): Switch now.
                      * 
                      */
                     void SetSwitchOption(const int64_t& _switchOption);
@@ -85,15 +113,15 @@ namespace TencentCloud
                     bool SwitchOptionHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取ID of the specified instance, such as `crs-xjhsdj****`. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), and copy it in the instance list.
+                     * @return InstanceId ID of the specified instance, such as `crs-xjhsdj****`. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), and copy it in the instance list.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置ID of the specified instance, such as `crs-xjhsdj****`. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), and copy it in the instance list.
+                     * @param _instanceId ID of the specified instance, such as `crs-xjhsdj****`. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), and copy it in the instance list.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -108,19 +136,26 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Target instance type after the change, which is the same as the `Type` of the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
+                     * Target instance type after the change, which is the same as the `TypeId` of the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
+- For Redis 4.0 or later, a standard architecture instance can be upgraded to a cluster architecture instance on the same version; for example, you can upgrade from Redis 4.0 Standard Architecture to Redis 4.0 Cluster Architecture.
+- Cross-version architecture upgrade is not supported; for example, you cannot upgrade from Redis 4.0 Standard Architecture to Redis 5.0 Cluster Architecture.
+- The architecture of Redis 2.8 cannot be upgraded.
+- Cluster architecture cannot be downgraded to standard architecture.
+
                      */
                     std::string m_targetInstanceType;
                     bool m_targetInstanceTypeHasBeenSet;
 
                     /**
-                     * Switch mode. Valid values: 1 (switch during the maintenance time), 2 (switch now).
+                     * Switch time. Valid values:
+- `1`: Switch in the maintenance time.
+- `2` (default value): Switch now.
                      */
                     int64_t m_switchOption;
                     bool m_switchOptionHasBeenSet;
 
                     /**
-                     * Instance ID
+                     * ID of the specified instance, such as `crs-xjhsdj****`. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), and copy it in the instance list.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;

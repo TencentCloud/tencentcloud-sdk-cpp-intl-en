@@ -25,6 +25,8 @@
 #include <tencentcloud/core/AsyncCallerContext.h>
 #include <tencentcloud/teo/v20220901/model/BindZoneToPlanRequest.h>
 #include <tencentcloud/teo/v20220901/model/BindZoneToPlanResponse.h>
+#include <tencentcloud/teo/v20220901/model/CheckCnameStatusRequest.h>
+#include <tencentcloud/teo/v20220901/model/CheckCnameStatusResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateAccelerationDomainRequest.h>
 #include <tencentcloud/teo/v20220901/model/CreateAccelerationDomainResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateAliasDomainRequest.h>
@@ -168,6 +170,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::BindZoneToPlanResponse> BindZoneToPlanOutcome;
                 typedef std::future<BindZoneToPlanOutcome> BindZoneToPlanOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::BindZoneToPlanRequest&, BindZoneToPlanOutcome, const std::shared_ptr<const AsyncCallerContext>&)> BindZoneToPlanAsyncHandler;
+                typedef Outcome<Core::Error, Model::CheckCnameStatusResponse> CheckCnameStatusOutcome;
+                typedef std::future<CheckCnameStatusOutcome> CheckCnameStatusOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::CheckCnameStatusRequest&, CheckCnameStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CheckCnameStatusAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateAccelerationDomainResponse> CreateAccelerationDomainOutcome;
                 typedef std::future<CreateAccelerationDomainOutcome> CreateAccelerationDomainOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CreateAccelerationDomainRequest&, CreateAccelerationDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAccelerationDomainAsyncHandler;
@@ -370,6 +375,15 @@ namespace TencentCloud
                 BindZoneToPlanOutcomeCallable BindZoneToPlanCallable(const Model::BindZoneToPlanRequest& request);
 
                 /**
+                 *This API is used to query the CNAME status of a domain name.
+                 * @param req CheckCnameStatusRequest
+                 * @return CheckCnameStatusOutcome
+                 */
+                CheckCnameStatusOutcome CheckCnameStatus(const Model::CheckCnameStatusRequest &request);
+                void CheckCnameStatusAsync(const Model::CheckCnameStatusRequest& request, const CheckCnameStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CheckCnameStatusOutcomeCallable CheckCnameStatusCallable(const Model::CheckCnameStatusRequest& request);
+
+                /**
                  *This API is used to connect a domain to EdgeOne.
                  * @param req CreateAccelerationDomainRequest
                  * @return CreateAccelerationDomainOutcome
@@ -433,7 +447,9 @@ namespace TencentCloud
                 CreatePrefetchTaskOutcomeCallable CreatePrefetchTaskCallable(const Model::CreatePrefetchTaskRequest& request);
 
                 /**
-                 *This API is used to create a cache purging task.
+                 *When there are resources updated on the origin with the TTL remaining valid, users cannot access the latest resources. In this case, you can purge the cache using this API. There are two methods: <li>Delete: This method deletes the node cache without verification and retrieves u200dthe latest resources from the origin when receiving a request.</li><li>Invalidate: This method marks the node cache as invalid and sends a request with the If-None-Match and If-Modified-Since headers to the origin. If the origin responses with 200, the latest resources are retrieved to be cached on the node. If a 304 response is returned, the latest resources are not cached on the node.
+
+</li>For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1). </li>
                  * @param req CreatePurgeTaskRequest
                  * @return CreatePurgeTaskOutcome
                  */

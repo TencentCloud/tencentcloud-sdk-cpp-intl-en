@@ -267,6 +267,27 @@ namespace TencentCloud
                     bool SessionPersistHasBeenSet() const;
 
                     /**
+                     * 获取Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
+                     * @return SessionPersistTime Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
+                     * 
+                     */
+                    uint64_t GetSessionPersistTime() const;
+
+                    /**
+                     * 设置Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
+                     * @param _sessionPersistTime Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
+                     * 
+                     */
+                    void SetSessionPersistTime(const uint64_t& _sessionPersistTime);
+
+                    /**
+                     * 判断参数 SessionPersistTime 是否已赋值
+                     * @return SessionPersistTime 是否已赋值
+                     * 
+                     */
+                    bool SessionPersistTimeHasBeenSet() const;
+
+                    /**
                      * 获取The origin port, which can be:
 <li>A single port, such as 80</li>
 <li>A port range, such as 81-82</li>
@@ -358,6 +379,12 @@ namespace TencentCloud
                      */
                     bool m_sessionPersist;
                     bool m_sessionPersistHasBeenSet;
+
+                    /**
+                     * Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
+                     */
+                    uint64_t m_sessionPersistTime;
+                    bool m_sessionPersistTimeHasBeenSet;
 
                     /**
                      * The origin port, which can be:

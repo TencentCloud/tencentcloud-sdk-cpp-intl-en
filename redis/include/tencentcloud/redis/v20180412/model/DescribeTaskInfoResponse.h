@@ -44,8 +44,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task status. preparing: to be run; running: running; succeed: succeeded; failed: failed; error: running error.
-                     * @return Status Task status. preparing: to be run; running: running; succeed: succeeded; failed: failed; error: running error.
+                     * 获取Task status. Valid values: 
+- `preparing`: To be run
+- `running`: Running
+- `succeed`: Succeedu200ded
+- `failed`: Failed
+- `Error`: Error occurred while running
+                     * @return Status Task status. Valid values: 
+- `preparing`: To be run
+- `running`: Running
+- `succeed`: Succeedu200ded
+- `failed`: Failed
+- `Error`: Error occurred while running
                      * 
                      */
                     std::string GetStatus() const;
@@ -72,8 +82,8 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Task type
-                     * @return TaskType Task type
+                     * 获取Task type, including `Create`, `Configure`, u200d`Disable Instance`, `Clear Instance`, `Reset Password`, `Upgrade Version`, `Back up Instance`, `Modify Network`, `Migrate to New AZ` and `Promote to Master`.
+                     * @return TaskType Task type, including `Create`, `Configure`, u200d`Disable Instance`, `Clear Instance`, `Reset Password`, `Upgrade Version`, `Back up Instance`, `Modify Network`, `Migrate to New AZ` and `Promote to Master`.
                      * 
                      */
                     std::string GetTaskType() const;
@@ -100,8 +110,8 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Task message, which is displayed in case of an error. It will be blank if the status is running or succeeded.
-                     * @return TaskMessage Task message, which is displayed in case of an error. It will be blank if the status is running or succeeded.
+                     * 获取Message returned by task execution, which will be au200dn error message when execution fails or be empty when the status is `running `or `succeed-`.
+                     * @return TaskMessage Message returned by task execution, which will be au200dn error message when execution fails or be empty when the status is `running `or `succeed-`.
                      * 
                      */
                     std::string GetTaskMessage() const;
@@ -116,7 +126,12 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Task status. preparing: to be run; running: running; succeed: succeeded; failed: failed; error: running error.
+                     * Task status. Valid values: 
+- `preparing`: To be run
+- `running`: Running
+- `succeed`: Succeedu200ded
+- `failed`: Failed
+- `Error`: Error occurred while running
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
@@ -128,7 +143,7 @@ namespace TencentCloud
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Task type
+                     * Task type, including `Create`, `Configure`, u200d`Disable Instance`, `Clear Instance`, `Reset Password`, `Upgrade Version`, `Back up Instance`, `Modify Network`, `Migrate to New AZ` and `Promote to Master`.
                      */
                     std::string m_taskType;
                     bool m_taskTypeHasBeenSet;
@@ -140,7 +155,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Task message, which is displayed in case of an error. It will be blank if the status is running or succeeded.
+                     * Message returned by task execution, which will be au200dn error message when execution fails or be empty when the status is `running `or `succeed-`.
                      */
                     std::string m_taskMessage;
                     bool m_taskMessageHasBeenSet;

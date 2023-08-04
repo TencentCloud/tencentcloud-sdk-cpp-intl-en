@@ -64,35 +64,35 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Purging mode. Valid values: 
-<li>`purge_url`: Purge by URL;</li>
-<li>`purge_prefix`: Purge by directory;</li>
-<li>`purge_host`: Purge by hostname;</li>
-<li>`purge_all`: Puege all cache;</li>
-<li>`purge_cache_tag`: Purge by cache tag.</li>
-                     * @return Type Purging mode. Valid values: 
-<li>`purge_url`: Purge by URL;</li>
-<li>`purge_prefix`: Purge by directory;</li>
-<li>`purge_host`: Purge by hostname;</li>
-<li>`purge_all`: Puege all cache;</li>
-<li>`purge_cache_tag`: Purge by cache tag.</li>
+                     * 获取Type of cache purging. Values:
+<li>`purge_url`: Purge by the URL</li>
+<li>`purge_prefix`: Purge by the directory</li>
+<li>`purge_host`: Purge by the hostname</li>
+<li>`purge_all`: Purge all caches</li>
+<li>`purge_cache_tag`: Purge by the cache-tag </li>For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1).
+                     * @return Type Type of cache purging. Values:
+<li>`purge_url`: Purge by the URL</li>
+<li>`purge_prefix`: Purge by the directory</li>
+<li>`purge_host`: Purge by the hostname</li>
+<li>`purge_all`: Purge all caches</li>
+<li>`purge_cache_tag`: Purge by the cache-tag </li>For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1).
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Purging mode. Valid values: 
-<li>`purge_url`: Purge by URL;</li>
-<li>`purge_prefix`: Purge by directory;</li>
-<li>`purge_host`: Purge by hostname;</li>
-<li>`purge_all`: Puege all cache;</li>
-<li>`purge_cache_tag`: Purge by cache tag.</li>
-                     * @param _type Purging mode. Valid values: 
-<li>`purge_url`: Purge by URL;</li>
-<li>`purge_prefix`: Purge by directory;</li>
-<li>`purge_host`: Purge by hostname;</li>
-<li>`purge_all`: Puege all cache;</li>
-<li>`purge_cache_tag`: Purge by cache tag.</li>
+                     * 设置Type of cache purging. Values:
+<li>`purge_url`: Purge by the URL</li>
+<li>`purge_prefix`: Purge by the directory</li>
+<li>`purge_host`: Purge by the hostname</li>
+<li>`purge_all`: Purge all caches</li>
+<li>`purge_cache_tag`: Purge by the cache-tag </li>For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1).
+                     * @param _type Type of cache purging. Values:
+<li>`purge_url`: Purge by the URL</li>
+<li>`purge_prefix`: Purge by the directory</li>
+<li>`purge_host`: Purge by the hostname</li>
+<li>`purge_all`: Purge all caches</li>
+<li>`purge_cache_tag`: Purge by the cache-tag </li>For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1).
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -105,15 +105,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Method 
+                     * 获取Configures how resources under the directory are purged when `Type = purge_prefix`. Values: <li>`invalidate`: Only resources updated under the directory are purged.</li><li>`delete`: All resources under the directory are purged regardless of whether they are updated. </li>Default value: `invalidate`.
+                     * @return Method Configures how resources under the directory are purged when `Type = purge_prefix`. Values: <li>`invalidate`: Only resources updated under the directory are purged.</li><li>`delete`: All resources under the directory are purged regardless of whether they are updated. </li>Default value: `invalidate`.
                      * 
                      */
                     std::string GetMethod() const;
 
                     /**
-                     * 设置
-                     * @param _method 
+                     * 设置Configures how resources under the directory are purged when `Type = purge_prefix`. Values: <li>`invalidate`: Only resources updated under the directory are purged.</li><li>`delete`: All resources under the directory are purged regardless of whether they are updated. </li>Default value: `invalidate`.
+                     * @param _method Configures how resources under the directory are purged when `Type = purge_prefix`. Values: <li>`invalidate`: Only resources updated under the directory are purged.</li><li>`delete`: All resources under the directory are purged regardless of whether they are updated. </li>Default value: `invalidate`.
                      * 
                      */
                     void SetMethod(const std::string& _method);
@@ -126,59 +126,15 @@ namespace TencentCloud
                     bool MethodHasBeenSet() const;
 
                     /**
-                     * 获取Resource to be purged, which depends on the `Type` field. 
-1. When `Type = purge_host`: 
-Enter the hostname, such as www.example.com and foo.bar.example.com. 
-2. When `Type = purge_prefix`: 
-Enter the prefix, such as http://www.example.com/example/. 
-3. When `Type = purge_url`: 
-Enter the URL, such as https://www.example.com/example.jpg. 
-4. When `Type = purge_all`: 
-`Targets` can be left empty. 
-5. When `Type = purge_cache_tag`: 
-Enter the cache tag, such as tag1. 
-Note: The number of submitted tasks is limited by the quota of the plan. For details, see [Billing Overview](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
-                     * @return Targets Resource to be purged, which depends on the `Type` field. 
-1. When `Type = purge_host`: 
-Enter the hostname, such as www.example.com and foo.bar.example.com. 
-2. When `Type = purge_prefix`: 
-Enter the prefix, such as http://www.example.com/example/. 
-3. When `Type = purge_url`: 
-Enter the URL, such as https://www.example.com/example.jpg. 
-4. When `Type = purge_all`: 
-`Targets` can be left empty. 
-5. When `Type = purge_cache_tag`: 
-Enter the cache tag, such as tag1. 
-Note: The number of submitted tasks is limited by the quota of the plan. For details, see [Billing Overview](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
+                     * 获取List of cached resources to purge. The format for input depends on the type of cache purging. See examples below for details. <li>By default, non-ASCII characters u200dare escaped based on RFC3986.</li><li>The maximum number of tasks per purging request is determined by the EdgeOne plan. See [Billing Overview (New)](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1). </li>
+                     * @return Targets List of cached resources to purge. The format for input depends on the type of cache purging. See examples below for details. <li>By default, non-ASCII characters u200dare escaped based on RFC3986.</li><li>The maximum number of tasks per purging request is determined by the EdgeOne plan. See [Billing Overview (New)](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1). </li>
                      * 
                      */
                     std::vector<std::string> GetTargets() const;
 
                     /**
-                     * 设置Resource to be purged, which depends on the `Type` field. 
-1. When `Type = purge_host`: 
-Enter the hostname, such as www.example.com and foo.bar.example.com. 
-2. When `Type = purge_prefix`: 
-Enter the prefix, such as http://www.example.com/example/. 
-3. When `Type = purge_url`: 
-Enter the URL, such as https://www.example.com/example.jpg. 
-4. When `Type = purge_all`: 
-`Targets` can be left empty. 
-5. When `Type = purge_cache_tag`: 
-Enter the cache tag, such as tag1. 
-Note: The number of submitted tasks is limited by the quota of the plan. For details, see [Billing Overview](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
-                     * @param _targets Resource to be purged, which depends on the `Type` field. 
-1. When `Type = purge_host`: 
-Enter the hostname, such as www.example.com and foo.bar.example.com. 
-2. When `Type = purge_prefix`: 
-Enter the prefix, such as http://www.example.com/example/. 
-3. When `Type = purge_url`: 
-Enter the URL, such as https://www.example.com/example.jpg. 
-4. When `Type = purge_all`: 
-`Targets` can be left empty. 
-5. When `Type = purge_cache_tag`: 
-Enter the cache tag, such as tag1. 
-Note: The number of submitted tasks is limited by the quota of the plan. For details, see [Billing Overview](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
+                     * 设置List of cached resources to purge. The format for input depends on the type of cache purging. See examples below for details. <li>By default, non-ASCII characters u200dare escaped based on RFC3986.</li><li>The maximum number of tasks per purging request is determined by the EdgeOne plan. See [Billing Overview (New)](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1). </li>
+                     * @param _targets List of cached resources to purge. The format for input depends on the type of cache purging. See examples below for details. <li>By default, non-ASCII characters u200dare escaped based on RFC3986.</li><li>The maximum number of tasks per purging request is determined by the EdgeOne plan. See [Billing Overview (New)](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1). </li>
                      * 
                      */
                     void SetTargets(const std::vector<std::string>& _targets);
@@ -224,35 +180,24 @@ Note that if it’s enabled, the purging is based on the converted URLs.
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Purging mode. Valid values: 
-<li>`purge_url`: Purge by URL;</li>
-<li>`purge_prefix`: Purge by directory;</li>
-<li>`purge_host`: Purge by hostname;</li>
-<li>`purge_all`: Puege all cache;</li>
-<li>`purge_cache_tag`: Purge by cache tag.</li>
+                     * Type of cache purging. Values:
+<li>`purge_url`: Purge by the URL</li>
+<li>`purge_prefix`: Purge by the directory</li>
+<li>`purge_host`: Purge by the hostname</li>
+<li>`purge_all`: Purge all caches</li>
+<li>`purge_cache_tag`: Purge by the cache-tag </li>For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1).
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * Configures how resources under the directory are purged when `Type = purge_prefix`. Values: <li>`invalidate`: Only resources updated under the directory are purged.</li><li>`delete`: All resources under the directory are purged regardless of whether they are updated. </li>Default value: `invalidate`.
                      */
                     std::string m_method;
                     bool m_methodHasBeenSet;
 
                     /**
-                     * Resource to be purged, which depends on the `Type` field. 
-1. When `Type = purge_host`: 
-Enter the hostname, such as www.example.com and foo.bar.example.com. 
-2. When `Type = purge_prefix`: 
-Enter the prefix, such as http://www.example.com/example/. 
-3. When `Type = purge_url`: 
-Enter the URL, such as https://www.example.com/example.jpg. 
-4. When `Type = purge_all`: 
-`Targets` can be left empty. 
-5. When `Type = purge_cache_tag`: 
-Enter the cache tag, such as tag1. 
-Note: The number of submitted tasks is limited by the quota of the plan. For details, see [Billing Overview](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
+                     * List of cached resources to purge. The format for input depends on the type of cache purging. See examples below for details. <li>By default, non-ASCII characters u200dare escaped based on RFC3986.</li><li>The maximum number of tasks per purging request is determined by the EdgeOne plan. See [Billing Overview (New)](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1). </li>
                      */
                     std::vector<std::string> m_targets;
                     bool m_targetsHasBeenSet;

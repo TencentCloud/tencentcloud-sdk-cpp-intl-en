@@ -295,6 +295,31 @@ Note that each rule can have up to 20 ports.
                     bool SessionPersistHasBeenSet() const;
 
                     /**
+                     * 获取Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @return SessionPersistTime Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    uint64_t GetSessionPersistTime() const;
+
+                    /**
+                     * 设置Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @param _sessionPersistTime Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetSessionPersistTime(const uint64_t& _sessionPersistTime);
+
+                    /**
+                     * 判断参数 SessionPersistTime 是否已赋值
+                     * @return SessionPersistTime 是否已赋值
+                     * 
+                     */
+                    bool SessionPersistTimeHasBeenSet() const;
+
+                    /**
                      * 获取The origin port, which can be:
 <li>A single port, such as 80</li>
 <li>A port range, such as 81-82</li>
@@ -392,6 +417,13 @@ Note that each rule can have up to 20 ports.
                      */
                     bool m_sessionPersist;
                     bool m_sessionPersistHasBeenSet;
+
+                    /**
+                     * Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_sessionPersistTime;
+                    bool m_sessionPersistTimeHasBeenSet;
 
                     /**
                      * The origin port, which can be:

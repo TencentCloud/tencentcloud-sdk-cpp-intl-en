@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Standard debugging
                 */
                 class StandardDebug : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Whether to enable standard debugging. Values:
+<li>`on`: Enable</li>
+<li>`off`: Disable </li>
+                     * @return Switch Whether to enable standard debugging. Values:
+<li>`on`: Enable</li>
+<li>`off`: Disable </li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置Whether to enable standard debugging. Values:
+<li>`on`: Enable</li>
+<li>`off`: Disable </li>
+                     * @param _switch Whether to enable standard debugging. Values:
+<li>`on`: Enable</li>
+<li>`off`: Disable </li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -68,15 +76,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AllowClientIPList 
+                     * 获取The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
+                     * @return AllowClientIPList The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
                      * 
                      */
                     std::vector<std::string> GetAllowClientIPList() const;
 
                     /**
-                     * 设置
-                     * @param _allowClientIPList 
+                     * 设置The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
+                     * @param _allowClientIPList The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
                      * 
                      */
                     void SetAllowClientIPList(const std::vector<std::string>& _allowClientIPList);
@@ -89,15 +97,15 @@ namespace TencentCloud
                     bool AllowClientIPListHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExpireTime 
+                     * 获取The time when the standard debugging setting expires. If it is exceeded, this feature u200dbecomes invalid.
+                     * @return ExpireTime The time when the standard debugging setting expires. If it is exceeded, this feature u200dbecomes invalid.
                      * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
-                     * 设置
-                     * @param _expireTime 
+                     * 设置The time when the standard debugging setting expires. If it is exceeded, this feature u200dbecomes invalid.
+                     * @param _expireTime The time when the standard debugging setting expires. If it is exceeded, this feature u200dbecomes invalid.
                      * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
@@ -112,19 +120,21 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Whether to enable standard debugging. Values:
+<li>`on`: Enable</li>
+<li>`off`: Disable </li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
                      */
                     std::vector<std::string> m_allowClientIPList;
                     bool m_allowClientIPListHasBeenSet;
 
                     /**
-                     * 
+                     * The time when the standard debugging setting expires. If it is exceeded, this feature u200dbecomes invalid.
                      */
                     std::string m_expireTime;
                     bool m_expireTimeHasBeenSet;

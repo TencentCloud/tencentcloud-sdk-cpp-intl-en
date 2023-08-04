@@ -83,6 +83,49 @@ TeoClient::BindZoneToPlanOutcomeCallable TeoClient::BindZoneToPlanCallable(const
     return task->get_future();
 }
 
+TeoClient::CheckCnameStatusOutcome TeoClient::CheckCnameStatus(const CheckCnameStatusRequest &request)
+{
+    auto outcome = MakeRequest(request, "CheckCnameStatus");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CheckCnameStatusResponse rsp = CheckCnameStatusResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CheckCnameStatusOutcome(rsp);
+        else
+            return CheckCnameStatusOutcome(o.GetError());
+    }
+    else
+    {
+        return CheckCnameStatusOutcome(outcome.GetError());
+    }
+}
+
+void TeoClient::CheckCnameStatusAsync(const CheckCnameStatusRequest& request, const CheckCnameStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CheckCnameStatus(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TeoClient::CheckCnameStatusOutcomeCallable TeoClient::CheckCnameStatusCallable(const CheckCnameStatusRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CheckCnameStatusOutcome()>>(
+        [this, request]()
+        {
+            return this->CheckCnameStatus(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TeoClient::CreateAccelerationDomainOutcome TeoClient::CreateAccelerationDomain(const CreateAccelerationDomainRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateAccelerationDomain");

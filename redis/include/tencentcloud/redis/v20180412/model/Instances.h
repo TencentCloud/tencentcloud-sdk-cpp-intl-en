@@ -216,18 +216,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Instance disk size
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * @return DiskSize Instance disk size
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetDiskSize() const;
 
                     /**
                      * 设置Instance disk size
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * @param _diskSize Instance disk size
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDiskSize(const int64_t& _diskSize);
@@ -566,7 +566,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Instance disk size
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_diskSize;
                     bool m_diskSizeHasBeenSet;

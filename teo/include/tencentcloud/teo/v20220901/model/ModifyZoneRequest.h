@@ -65,23 +65,23 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取The site access method. Values:
-<li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record.</li>The original configuration will apply if this field is not specified.
-                     * @return Type The site access method. Values:
-<li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record.</li>The original configuration will apply if this field is not specified.
+                     * 获取Access mode of the site. Values:
+<li> `full`: Access through a name server.</li>
+<li> `partial`: Access through a CNAME u200drecord. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
+                     * @return Type Access mode of the site. Values:
+<li> `full`: Access through a name server.</li>
+<li> `partial`: Access through a CNAME u200drecord. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置The site access method. Values:
-<li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record.</li>The original configuration will apply if this field is not specified.
-                     * @param _type The site access method. Values:
-<li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record.</li>The original configuration will apply if this field is not specified.
+                     * 设置Access mode of the site. Values:
+<li> `full`: Access through a name server.</li>
+<li> `partial`: Access through a CNAME u200drecord. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
+                     * @param _type Access mode of the site. Values:
+<li> `full`: Access through a name server.</li>
+<li> `partial`: Access through a CNAME u200drecord. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -94,15 +94,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取The custom name servers. If this field is not specified, the default name servers will be used.
-                     * @return VanityNameServers The custom name servers. If this field is not specified, the default name servers will be used.
+                     * 获取The custom name servers. The original configuration applies if this field is not specified. It is not allowed to pass this field when a site is connected without using a domain name.
+                     * @return VanityNameServers The custom name servers. The original configuration applies if this field is not specified. It is not allowed to pass this field when a site is connected without using a domain name.
                      * 
                      */
                     VanityNameServers GetVanityNameServers() const;
 
                     /**
-                     * 设置The custom name servers. If this field is not specified, the default name servers will be used.
-                     * @param _vanityNameServers The custom name servers. If this field is not specified, the default name servers will be used.
+                     * 设置The custom name servers. The original configuration applies if this field is not specified. It is not allowed to pass this field when a site is connected without using a domain name.
+                     * @param _vanityNameServers The custom name servers. The original configuration applies if this field is not specified. It is not allowed to pass this field when a site is connected without using a domain name.
                      * 
                      */
                     void SetVanityNameServers(const VanityNameServers& _vanityNameServers);
@@ -135,6 +135,60 @@ namespace TencentCloud
                      */
                     bool AliasZoneNameHasBeenSet() const;
 
+                    /**
+                     * 获取The region where the site requests access. Values:
+<li> `global`: Global coverage</li>
+<li> `mainland`: Chinese mainland</li>
+<li> `overseas`: Outside the Chinese mainland </li>It is not allowed to pass this field when a site is connected without using a domain name.
+                     * @return Area The region where the site requests access. Values:
+<li> `global`: Global coverage</li>
+<li> `mainland`: Chinese mainland</li>
+<li> `overseas`: Outside the Chinese mainland </li>It is not allowed to pass this field when a site is connected without using a domain name.
+                     * 
+                     */
+                    std::string GetArea() const;
+
+                    /**
+                     * 设置The region where the site requests access. Values:
+<li> `global`: Global coverage</li>
+<li> `mainland`: Chinese mainland</li>
+<li> `overseas`: Outside the Chinese mainland </li>It is not allowed to pass this field when a site is connected without using a domain name.
+                     * @param _area The region where the site requests access. Values:
+<li> `global`: Global coverage</li>
+<li> `mainland`: Chinese mainland</li>
+<li> `overseas`: Outside the Chinese mainland </li>It is not allowed to pass this field when a site is connected without using a domain name.
+                     * 
+                     */
+                    void SetArea(const std::string& _area);
+
+                    /**
+                     * 判断参数 Area 是否已赋值
+                     * @return Area 是否已赋值
+                     * 
+                     */
+                    bool AreaHasBeenSet() const;
+
+                    /**
+                     * 获取Name of the site. This field takes effect only when the site switches from domainless access to CNAME access.
+                     * @return ZoneName Name of the site. This field takes effect only when the site switches from domainless access to CNAME access.
+                     * 
+                     */
+                    std::string GetZoneName() const;
+
+                    /**
+                     * 设置Name of the site. This field takes effect only when the site switches from domainless access to CNAME access.
+                     * @param _zoneName Name of the site. This field takes effect only when the site switches from domainless access to CNAME access.
+                     * 
+                     */
+                    void SetZoneName(const std::string& _zoneName);
+
+                    /**
+                     * 判断参数 ZoneName 是否已赋值
+                     * @return ZoneName 是否已赋值
+                     * 
+                     */
+                    bool ZoneNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -144,15 +198,15 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * The site access method. Values:
-<li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record.</li>The original configuration will apply if this field is not specified.
+                     * Access mode of the site. Values:
+<li> `full`: Access through a name server.</li>
+<li> `partial`: Access through a CNAME u200drecord. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * The custom name servers. If this field is not specified, the default name servers will be used.
+                     * The custom name servers. The original configuration applies if this field is not specified. It is not allowed to pass this field when a site is connected without using a domain name.
                      */
                     VanityNameServers m_vanityNameServers;
                     bool m_vanityNameServersHasBeenSet;
@@ -162,6 +216,21 @@ namespace TencentCloud
                      */
                     std::string m_aliasZoneName;
                     bool m_aliasZoneNameHasBeenSet;
+
+                    /**
+                     * The region where the site requests access. Values:
+<li> `global`: Global coverage</li>
+<li> `mainland`: Chinese mainland</li>
+<li> `overseas`: Outside the Chinese mainland </li>It is not allowed to pass this field when a site is connected without using a domain name.
+                     */
+                    std::string m_area;
+                    bool m_areaHasBeenSet;
+
+                    /**
+                     * Name of the site. This field takes effect only when the site switches from domainless access to CNAME access.
+                     */
+                    std::string m_zoneName;
+                    bool m_zoneNameHasBeenSet;
 
                 };
             }

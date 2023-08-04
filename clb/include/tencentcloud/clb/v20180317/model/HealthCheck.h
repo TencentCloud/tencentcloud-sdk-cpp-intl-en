@@ -227,19 +227,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HttpCheckPathHasBeenSet() const;
 
                     /**
-                     * 获取The target domain name for health check. It’s applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It’s required for TCP listeners.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return HttpCheckDomain The target domain name for health check. It’s applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It’s required for TCP listeners.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Health check domain name. It is only applicable to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. For HTTP health checks of TCP listeners, this parameter is required.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @return HttpCheckDomain Health check domain name. It is only applicable to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. For HTTP health checks of TCP listeners, this parameter is required.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetHttpCheckDomain() const;
 
                     /**
-                     * 设置The target domain name for health check. It’s applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It’s required for TCP listeners.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _httpCheckDomain The target domain name for health check. It’s applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It’s required for TCP listeners.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Health check domain name. It is only applicable to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. For HTTP health checks of TCP listeners, this parameter is required.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @param _httpCheckDomain Health check domain name. It is only applicable to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. For HTTP health checks of TCP listeners, this parameter is required.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHttpCheckDomain(const std::string& _httpCheckDomain);
@@ -377,19 +377,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RecvContextHasBeenSet() const;
 
                     /**
-                     * 获取Health check protocol (a custom check parameter). Value range: TCP, HTTP, CUSTOM (applicable only to TCP/UDP listeners, where UDP listeners only support CUSTOM. If custom health check is used, this parameter is required).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CheckType Health check protocol (a custom check parameter). Value range: TCP, HTTP, CUSTOM (applicable only to TCP/UDP listeners, where UDP listeners only support CUSTOM. If custom health check is used, this parameter is required).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取u200dHealth check protocol. Values: `TCP`, `HTTP`, `HTTPS`, `GRPC`, `PING`, and `CUSTOM`. UDP listeners support `PING`/`CUSTOM`. TCP listener support `TCP`/`HTTP`/`CUSTOM`. TCP_SSL and QUIC listeners support `TCP`/`HTTP`. HTTP rules support `HTTP`/`GRPC. HTTPS rules support `HTTP`/`HTTPS`/`GRPC`.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @return CheckType u200dHealth check protocol. Values: `TCP`, `HTTP`, `HTTPS`, `GRPC`, `PING`, and `CUSTOM`. UDP listeners support `PING`/`CUSTOM`. TCP listener support `TCP`/`HTTP`/`CUSTOM`. TCP_SSL and QUIC listeners support `TCP`/`HTTP`. HTTP rules support `HTTP`/`GRPC. HTTPS rules support `HTTP`/`HTTPS`/`GRPC`.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCheckType() const;
 
                     /**
-                     * 设置Health check protocol (a custom check parameter). Value range: TCP, HTTP, CUSTOM (applicable only to TCP/UDP listeners, where UDP listeners only support CUSTOM. If custom health check is used, this parameter is required).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _checkType Health check protocol (a custom check parameter). Value range: TCP, HTTP, CUSTOM (applicable only to TCP/UDP listeners, where UDP listeners only support CUSTOM. If custom health check is used, this parameter is required).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置u200dHealth check protocol. Values: `TCP`, `HTTP`, `HTTPS`, `GRPC`, `PING`, and `CUSTOM`. UDP listeners support `PING`/`CUSTOM`. TCP listener support `TCP`/`HTTP`/`CUSTOM`. TCP_SSL and QUIC listeners support `TCP`/`HTTP`. HTTP rules support `HTTP`/`GRPC. HTTPS rules support `HTTP`/`HTTPS`/`GRPC`.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @param _checkType u200dHealth check protocol. Values: `TCP`, `HTTP`, `HTTPS`, `GRPC`, `PING`, and `CUSTOM`. UDP listeners support `PING`/`CUSTOM`. TCP listener support `TCP`/`HTTP`/`CUSTOM`. TCP_SSL and QUIC listeners support `TCP`/`HTTP`. HTTP rules support `HTTP`/`GRPC. HTTPS rules support `HTTP`/`HTTPS`/`GRPC`.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCheckType(const std::string& _checkType);
@@ -402,19 +402,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CheckTypeHasBeenSet() const;
 
                     /**
-                     * 获取Health check protocol (a custom check parameter), which is required if the value of CheckType is HTTP. This parameter represents the HTTP version of the real server. Value range: HTTP/1.0, HTTP/1.1. (Applicable only to TCP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HttpVersion Health check protocol (a custom check parameter), which is required if the value of CheckType is HTTP. This parameter represents the HTTP version of the real server. Value range: HTTP/1.0, HTTP/1.1. (Applicable only to TCP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取HTTP version. HTTP version of the backend service. Values: `HTTP/1.0`, HTTP/1.1`. It is only applicable to TCP listeners, and is required when `CheckType`=`HTTP`. 
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @return HttpVersion HTTP version. HTTP version of the backend service. Values: `HTTP/1.0`, HTTP/1.1`. It is only applicable to TCP listeners, and is required when `CheckType`=`HTTP`. 
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetHttpVersion() const;
 
                     /**
-                     * 设置Health check protocol (a custom check parameter), which is required if the value of CheckType is HTTP. This parameter represents the HTTP version of the real server. Value range: HTTP/1.0, HTTP/1.1. (Applicable only to TCP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _httpVersion Health check protocol (a custom check parameter), which is required if the value of CheckType is HTTP. This parameter represents the HTTP version of the real server. Value range: HTTP/1.0, HTTP/1.1. (Applicable only to TCP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置HTTP version. HTTP version of the backend service. Values: `HTTP/1.0`, HTTP/1.1`. It is only applicable to TCP listeners, and is required when `CheckType`=`HTTP`. 
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @param _httpVersion HTTP version. HTTP version of the backend service. Values: `HTTP/1.0`, HTTP/1.1`. It is only applicable to TCP listeners, and is required when `CheckType`=`HTTP`. 
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHttpVersion(const std::string& _httpVersion);
@@ -427,19 +427,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HttpVersionHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the type of IP for health check. `0` (default): CLB VIP. `1`: Use the IP range starting with 100.64 as the source IP.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return SourceIpType Specifies the type of IP for health check. `0` (default): CLB VIP. `1`: Use the IP range starting with 100.64 as the source IP.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Specifies the type of health check source IP. `0` (default): CLB VIP. `1`: 100.64 IP range.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @return SourceIpType Specifies the type of health check source IP. `0` (default): CLB VIP. `1`: 100.64 IP range.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetSourceIpType() const;
 
                     /**
-                     * 设置Specifies the type of IP for health check. `0` (default): CLB VIP. `1`: Use the IP range starting with 100.64 as the source IP.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _sourceIpType Specifies the type of IP for health check. `0` (default): CLB VIP. `1`: Use the IP range starting with 100.64 as the source IP.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Specifies the type of health check source IP. `0` (default): CLB VIP. `1`: 100.64 IP range.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @param _sourceIpType Specifies the type of health check source IP. `0` (default): CLB VIP. `1`: 100.64 IP range.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSourceIpType(const int64_t& _sourceIpType);
@@ -529,8 +529,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_httpCheckPathHasBeenSet;
 
                     /**
-                     * The target domain name for health check. It’s applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It’s required for TCP listeners.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Health check domain name. It is only applicable to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. For HTTP health checks of TCP listeners, this parameter is required.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_httpCheckDomain;
                     bool m_httpCheckDomainHasBeenSet;
@@ -571,22 +571,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_recvContextHasBeenSet;
 
                     /**
-                     * Health check protocol (a custom check parameter). Value range: TCP, HTTP, CUSTOM (applicable only to TCP/UDP listeners, where UDP listeners only support CUSTOM. If custom health check is used, this parameter is required).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * u200dHealth check protocol. Values: `TCP`, `HTTP`, `HTTPS`, `GRPC`, `PING`, and `CUSTOM`. UDP listeners support `PING`/`CUSTOM`. TCP listener support `TCP`/`HTTP`/`CUSTOM`. TCP_SSL and QUIC listeners support `TCP`/`HTTP`. HTTP rules support `HTTP`/`GRPC. HTTPS rules support `HTTP`/`HTTPS`/`GRPC`.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_checkType;
                     bool m_checkTypeHasBeenSet;
 
                     /**
-                     * Health check protocol (a custom check parameter), which is required if the value of CheckType is HTTP. This parameter represents the HTTP version of the real server. Value range: HTTP/1.0, HTTP/1.1. (Applicable only to TCP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * HTTP version. HTTP version of the backend service. Values: `HTTP/1.0`, HTTP/1.1`. It is only applicable to TCP listeners, and is required when `CheckType`=`HTTP`. 
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_httpVersion;
                     bool m_httpVersionHasBeenSet;
 
                     /**
-                     * Specifies the type of IP for health check. `0` (default): CLB VIP. `1`: Use the IP range starting with 100.64 as the source IP.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Specifies the type of health check source IP. `0` (default): CLB VIP. `1`: 100.64 IP range.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_sourceIpType;
                     bool m_sourceIpTypeHasBeenSet;

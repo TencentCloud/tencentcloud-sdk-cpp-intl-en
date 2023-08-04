@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Replication group ID
-                     * @return GroupId Replication group ID
+                     * 获取ID of the specified replication group, such as `crs-rpl-m3zt****`. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis/replication), and get it in the global replication group list.
+                     * @return GroupId ID of the specified replication group, such as `crs-rpl-m3zt****`. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis/replication), and get it in the global replication group list.
                      * 
                      */
                     std::string GetGroupId() const;
 
                     /**
-                     * 设置Replication group ID
-                     * @param _groupId Replication group ID
+                     * 设置ID of the specified replication group, such as `crs-rpl-m3zt****`. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis/replication), and get it in the global replication group list.
+                     * @param _groupId ID of the specified replication group, such as `crs-rpl-m3zt****`. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis/replication), and get it in the global replication group list.
                      * 
                      */
                     void SetGroupId(const std::string& _groupId);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool GroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Key words for fuzzy query, which can be set as the ID or name of a replication group.
-                     * @return SearchKey Key words for fuzzy query, which can be set as the ID or name of a replication group.
+                     * 获取Keyword for fuzzy query, which can be a replication group ID or name. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis/replication), and get u200dthem in the global replication group list.
+                     * @return SearchKey Keyword for fuzzy query, which can be a replication group ID or name. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis/replication), and get u200dthem in the global replication group list.
                      * 
                      */
                     std::string GetSearchKey() const;
 
                     /**
-                     * 设置Key words for fuzzy query, which can be set as the ID or name of a replication group.
-                     * @param _searchKey Key words for fuzzy query, which can be set as the ID or name of a replication group.
+                     * 设置Keyword for fuzzy query, which can be a replication group ID or name. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis/replication), and get u200dthem in the global replication group list.
+                     * @param _searchKey Keyword for fuzzy query, which can be a replication group ID or name. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis/replication), and get u200dthem in the global replication group list.
                      * 
                      */
                     void SetSearchKey(const std::string& _searchKey);
@@ -141,13 +141,13 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Replication group ID
+                     * ID of the specified replication group, such as `crs-rpl-m3zt****`. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis/replication), and get it in the global replication group list.
                      */
                     std::string m_groupId;
                     bool m_groupIdHasBeenSet;
 
                     /**
-                     * Key words for fuzzy query, which can be set as the ID or name of a replication group.
+                     * Keyword for fuzzy query, which can be a replication group ID or name. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis/replication), and get u200dthem in the global replication group list.
                      */
                     std::string m_searchKey;
                     bool m_searchKeyHasBeenSet;

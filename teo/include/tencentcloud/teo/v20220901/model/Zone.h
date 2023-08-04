@@ -172,23 +172,27 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取The site access method. Values:
-<li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record.</li>
-                     * @return Type The site access method. Values:
-<li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record.</li>
+                     * 获取Access mode of the site. Values:
+<li> `full`: Access through a name server.</li>
+<li> `partial`: Access through a CNAME record.</li>
+<li> `noDomainAccess`: Access without using a domain name </li>
+                     * @return Type Access mode of the site. Values:
+<li> `full`: Access through a name server.</li>
+<li> `partial`: Access through a CNAME record.</li>
+<li> `noDomainAccess`: Access without using a domain name </li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置The site access method. Values:
-<li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record.</li>
-                     * @param _type The site access method. Values:
-<li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record.</li>
+                     * 设置Access mode of the site. Values:
+<li> `full`: Access through a name server.</li>
+<li> `partial`: Access through a CNAME record.</li>
+<li> `noDomainAccess`: Access without using a domain name </li>
+                     * @param _type Access mode of the site. Values:
+<li> `full`: Access through a name server.</li>
+<li> `partial`: Access through a CNAME record.</li>
+<li> `noDomainAccess`: Access without using a domain name </li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -591,9 +595,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_statusHasBeenSet;
 
                     /**
-                     * The site access method. Values:
-<li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record.</li>
+                     * Access mode of the site. Values:
+<li> `full`: Access through a name server.</li>
+<li> `partial`: Access through a CNAME record.</li>
+<li> `noDomainAccess`: Access without using a domain name </li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

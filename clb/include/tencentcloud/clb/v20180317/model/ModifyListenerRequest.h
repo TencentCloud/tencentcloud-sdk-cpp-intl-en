@@ -130,15 +130,15 @@ namespace TencentCloud
                     bool SessionExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
-                     * @return HealthCheck Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
+                     * 获取Health check parameter. It is only applicable only to TCP, UDP, TCP_SSL and QUIC listeners.
+                     * @return HealthCheck Health check parameter. It is only applicable only to TCP, UDP, TCP_SSL and QUIC listeners.
                      * 
                      */
                     HealthCheck GetHealthCheck() const;
 
                     /**
-                     * 设置Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
-                     * @param _healthCheck Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
+                     * 设置Health check parameter. It is only applicable only to TCP, UDP, TCP_SSL and QUIC listeners.
+                     * @param _healthCheck Health check parameter. It is only applicable only to TCP, UDP, TCP_SSL and QUIC listeners.
                      * 
                      */
                     void SetHealthCheck(const HealthCheck& _healthCheck);
@@ -151,15 +151,15 @@ namespace TencentCloud
                     bool HealthCheckHasBeenSet() const;
 
                     /**
-                     * 获取Certificate information. This parameter is only applicable to HTTPS/TCP_SSL listeners. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
-                     * @return Certificate Certificate information. This parameter is only applicable to HTTPS/TCP_SSL listeners. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+                     * 获取Certificate information. This parameter is only applicable to HTTPS/TCP_SSL/QUIC listeners. `Certificate` and `MultiCertInfo` cannot be both specified.
+                     * @return Certificate Certificate information. This parameter is only applicable to HTTPS/TCP_SSL/QUIC listeners. `Certificate` and `MultiCertInfo` cannot be both specified.
                      * 
                      */
                     CertificateInput GetCertificate() const;
 
                     /**
-                     * 设置Certificate information. This parameter is only applicable to HTTPS/TCP_SSL listeners. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
-                     * @param _certificate Certificate information. This parameter is only applicable to HTTPS/TCP_SSL listeners. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+                     * 设置Certificate information. This parameter is only applicable to HTTPS/TCP_SSL/QUIC listeners. `Certificate` and `MultiCertInfo` cannot be both specified.
+                     * @param _certificate Certificate information. This parameter is only applicable to HTTPS/TCP_SSL/QUIC listeners. `Certificate` and `MultiCertInfo` cannot be both specified.
                      * 
                      */
                     void SetCertificate(const CertificateInput& _certificate);
@@ -412,13 +412,13 @@ They represent weighted round robin and least connections, respectively. Default
                     bool m_sessionExpireTimeHasBeenSet;
 
                     /**
-                     * Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
+                     * Health check parameter. It is only applicable only to TCP, UDP, TCP_SSL and QUIC listeners.
                      */
                     HealthCheck m_healthCheck;
                     bool m_healthCheckHasBeenSet;
 
                     /**
-                     * Certificate information. This parameter is only applicable to HTTPS/TCP_SSL listeners. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+                     * Certificate information. This parameter is only applicable to HTTPS/TCP_SSL/QUIC listeners. `Certificate` and `MultiCertInfo` cannot be both specified.
                      */
                     CertificateInput m_certificate;
                     bool m_certificateHasBeenSet;
