@@ -28,6 +28,7 @@
 #include <tencentcloud/as/v20180419/model/LifecycleActionResultInfo.h>
 #include <tencentcloud/as/v20180419/model/DetailedStatusMessage.h>
 #include <tencentcloud/as/v20180419/model/InvocationResult.h>
+#include <tencentcloud/as/v20180419/model/RelatedInstance.h>
 
 
 namespace TencentCloud
@@ -301,23 +302,23 @@ namespace TencentCloud
                     bool CreatedTimeHasBeenSet() const;
 
                     /**
-                     * 获取Information set of the instances related to the scaling activity.
-                     * @return ActivityRelatedInstanceSet Information set of the instances related to the scaling activity.
-                     * 
+                     * 获取This parameter has been deprecated.
+                     * @return ActivityRelatedInstanceSet This parameter has been deprecated.
+                     * @deprecated
                      */
                     std::vector<ActivtyRelatedInstance> GetActivityRelatedInstanceSet() const;
 
                     /**
-                     * 设置Information set of the instances related to the scaling activity.
-                     * @param _activityRelatedInstanceSet Information set of the instances related to the scaling activity.
-                     * 
+                     * 设置This parameter has been deprecated.
+                     * @param _activityRelatedInstanceSet This parameter has been deprecated.
+                     * @deprecated
                      */
                     void SetActivityRelatedInstanceSet(const std::vector<ActivtyRelatedInstance>& _activityRelatedInstanceSet);
 
                     /**
                      * 判断参数 ActivityRelatedInstanceSet 是否已赋值
                      * @return ActivityRelatedInstanceSet 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool ActivityRelatedInstanceSetHasBeenSet() const;
 
@@ -405,6 +406,27 @@ namespace TencentCloud
                      */
                     bool InvocationResultSetHasBeenSet() const;
 
+                    /**
+                     * 获取Information set of the instances related to the scaling activity.
+                     * @return RelatedInstanceSet Information set of the instances related to the scaling activity.
+                     * 
+                     */
+                    std::vector<RelatedInstance> GetRelatedInstanceSet() const;
+
+                    /**
+                     * 设置Information set of the instances related to the scaling activity.
+                     * @param _relatedInstanceSet Information set of the instances related to the scaling activity.
+                     * 
+                     */
+                    void SetRelatedInstanceSet(const std::vector<RelatedInstance>& _relatedInstanceSet);
+
+                    /**
+                     * 判断参数 RelatedInstanceSet 是否已赋值
+                     * @return RelatedInstanceSet 是否已赋值
+                     * 
+                     */
+                    bool RelatedInstanceSetHasBeenSet() const;
+
                 private:
 
                     /**
@@ -478,7 +500,7 @@ namespace TencentCloud
                     bool m_createdTimeHasBeenSet;
 
                     /**
-                     * Information set of the instances related to the scaling activity.
+                     * This parameter has been deprecated.
                      */
                     std::vector<ActivtyRelatedInstance> m_activityRelatedInstanceSet;
                     bool m_activityRelatedInstanceSetHasBeenSet;
@@ -506,6 +528,12 @@ namespace TencentCloud
                      */
                     std::vector<InvocationResult> m_invocationResultSet;
                     bool m_invocationResultSetHasBeenSet;
+
+                    /**
+                     * Information set of the instances related to the scaling activity.
+                     */
+                    std::vector<RelatedInstance> m_relatedInstanceSet;
+                    bool m_relatedInstanceSetHasBeenSet;
 
                 };
             }
