@@ -219,6 +219,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool MaxStorageHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the route can be modified
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @return CanEditRoute Whether the route can be modified
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    bool GetCanEditRoute() const;
+
+                    /**
+                     * 设置Whether the route can be modified
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @param _canEditRoute Whether the route can be modified
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetCanEditRoute(const bool& _canEditRoute);
+
+                    /**
+                     * 判断参数 CanEditRoute 是否已赋值
+                     * @return CanEditRoute 是否已赋值
+                     * 
+                     */
+                    bool CanEditRouteHasBeenSet() const;
+
                 private:
 
                     /**
@@ -269,6 +294,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     uint64_t m_maxStorage;
                     bool m_maxStorageHasBeenSet;
+
+                    /**
+                     * Whether the route can be modified
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     */
+                    bool m_canEditRoute;
+                    bool m_canEditRouteHasBeenSet;
 
                 };
             }

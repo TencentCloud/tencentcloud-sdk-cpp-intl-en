@@ -348,6 +348,81 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool SpecNameHasBeenSet() const;
 
+                    /**
+                     * 获取The maximum message retention period in hours
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @return MaxRetention The maximum message retention period in hours
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetMaxRetention() const;
+
+                    /**
+                     * 设置The maximum message retention period in hours
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @param _maxRetention The maximum message retention period in hours
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetMaxRetention(const int64_t& _maxRetention);
+
+                    /**
+                     * 判断参数 MaxRetention 是否已赋值
+                     * @return MaxRetention 是否已赋值
+                     * 
+                     */
+                    bool MaxRetentionHasBeenSet() const;
+
+                    /**
+                     * 获取The minimum message retention period in hours
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @return MinRetention The minimum message retention period in hours
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetMinRetention() const;
+
+                    /**
+                     * 设置The minimum message retention period in hours
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @param _minRetention The minimum message retention period in hours
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetMinRetention(const int64_t& _minRetention);
+
+                    /**
+                     * 判断参数 MinRetention 是否已赋值
+                     * @return MinRetention 是否已赋值
+                     * 
+                     */
+                    bool MinRetentionHasBeenSet() const;
+
+                    /**
+                     * 获取Instance message retention period in hours
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @return Retention Instance message retention period in hours
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetRetention() const;
+
+                    /**
+                     * 设置Instance message retention period in hours
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @param _retention Instance message retention period in hours
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetRetention(const int64_t& _retention);
+
+                    /**
+                     * 判断参数 Retention 是否已赋值
+                     * @return Retention 是否已赋值
+                     * 
+                     */
+                    bool RetentionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -435,6 +510,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_specName;
                     bool m_specNameHasBeenSet;
+
+                    /**
+                     * The maximum message retention period in hours
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_maxRetention;
+                    bool m_maxRetentionHasBeenSet;
+
+                    /**
+                     * The minimum message retention period in hours
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_minRetention;
+                    bool m_minRetentionHasBeenSet;
+
+                    /**
+                     * Instance message retention period in hours
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_retention;
+                    bool m_retentionHasBeenSet;
 
                 };
             }

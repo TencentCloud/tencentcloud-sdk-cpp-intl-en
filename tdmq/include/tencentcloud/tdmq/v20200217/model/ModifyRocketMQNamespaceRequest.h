@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool NamespaceIdHasBeenSet() const;
 
                     /**
-                     * 获取Retention time of unconsumed messages in milliseconds. Value range: 60 seconds–15 days
-                     * @return Ttl Retention time of unconsumed messages in milliseconds. Value range: 60 seconds–15 days
+                     * 获取This parameter is disused.
+                     * @return Ttl This parameter is disused.
                      * 
                      */
                     uint64_t GetTtl() const;
 
                     /**
-                     * 设置Retention time of unconsumed messages in milliseconds. Value range: 60 seconds–15 days
-                     * @param _ttl Retention time of unconsumed messages in milliseconds. Value range: 60 seconds–15 days
+                     * 设置This parameter is disused.
+                     * @param _ttl This parameter is disused.
                      * 
                      */
                     void SetTtl(const uint64_t& _ttl);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool TtlHasBeenSet() const;
 
                     /**
-                     * 获取Retention time for persisted messages in milliseconds
-                     * @return RetentionTime Retention time for persisted messages in milliseconds
+                     * 获取This parameter is disused.
+                     * @return RetentionTime This parameter is disused.
                      * 
                      */
                     uint64_t GetRetentionTime() const;
 
                     /**
-                     * 设置Retention time for persisted messages in milliseconds
-                     * @param _retentionTime Retention time for persisted messages in milliseconds
+                     * 设置This parameter is disused.
+                     * @param _retentionTime This parameter is disused.
                      * 
                      */
                     void SetRetentionTime(const uint64_t& _retentionTime);
@@ -147,6 +147,27 @@ namespace TencentCloud
                      */
                     bool RemarkHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to enable the public network access
+                     * @return PublicAccessEnabled Whether to enable the public network access
+                     * 
+                     */
+                    bool GetPublicAccessEnabled() const;
+
+                    /**
+                     * 设置Whether to enable the public network access
+                     * @param _publicAccessEnabled Whether to enable the public network access
+                     * 
+                     */
+                    void SetPublicAccessEnabled(const bool& _publicAccessEnabled);
+
+                    /**
+                     * 判断参数 PublicAccessEnabled 是否已赋值
+                     * @return PublicAccessEnabled 是否已赋值
+                     * 
+                     */
+                    bool PublicAccessEnabledHasBeenSet() const;
+
                 private:
 
                     /**
@@ -162,13 +183,13 @@ namespace TencentCloud
                     bool m_namespaceIdHasBeenSet;
 
                     /**
-                     * Retention time of unconsumed messages in milliseconds. Value range: 60 seconds–15 days
+                     * This parameter is disused.
                      */
                     uint64_t m_ttl;
                     bool m_ttlHasBeenSet;
 
                     /**
-                     * Retention time for persisted messages in milliseconds
+                     * This parameter is disused.
                      */
                     uint64_t m_retentionTime;
                     bool m_retentionTimeHasBeenSet;
@@ -178,6 +199,12 @@ namespace TencentCloud
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
+
+                    /**
+                     * Whether to enable the public network access
+                     */
+                    bool m_publicAccessEnabled;
+                    bool m_publicAccessEnabledHasBeenSet;
 
                 };
             }

@@ -48,18 +48,18 @@ namespace TencentCloud
 
                     /**
                      * 获取The final result of this verification. `0` indicates that the person is the same as that in the photo.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * @return ErrorCode The final result of this verification. `0` indicates that the person is the same as that in the photo.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetErrorCode() const;
 
                     /**
                      * 设置The final result of this verification. `0` indicates that the person is the same as that in the photo.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * @param _errorCode The final result of this verification. `0` indicates that the person is the same as that in the photo.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetErrorCode(const int64_t& _errorCode);
@@ -73,18 +73,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取The description of the final verification result.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * @return ErrorMsg The description of the final verification result.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetErrorMsg() const;
 
                     /**
                      * 设置The description of the final verification result.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * @param _errorMsg The description of the final verification result.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetErrorMsg(const std::string& _errorMsg);
@@ -98,18 +98,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取The result of this liveness detection process. `0` indicates success.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * @return LivenessErrorCode The result of this liveness detection process. `0` indicates success.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetLivenessErrorCode() const;
 
                     /**
                      * 设置The result of this liveness detection process. `0` indicates success.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * @param _livenessErrorCode The result of this liveness detection process. `0` indicates success.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLivenessErrorCode(const int64_t& _livenessErrorCode);
@@ -148,18 +148,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取The result of this comparison process. `0` indicates that the person in the best face screenshot collected from the video stream is the same as that in the uploaded image for comparison.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * @return CompareErrorCode The result of this comparison process. `0` indicates that the person in the best face screenshot collected from the video stream is the same as that in the uploaded image for comparison.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetCompareErrorCode() const;
 
                     /**
                      * 设置The result of this comparison process. `0` indicates that the person in the best face screenshot collected from the video stream is the same as that in the uploaded image for comparison.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * @param _compareErrorCode The result of this comparison process. `0` indicates that the person in the best face screenshot collected from the video stream is the same as that in the uploaded image for comparison.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCompareErrorCode(const int64_t& _compareErrorCode);
@@ -173,18 +173,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取The result description of this comparison process.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * @return CompareErrorMsg The result description of this comparison process.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCompareErrorMsg() const;
 
                     /**
                      * 设置The result description of this comparison process.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * @param _compareErrorMsg The result description of this comparison process.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCompareErrorMsg(const std::string& _compareErrorMsg);
@@ -222,19 +222,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ReqTimestampHasBeenSet() const;
 
                     /**
-                     * 获取The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Valid range: [0.00, 100.00]. By default, the person in the screenshot is judged as the same person in the image if the similarity is greater than or equal to 70.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Similarity The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Valid range: [0.00, 100.00]. By default, the person in the screenshot is judged as the same person in the image if the similarity is greater than or equal to 70.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Value range: [0.00, 100.00]. By default, the person in the screenshot is determined to be the same person in the image if the similarity is greater than or equal to 70.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @return Similarity The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Value range: [0.00, 100.00]. By default, the person in the screenshot is determined to be the same person in the image if the similarity is greater than or equal to 70.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     double GetSimilarity() const;
 
                     /**
-                     * 设置The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Valid range: [0.00, 100.00]. By default, the person in the screenshot is judged as the same person in the image if the similarity is greater than or equal to 70.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _similarity The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Valid range: [0.00, 100.00]. By default, the person in the screenshot is judged as the same person in the image if the similarity is greater than or equal to 70.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Value range: [0.00, 100.00]. By default, the person in the screenshot is determined to be the same person in the image if the similarity is greater than or equal to 70.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @param _similarity The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Value range: [0.00, 100.00]. By default, the person in the screenshot is determined to be the same person in the image if the similarity is greater than or equal to 70.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSimilarity(const double& _similarity);
@@ -275,21 +275,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * The final result of this verification. `0` indicates that the person is the same as that in the photo.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_errorCode;
                     bool m_errorCodeHasBeenSet;
 
                     /**
                      * The description of the final verification result.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_errorMsg;
                     bool m_errorMsgHasBeenSet;
 
                     /**
                      * The result of this liveness detection process. `0` indicates success.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_livenessErrorCode;
                     bool m_livenessErrorCodeHasBeenSet;
@@ -303,14 +303,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * The result of this comparison process. `0` indicates that the person in the best face screenshot collected from the video stream is the same as that in the uploaded image for comparison.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_compareErrorCode;
                     bool m_compareErrorCodeHasBeenSet;
 
                     /**
                      * The result description of this comparison process.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_compareErrorMsg;
                     bool m_compareErrorMsgHasBeenSet;
@@ -323,8 +323,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_reqTimestampHasBeenSet;
 
                     /**
-                     * The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Valid range: [0.00, 100.00]. By default, the person in the screenshot is judged as the same person in the image if the similarity is greater than or equal to 70.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Value range: [0.00, 100.00]. By default, the person in the screenshot is determined to be the same person in the image if the similarity is greater than or equal to 70.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      */
                     double m_similarity;
                     bool m_similarityHasBeenSet;

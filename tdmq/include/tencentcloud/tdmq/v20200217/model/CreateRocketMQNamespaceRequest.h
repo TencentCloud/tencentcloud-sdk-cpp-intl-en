@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool NamespaceIdHasBeenSet() const;
 
                     /**
-                     * 获取Retention time of unconsumed messages in milliseconds. Value range: 60 seconds–15 days
-                     * @return Ttl Retention time of unconsumed messages in milliseconds. Value range: 60 seconds–15 days
+                     * 获取This parameter is disused.
+                     * @return Ttl This parameter is disused.
                      * 
                      */
                     uint64_t GetTtl() const;
 
                     /**
-                     * 设置Retention time of unconsumed messages in milliseconds. Value range: 60 seconds–15 days
-                     * @param _ttl Retention time of unconsumed messages in milliseconds. Value range: 60 seconds–15 days
+                     * 设置This parameter is disused.
+                     * @param _ttl This parameter is disused.
                      * 
                      */
                     void SetTtl(const uint64_t& _ttl);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool TtlHasBeenSet() const;
 
                     /**
-                     * 获取Retention time of persisted messages in milliseconds
-                     * @return RetentionTime Retention time of persisted messages in milliseconds
+                     * 获取This parameter is disused.
+                     * @return RetentionTime This parameter is disused.
                      * 
                      */
                     uint64_t GetRetentionTime() const;
 
                     /**
-                     * 设置Retention time of persisted messages in milliseconds
-                     * @param _retentionTime Retention time of persisted messages in milliseconds
+                     * 设置This parameter is disused.
+                     * @param _retentionTime This parameter is disused.
                      * 
                      */
                     void SetRetentionTime(const uint64_t& _retentionTime);
@@ -162,13 +162,13 @@ namespace TencentCloud
                     bool m_namespaceIdHasBeenSet;
 
                     /**
-                     * Retention time of unconsumed messages in milliseconds. Value range: 60 seconds–15 days
+                     * This parameter is disused.
                      */
                     uint64_t m_ttl;
                     bool m_ttlHasBeenSet;
 
                     /**
-                     * Retention time of persisted messages in milliseconds
+                     * This parameter is disused.
                      */
                     uint64_t m_retentionTime;
                     bool m_retentionTimeHasBeenSet;

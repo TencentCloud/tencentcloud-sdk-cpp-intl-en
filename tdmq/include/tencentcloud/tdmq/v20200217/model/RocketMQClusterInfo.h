@@ -398,6 +398,56 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool HttpVpcEndpointHasBeenSet() const;
 
+                    /**
+                     * 获取Internal TCP access address
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @return InternalEndpoint Internal TCP access address
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetInternalEndpoint() const;
+
+                    /**
+                     * 设置Internal TCP access address
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @param _internalEndpoint Internal TCP access address
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetInternalEndpoint(const std::string& _internalEndpoint);
+
+                    /**
+                     * 判断参数 InternalEndpoint 是否已赋值
+                     * @return InternalEndpoint 是否已赋值
+                     * 
+                     */
+                    bool InternalEndpointHasBeenSet() const;
+
+                    /**
+                     * 获取Internal HTTP access address
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @return HttpInternalEndpoint Internal HTTP access address
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetHttpInternalEndpoint() const;
+
+                    /**
+                     * 设置Internal HTTP access address
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @param _httpInternalEndpoint Internal HTTP access address
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetHttpInternalEndpoint(const std::string& _httpInternalEndpoint);
+
+                    /**
+                     * 判断参数 HttpInternalEndpoint 是否已赋值
+                     * @return HttpInternalEndpoint 是否已赋值
+                     * 
+                     */
+                    bool HttpInternalEndpointHasBeenSet() const;
+
                 private:
 
                     /**
@@ -498,6 +548,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_httpVpcEndpoint;
                     bool m_httpVpcEndpointHasBeenSet;
+
+                    /**
+                     * Internal TCP access address
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_internalEndpoint;
+                    bool m_internalEndpointHasBeenSet;
+
+                    /**
+                     * Internal HTTP access address
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_httpInternalEndpoint;
+                    bool m_httpInternalEndpointHasBeenSet;
 
                 };
             }

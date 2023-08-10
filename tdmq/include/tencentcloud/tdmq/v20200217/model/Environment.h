@@ -244,6 +244,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool RetentionPolicyHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to enable "Auto-Create Subscription"
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @return AutoSubscriptionCreation Whether to enable "Auto-Create Subscription"
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    bool GetAutoSubscriptionCreation() const;
+
+                    /**
+                     * 设置Whether to enable "Auto-Create Subscription"
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @param _autoSubscriptionCreation Whether to enable "Auto-Create Subscription"
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetAutoSubscriptionCreation(const bool& _autoSubscriptionCreation);
+
+                    /**
+                     * 判断参数 AutoSubscriptionCreation 是否已赋值
+                     * @return AutoSubscriptionCreation 是否已赋值
+                     * 
+                     */
+                    bool AutoSubscriptionCreationHasBeenSet() const;
+
                 private:
 
                     /**
@@ -301,6 +326,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     RetentionPolicy m_retentionPolicy;
                     bool m_retentionPolicyHasBeenSet;
+
+                    /**
+                     * Whether to enable "Auto-Create Subscription"
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     */
+                    bool m_autoSubscriptionCreation;
+                    bool m_autoSubscriptionCreationHasBeenSet;
 
                 };
             }

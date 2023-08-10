@@ -126,6 +126,49 @@ FaceidClient::ApplySdkVerificationTokenOutcomeCallable FaceidClient::ApplySdkVer
     return task->get_future();
 }
 
+FaceidClient::ApplyWebVerificationBizTokenIntlOutcome FaceidClient::ApplyWebVerificationBizTokenIntl(const ApplyWebVerificationBizTokenIntlRequest &request)
+{
+    auto outcome = MakeRequest(request, "ApplyWebVerificationBizTokenIntl");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ApplyWebVerificationBizTokenIntlResponse rsp = ApplyWebVerificationBizTokenIntlResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ApplyWebVerificationBizTokenIntlOutcome(rsp);
+        else
+            return ApplyWebVerificationBizTokenIntlOutcome(o.GetError());
+    }
+    else
+    {
+        return ApplyWebVerificationBizTokenIntlOutcome(outcome.GetError());
+    }
+}
+
+void FaceidClient::ApplyWebVerificationBizTokenIntlAsync(const ApplyWebVerificationBizTokenIntlRequest& request, const ApplyWebVerificationBizTokenIntlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ApplyWebVerificationBizTokenIntl(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+FaceidClient::ApplyWebVerificationBizTokenIntlOutcomeCallable FaceidClient::ApplyWebVerificationBizTokenIntlCallable(const ApplyWebVerificationBizTokenIntlRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ApplyWebVerificationBizTokenIntlOutcome()>>(
+        [this, request]()
+        {
+            return this->ApplyWebVerificationBizTokenIntl(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 FaceidClient::ApplyWebVerificationTokenOutcome FaceidClient::ApplyWebVerificationToken(const ApplyWebVerificationTokenRequest &request)
 {
     auto outcome = MakeRequest(request, "ApplyWebVerificationToken");
@@ -506,6 +549,49 @@ FaceidClient::GetWebVerificationResultOutcomeCallable FaceidClient::GetWebVerifi
         [this, request]()
         {
             return this->GetWebVerificationResult(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+FaceidClient::GetWebVerificationResultIntlOutcome FaceidClient::GetWebVerificationResultIntl(const GetWebVerificationResultIntlRequest &request)
+{
+    auto outcome = MakeRequest(request, "GetWebVerificationResultIntl");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        GetWebVerificationResultIntlResponse rsp = GetWebVerificationResultIntlResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return GetWebVerificationResultIntlOutcome(rsp);
+        else
+            return GetWebVerificationResultIntlOutcome(o.GetError());
+    }
+    else
+    {
+        return GetWebVerificationResultIntlOutcome(outcome.GetError());
+    }
+}
+
+void FaceidClient::GetWebVerificationResultIntlAsync(const GetWebVerificationResultIntlRequest& request, const GetWebVerificationResultIntlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->GetWebVerificationResultIntl(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+FaceidClient::GetWebVerificationResultIntlOutcomeCallable FaceidClient::GetWebVerificationResultIntlCallable(const GetWebVerificationResultIntlRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<GetWebVerificationResultIntlOutcome()>>(
+        [this, request]()
+        {
+            return this->GetWebVerificationResultIntl(request);
         }
     );
 

@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tdmq/v20200217/model/EnvironmentRoleSet.h>
 
 
 namespace TencentCloud
@@ -87,6 +88,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool RemarkHasBeenSet() const;
 
+                    /**
+                     * 获取Namespaces that are bound in batches
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @return EnvironmentRoleSets Namespaces that are bound in batches
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<EnvironmentRoleSet> GetEnvironmentRoleSets() const;
+
+                    /**
+                     * 判断参数 EnvironmentRoleSets 是否已赋值
+                     * @return EnvironmentRoleSets 是否已赋值
+                     * 
+                     */
+                    bool EnvironmentRoleSetsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -107,6 +124,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
+
+                    /**
+                     * Namespaces that are bound in batches
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<EnvironmentRoleSet> m_environmentRoleSets;
+                    bool m_environmentRoleSetsHasBeenSet;
 
                 };
             }

@@ -148,6 +148,27 @@ namespace TencentCloud
                      */
                     bool RetentionPolicyHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to enable "Auto-Create Subscription"
+                     * @return AutoSubscriptionCreation Whether to enable "Auto-Create Subscription"
+                     * 
+                     */
+                    bool GetAutoSubscriptionCreation() const;
+
+                    /**
+                     * 设置Whether to enable "Auto-Create Subscription"
+                     * @param _autoSubscriptionCreation Whether to enable "Auto-Create Subscription"
+                     * 
+                     */
+                    void SetAutoSubscriptionCreation(const bool& _autoSubscriptionCreation);
+
+                    /**
+                     * 判断参数 AutoSubscriptionCreation 是否已赋值
+                     * @return AutoSubscriptionCreation 是否已赋值
+                     * 
+                     */
+                    bool AutoSubscriptionCreationHasBeenSet() const;
+
                 private:
 
                     /**
@@ -179,6 +200,12 @@ namespace TencentCloud
                      */
                     RetentionPolicy m_retentionPolicy;
                     bool m_retentionPolicyHasBeenSet;
+
+                    /**
+                     * Whether to enable "Auto-Create Subscription"
+                     */
+                    bool m_autoSubscriptionCreation;
+                    bool m_autoSubscriptionCreationHasBeenSet;
 
                 };
             }

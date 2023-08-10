@@ -373,6 +373,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ExceptionInformationHasBeenSet() const;
 
+                    /**
+                     * 获取Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
+This parameter is used to display the instance status additionally and distinguish from the `Status` parameter.
+                     * @return ClusterStatus Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
+This parameter is used to display the instance status additionally and distinguish from the `Status` parameter.
+                     * 
+                     */
+                    int64_t GetClusterStatus() const;
+
+                    /**
+                     * 设置Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
+This parameter is used to display the instance status additionally and distinguish from the `Status` parameter.
+                     * @param _clusterStatus Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
+This parameter is used to display the instance status additionally and distinguish from the `Status` parameter.
+                     * 
+                     */
+                    void SetClusterStatus(const int64_t& _clusterStatus);
+
+                    /**
+                     * 判断参数 ClusterStatus 是否已赋值
+                     * @return ClusterStatus 是否已赋值
+                     * 
+                     */
+                    bool ClusterStatusHasBeenSet() const;
+
                 private:
 
                     /**
@@ -467,6 +492,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_exceptionInformation;
                     bool m_exceptionInformationHasBeenSet;
+
+                    /**
+                     * Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
+This parameter is used to display the instance status additionally and distinguish from the `Status` parameter.
+                     */
+                    int64_t m_clusterStatus;
+                    bool m_clusterStatusHasBeenSet;
 
                 };
             }
