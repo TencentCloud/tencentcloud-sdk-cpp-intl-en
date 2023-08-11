@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/cdb/v20170320/model/DescribeProxyConnectionPoolConfResponse.h>
+#include <tencentcloud/cdb/v20170320/model/DescribeAuditLogsResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -23,13 +23,13 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdb::V20170320::Model;
 using namespace std;
 
-DescribeProxyConnectionPoolConfResponse::DescribeProxyConnectionPoolConfResponse() :
-    m_countHasBeenSet(false),
-    m_poolConfHasBeenSet(false)
+DescribeAuditLogsResponse::DescribeAuditLogsResponse() :
+    m_totalCountHasBeenSet(false),
+    m_itemsHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome DescribeProxyConnectionPoolConfResponse::Deserialize(const string &payload)
+CoreInternalOutcome DescribeAuditLogsResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -63,58 +63,67 @@ CoreInternalOutcome DescribeProxyConnectionPoolConfResponse::Deserialize(const s
     }
 
 
-    if (rsp.HasMember("Count") && !rsp["Count"].IsNull())
+    if (rsp.HasMember("TotalCount") && !rsp["TotalCount"].IsNull())
     {
-        if (!rsp["Count"].IsInt64())
+        if (!rsp["TotalCount"].IsInt64())
         {
-            return CoreInternalOutcome(Core::Error("response `Count` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TotalCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
-        m_count = rsp["Count"].GetInt64();
-        m_countHasBeenSet = true;
+        m_totalCount = rsp["TotalCount"].GetInt64();
+        m_totalCountHasBeenSet = true;
     }
 
-    if (rsp.HasMember("PoolConf") && !rsp["PoolConf"].IsNull())
+    if (rsp.HasMember("Items") && !rsp["Items"].IsNull())
     {
-        if (!rsp["PoolConf"].IsObject())
-        {
-            return CoreInternalOutcome(Core::Error("response `PoolConf` is not object type").SetRequestId(requestId));
-        }
+        if (!rsp["Items"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `Items` is not array type"));
 
-        CoreInternalOutcome outcome = m_poolConf.Deserialize(rsp["PoolConf"]);
-        if (!outcome.IsSuccess())
+        const rapidjson::Value &tmpValue = rsp["Items"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
-            outcome.GetError().SetRequestId(requestId);
-            return outcome;
+            AuditLog item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_items.push_back(item);
         }
-
-        m_poolConfHasBeenSet = true;
+        m_itemsHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string DescribeProxyConnectionPoolConfResponse::ToJsonString() const
+string DescribeAuditLogsResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_countHasBeenSet)
+    if (m_totalCountHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Count";
+        string key = "TotalCount";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_count, allocator);
+        value.AddMember(iKey, m_totalCount, allocator);
     }
 
-    if (m_poolConfHasBeenSet)
+    if (m_itemsHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "PoolConf";
+        string key = "Items";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
-        m_poolConf.ToJsonObject(value[key.c_str()], allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_items.begin(); itr != m_items.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -129,24 +138,24 @@ string DescribeProxyConnectionPoolConfResponse::ToJsonString() const
 }
 
 
-int64_t DescribeProxyConnectionPoolConfResponse::GetCount() const
+int64_t DescribeAuditLogsResponse::GetTotalCount() const
 {
-    return m_count;
+    return m_totalCount;
 }
 
-bool DescribeProxyConnectionPoolConfResponse::CountHasBeenSet() const
+bool DescribeAuditLogsResponse::TotalCountHasBeenSet() const
 {
-    return m_countHasBeenSet;
+    return m_totalCountHasBeenSet;
 }
 
-PoolConf DescribeProxyConnectionPoolConfResponse::GetPoolConf() const
+vector<AuditLog> DescribeAuditLogsResponse::GetItems() const
 {
-    return m_poolConf;
+    return m_items;
 }
 
-bool DescribeProxyConnectionPoolConfResponse::PoolConfHasBeenSet() const
+bool DescribeAuditLogsResponse::ItemsHasBeenSet() const
 {
-    return m_poolConfHasBeenSet;
+    return m_itemsHasBeenSet;
 }
 
 

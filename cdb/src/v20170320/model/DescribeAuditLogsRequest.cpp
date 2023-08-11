@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/cdb/v20170320/model/AnalyzeAuditLogsRequest.h>
+#include <tencentcloud/cdb/v20170320/model/DescribeAuditLogsRequest.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -22,17 +22,19 @@
 using namespace TencentCloud::Cdb::V20170320::Model;
 using namespace std;
 
-AnalyzeAuditLogsRequest::AnalyzeAuditLogsRequest() :
+DescribeAuditLogsRequest::DescribeAuditLogsRequest() :
     m_instanceIdHasBeenSet(false),
     m_startTimeHasBeenSet(false),
     m_endTimeHasBeenSet(false),
-    m_aggregationConditionsHasBeenSet(false),
-    m_auditLogFilterHasBeenSet(false),
+    m_limitHasBeenSet(false),
+    m_offsetHasBeenSet(false),
+    m_orderHasBeenSet(false),
+    m_orderByHasBeenSet(false),
     m_logFilterHasBeenSet(false)
 {
 }
 
-string AnalyzeAuditLogsRequest::ToJsonString() const
+string DescribeAuditLogsRequest::ToJsonString() const
 {
     rapidjson::Document d;
     d.SetObject();
@@ -63,28 +65,36 @@ string AnalyzeAuditLogsRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_endTime.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_aggregationConditionsHasBeenSet)
+    if (m_limitHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "AggregationConditions";
+        string key = "Limit";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
-
-        int i=0;
-        for (auto itr = m_aggregationConditions.begin(); itr != m_aggregationConditions.end(); ++itr, ++i)
-        {
-            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
-            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
-        }
+        d.AddMember(iKey, m_limit, allocator);
     }
 
-    if (m_auditLogFilterHasBeenSet)
+    if (m_offsetHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "AuditLogFilter";
+        string key = "Offset";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
-        m_auditLogFilter.ToJsonObject(d[key.c_str()], allocator);
+        d.AddMember(iKey, m_offset, allocator);
+    }
+
+    if (m_orderHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Order";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_order.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_orderByHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OrderBy";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_orderBy.c_str(), allocator).Move(), allocator);
     }
 
     if (m_logFilterHasBeenSet)
@@ -110,98 +120,130 @@ string AnalyzeAuditLogsRequest::ToJsonString() const
 }
 
 
-string AnalyzeAuditLogsRequest::GetInstanceId() const
+string DescribeAuditLogsRequest::GetInstanceId() const
 {
     return m_instanceId;
 }
 
-void AnalyzeAuditLogsRequest::SetInstanceId(const string& _instanceId)
+void DescribeAuditLogsRequest::SetInstanceId(const string& _instanceId)
 {
     m_instanceId = _instanceId;
     m_instanceIdHasBeenSet = true;
 }
 
-bool AnalyzeAuditLogsRequest::InstanceIdHasBeenSet() const
+bool DescribeAuditLogsRequest::InstanceIdHasBeenSet() const
 {
     return m_instanceIdHasBeenSet;
 }
 
-string AnalyzeAuditLogsRequest::GetStartTime() const
+string DescribeAuditLogsRequest::GetStartTime() const
 {
     return m_startTime;
 }
 
-void AnalyzeAuditLogsRequest::SetStartTime(const string& _startTime)
+void DescribeAuditLogsRequest::SetStartTime(const string& _startTime)
 {
     m_startTime = _startTime;
     m_startTimeHasBeenSet = true;
 }
 
-bool AnalyzeAuditLogsRequest::StartTimeHasBeenSet() const
+bool DescribeAuditLogsRequest::StartTimeHasBeenSet() const
 {
     return m_startTimeHasBeenSet;
 }
 
-string AnalyzeAuditLogsRequest::GetEndTime() const
+string DescribeAuditLogsRequest::GetEndTime() const
 {
     return m_endTime;
 }
 
-void AnalyzeAuditLogsRequest::SetEndTime(const string& _endTime)
+void DescribeAuditLogsRequest::SetEndTime(const string& _endTime)
 {
     m_endTime = _endTime;
     m_endTimeHasBeenSet = true;
 }
 
-bool AnalyzeAuditLogsRequest::EndTimeHasBeenSet() const
+bool DescribeAuditLogsRequest::EndTimeHasBeenSet() const
 {
     return m_endTimeHasBeenSet;
 }
 
-vector<AggregationCondition> AnalyzeAuditLogsRequest::GetAggregationConditions() const
+int64_t DescribeAuditLogsRequest::GetLimit() const
 {
-    return m_aggregationConditions;
+    return m_limit;
 }
 
-void AnalyzeAuditLogsRequest::SetAggregationConditions(const vector<AggregationCondition>& _aggregationConditions)
+void DescribeAuditLogsRequest::SetLimit(const int64_t& _limit)
 {
-    m_aggregationConditions = _aggregationConditions;
-    m_aggregationConditionsHasBeenSet = true;
+    m_limit = _limit;
+    m_limitHasBeenSet = true;
 }
 
-bool AnalyzeAuditLogsRequest::AggregationConditionsHasBeenSet() const
+bool DescribeAuditLogsRequest::LimitHasBeenSet() const
 {
-    return m_aggregationConditionsHasBeenSet;
+    return m_limitHasBeenSet;
 }
 
-AuditLogFilter AnalyzeAuditLogsRequest::GetAuditLogFilter() const
+int64_t DescribeAuditLogsRequest::GetOffset() const
 {
-    return m_auditLogFilter;
+    return m_offset;
 }
 
-void AnalyzeAuditLogsRequest::SetAuditLogFilter(const AuditLogFilter& _auditLogFilter)
+void DescribeAuditLogsRequest::SetOffset(const int64_t& _offset)
 {
-    m_auditLogFilter = _auditLogFilter;
-    m_auditLogFilterHasBeenSet = true;
+    m_offset = _offset;
+    m_offsetHasBeenSet = true;
 }
 
-bool AnalyzeAuditLogsRequest::AuditLogFilterHasBeenSet() const
+bool DescribeAuditLogsRequest::OffsetHasBeenSet() const
 {
-    return m_auditLogFilterHasBeenSet;
+    return m_offsetHasBeenSet;
 }
 
-vector<InstanceAuditLogFilters> AnalyzeAuditLogsRequest::GetLogFilter() const
+string DescribeAuditLogsRequest::GetOrder() const
+{
+    return m_order;
+}
+
+void DescribeAuditLogsRequest::SetOrder(const string& _order)
+{
+    m_order = _order;
+    m_orderHasBeenSet = true;
+}
+
+bool DescribeAuditLogsRequest::OrderHasBeenSet() const
+{
+    return m_orderHasBeenSet;
+}
+
+string DescribeAuditLogsRequest::GetOrderBy() const
+{
+    return m_orderBy;
+}
+
+void DescribeAuditLogsRequest::SetOrderBy(const string& _orderBy)
+{
+    m_orderBy = _orderBy;
+    m_orderByHasBeenSet = true;
+}
+
+bool DescribeAuditLogsRequest::OrderByHasBeenSet() const
+{
+    return m_orderByHasBeenSet;
+}
+
+vector<InstanceAuditLogFilters> DescribeAuditLogsRequest::GetLogFilter() const
 {
     return m_logFilter;
 }
 
-void AnalyzeAuditLogsRequest::SetLogFilter(const vector<InstanceAuditLogFilters>& _logFilter)
+void DescribeAuditLogsRequest::SetLogFilter(const vector<InstanceAuditLogFilters>& _logFilter)
 {
     m_logFilter = _logFilter;
     m_logFilterHasBeenSet = true;
 }
 
-bool AnalyzeAuditLogsRequest::LogFilterHasBeenSet() const
+bool DescribeAuditLogsRequest::LogFilterHasBeenSet() const
 {
     return m_logFilterHasBeenSet;
 }

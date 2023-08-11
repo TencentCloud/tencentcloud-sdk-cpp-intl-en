@@ -79,6 +79,8 @@
 #include <tencentcloud/cdb/v20170320/model/DescribeAccountsResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeAsyncRequestInfoRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeAsyncRequestInfoResponse.h>
+#include <tencentcloud/cdb/v20170320/model/DescribeAuditLogsRequest.h>
+#include <tencentcloud/cdb/v20170320/model/DescribeAuditLogsResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeAuditPoliciesRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeAuditPoliciesResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeAuditRulesRequest.h>
@@ -101,8 +103,6 @@
 #include <tencentcloud/cdb/v20170320/model/DescribeBinlogBackupOverviewResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeBinlogsRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeBinlogsResponse.h>
-#include <tencentcloud/cdb/v20170320/model/DescribeCDBProxyRequest.h>
-#include <tencentcloud/cdb/v20170320/model/DescribeCDBProxyResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeCdbProxyInfoRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeCdbProxyInfoResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeCdbZoneConfigRequest.h>
@@ -153,8 +153,6 @@
 #include <tencentcloud/cdb/v20170320/model/DescribeParamTemplatesResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeProjectSecurityGroupsRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeProjectSecurityGroupsResponse.h>
-#include <tencentcloud/cdb/v20170320/model/DescribeProxyConnectionPoolConfRequest.h>
-#include <tencentcloud/cdb/v20170320/model/DescribeProxyConnectionPoolConfResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeProxyCustomConfRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeProxyCustomConfResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeProxySupportParamRequest.h>
@@ -207,12 +205,6 @@
 #include <tencentcloud/cdb/v20170320/model/ModifyBackupDownloadRestrictionResponse.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyBackupEncryptionStatusRequest.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyBackupEncryptionStatusResponse.h>
-#include <tencentcloud/cdb/v20170320/model/ModifyCDBProxyConnectionPoolRequest.h>
-#include <tencentcloud/cdb/v20170320/model/ModifyCDBProxyConnectionPoolResponse.h>
-#include <tencentcloud/cdb/v20170320/model/ModifyCDBProxyDescRequest.h>
-#include <tencentcloud/cdb/v20170320/model/ModifyCDBProxyDescResponse.h>
-#include <tencentcloud/cdb/v20170320/model/ModifyCDBProxyVipVPortRequest.h>
-#include <tencentcloud/cdb/v20170320/model/ModifyCDBProxyVipVPortResponse.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyCdbProxyAddressDescRequest.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyCdbProxyAddressDescResponse.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyCdbProxyAddressVipAndVPortRequest.h>
@@ -255,8 +247,6 @@
 #include <tencentcloud/cdb/v20170320/model/OpenDBInstanceGTIDResponse.h>
 #include <tencentcloud/cdb/v20170320/model/OpenWanServiceRequest.h>
 #include <tencentcloud/cdb/v20170320/model/OpenWanServiceResponse.h>
-#include <tencentcloud/cdb/v20170320/model/QueryCDBProxyRequest.h>
-#include <tencentcloud/cdb/v20170320/model/QueryCDBProxyResponse.h>
 #include <tencentcloud/cdb/v20170320/model/ReleaseIsolatedDBInstancesRequest.h>
 #include <tencentcloud/cdb/v20170320/model/ReleaseIsolatedDBInstancesResponse.h>
 #include <tencentcloud/cdb/v20170320/model/ReloadBalanceProxyNodeRequest.h>
@@ -389,6 +379,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeAsyncRequestInfoResponse> DescribeAsyncRequestInfoOutcome;
                 typedef std::future<DescribeAsyncRequestInfoOutcome> DescribeAsyncRequestInfoOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeAsyncRequestInfoRequest&, DescribeAsyncRequestInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAsyncRequestInfoAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAuditLogsResponse> DescribeAuditLogsOutcome;
+                typedef std::future<DescribeAuditLogsOutcome> DescribeAuditLogsOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::DescribeAuditLogsRequest&, DescribeAuditLogsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAuditLogsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAuditPoliciesResponse> DescribeAuditPoliciesOutcome;
                 typedef std::future<DescribeAuditPoliciesOutcome> DescribeAuditPoliciesOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeAuditPoliciesRequest&, DescribeAuditPoliciesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAuditPoliciesAsyncHandler;
@@ -422,9 +415,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeBinlogsResponse> DescribeBinlogsOutcome;
                 typedef std::future<DescribeBinlogsOutcome> DescribeBinlogsOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeBinlogsRequest&, DescribeBinlogsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBinlogsAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeCDBProxyResponse> DescribeCDBProxyOutcome;
-                typedef std::future<DescribeCDBProxyOutcome> DescribeCDBProxyOutcomeCallable;
-                typedef std::function<void(const CdbClient*, const Model::DescribeCDBProxyRequest&, DescribeCDBProxyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCDBProxyAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeCdbProxyInfoResponse> DescribeCdbProxyInfoOutcome;
                 typedef std::future<DescribeCdbProxyInfoOutcome> DescribeCdbProxyInfoOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeCdbProxyInfoRequest&, DescribeCdbProxyInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCdbProxyInfoAsyncHandler;
@@ -500,9 +490,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeProjectSecurityGroupsResponse> DescribeProjectSecurityGroupsOutcome;
                 typedef std::future<DescribeProjectSecurityGroupsOutcome> DescribeProjectSecurityGroupsOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeProjectSecurityGroupsRequest&, DescribeProjectSecurityGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeProjectSecurityGroupsAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeProxyConnectionPoolConfResponse> DescribeProxyConnectionPoolConfOutcome;
-                typedef std::future<DescribeProxyConnectionPoolConfOutcome> DescribeProxyConnectionPoolConfOutcomeCallable;
-                typedef std::function<void(const CdbClient*, const Model::DescribeProxyConnectionPoolConfRequest&, DescribeProxyConnectionPoolConfOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeProxyConnectionPoolConfAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeProxyCustomConfResponse> DescribeProxyCustomConfOutcome;
                 typedef std::future<DescribeProxyCustomConfOutcome> DescribeProxyCustomConfOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeProxyCustomConfRequest&, DescribeProxyCustomConfOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeProxyCustomConfAsyncHandler;
@@ -581,15 +568,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyBackupEncryptionStatusResponse> ModifyBackupEncryptionStatusOutcome;
                 typedef std::future<ModifyBackupEncryptionStatusOutcome> ModifyBackupEncryptionStatusOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::ModifyBackupEncryptionStatusRequest&, ModifyBackupEncryptionStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyBackupEncryptionStatusAsyncHandler;
-                typedef Outcome<Core::Error, Model::ModifyCDBProxyConnectionPoolResponse> ModifyCDBProxyConnectionPoolOutcome;
-                typedef std::future<ModifyCDBProxyConnectionPoolOutcome> ModifyCDBProxyConnectionPoolOutcomeCallable;
-                typedef std::function<void(const CdbClient*, const Model::ModifyCDBProxyConnectionPoolRequest&, ModifyCDBProxyConnectionPoolOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyCDBProxyConnectionPoolAsyncHandler;
-                typedef Outcome<Core::Error, Model::ModifyCDBProxyDescResponse> ModifyCDBProxyDescOutcome;
-                typedef std::future<ModifyCDBProxyDescOutcome> ModifyCDBProxyDescOutcomeCallable;
-                typedef std::function<void(const CdbClient*, const Model::ModifyCDBProxyDescRequest&, ModifyCDBProxyDescOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyCDBProxyDescAsyncHandler;
-                typedef Outcome<Core::Error, Model::ModifyCDBProxyVipVPortResponse> ModifyCDBProxyVipVPortOutcome;
-                typedef std::future<ModifyCDBProxyVipVPortOutcome> ModifyCDBProxyVipVPortOutcomeCallable;
-                typedef std::function<void(const CdbClient*, const Model::ModifyCDBProxyVipVPortRequest&, ModifyCDBProxyVipVPortOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyCDBProxyVipVPortAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyCdbProxyAddressDescResponse> ModifyCdbProxyAddressDescOutcome;
                 typedef std::future<ModifyCdbProxyAddressDescOutcome> ModifyCdbProxyAddressDescOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::ModifyCdbProxyAddressDescRequest&, ModifyCdbProxyAddressDescOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyCdbProxyAddressDescAsyncHandler;
@@ -653,9 +631,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::OpenWanServiceResponse> OpenWanServiceOutcome;
                 typedef std::future<OpenWanServiceOutcome> OpenWanServiceOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::OpenWanServiceRequest&, OpenWanServiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> OpenWanServiceAsyncHandler;
-                typedef Outcome<Core::Error, Model::QueryCDBProxyResponse> QueryCDBProxyOutcome;
-                typedef std::future<QueryCDBProxyOutcome> QueryCDBProxyOutcomeCallable;
-                typedef std::function<void(const CdbClient*, const Model::QueryCDBProxyRequest&, QueryCDBProxyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryCDBProxyAsyncHandler;
                 typedef Outcome<Core::Error, Model::ReleaseIsolatedDBInstancesResponse> ReleaseIsolatedDBInstancesOutcome;
                 typedef std::future<ReleaseIsolatedDBInstancesOutcome> ReleaseIsolatedDBInstancesOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::ReleaseIsolatedDBInstancesRequest&, ReleaseIsolatedDBInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ReleaseIsolatedDBInstancesAsyncHandler;
@@ -982,6 +957,15 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
                 DescribeAsyncRequestInfoOutcomeCallable DescribeAsyncRequestInfoCallable(const Model::DescribeAsyncRequestInfoRequest& request);
 
                 /**
+                 *This API is used to query a database audit log.
+                 * @param req DescribeAuditLogsRequest
+                 * @return DescribeAuditLogsOutcome
+                 */
+                DescribeAuditLogsOutcome DescribeAuditLogs(const Model::DescribeAuditLogsRequest &request);
+                void DescribeAuditLogsAsync(const Model::DescribeAuditLogsRequest& request, const DescribeAuditLogsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAuditLogsOutcomeCallable DescribeAuditLogsCallable(const Model::DescribeAuditLogsRequest& request);
+
+                /**
                  *This API is used to query the audit policies of a TencentDB instance.
                  * @param req DescribeAuditPoliciesRequest
                  * @return DescribeAuditPoliciesOutcome
@@ -1079,19 +1063,6 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
                 DescribeBinlogsOutcome DescribeBinlogs(const Model::DescribeBinlogsRequest &request);
                 void DescribeBinlogsAsync(const Model::DescribeBinlogsRequest& request, const DescribeBinlogsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeBinlogsOutcomeCallable DescribeBinlogsCallable(const Model::DescribeBinlogsRequest& request);
-
-                /**
-                 *接口已经废弃，请使用+DescribeCdbProxyInfo+进行替换。
-
-This API is deprecated and replaced by the `DescribeCdbProxyInfo` API. 
-
-This API is used to query database proxy. It will be deprecated and replaced by the `QueryCDBProxy` API.
-                 * @param req DescribeCDBProxyRequest
-                 * @return DescribeCDBProxyOutcome
-                 */
-                DescribeCDBProxyOutcome DescribeCDBProxy(const Model::DescribeCDBProxyRequest &request);
-                void DescribeCDBProxyAsync(const Model::DescribeCDBProxyRequest& request, const DescribeCDBProxyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeCDBProxyOutcomeCallable DescribeCDBProxyCallable(const Model::DescribeCDBProxyRequest& request);
 
                 /**
                  *This API is used to query the details of a database proxy.
@@ -1320,19 +1291,6 @@ Note: the HTTP response packet will be very large if it contain a single large e
                 DescribeProjectSecurityGroupsOutcome DescribeProjectSecurityGroups(const Model::DescribeProjectSecurityGroupsRequest &request);
                 void DescribeProjectSecurityGroupsAsync(const Model::DescribeProjectSecurityGroupsRequest& request, const DescribeProjectSecurityGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeProjectSecurityGroupsOutcomeCallable DescribeProjectSecurityGroupsCallable(const Model::DescribeProjectSecurityGroupsRequest& request);
-
-                /**
-                 *当前接口已经废弃，请使用+DescribeCdbProxyInfo+替代。
-
-This API has been deprecated and replaced by the `DescribeCdbProxyInfo` API. 
-
-This API is used to query the connection pool configuration of a database proxy.
-                 * @param req DescribeProxyConnectionPoolConfRequest
-                 * @return DescribeProxyConnectionPoolConfOutcome
-                 */
-                DescribeProxyConnectionPoolConfOutcome DescribeProxyConnectionPoolConf(const Model::DescribeProxyConnectionPoolConfRequest &request);
-                void DescribeProxyConnectionPoolConfAsync(const Model::DescribeProxyConnectionPoolConfRequest& request, const DescribeProxyConnectionPoolConfAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeProxyConnectionPoolConfOutcomeCallable DescribeProxyConnectionPoolConfCallable(const Model::DescribeProxyConnectionPoolConfRequest& request);
 
                 /**
                  *This API is used to query the proxy configuration.
@@ -1577,45 +1535,6 @@ Note that when modifying account permissions, you need to pass in the full permi
                 ModifyBackupEncryptionStatusOutcomeCallable ModifyBackupEncryptionStatusCallable(const Model::ModifyBackupEncryptionStatusRequest& request);
 
                 /**
-                 *当前接口已经废弃，请使用+AdjustCdbProxyAddress+进行替代。
-
-This API has been deprecated and replaced with `AdjustCdbProxyAddress`. 
-
-This API is used to configure the connection pool of database proxy. The supported configurations can be obtained by the `DescribeProxyConnectionPoolConf` API.
-                 * @param req ModifyCDBProxyConnectionPoolRequest
-                 * @return ModifyCDBProxyConnectionPoolOutcome
-                 */
-                ModifyCDBProxyConnectionPoolOutcome ModifyCDBProxyConnectionPool(const Model::ModifyCDBProxyConnectionPoolRequest &request);
-                void ModifyCDBProxyConnectionPoolAsync(const Model::ModifyCDBProxyConnectionPoolRequest& request, const ModifyCDBProxyConnectionPoolAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                ModifyCDBProxyConnectionPoolOutcomeCallable ModifyCDBProxyConnectionPoolCallable(const Model::ModifyCDBProxyConnectionPoolRequest& request);
-
-                /**
-                 *当前接口已经废弃，请使用+ModifyCdbProxyAddressDesc+进行替代。
-
-This API has been deprecated and replaced with `ModifyCdbProxyAddressDesc`. 
-
-This API is used to modify the description of a database proxy.
-                 * @param req ModifyCDBProxyDescRequest
-                 * @return ModifyCDBProxyDescOutcome
-                 */
-                ModifyCDBProxyDescOutcome ModifyCDBProxyDesc(const Model::ModifyCDBProxyDescRequest &request);
-                void ModifyCDBProxyDescAsync(const Model::ModifyCDBProxyDescRequest& request, const ModifyCDBProxyDescAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                ModifyCDBProxyDescOutcomeCallable ModifyCDBProxyDescCallable(const Model::ModifyCDBProxyDescRequest& request);
-
-                /**
-                 *当前接口已经废弃，请使用+ModifyCdbProxyAddressVipAndVPort+进行替代。
-
-This API has been deprecated and replaced with `ModifyCdbProxyAddressVipAndVPort`. 
-
-This API is used to modify the VIP or the port of a database proxy.
-                 * @param req ModifyCDBProxyVipVPortRequest
-                 * @return ModifyCDBProxyVipVPortOutcome
-                 */
-                ModifyCDBProxyVipVPortOutcome ModifyCDBProxyVipVPort(const Model::ModifyCDBProxyVipVPortRequest &request);
-                void ModifyCDBProxyVipVPortAsync(const Model::ModifyCDBProxyVipVPortRequest& request, const ModifyCDBProxyVipVPortAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                ModifyCDBProxyVipVPortOutcomeCallable ModifyCDBProxyVipVPortCallable(const Model::ModifyCDBProxyVipVPortRequest& request);
-
-                /**
                  *This API is used to modify the description of a proxy address.
                  * @param req ModifyCdbProxyAddressDescRequest
                  * @return ModifyCdbProxyAddressDescOutcome
@@ -1819,19 +1738,6 @@ Note that before enabling public network access, you need to first [initialize t
                 OpenWanServiceOutcome OpenWanService(const Model::OpenWanServiceRequest &request);
                 void OpenWanServiceAsync(const Model::OpenWanServiceRequest& request, const OpenWanServiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 OpenWanServiceOutcomeCallable OpenWanServiceCallable(const Model::OpenWanServiceRequest& request);
-
-                /**
-                 *当前接口已经废弃，请使用+DescribeCdbProxyInfo+进行替代。
-
-This API has been deprecated and replaced with `DescribeCdbProxyInfo`. 
-
-This API is used to query the proxy details.
-                 * @param req QueryCDBProxyRequest
-                 * @return QueryCDBProxyOutcome
-                 */
-                QueryCDBProxyOutcome QueryCDBProxy(const Model::QueryCDBProxyRequest &request);
-                void QueryCDBProxyAsync(const Model::QueryCDBProxyRequest& request, const QueryCDBProxyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                QueryCDBProxyOutcomeCallable QueryCDBProxyCallable(const Model::QueryCDBProxyRequest& request);
 
                 /**
                  *This API is used to deisolate an isolated TencentDB instance.

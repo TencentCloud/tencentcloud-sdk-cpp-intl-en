@@ -277,15 +277,15 @@ namespace TencentCloud
                     bool MasterInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取MySQL version. Valid values: `5.5`, `5.6`, `5.7`. You can use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the supported versions.
-                     * @return EngineVersion MySQL version. Valid values: `5.5`, `5.6`, `5.7`. You can use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the supported versions.
+                     * 获取MySQL version. Valid values: `5.5`, `5.6`, `5.7`, and `8.0`. You can use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the supported instance versions.
+                     * @return EngineVersion MySQL version. Valid values: `5.5`, `5.6`, `5.7`, and `8.0`. You can use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the supported instance versions.
                      * 
                      */
                     std::string GetEngineVersion() const;
 
                     /**
-                     * 设置MySQL version. Valid values: `5.5`, `5.6`, `5.7`. You can use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the supported versions.
-                     * @param _engineVersion MySQL version. Valid values: `5.5`, `5.6`, `5.7`. You can use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the supported versions.
+                     * 设置MySQL version. Valid values: `5.5`, `5.6`, `5.7`, and `8.0`. You can use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the supported instance versions.
+                     * @param _engineVersion MySQL version. Valid values: `5.5`, `5.6`, `5.7`, and `8.0`. You can use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the supported instance versions.
                      * 
                      */
                     void SetEngineVersion(const std::string& _engineVersion);
@@ -912,7 +912,7 @@ namespace TencentCloud
                     bool m_masterInstanceIdHasBeenSet;
 
                     /**
-                     * MySQL version. Valid values: `5.5`, `5.6`, `5.7`. You can use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the supported versions.
+                     * MySQL version. Valid values: `5.5`, `5.6`, `5.7`, and `8.0`. You can use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the supported instance versions.
                      */
                     std::string m_engineVersion;
                     bool m_engineVersionHasBeenSet;

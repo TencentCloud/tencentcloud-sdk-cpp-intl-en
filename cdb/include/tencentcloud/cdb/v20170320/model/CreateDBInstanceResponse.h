@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Short order ID
-                     * @return DealIds Short order ID
+                     * 获取Billing sub-order ID
+                     * @return DealIds Billing sub-order ID
                      * 
                      */
                     std::vector<std::string> GetDealIds() const;
@@ -74,7 +74,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Short order ID
+                     * Billing sub-order ID
                      */
                     std::vector<std::string> m_dealIds;
                     bool m_dealIdsHasBeenSet;

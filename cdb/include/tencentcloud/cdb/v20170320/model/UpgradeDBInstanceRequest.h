@@ -274,15 +274,15 @@ namespace TencentCloud
                     bool DeviceTypeHasBeenSet() const;
 
                     /**
-                     * 获取The number of CPU cores after the instance is upgraded. If this parameter is left empty, it will be subject to the `Memory` value.
-                     * @return Cpu The number of CPU cores after the instance is upgraded. If this parameter is left empty, it will be subject to the `Memory` value.
+                     * 获取The number of CPU cores after the instance is upgraded. If this parameter is left empty, the minimum value will be automatically filled based on the value specified by `Memory`.
+                     * @return Cpu The number of CPU cores after the instance is upgraded. If this parameter is left empty, the minimum value will be automatically filled based on the value specified by `Memory`.
                      * 
                      */
                     int64_t GetCpu() const;
 
                     /**
-                     * 设置The number of CPU cores after the instance is upgraded. If this parameter is left empty, it will be subject to the `Memory` value.
-                     * @param _cpu The number of CPU cores after the instance is upgraded. If this parameter is left empty, it will be subject to the `Memory` value.
+                     * 设置The number of CPU cores after the instance is upgraded. If this parameter is left empty, the minimum value will be automatically filled based on the value specified by `Memory`.
+                     * @param _cpu The number of CPU cores after the instance is upgraded. If this parameter is left empty, the minimum value will be automatically filled based on the value specified by `Memory`.
                      * 
                      */
                     void SetCpu(const int64_t& _cpu);
@@ -468,7 +468,7 @@ namespace TencentCloud
                     bool m_deviceTypeHasBeenSet;
 
                     /**
-                     * The number of CPU cores after the instance is upgraded. If this parameter is left empty, it will be subject to the `Memory` value.
+                     * The number of CPU cores after the instance is upgraded. If this parameter is left empty, the minimum value will be automatically filled based on the value specified by `Memory`.
                      */
                     int64_t m_cpu;
                     bool m_cpuHasBeenSet;

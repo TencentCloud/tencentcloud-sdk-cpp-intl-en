@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cdb/v20170320/model/AggregationCondition.h>
 #include <tencentcloud/cdb/v20170320/model/AuditLogFilter.h>
+#include <tencentcloud/cdb/v20170320/model/InstanceAuditLogFilters.h>
 
 
 namespace TencentCloud
@@ -129,15 +130,15 @@ namespace TencentCloud
                     bool AggregationConditionsHasBeenSet() const;
 
                     /**
-                     * 获取The result set of the audit log filtered by this condition is set as the analysis Log.
-                     * @return AuditLogFilter The result set of the audit log filtered by this condition is set as the analysis Log.
+                     * 获取This parameter is disused. The result set of the audit log filtered by this condition is set as the analysis log.
+                     * @return AuditLogFilter This parameter is disused. The result set of the audit log filtered by this condition is set as the analysis log.
                      * 
                      */
                     AuditLogFilter GetAuditLogFilter() const;
 
                     /**
-                     * 设置The result set of the audit log filtered by this condition is set as the analysis Log.
-                     * @param _auditLogFilter The result set of the audit log filtered by this condition is set as the analysis Log.
+                     * 设置This parameter is disused. The result set of the audit log filtered by this condition is set as the analysis log.
+                     * @param _auditLogFilter This parameter is disused. The result set of the audit log filtered by this condition is set as the analysis log.
                      * 
                      */
                     void SetAuditLogFilter(const AuditLogFilter& _auditLogFilter);
@@ -148,6 +149,27 @@ namespace TencentCloud
                      * 
                      */
                     bool AuditLogFilterHasBeenSet() const;
+
+                    /**
+                     * 获取The result set of the audit log filtered by this condition is set as the analysis Log.
+                     * @return LogFilter The result set of the audit log filtered by this condition is set as the analysis Log.
+                     * 
+                     */
+                    std::vector<InstanceAuditLogFilters> GetLogFilter() const;
+
+                    /**
+                     * 设置The result set of the audit log filtered by this condition is set as the analysis Log.
+                     * @param _logFilter The result set of the audit log filtered by this condition is set as the analysis Log.
+                     * 
+                     */
+                    void SetLogFilter(const std::vector<InstanceAuditLogFilters>& _logFilter);
+
+                    /**
+                     * 判断参数 LogFilter 是否已赋值
+                     * @return LogFilter 是否已赋值
+                     * 
+                     */
+                    bool LogFilterHasBeenSet() const;
 
                 private:
 
@@ -176,10 +198,16 @@ namespace TencentCloud
                     bool m_aggregationConditionsHasBeenSet;
 
                     /**
-                     * The result set of the audit log filtered by this condition is set as the analysis Log.
+                     * This parameter is disused. The result set of the audit log filtered by this condition is set as the analysis log.
                      */
                     AuditLogFilter m_auditLogFilter;
                     bool m_auditLogFilterHasBeenSet;
+
+                    /**
+                     * The result set of the audit log filtered by this condition is set as the analysis Log.
+                     */
+                    std::vector<InstanceAuditLogFilters> m_logFilter;
+                    bool m_logFilterHasBeenSet;
 
                 };
             }
