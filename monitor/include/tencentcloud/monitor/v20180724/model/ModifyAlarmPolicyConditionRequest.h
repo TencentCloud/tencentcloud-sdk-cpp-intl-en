@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool LogAlarmReqInfoHasBeenSet() const;
 
                     /**
-                     * 获取Template ID, which is dedicated to TMP.
-                     * @return NoticeIds Template ID, which is dedicated to TMP.
+                     * 获取Template ID, which is dedicated to TencentCloud Managed Service for Prometheus.
+                     * @return NoticeIds Template ID, which is dedicated to TencentCloud Managed Service for Prometheus.
                      * 
                      */
                     std::vector<std::string> GetNoticeIds() const;
 
                     /**
-                     * 设置Template ID, which is dedicated to TMP.
-                     * @param _noticeIds Template ID, which is dedicated to TMP.
+                     * 设置Template ID, which is dedicated to TencentCloud Managed Service for Prometheus.
+                     * @param _noticeIds Template ID, which is dedicated to TencentCloud Managed Service for Prometheus.
                      * 
                      */
                     void SetNoticeIds(const std::vector<std::string>& _noticeIds);
@@ -349,7 +349,7 @@ namespace TencentCloud
                     bool m_logAlarmReqInfoHasBeenSet;
 
                     /**
-                     * Template ID, which is dedicated to TMP.
+                     * Template ID, which is dedicated to TencentCloud Managed Service for Prometheus.
                      */
                     std::vector<std::string> m_noticeIds;
                     bool m_noticeIdsHasBeenSet;

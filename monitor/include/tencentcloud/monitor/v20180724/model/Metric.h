@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/monitor/v20180724/model/MetricConfig.h>
+#include <tencentcloud/monitor/v20180724/model/Operator.h>
 
 
 namespace TencentCloud
@@ -294,6 +295,56 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool ProductIdHasBeenSet() const;
 
+                    /**
+                     * 获取Matching operator
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @return Operators Matching operator
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<Operator> GetOperators() const;
+
+                    /**
+                     * 设置Matching operator
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @param _operators Matching operator
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetOperators(const std::vector<Operator>& _operators);
+
+                    /**
+                     * 判断参数 Operators 是否已赋值
+                     * @return Operators 是否已赋值
+                     * 
+                     */
+                    bool OperatorsHasBeenSet() const;
+
+                    /**
+                     * 获取Metric monitoring granularity
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @return Periods Metric monitoring granularity
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<int64_t> GetPeriods() const;
+
+                    /**
+                     * 设置Metric monitoring granularity
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @param _periods Metric monitoring granularity
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetPeriods(const std::vector<int64_t>& _periods);
+
+                    /**
+                     * 判断参数 Periods 是否已赋值
+                     * @return Periods 是否已赋值
+                     * 
+                     */
+                    bool PeriodsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -365,6 +416,20 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     int64_t m_productId;
                     bool m_productIdHasBeenSet;
+
+                    /**
+                     * Matching operator
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<Operator> m_operators;
+                    bool m_operatorsHasBeenSet;
+
+                    /**
+                     * Metric monitoring granularity
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<int64_t> m_periods;
+                    bool m_periodsHasBeenSet;
 
                 };
             }

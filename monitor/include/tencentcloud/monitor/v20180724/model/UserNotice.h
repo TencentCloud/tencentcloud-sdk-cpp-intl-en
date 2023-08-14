@@ -371,6 +371,31 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool WeekdayHasBeenSet() const;
 
+                    /**
+                     * 获取List of schedule IDs
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @return OnCallFormIDs List of schedule IDs
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<std::string> GetOnCallFormIDs() const;
+
+                    /**
+                     * 设置List of schedule IDs
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @param _onCallFormIDs List of schedule IDs
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetOnCallFormIDs(const std::vector<std::string>& _onCallFormIDs);
+
+                    /**
+                     * 判断参数 OnCallFormIDs 是否已赋值
+                     * @return OnCallFormIDs 是否已赋值
+                     * 
+                     */
+                    bool OnCallFormIDsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -463,6 +488,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     std::vector<int64_t> m_weekday;
                     bool m_weekdayHasBeenSet;
+
+                    /**
+                     * List of schedule IDs
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_onCallFormIDs;
+                    bool m_onCallFormIDsHasBeenSet;
 
                 };
             }

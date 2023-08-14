@@ -350,18 +350,18 @@ Note: If `1` is passed in for `NeedCorrespondence`, the relationship between a p
                     bool ProjectIdsHasBeenSet() const;
 
                     /**
-                     * 获取ID list of the notification template, which can be obtained by querying the notification template list.
+                     * 获取List of the notification template IDs, which can be obtained by querying the notification template list.
 It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1).
-                     * @return NoticeIds ID list of the notification template, which can be obtained by querying the notification template list.
+                     * @return NoticeIds List of the notification template IDs, which can be obtained by querying the notification template list.
 It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1).
                      * 
                      */
                     std::vector<std::string> GetNoticeIds() const;
 
                     /**
-                     * 设置ID list of the notification template, which can be obtained by querying the notification template list.
+                     * 设置List of the notification template IDs, which can be obtained by querying the notification template list.
 It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1).
-                     * @param _noticeIds ID list of the notification template, which can be obtained by querying the notification template list.
+                     * @param _noticeIds List of the notification template IDs, which can be obtained by querying the notification template list.
 It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1).
                      * 
                      */
@@ -522,15 +522,15 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
                     bool OneClickPolicyTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether the returned result filters policies associated with all objects. Valid values: `1` (Yes), `0` (No).
-                     * @return NotBindAll Whether the returned result filters policies associated with all objects. Valid values: `1` (Yes), `0` (No).
+                     * 获取Whether the returned result needs to filter policies associated with all objects. Valid values: `1` (Yes), `0` (No).
+                     * @return NotBindAll Whether the returned result needs to filter policies associated with all objects. Valid values: `1` (Yes), `0` (No).
                      * 
                      */
                     int64_t GetNotBindAll() const;
 
                     /**
-                     * 设置Whether the returned result filters policies associated with all objects. Valid values: `1` (Yes), `0` (No).
-                     * @param _notBindAll Whether the returned result filters policies associated with all objects. Valid values: `1` (Yes), `0` (No).
+                     * 设置Whether the returned result needs to filter policies associated with all objects. Valid values: `1` (Yes), `0` (No).
+                     * @param _notBindAll Whether the returned result needs to filter policies associated with all objects. Valid values: `1` (Yes), `0` (No).
                      * 
                      */
                     void SetNotBindAll(const int64_t& _notBindAll);
@@ -543,15 +543,15 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
                     bool NotBindAllHasBeenSet() const;
 
                     /**
-                     * 获取Whether the returned result filters policies associated with instance groups. Valid values: `1` (Yes), `0` (No).
-                     * @return NotInstanceGroup Whether the returned result filters policies associated with instance groups. Valid values: `1` (Yes), `0` (No).
+                     * 获取Whether the returned result needs to filter policies associated with instance groups. Valid values: `1` (Yes), `0` (No).
+                     * @return NotInstanceGroup Whether the returned result needs to filter policies associated with instance groups. Valid values: `1` (Yes), `0` (No).
                      * 
                      */
                     int64_t GetNotInstanceGroup() const;
 
                     /**
-                     * 设置Whether the returned result filters policies associated with instance groups. Valid values: `1` (Yes), `0` (No).
-                     * @param _notInstanceGroup Whether the returned result filters policies associated with instance groups. Valid values: `1` (Yes), `0` (No).
+                     * 设置Whether the returned result needs to filter policies associated with instance groups. Valid values: `1` (Yes), `0` (No).
+                     * @param _notInstanceGroup Whether the returned result needs to filter policies associated with instance groups. Valid values: `1` (Yes), `0` (No).
                      * 
                      */
                     void SetNotInstanceGroup(const int64_t& _notInstanceGroup);
@@ -583,6 +583,48 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
                      * 
                      */
                     bool TagsHasBeenSet() const;
+
+                    /**
+                     * 获取ID of the TencentCloud Managed Service for Prometheus instance, which is used for customizing a metric policy.
+                     * @return PromInsId ID of the TencentCloud Managed Service for Prometheus instance, which is used for customizing a metric policy.
+                     * 
+                     */
+                    std::string GetPromInsId() const;
+
+                    /**
+                     * 设置ID of the TencentCloud Managed Service for Prometheus instance, which is used for customizing a metric policy.
+                     * @param _promInsId ID of the TencentCloud Managed Service for Prometheus instance, which is used for customizing a metric policy.
+                     * 
+                     */
+                    void SetPromInsId(const std::string& _promInsId);
+
+                    /**
+                     * 判断参数 PromInsId 是否已赋值
+                     * @return PromInsId 是否已赋值
+                     * 
+                     */
+                    bool PromInsIdHasBeenSet() const;
+
+                    /**
+                     * 获取Search by schedule
+                     * @return ReceiverOnCallFormIDs Search by schedule
+                     * 
+                     */
+                    std::vector<std::string> GetReceiverOnCallFormIDs() const;
+
+                    /**
+                     * 设置Search by schedule
+                     * @param _receiverOnCallFormIDs Search by schedule
+                     * 
+                     */
+                    void SetReceiverOnCallFormIDs(const std::vector<std::string>& _receiverOnCallFormIDs);
+
+                    /**
+                     * 判断参数 ReceiverOnCallFormIDs 是否已赋值
+                     * @return ReceiverOnCallFormIDs 是否已赋值
+                     * 
+                     */
+                    bool ReceiverOnCallFormIDsHasBeenSet() const;
 
                 private:
 
@@ -673,7 +715,7 @@ Note: If `1` is passed in for `NeedCorrespondence`, the relationship between a p
                     bool m_projectIdsHasBeenSet;
 
                     /**
-                     * ID list of the notification template, which can be obtained by querying the notification template list.
+                     * List of the notification template IDs, which can be obtained by querying the notification template list.
 It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1).
                      */
                     std::vector<std::string> m_noticeIds;
@@ -722,13 +764,13 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
                     bool m_oneClickPolicyTypeHasBeenSet;
 
                     /**
-                     * Whether the returned result filters policies associated with all objects. Valid values: `1` (Yes), `0` (No).
+                     * Whether the returned result needs to filter policies associated with all objects. Valid values: `1` (Yes), `0` (No).
                      */
                     int64_t m_notBindAll;
                     bool m_notBindAllHasBeenSet;
 
                     /**
-                     * Whether the returned result filters policies associated with instance groups. Valid values: `1` (Yes), `0` (No).
+                     * Whether the returned result needs to filter policies associated with instance groups. Valid values: `1` (Yes), `0` (No).
                      */
                     int64_t m_notInstanceGroup;
                     bool m_notInstanceGroupHasBeenSet;
@@ -738,6 +780,18 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
+
+                    /**
+                     * ID of the TencentCloud Managed Service for Prometheus instance, which is used for customizing a metric policy.
+                     */
+                    std::string m_promInsId;
+                    bool m_promInsIdHasBeenSet;
+
+                    /**
+                     * Search by schedule
+                     */
+                    std::vector<std::string> m_receiverOnCallFormIDs;
+                    bool m_receiverOnCallFormIDsHasBeenSet;
 
                 };
             }

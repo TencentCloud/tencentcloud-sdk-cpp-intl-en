@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_MONITOR_V20180724_MODEL_PUTMONITORDATARESPONSE_H_
-#define TENCENTCLOUD_MONITOR_V20180724_MODEL_PUTMONITORDATARESPONSE_H_
+#ifndef TENCENTCLOUD_MONITOR_V20180724_MODEL_DESCRIBECLUSTERAGENTCREATINGPROGRESSRESPONSE_H_
+#define TENCENTCLOUD_MONITOR_V20180724_MODEL_DESCRIBECLUSTERAGENTCREATINGPROGRESSRESPONSE_H_
 
 #include <string>
 #include <vector>
@@ -32,13 +32,13 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * PutMonitorData response structure.
+                * DescribeClusterAgentCreatingProgress response structure.
                 */
-                class PutMonitorDataResponse : public AbstractModel
+                class DescribeClusterAgentCreatingProgressResponse : public AbstractModel
                 {
                 public:
-                    PutMonitorDataResponse();
-                    ~PutMonitorDataResponse() = default;
+                    DescribeClusterAgentCreatingProgressResponse();
+                    ~DescribeClusterAgentCreatingProgressResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
@@ -51,4 +51,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_MONITOR_V20180724_MODEL_PUTMONITORDATARESPONSE_H_
+#endif // !TENCENTCLOUD_MONITOR_V20180724_MODEL_DESCRIBECLUSTERAGENTCREATINGPROGRESSRESPONSE_H_
