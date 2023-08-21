@@ -35,6 +35,8 @@
 #include <tencentcloud/cynosdb/v20190107/model/CloseAuditServiceResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/CloseClusterPasswordComplexityRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/CloseClusterPasswordComplexityResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/CloseProxyRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/CloseProxyResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/CloseWanRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/CloseWanResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/CopyClusterPasswordComplexityRequest.h>
@@ -51,6 +53,10 @@
 #include <tencentcloud/cynosdb/v20190107/model/CreateClustersResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/CreateParamTemplateRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/CreateParamTemplateResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/CreateProxyRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/CreateProxyResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/CreateProxyEndPointRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/CreateProxyEndPointResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/CreateResourcePackageRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/CreateResourcePackageResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/DeleteAccountsRequest.h>
@@ -119,6 +125,12 @@
 #include <tencentcloud/cynosdb/v20190107/model/DescribeParamTemplatesResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeProjectSecurityGroupsRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeProjectSecurityGroupsResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/DescribeProxiesRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/DescribeProxiesResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/DescribeProxyNodesRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/DescribeProxyNodesResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/DescribeProxySpecsRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/DescribeProxySpecsResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeResourcePackageDetailRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeResourcePackageDetailResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeResourcePackageListRequest.h>
@@ -131,6 +143,8 @@
 #include <tencentcloud/cynosdb/v20190107/model/DescribeRollbackTimeRangeResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeRollbackTimeValidityRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeRollbackTimeValidityResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/DescribeSupportProxyVersionRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/DescribeSupportProxyVersionResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeZonesRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeZonesResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/ExportInstanceErrorLogsRequest.h>
@@ -181,6 +195,10 @@
 #include <tencentcloud/cynosdb/v20190107/model/ModifyMaintainPeriodConfigResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/ModifyParamTemplateRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/ModifyParamTemplateResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/ModifyProxyDescRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/ModifyProxyDescResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/ModifyProxyRwSplitRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/ModifyProxyRwSplitResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/ModifyResourcePackageClustersRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/ModifyResourcePackageClustersResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/ModifyResourcePackageNameRequest.h>
@@ -195,6 +213,8 @@
 #include <tencentcloud/cynosdb/v20190107/model/OpenAuditServiceResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/OpenClusterPasswordComplexityRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/OpenClusterPasswordComplexityResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/OpenClusterReadOnlyInstanceGroupAccessRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/OpenClusterReadOnlyInstanceGroupAccessResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/OpenReadOnlyInstanceExclusiveAccessRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/OpenReadOnlyInstanceExclusiveAccessResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/OpenWanRequest.h>
@@ -203,6 +223,8 @@
 #include <tencentcloud/cynosdb/v20190107/model/PauseServerlessResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/RefundResourcePackageRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/RefundResourcePackageResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/ReloadBalanceProxyNodeRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/ReloadBalanceProxyNodeResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/RemoveClusterSlaveZoneRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/RemoveClusterSlaveZoneResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/ResetAccountPasswordRequest.h>
@@ -229,6 +251,10 @@
 #include <tencentcloud/cynosdb/v20190107/model/UpgradeClusterVersionResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/UpgradeInstanceRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/UpgradeInstanceResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/UpgradeProxyRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/UpgradeProxyResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/UpgradeProxyVersionRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/UpgradeProxyVersionResponse.h>
 
 
 namespace TencentCloud
@@ -261,6 +287,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CloseClusterPasswordComplexityResponse> CloseClusterPasswordComplexityOutcome;
                 typedef std::future<CloseClusterPasswordComplexityOutcome> CloseClusterPasswordComplexityOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::CloseClusterPasswordComplexityRequest&, CloseClusterPasswordComplexityOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CloseClusterPasswordComplexityAsyncHandler;
+                typedef Outcome<Core::Error, Model::CloseProxyResponse> CloseProxyOutcome;
+                typedef std::future<CloseProxyOutcome> CloseProxyOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::CloseProxyRequest&, CloseProxyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CloseProxyAsyncHandler;
                 typedef Outcome<Core::Error, Model::CloseWanResponse> CloseWanOutcome;
                 typedef std::future<CloseWanOutcome> CloseWanOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::CloseWanRequest&, CloseWanOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CloseWanAsyncHandler;
@@ -285,6 +314,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateParamTemplateResponse> CreateParamTemplateOutcome;
                 typedef std::future<CreateParamTemplateOutcome> CreateParamTemplateOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::CreateParamTemplateRequest&, CreateParamTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateParamTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateProxyResponse> CreateProxyOutcome;
+                typedef std::future<CreateProxyOutcome> CreateProxyOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::CreateProxyRequest&, CreateProxyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateProxyAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateProxyEndPointResponse> CreateProxyEndPointOutcome;
+                typedef std::future<CreateProxyEndPointOutcome> CreateProxyEndPointOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::CreateProxyEndPointRequest&, CreateProxyEndPointOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateProxyEndPointAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateResourcePackageResponse> CreateResourcePackageOutcome;
                 typedef std::future<CreateResourcePackageOutcome> CreateResourcePackageOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::CreateResourcePackageRequest&, CreateResourcePackageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateResourcePackageAsyncHandler;
@@ -387,6 +422,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeProjectSecurityGroupsResponse> DescribeProjectSecurityGroupsOutcome;
                 typedef std::future<DescribeProjectSecurityGroupsOutcome> DescribeProjectSecurityGroupsOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::DescribeProjectSecurityGroupsRequest&, DescribeProjectSecurityGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeProjectSecurityGroupsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeProxiesResponse> DescribeProxiesOutcome;
+                typedef std::future<DescribeProxiesOutcome> DescribeProxiesOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::DescribeProxiesRequest&, DescribeProxiesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeProxiesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeProxyNodesResponse> DescribeProxyNodesOutcome;
+                typedef std::future<DescribeProxyNodesOutcome> DescribeProxyNodesOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::DescribeProxyNodesRequest&, DescribeProxyNodesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeProxyNodesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeProxySpecsResponse> DescribeProxySpecsOutcome;
+                typedef std::future<DescribeProxySpecsOutcome> DescribeProxySpecsOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::DescribeProxySpecsRequest&, DescribeProxySpecsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeProxySpecsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeResourcePackageDetailResponse> DescribeResourcePackageDetailOutcome;
                 typedef std::future<DescribeResourcePackageDetailOutcome> DescribeResourcePackageDetailOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::DescribeResourcePackageDetailRequest&, DescribeResourcePackageDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeResourcePackageDetailAsyncHandler;
@@ -405,6 +449,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeRollbackTimeValidityResponse> DescribeRollbackTimeValidityOutcome;
                 typedef std::future<DescribeRollbackTimeValidityOutcome> DescribeRollbackTimeValidityOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::DescribeRollbackTimeValidityRequest&, DescribeRollbackTimeValidityOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRollbackTimeValidityAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeSupportProxyVersionResponse> DescribeSupportProxyVersionOutcome;
+                typedef std::future<DescribeSupportProxyVersionOutcome> DescribeSupportProxyVersionOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::DescribeSupportProxyVersionRequest&, DescribeSupportProxyVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSupportProxyVersionAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeZonesResponse> DescribeZonesOutcome;
                 typedef std::future<DescribeZonesOutcome> DescribeZonesOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::DescribeZonesRequest&, DescribeZonesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeZonesAsyncHandler;
@@ -480,6 +527,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyParamTemplateResponse> ModifyParamTemplateOutcome;
                 typedef std::future<ModifyParamTemplateOutcome> ModifyParamTemplateOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::ModifyParamTemplateRequest&, ModifyParamTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyParamTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyProxyDescResponse> ModifyProxyDescOutcome;
+                typedef std::future<ModifyProxyDescOutcome> ModifyProxyDescOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::ModifyProxyDescRequest&, ModifyProxyDescOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyProxyDescAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyProxyRwSplitResponse> ModifyProxyRwSplitOutcome;
+                typedef std::future<ModifyProxyRwSplitOutcome> ModifyProxyRwSplitOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::ModifyProxyRwSplitRequest&, ModifyProxyRwSplitOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyProxyRwSplitAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyResourcePackageClustersResponse> ModifyResourcePackageClustersOutcome;
                 typedef std::future<ModifyResourcePackageClustersOutcome> ModifyResourcePackageClustersOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::ModifyResourcePackageClustersRequest&, ModifyResourcePackageClustersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyResourcePackageClustersAsyncHandler;
@@ -501,6 +554,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::OpenClusterPasswordComplexityResponse> OpenClusterPasswordComplexityOutcome;
                 typedef std::future<OpenClusterPasswordComplexityOutcome> OpenClusterPasswordComplexityOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::OpenClusterPasswordComplexityRequest&, OpenClusterPasswordComplexityOutcome, const std::shared_ptr<const AsyncCallerContext>&)> OpenClusterPasswordComplexityAsyncHandler;
+                typedef Outcome<Core::Error, Model::OpenClusterReadOnlyInstanceGroupAccessResponse> OpenClusterReadOnlyInstanceGroupAccessOutcome;
+                typedef std::future<OpenClusterReadOnlyInstanceGroupAccessOutcome> OpenClusterReadOnlyInstanceGroupAccessOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::OpenClusterReadOnlyInstanceGroupAccessRequest&, OpenClusterReadOnlyInstanceGroupAccessOutcome, const std::shared_ptr<const AsyncCallerContext>&)> OpenClusterReadOnlyInstanceGroupAccessAsyncHandler;
                 typedef Outcome<Core::Error, Model::OpenReadOnlyInstanceExclusiveAccessResponse> OpenReadOnlyInstanceExclusiveAccessOutcome;
                 typedef std::future<OpenReadOnlyInstanceExclusiveAccessOutcome> OpenReadOnlyInstanceExclusiveAccessOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::OpenReadOnlyInstanceExclusiveAccessRequest&, OpenReadOnlyInstanceExclusiveAccessOutcome, const std::shared_ptr<const AsyncCallerContext>&)> OpenReadOnlyInstanceExclusiveAccessAsyncHandler;
@@ -513,6 +569,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::RefundResourcePackageResponse> RefundResourcePackageOutcome;
                 typedef std::future<RefundResourcePackageOutcome> RefundResourcePackageOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::RefundResourcePackageRequest&, RefundResourcePackageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RefundResourcePackageAsyncHandler;
+                typedef Outcome<Core::Error, Model::ReloadBalanceProxyNodeResponse> ReloadBalanceProxyNodeOutcome;
+                typedef std::future<ReloadBalanceProxyNodeOutcome> ReloadBalanceProxyNodeOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::ReloadBalanceProxyNodeRequest&, ReloadBalanceProxyNodeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ReloadBalanceProxyNodeAsyncHandler;
                 typedef Outcome<Core::Error, Model::RemoveClusterSlaveZoneResponse> RemoveClusterSlaveZoneOutcome;
                 typedef std::future<RemoveClusterSlaveZoneOutcome> RemoveClusterSlaveZoneOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::RemoveClusterSlaveZoneRequest&, RemoveClusterSlaveZoneOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RemoveClusterSlaveZoneAsyncHandler;
@@ -552,6 +611,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::UpgradeInstanceResponse> UpgradeInstanceOutcome;
                 typedef std::future<UpgradeInstanceOutcome> UpgradeInstanceOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::UpgradeInstanceRequest&, UpgradeInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpgradeInstanceAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpgradeProxyResponse> UpgradeProxyOutcome;
+                typedef std::future<UpgradeProxyOutcome> UpgradeProxyOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::UpgradeProxyRequest&, UpgradeProxyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpgradeProxyAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpgradeProxyVersionResponse> UpgradeProxyVersionOutcome;
+                typedef std::future<UpgradeProxyVersionOutcome> UpgradeProxyVersionOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::UpgradeProxyVersionRequest&, UpgradeProxyVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpgradeProxyVersionAsyncHandler;
 
 
 
@@ -608,6 +673,15 @@ namespace TencentCloud
                 CloseClusterPasswordComplexityOutcome CloseClusterPasswordComplexity(const Model::CloseClusterPasswordComplexityRequest &request);
                 void CloseClusterPasswordComplexityAsync(const Model::CloseClusterPasswordComplexityRequest& request, const CloseClusterPasswordComplexityAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CloseClusterPasswordComplexityOutcomeCallable CloseClusterPasswordComplexityCallable(const Model::CloseClusterPasswordComplexityRequest& request);
+
+                /**
+                 *This API is used to disable u200dthe database proxy.
+                 * @param req CloseProxyRequest
+                 * @return CloseProxyOutcome
+                 */
+                CloseProxyOutcome CloseProxy(const Model::CloseProxyRequest &request);
+                void CloseProxyAsync(const Model::CloseProxyRequest& request, const CloseProxyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CloseProxyOutcomeCallable CloseProxyCallable(const Model::CloseProxyRequest& request);
 
                 /**
                  *This API is used to disable the public network.
@@ -680,6 +754,24 @@ namespace TencentCloud
                 CreateParamTemplateOutcome CreateParamTemplate(const Model::CreateParamTemplateRequest &request);
                 void CreateParamTemplateAsync(const Model::CreateParamTemplateRequest& request, const CreateParamTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateParamTemplateOutcomeCallable CreateParamTemplateCallable(const Model::CreateParamTemplateRequest& request);
+
+                /**
+                 *This API is used to create a database proxy.
+                 * @param req CreateProxyRequest
+                 * @return CreateProxyOutcome
+                 */
+                CreateProxyOutcome CreateProxy(const Model::CreateProxyRequest &request);
+                void CreateProxyAsync(const Model::CreateProxyRequest& request, const CreateProxyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateProxyOutcomeCallable CreateProxyCallable(const Model::CreateProxyRequest& request);
+
+                /**
+                 *This API is used to create a database proxy connection.
+                 * @param req CreateProxyEndPointRequest
+                 * @return CreateProxyEndPointOutcome
+                 */
+                CreateProxyEndPointOutcome CreateProxyEndPoint(const Model::CreateProxyEndPointRequest &request);
+                void CreateProxyEndPointAsync(const Model::CreateProxyEndPointRequest& request, const CreateProxyEndPointAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateProxyEndPointOutcomeCallable CreateProxyEndPointCallable(const Model::CreateProxyEndPointRequest& request);
 
                 /**
                  *This API is used to purchase a resource pack.
@@ -988,6 +1080,33 @@ namespace TencentCloud
                 DescribeProjectSecurityGroupsOutcomeCallable DescribeProjectSecurityGroupsCallable(const Model::DescribeProjectSecurityGroupsRequest& request);
 
                 /**
+                 *This API is used to query the list of database proxies.
+                 * @param req DescribeProxiesRequest
+                 * @return DescribeProxiesOutcome
+                 */
+                DescribeProxiesOutcome DescribeProxies(const Model::DescribeProxiesRequest &request);
+                void DescribeProxiesAsync(const Model::DescribeProxiesRequest& request, const DescribeProxiesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeProxiesOutcomeCallable DescribeProxiesCallable(const Model::DescribeProxiesRequest& request);
+
+                /**
+                 *This API is used to query the list of proxy nodes.
+                 * @param req DescribeProxyNodesRequest
+                 * @return DescribeProxyNodesOutcome
+                 */
+                DescribeProxyNodesOutcome DescribeProxyNodes(const Model::DescribeProxyNodesRequest &request);
+                void DescribeProxyNodesAsync(const Model::DescribeProxyNodesRequest& request, const DescribeProxyNodesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeProxyNodesOutcomeCallable DescribeProxyNodesCallable(const Model::DescribeProxyNodesRequest& request);
+
+                /**
+                 *This API is used to query the specifications of a database proxy.
+                 * @param req DescribeProxySpecsRequest
+                 * @return DescribeProxySpecsOutcome
+                 */
+                DescribeProxySpecsOutcome DescribeProxySpecs(const Model::DescribeProxySpecsRequest &request);
+                void DescribeProxySpecsAsync(const Model::DescribeProxySpecsRequest& request, const DescribeProxySpecsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeProxySpecsOutcomeCallable DescribeProxySpecsCallable(const Model::DescribeProxySpecsRequest& request);
+
+                /**
                  *This API is used to query the usage details of a resource pack.
                  * @param req DescribeResourcePackageDetailRequest
                  * @return DescribeResourcePackageDetailOutcome
@@ -1040,6 +1159,15 @@ namespace TencentCloud
                 DescribeRollbackTimeValidityOutcome DescribeRollbackTimeValidity(const Model::DescribeRollbackTimeValidityRequest &request);
                 void DescribeRollbackTimeValidityAsync(const Model::DescribeRollbackTimeValidityRequest& request, const DescribeRollbackTimeValidityAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeRollbackTimeValidityOutcomeCallable DescribeRollbackTimeValidityCallable(const Model::DescribeRollbackTimeValidityRequest& request);
+
+                /**
+                 *This API is used to query the supported database proxy versions.
+                 * @param req DescribeSupportProxyVersionRequest
+                 * @return DescribeSupportProxyVersionOutcome
+                 */
+                DescribeSupportProxyVersionOutcome DescribeSupportProxyVersion(const Model::DescribeSupportProxyVersionRequest &request);
+                void DescribeSupportProxyVersionAsync(const Model::DescribeSupportProxyVersionRequest& request, const DescribeSupportProxyVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeSupportProxyVersionOutcomeCallable DescribeSupportProxyVersionCallable(const Model::DescribeSupportProxyVersionRequest& request);
 
                 /**
                  *This API is used to query the AZ information in a purchasable region.
@@ -1267,6 +1395,24 @@ namespace TencentCloud
                 ModifyParamTemplateOutcomeCallable ModifyParamTemplateCallable(const Model::ModifyParamTemplateRequest& request);
 
                 /**
+                 *This API is used to modify the description of a database proxy.
+                 * @param req ModifyProxyDescRequest
+                 * @return ModifyProxyDescOutcome
+                 */
+                ModifyProxyDescOutcome ModifyProxyDesc(const Model::ModifyProxyDescRequest &request);
+                void ModifyProxyDescAsync(const Model::ModifyProxyDescRequest& request, const ModifyProxyDescAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyProxyDescOutcomeCallable ModifyProxyDescCallable(const Model::ModifyProxyDescRequest& request);
+
+                /**
+                 *This API is used to configure the read/write separation of a database proxy.
+                 * @param req ModifyProxyRwSplitRequest
+                 * @return ModifyProxyRwSplitOutcome
+                 */
+                ModifyProxyRwSplitOutcome ModifyProxyRwSplit(const Model::ModifyProxyRwSplitRequest &request);
+                void ModifyProxyRwSplitAsync(const Model::ModifyProxyRwSplitRequest& request, const ModifyProxyRwSplitAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyProxyRwSplitOutcomeCallable ModifyProxyRwSplitCallable(const Model::ModifyProxyRwSplitRequest& request);
+
+                /**
                  *This API is used to bind a resource pack to a cluster.
                  * @param req ModifyResourcePackageClustersRequest
                  * @return ModifyResourcePackageClustersOutcome
@@ -1330,6 +1476,15 @@ namespace TencentCloud
                 OpenClusterPasswordComplexityOutcomeCallable OpenClusterPasswordComplexityCallable(const Model::OpenClusterPasswordComplexityRequest& request);
 
                 /**
+                 *This API is used to enable the access to read-only instance group.
+                 * @param req OpenClusterReadOnlyInstanceGroupAccessRequest
+                 * @return OpenClusterReadOnlyInstanceGroupAccessOutcome
+                 */
+                OpenClusterReadOnlyInstanceGroupAccessOutcome OpenClusterReadOnlyInstanceGroupAccess(const Model::OpenClusterReadOnlyInstanceGroupAccessRequest &request);
+                void OpenClusterReadOnlyInstanceGroupAccessAsync(const Model::OpenClusterReadOnlyInstanceGroupAccessRequest& request, const OpenClusterReadOnlyInstanceGroupAccessAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                OpenClusterReadOnlyInstanceGroupAccessOutcomeCallable OpenClusterReadOnlyInstanceGroupAccessCallable(const Model::OpenClusterReadOnlyInstanceGroupAccessRequest& request);
+
+                /**
                  *This API is used to enable the dedicated access group for a read-only instance.
                  * @param req OpenReadOnlyInstanceExclusiveAccessRequest
                  * @return OpenReadOnlyInstanceExclusiveAccessOutcome
@@ -1364,6 +1519,15 @@ namespace TencentCloud
                 RefundResourcePackageOutcome RefundResourcePackage(const Model::RefundResourcePackageRequest &request);
                 void RefundResourcePackageAsync(const Model::RefundResourcePackageRequest& request, const RefundResourcePackageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 RefundResourcePackageOutcomeCallable RefundResourcePackageCallable(const Model::RefundResourcePackageRequest& request);
+
+                /**
+                 *This API is used to rebalance the load on the database proxy.
+                 * @param req ReloadBalanceProxyNodeRequest
+                 * @return ReloadBalanceProxyNodeOutcome
+                 */
+                ReloadBalanceProxyNodeOutcome ReloadBalanceProxyNode(const Model::ReloadBalanceProxyNodeRequest &request);
+                void ReloadBalanceProxyNodeAsync(const Model::ReloadBalanceProxyNodeRequest& request, const ReloadBalanceProxyNodeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ReloadBalanceProxyNodeOutcomeCallable ReloadBalanceProxyNodeCallable(const Model::ReloadBalanceProxyNodeRequest& request);
 
                 /**
                  *This API is used to delete the replica AZ.
@@ -1481,6 +1645,24 @@ namespace TencentCloud
                 UpgradeInstanceOutcome UpgradeInstance(const Model::UpgradeInstanceRequest &request);
                 void UpgradeInstanceAsync(const Model::UpgradeInstanceRequest& request, const UpgradeInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 UpgradeInstanceOutcomeCallable UpgradeInstanceCallable(const Model::UpgradeInstanceRequest& request);
+
+                /**
+                 *This API is used to upgrade the configuration of a database proxy.
+                 * @param req UpgradeProxyRequest
+                 * @return UpgradeProxyOutcome
+                 */
+                UpgradeProxyOutcome UpgradeProxy(const Model::UpgradeProxyRequest &request);
+                void UpgradeProxyAsync(const Model::UpgradeProxyRequest& request, const UpgradeProxyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpgradeProxyOutcomeCallable UpgradeProxyCallable(const Model::UpgradeProxyRequest& request);
+
+                /**
+                 *This API is used to upgrade the version of a database proxy.
+                 * @param req UpgradeProxyVersionRequest
+                 * @return UpgradeProxyVersionOutcome
+                 */
+                UpgradeProxyVersionOutcome UpgradeProxyVersion(const Model::UpgradeProxyVersionRequest &request);
+                void UpgradeProxyVersionAsync(const Model::UpgradeProxyVersionRequest& request, const UpgradeProxyVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpgradeProxyVersionOutcomeCallable UpgradeProxyVersionCallable(const Model::UpgradeProxyVersionRequest& request);
 
             };
         }

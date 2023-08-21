@@ -176,6 +176,27 @@ This parameter has been disused.
                      */
                     bool OffsetHasBeenSet() const;
 
+                    /**
+                     * 获取Keywords for fuzzy search (match `AccountName` and `AccountHost` at the same time), which supports regex. The union results will be returned.
+                     * @return AccountRegular Keywords for fuzzy search (match `AccountName` and `AccountHost` at the same time), which supports regex. The union results will be returned.
+                     * 
+                     */
+                    std::string GetAccountRegular() const;
+
+                    /**
+                     * 设置Keywords for fuzzy search (match `AccountName` and `AccountHost` at the same time), which supports regex. The union results will be returned.
+                     * @param _accountRegular Keywords for fuzzy search (match `AccountName` and `AccountHost` at the same time), which supports regex. The union results will be returned.
+                     * 
+                     */
+                    void SetAccountRegular(const std::string& _accountRegular);
+
+                    /**
+                     * 判断参数 AccountRegular 是否已赋值
+                     * @return AccountRegular 是否已赋值
+                     * 
+                     */
+                    bool AccountRegularHasBeenSet() const;
+
                 private:
 
                     /**
@@ -215,6 +236,12 @@ This parameter has been disused.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
+
+                    /**
+                     * Keywords for fuzzy search (match `AccountName` and `AccountHost` at the same time), which supports regex. The union results will be returned.
+                     */
+                    std::string m_accountRegular;
+                    bool m_accountRegularHasBeenSet;
 
                 };
             }

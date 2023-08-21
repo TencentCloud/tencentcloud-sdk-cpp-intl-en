@@ -235,6 +235,102 @@ namespace TencentCloud
                      */
                     bool InstanceRoleHasBeenSet() const;
 
+                    /**
+                     * 获取Execution start time in seconds from 0:00	
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @return MaintainStartTime Execution start time in seconds from 0:00	
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetMaintainStartTime() const;
+
+                    /**
+                     * 设置Execution start time in seconds from 0:00	
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @param _maintainStartTime Execution start time in seconds from 0:00	
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetMaintainStartTime(const int64_t& _maintainStartTime);
+
+                    /**
+                     * 判断参数 MaintainStartTime 是否已赋值
+                     * @return MaintainStartTime 是否已赋值
+                     * 
+                     */
+                    bool MaintainStartTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Duration in seconds	
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @return MaintainDuration Duration in seconds	
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetMaintainDuration() const;
+
+                    /**
+                     * 设置Duration in seconds	
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @param _maintainDuration Duration in seconds	
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetMaintainDuration(const int64_t& _maintainDuration);
+
+                    /**
+                     * 判断参数 MaintainDuration 是否已赋值
+                     * @return MaintainDuration 是否已赋值
+                     * 
+                     */
+                    bool MaintainDurationHasBeenSet() const;
+
+                    /**
+                     * 获取Execution time. Valid values: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, Sat`, `Sun`.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @return MaintainWeekDays Execution time. Valid values: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, Sat`, `Sun`.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<std::string> GetMaintainWeekDays() const;
+
+                    /**
+                     * 设置Execution time. Valid values: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, Sat`, `Sun`.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @param _maintainWeekDays Execution time. Valid values: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, Sat`, `Sun`.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetMaintainWeekDays(const std::vector<std::string>& _maintainWeekDays);
+
+                    /**
+                     * 判断参数 MaintainWeekDays 是否已赋值
+                     * @return MaintainWeekDays 是否已赋值
+                     * 
+                     */
+                    bool MaintainWeekDaysHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ServerlessStatus 
+                     * 
+                     */
+                    std::string GetServerlessStatus() const;
+
+                    /**
+                     * 设置
+                     * @param _serverlessStatus 
+                     * 
+                     */
+                    void SetServerlessStatus(const std::string& _serverlessStatus);
+
+                    /**
+                     * 判断参数 ServerlessStatus 是否已赋值
+                     * @return ServerlessStatus 是否已赋值
+                     * 
+                     */
+                    bool ServerlessStatusHasBeenSet() const;
+
                 private:
 
                     /**
@@ -290,6 +386,33 @@ namespace TencentCloud
                      */
                     std::string m_instanceRole;
                     bool m_instanceRoleHasBeenSet;
+
+                    /**
+                     * Execution start time in seconds from 0:00	
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_maintainStartTime;
+                    bool m_maintainStartTimeHasBeenSet;
+
+                    /**
+                     * Duration in seconds	
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_maintainDuration;
+                    bool m_maintainDurationHasBeenSet;
+
+                    /**
+                     * Execution time. Valid values: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, Sat`, `Sun`.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_maintainWeekDays;
+                    bool m_maintainWeekDaysHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_serverlessStatus;
+                    bool m_serverlessStatusHasBeenSet;
 
                 };
             }

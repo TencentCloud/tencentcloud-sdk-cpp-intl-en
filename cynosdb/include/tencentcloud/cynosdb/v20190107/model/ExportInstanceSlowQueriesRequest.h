@@ -231,6 +231,48 @@ namespace TencentCloud
                      */
                     bool FileTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Sorting field. Valid values: u200d`QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
+                     * @return OrderBy Sorting field. Valid values: u200d`QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
+                     * 
+                     */
+                    std::string GetOrderBy() const;
+
+                    /**
+                     * 设置Sorting field. Valid values: u200d`QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
+                     * @param _orderBy Sorting field. Valid values: u200d`QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
+                     * 
+                     */
+                    void SetOrderBy(const std::string& _orderBy);
+
+                    /**
+                     * 判断参数 OrderBy 是否已赋值
+                     * @return OrderBy 是否已赋值
+                     * 
+                     */
+                    bool OrderByHasBeenSet() const;
+
+                    /**
+                     * 获取Sorting order. Valid values: `asc`, `desc`.
+                     * @return OrderByType Sorting order. Valid values: `asc`, `desc`.
+                     * 
+                     */
+                    std::string GetOrderByType() const;
+
+                    /**
+                     * 设置Sorting order. Valid values: `asc`, `desc`.
+                     * @param _orderByType Sorting order. Valid values: `asc`, `desc`.
+                     * 
+                     */
+                    void SetOrderByType(const std::string& _orderByType);
+
+                    /**
+                     * 判断参数 OrderByType 是否已赋值
+                     * @return OrderByType 是否已赋值
+                     * 
+                     */
+                    bool OrderByTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -286,6 +328,18 @@ namespace TencentCloud
                      */
                     std::string m_fileType;
                     bool m_fileTypeHasBeenSet;
+
+                    /**
+                     * Sorting field. Valid values: u200d`QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
+                     */
+                    std::string m_orderBy;
+                    bool m_orderByHasBeenSet;
+
+                    /**
+                     * Sorting order. Valid values: `asc`, `desc`.
+                     */
+                    std::string m_orderByType;
+                    bool m_orderByTypeHasBeenSet;
 
                 };
             }

@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool PackageRegionHasBeenSet() const;
 
                     /**
-                     * 获取Resource pack type. Valid values:  `CCU` (compute resource pack), `DISK` (storage resource pack).
-                     * @return PackageType Resource pack type. Valid values:  `CCU` (compute resource pack), `DISK` (storage resource pack).
+                     * 获取Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
+                     * @return PackageType Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
                      * 
                      */
                     std::string GetPackageType() const;
 
                     /**
-                     * 设置Resource pack type. Valid values:  `CCU` (compute resource pack), `DISK` (storage resource pack).
-                     * @param _packageType Resource pack type. Valid values:  `CCU` (compute resource pack), `DISK` (storage resource pack).
+                     * 设置Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
+                     * @param _packageType Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
                      * 
                      */
                     void SetPackageType(const std::string& _packageType);
@@ -225,7 +225,7 @@ namespace TencentCloud
                     bool m_packageRegionHasBeenSet;
 
                     /**
-                     * Resource pack type. Valid values:  `CCU` (compute resource pack), `DISK` (storage resource pack).
+                     * Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
                      */
                     std::string m_packageType;
                     bool m_packageTypeHasBeenSet;

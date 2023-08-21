@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool EngineVersionHasBeenSet() const;
 
                     /**
-                     * 获取The description of a template
-                     * @return TemplateDescription The description of a template
+                     * 获取Template description
+                     * @return TemplateDescription Template description
                      * 
                      */
                     std::string GetTemplateDescription() const;
 
                     /**
-                     * 设置The description of a template
-                     * @param _templateDescription The description of a template
+                     * 设置Template description
+                     * @param _templateDescription Template description
                      * 
                      */
                     void SetTemplateDescription(const std::string& _templateDescription);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool TemplateDescriptionHasBeenSet() const;
 
                     /**
-                     * 获取(Optional) ID of the template to be copied
-                     * @return TemplateId (Optional) ID of the template to be copied
+                     * 获取ID of the template to be copied
+                     * @return TemplateId ID of the template to be copied
                      * 
                      */
                     int64_t GetTemplateId() const;
 
                     /**
-                     * 设置(Optional) ID of the template to be copied
-                     * @param _templateId (Optional) ID of the template to be copied
+                     * 设置ID of the template to be copied
+                     * @param _templateId ID of the template to be copied
                      * 
                      */
                     void SetTemplateId(const int64_t& _templateId);
@@ -184,13 +184,13 @@ namespace TencentCloud
                     bool m_engineVersionHasBeenSet;
 
                     /**
-                     * The description of a template
+                     * Template description
                      */
                     std::string m_templateDescription;
                     bool m_templateDescriptionHasBeenSet;
 
                     /**
-                     * (Optional) ID of the template to be copied
+                     * ID of the template to be copied
                      */
                     int64_t m_templateId;
                     bool m_templateIdHasBeenSet;

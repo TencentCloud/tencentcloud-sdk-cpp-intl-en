@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool TemplateIdHasBeenSet() const;
 
                     /**
-                     * 获取Template Name
-                     * @return TemplateName Template Name
+                     * 获取Template name
+                     * @return TemplateName Template name
                      * 
                      */
                     std::string GetTemplateName() const;
 
                     /**
-                     * 设置Template Name
-                     * @param _templateName Template Name
+                     * 设置Template name
+                     * @param _templateName Template name
                      * 
                      */
                     void SetTemplateName(const std::string& _templateName);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool TemplateNameHasBeenSet() const;
 
                     /**
-                     * 获取The template description
-                     * @return TemplateDescription The template description
+                     * 获取Template description
+                     * @return TemplateDescription Template description
                      * 
                      */
                     std::string GetTemplateDescription() const;
 
                     /**
-                     * 设置The template description
-                     * @param _templateDescription The template description
+                     * 设置Template description
+                     * @param _templateDescription Template description
                      * 
                      */
                     void SetTemplateDescription(const std::string& _templateDescription);
@@ -136,13 +136,13 @@ namespace TencentCloud
                     bool m_templateIdHasBeenSet;
 
                     /**
-                     * Template Name
+                     * Template name
                      */
                     std::string m_templateName;
                     bool m_templateNameHasBeenSet;
 
                     /**
-                     * The template description
+                     * Template description
                      */
                     std::string m_templateDescription;
                     bool m_templateDescriptionHasBeenSet;
