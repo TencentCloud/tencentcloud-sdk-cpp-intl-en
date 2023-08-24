@@ -550,15 +550,15 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AntiDDoSPackageId 
+                     * 获取ID of the Anti-DDoS service package. It is returned if the EIP is an u200dAnti-DDoS EIP. 
+                     * @return AntiDDoSPackageId ID of the Anti-DDoS service package. It is returned if the EIP is an u200dAnti-DDoS EIP. 
                      * 
                      */
                     std::string GetAntiDDoSPackageId() const;
 
                     /**
-                     * 设置
-                     * @param _antiDDoSPackageId 
+                     * 设置ID of the Anti-DDoS service package. It is returned if the EIP is an u200dAnti-DDoS EIP. 
+                     * @param _antiDDoSPackageId ID of the Anti-DDoS service package. It is returned if the EIP is an u200dAnti-DDoS EIP. 
                      * 
                      */
                     void SetAntiDDoSPackageId(const std::string& _antiDDoSPackageId);
@@ -714,7 +714,7 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * 
+                     * ID of the Anti-DDoS service package. It is returned if the EIP is an u200dAnti-DDoS EIP. 
                      */
                     std::string m_antiDDoSPackageId;
                     bool m_antiDDoSPackageIdHasBeenSet;

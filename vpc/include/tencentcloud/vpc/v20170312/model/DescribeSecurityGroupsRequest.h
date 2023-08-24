@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The security group instance ID, such as `sg-33ocnj9n`. It can be obtained through `DescribeSecurityGroups`. Each request can have a maximum of 100 instances. `SecurityGroupIds` and `Filters` cannot be specified at the same time.
-                     * @return SecurityGroupIds The security group instance ID, such as `sg-33ocnj9n`. It can be obtained through `DescribeSecurityGroups`. Each request can have a maximum of 100 instances. `SecurityGroupIds` and `Filters` cannot be specified at the same time.
+                     * 获取Security group ID, such as `sg-33ocnj9n`. Each request can contain up to 100 instances at a time. `SecurityGroupIds` and `Filters` cannot be specified at the same time.
+                     * @return SecurityGroupIds Security group ID, such as `sg-33ocnj9n`. Each request can contain up to 100 instances at a time. `SecurityGroupIds` and `Filters` cannot be specified at the same time.
                      * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
-                     * 设置The security group instance ID, such as `sg-33ocnj9n`. It can be obtained through `DescribeSecurityGroups`. Each request can have a maximum of 100 instances. `SecurityGroupIds` and `Filters` cannot be specified at the same time.
-                     * @param _securityGroupIds The security group instance ID, such as `sg-33ocnj9n`. It can be obtained through `DescribeSecurityGroups`. Each request can have a maximum of 100 instances. `SecurityGroupIds` and `Filters` cannot be specified at the same time.
+                     * 设置Security group ID, such as `sg-33ocnj9n`. Each request can contain up to 100 instances at a time. `SecurityGroupIds` and `Filters` cannot be specified at the same time.
+                     * @param _securityGroupIds Security group ID, such as `sg-33ocnj9n`. Each request can contain up to 100 instances at a time. `SecurityGroupIds` and `Filters` cannot be specified at the same time.
                      * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
@@ -147,10 +147,52 @@ namespace TencentCloud
                      */
                     bool LimitHasBeenSet() const;
 
+                    /**
+                     * 获取Sorting field. Values: `CreatedTime`, `UpdateTime` Note: This field does not have default value.
+                     * @return OrderField Sorting field. Values: `CreatedTime`, `UpdateTime` Note: This field does not have default value.
+                     * 
+                     */
+                    std::string GetOrderField() const;
+
+                    /**
+                     * 设置Sorting field. Values: `CreatedTime`, `UpdateTime` Note: This field does not have default value.
+                     * @param _orderField Sorting field. Values: `CreatedTime`, `UpdateTime` Note: This field does not have default value.
+                     * 
+                     */
+                    void SetOrderField(const std::string& _orderField);
+
+                    /**
+                     * 判断参数 OrderField 是否已赋值
+                     * @return OrderField 是否已赋值
+                     * 
+                     */
+                    bool OrderFieldHasBeenSet() const;
+
+                    /**
+                     * 获取Sorting method Order methods. Ascending: `ASC`, Descending: `DESC`. Default: `ASC`
+                     * @return OrderDirection Sorting method Order methods. Ascending: `ASC`, Descending: `DESC`. Default: `ASC`
+                     * 
+                     */
+                    std::string GetOrderDirection() const;
+
+                    /**
+                     * 设置Sorting method Order methods. Ascending: `ASC`, Descending: `DESC`. Default: `ASC`
+                     * @param _orderDirection Sorting method Order methods. Ascending: `ASC`, Descending: `DESC`. Default: `ASC`
+                     * 
+                     */
+                    void SetOrderDirection(const std::string& _orderDirection);
+
+                    /**
+                     * 判断参数 OrderDirection 是否已赋值
+                     * @return OrderDirection 是否已赋值
+                     * 
+                     */
+                    bool OrderDirectionHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The security group instance ID, such as `sg-33ocnj9n`. It can be obtained through `DescribeSecurityGroups`. Each request can have a maximum of 100 instances. `SecurityGroupIds` and `Filters` cannot be specified at the same time.
+                     * Security group ID, such as `sg-33ocnj9n`. Each request can contain up to 100 instances at a time. `SecurityGroupIds` and `Filters` cannot be specified at the same time.
                      */
                     std::vector<std::string> m_securityGroupIds;
                     bool m_securityGroupIdsHasBeenSet;
@@ -177,6 +219,18 @@ namespace TencentCloud
                      */
                     std::string m_limit;
                     bool m_limitHasBeenSet;
+
+                    /**
+                     * Sorting field. Values: `CreatedTime`, `UpdateTime` Note: This field does not have default value.
+                     */
+                    std::string m_orderField;
+                    bool m_orderFieldHasBeenSet;
+
+                    /**
+                     * Sorting method Order methods. Ascending: `ASC`, Descending: `DESC`. Default: `ASC`
+                     */
+                    std::string m_orderDirection;
+                    bool m_orderDirectionHasBeenSet;
 
                 };
             }

@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool BusinessTypeHasBeenSet() const;
 
                     /**
-                     * 获取ID of the instance.
-                     * @return InstanceId ID of the instance.
+                     * 获取Service instance ID. It's corresponding to the `BusinessType`. 
+                     * @return InstanceId Service instance ID. It's corresponding to the `BusinessType`. 
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置ID of the instance.
-                     * @param _instanceId ID of the instance.
+                     * 设置Service instance ID. It's corresponding to the `BusinessType`. 
+                     * @param _instanceId Service instance ID. It's corresponding to the `BusinessType`. 
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of returned results. Default value: 20. Maximum value: 200.
-                     * @return Limit Number of returned results. Default value: 20. Maximum value: 200.
+                     * 获取Number of returned results. Default value: 20. Maximum value: 100.
+                     * @return Limit Number of returned results. Default value: 20. Maximum value: 100.
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of returned results. Default value: 20. Maximum value: 200.
-                     * @param _limit Number of returned results. Default value: 20. Maximum value: 200.
+                     * 设置Number of returned results. Default value: 20. Maximum value: 100.
+                     * @param _limit Number of returned results. Default value: 20. Maximum value: 100.
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -177,7 +177,7 @@ namespace TencentCloud
                     bool m_businessTypeHasBeenSet;
 
                     /**
-                     * ID of the instance.
+                     * Service instance ID. It's corresponding to the `BusinessType`. 
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -201,7 +201,7 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of returned results. Default value: 20. Maximum value: 200.
+                     * Number of returned results. Default value: 20. Maximum value: 100.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;

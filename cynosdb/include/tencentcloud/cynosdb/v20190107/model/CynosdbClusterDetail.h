@@ -647,15 +647,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VportHasBeenSet() const;
 
                     /**
-                     * 获取vport for read/write separation
-                     * @return RoAddr vport for read/write separation
+                     * 获取VIP u200dand vport of the read-only instance in a cluster
+                     * @return RoAddr VIP u200dand vport of the read-only instance in a cluster
                      * 
                      */
                     std::vector<Addr> GetRoAddr() const;
 
                     /**
-                     * 设置vport for read/write separation
-                     * @param _roAddr vport for read/write separation
+                     * 设置VIP u200dand vport of the read-only instance in a cluster
+                     * @param _roAddr VIP u200dand vport of the read-only instance in a cluster
                      * 
                      */
                     void SetRoAddr(const std::vector<Addr>& _roAddr);
@@ -1335,7 +1335,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_vportHasBeenSet;
 
                     /**
-                     * vport for read/write separation
+                     * VIP u200dand vport of the read-only instance in a cluster
                      */
                     std::vector<Addr> m_roAddr;
                     bool m_roAddrHasBeenSet;

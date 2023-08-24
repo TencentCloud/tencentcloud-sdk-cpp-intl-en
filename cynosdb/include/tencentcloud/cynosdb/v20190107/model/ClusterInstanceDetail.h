@@ -311,15 +311,19 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                     bool MaintainWeekDaysHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ServerlessStatus 
+                     * 获取Serverless instance u200denablement status
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @return ServerlessStatus Serverless instance u200denablement status
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetServerlessStatus() const;
 
                     /**
-                     * 设置
-                     * @param _serverlessStatus 
+                     * 设置Serverless instance u200denablement status
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @param _serverlessStatus Serverless instance u200denablement status
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetServerlessStatus(const std::string& _serverlessStatus);
@@ -409,7 +413,8 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                     bool m_maintainWeekDaysHasBeenSet;
 
                     /**
-                     * 
+                     * Serverless instance u200denablement status
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_serverlessStatus;
                     bool m_serverlessStatusHasBeenSet;

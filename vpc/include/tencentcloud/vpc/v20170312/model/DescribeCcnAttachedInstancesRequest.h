@@ -87,30 +87,30 @@ namespace TencentCloud
 
                     /**
                      * 获取Filter conditions:
-<li>ccn-id - String - (Filter condition) The CCN instance ID.</li>
-<li>instance-type - String - (Filter condition) The associated instance type.</li>
-<li>instance-region - String - (Filter condition) The associated instance region.</li>
-<li>instance-type - String - (Filter condition) The instance ID of the associated instance.</li>
+<li>`ccn-id` - String - The CCN instance ID. </li>
+<li>`instance-type` - String - The associated instance type. </li>
+<li>`instance-region` - String - The associated instance region. </li>
+<li>`instance-id` - String - The instance ID of the associated instance. </li>
                      * @return Filters Filter conditions:
-<li>ccn-id - String - (Filter condition) The CCN instance ID.</li>
-<li>instance-type - String - (Filter condition) The associated instance type.</li>
-<li>instance-region - String - (Filter condition) The associated instance region.</li>
-<li>instance-type - String - (Filter condition) The instance ID of the associated instance.</li>
+<li>`ccn-id` - String - The CCN instance ID. </li>
+<li>`instance-type` - String - The associated instance type. </li>
+<li>`instance-region` - String - The associated instance region. </li>
+<li>`instance-id` - String - The instance ID of the associated instance. </li>
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置Filter conditions:
-<li>ccn-id - String - (Filter condition) The CCN instance ID.</li>
-<li>instance-type - String - (Filter condition) The associated instance type.</li>
-<li>instance-region - String - (Filter condition) The associated instance region.</li>
-<li>instance-type - String - (Filter condition) The instance ID of the associated instance.</li>
+<li>`ccn-id` - String - The CCN instance ID. </li>
+<li>`instance-type` - String - The associated instance type. </li>
+<li>`instance-region` - String - The associated instance region. </li>
+<li>`instance-id` - String - The instance ID of the associated instance. </li>
                      * @param _filters Filter conditions:
-<li>ccn-id - String - (Filter condition) The CCN instance ID.</li>
-<li>instance-type - String - (Filter condition) The associated instance type.</li>
-<li>instance-region - String - (Filter condition) The associated instance region.</li>
-<li>instance-type - String - (Filter condition) The instance ID of the associated instance.</li>
+<li>`ccn-id` - String - The CCN instance ID. </li>
+<li>`instance-type` - String - The associated instance type. </li>
+<li>`instance-region` - String - The associated instance region. </li>
+<li>`instance-id` - String - The instance ID of the associated instance. </li>
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -201,10 +201,10 @@ namespace TencentCloud
 
                     /**
                      * Filter conditions:
-<li>ccn-id - String - (Filter condition) The CCN instance ID.</li>
-<li>instance-type - String - (Filter condition) The associated instance type.</li>
-<li>instance-region - String - (Filter condition) The associated instance region.</li>
-<li>instance-type - String - (Filter condition) The instance ID of the associated instance.</li>
+<li>`ccn-id` - String - The CCN instance ID. </li>
+<li>`instance-type` - String - The associated instance type. </li>
+<li>`instance-region` - String - The associated instance region. </li>
+<li>`instance-id` - String - The instance ID of the associated instance. </li>
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

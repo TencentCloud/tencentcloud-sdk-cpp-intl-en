@@ -27,7 +27,10 @@ HlsRemuxSettingsInfo::HlsRemuxSettingsInfo() :
     m_pdtDurationHasBeenSet(false),
     m_schemeHasBeenSet(false),
     m_segmentTypeHasBeenSet(false),
-    m_h265PackageTypeHasBeenSet(false)
+    m_h265PackageTypeHasBeenSet(false),
+    m_lowLatencyHasBeenSet(false),
+    m_partialSegmentDurationHasBeenSet(false),
+    m_partialSegmentPlaySiteHasBeenSet(false)
 {
 }
 
@@ -106,6 +109,36 @@ CoreInternalOutcome HlsRemuxSettingsInfo::Deserialize(const rapidjson::Value &va
         m_h265PackageTypeHasBeenSet = true;
     }
 
+    if (value.HasMember("LowLatency") && !value["LowLatency"].IsNull())
+    {
+        if (!value["LowLatency"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `HlsRemuxSettingsInfo.LowLatency` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_lowLatency = value["LowLatency"].GetUint64();
+        m_lowLatencyHasBeenSet = true;
+    }
+
+    if (value.HasMember("PartialSegmentDuration") && !value["PartialSegmentDuration"].IsNull())
+    {
+        if (!value["PartialSegmentDuration"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `HlsRemuxSettingsInfo.PartialSegmentDuration` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_partialSegmentDuration = value["PartialSegmentDuration"].GetUint64();
+        m_partialSegmentDurationHasBeenSet = true;
+    }
+
+    if (value.HasMember("PartialSegmentPlaySite") && !value["PartialSegmentPlaySite"].IsNull())
+    {
+        if (!value["PartialSegmentPlaySite"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `HlsRemuxSettingsInfo.PartialSegmentPlaySite` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_partialSegmentPlaySite = value["PartialSegmentPlaySite"].GetUint64();
+        m_partialSegmentPlaySiteHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -167,6 +200,30 @@ void HlsRemuxSettingsInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Docu
         string key = "H265PackageType";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_h265PackageType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_lowLatencyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "LowLatency";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_lowLatency, allocator);
+    }
+
+    if (m_partialSegmentDurationHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PartialSegmentDuration";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_partialSegmentDuration, allocator);
+    }
+
+    if (m_partialSegmentPlaySiteHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PartialSegmentPlaySite";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_partialSegmentPlaySite, allocator);
     }
 
 }
@@ -282,5 +339,53 @@ void HlsRemuxSettingsInfo::SetH265PackageType(const string& _h265PackageType)
 bool HlsRemuxSettingsInfo::H265PackageTypeHasBeenSet() const
 {
     return m_h265PackageTypeHasBeenSet;
+}
+
+uint64_t HlsRemuxSettingsInfo::GetLowLatency() const
+{
+    return m_lowLatency;
+}
+
+void HlsRemuxSettingsInfo::SetLowLatency(const uint64_t& _lowLatency)
+{
+    m_lowLatency = _lowLatency;
+    m_lowLatencyHasBeenSet = true;
+}
+
+bool HlsRemuxSettingsInfo::LowLatencyHasBeenSet() const
+{
+    return m_lowLatencyHasBeenSet;
+}
+
+uint64_t HlsRemuxSettingsInfo::GetPartialSegmentDuration() const
+{
+    return m_partialSegmentDuration;
+}
+
+void HlsRemuxSettingsInfo::SetPartialSegmentDuration(const uint64_t& _partialSegmentDuration)
+{
+    m_partialSegmentDuration = _partialSegmentDuration;
+    m_partialSegmentDurationHasBeenSet = true;
+}
+
+bool HlsRemuxSettingsInfo::PartialSegmentDurationHasBeenSet() const
+{
+    return m_partialSegmentDurationHasBeenSet;
+}
+
+uint64_t HlsRemuxSettingsInfo::GetPartialSegmentPlaySite() const
+{
+    return m_partialSegmentPlaySite;
+}
+
+void HlsRemuxSettingsInfo::SetPartialSegmentPlaySite(const uint64_t& _partialSegmentPlaySite)
+{
+    m_partialSegmentPlaySite = _partialSegmentPlaySite;
+    m_partialSegmentPlaySiteHasBeenSet = true;
+}
+
+bool HlsRemuxSettingsInfo::PartialSegmentPlaySiteHasBeenSet() const
+{
+    return m_partialSegmentPlaySiteHasBeenSet;
 }
 

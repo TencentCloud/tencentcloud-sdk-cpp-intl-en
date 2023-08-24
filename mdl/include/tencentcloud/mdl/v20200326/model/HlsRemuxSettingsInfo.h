@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool PdtDurationHasBeenSet() const;
 
                     /**
-                     * 获取Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`
-                     * @return Scheme Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`
+                     * 获取Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`. Default value is: SEPARATE.
+                     * @return Scheme Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`. Default value is: SEPARATE.
                      * 
                      */
                     std::string GetScheme() const;
 
                     /**
-                     * 设置Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`
-                     * @param _scheme Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`
+                     * 设置Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`. Default value is: SEPARATE.
+                     * @param _scheme Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`. Default value is: SEPARATE.
                      * 
                      */
                     void SetScheme(const std::string& _scheme);
@@ -197,6 +197,69 @@ Currently, fMP4 segments do not support DRM or time shifting.
                      */
                     bool H265PackageTypeHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return LowLatency 
+                     * 
+                     */
+                    uint64_t GetLowLatency() const;
+
+                    /**
+                     * 设置
+                     * @param _lowLatency 
+                     * 
+                     */
+                    void SetLowLatency(const uint64_t& _lowLatency);
+
+                    /**
+                     * 判断参数 LowLatency 是否已赋值
+                     * @return LowLatency 是否已赋值
+                     * 
+                     */
+                    bool LowLatencyHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return PartialSegmentDuration 
+                     * 
+                     */
+                    uint64_t GetPartialSegmentDuration() const;
+
+                    /**
+                     * 设置
+                     * @param _partialSegmentDuration 
+                     * 
+                     */
+                    void SetPartialSegmentDuration(const uint64_t& _partialSegmentDuration);
+
+                    /**
+                     * 判断参数 PartialSegmentDuration 是否已赋值
+                     * @return PartialSegmentDuration 是否已赋值
+                     * 
+                     */
+                    bool PartialSegmentDurationHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return PartialSegmentPlaySite 
+                     * 
+                     */
+                    uint64_t GetPartialSegmentPlaySite() const;
+
+                    /**
+                     * 设置
+                     * @param _partialSegmentPlaySite 
+                     * 
+                     */
+                    void SetPartialSegmentPlaySite(const uint64_t& _partialSegmentPlaySite);
+
+                    /**
+                     * 判断参数 PartialSegmentPlaySite 是否已赋值
+                     * @return PartialSegmentPlaySite 是否已赋值
+                     * 
+                     */
+                    bool PartialSegmentPlaySiteHasBeenSet() const;
+
                 private:
 
                     /**
@@ -224,7 +287,7 @@ Currently, fMP4 segments do not support DRM or time shifting.
                     bool m_pdtDurationHasBeenSet;
 
                     /**
-                     * Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`
+                     * Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`. Default value is: SEPARATE.
                      */
                     std::string m_scheme;
                     bool m_schemeHasBeenSet;
@@ -241,6 +304,24 @@ Currently, fMP4 segments do not support DRM or time shifting.
                      */
                     std::string m_h265PackageType;
                     bool m_h265PackageTypeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_lowLatency;
+                    bool m_lowLatencyHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_partialSegmentDuration;
+                    bool m_partialSegmentDurationHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_partialSegmentPlaySite;
+                    bool m_partialSegmentPlaySiteHasBeenSet;
 
                 };
             }

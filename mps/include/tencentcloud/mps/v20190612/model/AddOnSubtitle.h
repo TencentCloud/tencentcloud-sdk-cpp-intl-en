@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_MPS_V20190612_MODEL_TEHDCONFIGFORUPDATE_H_
-#define TENCENTCLOUD_MPS_V20190612_MODEL_TEHDCONFIGFORUPDATE_H_
+#ifndef TENCENTCLOUD_MPS_V20190612_MODEL_ADDONSUBTITLE_H_
+#define TENCENTCLOUD_MPS_V20190612_MODEL_ADDONSUBTITLE_H_
 
 #include <string>
 #include <vector>
@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/mps/v20190612/model/MediaInputInfo.h>
 
 
 namespace TencentCloud
@@ -35,42 +36,42 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * TESHD parameter configuration.
+                * The information of the subtitles to add.
                 */
-                class TEHDConfigForUpdate : public AbstractModel
+                class AddOnSubtitle : public AbstractModel
                 {
                 public:
-                    TEHDConfigForUpdate();
-                    ~TEHDConfigForUpdate() = default;
+                    AddOnSubtitle();
+                    ~AddOnSubtitle() = default;
                     void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
 
                     /**
-                     * 获取The TSC type. Valid values:
-<li>`TEHD-100`: TSC-100 (video TSC). </li>
-<li>`TEHD-200`: TSC-200 (audio TSC). </li>
-If this parameter is left blank, no modification will be made.
+                     * 获取The mode. Valid values:
+<li>`subtitle-stream`: Add a subtitle track.</li>
+<li>`close-caption-708`: u200dEmbed EA-708 subtitles in SEI frames.</li>
+<li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
 Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
-                     * @return Type The TSC type. Valid values:
-<li>`TEHD-100`: TSC-100 (video TSC). </li>
-<li>`TEHD-200`: TSC-200 (audio TSC). </li>
-If this parameter is left blank, no modification will be made.
+                     * @return Type The mode. Valid values:
+<li>`subtitle-stream`: Add a subtitle track.</li>
+<li>`close-caption-708`: u200dEmbed EA-708 subtitles in SEI frames.</li>
+<li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
 Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置The TSC type. Valid values:
-<li>`TEHD-100`: TSC-100 (video TSC). </li>
-<li>`TEHD-200`: TSC-200 (audio TSC). </li>
-If this parameter is left blank, no modification will be made.
+                     * 设置The mode. Valid values:
+<li>`subtitle-stream`: Add a subtitle track.</li>
+<li>`close-caption-708`: u200dEmbed EA-708 subtitles in SEI frames.</li>
+<li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
 Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
-                     * @param _type The TSC type. Valid values:
-<li>`TEHD-100`: TSC-100 (video TSC). </li>
-<li>`TEHD-200`: TSC-200 (audio TSC). </li>
-If this parameter is left blank, no modification will be made.
+                     * @param _type The mode. Valid values:
+<li>`subtitle-stream`: Add a subtitle track.</li>
+<li>`close-caption-708`: u200dEmbed EA-708 subtitles in SEI frames.</li>
+<li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
 Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
                      * 
                      */
@@ -84,48 +85,48 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取u200dThe maximum video bitrate. If this parameter is not specified, no modifications will be made.
+                     * 获取The subtitle file.
 Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
-                     * @return MaxVideoBitrate u200dThe maximum video bitrate. If this parameter is not specified, no modifications will be made.
+                     * @return Subtitle The subtitle file.
 Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
                      * 
                      */
-                    uint64_t GetMaxVideoBitrate() const;
+                    MediaInputInfo GetSubtitle() const;
 
                     /**
-                     * 设置u200dThe maximum video bitrate. If this parameter is not specified, no modifications will be made.
+                     * 设置The subtitle file.
 Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
-                     * @param _maxVideoBitrate u200dThe maximum video bitrate. If this parameter is not specified, no modifications will be made.
+                     * @param _subtitle The subtitle file.
 Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
                      * 
                      */
-                    void SetMaxVideoBitrate(const uint64_t& _maxVideoBitrate);
+                    void SetSubtitle(const MediaInputInfo& _subtitle);
 
                     /**
-                     * 判断参数 MaxVideoBitrate 是否已赋值
-                     * @return MaxVideoBitrate 是否已赋值
+                     * 判断参数 Subtitle 是否已赋值
+                     * @return Subtitle 是否已赋值
                      * 
                      */
-                    bool MaxVideoBitrateHasBeenSet() const;
+                    bool SubtitleHasBeenSet() const;
 
                 private:
 
                     /**
-                     * The TSC type. Valid values:
-<li>`TEHD-100`: TSC-100 (video TSC). </li>
-<li>`TEHD-200`: TSC-200 (audio TSC). </li>
-If this parameter is left blank, no modification will be made.
+                     * The mode. Valid values:
+<li>`subtitle-stream`: Add a subtitle track.</li>
+<li>`close-caption-708`: u200dEmbed EA-708 subtitles in SEI frames.</li>
+<li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
 Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * u200dThe maximum video bitrate. If this parameter is not specified, no modifications will be made.
+                     * The subtitle file.
 Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
                      */
-                    uint64_t m_maxVideoBitrate;
-                    bool m_maxVideoBitrateHasBeenSet;
+                    MediaInputInfo m_subtitle;
+                    bool m_subtitleHasBeenSet;
 
                 };
             }
@@ -133,4 +134,4 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
     }
 }
 
-#endif // !TENCENTCLOUD_MPS_V20190612_MODEL_TEHDCONFIGFORUPDATE_H_
+#endif // !TENCENTCLOUD_MPS_V20190612_MODEL_ADDONSUBTITLE_H_

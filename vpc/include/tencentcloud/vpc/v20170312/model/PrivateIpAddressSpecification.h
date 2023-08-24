@@ -210,15 +210,15 @@ AVAILABLE: Available
                     bool StateHasBeenSet() const;
 
                     /**
-                     * 获取IP service level. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
-                     * @return QosLevel IP service level. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+                     * 获取IP u200dservice level. Values: PT` u200d(Gold), `AU` u200d(Silver), `AG `(Bronze) and DEFAULT` (Default).
+                     * @return QosLevel IP u200dservice level. Values: PT` u200d(Gold), `AU` u200d(Silver), `AG `(Bronze) and DEFAULT` (Default).
                      * 
                      */
                     std::string GetQosLevel() const;
 
                     /**
-                     * 设置IP service level. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
-                     * @param _qosLevel IP service level. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+                     * 设置IP u200dservice level. Values: PT` u200d(Gold), `AU` u200d(Silver), `AG `(Bronze) and DEFAULT` (Default).
+                     * @param _qosLevel IP u200dservice level. Values: PT` u200d(Gold), `AU` u200d(Silver), `AG `(Bronze) and DEFAULT` (Default).
                      * 
                      */
                     void SetQosLevel(const std::string& _qosLevel);
@@ -279,7 +279,7 @@ AVAILABLE: Available
                     bool m_stateHasBeenSet;
 
                     /**
-                     * IP service level. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+                     * IP u200dservice level. Values: PT` u200d(Gold), `AU` u200d(Silver), `AG `(Bronze) and DEFAULT` (Default).
                      */
                     std::string m_qosLevel;
                     bool m_qosLevelHasBeenSet;

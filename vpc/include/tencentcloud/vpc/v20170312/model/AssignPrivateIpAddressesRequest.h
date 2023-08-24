@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool SecondaryPrivateIpAddressCountHasBeenSet() const;
 
                     /**
-                     * 获取IP service level. It’s used in combination with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
-                     * @return QosLevel IP service level. It’s used in combination with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+                     * 获取IP u200dservice level. It is used together with `SecondaryPrivateIpAddressCount`. Values: PT` u200d(Gold), `AU` u200d(Silver), `AG `(Bronze) and DEFAULT (Default).
+                     * @return QosLevel IP u200dservice level. It is used together with `SecondaryPrivateIpAddressCount`. Values: PT` u200d(Gold), `AU` u200d(Silver), `AG `(Bronze) and DEFAULT (Default).
                      * 
                      */
                     std::string GetQosLevel() const;
 
                     /**
-                     * 设置IP service level. It’s used in combination with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
-                     * @param _qosLevel IP service level. It’s used in combination with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+                     * 设置IP u200dservice level. It is used together with `SecondaryPrivateIpAddressCount`. Values: PT` u200d(Gold), `AU` u200d(Silver), `AG `(Bronze) and DEFAULT (Default).
+                     * @param _qosLevel IP u200dservice level. It is used together with `SecondaryPrivateIpAddressCount`. Values: PT` u200d(Gold), `AU` u200d(Silver), `AG `(Bronze) and DEFAULT (Default).
                      * 
                      */
                     void SetQosLevel(const std::string& _qosLevel);
@@ -148,7 +148,7 @@ namespace TencentCloud
                     bool m_secondaryPrivateIpAddressCountHasBeenSet;
 
                     /**
-                     * IP service level. It’s used in combination with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+                     * IP u200dservice level. It is used together with `SecondaryPrivateIpAddressCount`. Values: PT` u200d(Gold), `AU` u200d(Silver), `AG `(Bronze) and DEFAULT (Default).
                      */
                     std::string m_qosLevel;
                     bool m_qosLevelHasBeenSet;

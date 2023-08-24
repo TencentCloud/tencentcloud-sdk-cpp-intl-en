@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Resource ID
-                     * @return ResourceId Resource ID
+                     * 获取Resource ID. It can be left empty if `ResourceType` is `USERDEFINED`.
+                     * @return ResourceId Resource ID. It can be left empty if `ResourceType` is `USERDEFINED`.
                      * 
                      */
                     std::string GetResourceId() const;
 
                     /**
-                     * 设置Resource ID
-                     * @param _resourceId Resource ID
+                     * 设置Resource ID. It can be left empty if `ResourceType` is `USERDEFINED`.
+                     * @param _resourceId Resource ID. It can be left empty if `ResourceType` is `USERDEFINED`.
                      * 
                      */
                     void SetResourceId(const std::string& _resourceId);
@@ -68,19 +68,19 @@ namespace TencentCloud
                     bool ResourceIdHasBeenSet() const;
 
                     /**
-                     * 获取Resource type. Valid values: SUBNET, NETWORKINTERFACE
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return ResourceType Resource type. Valid values: SUBNET, NETWORKINTERFACE
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Resource type. Valid values: `SUBNET`, `NETWORKINTERFACE`, `USERDEFINED`
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ResourceType Resource type. Valid values: `SUBNET`, `NETWORKINTERFACE`, `USERDEFINED`
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetResourceType() const;
 
                     /**
-                     * 设置Resource type. Valid values: SUBNET, NETWORKINTERFACE
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _resourceType Resource type. Valid values: SUBNET, NETWORKINTERFACE
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Resource type. Valid values: `SUBNET`, `NETWORKINTERFACE`, `USERDEFINED`
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _resourceType Resource type. Valid values: `SUBNET`, `NETWORKINTERFACE`, `USERDEFINED`
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetResourceType(const std::string& _resourceType);
@@ -254,14 +254,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * Resource ID
+                     * Resource ID. It can be left empty if `ResourceType` is `USERDEFINED`.
                      */
                     std::string m_resourceId;
                     bool m_resourceIdHasBeenSet;
 
                     /**
-                     * Resource type. Valid values: SUBNET, NETWORKINTERFACE
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Resource type. Valid values: `SUBNET`, `NETWORKINTERFACE`, `USERDEFINED`
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_resourceType;
                     bool m_resourceTypeHasBeenSet;

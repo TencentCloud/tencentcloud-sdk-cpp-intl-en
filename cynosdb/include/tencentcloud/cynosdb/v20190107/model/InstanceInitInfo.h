@@ -130,6 +130,90 @@ namespace TencentCloud
                      */
                     bool InstanceCountHasBeenSet() const;
 
+                    /**
+                     * 获取Minimum number of serverless instances. Value range: 1-15.
+                     * @return MinRoCount Minimum number of serverless instances. Value range: 1-15.
+                     * 
+                     */
+                    int64_t GetMinRoCount() const;
+
+                    /**
+                     * 设置Minimum number of serverless instances. Value range: 1-15.
+                     * @param _minRoCount Minimum number of serverless instances. Value range: 1-15.
+                     * 
+                     */
+                    void SetMinRoCount(const int64_t& _minRoCount);
+
+                    /**
+                     * 判断参数 MinRoCount 是否已赋值
+                     * @return MinRoCount 是否已赋值
+                     * 
+                     */
+                    bool MinRoCountHasBeenSet() const;
+
+                    /**
+                     * 获取Maximum number of serverless instances. Value range: 1-15.
+                     * @return MaxRoCount Maximum number of serverless instances. Value range: 1-15.
+                     * 
+                     */
+                    int64_t GetMaxRoCount() const;
+
+                    /**
+                     * 设置Maximum number of serverless instances. Value range: 1-15.
+                     * @param _maxRoCount Maximum number of serverless instances. Value range: 1-15.
+                     * 
+                     */
+                    void SetMaxRoCount(const int64_t& _maxRoCount);
+
+                    /**
+                     * 判断参数 MaxRoCount 是否已赋值
+                     * @return MaxRoCount 是否已赋值
+                     * 
+                     */
+                    bool MaxRoCountHasBeenSet() const;
+
+                    /**
+                     * 获取Minimum specifications for serverless instance
+                     * @return MinRoCpu Minimum specifications for serverless instance
+                     * 
+                     */
+                    double GetMinRoCpu() const;
+
+                    /**
+                     * 设置Minimum specifications for serverless instance
+                     * @param _minRoCpu Minimum specifications for serverless instance
+                     * 
+                     */
+                    void SetMinRoCpu(const double& _minRoCpu);
+
+                    /**
+                     * 判断参数 MinRoCpu 是否已赋值
+                     * @return MinRoCpu 是否已赋值
+                     * 
+                     */
+                    bool MinRoCpuHasBeenSet() const;
+
+                    /**
+                     * 获取Maximum specifications for serverless instance
+                     * @return MaxRoCpu Maximum specifications for serverless instance
+                     * 
+                     */
+                    double GetMaxRoCpu() const;
+
+                    /**
+                     * 设置Maximum specifications for serverless instance
+                     * @param _maxRoCpu Maximum specifications for serverless instance
+                     * 
+                     */
+                    void SetMaxRoCpu(const double& _maxRoCpu);
+
+                    /**
+                     * 判断参数 MaxRoCpu 是否已赋值
+                     * @return MaxRoCpu 是否已赋值
+                     * 
+                     */
+                    bool MaxRoCpuHasBeenSet() const;
+
                 private:
 
                     /**
@@ -155,6 +239,30 @@ namespace TencentCloud
                      */
                     int64_t m_instanceCount;
                     bool m_instanceCountHasBeenSet;
+
+                    /**
+                     * Minimum number of serverless instances. Value range: 1-15.
+                     */
+                    int64_t m_minRoCount;
+                    bool m_minRoCountHasBeenSet;
+
+                    /**
+                     * Maximum number of serverless instances. Value range: 1-15.
+                     */
+                    int64_t m_maxRoCount;
+                    bool m_maxRoCountHasBeenSet;
+
+                    /**
+                     * Minimum specifications for serverless instance
+                     */
+                    double m_minRoCpu;
+                    bool m_minRoCpuHasBeenSet;
+
+                    /**
+                     * Maximum specifications for serverless instance
+                     */
+                    double m_maxRoCpu;
+                    bool m_maxRoCpuHasBeenSet;
 
                 };
             }

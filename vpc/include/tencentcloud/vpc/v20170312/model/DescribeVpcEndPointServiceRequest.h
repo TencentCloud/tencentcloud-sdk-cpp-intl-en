@@ -44,27 +44,31 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Filter condition
-<li> service-id - String - (Filter condition) Unique endpoint service ID.</li>
-<li>service-name - String - (Filter condition) Endpoint service instance name.</li>
-<li>service-instance-id - String - (Filter condition) Unique real server ID in the format of `lb-xxx`.</li>
-                     * @return Filters Filter condition
-<li> service-id - String - (Filter condition) Unique endpoint service ID.</li>
-<li>service-name - String - (Filter condition) Endpoint service instance name.</li>
-<li>service-instance-id - String - (Filter condition) Unique real server ID in the format of `lb-xxx`.</li>
+                     * 获取Filters. `EndPointServiceIds` and `Filters` cannot be both passed in. 
+<li>`service-id` - String - Unique endpoint service ID. </li>
+<li>`service-name` - String - Endpoint service instance name. </li>
+<li>`service-instance-id` - String - Unique backend service ID in the format of `lb-xxx`. </li>
+<li>`service-type` - String - Backend PaaS service type. It can be `CLB`, `CDB` or `CRS`. It defaults to `CLB` if not specified. </li>
+                     * @return Filters Filters. `EndPointServiceIds` and `Filters` cannot be both passed in. 
+<li>`service-id` - String - Unique endpoint service ID. </li>
+<li>`service-name` - String - Endpoint service instance name. </li>
+<li>`service-instance-id` - String - Unique backend service ID in the format of `lb-xxx`. </li>
+<li>`service-type` - String - Backend PaaS service type. It can be `CLB`, `CDB` or `CRS`. It defaults to `CLB` if not specified. </li>
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter condition
-<li> service-id - String - (Filter condition) Unique endpoint service ID.</li>
-<li>service-name - String - (Filter condition) Endpoint service instance name.</li>
-<li>service-instance-id - String - (Filter condition) Unique real server ID in the format of `lb-xxx`.</li>
-                     * @param _filters Filter condition
-<li> service-id - String - (Filter condition) Unique endpoint service ID.</li>
-<li>service-name - String - (Filter condition) Endpoint service instance name.</li>
-<li>service-instance-id - String - (Filter condition) Unique real server ID in the format of `lb-xxx`.</li>
+                     * 设置Filters. `EndPointServiceIds` and `Filters` cannot be both passed in. 
+<li>`service-id` - String - Unique endpoint service ID. </li>
+<li>`service-name` - String - Endpoint service instance name. </li>
+<li>`service-instance-id` - String - Unique backend service ID in the format of `lb-xxx`. </li>
+<li>`service-type` - String - Backend PaaS service type. It can be `CLB`, `CDB` or `CRS`. It defaults to `CLB` if not specified. </li>
+                     * @param _filters Filters. `EndPointServiceIds` and `Filters` cannot be both passed in. 
+<li>`service-id` - String - Unique endpoint service ID. </li>
+<li>`service-name` - String - Endpoint service instance name. </li>
+<li>`service-instance-id` - String - Unique backend service ID in the format of `lb-xxx`. </li>
+<li>`service-type` - String - Backend PaaS service type. It can be `CLB`, `CDB` or `CRS`. It defaults to `CLB` if not specified. </li>
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -119,15 +123,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Endpoint service ID
-                     * @return EndPointServiceIds Endpoint service ID
+                     * 获取Endpoint service ID `EndPointServiceIds` and `Filters` cannot be both passed in. 
+                     * @return EndPointServiceIds Endpoint service ID `EndPointServiceIds` and `Filters` cannot be both passed in. 
                      * 
                      */
                     std::vector<std::string> GetEndPointServiceIds() const;
 
                     /**
-                     * 设置Endpoint service ID
-                     * @param _endPointServiceIds Endpoint service ID
+                     * 设置Endpoint service ID `EndPointServiceIds` and `Filters` cannot be both passed in. 
+                     * @param _endPointServiceIds Endpoint service ID `EndPointServiceIds` and `Filters` cannot be both passed in. 
                      * 
                      */
                     void SetEndPointServiceIds(const std::vector<std::string>& _endPointServiceIds);
@@ -139,13 +143,35 @@ namespace TencentCloud
                      */
                     bool EndPointServiceIdsHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return IsListAuthorizedEndPointService 
+                     * 
+                     */
+                    bool GetIsListAuthorizedEndPointService() const;
+
+                    /**
+                     * 设置
+                     * @param _isListAuthorizedEndPointService 
+                     * 
+                     */
+                    void SetIsListAuthorizedEndPointService(const bool& _isListAuthorizedEndPointService);
+
+                    /**
+                     * 判断参数 IsListAuthorizedEndPointService 是否已赋值
+                     * @return IsListAuthorizedEndPointService 是否已赋值
+                     * 
+                     */
+                    bool IsListAuthorizedEndPointServiceHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Filter condition
-<li> service-id - String - (Filter condition) Unique endpoint service ID.</li>
-<li>service-name - String - (Filter condition) Endpoint service instance name.</li>
-<li>service-instance-id - String - (Filter condition) Unique real server ID in the format of `lb-xxx`.</li>
+                     * Filters. `EndPointServiceIds` and `Filters` cannot be both passed in. 
+<li>`service-id` - String - Unique endpoint service ID. </li>
+<li>`service-name` - String - Endpoint service instance name. </li>
+<li>`service-instance-id` - String - Unique backend service ID in the format of `lb-xxx`. </li>
+<li>`service-type` - String - Backend PaaS service type. It can be `CLB`, `CDB` or `CRS`. It defaults to `CLB` if not specified. </li>
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;
@@ -163,10 +189,16 @@ namespace TencentCloud
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Endpoint service ID
+                     * Endpoint service ID `EndPointServiceIds` and `Filters` cannot be both passed in. 
                      */
                     std::vector<std::string> m_endPointServiceIds;
                     bool m_endPointServiceIdsHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_isListAuthorizedEndPointService;
+                    bool m_isListAuthorizedEndPointServiceHasBeenSet;
 
                 };
             }

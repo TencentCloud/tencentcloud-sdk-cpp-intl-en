@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool GroupDescriptionHasBeenSet() const;
 
                     /**
-                     * 获取The project id is 0 by default. You can query this in the project management page of the Qcloud console.
-                     * @return ProjectId The project id is 0 by default. You can query this in the project management page of the Qcloud console.
+                     * 获取Project ID. Default value: 0. You can query it on the <a href="https://console.cloud.tencent.com/project">project management page</a> of the Tencent Cloud console.
+                     * @return ProjectId Project ID. Default value: 0. You can query it on the <a href="https://console.cloud.tencent.com/project">project management page</a> of the Tencent Cloud console.
                      * 
                      */
                     std::string GetProjectId() const;
 
                     /**
-                     * 设置The project id is 0 by default. You can query this in the project management page of the Qcloud console.
-                     * @param _projectId The project id is 0 by default. You can query this in the project management page of the Qcloud console.
+                     * 设置Project ID. Default value: 0. You can query it on the <a href="https://console.cloud.tencent.com/project">project management page</a> of the Tencent Cloud console.
+                     * @param _projectId Project ID. Default value: 0. You can query it on the <a href="https://console.cloud.tencent.com/project">project management page</a> of the Tencent Cloud console.
                      * 
                      */
                     void SetProjectId(const std::string& _projectId);
@@ -142,7 +142,7 @@ namespace TencentCloud
                     bool m_groupDescriptionHasBeenSet;
 
                     /**
-                     * The project id is 0 by default. You can query this in the project management page of the Qcloud console.
+                     * Project ID. Default value: 0. You can query it on the <a href="https://console.cloud.tencent.com/project">project management page</a> of the Tencent Cloud console.
                      */
                     std::string m_projectId;
                     bool m_projectIdHasBeenSet;

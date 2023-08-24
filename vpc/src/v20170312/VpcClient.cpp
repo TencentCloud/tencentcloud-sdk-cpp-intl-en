@@ -3652,6 +3652,49 @@ VpcClient::DeleteSubnetOutcomeCallable VpcClient::DeleteSubnetCallable(const Del
     return task->get_future();
 }
 
+VpcClient::DeleteTrafficPackagesOutcome VpcClient::DeleteTrafficPackages(const DeleteTrafficPackagesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteTrafficPackages");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteTrafficPackagesResponse rsp = DeleteTrafficPackagesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteTrafficPackagesOutcome(rsp);
+        else
+            return DeleteTrafficPackagesOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteTrafficPackagesOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::DeleteTrafficPackagesAsync(const DeleteTrafficPackagesRequest& request, const DeleteTrafficPackagesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteTrafficPackages(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::DeleteTrafficPackagesOutcomeCallable VpcClient::DeleteTrafficPackagesCallable(const DeleteTrafficPackagesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteTrafficPackagesOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteTrafficPackages(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 VpcClient::DeleteVpcOutcome VpcClient::DeleteVpc(const DeleteVpcRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteVpc");
@@ -7687,6 +7730,49 @@ VpcClient::EnableVpcEndPointConnectOutcomeCallable VpcClient::EnableVpcEndPointC
         [this, request]()
         {
             return this->EnableVpcEndPointConnect(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VpcClient::GenerateVpnConnectionDefaultHealthCheckIpOutcome VpcClient::GenerateVpnConnectionDefaultHealthCheckIp(const GenerateVpnConnectionDefaultHealthCheckIpRequest &request)
+{
+    auto outcome = MakeRequest(request, "GenerateVpnConnectionDefaultHealthCheckIp");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        GenerateVpnConnectionDefaultHealthCheckIpResponse rsp = GenerateVpnConnectionDefaultHealthCheckIpResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return GenerateVpnConnectionDefaultHealthCheckIpOutcome(rsp);
+        else
+            return GenerateVpnConnectionDefaultHealthCheckIpOutcome(o.GetError());
+    }
+    else
+    {
+        return GenerateVpnConnectionDefaultHealthCheckIpOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::GenerateVpnConnectionDefaultHealthCheckIpAsync(const GenerateVpnConnectionDefaultHealthCheckIpRequest& request, const GenerateVpnConnectionDefaultHealthCheckIpAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->GenerateVpnConnectionDefaultHealthCheckIp(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::GenerateVpnConnectionDefaultHealthCheckIpOutcomeCallable VpcClient::GenerateVpnConnectionDefaultHealthCheckIpCallable(const GenerateVpnConnectionDefaultHealthCheckIpRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<GenerateVpnConnectionDefaultHealthCheckIpOutcome()>>(
+        [this, request]()
+        {
+            return this->GenerateVpnConnectionDefaultHealthCheckIp(request);
         }
     );
 

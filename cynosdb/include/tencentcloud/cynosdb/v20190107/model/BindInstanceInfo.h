@@ -47,15 +47,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The ID of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceId The ID of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取ID of the bound cluster
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @return InstanceId ID of the bound cluster
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置The ID of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceId The ID of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置ID of the bound cluster
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @param _instanceId ID of the bound cluster
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -109,10 +113,36 @@ namespace TencentCloud
                      */
                     bool InstanceTypeHasBeenSet() const;
 
+                    /**
+                     * 获取ID of the instance in the bound cluster
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @return ExtendIds ID of the instance in the bound cluster
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<std::string> GetExtendIds() const;
+
+                    /**
+                     * 设置ID of the instance in the bound cluster
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @param _extendIds ID of the instance in the bound cluster
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetExtendIds(const std::vector<std::string>& _extendIds);
+
+                    /**
+                     * 判断参数 ExtendIds 是否已赋值
+                     * @return ExtendIds 是否已赋值
+                     * 
+                     */
+                    bool ExtendIdsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The ID of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
+                     * ID of the bound cluster
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -128,6 +158,13 @@ namespace TencentCloud
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
+
+                    /**
+                     * ID of the instance in the bound cluster
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_extendIds;
+                    bool m_extendIdsHasBeenSet;
 
                 };
             }

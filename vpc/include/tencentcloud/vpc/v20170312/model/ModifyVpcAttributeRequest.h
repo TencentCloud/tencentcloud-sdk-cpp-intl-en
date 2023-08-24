@@ -147,6 +147,27 @@ namespace TencentCloud
                      */
                     bool DomainNameHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to publish the CDC subnet to CCN. `true`: Publish; `false`: u200dDo not publish
+                     * @return EnableCdcPublish Whether to publish the CDC subnet to CCN. `true`: Publish; `false`: u200dDo not publish
+                     * 
+                     */
+                    bool GetEnableCdcPublish() const;
+
+                    /**
+                     * 设置Whether to publish the CDC subnet to CCN. `true`: Publish; `false`: u200dDo not publish
+                     * @param _enableCdcPublish Whether to publish the CDC subnet to CCN. `true`: Publish; `false`: u200dDo not publish
+                     * 
+                     */
+                    void SetEnableCdcPublish(const bool& _enableCdcPublish);
+
+                    /**
+                     * 判断参数 EnableCdcPublish 是否已赋值
+                     * @return EnableCdcPublish 是否已赋值
+                     * 
+                     */
+                    bool EnableCdcPublishHasBeenSet() const;
+
                 private:
 
                     /**
@@ -178,6 +199,12 @@ namespace TencentCloud
                      */
                     std::string m_domainName;
                     bool m_domainNameHasBeenSet;
+
+                    /**
+                     * Whether to publish the CDC subnet to CCN. `true`: Publish; `false`: u200dDo not publish
+                     */
+                    bool m_enableCdcPublish;
+                    bool m_enableCdcPublishHasBeenSet;
 
                 };
             }

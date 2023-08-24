@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the security group to be cloned, such as `sg-33ocnj9n`. This can be obtained through the `DescribeSecurityGroups` API.
-                     * @return SecurityGroupId ID of the security group to be cloned, such as `sg-33ocnj9n`. This can be obtained through the `DescribeSecurityGroups` API.
+                     * 获取Security group instance ID, such as `esg-33ocnj9n`, which can be obtained through the <a href="https://intl.cloud.tencent.com/document/product/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a> API.
+                     * @return SecurityGroupId Security group instance ID, such as `esg-33ocnj9n`, which can be obtained through the <a href="https://intl.cloud.tencent.com/document/product/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a> API.
                      * 
                      */
                     std::string GetSecurityGroupId() const;
 
                     /**
-                     * 设置ID of the security group to be cloned, such as `sg-33ocnj9n`. This can be obtained through the `DescribeSecurityGroups` API.
-                     * @param _securityGroupId ID of the security group to be cloned, such as `sg-33ocnj9n`. This can be obtained through the `DescribeSecurityGroups` API.
+                     * 设置Security group instance ID, such as `esg-33ocnj9n`, which can be obtained through the <a href="https://intl.cloud.tencent.com/document/product/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a> API.
+                     * @param _securityGroupId Security group instance ID, such as `esg-33ocnj9n`, which can be obtained through the <a href="https://intl.cloud.tencent.com/document/product/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a> API.
                      * 
                      */
                     void SetSecurityGroupId(const std::string& _securityGroupId);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool GroupDescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Project ID of the security group clone. The default is 0. You can query it on the project management page of the Tencent Cloud console.
-                     * @return ProjectId Project ID of the security group clone. The default is 0. You can query it on the project management page of the Tencent Cloud console.
+                     * 获取Project ID. Default value: 0. You can query it on the <a href="https://console.cloud.tencent.com/project">project management page</a> of the Tencent Cloud console.
+                     * @return ProjectId Project ID. Default value: 0. You can query it on the <a href="https://console.cloud.tencent.com/project">project management page</a> of the Tencent Cloud console.
                      * 
                      */
                     std::string GetProjectId() const;
 
                     /**
-                     * 设置Project ID of the security group clone. The default is 0. You can query it on the project management page of the Tencent Cloud console.
-                     * @param _projectId Project ID of the security group clone. The default is 0. You can query it on the project management page of the Tencent Cloud console.
+                     * 设置Project ID. Default value: 0. You can query it on the <a href="https://console.cloud.tencent.com/project">project management page</a> of the Tencent Cloud console.
+                     * @param _projectId Project ID. Default value: 0. You can query it on the <a href="https://console.cloud.tencent.com/project">project management page</a> of the Tencent Cloud console.
                      * 
                      */
                     void SetProjectId(const std::string& _projectId);
@@ -150,7 +150,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the security group to be cloned, such as `sg-33ocnj9n`. This can be obtained through the `DescribeSecurityGroups` API.
+                     * Security group instance ID, such as `esg-33ocnj9n`, which can be obtained through the <a href="https://intl.cloud.tencent.com/document/product/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a> API.
                      */
                     std::string m_securityGroupId;
                     bool m_securityGroupIdHasBeenSet;
@@ -168,7 +168,7 @@ namespace TencentCloud
                     bool m_groupDescriptionHasBeenSet;
 
                     /**
-                     * Project ID of the security group clone. The default is 0. You can query it on the project management page of the Tencent Cloud console.
+                     * Project ID. Default value: 0. You can query it on the <a href="https://console.cloud.tencent.com/project">project management page</a> of the Tencent Cloud console.
                      */
                     std::string m_projectId;
                     bool m_projectIdHasBeenSet;

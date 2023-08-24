@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The direct connect gateway ID.
-                     * @return VpcId The direct connect gateway ID.
+                     * 获取VPC instance ID. VPC instance ID, which can be obtained from the `VpcId` field in the response of the `DescribeVpcs` API.
+                     * @return VpcId VPC instance ID. VPC instance ID, which can be obtained from the `VpcId` field in the response of the `DescribeVpcs` API.
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置The direct connect gateway ID.
-                     * @param _vpcId The direct connect gateway ID.
+                     * 设置VPC instance ID. VPC instance ID, which can be obtained from the `VpcId` field in the response of the `DescribeVpcs` API.
+                     * @param _vpcId VPC instance ID. VPC instance ID, which can be obtained from the `VpcId` field in the response of the `DescribeVpcs` API.
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool NatGatewayIdHasBeenSet() const;
 
                     /**
-                     * 获取The ID of the VPC instance, which can be obtained from the `VpcId` field in response of the `DescribeVpcs` API.
-                     * @return DirectConnectGatewayId The ID of the VPC instance, which can be obtained from the `VpcId` field in response of the `DescribeVpcs` API.
+                     * 获取The direct connect gateway ID.
+                     * @return DirectConnectGatewayId The direct connect gateway ID.
                      * 
                      */
                     std::string GetDirectConnectGatewayId() const;
 
                     /**
-                     * 设置The ID of the VPC instance, which can be obtained from the `VpcId` field in response of the `DescribeVpcs` API.
-                     * @param _directConnectGatewayId The ID of the VPC instance, which can be obtained from the `VpcId` field in response of the `DescribeVpcs` API.
+                     * 设置The direct connect gateway ID.
+                     * @param _directConnectGatewayId The direct connect gateway ID.
                      * 
                      */
                     void SetDirectConnectGatewayId(const std::string& _directConnectGatewayId);
@@ -108,7 +108,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The direct connect gateway ID.
+                     * VPC instance ID. VPC instance ID, which can be obtained from the `VpcId` field in the response of the `DescribeVpcs` API.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
@@ -120,7 +120,7 @@ namespace TencentCloud
                     bool m_natGatewayIdHasBeenSet;
 
                     /**
-                     * The ID of the VPC instance, which can be obtained from the `VpcId` field in response of the `DescribeVpcs` API.
+                     * The direct connect gateway ID.
                      */
                     std::string m_directConnectGatewayId;
                     bool m_directConnectGatewayIdHasBeenSet;

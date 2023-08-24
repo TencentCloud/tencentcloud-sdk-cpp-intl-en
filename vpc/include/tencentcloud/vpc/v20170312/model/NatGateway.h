@@ -485,6 +485,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool RestrictStateHasBeenSet() const;
 
+                    /**
+                     * 获取NAT gateway major version. `1`: Classic, `2`: Standard
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return NatProductVersion NAT gateway major version. `1`: Classic, `2`: Standard
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    uint64_t GetNatProductVersion() const;
+
+                    /**
+                     * 设置NAT gateway major version. `1`: Classic, `2`: Standard
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _natProductVersion NAT gateway major version. `1`: Classic, `2`: Standard
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetNatProductVersion(const uint64_t& _natProductVersion);
+
+                    /**
+                     * 判断参数 NatProductVersion 是否已赋值
+                     * @return NatProductVersion 是否已赋值
+                     * 
+                     */
+                    bool NatProductVersionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -609,6 +634,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_restrictState;
                     bool m_restrictStateHasBeenSet;
+
+                    /**
+                     * NAT gateway major version. `1`: Classic, `2`: Standard
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_natProductVersion;
+                    bool m_natProductVersionHasBeenSet;
 
                 };
             }

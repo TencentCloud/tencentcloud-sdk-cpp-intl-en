@@ -29,6 +29,7 @@
 #include <tencentcloud/mps/v20190612/model/TEHDConfigForUpdate.h>
 #include <tencentcloud/mps/v20190612/model/SubtitleTemplate.h>
 #include <tencentcloud/mps/v20190612/model/MediaInputInfo.h>
+#include <tencentcloud/mps/v20190612/model/AddOnSubtitle.h>
 
 
 namespace TencentCloud
@@ -173,15 +174,19 @@ namespace TencentCloud
                     bool AudioTemplateHasBeenSet() const;
 
                     /**
-                     * 获取TESHD transcoding parameter.
-                     * @return TEHDConfig TESHD transcoding parameter.
+                     * 获取The TSC transcoding parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TEHDConfig The TSC transcoding parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     TEHDConfigForUpdate GetTEHDConfig() const;
 
                     /**
-                     * 设置TESHD transcoding parameter.
-                     * @param _tEHDConfig TESHD transcoding parameter.
+                     * 设置The TSC transcoding parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _tEHDConfig The TSC transcoding parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTEHDConfig(const TEHDConfigForUpdate& _tEHDConfig);
@@ -195,14 +200,18 @@ namespace TencentCloud
 
                     /**
                      * 获取The subtitle settings.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * @return SubtitleTemplate The subtitle settings.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     SubtitleTemplate GetSubtitleTemplate() const;
 
                     /**
                      * 设置The subtitle settings.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * @param _subtitleTemplate The subtitle settings.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSubtitleTemplate(const SubtitleTemplate& _subtitleTemplate);
@@ -238,6 +247,56 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool AddonAudioStreamHasBeenSet() const;
+
+                    /**
+                     * 获取An extended field for transcoding.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * @return StdExtInfo An extended field for transcoding.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetStdExtInfo() const;
+
+                    /**
+                     * 设置An extended field for transcoding.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * @param _stdExtInfo An extended field for transcoding.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetStdExtInfo(const std::string& _stdExtInfo);
+
+                    /**
+                     * 判断参数 StdExtInfo 是否已赋值
+                     * @return StdExtInfo 是否已赋值
+                     * 
+                     */
+                    bool StdExtInfoHasBeenSet() const;
+
+                    /**
+                     * 获取The subtitle file to add.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * @return AddOnSubtitles The subtitle file to add.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<AddOnSubtitle> GetAddOnSubtitles() const;
+
+                    /**
+                     * 设置The subtitle file to add.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * @param _addOnSubtitles The subtitle file to add.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetAddOnSubtitles(const std::vector<AddOnSubtitle>& _addOnSubtitles);
+
+                    /**
+                     * 判断参数 AddOnSubtitles 是否已赋值
+                     * @return AddOnSubtitles 是否已赋值
+                     * 
+                     */
+                    bool AddOnSubtitlesHasBeenSet() const;
 
                 private:
 
@@ -276,13 +335,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_audioTemplateHasBeenSet;
 
                     /**
-                     * TESHD transcoding parameter.
+                     * The TSC transcoding parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     TEHDConfigForUpdate m_tEHDConfig;
                     bool m_tEHDConfigHasBeenSet;
 
                     /**
                      * The subtitle settings.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      */
                     SubtitleTemplate m_subtitleTemplate;
                     bool m_subtitleTemplateHasBeenSet;
@@ -293,6 +354,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<MediaInputInfo> m_addonAudioStream;
                     bool m_addonAudioStreamHasBeenSet;
+
+                    /**
+                     * An extended field for transcoding.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     */
+                    std::string m_stdExtInfo;
+                    bool m_stdExtInfoHasBeenSet;
+
+                    /**
+                     * The subtitle file to add.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     */
+                    std::vector<AddOnSubtitle> m_addOnSubtitles;
+                    bool m_addOnSubtitlesHasBeenSet;
 
                 };
             }

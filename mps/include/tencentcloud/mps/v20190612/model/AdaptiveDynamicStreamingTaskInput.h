@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mps/v20190612/model/WatermarkInput.h>
 #include <tencentcloud/mps/v20190612/model/TaskOutputStorage.h>
+#include <tencentcloud/mps/v20190612/model/AddOnSubtitle.h>
 
 
 namespace TencentCloud
@@ -178,6 +179,31 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool SegmentObjectNameHasBeenSet() const;
 
+                    /**
+                     * 获取The subtitle file to add.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * @return AddOnSubtitles The subtitle file to add.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<AddOnSubtitle> GetAddOnSubtitles() const;
+
+                    /**
+                     * 设置The subtitle file to add.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * @param _addOnSubtitles The subtitle file to add.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetAddOnSubtitles(const std::vector<AddOnSubtitle>& _addOnSubtitles);
+
+                    /**
+                     * 判断参数 AddOnSubtitles 是否已赋值
+                     * @return AddOnSubtitles 是否已赋值
+                     * 
+                     */
+                    bool AddOnSubtitlesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -216,6 +242,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_segmentObjectName;
                     bool m_segmentObjectNameHasBeenSet;
+
+                    /**
+                     * The subtitle file to add.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     */
+                    std::vector<AddOnSubtitle> m_addOnSubtitles;
+                    bool m_addOnSubtitlesHasBeenSet;
 
                 };
             }

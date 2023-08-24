@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取IP
-                     * @return IP IP
+                     * 获取IP address
+                     * @return IP IP address
                      * 
                      */
                     std::string GetIP() const;
 
                     /**
-                     * 设置IP
-                     * @param _iP IP
+                     * 设置IP address
+                     * @param _iP IP address
                      * 
                      */
                     void SetIP(const std::string& _iP);
@@ -91,7 +91,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * IP
+                     * IP address
                      */
                     std::string m_iP;
                     bool m_iPHasBeenSet;

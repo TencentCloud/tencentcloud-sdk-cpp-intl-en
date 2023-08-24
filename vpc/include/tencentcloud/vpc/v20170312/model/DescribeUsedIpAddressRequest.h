@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取IPs to query
-                     * @return IpAddresses IPs to query
+                     * 获取List of IPs to be queried. The IPs must be within the VPC or subnet. Up to 100 IPs can be queried at a time.
+                     * @return IpAddresses List of IPs to be queried. The IPs must be within the VPC or subnet. Up to 100 IPs can be queried at a time.
                      * 
                      */
                     std::vector<std::string> GetIpAddresses() const;
 
                     /**
-                     * 设置IPs to query
-                     * @param _ipAddresses IPs to query
+                     * 设置List of IPs to be queried. The IPs must be within the VPC or subnet. Up to 100 IPs can be queried at a time.
+                     * @param _ipAddresses List of IPs to be queried. The IPs must be within the VPC or subnet. Up to 100 IPs can be queried at a time.
                      * 
                      */
                     void SetIpAddresses(const std::vector<std::string>& _ipAddresses);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool IpAddressesHasBeenSet() const;
 
                     /**
-                     * 获取Offset
-                     * @return Offset Offset
+                     * 获取The offset. Default value: 0
+                     * @return Offset The offset. Default value: 0
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Offset
-                     * @param _offset Offset
+                     * 设置The offset. Default value: 0
+                     * @param _offset The offset. Default value: 0
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取The number of requested objects.
-                     * @return Limit The number of requested objects.
+                     * 获取The number of returned results. Default value: 20. Maximum value: 100.
+                     * @return Limit The number of returned results. Default value: 20. Maximum value: 100.
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置The number of requested objects.
-                     * @param _limit The number of requested objects.
+                     * 设置The number of returned results. Default value: 20. Maximum value: 100.
+                     * @param _limit The number of returned results. Default value: 20. Maximum value: 100.
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -162,19 +162,19 @@ namespace TencentCloud
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * IPs to query
+                     * List of IPs to be queried. The IPs must be within the VPC or subnet. Up to 100 IPs can be queried at a time.
                      */
                     std::vector<std::string> m_ipAddresses;
                     bool m_ipAddressesHasBeenSet;
 
                     /**
-                     * Offset
+                     * The offset. Default value: 0
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * The number of requested objects.
+                     * The number of returned results. Default value: 20. Maximum value: 100.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
