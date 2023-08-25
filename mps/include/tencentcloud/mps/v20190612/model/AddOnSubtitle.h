@@ -50,14 +50,14 @@ namespace TencentCloud
                     /**
                      * 获取The mode. Valid values:
 <li>`subtitle-stream`: Add a subtitle track.</li>
-<li>`close-caption-708`: u200dEmbed EA-708 subtitles in SEI frames.</li>
+<li>`close-caption-708`: Embed EA-708 subtitles in SEI frames.</li>
 <li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * @return Type The mode. Valid values:
 <li>`subtitle-stream`: Add a subtitle track.</li>
-<li>`close-caption-708`: u200dEmbed EA-708 subtitles in SEI frames.</li>
+<li>`close-caption-708`: Embed EA-708 subtitles in SEI frames.</li>
 <li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetType() const;
@@ -65,14 +65,14 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
                     /**
                      * 设置The mode. Valid values:
 <li>`subtitle-stream`: Add a subtitle track.</li>
-<li>`close-caption-708`: u200dEmbed EA-708 subtitles in SEI frames.</li>
+<li>`close-caption-708`: Embed EA-708 subtitles in SEI frames.</li>
 <li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * @param _type The mode. Valid values:
 <li>`subtitle-stream`: Add a subtitle track.</li>
-<li>`close-caption-708`: u200dEmbed EA-708 subtitles in SEI frames.</li>
+<li>`close-caption-708`: Embed EA-708 subtitles in SEI frames.</li>
 <li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -86,18 +86,18 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
                     /**
                      * 获取The subtitle file.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * @return Subtitle The subtitle file.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     MediaInputInfo GetSubtitle() const;
 
                     /**
                      * 设置The subtitle file.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * @param _subtitle The subtitle file.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSubtitle(const MediaInputInfo& _subtitle);
@@ -114,16 +114,16 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
                     /**
                      * The mode. Valid values:
 <li>`subtitle-stream`: Add a subtitle track.</li>
-<li>`close-caption-708`: u200dEmbed EA-708 subtitles in SEI frames.</li>
+<li>`close-caption-708`: Embed EA-708 subtitles in SEI frames.</li>
 <li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
                      * The subtitle file.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     MediaInputInfo m_subtitle;
                     bool m_subtitleHasBeenSet;

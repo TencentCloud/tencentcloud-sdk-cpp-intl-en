@@ -181,18 +181,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取The subtitle file to add.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * @return AddOnSubtitles The subtitle file to add.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<AddOnSubtitle> GetAddOnSubtitles() const;
 
                     /**
                      * 设置The subtitle file to add.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * @param _addOnSubtitles The subtitle file to add.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAddOnSubtitles(const std::vector<AddOnSubtitle>& _addOnSubtitles);
@@ -245,7 +245,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * The subtitle file to add.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     std::vector<AddOnSubtitle> m_addOnSubtitles;
                     bool m_addOnSubtitlesHasBeenSet;

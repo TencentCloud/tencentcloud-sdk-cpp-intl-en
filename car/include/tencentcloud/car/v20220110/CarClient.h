@@ -29,6 +29,10 @@
 #include <tencentcloud/car/v20220110/model/CreateSessionResponse.h>
 #include <tencentcloud/car/v20220110/model/DestroySessionRequest.h>
 #include <tencentcloud/car/v20220110/model/DestroySessionResponse.h>
+#include <tencentcloud/car/v20220110/model/StartPublishStreamRequest.h>
+#include <tencentcloud/car/v20220110/model/StartPublishStreamResponse.h>
+#include <tencentcloud/car/v20220110/model/StopPublishStreamRequest.h>
+#include <tencentcloud/car/v20220110/model/StopPublishStreamResponse.h>
 
 
 namespace TencentCloud
@@ -52,11 +56,17 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DestroySessionResponse> DestroySessionOutcome;
                 typedef std::future<DestroySessionOutcome> DestroySessionOutcomeCallable;
                 typedef std::function<void(const CarClient*, const Model::DestroySessionRequest&, DestroySessionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DestroySessionAsyncHandler;
+                typedef Outcome<Core::Error, Model::StartPublishStreamResponse> StartPublishStreamOutcome;
+                typedef std::future<StartPublishStreamOutcome> StartPublishStreamOutcomeCallable;
+                typedef std::function<void(const CarClient*, const Model::StartPublishStreamRequest&, StartPublishStreamOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StartPublishStreamAsyncHandler;
+                typedef Outcome<Core::Error, Model::StopPublishStreamResponse> StopPublishStreamOutcome;
+                typedef std::future<StopPublishStreamOutcome> StopPublishStreamOutcomeCallable;
+                typedef std::function<void(const CarClient*, const Model::StopPublishStreamRequest&, StopPublishStreamOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StopPublishStreamAsyncHandler;
 
 
 
                 /**
-                 *This API is used to request concurrency quota.
+                 *This API is used to request a concurrency. The timeout period of the API is 20 seconds.
                  * @param req ApplyConcurrentRequest
                  * @return ApplyConcurrentOutcome
                  */
@@ -65,7 +75,7 @@ namespace TencentCloud
                 ApplyConcurrentOutcomeCallable ApplyConcurrentCallable(const Model::ApplyConcurrentRequest& request);
 
                 /**
-                 *This API is used to create a session.
+                 *This API is used to create a session. The timeout period of the API is 5 seconds.
                  * @param req CreateSessionRequest
                  * @return CreateSessionOutcome
                  */
@@ -81,6 +91,24 @@ namespace TencentCloud
                 DestroySessionOutcome DestroySession(const Model::DestroySessionRequest &request);
                 void DestroySessionAsync(const Model::DestroySessionRequest& request, const DestroySessionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DestroySessionOutcomeCallable DestroySessionCallable(const Model::DestroySessionRequest& request);
+
+                /**
+                 *This API is used to start stream push.
+                 * @param req StartPublishStreamRequest
+                 * @return StartPublishStreamOutcome
+                 */
+                StartPublishStreamOutcome StartPublishStream(const Model::StartPublishStreamRequest &request);
+                void StartPublishStreamAsync(const Model::StartPublishStreamRequest& request, const StartPublishStreamAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                StartPublishStreamOutcomeCallable StartPublishStreamCallable(const Model::StartPublishStreamRequest& request);
+
+                /**
+                 *This API is used to stop stream push.
+                 * @param req StopPublishStreamRequest
+                 * @return StopPublishStreamOutcome
+                 */
+                StopPublishStreamOutcome StopPublishStream(const Model::StopPublishStreamRequest &request);
+                void StopPublishStreamAsync(const Model::StopPublishStreamRequest& request, const StopPublishStreamAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                StopPublishStreamOutcomeCallable StopPublishStreamCallable(const Model::StopPublishStreamRequest& request);
 
             };
         }

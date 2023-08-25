@@ -51,12 +51,12 @@ namespace TencentCloud
 <li>`TEHD-100`: TSC-100 (video TSC). </li>
 <li>`TEHD-200`: TSC-200 (audio TSC). </li>
 If this parameter is left blank, no modification will be made.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * @return Type The TSC type. Valid values:
 <li>`TEHD-100`: TSC-100 (video TSC). </li>
 <li>`TEHD-200`: TSC-200 (audio TSC). </li>
 If this parameter is left blank, no modification will be made.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetType() const;
@@ -66,12 +66,12 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 <li>`TEHD-100`: TSC-100 (video TSC). </li>
 <li>`TEHD-200`: TSC-200 (audio TSC). </li>
 If this parameter is left blank, no modification will be made.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * @param _type The TSC type. Valid values:
 <li>`TEHD-100`: TSC-100 (video TSC). </li>
 <li>`TEHD-200`: TSC-200 (audio TSC). </li>
 If this parameter is left blank, no modification will be made.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -84,19 +84,19 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取u200dThe maximum video bitrate. If this parameter is not specified, no modifications will be made.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
-                     * @return MaxVideoBitrate u200dThe maximum video bitrate. If this parameter is not specified, no modifications will be made.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 获取The maximum video bitrate. If this parameter is not specified, no modifications will be made.
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @return MaxVideoBitrate The maximum video bitrate. If this parameter is not specified, no modifications will be made.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetMaxVideoBitrate() const;
 
                     /**
-                     * 设置u200dThe maximum video bitrate. If this parameter is not specified, no modifications will be made.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
-                     * @param _maxVideoBitrate u200dThe maximum video bitrate. If this parameter is not specified, no modifications will be made.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 设置The maximum video bitrate. If this parameter is not specified, no modifications will be made.
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @param _maxVideoBitrate The maximum video bitrate. If this parameter is not specified, no modifications will be made.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMaxVideoBitrate(const uint64_t& _maxVideoBitrate);
@@ -115,14 +115,14 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 <li>`TEHD-100`: TSC-100 (video TSC). </li>
 <li>`TEHD-200`: TSC-200 (audio TSC). </li>
 If this parameter is left blank, no modification will be made.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * u200dThe maximum video bitrate. If this parameter is not specified, no modifications will be made.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * The maximum video bitrate. If this parameter is not specified, no modifications will be made.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_maxVideoBitrate;
                     bool m_maxVideoBitrateHasBeenSet;
