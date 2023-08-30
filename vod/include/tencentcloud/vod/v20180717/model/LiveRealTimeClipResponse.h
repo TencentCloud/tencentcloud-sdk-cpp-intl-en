@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/vod/v20180717/model/MediaMetaData.h>
+#include <tencentcloud/vod/v20180717/model/LiveRealTimeClipMediaSegmentInfo.h>
 
 
 namespace TencentCloud
@@ -106,6 +107,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool MetaDataHasBeenSet() const;
 
+                    /**
+                     * 获取Cliped media segment info.
+                     * @return SegmentSet Cliped media segment info.
+                     * 
+                     */
+                    std::vector<LiveRealTimeClipMediaSegmentInfo> GetSegmentSet() const;
+
+                    /**
+                     * 判断参数 SegmentSet 是否已赋值
+                     * @return SegmentSet 是否已赋值
+                     * 
+                     */
+                    bool SegmentSetHasBeenSet() const;
+
                 private:
 
                     /**
@@ -134,6 +149,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     MediaMetaData m_metaData;
                     bool m_metaDataHasBeenSet;
+
+                    /**
+                     * Cliped media segment info.
+                     */
+                    std::vector<LiveRealTimeClipMediaSegmentInfo> m_segmentSet;
+                    bool m_segmentSetHasBeenSet;
 
                 };
             }

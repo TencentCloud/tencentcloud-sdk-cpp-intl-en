@@ -205,6 +205,8 @@
 #include <tencentcloud/vod/v20180717/model/DescribeWatermarkTemplatesResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeWordSamplesRequest.h>
 #include <tencentcloud/vod/v20180717/model/DescribeWordSamplesResponse.h>
+#include <tencentcloud/vod/v20180717/model/EditMediaRequest.h>
+#include <tencentcloud/vod/v20180717/model/EditMediaResponse.h>
 #include <tencentcloud/vod/v20180717/model/ExecuteFunctionRequest.h>
 #include <tencentcloud/vod/v20180717/model/ExecuteFunctionResponse.h>
 #include <tencentcloud/vod/v20180717/model/ExtractTraceWatermarkRequest.h>
@@ -588,6 +590,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeWordSamplesResponse> DescribeWordSamplesOutcome;
                 typedef std::future<DescribeWordSamplesOutcome> DescribeWordSamplesOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeWordSamplesRequest&, DescribeWordSamplesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWordSamplesAsyncHandler;
+                typedef Outcome<Core::Error, Model::EditMediaResponse> EditMediaOutcome;
+                typedef std::future<EditMediaOutcome> EditMediaOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::EditMediaRequest&, EditMediaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EditMediaAsyncHandler;
                 typedef Outcome<Core::Error, Model::ExecuteFunctionResponse> ExecuteFunctionOutcome;
                 typedef std::future<ExecuteFunctionOutcome> ExecuteFunctionOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ExecuteFunctionRequest&, ExecuteFunctionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ExecuteFunctionAsyncHandler;
@@ -1651,6 +1656,25 @@ This API is used to query player configurations. It supports pagination.
                 DescribeWordSamplesOutcome DescribeWordSamples(const Model::DescribeWordSamplesRequest &request);
                 void DescribeWordSamplesAsync(const Model::DescribeWordSamplesRequest& request, const DescribeWordSamplesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeWordSamplesOutcomeCallable DescribeWordSamplesCallable(const Model::DescribeWordSamplesRequest& request);
+
+                /**
+                 *This API is used to edit a video (by clipping, splicing, etc.) to generate a new VOD video. Editing features include:
+
+1. Clipping a file in VOD to generate a new video;
+2. Splicing multiple files in VOD to generate a new video;
+3. Clipping multiple files in VOD and then splicing the clips to generate a new video;
+4. Directly generating a new video from a stream in VOD;
+5. Clipping a stream in VOD to generate a new video;
+6. Splicing multiple streams in VOD to generate a new video;
+7. Clipping multiple streams in VOD and then splicing the clips to generate a new video.
+
+You can also specify whether to perform a task flow for the generated new video.
+                 * @param req EditMediaRequest
+                 * @return EditMediaOutcome
+                 */
+                EditMediaOutcome EditMedia(const Model::EditMediaRequest &request);
+                void EditMediaAsync(const Model::EditMediaRequest& request, const EditMediaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                EditMediaOutcomeCallable EditMediaCallable(const Model::EditMediaRequest& request);
 
                 /**
                  *This API is only used in special scenarios of custom development. Unless requested by VOD customer service, please do not call it.

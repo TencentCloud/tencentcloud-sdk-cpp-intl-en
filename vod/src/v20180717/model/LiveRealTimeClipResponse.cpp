@@ -27,7 +27,8 @@ LiveRealTimeClipResponse::LiveRealTimeClipResponse() :
     m_urlHasBeenSet(false),
     m_fileIdHasBeenSet(false),
     m_vodTaskIdHasBeenSet(false),
-    m_metaDataHasBeenSet(false)
+    m_metaDataHasBeenSet(false),
+    m_segmentSetHasBeenSet(false)
 {
 }
 
@@ -112,6 +113,26 @@ CoreInternalOutcome LiveRealTimeClipResponse::Deserialize(const string &payload)
         m_metaDataHasBeenSet = true;
     }
 
+    if (rsp.HasMember("SegmentSet") && !rsp["SegmentSet"].IsNull())
+    {
+        if (!rsp["SegmentSet"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `SegmentSet` is not array type"));
+
+        const rapidjson::Value &tmpValue = rsp["SegmentSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            LiveRealTimeClipMediaSegmentInfo item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_segmentSet.push_back(item);
+        }
+        m_segmentSetHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -153,6 +174,21 @@ string LiveRealTimeClipResponse::ToJsonString() const
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_metaData.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_segmentSetHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SegmentSet";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_segmentSet.begin(); itr != m_segmentSet.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -205,6 +241,16 @@ MediaMetaData LiveRealTimeClipResponse::GetMetaData() const
 bool LiveRealTimeClipResponse::MetaDataHasBeenSet() const
 {
     return m_metaDataHasBeenSet;
+}
+
+vector<LiveRealTimeClipMediaSegmentInfo> LiveRealTimeClipResponse::GetSegmentSet() const
+{
+    return m_segmentSet;
+}
+
+bool LiveRealTimeClipResponse::SegmentSetHasBeenSet() const
+{
+    return m_segmentSetHasBeenSet;
 }
 
 
