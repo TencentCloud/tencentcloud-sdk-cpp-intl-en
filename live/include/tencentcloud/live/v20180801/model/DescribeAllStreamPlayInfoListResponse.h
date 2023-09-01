@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The time point queried, whose value is the same as that of the corresponding request parameter.
-                     * @return QueryTime The time point queried, whose value is the same as that of the corresponding request parameter.
+                     * 获取The time point queried, whose format is the same as that of the corresponding request parameter.
+                     * @return QueryTime The time point queried, whose format is the same as that of the corresponding request parameter.
                      * 
                      */
                     std::string GetQueryTime() const;
@@ -75,7 +75,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The time point queried, whose value is the same as that of the corresponding request parameter.
+                     * The time point queried, whose format is the same as that of the corresponding request parameter.
                      */
                     std::string m_queryTime;
                     bool m_queryTimeHasBeenSet;

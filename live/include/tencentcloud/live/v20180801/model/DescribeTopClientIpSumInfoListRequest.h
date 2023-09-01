@@ -43,15 +43,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start point in time in the format of `yyyy-mm-dd HH:MM:SS`.
-                     * @return StartTime Start point in time in the format of `yyyy-mm-dd HH:MM:SS`.
+                     * 获取The start time of the request, supports data query for the last one day, the gap between the start time and the end time cannot exceed four hours. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format, for details, see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
+                     * @return StartTime The start time of the request, supports data query for the last one day, the gap between the start time and the end time cannot exceed four hours. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format, for details, see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Start point in time in the format of `yyyy-mm-dd HH:MM:SS`.
-                     * @param _startTime Start point in time in the format of `yyyy-mm-dd HH:MM:SS`.
+                     * 设置The start time of the request, supports data query for the last one day, the gap between the start time and the end time cannot exceed four hours. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format, for details, see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
+                     * @param _startTime The start time of the request, supports data query for the last one day, the gap between the start time and the end time cannot exceed four hours. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format, for details, see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -64,19 +72,23 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End point in time in the format of `yyyy-mm-dd HH:MM:SS`
-The time span is [0,4 hours]. Data for the last day can be queried.
-                     * @return EndTime End point in time in the format of `yyyy-mm-dd HH:MM:SS`
-The time span is [0,4 hours]. Data for the last day can be queried.
+                     * 获取The end time of the request, supports data query for the last one day, the gap between the start time and the end time cannot exceed four hours. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format,for details,see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
+                     * @return EndTime The end time of the request, supports data query for the last one day, the gap between the start time and the end time cannot exceed four hours. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format,for details,see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End point in time in the format of `yyyy-mm-dd HH:MM:SS`
-The time span is [0,4 hours]. Data for the last day can be queried.
-                     * @param _endTime End point in time in the format of `yyyy-mm-dd HH:MM:SS`
-The time span is [0,4 hours]. Data for the last day can be queried.
+                     * 设置The end time of the request, supports data query for the last one day, the gap between the start time and the end time cannot exceed four hours. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format,for details,see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
+                     * @param _endTime The end time of the request, supports data query for the last one day, the gap between the start time and the end time cannot exceed four hours. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format,for details,see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -217,14 +229,17 @@ The time span is [0,4 hours]. Data for the last day can be queried.
                 private:
 
                     /**
-                     * Start point in time in the format of `yyyy-mm-dd HH:MM:SS`.
+                     * The start time of the request, supports data query for the last one day, the gap between the start time and the end time cannot exceed four hours. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format, for details, see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End point in time in the format of `yyyy-mm-dd HH:MM:SS`
-The time span is [0,4 hours]. Data for the last day can be queried.
+                     * The end time of the request, supports data query for the last one day, the gap between the start time and the end time cannot exceed four hours. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format,for details,see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
