@@ -39,6 +39,8 @@
 #include <tencentcloud/dcdb/v20180411/model/CreateAccountResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/CreateDCDBInstanceRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/CreateDCDBInstanceResponse.h>
+#include <tencentcloud/dcdb/v20180411/model/CreateDedicatedClusterDCDBInstanceRequest.h>
+#include <tencentcloud/dcdb/v20180411/model/CreateDedicatedClusterDCDBInstanceResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/CreateHourDCDBInstanceRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/CreateHourDCDBInstanceResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/DeleteAccountRequest.h>
@@ -61,6 +63,8 @@
 #include <tencentcloud/dcdb/v20180411/model/DescribeDBSlowLogsResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeDBSyncModeRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeDBSyncModeResponse.h>
+#include <tencentcloud/dcdb/v20180411/model/DescribeDBTmpInstancesRequest.h>
+#include <tencentcloud/dcdb/v20180411/model/DescribeDBTmpInstancesResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeDCDBInstanceDetailRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeDCDBInstanceDetailResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeDCDBInstanceNodeInfoRequest.h>
@@ -83,6 +87,8 @@
 #include <tencentcloud/dcdb/v20180411/model/DescribeFileDownloadUrlResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeFlowRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeFlowResponse.h>
+#include <tencentcloud/dcdb/v20180411/model/DescribeLogFileRetentionPeriodRequest.h>
+#include <tencentcloud/dcdb/v20180411/model/DescribeLogFileRetentionPeriodResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeOrdersRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeOrdersResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeProjectSecurityGroupsRequest.h>
@@ -135,6 +141,8 @@
 #include <tencentcloud/dcdb/v20180411/model/SwitchDBInstanceHAResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/TerminateDedicatedDBInstanceRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/TerminateDedicatedDBInstanceResponse.h>
+#include <tencentcloud/dcdb/v20180411/model/UpgradeDedicatedDCDBInstanceRequest.h>
+#include <tencentcloud/dcdb/v20180411/model/UpgradeDedicatedDCDBInstanceResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/UpgradeHourDCDBInstanceRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/UpgradeHourDCDBInstanceResponse.h>
 
@@ -175,6 +183,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateDCDBInstanceResponse> CreateDCDBInstanceOutcome;
                 typedef std::future<CreateDCDBInstanceOutcome> CreateDCDBInstanceOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::CreateDCDBInstanceRequest&, CreateDCDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDCDBInstanceAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateDedicatedClusterDCDBInstanceResponse> CreateDedicatedClusterDCDBInstanceOutcome;
+                typedef std::future<CreateDedicatedClusterDCDBInstanceOutcome> CreateDedicatedClusterDCDBInstanceOutcomeCallable;
+                typedef std::function<void(const DcdbClient*, const Model::CreateDedicatedClusterDCDBInstanceRequest&, CreateDedicatedClusterDCDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDedicatedClusterDCDBInstanceAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateHourDCDBInstanceResponse> CreateHourDCDBInstanceOutcome;
                 typedef std::future<CreateHourDCDBInstanceOutcome> CreateHourDCDBInstanceOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::CreateHourDCDBInstanceRequest&, CreateHourDCDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateHourDCDBInstanceAsyncHandler;
@@ -208,6 +219,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeDBSyncModeResponse> DescribeDBSyncModeOutcome;
                 typedef std::future<DescribeDBSyncModeOutcome> DescribeDBSyncModeOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::DescribeDBSyncModeRequest&, DescribeDBSyncModeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBSyncModeAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDBTmpInstancesResponse> DescribeDBTmpInstancesOutcome;
+                typedef std::future<DescribeDBTmpInstancesOutcome> DescribeDBTmpInstancesOutcomeCallable;
+                typedef std::function<void(const DcdbClient*, const Model::DescribeDBTmpInstancesRequest&, DescribeDBTmpInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBTmpInstancesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDCDBInstanceDetailResponse> DescribeDCDBInstanceDetailOutcome;
                 typedef std::future<DescribeDCDBInstanceDetailOutcome> DescribeDCDBInstanceDetailOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::DescribeDCDBInstanceDetailRequest&, DescribeDCDBInstanceDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDCDBInstanceDetailAsyncHandler;
@@ -241,6 +255,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeFlowResponse> DescribeFlowOutcome;
                 typedef std::future<DescribeFlowOutcome> DescribeFlowOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::DescribeFlowRequest&, DescribeFlowOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeFlowAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeLogFileRetentionPeriodResponse> DescribeLogFileRetentionPeriodOutcome;
+                typedef std::future<DescribeLogFileRetentionPeriodOutcome> DescribeLogFileRetentionPeriodOutcomeCallable;
+                typedef std::function<void(const DcdbClient*, const Model::DescribeLogFileRetentionPeriodRequest&, DescribeLogFileRetentionPeriodOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLogFileRetentionPeriodAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeOrdersResponse> DescribeOrdersOutcome;
                 typedef std::future<DescribeOrdersOutcome> DescribeOrdersOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::DescribeOrdersRequest&, DescribeOrdersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeOrdersAsyncHandler;
@@ -319,6 +336,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::TerminateDedicatedDBInstanceResponse> TerminateDedicatedDBInstanceOutcome;
                 typedef std::future<TerminateDedicatedDBInstanceOutcome> TerminateDedicatedDBInstanceOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::TerminateDedicatedDBInstanceRequest&, TerminateDedicatedDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> TerminateDedicatedDBInstanceAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpgradeDedicatedDCDBInstanceResponse> UpgradeDedicatedDCDBInstanceOutcome;
+                typedef std::future<UpgradeDedicatedDCDBInstanceOutcome> UpgradeDedicatedDCDBInstanceOutcomeCallable;
+                typedef std::function<void(const DcdbClient*, const Model::UpgradeDedicatedDCDBInstanceRequest&, UpgradeDedicatedDCDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpgradeDedicatedDCDBInstanceAsyncHandler;
                 typedef Outcome<Core::Error, Model::UpgradeHourDCDBInstanceResponse> UpgradeHourDCDBInstanceOutcome;
                 typedef std::future<UpgradeHourDCDBInstanceOutcome> UpgradeHourDCDBInstanceOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::UpgradeHourDCDBInstanceRequest&, UpgradeHourDCDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpgradeHourDCDBInstanceAsyncHandler;
@@ -397,6 +417,15 @@ Note: Accounts with the same username but different hosts are different accounts
                 CreateDCDBInstanceOutcome CreateDCDBInstance(const Model::CreateDCDBInstanceRequest &request);
                 void CreateDCDBInstanceAsync(const Model::CreateDCDBInstanceRequest& request, const CreateDCDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateDCDBInstanceOutcomeCallable CreateDCDBInstanceCallable(const Model::CreateDCDBInstanceRequest& request);
+
+                /**
+                 *This API is used to create a dedicated TDSQL cluster instance.
+                 * @param req CreateDedicatedClusterDCDBInstanceRequest
+                 * @return CreateDedicatedClusterDCDBInstanceOutcome
+                 */
+                CreateDedicatedClusterDCDBInstanceOutcome CreateDedicatedClusterDCDBInstance(const Model::CreateDedicatedClusterDCDBInstanceRequest &request);
+                void CreateDedicatedClusterDCDBInstanceAsync(const Model::CreateDedicatedClusterDCDBInstanceRequest& request, const CreateDedicatedClusterDCDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateDedicatedClusterDCDBInstanceOutcomeCallable CreateDedicatedClusterDCDBInstanceCallable(const Model::CreateDedicatedClusterDCDBInstanceRequest& request);
 
                 /**
                  *This API is used to create a pay-as-you-go TDSQL instance.
@@ -499,6 +528,15 @@ Note: Accounts with the same username but different hosts are considered as diff
                 DescribeDBSyncModeOutcomeCallable DescribeDBSyncModeCallable(const Model::DescribeDBSyncModeRequest& request);
 
                 /**
+                 *This API is used to obtain u200da temp rollback instance.
+                 * @param req DescribeDBTmpInstancesRequest
+                 * @return DescribeDBTmpInstancesOutcome
+                 */
+                DescribeDBTmpInstancesOutcome DescribeDBTmpInstances(const Model::DescribeDBTmpInstancesRequest &request);
+                void DescribeDBTmpInstancesAsync(const Model::DescribeDBTmpInstancesRequest& request, const DescribeDBTmpInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDBTmpInstancesOutcomeCallable DescribeDBTmpInstancesCallable(const Model::DescribeDBTmpInstancesRequest& request);
+
+                /**
                  *This API is used to get the details of a TDSQL instance.
                  * @param req DescribeDCDBInstanceDetailRequest
                  * @return DescribeDCDBInstanceDetailOutcome
@@ -597,6 +635,15 @@ If no filter is specified, 10 instances will be returned by default. Up to 100 i
                 DescribeFlowOutcome DescribeFlow(const Model::DescribeFlowRequest &request);
                 void DescribeFlowAsync(const Model::DescribeFlowRequest& request, const DescribeFlowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeFlowOutcomeCallable DescribeFlowCallable(const Model::DescribeFlowRequest& request);
+
+                /**
+                 *This API is used to view the backup log retention days.
+                 * @param req DescribeLogFileRetentionPeriodRequest
+                 * @return DescribeLogFileRetentionPeriodOutcome
+                 */
+                DescribeLogFileRetentionPeriodOutcome DescribeLogFileRetentionPeriod(const Model::DescribeLogFileRetentionPeriodRequest &request);
+                void DescribeLogFileRetentionPeriodAsync(const Model::DescribeLogFileRetentionPeriodRequest& request, const DescribeLogFileRetentionPeriodAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeLogFileRetentionPeriodOutcomeCallable DescribeLogFileRetentionPeriodCallable(const Model::DescribeLogFileRetentionPeriodRequest& request);
 
                 /**
                  *This API is used to query TDSQL order information. You can pass in an order ID to query the TDSQL instance associated with the order and the corresponding task process ID.
@@ -834,6 +881,15 @@ Note: accounts with the same username but different hosts are different accounts
                 TerminateDedicatedDBInstanceOutcome TerminateDedicatedDBInstance(const Model::TerminateDedicatedDBInstanceRequest &request);
                 void TerminateDedicatedDBInstanceAsync(const Model::TerminateDedicatedDBInstanceRequest& request, const TerminateDedicatedDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 TerminateDedicatedDBInstanceOutcomeCallable TerminateDedicatedDBInstanceCallable(const Model::TerminateDedicatedDBInstanceRequest& request);
+
+                /**
+                 *This API is used to u200dupgrade a dedicated TDSQL cluster instance.
+                 * @param req UpgradeDedicatedDCDBInstanceRequest
+                 * @return UpgradeDedicatedDCDBInstanceOutcome
+                 */
+                UpgradeDedicatedDCDBInstanceOutcome UpgradeDedicatedDCDBInstance(const Model::UpgradeDedicatedDCDBInstanceRequest &request);
+                void UpgradeDedicatedDCDBInstanceAsync(const Model::UpgradeDedicatedDCDBInstanceRequest& request, const UpgradeDedicatedDCDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpgradeDedicatedDCDBInstanceOutcomeCallable UpgradeDedicatedDCDBInstanceCallable(const Model::UpgradeDedicatedDCDBInstanceRequest& request);
 
                 /**
                  *This API is used to upgrade a pay-as-you-go TDSQL instance.

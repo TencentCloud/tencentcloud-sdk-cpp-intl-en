@@ -27,6 +27,7 @@
 #include <tencentcloud/mps/v20190612/model/WatermarkInput.h>
 #include <tencentcloud/mps/v20190612/model/TaskOutputStorage.h>
 #include <tencentcloud/mps/v20190612/model/AddOnSubtitle.h>
+#include <tencentcloud/mps/v20190612/model/DrmInfo.h>
 
 
 namespace TencentCloud
@@ -204,6 +205,27 @@ Note: This field may return·null, indicating that no valid values can be obtain
                      */
                     bool AddOnSubtitlesHasBeenSet() const;
 
+                    /**
+                     * 获取Information of Drm.   Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @return DrmInfo Information of Drm.   Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    DrmInfo GetDrmInfo() const;
+
+                    /**
+                     * 设置Information of Drm.   Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @param _drmInfo Information of Drm.   Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetDrmInfo(const DrmInfo& _drmInfo);
+
+                    /**
+                     * 判断参数 DrmInfo 是否已赋值
+                     * @return DrmInfo 是否已赋值
+                     * 
+                     */
+                    bool DrmInfoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -249,6 +271,12 @@ Note: This field may return·null, indicating that no valid values can be obtain
                      */
                     std::vector<AddOnSubtitle> m_addOnSubtitles;
                     bool m_addOnSubtitlesHasBeenSet;
+
+                    /**
+                     * Information of Drm.   Note: This field may return·null, indicating that no valid values can be obtained.
+                     */
+                    DrmInfo m_drmInfo;
+                    bool m_drmInfoHasBeenSet;
 
                 };
             }

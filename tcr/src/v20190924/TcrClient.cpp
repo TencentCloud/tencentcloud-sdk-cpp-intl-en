@@ -126,6 +126,49 @@ TcrClient::CheckInstanceNameOutcomeCallable TcrClient::CheckInstanceNameCallable
     return task->get_future();
 }
 
+TcrClient::CreateCustomAccountOutcome TcrClient::CreateCustomAccount(const CreateCustomAccountRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateCustomAccount");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateCustomAccountResponse rsp = CreateCustomAccountResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateCustomAccountOutcome(rsp);
+        else
+            return CreateCustomAccountOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateCustomAccountOutcome(outcome.GetError());
+    }
+}
+
+void TcrClient::CreateCustomAccountAsync(const CreateCustomAccountRequest& request, const CreateCustomAccountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateCustomAccount(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcrClient::CreateCustomAccountOutcomeCallable TcrClient::CreateCustomAccountCallable(const CreateCustomAccountRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateCustomAccountOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateCustomAccount(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TcrClient::CreateImageAccelerationServiceOutcome TcrClient::CreateImageAccelerationService(const CreateImageAccelerationServiceRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateImageAccelerationService");
@@ -556,6 +599,49 @@ TcrClient::CreateSecurityPolicyOutcomeCallable TcrClient::CreateSecurityPolicyCa
     return task->get_future();
 }
 
+TcrClient::CreateServiceAccountOutcome TcrClient::CreateServiceAccount(const CreateServiceAccountRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateServiceAccount");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateServiceAccountResponse rsp = CreateServiceAccountResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateServiceAccountOutcome(rsp);
+        else
+            return CreateServiceAccountOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateServiceAccountOutcome(outcome.GetError());
+    }
+}
+
+void TcrClient::CreateServiceAccountAsync(const CreateServiceAccountRequest& request, const CreateServiceAccountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateServiceAccount(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcrClient::CreateServiceAccountOutcomeCallable TcrClient::CreateServiceAccountCallable(const CreateServiceAccountRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateServiceAccountOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateServiceAccount(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TcrClient::CreateSignatureOutcome TcrClient::CreateSignature(const CreateSignatureRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateSignature");
@@ -764,6 +850,49 @@ TcrClient::CreateWebhookTriggerOutcomeCallable TcrClient::CreateWebhookTriggerCa
         [this, request]()
         {
             return this->CreateWebhookTrigger(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TcrClient::DeleteCustomAccountOutcome TcrClient::DeleteCustomAccount(const DeleteCustomAccountRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteCustomAccount");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteCustomAccountResponse rsp = DeleteCustomAccountResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteCustomAccountOutcome(rsp);
+        else
+            return DeleteCustomAccountOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteCustomAccountOutcome(outcome.GetError());
+    }
+}
+
+void TcrClient::DeleteCustomAccountAsync(const DeleteCustomAccountRequest& request, const DeleteCustomAccountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteCustomAccount(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcrClient::DeleteCustomAccountOutcomeCallable TcrClient::DeleteCustomAccountCallable(const DeleteCustomAccountRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteCustomAccountOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteCustomAccount(request);
         }
     );
 
@@ -1287,6 +1416,49 @@ TcrClient::DeleteSecurityPolicyOutcomeCallable TcrClient::DeleteSecurityPolicyCa
     return task->get_future();
 }
 
+TcrClient::DeleteServiceAccountOutcome TcrClient::DeleteServiceAccount(const DeleteServiceAccountRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteServiceAccount");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteServiceAccountResponse rsp = DeleteServiceAccountResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteServiceAccountOutcome(rsp);
+        else
+            return DeleteServiceAccountOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteServiceAccountOutcome(outcome.GetError());
+    }
+}
+
+void TcrClient::DeleteServiceAccountAsync(const DeleteServiceAccountRequest& request, const DeleteServiceAccountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteServiceAccount(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcrClient::DeleteServiceAccountOutcomeCallable TcrClient::DeleteServiceAccountCallable(const DeleteServiceAccountRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteServiceAccountOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteServiceAccount(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TcrClient::DeleteSignaturePolicyOutcome TcrClient::DeleteSignaturePolicy(const DeleteSignaturePolicyRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteSignaturePolicy");
@@ -1452,6 +1624,49 @@ TcrClient::DescribeChartDownloadInfoOutcomeCallable TcrClient::DescribeChartDown
         [this, request]()
         {
             return this->DescribeChartDownloadInfo(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TcrClient::DescribeCustomAccountsOutcome TcrClient::DescribeCustomAccounts(const DescribeCustomAccountsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCustomAccounts");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCustomAccountsResponse rsp = DescribeCustomAccountsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCustomAccountsOutcome(rsp);
+        else
+            return DescribeCustomAccountsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCustomAccountsOutcome(outcome.GetError());
+    }
+}
+
+void TcrClient::DescribeCustomAccountsAsync(const DescribeCustomAccountsRequest& request, const DescribeCustomAccountsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeCustomAccounts(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcrClient::DescribeCustomAccountsOutcomeCallable TcrClient::DescribeCustomAccountsCallable(const DescribeCustomAccountsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeCustomAccountsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeCustomAccounts(request);
         }
     );
 
@@ -2276,6 +2491,49 @@ TcrClient::DescribeSecurityPoliciesOutcomeCallable TcrClient::DescribeSecurityPo
     return task->get_future();
 }
 
+TcrClient::DescribeServiceAccountsOutcome TcrClient::DescribeServiceAccounts(const DescribeServiceAccountsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeServiceAccounts");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeServiceAccountsResponse rsp = DescribeServiceAccountsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeServiceAccountsOutcome(rsp);
+        else
+            return DescribeServiceAccountsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeServiceAccountsOutcome(outcome.GetError());
+    }
+}
+
+void TcrClient::DescribeServiceAccountsAsync(const DescribeServiceAccountsRequest& request, const DescribeServiceAccountsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeServiceAccounts(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcrClient::DescribeServiceAccountsOutcomeCallable TcrClient::DescribeServiceAccountsCallable(const DescribeServiceAccountsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeServiceAccountsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeServiceAccounts(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TcrClient::DescribeTagRetentionExecutionOutcome TcrClient::DescribeTagRetentionExecution(const DescribeTagRetentionExecutionRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeTagRetentionExecution");
@@ -2663,6 +2921,49 @@ TcrClient::ManageReplicationOutcomeCallable TcrClient::ManageReplicationCallable
     return task->get_future();
 }
 
+TcrClient::ModifyCustomAccountOutcome TcrClient::ModifyCustomAccount(const ModifyCustomAccountRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyCustomAccount");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyCustomAccountResponse rsp = ModifyCustomAccountResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyCustomAccountOutcome(rsp);
+        else
+            return ModifyCustomAccountOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyCustomAccountOutcome(outcome.GetError());
+    }
+}
+
+void TcrClient::ModifyCustomAccountAsync(const ModifyCustomAccountRequest& request, const ModifyCustomAccountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyCustomAccount(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcrClient::ModifyCustomAccountOutcomeCallable TcrClient::ModifyCustomAccountCallable(const ModifyCustomAccountRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyCustomAccountOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyCustomAccount(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TcrClient::ModifyImmutableTagRulesOutcome TcrClient::ModifyImmutableTagRules(const ModifyImmutableTagRulesRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyImmutableTagRules");
@@ -2914,6 +3215,49 @@ TcrClient::ModifySecurityPolicyOutcomeCallable TcrClient::ModifySecurityPolicyCa
         [this, request]()
         {
             return this->ModifySecurityPolicy(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TcrClient::ModifyServiceAccountOutcome TcrClient::ModifyServiceAccount(const ModifyServiceAccountRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyServiceAccount");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyServiceAccountResponse rsp = ModifyServiceAccountResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyServiceAccountOutcome(rsp);
+        else
+            return ModifyServiceAccountOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyServiceAccountOutcome(outcome.GetError());
+    }
+}
+
+void TcrClient::ModifyServiceAccountAsync(const ModifyServiceAccountRequest& request, const ModifyServiceAccountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyServiceAccount(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcrClient::ModifyServiceAccountOutcomeCallable TcrClient::ModifyServiceAccountCallable(const ModifyServiceAccountRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyServiceAccountOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyServiceAccount(request);
         }
     );
 

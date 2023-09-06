@@ -795,8 +795,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ReservedNetResourcesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IsPhysicalReplicationSupported 
+                     * 获取Whether physical replication is supported.
+                     * @return IsPhysicalReplicationSupported Whether physical replication is supported.
                      * 
                      */
                     bool GetIsPhysicalReplicationSupported() const;
@@ -1134,7 +1134,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_reservedNetResourcesHasBeenSet;
 
                     /**
-                     * 
+                     * Whether physical replication is supported.
                      */
                     bool m_isPhysicalReplicationSupported;
                     bool m_isPhysicalReplicationSupportedHasBeenSet;

@@ -191,6 +191,27 @@ namespace TencentCloud
                      */
                     bool EnableCosMAZHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to enable deletion protection
+                     * @return DeletionProtection Whether to enable deletion protection
+                     * 
+                     */
+                    bool GetDeletionProtection() const;
+
+                    /**
+                     * 设置Whether to enable deletion protection
+                     * @param _deletionProtection Whether to enable deletion protection
+                     * 
+                     */
+                    void SetDeletionProtection(const bool& _deletionProtection);
+
+                    /**
+                     * 判断参数 DeletionProtection 是否已赋值
+                     * @return DeletionProtection 是否已赋值
+                     * 
+                     */
+                    bool DeletionProtectionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -234,6 +255,12 @@ namespace TencentCloud
                      */
                     bool m_enableCosMAZ;
                     bool m_enableCosMAZHasBeenSet;
+
+                    /**
+                     * Whether to enable deletion protection
+                     */
+                    bool m_deletionProtection;
+                    bool m_deletionProtectionHasBeenSet;
 
                 };
             }

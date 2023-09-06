@@ -201,6 +201,7 @@ set(mps_public_header_model
   include/tencentcloud/mps/v20190612/model/AsrWordsConfigureInfo.h
   include/tencentcloud/mps/v20190612/model/LiveStreamAsrWordsRecognitionResult.h
   include/tencentcloud/mps/v20190612/model/AiSamplePerson.h
+  include/tencentcloud/mps/v20190612/model/SimpleAesDrm.h
   include/tencentcloud/mps/v20190612/model/DescribeWorkflowsResponse.h
   include/tencentcloud/mps/v20190612/model/AsrWordsConfigureInfoForUpdate.h
   include/tencentcloud/mps/v20190612/model/DeleteImageSpriteTemplateResponse.h
@@ -371,6 +372,7 @@ set(mps_public_header_model
   include/tencentcloud/mps/v20190612/model/LiveStreamProcessTask.h
   include/tencentcloud/mps/v20190612/model/QualityControlData.h
   include/tencentcloud/mps/v20190612/model/CreateWatermarkTemplateResponse.h
+  include/tencentcloud/mps/v20190612/model/DrmInfo.h
   include/tencentcloud/mps/v20190612/model/DescribeSampleSnapshotTemplatesResponse.h
   include/tencentcloud/mps/v20190612/model/ModifyWordSampleResponse.h
   include/tencentcloud/mps/v20190612/model/AiContentReviewResult.h
@@ -618,6 +620,7 @@ set(mps_src
   src/v20190612/model/AsrWordsConfigureInfo.cpp
   src/v20190612/model/LiveStreamAsrWordsRecognitionResult.cpp
   src/v20190612/model/AiSamplePerson.cpp
+  src/v20190612/model/SimpleAesDrm.cpp
   src/v20190612/model/DescribeWorkflowsResponse.cpp
   src/v20190612/model/AsrWordsConfigureInfoForUpdate.cpp
   src/v20190612/model/DeleteImageSpriteTemplateResponse.cpp
@@ -788,6 +791,7 @@ set(mps_src
   src/v20190612/model/LiveStreamProcessTask.cpp
   src/v20190612/model/QualityControlData.cpp
   src/v20190612/model/CreateWatermarkTemplateResponse.cpp
+  src/v20190612/model/DrmInfo.cpp
   src/v20190612/model/DescribeSampleSnapshotTemplatesResponse.cpp
   src/v20190612/model/ModifyWordSampleResponse.cpp
   src/v20190612/model/AiContentReviewResult.cpp

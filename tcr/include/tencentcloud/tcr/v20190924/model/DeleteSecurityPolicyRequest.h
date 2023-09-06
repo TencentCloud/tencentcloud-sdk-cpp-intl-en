@@ -105,6 +105,27 @@ namespace TencentCloud
                      */
                     bool PolicyVersionHasBeenSet() const;
 
+                    /**
+                     * 获取IP range or IP address (mutually exclusive).
+                     * @return CidrBlock IP range or IP address (mutually exclusive).
+                     * 
+                     */
+                    std::string GetCidrBlock() const;
+
+                    /**
+                     * 设置IP range or IP address (mutually exclusive).
+                     * @param _cidrBlock IP range or IP address (mutually exclusive).
+                     * 
+                     */
+                    void SetCidrBlock(const std::string& _cidrBlock);
+
+                    /**
+                     * 判断参数 CidrBlock 是否已赋值
+                     * @return CidrBlock 是否已赋值
+                     * 
+                     */
+                    bool CidrBlockHasBeenSet() const;
+
                 private:
 
                     /**
@@ -124,6 +145,12 @@ namespace TencentCloud
                      */
                     std::string m_policyVersion;
                     bool m_policyVersionHasBeenSet;
+
+                    /**
+                     * IP range or IP address (mutually exclusive).
+                     */
+                    std::string m_cidrBlock;
+                    bool m_cidrBlockHasBeenSet;
 
                 };
             }

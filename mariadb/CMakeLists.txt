@@ -20,6 +20,7 @@ set(mariadb_public_header
 
 set(mariadb_public_header_model
   include/tencentcloud/mariadb/v20170312/model/CreateDBInstanceRequest.h
+  include/tencentcloud/mariadb/v20170312/model/DescribeDBTmpInstancesRequest.h
   include/tencentcloud/mariadb/v20170312/model/DescribeAccountPrivilegesResponse.h
   include/tencentcloud/mariadb/v20170312/model/DescribeDatabasesRequest.h
   include/tencentcloud/mariadb/v20170312/model/ParamDesc.h
@@ -80,6 +81,7 @@ set(mariadb_public_header_model
   include/tencentcloud/mariadb/v20170312/model/Deal.h
   include/tencentcloud/mariadb/v20170312/model/GrantAccountPrivilegesRequest.h
   include/tencentcloud/mariadb/v20170312/model/DBParamValue.h
+  include/tencentcloud/mariadb/v20170312/model/TmpInstance.h
   include/tencentcloud/mariadb/v20170312/model/ModifyDBParametersRequest.h
   include/tencentcloud/mariadb/v20170312/model/DescribeDcnDetailRequest.h
   include/tencentcloud/mariadb/v20170312/model/DescribeFileDownloadUrlResponse.h
@@ -121,6 +123,7 @@ set(mariadb_public_header_model
   include/tencentcloud/mariadb/v20170312/model/DCNReplicaConfig.h
   include/tencentcloud/mariadb/v20170312/model/ModifyAccountPrivilegesRequest.h
   include/tencentcloud/mariadb/v20170312/model/DatabaseProcedure.h
+  include/tencentcloud/mariadb/v20170312/model/DescribeDBTmpInstancesResponse.h
   include/tencentcloud/mariadb/v20170312/model/ModifyDBSyncModeRequest.h
   include/tencentcloud/mariadb/v20170312/model/DescribeInstanceNodeInfoRequest.h
   include/tencentcloud/mariadb/v20170312/model/CloneAccountRequest.h
@@ -154,6 +157,7 @@ set(mariadb_public_header_model
 set(mariadb_src
   src/v20170312/MariadbClient.cpp
   src/v20170312/model/CreateDBInstanceRequest.cpp
+  src/v20170312/model/DescribeDBTmpInstancesRequest.cpp
   src/v20170312/model/DescribeAccountPrivilegesResponse.cpp
   src/v20170312/model/DescribeDatabasesRequest.cpp
   src/v20170312/model/ParamDesc.cpp
@@ -214,6 +218,7 @@ set(mariadb_src
   src/v20170312/model/Deal.cpp
   src/v20170312/model/GrantAccountPrivilegesRequest.cpp
   src/v20170312/model/DBParamValue.cpp
+  src/v20170312/model/TmpInstance.cpp
   src/v20170312/model/ModifyDBParametersRequest.cpp
   src/v20170312/model/DescribeDcnDetailRequest.cpp
   src/v20170312/model/DescribeFileDownloadUrlResponse.cpp
@@ -255,6 +260,7 @@ set(mariadb_src
   src/v20170312/model/DCNReplicaConfig.cpp
   src/v20170312/model/ModifyAccountPrivilegesRequest.cpp
   src/v20170312/model/DatabaseProcedure.cpp
+  src/v20170312/model/DescribeDBTmpInstancesResponse.cpp
   src/v20170312/model/ModifyDBSyncModeRequest.cpp
   src/v20170312/model/DescribeInstanceNodeInfoRequest.cpp
   src/v20170312/model/CloneAccountRequest.cpp

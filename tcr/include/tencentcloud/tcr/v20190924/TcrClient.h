@@ -27,6 +27,8 @@
 #include <tencentcloud/tcr/v20190924/model/CheckInstanceResponse.h>
 #include <tencentcloud/tcr/v20190924/model/CheckInstanceNameRequest.h>
 #include <tencentcloud/tcr/v20190924/model/CheckInstanceNameResponse.h>
+#include <tencentcloud/tcr/v20190924/model/CreateCustomAccountRequest.h>
+#include <tencentcloud/tcr/v20190924/model/CreateCustomAccountResponse.h>
 #include <tencentcloud/tcr/v20190924/model/CreateImageAccelerationServiceRequest.h>
 #include <tencentcloud/tcr/v20190924/model/CreateImageAccelerationServiceResponse.h>
 #include <tencentcloud/tcr/v20190924/model/CreateImmutableTagRulesRequest.h>
@@ -47,6 +49,8 @@
 #include <tencentcloud/tcr/v20190924/model/CreateRepositoryResponse.h>
 #include <tencentcloud/tcr/v20190924/model/CreateSecurityPolicyRequest.h>
 #include <tencentcloud/tcr/v20190924/model/CreateSecurityPolicyResponse.h>
+#include <tencentcloud/tcr/v20190924/model/CreateServiceAccountRequest.h>
+#include <tencentcloud/tcr/v20190924/model/CreateServiceAccountResponse.h>
 #include <tencentcloud/tcr/v20190924/model/CreateSignatureRequest.h>
 #include <tencentcloud/tcr/v20190924/model/CreateSignatureResponse.h>
 #include <tencentcloud/tcr/v20190924/model/CreateSignaturePolicyRequest.h>
@@ -57,6 +61,8 @@
 #include <tencentcloud/tcr/v20190924/model/CreateTagRetentionRuleResponse.h>
 #include <tencentcloud/tcr/v20190924/model/CreateWebhookTriggerRequest.h>
 #include <tencentcloud/tcr/v20190924/model/CreateWebhookTriggerResponse.h>
+#include <tencentcloud/tcr/v20190924/model/DeleteCustomAccountRequest.h>
+#include <tencentcloud/tcr/v20190924/model/DeleteCustomAccountResponse.h>
 #include <tencentcloud/tcr/v20190924/model/DeleteImageRequest.h>
 #include <tencentcloud/tcr/v20190924/model/DeleteImageResponse.h>
 #include <tencentcloud/tcr/v20190924/model/DeleteImageAccelerateServiceRequest.h>
@@ -81,6 +87,8 @@
 #include <tencentcloud/tcr/v20190924/model/DeleteRepositoryTagsResponse.h>
 #include <tencentcloud/tcr/v20190924/model/DeleteSecurityPolicyRequest.h>
 #include <tencentcloud/tcr/v20190924/model/DeleteSecurityPolicyResponse.h>
+#include <tencentcloud/tcr/v20190924/model/DeleteServiceAccountRequest.h>
+#include <tencentcloud/tcr/v20190924/model/DeleteServiceAccountResponse.h>
 #include <tencentcloud/tcr/v20190924/model/DeleteSignaturePolicyRequest.h>
 #include <tencentcloud/tcr/v20190924/model/DeleteSignaturePolicyResponse.h>
 #include <tencentcloud/tcr/v20190924/model/DeleteTagRetentionRuleRequest.h>
@@ -89,6 +97,8 @@
 #include <tencentcloud/tcr/v20190924/model/DeleteWebhookTriggerResponse.h>
 #include <tencentcloud/tcr/v20190924/model/DescribeChartDownloadInfoRequest.h>
 #include <tencentcloud/tcr/v20190924/model/DescribeChartDownloadInfoResponse.h>
+#include <tencentcloud/tcr/v20190924/model/DescribeCustomAccountsRequest.h>
+#include <tencentcloud/tcr/v20190924/model/DescribeCustomAccountsResponse.h>
 #include <tencentcloud/tcr/v20190924/model/DescribeExternalEndpointStatusRequest.h>
 #include <tencentcloud/tcr/v20190924/model/DescribeExternalEndpointStatusResponse.h>
 #include <tencentcloud/tcr/v20190924/model/DescribeGCJobsRequest.h>
@@ -127,6 +137,8 @@
 #include <tencentcloud/tcr/v20190924/model/DescribeRepositoriesResponse.h>
 #include <tencentcloud/tcr/v20190924/model/DescribeSecurityPoliciesRequest.h>
 #include <tencentcloud/tcr/v20190924/model/DescribeSecurityPoliciesResponse.h>
+#include <tencentcloud/tcr/v20190924/model/DescribeServiceAccountsRequest.h>
+#include <tencentcloud/tcr/v20190924/model/DescribeServiceAccountsResponse.h>
 #include <tencentcloud/tcr/v20190924/model/DescribeTagRetentionExecutionRequest.h>
 #include <tencentcloud/tcr/v20190924/model/DescribeTagRetentionExecutionResponse.h>
 #include <tencentcloud/tcr/v20190924/model/DescribeTagRetentionExecutionTaskRequest.h>
@@ -145,6 +157,8 @@
 #include <tencentcloud/tcr/v20190924/model/ManageInternalEndpointResponse.h>
 #include <tencentcloud/tcr/v20190924/model/ManageReplicationRequest.h>
 #include <tencentcloud/tcr/v20190924/model/ManageReplicationResponse.h>
+#include <tencentcloud/tcr/v20190924/model/ModifyCustomAccountRequest.h>
+#include <tencentcloud/tcr/v20190924/model/ModifyCustomAccountResponse.h>
 #include <tencentcloud/tcr/v20190924/model/ModifyImmutableTagRulesRequest.h>
 #include <tencentcloud/tcr/v20190924/model/ModifyImmutableTagRulesResponse.h>
 #include <tencentcloud/tcr/v20190924/model/ModifyInstanceRequest.h>
@@ -157,6 +171,8 @@
 #include <tencentcloud/tcr/v20190924/model/ModifyRepositoryResponse.h>
 #include <tencentcloud/tcr/v20190924/model/ModifySecurityPolicyRequest.h>
 #include <tencentcloud/tcr/v20190924/model/ModifySecurityPolicyResponse.h>
+#include <tencentcloud/tcr/v20190924/model/ModifyServiceAccountRequest.h>
+#include <tencentcloud/tcr/v20190924/model/ModifyServiceAccountResponse.h>
 #include <tencentcloud/tcr/v20190924/model/ModifyTagRetentionRuleRequest.h>
 #include <tencentcloud/tcr/v20190924/model/ModifyTagRetentionRuleResponse.h>
 #include <tencentcloud/tcr/v20190924/model/ModifyWebhookTriggerRequest.h>
@@ -183,6 +199,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CheckInstanceNameResponse> CheckInstanceNameOutcome;
                 typedef std::future<CheckInstanceNameOutcome> CheckInstanceNameOutcomeCallable;
                 typedef std::function<void(const TcrClient*, const Model::CheckInstanceNameRequest&, CheckInstanceNameOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CheckInstanceNameAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateCustomAccountResponse> CreateCustomAccountOutcome;
+                typedef std::future<CreateCustomAccountOutcome> CreateCustomAccountOutcomeCallable;
+                typedef std::function<void(const TcrClient*, const Model::CreateCustomAccountRequest&, CreateCustomAccountOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCustomAccountAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateImageAccelerationServiceResponse> CreateImageAccelerationServiceOutcome;
                 typedef std::future<CreateImageAccelerationServiceOutcome> CreateImageAccelerationServiceOutcomeCallable;
                 typedef std::function<void(const TcrClient*, const Model::CreateImageAccelerationServiceRequest&, CreateImageAccelerationServiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateImageAccelerationServiceAsyncHandler;
@@ -213,6 +232,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateSecurityPolicyResponse> CreateSecurityPolicyOutcome;
                 typedef std::future<CreateSecurityPolicyOutcome> CreateSecurityPolicyOutcomeCallable;
                 typedef std::function<void(const TcrClient*, const Model::CreateSecurityPolicyRequest&, CreateSecurityPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateSecurityPolicyAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateServiceAccountResponse> CreateServiceAccountOutcome;
+                typedef std::future<CreateServiceAccountOutcome> CreateServiceAccountOutcomeCallable;
+                typedef std::function<void(const TcrClient*, const Model::CreateServiceAccountRequest&, CreateServiceAccountOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateServiceAccountAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateSignatureResponse> CreateSignatureOutcome;
                 typedef std::future<CreateSignatureOutcome> CreateSignatureOutcomeCallable;
                 typedef std::function<void(const TcrClient*, const Model::CreateSignatureRequest&, CreateSignatureOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateSignatureAsyncHandler;
@@ -228,6 +250,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateWebhookTriggerResponse> CreateWebhookTriggerOutcome;
                 typedef std::future<CreateWebhookTriggerOutcome> CreateWebhookTriggerOutcomeCallable;
                 typedef std::function<void(const TcrClient*, const Model::CreateWebhookTriggerRequest&, CreateWebhookTriggerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateWebhookTriggerAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteCustomAccountResponse> DeleteCustomAccountOutcome;
+                typedef std::future<DeleteCustomAccountOutcome> DeleteCustomAccountOutcomeCallable;
+                typedef std::function<void(const TcrClient*, const Model::DeleteCustomAccountRequest&, DeleteCustomAccountOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteCustomAccountAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteImageResponse> DeleteImageOutcome;
                 typedef std::future<DeleteImageOutcome> DeleteImageOutcomeCallable;
                 typedef std::function<void(const TcrClient*, const Model::DeleteImageRequest&, DeleteImageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteImageAsyncHandler;
@@ -264,6 +289,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteSecurityPolicyResponse> DeleteSecurityPolicyOutcome;
                 typedef std::future<DeleteSecurityPolicyOutcome> DeleteSecurityPolicyOutcomeCallable;
                 typedef std::function<void(const TcrClient*, const Model::DeleteSecurityPolicyRequest&, DeleteSecurityPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteSecurityPolicyAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteServiceAccountResponse> DeleteServiceAccountOutcome;
+                typedef std::future<DeleteServiceAccountOutcome> DeleteServiceAccountOutcomeCallable;
+                typedef std::function<void(const TcrClient*, const Model::DeleteServiceAccountRequest&, DeleteServiceAccountOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteServiceAccountAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteSignaturePolicyResponse> DeleteSignaturePolicyOutcome;
                 typedef std::future<DeleteSignaturePolicyOutcome> DeleteSignaturePolicyOutcomeCallable;
                 typedef std::function<void(const TcrClient*, const Model::DeleteSignaturePolicyRequest&, DeleteSignaturePolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteSignaturePolicyAsyncHandler;
@@ -276,6 +304,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeChartDownloadInfoResponse> DescribeChartDownloadInfoOutcome;
                 typedef std::future<DescribeChartDownloadInfoOutcome> DescribeChartDownloadInfoOutcomeCallable;
                 typedef std::function<void(const TcrClient*, const Model::DescribeChartDownloadInfoRequest&, DescribeChartDownloadInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeChartDownloadInfoAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCustomAccountsResponse> DescribeCustomAccountsOutcome;
+                typedef std::future<DescribeCustomAccountsOutcome> DescribeCustomAccountsOutcomeCallable;
+                typedef std::function<void(const TcrClient*, const Model::DescribeCustomAccountsRequest&, DescribeCustomAccountsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCustomAccountsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeExternalEndpointStatusResponse> DescribeExternalEndpointStatusOutcome;
                 typedef std::future<DescribeExternalEndpointStatusOutcome> DescribeExternalEndpointStatusOutcomeCallable;
                 typedef std::function<void(const TcrClient*, const Model::DescribeExternalEndpointStatusRequest&, DescribeExternalEndpointStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeExternalEndpointStatusAsyncHandler;
@@ -333,6 +364,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeSecurityPoliciesResponse> DescribeSecurityPoliciesOutcome;
                 typedef std::future<DescribeSecurityPoliciesOutcome> DescribeSecurityPoliciesOutcomeCallable;
                 typedef std::function<void(const TcrClient*, const Model::DescribeSecurityPoliciesRequest&, DescribeSecurityPoliciesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSecurityPoliciesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeServiceAccountsResponse> DescribeServiceAccountsOutcome;
+                typedef std::future<DescribeServiceAccountsOutcome> DescribeServiceAccountsOutcomeCallable;
+                typedef std::function<void(const TcrClient*, const Model::DescribeServiceAccountsRequest&, DescribeServiceAccountsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeServiceAccountsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeTagRetentionExecutionResponse> DescribeTagRetentionExecutionOutcome;
                 typedef std::future<DescribeTagRetentionExecutionOutcome> DescribeTagRetentionExecutionOutcomeCallable;
                 typedef std::function<void(const TcrClient*, const Model::DescribeTagRetentionExecutionRequest&, DescribeTagRetentionExecutionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTagRetentionExecutionAsyncHandler;
@@ -360,6 +394,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ManageReplicationResponse> ManageReplicationOutcome;
                 typedef std::future<ManageReplicationOutcome> ManageReplicationOutcomeCallable;
                 typedef std::function<void(const TcrClient*, const Model::ManageReplicationRequest&, ManageReplicationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ManageReplicationAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyCustomAccountResponse> ModifyCustomAccountOutcome;
+                typedef std::future<ModifyCustomAccountOutcome> ModifyCustomAccountOutcomeCallable;
+                typedef std::function<void(const TcrClient*, const Model::ModifyCustomAccountRequest&, ModifyCustomAccountOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyCustomAccountAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyImmutableTagRulesResponse> ModifyImmutableTagRulesOutcome;
                 typedef std::future<ModifyImmutableTagRulesOutcome> ModifyImmutableTagRulesOutcomeCallable;
                 typedef std::function<void(const TcrClient*, const Model::ModifyImmutableTagRulesRequest&, ModifyImmutableTagRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyImmutableTagRulesAsyncHandler;
@@ -378,6 +415,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifySecurityPolicyResponse> ModifySecurityPolicyOutcome;
                 typedef std::future<ModifySecurityPolicyOutcome> ModifySecurityPolicyOutcomeCallable;
                 typedef std::function<void(const TcrClient*, const Model::ModifySecurityPolicyRequest&, ModifySecurityPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifySecurityPolicyAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyServiceAccountResponse> ModifyServiceAccountOutcome;
+                typedef std::future<ModifyServiceAccountOutcome> ModifyServiceAccountOutcomeCallable;
+                typedef std::function<void(const TcrClient*, const Model::ModifyServiceAccountRequest&, ModifyServiceAccountOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyServiceAccountAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyTagRetentionRuleResponse> ModifyTagRetentionRuleOutcome;
                 typedef std::future<ModifyTagRetentionRuleOutcome> ModifyTagRetentionRuleOutcomeCallable;
                 typedef std::function<void(const TcrClient*, const Model::ModifyTagRetentionRuleRequest&, ModifyTagRetentionRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyTagRetentionRuleAsyncHandler;
@@ -407,6 +447,15 @@ namespace TencentCloud
                 CheckInstanceNameOutcome CheckInstanceName(const Model::CheckInstanceNameRequest &request);
                 void CheckInstanceNameAsync(const Model::CheckInstanceNameRequest& request, const CheckInstanceNameAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CheckInstanceNameOutcomeCallable CheckInstanceNameCallable(const Model::CheckInstanceNameRequest& request);
+
+                /**
+                 *This API is used to create a custom account.
+                 * @param req CreateCustomAccountRequest
+                 * @return CreateCustomAccountOutcome
+                 */
+                CreateCustomAccountOutcome CreateCustomAccount(const Model::CreateCustomAccountRequest &request);
+                void CreateCustomAccountAsync(const Model::CreateCustomAccountRequest& request, const CreateCustomAccountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateCustomAccountOutcomeCallable CreateCustomAccountCallable(const Model::CreateCustomAccountRequest& request);
 
                 /**
                  *This API is used to create an image acceleration service.
@@ -499,6 +548,15 @@ namespace TencentCloud
                 CreateSecurityPolicyOutcomeCallable CreateSecurityPolicyCallable(const Model::CreateSecurityPolicyRequest& request);
 
                 /**
+                 *This API is used to create a service account.
+                 * @param req CreateServiceAccountRequest
+                 * @return CreateServiceAccountOutcome
+                 */
+                CreateServiceAccountOutcome CreateServiceAccount(const Model::CreateServiceAccountRequest &request);
+                void CreateServiceAccountAsync(const Model::CreateServiceAccountRequest& request, const CreateServiceAccountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateServiceAccountOutcomeCallable CreateServiceAccountCallable(const Model::CreateServiceAccountRequest& request);
+
+                /**
                  *This API is used to create a signature for an image tag.
                  * @param req CreateSignatureRequest
                  * @return CreateSignatureOutcome
@@ -542,6 +600,15 @@ namespace TencentCloud
                 CreateWebhookTriggerOutcome CreateWebhookTrigger(const Model::CreateWebhookTriggerRequest &request);
                 void CreateWebhookTriggerAsync(const Model::CreateWebhookTriggerRequest& request, const CreateWebhookTriggerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateWebhookTriggerOutcomeCallable CreateWebhookTriggerCallable(const Model::CreateWebhookTriggerRequest& request);
+
+                /**
+                 *This API is used to delete a custom account.
+                 * @param req DeleteCustomAccountRequest
+                 * @return DeleteCustomAccountOutcome
+                 */
+                DeleteCustomAccountOutcome DeleteCustomAccount(const Model::DeleteCustomAccountRequest &request);
+                void DeleteCustomAccountAsync(const Model::DeleteCustomAccountRequest& request, const DeleteCustomAccountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteCustomAccountOutcomeCallable DeleteCustomAccountCallable(const Model::DeleteCustomAccountRequest& request);
 
                 /**
                  *This API is used to delete the specified image.
@@ -643,13 +710,24 @@ namespace TencentCloud
                 DeleteRepositoryTagsOutcomeCallable DeleteRepositoryTagsCallable(const Model::DeleteRepositoryTagsRequest& request);
 
                 /**
-                 *This API is used to delete a public network access allowlist policy of an instance.
+                 *This API is used to delete a public network access allow policy.
+
+Note: When both `PolicyIndex` and `CidrBlock` are specified, `CidrBlock` takes the higher priority
                  * @param req DeleteSecurityPolicyRequest
                  * @return DeleteSecurityPolicyOutcome
                  */
                 DeleteSecurityPolicyOutcome DeleteSecurityPolicy(const Model::DeleteSecurityPolicyRequest &request);
                 void DeleteSecurityPolicyAsync(const Model::DeleteSecurityPolicyRequest& request, const DeleteSecurityPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteSecurityPolicyOutcomeCallable DeleteSecurityPolicyCallable(const Model::DeleteSecurityPolicyRequest& request);
+
+                /**
+                 *This API is used to delete a service account.
+                 * @param req DeleteServiceAccountRequest
+                 * @return DeleteServiceAccountOutcome
+                 */
+                DeleteServiceAccountOutcome DeleteServiceAccount(const Model::DeleteServiceAccountRequest &request);
+                void DeleteServiceAccountAsync(const Model::DeleteServiceAccountRequest& request, const DeleteServiceAccountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteServiceAccountOutcomeCallable DeleteServiceAccountCallable(const Model::DeleteServiceAccountRequest& request);
 
                 /**
                  *This API is used to delete a namespace signing policy.
@@ -686,6 +764,15 @@ namespace TencentCloud
                 DescribeChartDownloadInfoOutcome DescribeChartDownloadInfo(const Model::DescribeChartDownloadInfoRequest &request);
                 void DescribeChartDownloadInfoAsync(const Model::DescribeChartDownloadInfoRequest& request, const DescribeChartDownloadInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeChartDownloadInfoOutcomeCallable DescribeChartDownloadInfoCallable(const Model::DescribeChartDownloadInfoRequest& request);
+
+                /**
+                 *This API is used to query custom accounts.
+                 * @param req DescribeCustomAccountsRequest
+                 * @return DescribeCustomAccountsOutcome
+                 */
+                DescribeCustomAccountsOutcome DescribeCustomAccounts(const Model::DescribeCustomAccountsRequest &request);
+                void DescribeCustomAccountsAsync(const Model::DescribeCustomAccountsRequest& request, const DescribeCustomAccountsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCustomAccountsOutcomeCallable DescribeCustomAccountsCallable(const Model::DescribeCustomAccountsRequest& request);
 
                 /**
                  *This API is used to query the public network access entry status of an instance.
@@ -859,6 +946,15 @@ namespace TencentCloud
                 DescribeSecurityPoliciesOutcomeCallable DescribeSecurityPoliciesCallable(const Model::DescribeSecurityPoliciesRequest& request);
 
                 /**
+                 *This API is used to query service accounts.
+                 * @param req DescribeServiceAccountsRequest
+                 * @return DescribeServiceAccountsOutcome
+                 */
+                DescribeServiceAccountsOutcome DescribeServiceAccounts(const Model::DescribeServiceAccountsRequest &request);
+                void DescribeServiceAccountsAsync(const Model::DescribeServiceAccountsRequest& request, const DescribeServiceAccountsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeServiceAccountsOutcomeCallable DescribeServiceAccountsCallable(const Model::DescribeServiceAccountsRequest& request);
+
+                /**
                  *This API is used to query tag retention execution records.
                  * @param req DescribeTagRetentionExecutionRequest
                  * @return DescribeTagRetentionExecutionOutcome
@@ -940,6 +1036,15 @@ namespace TencentCloud
                 ManageReplicationOutcomeCallable ManageReplicationCallable(const Model::ManageReplicationRequest& request);
 
                 /**
+                 *This API is used to update a custom account.
+                 * @param req ModifyCustomAccountRequest
+                 * @return ModifyCustomAccountOutcome
+                 */
+                ModifyCustomAccountOutcome ModifyCustomAccount(const Model::ModifyCustomAccountRequest &request);
+                void ModifyCustomAccountAsync(const Model::ModifyCustomAccountRequest& request, const ModifyCustomAccountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyCustomAccountOutcomeCallable ModifyCustomAccountCallable(const Model::ModifyCustomAccountRequest& request);
+
+                /**
                  *This API is used to update the tag immutability rule.
                  * @param req ModifyImmutableTagRulesRequest
                  * @return ModifyImmutableTagRulesOutcome
@@ -992,6 +1097,15 @@ namespace TencentCloud
                 ModifySecurityPolicyOutcome ModifySecurityPolicy(const Model::ModifySecurityPolicyRequest &request);
                 void ModifySecurityPolicyAsync(const Model::ModifySecurityPolicyRequest& request, const ModifySecurityPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifySecurityPolicyOutcomeCallable ModifySecurityPolicyCallable(const Model::ModifySecurityPolicyRequest& request);
+
+                /**
+                 *This API is used to update a service account.
+                 * @param req ModifyServiceAccountRequest
+                 * @return ModifyServiceAccountOutcome
+                 */
+                ModifyServiceAccountOutcome ModifyServiceAccount(const Model::ModifyServiceAccountRequest &request);
+                void ModifyServiceAccountAsync(const Model::ModifyServiceAccountRequest& request, const ModifyServiceAccountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyServiceAccountOutcomeCallable ModifyServiceAccountCallable(const Model::ModifyServiceAccountRequest& request);
 
                 /**
                  *This API is used to update a tag retention rule.

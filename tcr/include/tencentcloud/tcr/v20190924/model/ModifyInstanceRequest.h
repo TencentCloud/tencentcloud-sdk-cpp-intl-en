@@ -64,15 +64,27 @@ namespace TencentCloud
                     bool RegistryIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance specification
-                     * @return RegistryType Instance specification
+                     * 获取Instance edition
+Basic: `basic`
+Standard: `standard`
+Premium: `premium`
+                     * @return RegistryType Instance edition
+Basic: `basic`
+Standard: `standard`
+Premium: `premium`
                      * 
                      */
                     std::string GetRegistryType() const;
 
                     /**
-                     * 设置Instance specification
-                     * @param _registryType Instance specification
+                     * 设置Instance edition
+Basic: `basic`
+Standard: `standard`
+Premium: `premium`
+                     * @param _registryType Instance edition
+Basic: `basic`
+Standard: `standard`
+Premium: `premium`
                      * 
                      */
                     void SetRegistryType(const std::string& _registryType);
@@ -84,6 +96,27 @@ namespace TencentCloud
                      */
                     bool RegistryTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to enable deletion protection. It defaults to `false`. 
+                     * @return DeletionProtection Whether to enable deletion protection. It defaults to `false`. 
+                     * 
+                     */
+                    bool GetDeletionProtection() const;
+
+                    /**
+                     * 设置Whether to enable deletion protection. It defaults to `false`. 
+                     * @param _deletionProtection Whether to enable deletion protection. It defaults to `false`. 
+                     * 
+                     */
+                    void SetDeletionProtection(const bool& _deletionProtection);
+
+                    /**
+                     * 判断参数 DeletionProtection 是否已赋值
+                     * @return DeletionProtection 是否已赋值
+                     * 
+                     */
+                    bool DeletionProtectionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -93,10 +126,19 @@ namespace TencentCloud
                     bool m_registryIdHasBeenSet;
 
                     /**
-                     * Instance specification
+                     * Instance edition
+Basic: `basic`
+Standard: `standard`
+Premium: `premium`
                      */
                     std::string m_registryType;
                     bool m_registryTypeHasBeenSet;
+
+                    /**
+                     * Whether to enable deletion protection. It defaults to `false`. 
+                     */
+                    bool m_deletionProtection;
+                    bool m_deletionProtectionHasBeenSet;
 
                 };
             }
