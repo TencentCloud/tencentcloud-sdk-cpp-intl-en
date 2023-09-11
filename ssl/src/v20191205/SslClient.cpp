@@ -83,6 +83,49 @@ SslClient::ApplyCertificateOutcomeCallable SslClient::ApplyCertificateCallable(c
     return task->get_future();
 }
 
+SslClient::BatchDeleteCSROutcome SslClient::BatchDeleteCSR(const BatchDeleteCSRRequest &request)
+{
+    auto outcome = MakeRequest(request, "BatchDeleteCSR");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        BatchDeleteCSRResponse rsp = BatchDeleteCSRResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return BatchDeleteCSROutcome(rsp);
+        else
+            return BatchDeleteCSROutcome(o.GetError());
+    }
+    else
+    {
+        return BatchDeleteCSROutcome(outcome.GetError());
+    }
+}
+
+void SslClient::BatchDeleteCSRAsync(const BatchDeleteCSRRequest& request, const BatchDeleteCSRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->BatchDeleteCSR(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SslClient::BatchDeleteCSROutcomeCallable SslClient::BatchDeleteCSRCallable(const BatchDeleteCSRRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<BatchDeleteCSROutcome()>>(
+        [this, request]()
+        {
+            return this->BatchDeleteCSR(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 SslClient::CancelCertificateOrderOutcome SslClient::CancelCertificateOrder(const CancelCertificateOrderRequest &request)
 {
     auto outcome = MakeRequest(request, "CancelCertificateOrder");
@@ -169,6 +212,49 @@ SslClient::CommitCertificateInformationOutcomeCallable SslClient::CommitCertific
     return task->get_future();
 }
 
+SslClient::CreateCSROutcome SslClient::CreateCSR(const CreateCSRRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateCSR");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateCSRResponse rsp = CreateCSRResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateCSROutcome(rsp);
+        else
+            return CreateCSROutcome(o.GetError());
+    }
+    else
+    {
+        return CreateCSROutcome(outcome.GetError());
+    }
+}
+
+void SslClient::CreateCSRAsync(const CreateCSRRequest& request, const CreateCSRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateCSR(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SslClient::CreateCSROutcomeCallable SslClient::CreateCSRCallable(const CreateCSRRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateCSROutcome()>>(
+        [this, request]()
+        {
+            return this->CreateCSR(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 SslClient::CreateCertificateOutcome SslClient::CreateCertificate(const CreateCertificateRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateCertificate");
@@ -205,6 +291,49 @@ SslClient::CreateCertificateOutcomeCallable SslClient::CreateCertificateCallable
         [this, request]()
         {
             return this->CreateCertificate(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SslClient::CreateCertificateBindResourceSyncTaskOutcome SslClient::CreateCertificateBindResourceSyncTask(const CreateCertificateBindResourceSyncTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateCertificateBindResourceSyncTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateCertificateBindResourceSyncTaskResponse rsp = CreateCertificateBindResourceSyncTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateCertificateBindResourceSyncTaskOutcome(rsp);
+        else
+            return CreateCertificateBindResourceSyncTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateCertificateBindResourceSyncTaskOutcome(outcome.GetError());
+    }
+}
+
+void SslClient::CreateCertificateBindResourceSyncTaskAsync(const CreateCertificateBindResourceSyncTaskRequest& request, const CreateCertificateBindResourceSyncTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateCertificateBindResourceSyncTask(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SslClient::CreateCertificateBindResourceSyncTaskOutcomeCallable SslClient::CreateCertificateBindResourceSyncTaskCallable(const CreateCertificateBindResourceSyncTaskRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateCertificateBindResourceSyncTaskOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateCertificateBindResourceSyncTask(request);
         }
     );
 
@@ -255,6 +384,92 @@ SslClient::DeleteCertificateOutcomeCallable SslClient::DeleteCertificateCallable
     return task->get_future();
 }
 
+SslClient::DescribeCSROutcome SslClient::DescribeCSR(const DescribeCSRRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCSR");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCSRResponse rsp = DescribeCSRResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCSROutcome(rsp);
+        else
+            return DescribeCSROutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCSROutcome(outcome.GetError());
+    }
+}
+
+void SslClient::DescribeCSRAsync(const DescribeCSRRequest& request, const DescribeCSRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeCSR(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SslClient::DescribeCSROutcomeCallable SslClient::DescribeCSRCallable(const DescribeCSRRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeCSROutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeCSR(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SslClient::DescribeCSRSetOutcome SslClient::DescribeCSRSet(const DescribeCSRSetRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCSRSet");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCSRSetResponse rsp = DescribeCSRSetResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCSRSetOutcome(rsp);
+        else
+            return DescribeCSRSetOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCSRSetOutcome(outcome.GetError());
+    }
+}
+
+void SslClient::DescribeCSRSetAsync(const DescribeCSRSetRequest& request, const DescribeCSRSetAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeCSRSet(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SslClient::DescribeCSRSetOutcomeCallable SslClient::DescribeCSRSetCallable(const DescribeCSRSetRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeCSRSetOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeCSRSet(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 SslClient::DescribeCertificateOutcome SslClient::DescribeCertificate(const DescribeCertificateRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeCertificate");
@@ -291,6 +506,92 @@ SslClient::DescribeCertificateOutcomeCallable SslClient::DescribeCertificateCall
         [this, request]()
         {
             return this->DescribeCertificate(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SslClient::DescribeCertificateBindResourceTaskDetailOutcome SslClient::DescribeCertificateBindResourceTaskDetail(const DescribeCertificateBindResourceTaskDetailRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCertificateBindResourceTaskDetail");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCertificateBindResourceTaskDetailResponse rsp = DescribeCertificateBindResourceTaskDetailResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCertificateBindResourceTaskDetailOutcome(rsp);
+        else
+            return DescribeCertificateBindResourceTaskDetailOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCertificateBindResourceTaskDetailOutcome(outcome.GetError());
+    }
+}
+
+void SslClient::DescribeCertificateBindResourceTaskDetailAsync(const DescribeCertificateBindResourceTaskDetailRequest& request, const DescribeCertificateBindResourceTaskDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeCertificateBindResourceTaskDetail(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SslClient::DescribeCertificateBindResourceTaskDetailOutcomeCallable SslClient::DescribeCertificateBindResourceTaskDetailCallable(const DescribeCertificateBindResourceTaskDetailRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeCertificateBindResourceTaskDetailOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeCertificateBindResourceTaskDetail(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SslClient::DescribeCertificateBindResourceTaskResultOutcome SslClient::DescribeCertificateBindResourceTaskResult(const DescribeCertificateBindResourceTaskResultRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCertificateBindResourceTaskResult");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCertificateBindResourceTaskResultResponse rsp = DescribeCertificateBindResourceTaskResultResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCertificateBindResourceTaskResultOutcome(rsp);
+        else
+            return DescribeCertificateBindResourceTaskResultOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCertificateBindResourceTaskResultOutcome(outcome.GetError());
+    }
+}
+
+void SslClient::DescribeCertificateBindResourceTaskResultAsync(const DescribeCertificateBindResourceTaskResultRequest& request, const DescribeCertificateBindResourceTaskResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeCertificateBindResourceTaskResult(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SslClient::DescribeCertificateBindResourceTaskResultOutcomeCallable SslClient::DescribeCertificateBindResourceTaskResultCallable(const DescribeCertificateBindResourceTaskResultRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeCertificateBindResourceTaskResultOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeCertificateBindResourceTaskResult(request);
         }
     );
 
@@ -463,6 +764,49 @@ SslClient::DownloadCertificateOutcomeCallable SslClient::DownloadCertificateCall
         [this, request]()
         {
             return this->DownloadCertificate(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SslClient::ModifyCSROutcome SslClient::ModifyCSR(const ModifyCSRRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyCSR");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyCSRResponse rsp = ModifyCSRResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyCSROutcome(rsp);
+        else
+            return ModifyCSROutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyCSROutcome(outcome.GetError());
+    }
+}
+
+void SslClient::ModifyCSRAsync(const ModifyCSRRequest& request, const ModifyCSRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyCSR(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SslClient::ModifyCSROutcomeCallable SslClient::ModifyCSRCallable(const ModifyCSRRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyCSROutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyCSR(request);
         }
     );
 

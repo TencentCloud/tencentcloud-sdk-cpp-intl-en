@@ -315,6 +315,27 @@ namespace TencentCloud
                      */
                     bool FilterExpiringHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the certificate can be hosted. Valid values: `1` for yes and `0` for no.
+                     * @return Hostable Whether the certificate can be hosted. Valid values: `1` for yes and `0` for no.
+                     * 
+                     */
+                    uint64_t GetHostable() const;
+
+                    /**
+                     * 设置Whether the certificate can be hosted. Valid values: `1` for yes and `0` for no.
+                     * @param _hostable Whether the certificate can be hosted. Valid values: `1` for yes and `0` for no.
+                     * 
+                     */
+                    void SetHostable(const uint64_t& _hostable);
+
+                    /**
+                     * 判断参数 Hostable 是否已赋值
+                     * @return Hostable 是否已赋值
+                     * 
+                     */
+                    bool HostableHasBeenSet() const;
+
                 private:
 
                     /**
@@ -394,6 +415,12 @@ namespace TencentCloud
                      */
                     uint64_t m_filterExpiring;
                     bool m_filterExpiringHasBeenSet;
+
+                    /**
+                     * Whether the certificate can be hosted. Valid values: `1` for yes and `0` for no.
+                     */
+                    uint64_t m_hostable;
+                    bool m_hostableHasBeenSet;
 
                 };
             }

@@ -168,6 +168,52 @@ namespace TencentCloud
                      */
                     bool ReasonHasBeenSet() const;
 
+                    /**
+                     * 获取The CSR encryption algorithm. Valid values: `RSA` (default), `ECC1`, and `SM2`.
+This parameter is available for selection only when the value of `CsrType` is `Online`.
+                     * @return CertCSREncryptAlgo The CSR encryption algorithm. Valid values: `RSA` (default), `ECC1`, and `SM2`.
+This parameter is available for selection only when the value of `CsrType` is `Online`.
+                     * 
+                     */
+                    std::string GetCertCSREncryptAlgo() const;
+
+                    /**
+                     * 设置The CSR encryption algorithm. Valid values: `RSA` (default), `ECC1`, and `SM2`.
+This parameter is available for selection only when the value of `CsrType` is `Online`.
+                     * @param _certCSREncryptAlgo The CSR encryption algorithm. Valid values: `RSA` (default), `ECC1`, and `SM2`.
+This parameter is available for selection only when the value of `CsrType` is `Online`.
+                     * 
+                     */
+                    void SetCertCSREncryptAlgo(const std::string& _certCSREncryptAlgo);
+
+                    /**
+                     * 判断参数 CertCSREncryptAlgo 是否已赋值
+                     * @return CertCSREncryptAlgo 是否已赋值
+                     * 
+                     */
+                    bool CertCSREncryptAlgoHasBeenSet() const;
+
+                    /**
+                     * 获取The CSR encryption parameters. When `CsrEncryptAlgo` is set to `RSA`, `2048` (default) and `4096` are available for selection; and when`CsrEncryptAlgo` is set to `ECC`, `prime256v1` (default) and `secp384r1` are available for selection. 
+                     * @return CertCSRKeyParameter The CSR encryption parameters. When `CsrEncryptAlgo` is set to `RSA`, `2048` (default) and `4096` are available for selection; and when`CsrEncryptAlgo` is set to `ECC`, `prime256v1` (default) and `secp384r1` are available for selection. 
+                     * 
+                     */
+                    std::string GetCertCSRKeyParameter() const;
+
+                    /**
+                     * 设置The CSR encryption parameters. When `CsrEncryptAlgo` is set to `RSA`, `2048` (default) and `4096` are available for selection; and when`CsrEncryptAlgo` is set to `ECC`, `prime256v1` (default) and `secp384r1` are available for selection. 
+                     * @param _certCSRKeyParameter The CSR encryption parameters. When `CsrEncryptAlgo` is set to `RSA`, `2048` (default) and `4096` are available for selection; and when`CsrEncryptAlgo` is set to `ECC`, `prime256v1` (default) and `secp384r1` are available for selection. 
+                     * 
+                     */
+                    void SetCertCSRKeyParameter(const std::string& _certCSRKeyParameter);
+
+                    /**
+                     * 判断参数 CertCSRKeyParameter 是否已赋值
+                     * @return CertCSRKeyParameter 是否已赋值
+                     * 
+                     */
+                    bool CertCSRKeyParameterHasBeenSet() const;
+
                 private:
 
                     /**
@@ -205,6 +251,19 @@ namespace TencentCloud
                      */
                     std::string m_reason;
                     bool m_reasonHasBeenSet;
+
+                    /**
+                     * The CSR encryption algorithm. Valid values: `RSA` (default), `ECC1`, and `SM2`.
+This parameter is available for selection only when the value of `CsrType` is `Online`.
+                     */
+                    std::string m_certCSREncryptAlgo;
+                    bool m_certCSREncryptAlgoHasBeenSet;
+
+                    /**
+                     * The CSR encryption parameters. When `CsrEncryptAlgo` is set to `RSA`, `2048` (default) and `4096` are available for selection; and when`CsrEncryptAlgo` is set to `ECC`, `prime256v1` (default) and `secp384r1` are available for selection. 
+                     */
+                    std::string m_certCSRKeyParameter;
+                    bool m_certCSRKeyParameterHasBeenSet;
 
                 };
             }

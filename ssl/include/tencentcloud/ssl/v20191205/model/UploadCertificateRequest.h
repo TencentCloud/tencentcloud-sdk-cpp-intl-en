@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/ssl/v20191205/model/Tags.h>
 
 
 namespace TencentCloud
@@ -169,6 +170,27 @@ namespace TencentCloud
                     bool CertificateUseHasBeenSet() const;
 
                     /**
+                     * 获取The list of tags.
+                     * @return Tags The list of tags.
+                     * 
+                     */
+                    std::vector<Tags> GetTags() const;
+
+                    /**
+                     * 设置The list of tags.
+                     * @param _tags The list of tags.
+                     * 
+                     */
+                    void SetTags(const std::vector<Tags>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     * 
+                     */
+                    bool TagsHasBeenSet() const;
+
+                    /**
                      * 获取Whether a certificate can be repeatedly uploaded.
                      * @return Repeatable Whether a certificate can be repeatedly uploaded.
                      * 
@@ -226,6 +248,12 @@ namespace TencentCloud
                      */
                     std::string m_certificateUse;
                     bool m_certificateUseHasBeenSet;
+
+                    /**
+                     * The list of tags.
+                     */
+                    std::vector<Tags> m_tags;
+                    bool m_tagsHasBeenSet;
 
                     /**
                      * Whether a certificate can be repeatedly uploaded.

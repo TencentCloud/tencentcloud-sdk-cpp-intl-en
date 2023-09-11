@@ -26,6 +26,7 @@
 #include <tencentcloud/ssl/v20191205/model/SubmittedData.h>
 #include <tencentcloud/ssl/v20191205/model/Tags.h>
 #include <tencentcloud/ssl/v20191205/model/RootCertificates.h>
+#include <tencentcloud/ssl/v20191205/model/DvAuths.h>
 
 
 namespace TencentCloud
@@ -686,6 +687,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool EncryptAlgorithmHasBeenSet() const;
 
+                    /**
+                     * 获取The authentication value for DV certificate revocation.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DvRevokeAuthDetail The authentication value for DV certificate revocation.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<DvAuths> GetDvRevokeAuthDetail() const;
+
+                    /**
+                     * 判断参数 DvRevokeAuthDetail 是否已赋值
+                     * @return DvRevokeAuthDetail 是否已赋值
+                     * 
+                     */
+                    bool DvRevokeAuthDetailHasBeenSet() const;
+
                 private:
 
                     /**
@@ -966,6 +983,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_encryptAlgorithm;
                     bool m_encryptAlgorithmHasBeenSet;
+
+                    /**
+                     * The authentication value for DV certificate revocation.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<DvAuths> m_dvRevokeAuthDetail;
+                    bool m_dvRevokeAuthDetailHasBeenSet;
 
                 };
             }

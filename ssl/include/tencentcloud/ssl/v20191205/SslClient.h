@@ -25,16 +25,30 @@
 #include <tencentcloud/core/AsyncCallerContext.h>
 #include <tencentcloud/ssl/v20191205/model/ApplyCertificateRequest.h>
 #include <tencentcloud/ssl/v20191205/model/ApplyCertificateResponse.h>
+#include <tencentcloud/ssl/v20191205/model/BatchDeleteCSRRequest.h>
+#include <tencentcloud/ssl/v20191205/model/BatchDeleteCSRResponse.h>
 #include <tencentcloud/ssl/v20191205/model/CancelCertificateOrderRequest.h>
 #include <tencentcloud/ssl/v20191205/model/CancelCertificateOrderResponse.h>
 #include <tencentcloud/ssl/v20191205/model/CommitCertificateInformationRequest.h>
 #include <tencentcloud/ssl/v20191205/model/CommitCertificateInformationResponse.h>
+#include <tencentcloud/ssl/v20191205/model/CreateCSRRequest.h>
+#include <tencentcloud/ssl/v20191205/model/CreateCSRResponse.h>
 #include <tencentcloud/ssl/v20191205/model/CreateCertificateRequest.h>
 #include <tencentcloud/ssl/v20191205/model/CreateCertificateResponse.h>
+#include <tencentcloud/ssl/v20191205/model/CreateCertificateBindResourceSyncTaskRequest.h>
+#include <tencentcloud/ssl/v20191205/model/CreateCertificateBindResourceSyncTaskResponse.h>
 #include <tencentcloud/ssl/v20191205/model/DeleteCertificateRequest.h>
 #include <tencentcloud/ssl/v20191205/model/DeleteCertificateResponse.h>
+#include <tencentcloud/ssl/v20191205/model/DescribeCSRRequest.h>
+#include <tencentcloud/ssl/v20191205/model/DescribeCSRResponse.h>
+#include <tencentcloud/ssl/v20191205/model/DescribeCSRSetRequest.h>
+#include <tencentcloud/ssl/v20191205/model/DescribeCSRSetResponse.h>
 #include <tencentcloud/ssl/v20191205/model/DescribeCertificateRequest.h>
 #include <tencentcloud/ssl/v20191205/model/DescribeCertificateResponse.h>
+#include <tencentcloud/ssl/v20191205/model/DescribeCertificateBindResourceTaskDetailRequest.h>
+#include <tencentcloud/ssl/v20191205/model/DescribeCertificateBindResourceTaskDetailResponse.h>
+#include <tencentcloud/ssl/v20191205/model/DescribeCertificateBindResourceTaskResultRequest.h>
+#include <tencentcloud/ssl/v20191205/model/DescribeCertificateBindResourceTaskResultResponse.h>
 #include <tencentcloud/ssl/v20191205/model/DescribeCertificateDetailRequest.h>
 #include <tencentcloud/ssl/v20191205/model/DescribeCertificateDetailResponse.h>
 #include <tencentcloud/ssl/v20191205/model/DescribeCertificateOperateLogsRequest.h>
@@ -43,6 +57,8 @@
 #include <tencentcloud/ssl/v20191205/model/DescribeCertificatesResponse.h>
 #include <tencentcloud/ssl/v20191205/model/DownloadCertificateRequest.h>
 #include <tencentcloud/ssl/v20191205/model/DownloadCertificateResponse.h>
+#include <tencentcloud/ssl/v20191205/model/ModifyCSRRequest.h>
+#include <tencentcloud/ssl/v20191205/model/ModifyCSRResponse.h>
 #include <tencentcloud/ssl/v20191205/model/ModifyCertificateAliasRequest.h>
 #include <tencentcloud/ssl/v20191205/model/ModifyCertificateAliasResponse.h>
 #include <tencentcloud/ssl/v20191205/model/ModifyCertificateProjectRequest.h>
@@ -72,21 +88,42 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ApplyCertificateResponse> ApplyCertificateOutcome;
                 typedef std::future<ApplyCertificateOutcome> ApplyCertificateOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::ApplyCertificateRequest&, ApplyCertificateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ApplyCertificateAsyncHandler;
+                typedef Outcome<Core::Error, Model::BatchDeleteCSRResponse> BatchDeleteCSROutcome;
+                typedef std::future<BatchDeleteCSROutcome> BatchDeleteCSROutcomeCallable;
+                typedef std::function<void(const SslClient*, const Model::BatchDeleteCSRRequest&, BatchDeleteCSROutcome, const std::shared_ptr<const AsyncCallerContext>&)> BatchDeleteCSRAsyncHandler;
                 typedef Outcome<Core::Error, Model::CancelCertificateOrderResponse> CancelCertificateOrderOutcome;
                 typedef std::future<CancelCertificateOrderOutcome> CancelCertificateOrderOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::CancelCertificateOrderRequest&, CancelCertificateOrderOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CancelCertificateOrderAsyncHandler;
                 typedef Outcome<Core::Error, Model::CommitCertificateInformationResponse> CommitCertificateInformationOutcome;
                 typedef std::future<CommitCertificateInformationOutcome> CommitCertificateInformationOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::CommitCertificateInformationRequest&, CommitCertificateInformationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CommitCertificateInformationAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateCSRResponse> CreateCSROutcome;
+                typedef std::future<CreateCSROutcome> CreateCSROutcomeCallable;
+                typedef std::function<void(const SslClient*, const Model::CreateCSRRequest&, CreateCSROutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCSRAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateCertificateResponse> CreateCertificateOutcome;
                 typedef std::future<CreateCertificateOutcome> CreateCertificateOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::CreateCertificateRequest&, CreateCertificateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCertificateAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateCertificateBindResourceSyncTaskResponse> CreateCertificateBindResourceSyncTaskOutcome;
+                typedef std::future<CreateCertificateBindResourceSyncTaskOutcome> CreateCertificateBindResourceSyncTaskOutcomeCallable;
+                typedef std::function<void(const SslClient*, const Model::CreateCertificateBindResourceSyncTaskRequest&, CreateCertificateBindResourceSyncTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCertificateBindResourceSyncTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteCertificateResponse> DeleteCertificateOutcome;
                 typedef std::future<DeleteCertificateOutcome> DeleteCertificateOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::DeleteCertificateRequest&, DeleteCertificateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteCertificateAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCSRResponse> DescribeCSROutcome;
+                typedef std::future<DescribeCSROutcome> DescribeCSROutcomeCallable;
+                typedef std::function<void(const SslClient*, const Model::DescribeCSRRequest&, DescribeCSROutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCSRAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCSRSetResponse> DescribeCSRSetOutcome;
+                typedef std::future<DescribeCSRSetOutcome> DescribeCSRSetOutcomeCallable;
+                typedef std::function<void(const SslClient*, const Model::DescribeCSRSetRequest&, DescribeCSRSetOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCSRSetAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeCertificateResponse> DescribeCertificateOutcome;
                 typedef std::future<DescribeCertificateOutcome> DescribeCertificateOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::DescribeCertificateRequest&, DescribeCertificateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCertificateAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCertificateBindResourceTaskDetailResponse> DescribeCertificateBindResourceTaskDetailOutcome;
+                typedef std::future<DescribeCertificateBindResourceTaskDetailOutcome> DescribeCertificateBindResourceTaskDetailOutcomeCallable;
+                typedef std::function<void(const SslClient*, const Model::DescribeCertificateBindResourceTaskDetailRequest&, DescribeCertificateBindResourceTaskDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCertificateBindResourceTaskDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCertificateBindResourceTaskResultResponse> DescribeCertificateBindResourceTaskResultOutcome;
+                typedef std::future<DescribeCertificateBindResourceTaskResultOutcome> DescribeCertificateBindResourceTaskResultOutcomeCallable;
+                typedef std::function<void(const SslClient*, const Model::DescribeCertificateBindResourceTaskResultRequest&, DescribeCertificateBindResourceTaskResultOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCertificateBindResourceTaskResultAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeCertificateDetailResponse> DescribeCertificateDetailOutcome;
                 typedef std::future<DescribeCertificateDetailOutcome> DescribeCertificateDetailOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::DescribeCertificateDetailRequest&, DescribeCertificateDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCertificateDetailAsyncHandler;
@@ -99,6 +136,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DownloadCertificateResponse> DownloadCertificateOutcome;
                 typedef std::future<DownloadCertificateOutcome> DownloadCertificateOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::DownloadCertificateRequest&, DownloadCertificateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DownloadCertificateAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyCSRResponse> ModifyCSROutcome;
+                typedef std::future<ModifyCSROutcome> ModifyCSROutcomeCallable;
+                typedef std::function<void(const SslClient*, const Model::ModifyCSRRequest&, ModifyCSROutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyCSRAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyCertificateAliasResponse> ModifyCertificateAliasOutcome;
                 typedef std::future<ModifyCertificateAliasOutcome> ModifyCertificateAliasOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::ModifyCertificateAliasRequest&, ModifyCertificateAliasOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyCertificateAliasAsyncHandler;
@@ -130,6 +170,15 @@ namespace TencentCloud
                 ApplyCertificateOutcomeCallable ApplyCertificateCallable(const Model::ApplyCertificateRequest& request);
 
                 /**
+                 *This API is used to batch delete CSRs.
+                 * @param req BatchDeleteCSRRequest
+                 * @return BatchDeleteCSROutcome
+                 */
+                BatchDeleteCSROutcome BatchDeleteCSR(const Model::BatchDeleteCSRRequest &request);
+                void BatchDeleteCSRAsync(const Model::BatchDeleteCSRRequest& request, const BatchDeleteCSRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                BatchDeleteCSROutcomeCallable BatchDeleteCSRCallable(const Model::BatchDeleteCSRRequest& request);
+
+                /**
                  *This API is used to cancel a certificate order.
                  * @param req CancelCertificateOrderRequest
                  * @return CancelCertificateOrderOutcome
@@ -148,6 +197,15 @@ namespace TencentCloud
                 CommitCertificateInformationOutcomeCallable CommitCertificateInformationCallable(const Model::CommitCertificateInformationRequest& request);
 
                 /**
+                 *This API is used to create a CSR.
+                 * @param req CreateCSRRequest
+                 * @return CreateCSROutcome
+                 */
+                CreateCSROutcome CreateCSR(const Model::CreateCSRRequest &request);
+                void CreateCSRAsync(const Model::CreateCSRRequest& request, const CreateCSRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateCSROutcomeCallable CreateCSRCallable(const Model::CreateCSRRequest& request);
+
+                /**
                  *This API is used to purchase a certificate.
                  * @param req CreateCertificateRequest
                  * @return CreateCertificateOutcome
@@ -155,6 +213,15 @@ namespace TencentCloud
                 CreateCertificateOutcome CreateCertificate(const Model::CreateCertificateRequest &request);
                 void CreateCertificateAsync(const Model::CreateCertificateRequest& request, const CreateCertificateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateCertificateOutcomeCallable CreateCertificateCallable(const Model::CreateCertificateRequest& request);
+
+                /**
+                 *This API is used to create an async task for querying the cloud resources associated with a certificate. If such a task already exists under the certificate ID, the ID of this task is returned as the result. The following types of cloud resources are supported: CLB, CDN, WAF, LIVE, VOD, DDOS, TKE, APIGATEWAY, TCB, and TEO (EDGEONE). You can query the result of this task using the `DescribeCertificateBindResourceTaskResult` API.
+                 * @param req CreateCertificateBindResourceSyncTaskRequest
+                 * @return CreateCertificateBindResourceSyncTaskOutcome
+                 */
+                CreateCertificateBindResourceSyncTaskOutcome CreateCertificateBindResourceSyncTask(const Model::CreateCertificateBindResourceSyncTaskRequest &request);
+                void CreateCertificateBindResourceSyncTaskAsync(const Model::CreateCertificateBindResourceSyncTaskRequest& request, const CreateCertificateBindResourceSyncTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateCertificateBindResourceSyncTaskOutcomeCallable CreateCertificateBindResourceSyncTaskCallable(const Model::CreateCertificateBindResourceSyncTaskRequest& request);
 
                 /**
                  *This API is used to delete a certificate.
@@ -166,6 +233,24 @@ namespace TencentCloud
                 DeleteCertificateOutcomeCallable DeleteCertificateCallable(const Model::DeleteCertificateRequest& request);
 
                 /**
+                 *This API is used to query the details of a CSR.
+                 * @param req DescribeCSRRequest
+                 * @return DescribeCSROutcome
+                 */
+                DescribeCSROutcome DescribeCSR(const Model::DescribeCSRRequest &request);
+                void DescribeCSRAsync(const Model::DescribeCSRRequest& request, const DescribeCSRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCSROutcomeCallable DescribeCSRCallable(const Model::DescribeCSRRequest& request);
+
+                /**
+                 *This API is used to query the CSR list.
+                 * @param req DescribeCSRSetRequest
+                 * @return DescribeCSRSetOutcome
+                 */
+                DescribeCSRSetOutcome DescribeCSRSet(const Model::DescribeCSRSetRequest &request);
+                void DescribeCSRSetAsync(const Model::DescribeCSRSetRequest& request, const DescribeCSRSetAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCSRSetOutcomeCallable DescribeCSRSetCallable(const Model::DescribeCSRSetRequest& request);
+
+                /**
                  *This API is used to get certificate information.
                  * @param req DescribeCertificateRequest
                  * @return DescribeCertificateOutcome
@@ -173,6 +258,24 @@ namespace TencentCloud
                 DescribeCertificateOutcome DescribeCertificate(const Model::DescribeCertificateRequest &request);
                 void DescribeCertificateAsync(const Model::DescribeCertificateRequest& request, const DescribeCertificateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeCertificateOutcomeCallable DescribeCertificateCallable(const Model::DescribeCertificateRequest& request);
+
+                /**
+                 *This API is used to query the result of an async task created with `CreateCertificateBindResourceSyncTask` to query cloud resources associated with a certificate. The following types of cloud resources are supported: CLB, CDN, WAF, LIVE, VOD, DDOS, TKE, APIGATEWAY, TCB, and TEO (EDGEONE).
+                 * @param req DescribeCertificateBindResourceTaskDetailRequest
+                 * @return DescribeCertificateBindResourceTaskDetailOutcome
+                 */
+                DescribeCertificateBindResourceTaskDetailOutcome DescribeCertificateBindResourceTaskDetail(const Model::DescribeCertificateBindResourceTaskDetailRequest &request);
+                void DescribeCertificateBindResourceTaskDetailAsync(const Model::DescribeCertificateBindResourceTaskDetailRequest& request, const DescribeCertificateBindResourceTaskDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCertificateBindResourceTaskDetailOutcomeCallable DescribeCertificateBindResourceTaskDetailCallable(const Model::DescribeCertificateBindResourceTaskDetailRequest& request);
+
+                /**
+                 *This API is used to query the result of an async task created with `CreateCertificateBindResourceSyncTask` to query cloud resources associated with a certificate. The following types of cloud resources are supported: CLB, CDN, WAF, LIVE, VOD, DDOS, TKE, APIGATEWAY, TCB, and TEO (EDGEONE).
+                 * @param req DescribeCertificateBindResourceTaskResultRequest
+                 * @return DescribeCertificateBindResourceTaskResultOutcome
+                 */
+                DescribeCertificateBindResourceTaskResultOutcome DescribeCertificateBindResourceTaskResult(const Model::DescribeCertificateBindResourceTaskResultRequest &request);
+                void DescribeCertificateBindResourceTaskResultAsync(const Model::DescribeCertificateBindResourceTaskResultRequest& request, const DescribeCertificateBindResourceTaskResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCertificateBindResourceTaskResultOutcomeCallable DescribeCertificateBindResourceTaskResultCallable(const Model::DescribeCertificateBindResourceTaskResultRequest& request);
 
                 /**
                  *This API is used to get certificate details.
@@ -209,6 +312,15 @@ namespace TencentCloud
                 DownloadCertificateOutcome DownloadCertificate(const Model::DownloadCertificateRequest &request);
                 void DownloadCertificateAsync(const Model::DownloadCertificateRequest& request, const DownloadCertificateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DownloadCertificateOutcomeCallable DownloadCertificateCallable(const Model::DownloadCertificateRequest& request);
+
+                /**
+                 *This API is used to modify the information of a CSR.
+                 * @param req ModifyCSRRequest
+                 * @return ModifyCSROutcome
+                 */
+                ModifyCSROutcome ModifyCSR(const Model::ModifyCSRRequest &request);
+                void ModifyCSRAsync(const Model::ModifyCSRRequest& request, const ModifyCSRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyCSROutcomeCallable ModifyCSRCallable(const Model::ModifyCSRRequest& request);
 
                 /**
                  *This API is used to modify a certificate alias by passing in the certificate ID and new alias.
