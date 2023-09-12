@@ -28,6 +28,7 @@
 #include <tencentcloud/mdl/v20200326/model/AVTemplate.h>
 #include <tencentcloud/mdl/v20200326/model/PlanSettings.h>
 #include <tencentcloud/mdl/v20200326/model/EventNotifySetting.h>
+#include <tencentcloud/mdl/v20200326/model/InputLossBehaviorInfo.h>
 
 
 namespace TencentCloud
@@ -238,6 +239,27 @@ namespace TencentCloud
                      */
                     bool EventNotifySettingsHasBeenSet() const;
 
+                    /**
+                     * 获取Complement the last video frame settings.
+                     * @return InputLossBehavior Complement the last video frame settings.
+                     * 
+                     */
+                    InputLossBehaviorInfo GetInputLossBehavior() const;
+
+                    /**
+                     * 设置Complement the last video frame settings.
+                     * @param _inputLossBehavior Complement the last video frame settings.
+                     * 
+                     */
+                    void SetInputLossBehavior(const InputLossBehaviorInfo& _inputLossBehavior);
+
+                    /**
+                     * 判断参数 InputLossBehavior 是否已赋值
+                     * @return InputLossBehavior 是否已赋值
+                     * 
+                     */
+                    bool InputLossBehaviorHasBeenSet() const;
+
                 private:
 
                     /**
@@ -293,6 +315,12 @@ namespace TencentCloud
                      */
                     EventNotifySetting m_eventNotifySettings;
                     bool m_eventNotifySettingsHasBeenSet;
+
+                    /**
+                     * Complement the last video frame settings.
+                     */
+                    InputLossBehaviorInfo m_inputLossBehavior;
+                    bool m_inputLossBehaviorHasBeenSet;
 
                 };
             }

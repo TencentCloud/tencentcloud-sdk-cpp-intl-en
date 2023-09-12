@@ -30,7 +30,8 @@ StreamLiveChannelInfo::StreamLiveChannelInfo() :
     m_videoTemplatesHasBeenSet(false),
     m_aVTemplatesHasBeenSet(false),
     m_planSettingsHasBeenSet(false),
-    m_eventNotifySettingsHasBeenSet(false)
+    m_eventNotifySettingsHasBeenSet(false),
+    m_inputLossBehaviorHasBeenSet(false)
 {
 }
 
@@ -203,6 +204,23 @@ CoreInternalOutcome StreamLiveChannelInfo::Deserialize(const rapidjson::Value &v
         m_eventNotifySettingsHasBeenSet = true;
     }
 
+    if (value.HasMember("InputLossBehavior") && !value["InputLossBehavior"].IsNull())
+    {
+        if (!value["InputLossBehavior"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `StreamLiveChannelInfo.InputLossBehavior` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_inputLossBehavior.Deserialize(value["InputLossBehavior"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_inputLossBehaviorHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -325,6 +343,15 @@ void StreamLiveChannelInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Doc
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_eventNotifySettings.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_inputLossBehaviorHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InputLossBehavior";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_inputLossBehavior.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -488,5 +515,21 @@ void StreamLiveChannelInfo::SetEventNotifySettings(const EventNotifySetting& _ev
 bool StreamLiveChannelInfo::EventNotifySettingsHasBeenSet() const
 {
     return m_eventNotifySettingsHasBeenSet;
+}
+
+InputLossBehaviorInfo StreamLiveChannelInfo::GetInputLossBehavior() const
+{
+    return m_inputLossBehavior;
+}
+
+void StreamLiveChannelInfo::SetInputLossBehavior(const InputLossBehaviorInfo& _inputLossBehavior)
+{
+    m_inputLossBehavior = _inputLossBehavior;
+    m_inputLossBehaviorHasBeenSet = true;
+}
+
+bool StreamLiveChannelInfo::InputLossBehaviorHasBeenSet() const
+{
+    return m_inputLossBehaviorHasBeenSet;
 }
 

@@ -30,7 +30,8 @@ CreateStreamLiveChannelRequest::CreateStreamLiveChannelRequest() :
     m_videoTemplatesHasBeenSet(false),
     m_aVTemplatesHasBeenSet(false),
     m_planSettingsHasBeenSet(false),
-    m_eventNotifySettingsHasBeenSet(false)
+    m_eventNotifySettingsHasBeenSet(false),
+    m_inputLossBehaviorHasBeenSet(false)
 {
 }
 
@@ -140,6 +141,15 @@ string CreateStreamLiveChannelRequest::ToJsonString() const
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_eventNotifySettings.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_inputLossBehaviorHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InputLossBehavior";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_inputLossBehavior.ToJsonObject(d[key.c_str()], allocator);
     }
 
 
@@ -276,6 +286,22 @@ void CreateStreamLiveChannelRequest::SetEventNotifySettings(const EventNotifySet
 bool CreateStreamLiveChannelRequest::EventNotifySettingsHasBeenSet() const
 {
     return m_eventNotifySettingsHasBeenSet;
+}
+
+InputLossBehaviorInfo CreateStreamLiveChannelRequest::GetInputLossBehavior() const
+{
+    return m_inputLossBehavior;
+}
+
+void CreateStreamLiveChannelRequest::SetInputLossBehavior(const InputLossBehaviorInfo& _inputLossBehavior)
+{
+    m_inputLossBehavior = _inputLossBehavior;
+    m_inputLossBehaviorHasBeenSet = true;
+}
+
+bool CreateStreamLiveChannelRequest::InputLossBehaviorHasBeenSet() const
+{
+    return m_inputLossBehaviorHasBeenSet;
 }
 
 

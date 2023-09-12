@@ -22,6 +22,7 @@ set(mdl_public_header_model
   include/tencentcloud/mdl/v20200326/model/DeleteStreamLiveChannelResponse.h
   include/tencentcloud/mdl/v20200326/model/VideoPipelineInputStatistics.h
   include/tencentcloud/mdl/v20200326/model/CreateStreamLiveInputSecurityGroupResponse.h
+  include/tencentcloud/mdl/v20200326/model/InputLossBehaviorInfo.h
   include/tencentcloud/mdl/v20200326/model/StreamVideoInfo.h
   include/tencentcloud/mdl/v20200326/model/CreateStreamLivePlanRequest.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveWatermarksResponse.h
@@ -154,6 +155,7 @@ set(mdl_src
   src/v20200326/model/DeleteStreamLiveChannelResponse.cpp
   src/v20200326/model/VideoPipelineInputStatistics.cpp
   src/v20200326/model/CreateStreamLiveInputSecurityGroupResponse.cpp
+  src/v20200326/model/InputLossBehaviorInfo.cpp
   src/v20200326/model/StreamVideoInfo.cpp
   src/v20200326/model/CreateStreamLivePlanRequest.cpp
   src/v20200326/model/DescribeStreamLiveWatermarksResponse.cpp
