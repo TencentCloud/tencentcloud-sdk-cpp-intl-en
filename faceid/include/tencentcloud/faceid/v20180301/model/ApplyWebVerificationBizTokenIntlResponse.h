@@ -46,14 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取The URL of this verification process, which will be returned to the frontend of the browser for starting the process.
                      * @return VerificationUrl The URL of this verification process, which will be returned to the frontend of the browser for starting the process.
-                     * 
+                     * @deprecated
                      */
                     std::string GetVerificationUrl() const;
 
                     /**
                      * 判断参数 VerificationUrl 是否已赋值
                      * @return VerificationUrl 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool VerificationUrlHasBeenSet() const;
 
@@ -71,6 +71,20 @@ namespace TencentCloud
                      */
                     bool BizTokenHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return VerificationURL 
+                     * 
+                     */
+                    std::string GetVerificationURL() const;
+
+                    /**
+                     * 判断参数 VerificationURL 是否已赋值
+                     * @return VerificationURL 是否已赋值
+                     * 
+                     */
+                    bool VerificationURLHasBeenSet() const;
+
                 private:
 
                     /**
@@ -84,6 +98,12 @@ namespace TencentCloud
                      */
                     std::string m_bizToken;
                     bool m_bizTokenHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_verificationURL;
+                    bool m_verificationURLHasBeenSet;
 
                 };
             }

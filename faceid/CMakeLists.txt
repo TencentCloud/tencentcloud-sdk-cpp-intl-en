@@ -49,6 +49,7 @@ set(faceid_public_header_model
   include/tencentcloud/faceid/v20180301/model/FileInfo.h
   include/tencentcloud/faceid/v20180301/model/ApplyLivenessTokenRequest.h
   include/tencentcloud/faceid/v20180301/model/GenerateReflectSequenceResponse.h
+  include/tencentcloud/faceid/v20180301/model/WebVerificationConfigIntl.h
   include/tencentcloud/faceid/v20180301/model/LivenessCompareRequest.h
   include/tencentcloud/faceid/v20180301/model/GetFaceIdResultIntlResponse.h
   include/tencentcloud/faceid/v20180301/model/GetWebVerificationResultIntlRequest.h
@@ -87,6 +88,7 @@ set(faceid_src
   src/v20180301/model/FileInfo.cpp
   src/v20180301/model/ApplyLivenessTokenRequest.cpp
   src/v20180301/model/GenerateReflectSequenceResponse.cpp
+  src/v20180301/model/WebVerificationConfigIntl.cpp
   src/v20180301/model/LivenessCompareRequest.cpp
   src/v20180301/model/GetFaceIdResultIntlResponse.cpp
   src/v20180301/model/GetWebVerificationResultIntlRequest.cpp

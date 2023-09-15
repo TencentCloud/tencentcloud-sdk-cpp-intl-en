@@ -25,7 +25,8 @@ using namespace std;
 ApplyWebVerificationBizTokenIntlRequest::ApplyWebVerificationBizTokenIntlRequest() :
     m_compareImageBase64HasBeenSet(false),
     m_redirectURLHasBeenSet(false),
-    m_extraHasBeenSet(false)
+    m_extraHasBeenSet(false),
+    m_configHasBeenSet(false)
 {
 }
 
@@ -58,6 +59,15 @@ string ApplyWebVerificationBizTokenIntlRequest::ToJsonString() const
         string key = "Extra";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_extra.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_configHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Config";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_config.ToJsonObject(d[key.c_str()], allocator);
     }
 
 
@@ -114,6 +124,22 @@ void ApplyWebVerificationBizTokenIntlRequest::SetExtra(const string& _extra)
 bool ApplyWebVerificationBizTokenIntlRequest::ExtraHasBeenSet() const
 {
     return m_extraHasBeenSet;
+}
+
+WebVerificationConfigIntl ApplyWebVerificationBizTokenIntlRequest::GetConfig() const
+{
+    return m_config;
+}
+
+void ApplyWebVerificationBizTokenIntlRequest::SetConfig(const WebVerificationConfigIntl& _config)
+{
+    m_config = _config;
+    m_configHasBeenSet = true;
+}
+
+bool ApplyWebVerificationBizTokenIntlRequest::ConfigHasBeenSet() const
+{
+    return m_configHasBeenSet;
 }
 
 

@@ -25,7 +25,8 @@ using namespace std;
 
 ApplyWebVerificationBizTokenIntlResponse::ApplyWebVerificationBizTokenIntlResponse() :
     m_verificationUrlHasBeenSet(false),
-    m_bizTokenHasBeenSet(false)
+    m_bizTokenHasBeenSet(false),
+    m_verificationURLHasBeenSet(false)
 {
 }
 
@@ -83,6 +84,16 @@ CoreInternalOutcome ApplyWebVerificationBizTokenIntlResponse::Deserialize(const 
         m_bizTokenHasBeenSet = true;
     }
 
+    if (rsp.HasMember("VerificationURL") && !rsp["VerificationURL"].IsNull())
+    {
+        if (!rsp["VerificationURL"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `VerificationURL` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_verificationURL = string(rsp["VerificationURL"].GetString());
+        m_verificationURLHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -107,6 +118,14 @@ string ApplyWebVerificationBizTokenIntlResponse::ToJsonString() const
         string key = "BizToken";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_bizToken.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_verificationURLHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "VerificationURL";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_verificationURL.c_str(), allocator).Move(), allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -139,6 +158,16 @@ string ApplyWebVerificationBizTokenIntlResponse::GetBizToken() const
 bool ApplyWebVerificationBizTokenIntlResponse::BizTokenHasBeenSet() const
 {
     return m_bizTokenHasBeenSet;
+}
+
+string ApplyWebVerificationBizTokenIntlResponse::GetVerificationURL() const
+{
+    return m_verificationURL;
+}
+
+bool ApplyWebVerificationBizTokenIntlResponse::VerificationURLHasBeenSet() const
+{
+    return m_verificationURLHasBeenSet;
 }
 
 

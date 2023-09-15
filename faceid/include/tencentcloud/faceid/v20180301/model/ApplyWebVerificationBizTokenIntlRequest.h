@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/faceid/v20180301/model/WebVerificationConfigIntl.h>
 
 
 namespace TencentCloud
@@ -109,6 +110,27 @@ After the verification process is completed, the `BizToken` of this process will
                      */
                     bool ExtraHasBeenSet() const;
 
+                    /**
+                     * 获取The parameter control the page configuration.
+                     * @return Config The parameter control the page configuration.
+                     * 
+                     */
+                    WebVerificationConfigIntl GetConfig() const;
+
+                    /**
+                     * 设置The parameter control the page configuration.
+                     * @param _config The parameter control the page configuration.
+                     * 
+                     */
+                    void SetConfig(const WebVerificationConfigIntl& _config);
+
+                    /**
+                     * 判断参数 Config 是否已赋值
+                     * @return Config 是否已赋值
+                     * 
+                     */
+                    bool ConfigHasBeenSet() const;
+
                 private:
 
                     /**
@@ -129,6 +151,12 @@ After the verification process is completed, the `BizToken` of this process will
                      */
                     std::string m_extra;
                     bool m_extraHasBeenSet;
+
+                    /**
+                     * The parameter control the page configuration.
+                     */
+                    WebVerificationConfigIntl m_config;
+                    bool m_configHasBeenSet;
 
                 };
             }
