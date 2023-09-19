@@ -951,6 +951,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool IsInheritHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * @return IsSessionStarted Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    bool GetIsSessionStarted() const;
+
+                    /**
+                     * 设置Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * @param _isSessionStarted Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetIsSessionStarted(const bool& _isSessionStarted);
+
+                    /**
+                     * 判断参数 IsSessionStarted 是否已赋值
+                     * @return IsSessionStarted 是否已赋值
+                     * 
+                     */
+                    bool IsSessionStartedHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1208,6 +1233,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     uint64_t m_isInherit;
                     bool m_isInheritHasBeenSet;
+
+                    /**
+                     * Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     */
+                    bool m_isSessionStarted;
+                    bool m_isSessionStartedHasBeenSet;
 
                 };
             }

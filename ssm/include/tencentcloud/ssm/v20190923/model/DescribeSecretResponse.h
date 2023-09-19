@@ -285,6 +285,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool TargetUinHasBeenSet() const;
 
+                    /**
+                     * 获取Additional configuration of the Secret
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AdditionalConfig Additional configuration of the Secret
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetAdditionalConfig() const;
+
+                    /**
+                     * 判断参数 AdditionalConfig 是否已赋值
+                     * @return AdditionalConfig 是否已赋值
+                     * 
+                     */
+                    bool AdditionalConfigHasBeenSet() const;
+
                 private:
 
                     /**
@@ -391,6 +407,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     uint64_t m_targetUin;
                     bool m_targetUinHasBeenSet;
+
+                    /**
+                     * Additional configuration of the Secret
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_additionalConfig;
+                    bool m_additionalConfigHasBeenSet;
 
                 };
             }

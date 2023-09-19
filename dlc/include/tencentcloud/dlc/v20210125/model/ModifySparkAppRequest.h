@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Spark application name
-                     * @return AppName Spark application name
+                     * 获取The Spark job name.
+                     * @return AppName The Spark job name.
                      * 
                      */
                     std::string GetAppName() const;
 
                     /**
-                     * 设置Spark application name
-                     * @param _appName Spark application name
+                     * 设置The Spark job name.
+                     * @param _appName The Spark job name.
                      * 
                      */
                     void SetAppName(const std::string& _appName);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool AppNameHasBeenSet() const;
 
                     /**
-                     * 获取1: Spark JAR application; 2: Spark streaming application
-                     * @return AppType 1: Spark JAR application; 2: Spark streaming application
+                     * 获取The Spark job type. Valid values: `1` for Spark JAR job and `2` for Spark streaming job.
+                     * @return AppType The Spark job type. Valid values: `1` for Spark JAR job and `2` for Spark streaming job.
                      * 
                      */
                     int64_t GetAppType() const;
 
                     /**
-                     * 设置1: Spark JAR application; 2: Spark streaming application
-                     * @param _appType 1: Spark JAR application; 2: Spark streaming application
+                     * 设置The Spark job type. Valid values: `1` for Spark JAR job and `2` for Spark streaming job.
+                     * @param _appType The Spark job type. Valid values: `1` for Spark JAR job and `2` for Spark streaming job.
                      * 
                      */
                     void SetAppType(const int64_t& _appType);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool AppTypeHasBeenSet() const;
 
                     /**
-                     * 获取The data engine executing the Spark job
-                     * @return DataEngine The data engine executing the Spark job
+                     * 获取The data engine executing the Spark job.
+                     * @return DataEngine The data engine executing the Spark job.
                      * 
                      */
                     std::string GetDataEngine() const;
 
                     /**
-                     * 设置The data engine executing the Spark job
-                     * @param _dataEngine The data engine executing the Spark job
+                     * 设置The data engine executing the Spark job.
+                     * @param _dataEngine The data engine executing the Spark job.
                      * 
                      */
                     void SetDataEngine(const std::string& _dataEngine);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool DataEngineHasBeenSet() const;
 
                     /**
-                     * 获取Execution entry of the Spark application
-                     * @return AppFile Execution entry of the Spark application
+                     * 获取The path of the Spark job package.
+                     * @return AppFile The path of the Spark job package.
                      * 
                      */
                     std::string GetAppFile() const;
 
                     /**
-                     * 设置Execution entry of the Spark application
-                     * @param _appFile Execution entry of the Spark application
+                     * 设置The path of the Spark job package.
+                     * @param _appFile The path of the Spark job package.
                      * 
                      */
                     void SetAppFile(const std::string& _appFile);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool AppFileHasBeenSet() const;
 
                     /**
-                     * 获取Execution role ID of the Spark job
-                     * @return RoleArn Execution role ID of the Spark job
+                     * 获取The data access policy (CAM role arn).
+                     * @return RoleArn The data access policy (CAM role arn).
                      * 
                      */
                     int64_t GetRoleArn() const;
 
                     /**
-                     * 设置Execution role ID of the Spark job
-                     * @param _roleArn Execution role ID of the Spark job
+                     * 设置The data access policy (CAM role arn).
+                     * @param _roleArn The data access policy (CAM role arn).
                      * 
                      */
                     void SetRoleArn(const int64_t& _roleArn);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool RoleArnHasBeenSet() const;
 
                     /**
-                     * 获取Driver resource specification of the Spark job. Valid values: `small`, `medium`, `large`, `xlarge`.
-                     * @return AppDriverSize Driver resource specification of the Spark job. Valid values: `small`, `medium`, `large`, `xlarge`.
+                     * 获取The driver size. Valid values: `small` (default, 1 CU), `medium` (2 CUs), `large` (4 CUs), and `xlarge` (8 CUs).
+                     * @return AppDriverSize The driver size. Valid values: `small` (default, 1 CU), `medium` (2 CUs), `large` (4 CUs), and `xlarge` (8 CUs).
                      * 
                      */
                     std::string GetAppDriverSize() const;
 
                     /**
-                     * 设置Driver resource specification of the Spark job. Valid values: `small`, `medium`, `large`, `xlarge`.
-                     * @param _appDriverSize Driver resource specification of the Spark job. Valid values: `small`, `medium`, `large`, `xlarge`.
+                     * 设置The driver size. Valid values: `small` (default, 1 CU), `medium` (2 CUs), `large` (4 CUs), and `xlarge` (8 CUs).
+                     * @param _appDriverSize The driver size. Valid values: `small` (default, 1 CU), `medium` (2 CUs), `large` (4 CUs), and `xlarge` (8 CUs).
                      * 
                      */
                     void SetAppDriverSize(const std::string& _appDriverSize);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool AppDriverSizeHasBeenSet() const;
 
                     /**
-                     * 获取Executor resource specification of the Spark job. Valid values: `small`, `medium`, `large`, `xlarge`.
-                     * @return AppExecutorSize Executor resource specification of the Spark job. Valid values: `small`, `medium`, `large`, `xlarge`.
+                     * 获取The executor size. Valid values: `small` (default, 1 CU), `medium` (2 CUs), `large` (4 CUs), and `xlarge` (8 CUs).
+                     * @return AppExecutorSize The executor size. Valid values: `small` (default, 1 CU), `medium` (2 CUs), `large` (4 CUs), and `xlarge` (8 CUs).
                      * 
                      */
                     std::string GetAppExecutorSize() const;
 
                     /**
-                     * 设置Executor resource specification of the Spark job. Valid values: `small`, `medium`, `large`, `xlarge`.
-                     * @param _appExecutorSize Executor resource specification of the Spark job. Valid values: `small`, `medium`, `large`, `xlarge`.
+                     * 设置The executor size. Valid values: `small` (default, 1 CU), `medium` (2 CUs), `large` (4 CUs), and `xlarge` (8 CUs).
+                     * @param _appExecutorSize The executor size. Valid values: `small` (default, 1 CU), `medium` (2 CUs), `large` (4 CUs), and `xlarge` (8 CUs).
                      * 
                      */
                     void SetAppExecutorSize(const std::string& _appExecutorSize);
@@ -211,15 +211,15 @@ namespace TencentCloud
                     bool AppExecutorNumsHasBeenSet() const;
 
                     /**
-                     * 获取Spark application ID
-                     * @return SparkAppId Spark application ID
+                     * 获取The Spark job ID.
+                     * @return SparkAppId The Spark job ID.
                      * 
                      */
                     std::string GetSparkAppId() const;
 
                     /**
-                     * 设置Spark application ID
-                     * @param _sparkAppId Spark application ID
+                     * 设置The Spark job ID.
+                     * @param _sparkAppId The Spark job ID.
                      * 
                      */
                     void SetSparkAppId(const std::string& _sparkAppId);
@@ -253,15 +253,15 @@ namespace TencentCloud
                     bool EniHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is uploaded locally. Valid values: `cos`, `lakefs`.
-                     * @return IsLocal Whether it is uploaded locally. Valid values: `cos`, `lakefs`.
+                     * 获取The source of the Spark job package. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
+                     * @return IsLocal The source of the Spark job package. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
                      * 
                      */
                     std::string GetIsLocal() const;
 
                     /**
-                     * 设置Whether it is uploaded locally. Valid values: `cos`, `lakefs`.
-                     * @param _isLocal Whether it is uploaded locally. Valid values: `cos`, `lakefs`.
+                     * 设置The source of the Spark job package. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
+                     * @param _isLocal The source of the Spark job package. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
                      * 
                      */
                     void SetIsLocal(const std::string& _isLocal);
@@ -274,15 +274,15 @@ namespace TencentCloud
                     bool IsLocalHasBeenSet() const;
 
                     /**
-                     * 获取Main class of the Spark JAR job during execution
-                     * @return MainClass Main class of the Spark JAR job during execution
+                     * 获取The main class of the Spark job.
+                     * @return MainClass The main class of the Spark job.
                      * 
                      */
                     std::string GetMainClass() const;
 
                     /**
-                     * 设置Main class of the Spark JAR job during execution
-                     * @param _mainClass Main class of the Spark JAR job during execution
+                     * 设置The main class of the Spark job.
+                     * @param _mainClass The main class of the Spark job.
                      * 
                      */
                     void SetMainClass(const std::string& _mainClass);
@@ -316,15 +316,15 @@ namespace TencentCloud
                     bool AppConfHasBeenSet() const;
 
                     /**
-                     * 获取JAR resource dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
-                     * @return IsLocalJars JAR resource dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
+                     * 获取The source of the dependency JAR packages of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
+                     * @return IsLocalJars The source of the dependency JAR packages of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
                      * 
                      */
                     std::string GetIsLocalJars() const;
 
                     /**
-                     * 设置JAR resource dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
-                     * @param _isLocalJars JAR resource dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
+                     * 设置The source of the dependency JAR packages of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
+                     * @param _isLocalJars The source of the dependency JAR packages of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
                      * 
                      */
                     void SetIsLocalJars(const std::string& _isLocalJars);
@@ -337,15 +337,15 @@ namespace TencentCloud
                     bool IsLocalJarsHasBeenSet() const;
 
                     /**
-                     * 获取Dependency JAR packages of the Spark JAR job separated by comma
-                     * @return AppJars Dependency JAR packages of the Spark JAR job separated by comma
+                     * 获取The dependency JAR packages of the Spark JAR job (JAR packages), separated by comma.
+                     * @return AppJars The dependency JAR packages of the Spark JAR job (JAR packages), separated by comma.
                      * 
                      */
                     std::string GetAppJars() const;
 
                     /**
-                     * 设置Dependency JAR packages of the Spark JAR job separated by comma
-                     * @param _appJars Dependency JAR packages of the Spark JAR job separated by comma
+                     * 设置The dependency JAR packages of the Spark JAR job (JAR packages), separated by comma.
+                     * @param _appJars The dependency JAR packages of the Spark JAR job (JAR packages), separated by comma.
                      * 
                      */
                     void SetAppJars(const std::string& _appJars);
@@ -358,15 +358,15 @@ namespace TencentCloud
                     bool AppJarsHasBeenSet() const;
 
                     /**
-                     * 获取File resource dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
-                     * @return IsLocalFiles File resource dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
+                     * 获取The source of the dependency files of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
+                     * @return IsLocalFiles The source of the dependency files of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
                      * 
                      */
                     std::string GetIsLocalFiles() const;
 
                     /**
-                     * 设置File resource dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
-                     * @param _isLocalFiles File resource dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
+                     * 设置The source of the dependency files of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
+                     * @param _isLocalFiles The source of the dependency files of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
                      * 
                      */
                     void SetIsLocalFiles(const std::string& _isLocalFiles);
@@ -379,15 +379,15 @@ namespace TencentCloud
                     bool IsLocalFilesHasBeenSet() const;
 
                     /**
-                     * 获取Dependency resources of the Spark job separated by comma
-                     * @return AppFiles Dependency resources of the Spark job separated by comma
+                     * 获取The dependency files of the Spark job (files other than JAR and ZIP packages), separated by comma.
+                     * @return AppFiles The dependency files of the Spark job (files other than JAR and ZIP packages), separated by comma.
                      * 
                      */
                     std::string GetAppFiles() const;
 
                     /**
-                     * 设置Dependency resources of the Spark job separated by comma
-                     * @param _appFiles Dependency resources of the Spark job separated by comma
+                     * 设置The dependency files of the Spark job (files other than JAR and ZIP packages), separated by comma.
+                     * @param _appFiles The dependency files of the Spark job (files other than JAR and ZIP packages), separated by comma.
                      * 
                      */
                     void SetAppFiles(const std::string& _appFiles);
@@ -400,15 +400,15 @@ namespace TencentCloud
                     bool AppFilesHasBeenSet() const;
 
                     /**
-                     * 获取PySpark: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
-                     * @return IsLocalPythonFiles PySpark: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
+                     * 获取The source of the PySpark dependencies. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
+                     * @return IsLocalPythonFiles The source of the PySpark dependencies. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
                      * 
                      */
                     std::string GetIsLocalPythonFiles() const;
 
                     /**
-                     * 设置PySpark: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
-                     * @param _isLocalPythonFiles PySpark: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
+                     * 设置The source of the PySpark dependencies. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
+                     * @param _isLocalPythonFiles The source of the PySpark dependencies. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
                      * 
                      */
                     void SetIsLocalPythonFiles(const std::string& _isLocalPythonFiles);
@@ -421,15 +421,15 @@ namespace TencentCloud
                     bool IsLocalPythonFilesHasBeenSet() const;
 
                     /**
-                     * 获取PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
-                     * @return AppPythonFiles PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
+                     * 获取The PySpark dependencies (Python files), separated by comma, with .py, .zip, and .egg formats supported.
+                     * @return AppPythonFiles The PySpark dependencies (Python files), separated by comma, with .py, .zip, and .egg formats supported.
                      * 
                      */
                     std::string GetAppPythonFiles() const;
 
                     /**
-                     * 设置PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
-                     * @param _appPythonFiles PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
+                     * 设置The PySpark dependencies (Python files), separated by comma, with .py, .zip, and .egg formats supported.
+                     * @param _appPythonFiles The PySpark dependencies (Python files), separated by comma, with .py, .zip, and .egg formats supported.
                      * 
                      */
                     void SetAppPythonFiles(const std::string& _appPythonFiles);
@@ -442,15 +442,15 @@ namespace TencentCloud
                     bool AppPythonFilesHasBeenSet() const;
 
                     /**
-                     * 获取Command line parameters of the Spark job
-                     * @return CmdArgs Command line parameters of the Spark job
+                     * 获取The input parameters of the Spark job, separated by comma.
+                     * @return CmdArgs The input parameters of the Spark job, separated by comma.
                      * 
                      */
                     std::string GetCmdArgs() const;
 
                     /**
-                     * 设置Command line parameters of the Spark job
-                     * @param _cmdArgs Command line parameters of the Spark job
+                     * 设置The input parameters of the Spark job, separated by comma.
+                     * @param _cmdArgs The input parameters of the Spark job, separated by comma.
                      * 
                      */
                     void SetCmdArgs(const std::string& _cmdArgs);
@@ -463,15 +463,15 @@ namespace TencentCloud
                     bool CmdArgsHasBeenSet() const;
 
                     /**
-                     * 获取This parameter takes effect only for Spark flow tasks.
-                     * @return MaxRetries This parameter takes effect only for Spark flow tasks.
+                     * 获取The maximum number of retries, valid for Spark streaming tasks only.
+                     * @return MaxRetries The maximum number of retries, valid for Spark streaming tasks only.
                      * 
                      */
                     int64_t GetMaxRetries() const;
 
                     /**
-                     * 设置This parameter takes effect only for Spark flow tasks.
-                     * @param _maxRetries This parameter takes effect only for Spark flow tasks.
+                     * 设置The maximum number of retries, valid for Spark streaming tasks only.
+                     * @param _maxRetries The maximum number of retries, valid for Spark streaming tasks only.
                      * 
                      */
                     void SetMaxRetries(const int64_t& _maxRetries);
@@ -505,15 +505,15 @@ namespace TencentCloud
                     bool DataSourceHasBeenSet() const;
 
                     /**
-                     * 获取Archives: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
-                     * @return IsLocalArchives Archives: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
+                     * 获取The source of the dependency archives of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
+                     * @return IsLocalArchives The source of the dependency archives of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
                      * 
                      */
                     std::string GetIsLocalArchives() const;
 
                     /**
-                     * 设置Archives: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
-                     * @param _isLocalArchives Archives: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
+                     * 设置The source of the dependency archives of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
+                     * @param _isLocalArchives The source of the dependency archives of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
                      * 
                      */
                     void SetIsLocalArchives(const std::string& _isLocalArchives);
@@ -526,15 +526,15 @@ namespace TencentCloud
                     bool IsLocalArchivesHasBeenSet() const;
 
                     /**
-                     * 获取Archives: Dependency resources
-                     * @return AppArchives Archives: Dependency resources
+                     * 获取The dependency archives of the Spark job, separated by comma, with tar.gz, .tgz, and .tar formats supported.
+                     * @return AppArchives The dependency archives of the Spark job, separated by comma, with tar.gz, .tgz, and .tar formats supported.
                      * 
                      */
                     std::string GetAppArchives() const;
 
                     /**
-                     * 设置Archives: Dependency resources
-                     * @param _appArchives Archives: Dependency resources
+                     * 设置The dependency archives of the Spark job, separated by comma, with tar.gz, .tgz, and .tar formats supported.
+                     * @param _appArchives The dependency archives of the Spark job, separated by comma, with tar.gz, .tgz, and .tar formats supported.
                      * 
                      */
                     void SetAppArchives(const std::string& _appArchives);
@@ -651,46 +651,67 @@ namespace TencentCloud
                      */
                     bool IsInheritHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to run the task with the session SQLs. Valid values: `false` for no and `true` for yes.
+                     * @return IsSessionStarted Whether to run the task with the session SQLs. Valid values: `false` for no and `true` for yes.
+                     * 
+                     */
+                    bool GetIsSessionStarted() const;
+
+                    /**
+                     * 设置Whether to run the task with the session SQLs. Valid values: `false` for no and `true` for yes.
+                     * @param _isSessionStarted Whether to run the task with the session SQLs. Valid values: `false` for no and `true` for yes.
+                     * 
+                     */
+                    void SetIsSessionStarted(const bool& _isSessionStarted);
+
+                    /**
+                     * 判断参数 IsSessionStarted 是否已赋值
+                     * @return IsSessionStarted 是否已赋值
+                     * 
+                     */
+                    bool IsSessionStartedHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Spark application name
+                     * The Spark job name.
                      */
                     std::string m_appName;
                     bool m_appNameHasBeenSet;
 
                     /**
-                     * 1: Spark JAR application; 2: Spark streaming application
+                     * The Spark job type. Valid values: `1` for Spark JAR job and `2` for Spark streaming job.
                      */
                     int64_t m_appType;
                     bool m_appTypeHasBeenSet;
 
                     /**
-                     * The data engine executing the Spark job
+                     * The data engine executing the Spark job.
                      */
                     std::string m_dataEngine;
                     bool m_dataEngineHasBeenSet;
 
                     /**
-                     * Execution entry of the Spark application
+                     * The path of the Spark job package.
                      */
                     std::string m_appFile;
                     bool m_appFileHasBeenSet;
 
                     /**
-                     * Execution role ID of the Spark job
+                     * The data access policy (CAM role arn).
                      */
                     int64_t m_roleArn;
                     bool m_roleArnHasBeenSet;
 
                     /**
-                     * Driver resource specification of the Spark job. Valid values: `small`, `medium`, `large`, `xlarge`.
+                     * The driver size. Valid values: `small` (default, 1 CU), `medium` (2 CUs), `large` (4 CUs), and `xlarge` (8 CUs).
                      */
                     std::string m_appDriverSize;
                     bool m_appDriverSizeHasBeenSet;
 
                     /**
-                     * Executor resource specification of the Spark job. Valid values: `small`, `medium`, `large`, `xlarge`.
+                     * The executor size. Valid values: `small` (default, 1 CU), `medium` (2 CUs), `large` (4 CUs), and `xlarge` (8 CUs).
                      */
                     std::string m_appExecutorSize;
                     bool m_appExecutorSizeHasBeenSet;
@@ -702,7 +723,7 @@ namespace TencentCloud
                     bool m_appExecutorNumsHasBeenSet;
 
                     /**
-                     * Spark application ID
+                     * The Spark job ID.
                      */
                     std::string m_sparkAppId;
                     bool m_sparkAppIdHasBeenSet;
@@ -714,13 +735,13 @@ namespace TencentCloud
                     bool m_eniHasBeenSet;
 
                     /**
-                     * Whether it is uploaded locally. Valid values: `cos`, `lakefs`.
+                     * The source of the Spark job package. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
                      */
                     std::string m_isLocal;
                     bool m_isLocalHasBeenSet;
 
                     /**
-                     * Main class of the Spark JAR job during execution
+                     * The main class of the Spark job.
                      */
                     std::string m_mainClass;
                     bool m_mainClassHasBeenSet;
@@ -732,49 +753,49 @@ namespace TencentCloud
                     bool m_appConfHasBeenSet;
 
                     /**
-                     * JAR resource dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
+                     * The source of the dependency JAR packages of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
                      */
                     std::string m_isLocalJars;
                     bool m_isLocalJarsHasBeenSet;
 
                     /**
-                     * Dependency JAR packages of the Spark JAR job separated by comma
+                     * The dependency JAR packages of the Spark JAR job (JAR packages), separated by comma.
                      */
                     std::string m_appJars;
                     bool m_appJarsHasBeenSet;
 
                     /**
-                     * File resource dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
+                     * The source of the dependency files of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
                      */
                     std::string m_isLocalFiles;
                     bool m_isLocalFilesHasBeenSet;
 
                     /**
-                     * Dependency resources of the Spark job separated by comma
+                     * The dependency files of the Spark job (files other than JAR and ZIP packages), separated by comma.
                      */
                     std::string m_appFiles;
                     bool m_appFilesHasBeenSet;
 
                     /**
-                     * PySpark: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
+                     * The source of the PySpark dependencies. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
                      */
                     std::string m_isLocalPythonFiles;
                     bool m_isLocalPythonFilesHasBeenSet;
 
                     /**
-                     * PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
+                     * The PySpark dependencies (Python files), separated by comma, with .py, .zip, and .egg formats supported.
                      */
                     std::string m_appPythonFiles;
                     bool m_appPythonFilesHasBeenSet;
 
                     /**
-                     * Command line parameters of the Spark job
+                     * The input parameters of the Spark job, separated by comma.
                      */
                     std::string m_cmdArgs;
                     bool m_cmdArgsHasBeenSet;
 
                     /**
-                     * This parameter takes effect only for Spark flow tasks.
+                     * The maximum number of retries, valid for Spark streaming tasks only.
                      */
                     int64_t m_maxRetries;
                     bool m_maxRetriesHasBeenSet;
@@ -786,13 +807,13 @@ namespace TencentCloud
                     bool m_dataSourceHasBeenSet;
 
                     /**
-                     * Archives: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
+                     * The source of the dependency archives of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
                      */
                     std::string m_isLocalArchives;
                     bool m_isLocalArchivesHasBeenSet;
 
                     /**
-                     * Archives: Dependency resources
+                     * The dependency archives of the Spark job, separated by comma, with tar.gz, .tgz, and .tar formats supported.
                      */
                     std::string m_appArchives;
                     bool m_appArchivesHasBeenSet;
@@ -826,6 +847,12 @@ namespace TencentCloud
                      */
                     uint64_t m_isInherit;
                     bool m_isInheritHasBeenSet;
+
+                    /**
+                     * Whether to run the task with the session SQLs. Valid values: `false` for no and `true` for yes.
+                     */
+                    bool m_isSessionStarted;
+                    bool m_isSessionStartedHasBeenSet;
 
                 };
             }

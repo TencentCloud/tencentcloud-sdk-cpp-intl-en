@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool DBNamesHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID in the format of mssql-i1z41iwd
-                     * @return InstanceId Instance ID in the format of mssql-i1z41iwd
+                     * 获取(Required) Instance ID in the format of mssql-i1z41iwd
+                     * @return InstanceId (Required) Instance ID in the format of mssql-i1z41iwd
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID in the format of mssql-i1z41iwd
-                     * @param _instanceId Instance ID in the format of mssql-i1z41iwd
+                     * 设置(Required) Instance ID in the format of mssql-i1z41iwd
+                     * @param _instanceId (Required) Instance ID in the format of mssql-i1z41iwd
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -126,6 +126,27 @@ namespace TencentCloud
                      */
                     bool BackupNameHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return StorageStrategy 
+                     * 
+                     */
+                    int64_t GetStorageStrategy() const;
+
+                    /**
+                     * 设置
+                     * @param _storageStrategy 
+                     * 
+                     */
+                    void SetStorageStrategy(const int64_t& _storageStrategy);
+
+                    /**
+                     * 判断参数 StorageStrategy 是否已赋值
+                     * @return StorageStrategy 是否已赋值
+                     * 
+                     */
+                    bool StorageStrategyHasBeenSet() const;
+
                 private:
 
                     /**
@@ -141,7 +162,7 @@ namespace TencentCloud
                     bool m_dBNamesHasBeenSet;
 
                     /**
-                     * Instance ID in the format of mssql-i1z41iwd
+                     * (Required) Instance ID in the format of mssql-i1z41iwd
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -151,6 +172,12 @@ namespace TencentCloud
                      */
                     std::string m_backupName;
                     bool m_backupNameHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_storageStrategy;
+                    bool m_storageStrategyHasBeenSet;
 
                 };
             }

@@ -152,6 +152,27 @@ namespace TencentCloud
                     bool ConfigMapCountHasBeenSet() const;
 
                     /**
+                     * 获取Number of ReplicaSets
+                     * @return RSCount Number of ReplicaSets
+                     * 
+                     */
+                    uint64_t GetRSCount() const;
+
+                    /**
+                     * 设置Number of ReplicaSets
+                     * @param _rSCount Number of ReplicaSets
+                     * 
+                     */
+                    void SetRSCount(const uint64_t& _rSCount);
+
+                    /**
+                     * 判断参数 RSCount 是否已赋值
+                     * @return RSCount 是否已赋值
+                     * 
+                     */
+                    bool RSCountHasBeenSet() const;
+
+                    /**
                      * 获取Number of CRDs
                      * @return CRDCount Number of CRDs
                      * 
@@ -249,6 +270,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     uint64_t m_configMapCount;
                     bool m_configMapCountHasBeenSet;
+
+                    /**
+                     * Number of ReplicaSets
+                     */
+                    uint64_t m_rSCount;
+                    bool m_rSCountHasBeenSet;
 
                     /**
                      * Number of CRDs

@@ -67,6 +67,8 @@
 #include <tencentcloud/dlc/v20210125/model/DescribeTaskResultResponse.h>
 #include <tencentcloud/dlc/v20210125/model/DescribeTasksRequest.h>
 #include <tencentcloud/dlc/v20210125/model/DescribeTasksResponse.h>
+#include <tencentcloud/dlc/v20210125/model/DescribeUserRolesRequest.h>
+#include <tencentcloud/dlc/v20210125/model/DescribeUserRolesResponse.h>
 #include <tencentcloud/dlc/v20210125/model/GenerateCreateMangedTableSqlRequest.h>
 #include <tencentcloud/dlc/v20210125/model/GenerateCreateMangedTableSqlResponse.h>
 #include <tencentcloud/dlc/v20210125/model/ModifyGovernEventRuleRequest.h>
@@ -161,6 +163,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeTasksResponse> DescribeTasksOutcome;
                 typedef std::future<DescribeTasksOutcome> DescribeTasksOutcomeCallable;
                 typedef std::function<void(const DlcClient*, const Model::DescribeTasksRequest&, DescribeTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTasksAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeUserRolesResponse> DescribeUserRolesOutcome;
+                typedef std::future<DescribeUserRolesOutcome> DescribeUserRolesOutcomeCallable;
+                typedef std::function<void(const DlcClient*, const Model::DescribeUserRolesRequest&, DescribeUserRolesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUserRolesAsyncHandler;
                 typedef Outcome<Core::Error, Model::GenerateCreateMangedTableSqlResponse> GenerateCreateMangedTableSqlOutcome;
                 typedef std::future<GenerateCreateMangedTableSqlOutcome> GenerateCreateMangedTableSqlOutcomeCallable;
                 typedef std::function<void(const DlcClient*, const Model::GenerateCreateMangedTableSqlRequest&, GenerateCreateMangedTableSqlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GenerateCreateMangedTableSqlAsyncHandler;
@@ -231,7 +236,7 @@ namespace TencentCloud
                 CreateResultDownloadOutcomeCallable CreateResultDownloadCallable(const Model::CreateResultDownloadRequest& request);
 
                 /**
-                 *This API is used to create a Spark application.
+                 *This API is used to create a Spark job.
                  * @param req CreateSparkAppRequest
                  * @return CreateSparkAppOutcome
                  */
@@ -240,7 +245,7 @@ namespace TencentCloud
                 CreateSparkAppOutcomeCallable CreateSparkAppCallable(const Model::CreateSparkAppRequest& request);
 
                 /**
-                 *This API is used to create a Spark task.
+                 *This API is used to start a Spark job.
                  * @param req CreateSparkAppTaskRequest
                  * @return CreateSparkAppTaskOutcome
                  */
@@ -249,7 +254,7 @@ namespace TencentCloud
                 CreateSparkAppTaskOutcomeCallable CreateSparkAppTaskCallable(const Model::CreateSparkAppTaskRequest& request);
 
                 /**
-                 *This API is used to submit a Spark SQL batch task.
+                 *This API is used to submit a Spark SQL batch task to the job engine.
                  * @param req CreateSparkSessionBatchSQLRequest
                  * @return CreateSparkSessionBatchSQLOutcome
                  */
@@ -258,7 +263,7 @@ namespace TencentCloud
                 CreateSparkSessionBatchSQLOutcomeCallable CreateSparkSessionBatchSQLCallable(const Model::CreateSparkSessionBatchSQLRequest& request);
 
                 /**
-                 *This API is used to create a SQL query task. (We recommend you use the `CreateTasks` API instead.)
+                 *This API is used to create and execute a SQL task. (`CreateTasks` is recommended.)
                  * @param req CreateTaskRequest
                  * @return CreateTaskOutcome
                  */
@@ -267,7 +272,7 @@ namespace TencentCloud
                 CreateTaskOutcomeCallable CreateTaskCallable(const Model::CreateTaskRequest& request);
 
                 /**
-                 *This API is used to create tasks in batches.
+                 *This API is used to create and execute SQL tasks in batches.
                  * @param req CreateTasksRequest
                  * @return CreateTasksOutcome
                  */
@@ -276,7 +281,7 @@ namespace TencentCloud
                 CreateTasksOutcomeCallable CreateTasksCallable(const Model::CreateTasksRequest& request);
 
                 /**
-                 *This API is used to delete a Spark application.
+                 *This API is used to delete a Spark job.
                  * @param req DeleteSparkAppRequest
                  * @return DeleteSparkAppOutcome
                  */
@@ -294,7 +299,7 @@ namespace TencentCloud
                 DescribeEngineUsageInfoOutcomeCallable DescribeEngineUsageInfoCallable(const Model::DescribeEngineUsageInfoRequest& request);
 
                 /**
-                 *This API is used to get the list of disabled table attributes.
+                 *This API is used to get the list of disabled table attributes (new).
                  * @param req DescribeForbiddenTableProRequest
                  * @return DescribeForbiddenTableProOutcome
                  */
@@ -330,7 +335,7 @@ namespace TencentCloud
                 DescribeResultDownloadOutcomeCallable DescribeResultDownloadCallable(const Model::DescribeResultDownloadRequest& request);
 
                 /**
-                 *This API is used to query a specific Spark application.
+                 *u200cThis API is used to query the information of a Spark job.
                  * @param req DescribeSparkAppJobRequest
                  * @return DescribeSparkAppJobOutcome
                  */
@@ -339,7 +344,7 @@ namespace TencentCloud
                 DescribeSparkAppJobOutcomeCallable DescribeSparkAppJobCallable(const Model::DescribeSparkAppJobRequest& request);
 
                 /**
-                 *This API is used to get the list of Spark applications.
+                 *This API is used to query the list of Spark jobs.
                  * @param req DescribeSparkAppJobsRequest
                  * @return DescribeSparkAppJobsOutcome
                  */
@@ -348,7 +353,7 @@ namespace TencentCloud
                 DescribeSparkAppJobsOutcomeCallable DescribeSparkAppJobsCallable(const Model::DescribeSparkAppJobsRequest& request);
 
                 /**
-                 *This API is used to query the list of running task instances of a Spark application.
+                 *This API is used to query the list of running task instances of a Spark job.
                  * @param req DescribeSparkAppTasksRequest
                  * @return DescribeSparkAppTasksOutcome
                  */
@@ -384,6 +389,15 @@ namespace TencentCloud
                 DescribeTasksOutcomeCallable DescribeTasksCallable(const Model::DescribeTasksRequest& request);
 
                 /**
+                 *This API is used to enumerate user roles.
+                 * @param req DescribeUserRolesRequest
+                 * @return DescribeUserRolesOutcome
+                 */
+                DescribeUserRolesOutcome DescribeUserRoles(const Model::DescribeUserRolesRequest &request);
+                void DescribeUserRolesAsync(const Model::DescribeUserRolesRequest& request, const DescribeUserRolesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeUserRolesOutcomeCallable DescribeUserRolesCallable(const Model::DescribeUserRolesRequest& request);
+
+                /**
                  *This API is used to generate SQL statements for creating a managed table.
                  * @param req GenerateCreateMangedTableSqlRequest
                  * @return GenerateCreateMangedTableSqlOutcome
@@ -402,7 +416,7 @@ namespace TencentCloud
                 ModifyGovernEventRuleOutcomeCallable ModifyGovernEventRuleCallable(const Model::ModifyGovernEventRuleRequest& request);
 
                 /**
-                 *This API is used to update a Spark application.
+                 *This API is used to update a Spark job.
                  * @param req ModifySparkAppRequest
                  * @return ModifySparkAppOutcome
                  */
@@ -420,7 +434,7 @@ namespace TencentCloud
                 ModifySparkAppBatchOutcomeCallable ModifySparkAppBatchCallable(const Model::ModifySparkAppBatchRequest& request);
 
                 /**
-                 *This API is used to suspend or resume a data engine.
+                 *This API is used to suspend or start a data engine.
                  * @param req SuspendResumeDataEngineRequest
                  * @return SuspendResumeDataEngineOutcome
                  */

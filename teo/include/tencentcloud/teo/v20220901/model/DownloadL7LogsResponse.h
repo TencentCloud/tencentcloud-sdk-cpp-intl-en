@@ -45,22 +45,6 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The list of L7 log data.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Data The list of L7 log data.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
-                     */
-                    std::vector<L7OfflineLog> GetData() const;
-
-                    /**
-                     * 判断参数 Data 是否已赋值
-                     * @return Data 是否已赋值
-                     * 
-                     */
-                    bool DataHasBeenSet() const;
-
-                    /**
                      * 获取Total number of query results.
                      * @return TotalCount Total number of query results.
                      * 
@@ -74,20 +58,33 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool TotalCountHasBeenSet() const;
 
-                private:
+                    /**
+                     * 获取List of L7 logs.
+                     * @return Data List of L7 logs.
+                     * 
+                     */
+                    std::vector<L7OfflineLog> GetData() const;
 
                     /**
-                     * The list of L7 log data.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 判断参数 Data 是否已赋值
+                     * @return Data 是否已赋值
+                     * 
                      */
-                    std::vector<L7OfflineLog> m_data;
-                    bool m_dataHasBeenSet;
+                    bool DataHasBeenSet() const;
+
+                private:
 
                     /**
                      * Total number of query results.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
+
+                    /**
+                     * List of L7 logs.
+                     */
+                    std::vector<L7OfflineLog> m_data;
+                    bool m_dataHasBeenSet;
 
                 };
             }

@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取Update start time
-                     * @return StartTime Update start time
+                     * 获取The update start time in the format of yyyy-MM-dd HH:mm:ss.
+                     * @return StartTime The update start time in the format of yyyy-MM-dd HH:mm:ss.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Update start time
-                     * @param _startTime Update start time
+                     * 设置The update start time in the format of yyyy-MM-dd HH:mm:ss.
+                     * @param _startTime The update start time in the format of yyyy-MM-dd HH:mm:ss.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Update end time
-                     * @return EndTime Update end time
+                     * 获取The update end time in the format of yyyy-MM-dd HH:mm:ss.
+                     * @return EndTime The update end time in the format of yyyy-MM-dd HH:mm:ss.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置Update end time
-                     * @param _endTime Update end time
+                     * 设置The update end time in the format of yyyy-MM-dd HH:mm:ss.
+                     * @param _endTime The update end time in the format of yyyy-MM-dd HH:mm:ss.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -217,13 +217,13 @@ namespace TencentCloud
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * Update start time
+                     * The update start time in the format of yyyy-MM-dd HH:mm:ss.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Update end time
+                     * The update end time in the format of yyyy-MM-dd HH:mm:ss.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;

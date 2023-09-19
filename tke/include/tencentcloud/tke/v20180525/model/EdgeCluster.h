@@ -409,15 +409,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EdgeVersionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TagSpecification 
+                     * 获取u200dTags bound with the cluster
+Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+                     * @return TagSpecification u200dTags bound with the cluster
+Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     TagSpecification GetTagSpecification() const;
 
                     /**
-                     * 设置
-                     * @param _tagSpecification 
+                     * 设置u200dTags bound with the cluster
+Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+                     * @param _tagSpecification u200dTags bound with the cluster
+Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTagSpecification(const TagSpecification& _tagSpecification);
@@ -534,7 +538,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_edgeVersionHasBeenSet;
 
                     /**
-                     * 
+                     * u200dTags bound with the cluster
+Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
                      */
                     TagSpecification m_tagSpecification;
                     bool m_tagSpecificationHasBeenSet;

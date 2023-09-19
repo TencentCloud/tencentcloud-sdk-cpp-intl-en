@@ -27,6 +27,8 @@
 #include <tencentcloud/ssl/v20191205/model/ApplyCertificateResponse.h>
 #include <tencentcloud/ssl/v20191205/model/BatchDeleteCSRRequest.h>
 #include <tencentcloud/ssl/v20191205/model/BatchDeleteCSRResponse.h>
+#include <tencentcloud/ssl/v20191205/model/CancelAuditCertificateRequest.h>
+#include <tencentcloud/ssl/v20191205/model/CancelAuditCertificateResponse.h>
 #include <tencentcloud/ssl/v20191205/model/CancelCertificateOrderRequest.h>
 #include <tencentcloud/ssl/v20191205/model/CancelCertificateOrderResponse.h>
 #include <tencentcloud/ssl/v20191205/model/CommitCertificateInformationRequest.h>
@@ -63,6 +65,8 @@
 #include <tencentcloud/ssl/v20191205/model/ModifyCertificateAliasResponse.h>
 #include <tencentcloud/ssl/v20191205/model/ModifyCertificateProjectRequest.h>
 #include <tencentcloud/ssl/v20191205/model/ModifyCertificateProjectResponse.h>
+#include <tencentcloud/ssl/v20191205/model/ModifyCertificateResubmitRequest.h>
+#include <tencentcloud/ssl/v20191205/model/ModifyCertificateResubmitResponse.h>
 #include <tencentcloud/ssl/v20191205/model/ReplaceCertificateRequest.h>
 #include <tencentcloud/ssl/v20191205/model/ReplaceCertificateResponse.h>
 #include <tencentcloud/ssl/v20191205/model/SubmitCertificateInformationRequest.h>
@@ -91,6 +95,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::BatchDeleteCSRResponse> BatchDeleteCSROutcome;
                 typedef std::future<BatchDeleteCSROutcome> BatchDeleteCSROutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::BatchDeleteCSRRequest&, BatchDeleteCSROutcome, const std::shared_ptr<const AsyncCallerContext>&)> BatchDeleteCSRAsyncHandler;
+                typedef Outcome<Core::Error, Model::CancelAuditCertificateResponse> CancelAuditCertificateOutcome;
+                typedef std::future<CancelAuditCertificateOutcome> CancelAuditCertificateOutcomeCallable;
+                typedef std::function<void(const SslClient*, const Model::CancelAuditCertificateRequest&, CancelAuditCertificateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CancelAuditCertificateAsyncHandler;
                 typedef Outcome<Core::Error, Model::CancelCertificateOrderResponse> CancelCertificateOrderOutcome;
                 typedef std::future<CancelCertificateOrderOutcome> CancelCertificateOrderOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::CancelCertificateOrderRequest&, CancelCertificateOrderOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CancelCertificateOrderAsyncHandler;
@@ -145,6 +152,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyCertificateProjectResponse> ModifyCertificateProjectOutcome;
                 typedef std::future<ModifyCertificateProjectOutcome> ModifyCertificateProjectOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::ModifyCertificateProjectRequest&, ModifyCertificateProjectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyCertificateProjectAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyCertificateResubmitResponse> ModifyCertificateResubmitOutcome;
+                typedef std::future<ModifyCertificateResubmitOutcome> ModifyCertificateResubmitOutcomeCallable;
+                typedef std::function<void(const SslClient*, const Model::ModifyCertificateResubmitRequest&, ModifyCertificateResubmitOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyCertificateResubmitAsyncHandler;
                 typedef Outcome<Core::Error, Model::ReplaceCertificateResponse> ReplaceCertificateOutcome;
                 typedef std::future<ReplaceCertificateOutcome> ReplaceCertificateOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::ReplaceCertificateRequest&, ReplaceCertificateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ReplaceCertificateAsyncHandler;
@@ -177,6 +187,15 @@ namespace TencentCloud
                 BatchDeleteCSROutcome BatchDeleteCSR(const Model::BatchDeleteCSRRequest &request);
                 void BatchDeleteCSRAsync(const Model::BatchDeleteCSRRequest& request, const BatchDeleteCSRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 BatchDeleteCSROutcomeCallable BatchDeleteCSRCallable(const Model::BatchDeleteCSRRequest& request);
+
+                /**
+                 *This API is used to cancel certificate review.
+                 * @param req CancelAuditCertificateRequest
+                 * @return CancelAuditCertificateOutcome
+                 */
+                CancelAuditCertificateOutcome CancelAuditCertificate(const Model::CancelAuditCertificateRequest &request);
+                void CancelAuditCertificateAsync(const Model::CancelAuditCertificateRequest& request, const CancelAuditCertificateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CancelAuditCertificateOutcomeCallable CancelAuditCertificateCallable(const Model::CancelAuditCertificateRequest& request);
 
                 /**
                  *This API is used to cancel a certificate order.
@@ -339,6 +358,15 @@ namespace TencentCloud
                 ModifyCertificateProjectOutcome ModifyCertificateProject(const Model::ModifyCertificateProjectRequest &request);
                 void ModifyCertificateProjectAsync(const Model::ModifyCertificateProjectRequest& request, const ModifyCertificateProjectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyCertificateProjectOutcomeCallable ModifyCertificateProjectCallable(const Model::ModifyCertificateProjectRequest& request);
+
+                /**
+                 *This API is used to re-submit a review application for a paid certificate whose review failed or was canceled.
+                 * @param req ModifyCertificateResubmitRequest
+                 * @return ModifyCertificateResubmitOutcome
+                 */
+                ModifyCertificateResubmitOutcome ModifyCertificateResubmit(const Model::ModifyCertificateResubmitRequest &request);
+                void ModifyCertificateResubmitAsync(const Model::ModifyCertificateResubmitRequest& request, const ModifyCertificateResubmitAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyCertificateResubmitOutcomeCallable ModifyCertificateResubmitCallable(const Model::ModifyCertificateResubmitRequest& request);
 
                 /**
                  *This API is used to reissue a certificate. Note that if you have applied for a free certificate, only an RSA-2048 certificate will be reissued, and the certificate can be reissued only once.

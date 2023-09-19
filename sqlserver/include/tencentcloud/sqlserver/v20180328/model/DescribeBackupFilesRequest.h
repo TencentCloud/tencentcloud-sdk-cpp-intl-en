@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Group ID of unarchived backup files, which can be obtained by the `DescribeBackups` API
-                     * @return GroupId Group ID of unarchived backup files, which can be obtained by the `DescribeBackups` API
+                     * 获取Group ID of unarchived backup files, which can be obtained by the `DescribeBackups` API (Querying archived backup record is not supported).
+                     * @return GroupId Group ID of unarchived backup files, which can be obtained by the `DescribeBackups` API (Querying archived backup record is not supported).
                      * 
                      */
                     std::string GetGroupId() const;
 
                     /**
-                     * 设置Group ID of unarchived backup files, which can be obtained by the `DescribeBackups` API
-                     * @param _groupId Group ID of unarchived backup files, which can be obtained by the `DescribeBackups` API
+                     * 设置Group ID of unarchived backup files, which can be obtained by the `DescribeBackups` API (Querying archived backup record is not supported).
+                     * @param _groupId Group ID of unarchived backup files, which can be obtained by the `DescribeBackups` API (Querying archived backup record is not supported).
                      * 
                      */
                     void SetGroupId(const std::string& _groupId);
@@ -177,7 +177,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Group ID of unarchived backup files, which can be obtained by the `DescribeBackups` API
+                     * Group ID of unarchived backup files, which can be obtained by the `DescribeBackups` API (Querying archived backup record is not supported).
                      */
                     std::string m_groupId;
                     bool m_groupIdHasBeenSet;

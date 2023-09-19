@@ -900,6 +900,49 @@ TkeClient::CreateTKEEdgeClusterOutcomeCallable TkeClient::CreateTKEEdgeClusterCa
     return task->get_future();
 }
 
+TkeClient::DeleteAddonOutcome TkeClient::DeleteAddon(const DeleteAddonRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteAddon");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteAddonResponse rsp = DeleteAddonResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteAddonOutcome(rsp);
+        else
+            return DeleteAddonOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteAddonOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::DeleteAddonAsync(const DeleteAddonRequest& request, const DeleteAddonAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteAddon(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::DeleteAddonOutcomeCallable TkeClient::DeleteAddonCallable(const DeleteAddonRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteAddonOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteAddon(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TkeClient::DeleteBackupStorageLocationOutcome TkeClient::DeleteBackupStorageLocation(const DeleteBackupStorageLocationRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteBackupStorageLocation");
@@ -1581,6 +1624,92 @@ TkeClient::DeleteTKEEdgeClusterOutcomeCallable TkeClient::DeleteTKEEdgeClusterCa
         [this, request]()
         {
             return this->DeleteTKEEdgeCluster(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TkeClient::DescribeAddonOutcome TkeClient::DescribeAddon(const DescribeAddonRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAddon");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAddonResponse rsp = DescribeAddonResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAddonOutcome(rsp);
+        else
+            return DescribeAddonOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAddonOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::DescribeAddonAsync(const DescribeAddonRequest& request, const DescribeAddonAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeAddon(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::DescribeAddonOutcomeCallable TkeClient::DescribeAddonCallable(const DescribeAddonRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeAddonOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeAddon(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TkeClient::DescribeAddonValuesOutcome TkeClient::DescribeAddonValues(const DescribeAddonValuesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAddonValues");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAddonValuesResponse rsp = DescribeAddonValuesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAddonValuesOutcome(rsp);
+        else
+            return DescribeAddonValuesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAddonValuesOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::DescribeAddonValuesAsync(const DescribeAddonValuesRequest& request, const DescribeAddonValuesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeAddonValues(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::DescribeAddonValuesOutcomeCallable TkeClient::DescribeAddonValuesCallable(const DescribeAddonValuesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeAddonValuesOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeAddonValues(request);
         }
     );
 
@@ -2921,6 +3050,49 @@ TkeClient::DescribeEnableVpcCniProgressOutcomeCallable TkeClient::DescribeEnable
     return task->get_future();
 }
 
+TkeClient::DescribeEncryptionStatusOutcome TkeClient::DescribeEncryptionStatus(const DescribeEncryptionStatusRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeEncryptionStatus");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeEncryptionStatusResponse rsp = DescribeEncryptionStatusResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeEncryptionStatusOutcome(rsp);
+        else
+            return DescribeEncryptionStatusOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeEncryptionStatusOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::DescribeEncryptionStatusAsync(const DescribeEncryptionStatusRequest& request, const DescribeEncryptionStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeEncryptionStatus(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::DescribeEncryptionStatusOutcomeCallable TkeClient::DescribeEncryptionStatusCallable(const DescribeEncryptionStatusRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeEncryptionStatusOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeEncryptionStatus(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TkeClient::DescribeExistedInstancesOutcome TkeClient::DescribeExistedInstances(const DescribeExistedInstancesRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeExistedInstances");
@@ -3523,6 +3695,49 @@ TkeClient::DisableClusterDeletionProtectionOutcomeCallable TkeClient::DisableClu
     return task->get_future();
 }
 
+TkeClient::DisableEncryptionProtectionOutcome TkeClient::DisableEncryptionProtection(const DisableEncryptionProtectionRequest &request)
+{
+    auto outcome = MakeRequest(request, "DisableEncryptionProtection");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DisableEncryptionProtectionResponse rsp = DisableEncryptionProtectionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DisableEncryptionProtectionOutcome(rsp);
+        else
+            return DisableEncryptionProtectionOutcome(o.GetError());
+    }
+    else
+    {
+        return DisableEncryptionProtectionOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::DisableEncryptionProtectionAsync(const DisableEncryptionProtectionRequest& request, const DisableEncryptionProtectionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DisableEncryptionProtection(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::DisableEncryptionProtectionOutcomeCallable TkeClient::DisableEncryptionProtectionCallable(const DisableEncryptionProtectionRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DisableEncryptionProtectionOutcome()>>(
+        [this, request]()
+        {
+            return this->DisableEncryptionProtection(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TkeClient::DrainClusterVirtualNodeOutcome TkeClient::DrainClusterVirtualNode(const DrainClusterVirtualNodeRequest &request)
 {
     auto outcome = MakeRequest(request, "DrainClusterVirtualNode");
@@ -3602,6 +3817,49 @@ TkeClient::EnableClusterDeletionProtectionOutcomeCallable TkeClient::EnableClust
         [this, request]()
         {
             return this->EnableClusterDeletionProtection(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TkeClient::EnableEncryptionProtectionOutcome TkeClient::EnableEncryptionProtection(const EnableEncryptionProtectionRequest &request)
+{
+    auto outcome = MakeRequest(request, "EnableEncryptionProtection");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        EnableEncryptionProtectionResponse rsp = EnableEncryptionProtectionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return EnableEncryptionProtectionOutcome(rsp);
+        else
+            return EnableEncryptionProtectionOutcome(o.GetError());
+    }
+    else
+    {
+        return EnableEncryptionProtectionOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::EnableEncryptionProtectionAsync(const EnableEncryptionProtectionRequest& request, const EnableEncryptionProtectionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->EnableEncryptionProtection(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::EnableEncryptionProtectionOutcomeCallable TkeClient::EnableEncryptionProtectionCallable(const EnableEncryptionProtectionRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<EnableEncryptionProtectionOutcome()>>(
+        [this, request]()
+        {
+            return this->EnableEncryptionProtection(request);
         }
     );
 
@@ -3774,6 +4032,49 @@ TkeClient::GetUpgradeInstanceProgressOutcomeCallable TkeClient::GetUpgradeInstan
         [this, request]()
         {
             return this->GetUpgradeInstanceProgress(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TkeClient::InstallAddonOutcome TkeClient::InstallAddon(const InstallAddonRequest &request)
+{
+    auto outcome = MakeRequest(request, "InstallAddon");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        InstallAddonResponse rsp = InstallAddonResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return InstallAddonOutcome(rsp);
+        else
+            return InstallAddonOutcome(o.GetError());
+    }
+    else
+    {
+        return InstallAddonOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::InstallAddonAsync(const InstallAddonRequest& request, const InstallAddonAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->InstallAddon(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::InstallAddonOutcomeCallable TkeClient::InstallAddonCallable(const InstallAddonRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<InstallAddonOutcome()>>(
+        [this, request]()
+        {
+            return this->InstallAddon(request);
         }
     );
 
@@ -4333,6 +4634,49 @@ TkeClient::UninstallEdgeLogAgentOutcomeCallable TkeClient::UninstallEdgeLogAgent
         [this, request]()
         {
             return this->UninstallEdgeLogAgent(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TkeClient::UpdateAddonOutcome TkeClient::UpdateAddon(const UpdateAddonRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdateAddon");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdateAddonResponse rsp = UpdateAddonResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdateAddonOutcome(rsp);
+        else
+            return UpdateAddonOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdateAddonOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::UpdateAddonAsync(const UpdateAddonRequest& request, const UpdateAddonAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->UpdateAddon(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::UpdateAddonOutcomeCallable TkeClient::UpdateAddonCallable(const UpdateAddonRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<UpdateAddonOutcome()>>(
+        [this, request]()
+        {
+            return this->UpdateAddon(request);
         }
     );
 

@@ -426,6 +426,81 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool TargetUinHasBeenSet() const;
 
+                    /**
+                     * 获取Rotation frequency in days. It takes effect when the rotation feature is enabled. 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RotationFrequency Rotation frequency in days. It takes effect when the rotation feature is enabled. 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetRotationFrequency() const;
+
+                    /**
+                     * 设置Rotation frequency in days. It takes effect when the rotation feature is enabled. 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _rotationFrequency Rotation frequency in days. It takes effect when the rotation feature is enabled. 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetRotationFrequency(const int64_t& _rotationFrequency);
+
+                    /**
+                     * 判断参数 RotationFrequency 是否已赋值
+                     * @return RotationFrequency 是否已赋值
+                     * 
+                     */
+                    bool RotationFrequencyHasBeenSet() const;
+
+                    /**
+                     * 获取ID of Tencent Cloud resource corresponding with the Secret. 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ResourceID ID of Tencent Cloud resource corresponding with the Secret. 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetResourceID() const;
+
+                    /**
+                     * 设置ID of Tencent Cloud resource corresponding with the Secret. 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _resourceID ID of Tencent Cloud resource corresponding with the Secret. 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetResourceID(const std::string& _resourceID);
+
+                    /**
+                     * 判断参数 ResourceID 是否已赋值
+                     * @return ResourceID 是否已赋值
+                     * 
+                     */
+                    bool ResourceIDHasBeenSet() const;
+
+                    /**
+                     * 获取The rotation start time.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RotationBeginTime The rotation start time.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetRotationBeginTime() const;
+
+                    /**
+                     * 设置The rotation start time.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _rotationBeginTime The rotation start time.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetRotationBeginTime(const std::string& _rotationBeginTime);
+
+                    /**
+                     * 判断参数 RotationBeginTime 是否已赋值
+                     * @return RotationBeginTime 是否已赋值
+                     * 
+                     */
+                    bool RotationBeginTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -534,6 +609,27 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     uint64_t m_targetUin;
                     bool m_targetUinHasBeenSet;
+
+                    /**
+                     * Rotation frequency in days. It takes effect when the rotation feature is enabled. 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_rotationFrequency;
+                    bool m_rotationFrequencyHasBeenSet;
+
+                    /**
+                     * ID of Tencent Cloud resource corresponding with the Secret. 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_resourceID;
+                    bool m_resourceIDHasBeenSet;
+
+                    /**
+                     * The rotation start time.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_rotationBeginTime;
+                    bool m_rotationBeginTimeHasBeenSet;
 
                 };
             }

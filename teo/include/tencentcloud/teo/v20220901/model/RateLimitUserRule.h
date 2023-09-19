@@ -111,27 +111,15 @@ namespace TencentCloud
                     bool RuleNameHasBeenSet() const;
 
                     /**
-                     * 获取The action. Values:
-<li>`monitor`: Observe</li>
-<li>`drop`: Block</li>
-<li>`alg`: JavaScript challenge</li>
-                     * @return Action The action. Values:
-<li>`monitor`: Observe</li>
-<li>`drop`: Block</li>
-<li>`alg`: JavaScript challenge</li>
+                     * 获取Action. Valid values: <li>`monitor`: Observe;</li>`<li>drop`: Block;</li> <li>`alg`: JavaScript challenge. </li>	
+                     * @return Action Action. Valid values: <li>`monitor`: Observe;</li>`<li>drop`: Block;</li> <li>`alg`: JavaScript challenge. </li>	
                      * 
                      */
                     std::string GetAction() const;
 
                     /**
-                     * 设置The action. Values:
-<li>`monitor`: Observe</li>
-<li>`drop`: Block</li>
-<li>`alg`: JavaScript challenge</li>
-                     * @param _action The action. Values:
-<li>`monitor`: Observe</li>
-<li>`drop`: Block</li>
-<li>`alg`: JavaScript challenge</li>
+                     * 设置Action. Valid values: <li>`monitor`: Observe;</li>`<li>drop`: Block;</li> <li>`alg`: JavaScript challenge. </li>	
+                     * @param _action Action. Valid values: <li>`monitor`: Observe;</li>`<li>drop`: Block;</li> <li>`alg`: JavaScript challenge. </li>	
                      * 
                      */
                     void SetAction(const std::string& _action);
@@ -269,19 +257,19 @@ namespace TencentCloud
                     bool RulePriorityHasBeenSet() const;
 
                     /**
-                     * 获取The rule ID, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RuleID The rule ID, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Rule ID, which is only used as an output parameter.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * @return RuleID Rule ID, which is only used as an output parameter.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetRuleID() const;
 
                     /**
-                     * 设置The rule ID, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _ruleID The rule ID, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Rule ID, which is only used as an output parameter.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * @param _ruleID Rule ID, which is only used as an output parameter.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRuleID(const int64_t& _ruleID);
@@ -348,27 +336,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取The statistical dimension. Values:
-<li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
-<li>`client_to_eo`: Requests from the client to EdgeOne</li>
-Note: A null value indicates responses from the origin server to EdgeOne are recorded.
-                     * @return FreqScope The statistical dimension. Values:
-<li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
-<li>`client_to_eo`: Requests from the client to EdgeOne</li>
-Note: A null value indicates responses from the origin server to EdgeOne are recorded.
+                     * 获取Statistical dimension. `source_to_eo` is entered by default when this parameter is not specified. Valid values:
+<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne. </li>
+<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * @return FreqScope Statistical dimension. `source_to_eo` is entered by default when this parameter is not specified. Valid values:
+<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne. </li>
+<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetFreqScope() const;
 
                     /**
-                     * 设置The statistical dimension. Values:
-<li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
-<li>`client_to_eo`: Requests from the client to EdgeOne</li>
-Note: A null value indicates responses from the origin server to EdgeOne are recorded.
-                     * @param _freqScope The statistical dimension. Values:
-<li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
-<li>`client_to_eo`: Requests from the client to EdgeOne</li>
-Note: A null value indicates responses from the origin server to EdgeOne are recorded.
+                     * 设置Statistical dimension. `source_to_eo` is entered by default when this parameter is not specified. Valid values:
+<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne. </li>
+<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * @param _freqScope Statistical dimension. `source_to_eo` is entered by default when this parameter is not specified. Valid values:
+<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne. </li>
+<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetFreqScope(const std::vector<std::string>& _freqScope);
@@ -401,10 +389,7 @@ Note: A null value indicates responses from the origin server to EdgeOne are rec
                     bool m_ruleNameHasBeenSet;
 
                     /**
-                     * The action. Values:
-<li>`monitor`: Observe</li>
-<li>`drop`: Block</li>
-<li>`alg`: JavaScript challenge</li>
+                     * Action. Valid values: <li>`monitor`: Observe;</li>`<li>drop`: Block;</li> <li>`alg`: JavaScript challenge. </li>	
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;
@@ -445,8 +430,8 @@ Note: A null value indicates responses from the origin server to EdgeOne are rec
                     bool m_rulePriorityHasBeenSet;
 
                     /**
-                     * The rule ID, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Rule ID, which is only used as an output parameter.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      */
                     int64_t m_ruleID;
                     bool m_ruleIDHasBeenSet;
@@ -467,10 +452,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * The statistical dimension. Values:
-<li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
-<li>`client_to_eo`: Requests from the client to EdgeOne</li>
-Note: A null value indicates responses from the origin server to EdgeOne are recorded.
+                     * Statistical dimension. `source_to_eo` is entered by default when this parameter is not specified. Valid values:
+<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne. </li>
+<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_freqScope;
                     bool m_freqScopeHasBeenSet;

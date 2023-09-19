@@ -176,15 +176,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Task status. Valid values: `0` (initial), `1` (executing), `2` (executed successfully), `-1` (failed to execute), `-3` (canceled).
-                     * @return State Task status. Valid values: `0` (initial), `1` (executing), `2` (executed successfully), `-1` (failed to execute), `-3` (canceled).
+                     * 获取The task status. Valid values: `0` (initializing), `1` (executing), `2` (executed), `3` (writing data), `4` (queuing), `-1` (failed), and `-3` (canceled).
+                     * @return State The task status. Valid values: `0` (initializing), `1` (executing), `2` (executed), `3` (writing data), `4` (queuing), `-1` (failed), and `-3` (canceled).
                      * 
                      */
                     int64_t GetState() const;
 
                     /**
-                     * 设置Task status. Valid values: `0` (initial), `1` (executing), `2` (executed successfully), `-1` (failed to execute), `-3` (canceled).
-                     * @param _state Task status. Valid values: `0` (initial), `1` (executing), `2` (executed successfully), `-1` (failed to execute), `-3` (canceled).
+                     * 设置The task status. Valid values: `0` (initializing), `1` (executing), `2` (executed), `3` (writing data), `4` (queuing), `-1` (failed), and `-3` (canceled).
+                     * @param _state The task status. Valid values: `0` (initializing), `1` (executing), `2` (executed), `3` (writing data), `4` (queuing), `-1` (failed), and `-3` (canceled).
                      * 
                      */
                     void SetState(const int64_t& _state);
@@ -931,15 +931,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ExecutorMaxNumbersHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CommonMetrics 
+                     * 获取Common task metrics
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * @return CommonMetrics Common task metrics
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
                      * 
                      */
                     CommonMetrics GetCommonMetrics() const;
 
                     /**
-                     * 设置
-                     * @param _commonMetrics 
+                     * 设置Common task metrics
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * @param _commonMetrics Common task metrics
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCommonMetrics(const CommonMetrics& _commonMetrics);
@@ -952,15 +956,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CommonMetricsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SparkMonitorMetrics 
+                     * 获取The Spark task metrics.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * @return SparkMonitorMetrics The Spark task metrics.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
                      * 
                      */
                     SparkMonitorMetrics GetSparkMonitorMetrics() const;
 
                     /**
-                     * 设置
-                     * @param _sparkMonitorMetrics 
+                     * 设置The Spark task metrics.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * @param _sparkMonitorMetrics The Spark task metrics.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSparkMonitorMetrics(const SparkMonitorMetrics& _sparkMonitorMetrics);
@@ -973,15 +981,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SparkMonitorMetricsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PrestoMonitorMetrics 
+                     * 获取The Presto task metrics.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * @return PrestoMonitorMetrics The Presto task metrics.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
                      * 
                      */
                     PrestoMonitorMetrics GetPrestoMonitorMetrics() const;
 
                     /**
-                     * 设置
-                     * @param _prestoMonitorMetrics 
+                     * 设置The Presto task metrics.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * @param _prestoMonitorMetrics The Presto task metrics.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetPrestoMonitorMetrics(const PrestoMonitorMetrics& _prestoMonitorMetrics);
@@ -1032,7 +1044,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Task status. Valid values: `0` (initial), `1` (executing), `2` (executed successfully), `-1` (failed to execute), `-3` (canceled).
+                     * The task status. Valid values: `0` (initializing), `1` (executing), `2` (executed), `3` (writing data), `4` (queuing), `-1` (failed), and `-3` (canceled).
                      */
                     int64_t m_state;
                     bool m_stateHasBeenSet;
@@ -1244,19 +1256,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_executorMaxNumbersHasBeenSet;
 
                     /**
-                     * 
+                     * Common task metrics
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
                      */
                     CommonMetrics m_commonMetrics;
                     bool m_commonMetricsHasBeenSet;
 
                     /**
-                     * 
+                     * The Spark task metrics.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
                      */
                     SparkMonitorMetrics m_sparkMonitorMetrics;
                     bool m_sparkMonitorMetricsHasBeenSet;
 
                     /**
-                     * 
+                     * The Presto task metrics.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
                      */
                     PrestoMonitorMetrics m_prestoMonitorMetrics;
                     bool m_prestoMonitorMetricsHasBeenSet;

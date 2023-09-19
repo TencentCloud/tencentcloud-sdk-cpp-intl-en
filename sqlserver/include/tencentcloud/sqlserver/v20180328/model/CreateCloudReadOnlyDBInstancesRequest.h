@@ -338,15 +338,15 @@ namespace TencentCloud
                     bool InstanceChargeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Number of instances purchased this time. Default value: `1`.
-                     * @return GoodsNum Number of instances purchased this time. Default value: `1`.
+                     * 获取Number of read-only instances to be purchased this time. Default value: `2`.
+                     * @return GoodsNum Number of read-only instances to be purchased this time. Default value: `2`.
                      * 
                      */
                     int64_t GetGoodsNum() const;
 
                     /**
-                     * 设置Number of instances purchased this time. Default value: `1`.
-                     * @param _goodsNum Number of instances purchased this time. Default value: `1`.
+                     * 设置Number of read-only instances to be purchased this time. Default value: `2`.
+                     * @param _goodsNum Number of read-only instances to be purchased this time. Default value: `2`.
                      * 
                      */
                     void SetGoodsNum(const int64_t& _goodsNum);
@@ -634,7 +634,7 @@ namespace TencentCloud
                     bool m_instanceChargeTypeHasBeenSet;
 
                     /**
-                     * Number of instances purchased this time. Default value: `1`.
+                     * Number of read-only instances to be purchased this time. Default value: `2`.
                      */
                     int64_t m_goodsNum;
                     bool m_goodsNumHasBeenSet;

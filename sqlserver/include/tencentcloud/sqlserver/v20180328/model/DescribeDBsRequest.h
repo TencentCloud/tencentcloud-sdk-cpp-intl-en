@@ -147,6 +147,27 @@ namespace TencentCloud
                      */
                     bool OrderByTypeHasBeenSet() const;
 
+                    /**
+                     * 获取TDE status. Valid values: `enable` (enabled), `disable` (disabled).
+                     * @return Encryption TDE status. Valid values: `enable` (enabled), `disable` (disabled).
+                     * 
+                     */
+                    std::string GetEncryption() const;
+
+                    /**
+                     * 设置TDE status. Valid values: `enable` (enabled), `disable` (disabled).
+                     * @param _encryption TDE status. Valid values: `enable` (enabled), `disable` (disabled).
+                     * 
+                     */
+                    void SetEncryption(const std::string& _encryption);
+
+                    /**
+                     * 判断参数 Encryption 是否已赋值
+                     * @return Encryption 是否已赋值
+                     * 
+                     */
+                    bool EncryptionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -178,6 +199,12 @@ namespace TencentCloud
                      */
                     std::string m_orderByType;
                     bool m_orderByTypeHasBeenSet;
+
+                    /**
+                     * TDE status. Valid values: `enable` (enabled), `disable` (disabled).
+                     */
+                    std::string m_encryption;
+                    bool m_encryptionHasBeenSet;
 
                 };
             }

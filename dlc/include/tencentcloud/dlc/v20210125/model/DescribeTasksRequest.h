@@ -211,15 +211,15 @@ task-kind - string (filter by task type)
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Filter by compute resource name
-                     * @return DataEngineName Filter by compute resource name
+                     * 获取The data engine name for filtering.
+                     * @return DataEngineName The data engine name for filtering.
                      * 
                      */
                     std::string GetDataEngineName() const;
 
                     /**
-                     * 设置Filter by compute resource name
-                     * @param _dataEngineName Filter by compute resource name
+                     * 设置The data engine name for filtering.
+                     * @param _dataEngineName The data engine name for filtering.
                      * 
                      */
                     void SetDataEngineName(const std::string& _dataEngineName);
@@ -281,7 +281,7 @@ task-kind - string (filter by task type)
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Filter by compute resource name
+                     * The data engine name for filtering.
                      */
                     std::string m_dataEngineName;
                     bool m_dataEngineNameHasBeenSet;

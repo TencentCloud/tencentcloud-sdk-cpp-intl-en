@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool JobNameHasBeenSet() const;
 
                     /**
-                     * 获取Command line parameters of the Spark job separated by space. They are generally used for periodic calls.
-                     * @return CmdArgs Command line parameters of the Spark job separated by space. They are generally used for periodic calls.
+                     * 获取The input parameters of the Spark job, separated by space. They are generally used for periodic calls.
+                     * @return CmdArgs The input parameters of the Spark job, separated by space. They are generally used for periodic calls.
                      * 
                      */
                     std::string GetCmdArgs() const;
 
                     /**
-                     * 设置Command line parameters of the Spark job separated by space. They are generally used for periodic calls.
-                     * @param _cmdArgs Command line parameters of the Spark job separated by space. They are generally used for periodic calls.
+                     * 设置The input parameters of the Spark job, separated by space. They are generally used for periodic calls.
+                     * @param _cmdArgs The input parameters of the Spark job, separated by space. They are generally used for periodic calls.
                      * 
                      */
                     void SetCmdArgs(const std::string& _cmdArgs);
@@ -93,7 +93,7 @@ namespace TencentCloud
                     bool m_jobNameHasBeenSet;
 
                     /**
-                     * Command line parameters of the Spark job separated by space. They are generally used for periodic calls.
+                     * The input parameters of the Spark job, separated by space. They are generally used for periodic calls.
                      */
                     std::string m_cmdArgs;
                     bool m_cmdArgsHasBeenSet;

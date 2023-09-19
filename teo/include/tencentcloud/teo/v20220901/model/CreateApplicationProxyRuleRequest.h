@@ -316,6 +316,27 @@ namespace TencentCloud
                      */
                     bool OriginPortHasBeenSet() const;
 
+                    /**
+                     * 获取Rule tag. This parameter is left empty by default.
+                     * @return RuleTag Rule tag. This parameter is left empty by default.
+                     * 
+                     */
+                    std::string GetRuleTag() const;
+
+                    /**
+                     * 设置Rule tag. This parameter is left empty by default.
+                     * @param _ruleTag Rule tag. This parameter is left empty by default.
+                     * 
+                     */
+                    void SetRuleTag(const std::string& _ruleTag);
+
+                    /**
+                     * 判断参数 RuleTag 是否已赋值
+                     * @return RuleTag 是否已赋值
+                     * 
+                     */
+                    bool RuleTagHasBeenSet() const;
+
                 private:
 
                     /**
@@ -393,6 +414,12 @@ namespace TencentCloud
                      */
                     std::string m_originPort;
                     bool m_originPortHasBeenSet;
+
+                    /**
+                     * Rule tag. This parameter is left empty by default.
+                     */
+                    std::string m_ruleTag;
+                    bool m_ruleTagHasBeenSet;
 
                 };
             }

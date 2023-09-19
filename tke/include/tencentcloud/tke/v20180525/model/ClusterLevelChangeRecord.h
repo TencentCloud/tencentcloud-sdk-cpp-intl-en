@@ -194,6 +194,27 @@ namespace TencentCloud
                     bool TriggerTypeHasBeenSet() const;
 
                     /**
+                     * 获取Creation time
+                     * @return CreatedAt Creation time
+                     * 
+                     */
+                    std::string GetCreatedAt() const;
+
+                    /**
+                     * 设置Creation time
+                     * @param _createdAt Creation time
+                     * 
+                     */
+                    void SetCreatedAt(const std::string& _createdAt);
+
+                    /**
+                     * 判断参数 CreatedAt 是否已赋值
+                     * @return CreatedAt 是否已赋值
+                     * 
+                     */
+                    bool CreatedAtHasBeenSet() const;
+
+                    /**
                      * 获取Start time
                      * @return StartedAt Start time
                      * 
@@ -278,6 +299,12 @@ namespace TencentCloud
                      */
                     std::string m_triggerType;
                     bool m_triggerTypeHasBeenSet;
+
+                    /**
+                     * Creation time
+                     */
+                    std::string m_createdAt;
+                    bool m_createdAtHasBeenSet;
 
                     /**
                      * Start time

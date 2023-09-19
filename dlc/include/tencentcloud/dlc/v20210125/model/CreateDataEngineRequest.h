@@ -196,21 +196,21 @@ namespace TencentCloud
                     /**
                      * 获取Whether the cluster is the default one.
                      * @return DefaultDataEngine Whether the cluster is the default one.
-                     * 
+                     * @deprecated
                      */
                     bool GetDefaultDataEngine() const;
 
                     /**
                      * 设置Whether the cluster is the default one.
                      * @param _defaultDataEngine Whether the cluster is the default one.
-                     * 
+                     * @deprecated
                      */
                     void SetDefaultDataEngine(const bool& _defaultDataEngine);
 
                     /**
                      * 判断参数 DefaultDataEngine 是否已赋值
                      * @return DefaultDataEngine 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool DefaultDataEngineHasBeenSet() const;
 
@@ -446,15 +446,15 @@ namespace TencentCloud
                     bool CrontabResumeSuspendStrategyHasBeenSet() const;
 
                     /**
-                     * 获取The type of tasks to be executed by the engine, which defaults to SQL.
-                     * @return EngineExecType The type of tasks to be executed by the engine, which defaults to SQL.
+                     * 获取The type of tasks to be executed by the engine, which defaults to SQL. Valid values: `SQL` and `BATCH`.
+                     * @return EngineExecType The type of tasks to be executed by the engine, which defaults to SQL. Valid values: `SQL` and `BATCH`.
                      * 
                      */
                     std::string GetEngineExecType() const;
 
                     /**
-                     * 设置The type of tasks to be executed by the engine, which defaults to SQL.
-                     * @param _engineExecType The type of tasks to be executed by the engine, which defaults to SQL.
+                     * 设置The type of tasks to be executed by the engine, which defaults to SQL. Valid values: `SQL` and `BATCH`.
+                     * @param _engineExecType The type of tasks to be executed by the engine, which defaults to SQL. Valid values: `SQL` and `BATCH`.
                      * 
                      */
                     void SetEngineExecType(const std::string& _engineExecType);
@@ -593,15 +593,15 @@ namespace TencentCloud
                     bool ImageVersionNameHasBeenSet() const;
 
                     /**
-                     * 获取The name of the primary cluster.
-                     * @return MainClusterName The name of the primary cluster.
+                     * 获取The primary cluster, which is specified when a failover cluster is created.
+                     * @return MainClusterName The primary cluster, which is specified when a failover cluster is created.
                      * 
                      */
                     std::string GetMainClusterName() const;
 
                     /**
-                     * 设置The name of the primary cluster.
-                     * @param _mainClusterName The name of the primary cluster.
+                     * 设置The primary cluster, which is specified when a failover cluster is created.
+                     * @param _mainClusterName The primary cluster, which is specified when a failover cluster is created.
                      * 
                      */
                     void SetMainClusterName(const std::string& _mainClusterName);
@@ -793,7 +793,7 @@ namespace TencentCloud
                     bool m_crontabResumeSuspendStrategyHasBeenSet;
 
                     /**
-                     * The type of tasks to be executed by the engine, which defaults to SQL.
+                     * The type of tasks to be executed by the engine, which defaults to SQL. Valid values: `SQL` and `BATCH`.
                      */
                     std::string m_engineExecType;
                     bool m_engineExecTypeHasBeenSet;
@@ -835,7 +835,7 @@ namespace TencentCloud
                     bool m_imageVersionNameHasBeenSet;
 
                     /**
-                     * The name of the primary cluster.
+                     * The primary cluster, which is specified when a failover cluster is created.
                      */
                     std::string m_mainClusterName;
                     bool m_mainClusterNameHasBeenSet;

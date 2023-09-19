@@ -147,31 +147,6 @@ Note: this field may return `null`, indicating that no valid value is obtained.
                     bool AutoFormatAndMountHasBeenSet() const;
 
                     /**
-                     * 获取Mounting directory
-Note: This field may return null, indicating that no valid value was found.
-                     * @return MountTarget Mounting directory
-Note: This field may return null, indicating that no valid value was found.
-                     * 
-                     */
-                    std::string GetMountTarget() const;
-
-                    /**
-                     * 设置Mounting directory
-Note: This field may return null, indicating that no valid value was found.
-                     * @param _mountTarget Mounting directory
-Note: This field may return null, indicating that no valid value was found.
-                     * 
-                     */
-                    void SetMountTarget(const std::string& _mountTarget);
-
-                    /**
-                     * 判断参数 MountTarget 是否已赋值
-                     * @return MountTarget 是否已赋值
-                     * 
-                     */
-                    bool MountTargetHasBeenSet() const;
-
-                    /**
                      * 获取Mounted device name or partition name (only required when adding an existing node)
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return DiskPartition Mounted device name or partition name (only required when adding an existing node)
@@ -195,6 +170,31 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      * 
                      */
                     bool DiskPartitionHasBeenSet() const;
+
+                    /**
+                     * 获取Mounting directory
+Note: This field may return null, indicating that no valid value was found.
+                     * @return MountTarget Mounting directory
+Note: This field may return null, indicating that no valid value was found.
+                     * 
+                     */
+                    std::string GetMountTarget() const;
+
+                    /**
+                     * 设置Mounting directory
+Note: This field may return null, indicating that no valid value was found.
+                     * @param _mountTarget Mounting directory
+Note: This field may return null, indicating that no valid value was found.
+                     * 
+                     */
+                    void SetMountTarget(const std::string& _mountTarget);
+
+                    /**
+                     * 判断参数 MountTarget 是否已赋值
+                     * @return MountTarget 是否已赋值
+                     * 
+                     */
+                    bool MountTargetHasBeenSet() const;
 
                 private:
 
@@ -227,18 +227,18 @@ Note: this field may return `null`, indicating that no valid value is obtained.
                     bool m_autoFormatAndMountHasBeenSet;
 
                     /**
-                     * Mounting directory
-Note: This field may return null, indicating that no valid value was found.
-                     */
-                    std::string m_mountTarget;
-                    bool m_mountTargetHasBeenSet;
-
-                    /**
                      * Mounted device name or partition name (only required when adding an existing node)
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_diskPartition;
                     bool m_diskPartitionHasBeenSet;
+
+                    /**
+                     * Mounting directory
+Note: This field may return null, indicating that no valid value was found.
+                     */
+                    std::string m_mountTarget;
+                    bool m_mountTargetHasBeenSet;
 
                 };
             }

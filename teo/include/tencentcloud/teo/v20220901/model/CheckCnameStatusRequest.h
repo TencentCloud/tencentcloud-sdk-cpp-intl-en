@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the site.
-                     * @return ZoneId ID of the site.
+                     * 获取Site ID.
+                     * @return ZoneId Site ID.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置ID of the site.
-                     * @param _zoneId ID of the site.
+                     * 设置Site ID.
+                     * @param _zoneId Site ID.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取List of domain names.
-                     * @return RecordNames List of domain names.
+                     * 获取List of accelerated domain names.
+                     * @return RecordNames List of accelerated domain names.
                      * 
                      */
                     std::vector<std::string> GetRecordNames() const;
 
                     /**
-                     * 设置List of domain names.
-                     * @param _recordNames List of domain names.
+                     * 设置List of accelerated domain names.
+                     * @param _recordNames List of accelerated domain names.
                      * 
                      */
                     void SetRecordNames(const std::vector<std::string>& _recordNames);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the site.
+                     * Site ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * List of domain names.
+                     * List of accelerated domain names.
                      */
                     std::vector<std::string> m_recordNames;
                     bool m_recordNamesHasBeenSet;

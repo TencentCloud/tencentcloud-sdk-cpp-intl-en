@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Secret name, which must be unique within a region. The name can be up to 128 bytes, contain letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit.
-                     * @return SecretName Secret name, which must be unique within a region. The name can be up to 128 bytes, contain letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit.
+                     * 获取Secret name, which must be unique in the same region. It can contain 128 bytes ([a-z], [A-Z], [0-9], [-_]). It must begin with a letter or digit. Note that it cannot be modified once created. 
+                     * @return SecretName Secret name, which must be unique in the same region. It can contain 128 bytes ([a-z], [A-Z], [0-9], [-_]). It must begin with a letter or digit. Note that it cannot be modified once created. 
                      * 
                      */
                     std::string GetSecretName() const;
 
                     /**
-                     * 设置Secret name, which must be unique within a region. The name can be up to 128 bytes, contain letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit.
-                     * @param _secretName Secret name, which must be unique within a region. The name can be up to 128 bytes, contain letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit.
+                     * 设置Secret name, which must be unique in the same region. It can contain 128 bytes ([a-z], [A-Z], [0-9], [-_]). It must begin with a letter or digit. Note that it cannot be modified once created. 
+                     * @param _secretName Secret name, which must be unique in the same region. It can contain 128 bytes ([a-z], [A-Z], [0-9], [-_]). It must begin with a letter or digit. Note that it cannot be modified once created. 
                      * 
                      */
                     void SetSecretName(const std::string& _secretName);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool SecretNameHasBeenSet() const;
 
                     /**
-                     * 获取Secret version. It can be up to 64 bytes, contain letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit. `SecretName` and `VersionId` are used to query the Secret information.
-                     * @return VersionId Secret version. It can be up to 64 bytes, contain letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit. `SecretName` and `VersionId` are used to query the Secret information.
+                     * 获取Secret version. It can contain up to 64 bytes ([a-z], [A-Z], [0-9], [-_.]). It must begin with a letter or digit. `SecretName` and `VersionId` are used to query the Secret information. If it is left empty, the initial Secret version number is used by default.
+                     * @return VersionId Secret version. It can contain up to 64 bytes ([a-z], [A-Z], [0-9], [-_.]). It must begin with a letter or digit. `SecretName` and `VersionId` are used to query the Secret information. If it is left empty, the initial Secret version number is used by default.
                      * 
                      */
                     std::string GetVersionId() const;
 
                     /**
-                     * 设置Secret version. It can be up to 64 bytes, contain letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit. `SecretName` and `VersionId` are used to query the Secret information.
-                     * @param _versionId Secret version. It can be up to 64 bytes, contain letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit. `SecretName` and `VersionId` are used to query the Secret information.
+                     * 设置Secret version. It can contain up to 64 bytes ([a-z], [A-Z], [0-9], [-_.]). It must begin with a letter or digit. `SecretName` and `VersionId` are used to query the Secret information. If it is left empty, the initial Secret version number is used by default.
+                     * @param _versionId Secret version. It can contain up to 64 bytes ([a-z], [A-Z], [0-9], [-_.]). It must begin with a letter or digit. `SecretName` and `VersionId` are used to query the Secret information. If it is left empty, the initial Secret version number is used by default.
                      * 
                      */
                     void SetVersionId(const std::string& _versionId);
@@ -128,6 +128,27 @@ namespace TencentCloud
                     bool KmsKeyIdHasBeenSet() const;
 
                     /**
+                     * 获取Secret type. It defaults to `custom`.
+                     * @return SecretType Secret type. It defaults to `custom`.
+                     * 
+                     */
+                    uint64_t GetSecretType() const;
+
+                    /**
+                     * 设置Secret type. It defaults to `custom`.
+                     * @param _secretType Secret type. It defaults to `custom`.
+                     * 
+                     */
+                    void SetSecretType(const uint64_t& _secretType);
+
+                    /**
+                     * 判断参数 SecretType 是否已赋值
+                     * @return SecretType 是否已赋值
+                     * 
+                     */
+                    bool SecretTypeHasBeenSet() const;
+
+                    /**
                      * 获取Base64-encoded plaintext of a binary Secret. Either `SecretBinary` or `SecretString` must be set. A maximum of 4096 bytes is supported.
                      * @return SecretBinary Base64-encoded plaintext of a binary Secret. Either `SecretBinary` or `SecretString` must be set. A maximum of 4096 bytes is supported.
                      * 
@@ -170,6 +191,27 @@ namespace TencentCloud
                     bool SecretStringHasBeenSet() const;
 
                     /**
+                     * 获取Additional configuration of the Secret in JSON format
+                     * @return AdditionalConfig Additional configuration of the Secret in JSON format
+                     * 
+                     */
+                    std::string GetAdditionalConfig() const;
+
+                    /**
+                     * 设置Additional configuration of the Secret in JSON format
+                     * @param _additionalConfig Additional configuration of the Secret in JSON format
+                     * 
+                     */
+                    void SetAdditionalConfig(const std::string& _additionalConfig);
+
+                    /**
+                     * 判断参数 AdditionalConfig 是否已赋值
+                     * @return AdditionalConfig 是否已赋值
+                     * 
+                     */
+                    bool AdditionalConfigHasBeenSet() const;
+
+                    /**
                      * 获取List of tags.
                      * @return Tags List of tags.
                      * 
@@ -193,13 +235,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Secret name, which must be unique within a region. The name can be up to 128 bytes, contain letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit.
+                     * Secret name, which must be unique in the same region. It can contain 128 bytes ([a-z], [A-Z], [0-9], [-_]). It must begin with a letter or digit. Note that it cannot be modified once created. 
                      */
                     std::string m_secretName;
                     bool m_secretNameHasBeenSet;
 
                     /**
-                     * Secret version. It can be up to 64 bytes, contain letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit. `SecretName` and `VersionId` are used to query the Secret information.
+                     * Secret version. It can contain up to 64 bytes ([a-z], [A-Z], [0-9], [-_.]). It must begin with a letter or digit. `SecretName` and `VersionId` are used to query the Secret information. If it is left empty, the initial Secret version number is used by default.
                      */
                     std::string m_versionId;
                     bool m_versionIdHasBeenSet;
@@ -217,6 +259,12 @@ namespace TencentCloud
                     bool m_kmsKeyIdHasBeenSet;
 
                     /**
+                     * Secret type. It defaults to `custom`.
+                     */
+                    uint64_t m_secretType;
+                    bool m_secretTypeHasBeenSet;
+
+                    /**
                      * Base64-encoded plaintext of a binary Secret. Either `SecretBinary` or `SecretString` must be set. A maximum of 4096 bytes is supported.
                      */
                     std::string m_secretBinary;
@@ -227,6 +275,12 @@ namespace TencentCloud
                      */
                     std::string m_secretString;
                     bool m_secretStringHasBeenSet;
+
+                    /**
+                     * Additional configuration of the Secret in JSON format
+                     */
+                    std::string m_additionalConfig;
+                    bool m_additionalConfigHasBeenSet;
 
                     /**
                      * List of tags.

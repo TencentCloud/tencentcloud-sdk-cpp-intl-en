@@ -637,15 +637,15 @@ namespace TencentCloud
                     bool VersionHasBeenSet() const;
 
                     /**
-                     * 获取Physical server code
-                     * @return Type Physical server code
+                     * 获取Instance type. Valid values: `TS85` (physical machine, local SSD), `Z3` (early version of physical machine, local SSD), `CLOUD_BASIC` (virtual machine, HDD cloud disk), `CLOUD_PREMIUM` (virtual machine, premium cloud disk), `CLOUD_SSD` (virtual machine, SSD), `CLOUD_HSSD` (virtual machine, enhanced SSD), `CLOUD_TSSD` (virtual machine, ulTra SSD), `CLOUD_BSSD` virtual machine, balanced SSD).
+                     * @return Type Instance type. Valid values: `TS85` (physical machine, local SSD), `Z3` (early version of physical machine, local SSD), `CLOUD_BASIC` (virtual machine, HDD cloud disk), `CLOUD_PREMIUM` (virtual machine, premium cloud disk), `CLOUD_SSD` (virtual machine, SSD), `CLOUD_HSSD` (virtual machine, enhanced SSD), `CLOUD_TSSD` (virtual machine, ulTra SSD), `CLOUD_BSSD` virtual machine, balanced SSD).
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Physical server code
-                     * @param _type Physical server code
+                     * 设置Instance type. Valid values: `TS85` (physical machine, local SSD), `Z3` (early version of physical machine, local SSD), `CLOUD_BASIC` (virtual machine, HDD cloud disk), `CLOUD_PREMIUM` (virtual machine, premium cloud disk), `CLOUD_SSD` (virtual machine, SSD), `CLOUD_HSSD` (virtual machine, enhanced SSD), `CLOUD_TSSD` (virtual machine, ulTra SSD), `CLOUD_BSSD` virtual machine, balanced SSD).
+                     * @param _type Instance type. Valid values: `TS85` (physical machine, local SSD), `Z3` (early version of physical machine, local SSD), `CLOUD_BASIC` (virtual machine, HDD cloud disk), `CLOUD_PREMIUM` (virtual machine, premium cloud disk), `CLOUD_SSD` (virtual machine, SSD), `CLOUD_HSSD` (virtual machine, enhanced SSD), `CLOUD_TSSD` (virtual machine, ulTra SSD), `CLOUD_BSSD` virtual machine, balanced SSD).
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -1173,19 +1173,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SlaveZonesHasBeenSet() const;
 
                     /**
-                     * 获取Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node), `TRIPLE` (three-node).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Architecture Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node), `TRIPLE` (three-node).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node).
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @return Architecture Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node).
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetArchitecture() const;
 
                     /**
-                     * 设置Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node), `TRIPLE` (three-node).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _architecture Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node), `TRIPLE` (three-node).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node).
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @param _architecture Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node).
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetArchitecture(const std::string& _architecture);
@@ -1393,7 +1393,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_versionHasBeenSet;
 
                     /**
-                     * Physical server code
+                     * Instance type. Valid values: `TS85` (physical machine, local SSD), `Z3` (early version of physical machine, local SSD), `CLOUD_BASIC` (virtual machine, HDD cloud disk), `CLOUD_PREMIUM` (virtual machine, premium cloud disk), `CLOUD_SSD` (virtual machine, SSD), `CLOUD_HSSD` (virtual machine, enhanced SSD), `CLOUD_TSSD` (virtual machine, ulTra SSD), `CLOUD_BSSD` virtual machine, balanced SSD).
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
@@ -1545,8 +1545,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_slaveZonesHasBeenSet;
 
                     /**
-                     * Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node), `TRIPLE` (three-node).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node).
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_architecture;
                     bool m_architectureHasBeenSet;

@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool SortingHasBeenSet() const;
 
                     /**
-                     * 获取Filter by this parameter, which can be `spark-job-name`.
-                     * @return Filters Filter by this parameter, which can be `spark-job-name`.
+                     * 获取The filters. The following types are supported, and `Name` of the parameter passed in must be one of them: `spark-job-name` (job name), `spark-job-id` (job ID), `spark-app-type` (job type: `1` for batch, `2` for streaming, and `4` for SQL), `user-name` (creator), and `key-word` (job name or ID keywords for fuzzy search).
+                     * @return Filters The filters. The following types are supported, and `Name` of the parameter passed in must be one of them: `spark-job-name` (job name), `spark-job-id` (job ID), `spark-app-type` (job type: `1` for batch, `2` for streaming, and `4` for SQL), `user-name` (creator), and `key-word` (job name or ID keywords for fuzzy search).
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter by this parameter, which can be `spark-job-name`.
-                     * @param _filters Filter by this parameter, which can be `spark-job-name`.
+                     * 设置The filters. The following types are supported, and `Name` of the parameter passed in must be one of them: `spark-job-name` (job name), `spark-job-id` (job ID), `spark-app-type` (job type: `1` for batch, `2` for streaming, and `4` for SQL), `user-name` (creator), and `key-word` (job name or ID keywords for fuzzy search).
+                     * @param _filters The filters. The following types are supported, and `Name` of the parameter passed in must be one of them: `spark-job-name` (job name), `spark-job-id` (job ID), `spark-app-type` (job type: `1` for batch, `2` for streaming, and `4` for SQL), `user-name` (creator), and `key-word` (job name or ID keywords for fuzzy search).
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -205,7 +205,7 @@ namespace TencentCloud
                     bool m_sortingHasBeenSet;
 
                     /**
-                     * Filter by this parameter, which can be `spark-job-name`.
+                     * The filters. The following types are supported, and `Name` of the parameter passed in must be one of them: `spark-job-name` (job name), `spark-job-id` (job ID), `spark-app-type` (job type: `1` for batch, `2` for streaming, and `4` for SQL), `user-name` (creator), and `key-word` (job name or ID keywords for fuzzy search).
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

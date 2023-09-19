@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Query start time
-                     * @return StartTime Query start time
+                     * 获取Start time in the format of `yyyy-MM-dd HH:mm:ss`
+                     * @return StartTime Start time in the format of `yyyy-MM-dd HH:mm:ss`
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Query start time
-                     * @param _startTime Query start time
+                     * 设置Start time in the format of `yyyy-MM-dd HH:mm:ss`
+                     * @param _startTime Start time in the format of `yyyy-MM-dd HH:mm:ss`
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Query end time
-                     * @return EndTime Query end time
+                     * 获取End time in the format of `yyyy-MM-dd HH:mm:ss`
+                     * @return EndTime End time in the format of `yyyy-MM-dd HH:mm:ss`
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置Query end time
-                     * @param _endTime Query end time
+                     * 设置End time in the format of `yyyy-MM-dd HH:mm:ss`
+                     * @param _endTime End time in the format of `yyyy-MM-dd HH:mm:ss`
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -156,13 +156,13 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Query start time
+                     * Start time in the format of `yyyy-MM-dd HH:mm:ss`
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Query end time
+                     * End time in the format of `yyyy-MM-dd HH:mm:ss`
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;

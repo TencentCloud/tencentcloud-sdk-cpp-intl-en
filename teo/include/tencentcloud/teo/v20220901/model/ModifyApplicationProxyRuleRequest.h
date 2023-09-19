@@ -345,6 +345,27 @@ The original configuration will apply if this field is not specified.
                      */
                     bool OriginPortHasBeenSet() const;
 
+                    /**
+                     * 获取Rule tag. The original configuration will apply if it is not specified.
+                     * @return RuleTag Rule tag. The original configuration will apply if it is not specified.
+                     * 
+                     */
+                    std::string GetRuleTag() const;
+
+                    /**
+                     * 设置Rule tag. The original configuration will apply if it is not specified.
+                     * @param _ruleTag Rule tag. The original configuration will apply if it is not specified.
+                     * 
+                     */
+                    void SetRuleTag(const std::string& _ruleTag);
+
+                    /**
+                     * 判断参数 RuleTag 是否已赋值
+                     * @return RuleTag 是否已赋值
+                     * 
+                     */
+                    bool RuleTagHasBeenSet() const;
+
                 private:
 
                     /**
@@ -430,6 +451,12 @@ The original configuration will apply if this field is not specified.
                      */
                     std::string m_originPort;
                     bool m_originPortHasBeenSet;
+
+                    /**
+                     * Rule tag. The original configuration will apply if it is not specified.
+                     */
+                    std::string m_ruleTag;
+                    bool m_ruleTagHasBeenSet;
 
                 };
             }

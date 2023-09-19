@@ -161,6 +161,20 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool GridDaemonHasBeenSet() const;
 
+                    /**
+                     * 获取Access kins clusters over the public network
+                     * @return UnitCluster Access kins clusters over the public network
+                     * 
+                     */
+                    std::string GetUnitCluster() const;
+
+                    /**
+                     * 判断参数 UnitCluster 是否已赋值
+                     * @return UnitCluster 是否已赋值
+                     * 
+                     */
+                    bool UnitClusterHasBeenSet() const;
+
                 private:
 
                     /**
@@ -211,6 +225,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     std::string m_gridDaemon;
                     bool m_gridDaemonHasBeenSet;
+
+                    /**
+                     * Access kins clusters over the public network
+                     */
+                    std::string m_unitCluster;
+                    bool m_unitClusterHasBeenSet;
 
                 };
             }

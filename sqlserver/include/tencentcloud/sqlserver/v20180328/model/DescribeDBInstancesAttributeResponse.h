@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/sqlserver/v20180328/model/TDEConfigAttribute.h>
 
 
 namespace TencentCloud
@@ -155,6 +156,20 @@ namespace TencentCloud
                      */
                     bool EventSaveDaysHasBeenSet() const;
 
+                    /**
+                     * 获取TDE u200dconfiguration
+                     * @return TDEConfig TDE u200dconfiguration
+                     * 
+                     */
+                    TDEConfigAttribute GetTDEConfig() const;
+
+                    /**
+                     * 判断参数 TDEConfig 是否已赋值
+                     * @return TDEConfig 是否已赋值
+                     * 
+                     */
+                    bool TDEConfigHasBeenSet() const;
+
                 private:
 
                     /**
@@ -204,6 +219,12 @@ namespace TencentCloud
                      */
                     int64_t m_eventSaveDays;
                     bool m_eventSaveDaysHasBeenSet;
+
+                    /**
+                     * TDE u200dconfiguration
+                     */
+                    TDEConfigAttribute m_tDEConfig;
+                    bool m_tDEConfigHasBeenSet;
 
                 };
             }

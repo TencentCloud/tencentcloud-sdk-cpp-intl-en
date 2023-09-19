@@ -47,40 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The start time of the log packaging.
-                     * @return LogTime The start time of the log packaging.
-                     * 
-                     */
-                    int64_t GetLogTime() const;
-
-                    /**
-                     * 设置The start time of the log packaging.
-                     * @param _logTime The start time of the log packaging.
-                     * 
-                     */
-                    void SetLogTime(const int64_t& _logTime);
-
-                    /**
-                     * 判断参数 LogTime 是否已赋值
-                     * @return LogTime 是否已赋值
-                     * 
-                     */
-                    bool LogTimeHasBeenSet() const;
-
-                    /**
-                     * 获取The L4 proxy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProxyId The L4 proxy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取L4 proxy instance ID.
+                     * @return ProxyId L4 proxy instance ID.
                      * 
                      */
                     std::string GetProxyId() const;
 
                     /**
-                     * 设置The L4 proxy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _proxyId The L4 proxy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置L4 proxy instance ID.
+                     * @param _proxyId L4 proxy instance ID.
                      * 
                      */
                     void SetProxyId(const std::string& _proxyId);
@@ -93,57 +68,44 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProxyIdHasBeenSet() const;
 
                     /**
-                     * 获取The log size, in bytes.
-                     * @return Size The log size, in bytes.
+                     * 获取Log query area. Valid values:
+<li>`mainland`: Chinese mainland;</li>
+<li>`overseas`: Global (outside the Chinese mainland). </li>
+                     * @return Area Log query area. Valid values:
+<li>`mainland`: Chinese mainland;</li>
+<li>`overseas`: Global (outside the Chinese mainland). </li>
                      * 
                      */
-                    int64_t GetSize() const;
+                    std::string GetArea() const;
 
                     /**
-                     * 设置The log size, in bytes.
-                     * @param _size The log size, in bytes.
+                     * 设置Log query area. Valid values:
+<li>`mainland`: Chinese mainland;</li>
+<li>`overseas`: Global (outside the Chinese mainland). </li>
+                     * @param _area Log query area. Valid values:
+<li>`mainland`: Chinese mainland;</li>
+<li>`overseas`: Global (outside the Chinese mainland). </li>
                      * 
                      */
-                    void SetSize(const int64_t& _size);
+                    void SetArea(const std::string& _area);
 
                     /**
-                     * 判断参数 Size 是否已赋值
-                     * @return Size 是否已赋值
+                     * 判断参数 Area 是否已赋值
+                     * @return Area 是否已赋值
                      * 
                      */
-                    bool SizeHasBeenSet() const;
+                    bool AreaHasBeenSet() const;
 
                     /**
-                     * 获取The download address.
-                     * @return Url The download address.
-                     * 
-                     */
-                    std::string GetUrl() const;
-
-                    /**
-                     * 设置The download address.
-                     * @param _url The download address.
-                     * 
-                     */
-                    void SetUrl(const std::string& _url);
-
-                    /**
-                     * 判断参数 Url 是否已赋值
-                     * @return Url 是否已赋值
-                     * 
-                     */
-                    bool UrlHasBeenSet() const;
-
-                    /**
-                     * 获取The log package name.
-                     * @return LogPacketName The log package name.
+                     * 获取Log packet name.
+                     * @return LogPacketName Log packet name.
                      * 
                      */
                     std::string GetLogPacketName() const;
 
                     /**
-                     * 设置The log package name.
-                     * @param _logPacketName The log package name.
+                     * 设置Log packet name.
+                     * @param _logPacketName Log packet name.
                      * 
                      */
                     void SetLogPacketName(const std::string& _logPacketName);
@@ -156,74 +118,161 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LogPacketNameHasBeenSet() const;
 
                     /**
-                     * 获取The acceleration region. Values:
-<li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-                     * @return Area The acceleration region. Values:
-<li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (outside the Chinese mainland);</li>
+                     * 获取Log download address.
+                     * @return Url Log download address.
                      * 
                      */
-                    std::string GetArea() const;
+                    std::string GetUrl() const;
 
                     /**
-                     * 设置The acceleration region. Values:
-<li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-                     * @param _area The acceleration region. Values:
-<li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (outside the Chinese mainland);</li>
+                     * 设置Log download address.
+                     * @param _url Log download address.
                      * 
                      */
-                    void SetArea(const std::string& _area);
+                    void SetUrl(const std::string& _url);
 
                     /**
-                     * 判断参数 Area 是否已赋值
-                     * @return Area 是否已赋值
+                     * 判断参数 Url 是否已赋值
+                     * @return Url 是否已赋值
                      * 
                      */
-                    bool AreaHasBeenSet() const;
+                    bool UrlHasBeenSet() const;
+
+                    /**
+                     * 获取(Disused) Log packaging time. 
+                     * @return LogTime (Disused) Log packaging time. 
+                     * 
+                     */
+                    int64_t GetLogTime() const;
+
+                    /**
+                     * 设置(Disused) Log packaging time. 
+                     * @param _logTime (Disused) Log packaging time. 
+                     * 
+                     */
+                    void SetLogTime(const int64_t& _logTime);
+
+                    /**
+                     * 判断参数 LogTime 是否已赋值
+                     * @return LogTime 是否已赋值
+                     * 
+                     */
+                    bool LogTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Start time of log packaging.
+                     * @return LogStartTime Start time of log packaging.
+                     * 
+                     */
+                    std::string GetLogStartTime() const;
+
+                    /**
+                     * 设置Start time of log packaging.
+                     * @param _logStartTime Start time of log packaging.
+                     * 
+                     */
+                    void SetLogStartTime(const std::string& _logStartTime);
+
+                    /**
+                     * 判断参数 LogStartTime 是否已赋值
+                     * @return LogStartTime 是否已赋值
+                     * 
+                     */
+                    bool LogStartTimeHasBeenSet() const;
+
+                    /**
+                     * 获取End time of the log package.
+                     * @return LogEndTime End time of the log package.
+                     * 
+                     */
+                    std::string GetLogEndTime() const;
+
+                    /**
+                     * 设置End time of the log package.
+                     * @param _logEndTime End time of the log package.
+                     * 
+                     */
+                    void SetLogEndTime(const std::string& _logEndTime);
+
+                    /**
+                     * 判断参数 LogEndTime 是否已赋值
+                     * @return LogEndTime 是否已赋值
+                     * 
+                     */
+                    bool LogEndTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Log size (in bytes).
+                     * @return Size Log size (in bytes).
+                     * 
+                     */
+                    int64_t GetSize() const;
+
+                    /**
+                     * 设置Log size (in bytes).
+                     * @param _size Log size (in bytes).
+                     * 
+                     */
+                    void SetSize(const int64_t& _size);
+
+                    /**
+                     * 判断参数 Size 是否已赋值
+                     * @return Size 是否已赋值
+                     * 
+                     */
+                    bool SizeHasBeenSet() const;
 
                 private:
 
                     /**
-                     * The start time of the log packaging.
-                     */
-                    int64_t m_logTime;
-                    bool m_logTimeHasBeenSet;
-
-                    /**
-                     * The L4 proxy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * L4 proxy instance ID.
                      */
                     std::string m_proxyId;
                     bool m_proxyIdHasBeenSet;
 
                     /**
-                     * The log size, in bytes.
+                     * Log query area. Valid values:
+<li>`mainland`: Chinese mainland;</li>
+<li>`overseas`: Global (outside the Chinese mainland). </li>
                      */
-                    int64_t m_size;
-                    bool m_sizeHasBeenSet;
+                    std::string m_area;
+                    bool m_areaHasBeenSet;
 
                     /**
-                     * The download address.
-                     */
-                    std::string m_url;
-                    bool m_urlHasBeenSet;
-
-                    /**
-                     * The log package name.
+                     * Log packet name.
                      */
                     std::string m_logPacketName;
                     bool m_logPacketNameHasBeenSet;
 
                     /**
-                     * The acceleration region. Values:
-<li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (outside the Chinese mainland);</li>
+                     * Log download address.
                      */
-                    std::string m_area;
-                    bool m_areaHasBeenSet;
+                    std::string m_url;
+                    bool m_urlHasBeenSet;
+
+                    /**
+                     * (Disused) Log packaging time. 
+                     */
+                    int64_t m_logTime;
+                    bool m_logTimeHasBeenSet;
+
+                    /**
+                     * Start time of log packaging.
+                     */
+                    std::string m_logStartTime;
+                    bool m_logStartTimeHasBeenSet;
+
+                    /**
+                     * End time of the log package.
+                     */
+                    std::string m_logEndTime;
+                    bool m_logEndTimeHasBeenSet;
+
+                    /**
+                     * Log size (in bytes).
+                     */
+                    int64_t m_size;
+                    bool m_sizeHasBeenSet;
 
                 };
             }

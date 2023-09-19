@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Spark monitoring metrics
                 */
                 class SparkMonitorMetrics : public AbstractModel
                 {
@@ -47,15 +47,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ShuffleWriteBytesCos 
+                     * 获取The shuffle data (in bytes) that overflows to COS.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * @return ShuffleWriteBytesCos The shuffle data (in bytes) that overflows to COS.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetShuffleWriteBytesCos() const;
 
                     /**
-                     * 设置
-                     * @param _shuffleWriteBytesCos 
+                     * 设置The shuffle data (in bytes) that overflows to COS.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * @param _shuffleWriteBytesCos The shuffle data (in bytes) that overflows to COS.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetShuffleWriteBytesCos(const int64_t& _shuffleWriteBytesCos);
@@ -68,15 +72,19 @@ namespace TencentCloud
                     bool ShuffleWriteBytesCosHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ShuffleWriteBytesTotal 
+                     * 获取The total shuffle data (in bytes).
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * @return ShuffleWriteBytesTotal The total shuffle data (in bytes).
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetShuffleWriteBytesTotal() const;
 
                     /**
-                     * 设置
-                     * @param _shuffleWriteBytesTotal 
+                     * 设置The total shuffle data (in bytes).
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * @param _shuffleWriteBytesTotal The total shuffle data (in bytes).
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetShuffleWriteBytesTotal(const int64_t& _shuffleWriteBytesTotal);
@@ -91,13 +99,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * The shuffle data (in bytes) that overflows to COS.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
                      */
                     int64_t m_shuffleWriteBytesCos;
                     bool m_shuffleWriteBytesCosHasBeenSet;
 
                     /**
-                     * 
+                     * The total shuffle data (in bytes).
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
                      */
                     int64_t m_shuffleWriteBytesTotal;
                     bool m_shuffleWriteBytesTotalHasBeenSet;

@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/tke/v20180525/model/EdgeClusterAdvancedSettings.h>
 #include <tencentcloud/tke/v20180525/model/EdgeClusterPublicLB.h>
+#include <tencentcloud/tke/v20180525/model/TagSpecification.h>
 
 
 namespace TencentCloud
@@ -338,6 +339,27 @@ namespace TencentCloud
                      */
                     bool RegistryPrefixHasBeenSet() const;
 
+                    /**
+                     * 获取u200dTags bound with the cluster
+                     * @return TagSpecification u200dTags bound with the cluster
+                     * 
+                     */
+                    TagSpecification GetTagSpecification() const;
+
+                    /**
+                     * 设置u200dTags bound with the cluster
+                     * @param _tagSpecification u200dTags bound with the cluster
+                     * 
+                     */
+                    void SetTagSpecification(const TagSpecification& _tagSpecification);
+
+                    /**
+                     * 判断参数 TagSpecification 是否已赋值
+                     * @return TagSpecification 是否已赋值
+                     * 
+                     */
+                    bool TagSpecificationHasBeenSet() const;
+
                 private:
 
                     /**
@@ -423,6 +445,12 @@ namespace TencentCloud
                      */
                     std::string m_registryPrefix;
                     bool m_registryPrefixHasBeenSet;
+
+                    /**
+                     * u200dTags bound with the cluster
+                     */
+                    TagSpecification m_tagSpecification;
+                    bool m_tagSpecificationHasBeenSet;
 
                 };
             }

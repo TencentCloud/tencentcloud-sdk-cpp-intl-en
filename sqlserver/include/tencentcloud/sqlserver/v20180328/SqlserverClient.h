@@ -91,6 +91,8 @@
 #include <tencentcloud/sqlserver/v20180328/model/DescribeFlowStatusResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeIncrementalMigrationRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeIncrementalMigrationResponse.h>
+#include <tencentcloud/sqlserver/v20180328/model/DescribeInstanceByOrdersRequest.h>
+#include <tencentcloud/sqlserver/v20180328/model/DescribeInstanceByOrdersResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeInstanceParamRecordsRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeInstanceParamRecordsResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeInstanceParamsRequest.h>
@@ -127,6 +129,8 @@
 #include <tencentcloud/sqlserver/v20180328/model/ModifyBackupMigrationResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/ModifyBackupStrategyRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/ModifyBackupStrategyResponse.h>
+#include <tencentcloud/sqlserver/v20180328/model/ModifyDBEncryptAttributesRequest.h>
+#include <tencentcloud/sqlserver/v20180328/model/ModifyDBEncryptAttributesResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/ModifyDBInstanceNameRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/ModifyDBInstanceNameResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/ModifyDBInstanceNetworkRequest.h>
@@ -145,6 +149,8 @@
 #include <tencentcloud/sqlserver/v20180328/model/ModifyDatabaseMdfResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/ModifyIncrementalMigrationRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/ModifyIncrementalMigrationResponse.h>
+#include <tencentcloud/sqlserver/v20180328/model/ModifyInstanceEncryptAttributesRequest.h>
+#include <tencentcloud/sqlserver/v20180328/model/ModifyInstanceEncryptAttributesResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/ModifyInstanceParamRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/ModifyInstanceParamResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/ModifyMigrationRequest.h>
@@ -289,6 +295,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeIncrementalMigrationResponse> DescribeIncrementalMigrationOutcome;
                 typedef std::future<DescribeIncrementalMigrationOutcome> DescribeIncrementalMigrationOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::DescribeIncrementalMigrationRequest&, DescribeIncrementalMigrationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeIncrementalMigrationAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeInstanceByOrdersResponse> DescribeInstanceByOrdersOutcome;
+                typedef std::future<DescribeInstanceByOrdersOutcome> DescribeInstanceByOrdersOutcomeCallable;
+                typedef std::function<void(const SqlserverClient*, const Model::DescribeInstanceByOrdersRequest&, DescribeInstanceByOrdersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstanceByOrdersAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeInstanceParamRecordsResponse> DescribeInstanceParamRecordsOutcome;
                 typedef std::future<DescribeInstanceParamRecordsOutcome> DescribeInstanceParamRecordsOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::DescribeInstanceParamRecordsRequest&, DescribeInstanceParamRecordsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstanceParamRecordsAsyncHandler;
@@ -343,6 +352,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyBackupStrategyResponse> ModifyBackupStrategyOutcome;
                 typedef std::future<ModifyBackupStrategyOutcome> ModifyBackupStrategyOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::ModifyBackupStrategyRequest&, ModifyBackupStrategyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyBackupStrategyAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyDBEncryptAttributesResponse> ModifyDBEncryptAttributesOutcome;
+                typedef std::future<ModifyDBEncryptAttributesOutcome> ModifyDBEncryptAttributesOutcomeCallable;
+                typedef std::function<void(const SqlserverClient*, const Model::ModifyDBEncryptAttributesRequest&, ModifyDBEncryptAttributesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDBEncryptAttributesAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyDBInstanceNameResponse> ModifyDBInstanceNameOutcome;
                 typedef std::future<ModifyDBInstanceNameOutcome> ModifyDBInstanceNameOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::ModifyDBInstanceNameRequest&, ModifyDBInstanceNameOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDBInstanceNameAsyncHandler;
@@ -370,6 +382,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyIncrementalMigrationResponse> ModifyIncrementalMigrationOutcome;
                 typedef std::future<ModifyIncrementalMigrationOutcome> ModifyIncrementalMigrationOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::ModifyIncrementalMigrationRequest&, ModifyIncrementalMigrationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyIncrementalMigrationAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyInstanceEncryptAttributesResponse> ModifyInstanceEncryptAttributesOutcome;
+                typedef std::future<ModifyInstanceEncryptAttributesOutcome> ModifyInstanceEncryptAttributesOutcomeCallable;
+                typedef std::function<void(const SqlserverClient*, const Model::ModifyInstanceEncryptAttributesRequest&, ModifyInstanceEncryptAttributesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstanceEncryptAttributesAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyInstanceParamResponse> ModifyInstanceParamOutcome;
                 typedef std::future<ModifyInstanceParamOutcome> ModifyInstanceParamOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::ModifyInstanceParamRequest&, ModifyInstanceParamOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstanceParamAsyncHandler;
@@ -605,7 +620,7 @@ namespace TencentCloud
                 DescribeBackupCommandOutcomeCallable DescribeBackupCommandCallable(const Model::DescribeBackupCommandRequest& request);
 
                 /**
-                 *This API is used to query the list of unarchived database backup files.
+                 *This API is used to query the details of an unarchived backup.
                  * @param req DescribeBackupFilesRequest
                  * @return DescribeBackupFilesOutcome
                  */
@@ -720,6 +735,15 @@ namespace TencentCloud
                 DescribeIncrementalMigrationOutcome DescribeIncrementalMigration(const Model::DescribeIncrementalMigrationRequest &request);
                 void DescribeIncrementalMigrationAsync(const Model::DescribeIncrementalMigrationRequest& request, const DescribeIncrementalMigrationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeIncrementalMigrationOutcomeCallable DescribeIncrementalMigrationCallable(const Model::DescribeIncrementalMigrationRequest& request);
+
+                /**
+                 *This API is used to query the instance ID by the order number.
+                 * @param req DescribeInstanceByOrdersRequest
+                 * @return DescribeInstanceByOrdersOutcome
+                 */
+                DescribeInstanceByOrdersOutcome DescribeInstanceByOrders(const Model::DescribeInstanceByOrdersRequest &request);
+                void DescribeInstanceByOrdersAsync(const Model::DescribeInstanceByOrdersRequest& request, const DescribeInstanceByOrdersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeInstanceByOrdersOutcomeCallable DescribeInstanceByOrdersCallable(const Model::DescribeInstanceByOrdersRequest& request);
 
                 /**
                  *This API is used to query the parameter modification records of an instance.
@@ -839,7 +863,8 @@ namespace TencentCloud
                 InquiryPriceCreateDBInstancesOutcomeCallable InquiryPriceCreateDBInstancesCallable(const Model::InquiryPriceCreateDBInstancesRequest& request);
 
                 /**
-                 *This API is used to query the upgrade price of an instance.
+                 *This API is used to query the upgrade prices of a monthly subscribed instance
+.
                  * @param req InquiryPriceUpgradeDBInstanceRequest
                  * @return InquiryPriceUpgradeDBInstanceOutcome
                  */
@@ -882,6 +907,15 @@ namespace TencentCloud
                 ModifyBackupStrategyOutcome ModifyBackupStrategy(const Model::ModifyBackupStrategyRequest &request);
                 void ModifyBackupStrategyAsync(const Model::ModifyBackupStrategyRequest& request, const ModifyBackupStrategyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyBackupStrategyOutcomeCallable ModifyBackupStrategyCallable(const Model::ModifyBackupStrategyRequest& request);
+
+                /**
+                 *This API is used to u200denable or disable TDE of a database.
+                 * @param req ModifyDBEncryptAttributesRequest
+                 * @return ModifyDBEncryptAttributesOutcome
+                 */
+                ModifyDBEncryptAttributesOutcome ModifyDBEncryptAttributes(const Model::ModifyDBEncryptAttributesRequest &request);
+                void ModifyDBEncryptAttributesAsync(const Model::ModifyDBEncryptAttributesRequest& request, const ModifyDBEncryptAttributesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyDBEncryptAttributesOutcomeCallable ModifyDBEncryptAttributesCallable(const Model::ModifyDBEncryptAttributesRequest& request);
 
                 /**
                  *This API is used to rename an instance.
@@ -963,6 +997,15 @@ namespace TencentCloud
                 ModifyIncrementalMigrationOutcome ModifyIncrementalMigration(const Model::ModifyIncrementalMigrationRequest &request);
                 void ModifyIncrementalMigrationAsync(const Model::ModifyIncrementalMigrationRequest& request, const ModifyIncrementalMigrationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyIncrementalMigrationOutcomeCallable ModifyIncrementalMigrationCallable(const Model::ModifyIncrementalMigrationRequest& request);
+
+                /**
+                 *This API is used to enable TDE of an instance.
+                 * @param req ModifyInstanceEncryptAttributesRequest
+                 * @return ModifyInstanceEncryptAttributesOutcome
+                 */
+                ModifyInstanceEncryptAttributesOutcome ModifyInstanceEncryptAttributes(const Model::ModifyInstanceEncryptAttributesRequest &request);
+                void ModifyInstanceEncryptAttributesAsync(const Model::ModifyInstanceEncryptAttributesRequest& request, const ModifyInstanceEncryptAttributesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyInstanceEncryptAttributesOutcomeCallable ModifyInstanceEncryptAttributesCallable(const Model::ModifyInstanceEncryptAttributesRequest& request);
 
                 /**
                  *This API is used to modify instance parameters.

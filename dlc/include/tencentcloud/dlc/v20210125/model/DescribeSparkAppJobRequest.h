@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Spark job ID. If it co-exists with `JobName`, `JobName` will become invalid.
-                     * @return JobId Spark job ID. If it co-exists with `JobName`, `JobName` will become invalid.
+                     * 获取The Spark job ID. If it co-exists with `JobName`, `JobName` is invalid. At least `JobId` or `JobName` must be used.
+                     * @return JobId The Spark job ID. If it co-exists with `JobName`, `JobName` is invalid. At least `JobId` or `JobName` must be used.
                      * 
                      */
                     std::string GetJobId() const;
 
                     /**
-                     * 设置Spark job ID. If it co-exists with `JobName`, `JobName` will become invalid.
-                     * @param _jobId Spark job ID. If it co-exists with `JobName`, `JobName` will become invalid.
+                     * 设置The Spark job ID. If it co-exists with `JobName`, `JobName` is invalid. At least `JobId` or `JobName` must be used.
+                     * @param _jobId The Spark job ID. If it co-exists with `JobName`, `JobName` is invalid. At least `JobId` or `JobName` must be used.
                      * 
                      */
                     void SetJobId(const std::string& _jobId);
@@ -87,7 +87,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Spark job ID. If it co-exists with `JobName`, `JobName` will become invalid.
+                     * The Spark job ID. If it co-exists with `JobName`, `JobName` is invalid. At least `JobId` or `JobName` must be used.
                      */
                     std::string m_jobId;
                     bool m_jobIdHasBeenSet;

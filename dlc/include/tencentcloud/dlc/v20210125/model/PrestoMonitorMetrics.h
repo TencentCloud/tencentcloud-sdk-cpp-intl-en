@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Presto monitoring metrics
                 */
                 class PrestoMonitorMetrics : public AbstractModel
                 {
@@ -47,15 +47,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return LocalCacheHitRate 
+                     * 获取	The Alluxio cache hit rate.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * @return LocalCacheHitRate 	The Alluxio cache hit rate.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
                      * 
                      */
                     double GetLocalCacheHitRate() const;
 
                     /**
-                     * 设置
-                     * @param _localCacheHitRate 
+                     * 设置	The Alluxio cache hit rate.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * @param _localCacheHitRate 	The Alluxio cache hit rate.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLocalCacheHitRate(const double& _localCacheHitRate);
@@ -68,15 +72,19 @@ namespace TencentCloud
                     bool LocalCacheHitRateHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FragmentCacheHitRate 
+                     * 获取The Fragment cache hit rate.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * @return FragmentCacheHitRate The Fragment cache hit rate.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
                      * 
                      */
                     double GetFragmentCacheHitRate() const;
 
                     /**
-                     * 设置
-                     * @param _fragmentCacheHitRate 
+                     * 设置The Fragment cache hit rate.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * @param _fragmentCacheHitRate The Fragment cache hit rate.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetFragmentCacheHitRate(const double& _fragmentCacheHitRate);
@@ -91,13 +99,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * 	The Alluxio cache hit rate.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
                      */
                     double m_localCacheHitRate;
                     bool m_localCacheHitRateHasBeenSet;
 
                     /**
-                     * 
+                     * The Fragment cache hit rate.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
                      */
                     double m_fragmentCacheHitRate;
                     bool m_fragmentCacheHitRateHasBeenSet;

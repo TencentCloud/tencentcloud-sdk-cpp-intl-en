@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool BizTokenHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VerificationURL 
+                     * 获取The verification URL to be opened with a browser to start the verification process.
+                     * @return VerificationURL The verification URL to be opened with a browser to start the verification process.
                      * 
                      */
                     std::string GetVerificationURL() const;
@@ -100,7 +100,7 @@ namespace TencentCloud
                     bool m_bizTokenHasBeenSet;
 
                     /**
-                     * 
+                     * The verification URL to be opened with a browser to start the verification process.
                      */
                     std::string m_verificationURL;
                     bool m_verificationURLHasBeenSet;

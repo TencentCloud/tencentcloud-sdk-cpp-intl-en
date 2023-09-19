@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool EventTypeHasBeenSet() const;
 
                     /**
-                     * 获取Generation start time of an extended file
-                     * @return StartTime Generation start time of an extended file
+                     * 获取Generation start time of an extended file in the format of yyyy-MM-dd HH:mm:ss.
+                     * @return StartTime Generation start time of an extended file in the format of yyyy-MM-dd HH:mm:ss.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Generation start time of an extended file
-                     * @param _startTime Generation start time of an extended file
+                     * 设置Generation start time of an extended file in the format of yyyy-MM-dd HH:mm:ss.
+                     * @param _startTime Generation start time of an extended file in the format of yyyy-MM-dd HH:mm:ss.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Generation end time of an extended file
-                     * @return EndTime Generation end time of an extended file
+                     * 获取Generation end time of an extended file in the format of yyyy-MM-dd HH:mm:ss.
+                     * @return EndTime Generation end time of an extended file in the format of yyyy-MM-dd HH:mm:ss.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置Generation end time of an extended file
-                     * @param _endTime Generation end time of an extended file
+                     * 设置Generation end time of an extended file in the format of yyyy-MM-dd HH:mm:ss.
+                     * @param _endTime Generation end time of an extended file in the format of yyyy-MM-dd HH:mm:ss.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -183,13 +183,13 @@ namespace TencentCloud
                     bool m_eventTypeHasBeenSet;
 
                     /**
-                     * Generation start time of an extended file
+                     * Generation start time of an extended file in the format of yyyy-MM-dd HH:mm:ss.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Generation end time of an extended file
+                     * Generation end time of an extended file in the format of yyyy-MM-dd HH:mm:ss.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;

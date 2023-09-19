@@ -108,6 +108,27 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
+                     * 获取List of security group IDs
+                     * @return SecurityGroupIds List of security group IDs
+                     * 
+                     */
+                    std::vector<std::string> GetSecurityGroupIds() const;
+
+                    /**
+                     * 设置List of security group IDs
+                     * @param _securityGroupIds List of security group IDs
+                     * 
+                     */
+                    void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
+
+                    /**
+                     * 判断参数 SecurityGroupIds 是否已赋值
+                     * @return SecurityGroupIds 是否已赋值
+                     * 
+                     */
+                    bool SecurityGroupIdsHasBeenSet() const;
+
+                    /**
                      * 获取Virtual node labels
                      * @return Labels Virtual node labels
                      * 
@@ -189,6 +210,12 @@ namespace TencentCloud
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
+
+                    /**
+                     * List of security group IDs
+                     */
+                    std::vector<std::string> m_securityGroupIds;
+                    bool m_securityGroupIdsHasBeenSet;
 
                     /**
                      * Virtual node labels

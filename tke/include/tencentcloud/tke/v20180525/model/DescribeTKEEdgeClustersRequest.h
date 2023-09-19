@@ -111,15 +111,15 @@ all clusters under the account are obtained)
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Filter condition (only filtering by a single ClusterName is supported)
-                     * @return Filters Filter condition (only filtering by a single ClusterName is supported)
+                     * 获取Filter conditions. Values: `ClusterName` and tags in the format of ["key1:value1","key2:value2"].
+                     * @return Filters Filter conditions. Values: `ClusterName` and tags in the format of ["key1:value1","key2:value2"].
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter condition (only filtering by a single ClusterName is supported)
-                     * @param _filters Filter condition (only filtering by a single ClusterName is supported)
+                     * 设置Filter conditions. Values: `ClusterName` and tags in the format of ["key1:value1","key2:value2"].
+                     * @param _filters Filter conditions. Values: `ClusterName` and tags in the format of ["key1:value1","key2:value2"].
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -153,7 +153,7 @@ all clusters under the account are obtained)
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Filter condition (only filtering by a single ClusterName is supported)
+                     * Filter conditions. Values: `ClusterName` and tags in the format of ["key1:value1","key2:value2"].
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

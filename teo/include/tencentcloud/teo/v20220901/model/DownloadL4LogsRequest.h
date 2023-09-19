@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取List of sites to be queried. All sites will be selected if this field is not specified.
-                     * @return ZoneIds List of sites to be queried. All sites will be selected if this field is not specified.
+                     * 获取List of sites. This parameter is required. A `null` will be returned if it is left empty.
+                     * @return ZoneIds List of sites. This parameter is required. A `null` will be returned if it is left empty.
                      * 
                      */
                     std::vector<std::string> GetZoneIds() const;
 
                     /**
-                     * 设置List of sites to be queried. All sites will be selected if this field is not specified.
-                     * @param _zoneIds List of sites to be queried. All sites will be selected if this field is not specified.
+                     * 设置List of sites. This parameter is required. A `null` will be returned if it is left empty.
+                     * @param _zoneIds List of sites. This parameter is required. A `null` will be returned if it is left empty.
                      * 
                      */
                     void SetZoneIds(const std::vector<std::string>& _zoneIds);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool ZoneIdsHasBeenSet() const;
 
                     /**
-                     * 获取List of L4 proxy IDs.
-                     * @return ProxyIds List of L4 proxy IDs.
+                     * 获取List of L4 proxy instance IDs.
+                     * @return ProxyIds List of L4 proxy instance IDs.
                      * 
                      */
                     std::vector<std::string> GetProxyIds() const;
 
                     /**
-                     * 设置List of L4 proxy IDs.
-                     * @param _proxyIds List of L4 proxy IDs.
+                     * 设置List of L4 proxy instance IDs.
+                     * @param _proxyIds List of L4 proxy instance IDs.
                      * 
                      */
                     void SetProxyIds(const std::vector<std::string>& _proxyIds);
@@ -183,13 +183,13 @@ namespace TencentCloud
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * List of sites to be queried. All sites will be selected if this field is not specified.
+                     * List of sites. This parameter is required. A `null` will be returned if it is left empty.
                      */
                     std::vector<std::string> m_zoneIds;
                     bool m_zoneIdsHasBeenSet;
 
                     /**
-                     * List of L4 proxy IDs.
+                     * List of L4 proxy instance IDs.
                      */
                     std::vector<std::string> m_proxyIds;
                     bool m_proxyIdsHasBeenSet;

@@ -1008,6 +1008,81 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool AutoRenewFlagHasBeenSet() const;
 
+                    /**
+                     * 获取The hosting status. Valid values: `0` (hosting), `5` (replacing resources), `10` (hosting completed), and `-1` (not hosted). 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return HostingStatus The hosting status. Valid values: `0` (hosting), `5` (replacing resources), `10` (hosting completed), and `-1` (not hosted). 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetHostingStatus() const;
+
+                    /**
+                     * 设置The hosting status. Valid values: `0` (hosting), `5` (replacing resources), `10` (hosting completed), and `-1` (not hosted). 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _hostingStatus The hosting status. Valid values: `0` (hosting), `5` (replacing resources), `10` (hosting completed), and `-1` (not hosted). 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetHostingStatus(const int64_t& _hostingStatus);
+
+                    /**
+                     * 判断参数 HostingStatus 是否已赋值
+                     * @return HostingStatus 是否已赋值
+                     * 
+                     */
+                    bool HostingStatusHasBeenSet() const;
+
+                    /**
+                     * 获取The hosting completion time.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return HostingCompleteTime The hosting completion time.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetHostingCompleteTime() const;
+
+                    /**
+                     * 设置The hosting completion time.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _hostingCompleteTime The hosting completion time.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetHostingCompleteTime(const std::string& _hostingCompleteTime);
+
+                    /**
+                     * 判断参数 HostingCompleteTime 是否已赋值
+                     * @return HostingCompleteTime 是否已赋值
+                     * 
+                     */
+                    bool HostingCompleteTimeHasBeenSet() const;
+
+                    /**
+                     * 获取The hosted new certificate ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return HostingRenewCertId The hosted new certificate ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetHostingRenewCertId() const;
+
+                    /**
+                     * 设置The hosted new certificate ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _hostingRenewCertId The hosted new certificate ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetHostingRenewCertId(const std::string& _hostingRenewCertId);
+
+                    /**
+                     * 判断参数 HostingRenewCertId 是否已赋值
+                     * @return HostingRenewCertId 是否已赋值
+                     * 
+                     */
+                    bool HostingRenewCertIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1277,6 +1352,27 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     int64_t m_autoRenewFlag;
                     bool m_autoRenewFlagHasBeenSet;
+
+                    /**
+                     * The hosting status. Valid values: `0` (hosting), `5` (replacing resources), `10` (hosting completed), and `-1` (not hosted). 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_hostingStatus;
+                    bool m_hostingStatusHasBeenSet;
+
+                    /**
+                     * The hosting completion time.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_hostingCompleteTime;
+                    bool m_hostingCompleteTimeHasBeenSet;
+
+                    /**
+                     * The hosted new certificate ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_hostingRenewCertId;
+                    bool m_hostingRenewCertIdHasBeenSet;
 
                 };
             }

@@ -233,15 +233,23 @@ namespace TencentCloud
                     bool SessionNameHasBeenSet() const;
 
                     /**
-                     * 获取Session configurations. `dlc.eni`, `dlc.role.arn`, `dlc.sql.set.config`, and user-defined configurations are supported.
-                     * @return Arguments Session configurations. `dlc.eni`, `dlc.role.arn`, `dlc.sql.set.config`, and user-defined configurations are supported.
+                     * 获取The session configurations. Valid values: `1.dlc.eni` for user-defined ENI gateway information;
+`2.dlc.role.arn` for user-defined roleArn configurations;
+and `3.dlc.sql.set.config` for user-defined cluster configurations.
+                     * @return Arguments The session configurations. Valid values: `1.dlc.eni` for user-defined ENI gateway information;
+`2.dlc.role.arn` for user-defined roleArn configurations;
+and `3.dlc.sql.set.config` for user-defined cluster configurations.
                      * 
                      */
                     std::vector<KVPair> GetArguments() const;
 
                     /**
-                     * 设置Session configurations. `dlc.eni`, `dlc.role.arn`, `dlc.sql.set.config`, and user-defined configurations are supported.
-                     * @param _arguments Session configurations. `dlc.eni`, `dlc.role.arn`, `dlc.sql.set.config`, and user-defined configurations are supported.
+                     * 设置The session configurations. Valid values: `1.dlc.eni` for user-defined ENI gateway information;
+`2.dlc.role.arn` for user-defined roleArn configurations;
+and `3.dlc.sql.set.config` for user-defined cluster configurations.
+                     * @param _arguments The session configurations. Valid values: `1.dlc.eni` for user-defined ENI gateway information;
+`2.dlc.role.arn` for user-defined roleArn configurations;
+and `3.dlc.sql.set.config` for user-defined cluster configurations.
                      * 
                      */
                     void SetArguments(const std::vector<KVPair>& _arguments);
@@ -252,6 +260,27 @@ namespace TencentCloud
                      * 
                      */
                     bool ArgumentsHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to inherit the resource configurations from the cluster. Valid values: `0` for no (default) and `1` for yes.
+                     * @return IsInherit Whether to inherit the resource configurations from the cluster. Valid values: `0` for no (default) and `1` for yes.
+                     * 
+                     */
+                    int64_t GetIsInherit() const;
+
+                    /**
+                     * 设置Whether to inherit the resource configurations from the cluster. Valid values: `0` for no (default) and `1` for yes.
+                     * @param _isInherit Whether to inherit the resource configurations from the cluster. Valid values: `0` for no (default) and `1` for yes.
+                     * 
+                     */
+                    void SetIsInherit(const int64_t& _isInherit);
+
+                    /**
+                     * 判断参数 IsInherit 是否已赋值
+                     * @return IsInherit 是否已赋值
+                     * 
+                     */
+                    bool IsInheritHasBeenSet() const;
 
                 private:
 
@@ -310,10 +339,18 @@ namespace TencentCloud
                     bool m_sessionNameHasBeenSet;
 
                     /**
-                     * Session configurations. `dlc.eni`, `dlc.role.arn`, `dlc.sql.set.config`, and user-defined configurations are supported.
+                     * The session configurations. Valid values: `1.dlc.eni` for user-defined ENI gateway information;
+`2.dlc.role.arn` for user-defined roleArn configurations;
+and `3.dlc.sql.set.config` for user-defined cluster configurations.
                      */
                     std::vector<KVPair> m_arguments;
                     bool m_argumentsHasBeenSet;
+
+                    /**
+                     * Whether to inherit the resource configurations from the cluster. Valid values: `0` for no (default) and `1` for yes.
+                     */
+                    int64_t m_isInherit;
+                    bool m_isInheritHasBeenSet;
 
                 };
             }
