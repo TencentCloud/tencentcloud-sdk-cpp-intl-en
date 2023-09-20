@@ -87,15 +87,15 @@ namespace TencentCloud
                     bool TableGroupIdsHasBeenSet() const;
 
                     /**
-                     * 获取Information list of tables to be queried
-                     * @return SelectedTables Information list of tables to be queried
+                     * 获取Information list of tables to be queriedu200d. If you need to filter the tables, use the`Filter` parameter.
+                     * @return SelectedTables Information list of tables to be queriedu200d. If you need to filter the tables, use the`Filter` parameter.
                      * 
                      */
                     std::vector<SelectedTableInfoNew> GetSelectedTables() const;
 
                     /**
-                     * 设置Information list of tables to be queried
-                     * @param _selectedTables Information list of tables to be queried
+                     * 设置Information list of tables to be queriedu200d. If you need to filter the tables, use the`Filter` parameter.
+                     * @param _selectedTables Information list of tables to be queriedu200d. If you need to filter the tables, use the`Filter` parameter.
                      * 
                      */
                     void SetSelectedTables(const std::vector<SelectedTableInfoNew>& _selectedTables);
@@ -185,7 +185,7 @@ namespace TencentCloud
                     bool m_tableGroupIdsHasBeenSet;
 
                     /**
-                     * Information list of tables to be queried
+                     * Information list of tables to be queriedu200d. If you need to filter the tables, use the`Filter` parameter.
                      */
                     std::vector<SelectedTableInfoNew> m_selectedTables;
                     bool m_selectedTablesHasBeenSet;

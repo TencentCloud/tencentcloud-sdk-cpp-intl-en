@@ -59,6 +59,22 @@ Note: `null` may be returned for this field, indicating that no valid values can
                      */
                     bool TaskIdHasBeenSet() const;
 
+                    /**
+                     * 获取`ApplicationId` is in the format of `AppInstanceId-applicationId`, which is used to identify applications of different clusters.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * @return ApplicationId `ApplicationId` is in the format of `AppInstanceId-applicationId`, which is used to identify applications of different clusters.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetApplicationId() const;
+
+                    /**
+                     * 判断参数 ApplicationId 是否已赋值
+                     * @return ApplicationId 是否已赋值
+                     * 
+                     */
+                    bool ApplicationIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -67,6 +83,13 @@ Note: `null` may be returned for this field, indicating that no valid values can
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
+
+                    /**
+                     * `ApplicationId` is in the format of `AppInstanceId-applicationId`, which is used to identify applications of different clusters.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_applicationId;
+                    bool m_applicationIdHasBeenSet;
 
                 };
             }
