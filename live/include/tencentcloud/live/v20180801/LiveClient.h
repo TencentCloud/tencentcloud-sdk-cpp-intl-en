@@ -241,6 +241,8 @@
 #include <tencentcloud/live/v20180801/model/ModifyLiveTimeShiftTemplateResponse.h>
 #include <tencentcloud/live/v20180801/model/ModifyLiveTranscodeTemplateRequest.h>
 #include <tencentcloud/live/v20180801/model/ModifyLiveTranscodeTemplateResponse.h>
+#include <tencentcloud/live/v20180801/model/RestartLivePullStreamTaskRequest.h>
+#include <tencentcloud/live/v20180801/model/RestartLivePullStreamTaskResponse.h>
 #include <tencentcloud/live/v20180801/model/ResumeDelayLiveStreamRequest.h>
 #include <tencentcloud/live/v20180801/model/ResumeDelayLiveStreamResponse.h>
 #include <tencentcloud/live/v20180801/model/ResumeLiveStreamRequest.h>
@@ -594,6 +596,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyLiveTranscodeTemplateResponse> ModifyLiveTranscodeTemplateOutcome;
                 typedef std::future<ModifyLiveTranscodeTemplateOutcome> ModifyLiveTranscodeTemplateOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::ModifyLiveTranscodeTemplateRequest&, ModifyLiveTranscodeTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLiveTranscodeTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::RestartLivePullStreamTaskResponse> RestartLivePullStreamTaskOutcome;
+                typedef std::future<RestartLivePullStreamTaskOutcome> RestartLivePullStreamTaskOutcomeCallable;
+                typedef std::function<void(const LiveClient*, const Model::RestartLivePullStreamTaskRequest&, RestartLivePullStreamTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RestartLivePullStreamTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::ResumeDelayLiveStreamResponse> ResumeDelayLiveStreamOutcome;
                 typedef std::future<ResumeDelayLiveStreamOutcome> ResumeDelayLiveStreamOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::ResumeDelayLiveStreamRequest&, ResumeDelayLiveStreamOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResumeDelayLiveStreamAsyncHandler;
@@ -1692,6 +1697,15 @@ Referer information is included in HTTP requests. After you enable referer confi
                 ModifyLiveTranscodeTemplateOutcome ModifyLiveTranscodeTemplate(const Model::ModifyLiveTranscodeTemplateRequest &request);
                 void ModifyLiveTranscodeTemplateAsync(const Model::ModifyLiveTranscodeTemplateRequest& request, const ModifyLiveTranscodeTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyLiveTranscodeTemplateOutcomeCallable ModifyLiveTranscodeTemplateCallable(const Model::ModifyLiveTranscodeTemplateRequest& request);
+
+                /**
+                 *Restart the running live streaming pull task.
+                 * @param req RestartLivePullStreamTaskRequest
+                 * @return RestartLivePullStreamTaskOutcome
+                 */
+                RestartLivePullStreamTaskOutcome RestartLivePullStreamTask(const Model::RestartLivePullStreamTaskRequest &request);
+                void RestartLivePullStreamTaskAsync(const Model::RestartLivePullStreamTaskRequest& request, const RestartLivePullStreamTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RestartLivePullStreamTaskOutcomeCallable RestartLivePullStreamTaskCallable(const Model::RestartLivePullStreamTaskRequest& request);
 
                 /**
                  *This API is used to cancel the delay setting and recover the real-time display of the live streaming image.

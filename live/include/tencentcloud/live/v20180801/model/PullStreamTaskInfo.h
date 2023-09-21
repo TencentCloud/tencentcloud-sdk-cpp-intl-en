@@ -867,6 +867,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool VodLocalModeHasBeenSet() const;
 
+                    /**
+                     * 获取 Recording template ID.
+                     * @return RecordTemplateId  Recording template ID.
+                     * 
+                     */
+                    std::string GetRecordTemplateId() const;
+
+                    /**
+                     * 设置 Recording template ID.
+                     * @param _recordTemplateId  Recording template ID.
+                     * 
+                     */
+                    void SetRecordTemplateId(const std::string& _recordTemplateId);
+
+                    /**
+                     * 判断参数 RecordTemplateId 是否已赋值
+                     * @return RecordTemplateId 是否已赋值
+                     * 
+                     */
+                    bool RecordTemplateIdHasBeenSet() const;
+
+                    /**
+                     * 获取Newly added streaming address. Used for the scenario of pushing two streams with a single task.
+                     * @return BackupToUrl Newly added streaming address. Used for the scenario of pushing two streams with a single task.
+                     * 
+                     */
+                    std::string GetBackupToUrl() const;
+
+                    /**
+                     * 设置Newly added streaming address. Used for the scenario of pushing two streams with a single task.
+                     * @param _backupToUrl Newly added streaming address. Used for the scenario of pushing two streams with a single task.
+                     * 
+                     */
+                    void SetBackupToUrl(const std::string& _backupToUrl);
+
+                    /**
+                     * 判断参数 BackupToUrl 是否已赋值
+                     * @return BackupToUrl 是否已赋值
+                     * 
+                     */
+                    bool BackupToUrlHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1093,6 +1135,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_vodLocalMode;
                     bool m_vodLocalModeHasBeenSet;
+
+                    /**
+                     *  Recording template ID.
+                     */
+                    std::string m_recordTemplateId;
+                    bool m_recordTemplateIdHasBeenSet;
+
+                    /**
+                     * Newly added streaming address. Used for the scenario of pushing two streams with a single task.
+                     */
+                    std::string m_backupToUrl;
+                    bool m_backupToUrlHasBeenSet;
 
                 };
             }
