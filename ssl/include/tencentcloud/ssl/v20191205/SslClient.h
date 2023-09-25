@@ -57,6 +57,8 @@
 #include <tencentcloud/ssl/v20191205/model/DescribeCertificateOperateLogsResponse.h>
 #include <tencentcloud/ssl/v20191205/model/DescribeCertificatesRequest.h>
 #include <tencentcloud/ssl/v20191205/model/DescribeCertificatesResponse.h>
+#include <tencentcloud/ssl/v20191205/model/DescribeHostTeoInstanceListRequest.h>
+#include <tencentcloud/ssl/v20191205/model/DescribeHostTeoInstanceListResponse.h>
 #include <tencentcloud/ssl/v20191205/model/DownloadCertificateRequest.h>
 #include <tencentcloud/ssl/v20191205/model/DownloadCertificateResponse.h>
 #include <tencentcloud/ssl/v20191205/model/ModifyCSRRequest.h>
@@ -140,6 +142,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeCertificatesResponse> DescribeCertificatesOutcome;
                 typedef std::future<DescribeCertificatesOutcome> DescribeCertificatesOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::DescribeCertificatesRequest&, DescribeCertificatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCertificatesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeHostTeoInstanceListResponse> DescribeHostTeoInstanceListOutcome;
+                typedef std::future<DescribeHostTeoInstanceListOutcome> DescribeHostTeoInstanceListOutcomeCallable;
+                typedef std::function<void(const SslClient*, const Model::DescribeHostTeoInstanceListRequest&, DescribeHostTeoInstanceListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeHostTeoInstanceListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DownloadCertificateResponse> DownloadCertificateOutcome;
                 typedef std::future<DownloadCertificateOutcome> DownloadCertificateOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::DownloadCertificateRequest&, DownloadCertificateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DownloadCertificateAsyncHandler;
@@ -322,6 +327,15 @@ namespace TencentCloud
                 DescribeCertificatesOutcome DescribeCertificates(const Model::DescribeCertificatesRequest &request);
                 void DescribeCertificatesAsync(const Model::DescribeCertificatesRequest& request, const DescribeCertificatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeCertificatesOutcomeCallable DescribeCertificatesCallable(const Model::DescribeCertificatesRequest& request);
+
+                /**
+                 *This API is used to query the list of EDGEONE instances to which a certificate can be deployed.
+                 * @param req DescribeHostTeoInstanceListRequest
+                 * @return DescribeHostTeoInstanceListOutcome
+                 */
+                DescribeHostTeoInstanceListOutcome DescribeHostTeoInstanceList(const Model::DescribeHostTeoInstanceListRequest &request);
+                void DescribeHostTeoInstanceListAsync(const Model::DescribeHostTeoInstanceListRequest& request, const DescribeHostTeoInstanceListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeHostTeoInstanceListOutcomeCallable DescribeHostTeoInstanceListCallable(const Model::DescribeHostTeoInstanceListRequest& request);
 
                 /**
                  *This API is used to download a certificate.

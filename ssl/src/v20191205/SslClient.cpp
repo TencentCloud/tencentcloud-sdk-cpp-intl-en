@@ -771,6 +771,49 @@ SslClient::DescribeCertificatesOutcomeCallable SslClient::DescribeCertificatesCa
     return task->get_future();
 }
 
+SslClient::DescribeHostTeoInstanceListOutcome SslClient::DescribeHostTeoInstanceList(const DescribeHostTeoInstanceListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeHostTeoInstanceList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeHostTeoInstanceListResponse rsp = DescribeHostTeoInstanceListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeHostTeoInstanceListOutcome(rsp);
+        else
+            return DescribeHostTeoInstanceListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeHostTeoInstanceListOutcome(outcome.GetError());
+    }
+}
+
+void SslClient::DescribeHostTeoInstanceListAsync(const DescribeHostTeoInstanceListRequest& request, const DescribeHostTeoInstanceListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeHostTeoInstanceList(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SslClient::DescribeHostTeoInstanceListOutcomeCallable SslClient::DescribeHostTeoInstanceListCallable(const DescribeHostTeoInstanceListRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeHostTeoInstanceListOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeHostTeoInstanceList(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 SslClient::DownloadCertificateOutcome SslClient::DownloadCertificate(const DownloadCertificateRequest &request)
 {
     auto outcome = MakeRequest(request, "DownloadCertificate");
