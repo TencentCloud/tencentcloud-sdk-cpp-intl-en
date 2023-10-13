@@ -29,8 +29,11 @@ ProcessLiveStreamRequest::ProcessLiveStreamRequest() :
     m_outputDirHasBeenSet(false),
     m_aiContentReviewTaskHasBeenSet(false),
     m_aiRecognitionTaskHasBeenSet(false),
+    m_aiAnalysisTaskHasBeenSet(false),
+    m_aiQualityControlTaskHasBeenSet(false),
     m_sessionIdHasBeenSet(false),
-    m_sessionContextHasBeenSet(false)
+    m_sessionContextHasBeenSet(false),
+    m_scheduleIdHasBeenSet(false)
 {
 }
 
@@ -93,6 +96,24 @@ string ProcessLiveStreamRequest::ToJsonString() const
         m_aiRecognitionTask.ToJsonObject(d[key.c_str()], allocator);
     }
 
+    if (m_aiAnalysisTaskHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AiAnalysisTask";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_aiAnalysisTask.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_aiQualityControlTaskHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AiQualityControlTask";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_aiQualityControlTask.ToJsonObject(d[key.c_str()], allocator);
+    }
+
     if (m_sessionIdHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -107,6 +128,14 @@ string ProcessLiveStreamRequest::ToJsonString() const
         string key = "SessionContext";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_sessionContext.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_scheduleIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ScheduleId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_scheduleId, allocator);
     }
 
 
@@ -213,6 +242,38 @@ bool ProcessLiveStreamRequest::AiRecognitionTaskHasBeenSet() const
     return m_aiRecognitionTaskHasBeenSet;
 }
 
+AiAnalysisTaskInput ProcessLiveStreamRequest::GetAiAnalysisTask() const
+{
+    return m_aiAnalysisTask;
+}
+
+void ProcessLiveStreamRequest::SetAiAnalysisTask(const AiAnalysisTaskInput& _aiAnalysisTask)
+{
+    m_aiAnalysisTask = _aiAnalysisTask;
+    m_aiAnalysisTaskHasBeenSet = true;
+}
+
+bool ProcessLiveStreamRequest::AiAnalysisTaskHasBeenSet() const
+{
+    return m_aiAnalysisTaskHasBeenSet;
+}
+
+AiQualityControlTaskInput ProcessLiveStreamRequest::GetAiQualityControlTask() const
+{
+    return m_aiQualityControlTask;
+}
+
+void ProcessLiveStreamRequest::SetAiQualityControlTask(const AiQualityControlTaskInput& _aiQualityControlTask)
+{
+    m_aiQualityControlTask = _aiQualityControlTask;
+    m_aiQualityControlTaskHasBeenSet = true;
+}
+
+bool ProcessLiveStreamRequest::AiQualityControlTaskHasBeenSet() const
+{
+    return m_aiQualityControlTaskHasBeenSet;
+}
+
 string ProcessLiveStreamRequest::GetSessionId() const
 {
     return m_sessionId;
@@ -243,6 +304,22 @@ void ProcessLiveStreamRequest::SetSessionContext(const string& _sessionContext)
 bool ProcessLiveStreamRequest::SessionContextHasBeenSet() const
 {
     return m_sessionContextHasBeenSet;
+}
+
+int64_t ProcessLiveStreamRequest::GetScheduleId() const
+{
+    return m_scheduleId;
+}
+
+void ProcessLiveStreamRequest::SetScheduleId(const int64_t& _scheduleId)
+{
+    m_scheduleId = _scheduleId;
+    m_scheduleIdHasBeenSet = true;
+}
+
+bool ProcessLiveStreamRequest::ScheduleIdHasBeenSet() const
+{
+    return m_scheduleIdHasBeenSet;
 }
 
 

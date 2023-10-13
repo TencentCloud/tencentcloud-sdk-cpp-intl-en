@@ -47,15 +47,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Format. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`
-                     * @return Container Format. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`
+                     * 获取The container. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`.
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @return Container The container. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetContainer() const;
 
                     /**
-                     * 设置Format. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`
-                     * @param _container Format. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`
+                     * 设置The container. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`.
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @param _container The container. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetContainer(const std::string& _container);
@@ -68,15 +72,19 @@ namespace TencentCloud
                     bool ContainerHasBeenSet() const;
 
                     /**
-                     * 获取The editing mode. Valid values are `normal` and `fast`. The default is `normal`, which indicates precise editing.
-                     * @return Type The editing mode. Valid values are `normal` and `fast`. The default is `normal`, which indicates precise editing.
+                     * 获取The clip mode. Valid values: `normal` (default), `fast`.
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @return Type The clip mode. Valid values: `normal` (default), `fast`.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置The editing mode. Valid values are `normal` and `fast`. The default is `normal`, which indicates precise editing.
-                     * @param _type The editing mode. Valid values are `normal` and `fast`. The default is `normal`, which indicates precise editing.
+                     * 设置The clip mode. Valid values: `normal` (default), `fast`.
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @param _type The clip mode. Valid values: `normal` (default), `fast`.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -91,13 +99,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Format. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`
+                     * The container. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     std::string m_container;
                     bool m_containerHasBeenSet;
 
                     /**
-                     * The editing mode. Valid values are `normal` and `fast`. The default is `normal`, which indicates precise editing.
+                     * The clip mode. Valid values: `normal` (default), `fast`.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

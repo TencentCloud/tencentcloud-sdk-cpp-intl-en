@@ -142,6 +142,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ScheduleTaskEventHasBeenSet() const;
 
+                    /**
+                     * 获取- The expiration time (Unix timestamp) of the notification's signature.
+- By default, notifications sent by MPS expire after 10 minutes. If the expiration time specified has elapsed, a notification will be considered invalid. This can prevent replay attacks.
+- The format of this parameter is a decimal Unix timestamp, i.e., the number of seconds that have elapsed since 00:00 (UTC/GMT time) on January 1, 1970.
+
+                     * @return Timestamp - The expiration time (Unix timestamp) of the notification's signature.
+- By default, notifications sent by MPS expire after 10 minutes. If the expiration time specified has elapsed, a notification will be considered invalid. This can prevent replay attacks.
+- The format of this parameter is a decimal Unix timestamp, i.e., the number of seconds that have elapsed since 00:00 (UTC/GMT time) on January 1, 1970.
+
+                     * 
+                     */
+                    int64_t GetTimestamp() const;
+
+                    /**
+                     * 判断参数 Timestamp 是否已赋值
+                     * @return Timestamp 是否已赋值
+                     * 
+                     */
+                    bool TimestampHasBeenSet() const;
+
+                    /**
+                     * 获取The notification signature. Sign = MD5 (Timestamp + NotifyKey) MPS concatenates `Timestamp` and `NotifyKey` in `TaskNotifyConfig` and calculates a signature using the MD5 algorithm. This signature is included in the notification sent to your backend server. If the signature in the notification matches your own calculation result, it indicates that the notification is from MPS.
+                     * @return Sign The notification signature. Sign = MD5 (Timestamp + NotifyKey) MPS concatenates `Timestamp` and `NotifyKey` in `TaskNotifyConfig` and calculates a signature using the MD5 algorithm. This signature is included in the notification sent to your backend server. If the signature in the notification matches your own calculation result, it indicates that the notification is from MPS.
+                     * 
+                     */
+                    std::string GetSign() const;
+
+                    /**
+                     * 判断参数 Sign 是否已赋值
+                     * @return Sign 是否已赋值
+                     * 
+                     */
+                    bool SignHasBeenSet() const;
+
                 private:
 
                     /**
@@ -185,6 +219,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     ScheduleTask m_scheduleTaskEvent;
                     bool m_scheduleTaskEventHasBeenSet;
+
+                    /**
+                     * - The expiration time (Unix timestamp) of the notification's signature.
+- By default, notifications sent by MPS expire after 10 minutes. If the expiration time specified has elapsed, a notification will be considered invalid. This can prevent replay attacks.
+- The format of this parameter is a decimal Unix timestamp, i.e., the number of seconds that have elapsed since 00:00 (UTC/GMT time) on January 1, 1970.
+
+                     */
+                    int64_t m_timestamp;
+                    bool m_timestampHasBeenSet;
+
+                    /**
+                     * The notification signature. Sign = MD5 (Timestamp + NotifyKey) MPS concatenates `Timestamp` and `NotifyKey` in `TaskNotifyConfig` and calculates a signature using the MD5 algorithm. This signature is included in the notification sent to your backend server. If the signature in the notification matches your own calculation result, it indicates that the notification is from MPS.
+                     */
+                    std::string m_sign;
+                    bool m_signHasBeenSet;
 
                 };
             }

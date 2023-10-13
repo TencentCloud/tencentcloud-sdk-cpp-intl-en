@@ -97,6 +97,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ScheduleNameHasBeenSet() const;
 
                     /**
+                     * 获取The scheme type. Valid values:
+ <li>`Preset`</li>
+<li>`Custom` </li>
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @return Type The scheme type. Valid values:
+ <li>`Preset`</li>
+<li>`Custom` </li>
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetType() const;
+
+                    /**
+                     * 设置The scheme type. Valid values:
+ <li>`Preset`</li>
+<li>`Custom` </li>
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @param _type The scheme type. Valid values:
+ <li>`Preset`</li>
+<li>`Custom` </li>
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetType(const std::string& _type);
+
+                    /**
+                     * 判断参数 Type 是否已赋值
+                     * @return Type 是否已赋值
+                     * 
+                     */
+                    bool TypeHasBeenSet() const;
+
+                    /**
                      * 获取The scheme status. Valid values:
 `Enabled`
 `Disabled`
@@ -107,7 +140,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    std::vector<std::string> GetStatus() const;
+                    std::string GetStatus() const;
 
                     /**
                      * 设置The scheme status. Valid values:
@@ -120,7 +153,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    void SetStatus(const std::vector<std::string>& _status);
+                    void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
@@ -320,12 +353,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_scheduleNameHasBeenSet;
 
                     /**
+                     * The scheme type. Valid values:
+ <li>`Preset`</li>
+<li>`Custom` </li>
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_type;
+                    bool m_typeHasBeenSet;
+
+                    /**
                      * The scheme status. Valid values:
 `Enabled`
 `Disabled`
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    std::vector<std::string> m_status;
+                    std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**

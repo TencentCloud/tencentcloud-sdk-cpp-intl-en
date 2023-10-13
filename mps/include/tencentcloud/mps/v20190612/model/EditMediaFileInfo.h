@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool InputInfoHasBeenSet() const;
 
                     /**
-                     * 获取Start time offset of video clipping in seconds.
-                     * @return StartTimeOffset Start time offset of video clipping in seconds.
+                     * 获取The start offset (seconds) for video clipping. This parameter is valid for video clipping tasks.
+                     * @return StartTimeOffset The start offset (seconds) for video clipping. This parameter is valid for video clipping tasks.
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置Start time offset of video clipping in seconds.
-                     * @param _startTimeOffset Start time offset of video clipping in seconds.
+                     * 设置The start offset (seconds) for video clipping. This parameter is valid for video clipping tasks.
+                     * @param _startTimeOffset The start offset (seconds) for video clipping. This parameter is valid for video clipping tasks.
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取End time offset of video clipping in seconds.
-                     * @return EndTimeOffset End time offset of video clipping in seconds.
+                     * 获取The end offset (seconds) for video clipping. This parameter is valid for video clipping tasks.
+                     * @return EndTimeOffset The end offset (seconds) for video clipping. This parameter is valid for video clipping tasks.
                      * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置End time offset of video clipping in seconds.
-                     * @param _endTimeOffset End time offset of video clipping in seconds.
+                     * 设置The end offset (seconds) for video clipping. This parameter is valid for video clipping tasks.
+                     * @param _endTimeOffset The end offset (seconds) for video clipping. This parameter is valid for video clipping tasks.
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -110,6 +110,39 @@ namespace TencentCloud
                      */
                     bool EndTimeOffsetHasBeenSet() const;
 
+                    /**
+                     * 获取The ID of the material associated with an element. This parameter is required for video compositing tasks.
+
+Note: The ID can be up to 32 characters long and can contain letters, digits, and special characters -_
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @return Id The ID of the material associated with an element. This parameter is required for video compositing tasks.
+
+Note: The ID can be up to 32 characters long and can contain letters, digits, and special characters -_
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetId() const;
+
+                    /**
+                     * 设置The ID of the material associated with an element. This parameter is required for video compositing tasks.
+
+Note: The ID can be up to 32 characters long and can contain letters, digits, and special characters -_
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @param _id The ID of the material associated with an element. This parameter is required for video compositing tasks.
+
+Note: The ID can be up to 32 characters long and can contain letters, digits, and special characters -_
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetId(const std::string& _id);
+
+                    /**
+                     * 判断参数 Id 是否已赋值
+                     * @return Id 是否已赋值
+                     * 
+                     */
+                    bool IdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -119,16 +152,25 @@ namespace TencentCloud
                     bool m_inputInfoHasBeenSet;
 
                     /**
-                     * Start time offset of video clipping in seconds.
+                     * The start offset (seconds) for video clipping. This parameter is valid for video clipping tasks.
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * End time offset of video clipping in seconds.
+                     * The end offset (seconds) for video clipping. This parameter is valid for video clipping tasks.
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;
+
+                    /**
+                     * The ID of the material associated with an element. This parameter is required for video compositing tasks.
+
+Note: The ID can be up to 32 characters long and can contain letters, digits, and special characters -_
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_id;
+                    bool m_idHasBeenSet;
 
                 };
             }

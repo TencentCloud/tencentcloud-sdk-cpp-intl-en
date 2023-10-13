@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mps/v20190612/model/VideoEnhanceConfig.h>
+#include <tencentcloud/mps/v20190612/model/AudioEnhanceConfig.h>
 
 
 namespace TencentCloud
@@ -72,6 +73,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool VideoEnhanceHasBeenSet() const;
 
+                    /**
+                     * 获取The audio enhancement configuration.
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @return AudioEnhance The audio enhancement configuration.
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    AudioEnhanceConfig GetAudioEnhance() const;
+
+                    /**
+                     * 设置The audio enhancement configuration.
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @param _audioEnhance The audio enhancement configuration.
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetAudioEnhance(const AudioEnhanceConfig& _audioEnhance);
+
+                    /**
+                     * 判断参数 AudioEnhance 是否已赋值
+                     * @return AudioEnhance 是否已赋值
+                     * 
+                     */
+                    bool AudioEnhanceHasBeenSet() const;
+
                 private:
 
                     /**
@@ -80,6 +106,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     VideoEnhanceConfig m_videoEnhance;
                     bool m_videoEnhanceHasBeenSet;
+
+                    /**
+                     * The audio enhancement configuration.
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     */
+                    AudioEnhanceConfig m_audioEnhance;
+                    bool m_audioEnhanceHasBeenSet;
 
                 };
             }

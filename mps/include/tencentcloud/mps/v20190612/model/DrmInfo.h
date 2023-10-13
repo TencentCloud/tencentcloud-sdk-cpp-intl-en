@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * The DRM encryption details.
                 */
                 class DrmInfo : public AbstractModel
                 {
@@ -48,15 +48,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取The encryption type.
+<li>`simpleaes`: AES-128 encryption.</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @return Type The encryption type.
+<li>`simpleaes`: AES-128 encryption.</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置The encryption type.
+<li>`simpleaes`: AES-128 encryption.</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @param _type The encryption type.
+<li>`simpleaes`: AES-128 encryption.</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -69,15 +77,19 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SimpleAesDrm 
+                     * 获取The AES-128 encryption details.
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @return SimpleAesDrm The AES-128 encryption details.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     SimpleAesDrm GetSimpleAesDrm() const;
 
                     /**
-                     * 设置
-                     * @param _simpleAesDrm 
+                     * 设置The AES-128 encryption details.
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @param _simpleAesDrm The AES-128 encryption details.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSimpleAesDrm(const SimpleAesDrm& _simpleAesDrm);
@@ -92,13 +104,16 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * The encryption type.
+<li>`simpleaes`: AES-128 encryption.</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * The AES-128 encryption details.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     SimpleAesDrm m_simpleAesDrm;
                     bool m_simpleAesDrmHasBeenSet;

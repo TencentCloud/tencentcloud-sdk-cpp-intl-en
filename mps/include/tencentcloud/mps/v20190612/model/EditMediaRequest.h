@@ -24,6 +24,7 @@
 #include <tencentcloud/mps/v20190612/model/EditMediaFileInfo.h>
 #include <tencentcloud/mps/v20190612/model/TaskOutputStorage.h>
 #include <tencentcloud/mps/v20190612/model/EditMediaOutputConfig.h>
+#include <tencentcloud/mps/v20190612/model/ComposeMediaConfig.h>
 #include <tencentcloud/mps/v20190612/model/TaskNotifyConfig.h>
 
 
@@ -90,14 +91,26 @@ namespace TencentCloud
 
                     /**
                      * 获取The path to save the media processing output file.
+
+Note: For complex compositing tasks, the filename can be up to 64 characters long and can only contain digits, letters, and special characters -_
+
                      * @return OutputObjectPath The path to save the media processing output file.
+
+Note: For complex compositing tasks, the filename can be up to 64 characters long and can only contain digits, letters, and special characters -_
+
                      * 
                      */
                     std::string GetOutputObjectPath() const;
 
                     /**
                      * 设置The path to save the media processing output file.
+
+Note: For complex compositing tasks, the filename can be up to 64 characters long and can only contain digits, letters, and special characters -_
+
                      * @param _outputObjectPath The path to save the media processing output file.
+
+Note: For complex compositing tasks, the filename can be up to 64 characters long and can only contain digits, letters, and special characters -_
+
                      * 
                      */
                     void SetOutputObjectPath(const std::string& _outputObjectPath);
@@ -110,15 +123,15 @@ namespace TencentCloud
                     bool OutputObjectPathHasBeenSet() const;
 
                     /**
-                     * 获取Configuration for output files of video editing
-                     * @return OutputConfig Configuration for output files of video editing
+                     * 获取The output settings for a video clipping task.
+                     * @return OutputConfig The output settings for a video clipping task.
                      * 
                      */
                     EditMediaOutputConfig GetOutputConfig() const;
 
                     /**
-                     * 设置Configuration for output files of video editing
-                     * @param _outputConfig Configuration for output files of video editing
+                     * 设置The output settings for a video clipping task.
+                     * @param _outputConfig The output settings for a video clipping task.
                      * 
                      */
                     void SetOutputConfig(const EditMediaOutputConfig& _outputConfig);
@@ -129,6 +142,35 @@ namespace TencentCloud
                      * 
                      */
                     bool OutputConfigHasBeenSet() const;
+
+                    /**
+                     * 获取The settings for a video compositing task.
+
+Note: If this parameter is not empty, the task is a video compositing task. Otherwise, the task is a video clipping task.
+                     * @return ComposeConfig The settings for a video compositing task.
+
+Note: If this parameter is not empty, the task is a video compositing task. Otherwise, the task is a video clipping task.
+                     * 
+                     */
+                    ComposeMediaConfig GetComposeConfig() const;
+
+                    /**
+                     * 设置The settings for a video compositing task.
+
+Note: If this parameter is not empty, the task is a video compositing task. Otherwise, the task is a video clipping task.
+                     * @param _composeConfig The settings for a video compositing task.
+
+Note: If this parameter is not empty, the task is a video compositing task. Otherwise, the task is a video clipping task.
+                     * 
+                     */
+                    void SetComposeConfig(const ComposeMediaConfig& _composeConfig);
+
+                    /**
+                     * 判断参数 ComposeConfig 是否已赋值
+                     * @return ComposeConfig 是否已赋值
+                     * 
+                     */
+                    bool ComposeConfigHasBeenSet() const;
 
                     /**
                      * 获取Event notification information of task. If this parameter is left empty, no event notifications will be obtained.
@@ -230,15 +272,26 @@ namespace TencentCloud
 
                     /**
                      * The path to save the media processing output file.
+
+Note: For complex compositing tasks, the filename can be up to 64 characters long and can only contain digits, letters, and special characters -_
+
                      */
                     std::string m_outputObjectPath;
                     bool m_outputObjectPathHasBeenSet;
 
                     /**
-                     * Configuration for output files of video editing
+                     * The output settings for a video clipping task.
                      */
                     EditMediaOutputConfig m_outputConfig;
                     bool m_outputConfigHasBeenSet;
+
+                    /**
+                     * The settings for a video compositing task.
+
+Note: If this parameter is not empty, the task is a video compositing task. Otherwise, the task is a video clipping task.
+                     */
+                    ComposeMediaConfig m_composeConfig;
+                    bool m_composeConfigHasBeenSet;
 
                     /**
                      * Event notification information of task. If this parameter is left empty, no event notifications will be obtained.

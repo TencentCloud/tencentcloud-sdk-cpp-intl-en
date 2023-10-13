@@ -26,6 +26,7 @@
 #include <tencentcloud/mps/v20190612/model/LiveStreamProcessTask.h>
 #include <tencentcloud/mps/v20190612/model/TaskNotifyConfig.h>
 #include <tencentcloud/mps/v20190612/model/ScheduleTask.h>
+#include <tencentcloud/mps/v20190612/model/LiveScheduleTask.h>
 
 
 namespace TencentCloud
@@ -266,6 +267,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ScheduleTaskHasBeenSet() const;
 
+                    /**
+                     * 获取The information of a live scheme. This parameter is valid only if `TaskType` is `LiveScheduleTask`.
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @return LiveScheduleTask The information of a live scheme. This parameter is valid only if `TaskType` is `LiveScheduleTask`.
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    LiveScheduleTask GetLiveScheduleTask() const;
+
+                    /**
+                     * 判断参数 LiveScheduleTask 是否已赋值
+                     * @return LiveScheduleTask 是否已赋值
+                     * 
+                     */
+                    bool LiveScheduleTaskHasBeenSet() const;
+
                 private:
 
                     /**
@@ -362,6 +379,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     ScheduleTask m_scheduleTask;
                     bool m_scheduleTaskHasBeenSet;
+
+                    /**
+                     * The information of a live scheme. This parameter is valid only if `TaskType` is `LiveScheduleTask`.
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     */
+                    LiveScheduleTask m_liveScheduleTask;
+                    bool m_liveScheduleTaskHasBeenSet;
 
                 };
             }

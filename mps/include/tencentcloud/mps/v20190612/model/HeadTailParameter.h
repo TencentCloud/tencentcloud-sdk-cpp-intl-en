@@ -48,15 +48,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Opening credits list
-                     * @return HeadSet Opening credits list
+                     * 获取The opening segments.
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @return HeadSet The opening segments.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<MediaInputInfo> GetHeadSet() const;
 
                     /**
-                     * 设置Opening credits list
-                     * @param _headSet Opening credits list
+                     * 设置The opening segments.
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @param _headSet The opening segments.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHeadSet(const std::vector<MediaInputInfo>& _headSet);
@@ -69,15 +73,19 @@ namespace TencentCloud
                     bool HeadSetHasBeenSet() const;
 
                     /**
-                     * 获取Closing credits list
-                     * @return TailSet Closing credits list
+                     * 获取The closing segments.
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @return TailSet The closing segments.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<MediaInputInfo> GetTailSet() const;
 
                     /**
-                     * 设置Closing credits list
-                     * @param _tailSet Closing credits list
+                     * 设置The closing segments.
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @param _tailSet The closing segments.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTailSet(const std::vector<MediaInputInfo>& _tailSet);
@@ -92,13 +100,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Opening credits list
+                     * The opening segments.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     std::vector<MediaInputInfo> m_headSet;
                     bool m_headSetHasBeenSet;
 
                     /**
-                     * Closing credits list
+                     * The closing segments.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     std::vector<MediaInputInfo> m_tailSet;
                     bool m_tailSetHasBeenSet;

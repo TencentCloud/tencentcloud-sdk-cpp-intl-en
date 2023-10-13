@@ -25,6 +25,8 @@
 #include <tencentcloud/mps/v20190612/model/TaskOutputStorage.h>
 #include <tencentcloud/mps/v20190612/model/AiContentReviewTaskInput.h>
 #include <tencentcloud/mps/v20190612/model/AiRecognitionTaskInput.h>
+#include <tencentcloud/mps/v20190612/model/AiAnalysisTaskInput.h>
+#include <tencentcloud/mps/v20190612/model/AiQualityControlTaskInput.h>
 
 
 namespace TencentCloud
@@ -173,6 +175,48 @@ namespace TencentCloud
                     bool AiRecognitionTaskHasBeenSet() const;
 
                     /**
+                     * 获取
+                     * @return AiAnalysisTask 
+                     * 
+                     */
+                    AiAnalysisTaskInput GetAiAnalysisTask() const;
+
+                    /**
+                     * 设置
+                     * @param _aiAnalysisTask 
+                     * 
+                     */
+                    void SetAiAnalysisTask(const AiAnalysisTaskInput& _aiAnalysisTask);
+
+                    /**
+                     * 判断参数 AiAnalysisTask 是否已赋值
+                     * @return AiAnalysisTask 是否已赋值
+                     * 
+                     */
+                    bool AiAnalysisTaskHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return AiQualityControlTask 
+                     * 
+                     */
+                    AiQualityControlTaskInput GetAiQualityControlTask() const;
+
+                    /**
+                     * 设置
+                     * @param _aiQualityControlTask 
+                     * 
+                     */
+                    void SetAiQualityControlTask(const AiQualityControlTaskInput& _aiQualityControlTask);
+
+                    /**
+                     * 判断参数 AiQualityControlTask 是否已赋值
+                     * @return AiQualityControlTask 是否已赋值
+                     * 
+                     */
+                    bool AiQualityControlTaskHasBeenSet() const;
+
+                    /**
                      * 获取The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
                      * @return SessionId The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
                      * 
@@ -214,6 +258,43 @@ namespace TencentCloud
                      */
                     bool SessionContextHasBeenSet() const;
 
+                    /**
+                     * 获取The live scheme ID.
+Note 1:
+<li>If an output storage (`OutputStorage`) and directory (`OutputDir`) are specified for a subtask of the scheme, those output settings will be applied. </li>
+u200c<li>If an output storage (`OutputStorage`) and directory (`OutputDir`) are not specified for a subtask of the scheme, the output parameters specified for `ProcessLiveStream` (if any) will be applied. </li>
+Note 2: If `TaskNotifyConfig` is specified when `ProcessLiveStream` is called, the specified settings will be applied instead of the default callback settings of the scheme.
+                     * @return ScheduleId The live scheme ID.
+Note 1:
+<li>If an output storage (`OutputStorage`) and directory (`OutputDir`) are specified for a subtask of the scheme, those output settings will be applied. </li>
+u200c<li>If an output storage (`OutputStorage`) and directory (`OutputDir`) are not specified for a subtask of the scheme, the output parameters specified for `ProcessLiveStream` (if any) will be applied. </li>
+Note 2: If `TaskNotifyConfig` is specified when `ProcessLiveStream` is called, the specified settings will be applied instead of the default callback settings of the scheme.
+                     * 
+                     */
+                    int64_t GetScheduleId() const;
+
+                    /**
+                     * 设置The live scheme ID.
+Note 1:
+<li>If an output storage (`OutputStorage`) and directory (`OutputDir`) are specified for a subtask of the scheme, those output settings will be applied. </li>
+u200c<li>If an output storage (`OutputStorage`) and directory (`OutputDir`) are not specified for a subtask of the scheme, the output parameters specified for `ProcessLiveStream` (if any) will be applied. </li>
+Note 2: If `TaskNotifyConfig` is specified when `ProcessLiveStream` is called, the specified settings will be applied instead of the default callback settings of the scheme.
+                     * @param _scheduleId The live scheme ID.
+Note 1:
+<li>If an output storage (`OutputStorage`) and directory (`OutputDir`) are specified for a subtask of the scheme, those output settings will be applied. </li>
+u200c<li>If an output storage (`OutputStorage`) and directory (`OutputDir`) are not specified for a subtask of the scheme, the output parameters specified for `ProcessLiveStream` (if any) will be applied. </li>
+Note 2: If `TaskNotifyConfig` is specified when `ProcessLiveStream` is called, the specified settings will be applied instead of the default callback settings of the scheme.
+                     * 
+                     */
+                    void SetScheduleId(const int64_t& _scheduleId);
+
+                    /**
+                     * 判断参数 ScheduleId 是否已赋值
+                     * @return ScheduleId 是否已赋值
+                     * 
+                     */
+                    bool ScheduleIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -253,6 +334,18 @@ namespace TencentCloud
                     bool m_aiRecognitionTaskHasBeenSet;
 
                     /**
+                     * 
+                     */
+                    AiAnalysisTaskInput m_aiAnalysisTask;
+                    bool m_aiAnalysisTaskHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    AiQualityControlTaskInput m_aiQualityControlTask;
+                    bool m_aiQualityControlTaskHasBeenSet;
+
+                    /**
                      * The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
                      */
                     std::string m_sessionId;
@@ -263,6 +356,16 @@ namespace TencentCloud
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;
+
+                    /**
+                     * The live scheme ID.
+Note 1:
+<li>If an output storage (`OutputStorage`) and directory (`OutputDir`) are specified for a subtask of the scheme, those output settings will be applied. </li>
+u200c<li>If an output storage (`OutputStorage`) and directory (`OutputDir`) are not specified for a subtask of the scheme, the output parameters specified for `ProcessLiveStream` (if any) will be applied. </li>
+Note 2: If `TaskNotifyConfig` is specified when `ProcessLiveStream` is called, the specified settings will be applied instead of the default callback settings of the scheme.
+                     */
+                    int64_t m_scheduleId;
+                    bool m_scheduleIdHasBeenSet;
 
                 };
             }

@@ -93,19 +93,19 @@ namespace TencentCloud
                     bool WatermarkSetHasBeenSet() const;
 
                     /**
-                     * 获取Target bucket of an output file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return OutputStorage Target bucket of an output file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @return OutputStorage 
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置Target bucket of an output file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _outputStorage Target bucket of an output file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @param _outputStorage 
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
@@ -181,18 +181,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SegmentObjectNameHasBeenSet() const;
 
                     /**
-                     * 获取The subtitle file to add.
+                     * 获取
 Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return AddOnSubtitles The subtitle file to add.
+                     * @return AddOnSubtitles 
 Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<AddOnSubtitle> GetAddOnSubtitles() const;
 
                     /**
-                     * 设置The subtitle file to add.
+                     * 设置
 Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _addOnSubtitles The subtitle file to add.
+                     * @param _addOnSubtitles 
 Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -206,15 +206,19 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool AddOnSubtitlesHasBeenSet() const;
 
                     /**
-                     * 获取Information of Drm.   Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return DrmInfo Information of Drm.   Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @return DrmInfo 
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     DrmInfo GetDrmInfo() const;
 
                     /**
-                     * 设置Information of Drm.   Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _drmInfo Information of Drm.   Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @param _drmInfo 
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDrmInfo(const DrmInfo& _drmInfo);
@@ -241,8 +245,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_watermarkSetHasBeenSet;
 
                     /**
-                     * Target bucket of an output file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
+Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;
@@ -266,14 +270,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_segmentObjectNameHasBeenSet;
 
                     /**
-                     * The subtitle file to add.
+                     * 
 Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     std::vector<AddOnSubtitle> m_addOnSubtitles;
                     bool m_addOnSubtitlesHasBeenSet;
 
                     /**
-                     * Information of Drm.   Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 
+Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     DrmInfo m_drmInfo;
                     bool m_drmInfoHasBeenSet;
