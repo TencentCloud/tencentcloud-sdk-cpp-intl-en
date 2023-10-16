@@ -43,15 +43,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The list of security groups to be associated with the instance or RO groups
-                     * @return SecurityGroupIdSet The list of security groups to be associated with the instance or RO groups
+                     * 获取The list of security groups to be associated with the instance or RO groups.
+Information of security groups can be obtained from the `sgld` field in the returned value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API.
+
+                     * @return SecurityGroupIdSet The list of security groups to be associated with the instance or RO groups.
+Information of security groups can be obtained from the `sgld` field in the returned value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API.
+
                      * 
                      */
                     std::vector<std::string> GetSecurityGroupIdSet() const;
 
                     /**
-                     * 设置The list of security groups to be associated with the instance or RO groups
-                     * @param _securityGroupIdSet The list of security groups to be associated with the instance or RO groups
+                     * 设置The list of security groups to be associated with the instance or RO groups.
+Information of security groups can be obtained from the `sgld` field in the returned value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API.
+
+                     * @param _securityGroupIdSet The list of security groups to be associated with the instance or RO groups.
+Information of security groups can be obtained from the `sgld` field in the returned value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API.
+
                      * 
                      */
                     void SetSecurityGroupIdSet(const std::vector<std::string>& _securityGroupIdSet);
@@ -108,7 +116,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The list of security groups to be associated with the instance or RO groups
+                     * The list of security groups to be associated with the instance or RO groups.
+Information of security groups can be obtained from the `sgld` field in the returned value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API.
+
                      */
                     std::vector<std::string> m_securityGroupIdSet;
                     bool m_securityGroupIdSetHasBeenSet;

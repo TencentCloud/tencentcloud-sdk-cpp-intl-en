@@ -44,15 +44,61 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
-                     * @return SpecCode Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
+                     * 获取Primary AZ of an instance, such as "ap-guangzhou-3".
+The information of AZ can be obtained from the `Zone` field in the return value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
+                     * @return Zone Primary AZ of an instance, such as "ap-guangzhou-3".
+The information of AZ can be obtained from the `Zone` field in the return value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
+                     * 
+                     */
+                    std::string GetZone() const;
+
+                    /**
+                     * 设置Primary AZ of an instance, such as "ap-guangzhou-3".
+The information of AZ can be obtained from the `Zone` field in the return value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
+                     * @param _zone Primary AZ of an instance, such as "ap-guangzhou-3".
+The information of AZ can be obtained from the `Zone` field in the return value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
+                     * 
+                     */
+                    void SetZone(const std::string& _zone);
+
+                    /**
+                     * 判断参数 Zone 是否已赋值
+                     * @return Zone 是否已赋值
+                     * 
+                     */
+                    bool ZoneHasBeenSet() const;
+
+                    /**
+                     * 获取ID of the primary instance to which the read-only instance belongs
+                     * @return MasterDBInstanceId ID of the primary instance to which the read-only instance belongs
+                     * 
+                     */
+                    std::string GetMasterDBInstanceId() const;
+
+                    /**
+                     * 设置ID of the primary instance to which the read-only instance belongs
+                     * @param _masterDBInstanceId ID of the primary instance to which the read-only instance belongs
+                     * 
+                     */
+                    void SetMasterDBInstanceId(const std::string& _masterDBInstanceId);
+
+                    /**
+                     * 判断参数 MasterDBInstanceId 是否已赋值
+                     * @return MasterDBInstanceId 是否已赋值
+                     * 
+                     */
+                    bool MasterDBInstanceIdHasBeenSet() const;
+
+                    /**
+                     * 获取Purchasable code, which can be obtained from the `SpecCode` field in the return value of the [DescribeClasses](https://intl.cloud.tencent.com/document/api/409/89019?from_cn_redirect=1) API.
+                     * @return SpecCode Purchasable code, which can be obtained from the `SpecCode` field in the return value of the [DescribeClasses](https://intl.cloud.tencent.com/document/api/409/89019?from_cn_redirect=1) API.
                      * 
                      */
                     std::string GetSpecCode() const;
 
                     /**
-                     * 设置Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
-                     * @param _specCode Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
+                     * 设置Purchasable code, which can be obtained from the `SpecCode` field in the return value of the [DescribeClasses](https://intl.cloud.tencent.com/document/api/409/89019?from_cn_redirect=1) API.
+                     * @param _specCode Purchasable code, which can be obtained from the `SpecCode` field in the return value of the [DescribeClasses](https://intl.cloud.tencent.com/document/api/409/89019?from_cn_redirect=1) API.
                      * 
                      */
                     void SetSpecCode(const std::string& _specCode);
@@ -86,15 +132,15 @@ namespace TencentCloud
                     bool StorageHasBeenSet() const;
 
                     /**
-                     * 获取Number of instances purchased at a time. Value range: 1–100.
-                     * @return InstanceCount Number of instances purchased at a time. Value range: 1–100.
+                     * 获取The number of instances to be purchased at a time. Value range: 1-10. To purchase more than 10 instances each time, you can make multiple calls.
+                     * @return InstanceCount The number of instances to be purchased at a time. Value range: 1-10. To purchase more than 10 instances each time, you can make multiple calls.
                      * 
                      */
                     uint64_t GetInstanceCount() const;
 
                     /**
-                     * 设置Number of instances purchased at a time. Value range: 1–100.
-                     * @param _instanceCount Number of instances purchased at a time. Value range: 1–100.
+                     * 设置The number of instances to be purchased at a time. Value range: 1-10. To purchase more than 10 instances each time, you can make multiple calls.
+                     * @param _instanceCount The number of instances to be purchased at a time. Value range: 1-10. To purchase more than 10 instances each time, you can make multiple calls.
                      * 
                      */
                     void SetInstanceCount(const uint64_t& _instanceCount);
@@ -107,15 +153,23 @@ namespace TencentCloud
                     bool InstanceCountHasBeenSet() const;
 
                     /**
-                     * 获取Valid period in months of purchased instances. Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`. This parameter is set to `1` when the pay-as-you-go billing mode is used.
-                     * @return Period Valid period in months of purchased instances. Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`. This parameter is set to `1` when the pay-as-you-go billing mode is used.
+                     * 获取Validity period in months, valid values:
+<li>Monthly subscription: `1`, `2`, `3`, 4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
+<li>Pay-as-you-go: `1`.
+                     * @return Period Validity period in months, valid values:
+<li>Monthly subscription: `1`, `2`, `3`, 4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
+<li>Pay-as-you-go: `1`.
                      * 
                      */
                     uint64_t GetPeriod() const;
 
                     /**
-                     * 设置Valid period in months of purchased instances. Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`. This parameter is set to `1` when the pay-as-you-go billing mode is used.
-                     * @param _period Valid period in months of purchased instances. Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`. This parameter is set to `1` when the pay-as-you-go billing mode is used.
+                     * 设置Validity period in months, valid values:
+<li>Monthly subscription: `1`, `2`, `3`, 4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
+<li>Pay-as-you-go: `1`.
+                     * @param _period Validity period in months, valid values:
+<li>Monthly subscription: `1`, `2`, `3`, 4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
+<li>Pay-as-you-go: `1`.
                      * 
                      */
                     void SetPeriod(const uint64_t& _period);
@@ -128,99 +182,69 @@ namespace TencentCloud
                     bool PeriodHasBeenSet() const;
 
                     /**
-                     * 获取ID of the primary instance to which the read-only replica belongs
-                     * @return MasterDBInstanceId ID of the primary instance to which the read-only replica belongs
+                     * 获取VPC ID in the format of `vpc-xxxxxxx`, which can be obtained in the console or from the `unVpcId` field in the return value of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
+                     * @return VpcId VPC ID in the format of `vpc-xxxxxxx`, which can be obtained in the console or from the `unVpcId` field in the return value of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
                      * 
                      */
-                    std::string GetMasterDBInstanceId() const;
+                    std::string GetVpcId() const;
 
                     /**
-                     * 设置ID of the primary instance to which the read-only replica belongs
-                     * @param _masterDBInstanceId ID of the primary instance to which the read-only replica belongs
+                     * 设置VPC ID in the format of `vpc-xxxxxxx`, which can be obtained in the console or from the `unVpcId` field in the return value of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
+                     * @param _vpcId VPC ID in the format of `vpc-xxxxxxx`, which can be obtained in the console or from the `unVpcId` field in the return value of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
                      * 
                      */
-                    void SetMasterDBInstanceId(const std::string& _masterDBInstanceId);
+                    void SetVpcId(const std::string& _vpcId);
 
                     /**
-                     * 判断参数 MasterDBInstanceId 是否已赋值
-                     * @return MasterDBInstanceId 是否已赋值
+                     * 判断参数 VpcId 是否已赋值
+                     * @return VpcId 是否已赋值
                      * 
                      */
-                    bool MasterDBInstanceIdHasBeenSet() const;
+                    bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Availability zone ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API.
-                     * @return Zone Availability zone ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API.
+                     * 获取VPC subnet ID in the format of `subnet-xxxxxxxx` which can be obtained in the console or from the `unSubnetId` field in the return value of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
+                     * @return SubnetId VPC subnet ID in the format of `subnet-xxxxxxxx` which can be obtained in the console or from the `unSubnetId` field in the return value of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
                      * 
                      */
-                    std::string GetZone() const;
+                    std::string GetSubnetId() const;
 
                     /**
-                     * 设置Availability zone ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API.
-                     * @param _zone Availability zone ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API.
+                     * 设置VPC subnet ID in the format of `subnet-xxxxxxxx` which can be obtained in the console or from the `unSubnetId` field in the return value of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
+                     * @param _subnetId VPC subnet ID in the format of `subnet-xxxxxxxx` which can be obtained in the console or from the `unSubnetId` field in the return value of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
                      * 
                      */
-                    void SetZone(const std::string& _zone);
+                    void SetSubnetId(const std::string& _subnetId);
 
                     /**
-                     * 判断参数 Zone 是否已赋值
-                     * @return Zone 是否已赋值
+                     * 判断参数 SubnetId 是否已赋值
+                     * @return SubnetId 是否已赋值
                      * 
                      */
-                    bool ZoneHasBeenSet() const;
+                    bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Project ID
-                     * @return ProjectId Project ID
-                     * 
-                     */
-                    uint64_t GetProjectId() const;
-
-                    /**
-                     * 设置Project ID
-                     * @param _projectId Project ID
-                     * 
-                     */
-                    void SetProjectId(const uint64_t& _projectId);
-
-                    /**
-                     * 判断参数 ProjectId 是否已赋值
-                     * @return ProjectId 是否已赋值
-                     * 
-                     */
-                    bool ProjectIdHasBeenSet() const;
-
-                    /**
-                     * 获取(Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
-                     * @return DBVersion (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
-                     * 
-                     */
-                    std::string GetDBVersion() const;
-
-                    /**
-                     * 设置(Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
-                     * @param _dBVersion (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
-                     * 
-                     */
-                    void SetDBVersion(const std::string& _dBVersion);
-
-                    /**
-                     * 判断参数 DBVersion 是否已赋值
-                     * @return DBVersion 是否已赋值
-                     * 
-                     */
-                    bool DBVersionHasBeenSet() const;
-
-                    /**
-                     * 获取Instance billing mode. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go). If the source instance is pay-as-you-go, so is the read-only instance.
-                     * @return InstanceChargeType Instance billing mode. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go). If the source instance is pay-as-you-go, so is the read-only instance.
+                     * 获取Instance billing mode. Valid values: 
+<li>`PREPAID`: Monthly subscription
+<li>`POSTPAID_BY_HOUR`: Pay-as-you-go
+Default value: `PREPAID`. If the primary instance is pay-as-you-go, so is the read-only instance.
+                     * @return InstanceChargeType Instance billing mode. Valid values: 
+<li>`PREPAID`: Monthly subscription
+<li>`POSTPAID_BY_HOUR`: Pay-as-you-go
+Default value: `PREPAID`. If the primary instance is pay-as-you-go, so is the read-only instance.
                      * 
                      */
                     std::string GetInstanceChargeType() const;
 
                     /**
-                     * 设置Instance billing mode. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go). If the source instance is pay-as-you-go, so is the read-only instance.
-                     * @param _instanceChargeType Instance billing mode. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go). If the source instance is pay-as-you-go, so is the read-only instance.
+                     * 设置Instance billing mode. Valid values: 
+<li>`PREPAID`: Monthly subscription
+<li>`POSTPAID_BY_HOUR`: Pay-as-you-go
+Default value: `PREPAID`. If the primary instance is pay-as-you-go, so is the read-only instance.
+                     * @param _instanceChargeType Instance billing mode. Valid values: 
+<li>`PREPAID`: Monthly subscription
+<li>`POSTPAID_BY_HOUR`: Pay-as-you-go
+Default value: `PREPAID`. If the primary instance is pay-as-you-go, so is the read-only instance.
                      * 
                      */
                     void SetInstanceChargeType(const std::string& _instanceChargeType);
@@ -233,15 +257,27 @@ namespace TencentCloud
                     bool InstanceChargeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
-                     * @return AutoVoucher Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
+                     * 获取Whether to use vouchers automatically. Valid values:
+<li>`0`: No.
+<li>`1`: Yes.
+Default value: `0`.
+                     * @return AutoVoucher Whether to use vouchers automatically. Valid values:
+<li>`0`: No.
+<li>`1`: Yes.
+Default value: `0`.
                      * 
                      */
                     uint64_t GetAutoVoucher() const;
 
                     /**
-                     * 设置Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
-                     * @param _autoVoucher Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
+                     * 设置Whether to use vouchers automatically. Valid values:
+<li>`0`: No.
+<li>`1`: Yes.
+Default value: `0`.
+                     * @param _autoVoucher Whether to use vouchers automatically. Valid values:
+<li>`0`: No.
+<li>`1`: Yes.
+Default value: `0`.
                      * 
                      */
                     void SetAutoVoucher(const uint64_t& _autoVoucher);
@@ -275,15 +311,27 @@ namespace TencentCloud
                     bool VoucherIdsHasBeenSet() const;
 
                     /**
-                     * 获取Renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal). Default value: `0`.
-                     * @return AutoRenewFlag Renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal). Default value: `0`.
+                     * 获取Auto-renewal flag. Valid values:
+<li>`0`: Manual renewal.
+<li>`1`: Automatic renewal.
+Default value: `0`.
+                     * @return AutoRenewFlag Auto-renewal flag. Valid values:
+<li>`0`: Manual renewal.
+<li>`1`: Automatic renewal.
+Default value: `0`.
                      * 
                      */
                     int64_t GetAutoRenewFlag() const;
 
                     /**
-                     * 设置Renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal). Default value: `0`.
-                     * @param _autoRenewFlag Renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal). Default value: `0`.
+                     * 设置Auto-renewal flag. Valid values:
+<li>`0`: Manual renewal.
+<li>`1`: Automatic renewal.
+Default value: `0`.
+                     * @param _autoRenewFlag Auto-renewal flag. Valid values:
+<li>`0`: Manual renewal.
+<li>`1`: Automatic renewal.
+Default value: `0`.
                      * 
                      */
                     void SetAutoRenewFlag(const int64_t& _autoRenewFlag);
@@ -296,46 +344,25 @@ namespace TencentCloud
                     bool AutoRenewFlagHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID
-                     * @return VpcId VPC ID
+                     * 获取Project ID
+                     * @return ProjectId Project ID
                      * 
                      */
-                    std::string GetVpcId() const;
+                    uint64_t GetProjectId() const;
 
                     /**
-                     * 设置VPC ID
-                     * @param _vpcId VPC ID
+                     * 设置Project ID
+                     * @param _projectId Project ID
                      * 
                      */
-                    void SetVpcId(const std::string& _vpcId);
+                    void SetProjectId(const uint64_t& _projectId);
 
                     /**
-                     * 判断参数 VpcId 是否已赋值
-                     * @return VpcId 是否已赋值
+                     * 判断参数 ProjectId 是否已赋值
+                     * @return ProjectId 是否已赋值
                      * 
                      */
-                    bool VpcIdHasBeenSet() const;
-
-                    /**
-                     * 获取VPC subnet ID
-                     * @return SubnetId VPC subnet ID
-                     * 
-                     */
-                    std::string GetSubnetId() const;
-
-                    /**
-                     * 设置VPC subnet ID
-                     * @param _subnetId VPC subnet ID
-                     * 
-                     */
-                    void SetSubnetId(const std::string& _subnetId);
-
-                    /**
-                     * 判断参数 SubnetId 是否已赋值
-                     * @return SubnetId 是否已赋值
-                     * 
-                     */
-                    bool SubnetIdHasBeenSet() const;
+                    bool ProjectIdHasBeenSet() const;
 
                     /**
                      * 获取Special offer ID
@@ -359,48 +386,6 @@ namespace TencentCloud
                     bool ActivityIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance name (which will be supported in the future)
-                     * @return Name Instance name (which will be supported in the future)
-                     * 
-                     */
-                    std::string GetName() const;
-
-                    /**
-                     * 设置Instance name (which will be supported in the future)
-                     * @param _name Instance name (which will be supported in the future)
-                     * 
-                     */
-                    void SetName(const std::string& _name);
-
-                    /**
-                     * 判断参数 Name 是否已赋值
-                     * @return Name 是否已赋值
-                     * 
-                     */
-                    bool NameHasBeenSet() const;
-
-                    /**
-                     * 获取Whether to support IPv6 address access. Valid values: `1` (yes), `0` (no).
-                     * @return NeedSupportIpv6 Whether to support IPv6 address access. Valid values: `1` (yes), `0` (no).
-                     * 
-                     */
-                    uint64_t GetNeedSupportIpv6() const;
-
-                    /**
-                     * 设置Whether to support IPv6 address access. Valid values: `1` (yes), `0` (no).
-                     * @param _needSupportIpv6 Whether to support IPv6 address access. Valid values: `1` (yes), `0` (no).
-                     * 
-                     */
-                    void SetNeedSupportIpv6(const uint64_t& _needSupportIpv6);
-
-                    /**
-                     * 判断参数 NeedSupportIpv6 是否已赋值
-                     * @return NeedSupportIpv6 是否已赋值
-                     * 
-                     */
-                    bool NeedSupportIpv6HasBeenSet() const;
-
-                    /**
                      * 获取RO group ID
                      * @return ReadOnlyGroupId RO group ID
                      * 
@@ -422,15 +407,15 @@ namespace TencentCloud
                     bool ReadOnlyGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取The information of tags to be bound with the purchased instance, which is left empty by default (type: tag array).
-                     * @return TagList The information of tags to be bound with the purchased instance, which is left empty by default (type: tag array).
+                     * 获取The information of tags to be bound with the instance, which is left empty by default. This parameter can be obtained from the `Tags` field in the return value of the [DescribeTags](https://intl.cloud.tencent.com/document/api/651/35316?from_cn_redirect=1) API.
+                     * @return TagList The information of tags to be bound with the instance, which is left empty by default. This parameter can be obtained from the `Tags` field in the return value of the [DescribeTags](https://intl.cloud.tencent.com/document/api/651/35316?from_cn_redirect=1) API.
                      * 
                      */
                     Tag GetTagList() const;
 
                     /**
-                     * 设置The information of tags to be bound with the purchased instance, which is left empty by default (type: tag array).
-                     * @param _tagList The information of tags to be bound with the purchased instance, which is left empty by default (type: tag array).
+                     * 设置The information of tags to be bound with the instance, which is left empty by default. This parameter can be obtained from the `Tags` field in the return value of the [DescribeTags](https://intl.cloud.tencent.com/document/api/651/35316?from_cn_redirect=1) API.
+                     * @param _tagList The information of tags to be bound with the instance, which is left empty by default. This parameter can be obtained from the `Tags` field in the return value of the [DescribeTags](https://intl.cloud.tencent.com/document/api/651/35316?from_cn_redirect=1) API.
                      * 
                      */
                     void SetTagList(const Tag& _tagList);
@@ -443,15 +428,19 @@ namespace TencentCloud
                     bool TagListHasBeenSet() const;
 
                     /**
-                     * 获取Security group ID
-                     * @return SecurityGroupIds Security group ID
+                     * 获取Security group of the instance, which can be obtained from the `sgld` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API. If this parameter is not specified, the default security group will be bound.
+
+                     * @return SecurityGroupIds Security group of the instance, which can be obtained from the `sgld` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API. If this parameter is not specified, the default security group will be bound.
+
                      * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
-                     * 设置Security group ID
-                     * @param _securityGroupIds Security group ID
+                     * 设置Security group of the instance, which can be obtained from the `sgld` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API. If this parameter is not specified, the default security group will be bound.
+
+                     * @param _securityGroupIds Security group of the instance, which can be obtained from the `sgld` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API. If this parameter is not specified, the default security group will be bound.
+
                      * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
@@ -463,10 +452,98 @@ namespace TencentCloud
                      */
                     bool SecurityGroupIdsHasBeenSet() const;
 
+                    /**
+                     * 获取Whether IPv6 is supported.
+<li>`0`: No.
+<li>`1`: Yes.
+Default value: `0`.
+                     * @return NeedSupportIpv6 Whether IPv6 is supported.
+<li>`0`: No.
+<li>`1`: Yes.
+Default value: `0`.
+                     * 
+                     */
+                    uint64_t GetNeedSupportIpv6() const;
+
+                    /**
+                     * 设置Whether IPv6 is supported.
+<li>`0`: No.
+<li>`1`: Yes.
+Default value: `0`.
+                     * @param _needSupportIpv6 Whether IPv6 is supported.
+<li>`0`: No.
+<li>`1`: Yes.
+Default value: `0`.
+                     * 
+                     */
+                    void SetNeedSupportIpv6(const uint64_t& _needSupportIpv6);
+
+                    /**
+                     * 判断参数 NeedSupportIpv6 是否已赋值
+                     * @return NeedSupportIpv6 是否已赋值
+                     * 
+                     */
+                    bool NeedSupportIpv6HasBeenSet() const;
+
+                    /**
+                     * 获取Instance name (which will be supported in the future)
+                     * @return Name Instance name (which will be supported in the future)
+                     * 
+                     */
+                    std::string GetName() const;
+
+                    /**
+                     * 设置Instance name (which will be supported in the future)
+                     * @param _name Instance name (which will be supported in the future)
+                     * 
+                     */
+                    void SetName(const std::string& _name);
+
+                    /**
+                     * 判断参数 Name 是否已赋值
+                     * @return Name 是否已赋值
+                     * 
+                     */
+                    bool NameHasBeenSet() const;
+
+                    /**
+                     * 获取(Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
+                     * @return DBVersion (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
+                     * 
+                     */
+                    std::string GetDBVersion() const;
+
+                    /**
+                     * 设置(Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
+                     * @param _dBVersion (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
+                     * 
+                     */
+                    void SetDBVersion(const std::string& _dBVersion);
+
+                    /**
+                     * 判断参数 DBVersion 是否已赋值
+                     * @return DBVersion 是否已赋值
+                     * 
+                     */
+                    bool DBVersionHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
+                     * Primary AZ of an instance, such as "ap-guangzhou-3".
+The information of AZ can be obtained from the `Zone` field in the return value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
+                     */
+                    std::string m_zone;
+                    bool m_zoneHasBeenSet;
+
+                    /**
+                     * ID of the primary instance to which the read-only instance belongs
+                     */
+                    std::string m_masterDBInstanceId;
+                    bool m_masterDBInstanceIdHasBeenSet;
+
+                    /**
+                     * Purchasable code, which can be obtained from the `SpecCode` field in the return value of the [DescribeClasses](https://intl.cloud.tencent.com/document/api/409/89019?from_cn_redirect=1) API.
                      */
                     std::string m_specCode;
                     bool m_specCodeHasBeenSet;
@@ -478,49 +555,45 @@ namespace TencentCloud
                     bool m_storageHasBeenSet;
 
                     /**
-                     * Number of instances purchased at a time. Value range: 1–100.
+                     * The number of instances to be purchased at a time. Value range: 1-10. To purchase more than 10 instances each time, you can make multiple calls.
                      */
                     uint64_t m_instanceCount;
                     bool m_instanceCountHasBeenSet;
 
                     /**
-                     * Valid period in months of purchased instances. Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`. This parameter is set to `1` when the pay-as-you-go billing mode is used.
+                     * Validity period in months, valid values:
+<li>Monthly subscription: `1`, `2`, `3`, 4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
+<li>Pay-as-you-go: `1`.
                      */
                     uint64_t m_period;
                     bool m_periodHasBeenSet;
 
                     /**
-                     * ID of the primary instance to which the read-only replica belongs
+                     * VPC ID in the format of `vpc-xxxxxxx`, which can be obtained in the console or from the `unVpcId` field in the return value of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
                      */
-                    std::string m_masterDBInstanceId;
-                    bool m_masterDBInstanceIdHasBeenSet;
+                    std::string m_vpcId;
+                    bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Availability zone ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API.
+                     * VPC subnet ID in the format of `subnet-xxxxxxxx` which can be obtained in the console or from the `unSubnetId` field in the return value of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
                      */
-                    std::string m_zone;
-                    bool m_zoneHasBeenSet;
+                    std::string m_subnetId;
+                    bool m_subnetIdHasBeenSet;
 
                     /**
-                     * Project ID
-                     */
-                    uint64_t m_projectId;
-                    bool m_projectIdHasBeenSet;
-
-                    /**
-                     * (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
-                     */
-                    std::string m_dBVersion;
-                    bool m_dBVersionHasBeenSet;
-
-                    /**
-                     * Instance billing mode. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go). If the source instance is pay-as-you-go, so is the read-only instance.
+                     * Instance billing mode. Valid values: 
+<li>`PREPAID`: Monthly subscription
+<li>`POSTPAID_BY_HOUR`: Pay-as-you-go
+Default value: `PREPAID`. If the primary instance is pay-as-you-go, so is the read-only instance.
                      */
                     std::string m_instanceChargeType;
                     bool m_instanceChargeTypeHasBeenSet;
 
                     /**
-                     * Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
+                     * Whether to use vouchers automatically. Valid values:
+<li>`0`: No.
+<li>`1`: Yes.
+Default value: `0`.
                      */
                     uint64_t m_autoVoucher;
                     bool m_autoVoucherHasBeenSet;
@@ -532,22 +605,19 @@ namespace TencentCloud
                     bool m_voucherIdsHasBeenSet;
 
                     /**
-                     * Renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal). Default value: `0`.
+                     * Auto-renewal flag. Valid values:
+<li>`0`: Manual renewal.
+<li>`1`: Automatic renewal.
+Default value: `0`.
                      */
                     int64_t m_autoRenewFlag;
                     bool m_autoRenewFlagHasBeenSet;
 
                     /**
-                     * VPC ID
+                     * Project ID
                      */
-                    std::string m_vpcId;
-                    bool m_vpcIdHasBeenSet;
-
-                    /**
-                     * VPC subnet ID
-                     */
-                    std::string m_subnetId;
-                    bool m_subnetIdHasBeenSet;
+                    uint64_t m_projectId;
+                    bool m_projectIdHasBeenSet;
 
                     /**
                      * Special offer ID
@@ -556,34 +626,44 @@ namespace TencentCloud
                     bool m_activityIdHasBeenSet;
 
                     /**
-                     * Instance name (which will be supported in the future)
-                     */
-                    std::string m_name;
-                    bool m_nameHasBeenSet;
-
-                    /**
-                     * Whether to support IPv6 address access. Valid values: `1` (yes), `0` (no).
-                     */
-                    uint64_t m_needSupportIpv6;
-                    bool m_needSupportIpv6HasBeenSet;
-
-                    /**
                      * RO group ID
                      */
                     std::string m_readOnlyGroupId;
                     bool m_readOnlyGroupIdHasBeenSet;
 
                     /**
-                     * The information of tags to be bound with the purchased instance, which is left empty by default (type: tag array).
+                     * The information of tags to be bound with the instance, which is left empty by default. This parameter can be obtained from the `Tags` field in the return value of the [DescribeTags](https://intl.cloud.tencent.com/document/api/651/35316?from_cn_redirect=1) API.
                      */
                     Tag m_tagList;
                     bool m_tagListHasBeenSet;
 
                     /**
-                     * Security group ID
+                     * Security group of the instance, which can be obtained from the `sgld` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API. If this parameter is not specified, the default security group will be bound.
+
                      */
                     std::vector<std::string> m_securityGroupIds;
                     bool m_securityGroupIdsHasBeenSet;
+
+                    /**
+                     * Whether IPv6 is supported.
+<li>`0`: No.
+<li>`1`: Yes.
+Default value: `0`.
+                     */
+                    uint64_t m_needSupportIpv6;
+                    bool m_needSupportIpv6HasBeenSet;
+
+                    /**
+                     * Instance name (which will be supported in the future)
+                     */
+                    std::string m_name;
+                    bool m_nameHasBeenSet;
+
+                    /**
+                     * (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
+                     */
+                    std::string m_dBVersion;
+                    bool m_dBVersionHasBeenSet;
 
                 };
             }

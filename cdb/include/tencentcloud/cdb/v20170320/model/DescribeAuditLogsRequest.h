@@ -203,15 +203,15 @@ namespace TencentCloud
                     bool OrderByHasBeenSet() const;
 
                     /**
-                     * 获取Filter, which can be used to filter logs.
-                     * @return LogFilter Filter, which can be used to filter logs.
+                     * 获取Filter. Multiple values are in `AND` relationship.
+                     * @return LogFilter Filter. Multiple values are in `AND` relationship.
                      * 
                      */
                     std::vector<InstanceAuditLogFilters> GetLogFilter() const;
 
                     /**
-                     * 设置Filter, which can be used to filter logs.
-                     * @param _logFilter Filter, which can be used to filter logs.
+                     * 设置Filter. Multiple values are in `AND` relationship.
+                     * @param _logFilter Filter. Multiple values are in `AND` relationship.
                      * 
                      */
                     void SetLogFilter(const std::vector<InstanceAuditLogFilters>& _logFilter);
@@ -271,7 +271,7 @@ namespace TencentCloud
                     bool m_orderByHasBeenSet;
 
                     /**
-                     * Filter, which can be used to filter logs.
+                     * Filter. Multiple values are in `AND` relationship.
                      */
                     std::vector<InstanceAuditLogFilters> m_logFilter;
                     bool m_logFilterHasBeenSet;

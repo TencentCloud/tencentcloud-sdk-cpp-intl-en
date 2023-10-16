@@ -350,7 +350,6 @@ namespace TencentCloud
 
                 /**
                  *This API is used to query CDN IP ownership.
-(Note: the request rate limit of this API is subject to the limit in CDN, which is 200 calls/10 minutes).  
                  * @param req DescribeCdnIpRequest
                  * @return DescribeCdnIpOutcome
                  */

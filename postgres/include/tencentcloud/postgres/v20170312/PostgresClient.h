@@ -89,6 +89,8 @@
 #include <tencentcloud/postgres/v20170312/model/DescribeDBErrlogsResponse.h>
 #include <tencentcloud/postgres/v20170312/model/DescribeDBInstanceAttributeRequest.h>
 #include <tencentcloud/postgres/v20170312/model/DescribeDBInstanceAttributeResponse.h>
+#include <tencentcloud/postgres/v20170312/model/DescribeDBInstanceHAConfigRequest.h>
+#include <tencentcloud/postgres/v20170312/model/DescribeDBInstanceHAConfigResponse.h>
 #include <tencentcloud/postgres/v20170312/model/DescribeDBInstanceParametersRequest.h>
 #include <tencentcloud/postgres/v20170312/model/DescribeDBInstanceParametersResponse.h>
 #include <tencentcloud/postgres/v20170312/model/DescribeDBInstanceSecurityGroupsRequest.h>
@@ -157,6 +159,8 @@
 #include <tencentcloud/postgres/v20170312/model/ModifyDBInstanceChargeTypeResponse.h>
 #include <tencentcloud/postgres/v20170312/model/ModifyDBInstanceDeploymentRequest.h>
 #include <tencentcloud/postgres/v20170312/model/ModifyDBInstanceDeploymentResponse.h>
+#include <tencentcloud/postgres/v20170312/model/ModifyDBInstanceHAConfigRequest.h>
+#include <tencentcloud/postgres/v20170312/model/ModifyDBInstanceHAConfigResponse.h>
 #include <tencentcloud/postgres/v20170312/model/ModifyDBInstanceNameRequest.h>
 #include <tencentcloud/postgres/v20170312/model/ModifyDBInstanceNameResponse.h>
 #include <tencentcloud/postgres/v20170312/model/ModifyDBInstanceParametersRequest.h>
@@ -191,6 +195,8 @@
 #include <tencentcloud/postgres/v20170312/model/RestartDBInstanceResponse.h>
 #include <tencentcloud/postgres/v20170312/model/SetAutoRenewFlagRequest.h>
 #include <tencentcloud/postgres/v20170312/model/SetAutoRenewFlagResponse.h>
+#include <tencentcloud/postgres/v20170312/model/SwitchDBInstancePrimaryRequest.h>
+#include <tencentcloud/postgres/v20170312/model/SwitchDBInstancePrimaryResponse.h>
 #include <tencentcloud/postgres/v20170312/model/UpgradeDBInstanceRequest.h>
 #include <tencentcloud/postgres/v20170312/model/UpgradeDBInstanceResponse.h>
 #include <tencentcloud/postgres/v20170312/model/UpgradeDBInstanceKernelVersionRequest.h>
@@ -308,6 +314,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeDBInstanceAttributeResponse> DescribeDBInstanceAttributeOutcome;
                 typedef std::future<DescribeDBInstanceAttributeOutcome> DescribeDBInstanceAttributeOutcomeCallable;
                 typedef std::function<void(const PostgresClient*, const Model::DescribeDBInstanceAttributeRequest&, DescribeDBInstanceAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBInstanceAttributeAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDBInstanceHAConfigResponse> DescribeDBInstanceHAConfigOutcome;
+                typedef std::future<DescribeDBInstanceHAConfigOutcome> DescribeDBInstanceHAConfigOutcomeCallable;
+                typedef std::function<void(const PostgresClient*, const Model::DescribeDBInstanceHAConfigRequest&, DescribeDBInstanceHAConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBInstanceHAConfigAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDBInstanceParametersResponse> DescribeDBInstanceParametersOutcome;
                 typedef std::future<DescribeDBInstanceParametersOutcome> DescribeDBInstanceParametersOutcomeCallable;
                 typedef std::function<void(const PostgresClient*, const Model::DescribeDBInstanceParametersRequest&, DescribeDBInstanceParametersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBInstanceParametersAsyncHandler;
@@ -410,6 +419,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyDBInstanceDeploymentResponse> ModifyDBInstanceDeploymentOutcome;
                 typedef std::future<ModifyDBInstanceDeploymentOutcome> ModifyDBInstanceDeploymentOutcomeCallable;
                 typedef std::function<void(const PostgresClient*, const Model::ModifyDBInstanceDeploymentRequest&, ModifyDBInstanceDeploymentOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDBInstanceDeploymentAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyDBInstanceHAConfigResponse> ModifyDBInstanceHAConfigOutcome;
+                typedef std::future<ModifyDBInstanceHAConfigOutcome> ModifyDBInstanceHAConfigOutcomeCallable;
+                typedef std::function<void(const PostgresClient*, const Model::ModifyDBInstanceHAConfigRequest&, ModifyDBInstanceHAConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDBInstanceHAConfigAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyDBInstanceNameResponse> ModifyDBInstanceNameOutcome;
                 typedef std::future<ModifyDBInstanceNameOutcome> ModifyDBInstanceNameOutcomeCallable;
                 typedef std::function<void(const PostgresClient*, const Model::ModifyDBInstanceNameRequest&, ModifyDBInstanceNameOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDBInstanceNameAsyncHandler;
@@ -461,6 +473,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::SetAutoRenewFlagResponse> SetAutoRenewFlagOutcome;
                 typedef std::future<SetAutoRenewFlagOutcome> SetAutoRenewFlagOutcomeCallable;
                 typedef std::function<void(const PostgresClient*, const Model::SetAutoRenewFlagRequest&, SetAutoRenewFlagOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SetAutoRenewFlagAsyncHandler;
+                typedef Outcome<Core::Error, Model::SwitchDBInstancePrimaryResponse> SwitchDBInstancePrimaryOutcome;
+                typedef std::future<SwitchDBInstancePrimaryOutcome> SwitchDBInstancePrimaryOutcomeCallable;
+                typedef std::function<void(const PostgresClient*, const Model::SwitchDBInstancePrimaryRequest&, SwitchDBInstancePrimaryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SwitchDBInstancePrimaryAsyncHandler;
                 typedef Outcome<Core::Error, Model::UpgradeDBInstanceResponse> UpgradeDBInstanceOutcome;
                 typedef std::future<UpgradeDBInstanceOutcome> UpgradeDBInstanceOutcomeCallable;
                 typedef std::function<void(const PostgresClient*, const Model::UpgradeDBInstanceRequest&, UpgradeDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpgradeDBInstanceAsyncHandler;
@@ -489,7 +504,7 @@ namespace TencentCloud
                 CloneDBInstanceOutcomeCallable CloneDBInstanceCallable(const Model::CloneDBInstanceRequest& request);
 
                 /**
-                 *This API is used to disable the public network link to an instance.
+                 *This API is used to disable the public network address of an instance.
                  * @param req CloseDBExtranetAccessRequest
                  * @return CloseDBExtranetAccessOutcome
                  */
@@ -498,7 +513,7 @@ namespace TencentCloud
                 CloseDBExtranetAccessOutcomeCallable CloseDBExtranetAccessCallable(const Model::CloseDBExtranetAccessRequest& request);
 
                 /**
-                 *This API is used to disable public network access for a PostgreSQL for Serverless instance.
+                 *This API is used to disable the public network address of a PostgreSQL for Serverless instance.
                  * @param req CloseServerlessDBExtranetAccessRequest
                  * @return CloseServerlessDBExtranetAccessOutcome
                  */
@@ -516,7 +531,7 @@ namespace TencentCloud
                 CreateBaseBackupOutcomeCallable CreateBaseBackupCallable(const Model::CreateBaseBackupRequest& request);
 
                 /**
-                 *This API is used to add a network for an instance.
+                 *This API is used to create a network for an instance.
                  * @param req CreateDBInstanceNetworkAccessRequest
                  * @return CreateDBInstanceNetworkAccessOutcome
                  */
@@ -525,7 +540,7 @@ namespace TencentCloud
                 CreateDBInstanceNetworkAccessOutcomeCallable CreateDBInstanceNetworkAccessCallable(const Model::CreateDBInstanceNetworkAccessRequest& request);
 
                 /**
-                 *This API is used to create (but not initialize) one or more TencentDB for PostgreSQL instances.
+                 *This API is used to create (but not initialize) one or more TencentDB for PostgreSQL instances. This API is disused and replaced by the [CreateInstances](https://intl.cloud.tencent.com/document/api/409/56107?from_cn_redirect=1) API.
                  * @param req CreateDBInstancesRequest
                  * @return CreateDBInstancesOutcome
                  */
@@ -535,6 +550,8 @@ namespace TencentCloud
 
                 /**
                  *This API is used to create and initialize one or more TencentDB for PostgreSQL instances.
+<li>After an instance is created successfully, it will start up automatically and enter the "Running" status.
+<li>If you create a monthly subscribed instance, you will be billed for the instance before the creation; if you create a pay-as-you-go instance billed on an hourly basis, the amount equivalent to the hourly rate will be frozen before the creation. Make sure your account balance is sufficient before calling this API.
                  * @param req CreateInstancesRequest
                  * @return CreateInstancesOutcome
                  */
@@ -570,7 +587,7 @@ namespace TencentCloud
                 CreateReadOnlyGroupOutcomeCallable CreateReadOnlyGroupCallable(const Model::CreateReadOnlyGroupRequest& request);
 
                 /**
-                 *This API is used to add a network for an RO group.
+                 *This API is used to create a network for an RO group.
                  * @param req CreateReadOnlyGroupNetworkAccessRequest
                  * @return CreateReadOnlyGroupNetworkAccessOutcome
                  */
@@ -651,7 +668,7 @@ namespace TencentCloud
                 DeleteServerlessDBInstanceOutcomeCallable DeleteServerlessDBInstanceCallable(const Model::DeleteServerlessDBInstanceRequest& request);
 
                 /**
-                 *This API is used to get the instance user list.
+                 *This API is used to query the list of the database accounts for an instance.
                  * @param req DescribeAccountsRequest
                  * @return DescribeAccountsOutcome
                  */
@@ -678,7 +695,7 @@ namespace TencentCloud
                 DescribeBackupDownloadRestrictionOutcomeCallable DescribeBackupDownloadRestrictionCallable(const Model::DescribeBackupDownloadRestrictionRequest& request);
 
                 /**
-                 *This API is used to get the download URL of a backup.
+                 *u200cThis API is used to query the download address of a specified backup set, including full backup sets and incremental log backup sets.
                  * @param req DescribeBackupDownloadURLRequest
                  * @return DescribeBackupDownloadURLOutcome
                  */
@@ -741,7 +758,7 @@ namespace TencentCloud
                 DescribeCloneDBInstanceSpecOutcomeCallable DescribeCloneDBInstanceSpecCallable(const Model::DescribeCloneDBInstanceSpecRequest& request);
 
                 /**
-                 *This API is used to query the instance backup list.
+                 *This API is used to query the backup list of an instance. This API is disused and replaced by the [DescribeBaseBackups](https://intl.cloud.tencent.com/document/api/409/89022?from_cn_redirect=1) API.
                  * @param req DescribeDBBackupsRequest
                  * @return DescribeDBBackupsOutcome
                  */
@@ -750,7 +767,7 @@ namespace TencentCloud
                 DescribeDBBackupsOutcomeCallable DescribeDBBackupsCallable(const Model::DescribeDBBackupsRequest& request);
 
                 /**
-                 *This API is used to get error logs.
+                 *This API is used to query an error log.
                  * @param req DescribeDBErrlogsRequest
                  * @return DescribeDBErrlogsOutcome
                  */
@@ -768,7 +785,18 @@ namespace TencentCloud
                 DescribeDBInstanceAttributeOutcomeCallable DescribeDBInstanceAttributeCallable(const Model::DescribeDBInstanceAttributeRequest& request);
 
                 /**
-                 *This API is used to get the list of modifiable parameters of an instance.
+                 *This API is used to query the HA configuration of an instance, u200cwhich includes:
+<li>Allow a standby node to promote to a primary node.
+<li>Allow a semi-sync instance to adopt sync or async replication.
+                 * @param req DescribeDBInstanceHAConfigRequest
+                 * @return DescribeDBInstanceHAConfigOutcome
+                 */
+                DescribeDBInstanceHAConfigOutcome DescribeDBInstanceHAConfig(const Model::DescribeDBInstanceHAConfigRequest &request);
+                void DescribeDBInstanceHAConfigAsync(const Model::DescribeDBInstanceHAConfigRequest& request, const DescribeDBInstanceHAConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDBInstanceHAConfigOutcomeCallable DescribeDBInstanceHAConfigCallable(const Model::DescribeDBInstanceHAConfigRequest& request);
+
+                /**
+                 *This API is used to query the parameters of an instance.
                  * @param req DescribeDBInstanceParametersRequest
                  * @return DescribeDBInstanceParametersOutcome
                  */
@@ -777,7 +805,7 @@ namespace TencentCloud
                 DescribeDBInstanceParametersOutcomeCallable DescribeDBInstanceParametersCallable(const Model::DescribeDBInstanceParametersRequest& request);
 
                 /**
-                 *This API is used to query the security group information of an instance.
+                 *This API is used to query the security group of an instance.
                  * @param req DescribeDBInstanceSecurityGroupsRequest
                  * @return DescribeDBInstanceSecurityGroupsOutcome
                  */
@@ -795,7 +823,7 @@ namespace TencentCloud
                 DescribeDBInstancesOutcomeCallable DescribeDBInstancesCallable(const Model::DescribeDBInstancesRequest& request);
 
                 /**
-                 *This API was used to get slow query logs. Since it was deprecated on September 1, 2021, it has no longer returned data. Please use the [DescribeSlowQueryList](https://intl.cloud.tencent.com/document/product/409/60540?from_cn_redirect=1) API instead to get slow query logs.
+                 *This API is used to get a slow query log. Since it was deprecated on September 1, 2021, it has no longer returned data. You need to use the [DescribeSlowQueryList](https://intl.cloud.tencent.com/document/product/409/60540?from_cn_redirect=1) API instead to get slow query logs.
                  * @param req DescribeDBSlowlogsRequest
                  * @return DescribeDBSlowlogsOutcome
                  */
@@ -813,7 +841,7 @@ namespace TencentCloud
                 DescribeDBVersionsOutcomeCallable DescribeDBVersionsCallable(const Model::DescribeDBVersionsRequest& request);
 
                 /**
-                 *This API is used to get the instance Xlog list.
+                 *This API is used to get the instance Xlog list. This API is disused and replaced by the [DescribeBaseBackups](https://intl.cloud.tencent.com/document/api/409/89022?from_cn_redirect=1) API.
                  * @param req DescribeDBXlogsRequest
                  * @return DescribeDBXlogsOutcome
                  */
@@ -822,7 +850,7 @@ namespace TencentCloud
                 DescribeDBXlogsOutcomeCallable DescribeDBXlogsCallable(const Model::DescribeDBXlogsRequest& request);
 
                 /**
-                 *This API is used to pull the list of databases.
+                 *This API is used to query the database list of an instance.
                  * @param req DescribeDatabasesRequest
                  * @return DescribeDatabasesOutcome
                  */
@@ -840,7 +868,7 @@ namespace TencentCloud
                 DescribeDefaultParametersOutcomeCallable DescribeDefaultParametersCallable(const Model::DescribeDefaultParametersRequest& request);
 
                 /**
-                 *This API is used to get instance key list.
+                 *This API is used to query the instance key list.
                  * @param req DescribeEncryptionKeysRequest
                  * @return DescribeEncryptionKeysOutcome
                  */
@@ -858,7 +886,7 @@ namespace TencentCloud
                 DescribeLogBackupsOutcomeCallable DescribeLogBackupsCallable(const Model::DescribeLogBackupsRequest& request);
 
                 /**
-                 *This API is used to get order information.
+                 *This API is used to query the order information.
                  * @param req DescribeOrdersRequest
                  * @return DescribeOrdersOutcome
                  */
@@ -885,7 +913,7 @@ namespace TencentCloud
                 DescribeParameterTemplatesOutcomeCallable DescribeParameterTemplatesCallable(const Model::DescribeParameterTemplatesRequest& request);
 
                 /**
-                 *This API is used to get the details of parameter modification events.
+                 *This API is used to query the parameter modification event.
                  * @param req DescribeParamsEventRequest
                  * @return DescribeParamsEventOutcome
                  */
@@ -894,7 +922,7 @@ namespace TencentCloud
                 DescribeParamsEventOutcomeCallable DescribeParamsEventCallable(const Model::DescribeParamsEventRequest& request);
 
                 /**
-                 *This API is used to query the purchasable specification configuration.
+                 *This API is used to query the purchasable specification configuration. u200cThis API is disused and replaced by the [DescribeClasses](https://intl.cloud.tencent.com/document/api/409/89019?from_cn_redirect=1) API.
                  * @param req DescribeProductConfigRequest
                  * @return DescribeProductConfigOutcome
                  */
@@ -903,7 +931,7 @@ namespace TencentCloud
                 DescribeProductConfigOutcomeCallable DescribeProductConfigCallable(const Model::DescribeProductConfigRequest& request);
 
                 /**
-                 *This API is used to query RO group information by specifying the primary instance IDs.
+                 *This API is used to query the list of RO groups.
                  * @param req DescribeReadOnlyGroupsRequest
                  * @return DescribeReadOnlyGroupsOutcome
                  */
@@ -957,7 +985,7 @@ namespace TencentCloud
                 DescribeZonesOutcomeCallable DescribeZonesCallable(const Model::DescribeZonesRequest& request);
 
                 /**
-                 *This API is used to terminate an isolated instance by specifying the `DBInstanceId` parameter. The data of an terminated instance will be deleted and cannot be recovered.
+                 *This API is used to terminate an isolated instance by specifying the `DBInstanceId` parameter. The data of a terminated instance will be deleted and cannot be recovered. Be cautious with this API calling. Only the instance in isolation can be terminated.
                  * @param req DestroyDBInstanceRequest
                  * @return DestroyDBInstanceOutcome
                  */
@@ -975,7 +1003,7 @@ namespace TencentCloud
                 DisIsolateDBInstancesOutcomeCallable DisIsolateDBInstancesCallable(const Model::DisIsolateDBInstancesRequest& request);
 
                 /**
-                 *This API is used to initialize a TencentDB for PostgreSQL instance.
+                 *This API is used to initialize a TencentDB for PostgreSQL instance. This API is disused and replaced by the [CreateInstances](https://intl.cloud.tencent.com/document/api/409/56107?from_cn_redirect=1) API.
                  * @param req InitDBInstancesRequest
                  * @return InitDBInstancesOutcome
                  */
@@ -984,7 +1012,7 @@ namespace TencentCloud
                 InitDBInstancesOutcomeCallable InitDBInstancesCallable(const Model::InitDBInstancesRequest& request);
 
                 /**
-                 *This API is used to query the purchase price of one or multiple instances.
+                 *This API is used to query the purchase price of an instance.
                  * @param req InquiryPriceCreateDBInstancesRequest
                  * @return InquiryPriceCreateDBInstancesOutcome
                  */
@@ -1011,7 +1039,7 @@ namespace TencentCloud
                 InquiryPriceUpgradeDBInstanceOutcomeCallable InquiryPriceUpgradeDBInstanceCallable(const Model::InquiryPriceUpgradeDBInstanceRequest& request);
 
                 /**
-                 *This API is used to isolate one or more instances.
+                 *This API is used to isolate an instance.
                  * @param req IsolateDBInstancesRequest
                  * @return IsolateDBInstancesOutcome
                  */
@@ -1047,7 +1075,7 @@ namespace TencentCloud
                 ModifyBackupPlanOutcomeCallable ModifyBackupPlanCallable(const Model::ModifyBackupPlanRequest& request);
 
                 /**
-                 *This API is used to modify the expiration time of the specified full backup of an instance.
+                 *This API is used to modify the specified expiration time of a full backup for an instance.
                  * @param req ModifyBaseBackupExpireTimeRequest
                  * @return ModifyBaseBackupExpireTimeOutcome
                  */
@@ -1074,6 +1102,17 @@ namespace TencentCloud
                 ModifyDBInstanceDeploymentOutcomeCallable ModifyDBInstanceDeploymentCallable(const Model::ModifyDBInstanceDeploymentRequest& request);
 
                 /**
+                 *This API is used to modify the HA configuration of an instance. u200cwhich includes:
+<li>Allow the standby node to promote to the primary node.
+<li>Allow a semi-sync instance to adopt sync or async replication.
+                 * @param req ModifyDBInstanceHAConfigRequest
+                 * @return ModifyDBInstanceHAConfigOutcome
+                 */
+                ModifyDBInstanceHAConfigOutcome ModifyDBInstanceHAConfig(const Model::ModifyDBInstanceHAConfigRequest &request);
+                void ModifyDBInstanceHAConfigAsync(const Model::ModifyDBInstanceHAConfigRequest& request, const ModifyDBInstanceHAConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyDBInstanceHAConfigOutcomeCallable ModifyDBInstanceHAConfigCallable(const Model::ModifyDBInstanceHAConfigRequest& request);
+
+                /**
                  *This API is used to rename a TencentDB for PostgreSQL instance.
                  * @param req ModifyDBInstanceNameRequest
                  * @return ModifyDBInstanceNameOutcome
@@ -1083,7 +1122,7 @@ namespace TencentCloud
                 ModifyDBInstanceNameOutcomeCallable ModifyDBInstanceNameCallable(const Model::ModifyDBInstanceNameRequest& request);
 
                 /**
-                 *This API is used to modify parameters in batches.
+                 *This API is used to modify instance parameters.
                  * @param req ModifyDBInstanceParametersRequest
                  * @return ModifyDBInstanceParametersOutcome
                  */
@@ -1110,7 +1149,7 @@ namespace TencentCloud
                 ModifyDBInstanceSecurityGroupsOutcomeCallable ModifyDBInstanceSecurityGroupsCallable(const Model::ModifyDBInstanceSecurityGroupsRequest& request);
 
                 /**
-                 *This API is used to modify instance specifications including memory and disk size.
+                 *This API is used to modify instance specifications, including memory and disk size.
                  * @param req ModifyDBInstanceSpecRequest
                  * @return ModifyDBInstanceSpecOutcome
                  */
@@ -1119,7 +1158,7 @@ namespace TencentCloud
                 ModifyDBInstanceSpecOutcomeCallable ModifyDBInstanceSpecCallable(const Model::ModifyDBInstanceSpecRequest& request);
 
                 /**
-                 *This API is used to transfer an instance to another project.
+                 *This API is used to modify the project of an instance.
                  * @param req ModifyDBInstancesProjectRequest
                  * @return ModifyDBInstancesProjectOutcome
                  */
@@ -1128,7 +1167,7 @@ namespace TencentCloud
                 ModifyDBInstancesProjectOutcomeCallable ModifyDBInstancesProjectCallable(const Model::ModifyDBInstancesProjectRequest& request);
 
                 /**
-                 *This API is used to modify the parameter template name and description, and add or delete parameter template parameters.
+                 *This API is used to modify the configurations, such as parameter template name and description. It can also be used to manage the parameter list in the parameter template.
                  * @param req ModifyParameterTemplateRequest
                  * @return ModifyParameterTemplateOutcome
                  */
@@ -1155,7 +1194,7 @@ namespace TencentCloud
                 ModifySwitchTimePeriodOutcomeCallable ModifySwitchTimePeriodCallable(const Model::ModifySwitchTimePeriodRequest& request);
 
                 /**
-                 *This API is used to enable public network access.
+                 *This API is used to enable the public network access of an instance.
                  * @param req OpenDBExtranetAccessRequest
                  * @return OpenDBExtranetAccessOutcome
                  */
@@ -1164,7 +1203,7 @@ namespace TencentCloud
                 OpenDBExtranetAccessOutcomeCallable OpenDBExtranetAccessCallable(const Model::OpenDBExtranetAccessRequest& request);
 
                 /**
-                 *This API is used to enable public network access for a PostgreSQL for Serverless instance.
+                 *This API is used to enable the public network address of a PostgreSQL for Serverless instance.
                  * @param req OpenServerlessDBExtranetAccessRequest
                  * @return OpenServerlessDBExtranetAccessOutcome
                  */
@@ -1227,7 +1266,19 @@ namespace TencentCloud
                 SetAutoRenewFlagOutcomeCallable SetAutoRenewFlagCallable(const Model::SetAutoRenewFlagRequest& request);
 
                 /**
-                 *This API is used to upgrade instance configurations.
+                 *This API is used to enable the primary-standby switch of an instance.
+<li>By initiating a switch, you can verify whether the primary-standby switch is performed correctly.
+<li>By using forced switch, you can forcibly initiate the primary-standby switch when the delay of replica node failed to meet the switch requirement.
+<li>This operation can only be performed for the primary instance.
+                 * @param req SwitchDBInstancePrimaryRequest
+                 * @return SwitchDBInstancePrimaryOutcome
+                 */
+                SwitchDBInstancePrimaryOutcome SwitchDBInstancePrimary(const Model::SwitchDBInstancePrimaryRequest &request);
+                void SwitchDBInstancePrimaryAsync(const Model::SwitchDBInstancePrimaryRequest& request, const SwitchDBInstancePrimaryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SwitchDBInstancePrimaryOutcomeCallable SwitchDBInstancePrimaryCallable(const Model::SwitchDBInstancePrimaryRequest& request);
+
+                /**
+                 *This API is used to upgrade instance configurations. u200cThis API is disused and replaced by the [ModifyDBInstanceSpec](https://intl.cloud.tencent.com/document/api/409/63689?from_cn_redirect=1) API.
                  * @param req UpgradeDBInstanceRequest
                  * @return UpgradeDBInstanceOutcome
                  */

@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
-                     * @return SpecCode Specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
+                     * 获取Specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeClasses` API.
+                     * @return SpecCode Specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeClasses` API.
                      * 
                      */
                     std::string GetSpecCode() const;
 
                     /**
-                     * 设置Specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
-                     * @param _specCode Specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
+                     * 设置Specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeClasses` API.
+                     * @param _specCode Specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeClasses` API.
                      * 
                      */
                     void SetSpecCode(const std::string& _specCode);
@@ -248,7 +248,7 @@ namespace TencentCloud
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
+                     * Specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeClasses` API.
                      */
                     std::string m_specCode;
                     bool m_specCodeHasBeenSet;

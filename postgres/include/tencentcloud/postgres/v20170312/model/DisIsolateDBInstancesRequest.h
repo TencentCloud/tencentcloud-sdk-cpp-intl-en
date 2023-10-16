@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of resource IDs. Note that currently you cannot remove multiple instances from isolation at the same time. Only one instance ID can be passed in here.
-                     * @return DBInstanceIdSet List of resource IDs. Note that currently you cannot remove multiple instances from isolation at the same time. Only one instance ID can be passed in here.
+                     * 获取Instance ID list. Currently, you can't remove multiple instances from isolation in batches. Only one instance ID can be passed in here.
+                     * @return DBInstanceIdSet Instance ID list. Currently, you can't remove multiple instances from isolation in batches. Only one instance ID can be passed in here.
                      * 
                      */
                     std::vector<std::string> GetDBInstanceIdSet() const;
 
                     /**
-                     * 设置List of resource IDs. Note that currently you cannot remove multiple instances from isolation at the same time. Only one instance ID can be passed in here.
-                     * @param _dBInstanceIdSet List of resource IDs. Note that currently you cannot remove multiple instances from isolation at the same time. Only one instance ID can be passed in here.
+                     * 设置Instance ID list. Currently, you can't remove multiple instances from isolation in batches. Only one instance ID can be passed in here.
+                     * @param _dBInstanceIdSet Instance ID list. Currently, you can't remove multiple instances from isolation in batches. Only one instance ID can be passed in here.
                      * 
                      */
                     void SetDBInstanceIdSet(const std::vector<std::string>& _dBInstanceIdSet);
@@ -64,15 +64,23 @@ namespace TencentCloud
                     bool DBInstanceIdSetHasBeenSet() const;
 
                     /**
-                     * 获取The valid period (in months) of the monthly-subscribed instance when removing it from isolation
-                     * @return Period The valid period (in months) of the monthly-subscribed instance when removing it from isolation
+                     * 获取Validity period in months
+<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
+<li>Pay-as-you-go: `1`.
+                     * @return Period Validity period in months
+<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
+<li>Pay-as-you-go: `1`.
                      * 
                      */
                     int64_t GetPeriod() const;
 
                     /**
-                     * 设置The valid period (in months) of the monthly-subscribed instance when removing it from isolation
-                     * @param _period The valid period (in months) of the monthly-subscribed instance when removing it from isolation
+                     * 设置Validity period in months
+<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
+<li>Pay-as-you-go: `1`.
+                     * @param _period Validity period in months
+<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
+<li>Pay-as-you-go: `1`.
                      * 
                      */
                     void SetPeriod(const int64_t& _period);
@@ -85,15 +93,27 @@ namespace TencentCloud
                     bool PeriodHasBeenSet() const;
 
                     /**
-                     * 获取Whether to use vouchers. Valid values: `true` (yes), `false` (no). Default value: `false`.
-                     * @return AutoVoucher Whether to use vouchers. Valid values: `true` (yes), `false` (no). Default value: `false`.
+                     * 获取Whether to use vouchers. Valid values:
+<li>`true`: Yes.
+u200c<li>`false`: No.
+Default value: `false`.
+                     * @return AutoVoucher Whether to use vouchers. Valid values:
+<li>`true`: Yes.
+u200c<li>`false`: No.
+Default value: `false`.
                      * 
                      */
                     bool GetAutoVoucher() const;
 
                     /**
-                     * 设置Whether to use vouchers. Valid values: `true` (yes), `false` (no). Default value: `false`.
-                     * @param _autoVoucher Whether to use vouchers. Valid values: `true` (yes), `false` (no). Default value: `false`.
+                     * 设置Whether to use vouchers. Valid values:
+<li>`true`: Yes.
+u200c<li>`false`: No.
+Default value: `false`.
+                     * @param _autoVoucher Whether to use vouchers. Valid values:
+<li>`true`: Yes.
+u200c<li>`false`: No.
+Default value: `false`.
                      * 
                      */
                     void SetAutoVoucher(const bool& _autoVoucher);
@@ -129,19 +149,24 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of resource IDs. Note that currently you cannot remove multiple instances from isolation at the same time. Only one instance ID can be passed in here.
+                     * Instance ID list. Currently, you can't remove multiple instances from isolation in batches. Only one instance ID can be passed in here.
                      */
                     std::vector<std::string> m_dBInstanceIdSet;
                     bool m_dBInstanceIdSetHasBeenSet;
 
                     /**
-                     * The valid period (in months) of the monthly-subscribed instance when removing it from isolation
+                     * Validity period in months
+<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
+<li>Pay-as-you-go: `1`.
                      */
                     int64_t m_period;
                     bool m_periodHasBeenSet;
 
                     /**
-                     * Whether to use vouchers. Valid values: `true` (yes), `false` (no). Default value: `false`.
+                     * Whether to use vouchers. Valid values:
+<li>`true`: Yes.
+u200c<li>`false`: No.
+Default value: `false`.
                      */
                     bool m_autoVoucher;
                     bool m_autoVoucherHasBeenSet;

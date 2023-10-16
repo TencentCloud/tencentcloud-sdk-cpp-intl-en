@@ -14,14 +14,13 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_POSTGRES_V20170312_MODEL_MODIFYDBINSTANCEDEPLOYMENTREQUEST_H_
-#define TENCENTCLOUD_POSTGRES_V20170312_MODEL_MODIFYDBINSTANCEDEPLOYMENTREQUEST_H_
+#ifndef TENCENTCLOUD_POSTGRES_V20170312_MODEL_SWITCHDBINSTANCEPRIMARYREQUEST_H_
+#define TENCENTCLOUD_POSTGRES_V20170312_MODEL_SWITCHDBINSTANCEPRIMARYREQUEST_H_
 
 #include <string>
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/postgres/v20170312/model/DBNode.h>
 
 
 namespace TencentCloud
@@ -33,26 +32,26 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * ModifyDBInstanceDeployment request structure.
+                * SwitchDBInstancePrimary request structure.
                 */
-                class ModifyDBInstanceDeploymentRequest : public AbstractModel
+                class SwitchDBInstancePrimaryRequest : public AbstractModel
                 {
                 public:
-                    ModifyDBInstanceDeploymentRequest();
-                    ~ModifyDBInstanceDeploymentRequest() = default;
+                    SwitchDBInstancePrimaryRequest();
+                    ~SwitchDBInstancePrimaryRequest() = default;
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Instance ID.
-                     * @return DBInstanceId Instance ID.
+                     * 获取Instance ID
+                     * @return DBInstanceId Instance ID
                      * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
-                     * 设置Instance ID.
-                     * @param _dBInstanceId Instance ID.
+                     * 设置Instance ID
+                     * @param _dBInstanceId Instance ID
                      * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
@@ -65,59 +64,59 @@ namespace TencentCloud
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Deployment information of the instance node, which will display the information of each AZ when the instance node is deployed across multiple AZs.
-The information of AZ can be obtained from the `Zone` field in the returned value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
-                     * @return DBNodeSet Deployment information of the instance node, which will display the information of each AZ when the instance node is deployed across multiple AZs.
-The information of AZ can be obtained from the `Zone` field in the returned value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
+                     * 获取Whether to perform forced switch. As long as the standby node can be accessed, the switch will be performed regardless of the primary-standby sync delay. You can switch immediately only when `SwitchTag` is `0.
+<li>Default: `false`.
+                     * @return Force Whether to perform forced switch. As long as the standby node can be accessed, the switch will be performed regardless of the primary-standby sync delay. You can switch immediately only when `SwitchTag` is `0.
+<li>Default: `false`.
                      * 
                      */
-                    std::vector<DBNode> GetDBNodeSet() const;
+                    bool GetForce() const;
 
                     /**
-                     * 设置Deployment information of the instance node, which will display the information of each AZ when the instance node is deployed across multiple AZs.
-The information of AZ can be obtained from the `Zone` field in the returned value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
-                     * @param _dBNodeSet Deployment information of the instance node, which will display the information of each AZ when the instance node is deployed across multiple AZs.
-The information of AZ can be obtained from the `Zone` field in the returned value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
+                     * 设置Whether to perform forced switch. As long as the standby node can be accessed, the switch will be performed regardless of the primary-standby sync delay. You can switch immediately only when `SwitchTag` is `0.
+<li>Default: `false`.
+                     * @param _force Whether to perform forced switch. As long as the standby node can be accessed, the switch will be performed regardless of the primary-standby sync delay. You can switch immediately only when `SwitchTag` is `0.
+<li>Default: `false`.
                      * 
                      */
-                    void SetDBNodeSet(const std::vector<DBNode>& _dBNodeSet);
+                    void SetForce(const bool& _force);
 
                     /**
-                     * 判断参数 DBNodeSet 是否已赋值
-                     * @return DBNodeSet 是否已赋值
+                     * 判断参数 Force 是否已赋值
+                     * @return Force 是否已赋值
                      * 
                      */
-                    bool DBNodeSetHasBeenSet() const;
+                    bool ForceHasBeenSet() const;
 
                     /**
                      * 获取Switch time for the specified instance after configuration modification.
 <li>`0`: Switch now. 
 <li>`1`: Switch at the specified time.
 <li>`2`: Switch in the maintenance time.
-Default value: `0`. 
+<li>Default value: `0`. 
                      * @return SwitchTag Switch time for the specified instance after configuration modification.
 <li>`0`: Switch now. 
 <li>`1`: Switch at the specified time.
 <li>`2`: Switch in the maintenance time.
-Default value: `0`. 
+<li>Default value: `0`. 
                      * 
                      */
-                    int64_t GetSwitchTag() const;
+                    uint64_t GetSwitchTag() const;
 
                     /**
                      * 设置Switch time for the specified instance after configuration modification.
 <li>`0`: Switch now. 
 <li>`1`: Switch at the specified time.
 <li>`2`: Switch in the maintenance time.
-Default value: `0`. 
+<li>Default value: `0`. 
                      * @param _switchTag Switch time for the specified instance after configuration modification.
 <li>`0`: Switch now. 
 <li>`1`: Switch at the specified time.
 <li>`2`: Switch in the maintenance time.
-Default value: `0`. 
+<li>Default value: `0`. 
                      * 
                      */
-                    void SetSwitchTag(const int64_t& _switchTag);
+                    void SetSwitchTag(const uint64_t& _switchTag);
 
                     /**
                      * 判断参数 SwitchTag 是否已赋值
@@ -127,15 +126,15 @@ Default value: `0`.
                     bool SwitchTagHasBeenSet() const;
 
                     /**
-                     * 获取Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
-                     * @return SwitchStartTime Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
+                     * 获取The earliest time to start a switch in the format of "HH:MM:SS", such as "01:00:00". This parameter is invalid when `SwitchTag` is `0` or `2`.
+                     * @return SwitchStartTime The earliest time to start a switch in the format of "HH:MM:SS", such as "01:00:00". This parameter is invalid when `SwitchTag` is `0` or `2`.
                      * 
                      */
                     std::string GetSwitchStartTime() const;
 
                     /**
-                     * 设置Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
-                     * @param _switchStartTime Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
+                     * 设置The earliest time to start a switch in the format of "HH:MM:SS", such as "01:00:00". This parameter is invalid when `SwitchTag` is `0` or `2`.
+                     * @param _switchStartTime The earliest time to start a switch in the format of "HH:MM:SS", such as "01:00:00". This parameter is invalid when `SwitchTag` is `0` or `2`.
                      * 
                      */
                     void SetSwitchStartTime(const std::string& _switchStartTime);
@@ -148,15 +147,15 @@ Default value: `0`.
                     bool SwitchStartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
-                     * @return SwitchEndTime Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
+                     * 获取The latest time to start a switch in the format of "HH:MM:SS", such as "01:30:00". This parameter is invalid when `SwitchTag` is `0` or `2`. The difference between `SwitchStartTime` and `SwitchEndTime` cannot be less than 30 minutes.
+                     * @return SwitchEndTime The latest time to start a switch in the format of "HH:MM:SS", such as "01:30:00". This parameter is invalid when `SwitchTag` is `0` or `2`. The difference between `SwitchStartTime` and `SwitchEndTime` cannot be less than 30 minutes.
                      * 
                      */
                     std::string GetSwitchEndTime() const;
 
                     /**
-                     * 设置Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
-                     * @param _switchEndTime Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
+                     * 设置The latest time to start a switch in the format of "HH:MM:SS", such as "01:30:00". This parameter is invalid when `SwitchTag` is `0` or `2`. The difference between `SwitchStartTime` and `SwitchEndTime` cannot be less than 30 minutes.
+                     * @param _switchEndTime The latest time to start a switch in the format of "HH:MM:SS", such as "01:30:00". This parameter is invalid when `SwitchTag` is `0` or `2`. The difference between `SwitchStartTime` and `SwitchEndTime` cannot be less than 30 minutes.
                      * 
                      */
                     void SetSwitchEndTime(const std::string& _switchEndTime);
@@ -171,36 +170,36 @@ Default value: `0`.
                 private:
 
                     /**
-                     * Instance ID.
+                     * Instance ID
                      */
                     std::string m_dBInstanceId;
                     bool m_dBInstanceIdHasBeenSet;
 
                     /**
-                     * Deployment information of the instance node, which will display the information of each AZ when the instance node is deployed across multiple AZs.
-The information of AZ can be obtained from the `Zone` field in the returned value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
+                     * Whether to perform forced switch. As long as the standby node can be accessed, the switch will be performed regardless of the primary-standby sync delay. You can switch immediately only when `SwitchTag` is `0.
+<li>Default: `false`.
                      */
-                    std::vector<DBNode> m_dBNodeSet;
-                    bool m_dBNodeSetHasBeenSet;
+                    bool m_force;
+                    bool m_forceHasBeenSet;
 
                     /**
                      * Switch time for the specified instance after configuration modification.
 <li>`0`: Switch now. 
 <li>`1`: Switch at the specified time.
 <li>`2`: Switch in the maintenance time.
-Default value: `0`. 
+<li>Default value: `0`. 
                      */
-                    int64_t m_switchTag;
+                    uint64_t m_switchTag;
                     bool m_switchTagHasBeenSet;
 
                     /**
-                     * Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
+                     * The earliest time to start a switch in the format of "HH:MM:SS", such as "01:00:00". This parameter is invalid when `SwitchTag` is `0` or `2`.
                      */
                     std::string m_switchStartTime;
                     bool m_switchStartTimeHasBeenSet;
 
                     /**
-                     * Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
+                     * The latest time to start a switch in the format of "HH:MM:SS", such as "01:30:00". This parameter is invalid when `SwitchTag` is `0` or `2`. The difference between `SwitchStartTime` and `SwitchEndTime` cannot be less than 30 minutes.
                      */
                     std::string m_switchEndTime;
                     bool m_switchEndTimeHasBeenSet;
@@ -211,4 +210,4 @@ Default value: `0`.
     }
 }
 
-#endif // !TENCENTCLOUD_POSTGRES_V20170312_MODEL_MODIFYDBINSTANCEDEPLOYMENTREQUEST_H_
+#endif // !TENCENTCLOUD_POSTGRES_V20170312_MODEL_SWITCHDBINSTANCEPRIMARYREQUEST_H_

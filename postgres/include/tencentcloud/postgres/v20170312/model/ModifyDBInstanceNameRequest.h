@@ -64,15 +64,19 @@ namespace TencentCloud
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取New name of database instance
-                     * @return InstanceName New name of database instance
+                     * 获取Instance name, which can contain up to 60 letters, digits, hyphens, and symbols (_-). If this parameter is not specified, "Unnamed" will be displayed by default.
+
+                     * @return InstanceName Instance name, which can contain up to 60 letters, digits, hyphens, and symbols (_-). If this parameter is not specified, "Unnamed" will be displayed by default.
+
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置New name of database instance
-                     * @param _instanceName New name of database instance
+                     * 设置Instance name, which can contain up to 60 letters, digits, hyphens, and symbols (_-). If this parameter is not specified, "Unnamed" will be displayed by default.
+
+                     * @param _instanceName Instance name, which can contain up to 60 letters, digits, hyphens, and symbols (_-). If this parameter is not specified, "Unnamed" will be displayed by default.
+
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -93,7 +97,8 @@ namespace TencentCloud
                     bool m_dBInstanceIdHasBeenSet;
 
                     /**
-                     * New name of database instance
+                     * Instance name, which can contain up to 60 letters, digits, hyphens, and symbols (_-). If this parameter is not specified, "Unnamed" will be displayed by default.
+
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID in the format of postgres-5bq3wfjd
-                     * @return DBInstanceId Instance ID in the format of postgres-5bq3wfjd
+                     * 获取Instance ID	
+                     * @return DBInstanceId Instance ID	
                      * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
-                     * 设置Instance ID in the format of postgres-5bq3wfjd
-                     * @param _dBInstanceId Instance ID in the format of postgres-5bq3wfjd
+                     * 设置Instance ID	
+                     * @param _dBInstanceId Instance ID	
                      * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Query start time in the format of 2018-01-01 00:00:00, which cannot be more than 7 days ago
-                     * @return StartTime Query start time in the format of 2018-01-01 00:00:00, which cannot be more than 7 days ago
+                     * 获取u200cu200cu200cQuery start time in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.	
+                     * @return StartTime u200cu200cu200cQuery start time in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.	
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Query start time in the format of 2018-01-01 00:00:00, which cannot be more than 7 days ago
-                     * @param _startTime Query start time in the format of 2018-01-01 00:00:00, which cannot be more than 7 days ago
+                     * 设置u200cu200cu200cQuery start time in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.	
+                     * @param _startTime u200cu200cu200cQuery start time in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.	
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Query end time in the format of 2018-01-01 00:00:00
-                     * @return EndTime Query end time in the format of 2018-01-01 00:00:00
+                     * 获取u200cu200cu200cu200cQuery end time in the format of 2018-01-01 00:00:00	
+                     * @return EndTime u200cu200cu200cu200cQuery end time in the format of 2018-01-01 00:00:00	
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置Query end time in the format of 2018-01-01 00:00:00
-                     * @param _endTime Query end time in the format of 2018-01-01 00:00:00
+                     * 设置u200cu200cu200cu200cQuery end time in the format of 2018-01-01 00:00:00	
+                     * @param _endTime u200cu200cu200cu200cQuery end time in the format of 2018-01-01 00:00:00	
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool DatabaseNameHasBeenSet() const;
 
                     /**
-                     * 获取Search keyword
-                     * @return SearchKeys Search keyword
+                     * 获取Keywords used for search
+                     * @return SearchKeys Keywords used for search
                      * 
                      */
                     std::vector<std::string> GetSearchKeys() const;
 
                     /**
-                     * 设置Search keyword
-                     * @param _searchKeys Search keyword
+                     * 设置Keywords used for search
+                     * @param _searchKeys Keywords used for search
                      * 
                      */
                     void SetSearchKeys(const std::vector<std::string>& _searchKeys);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool SearchKeysHasBeenSet() const;
 
                     /**
-                     * 获取Number of entries returned per page. Value range: 1-100
-                     * @return Limit Number of entries returned per page. Value range: 1-100
+                     * 获取Number of results returned per page. Value range: 1-100. Default value: `50`.	
+                     * @return Limit Number of results returned per page. Value range: 1-100. Default value: `50`.	
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of entries returned per page. Value range: 1-100
-                     * @param _limit Number of entries returned per page. Value range: 1-100
+                     * 设置Number of results returned per page. Value range: 1-100. Default value: `50`.	
+                     * @param _limit Number of results returned per page. Value range: 1-100. Default value: `50`.	
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Page number for data return in paged query. Pagination starts from 0
-                     * @return Offset Page number for data return in paged query. Pagination starts from 0
+                     * 获取Data offset, which starts from 0. Default value: `0`.	
+                     * @return Offset Data offset, which starts from 0. Default value: `0`.	
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Page number for data return in paged query. Pagination starts from 0
-                     * @param _offset Page number for data return in paged query. Pagination starts from 0
+                     * 设置Data offset, which starts from 0. Default value: `0`.	
+                     * @param _offset Data offset, which starts from 0. Default value: `0`.	
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -192,19 +192,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID in the format of postgres-5bq3wfjd
+                     * Instance ID	
                      */
                     std::string m_dBInstanceId;
                     bool m_dBInstanceIdHasBeenSet;
 
                     /**
-                     * Query start time in the format of 2018-01-01 00:00:00, which cannot be more than 7 days ago
+                     * u200cu200cu200cQuery start time in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.	
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Query end time in the format of 2018-01-01 00:00:00
+                     * u200cu200cu200cu200cQuery end time in the format of 2018-01-01 00:00:00	
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
@@ -216,19 +216,19 @@ namespace TencentCloud
                     bool m_databaseNameHasBeenSet;
 
                     /**
-                     * Search keyword
+                     * Keywords used for search
                      */
                     std::vector<std::string> m_searchKeys;
                     bool m_searchKeysHasBeenSet;
 
                     /**
-                     * Number of entries returned per page. Value range: 1-100
+                     * Number of results returned per page. Value range: 1-100. Default value: `50`.	
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Page number for data return in paged query. Pagination starts from 0
+                     * Data offset, which starts from 0. Default value: `0`.	
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;

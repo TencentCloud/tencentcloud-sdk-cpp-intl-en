@@ -106,15 +106,27 @@ namespace TencentCloud
                     bool StorageHasBeenSet() const;
 
                     /**
-                     * 获取Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
-                     * @return AutoVoucher Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
+                     * 获取Whether to use vouchers automatically. Valid values:
+<li>`0`: No.
+<li>`1`: Yes.
+Default value: `0`.
+                     * @return AutoVoucher Whether to use vouchers automatically. Valid values:
+<li>`0`: No.
+<li>`1`: Yes.
+Default value: `0`.
                      * 
                      */
                     uint64_t GetAutoVoucher() const;
 
                     /**
-                     * 设置Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
-                     * @param _autoVoucher Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
+                     * 设置Whether to use vouchers automatically. Valid values:
+<li>`0`: No.
+<li>`1`: Yes.
+Default value: `0`.
+                     * @param _autoVoucher Whether to use vouchers automatically. Valid values:
+<li>`0`: No.
+<li>`1`: Yes.
+Default value: `0`.
                      * 
                      */
                     void SetAutoVoucher(const uint64_t& _autoVoucher);
@@ -169,15 +181,31 @@ namespace TencentCloud
                     bool ActivityIdHasBeenSet() const;
 
                     /**
-                     * 获取Switch time after instance configurations are modified. Valid values: `0` (switch now), `1` (switch at a specified time), `2` (switch during maintenance time). Default value: `0`.
-                     * @return SwitchTag Switch time after instance configurations are modified. Valid values: `0` (switch now), `1` (switch at a specified time), `2` (switch during maintenance time). Default value: `0`.
+                     * 获取Switch time for the specified instance after configuration modification.
+<li>`0`: Switch now. 
+<li>`1`: Switch at the specified time.
+<li>`2`: Switch in the maintenance time.
+Default value: `0`. 
+                     * @return SwitchTag Switch time for the specified instance after configuration modification.
+<li>`0`: Switch now. 
+<li>`1`: Switch at the specified time.
+<li>`2`: Switch in the maintenance time.
+Default value: `0`. 
                      * 
                      */
                     uint64_t GetSwitchTag() const;
 
                     /**
-                     * 设置Switch time after instance configurations are modified. Valid values: `0` (switch now), `1` (switch at a specified time), `2` (switch during maintenance time). Default value: `0`.
-                     * @param _switchTag Switch time after instance configurations are modified. Valid values: `0` (switch now), `1` (switch at a specified time), `2` (switch during maintenance time). Default value: `0`.
+                     * 设置Switch time for the specified instance after configuration modification.
+<li>`0`: Switch now. 
+<li>`1`: Switch at the specified time.
+<li>`2`: Switch in the maintenance time.
+Default value: `0`. 
+                     * @param _switchTag Switch time for the specified instance after configuration modification.
+<li>`0`: Switch now. 
+<li>`1`: Switch at the specified time.
+<li>`2`: Switch in the maintenance time.
+Default value: `0`. 
                      * 
                      */
                     void SetSwitchTag(const uint64_t& _switchTag);
@@ -252,7 +280,10 @@ namespace TencentCloud
                     bool m_storageHasBeenSet;
 
                     /**
-                     * Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
+                     * Whether to use vouchers automatically. Valid values:
+<li>`0`: No.
+<li>`1`: Yes.
+Default value: `0`.
                      */
                     uint64_t m_autoVoucher;
                     bool m_autoVoucherHasBeenSet;
@@ -270,7 +301,11 @@ namespace TencentCloud
                     bool m_activityIdHasBeenSet;
 
                     /**
-                     * Switch time after instance configurations are modified. Valid values: `0` (switch now), `1` (switch at a specified time), `2` (switch during maintenance time). Default value: `0`.
+                     * Switch time for the specified instance after configuration modification.
+<li>`0`: Switch now. 
+<li>`1`: Switch at the specified time.
+<li>`2`: Switch in the maintenance time.
+Default value: `0`. 
                      */
                     uint64_t m_switchTag;
                     bool m_switchTagHasBeenSet;

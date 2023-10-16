@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool MaxBackupStartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Backup retention period in days. Value range: 3-7
-                     * @return BaseBackupRetentionPeriod Backup retention period in days. Value range: 3-7
+                     * 获取Backup retention period in days. Value range: 7-1830
+                     * @return BaseBackupRetentionPeriod Backup retention period in days. Value range: 7-1830
                      * 
                      */
                     uint64_t GetBaseBackupRetentionPeriod() const;
 
                     /**
-                     * 设置Backup retention period in days. Value range: 3-7
-                     * @param _baseBackupRetentionPeriod Backup retention period in days. Value range: 3-7
+                     * 设置Backup retention period in days. Value range: 7-1830
+                     * @param _baseBackupRetentionPeriod Backup retention period in days. Value range: 7-1830
                      * 
                      */
                     void SetBaseBackupRetentionPeriod(const uint64_t& _baseBackupRetentionPeriod);
@@ -168,7 +168,7 @@ namespace TencentCloud
                     bool m_maxBackupStartTimeHasBeenSet;
 
                     /**
-                     * Backup retention period in days. Value range: 3-7
+                     * Backup retention period in days. Value range: 7-1830
                      */
                     uint64_t m_baseBackupRetentionPeriod;
                     bool m_baseBackupRetentionPeriodHasBeenSet;

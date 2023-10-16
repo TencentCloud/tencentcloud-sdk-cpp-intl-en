@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of date entries returned for this call
-                     * @return TotalCount Number of date entries returned for this call
+                     * 获取Number of logs returned in a single query. Maximum value: `10000`.
+                     * @return TotalCount Number of logs returned in a single query. Maximum value: `10000`.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Error log list
-                     * @return Details Error log list
+                     * 获取Detailed sets of error logs
+                     * @return Details Detailed sets of error logs
                      * 
                      */
                     std::vector<ErrLogDetail> GetDetails() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of date entries returned for this call
+                     * Number of logs returned in a single query. Maximum value: `10000`.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Error log list
+                     * Detailed sets of error logs
                      */
                     std::vector<ErrLogDetail> m_details;
                     bool m_detailsHasBeenSet;
