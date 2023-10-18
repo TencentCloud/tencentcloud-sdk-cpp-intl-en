@@ -27,6 +27,7 @@
 #include <tencentcloud/dts/v20211206/model/Options.h>
 #include <tencentcloud/dts/v20211206/model/Objects.h>
 #include <tencentcloud/dts/v20211206/model/Endpoint.h>
+#include <tencentcloud/dts/v20211206/model/SyncDBEndpointInfos.h>
 #include <tencentcloud/dts/v20211206/model/TagItem.h>
 #include <tencentcloud/dts/v20211206/model/SyncDetailInfo.h>
 
@@ -427,6 +428,56 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SrcInfoHasBeenSet() const;
 
                     /**
+                     * 获取Valid values: `cluster`, `single`. `single`: For single-node source databases; `cluster`: For multi-node source databases.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * @return SrcNodeType Valid values: `cluster`, `single`. `single`: For single-node source databases; `cluster`: For multi-node source databases.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetSrcNodeType() const;
+
+                    /**
+                     * 设置Valid values: `cluster`, `single`. `single`: For single-node source databases; `cluster`: For multi-node source databases.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * @param _srcNodeType Valid values: `cluster`, `single`. `single`: For single-node source databases; `cluster`: For multi-node source databases.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetSrcNodeType(const std::string& _srcNodeType);
+
+                    /**
+                     * 判断参数 SrcNodeType 是否已赋值
+                     * @return SrcNodeType 是否已赋值
+                     * 
+                     */
+                    bool SrcNodeTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Source database information. This parameter is used for multi-node databases.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * @return SrcInfos Source database information. This parameter is used for multi-node databases.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    SyncDBEndpointInfos GetSrcInfos() const;
+
+                    /**
+                     * 设置Source database information. This parameter is used for multi-node databases.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * @param _srcInfos Source database information. This parameter is used for multi-node databases.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetSrcInfos(const SyncDBEndpointInfos& _srcInfos);
+
+                    /**
+                     * 判断参数 SrcInfos 是否已赋值
+                     * @return SrcInfos 是否已赋值
+                     * 
+                     */
+                    bool SrcInfosHasBeenSet() const;
+
+                    /**
                      * 获取Target database region, such as `ap-guangzhou`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DstRegion Target database region, such as `ap-guangzhou`.
@@ -525,6 +576,56 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool DstInfoHasBeenSet() const;
+
+                    /**
+                     * 获取Valid values: `cluster`, `single`. `single`: For single-node target databases; `cluster`: For multi-node target databases.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * @return DstNodeType Valid values: `cluster`, `single`. `single`: For single-node target databases; `cluster`: For multi-node target databases.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetDstNodeType() const;
+
+                    /**
+                     * 设置Valid values: `cluster`, `single`. `single`: For single-node target databases; `cluster`: For multi-node target databases.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * @param _dstNodeType Valid values: `cluster`, `single`. `single`: For single-node target databases; `cluster`: For multi-node target databases.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetDstNodeType(const std::string& _dstNodeType);
+
+                    /**
+                     * 判断参数 DstNodeType 是否已赋值
+                     * @return DstNodeType 是否已赋值
+                     * 
+                     */
+                    bool DstNodeTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Target database information. This parameter is used for multi-node databases.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * @return DstInfos Target database information. This parameter is used for multi-node databases.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    SyncDBEndpointInfos GetDstInfos() const;
+
+                    /**
+                     * 设置Target database information. This parameter is used for multi-node databases.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * @param _dstInfos Target database information. This parameter is used for multi-node databases.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetDstInfos(const SyncDBEndpointInfos& _dstInfos);
+
+                    /**
+                     * 判断参数 DstInfos 是否已赋值
+                     * @return DstInfos 是否已赋值
+                     * 
+                     */
+                    bool DstInfosHasBeenSet() const;
 
                     /**
                      * 获取Creation time in the format of `yyyy-mm-dd hh:mm:ss`
@@ -801,6 +902,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool AutoRetryTimeRangeMinutesHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the task can be reentered in the full export stage. Valid values: `yes`, `no`. `yes`: The current task can be reentered. `no`: The current task is in the full export stage which cannot be reentered. If the value of this parameter is `no`, the checkpoint restart is not supported when the task is restarted in the export stage.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * @return DumperResumeCtrl Whether the task can be reentered in the full export stage. Valid values: `yes`, `no`. `yes`: The current task can be reentered. `no`: The current task is in the full export stage which cannot be reentered. If the value of this parameter is `no`, the checkpoint restart is not supported when the task is restarted in the export stage.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetDumperResumeCtrl() const;
+
+                    /**
+                     * 设置Whether the task can be reentered in the full export stage. Valid values: `yes`, `no`. `yes`: The current task can be reentered. `no`: The current task is in the full export stage which cannot be reentered. If the value of this parameter is `no`, the checkpoint restart is not supported when the task is restarted in the export stage.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * @param _dumperResumeCtrl Whether the task can be reentered in the full export stage. Valid values: `yes`, `no`. `yes`: The current task can be reentered. `no`: The current task is in the full export stage which cannot be reentered. If the value of this parameter is `no`, the checkpoint restart is not supported when the task is restarted in the export stage.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetDumperResumeCtrl(const std::string& _dumperResumeCtrl);
+
+                    /**
+                     * 判断参数 DumperResumeCtrl 是否已赋值
+                     * @return DumperResumeCtrl 是否已赋值
+                     * 
+                     */
+                    bool DumperResumeCtrlHasBeenSet() const;
+
                 private:
 
                     /**
@@ -909,6 +1035,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_srcInfoHasBeenSet;
 
                     /**
+                     * Valid values: `cluster`, `single`. `single`: For single-node source databases; `cluster`: For multi-node source databases.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     */
+                    std::string m_srcNodeType;
+                    bool m_srcNodeTypeHasBeenSet;
+
+                    /**
+                     * Source database information. This parameter is used for multi-node databases.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     */
+                    SyncDBEndpointInfos m_srcInfos;
+                    bool m_srcInfosHasBeenSet;
+
+                    /**
                      * Target database region, such as `ap-guangzhou`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
@@ -935,6 +1075,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     Endpoint m_dstInfo;
                     bool m_dstInfoHasBeenSet;
+
+                    /**
+                     * Valid values: `cluster`, `single`. `single`: For single-node target databases; `cluster`: For multi-node target databases.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     */
+                    std::string m_dstNodeType;
+                    bool m_dstNodeTypeHasBeenSet;
+
+                    /**
+                     * Target database information. This parameter is used for multi-node databases.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     */
+                    SyncDBEndpointInfos m_dstInfos;
+                    bool m_dstInfosHasBeenSet;
 
                     /**
                      * Creation time in the format of `yyyy-mm-dd hh:mm:ss`
@@ -1012,6 +1166,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_autoRetryTimeRangeMinutes;
                     bool m_autoRetryTimeRangeMinutesHasBeenSet;
+
+                    /**
+                     * Whether the task can be reentered in the full export stage. Valid values: `yes`, `no`. `yes`: The current task can be reentered. `no`: The current task is in the full export stage which cannot be reentered. If the value of this parameter is `no`, the checkpoint restart is not supported when the task is restarted in the export stage.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     */
+                    std::string m_dumperResumeCtrl;
+                    bool m_dumperResumeCtrlHasBeenSet;
 
                 };
             }

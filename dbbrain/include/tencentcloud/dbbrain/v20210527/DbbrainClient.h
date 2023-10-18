@@ -25,6 +25,8 @@
 #include <tencentcloud/core/AsyncCallerContext.h>
 #include <tencentcloud/dbbrain/v20210527/model/AddUserContactRequest.h>
 #include <tencentcloud/dbbrain/v20210527/model/AddUserContactResponse.h>
+#include <tencentcloud/dbbrain/v20210527/model/CloseAuditServiceRequest.h>
+#include <tencentcloud/dbbrain/v20210527/model/CloseAuditServiceResponse.h>
 #include <tencentcloud/dbbrain/v20210527/model/CreateDBDiagReportTaskRequest.h>
 #include <tencentcloud/dbbrain/v20210527/model/CreateDBDiagReportTaskResponse.h>
 #include <tencentcloud/dbbrain/v20210527/model/CreateDBDiagReportUrlRequest.h>
@@ -35,6 +37,8 @@
 #include <tencentcloud/dbbrain/v20210527/model/CreateMailProfileResponse.h>
 #include <tencentcloud/dbbrain/v20210527/model/CreateProxySessionKillTaskRequest.h>
 #include <tencentcloud/dbbrain/v20210527/model/CreateProxySessionKillTaskResponse.h>
+#include <tencentcloud/dbbrain/v20210527/model/CreateRedisBigKeyAnalysisTaskRequest.h>
+#include <tencentcloud/dbbrain/v20210527/model/CreateRedisBigKeyAnalysisTaskResponse.h>
 #include <tencentcloud/dbbrain/v20210527/model/CreateSchedulerMailProfileRequest.h>
 #include <tencentcloud/dbbrain/v20210527/model/CreateSchedulerMailProfileResponse.h>
 #include <tencentcloud/dbbrain/v20210527/model/CreateSecurityAuditLogExportTaskRequest.h>
@@ -47,6 +51,8 @@
 #include <tencentcloud/dbbrain/v20210527/model/DescribeAllUserContactResponse.h>
 #include <tencentcloud/dbbrain/v20210527/model/DescribeAllUserGroupRequest.h>
 #include <tencentcloud/dbbrain/v20210527/model/DescribeAllUserGroupResponse.h>
+#include <tencentcloud/dbbrain/v20210527/model/DescribeAuditInstanceListRequest.h>
+#include <tencentcloud/dbbrain/v20210527/model/DescribeAuditInstanceListResponse.h>
 #include <tencentcloud/dbbrain/v20210527/model/DescribeDBDiagEventRequest.h>
 #include <tencentcloud/dbbrain/v20210527/model/DescribeDBDiagEventResponse.h>
 #include <tencentcloud/dbbrain/v20210527/model/DescribeDBDiagEventsRequest.h>
@@ -95,8 +101,12 @@
 #include <tencentcloud/dbbrain/v20210527/model/DescribeUserSqlAdviceResponse.h>
 #include <tencentcloud/dbbrain/v20210527/model/KillMySqlThreadsRequest.h>
 #include <tencentcloud/dbbrain/v20210527/model/KillMySqlThreadsResponse.h>
+#include <tencentcloud/dbbrain/v20210527/model/ModifyAuditServiceRequest.h>
+#include <tencentcloud/dbbrain/v20210527/model/ModifyAuditServiceResponse.h>
 #include <tencentcloud/dbbrain/v20210527/model/ModifyDiagDBInstanceConfRequest.h>
 #include <tencentcloud/dbbrain/v20210527/model/ModifyDiagDBInstanceConfResponse.h>
+#include <tencentcloud/dbbrain/v20210527/model/OpenAuditServiceRequest.h>
+#include <tencentcloud/dbbrain/v20210527/model/OpenAuditServiceResponse.h>
 
 
 namespace TencentCloud
@@ -114,6 +124,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::AddUserContactResponse> AddUserContactOutcome;
                 typedef std::future<AddUserContactOutcome> AddUserContactOutcomeCallable;
                 typedef std::function<void(const DbbrainClient*, const Model::AddUserContactRequest&, AddUserContactOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddUserContactAsyncHandler;
+                typedef Outcome<Core::Error, Model::CloseAuditServiceResponse> CloseAuditServiceOutcome;
+                typedef std::future<CloseAuditServiceOutcome> CloseAuditServiceOutcomeCallable;
+                typedef std::function<void(const DbbrainClient*, const Model::CloseAuditServiceRequest&, CloseAuditServiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CloseAuditServiceAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateDBDiagReportTaskResponse> CreateDBDiagReportTaskOutcome;
                 typedef std::future<CreateDBDiagReportTaskOutcome> CreateDBDiagReportTaskOutcomeCallable;
                 typedef std::function<void(const DbbrainClient*, const Model::CreateDBDiagReportTaskRequest&, CreateDBDiagReportTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDBDiagReportTaskAsyncHandler;
@@ -129,6 +142,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateProxySessionKillTaskResponse> CreateProxySessionKillTaskOutcome;
                 typedef std::future<CreateProxySessionKillTaskOutcome> CreateProxySessionKillTaskOutcomeCallable;
                 typedef std::function<void(const DbbrainClient*, const Model::CreateProxySessionKillTaskRequest&, CreateProxySessionKillTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateProxySessionKillTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateRedisBigKeyAnalysisTaskResponse> CreateRedisBigKeyAnalysisTaskOutcome;
+                typedef std::future<CreateRedisBigKeyAnalysisTaskOutcome> CreateRedisBigKeyAnalysisTaskOutcomeCallable;
+                typedef std::function<void(const DbbrainClient*, const Model::CreateRedisBigKeyAnalysisTaskRequest&, CreateRedisBigKeyAnalysisTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateRedisBigKeyAnalysisTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateSchedulerMailProfileResponse> CreateSchedulerMailProfileOutcome;
                 typedef std::future<CreateSchedulerMailProfileOutcome> CreateSchedulerMailProfileOutcomeCallable;
                 typedef std::function<void(const DbbrainClient*, const Model::CreateSchedulerMailProfileRequest&, CreateSchedulerMailProfileOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateSchedulerMailProfileAsyncHandler;
@@ -147,6 +163,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeAllUserGroupResponse> DescribeAllUserGroupOutcome;
                 typedef std::future<DescribeAllUserGroupOutcome> DescribeAllUserGroupOutcomeCallable;
                 typedef std::function<void(const DbbrainClient*, const Model::DescribeAllUserGroupRequest&, DescribeAllUserGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAllUserGroupAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAuditInstanceListResponse> DescribeAuditInstanceListOutcome;
+                typedef std::future<DescribeAuditInstanceListOutcome> DescribeAuditInstanceListOutcomeCallable;
+                typedef std::function<void(const DbbrainClient*, const Model::DescribeAuditInstanceListRequest&, DescribeAuditInstanceListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAuditInstanceListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDBDiagEventResponse> DescribeDBDiagEventOutcome;
                 typedef std::future<DescribeDBDiagEventOutcome> DescribeDBDiagEventOutcomeCallable;
                 typedef std::function<void(const DbbrainClient*, const Model::DescribeDBDiagEventRequest&, DescribeDBDiagEventOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBDiagEventAsyncHandler;
@@ -219,9 +238,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::KillMySqlThreadsResponse> KillMySqlThreadsOutcome;
                 typedef std::future<KillMySqlThreadsOutcome> KillMySqlThreadsOutcomeCallable;
                 typedef std::function<void(const DbbrainClient*, const Model::KillMySqlThreadsRequest&, KillMySqlThreadsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> KillMySqlThreadsAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyAuditServiceResponse> ModifyAuditServiceOutcome;
+                typedef std::future<ModifyAuditServiceOutcome> ModifyAuditServiceOutcomeCallable;
+                typedef std::function<void(const DbbrainClient*, const Model::ModifyAuditServiceRequest&, ModifyAuditServiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAuditServiceAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyDiagDBInstanceConfResponse> ModifyDiagDBInstanceConfOutcome;
                 typedef std::future<ModifyDiagDBInstanceConfOutcome> ModifyDiagDBInstanceConfOutcomeCallable;
                 typedef std::function<void(const DbbrainClient*, const Model::ModifyDiagDBInstanceConfRequest&, ModifyDiagDBInstanceConfOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDiagDBInstanceConfAsyncHandler;
+                typedef Outcome<Core::Error, Model::OpenAuditServiceResponse> OpenAuditServiceOutcome;
+                typedef std::future<OpenAuditServiceOutcome> OpenAuditServiceOutcomeCallable;
+                typedef std::function<void(const DbbrainClient*, const Model::OpenAuditServiceRequest&, OpenAuditServiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> OpenAuditServiceAsyncHandler;
 
 
 
@@ -233,6 +258,15 @@ namespace TencentCloud
                 AddUserContactOutcome AddUserContact(const Model::AddUserContactRequest &request);
                 void AddUserContactAsync(const Model::AddUserContactRequest& request, const AddUserContactAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 AddUserContactOutcomeCallable AddUserContactCallable(const Model::AddUserContactRequest& request);
+
+                /**
+                 *This API is used to disable database audit as needed.
+                 * @param req CloseAuditServiceRequest
+                 * @return CloseAuditServiceOutcome
+                 */
+                CloseAuditServiceOutcome CloseAuditService(const Model::CloseAuditServiceRequest &request);
+                void CloseAuditServiceAsync(const Model::CloseAuditServiceRequest& request, const CloseAuditServiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CloseAuditServiceOutcomeCallable CloseAuditServiceCallable(const Model::CloseAuditServiceRequest& request);
 
                 /**
                  *This API is used to create a health report and send it via email as configured.
@@ -278,6 +312,15 @@ namespace TencentCloud
                 CreateProxySessionKillTaskOutcome CreateProxySessionKillTask(const Model::CreateProxySessionKillTaskRequest &request);
                 void CreateProxySessionKillTaskAsync(const Model::CreateProxySessionKillTaskRequest& request, const CreateProxySessionKillTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateProxySessionKillTaskOutcomeCallable CreateProxySessionKillTaskCallable(const Model::CreateProxySessionKillTaskRequest& request);
+
+                /**
+                 *This API is used to create an ad hoc big key analysis task for Redis instances. By default, there can only be up to five running ad hoc analysis tasks.
+                 * @param req CreateRedisBigKeyAnalysisTaskRequest
+                 * @return CreateRedisBigKeyAnalysisTaskOutcome
+                 */
+                CreateRedisBigKeyAnalysisTaskOutcome CreateRedisBigKeyAnalysisTask(const Model::CreateRedisBigKeyAnalysisTaskRequest &request);
+                void CreateRedisBigKeyAnalysisTaskAsync(const Model::CreateRedisBigKeyAnalysisTaskRequest& request, const CreateRedisBigKeyAnalysisTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateRedisBigKeyAnalysisTaskOutcomeCallable CreateRedisBigKeyAnalysisTaskCallable(const Model::CreateRedisBigKeyAnalysisTaskRequest& request);
 
                 /**
                  *This API is used to create the regular generation time of health reports and the regular email sending configuration. Pass in the regular generation time of health reports as a parameter (Monday to Sunday) to set the regular generation time, and save the corresponding regular email sending configuration.
@@ -332,6 +375,15 @@ namespace TencentCloud
                 DescribeAllUserGroupOutcome DescribeAllUserGroup(const Model::DescribeAllUserGroupRequest &request);
                 void DescribeAllUserGroupAsync(const Model::DescribeAllUserGroupRequest& request, const DescribeAllUserGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeAllUserGroupOutcomeCallable DescribeAllUserGroupCallable(const Model::DescribeAllUserGroupRequest& request);
+
+                /**
+                 *This API is used to query the instance list.
+                 * @param req DescribeAuditInstanceListRequest
+                 * @return DescribeAuditInstanceListOutcome
+                 */
+                DescribeAuditInstanceListOutcome DescribeAuditInstanceList(const Model::DescribeAuditInstanceListRequest &request);
+                void DescribeAuditInstanceListAsync(const Model::DescribeAuditInstanceListRequest& request, const DescribeAuditInstanceListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAuditInstanceListOutcomeCallable DescribeAuditInstanceListCallable(const Model::DescribeAuditInstanceListRequest& request);
 
                 /**
                  *This API is used to get the details of an instance exception diagnosis event.
@@ -550,6 +602,15 @@ namespace TencentCloud
                 KillMySqlThreadsOutcomeCallable KillMySqlThreadsCallable(const Model::KillMySqlThreadsRequest& request);
 
                 /**
+                 *u200cThis API is used to modify audit configurations such as the frequent access storage period.
+                 * @param req ModifyAuditServiceRequest
+                 * @return ModifyAuditServiceOutcome
+                 */
+                ModifyAuditServiceOutcome ModifyAuditService(const Model::ModifyAuditServiceRequest &request);
+                void ModifyAuditServiceAsync(const Model::ModifyAuditServiceRequest& request, const ModifyAuditServiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyAuditServiceOutcomeCallable ModifyAuditServiceCallable(const Model::ModifyAuditServiceRequest& request);
+
+                /**
                  *This API is used to enable/disable instance inspection.
                  * @param req ModifyDiagDBInstanceConfRequest
                  * @return ModifyDiagDBInstanceConfOutcome
@@ -557,6 +618,15 @@ namespace TencentCloud
                 ModifyDiagDBInstanceConfOutcome ModifyDiagDBInstanceConf(const Model::ModifyDiagDBInstanceConfRequest &request);
                 void ModifyDiagDBInstanceConfAsync(const Model::ModifyDiagDBInstanceConfRequest& request, const ModifyDiagDBInstanceConfAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyDiagDBInstanceConfOutcomeCallable ModifyDiagDBInstanceConfCallable(const Model::ModifyDiagDBInstanceConfRequest& request);
+
+                /**
+                 *This API is used to enable database audit.
+                 * @param req OpenAuditServiceRequest
+                 * @return OpenAuditServiceOutcome
+                 */
+                OpenAuditServiceOutcome OpenAuditService(const Model::OpenAuditServiceRequest &request);
+                void OpenAuditServiceAsync(const Model::OpenAuditServiceRequest& request, const OpenAuditServiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                OpenAuditServiceOutcomeCallable OpenAuditServiceCallable(const Model::OpenAuditServiceRequest& request);
 
             };
         }

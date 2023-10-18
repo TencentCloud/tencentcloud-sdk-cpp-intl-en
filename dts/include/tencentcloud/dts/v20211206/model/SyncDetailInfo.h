@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/dts/v20211206/model/StepInfo.h>
+#include <tencentcloud/dts/v20211206/model/ErrInfo.h>
 
 
 namespace TencentCloud
@@ -123,19 +124,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProgressHasBeenSet() const;
 
                     /**
-                     * 获取Progress of the current step
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CurrentStepProgress Progress of the current step
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Progress of the current step. Value range: 0-100. The value of `-1` indicates that you can't check the progress of the current step.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * @return CurrentStepProgress Progress of the current step. Value range: 0-100. The value of `-1` indicates that you can't check the progress of the current step.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetCurrentStepProgress() const;
 
                     /**
-                     * 设置Progress of the current step
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _currentStepProgress Progress of the current step
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Progress of the current step. Value range: 0-100. The value of `-1` indicates that you can't check the progress of the current step.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * @param _currentStepProgress Progress of the current step. Value range: 0-100. The value of `-1` indicates that you can't check the progress of the current step.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCurrentStepProgress(const int64_t& _currentStepProgress);
@@ -272,6 +273,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool CauseOfCompareDisableHasBeenSet() const;
 
+                    /**
+                     * 获取Task error and the corresponding solution
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * @return ErrInfo Task error and the corresponding solution
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    ErrInfo GetErrInfo() const;
+
+                    /**
+                     * 设置Task error and the corresponding solution
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * @param _errInfo Task error and the corresponding solution
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetErrInfo(const ErrInfo& _errInfo);
+
+                    /**
+                     * 判断参数 ErrInfo 是否已赋值
+                     * @return ErrInfo 是否已赋值
+                     * 
+                     */
+                    bool ErrInfoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -296,8 +322,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_progressHasBeenSet;
 
                     /**
-                     * Progress of the current step
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Progress of the current step. Value range: 0-100. The value of `-1` indicates that you can't check the progress of the current step.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
                      */
                     int64_t m_currentStepProgress;
                     bool m_currentStepProgressHasBeenSet;
@@ -336,6 +362,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_causeOfCompareDisable;
                     bool m_causeOfCompareDisableHasBeenSet;
+
+                    /**
+                     * Task error and the corresponding solution
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     */
+                    ErrInfo m_errInfo;
+                    bool m_errInfoHasBeenSet;
 
                 };
             }

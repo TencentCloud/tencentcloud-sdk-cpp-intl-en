@@ -88,15 +88,15 @@ namespace TencentCloud
                     bool RunModeHasBeenSet() const;
 
                     /**
-                     * 获取Migration task configuration options, which describe how the task performs migration.
-                     * @return MigrateOption Migration task configuration options, which describe how the task performs migration.
+                     * 获取Migration task configuration options, which describe how the task performs migration. The `RateLimitOption` option cannot be configured. To modify the speed limit settings of the task, use the `ModifyMigrateRateLimit` API after the task starts running.
+                     * @return MigrateOption Migration task configuration options, which describe how the task performs migration. The `RateLimitOption` option cannot be configured. To modify the speed limit settings of the task, use the `ModifyMigrateRateLimit` API after the task starts running.
                      * 
                      */
                     MigrateOption GetMigrateOption() const;
 
                     /**
-                     * 设置Migration task configuration options, which describe how the task performs migration.
-                     * @param _migrateOption Migration task configuration options, which describe how the task performs migration.
+                     * 设置Migration task configuration options, which describe how the task performs migration. The `RateLimitOption` option cannot be configured. To modify the speed limit settings of the task, use the `ModifyMigrateRateLimit` API after the task starts running.
+                     * @param _migrateOption Migration task configuration options, which describe how the task performs migration. The `RateLimitOption` option cannot be configured. To modify the speed limit settings of the task, use the `ModifyMigrateRateLimit` API after the task starts running.
                      * 
                      */
                     void SetMigrateOption(const MigrateOption& _migrateOption);
@@ -249,7 +249,7 @@ namespace TencentCloud
                     bool m_runModeHasBeenSet;
 
                     /**
-                     * Migration task configuration options, which describe how the task performs migration.
+                     * Migration task configuration options, which describe how the task performs migration. The `RateLimitOption` option cannot be configured. To modify the speed limit settings of the task, use the `ModifyMigrateRateLimit` API after the task starts running.
                      */
                     MigrateOption m_migrateOption;
                     bool m_migrateOptionHasBeenSet;

@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool ProductHasBeenSet() const;
 
                     /**
-                     * 获取MD5 value of SOL template
-                     * @return Md5 MD5 value of SOL template
+                     * 获取MD5 value of the SQL template
+                     * @return Md5 MD5 value of the SQL template
                      * 
                      */
                     std::string GetMd5() const;
 
                     /**
-                     * 设置MD5 value of SOL template
-                     * @param _md5 MD5 value of SOL template
+                     * 设置MD5 value of the SQL template
+                     * @param _md5 MD5 value of the SQL template
                      * 
                      */
                     void SetMd5(const std::string& _md5);
@@ -174,7 +174,7 @@ namespace TencentCloud
                     bool m_productHasBeenSet;
 
                     /**
-                     * MD5 value of SOL template
+                     * MD5 value of the SQL template
                      */
                     std::string m_md5;
                     bool m_md5HasBeenSet;

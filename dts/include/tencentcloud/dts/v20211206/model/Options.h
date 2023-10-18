@@ -27,6 +27,7 @@
 #include <tencentcloud/dts/v20211206/model/ConflictHandleOption.h>
 #include <tencentcloud/dts/v20211206/model/DdlOption.h>
 #include <tencentcloud/dts/v20211206/model/KafkaOption.h>
+#include <tencentcloud/dts/v20211206/model/RateLimitOption.h>
 
 
 namespace TencentCloud
@@ -249,6 +250,56 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool KafkaOptionHasBeenSet() const;
 
+                    /**
+                     * 获取Task speed limit information. This parameter can only be used as an output parameter.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * @return RateLimitOption Task speed limit information. This parameter can only be used as an output parameter.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    RateLimitOption GetRateLimitOption() const;
+
+                    /**
+                     * 设置Task speed limit information. This parameter can only be used as an output parameter.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * @param _rateLimitOption Task speed limit information. This parameter can only be used as an output parameter.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetRateLimitOption(const RateLimitOption& _rateLimitOption);
+
+                    /**
+                     * 判断参数 RateLimitOption 是否已赋值
+                     * @return RateLimitOption 是否已赋值
+                     * 
+                     */
+                    bool RateLimitOptionHasBeenSet() const;
+
+                    /**
+                     * 获取Settings of the automatic retry time range
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * @return AutoRetryTimeRangeMinutes Settings of the automatic retry time range
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetAutoRetryTimeRangeMinutes() const;
+
+                    /**
+                     * 设置Settings of the automatic retry time range
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * @param _autoRetryTimeRangeMinutes Settings of the automatic retry time range
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetAutoRetryTimeRangeMinutes(const int64_t& _autoRetryTimeRangeMinutes);
+
+                    /**
+                     * 判断参数 AutoRetryTimeRangeMinutes 是否已赋值
+                     * @return AutoRetryTimeRangeMinutes 是否已赋值
+                     * 
+                     */
+                    bool AutoRetryTimeRangeMinutesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -306,6 +357,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     KafkaOption m_kafkaOption;
                     bool m_kafkaOptionHasBeenSet;
+
+                    /**
+                     * Task speed limit information. This parameter can only be used as an output parameter.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     */
+                    RateLimitOption m_rateLimitOption;
+                    bool m_rateLimitOptionHasBeenSet;
+
+                    /**
+                     * Settings of the automatic retry time range
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_autoRetryTimeRangeMinutes;
+                    bool m_autoRetryTimeRangeMinutesHasBeenSet;
 
                 };
             }

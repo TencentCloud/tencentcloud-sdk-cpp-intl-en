@@ -696,6 +696,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool DatabaseNetEnvHasBeenSet() const;
 
+                    /**
+                     * 获取The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
+Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+                     * @return CcnOwnerUin The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
+Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetCcnOwnerUin() const;
+
+                    /**
+                     * 设置The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
+Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+                     * @param _ccnOwnerUin The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
+Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetCcnOwnerUin(const std::string& _ccnOwnerUin);
+
+                    /**
+                     * 判断参数 CcnOwnerUin 是否已赋值
+                     * @return CcnOwnerUin 是否已赋值
+                     * 
+                     */
+                    bool CcnOwnerUinHasBeenSet() const;
+
                 private:
 
                     /**
@@ -879,6 +904,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_databaseNetEnv;
                     bool m_databaseNetEnvHasBeenSet;
+
+                    /**
+                     * The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
+Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_ccnOwnerUin;
+                    bool m_ccnOwnerUinHasBeenSet;
 
                 };
             }

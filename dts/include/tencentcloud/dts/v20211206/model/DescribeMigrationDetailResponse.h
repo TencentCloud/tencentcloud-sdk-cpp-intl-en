@@ -30,6 +30,7 @@
 #include <tencentcloud/dts/v20211206/model/CheckStepInfo.h>
 #include <tencentcloud/dts/v20211206/model/TradeInfo.h>
 #include <tencentcloud/dts/v20211206/model/ErrorInfoItem.h>
+#include <tencentcloud/dts/v20211206/model/RateLimitOption.h>
 
 
 namespace TencentCloud
@@ -370,6 +371,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ErrorInfoHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the task can be reentered in the full export stage. Valid values: `yes`, `no`. `yes`: The current task can be reentered. `no`: The current task is in the full export stage which cannot be reentered. If the value of this parameter is `no`, the checkpoint restart is not supported when the task is restarted in the export stage.
+                     * @return DumperResumeCtrl Whether the task can be reentered in the full export stage. Valid values: `yes`, `no`. `yes`: The current task can be reentered. `no`: The current task is in the full export stage which cannot be reentered. If the value of this parameter is `no`, the checkpoint restart is not supported when the task is restarted in the export stage.
+                     * 
+                     */
+                    std::string GetDumperResumeCtrl() const;
+
+                    /**
+                     * 判断参数 DumperResumeCtrl 是否已赋值
+                     * @return DumperResumeCtrl 是否已赋值
+                     * 
+                     */
+                    bool DumperResumeCtrlHasBeenSet() const;
+
+                    /**
+                     * 获取Task throttling information
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * @return RateLimitOption Task throttling information
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    RateLimitOption GetRateLimitOption() const;
+
+                    /**
+                     * 判断参数 RateLimitOption 是否已赋值
+                     * @return RateLimitOption 是否已赋值
+                     * 
+                     */
+                    bool RateLimitOptionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -510,6 +541,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<ErrorInfoItem> m_errorInfo;
                     bool m_errorInfoHasBeenSet;
+
+                    /**
+                     * Whether the task can be reentered in the full export stage. Valid values: `yes`, `no`. `yes`: The current task can be reentered. `no`: The current task is in the full export stage which cannot be reentered. If the value of this parameter is `no`, the checkpoint restart is not supported when the task is restarted in the export stage.
+                     */
+                    std::string m_dumperResumeCtrl;
+                    bool m_dumperResumeCtrlHasBeenSet;
+
+                    /**
+                     * Task throttling information
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     */
+                    RateLimitOption m_rateLimitOption;
+                    bool m_rateLimitOptionHasBeenSet;
 
                 };
             }

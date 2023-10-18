@@ -341,15 +341,15 @@ namespace TencentCloud
                     bool DstNodeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Sync task options
-                     * @return Options Sync task options
+                     * 获取Sync task options. The `RateLimitOption` option cannot take effect currently. To modify the speed limit settings, use the `ModifySyncRateLimit` API.
+                     * @return Options Sync task options. The `RateLimitOption` option cannot take effect currently. To modify the speed limit settings, use the `ModifySyncRateLimit` API.
                      * 
                      */
                     Options GetOptions() const;
 
                     /**
-                     * 设置Sync task options
-                     * @param _options Sync task options
+                     * 设置Sync task options. The `RateLimitOption` option cannot take effect currently. To modify the speed limit settings, use the `ModifySyncRateLimit` API.
+                     * @param _options Sync task options. The `RateLimitOption` option cannot take effect currently. To modify the speed limit settings, use the `ModifySyncRateLimit` API.
                      * 
                      */
                     void SetOptions(const Options& _options);
@@ -469,7 +469,7 @@ namespace TencentCloud
                     bool m_dstNodeTypeHasBeenSet;
 
                     /**
-                     * Sync task options
+                     * Sync task options. The `RateLimitOption` option cannot take effect currently. To modify the speed limit settings, use the `ModifySyncRateLimit` API.
                      */
                     Options m_options;
                     bool m_optionsHasBeenSet;
