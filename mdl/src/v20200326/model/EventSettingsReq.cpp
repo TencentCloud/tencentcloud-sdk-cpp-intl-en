@@ -28,7 +28,8 @@ EventSettingsReq::EventSettingsReq() :
     m_destinationsHasBeenSet(false),
     m_sCTE35SegmentationDescriptorHasBeenSet(false),
     m_spliceEventIDHasBeenSet(false),
-    m_spliceDurationHasBeenSet(false)
+    m_spliceDurationHasBeenSet(false),
+    m_timedMetadataSettingHasBeenSet(false)
 {
 }
 
@@ -137,6 +138,23 @@ CoreInternalOutcome EventSettingsReq::Deserialize(const rapidjson::Value &value)
         m_spliceDurationHasBeenSet = true;
     }
 
+    if (value.HasMember("TimedMetadataSetting") && !value["TimedMetadataSetting"].IsNull())
+    {
+        if (!value["TimedMetadataSetting"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `EventSettingsReq.TimedMetadataSetting` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_timedMetadataSetting.Deserialize(value["TimedMetadataSetting"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_timedMetadataSettingHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -220,6 +238,15 @@ void EventSettingsReq::ToJsonObject(rapidjson::Value &value, rapidjson::Document
         string key = "SpliceDuration";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_spliceDuration, allocator);
+    }
+
+    if (m_timedMetadataSettingHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TimedMetadataSetting";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_timedMetadataSetting.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -351,5 +378,21 @@ void EventSettingsReq::SetSpliceDuration(const uint64_t& _spliceDuration)
 bool EventSettingsReq::SpliceDurationHasBeenSet() const
 {
     return m_spliceDurationHasBeenSet;
+}
+
+TimedMetadataInfo EventSettingsReq::GetTimedMetadataSetting() const
+{
+    return m_timedMetadataSetting;
+}
+
+void EventSettingsReq::SetTimedMetadataSetting(const TimedMetadataInfo& _timedMetadataSetting)
+{
+    m_timedMetadataSetting = _timedMetadataSetting;
+    m_timedMetadataSettingHasBeenSet = true;
+}
+
+bool EventSettingsReq::TimedMetadataSettingHasBeenSet() const
+{
+    return m_timedMetadataSettingHasBeenSet;
 }
 

@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mdl/v20200326/model/Scte35SettingsInfo.h>
+#include <tencentcloud/mdl/v20200326/model/TimedMetadataSettingInfo.h>
 
 
 namespace TencentCloud
@@ -168,6 +169,27 @@ Note: this field may return `null`, indicating that no valid value was found.
                      */
                     bool AVTemplateNamesHasBeenSet() const;
 
+                    /**
+                     * 获取Meta information controls configuration.
+                     * @return TimedMetadataSettings Meta information controls configuration.
+                     * 
+                     */
+                    TimedMetadataSettingInfo GetTimedMetadataSettings() const;
+
+                    /**
+                     * 设置Meta information controls configuration.
+                     * @param _timedMetadataSettings Meta information controls configuration.
+                     * 
+                     */
+                    void SetTimedMetadataSettings(const TimedMetadataSettingInfo& _timedMetadataSettings);
+
+                    /**
+                     * 判断参数 TimedMetadataSettings 是否已赋值
+                     * @return TimedMetadataSettings 是否已赋值
+                     * 
+                     */
+                    bool TimedMetadataSettingsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -203,6 +225,12 @@ Note: this field may return `null`, indicating that no valid value was found.
                      */
                     std::vector<std::string> m_aVTemplateNames;
                     bool m_aVTemplateNamesHasBeenSet;
+
+                    /**
+                     * Meta information controls configuration.
+                     */
+                    TimedMetadataSettingInfo m_timedMetadataSettings;
+                    bool m_timedMetadataSettingsHasBeenSet;
 
                 };
             }

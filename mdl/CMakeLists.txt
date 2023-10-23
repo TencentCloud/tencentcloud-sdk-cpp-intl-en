@@ -59,6 +59,7 @@ set(mdl_public_header_model
   include/tencentcloud/mdl/v20200326/model/AttachedInput.h
   include/tencentcloud/mdl/v20200326/model/QueryInputStreamStateResponse.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveWatermarksRequest.h
+  include/tencentcloud/mdl/v20200326/model/TimedMetadataInfo.h
   include/tencentcloud/mdl/v20200326/model/DescribeTranscodeDetailInfo.h
   include/tencentcloud/mdl/v20200326/model/TimeShiftSettingsInfo.h
   include/tencentcloud/mdl/v20200326/model/DeliveryRestrictionsInfo.h
@@ -76,7 +77,7 @@ set(mdl_public_header_model
   include/tencentcloud/mdl/v20200326/model/ChannelInputStatistics.h
   include/tencentcloud/mdl/v20200326/model/HlsRemuxSettingsInfo.h
   include/tencentcloud/mdl/v20200326/model/EventSettingsResp.h
-  include/tencentcloud/mdl/v20200326/model/TimingSettingsResp.h
+  include/tencentcloud/mdl/v20200326/model/TimedMetadataSettingInfo.h
   include/tencentcloud/mdl/v20200326/model/AudioTemplateInfo.h
   include/tencentcloud/mdl/v20200326/model/StreamPackageSettingsInfo.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveChannelsResponse.h
@@ -119,6 +120,7 @@ set(mdl_public_header_model
   include/tencentcloud/mdl/v20200326/model/EventNotifySetting.h
   include/tencentcloud/mdl/v20200326/model/DeleteStreamLiveInputResponse.h
   include/tencentcloud/mdl/v20200326/model/StartStreamLiveChannelRequest.h
+  include/tencentcloud/mdl/v20200326/model/TimingSettingsResp.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveWatermarkResponse.h
   include/tencentcloud/mdl/v20200326/model/StreamScte35Info.h
   include/tencentcloud/mdl/v20200326/model/StreamAudioInfo.h
@@ -192,6 +194,7 @@ set(mdl_src
   src/v20200326/model/AttachedInput.cpp
   src/v20200326/model/QueryInputStreamStateResponse.cpp
   src/v20200326/model/DescribeStreamLiveWatermarksRequest.cpp
+  src/v20200326/model/TimedMetadataInfo.cpp
   src/v20200326/model/DescribeTranscodeDetailInfo.cpp
   src/v20200326/model/TimeShiftSettingsInfo.cpp
   src/v20200326/model/DeliveryRestrictionsInfo.cpp
@@ -209,7 +212,7 @@ set(mdl_src
   src/v20200326/model/ChannelInputStatistics.cpp
   src/v20200326/model/HlsRemuxSettingsInfo.cpp
   src/v20200326/model/EventSettingsResp.cpp
-  src/v20200326/model/TimingSettingsResp.cpp
+  src/v20200326/model/TimedMetadataSettingInfo.cpp
   src/v20200326/model/AudioTemplateInfo.cpp
   src/v20200326/model/StreamPackageSettingsInfo.cpp
   src/v20200326/model/DescribeStreamLiveChannelsResponse.cpp
@@ -252,6 +255,7 @@ set(mdl_src
   src/v20200326/model/EventNotifySetting.cpp
   src/v20200326/model/DeleteStreamLiveInputResponse.cpp
   src/v20200326/model/StartStreamLiveChannelRequest.cpp
+  src/v20200326/model/TimingSettingsResp.cpp
   src/v20200326/model/DescribeStreamLiveWatermarkResponse.cpp
   src/v20200326/model/StreamScte35Info.cpp
   src/v20200326/model/StreamAudioInfo.cpp

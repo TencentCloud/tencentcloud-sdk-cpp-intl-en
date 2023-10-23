@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mdl/v20200326/model/EventSettingsDestinationReq.h>
 #include <tencentcloud/mdl/v20200326/model/SegmentationDescriptorInfo.h>
+#include <tencentcloud/mdl/v20200326/model/TimedMetadataInfo.h>
 
 
 namespace TencentCloud
@@ -216,6 +217,27 @@ namespace TencentCloud
                      */
                     bool SpliceDurationHasBeenSet() const;
 
+                    /**
+                     * 获取Meta information plan configuration.
+                     * @return TimedMetadataSetting Meta information plan configuration.
+                     * 
+                     */
+                    TimedMetadataInfo GetTimedMetadataSetting() const;
+
+                    /**
+                     * 设置Meta information plan configuration.
+                     * @param _timedMetadataSetting Meta information plan configuration.
+                     * 
+                     */
+                    void SetTimedMetadataSetting(const TimedMetadataInfo& _timedMetadataSetting);
+
+                    /**
+                     * 判断参数 TimedMetadataSetting 是否已赋值
+                     * @return TimedMetadataSetting 是否已赋值
+                     * 
+                     */
+                    bool TimedMetadataSettingHasBeenSet() const;
+
                 private:
 
                     /**
@@ -265,6 +287,12 @@ namespace TencentCloud
                      */
                     uint64_t m_spliceDuration;
                     bool m_spliceDurationHasBeenSet;
+
+                    /**
+                     * Meta information plan configuration.
+                     */
+                    TimedMetadataInfo m_timedMetadataSetting;
+                    bool m_timedMetadataSettingHasBeenSet;
 
                 };
             }

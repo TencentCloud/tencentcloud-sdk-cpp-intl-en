@@ -25,7 +25,8 @@ OutputInfo::OutputInfo() :
     m_audioTemplateNamesHasBeenSet(false),
     m_videoTemplateNamesHasBeenSet(false),
     m_scte35SettingsHasBeenSet(false),
-    m_aVTemplateNamesHasBeenSet(false)
+    m_aVTemplateNamesHasBeenSet(false),
+    m_timedMetadataSettingsHasBeenSet(false)
 {
 }
 
@@ -100,6 +101,23 @@ CoreInternalOutcome OutputInfo::Deserialize(const rapidjson::Value &value)
         m_aVTemplateNamesHasBeenSet = true;
     }
 
+    if (value.HasMember("TimedMetadataSettings") && !value["TimedMetadataSettings"].IsNull())
+    {
+        if (!value["TimedMetadataSettings"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `OutputInfo.TimedMetadataSettings` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_timedMetadataSettings.Deserialize(value["TimedMetadataSettings"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_timedMetadataSettingsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -161,6 +179,15 @@ void OutputInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Allo
         {
             value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
+    }
+
+    if (m_timedMetadataSettingsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TimedMetadataSettings";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_timedMetadataSettings.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -244,5 +271,21 @@ void OutputInfo::SetAVTemplateNames(const vector<string>& _aVTemplateNames)
 bool OutputInfo::AVTemplateNamesHasBeenSet() const
 {
     return m_aVTemplateNamesHasBeenSet;
+}
+
+TimedMetadataSettingInfo OutputInfo::GetTimedMetadataSettings() const
+{
+    return m_timedMetadataSettings;
+}
+
+void OutputInfo::SetTimedMetadataSettings(const TimedMetadataSettingInfo& _timedMetadataSettings)
+{
+    m_timedMetadataSettings = _timedMetadataSettings;
+    m_timedMetadataSettingsHasBeenSet = true;
+}
+
+bool OutputInfo::TimedMetadataSettingsHasBeenSet() const
+{
+    return m_timedMetadataSettingsHasBeenSet;
 }
 
