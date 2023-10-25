@@ -68,19 +68,47 @@ namespace TencentCloud
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
-                     * 获取u200dTo upgrade the instance to an LCU-support instance, set it to `SLA`. `SLA` indicates Super Large 1. 
-If you have activated Super Large LCU-supported instances, `SLA` indicates the Super Large 4 specification. Super u200dLarge LCU-supported specification is in beta now. u200cu200dTo join the beta, [submit a ticket](https://console.cloud.tencent.com/workorder/category).
-                     * @return SlaType u200dTo upgrade the instance to an LCU-support instance, set it to `SLA`. `SLA` indicates Super Large 1. 
-If you have activated Super Large LCU-supported instances, `SLA` indicates the Super Large 4 specification. Super u200dLarge LCU-supported specification is in beta now. u200cu200dTo join the beta, [submit a ticket](https://console.cloud.tencent.com/workorder/category).
+                     * 获取LCU-supported instance specification. Value:
+<li>`SLA`: If you have activated Super Large LCU-supported instances, `SLA` indicates Super Large 4.</li>
+<li>`clb.c2.medium`: Standard</li>
+<li>`clb.c3.small`: Advanced 1</li>
+<li>`clb.c3.medium`: Advanced 2</li>
+<li>`clb.c4.small`: Super Large 1</li>
+<li>`clb.c4.medium`: Super Large 2</li>
+<li>`clb.c4.large`: Super Large 3</li>
+<li>`clb.c4.xlarge`: Super Large 4</li> For Super Large 2 and above specifications, please [submit a ticket](https://console.cloud.tencent.com/workorder/category). For more specifications, see [Specifications Comparison](https://intl.cloud.tencent.com/document/product/214/84689?from_cn_redirect=1)
+                     * @return SlaType LCU-supported instance specification. Value:
+<li>`SLA`: If you have activated Super Large LCU-supported instances, `SLA` indicates Super Large 4.</li>
+<li>`clb.c2.medium`: Standard</li>
+<li>`clb.c3.small`: Advanced 1</li>
+<li>`clb.c3.medium`: Advanced 2</li>
+<li>`clb.c4.small`: Super Large 1</li>
+<li>`clb.c4.medium`: Super Large 2</li>
+<li>`clb.c4.large`: Super Large 3</li>
+<li>`clb.c4.xlarge`: Super Large 4</li> For Super Large 2 and above specifications, please [submit a ticket](https://console.cloud.tencent.com/workorder/category). For more specifications, see [Specifications Comparison](https://intl.cloud.tencent.com/document/product/214/84689?from_cn_redirect=1)
                      * 
                      */
                     std::string GetSlaType() const;
 
                     /**
-                     * 设置u200dTo upgrade the instance to an LCU-support instance, set it to `SLA`. `SLA` indicates Super Large 1. 
-If you have activated Super Large LCU-supported instances, `SLA` indicates the Super Large 4 specification. Super u200dLarge LCU-supported specification is in beta now. u200cu200dTo join the beta, [submit a ticket](https://console.cloud.tencent.com/workorder/category).
-                     * @param _slaType u200dTo upgrade the instance to an LCU-support instance, set it to `SLA`. `SLA` indicates Super Large 1. 
-If you have activated Super Large LCU-supported instances, `SLA` indicates the Super Large 4 specification. Super u200dLarge LCU-supported specification is in beta now. u200cu200dTo join the beta, [submit a ticket](https://console.cloud.tencent.com/workorder/category).
+                     * 设置LCU-supported instance specification. Value:
+<li>`SLA`: If you have activated Super Large LCU-supported instances, `SLA` indicates Super Large 4.</li>
+<li>`clb.c2.medium`: Standard</li>
+<li>`clb.c3.small`: Advanced 1</li>
+<li>`clb.c3.medium`: Advanced 2</li>
+<li>`clb.c4.small`: Super Large 1</li>
+<li>`clb.c4.medium`: Super Large 2</li>
+<li>`clb.c4.large`: Super Large 3</li>
+<li>`clb.c4.xlarge`: Super Large 4</li> For Super Large 2 and above specifications, please [submit a ticket](https://console.cloud.tencent.com/workorder/category). For more specifications, see [Specifications Comparison](https://intl.cloud.tencent.com/document/product/214/84689?from_cn_redirect=1)
+                     * @param _slaType LCU-supported instance specification. Value:
+<li>`SLA`: If you have activated Super Large LCU-supported instances, `SLA` indicates Super Large 4.</li>
+<li>`clb.c2.medium`: Standard</li>
+<li>`clb.c3.small`: Advanced 1</li>
+<li>`clb.c3.medium`: Advanced 2</li>
+<li>`clb.c4.small`: Super Large 1</li>
+<li>`clb.c4.medium`: Super Large 2</li>
+<li>`clb.c4.large`: Super Large 3</li>
+<li>`clb.c4.xlarge`: Super Large 4</li> For Super Large 2 and above specifications, please [submit a ticket](https://console.cloud.tencent.com/workorder/category). For more specifications, see [Specifications Comparison](https://intl.cloud.tencent.com/document/product/214/84689?from_cn_redirect=1)
                      * 
                      */
                     void SetSlaType(const std::string& _slaType);
@@ -101,8 +129,15 @@ If you have activated Super Large LCU-supported instances, `SLA` indicates the S
                     bool m_loadBalancerIdHasBeenSet;
 
                     /**
-                     * u200dTo upgrade the instance to an LCU-support instance, set it to `SLA`. `SLA` indicates Super Large 1. 
-If you have activated Super Large LCU-supported instances, `SLA` indicates the Super Large 4 specification. Super u200dLarge LCU-supported specification is in beta now. u200cu200dTo join the beta, [submit a ticket](https://console.cloud.tencent.com/workorder/category).
+                     * LCU-supported instance specification. Value:
+<li>`SLA`: If you have activated Super Large LCU-supported instances, `SLA` indicates Super Large 4.</li>
+<li>`clb.c2.medium`: Standard</li>
+<li>`clb.c3.small`: Advanced 1</li>
+<li>`clb.c3.medium`: Advanced 2</li>
+<li>`clb.c4.small`: Super Large 1</li>
+<li>`clb.c4.medium`: Super Large 2</li>
+<li>`clb.c4.large`: Super Large 3</li>
+<li>`clb.c4.xlarge`: Super Large 4</li> For Super Large 2 and above specifications, please [submit a ticket](https://console.cloud.tencent.com/workorder/category). For more specifications, see [Specifications Comparison](https://intl.cloud.tencent.com/document/product/214/84689?from_cn_redirect=1)
                      */
                     std::string m_slaType;
                     bool m_slaTypeHasBeenSet;

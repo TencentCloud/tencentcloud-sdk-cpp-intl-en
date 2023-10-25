@@ -227,19 +227,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HttpCheckPathHasBeenSet() const;
 
                     /**
-                     * 获取Health check domain name. It is only applicable to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. For HTTP health checks of TCP listeners, this parameter is required.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-                     * @return HttpCheckDomain Health check domain name. It is only applicable to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. For HTTP health checks of TCP listeners, this parameter is required.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 获取Health check domain name. It’s applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It’s required for HTTP health check of TCP listeners.
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @return HttpCheckDomain Health check domain name. It’s applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It’s required for HTTP health check of TCP listeners.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetHttpCheckDomain() const;
 
                     /**
-                     * 设置Health check domain name. It is only applicable to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. For HTTP health checks of TCP listeners, this parameter is required.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-                     * @param _httpCheckDomain Health check domain name. It is only applicable to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. For HTTP health checks of TCP listeners, this parameter is required.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 设置Health check domain name. It’s applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It’s required for HTTP health check of TCP listeners.
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @param _httpCheckDomain Health check domain name. It’s applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It’s required for HTTP health check of TCP listeners.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHttpCheckDomain(const std::string& _httpCheckDomain);
@@ -529,8 +529,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_httpCheckPathHasBeenSet;
 
                     /**
-                     * Health check domain name. It is only applicable to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. For HTTP health checks of TCP listeners, this parameter is required.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * Health check domain name. It’s applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It’s required for HTTP health check of TCP listeners.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     std::string m_httpCheckDomain;
                     bool m_httpCheckDomainHasBeenSet;

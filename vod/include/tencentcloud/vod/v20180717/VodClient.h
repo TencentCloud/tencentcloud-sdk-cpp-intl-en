@@ -269,6 +269,8 @@
 #include <tencentcloud/vod/v20180717/model/ModifyWordSampleResponse.h>
 #include <tencentcloud/vod/v20180717/model/ParseStreamingManifestRequest.h>
 #include <tencentcloud/vod/v20180717/model/ParseStreamingManifestResponse.h>
+#include <tencentcloud/vod/v20180717/model/ProcessMediaRequest.h>
+#include <tencentcloud/vod/v20180717/model/ProcessMediaResponse.h>
 #include <tencentcloud/vod/v20180717/model/ProcessMediaByProcedureRequest.h>
 #include <tencentcloud/vod/v20180717/model/ProcessMediaByProcedureResponse.h>
 #include <tencentcloud/vod/v20180717/model/ProcessMediaByUrlRequest.h>
@@ -686,6 +688,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ParseStreamingManifestResponse> ParseStreamingManifestOutcome;
                 typedef std::future<ParseStreamingManifestOutcome> ParseStreamingManifestOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ParseStreamingManifestRequest&, ParseStreamingManifestOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ParseStreamingManifestAsyncHandler;
+                typedef Outcome<Core::Error, Model::ProcessMediaResponse> ProcessMediaOutcome;
+                typedef std::future<ProcessMediaOutcome> ProcessMediaOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::ProcessMediaRequest&, ProcessMediaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ProcessMediaAsyncHandler;
                 typedef Outcome<Core::Error, Model::ProcessMediaByProcedureResponse> ProcessMediaByProcedureOutcome;
                 typedef std::future<ProcessMediaByProcedureOutcome> ProcessMediaByProcedureOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ProcessMediaByProcedureRequest&, ProcessMediaByProcedureOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ProcessMediaByProcedureAsyncHandler;
@@ -1998,6 +2003,15 @@ This API is used to modify a player configuration.
                 ParseStreamingManifestOutcome ParseStreamingManifest(const Model::ParseStreamingManifestRequest &request);
                 void ParseStreamingManifestAsync(const Model::ParseStreamingManifestRequest& request, const ParseStreamingManifestAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ParseStreamingManifestOutcomeCallable ParseStreamingManifestCallable(const Model::ParseStreamingManifestRequest& request);
+
+                /**
+                 *
+                 * @param req ProcessMediaRequest
+                 * @return ProcessMediaOutcome
+                 */
+                ProcessMediaOutcome ProcessMedia(const Model::ProcessMediaRequest &request);
+                void ProcessMediaAsync(const Model::ProcessMediaRequest& request, const ProcessMediaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ProcessMediaOutcomeCallable ProcessMediaCallable(const Model::ProcessMediaRequest& request);
 
                 /**
                  *This API is used to start a task flow on a video.

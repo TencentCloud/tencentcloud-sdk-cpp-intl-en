@@ -21,8 +21,8 @@ using namespace TencentCloud::Vod::V20180717::Model;
 using namespace std;
 
 TerrorismConfigureInfo::TerrorismConfigureInfo() :
-    m_imgReviewInfoHasBeenSet(false),
-    m_ocrReviewInfoHasBeenSet(false)
+    m_ocrReviewInfoHasBeenSet(false),
+    m_imgReviewInfoHasBeenSet(false)
 {
 }
 
@@ -30,23 +30,6 @@ CoreInternalOutcome TerrorismConfigureInfo::Deserialize(const rapidjson::Value &
 {
     string requestId = "";
 
-
-    if (value.HasMember("ImgReviewInfo") && !value["ImgReviewInfo"].IsNull())
-    {
-        if (!value["ImgReviewInfo"].IsObject())
-        {
-            return CoreInternalOutcome(Core::Error("response `TerrorismConfigureInfo.ImgReviewInfo` is not object type").SetRequestId(requestId));
-        }
-
-        CoreInternalOutcome outcome = m_imgReviewInfo.Deserialize(value["ImgReviewInfo"]);
-        if (!outcome.IsSuccess())
-        {
-            outcome.GetError().SetRequestId(requestId);
-            return outcome;
-        }
-
-        m_imgReviewInfoHasBeenSet = true;
-    }
 
     if (value.HasMember("OcrReviewInfo") && !value["OcrReviewInfo"].IsNull())
     {
@@ -65,21 +48,29 @@ CoreInternalOutcome TerrorismConfigureInfo::Deserialize(const rapidjson::Value &
         m_ocrReviewInfoHasBeenSet = true;
     }
 
+    if (value.HasMember("ImgReviewInfo") && !value["ImgReviewInfo"].IsNull())
+    {
+        if (!value["ImgReviewInfo"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `TerrorismConfigureInfo.ImgReviewInfo` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_imgReviewInfo.Deserialize(value["ImgReviewInfo"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_imgReviewInfoHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
 void TerrorismConfigureInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
-
-    if (m_imgReviewInfoHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "ImgReviewInfo";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
-        m_imgReviewInfo.ToJsonObject(value[key.c_str()], allocator);
-    }
 
     if (m_ocrReviewInfoHasBeenSet)
     {
@@ -90,24 +81,17 @@ void TerrorismConfigureInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Do
         m_ocrReviewInfo.ToJsonObject(value[key.c_str()], allocator);
     }
 
+    if (m_imgReviewInfoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ImgReviewInfo";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_imgReviewInfo.ToJsonObject(value[key.c_str()], allocator);
+    }
+
 }
 
-
-TerrorismImgReviewTemplateInfo TerrorismConfigureInfo::GetImgReviewInfo() const
-{
-    return m_imgReviewInfo;
-}
-
-void TerrorismConfigureInfo::SetImgReviewInfo(const TerrorismImgReviewTemplateInfo& _imgReviewInfo)
-{
-    m_imgReviewInfo = _imgReviewInfo;
-    m_imgReviewInfoHasBeenSet = true;
-}
-
-bool TerrorismConfigureInfo::ImgReviewInfoHasBeenSet() const
-{
-    return m_imgReviewInfoHasBeenSet;
-}
 
 TerrorismOcrReviewTemplateInfo TerrorismConfigureInfo::GetOcrReviewInfo() const
 {
@@ -123,5 +107,21 @@ void TerrorismConfigureInfo::SetOcrReviewInfo(const TerrorismOcrReviewTemplateIn
 bool TerrorismConfigureInfo::OcrReviewInfoHasBeenSet() const
 {
     return m_ocrReviewInfoHasBeenSet;
+}
+
+TerrorismImgReviewTemplateInfo TerrorismConfigureInfo::GetImgReviewInfo() const
+{
+    return m_imgReviewInfo;
+}
+
+void TerrorismConfigureInfo::SetImgReviewInfo(const TerrorismImgReviewTemplateInfo& _imgReviewInfo)
+{
+    m_imgReviewInfo = _imgReviewInfo;
+    m_imgReviewInfoHasBeenSet = true;
+}
+
+bool TerrorismConfigureInfo::ImgReviewInfoHasBeenSet() const
+{
+    return m_imgReviewInfoHasBeenSet;
 }
 

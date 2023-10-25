@@ -127,6 +127,14 @@
 #include <tencentcloud/clb/v20180317/model/DescribeTaskStatusResponse.h>
 #include <tencentcloud/clb/v20180317/model/DisassociateTargetGroupsRequest.h>
 #include <tencentcloud/clb/v20180317/model/DisassociateTargetGroupsResponse.h>
+#include <tencentcloud/clb/v20180317/model/InquiryPriceCreateLoadBalancerRequest.h>
+#include <tencentcloud/clb/v20180317/model/InquiryPriceCreateLoadBalancerResponse.h>
+#include <tencentcloud/clb/v20180317/model/InquiryPriceModifyLoadBalancerRequest.h>
+#include <tencentcloud/clb/v20180317/model/InquiryPriceModifyLoadBalancerResponse.h>
+#include <tencentcloud/clb/v20180317/model/InquiryPriceRefundLoadBalancerRequest.h>
+#include <tencentcloud/clb/v20180317/model/InquiryPriceRefundLoadBalancerResponse.h>
+#include <tencentcloud/clb/v20180317/model/InquiryPriceRenewLoadBalancerRequest.h>
+#include <tencentcloud/clb/v20180317/model/InquiryPriceRenewLoadBalancerResponse.h>
 #include <tencentcloud/clb/v20180317/model/ManualRewriteRequest.h>
 #include <tencentcloud/clb/v20180317/model/ManualRewriteResponse.h>
 #include <tencentcloud/clb/v20180317/model/MigrateClassicalLoadBalancersRequest.h>
@@ -145,6 +153,8 @@
 #include <tencentcloud/clb/v20180317/model/ModifyLoadBalancerAttributesResponse.h>
 #include <tencentcloud/clb/v20180317/model/ModifyLoadBalancerSlaRequest.h>
 #include <tencentcloud/clb/v20180317/model/ModifyLoadBalancerSlaResponse.h>
+#include <tencentcloud/clb/v20180317/model/ModifyLoadBalancersProjectRequest.h>
+#include <tencentcloud/clb/v20180317/model/ModifyLoadBalancersProjectResponse.h>
 #include <tencentcloud/clb/v20180317/model/ModifyRuleRequest.h>
 #include <tencentcloud/clb/v20180317/model/ModifyRuleResponse.h>
 #include <tencentcloud/clb/v20180317/model/ModifyTargetGroupAttributeRequest.h>
@@ -345,6 +355,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DisassociateTargetGroupsResponse> DisassociateTargetGroupsOutcome;
                 typedef std::future<DisassociateTargetGroupsOutcome> DisassociateTargetGroupsOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::DisassociateTargetGroupsRequest&, DisassociateTargetGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisassociateTargetGroupsAsyncHandler;
+                typedef Outcome<Core::Error, Model::InquiryPriceCreateLoadBalancerResponse> InquiryPriceCreateLoadBalancerOutcome;
+                typedef std::future<InquiryPriceCreateLoadBalancerOutcome> InquiryPriceCreateLoadBalancerOutcomeCallable;
+                typedef std::function<void(const ClbClient*, const Model::InquiryPriceCreateLoadBalancerRequest&, InquiryPriceCreateLoadBalancerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquiryPriceCreateLoadBalancerAsyncHandler;
+                typedef Outcome<Core::Error, Model::InquiryPriceModifyLoadBalancerResponse> InquiryPriceModifyLoadBalancerOutcome;
+                typedef std::future<InquiryPriceModifyLoadBalancerOutcome> InquiryPriceModifyLoadBalancerOutcomeCallable;
+                typedef std::function<void(const ClbClient*, const Model::InquiryPriceModifyLoadBalancerRequest&, InquiryPriceModifyLoadBalancerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquiryPriceModifyLoadBalancerAsyncHandler;
+                typedef Outcome<Core::Error, Model::InquiryPriceRefundLoadBalancerResponse> InquiryPriceRefundLoadBalancerOutcome;
+                typedef std::future<InquiryPriceRefundLoadBalancerOutcome> InquiryPriceRefundLoadBalancerOutcomeCallable;
+                typedef std::function<void(const ClbClient*, const Model::InquiryPriceRefundLoadBalancerRequest&, InquiryPriceRefundLoadBalancerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquiryPriceRefundLoadBalancerAsyncHandler;
+                typedef Outcome<Core::Error, Model::InquiryPriceRenewLoadBalancerResponse> InquiryPriceRenewLoadBalancerOutcome;
+                typedef std::future<InquiryPriceRenewLoadBalancerOutcome> InquiryPriceRenewLoadBalancerOutcomeCallable;
+                typedef std::function<void(const ClbClient*, const Model::InquiryPriceRenewLoadBalancerRequest&, InquiryPriceRenewLoadBalancerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquiryPriceRenewLoadBalancerAsyncHandler;
                 typedef Outcome<Core::Error, Model::ManualRewriteResponse> ManualRewriteOutcome;
                 typedef std::future<ManualRewriteOutcome> ManualRewriteOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::ManualRewriteRequest&, ManualRewriteOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ManualRewriteAsyncHandler;
@@ -372,6 +394,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyLoadBalancerSlaResponse> ModifyLoadBalancerSlaOutcome;
                 typedef std::future<ModifyLoadBalancerSlaOutcome> ModifyLoadBalancerSlaOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::ModifyLoadBalancerSlaRequest&, ModifyLoadBalancerSlaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLoadBalancerSlaAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyLoadBalancersProjectResponse> ModifyLoadBalancersProjectOutcome;
+                typedef std::future<ModifyLoadBalancersProjectOutcome> ModifyLoadBalancersProjectOutcomeCallable;
+                typedef std::function<void(const ClbClient*, const Model::ModifyLoadBalancersProjectRequest&, ModifyLoadBalancersProjectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLoadBalancersProjectAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyRuleResponse> ModifyRuleOutcome;
                 typedef std::future<ModifyRuleOutcome> ModifyRuleOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::ModifyRuleRequest&, ModifyRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyRuleAsyncHandler;
@@ -937,6 +962,42 @@ This is an async API. After it is returned successfully, you can call the `Descr
                 DisassociateTargetGroupsOutcomeCallable DisassociateTargetGroupsCallable(const Model::DisassociateTargetGroupsRequest& request);
 
                 /**
+                 *This API is used to query the price of creating a CLB instance.
+                 * @param req InquiryPriceCreateLoadBalancerRequest
+                 * @return InquiryPriceCreateLoadBalancerOutcome
+                 */
+                InquiryPriceCreateLoadBalancerOutcome InquiryPriceCreateLoadBalancer(const Model::InquiryPriceCreateLoadBalancerRequest &request);
+                void InquiryPriceCreateLoadBalancerAsync(const Model::InquiryPriceCreateLoadBalancerRequest& request, const InquiryPriceCreateLoadBalancerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                InquiryPriceCreateLoadBalancerOutcomeCallable InquiryPriceCreateLoadBalancerCallable(const Model::InquiryPriceCreateLoadBalancerRequest& request);
+
+                /**
+                 *This API is used to query the price of adjusting the specification of a CLB instance.
+                 * @param req InquiryPriceModifyLoadBalancerRequest
+                 * @return InquiryPriceModifyLoadBalancerOutcome
+                 */
+                InquiryPriceModifyLoadBalancerOutcome InquiryPriceModifyLoadBalancer(const Model::InquiryPriceModifyLoadBalancerRequest &request);
+                void InquiryPriceModifyLoadBalancerAsync(const Model::InquiryPriceModifyLoadBalancerRequest& request, const InquiryPriceModifyLoadBalancerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                InquiryPriceModifyLoadBalancerOutcomeCallable InquiryPriceModifyLoadBalancerCallable(const Model::InquiryPriceModifyLoadBalancerRequest& request);
+
+                /**
+                 *This API is used to query the refund amount of returning a CLB instance. 
+                 * @param req InquiryPriceRefundLoadBalancerRequest
+                 * @return InquiryPriceRefundLoadBalancerOutcome
+                 */
+                InquiryPriceRefundLoadBalancerOutcome InquiryPriceRefundLoadBalancer(const Model::InquiryPriceRefundLoadBalancerRequest &request);
+                void InquiryPriceRefundLoadBalancerAsync(const Model::InquiryPriceRefundLoadBalancerRequest& request, const InquiryPriceRefundLoadBalancerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                InquiryPriceRefundLoadBalancerOutcomeCallable InquiryPriceRefundLoadBalancerCallable(const Model::InquiryPriceRefundLoadBalancerRequest& request);
+
+                /**
+                 *This API is used to query the price of renewing a CLB instance. It's only available to prepaid CLB instances.
+                 * @param req InquiryPriceRenewLoadBalancerRequest
+                 * @return InquiryPriceRenewLoadBalancerOutcome
+                 */
+                InquiryPriceRenewLoadBalancerOutcome InquiryPriceRenewLoadBalancer(const Model::InquiryPriceRenewLoadBalancerRequest &request);
+                void InquiryPriceRenewLoadBalancerAsync(const Model::InquiryPriceRenewLoadBalancerRequest& request, const InquiryPriceRenewLoadBalancerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                InquiryPriceRenewLoadBalancerOutcomeCallable InquiryPriceRenewLoadBalancerCallable(const Model::InquiryPriceRenewLoadBalancerRequest& request);
+
+                /**
                  *After the original access address and the address to be redirected are configured manually, the system will automatically redirect requests made to the original access address to the target address of the corresponding path. Multiple paths can be configured as a redirection policy under one domain name to achieve automatic redirection between HTTP and HTTPS. A redirection policy should meet the following rules: if A has already been redirected to B, then it cannot be redirected to C (unless the original redirection relationship is deleted and a new one is created), and B cannot be redirected to any other addresses.
                  * @param req ManualRewriteRequest
                  * @return ManualRewriteOutcome
@@ -1026,6 +1087,15 @@ Limits
                 ModifyLoadBalancerSlaOutcome ModifyLoadBalancerSla(const Model::ModifyLoadBalancerSlaRequest &request);
                 void ModifyLoadBalancerSlaAsync(const Model::ModifyLoadBalancerSlaRequest& request, const ModifyLoadBalancerSlaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyLoadBalancerSlaOutcomeCallable ModifyLoadBalancerSlaCallable(const Model::ModifyLoadBalancerSlaRequest& request);
+
+                /**
+                 *This API is used to modify the projects of CLB instances. 
+                 * @param req ModifyLoadBalancersProjectRequest
+                 * @return ModifyLoadBalancersProjectOutcome
+                 */
+                ModifyLoadBalancersProjectOutcome ModifyLoadBalancersProject(const Model::ModifyLoadBalancersProjectRequest &request);
+                void ModifyLoadBalancersProjectAsync(const Model::ModifyLoadBalancersProjectRequest& request, const ModifyLoadBalancersProjectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyLoadBalancersProjectOutcomeCallable ModifyLoadBalancersProjectCallable(const Model::ModifyLoadBalancersProjectRequest& request);
 
                 /**
                  *This API (ModifyRule) is used to modify the attributes of a forwarding rule under a layer-7 CLB listener, such as forwarding path, health check attribute, and forwarding policy.

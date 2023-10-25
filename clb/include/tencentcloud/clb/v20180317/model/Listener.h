@@ -214,19 +214,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SessionExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable the SNI feature (this parameter is only meaningful for HTTPS listeners)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SniSwitch Whether to enable the SNI feature (this parameter is only meaningful for HTTPS listeners)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @return SniSwitch Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetSniSwitch() const;
 
                     /**
-                     * 设置Whether to enable the SNI feature (this parameter is only meaningful for HTTPS listeners)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _sniSwitch Whether to enable the SNI feature (this parameter is only meaningful for HTTPS listeners)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @param _sniSwitch Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSniSwitch(const int64_t& _sniSwitch);
@@ -662,8 +662,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_sessionExpireTimeHasBeenSet;
 
                     /**
-                     * Whether to enable the SNI feature (this parameter is only meaningful for HTTPS listeners)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     int64_t m_sniSwitch;
                     bool m_sniSwitchHasBeenSet;

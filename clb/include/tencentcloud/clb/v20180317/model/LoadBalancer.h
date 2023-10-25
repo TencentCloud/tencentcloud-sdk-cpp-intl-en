@@ -1388,6 +1388,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool LoadBalancerDomainHasBeenSet() const;
 
+                    /**
+                     * 获取Network egress
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @return Egress Network egress
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetEgress() const;
+
+                    /**
+                     * 设置Network egress
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @param _egress Network egress
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetEgress(const std::string& _egress);
+
+                    /**
+                     * 判断参数 Egress 是否已赋值
+                     * @return Egress 是否已赋值
+                     * 
+                     */
+                    bool EgressHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1763,6 +1788,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_loadBalancerDomain;
                     bool m_loadBalancerDomainHasBeenSet;
+
+                    /**
+                     * Network egress
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_egress;
+                    bool m_egressHasBeenSet;
 
                 };
             }

@@ -951,19 +951,19 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool ZonesHasBeenSet() const;
 
                     /**
-                     * 获取Whether SNI is enabled. This parameter is only meaningful for HTTPS listeners.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return SniSwitch Whether SNI is enabled. This parameter is only meaningful for HTTPS listeners.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @return SniSwitch Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetSniSwitch() const;
 
                     /**
-                     * 设置Whether SNI is enabled. This parameter is only meaningful for HTTPS listeners.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _sniSwitch Whether SNI is enabled. This parameter is only meaningful for HTTPS listeners.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @param _sniSwitch Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSniSwitch(const int64_t& _sniSwitch);
@@ -999,6 +999,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool LoadBalancerDomainHasBeenSet() const;
+
+                    /**
+                     * 获取Network egress
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @return Egress Network egress
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetEgress() const;
+
+                    /**
+                     * 设置Network egress
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @param _egress Network egress
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetEgress(const std::string& _egress);
+
+                    /**
+                     * 判断参数 Egress 是否已赋值
+                     * @return Egress 是否已赋值
+                     * 
+                     */
+                    bool EgressHasBeenSet() const;
 
                 private:
 
@@ -1255,8 +1280,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_zonesHasBeenSet;
 
                     /**
-                     * Whether SNI is enabled. This parameter is only meaningful for HTTPS listeners.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     int64_t m_sniSwitch;
                     bool m_sniSwitchHasBeenSet;
@@ -1267,6 +1292,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_loadBalancerDomain;
                     bool m_loadBalancerDomainHasBeenSet;
+
+                    /**
+                     * Network egress
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_egress;
+                    bool m_egressHasBeenSet;
 
                 };
             }

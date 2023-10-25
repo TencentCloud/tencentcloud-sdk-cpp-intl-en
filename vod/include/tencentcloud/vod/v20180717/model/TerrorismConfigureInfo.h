@@ -24,8 +24,8 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/vod/v20180717/model/TerrorismImgReviewTemplateInfo.h>
 #include <tencentcloud/vod/v20180717/model/TerrorismOcrReviewTemplateInfo.h>
+#include <tencentcloud/vod/v20180717/model/TerrorismImgReviewTemplateInfo.h>
 
 
 namespace TencentCloud
@@ -47,31 +47,6 @@ namespace TencentCloud
                     void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
-
-                    /**
-                     * 获取Parameters for recognition of terrorism content in images
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @return ImgReviewInfo Parameters for recognition of terrorism content in images
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * 
-                     */
-                    TerrorismImgReviewTemplateInfo GetImgReviewInfo() const;
-
-                    /**
-                     * 设置Parameters for recognition of terrorism content in images
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param _imgReviewInfo Parameters for recognition of terrorism content in images
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * 
-                     */
-                    void SetImgReviewInfo(const TerrorismImgReviewTemplateInfo& _imgReviewInfo);
-
-                    /**
-                     * 判断参数 ImgReviewInfo 是否已赋值
-                     * @return ImgReviewInfo 是否已赋值
-                     * 
-                     */
-                    bool ImgReviewInfoHasBeenSet() const;
 
                     /**
                      * 获取Parameters for OCR-based recognition of terrorism content
@@ -98,14 +73,32 @@ Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     bool OcrReviewInfoHasBeenSet() const;
 
-                private:
+                    /**
+                     * 获取Parameters for recognition of terrorism content in images
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @return ImgReviewInfo Parameters for recognition of terrorism content in images
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
+                     */
+                    TerrorismImgReviewTemplateInfo GetImgReviewInfo() const;
 
                     /**
-                     * Parameters for recognition of terrorism content in images
+                     * 设置Parameters for recognition of terrorism content in images
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * @param _imgReviewInfo Parameters for recognition of terrorism content in images
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
-                    TerrorismImgReviewTemplateInfo m_imgReviewInfo;
-                    bool m_imgReviewInfoHasBeenSet;
+                    void SetImgReviewInfo(const TerrorismImgReviewTemplateInfo& _imgReviewInfo);
+
+                    /**
+                     * 判断参数 ImgReviewInfo 是否已赋值
+                     * @return ImgReviewInfo 是否已赋值
+                     * 
+                     */
+                    bool ImgReviewInfoHasBeenSet() const;
+
+                private:
 
                     /**
                      * Parameters for OCR-based recognition of terrorism content
@@ -113,6 +106,13 @@ Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     TerrorismOcrReviewTemplateInfo m_ocrReviewInfo;
                     bool m_ocrReviewInfoHasBeenSet;
+
+                    /**
+                     * Parameters for recognition of terrorism content in images
+Note: This field may return `null`, indicating that no valid value can be found.
+                     */
+                    TerrorismImgReviewTemplateInfo m_imgReviewInfo;
+                    bool m_imgReviewInfoHasBeenSet;
 
                 };
             }
