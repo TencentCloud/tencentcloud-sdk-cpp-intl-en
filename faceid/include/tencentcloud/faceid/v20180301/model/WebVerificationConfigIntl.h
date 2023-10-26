@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * eKYC Web related configuration
                 */
                 class WebVerificationConfigIntl : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to automatically redirect to `RedirectUrl` after successful verification. Default value: `false`.
-                     * @return AutoSkip Whether to automatically redirect to `RedirectUrl` after successful verification. Default value: `false`.
+                     * 获取Whether to automatically redirect to RedirectUrl after successful verification. Default value: false.
+                     * @return AutoSkip Whether to automatically redirect to RedirectUrl after successful verification. Default value: false.
                      * 
                      */
                     bool GetAutoSkip() const;
 
                     /**
-                     * 设置Whether to automatically redirect to `RedirectUrl` after successful verification. Default value: `false`.
-                     * @param _autoSkip Whether to automatically redirect to `RedirectUrl` after successful verification. Default value: `false`.
+                     * 设置Whether to automatically redirect to RedirectUrl after successful verification. Default value: false.
+                     * @param _autoSkip Whether to automatically redirect to RedirectUrl after successful verification. Default value: false.
                      * 
                      */
                     void SetAutoSkip(const bool& _autoSkip);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to automatically redirect to `RedirectUrl` after successful verification. Default value: `false`.
+                     * Whether to automatically redirect to RedirectUrl after successful verification. Default value: false.
                      */
                     bool m_autoSkip;
                     bool m_autoSkipHasBeenSet;

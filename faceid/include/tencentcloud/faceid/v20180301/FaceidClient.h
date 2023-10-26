@@ -31,6 +31,8 @@
 #include <tencentcloud/faceid/v20180301/model/ApplyWebVerificationBizTokenIntlResponse.h>
 #include <tencentcloud/faceid/v20180301/model/ApplyWebVerificationTokenRequest.h>
 #include <tencentcloud/faceid/v20180301/model/ApplyWebVerificationTokenResponse.h>
+#include <tencentcloud/faceid/v20180301/model/CompareFaceLivenessRequest.h>
+#include <tencentcloud/faceid/v20180301/model/CompareFaceLivenessResponse.h>
 #include <tencentcloud/faceid/v20180301/model/CreateUploadUrlRequest.h>
 #include <tencentcloud/faceid/v20180301/model/CreateUploadUrlResponse.h>
 #include <tencentcloud/faceid/v20180301/model/DetectReflectLivenessAndCompareRequest.h>
@@ -79,6 +81,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ApplyWebVerificationTokenResponse> ApplyWebVerificationTokenOutcome;
                 typedef std::future<ApplyWebVerificationTokenOutcome> ApplyWebVerificationTokenOutcomeCallable;
                 typedef std::function<void(const FaceidClient*, const Model::ApplyWebVerificationTokenRequest&, ApplyWebVerificationTokenOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ApplyWebVerificationTokenAsyncHandler;
+                typedef Outcome<Core::Error, Model::CompareFaceLivenessResponse> CompareFaceLivenessOutcome;
+                typedef std::future<CompareFaceLivenessOutcome> CompareFaceLivenessOutcomeCallable;
+                typedef std::function<void(const FaceidClient*, const Model::CompareFaceLivenessRequest&, CompareFaceLivenessOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CompareFaceLivenessAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateUploadUrlResponse> CreateUploadUrlOutcome;
                 typedef std::future<CreateUploadUrlOutcome> CreateUploadUrlOutcomeCallable;
                 typedef std::function<void(const FaceidClient*, const Model::CreateUploadUrlRequest&, CreateUploadUrlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateUploadUrlAsyncHandler;
@@ -150,6 +155,15 @@ namespace TencentCloud
                 ApplyWebVerificationTokenOutcome ApplyWebVerificationToken(const Model::ApplyWebVerificationTokenRequest &request);
                 void ApplyWebVerificationTokenAsync(const Model::ApplyWebVerificationTokenRequest& request, const ApplyWebVerificationTokenAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ApplyWebVerificationTokenOutcomeCallable ApplyWebVerificationTokenCallable(const Model::ApplyWebVerificationTokenRequest& request);
+
+                /**
+                 *This interface supports judgment of real person and photo comparison to verify the user's identity online. By passing the video and photo into the interface, it will first judge whether the person in the video is real. If yes, it judges whether the person in the video is the same one as the uploaded photo and returns authentication result.
+                 * @param req CompareFaceLivenessRequest
+                 * @return CompareFaceLivenessOutcome
+                 */
+                CompareFaceLivenessOutcome CompareFaceLiveness(const Model::CompareFaceLivenessRequest &request);
+                void CompareFaceLivenessAsync(const Model::CompareFaceLivenessRequest& request, const CompareFaceLivenessAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CompareFaceLivenessOutcomeCallable CompareFaceLivenessCallable(const Model::CompareFaceLivenessRequest& request);
 
                 /**
                  *This API is used to generate a temporary `UploadUrl` for uploading resource files (with the `HTTP PUT` method). After resource upload, `ResourceUrl` will be passed to the `TargetAction` API to complete the resource passing (specific fields vary by case). 

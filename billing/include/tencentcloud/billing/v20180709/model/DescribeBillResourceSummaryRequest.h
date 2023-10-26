@@ -336,6 +336,52 @@ Note: To query the product codes used in the current month, call <a href="https:
                      */
                     bool PayerUinHasBeenSet() const;
 
+                    /**
+                     * 获取Cost allocation tag key, which can be customized. This parameter can be used for querying bills after January 2021.
+                     * @return TagKey Cost allocation tag key, which can be customized. This parameter can be used for querying bills after January 2021.
+                     * 
+                     */
+                    std::string GetTagKey() const;
+
+                    /**
+                     * 设置Cost allocation tag key, which can be customized. This parameter can be used for querying bills after January 2021.
+                     * @param _tagKey Cost allocation tag key, which can be customized. This parameter can be used for querying bills after January 2021.
+                     * 
+                     */
+                    void SetTagKey(const std::string& _tagKey);
+
+                    /**
+                     * 判断参数 TagKey 是否已赋值
+                     * @return TagKey 是否已赋值
+                     * 
+                     */
+                    bool TagKeyHasBeenSet() const;
+
+                    /**
+                     * 获取Resource tag value. If it is left empty, there are no records with tag values set under this tag key.
+This parameter can be used for querying bills after January 2021.
+                     * @return TagValue Resource tag value. If it is left empty, there are no records with tag values set under this tag key.
+This parameter can be used for querying bills after January 2021.
+                     * 
+                     */
+                    std::string GetTagValue() const;
+
+                    /**
+                     * 设置Resource tag value. If it is left empty, there are no records with tag values set under this tag key.
+This parameter can be used for querying bills after January 2021.
+                     * @param _tagValue Resource tag value. If it is left empty, there are no records with tag values set under this tag key.
+This parameter can be used for querying bills after January 2021.
+                     * 
+                     */
+                    void SetTagValue(const std::string& _tagValue);
+
+                    /**
+                     * 判断参数 TagValue 是否已赋值
+                     * @return TagValue 是否已赋值
+                     * 
+                     */
+                    bool TagValueHasBeenSet() const;
+
                 private:
 
                     /**
@@ -418,6 +464,19 @@ Note: To query the product codes used in the current month, call <a href="https:
                      */
                     std::string m_payerUin;
                     bool m_payerUinHasBeenSet;
+
+                    /**
+                     * Cost allocation tag key, which can be customized. This parameter can be used for querying bills after January 2021.
+                     */
+                    std::string m_tagKey;
+                    bool m_tagKeyHasBeenSet;
+
+                    /**
+                     * Resource tag value. If it is left empty, there are no records with tag values set under this tag key.
+This parameter can be used for querying bills after January 2021.
+                     */
+                    std::string m_tagValue;
+                    bool m_tagValueHasBeenSet;
 
                 };
             }

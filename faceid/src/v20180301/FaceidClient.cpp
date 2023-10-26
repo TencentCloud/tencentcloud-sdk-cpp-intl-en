@@ -212,6 +212,49 @@ FaceidClient::ApplyWebVerificationTokenOutcomeCallable FaceidClient::ApplyWebVer
     return task->get_future();
 }
 
+FaceidClient::CompareFaceLivenessOutcome FaceidClient::CompareFaceLiveness(const CompareFaceLivenessRequest &request)
+{
+    auto outcome = MakeRequest(request, "CompareFaceLiveness");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CompareFaceLivenessResponse rsp = CompareFaceLivenessResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CompareFaceLivenessOutcome(rsp);
+        else
+            return CompareFaceLivenessOutcome(o.GetError());
+    }
+    else
+    {
+        return CompareFaceLivenessOutcome(outcome.GetError());
+    }
+}
+
+void FaceidClient::CompareFaceLivenessAsync(const CompareFaceLivenessRequest& request, const CompareFaceLivenessAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CompareFaceLiveness(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+FaceidClient::CompareFaceLivenessOutcomeCallable FaceidClient::CompareFaceLivenessCallable(const CompareFaceLivenessRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CompareFaceLivenessOutcome()>>(
+        [this, request]()
+        {
+            return this->CompareFaceLiveness(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 FaceidClient::CreateUploadUrlOutcome FaceidClient::CreateUploadUrl(const CreateUploadUrlRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateUploadUrl");

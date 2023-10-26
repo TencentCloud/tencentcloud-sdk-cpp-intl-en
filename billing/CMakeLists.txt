@@ -21,45 +21,64 @@ set(billing_public_header
 set(billing_public_header_model
   include/tencentcloud/billing/v20180709/model/VoucherInfos.h
   include/tencentcloud/billing/v20180709/model/UsageDetails.h
+  include/tencentcloud/billing/v20180709/model/DescribeBillSummaryForOrganizationRequest.h
   include/tencentcloud/billing/v20180709/model/DescribeBillSummaryByTagResponse.h
+  include/tencentcloud/billing/v20180709/model/BillDetailComponentConfig.h
   include/tencentcloud/billing/v20180709/model/DescribeBillSummaryResponse.h
   include/tencentcloud/billing/v20180709/model/DescribeBillSummaryByPayModeResponse.h
+  include/tencentcloud/billing/v20180709/model/SummaryTotal.h
   include/tencentcloud/billing/v20180709/model/BillResourceSummary.h
   include/tencentcloud/billing/v20180709/model/DescribeBillSummaryByTagRequest.h
   include/tencentcloud/billing/v20180709/model/DescribeBillSummaryByProductResponse.h
   include/tencentcloud/billing/v20180709/model/BillTagInfo.h
+  include/tencentcloud/billing/v20180709/model/TagDataInfo.h
   include/tencentcloud/billing/v20180709/model/DescribeBillSummaryByRegionResponse.h
+  include/tencentcloud/billing/v20180709/model/CreateAllocationTagResponse.h
   include/tencentcloud/billing/v20180709/model/RegionSummaryOverviewItem.h
   include/tencentcloud/billing/v20180709/model/DescribeAccountBalanceRequest.h
   include/tencentcloud/billing/v20180709/model/DescribeBillDetailRequest.h
+  include/tencentcloud/billing/v20180709/model/DescribeBillResourceSummaryForOrganizationRequest.h
   include/tencentcloud/billing/v20180709/model/DescribeVoucherInfoResponse.h
+  include/tencentcloud/billing/v20180709/model/DeleteAllocationTagResponse.h
   include/tencentcloud/billing/v20180709/model/SummaryDetail.h
   include/tencentcloud/billing/v20180709/model/DescribeAccountBalanceResponse.h
-  include/tencentcloud/billing/v20180709/model/BusinessSummaryOverviewItem.h
+  include/tencentcloud/billing/v20180709/model/DescribeVoucherInfoRequest.h
+  include/tencentcloud/billing/v20180709/model/DescribeBillDetailForOrganizationResponse.h
   include/tencentcloud/billing/v20180709/model/BillDetailComponent.h
-  include/tencentcloud/billing/v20180709/model/DescribeBillSummaryByRegionRequest.h
+  include/tencentcloud/billing/v20180709/model/DescribeBillDownloadUrlRequest.h
   include/tencentcloud/billing/v20180709/model/DescribeBillSummaryByPayModeRequest.h
   include/tencentcloud/billing/v20180709/model/UsageRecords.h
   include/tencentcloud/billing/v20180709/model/DescribeDosageCosDetailByDateResponse.h
   include/tencentcloud/billing/v20180709/model/DescribeBillSummaryRequest.h
   include/tencentcloud/billing/v20180709/model/DescribeBillResourceSummaryResponse.h
   include/tencentcloud/billing/v20180709/model/ActionSummaryOverviewItem.h
-  include/tencentcloud/billing/v20180709/model/DescribeVoucherInfoRequest.h
+  include/tencentcloud/billing/v20180709/model/DescribeBillDetailForOrganizationRequest.h
   include/tencentcloud/billing/v20180709/model/ApplicableProducts.h
+  include/tencentcloud/billing/v20180709/model/DistributionBillDetail.h
   include/tencentcloud/billing/v20180709/model/DescribeBillSummaryByProjectRequest.h
   include/tencentcloud/billing/v20180709/model/DescribeVoucherUsageDetailsRequest.h
   include/tencentcloud/billing/v20180709/model/DescribeDosageCosDetailByDateRequest.h
   include/tencentcloud/billing/v20180709/model/DescribeBillResourceSummaryRequest.h
+  include/tencentcloud/billing/v20180709/model/DeleteAllocationTagRequest.h
+  include/tencentcloud/billing/v20180709/model/BusinessSummaryOverviewItem.h
   include/tencentcloud/billing/v20180709/model/DescribeBillSummaryByProductRequest.h
-  include/tencentcloud/billing/v20180709/model/SummaryTotal.h
+  include/tencentcloud/billing/v20180709/model/BillDistributionResourceSummary.h
+  include/tencentcloud/billing/v20180709/model/BillDetailAssociatedOrder.h
   include/tencentcloud/billing/v20180709/model/BillDetail.h
   include/tencentcloud/billing/v20180709/model/BusinessSummaryInfo.h
   include/tencentcloud/billing/v20180709/model/TagSummaryOverviewItem.h
   include/tencentcloud/billing/v20180709/model/ProjectSummaryOverviewItem.h
   include/tencentcloud/billing/v20180709/model/DescribeBillDetailResponse.h
+  include/tencentcloud/billing/v20180709/model/DescribeBillSummaryForOrganizationResponse.h
   include/tencentcloud/billing/v20180709/model/DescribeVoucherUsageDetailsResponse.h
+  include/tencentcloud/billing/v20180709/model/DescribeBillSummaryByRegionRequest.h
+  include/tencentcloud/billing/v20180709/model/DescribeTagListResponse.h
   include/tencentcloud/billing/v20180709/model/CosDetailSets.h
+  include/tencentcloud/billing/v20180709/model/DescribeTagListRequest.h
   include/tencentcloud/billing/v20180709/model/DescribeBillSummaryByProjectResponse.h
+  include/tencentcloud/billing/v20180709/model/DescribeBillDownloadUrlResponse.h
+  include/tencentcloud/billing/v20180709/model/DescribeBillResourceSummaryForOrganizationResponse.h
+  include/tencentcloud/billing/v20180709/model/CreateAllocationTagRequest.h
   include/tencentcloud/billing/v20180709/model/ExcludedProducts.h
   include/tencentcloud/billing/v20180709/model/PayModeSummaryOverviewItem.h
   include/tencentcloud/billing/v20180709/model/BusinessSummaryTotal.h
@@ -69,45 +88,64 @@ set(billing_src
   src/v20180709/BillingClient.cpp
   src/v20180709/model/VoucherInfos.cpp
   src/v20180709/model/UsageDetails.cpp
+  src/v20180709/model/DescribeBillSummaryForOrganizationRequest.cpp
   src/v20180709/model/DescribeBillSummaryByTagResponse.cpp
+  src/v20180709/model/BillDetailComponentConfig.cpp
   src/v20180709/model/DescribeBillSummaryResponse.cpp
   src/v20180709/model/DescribeBillSummaryByPayModeResponse.cpp
+  src/v20180709/model/SummaryTotal.cpp
   src/v20180709/model/BillResourceSummary.cpp
   src/v20180709/model/DescribeBillSummaryByTagRequest.cpp
   src/v20180709/model/DescribeBillSummaryByProductResponse.cpp
   src/v20180709/model/BillTagInfo.cpp
+  src/v20180709/model/TagDataInfo.cpp
   src/v20180709/model/DescribeBillSummaryByRegionResponse.cpp
+  src/v20180709/model/CreateAllocationTagResponse.cpp
   src/v20180709/model/RegionSummaryOverviewItem.cpp
   src/v20180709/model/DescribeAccountBalanceRequest.cpp
   src/v20180709/model/DescribeBillDetailRequest.cpp
+  src/v20180709/model/DescribeBillResourceSummaryForOrganizationRequest.cpp
   src/v20180709/model/DescribeVoucherInfoResponse.cpp
+  src/v20180709/model/DeleteAllocationTagResponse.cpp
   src/v20180709/model/SummaryDetail.cpp
   src/v20180709/model/DescribeAccountBalanceResponse.cpp
-  src/v20180709/model/BusinessSummaryOverviewItem.cpp
+  src/v20180709/model/DescribeVoucherInfoRequest.cpp
+  src/v20180709/model/DescribeBillDetailForOrganizationResponse.cpp
   src/v20180709/model/BillDetailComponent.cpp
-  src/v20180709/model/DescribeBillSummaryByRegionRequest.cpp
+  src/v20180709/model/DescribeBillDownloadUrlRequest.cpp
   src/v20180709/model/DescribeBillSummaryByPayModeRequest.cpp
   src/v20180709/model/UsageRecords.cpp
   src/v20180709/model/DescribeDosageCosDetailByDateResponse.cpp
   src/v20180709/model/DescribeBillSummaryRequest.cpp
   src/v20180709/model/DescribeBillResourceSummaryResponse.cpp
   src/v20180709/model/ActionSummaryOverviewItem.cpp
-  src/v20180709/model/DescribeVoucherInfoRequest.cpp
+  src/v20180709/model/DescribeBillDetailForOrganizationRequest.cpp
   src/v20180709/model/ApplicableProducts.cpp
+  src/v20180709/model/DistributionBillDetail.cpp
   src/v20180709/model/DescribeBillSummaryByProjectRequest.cpp
   src/v20180709/model/DescribeVoucherUsageDetailsRequest.cpp
   src/v20180709/model/DescribeDosageCosDetailByDateRequest.cpp
   src/v20180709/model/DescribeBillResourceSummaryRequest.cpp
+  src/v20180709/model/DeleteAllocationTagRequest.cpp
+  src/v20180709/model/BusinessSummaryOverviewItem.cpp
   src/v20180709/model/DescribeBillSummaryByProductRequest.cpp
-  src/v20180709/model/SummaryTotal.cpp
+  src/v20180709/model/BillDistributionResourceSummary.cpp
+  src/v20180709/model/BillDetailAssociatedOrder.cpp
   src/v20180709/model/BillDetail.cpp
   src/v20180709/model/BusinessSummaryInfo.cpp
   src/v20180709/model/TagSummaryOverviewItem.cpp
   src/v20180709/model/ProjectSummaryOverviewItem.cpp
   src/v20180709/model/DescribeBillDetailResponse.cpp
+  src/v20180709/model/DescribeBillSummaryForOrganizationResponse.cpp
   src/v20180709/model/DescribeVoucherUsageDetailsResponse.cpp
+  src/v20180709/model/DescribeBillSummaryByRegionRequest.cpp
+  src/v20180709/model/DescribeTagListResponse.cpp
   src/v20180709/model/CosDetailSets.cpp
+  src/v20180709/model/DescribeTagListRequest.cpp
   src/v20180709/model/DescribeBillSummaryByProjectResponse.cpp
+  src/v20180709/model/DescribeBillDownloadUrlResponse.cpp
+  src/v20180709/model/DescribeBillResourceSummaryForOrganizationResponse.cpp
+  src/v20180709/model/CreateAllocationTagRequest.cpp
   src/v20180709/model/ExcludedProducts.cpp
   src/v20180709/model/PayModeSummaryOverviewItem.cpp
   src/v20180709/model/BusinessSummaryTotal.cpp

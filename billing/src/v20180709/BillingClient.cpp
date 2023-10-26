@@ -40,6 +40,92 @@ BillingClient::BillingClient(const Credential &credential, const string &region,
 }
 
 
+BillingClient::CreateAllocationTagOutcome BillingClient::CreateAllocationTag(const CreateAllocationTagRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateAllocationTag");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateAllocationTagResponse rsp = CreateAllocationTagResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateAllocationTagOutcome(rsp);
+        else
+            return CreateAllocationTagOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateAllocationTagOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::CreateAllocationTagAsync(const CreateAllocationTagRequest& request, const CreateAllocationTagAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateAllocationTag(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+BillingClient::CreateAllocationTagOutcomeCallable BillingClient::CreateAllocationTagCallable(const CreateAllocationTagRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateAllocationTagOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateAllocationTag(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+BillingClient::DeleteAllocationTagOutcome BillingClient::DeleteAllocationTag(const DeleteAllocationTagRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteAllocationTag");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteAllocationTagResponse rsp = DeleteAllocationTagResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteAllocationTagOutcome(rsp);
+        else
+            return DeleteAllocationTagOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteAllocationTagOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::DeleteAllocationTagAsync(const DeleteAllocationTagRequest& request, const DeleteAllocationTagAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteAllocationTag(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+BillingClient::DeleteAllocationTagOutcomeCallable BillingClient::DeleteAllocationTagCallable(const DeleteAllocationTagRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteAllocationTagOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteAllocationTag(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 BillingClient::DescribeAccountBalanceOutcome BillingClient::DescribeAccountBalance(const DescribeAccountBalanceRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeAccountBalance");
@@ -126,6 +212,92 @@ BillingClient::DescribeBillDetailOutcomeCallable BillingClient::DescribeBillDeta
     return task->get_future();
 }
 
+BillingClient::DescribeBillDetailForOrganizationOutcome BillingClient::DescribeBillDetailForOrganization(const DescribeBillDetailForOrganizationRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeBillDetailForOrganization");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeBillDetailForOrganizationResponse rsp = DescribeBillDetailForOrganizationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeBillDetailForOrganizationOutcome(rsp);
+        else
+            return DescribeBillDetailForOrganizationOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeBillDetailForOrganizationOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::DescribeBillDetailForOrganizationAsync(const DescribeBillDetailForOrganizationRequest& request, const DescribeBillDetailForOrganizationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeBillDetailForOrganization(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+BillingClient::DescribeBillDetailForOrganizationOutcomeCallable BillingClient::DescribeBillDetailForOrganizationCallable(const DescribeBillDetailForOrganizationRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeBillDetailForOrganizationOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeBillDetailForOrganization(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+BillingClient::DescribeBillDownloadUrlOutcome BillingClient::DescribeBillDownloadUrl(const DescribeBillDownloadUrlRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeBillDownloadUrl");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeBillDownloadUrlResponse rsp = DescribeBillDownloadUrlResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeBillDownloadUrlOutcome(rsp);
+        else
+            return DescribeBillDownloadUrlOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeBillDownloadUrlOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::DescribeBillDownloadUrlAsync(const DescribeBillDownloadUrlRequest& request, const DescribeBillDownloadUrlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeBillDownloadUrl(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+BillingClient::DescribeBillDownloadUrlOutcomeCallable BillingClient::DescribeBillDownloadUrlCallable(const DescribeBillDownloadUrlRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeBillDownloadUrlOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeBillDownloadUrl(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 BillingClient::DescribeBillResourceSummaryOutcome BillingClient::DescribeBillResourceSummary(const DescribeBillResourceSummaryRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeBillResourceSummary");
@@ -162,6 +334,49 @@ BillingClient::DescribeBillResourceSummaryOutcomeCallable BillingClient::Describ
         [this, request]()
         {
             return this->DescribeBillResourceSummary(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+BillingClient::DescribeBillResourceSummaryForOrganizationOutcome BillingClient::DescribeBillResourceSummaryForOrganization(const DescribeBillResourceSummaryForOrganizationRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeBillResourceSummaryForOrganization");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeBillResourceSummaryForOrganizationResponse rsp = DescribeBillResourceSummaryForOrganizationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeBillResourceSummaryForOrganizationOutcome(rsp);
+        else
+            return DescribeBillResourceSummaryForOrganizationOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeBillResourceSummaryForOrganizationOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::DescribeBillResourceSummaryForOrganizationAsync(const DescribeBillResourceSummaryForOrganizationRequest& request, const DescribeBillResourceSummaryForOrganizationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeBillResourceSummaryForOrganization(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+BillingClient::DescribeBillResourceSummaryForOrganizationOutcomeCallable BillingClient::DescribeBillResourceSummaryForOrganizationCallable(const DescribeBillResourceSummaryForOrganizationRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeBillResourceSummaryForOrganizationOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeBillResourceSummaryForOrganization(request);
         }
     );
 
@@ -427,6 +642,49 @@ BillingClient::DescribeBillSummaryByTagOutcomeCallable BillingClient::DescribeBi
     return task->get_future();
 }
 
+BillingClient::DescribeBillSummaryForOrganizationOutcome BillingClient::DescribeBillSummaryForOrganization(const DescribeBillSummaryForOrganizationRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeBillSummaryForOrganization");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeBillSummaryForOrganizationResponse rsp = DescribeBillSummaryForOrganizationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeBillSummaryForOrganizationOutcome(rsp);
+        else
+            return DescribeBillSummaryForOrganizationOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeBillSummaryForOrganizationOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::DescribeBillSummaryForOrganizationAsync(const DescribeBillSummaryForOrganizationRequest& request, const DescribeBillSummaryForOrganizationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeBillSummaryForOrganization(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+BillingClient::DescribeBillSummaryForOrganizationOutcomeCallable BillingClient::DescribeBillSummaryForOrganizationCallable(const DescribeBillSummaryForOrganizationRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeBillSummaryForOrganizationOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeBillSummaryForOrganization(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 BillingClient::DescribeDosageCosDetailByDateOutcome BillingClient::DescribeDosageCosDetailByDate(const DescribeDosageCosDetailByDateRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeDosageCosDetailByDate");
@@ -463,6 +721,49 @@ BillingClient::DescribeDosageCosDetailByDateOutcomeCallable BillingClient::Descr
         [this, request]()
         {
             return this->DescribeDosageCosDetailByDate(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+BillingClient::DescribeTagListOutcome BillingClient::DescribeTagList(const DescribeTagListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeTagList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeTagListResponse rsp = DescribeTagListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeTagListOutcome(rsp);
+        else
+            return DescribeTagListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeTagListOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::DescribeTagListAsync(const DescribeTagListRequest& request, const DescribeTagListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeTagList(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+BillingClient::DescribeTagListOutcomeCallable BillingClient::DescribeTagListCallable(const DescribeTagListRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeTagListOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeTagList(request);
         }
     );
 

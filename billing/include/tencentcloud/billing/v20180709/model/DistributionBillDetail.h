@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_BILLING_V20180709_MODEL_BILLDETAIL_H_
-#define TENCENTCLOUD_BILLING_V20180709_MODEL_BILLDETAIL_H_
+#ifndef TENCENTCLOUD_BILLING_V20180709_MODEL_DISTRIBUTIONBILLDETAIL_H_
+#define TENCENTCLOUD_BILLING_V20180709_MODEL_DISTRIBUTIONBILLDETAIL_H_
 
 #include <string>
 #include <vector>
@@ -38,13 +38,13 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Bill details
+                * Objects of reseller bill details
                 */
-                class BillDetail : public AbstractModel
+                class DistributionBillDetail : public AbstractModel
                 {
                 public:
-                    BillDetail();
-                    ~BillDetail() = default;
+                    DistributionBillDetail();
+                    ~DistributionBillDetail() = default;
                     void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool BusinessCodeNameHasBeenSet() const;
 
                     /**
-                     * 获取Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
-                     * @return ProductCodeName Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
+                     * 获取Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM - Standard S1.
+                     * @return ProductCodeName Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM - Standard S1.
                      * 
                      */
                     std::string GetProductCodeName() const;
 
                     /**
-                     * 设置Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
-                     * @param _productCodeName Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
+                     * 设置Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM - Standard S1.
+                     * @param _productCodeName Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM - Standard S1.
                      * 
                      */
                     void SetProductCodeName(const std::string& _productCodeName);
@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool ProductCodeNameHasBeenSet() const;
 
                     /**
-                     * 获取Billing mode, which can be monthly subscription or pay-as-you-go.
-                     * @return PayModeName Billing mode, which can be monthly subscription or pay-as-you-go.
+                     * 获取Billing mode: The billing mode, which can be monthly subscription or pay-as-you-go.
+                     * @return PayModeName Billing mode: The billing mode, which can be monthly subscription or pay-as-you-go.
                      * 
                      */
                     std::string GetPayModeName() const;
 
                     /**
-                     * 设置Billing mode, which can be monthly subscription or pay-as-you-go.
-                     * @param _payModeName Billing mode, which can be monthly subscription or pay-as-you-go.
+                     * 设置Billing mode: The billing mode, which can be monthly subscription or pay-as-you-go.
+                     * @param _payModeName Billing mode: The billing mode, which can be monthly subscription or pay-as-you-go.
                      * 
                      */
                     void SetPayModeName(const std::string& _payModeName);
@@ -113,15 +113,15 @@ namespace TencentCloud
                     bool PayModeNameHasBeenSet() const;
 
                     /**
-                     * 获取Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
-                     * @return ProjectName Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+                     * 获取Project Name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+                     * @return ProjectName Project Name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
                      * 
                      */
                     std::string GetProjectName() const;
 
                     /**
-                     * 设置Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
-                     * @param _projectName Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+                     * 设置Project Name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+                     * @param _projectName Project Name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
                      * 
                      */
                     void SetProjectName(const std::string& _projectName);
@@ -134,15 +134,15 @@ namespace TencentCloud
                     bool ProjectNameHasBeenSet() const;
 
                     /**
-                     * 获取Region: The region to which a resource belongs, such as South China (Guangzhou).
-                     * @return RegionName Region: The region to which a resource belongs, such as South China (Guangzhou).
+                     * 获取Region: The region of a resource, e.g. South China (Guangzhou).
+                     * @return RegionName Region: The region of a resource, e.g. South China (Guangzhou).
                      * 
                      */
                     std::string GetRegionName() const;
 
                     /**
-                     * 设置Region: The region to which a resource belongs, such as South China (Guangzhou).
-                     * @param _regionName Region: The region to which a resource belongs, such as South China (Guangzhou).
+                     * 设置Region: The region of a resource, e.g. South China (Guangzhou).
+                     * @param _regionName Region: The region of a resource, e.g. South China (Guangzhou).
                      * 
                      */
                     void SetRegionName(const std::string& _regionName);
@@ -155,15 +155,15 @@ namespace TencentCloud
                     bool RegionNameHasBeenSet() const;
 
                     /**
-                     * 获取Availability zone: availability zone of a resource, e.g. Guangzhou Zone 3
-                     * @return ZoneName Availability zone: availability zone of a resource, e.g. Guangzhou Zone 3
+                     * 获取Availability zone: availability zone of a resource, e.g. Guangzhou Zone 3.
+                     * @return ZoneName Availability zone: availability zone of a resource, e.g. Guangzhou Zone 3.
                      * 
                      */
                     std::string GetZoneName() const;
 
                     /**
-                     * 设置Availability zone: availability zone of a resource, e.g. Guangzhou Zone 3
-                     * @param _zoneName Availability zone: availability zone of a resource, e.g. Guangzhou Zone 3
+                     * 设置Availability zone: availability zone of a resource, e.g. Guangzhou Zone 3.
+                     * @param _zoneName Availability zone: availability zone of a resource, e.g. Guangzhou Zone 3.
                      * 
                      */
                     void SetZoneName(const std::string& _zoneName);
@@ -218,15 +218,15 @@ namespace TencentCloud
                     bool ResourceNameHasBeenSet() const;
 
                     /**
-                     * 获取Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
-                     * @return ActionTypeName Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
+                     * 获取Transaction type, which can be monthly subscription purchase, monthly subscription renewal, pay-as-you-go deduction, etc.
+                     * @return ActionTypeName Transaction type, which can be monthly subscription purchase, monthly subscription renewal, pay-as-you-go deduction, etc.
                      * 
                      */
                     std::string GetActionTypeName() const;
 
                     /**
-                     * 设置Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
-                     * @param _actionTypeName Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
+                     * 设置Transaction type, which can be monthly subscription purchase, monthly subscription renewal, pay-as-you-go deduction, etc.
+                     * @param _actionTypeName Transaction type, which can be monthly subscription purchase, monthly subscription renewal, pay-as-you-go deduction, etc.
                      * 
                      */
                     void SetActionTypeName(const std::string& _actionTypeName);
@@ -239,15 +239,15 @@ namespace TencentCloud
                     bool ActionTypeNameHasBeenSet() const;
 
                     /**
-                     * 获取Order ID: The order number for a monthly subscription purchase
-                     * @return OrderId Order ID: The order number for a monthly subscription purchase
+                     * 获取Order ID: The ID of a monthly subscription order.
+                     * @return OrderId Order ID: The ID of a monthly subscription order.
                      * 
                      */
                     std::string GetOrderId() const;
 
                     /**
-                     * 设置Order ID: The order number for a monthly subscription purchase
-                     * @param _orderId Order ID: The order number for a monthly subscription purchase
+                     * 设置Order ID: The ID of a monthly subscription order.
+                     * @param _orderId Order ID: The ID of a monthly subscription order.
                      * 
                      */
                     void SetOrderId(const std::string& _orderId);
@@ -260,15 +260,15 @@ namespace TencentCloud
                     bool OrderIdHasBeenSet() const;
 
                     /**
-                     * 获取Transaction ID: The bill number for a deducted payment
-                     * @return BillId Transaction ID: The bill number for a deducted payment
+                     * 获取Transaction ID: The ID of a settlement bill.
+                     * @return BillId Transaction ID: The ID of a settlement bill.
                      * 
                      */
                     std::string GetBillId() const;
 
                     /**
-                     * 设置Transaction ID: The bill number for a deducted payment
-                     * @param _billId Transaction ID: The bill number for a deducted payment
+                     * 设置Transaction ID: The ID of a settlement bill.
+                     * @param _billId Transaction ID: The ID of a settlement bill.
                      * 
                      */
                     void SetBillId(const std::string& _billId);
@@ -281,15 +281,15 @@ namespace TencentCloud
                     bool BillIdHasBeenSet() const;
 
                     /**
-                     * 获取Transaction time: The time at which a payment was deducted
-                     * @return PayTime Transaction time: The time at which a payment was deducted
+                     * 获取Deduction time: The settlement cost deduction time.
+                     * @return PayTime Deduction time: The settlement cost deduction time.
                      * 
                      */
                     std::string GetPayTime() const;
 
                     /**
-                     * 设置Transaction time: The time at which a payment was deducted
-                     * @param _payTime Transaction time: The time at which a payment was deducted
+                     * 设置Deduction time: The settlement cost deduction time.
+                     * @param _payTime Deduction time: The settlement cost deduction time.
                      * 
                      */
                     void SetPayTime(const std::string& _payTime);
@@ -302,15 +302,15 @@ namespace TencentCloud
                     bool PayTimeHasBeenSet() const;
 
                     /**
-                     * 获取Usage start time: The time at which product or service usage starts
-                     * @return FeeBeginTime Usage start time: The time at which product or service usage starts
+                     * 获取Usage start time: The time at which product or service usage starts.
+                     * @return FeeBeginTime Usage start time: The time at which product or service usage starts.
                      * 
                      */
                     std::string GetFeeBeginTime() const;
 
                     /**
-                     * 设置Usage start time: The time at which product or service usage starts
-                     * @param _feeBeginTime Usage start time: The time at which product or service usage starts
+                     * 设置Usage start time: The time at which product or service usage starts.
+                     * @param _feeBeginTime Usage start time: The time at which product or service usage starts.
                      * 
                      */
                     void SetFeeBeginTime(const std::string& _feeBeginTime);
@@ -323,15 +323,15 @@ namespace TencentCloud
                     bool FeeBeginTimeHasBeenSet() const;
 
                     /**
-                     * 获取Usage end time: The time at which product or service usage ends
-                     * @return FeeEndTime Usage end time: The time at which product or service usage ends
+                     * 获取Usage end time: The time at which product or service usage ends.
+                     * @return FeeEndTime Usage end time: The time at which product or service usage ends.
                      * 
                      */
                     std::string GetFeeEndTime() const;
 
                     /**
-                     * 设置Usage end time: The time at which product or service usage ends
-                     * @param _feeEndTime Usage end time: The time at which product or service usage ends
+                     * 设置Usage end time: The time at which product or service usage ends.
+                     * @param _feeEndTime Usage end time: The time at which product or service usage ends.
                      * 
                      */
                     void SetFeeEndTime(const std::string& _feeEndTime);
@@ -344,15 +344,15 @@ namespace TencentCloud
                     bool FeeEndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Component list
-                     * @return ComponentSet Component list
+                     * 获取List of components.
+                     * @return ComponentSet List of components.
                      * 
                      */
                     std::vector<BillDetailComponent> GetComponentSet() const;
 
                     /**
-                     * 设置Component list
-                     * @param _componentSet Component list
+                     * 设置List of components.
+                     * @param _componentSet List of components.
                      * 
                      */
                     void SetComponentSet(const std::vector<BillDetailComponent>& _componentSet);
@@ -365,36 +365,15 @@ namespace TencentCloud
                     bool ComponentSetHasBeenSet() const;
 
                     /**
-                     * 获取Payer account ID: The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
-                     * @return PayerUin Payer account ID: The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
-                     * 
-                     */
-                    std::string GetPayerUin() const;
-
-                    /**
-                     * 设置Payer account ID: The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
-                     * @param _payerUin Payer account ID: The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
-                     * 
-                     */
-                    void SetPayerUin(const std::string& _payerUin);
-
-                    /**
-                     * 判断参数 PayerUin 是否已赋值
-                     * @return PayerUin 是否已赋值
-                     * 
-                     */
-                    bool PayerUinHasBeenSet() const;
-
-                    /**
-                     * 获取Owner account ID: The account ID of the actual resource user
-                     * @return OwnerUin Owner account ID: The account ID of the actual resource user
+                     * 获取Owner account ID: The account ID of the actual resource user.
+                     * @return OwnerUin Owner account ID: The account ID of the actual resource user.
                      * 
                      */
                     std::string GetOwnerUin() const;
 
                     /**
-                     * 设置Owner account ID: The account ID of the actual resource user
-                     * @param _ownerUin Owner account ID: The account ID of the actual resource user
+                     * 设置Owner account ID: The account ID of the actual resource user.
+                     * @param _ownerUin Owner account ID: The account ID of the actual resource user.
                      * 
                      */
                     void SetOwnerUin(const std::string& _ownerUin);
@@ -407,15 +386,15 @@ namespace TencentCloud
                     bool OwnerUinHasBeenSet() const;
 
                     /**
-                     * 获取Operator account ID: The account or role ID of the operator who purchases or activates a resource
-                     * @return OperateUin Operator account ID: The account or role ID of the operator who purchases or activates a resource
+                     * 获取Operator account ID: The account or role ID of the operator who purchases or activates a resource.
+                     * @return OperateUin Operator account ID: The account or role ID of the operator who purchases or activates a resource.
                      * 
                      */
                     std::string GetOperateUin() const;
 
                     /**
-                     * 设置Operator account ID: The account or role ID of the operator who purchases or activates a resource
-                     * @param _operateUin Operator account ID: The account or role ID of the operator who purchases or activates a resource
+                     * 设置Operator account ID: The account or role ID of the operator who purchases or activates a resource.
+                     * @param _operateUin Operator account ID: The account or role ID of the operator who purchases or activates a resource.
                      * 
                      */
                     void SetOperateUin(const std::string& _operateUin);
@@ -428,15 +407,19 @@ namespace TencentCloud
                     bool OperateUinHasBeenSet() const;
 
                     /**
-                     * 获取Tag information. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Tags Tag information. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Tag information.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Tags Tag information.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<BillTagInfo> GetTags() const;
 
                     /**
-                     * 设置Tag information. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tags Tag information. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Tag information.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _tags Tag information.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTags(const std::vector<BillTagInfo>& _tags);
@@ -449,15 +432,19 @@ namespace TencentCloud
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Product code. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BusinessCode Product code. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Product code.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return BusinessCode Product code.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetBusinessCode() const;
 
                     /**
-                     * 设置Product code. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _businessCode Product code. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Product code.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _businessCode Product code.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetBusinessCode(const std::string& _businessCode);
@@ -470,15 +457,19 @@ namespace TencentCloud
                     bool BusinessCodeHasBeenSet() const;
 
                     /**
-                     * 获取Subproduct code. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProductCode Subproduct code. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Subproduct code.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ProductCode Subproduct code.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetProductCode() const;
 
                     /**
-                     * 设置Subproduct code. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _productCode Subproduct code. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Subproduct code.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _productCode Subproduct code.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetProductCode(const std::string& _productCode);
@@ -491,15 +482,19 @@ namespace TencentCloud
                     bool ProductCodeHasBeenSet() const;
 
                     /**
-                     * 获取Transaction type code. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ActionType Transaction type code. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Transaction type code.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ActionType Transaction type code.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetActionType() const;
 
                     /**
-                     * 设置Transaction type code. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _actionType Transaction type code. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Transaction type code.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _actionType Transaction type code.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetActionType(const std::string& _actionType);
@@ -512,15 +507,19 @@ namespace TencentCloud
                     bool ActionTypeHasBeenSet() const;
 
                     /**
-                     * 获取Region ID. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RegionId Region ID. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Region ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RegionId Region ID.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRegionId() const;
 
                     /**
-                     * 设置Region ID. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _regionId Region ID. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Region ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _regionId Region ID.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRegionId(const std::string& _regionId);
@@ -533,15 +532,15 @@ namespace TencentCloud
                     bool RegionIdHasBeenSet() const;
 
                     /**
-                     * 获取Project ID
-                     * @return ProjectId Project ID
+                     * 获取Project ID.
+                     * @return ProjectId Project ID.
                      * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
-                     * 设置Project ID
-                     * @param _projectId Project ID
+                     * 设置Project ID.
+                     * @param _projectId Project ID.
                      * 
                      */
                     void SetProjectId(const int64_t& _projectId);
@@ -662,31 +661,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_businessCodeNameHasBeenSet;
 
                     /**
-                     * Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
+                     * Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM - Standard S1.
                      */
                     std::string m_productCodeName;
                     bool m_productCodeNameHasBeenSet;
 
                     /**
-                     * Billing mode, which can be monthly subscription or pay-as-you-go.
+                     * Billing mode: The billing mode, which can be monthly subscription or pay-as-you-go.
                      */
                     std::string m_payModeName;
                     bool m_payModeNameHasBeenSet;
 
                     /**
-                     * Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+                     * Project Name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
                      */
                     std::string m_projectName;
                     bool m_projectNameHasBeenSet;
 
                     /**
-                     * Region: The region to which a resource belongs, such as South China (Guangzhou).
+                     * Region: The region of a resource, e.g. South China (Guangzhou).
                      */
                     std::string m_regionName;
                     bool m_regionNameHasBeenSet;
 
                     /**
-                     * Availability zone: availability zone of a resource, e.g. Guangzhou Zone 3
+                     * Availability zone: availability zone of a resource, e.g. Guangzhou Zone 3.
                      */
                     std::string m_zoneName;
                     bool m_zoneNameHasBeenSet;
@@ -704,97 +703,96 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_resourceNameHasBeenSet;
 
                     /**
-                     * Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
+                     * Transaction type, which can be monthly subscription purchase, monthly subscription renewal, pay-as-you-go deduction, etc.
                      */
                     std::string m_actionTypeName;
                     bool m_actionTypeNameHasBeenSet;
 
                     /**
-                     * Order ID: The order number for a monthly subscription purchase
+                     * Order ID: The ID of a monthly subscription order.
                      */
                     std::string m_orderId;
                     bool m_orderIdHasBeenSet;
 
                     /**
-                     * Transaction ID: The bill number for a deducted payment
+                     * Transaction ID: The ID of a settlement bill.
                      */
                     std::string m_billId;
                     bool m_billIdHasBeenSet;
 
                     /**
-                     * Transaction time: The time at which a payment was deducted
+                     * Deduction time: The settlement cost deduction time.
                      */
                     std::string m_payTime;
                     bool m_payTimeHasBeenSet;
 
                     /**
-                     * Usage start time: The time at which product or service usage starts
+                     * Usage start time: The time at which product or service usage starts.
                      */
                     std::string m_feeBeginTime;
                     bool m_feeBeginTimeHasBeenSet;
 
                     /**
-                     * Usage end time: The time at which product or service usage ends
+                     * Usage end time: The time at which product or service usage ends.
                      */
                     std::string m_feeEndTime;
                     bool m_feeEndTimeHasBeenSet;
 
                     /**
-                     * Component list
+                     * List of components.
                      */
                     std::vector<BillDetailComponent> m_componentSet;
                     bool m_componentSetHasBeenSet;
 
                     /**
-                     * Payer account ID: The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
-                     */
-                    std::string m_payerUin;
-                    bool m_payerUinHasBeenSet;
-
-                    /**
-                     * Owner account ID: The account ID of the actual resource user
+                     * Owner account ID: The account ID of the actual resource user.
                      */
                     std::string m_ownerUin;
                     bool m_ownerUinHasBeenSet;
 
                     /**
-                     * Operator account ID: The account or role ID of the operator who purchases or activates a resource
+                     * Operator account ID: The account or role ID of the operator who purchases or activates a resource.
                      */
                     std::string m_operateUin;
                     bool m_operateUinHasBeenSet;
 
                     /**
-                     * Tag information. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Tag information.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<BillTagInfo> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Product code. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Product code.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_businessCode;
                     bool m_businessCodeHasBeenSet;
 
                     /**
-                     * Subproduct code. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Subproduct code.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_productCode;
                     bool m_productCodeHasBeenSet;
 
                     /**
-                     * Transaction type code. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Transaction type code.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_actionType;
                     bool m_actionTypeHasBeenSet;
 
                     /**
-                     * Region ID. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Region ID.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_regionId;
                     bool m_regionIdHasBeenSet;
 
                     /**
-                     * Project ID
+                     * Project ID.
                      */
                     int64_t m_projectId;
                     bool m_projectIdHasBeenSet;
@@ -833,4 +831,4 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 }
 
-#endif // !TENCENTCLOUD_BILLING_V20180709_MODEL_BILLDETAIL_H_
+#endif // !TENCENTCLOUD_BILLING_V20180709_MODEL_DISTRIBUTIONBILLDETAIL_H_

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/billing/v20180709/model/DescribeBillResourceSummaryRequest.h>
+#include <tencentcloud/billing/v20180709/model/DescribeBillResourceSummaryForOrganizationRequest.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -22,7 +22,7 @@
 using namespace TencentCloud::Billing::V20180709::Model;
 using namespace std;
 
-DescribeBillResourceSummaryRequest::DescribeBillResourceSummaryRequest() :
+DescribeBillResourceSummaryForOrganizationRequest::DescribeBillResourceSummaryForOrganizationRequest() :
     m_offsetHasBeenSet(false),
     m_limitHasBeenSet(false),
     m_monthHasBeenSet(false),
@@ -32,13 +32,12 @@ DescribeBillResourceSummaryRequest::DescribeBillResourceSummaryRequest() :
     m_resourceIdHasBeenSet(false),
     m_payModeHasBeenSet(false),
     m_businessCodeHasBeenSet(false),
-    m_payerUinHasBeenSet(false),
     m_tagKeyHasBeenSet(false),
     m_tagValueHasBeenSet(false)
 {
 }
 
-string DescribeBillResourceSummaryRequest::ToJsonString() const
+string DescribeBillResourceSummaryForOrganizationRequest::ToJsonString() const
 {
     rapidjson::Document d;
     d.SetObject();
@@ -117,14 +116,6 @@ string DescribeBillResourceSummaryRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_businessCode.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_payerUinHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "PayerUin";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_payerUin.c_str(), allocator).Move(), allocator);
-    }
-
     if (m_tagKeyHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -149,194 +140,178 @@ string DescribeBillResourceSummaryRequest::ToJsonString() const
 }
 
 
-uint64_t DescribeBillResourceSummaryRequest::GetOffset() const
+uint64_t DescribeBillResourceSummaryForOrganizationRequest::GetOffset() const
 {
     return m_offset;
 }
 
-void DescribeBillResourceSummaryRequest::SetOffset(const uint64_t& _offset)
+void DescribeBillResourceSummaryForOrganizationRequest::SetOffset(const uint64_t& _offset)
 {
     m_offset = _offset;
     m_offsetHasBeenSet = true;
 }
 
-bool DescribeBillResourceSummaryRequest::OffsetHasBeenSet() const
+bool DescribeBillResourceSummaryForOrganizationRequest::OffsetHasBeenSet() const
 {
     return m_offsetHasBeenSet;
 }
 
-uint64_t DescribeBillResourceSummaryRequest::GetLimit() const
+uint64_t DescribeBillResourceSummaryForOrganizationRequest::GetLimit() const
 {
     return m_limit;
 }
 
-void DescribeBillResourceSummaryRequest::SetLimit(const uint64_t& _limit)
+void DescribeBillResourceSummaryForOrganizationRequest::SetLimit(const uint64_t& _limit)
 {
     m_limit = _limit;
     m_limitHasBeenSet = true;
 }
 
-bool DescribeBillResourceSummaryRequest::LimitHasBeenSet() const
+bool DescribeBillResourceSummaryForOrganizationRequest::LimitHasBeenSet() const
 {
     return m_limitHasBeenSet;
 }
 
-string DescribeBillResourceSummaryRequest::GetMonth() const
+string DescribeBillResourceSummaryForOrganizationRequest::GetMonth() const
 {
     return m_month;
 }
 
-void DescribeBillResourceSummaryRequest::SetMonth(const string& _month)
+void DescribeBillResourceSummaryForOrganizationRequest::SetMonth(const string& _month)
 {
     m_month = _month;
     m_monthHasBeenSet = true;
 }
 
-bool DescribeBillResourceSummaryRequest::MonthHasBeenSet() const
+bool DescribeBillResourceSummaryForOrganizationRequest::MonthHasBeenSet() const
 {
     return m_monthHasBeenSet;
 }
 
-string DescribeBillResourceSummaryRequest::GetPeriodType() const
+string DescribeBillResourceSummaryForOrganizationRequest::GetPeriodType() const
 {
     return m_periodType;
 }
 
-void DescribeBillResourceSummaryRequest::SetPeriodType(const string& _periodType)
+void DescribeBillResourceSummaryForOrganizationRequest::SetPeriodType(const string& _periodType)
 {
     m_periodType = _periodType;
     m_periodTypeHasBeenSet = true;
 }
 
-bool DescribeBillResourceSummaryRequest::PeriodTypeHasBeenSet() const
+bool DescribeBillResourceSummaryForOrganizationRequest::PeriodTypeHasBeenSet() const
 {
     return m_periodTypeHasBeenSet;
 }
 
-int64_t DescribeBillResourceSummaryRequest::GetNeedRecordNum() const
+int64_t DescribeBillResourceSummaryForOrganizationRequest::GetNeedRecordNum() const
 {
     return m_needRecordNum;
 }
 
-void DescribeBillResourceSummaryRequest::SetNeedRecordNum(const int64_t& _needRecordNum)
+void DescribeBillResourceSummaryForOrganizationRequest::SetNeedRecordNum(const int64_t& _needRecordNum)
 {
     m_needRecordNum = _needRecordNum;
     m_needRecordNumHasBeenSet = true;
 }
 
-bool DescribeBillResourceSummaryRequest::NeedRecordNumHasBeenSet() const
+bool DescribeBillResourceSummaryForOrganizationRequest::NeedRecordNumHasBeenSet() const
 {
     return m_needRecordNumHasBeenSet;
 }
 
-string DescribeBillResourceSummaryRequest::GetActionType() const
+string DescribeBillResourceSummaryForOrganizationRequest::GetActionType() const
 {
     return m_actionType;
 }
 
-void DescribeBillResourceSummaryRequest::SetActionType(const string& _actionType)
+void DescribeBillResourceSummaryForOrganizationRequest::SetActionType(const string& _actionType)
 {
     m_actionType = _actionType;
     m_actionTypeHasBeenSet = true;
 }
 
-bool DescribeBillResourceSummaryRequest::ActionTypeHasBeenSet() const
+bool DescribeBillResourceSummaryForOrganizationRequest::ActionTypeHasBeenSet() const
 {
     return m_actionTypeHasBeenSet;
 }
 
-string DescribeBillResourceSummaryRequest::GetResourceId() const
+string DescribeBillResourceSummaryForOrganizationRequest::GetResourceId() const
 {
     return m_resourceId;
 }
 
-void DescribeBillResourceSummaryRequest::SetResourceId(const string& _resourceId)
+void DescribeBillResourceSummaryForOrganizationRequest::SetResourceId(const string& _resourceId)
 {
     m_resourceId = _resourceId;
     m_resourceIdHasBeenSet = true;
 }
 
-bool DescribeBillResourceSummaryRequest::ResourceIdHasBeenSet() const
+bool DescribeBillResourceSummaryForOrganizationRequest::ResourceIdHasBeenSet() const
 {
     return m_resourceIdHasBeenSet;
 }
 
-string DescribeBillResourceSummaryRequest::GetPayMode() const
+string DescribeBillResourceSummaryForOrganizationRequest::GetPayMode() const
 {
     return m_payMode;
 }
 
-void DescribeBillResourceSummaryRequest::SetPayMode(const string& _payMode)
+void DescribeBillResourceSummaryForOrganizationRequest::SetPayMode(const string& _payMode)
 {
     m_payMode = _payMode;
     m_payModeHasBeenSet = true;
 }
 
-bool DescribeBillResourceSummaryRequest::PayModeHasBeenSet() const
+bool DescribeBillResourceSummaryForOrganizationRequest::PayModeHasBeenSet() const
 {
     return m_payModeHasBeenSet;
 }
 
-string DescribeBillResourceSummaryRequest::GetBusinessCode() const
+string DescribeBillResourceSummaryForOrganizationRequest::GetBusinessCode() const
 {
     return m_businessCode;
 }
 
-void DescribeBillResourceSummaryRequest::SetBusinessCode(const string& _businessCode)
+void DescribeBillResourceSummaryForOrganizationRequest::SetBusinessCode(const string& _businessCode)
 {
     m_businessCode = _businessCode;
     m_businessCodeHasBeenSet = true;
 }
 
-bool DescribeBillResourceSummaryRequest::BusinessCodeHasBeenSet() const
+bool DescribeBillResourceSummaryForOrganizationRequest::BusinessCodeHasBeenSet() const
 {
     return m_businessCodeHasBeenSet;
 }
 
-string DescribeBillResourceSummaryRequest::GetPayerUin() const
-{
-    return m_payerUin;
-}
-
-void DescribeBillResourceSummaryRequest::SetPayerUin(const string& _payerUin)
-{
-    m_payerUin = _payerUin;
-    m_payerUinHasBeenSet = true;
-}
-
-bool DescribeBillResourceSummaryRequest::PayerUinHasBeenSet() const
-{
-    return m_payerUinHasBeenSet;
-}
-
-string DescribeBillResourceSummaryRequest::GetTagKey() const
+string DescribeBillResourceSummaryForOrganizationRequest::GetTagKey() const
 {
     return m_tagKey;
 }
 
-void DescribeBillResourceSummaryRequest::SetTagKey(const string& _tagKey)
+void DescribeBillResourceSummaryForOrganizationRequest::SetTagKey(const string& _tagKey)
 {
     m_tagKey = _tagKey;
     m_tagKeyHasBeenSet = true;
 }
 
-bool DescribeBillResourceSummaryRequest::TagKeyHasBeenSet() const
+bool DescribeBillResourceSummaryForOrganizationRequest::TagKeyHasBeenSet() const
 {
     return m_tagKeyHasBeenSet;
 }
 
-string DescribeBillResourceSummaryRequest::GetTagValue() const
+string DescribeBillResourceSummaryForOrganizationRequest::GetTagValue() const
 {
     return m_tagValue;
 }
 
-void DescribeBillResourceSummaryRequest::SetTagValue(const string& _tagValue)
+void DescribeBillResourceSummaryForOrganizationRequest::SetTagValue(const string& _tagValue)
 {
     m_tagValue = _tagValue;
     m_tagValueHasBeenSet = true;
 }
 
-bool DescribeBillResourceSummaryRequest::TagValueHasBeenSet() const
+bool DescribeBillResourceSummaryForOrganizationRequest::TagValueHasBeenSet() const
 {
     return m_tagValueHasBeenSet;
 }

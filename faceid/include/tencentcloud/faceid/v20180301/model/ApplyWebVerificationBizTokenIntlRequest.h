@@ -65,19 +65,23 @@ namespace TencentCloud
                     bool CompareImageBase64HasBeenSet() const;
 
                     /**
-                     * 获取The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. Example: `https://www.tencentcloud.com/products/faceid`.
-After the verification process is completed, the `BizToken` of this process will be spliced to the callback URL in the format of `https://www.tencentcloud.com/products/faceid?token={BizToken}` before redirect.
-                     * @return RedirectURL The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. Example: `https://www.tencentcloud.com/products/faceid`.
-After the verification process is completed, the `BizToken` of this process will be spliced to the callback URL in the format of `https://www.tencentcloud.com/products/faceid?token={BizToken}` before redirect.
+                     * 获取The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
+Example: https://www.tencentcloud.com/products/faceid.
+After the verification process is completed, the BizToken of this process will be spliced to the callback URL in the format of https://www.tencentcloud.com/products/faceid?token={BizToken} before redirect.
+                     * @return RedirectURL The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
+Example: https://www.tencentcloud.com/products/faceid.
+After the verification process is completed, the BizToken of this process will be spliced to the callback URL in the format of https://www.tencentcloud.com/products/faceid?token={BizToken} before redirect.
                      * 
                      */
                     std::string GetRedirectURL() const;
 
                     /**
-                     * 设置The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. Example: `https://www.tencentcloud.com/products/faceid`.
-After the verification process is completed, the `BizToken` of this process will be spliced to the callback URL in the format of `https://www.tencentcloud.com/products/faceid?token={BizToken}` before redirect.
-                     * @param _redirectURL The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. Example: `https://www.tencentcloud.com/products/faceid`.
-After the verification process is completed, the `BizToken` of this process will be spliced to the callback URL in the format of `https://www.tencentcloud.com/products/faceid?token={BizToken}` before redirect.
+                     * 设置The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
+Example: https://www.tencentcloud.com/products/faceid.
+After the verification process is completed, the BizToken of this process will be spliced to the callback URL in the format of https://www.tencentcloud.com/products/faceid?token={BizToken} before redirect.
+                     * @param _redirectURL The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
+Example: https://www.tencentcloud.com/products/faceid.
+After the verification process is completed, the BizToken of this process will be spliced to the callback URL in the format of https://www.tencentcloud.com/products/faceid?token={BizToken} before redirect.
                      * 
                      */
                     void SetRedirectURL(const std::string& _redirectURL);
@@ -90,15 +94,15 @@ After the verification process is completed, the `BizToken` of this process will
                     bool RedirectURLHasBeenSet() const;
 
                     /**
-                     * 获取The passthrough parameter of the business, max 1,000 characters, which will be returned in `GetWebVerificationResultIntl`.
-                     * @return Extra The passthrough parameter of the business, max 1,000 characters, which will be returned in `GetWebVerificationResultIntl`.
+                     * 获取The passthrough parameter of the business, max 1,000 characters, which will be returned in GetWebVerificationResultIntl.
+                     * @return Extra The passthrough parameter of the business, max 1,000 characters, which will be returned in GetWebVerificationResultIntl.
                      * 
                      */
                     std::string GetExtra() const;
 
                     /**
-                     * 设置The passthrough parameter of the business, max 1,000 characters, which will be returned in `GetWebVerificationResultIntl`.
-                     * @param _extra The passthrough parameter of the business, max 1,000 characters, which will be returned in `GetWebVerificationResultIntl`.
+                     * 设置The passthrough parameter of the business, max 1,000 characters, which will be returned in GetWebVerificationResultIntl.
+                     * @param _extra The passthrough parameter of the business, max 1,000 characters, which will be returned in GetWebVerificationResultIntl.
                      * 
                      */
                     void SetExtra(const std::string& _extra);
@@ -140,14 +144,15 @@ After the verification process is completed, the `BizToken` of this process will
                     bool m_compareImageBase64HasBeenSet;
 
                     /**
-                     * The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. Example: `https://www.tencentcloud.com/products/faceid`.
-After the verification process is completed, the `BizToken` of this process will be spliced to the callback URL in the format of `https://www.tencentcloud.com/products/faceid?token={BizToken}` before redirect.
+                     * The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
+Example: https://www.tencentcloud.com/products/faceid.
+After the verification process is completed, the BizToken of this process will be spliced to the callback URL in the format of https://www.tencentcloud.com/products/faceid?token={BizToken} before redirect.
                      */
                     std::string m_redirectURL;
                     bool m_redirectURLHasBeenSet;
 
                     /**
-                     * The passthrough parameter of the business, max 1,000 characters, which will be returned in `GetWebVerificationResultIntl`.
+                     * The passthrough parameter of the business, max 1,000 characters, which will be returned in GetWebVerificationResultIntl.
                      */
                     std::string m_extra;
                     bool m_extraHasBeenSet;

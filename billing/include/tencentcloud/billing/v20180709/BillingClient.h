@@ -23,12 +23,22 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
+#include <tencentcloud/billing/v20180709/model/CreateAllocationTagRequest.h>
+#include <tencentcloud/billing/v20180709/model/CreateAllocationTagResponse.h>
+#include <tencentcloud/billing/v20180709/model/DeleteAllocationTagRequest.h>
+#include <tencentcloud/billing/v20180709/model/DeleteAllocationTagResponse.h>
 #include <tencentcloud/billing/v20180709/model/DescribeAccountBalanceRequest.h>
 #include <tencentcloud/billing/v20180709/model/DescribeAccountBalanceResponse.h>
 #include <tencentcloud/billing/v20180709/model/DescribeBillDetailRequest.h>
 #include <tencentcloud/billing/v20180709/model/DescribeBillDetailResponse.h>
+#include <tencentcloud/billing/v20180709/model/DescribeBillDetailForOrganizationRequest.h>
+#include <tencentcloud/billing/v20180709/model/DescribeBillDetailForOrganizationResponse.h>
+#include <tencentcloud/billing/v20180709/model/DescribeBillDownloadUrlRequest.h>
+#include <tencentcloud/billing/v20180709/model/DescribeBillDownloadUrlResponse.h>
 #include <tencentcloud/billing/v20180709/model/DescribeBillResourceSummaryRequest.h>
 #include <tencentcloud/billing/v20180709/model/DescribeBillResourceSummaryResponse.h>
+#include <tencentcloud/billing/v20180709/model/DescribeBillResourceSummaryForOrganizationRequest.h>
+#include <tencentcloud/billing/v20180709/model/DescribeBillResourceSummaryForOrganizationResponse.h>
 #include <tencentcloud/billing/v20180709/model/DescribeBillSummaryRequest.h>
 #include <tencentcloud/billing/v20180709/model/DescribeBillSummaryResponse.h>
 #include <tencentcloud/billing/v20180709/model/DescribeBillSummaryByPayModeRequest.h>
@@ -41,8 +51,12 @@
 #include <tencentcloud/billing/v20180709/model/DescribeBillSummaryByRegionResponse.h>
 #include <tencentcloud/billing/v20180709/model/DescribeBillSummaryByTagRequest.h>
 #include <tencentcloud/billing/v20180709/model/DescribeBillSummaryByTagResponse.h>
+#include <tencentcloud/billing/v20180709/model/DescribeBillSummaryForOrganizationRequest.h>
+#include <tencentcloud/billing/v20180709/model/DescribeBillSummaryForOrganizationResponse.h>
 #include <tencentcloud/billing/v20180709/model/DescribeDosageCosDetailByDateRequest.h>
 #include <tencentcloud/billing/v20180709/model/DescribeDosageCosDetailByDateResponse.h>
+#include <tencentcloud/billing/v20180709/model/DescribeTagListRequest.h>
+#include <tencentcloud/billing/v20180709/model/DescribeTagListResponse.h>
 #include <tencentcloud/billing/v20180709/model/DescribeVoucherInfoRequest.h>
 #include <tencentcloud/billing/v20180709/model/DescribeVoucherInfoResponse.h>
 #include <tencentcloud/billing/v20180709/model/DescribeVoucherUsageDetailsRequest.h>
@@ -61,15 +75,30 @@ namespace TencentCloud
                 BillingClient(const Credential &credential, const std::string &region);
                 BillingClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
+                typedef Outcome<Core::Error, Model::CreateAllocationTagResponse> CreateAllocationTagOutcome;
+                typedef std::future<CreateAllocationTagOutcome> CreateAllocationTagOutcomeCallable;
+                typedef std::function<void(const BillingClient*, const Model::CreateAllocationTagRequest&, CreateAllocationTagOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAllocationTagAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteAllocationTagResponse> DeleteAllocationTagOutcome;
+                typedef std::future<DeleteAllocationTagOutcome> DeleteAllocationTagOutcomeCallable;
+                typedef std::function<void(const BillingClient*, const Model::DeleteAllocationTagRequest&, DeleteAllocationTagOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAllocationTagAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAccountBalanceResponse> DescribeAccountBalanceOutcome;
                 typedef std::future<DescribeAccountBalanceOutcome> DescribeAccountBalanceOutcomeCallable;
                 typedef std::function<void(const BillingClient*, const Model::DescribeAccountBalanceRequest&, DescribeAccountBalanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAccountBalanceAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeBillDetailResponse> DescribeBillDetailOutcome;
                 typedef std::future<DescribeBillDetailOutcome> DescribeBillDetailOutcomeCallable;
                 typedef std::function<void(const BillingClient*, const Model::DescribeBillDetailRequest&, DescribeBillDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBillDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBillDetailForOrganizationResponse> DescribeBillDetailForOrganizationOutcome;
+                typedef std::future<DescribeBillDetailForOrganizationOutcome> DescribeBillDetailForOrganizationOutcomeCallable;
+                typedef std::function<void(const BillingClient*, const Model::DescribeBillDetailForOrganizationRequest&, DescribeBillDetailForOrganizationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBillDetailForOrganizationAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBillDownloadUrlResponse> DescribeBillDownloadUrlOutcome;
+                typedef std::future<DescribeBillDownloadUrlOutcome> DescribeBillDownloadUrlOutcomeCallable;
+                typedef std::function<void(const BillingClient*, const Model::DescribeBillDownloadUrlRequest&, DescribeBillDownloadUrlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBillDownloadUrlAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeBillResourceSummaryResponse> DescribeBillResourceSummaryOutcome;
                 typedef std::future<DescribeBillResourceSummaryOutcome> DescribeBillResourceSummaryOutcomeCallable;
                 typedef std::function<void(const BillingClient*, const Model::DescribeBillResourceSummaryRequest&, DescribeBillResourceSummaryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBillResourceSummaryAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBillResourceSummaryForOrganizationResponse> DescribeBillResourceSummaryForOrganizationOutcome;
+                typedef std::future<DescribeBillResourceSummaryForOrganizationOutcome> DescribeBillResourceSummaryForOrganizationOutcomeCallable;
+                typedef std::function<void(const BillingClient*, const Model::DescribeBillResourceSummaryForOrganizationRequest&, DescribeBillResourceSummaryForOrganizationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBillResourceSummaryForOrganizationAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeBillSummaryResponse> DescribeBillSummaryOutcome;
                 typedef std::future<DescribeBillSummaryOutcome> DescribeBillSummaryOutcomeCallable;
                 typedef std::function<void(const BillingClient*, const Model::DescribeBillSummaryRequest&, DescribeBillSummaryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBillSummaryAsyncHandler;
@@ -88,9 +117,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeBillSummaryByTagResponse> DescribeBillSummaryByTagOutcome;
                 typedef std::future<DescribeBillSummaryByTagOutcome> DescribeBillSummaryByTagOutcomeCallable;
                 typedef std::function<void(const BillingClient*, const Model::DescribeBillSummaryByTagRequest&, DescribeBillSummaryByTagOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBillSummaryByTagAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBillSummaryForOrganizationResponse> DescribeBillSummaryForOrganizationOutcome;
+                typedef std::future<DescribeBillSummaryForOrganizationOutcome> DescribeBillSummaryForOrganizationOutcomeCallable;
+                typedef std::function<void(const BillingClient*, const Model::DescribeBillSummaryForOrganizationRequest&, DescribeBillSummaryForOrganizationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBillSummaryForOrganizationAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDosageCosDetailByDateResponse> DescribeDosageCosDetailByDateOutcome;
                 typedef std::future<DescribeDosageCosDetailByDateOutcome> DescribeDosageCosDetailByDateOutcomeCallable;
                 typedef std::function<void(const BillingClient*, const Model::DescribeDosageCosDetailByDateRequest&, DescribeDosageCosDetailByDateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDosageCosDetailByDateAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeTagListResponse> DescribeTagListOutcome;
+                typedef std::future<DescribeTagListOutcome> DescribeTagListOutcomeCallable;
+                typedef std::function<void(const BillingClient*, const Model::DescribeTagListRequest&, DescribeTagListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTagListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeVoucherInfoResponse> DescribeVoucherInfoOutcome;
                 typedef std::future<DescribeVoucherInfoOutcome> DescribeVoucherInfoOutcomeCallable;
                 typedef std::function<void(const BillingClient*, const Model::DescribeVoucherInfoRequest&, DescribeVoucherInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVoucherInfoAsyncHandler;
@@ -99,6 +134,24 @@ namespace TencentCloud
                 typedef std::function<void(const BillingClient*, const Model::DescribeVoucherUsageDetailsRequest&, DescribeVoucherUsageDetailsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVoucherUsageDetailsAsyncHandler;
 
 
+
+                /**
+                 *This API is used to batch set cost allocation tags.
+                 * @param req CreateAllocationTagRequest
+                 * @return CreateAllocationTagOutcome
+                 */
+                CreateAllocationTagOutcome CreateAllocationTag(const Model::CreateAllocationTagRequest &request);
+                void CreateAllocationTagAsync(const Model::CreateAllocationTagRequest& request, const CreateAllocationTagAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateAllocationTagOutcomeCallable CreateAllocationTagCallable(const Model::CreateAllocationTagRequest& request);
+
+                /**
+                 *u200cThis API is used to batch cancel cost allocation tags.
+                 * @param req DeleteAllocationTagRequest
+                 * @return DeleteAllocationTagOutcome
+                 */
+                DeleteAllocationTagOutcome DeleteAllocationTag(const Model::DeleteAllocationTagRequest &request);
+                void DeleteAllocationTagAsync(const Model::DeleteAllocationTagRequest& request, const DeleteAllocationTagAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteAllocationTagOutcomeCallable DeleteAllocationTagCallable(const Model::DeleteAllocationTagRequest& request);
 
                 /**
                  *This API is used to check the Tencent Cloud account balance.
@@ -110,8 +163,10 @@ namespace TencentCloud
                 DescribeAccountBalanceOutcomeCallable DescribeAccountBalanceCallable(const Model::DescribeAccountBalanceRequest& request);
 
                 /**
-                 *This API is used to get bill details. 
-Notes: 1. The API request may fail due to network instability or other network exceptions. In this case, we recommend you manually retry the request when the API request fails. 2. If the volume of your bill data is high (for example, if over 200 thousand bill entries are generated for a month), querying bill data via APIs may be slow. We recommend you enable bill storage so that you can obtain bill files from COS buckets for analysis. For details, see [Saving Bills to COS](https://intl.cloud.tencent.com/document/product/555/61275?from_cn_redirect=1).
+                 *u200cThis API is used to get bill details.
+Note:
+1. The API request may fail due to network instability or other exceptions. In this case, we recommend you manually retry the request when the API request fails.
+2.If the volume of your bill data is high (for example, if over 200 thousand bill entries are generated for a month), bill data query via APIs may be slow. We recommend you enable bill storage so that you can obtain bill files from COS buckets for analysis. For details, see [Saving Bills to COS](https://intl.cloud.tencent.com/document/product/555/61275?from_cn_redirect=1).
                  * @param req DescribeBillDetailRequest
                  * @return DescribeBillDetailOutcome
                  */
@@ -120,13 +175,41 @@ Notes: 1. The API request may fail due to network instability or other network e
                 DescribeBillDetailOutcomeCallable DescribeBillDetailCallable(const Model::DescribeBillDetailRequest& request);
 
                 /**
-                 *This API is used to query bill resources summary.
+                 *This API is used to get pay-on-behalf bills of the admin account (bill details).
+Note: The API request may fail due to network instability or other exceptions. In this case, we recommend you manually retry the request when the API request fails.
+                 * @param req DescribeBillDetailForOrganizationRequest
+                 * @return DescribeBillDetailForOrganizationOutcome
+                 */
+                DescribeBillDetailForOrganizationOutcome DescribeBillDetailForOrganization(const Model::DescribeBillDetailForOrganizationRequest &request);
+                void DescribeBillDetailForOrganizationAsync(const Model::DescribeBillDetailForOrganizationRequest& request, const DescribeBillDetailForOrganizationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBillDetailForOrganizationOutcomeCallable DescribeBillDetailForOrganizationCallable(const Model::DescribeBillDetailForOrganizationRequest& request);
+
+                /**
+                 *This API is used to get bill download URLs for L0, L1, L2, and L3 bills and bill packs.
+                 * @param req DescribeBillDownloadUrlRequest
+                 * @return DescribeBillDownloadUrlOutcome
+                 */
+                DescribeBillDownloadUrlOutcome DescribeBillDownloadUrl(const Model::DescribeBillDownloadUrlRequest &request);
+                void DescribeBillDownloadUrlAsync(const Model::DescribeBillDownloadUrlRequest& request, const DescribeBillDownloadUrlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBillDownloadUrlOutcomeCallable DescribeBillDownloadUrlCallable(const Model::DescribeBillDownloadUrlRequest& request);
+
+                /**
+                 *This API is used to get the bill summarized by instance.
                  * @param req DescribeBillResourceSummaryRequest
                  * @return DescribeBillResourceSummaryOutcome
                  */
                 DescribeBillResourceSummaryOutcome DescribeBillResourceSummary(const Model::DescribeBillResourceSummaryRequest &request);
                 void DescribeBillResourceSummaryAsync(const Model::DescribeBillResourceSummaryRequest& request, const DescribeBillResourceSummaryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeBillResourceSummaryOutcomeCallable DescribeBillResourceSummaryCallable(const Model::DescribeBillResourceSummaryRequest& request);
+
+                /**
+                 *This API is used to get pay-on-behalf bills of the admin account (bills by instance).
+                 * @param req DescribeBillResourceSummaryForOrganizationRequest
+                 * @return DescribeBillResourceSummaryForOrganizationOutcome
+                 */
+                DescribeBillResourceSummaryForOrganizationOutcome DescribeBillResourceSummaryForOrganization(const Model::DescribeBillResourceSummaryForOrganizationRequest &request);
+                void DescribeBillResourceSummaryForOrganizationAsync(const Model::DescribeBillResourceSummaryForOrganizationRequest& request, const DescribeBillResourceSummaryForOrganizationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBillResourceSummaryForOrganizationOutcomeCallable DescribeBillResourceSummaryForOrganizationCallable(const Model::DescribeBillResourceSummaryForOrganizationRequest& request);
 
                 /**
                  *This API is used to get bill details by product, project, region, billing mode, and tag by passing in parameters.
@@ -183,6 +266,15 @@ Notes: 1. The API request may fail due to network instability or other network e
                 DescribeBillSummaryByTagOutcomeCallable DescribeBillSummaryByTagCallable(const Model::DescribeBillSummaryByTagRequest& request);
 
                 /**
+                 *This API is used to get bills summarized by product, project, region, billing mode, and tag by passing in parameters.
+                 * @param req DescribeBillSummaryForOrganizationRequest
+                 * @return DescribeBillSummaryForOrganizationOutcome
+                 */
+                DescribeBillSummaryForOrganizationOutcome DescribeBillSummaryForOrganization(const Model::DescribeBillSummaryForOrganizationRequest &request);
+                void DescribeBillSummaryForOrganizationAsync(const Model::DescribeBillSummaryForOrganizationRequest& request, const DescribeBillSummaryForOrganizationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBillSummaryForOrganizationOutcomeCallable DescribeBillSummaryForOrganizationCallable(const Model::DescribeBillSummaryForOrganizationRequest& request);
+
+                /**
                  *This API is used to query COS usage details.
                  * @param req DescribeDosageCosDetailByDateRequest
                  * @return DescribeDosageCosDetailByDateOutcome
@@ -190,6 +282,15 @@ Notes: 1. The API request may fail due to network instability or other network e
                 DescribeDosageCosDetailByDateOutcome DescribeDosageCosDetailByDate(const Model::DescribeDosageCosDetailByDateRequest &request);
                 void DescribeDosageCosDetailByDateAsync(const Model::DescribeDosageCosDetailByDateRequest& request, const DescribeDosageCosDetailByDateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeDosageCosDetailByDateOutcomeCallable DescribeDosageCosDetailByDateCallable(const Model::DescribeDosageCosDetailByDateRequest& request);
+
+                /**
+                 *This API is used to get cost allocation tags.
+                 * @param req DescribeTagListRequest
+                 * @return DescribeTagListOutcome
+                 */
+                DescribeTagListOutcome DescribeTagList(const Model::DescribeTagListRequest &request);
+                void DescribeTagListAsync(const Model::DescribeTagListRequest& request, const DescribeTagListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeTagListOutcomeCallable DescribeTagListCallable(const Model::DescribeTagListRequest& request);
 
                 /**
                  *This API is used to query vouchers.

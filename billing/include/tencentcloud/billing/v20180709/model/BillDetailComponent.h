@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/billing/v20180709/model/BillDetailComponentConfig.h>
 
 
 namespace TencentCloud
@@ -655,6 +656,31 @@ namespace TencentCloud
                      */
                     bool BlendedDiscountHasBeenSet() const;
 
+                    /**
+                     * 获取Configuration description: The specification configuration of an instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ComponentConfig Configuration description: The specification configuration of an instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<BillDetailComponentConfig> GetComponentConfig() const;
+
+                    /**
+                     * 设置Configuration description: The specification configuration of an instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _componentConfig Configuration description: The specification configuration of an instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetComponentConfig(const std::vector<BillDetailComponentConfig>& _componentConfig);
+
+                    /**
+                     * 判断参数 ComponentConfig 是否已赋值
+                     * @return ComponentConfig 是否已赋值
+                     * 
+                     */
+                    bool ComponentConfigHasBeenSet() const;
+
                 private:
 
                     /**
@@ -830,6 +856,13 @@ namespace TencentCloud
                      */
                     std::string m_blendedDiscount;
                     bool m_blendedDiscountHasBeenSet;
+
+                    /**
+                     * Configuration description: The specification configuration of an instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<BillDetailComponentConfig> m_componentConfig;
+                    bool m_componentConfigHasBeenSet;
 
                 };
             }

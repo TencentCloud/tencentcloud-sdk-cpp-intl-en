@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The URL of this verification process, which will be returned to the frontend of the browser for starting the process.
-                     * @return VerificationUrl The URL of this verification process, which will be returned to the frontend of the browser for starting the process.
+                     * 获取The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
+                     * @return VerificationUrl The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
                      * @deprecated
                      */
                     std::string GetVerificationUrl() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool VerificationUrlHasBeenSet() const;
 
                     /**
-                     * 获取The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
-                     * @return BizToken The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
+                     * 获取The token for the web-based verification, which is generated using the ApplyWebVerificationBizTokenIntl API.
+                     * @return BizToken The token for the web-based verification, which is generated using the ApplyWebVerificationBizTokenIntl API.
                      * 
                      */
                     std::string GetBizToken() const;
@@ -88,13 +88,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The URL of this verification process, which will be returned to the frontend of the browser for starting the process.
+                     * The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
                      */
                     std::string m_verificationUrl;
                     bool m_verificationUrlHasBeenSet;
 
                     /**
-                     * The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
+                     * The token for the web-based verification, which is generated using the ApplyWebVerificationBizTokenIntl API.
                      */
                     std::string m_bizToken;
                     bool m_bizTokenHasBeenSet;
