@@ -31,7 +31,8 @@ StreamLiveChannelInfo::StreamLiveChannelInfo() :
     m_aVTemplatesHasBeenSet(false),
     m_planSettingsHasBeenSet(false),
     m_eventNotifySettingsHasBeenSet(false),
-    m_inputLossBehaviorHasBeenSet(false)
+    m_inputLossBehaviorHasBeenSet(false),
+    m_pipelineInputSettingsHasBeenSet(false)
 {
 }
 
@@ -221,6 +222,23 @@ CoreInternalOutcome StreamLiveChannelInfo::Deserialize(const rapidjson::Value &v
         m_inputLossBehaviorHasBeenSet = true;
     }
 
+    if (value.HasMember("PipelineInputSettings") && !value["PipelineInputSettings"].IsNull())
+    {
+        if (!value["PipelineInputSettings"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `StreamLiveChannelInfo.PipelineInputSettings` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_pipelineInputSettings.Deserialize(value["PipelineInputSettings"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_pipelineInputSettingsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -352,6 +370,15 @@ void StreamLiveChannelInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Doc
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_inputLossBehavior.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_pipelineInputSettingsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PipelineInputSettings";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_pipelineInputSettings.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -531,5 +558,21 @@ void StreamLiveChannelInfo::SetInputLossBehavior(const InputLossBehaviorInfo& _i
 bool StreamLiveChannelInfo::InputLossBehaviorHasBeenSet() const
 {
     return m_inputLossBehaviorHasBeenSet;
+}
+
+PipelineInputSettingsInfo StreamLiveChannelInfo::GetPipelineInputSettings() const
+{
+    return m_pipelineInputSettings;
+}
+
+void StreamLiveChannelInfo::SetPipelineInputSettings(const PipelineInputSettingsInfo& _pipelineInputSettings)
+{
+    m_pipelineInputSettings = _pipelineInputSettings;
+    m_pipelineInputSettingsHasBeenSet = true;
+}
+
+bool StreamLiveChannelInfo::PipelineInputSettingsHasBeenSet() const
+{
+    return m_pipelineInputSettingsHasBeenSet;
 }
 

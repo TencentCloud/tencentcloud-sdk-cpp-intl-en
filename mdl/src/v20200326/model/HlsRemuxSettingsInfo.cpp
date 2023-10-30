@@ -30,7 +30,9 @@ HlsRemuxSettingsInfo::HlsRemuxSettingsInfo() :
     m_h265PackageTypeHasBeenSet(false),
     m_lowLatencyHasBeenSet(false),
     m_partialSegmentDurationHasBeenSet(false),
-    m_partialSegmentPlaySiteHasBeenSet(false)
+    m_partialSegmentPlaySiteHasBeenSet(false),
+    m_streamOrderHasBeenSet(false),
+    m_videoResolutionHasBeenSet(false)
 {
 }
 
@@ -139,6 +141,26 @@ CoreInternalOutcome HlsRemuxSettingsInfo::Deserialize(const rapidjson::Value &va
         m_partialSegmentPlaySiteHasBeenSet = true;
     }
 
+    if (value.HasMember("StreamOrder") && !value["StreamOrder"].IsNull())
+    {
+        if (!value["StreamOrder"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `HlsRemuxSettingsInfo.StreamOrder` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_streamOrder = value["StreamOrder"].GetUint64();
+        m_streamOrderHasBeenSet = true;
+    }
+
+    if (value.HasMember("VideoResolution") && !value["VideoResolution"].IsNull())
+    {
+        if (!value["VideoResolution"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `HlsRemuxSettingsInfo.VideoResolution` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_videoResolution = value["VideoResolution"].GetUint64();
+        m_videoResolutionHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -224,6 +246,22 @@ void HlsRemuxSettingsInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Docu
         string key = "PartialSegmentPlaySite";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_partialSegmentPlaySite, allocator);
+    }
+
+    if (m_streamOrderHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "StreamOrder";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_streamOrder, allocator);
+    }
+
+    if (m_videoResolutionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "VideoResolution";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_videoResolution, allocator);
     }
 
 }
@@ -387,5 +425,37 @@ void HlsRemuxSettingsInfo::SetPartialSegmentPlaySite(const uint64_t& _partialSeg
 bool HlsRemuxSettingsInfo::PartialSegmentPlaySiteHasBeenSet() const
 {
     return m_partialSegmentPlaySiteHasBeenSet;
+}
+
+uint64_t HlsRemuxSettingsInfo::GetStreamOrder() const
+{
+    return m_streamOrder;
+}
+
+void HlsRemuxSettingsInfo::SetStreamOrder(const uint64_t& _streamOrder)
+{
+    m_streamOrder = _streamOrder;
+    m_streamOrderHasBeenSet = true;
+}
+
+bool HlsRemuxSettingsInfo::StreamOrderHasBeenSet() const
+{
+    return m_streamOrderHasBeenSet;
+}
+
+uint64_t HlsRemuxSettingsInfo::GetVideoResolution() const
+{
+    return m_videoResolution;
+}
+
+void HlsRemuxSettingsInfo::SetVideoResolution(const uint64_t& _videoResolution)
+{
+    m_videoResolution = _videoResolution;
+    m_videoResolutionHasBeenSet = true;
+}
+
+bool HlsRemuxSettingsInfo::VideoResolutionHasBeenSet() const
+{
+    return m_videoResolutionHasBeenSet;
 }
 

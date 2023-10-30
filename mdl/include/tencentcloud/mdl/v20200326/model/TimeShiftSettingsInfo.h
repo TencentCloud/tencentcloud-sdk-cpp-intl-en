@@ -97,19 +97,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool PlayDomainHasBeenSet() const;
 
                     /**
-                     * 获取Allowable time-shift period (s). Value range: [600, 1209600]. Default value: 300
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return StartoverWindow Allowable time-shift period (s). Value range: [600, 1209600]. Default value: 300
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取Allowable time-shift period (s). Value range: [300, 2592000]. Default value: 300Note: This field may return `null`, indicating that no valid value was found.
+                     * @return StartoverWindow Allowable time-shift period (s). Value range: [300, 2592000]. Default value: 300Note: This field may return `null`, indicating that no valid value was found.
                      * 
                      */
                     int64_t GetStartoverWindow() const;
 
                     /**
-                     * 设置Allowable time-shift period (s). Value range: [600, 1209600]. Default value: 300
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _startoverWindow Allowable time-shift period (s). Value range: [600, 1209600]. Default value: 300
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置Allowable time-shift period (s). Value range: [300, 2592000]. Default value: 300Note: This field may return `null`, indicating that no valid value was found.
+                     * @param _startoverWindow Allowable time-shift period (s). Value range: [300, 2592000]. Default value: 300Note: This field may return `null`, indicating that no valid value was found.
                      * 
                      */
                     void SetStartoverWindow(const int64_t& _startoverWindow);
@@ -138,8 +134,7 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool m_playDomainHasBeenSet;
 
                     /**
-                     * Allowable time-shift period (s). Value range: [600, 1209600]. Default value: 300
-Note: This field may return `null`, indicating that no valid value was found.
+                     * Allowable time-shift period (s). Value range: [300, 2592000]. Default value: 300Note: This field may return `null`, indicating that no valid value was found.
                      */
                     int64_t m_startoverWindow;
                     bool m_startoverWindowHasBeenSet;

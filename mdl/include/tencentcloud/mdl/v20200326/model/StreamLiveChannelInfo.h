@@ -32,6 +32,7 @@
 #include <tencentcloud/mdl/v20200326/model/PlanSettings.h>
 #include <tencentcloud/mdl/v20200326/model/EventNotifySetting.h>
 #include <tencentcloud/mdl/v20200326/model/InputLossBehaviorInfo.h>
+#include <tencentcloud/mdl/v20200326/model/PipelineInputSettingsInfo.h>
 
 
 namespace TencentCloud
@@ -305,6 +306,27 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     bool InputLossBehaviorHasBeenSet() const;
 
+                    /**
+                     * 获取Pipeline configuration.
+                     * @return PipelineInputSettings Pipeline configuration.
+                     * 
+                     */
+                    PipelineInputSettingsInfo GetPipelineInputSettings() const;
+
+                    /**
+                     * 设置Pipeline configuration.
+                     * @param _pipelineInputSettings Pipeline configuration.
+                     * 
+                     */
+                    void SetPipelineInputSettings(const PipelineInputSettingsInfo& _pipelineInputSettings);
+
+                    /**
+                     * 判断参数 PipelineInputSettings 是否已赋值
+                     * @return PipelineInputSettings 是否已赋值
+                     * 
+                     */
+                    bool PipelineInputSettingsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -377,6 +399,12 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     InputLossBehaviorInfo m_inputLossBehavior;
                     bool m_inputLossBehaviorHasBeenSet;
+
+                    /**
+                     * Pipeline configuration.
+                     */
+                    PipelineInputSettingsInfo m_pipelineInputSettings;
+                    bool m_pipelineInputSettingsHasBeenSet;
 
                 };
             }

@@ -178,19 +178,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool SDMCSettingsHasBeenSet() const;
 
                     /**
-                     * 获取The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`. For HLS, this can be `FAIRPLAY` or `AES128`. For DASH, this can only be `WIDEVINE`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return DrmType The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`. For HLS, this can be `FAIRPLAY` or `AES128`. For DASH, this can only be `WIDEVINE`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`, `PLAYREADY`. For HLS, this can be `FAIRPLAY` or `AES128` or `PLAYREADY`. For DASH, valid values: `WIDEVINE` or `PLAYREADY`. 
+                     * @return DrmType The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`, `PLAYREADY`. For HLS, this can be `FAIRPLAY` or `AES128` or `PLAYREADY`. For DASH, valid values: `WIDEVINE` or `PLAYREADY`. 
                      * 
                      */
                     std::string GetDrmType() const;
 
                     /**
-                     * 设置The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`. For HLS, this can be `FAIRPLAY` or `AES128`. For DASH, this can only be `WIDEVINE`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _drmType The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`. For HLS, this can be `FAIRPLAY` or `AES128`. For DASH, this can only be `WIDEVINE`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`, `PLAYREADY`. For HLS, this can be `FAIRPLAY` or `AES128` or `PLAYREADY`. For DASH, valid values: `WIDEVINE` or `PLAYREADY`. 
+                     * @param _drmType The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`, `PLAYREADY`. For HLS, this can be `FAIRPLAY` or `AES128` or `PLAYREADY`. For DASH, valid values: `WIDEVINE` or `PLAYREADY`. 
                      * 
                      */
                     void SetDrmType(const std::string& _drmType);
@@ -241,8 +237,7 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool m_sDMCSettingsHasBeenSet;
 
                     /**
-                     * The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`. For HLS, this can be `FAIRPLAY` or `AES128`. For DASH, this can only be `WIDEVINE`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`, `PLAYREADY`. For HLS, this can be `FAIRPLAY` or `AES128` or `PLAYREADY`. For DASH, valid values: `WIDEVINE` or `PLAYREADY`. 
                      */
                     std::string m_drmType;
                     bool m_drmTypeHasBeenSet;

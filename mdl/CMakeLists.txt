@@ -33,6 +33,7 @@ set(mdl_public_header_model
   include/tencentcloud/mdl/v20200326/model/AudioPipelineInputStatistics.h
   include/tencentcloud/mdl/v20200326/model/CreateStreamLivePlanResponse.h
   include/tencentcloud/mdl/v20200326/model/InputStreamInfo.h
+  include/tencentcloud/mdl/v20200326/model/PipelineInputSettingsInfo.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveChannelOutputStatisticsRequest.h
   include/tencentcloud/mdl/v20200326/model/ChannelPipelineAlerts.h
   include/tencentcloud/mdl/v20200326/model/InputInfo.h
@@ -168,6 +169,7 @@ set(mdl_src
   src/v20200326/model/AudioPipelineInputStatistics.cpp
   src/v20200326/model/CreateStreamLivePlanResponse.cpp
   src/v20200326/model/InputStreamInfo.cpp
+  src/v20200326/model/PipelineInputSettingsInfo.cpp
   src/v20200326/model/DescribeStreamLiveChannelOutputStatisticsRequest.cpp
   src/v20200326/model/ChannelPipelineAlerts.cpp
   src/v20200326/model/InputInfo.cpp

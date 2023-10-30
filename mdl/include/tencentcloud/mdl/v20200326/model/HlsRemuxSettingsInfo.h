@@ -198,15 +198,15 @@ Currently, fMP4 segments do not support DRM or time shifting.
                     bool H265PackageTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LowLatency 
+                     * 获取Whether to enable low latency 0:CLOSE, 1:OPEN, default value: 0.
+                     * @return LowLatency Whether to enable low latency 0:CLOSE, 1:OPEN, default value: 0.
                      * 
                      */
                     uint64_t GetLowLatency() const;
 
                     /**
-                     * 设置
-                     * @param _lowLatency 
+                     * 设置Whether to enable low latency 0:CLOSE, 1:OPEN, default value: 0.
+                     * @param _lowLatency Whether to enable low latency 0:CLOSE, 1:OPEN, default value: 0.
                      * 
                      */
                     void SetLowLatency(const uint64_t& _lowLatency);
@@ -219,15 +219,15 @@ Currently, fMP4 segments do not support DRM or time shifting.
                     bool LowLatencyHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PartialSegmentDuration 
+                     * 获取Low latency slice size, unit ms. Value range: integer [200-HlsRemuxSettings.SegmentDuration] Default value: 500ms.
+                     * @return PartialSegmentDuration Low latency slice size, unit ms. Value range: integer [200-HlsRemuxSettings.SegmentDuration] Default value: 500ms.
                      * 
                      */
                     uint64_t GetPartialSegmentDuration() const;
 
                     /**
-                     * 设置
-                     * @param _partialSegmentDuration 
+                     * 设置Low latency slice size, unit ms. Value range: integer [200-HlsRemuxSettings.SegmentDuration] Default value: 500ms.
+                     * @param _partialSegmentDuration Low latency slice size, unit ms. Value range: integer [200-HlsRemuxSettings.SegmentDuration] Default value: 500ms.
                      * 
                      */
                     void SetPartialSegmentDuration(const uint64_t& _partialSegmentDuration);
@@ -240,15 +240,15 @@ Currently, fMP4 segments do not support DRM or time shifting.
                     bool PartialSegmentDurationHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PartialSegmentPlaySite 
+                     * 获取Low latency slice playback position, unit ms. Value range: integer [3*HlsRemuxSettings.PartiSegmentDuration - 3*HlsRemuxSettings.SegmentDuration], Default value: 3*HlsRemuxSettings.PartiSegmentDuration.
+                     * @return PartialSegmentPlaySite Low latency slice playback position, unit ms. Value range: integer [3*HlsRemuxSettings.PartiSegmentDuration - 3*HlsRemuxSettings.SegmentDuration], Default value: 3*HlsRemuxSettings.PartiSegmentDuration.
                      * 
                      */
                     uint64_t GetPartialSegmentPlaySite() const;
 
                     /**
-                     * 设置
-                     * @param _partialSegmentPlaySite 
+                     * 设置Low latency slice playback position, unit ms. Value range: integer [3*HlsRemuxSettings.PartiSegmentDuration - 3*HlsRemuxSettings.SegmentDuration], Default value: 3*HlsRemuxSettings.PartiSegmentDuration.
+                     * @param _partialSegmentPlaySite Low latency slice playback position, unit ms. Value range: integer [3*HlsRemuxSettings.PartiSegmentDuration - 3*HlsRemuxSettings.SegmentDuration], Default value: 3*HlsRemuxSettings.PartiSegmentDuration.
                      * 
                      */
                     void SetPartialSegmentPlaySite(const uint64_t& _partialSegmentPlaySite);
@@ -259,6 +259,48 @@ Currently, fMP4 segments do not support DRM or time shifting.
                      * 
                      */
                     bool PartialSegmentPlaySiteHasBeenSet() const;
+
+                    /**
+                     * 获取Hls main m3u8 file sorting rules by bitrate, optional values: 1: video bitrate ascending order; 2: video bitrate descending order. Default value: 1.
+                     * @return StreamOrder Hls main m3u8 file sorting rules by bitrate, optional values: 1: video bitrate ascending order; 2: video bitrate descending order. Default value: 1.
+                     * 
+                     */
+                    uint64_t GetStreamOrder() const;
+
+                    /**
+                     * 设置Hls main m3u8 file sorting rules by bitrate, optional values: 1: video bitrate ascending order; 2: video bitrate descending order. Default value: 1.
+                     * @param _streamOrder Hls main m3u8 file sorting rules by bitrate, optional values: 1: video bitrate ascending order; 2: video bitrate descending order. Default value: 1.
+                     * 
+                     */
+                    void SetStreamOrder(const uint64_t& _streamOrder);
+
+                    /**
+                     * 判断参数 StreamOrder 是否已赋值
+                     * @return StreamOrder 是否已赋值
+                     * 
+                     */
+                    bool StreamOrderHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the Hls main m3u8 file contains resolution information, optional values: 1: INCLUDE includes video resolution; 2: EXCLUDE does not include video resolution. Default value: 1.
+                     * @return VideoResolution Whether the Hls main m3u8 file contains resolution information, optional values: 1: INCLUDE includes video resolution; 2: EXCLUDE does not include video resolution. Default value: 1.
+                     * 
+                     */
+                    uint64_t GetVideoResolution() const;
+
+                    /**
+                     * 设置Whether the Hls main m3u8 file contains resolution information, optional values: 1: INCLUDE includes video resolution; 2: EXCLUDE does not include video resolution. Default value: 1.
+                     * @param _videoResolution Whether the Hls main m3u8 file contains resolution information, optional values: 1: INCLUDE includes video resolution; 2: EXCLUDE does not include video resolution. Default value: 1.
+                     * 
+                     */
+                    void SetVideoResolution(const uint64_t& _videoResolution);
+
+                    /**
+                     * 判断参数 VideoResolution 是否已赋值
+                     * @return VideoResolution 是否已赋值
+                     * 
+                     */
+                    bool VideoResolutionHasBeenSet() const;
 
                 private:
 
@@ -306,22 +348,34 @@ Currently, fMP4 segments do not support DRM or time shifting.
                     bool m_h265PackageTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Whether to enable low latency 0:CLOSE, 1:OPEN, default value: 0.
                      */
                     uint64_t m_lowLatency;
                     bool m_lowLatencyHasBeenSet;
 
                     /**
-                     * 
+                     * Low latency slice size, unit ms. Value range: integer [200-HlsRemuxSettings.SegmentDuration] Default value: 500ms.
                      */
                     uint64_t m_partialSegmentDuration;
                     bool m_partialSegmentDurationHasBeenSet;
 
                     /**
-                     * 
+                     * Low latency slice playback position, unit ms. Value range: integer [3*HlsRemuxSettings.PartiSegmentDuration - 3*HlsRemuxSettings.SegmentDuration], Default value: 3*HlsRemuxSettings.PartiSegmentDuration.
                      */
                     uint64_t m_partialSegmentPlaySite;
                     bool m_partialSegmentPlaySiteHasBeenSet;
+
+                    /**
+                     * Hls main m3u8 file sorting rules by bitrate, optional values: 1: video bitrate ascending order; 2: video bitrate descending order. Default value: 1.
+                     */
+                    uint64_t m_streamOrder;
+                    bool m_streamOrderHasBeenSet;
+
+                    /**
+                     * Whether the Hls main m3u8 file contains resolution information, optional values: 1: INCLUDE includes video resolution; 2: EXCLUDE does not include video resolution. Default value: 1.
+                     */
+                    uint64_t m_videoResolution;
+                    bool m_videoResolutionHasBeenSet;
 
                 };
             }

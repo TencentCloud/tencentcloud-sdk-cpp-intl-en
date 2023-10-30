@@ -31,7 +31,8 @@ CreateStreamLiveChannelRequest::CreateStreamLiveChannelRequest() :
     m_aVTemplatesHasBeenSet(false),
     m_planSettingsHasBeenSet(false),
     m_eventNotifySettingsHasBeenSet(false),
-    m_inputLossBehaviorHasBeenSet(false)
+    m_inputLossBehaviorHasBeenSet(false),
+    m_pipelineInputSettingsHasBeenSet(false)
 {
 }
 
@@ -150,6 +151,15 @@ string CreateStreamLiveChannelRequest::ToJsonString() const
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_inputLossBehavior.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_pipelineInputSettingsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PipelineInputSettings";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_pipelineInputSettings.ToJsonObject(d[key.c_str()], allocator);
     }
 
 
@@ -302,6 +312,22 @@ void CreateStreamLiveChannelRequest::SetInputLossBehavior(const InputLossBehavio
 bool CreateStreamLiveChannelRequest::InputLossBehaviorHasBeenSet() const
 {
     return m_inputLossBehaviorHasBeenSet;
+}
+
+PipelineInputSettingsInfo CreateStreamLiveChannelRequest::GetPipelineInputSettings() const
+{
+    return m_pipelineInputSettings;
+}
+
+void CreateStreamLiveChannelRequest::SetPipelineInputSettings(const PipelineInputSettingsInfo& _pipelineInputSettings)
+{
+    m_pipelineInputSettings = _pipelineInputSettings;
+    m_pipelineInputSettingsHasBeenSet = true;
+}
+
+bool CreateStreamLiveChannelRequest::PipelineInputSettingsHasBeenSet() const
+{
+    return m_pipelineInputSettingsHasBeenSet;
 }
 
 
