@@ -74,19 +74,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取Transcoding specification ID. For more information, please see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33478?from_cn_redirect=1#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Definition Transcoding specification ID. For more information, please see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33478?from_cn_redirect=1#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Definition 
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Transcoding specification ID. For more information, please see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33478?from_cn_redirect=1#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _definition Transcoding specification ID. For more information, please see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33478?from_cn_redirect=1#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _definition 
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -352,6 +348,27 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool DigitalWatermarkTypeHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return CopyRightWatermarkText 
+                     * 
+                     */
+                    std::string GetCopyRightWatermarkText() const;
+
+                    /**
+                     * 设置
+                     * @param _copyRightWatermarkText 
+                     * 
+                     */
+                    void SetCopyRightWatermarkText(const std::string& _copyRightWatermarkText);
+
+                    /**
+                     * 判断参数 CopyRightWatermarkText 是否已赋值
+                     * @return CopyRightWatermarkText 是否已赋值
+                     * 
+                     */
+                    bool CopyRightWatermarkTextHasBeenSet() const;
+
                 private:
 
                     /**
@@ -362,8 +379,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_urlHasBeenSet;
 
                     /**
-                     * Transcoding specification ID. For more information, please see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33478?from_cn_redirect=1#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
@@ -438,6 +454,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_digitalWatermarkType;
                     bool m_digitalWatermarkTypeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_copyRightWatermarkText;
+                    bool m_copyRightWatermarkTextHasBeenSet;
 
                 };
             }

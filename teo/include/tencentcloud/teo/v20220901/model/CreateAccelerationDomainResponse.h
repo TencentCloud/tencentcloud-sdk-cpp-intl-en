@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/teo/v20220901/model/OwnershipVerification.h>
 
 
 namespace TencentCloud
@@ -43,7 +44,27 @@ namespace TencentCloud
                     std::string ToJsonString() const;
 
 
+                    /**
+                     * 获取
+                     * @return OwnershipVerification 
+                     * 
+                     */
+                    OwnershipVerification GetOwnershipVerification() const;
+
+                    /**
+                     * 判断参数 OwnershipVerification 是否已赋值
+                     * @return OwnershipVerification 是否已赋值
+                     * 
+                     */
+                    bool OwnershipVerificationHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * 
+                     */
+                    OwnershipVerification m_ownershipVerification;
+                    bool m_ownershipVerificationHasBeenSet;
 
                 };
             }

@@ -205,8 +205,6 @@
 #include <tencentcloud/vod/v20180717/model/DescribeWatermarkTemplatesResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeWordSamplesRequest.h>
 #include <tencentcloud/vod/v20180717/model/DescribeWordSamplesResponse.h>
-#include <tencentcloud/vod/v20180717/model/EditMediaRequest.h>
-#include <tencentcloud/vod/v20180717/model/EditMediaResponse.h>
 #include <tencentcloud/vod/v20180717/model/ExecuteFunctionRequest.h>
 #include <tencentcloud/vod/v20180717/model/ExecuteFunctionResponse.h>
 #include <tencentcloud/vod/v20180717/model/ExtractTraceWatermarkRequest.h>
@@ -269,8 +267,6 @@
 #include <tencentcloud/vod/v20180717/model/ModifyWordSampleResponse.h>
 #include <tencentcloud/vod/v20180717/model/ParseStreamingManifestRequest.h>
 #include <tencentcloud/vod/v20180717/model/ParseStreamingManifestResponse.h>
-#include <tencentcloud/vod/v20180717/model/ProcessMediaRequest.h>
-#include <tencentcloud/vod/v20180717/model/ProcessMediaResponse.h>
 #include <tencentcloud/vod/v20180717/model/ProcessMediaByProcedureRequest.h>
 #include <tencentcloud/vod/v20180717/model/ProcessMediaByProcedureResponse.h>
 #include <tencentcloud/vod/v20180717/model/ProcessMediaByUrlRequest.h>
@@ -592,9 +588,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeWordSamplesResponse> DescribeWordSamplesOutcome;
                 typedef std::future<DescribeWordSamplesOutcome> DescribeWordSamplesOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeWordSamplesRequest&, DescribeWordSamplesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWordSamplesAsyncHandler;
-                typedef Outcome<Core::Error, Model::EditMediaResponse> EditMediaOutcome;
-                typedef std::future<EditMediaOutcome> EditMediaOutcomeCallable;
-                typedef std::function<void(const VodClient*, const Model::EditMediaRequest&, EditMediaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EditMediaAsyncHandler;
                 typedef Outcome<Core::Error, Model::ExecuteFunctionResponse> ExecuteFunctionOutcome;
                 typedef std::future<ExecuteFunctionOutcome> ExecuteFunctionOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ExecuteFunctionRequest&, ExecuteFunctionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ExecuteFunctionAsyncHandler;
@@ -688,9 +681,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ParseStreamingManifestResponse> ParseStreamingManifestOutcome;
                 typedef std::future<ParseStreamingManifestOutcome> ParseStreamingManifestOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ParseStreamingManifestRequest&, ParseStreamingManifestOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ParseStreamingManifestAsyncHandler;
-                typedef Outcome<Core::Error, Model::ProcessMediaResponse> ProcessMediaOutcome;
-                typedef std::future<ProcessMediaOutcome> ProcessMediaOutcomeCallable;
-                typedef std::function<void(const VodClient*, const Model::ProcessMediaRequest&, ProcessMediaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ProcessMediaAsyncHandler;
                 typedef Outcome<Core::Error, Model::ProcessMediaByProcedureResponse> ProcessMediaByProcedureOutcome;
                 typedef std::future<ProcessMediaByProcedureOutcome> ProcessMediaByProcedureOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ProcessMediaByProcedureRequest&, ProcessMediaByProcedureOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ProcessMediaByProcedureAsyncHandler;
@@ -1137,7 +1127,7 @@ This API is used to delete a custom audio/video moderation template.
                 DeletePersonSampleOutcomeCallable DeletePersonSampleCallable(const Model::DeletePersonSampleRequest& request);
 
                 /**
-                 *This API is used to delete a custom task flow template.  
+                 *
                  * @param req DeleteProcedureTemplateRequest
                  * @return DeleteProcedureTemplateOutcome
                  */
@@ -1663,25 +1653,6 @@ This API is used to query player configurations. It supports pagination.
                 DescribeWordSamplesOutcomeCallable DescribeWordSamplesCallable(const Model::DescribeWordSamplesRequest& request);
 
                 /**
-                 *This API is used to edit a video (by clipping, splicing, etc.) to generate a new VOD video. Editing features include:
-
-1. Clipping a file in VOD to generate a new video;
-2. Splicing multiple files in VOD to generate a new video;
-3. Clipping multiple files in VOD and then splicing the clips to generate a new video;
-4. Directly generating a new video from a stream in VOD;
-5. Clipping a stream in VOD to generate a new video;
-6. Splicing multiple streams in VOD to generate a new video;
-7. Clipping multiple streams in VOD and then splicing the clips to generate a new video.
-
-You can also specify whether to perform a task flow for the generated new video.
-                 * @param req EditMediaRequest
-                 * @return EditMediaOutcome
-                 */
-                EditMediaOutcome EditMedia(const Model::EditMediaRequest &request);
-                void EditMediaAsync(const Model::EditMediaRequest& request, const EditMediaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                EditMediaOutcomeCallable EditMediaCallable(const Model::EditMediaRequest& request);
-
-                /**
                  *This API is only used in special scenarios of custom development. Unless requested by VOD customer service, please do not call it.
                  * @param req ExecuteFunctionRequest
                  * @return ExecuteFunctionOutcome
@@ -1710,30 +1681,7 @@ You can also specify whether to perform a task flow for the generated new video.
                 ForbidMediaDistributionOutcomeCallable ForbidMediaDistributionCallable(const Model::ForbidMediaDistributionRequest& request);
 
                 /**
-                 *Live clipping means that during a live broadcast (before it ends), you can select a segment of previous live broadcast content to generate a new video (in HLS format) in real time and share it immediately or store it persistently.
-
-VOD supports two live clipping modes:
-- Persistent clipping: in this mode, the clipped video is saved as an independent video file with a `FileId`, which is suitable for **persistently storing** highlights;
-- Temporary clipping: in this mode, the clipped video is part of the LVB recording file with no `FileId`, which is suitable for **temporarily sharing** highlights;
-
-Note:
-- The live clipping feature can be used only when [time shifting](https://intl.cloud.tencent.com/document/product/267/32742?from_cn_redirect=1) has been enabled for the target live stream.
-- Live clipping is performed based on the m3u8 file generated by LVB recording, so its minimum clipping granularity is one ts segment rather than at or below the second level.
-
-
-### Persistent clipping
-In persistent clipping mode, the clipped video is saved as an independent video file with a `FileId`, and its lifecycle is not subject to the source LVB recording video (even if the source video is deleted, the clipped video will not be affected in any way). It can be further processed (transcoded, published on WeChat, etc.).
-
-An example is as follows: for a complete football match, the source LVB recording video may be up to 2 hours in length. You want to store this video for only 2 months for the purpose of cost savings. However, you want to specify a longer retention period for the "highlights" video created by live clipping and perform additional VOD operations on it such as transcoding and release on WeChat. In this case, you need to choose the persistent clipping mode of live clipping.
-
-The advantage of persistent clipping is that the clipped video has a lifecycle independent of the source recording video and can be managed independently and stored persistently.
-
-### Temporary clipping
-In temporary clipping mode, the clipped video (m3u8 file) shares the same ts segments with the LVB recording video instead of being an independent video. It only has a playback URL but has no `FileId`, and its validity period is the same as that of the LVB recording video; therefore, if the LVB recording video is deleted, it cannot be played back.
-
-For temporary clipping, as the clipping result is not an independent video, it will not be included in VOD's media asset management (for example, it will not be counted in the total videos in the console), and no video processing operations can be separately performed on it, such as transcoding and release on WeChat.
-
-The advantage of temporary clipping is that the clipping operation is very "lightweight" and does not incur additional storage fees. However, the clipped video has the same lifecycle as the source recording video and cannot be further transcoded or processed.
+                 *
                  * @param req LiveRealTimeClipRequest
                  * @return LiveRealTimeClipOutcome
                  */
@@ -2003,15 +1951,6 @@ This API is used to modify a player configuration.
                 ParseStreamingManifestOutcome ParseStreamingManifest(const Model::ParseStreamingManifestRequest &request);
                 void ParseStreamingManifestAsync(const Model::ParseStreamingManifestRequest& request, const ParseStreamingManifestAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ParseStreamingManifestOutcomeCallable ParseStreamingManifestCallable(const Model::ParseStreamingManifestRequest& request);
-
-                /**
-                 *
-                 * @param req ProcessMediaRequest
-                 * @return ProcessMediaOutcome
-                 */
-                ProcessMediaOutcome ProcessMedia(const Model::ProcessMediaRequest &request);
-                void ProcessMediaAsync(const Model::ProcessMediaRequest& request, const ProcessMediaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                ProcessMediaOutcomeCallable ProcessMediaCallable(const Model::ProcessMediaRequest& request);
 
                 /**
                  *This API is used to start a task flow on a video.

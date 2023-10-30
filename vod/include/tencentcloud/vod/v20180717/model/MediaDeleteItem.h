@@ -35,8 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Content to be deleted when a VOD video is deleted
-
+                * 
                 */
                 class MediaDeleteItem : public AbstractModel
                 {

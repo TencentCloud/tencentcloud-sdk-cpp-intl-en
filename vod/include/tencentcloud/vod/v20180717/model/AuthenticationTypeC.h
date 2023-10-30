@@ -35,10 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Timestamp hotlink protection mode C configuration
-The access URL format of timestamp hotlink protection mode C is as follows: http://DomainName/md5hash/timestamp/FileName
-Here, timestamp is a hexadecimal timestamp in Unix format;
-md5hash: MD5 (custom key + file path + timestamp)
+                * 
                 */
                 class AuthenticationTypeC : public AbstractModel
                 {
@@ -50,15 +47,15 @@ md5hash: MD5 (custom key + file path + timestamp)
 
 
                     /**
-                     * 获取The key for signature calculation 6-32 characters. Only digits and letters are allowed.
-                     * @return SecretKey The key for signature calculation 6-32 characters. Only digits and letters are allowed.
+                     * 获取
+                     * @return SecretKey 
                      * 
                      */
                     std::string GetSecretKey() const;
 
                     /**
-                     * 设置The key for signature calculation 6-32 characters. Only digits and letters are allowed.
-                     * @param _secretKey The key for signature calculation 6-32 characters. Only digits and letters are allowed.
+                     * 设置
+                     * @param _secretKey 
                      * 
                      */
                     void SetSecretKey(const std::string& _secretKey);
@@ -71,15 +68,15 @@ md5hash: MD5 (custom key + file path + timestamp)
                     bool SecretKeyHasBeenSet() const;
 
                     /**
-                     * 获取Signature expiration time;Unit: second. The maximum value is 630720000.
-                     * @return ExpireTime Signature expiration time;Unit: second. The maximum value is 630720000.
+                     * 获取
+                     * @return ExpireTime 
                      * 
                      */
                     uint64_t GetExpireTime() const;
 
                     /**
-                     * 设置Signature expiration time;Unit: second. The maximum value is 630720000.
-                     * @param _expireTime Signature expiration time;Unit: second. The maximum value is 630720000.
+                     * 设置
+                     * @param _expireTime 
                      * 
                      */
                     void SetExpireTime(const uint64_t& _expireTime);
@@ -92,15 +89,15 @@ md5hash: MD5 (custom key + file path + timestamp)
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取File extension list settings determining if authentication should be performed;If it contains an asterisk (*), this indicates all files.
-                     * @return FileExtensions File extension list settings determining if authentication should be performed;If it contains an asterisk (*), this indicates all files.
+                     * 获取
+                     * @return FileExtensions 
                      * 
                      */
                     std::vector<std::string> GetFileExtensions() const;
 
                     /**
-                     * 设置File extension list settings determining if authentication should be performed;If it contains an asterisk (*), this indicates all files.
-                     * @param _fileExtensions File extension list settings determining if authentication should be performed;If it contains an asterisk (*), this indicates all files.
+                     * 设置
+                     * @param _fileExtensions 
                      * 
                      */
                     void SetFileExtensions(const std::vector<std::string>& _fileExtensions);
@@ -113,15 +110,15 @@ md5hash: MD5 (custom key + file path + timestamp)
                     bool FileExtensionsHasBeenSet() const;
 
                     /**
-                     * 获取whitelist: All file types apart from the FileExtensions list are authenticated;blacklist: Only the file types in the FileExtensions list are authenticated.
-                     * @return FilterType whitelist: All file types apart from the FileExtensions list are authenticated;blacklist: Only the file types in the FileExtensions list are authenticated.
+                     * 获取
+                     * @return FilterType 
                      * 
                      */
                     std::string GetFilterType() const;
 
                     /**
-                     * 设置whitelist: All file types apart from the FileExtensions list are authenticated;blacklist: Only the file types in the FileExtensions list are authenticated.
-                     * @param _filterType whitelist: All file types apart from the FileExtensions list are authenticated;blacklist: Only the file types in the FileExtensions list are authenticated.
+                     * 设置
+                     * @param _filterType 
                      * 
                      */
                     void SetFilterType(const std::string& _filterType);
@@ -134,15 +131,15 @@ md5hash: MD5 (custom key + file path + timestamp)
                     bool FilterTypeHasBeenSet() const;
 
                     /**
-                     * 获取Timestamp settings:<li>dec: Decimal</li> <li>hex: Hexadecimal</li>
-                     * @return TimeFormat Timestamp settings:<li>dec: Decimal</li> <li>hex: Hexadecimal</li>
+                     * 获取
+                     * @return TimeFormat 
                      * 
                      */
                     std::string GetTimeFormat() const;
 
                     /**
-                     * 设置Timestamp settings:<li>dec: Decimal</li> <li>hex: Hexadecimal</li>
-                     * @param _timeFormat Timestamp settings:<li>dec: Decimal</li> <li>hex: Hexadecimal</li>
+                     * 设置
+                     * @param _timeFormat 
                      * 
                      */
                     void SetTimeFormat(const std::string& _timeFormat);
@@ -155,15 +152,15 @@ md5hash: MD5 (custom key + file path + timestamp)
                     bool TimeFormatHasBeenSet() const;
 
                     /**
-                     * 获取Backup key, which is used to calculate a signature. 6-32 characters. Only digits and letters are allowed.
-                     * @return BackupSecretKey Backup key, which is used to calculate a signature. 6-32 characters. Only digits and letters are allowed.
+                     * 获取
+                     * @return BackupSecretKey 
                      * 
                      */
                     std::string GetBackupSecretKey() const;
 
                     /**
-                     * 设置Backup key, which is used to calculate a signature. 6-32 characters. Only digits and letters are allowed.
-                     * @param _backupSecretKey Backup key, which is used to calculate a signature. 6-32 characters. Only digits and letters are allowed.
+                     * 设置
+                     * @param _backupSecretKey 
                      * 
                      */
                     void SetBackupSecretKey(const std::string& _backupSecretKey);
@@ -178,37 +175,37 @@ md5hash: MD5 (custom key + file path + timestamp)
                 private:
 
                     /**
-                     * The key for signature calculation 6-32 characters. Only digits and letters are allowed.
+                     * 
                      */
                     std::string m_secretKey;
                     bool m_secretKeyHasBeenSet;
 
                     /**
-                     * Signature expiration time;Unit: second. The maximum value is 630720000.
+                     * 
                      */
                     uint64_t m_expireTime;
                     bool m_expireTimeHasBeenSet;
 
                     /**
-                     * File extension list settings determining if authentication should be performed;If it contains an asterisk (*), this indicates all files.
+                     * 
                      */
                     std::vector<std::string> m_fileExtensions;
                     bool m_fileExtensionsHasBeenSet;
 
                     /**
-                     * whitelist: All file types apart from the FileExtensions list are authenticated;blacklist: Only the file types in the FileExtensions list are authenticated.
+                     * 
                      */
                     std::string m_filterType;
                     bool m_filterTypeHasBeenSet;
 
                     /**
-                     * Timestamp settings:<li>dec: Decimal</li> <li>hex: Hexadecimal</li>
+                     * 
                      */
                     std::string m_timeFormat;
                     bool m_timeFormatHasBeenSet;
 
                     /**
-                     * Backup key, which is used to calculate a signature. 6-32 characters. Only digits and letters are allowed.
+                     * 
                      */
                     std::string m_backupSecretKey;
                     bool m_backupSecretKeyHasBeenSet;

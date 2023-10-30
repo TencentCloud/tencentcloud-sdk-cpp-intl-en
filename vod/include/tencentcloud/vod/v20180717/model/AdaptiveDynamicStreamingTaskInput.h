@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/vod/v20180717/model/WatermarkInput.h>
 #include <tencentcloud/vod/v20180717/model/TraceWatermarkInput.h>
+#include <tencentcloud/vod/v20180717/model/CopyRightWatermarkInput.h>
 
 
 namespace TencentCloud
@@ -116,6 +117,27 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TraceWatermarkHasBeenSet() const;
 
                     /**
+                     * 获取
+                     * @return CopyRightWatermark 
+                     * 
+                     */
+                    CopyRightWatermarkInput GetCopyRightWatermark() const;
+
+                    /**
+                     * 设置
+                     * @param _copyRightWatermark 
+                     * 
+                     */
+                    void SetCopyRightWatermark(const CopyRightWatermarkInput& _copyRightWatermark);
+
+                    /**
+                     * 判断参数 CopyRightWatermark 是否已赋值
+                     * @return CopyRightWatermark 是否已赋值
+                     * 
+                     */
+                    bool CopyRightWatermarkHasBeenSet() const;
+
+                    /**
                      * 获取List of subtitle IDs (maximum: 16)
                      * @return SubtitleSet List of subtitle IDs (maximum: 16)
                      * 
@@ -156,6 +178,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     TraceWatermarkInput m_traceWatermark;
                     bool m_traceWatermarkHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    CopyRightWatermarkInput m_copyRightWatermark;
+                    bool m_copyRightWatermarkHasBeenSet;
 
                     /**
                      * List of subtitle IDs (maximum: 16)

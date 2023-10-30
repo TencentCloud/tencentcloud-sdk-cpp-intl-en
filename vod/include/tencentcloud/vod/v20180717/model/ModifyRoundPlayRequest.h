@@ -173,6 +173,48 @@ namespace TencentCloud
                      */
                     bool DescHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return Status 
+                     * 
+                     */
+                    std::string GetStatus() const;
+
+                    /**
+                     * 设置
+                     * @param _status 
+                     * 
+                     */
+                    void SetStatus(const std::string& _status);
+
+                    /**
+                     * 判断参数 Status 是否已赋值
+                     * @return Status 是否已赋值
+                     * 
+                     */
+                    bool StatusHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return PlayBackMode 
+                     * 
+                     */
+                    std::string GetPlayBackMode() const;
+
+                    /**
+                     * 设置
+                     * @param _playBackMode 
+                     * 
+                     */
+                    void SetPlayBackMode(const std::string& _playBackMode);
+
+                    /**
+                     * 判断参数 PlayBackMode 是否已赋值
+                     * @return PlayBackMode 是否已赋值
+                     * 
+                     */
+                    bool PlayBackModeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -211,6 +253,18 @@ namespace TencentCloud
                      */
                     std::string m_desc;
                     bool m_descHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_status;
+                    bool m_statusHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_playBackMode;
+                    bool m_playBackModeHasBeenSet;
 
                 };
             }

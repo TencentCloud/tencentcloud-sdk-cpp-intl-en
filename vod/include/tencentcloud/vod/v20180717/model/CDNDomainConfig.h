@@ -65,15 +65,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Acceleration region:<li>mainland:Acceleration inside the Chinese mainland;</li> <li>overseas: Acceleration outside the Chinese mainland;</li> <li>Acceleration over the globe.</li>
-                     * @return Area Acceleration region:<li>mainland:Acceleration inside the Chinese mainland;</li> <li>overseas: Acceleration outside the Chinese mainland;</li> <li>Acceleration over the globe.</li>
+                     * 获取
+                     * @return Area 
                      * 
                      */
                     std::string GetArea() const;
 
                     /**
-                     * 设置Acceleration region:<li>mainland:Acceleration inside the Chinese mainland;</li> <li>overseas: Acceleration outside the Chinese mainland;</li> <li>Acceleration over the globe.</li>
-                     * @param _area Acceleration region:<li>mainland:Acceleration inside the Chinese mainland;</li> <li>overseas: Acceleration outside the Chinese mainland;</li> <li>Acceleration over the globe.</li>
+                     * 设置
+                     * @param _area 
                      * 
                      */
                     void SetArea(const std::string& _area);
@@ -466,7 +466,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Acceleration region:<li>mainland:Acceleration inside the Chinese mainland;</li> <li>overseas: Acceleration outside the Chinese mainland;</li> <li>Acceleration over the globe.</li>
+                     * 
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;

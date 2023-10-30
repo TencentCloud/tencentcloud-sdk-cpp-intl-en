@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/vod/v20180717/model/TransitionOpertion.h>
+#include <tencentcloud/vod/v20180717/model/TransitionOperation.h>
 
 
 namespace TencentCloud
@@ -73,7 +74,7 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Transitions List of transition operations. Up to one video image or audio transition operation is supported.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * 
+                     * @deprecated
                      */
                     std::vector<TransitionOpertion> GetTransitions() const;
 
@@ -82,16 +83,37 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _transitions List of transition operations. Up to one video image or audio transition operation is supported.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * 
+                     * @deprecated
                      */
                     void SetTransitions(const std::vector<TransitionOpertion>& _transitions);
 
                     /**
                      * 判断参数 Transitions 是否已赋值
                      * @return Transitions 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool TransitionsHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return MediaTransitions 
+                     * 
+                     */
+                    std::vector<TransitionOperation> GetMediaTransitions() const;
+
+                    /**
+                     * 设置
+                     * @param _mediaTransitions 
+                     * 
+                     */
+                    void SetMediaTransitions(const std::vector<TransitionOperation>& _mediaTransitions);
+
+                    /**
+                     * 判断参数 MediaTransitions 是否已赋值
+                     * @return MediaTransitions 是否已赋值
+                     * 
+                     */
+                    bool MediaTransitionsHasBeenSet() const;
 
                 private:
 
@@ -107,6 +129,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<TransitionOpertion> m_transitions;
                     bool m_transitionsHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<TransitionOperation> m_mediaTransitions;
+                    bool m_mediaTransitionsHasBeenSet;
 
                 };
             }

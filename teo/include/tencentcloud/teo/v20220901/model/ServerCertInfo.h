@@ -98,30 +98,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Type of the certificate. Values:
-<li>`default`: Default certificate</lil>
-<li>`upload`: Specified certificate</li>
-<li>`managed`: Tencent Cloud-managed certificate</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+u200c<li>`default`: Default certificate</li>
+u200c<li>`upload`: Custom certificate</li>
+u200c<li>`managed`: Tencent Cloud-managed certificate</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * @return Type Type of the certificate. Values:
-<li>`default`: Default certificate</lil>
-<li>`upload`: Specified certificate</li>
-<li>`managed`: Tencent Cloud-managed certificate</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+u200c<li>`default`: Default certificate</li>
+u200c<li>`upload`: Custom certificate</li>
+u200c<li>`managed`: Tencent Cloud-managed certificate</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Type of the certificate. Values:
-<li>`default`: Default certificate</lil>
-<li>`upload`: Specified certificate</li>
-<li>`managed`: Tencent Cloud-managed certificate</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+u200c<li>`default`: Default certificate</li>
+u200c<li>`upload`: Custom certificate</li>
+u200c<li>`managed`: Tencent Cloud-managed certificate</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * @param _type Type of the certificate. Values:
-<li>`default`: Default certificate</lil>
-<li>`upload`: Specified certificate</li>
-<li>`managed`: Tencent Cloud-managed certificate</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+u200c<li>`default`: Default certificate</li>
+u200c<li>`upload`: Custom certificate</li>
+u200c<li>`managed`: Tencent Cloud-managed certificate</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -251,10 +251,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Type of the certificate. Values:
-<li>`default`: Default certificate</lil>
-<li>`upload`: Specified certificate</li>
-<li>`managed`: Tencent Cloud-managed certificate</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+u200c<li>`default`: Default certificate</li>
+u200c<li>`upload`: Custom certificate</li>
+u200c<li>`managed`: Tencent Cloud-managed certificate</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

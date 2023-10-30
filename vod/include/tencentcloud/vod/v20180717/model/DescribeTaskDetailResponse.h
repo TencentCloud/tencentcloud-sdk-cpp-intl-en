@@ -36,9 +36,11 @@
 #include <tencentcloud/vod/v20180717/model/RemoveWatermarkTask.h>
 #include <tencentcloud/vod/v20180717/model/RebuildMediaTask.h>
 #include <tencentcloud/vod/v20180717/model/ExtractTraceWatermarkTask.h>
+#include <tencentcloud/vod/v20180717/model/ExtractCopyRightWatermarkTask.h>
 #include <tencentcloud/vod/v20180717/model/ReviewAudioVideoTask.h>
 #include <tencentcloud/vod/v20180717/model/ReduceMediaBitrateTask.h>
 #include <tencentcloud/vod/v20180717/model/DescribeFileAttributesTask.h>
+#include <tencentcloud/vod/v20180717/model/QualityInspectTask.h>
 
 
 namespace TencentCloud
@@ -164,10 +166,8 @@ namespace TencentCloud
                     bool FinishTimeHasBeenSet() const;
 
                     /**
-                     * 获取Video processing task information. This field has a value only when `TaskType` is `Procedure`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ProcedureTask Video processing task information. This field has a value only when `TaskType` is `Procedure`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return ProcedureTask 
                      * 
                      */
                     ProcedureTask GetProcedureTask() const;
@@ -180,10 +180,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ProcedureTaskHasBeenSet() const;
 
                     /**
-                     * 获取Video editing task information. This field has a value only when `TaskType` is `EditMedia`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return EditMediaTask Video editing task information. This field has a value only when `TaskType` is `EditMedia`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return EditMediaTask 
                      * 
                      */
                     EditMediaTask GetEditMediaTask() const;
@@ -196,10 +194,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool EditMediaTaskHasBeenSet() const;
 
                     /**
-                     * 获取Release on WeChat task information. This field has a value only when `TaskType` is `WechatPublish`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return WechatPublishTask Release on WeChat task information. This field has a value only when `TaskType` is `WechatPublish`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return WechatPublishTask 
                      * 
                      */
                     WechatPublishTask GetWechatPublishTask() const;
@@ -212,10 +208,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool WechatPublishTaskHasBeenSet() const;
 
                     /**
-                     * 获取Media file composing task information. This field has a value only when `TaskType` is `ComposeMedia`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ComposeMediaTask Media file composing task information. This field has a value only when `TaskType` is `ComposeMedia`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return ComposeMediaTask 
                      * 
                      */
                     ComposeMediaTask GetComposeMediaTask() const;
@@ -228,10 +222,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ComposeMediaTaskHasBeenSet() const;
 
                     /**
-                     * 获取Video splitting task information. This field has a value only when `TaskType` is `EditMedia`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return SplitMediaTask Video splitting task information. This field has a value only when `TaskType` is `EditMedia`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return SplitMediaTask 
                      * 
                      */
                     SplitMediaTask GetSplitMediaTask() const;
@@ -244,10 +236,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool SplitMediaTaskHasBeenSet() const;
 
                     /**
-                     * 获取Release on WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return WechatMiniProgramPublishTask Release on WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return WechatMiniProgramPublishTask 
                      * 
                      */
                     WechatMiniProgramPublishTask GetWechatMiniProgramPublishTask() const;
@@ -260,10 +250,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool WechatMiniProgramPublishTaskHasBeenSet() const;
 
                     /**
-                     * 获取Media file pulling for upload task information. This field has a value only when `TaskType` is `PullUpload`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return PullUploadTask Media file pulling for upload task information. This field has a value only when `TaskType` is `PullUpload`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return PullUploadTask 
                      * 
                      */
                     PullUploadTask GetPullUploadTask() const;
@@ -276,10 +264,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PullUploadTaskHasBeenSet() const;
 
                     /**
-                     * 获取Video transcoding task information. This field has a value only when `TaskType` is `Transcode`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TranscodeTask Video transcoding task information. This field has a value only when `TaskType` is `Transcode`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return TranscodeTask 
                      * 
                      */
                     TranscodeTask2017 GetTranscodeTask() const;
@@ -292,10 +278,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TranscodeTaskHasBeenSet() const;
 
                     /**
-                     * 获取Video splicing task information. This field has a value only when `TaskType` is `Concat`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ConcatTask Video splicing task information. This field has a value only when `TaskType` is `Concat`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return ConcatTask 
                      * 
                      */
                     ConcatTask2017 GetConcatTask() const;
@@ -308,10 +292,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ConcatTaskHasBeenSet() const;
 
                     /**
-                     * 获取Video clipping task information. This field has a value only when `TaskType` is `Clip`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ClipTask Video clipping task information. This field has a value only when `TaskType` is `Clip`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return ClipTask 
                      * 
                      */
                     ClipTask2017 GetClipTask() const;
@@ -324,10 +306,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ClipTaskHasBeenSet() const;
 
                     /**
-                     * 获取Image sprite creating task information. This field has a value only when `TaskType` is `ImageSprite`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return CreateImageSpriteTask Image sprite creating task information. This field has a value only when `TaskType` is `ImageSprite`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return CreateImageSpriteTask 
                      * 
                      */
                     CreateImageSpriteTask2017 GetCreateImageSpriteTask() const;
@@ -340,10 +320,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CreateImageSpriteTaskHasBeenSet() const;
 
                     /**
-                     * 获取Time point screencapturing task information. This field has a value only when `TaskType` is `SnapshotByTimeOffset`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return SnapshotByTimeOffsetTask Time point screencapturing task information. This field has a value only when `TaskType` is `SnapshotByTimeOffset`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return SnapshotByTimeOffsetTask 
                      * 
                      */
                     SnapshotByTimeOffsetTask2017 GetSnapshotByTimeOffsetTask() const;
@@ -356,10 +334,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SnapshotByTimeOffsetTaskHasBeenSet() const;
 
                     /**
-                     * 获取The information of a watermark removal task. This parameter is valid only if `TaskType` is `RemoveWatermark`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RemoveWatermarkTask The information of a watermark removal task. This parameter is valid only if `TaskType` is `RemoveWatermark`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return RemoveWatermarkTask 
                      * 
                      */
                     RemoveWatermarkTask GetRemoveWatermarkTask() const;
@@ -372,10 +348,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RemoveWatermarkTaskHasBeenSet() const;
 
                     /**
-                     * 获取The information of an audio/video remastering task. This parameter is valid only if `TaskType` is `RebuildMedia`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RebuildMediaTask The information of an audio/video remastering task. This parameter is valid only if `TaskType` is `RebuildMedia`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return RebuildMediaTask 
                      * 
                      */
                     RebuildMediaTask GetRebuildMediaTask() const;
@@ -388,10 +362,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RebuildMediaTaskHasBeenSet() const;
 
                     /**
-                     * 获取The information of a digital watermark extraction task. This parameter is valid only if `TaskType` is `ExtractTraceWatermark`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ExtractTraceWatermarkTask The information of a digital watermark extraction task. This parameter is valid only if `TaskType` is `ExtractTraceWatermark`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return ExtractTraceWatermarkTask 
                      * 
                      */
                     ExtractTraceWatermarkTask GetExtractTraceWatermarkTask() const;
@@ -404,10 +376,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ExtractTraceWatermarkTaskHasBeenSet() const;
 
                     /**
-                     * 获取The information of a moderation task. This parameter is valid only if `TaskType` is `ReviewAudioVideo`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ReviewAudioVideoTask The information of a moderation task. This parameter is valid only if `TaskType` is `ReviewAudioVideo`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return ExtractCopyRightWatermarkTask 
+                     * 
+                     */
+                    ExtractCopyRightWatermarkTask GetExtractCopyRightWatermarkTask() const;
+
+                    /**
+                     * 判断参数 ExtractCopyRightWatermarkTask 是否已赋值
+                     * @return ExtractCopyRightWatermarkTask 是否已赋值
+                     * 
+                     */
+                    bool ExtractCopyRightWatermarkTaskHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ReviewAudioVideoTask 
                      * 
                      */
                     ReviewAudioVideoTask GetReviewAudioVideoTask() const;
@@ -420,10 +404,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ReviewAudioVideoTaskHasBeenSet() const;
 
                     /**
-                     * 获取This parameter is invalid now.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ReduceMediaBitrateTask This parameter is invalid now.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return ReduceMediaBitrateTask 
                      * 
                      */
                     ReduceMediaBitrateTask GetReduceMediaBitrateTask() const;
@@ -436,10 +418,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ReduceMediaBitrateTaskHasBeenSet() const;
 
                     /**
-                     * 获取The information of a task to get file attributes. This parameter is valid only if `TaskType` is `DescribeFileAttributes`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DescribeFileAttributesTask The information of a task to get file attributes. This parameter is valid only if `TaskType` is `DescribeFileAttributes`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return DescribeFileAttributesTask 
                      * 
                      */
                     DescribeFileAttributesTask GetDescribeFileAttributesTask() const;
@@ -450,6 +430,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool DescribeFileAttributesTaskHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return QualityInspectTask 
+                     * 
+                     */
+                    QualityInspectTask GetQualityInspectTask() const;
+
+                    /**
+                     * 判断参数 QualityInspectTask 是否已赋值
+                     * @return QualityInspectTask 是否已赋值
+                     * 
+                     */
+                    bool QualityInspectTaskHasBeenSet() const;
 
                 private:
 
@@ -500,130 +494,124 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_finishTimeHasBeenSet;
 
                     /**
-                     * Video processing task information. This field has a value only when `TaskType` is `Procedure`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ProcedureTask m_procedureTask;
                     bool m_procedureTaskHasBeenSet;
 
                     /**
-                     * Video editing task information. This field has a value only when `TaskType` is `EditMedia`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     EditMediaTask m_editMediaTask;
                     bool m_editMediaTaskHasBeenSet;
 
                     /**
-                     * Release on WeChat task information. This field has a value only when `TaskType` is `WechatPublish`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     WechatPublishTask m_wechatPublishTask;
                     bool m_wechatPublishTaskHasBeenSet;
 
                     /**
-                     * Media file composing task information. This field has a value only when `TaskType` is `ComposeMedia`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ComposeMediaTask m_composeMediaTask;
                     bool m_composeMediaTaskHasBeenSet;
 
                     /**
-                     * Video splitting task information. This field has a value only when `TaskType` is `EditMedia`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     SplitMediaTask m_splitMediaTask;
                     bool m_splitMediaTaskHasBeenSet;
 
                     /**
-                     * Release on WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     WechatMiniProgramPublishTask m_wechatMiniProgramPublishTask;
                     bool m_wechatMiniProgramPublishTaskHasBeenSet;
 
                     /**
-                     * Media file pulling for upload task information. This field has a value only when `TaskType` is `PullUpload`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     PullUploadTask m_pullUploadTask;
                     bool m_pullUploadTaskHasBeenSet;
 
                     /**
-                     * Video transcoding task information. This field has a value only when `TaskType` is `Transcode`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     TranscodeTask2017 m_transcodeTask;
                     bool m_transcodeTaskHasBeenSet;
 
                     /**
-                     * Video splicing task information. This field has a value only when `TaskType` is `Concat`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ConcatTask2017 m_concatTask;
                     bool m_concatTaskHasBeenSet;
 
                     /**
-                     * Video clipping task information. This field has a value only when `TaskType` is `Clip`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ClipTask2017 m_clipTask;
                     bool m_clipTaskHasBeenSet;
 
                     /**
-                     * Image sprite creating task information. This field has a value only when `TaskType` is `ImageSprite`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     CreateImageSpriteTask2017 m_createImageSpriteTask;
                     bool m_createImageSpriteTaskHasBeenSet;
 
                     /**
-                     * Time point screencapturing task information. This field has a value only when `TaskType` is `SnapshotByTimeOffset`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     SnapshotByTimeOffsetTask2017 m_snapshotByTimeOffsetTask;
                     bool m_snapshotByTimeOffsetTaskHasBeenSet;
 
                     /**
-                     * The information of a watermark removal task. This parameter is valid only if `TaskType` is `RemoveWatermark`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     RemoveWatermarkTask m_removeWatermarkTask;
                     bool m_removeWatermarkTaskHasBeenSet;
 
                     /**
-                     * The information of an audio/video remastering task. This parameter is valid only if `TaskType` is `RebuildMedia`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     RebuildMediaTask m_rebuildMediaTask;
                     bool m_rebuildMediaTaskHasBeenSet;
 
                     /**
-                     * The information of a digital watermark extraction task. This parameter is valid only if `TaskType` is `ExtractTraceWatermark`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ExtractTraceWatermarkTask m_extractTraceWatermarkTask;
                     bool m_extractTraceWatermarkTaskHasBeenSet;
 
                     /**
-                     * The information of a moderation task. This parameter is valid only if `TaskType` is `ReviewAudioVideo`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    ExtractCopyRightWatermarkTask m_extractCopyRightWatermarkTask;
+                    bool m_extractCopyRightWatermarkTaskHasBeenSet;
+
+                    /**
+                     * 
                      */
                     ReviewAudioVideoTask m_reviewAudioVideoTask;
                     bool m_reviewAudioVideoTaskHasBeenSet;
 
                     /**
-                     * This parameter is invalid now.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ReduceMediaBitrateTask m_reduceMediaBitrateTask;
                     bool m_reduceMediaBitrateTaskHasBeenSet;
 
                     /**
-                     * The information of a task to get file attributes. This parameter is valid only if `TaskType` is `DescribeFileAttributes`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     DescribeFileAttributesTask m_describeFileAttributesTask;
                     bool m_describeFileAttributesTaskHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    QualityInspectTask m_qualityInspectTask;
+                    bool m_qualityInspectTaskHasBeenSet;
 
                 };
             }

@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取Domain operation, value: <li>start: enable;</li> <li>stop: disable. </li>
-                     * @return Operation Domain operation, value: <li>start: enable;</li> <li>stop: disable. </li>
+                     * 获取
+                     * @return Operation 
                      * 
                      */
                     std::string GetOperation() const;
 
                     /**
-                     * 设置Domain operation, value: <li>start: enable;</li> <li>stop: disable. </li>
-                     * @param _operation Domain operation, value: <li>start: enable;</li> <li>stop: disable. </li>
+                     * 设置
+                     * @param _operation 
                      * 
                      */
                     void SetOperation(const std::string& _operation);
@@ -114,7 +114,7 @@ namespace TencentCloud
                     bool m_domainHasBeenSet;
 
                     /**
-                     * Domain operation, value: <li>start: enable;</li> <li>stop: disable. </li>
+                     * 
                      */
                     std::string m_operation;
                     bool m_operationHasBeenSet;

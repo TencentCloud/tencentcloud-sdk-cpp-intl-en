@@ -182,6 +182,27 @@ Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     bool OutputHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return Progress 
+                     * 
+                     */
+                    int64_t GetProgress() const;
+
+                    /**
+                     * 设置
+                     * @param _progress 
+                     * 
+                     */
+                    void SetProgress(const int64_t& _progress);
+
+                    /**
+                     * 判断参数 Progress 是否已赋值
+                     * @return Progress 是否已赋值
+                     * 
+                     */
+                    bool ProgressHasBeenSet() const;
+
                 private:
 
                     /**
@@ -221,6 +242,12 @@ Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     AiReviewPoliticalOcrTaskOutput m_output;
                     bool m_outputHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_progress;
+                    bool m_progressHasBeenSet;
 
                 };
             }

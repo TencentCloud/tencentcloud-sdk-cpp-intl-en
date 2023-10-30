@@ -67,6 +67,27 @@ namespace TencentCloud
                      */
                     bool Md5HasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return Sha1 
+                     * 
+                     */
+                    std::string GetSha1() const;
+
+                    /**
+                     * 设置
+                     * @param _sha1 
+                     * 
+                     */
+                    void SetSha1(const std::string& _sha1);
+
+                    /**
+                     * 判断参数 Sha1 是否已赋值
+                     * @return Sha1 是否已赋值
+                     * 
+                     */
+                    bool Sha1HasBeenSet() const;
+
                 private:
 
                     /**
@@ -74,6 +95,12 @@ namespace TencentCloud
                      */
                     std::string m_md5;
                     bool m_md5HasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_sha1;
+                    bool m_sha1HasBeenSet;
 
                 };
             }

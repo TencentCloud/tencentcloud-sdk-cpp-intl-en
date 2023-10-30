@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取MaxAge rule.
-                     * @return MaxAgeRules MaxAge rule.
+                     * 获取MaxAge rule
+                     * @return MaxAgeRules MaxAge rule
                      * 
                      */
                     std::vector<MaxAgeRule> GetMaxAgeRules() const;
 
                     /**
-                     * 设置MaxAge rule.
-                     * @param _maxAgeRules MaxAge rule.
+                     * 设置MaxAge rule
+                     * @param _maxAgeRules MaxAge rule
                      * 
                      */
                     void SetMaxAgeRules(const std::vector<MaxAgeRule>& _maxAgeRules);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * MaxAge rule.
+                     * MaxAge rule
                      */
                     std::vector<MaxAgeRule> m_maxAgeRules;
                     bool m_maxAgeRulesHasBeenSet;

@@ -195,6 +195,48 @@ namespace TencentCloud
                      */
                     bool OutputHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return BeginProcessTime 
+                     * 
+                     */
+                    std::string GetBeginProcessTime() const;
+
+                    /**
+                     * 设置
+                     * @param _beginProcessTime 
+                     * 
+                     */
+                    void SetBeginProcessTime(const std::string& _beginProcessTime);
+
+                    /**
+                     * 判断参数 BeginProcessTime 是否已赋值
+                     * @return BeginProcessTime 是否已赋值
+                     * 
+                     */
+                    bool BeginProcessTimeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return FinishTime 
+                     * 
+                     */
+                    std::string GetFinishTime() const;
+
+                    /**
+                     * 设置
+                     * @param _finishTime 
+                     * 
+                     */
+                    void SetFinishTime(const std::string& _finishTime);
+
+                    /**
+                     * 判断参数 FinishTime 是否已赋值
+                     * @return FinishTime 是否已赋值
+                     * 
+                     */
+                    bool FinishTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -238,6 +280,18 @@ namespace TencentCloud
                      */
                     AdaptiveDynamicStreamingInfoItem m_output;
                     bool m_outputHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_beginProcessTime;
+                    bool m_beginProcessTimeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_finishTime;
+                    bool m_finishTimeHasBeenSet;
 
                 };
             }

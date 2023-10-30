@@ -64,6 +64,27 @@ namespace TencentCloud
                     bool FileIdsHasBeenSet() const;
 
                     /**
+                     * 获取The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
+                     * @return SubAppId The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
+                     * 
+                     */
+                    uint64_t GetSubAppId() const;
+
+                    /**
+                     * 设置The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
+                     * @param _subAppId The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
+                     * 
+                     */
+                    void SetSubAppId(const uint64_t& _subAppId);
+
+                    /**
+                     * 判断参数 SubAppId 是否已赋值
+                     * @return SubAppId 是否已赋值
+                     * 
+                     */
+                    bool SubAppIdHasBeenSet() const;
+
+                    /**
                      * 获取The number of days during which the restored files will remain available.
                      * @return RestoreDay The number of days during which the restored files will remain available.
                      * 
@@ -129,27 +150,6 @@ If the current storage class is DEEP ARCHIVE, the valid values for this paramete
                      */
                     bool RestoreTierHasBeenSet() const;
 
-                    /**
-                     * 获取The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
-                     * @return SubAppId The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
-                     * 
-                     */
-                    uint64_t GetSubAppId() const;
-
-                    /**
-                     * 设置The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
-                     * @param _subAppId The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
-                     * 
-                     */
-                    void SetSubAppId(const uint64_t& _subAppId);
-
-                    /**
-                     * 判断参数 SubAppId 是否已赋值
-                     * @return SubAppId 是否已赋值
-                     * 
-                     */
-                    bool SubAppIdHasBeenSet() const;
-
                 private:
 
                     /**
@@ -157,6 +157,12 @@ If the current storage class is DEEP ARCHIVE, the valid values for this paramete
                      */
                     std::vector<std::string> m_fileIds;
                     bool m_fileIdsHasBeenSet;
+
+                    /**
+                     * The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
+                     */
+                    uint64_t m_subAppId;
+                    bool m_subAppIdHasBeenSet;
 
                     /**
                      * The number of days during which the restored files will remain available.
@@ -175,12 +181,6 @@ If the current storage class is DEEP ARCHIVE, the valid values for this paramete
                      */
                     std::string m_restoreTier;
                     bool m_restoreTierHasBeenSet;
-
-                    /**
-                     * The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
-                     */
-                    uint64_t m_subAppId;
-                    bool m_subAppIdHasBeenSet;
 
                 };
             }

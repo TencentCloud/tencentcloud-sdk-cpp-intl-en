@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Path cache configuration, choose one from the following three cache modes.
+                * 
                 */
                 class RuleCacheConfig : public AbstractModel
                 {
@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cache configuration
-                     * @return Cache Cache configuration
+                     * 获取
+                     * @return Cache 
                      * 
                      */
                     CacheConfigCache GetCache() const;
 
                     /**
-                     * 设置Cache configuration
-                     * @param _cache Cache configuration
+                     * 设置
+                     * @param _cache 
                      * 
                      */
                     void SetCache(const CacheConfigCache& _cache);
@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool CacheHasBeenSet() const;
 
                     /**
-                     * 获取No cache configuration
-                     * @return NoCache No cache configuration
+                     * 获取
+                     * @return NoCache 
                      * 
                      */
                     CacheConfigNoCache GetNoCache() const;
 
                     /**
-                     * 设置No cache configuration
-                     * @param _noCache No cache configuration
+                     * 设置
+                     * @param _noCache 
                      * 
                      */
                     void SetNoCache(const CacheConfigNoCache& _noCache);
@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool NoCacheHasBeenSet() const;
 
                     /**
-                     * 获取Follows the origin server configuration
-                     * @return FollowOrigin Follows the origin server configuration
+                     * 获取
+                     * @return FollowOrigin 
                      * 
                      */
                     CacheConfigFollowOrigin GetFollowOrigin() const;
 
                     /**
-                     * 设置Follows the origin server configuration
-                     * @param _followOrigin Follows the origin server configuration
+                     * 设置
+                     * @param _followOrigin 
                      * 
                      */
                     void SetFollowOrigin(const CacheConfigFollowOrigin& _followOrigin);
@@ -115,19 +115,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cache configuration
+                     * 
                      */
                     CacheConfigCache m_cache;
                     bool m_cacheHasBeenSet;
 
                     /**
-                     * No cache configuration
+                     * 
                      */
                     CacheConfigNoCache m_noCache;
                     bool m_noCacheHasBeenSet;
 
                     /**
-                     * Follows the origin server configuration
+                     * 
                      */
                     CacheConfigFollowOrigin m_followOrigin;
                     bool m_followOriginHasBeenSet;

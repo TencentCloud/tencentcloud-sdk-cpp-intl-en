@@ -51,15 +51,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Hotlink protection configuration switch: <li>on:Enable;</li> <li>off:Disable.</li>
-                     * @return Switch Hotlink protection configuration switch: <li>on:Enable;</li> <li>off:Disable.</li>
+                     * 获取
+                     * @return Switch 
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Hotlink protection configuration switch: <li>on:Enable;</li> <li>off:Disable.</li>
-                     * @param _switch Hotlink protection configuration switch: <li>on:Enable;</li> <li>off:Disable.</li>
+                     * 设置
+                     * @param _switch 
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -158,7 +158,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Hotlink protection configuration switch: <li>on:Enable;</li> <li>off:Disable.</li>
+                     * 
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

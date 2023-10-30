@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Follow origin server switch configuration: <li>on: Enable.</li> <li>off: Disable.</li>
-                     * @return Switch Follow origin server switch configuration: <li>on: Enable.</li> <li>off: Disable.</li>
+                     * 获取
+                     * @return Switch 
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Follow origin server switch configuration: <li>on: Enable.</li> <li>off: Disable.</li>
-                     * @param _switch Follow origin server switch configuration: <li>on: Enable.</li> <li>off: Disable.</li>
+                     * 设置
+                     * @param _switch 
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -92,7 +92,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Follow origin server switch configuration: <li>on: Enable.</li> <li>off: Disable.</li>
+                     * 
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

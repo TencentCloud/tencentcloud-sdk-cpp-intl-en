@@ -41,9 +41,11 @@ EventContent::EventContent() :
     m_restoreMediaCompleteEventHasBeenSet(false),
     m_rebuildMediaCompleteEventHasBeenSet(false),
     m_extractTraceWatermarkCompleteEventHasBeenSet(false),
+    m_extractCopyRightWatermarkCompleteEventHasBeenSet(false),
     m_reviewAudioVideoCompleteEventHasBeenSet(false),
     m_reduceMediaBitrateCompleteEventHasBeenSet(false),
-    m_describeFileAttributesCompleteEventHasBeenSet(false)
+    m_describeFileAttributesCompleteEventHasBeenSet(false),
+    m_qualityInspectCompleteEventHasBeenSet(false)
 {
 }
 
@@ -378,6 +380,23 @@ CoreInternalOutcome EventContent::Deserialize(const rapidjson::Value &value)
         m_extractTraceWatermarkCompleteEventHasBeenSet = true;
     }
 
+    if (value.HasMember("ExtractCopyRightWatermarkCompleteEvent") && !value["ExtractCopyRightWatermarkCompleteEvent"].IsNull())
+    {
+        if (!value["ExtractCopyRightWatermarkCompleteEvent"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `EventContent.ExtractCopyRightWatermarkCompleteEvent` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_extractCopyRightWatermarkCompleteEvent.Deserialize(value["ExtractCopyRightWatermarkCompleteEvent"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_extractCopyRightWatermarkCompleteEventHasBeenSet = true;
+    }
+
     if (value.HasMember("ReviewAudioVideoCompleteEvent") && !value["ReviewAudioVideoCompleteEvent"].IsNull())
     {
         if (!value["ReviewAudioVideoCompleteEvent"].IsObject())
@@ -427,6 +446,23 @@ CoreInternalOutcome EventContent::Deserialize(const rapidjson::Value &value)
         }
 
         m_describeFileAttributesCompleteEventHasBeenSet = true;
+    }
+
+    if (value.HasMember("QualityInspectCompleteEvent") && !value["QualityInspectCompleteEvent"].IsNull())
+    {
+        if (!value["QualityInspectCompleteEvent"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `EventContent.QualityInspectCompleteEvent` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_qualityInspectCompleteEvent.Deserialize(value["QualityInspectCompleteEvent"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_qualityInspectCompleteEventHasBeenSet = true;
     }
 
 
@@ -614,6 +650,15 @@ void EventContent::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Al
         m_extractTraceWatermarkCompleteEvent.ToJsonObject(value[key.c_str()], allocator);
     }
 
+    if (m_extractCopyRightWatermarkCompleteEventHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ExtractCopyRightWatermarkCompleteEvent";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_extractCopyRightWatermarkCompleteEvent.ToJsonObject(value[key.c_str()], allocator);
+    }
+
     if (m_reviewAudioVideoCompleteEventHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -639,6 +684,15 @@ void EventContent::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Al
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_describeFileAttributesCompleteEvent.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_qualityInspectCompleteEventHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "QualityInspectCompleteEvent";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_qualityInspectCompleteEvent.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -964,6 +1018,22 @@ bool EventContent::ExtractTraceWatermarkCompleteEventHasBeenSet() const
     return m_extractTraceWatermarkCompleteEventHasBeenSet;
 }
 
+ExtractCopyRightWatermarkTask EventContent::GetExtractCopyRightWatermarkCompleteEvent() const
+{
+    return m_extractCopyRightWatermarkCompleteEvent;
+}
+
+void EventContent::SetExtractCopyRightWatermarkCompleteEvent(const ExtractCopyRightWatermarkTask& _extractCopyRightWatermarkCompleteEvent)
+{
+    m_extractCopyRightWatermarkCompleteEvent = _extractCopyRightWatermarkCompleteEvent;
+    m_extractCopyRightWatermarkCompleteEventHasBeenSet = true;
+}
+
+bool EventContent::ExtractCopyRightWatermarkCompleteEventHasBeenSet() const
+{
+    return m_extractCopyRightWatermarkCompleteEventHasBeenSet;
+}
+
 ReviewAudioVideoTask EventContent::GetReviewAudioVideoCompleteEvent() const
 {
     return m_reviewAudioVideoCompleteEvent;
@@ -1010,5 +1080,21 @@ void EventContent::SetDescribeFileAttributesCompleteEvent(const DescribeFileAttr
 bool EventContent::DescribeFileAttributesCompleteEventHasBeenSet() const
 {
     return m_describeFileAttributesCompleteEventHasBeenSet;
+}
+
+QualityInspectTask EventContent::GetQualityInspectCompleteEvent() const
+{
+    return m_qualityInspectCompleteEvent;
+}
+
+void EventContent::SetQualityInspectCompleteEvent(const QualityInspectTask& _qualityInspectCompleteEvent)
+{
+    m_qualityInspectCompleteEvent = _qualityInspectCompleteEvent;
+    m_qualityInspectCompleteEventHasBeenSet = true;
+}
+
+bool EventContent::QualityInspectCompleteEventHasBeenSet() const
+{
+    return m_qualityInspectCompleteEventHasBeenSet;
 }
 

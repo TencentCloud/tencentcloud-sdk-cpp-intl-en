@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取No-cache configuration switch: <li>on: Enable;</li> <li>off: Disable.</li>
-                     * @return Switch No-cache configuration switch: <li>on: Enable;</li> <li>off: Disable.</li>
+                     * 获取
+                     * @return Switch 
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置No-cache configuration switch: <li>on: Enable;</li> <li>off: Disable.</li>
-                     * @param _switch No-cache configuration switch: <li>on: Enable;</li> <li>off: Disable.</li>
+                     * 设置
+                     * @param _switch 
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Always forwards to the origin server for verification:<li>on: Enable;</li> <li>off: Disable.</li>
-                     * @return Revalidate Always forwards to the origin server for verification:<li>on: Enable;</li> <li>off: Disable.</li>
+                     * 获取
+                     * @return Revalidate 
                      * 
                      */
                     std::string GetRevalidate() const;
 
                     /**
-                     * 设置Always forwards to the origin server for verification:<li>on: Enable;</li> <li>off: Disable.</li>
-                     * @param _revalidate Always forwards to the origin server for verification:<li>on: Enable;</li> <li>off: Disable.</li>
+                     * 设置
+                     * @param _revalidate 
                      * 
                      */
                     void SetRevalidate(const std::string& _revalidate);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * No-cache configuration switch: <li>on: Enable;</li> <li>off: Disable.</li>
+                     * 
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Always forwards to the origin server for verification:<li>on: Enable;</li> <li>off: Disable.</li>
+                     * 
                      */
                     std::string m_revalidate;
                     bool m_revalidateHasBeenSet;

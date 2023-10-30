@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool DomainsHasBeenSet() const;
 
                     /**
-                     * 获取Limit on paginated queries. Default value: 20. Maximum value: 1000.
-                     * @return Limit Limit on paginated queries. Default value: 20. Maximum value: 1000.
+                     * 获取Limit on paginated queries. Default value: 20. Maximum value: 300.
+                     * @return Limit Limit on paginated queries. Default value: 20. Maximum value: 300.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Limit on paginated queries. Default value: 20. Maximum value: 1000.
-                     * @param _limit Limit on paginated queries. Default value: 20. Maximum value: 1000.
+                     * 设置Limit on paginated queries. Default value: 20. Maximum value: 300.
+                     * @param _limit Limit on paginated queries. Default value: 20. Maximum value: 300.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -195,7 +195,7 @@ namespace TencentCloud
                     bool m_domainsHasBeenSet;
 
                     /**
-                     * Limit on paginated queries. Default value: 20. Maximum value: 1000.
+                     * Limit on paginated queries. Default value: 20. Maximum value: 300.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

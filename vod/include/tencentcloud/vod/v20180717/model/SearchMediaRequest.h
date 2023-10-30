@@ -369,146 +369,6 @@ namespace TencentCloud
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取Sorting order.
-<li>Valid value of `Sort.Field`: CreateTime.</li>
-<li>If `Text`, `Names`, or `Descriptions` is not empty, the `Sort.Field` field will not take effect, and the search results will be sorted by match rate.</li>
-                     * @return Sort Sorting order.
-<li>Valid value of `Sort.Field`: CreateTime.</li>
-<li>If `Text`, `Names`, or `Descriptions` is not empty, the `Sort.Field` field will not take effect, and the search results will be sorted by match rate.</li>
-                     * 
-                     */
-                    SortBy GetSort() const;
-
-                    /**
-                     * 设置Sorting order.
-<li>Valid value of `Sort.Field`: CreateTime.</li>
-<li>If `Text`, `Names`, or `Descriptions` is not empty, the `Sort.Field` field will not take effect, and the search results will be sorted by match rate.</li>
-                     * @param _sort Sorting order.
-<li>Valid value of `Sort.Field`: CreateTime.</li>
-<li>If `Text`, `Names`, or `Descriptions` is not empty, the `Sort.Field` field will not take effect, and the search results will be sorted by match rate.</li>
-                     * 
-                     */
-                    void SetSort(const SortBy& _sort);
-
-                    /**
-                     * 判断参数 Sort 是否已赋值
-                     * @return Sort 是否已赋值
-                     * 
-                     */
-                    bool SortHasBeenSet() const;
-
-                    /**
-                     * 获取<div id="p_offset">Start offset of a paged return. Default value: 0. Entries from No. "Offset" to No. "Offset + Limit - 1" will be returned.
-<li>Value range: "Offset + Limit" cannot be more than 5,000. (For more information, please see <a href="#maxResultsDesc">Limit on the Number of Results Returned by API</a>)</li></div>
-                     * @return Offset <div id="p_offset">Start offset of a paged return. Default value: 0. Entries from No. "Offset" to No. "Offset + Limit - 1" will be returned.
-<li>Value range: "Offset + Limit" cannot be more than 5,000. (For more information, please see <a href="#maxResultsDesc">Limit on the Number of Results Returned by API</a>)</li></div>
-                     * 
-                     */
-                    uint64_t GetOffset() const;
-
-                    /**
-                     * 设置<div id="p_offset">Start offset of a paged return. Default value: 0. Entries from No. "Offset" to No. "Offset + Limit - 1" will be returned.
-<li>Value range: "Offset + Limit" cannot be more than 5,000. (For more information, please see <a href="#maxResultsDesc">Limit on the Number of Results Returned by API</a>)</li></div>
-                     * @param _offset <div id="p_offset">Start offset of a paged return. Default value: 0. Entries from No. "Offset" to No. "Offset + Limit - 1" will be returned.
-<li>Value range: "Offset + Limit" cannot be more than 5,000. (For more information, please see <a href="#maxResultsDesc">Limit on the Number of Results Returned by API</a>)</li></div>
-                     * 
-                     */
-                    void SetOffset(const uint64_t& _offset);
-
-                    /**
-                     * 判断参数 Offset 是否已赋值
-                     * @return Offset 是否已赋值
-                     * 
-                     */
-                    bool OffsetHasBeenSet() const;
-
-                    /**
-                     * 获取<div id="p_limit">Number of entries returned by a paged query. Default value: 10. Entries from No. "Offset" to No. "Offset + Limit - 1" will be returned.
-<li>Value range: "Offset + Limit" cannot be more than 5,000. (For more information, please see <a href="#maxResultsDesc">Limit on the Number of Results Returned by API</a>)</li></div>
-                     * @return Limit <div id="p_limit">Number of entries returned by a paged query. Default value: 10. Entries from No. "Offset" to No. "Offset + Limit - 1" will be returned.
-<li>Value range: "Offset + Limit" cannot be more than 5,000. (For more information, please see <a href="#maxResultsDesc">Limit on the Number of Results Returned by API</a>)</li></div>
-                     * 
-                     */
-                    uint64_t GetLimit() const;
-
-                    /**
-                     * 设置<div id="p_limit">Number of entries returned by a paged query. Default value: 10. Entries from No. "Offset" to No. "Offset + Limit - 1" will be returned.
-<li>Value range: "Offset + Limit" cannot be more than 5,000. (For more information, please see <a href="#maxResultsDesc">Limit on the Number of Results Returned by API</a>)</li></div>
-                     * @param _limit <div id="p_limit">Number of entries returned by a paged query. Default value: 10. Entries from No. "Offset" to No. "Offset + Limit - 1" will be returned.
-<li>Value range: "Offset + Limit" cannot be more than 5,000. (For more information, please see <a href="#maxResultsDesc">Limit on the Number of Results Returned by API</a>)</li></div>
-                     * 
-                     */
-                    void SetLimit(const uint64_t& _limit);
-
-                    /**
-                     * 判断参数 Limit 是否已赋值
-                     * @return Limit 是否已赋值
-                     * 
-                     */
-                    bool LimitHasBeenSet() const;
-
-                    /**
-                     * 获取Specifies information entry that needs to be returned for all media files. Multiple entries can be specified simultaneously. N starts from 0. If this field is left empty, all information entries will be returned by default. Valid values:
-<li>basicInfo (basic video information).</li>
-<li>metaData (video metadata).</li>
-<li>transcodeInfo (result information of video transcoding).</li>
-<li>animatedGraphicsInfo (result information of animated image generating task).</li>
-<li>imageSpriteInfo (image sprite information).</li>
-<li>snapshotByTimeOffsetInfo (point-in-time screenshot information).</li>
-<li>sampleSnapshotInfo (sampled screenshot information).</li>
-<li>keyFrameDescInfo (timestamp information).</li>
-<li>adaptiveDynamicStreamingInfo (information of adaptive bitrate streaming).</li>
-<li>miniProgramReviewInfo (WeChat Mini Program audit information).</li>
-                     * @return Filters Specifies information entry that needs to be returned for all media files. Multiple entries can be specified simultaneously. N starts from 0. If this field is left empty, all information entries will be returned by default. Valid values:
-<li>basicInfo (basic video information).</li>
-<li>metaData (video metadata).</li>
-<li>transcodeInfo (result information of video transcoding).</li>
-<li>animatedGraphicsInfo (result information of animated image generating task).</li>
-<li>imageSpriteInfo (image sprite information).</li>
-<li>snapshotByTimeOffsetInfo (point-in-time screenshot information).</li>
-<li>sampleSnapshotInfo (sampled screenshot information).</li>
-<li>keyFrameDescInfo (timestamp information).</li>
-<li>adaptiveDynamicStreamingInfo (information of adaptive bitrate streaming).</li>
-<li>miniProgramReviewInfo (WeChat Mini Program audit information).</li>
-                     * 
-                     */
-                    std::vector<std::string> GetFilters() const;
-
-                    /**
-                     * 设置Specifies information entry that needs to be returned for all media files. Multiple entries can be specified simultaneously. N starts from 0. If this field is left empty, all information entries will be returned by default. Valid values:
-<li>basicInfo (basic video information).</li>
-<li>metaData (video metadata).</li>
-<li>transcodeInfo (result information of video transcoding).</li>
-<li>animatedGraphicsInfo (result information of animated image generating task).</li>
-<li>imageSpriteInfo (image sprite information).</li>
-<li>snapshotByTimeOffsetInfo (point-in-time screenshot information).</li>
-<li>sampleSnapshotInfo (sampled screenshot information).</li>
-<li>keyFrameDescInfo (timestamp information).</li>
-<li>adaptiveDynamicStreamingInfo (information of adaptive bitrate streaming).</li>
-<li>miniProgramReviewInfo (WeChat Mini Program audit information).</li>
-                     * @param _filters Specifies information entry that needs to be returned for all media files. Multiple entries can be specified simultaneously. N starts from 0. If this field is left empty, all information entries will be returned by default. Valid values:
-<li>basicInfo (basic video information).</li>
-<li>metaData (video metadata).</li>
-<li>transcodeInfo (result information of video transcoding).</li>
-<li>animatedGraphicsInfo (result information of animated image generating task).</li>
-<li>imageSpriteInfo (image sprite information).</li>
-<li>snapshotByTimeOffsetInfo (point-in-time screenshot information).</li>
-<li>sampleSnapshotInfo (sampled screenshot information).</li>
-<li>keyFrameDescInfo (timestamp information).</li>
-<li>adaptiveDynamicStreamingInfo (information of adaptive bitrate streaming).</li>
-<li>miniProgramReviewInfo (WeChat Mini Program audit information).</li>
-                     * 
-                     */
-                    void SetFilters(const std::vector<std::string>& _filters);
-
-                    /**
-                     * 判断参数 Filters 是否已赋值
-                     * @return Filters 是否已赋值
-                     * 
-                     */
-                    bool FiltersHasBeenSet() const;
-
-                    /**
                      * 获取Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Regions](https://intl.cloud.tencent.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
 <li>Length limit for a single region: 20 characters</li>
 <li>Array length limit: 20</li>
@@ -722,6 +582,146 @@ namespace TencentCloud
                      * 
                      */
                     bool TrtcRoomIdsHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies information entry that needs to be returned for all media files. Multiple entries can be specified simultaneously. N starts from 0. If this field is left empty, all information entries will be returned by default. Valid values:
+<li>basicInfo (basic video information).</li>
+<li>metaData (video metadata).</li>
+<li>transcodeInfo (result information of video transcoding).</li>
+<li>animatedGraphicsInfo (result information of animated image generating task).</li>
+<li>imageSpriteInfo (image sprite information).</li>
+<li>snapshotByTimeOffsetInfo (point-in-time screenshot information).</li>
+<li>sampleSnapshotInfo (sampled screenshot information).</li>
+<li>keyFrameDescInfo (timestamp information).</li>
+<li>adaptiveDynamicStreamingInfo (information of adaptive bitrate streaming).</li>
+<li>miniProgramReviewInfo (WeChat Mini Program audit information).</li>
+                     * @return Filters Specifies information entry that needs to be returned for all media files. Multiple entries can be specified simultaneously. N starts from 0. If this field is left empty, all information entries will be returned by default. Valid values:
+<li>basicInfo (basic video information).</li>
+<li>metaData (video metadata).</li>
+<li>transcodeInfo (result information of video transcoding).</li>
+<li>animatedGraphicsInfo (result information of animated image generating task).</li>
+<li>imageSpriteInfo (image sprite information).</li>
+<li>snapshotByTimeOffsetInfo (point-in-time screenshot information).</li>
+<li>sampleSnapshotInfo (sampled screenshot information).</li>
+<li>keyFrameDescInfo (timestamp information).</li>
+<li>adaptiveDynamicStreamingInfo (information of adaptive bitrate streaming).</li>
+<li>miniProgramReviewInfo (WeChat Mini Program audit information).</li>
+                     * 
+                     */
+                    std::vector<std::string> GetFilters() const;
+
+                    /**
+                     * 设置Specifies information entry that needs to be returned for all media files. Multiple entries can be specified simultaneously. N starts from 0. If this field is left empty, all information entries will be returned by default. Valid values:
+<li>basicInfo (basic video information).</li>
+<li>metaData (video metadata).</li>
+<li>transcodeInfo (result information of video transcoding).</li>
+<li>animatedGraphicsInfo (result information of animated image generating task).</li>
+<li>imageSpriteInfo (image sprite information).</li>
+<li>snapshotByTimeOffsetInfo (point-in-time screenshot information).</li>
+<li>sampleSnapshotInfo (sampled screenshot information).</li>
+<li>keyFrameDescInfo (timestamp information).</li>
+<li>adaptiveDynamicStreamingInfo (information of adaptive bitrate streaming).</li>
+<li>miniProgramReviewInfo (WeChat Mini Program audit information).</li>
+                     * @param _filters Specifies information entry that needs to be returned for all media files. Multiple entries can be specified simultaneously. N starts from 0. If this field is left empty, all information entries will be returned by default. Valid values:
+<li>basicInfo (basic video information).</li>
+<li>metaData (video metadata).</li>
+<li>transcodeInfo (result information of video transcoding).</li>
+<li>animatedGraphicsInfo (result information of animated image generating task).</li>
+<li>imageSpriteInfo (image sprite information).</li>
+<li>snapshotByTimeOffsetInfo (point-in-time screenshot information).</li>
+<li>sampleSnapshotInfo (sampled screenshot information).</li>
+<li>keyFrameDescInfo (timestamp information).</li>
+<li>adaptiveDynamicStreamingInfo (information of adaptive bitrate streaming).</li>
+<li>miniProgramReviewInfo (WeChat Mini Program audit information).</li>
+                     * 
+                     */
+                    void SetFilters(const std::vector<std::string>& _filters);
+
+                    /**
+                     * 判断参数 Filters 是否已赋值
+                     * @return Filters 是否已赋值
+                     * 
+                     */
+                    bool FiltersHasBeenSet() const;
+
+                    /**
+                     * 获取Sorting order.
+<li>Valid value of `Sort.Field`: CreateTime.</li>
+<li>If `Text`, `Names`, or `Descriptions` is not empty, the `Sort.Field` field will not take effect, and the search results will be sorted by match rate.</li>
+                     * @return Sort Sorting order.
+<li>Valid value of `Sort.Field`: CreateTime.</li>
+<li>If `Text`, `Names`, or `Descriptions` is not empty, the `Sort.Field` field will not take effect, and the search results will be sorted by match rate.</li>
+                     * 
+                     */
+                    SortBy GetSort() const;
+
+                    /**
+                     * 设置Sorting order.
+<li>Valid value of `Sort.Field`: CreateTime.</li>
+<li>If `Text`, `Names`, or `Descriptions` is not empty, the `Sort.Field` field will not take effect, and the search results will be sorted by match rate.</li>
+                     * @param _sort Sorting order.
+<li>Valid value of `Sort.Field`: CreateTime.</li>
+<li>If `Text`, `Names`, or `Descriptions` is not empty, the `Sort.Field` field will not take effect, and the search results will be sorted by match rate.</li>
+                     * 
+                     */
+                    void SetSort(const SortBy& _sort);
+
+                    /**
+                     * 判断参数 Sort 是否已赋值
+                     * @return Sort 是否已赋值
+                     * 
+                     */
+                    bool SortHasBeenSet() const;
+
+                    /**
+                     * 获取<div id="p_offset">Start offset of a paged return. Default value: 0. Entries from No. "Offset" to No. "Offset + Limit - 1" will be returned.
+<li>Value range: "Offset + Limit" cannot be more than 5,000. (For more information, please see <a href="#maxResultsDesc">Limit on the Number of Results Returned by API</a>)</li></div>
+                     * @return Offset <div id="p_offset">Start offset of a paged return. Default value: 0. Entries from No. "Offset" to No. "Offset + Limit - 1" will be returned.
+<li>Value range: "Offset + Limit" cannot be more than 5,000. (For more information, please see <a href="#maxResultsDesc">Limit on the Number of Results Returned by API</a>)</li></div>
+                     * 
+                     */
+                    uint64_t GetOffset() const;
+
+                    /**
+                     * 设置<div id="p_offset">Start offset of a paged return. Default value: 0. Entries from No. "Offset" to No. "Offset + Limit - 1" will be returned.
+<li>Value range: "Offset + Limit" cannot be more than 5,000. (For more information, please see <a href="#maxResultsDesc">Limit on the Number of Results Returned by API</a>)</li></div>
+                     * @param _offset <div id="p_offset">Start offset of a paged return. Default value: 0. Entries from No. "Offset" to No. "Offset + Limit - 1" will be returned.
+<li>Value range: "Offset + Limit" cannot be more than 5,000. (For more information, please see <a href="#maxResultsDesc">Limit on the Number of Results Returned by API</a>)</li></div>
+                     * 
+                     */
+                    void SetOffset(const uint64_t& _offset);
+
+                    /**
+                     * 判断参数 Offset 是否已赋值
+                     * @return Offset 是否已赋值
+                     * 
+                     */
+                    bool OffsetHasBeenSet() const;
+
+                    /**
+                     * 获取<div id="p_limit">Number of entries returned by a paged query. Default value: 10. Entries from No. "Offset" to No. "Offset + Limit - 1" will be returned.
+<li>Value range: "Offset + Limit" cannot be more than 5,000. (For more information, please see <a href="#maxResultsDesc">Limit on the Number of Results Returned by API</a>)</li></div>
+                     * @return Limit <div id="p_limit">Number of entries returned by a paged query. Default value: 10. Entries from No. "Offset" to No. "Offset + Limit - 1" will be returned.
+<li>Value range: "Offset + Limit" cannot be more than 5,000. (For more information, please see <a href="#maxResultsDesc">Limit on the Number of Results Returned by API</a>)</li></div>
+                     * 
+                     */
+                    uint64_t GetLimit() const;
+
+                    /**
+                     * 设置<div id="p_limit">Number of entries returned by a paged query. Default value: 10. Entries from No. "Offset" to No. "Offset + Limit - 1" will be returned.
+<li>Value range: "Offset + Limit" cannot be more than 5,000. (For more information, please see <a href="#maxResultsDesc">Limit on the Number of Results Returned by API</a>)</li></div>
+                     * @param _limit <div id="p_limit">Number of entries returned by a paged query. Default value: 10. Entries from No. "Offset" to No. "Offset + Limit - 1" will be returned.
+<li>Value range: "Offset + Limit" cannot be more than 5,000. (For more information, please see <a href="#maxResultsDesc">Limit on the Number of Results Returned by API</a>)</li></div>
+                     * 
+                     */
+                    void SetLimit(const uint64_t& _limit);
+
+                    /**
+                     * 判断参数 Limit 是否已赋值
+                     * @return Limit 是否已赋值
+                     * 
+                     */
+                    bool LimitHasBeenSet() const;
 
                     /**
                      * 获取(This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
@@ -1007,44 +1007,6 @@ End time in the creation time range.
                     bool m_expireTimeHasBeenSet;
 
                     /**
-                     * Sorting order.
-<li>Valid value of `Sort.Field`: CreateTime.</li>
-<li>If `Text`, `Names`, or `Descriptions` is not empty, the `Sort.Field` field will not take effect, and the search results will be sorted by match rate.</li>
-                     */
-                    SortBy m_sort;
-                    bool m_sortHasBeenSet;
-
-                    /**
-                     * <div id="p_offset">Start offset of a paged return. Default value: 0. Entries from No. "Offset" to No. "Offset + Limit - 1" will be returned.
-<li>Value range: "Offset + Limit" cannot be more than 5,000. (For more information, please see <a href="#maxResultsDesc">Limit on the Number of Results Returned by API</a>)</li></div>
-                     */
-                    uint64_t m_offset;
-                    bool m_offsetHasBeenSet;
-
-                    /**
-                     * <div id="p_limit">Number of entries returned by a paged query. Default value: 10. Entries from No. "Offset" to No. "Offset + Limit - 1" will be returned.
-<li>Value range: "Offset + Limit" cannot be more than 5,000. (For more information, please see <a href="#maxResultsDesc">Limit on the Number of Results Returned by API</a>)</li></div>
-                     */
-                    uint64_t m_limit;
-                    bool m_limitHasBeenSet;
-
-                    /**
-                     * Specifies information entry that needs to be returned for all media files. Multiple entries can be specified simultaneously. N starts from 0. If this field is left empty, all information entries will be returned by default. Valid values:
-<li>basicInfo (basic video information).</li>
-<li>metaData (video metadata).</li>
-<li>transcodeInfo (result information of video transcoding).</li>
-<li>animatedGraphicsInfo (result information of animated image generating task).</li>
-<li>imageSpriteInfo (image sprite information).</li>
-<li>snapshotByTimeOffsetInfo (point-in-time screenshot information).</li>
-<li>sampleSnapshotInfo (sampled screenshot information).</li>
-<li>keyFrameDescInfo (timestamp information).</li>
-<li>adaptiveDynamicStreamingInfo (information of adaptive bitrate streaming).</li>
-<li>miniProgramReviewInfo (WeChat Mini Program audit information).</li>
-                     */
-                    std::vector<std::string> m_filters;
-                    bool m_filtersHasBeenSet;
-
-                    /**
                      * Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Regions](https://intl.cloud.tencent.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
 <li>Length limit for a single region: 20 characters</li>
 <li>Array length limit: 20</li>
@@ -1102,6 +1064,44 @@ End time in the creation time range.
                      */
                     std::vector<std::string> m_trtcRoomIds;
                     bool m_trtcRoomIdsHasBeenSet;
+
+                    /**
+                     * Specifies information entry that needs to be returned for all media files. Multiple entries can be specified simultaneously. N starts from 0. If this field is left empty, all information entries will be returned by default. Valid values:
+<li>basicInfo (basic video information).</li>
+<li>metaData (video metadata).</li>
+<li>transcodeInfo (result information of video transcoding).</li>
+<li>animatedGraphicsInfo (result information of animated image generating task).</li>
+<li>imageSpriteInfo (image sprite information).</li>
+<li>snapshotByTimeOffsetInfo (point-in-time screenshot information).</li>
+<li>sampleSnapshotInfo (sampled screenshot information).</li>
+<li>keyFrameDescInfo (timestamp information).</li>
+<li>adaptiveDynamicStreamingInfo (information of adaptive bitrate streaming).</li>
+<li>miniProgramReviewInfo (WeChat Mini Program audit information).</li>
+                     */
+                    std::vector<std::string> m_filters;
+                    bool m_filtersHasBeenSet;
+
+                    /**
+                     * Sorting order.
+<li>Valid value of `Sort.Field`: CreateTime.</li>
+<li>If `Text`, `Names`, or `Descriptions` is not empty, the `Sort.Field` field will not take effect, and the search results will be sorted by match rate.</li>
+                     */
+                    SortBy m_sort;
+                    bool m_sortHasBeenSet;
+
+                    /**
+                     * <div id="p_offset">Start offset of a paged return. Default value: 0. Entries from No. "Offset" to No. "Offset + Limit - 1" will be returned.
+<li>Value range: "Offset + Limit" cannot be more than 5,000. (For more information, please see <a href="#maxResultsDesc">Limit on the Number of Results Returned by API</a>)</li></div>
+                     */
+                    uint64_t m_offset;
+                    bool m_offsetHasBeenSet;
+
+                    /**
+                     * <div id="p_limit">Number of entries returned by a paged query. Default value: 10. Entries from No. "Offset" to No. "Offset + Limit - 1" will be returned.
+<li>Value range: "Offset + Limit" cannot be more than 5,000. (For more information, please see <a href="#maxResultsDesc">Limit on the Number of Results Returned by API</a>)</li></div>
+                     */
+                    uint64_t m_limit;
+                    bool m_limitHasBeenSet;
 
                     /**
                      * (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)

@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/vod/v20180717/model/AiRecognitionTaskObjectSeqmentItem.h>
+#include <tencentcloud/vod/v20180717/model/AiRecognitionTaskObjectSegmentItem.h>
 
 
 namespace TencentCloud
@@ -71,23 +72,44 @@ namespace TencentCloud
                     /**
                      * 获取List of segments that contain an object.
                      * @return SegmentSet List of segments that contain an object.
-                     * 
+                     * @deprecated
                      */
                     std::vector<AiRecognitionTaskObjectSeqmentItem> GetSegmentSet() const;
 
                     /**
                      * 设置List of segments that contain an object.
                      * @param _segmentSet List of segments that contain an object.
-                     * 
+                     * @deprecated
                      */
                     void SetSegmentSet(const std::vector<AiRecognitionTaskObjectSeqmentItem>& _segmentSet);
 
                     /**
                      * 判断参数 SegmentSet 是否已赋值
                      * @return SegmentSet 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool SegmentSetHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return RecognitionSegmentSet 
+                     * 
+                     */
+                    std::vector<AiRecognitionTaskObjectSegmentItem> GetRecognitionSegmentSet() const;
+
+                    /**
+                     * 设置
+                     * @param _recognitionSegmentSet 
+                     * 
+                     */
+                    void SetRecognitionSegmentSet(const std::vector<AiRecognitionTaskObjectSegmentItem>& _recognitionSegmentSet);
+
+                    /**
+                     * 判断参数 RecognitionSegmentSet 是否已赋值
+                     * @return RecognitionSegmentSet 是否已赋值
+                     * 
+                     */
+                    bool RecognitionSegmentSetHasBeenSet() const;
 
                 private:
 
@@ -102,6 +124,12 @@ namespace TencentCloud
                      */
                     std::vector<AiRecognitionTaskObjectSeqmentItem> m_segmentSet;
                     bool m_segmentSetHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<AiRecognitionTaskObjectSegmentItem> m_recognitionSegmentSet;
+                    bool m_recognitionSegmentSetHasBeenSet;
 
                 };
             }

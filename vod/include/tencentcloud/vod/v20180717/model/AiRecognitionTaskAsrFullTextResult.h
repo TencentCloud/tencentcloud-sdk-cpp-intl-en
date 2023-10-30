@@ -178,6 +178,69 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool OutputHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return Progress 
+                     * 
+                     */
+                    int64_t GetProgress() const;
+
+                    /**
+                     * 设置
+                     * @param _progress 
+                     * 
+                     */
+                    void SetProgress(const int64_t& _progress);
+
+                    /**
+                     * 判断参数 Progress 是否已赋值
+                     * @return Progress 是否已赋值
+                     * 
+                     */
+                    bool ProgressHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return BeginProcessTime 
+                     * 
+                     */
+                    std::string GetBeginProcessTime() const;
+
+                    /**
+                     * 设置
+                     * @param _beginProcessTime 
+                     * 
+                     */
+                    void SetBeginProcessTime(const std::string& _beginProcessTime);
+
+                    /**
+                     * 判断参数 BeginProcessTime 是否已赋值
+                     * @return BeginProcessTime 是否已赋值
+                     * 
+                     */
+                    bool BeginProcessTimeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return FinishTime 
+                     * 
+                     */
+                    std::string GetFinishTime() const;
+
+                    /**
+                     * 设置
+                     * @param _finishTime 
+                     * 
+                     */
+                    void SetFinishTime(const std::string& _finishTime);
+
+                    /**
+                     * 判断参数 FinishTime 是否已赋值
+                     * @return FinishTime 是否已赋值
+                     * 
+                     */
+                    bool FinishTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -216,6 +279,24 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     AiRecognitionTaskAsrFullTextResultOutput m_output;
                     bool m_outputHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_progress;
+                    bool m_progressHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_beginProcessTime;
+                    bool m_beginProcessTimeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_finishTime;
+                    bool m_finishTimeHasBeenSet;
 
                 };
             }

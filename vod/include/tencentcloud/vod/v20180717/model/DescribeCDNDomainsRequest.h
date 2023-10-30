@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取The starting offset for page fetching. Default value: 0.
-                     * @return Offset The starting offset for page fetching. Default value: 0.
+                     * 获取
+                     * @return Offset 
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置The starting offset for page fetching. Default value: 0.
-                     * @param _offset The starting offset for page fetching. Default value: 0.
+                     * 设置
+                     * @param _offset 
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -141,7 +141,7 @@ namespace TencentCloud
                     bool m_limitHasBeenSet;
 
                     /**
-                     * The starting offset for page fetching. Default value: 0.
+                     * 
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;

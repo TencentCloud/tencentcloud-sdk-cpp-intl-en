@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取The video remaster parameters.
-                     * @return RebuildVideoInfo The video remaster parameters.
+                     * 获取
+                     * @return RebuildVideoInfo 
                      * 
                      */
                     RebuildVideoInfo GetRebuildVideoInfo() const;
 
                     /**
-                     * 设置The video remaster parameters.
-                     * @param _rebuildVideoInfo The video remaster parameters.
+                     * 设置
+                     * @param _rebuildVideoInfo 
                      * 
                      */
                     void SetRebuildVideoInfo(const RebuildVideoInfo& _rebuildVideoInfo);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool RebuildVideoInfoHasBeenSet() const;
 
                     /**
-                     * 获取The audio remaster parameters.
-                     * @return RebuildAudioInfo The audio remaster parameters.
+                     * 获取
+                     * @return RebuildAudioInfo 
                      * 
                      */
                     RebuildAudioInfo GetRebuildAudioInfo() const;
 
                     /**
-                     * 设置The audio remaster parameters.
-                     * @param _rebuildAudioInfo The audio remaster parameters.
+                     * 设置
+                     * @param _rebuildAudioInfo 
                      * 
                      */
                     void SetRebuildAudioInfo(const RebuildAudioInfo& _rebuildAudioInfo);
@@ -320,13 +320,13 @@ namespace TencentCloud
                     bool m_commentHasBeenSet;
 
                     /**
-                     * The video remaster parameters.
+                     * 
                      */
                     RebuildVideoInfo m_rebuildVideoInfo;
                     bool m_rebuildVideoInfoHasBeenSet;
 
                     /**
-                     * The audio remaster parameters.
+                     * 
                      */
                     RebuildAudioInfo m_rebuildAudioInfo;
                     bool m_rebuildAudioInfoHasBeenSet;

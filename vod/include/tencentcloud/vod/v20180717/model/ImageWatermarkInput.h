@@ -166,6 +166,27 @@ Default value: 0 px, which means that `Height` will be proportionally scaled acc
                      */
                     bool RepeatTypeHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return Transparency 
+                     * 
+                     */
+                    int64_t GetTransparency() const;
+
+                    /**
+                     * 设置
+                     * @param _transparency 
+                     * 
+                     */
+                    void SetTransparency(const int64_t& _transparency);
+
+                    /**
+                     * 判断参数 Transparency 是否已赋值
+                     * @return Transparency 是否已赋值
+                     * 
+                     */
+                    bool TransparencyHasBeenSet() const;
+
                 private:
 
                     /**
@@ -200,6 +221,12 @@ Default value: 0 px, which means that `Height` will be proportionally scaled acc
                      */
                     std::string m_repeatType;
                     bool m_repeatTypeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_transparency;
+                    bool m_transparencyHasBeenSet;
 
                 };
             }

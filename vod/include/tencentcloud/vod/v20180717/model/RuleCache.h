@@ -36,8 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * ath-based cache rule configuration
-The cache expiration time for all files is 30 days by default.
+                * 
                 */
                 class RuleCache : public AbstractModel
                 {
@@ -49,15 +48,15 @@ The cache expiration time for all files is 30 days by default.
 
 
                     /**
-                     * 获取Rule types:<li>all: effective for all files.</li> <li>file: effective for specified file suffixes.</li> <li>directory: effective for specified paths.</li> <li>path: effective for specified absolute paths.</li>
-                     * @return RuleType Rule types:<li>all: effective for all files.</li> <li>file: effective for specified file suffixes.</li> <li>directory: effective for specified paths.</li> <li>path: effective for specified absolute paths.</li>
+                     * 获取
+                     * @return RuleType 
                      * 
                      */
                     std::string GetRuleType() const;
 
                     /**
-                     * 设置Rule types:<li>all: effective for all files.</li> <li>file: effective for specified file suffixes.</li> <li>directory: effective for specified paths.</li> <li>path: effective for specified absolute paths.</li>
-                     * @param _ruleType Rule types:<li>all: effective for all files.</li> <li>file: effective for specified file suffixes.</li> <li>directory: effective for specified paths.</li> <li>path: effective for specified absolute paths.</li>
+                     * 设置
+                     * @param _ruleType 
                      * 
                      */
                     void SetRuleType(const std::string& _ruleType);
@@ -70,15 +69,15 @@ The cache expiration time for all files is 30 days by default.
                     bool RuleTypeHasBeenSet() const;
 
                     /**
-                     * 获取Content for each CacheType: <li>For all, enter a wildcard *.</li> <li>For file, enter the suffix, e.g., jpg or txt.</li> <li>For directory, enter the path, e.g., /xxx/test/.</li> <li>For path, enter the absolute path, e.g., /xxx/test.html.</li>
-                     * @return RulePaths Content for each CacheType: <li>For all, enter a wildcard *.</li> <li>For file, enter the suffix, e.g., jpg or txt.</li> <li>For directory, enter the path, e.g., /xxx/test/.</li> <li>For path, enter the absolute path, e.g., /xxx/test.html.</li>
+                     * 获取
+                     * @return RulePaths 
                      * 
                      */
                     std::vector<std::string> GetRulePaths() const;
 
                     /**
-                     * 设置Content for each CacheType: <li>For all, enter a wildcard *.</li> <li>For file, enter the suffix, e.g., jpg or txt.</li> <li>For directory, enter the path, e.g., /xxx/test/.</li> <li>For path, enter the absolute path, e.g., /xxx/test.html.</li>
-                     * @param _rulePaths Content for each CacheType: <li>For all, enter a wildcard *.</li> <li>For file, enter the suffix, e.g., jpg or txt.</li> <li>For directory, enter the path, e.g., /xxx/test/.</li> <li>For path, enter the absolute path, e.g., /xxx/test.html.</li>
+                     * 设置
+                     * @param _rulePaths 
                      * 
                      */
                     void SetRulePaths(const std::vector<std::string>& _rulePaths);
@@ -114,13 +113,13 @@ The cache expiration time for all files is 30 days by default.
                 private:
 
                     /**
-                     * Rule types:<li>all: effective for all files.</li> <li>file: effective for specified file suffixes.</li> <li>directory: effective for specified paths.</li> <li>path: effective for specified absolute paths.</li>
+                     * 
                      */
                     std::string m_ruleType;
                     bool m_ruleTypeHasBeenSet;
 
                     /**
-                     * Content for each CacheType: <li>For all, enter a wildcard *.</li> <li>For file, enter the suffix, e.g., jpg or txt.</li> <li>For directory, enter the path, e.g., /xxx/test/.</li> <li>For path, enter the absolute path, e.g., /xxx/test.html.</li>
+                     * 
                      */
                     std::vector<std::string> m_rulePaths;
                     bool m_rulePathsHasBeenSet;

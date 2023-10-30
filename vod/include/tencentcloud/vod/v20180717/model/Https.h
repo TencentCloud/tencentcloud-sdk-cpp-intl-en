@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取HTTPS configuration switch: <li>on:Enable;</li> <li>off:Disable.</li>
-                     * @return Switch HTTPS configuration switch: <li>on:Enable;</li> <li>off:Disable.</li>
+                     * 获取
+                     * @return Switch 
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置HTTPS configuration switch: <li>on:Enable;</li> <li>off:Disable.</li>
-                     * @param _switch HTTPS configuration switch: <li>on:Enable;</li> <li>off:Disable.</li>
+                     * 设置
+                     * @param _switch 
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable HTTP2: <li>on:Enable;</li> <li>off:Disable.</li>
-                     * @return Http2 Whether to enable HTTP2: <li>on:Enable;</li> <li>off:Disable.</li>
+                     * 获取
+                     * @return Http2 
                      * 
                      */
                     std::string GetHttp2() const;
 
                     /**
-                     * 设置Whether to enable HTTP2: <li>on:Enable;</li> <li>off:Disable.</li>
-                     * @param _http2 Whether to enable HTTP2: <li>on:Enable;</li> <li>off:Disable.</li>
+                     * 设置
+                     * @param _http2 
                      * 
                      */
                     void SetHttp2(const std::string& _http2);
@@ -113,13 +113,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * HTTPS configuration switch: <li>on:Enable;</li> <li>off:Disable.</li>
+                     * 
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Whether to enable HTTP2: <li>on:Enable;</li> <li>off:Disable.</li>
+                     * 
                      */
                     std::string m_http2;
                     bool m_http2HasBeenSet;

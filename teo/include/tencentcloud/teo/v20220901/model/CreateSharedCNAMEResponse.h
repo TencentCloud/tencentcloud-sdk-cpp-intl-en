@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_VOD_V20180717_MODEL_PROCESSMEDIARESPONSE_H_
-#define TENCENTCLOUD_VOD_V20180717_MODEL_PROCESSMEDIARESPONSE_H_
+#ifndef TENCENTCLOUD_TEO_V20220901_MODEL_CREATESHAREDCNAMERESPONSE_H_
+#define TENCENTCLOUD_TEO_V20220901_MODEL_CREATESHAREDCNAMERESPONSE_H_
 
 #include <string>
 #include <vector>
@@ -25,45 +25,45 @@
 
 namespace TencentCloud
 {
-    namespace Vod
+    namespace Teo
     {
-        namespace V20180717
+        namespace V20220901
         {
             namespace Model
             {
                 /**
-                * ProcessMedia response structure.
+                * CreateSharedCNAME response structure.
                 */
-                class ProcessMediaResponse : public AbstractModel
+                class CreateSharedCNAMEResponse : public AbstractModel
                 {
                 public:
-                    ProcessMediaResponse();
-                    ~ProcessMediaResponse() = default;
+                    CreateSharedCNAMEResponse();
+                    ~CreateSharedCNAMEResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Task ID
-                     * @return TaskId Task ID
+                     * 获取Shared CNAME. Format: <Custom Prefix> + <12-bit random string in ZoneId> + "share.eo.dnse[0-5].com"
+                     * @return SharedCNAME Shared CNAME. Format: <Custom Prefix> + <12-bit random string in ZoneId> + "share.eo.dnse[0-5].com"
                      * 
                      */
-                    std::string GetTaskId() const;
+                    std::string GetSharedCNAME() const;
 
                     /**
-                     * 判断参数 TaskId 是否已赋值
-                     * @return TaskId 是否已赋值
+                     * 判断参数 SharedCNAME 是否已赋值
+                     * @return SharedCNAME 是否已赋值
                      * 
                      */
-                    bool TaskIdHasBeenSet() const;
+                    bool SharedCNAMEHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Task ID
+                     * Shared CNAME. Format: <Custom Prefix> + <12-bit random string in ZoneId> + "share.eo.dnse[0-5].com"
                      */
-                    std::string m_taskId;
-                    bool m_taskIdHasBeenSet;
+                    std::string m_sharedCNAME;
+                    bool m_sharedCNAMEHasBeenSet;
 
                 };
             }
@@ -71,4 +71,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_VOD_V20180717_MODEL_PROCESSMEDIARESPONSE_H_
+#endif // !TENCENTCLOUD_TEO_V20220901_MODEL_CREATESHAREDCNAMERESPONSE_H_

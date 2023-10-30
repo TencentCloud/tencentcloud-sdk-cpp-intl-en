@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Heuristic cache configuration switch:<li>on:Enable.</li> <li>off: Disable.</li>
-                     * @return HeuristicCacheTimeSwitch Heuristic cache configuration switch:<li>on:Enable.</li> <li>off: Disable.</li>
+                     * 获取
+                     * @return HeuristicCacheTimeSwitch 
                      * 
                      */
                     std::string GetHeuristicCacheTimeSwitch() const;
 
                     /**
-                     * 设置Heuristic cache configuration switch:<li>on:Enable.</li> <li>off: Disable.</li>
-                     * @param _heuristicCacheTimeSwitch Heuristic cache configuration switch:<li>on:Enable.</li> <li>off: Disable.</li>
+                     * 设置
+                     * @param _heuristicCacheTimeSwitch 
                      * 
                      */
                     void SetHeuristicCacheTimeSwitch(const std::string& _heuristicCacheTimeSwitch);
@@ -91,7 +91,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Heuristic cache configuration switch:<li>on:Enable.</li> <li>off: Disable.</li>
+                     * 
                      */
                     std::string m_heuristicCacheTimeSwitch;
                     bool m_heuristicCacheTimeSwitchHasBeenSet;

@@ -50,16 +50,18 @@ namespace TencentCloud
                     /**
                      * 获取The origin type. Values:
 <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address </li>
-<li>`ORIGIN_GROUP`: Origin group </li>
-<li>`AWS_S3`: AWS S3 bucket address </li>
-<li>`SPACE`: EdgeOne Shield Space </li>
+<li>`COS`: COS bucket address</li>
+<li>`ORIGIN_GROUP`: Origin group</li>
+<li>`AWS_S3`: AWS S3 bucket address</li>
+<li>`LB`: Tencent Cloud CLB instance</li>
+<li>`SPACE`: EdgeOne Shield Space</li>
                      * @return OriginType The origin type. Values:
 <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address </li>
-<li>`ORIGIN_GROUP`: Origin group </li>
-<li>`AWS_S3`: AWS S3 bucket address </li>
-<li>`SPACE`: EdgeOne Shield Space </li>
+<li>`COS`: COS bucket address</li>
+<li>`ORIGIN_GROUP`: Origin group</li>
+<li>`AWS_S3`: AWS S3 bucket address</li>
+<li>`LB`: Tencent Cloud CLB instance</li>
+<li>`SPACE`: EdgeOne Shield Space</li>
                      * 
                      */
                     std::string GetOriginType() const;
@@ -67,16 +69,18 @@ namespace TencentCloud
                     /**
                      * 设置The origin type. Values:
 <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address </li>
-<li>`ORIGIN_GROUP`: Origin group </li>
-<li>`AWS_S3`: AWS S3 bucket address </li>
-<li>`SPACE`: EdgeOne Shield Space </li>
+<li>`COS`: COS bucket address</li>
+<li>`ORIGIN_GROUP`: Origin group</li>
+<li>`AWS_S3`: AWS S3 bucket address</li>
+<li>`LB`: Tencent Cloud CLB instance</li>
+<li>`SPACE`: EdgeOne Shield Space</li>
                      * @param _originType The origin type. Values:
 <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address </li>
-<li>`ORIGIN_GROUP`: Origin group </li>
-<li>`AWS_S3`: AWS S3 bucket address </li>
-<li>`SPACE`: EdgeOne Shield Space </li>
+<li>`COS`: COS bucket address</li>
+<li>`ORIGIN_GROUP`: Origin group</li>
+<li>`AWS_S3`: AWS S3 bucket address</li>
+<li>`LB`: Tencent Cloud CLB instance</li>
+<li>`SPACE`: EdgeOne Shield Space</li>
                      * 
                      */
                     void SetOriginType(const std::string& _originType);
@@ -110,15 +114,15 @@ namespace TencentCloud
                     bool OriginHasBeenSet() const;
 
                     /**
-                     * 获取ID of the secondary origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates that secondary origins are not used.
-                     * @return BackupOrigin ID of the secondary origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates that secondary origins are not used.
+                     * 获取ID of the backup origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates not to use backup origins.
+                     * @return BackupOrigin ID of the backup origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates not to use backup origins.
                      * 
                      */
                     std::string GetBackupOrigin() const;
 
                     /**
-                     * 设置ID of the secondary origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates that secondary origins are not used.
-                     * @param _backupOrigin ID of the secondary origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates that secondary origins are not used.
+                     * 设置ID of the backup origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates not to use backup origins.
+                     * @param _backupOrigin ID of the backup origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates not to use backup origins.
                      * 
                      */
                     void SetBackupOrigin(const std::string& _backupOrigin);
@@ -131,23 +135,23 @@ namespace TencentCloud
                     bool BackupOriginHasBeenSet() const;
 
                     /**
-                     * 获取Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values: 
-<li>`on`: Enable private authentication.</li>
-<li>`off`: Disable private authentication.</li>If this field is not specified, the default value `off` is used.
-                     * @return PrivateAccess Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values: 
-<li>`on`: Enable private authentication.</li>
-<li>`off`: Disable private authentication.</li>If this field is not specified, the default value `off` is used.
+                     * 获取Whether to allow access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values:
+u200c<li>`on`: Enable private authentication.</li>
+<li>`off`: (Default) Disable private authentication.</li>
+                     * @return PrivateAccess Whether to allow access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values:
+u200c<li>`on`: Enable private authentication.</li>
+<li>`off`: (Default) Disable private authentication.</li>
                      * 
                      */
                     std::string GetPrivateAccess() const;
 
                     /**
-                     * 设置Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values: 
-<li>`on`: Enable private authentication.</li>
-<li>`off`: Disable private authentication.</li>If this field is not specified, the default value `off` is used.
-                     * @param _privateAccess Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values: 
-<li>`on`: Enable private authentication.</li>
-<li>`off`: Disable private authentication.</li>If this field is not specified, the default value `off` is used.
+                     * 设置Whether to allow access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values:
+u200c<li>`on`: Enable private authentication.</li>
+<li>`off`: (Default) Disable private authentication.</li>
+                     * @param _privateAccess Whether to allow access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values:
+u200c<li>`on`: Enable private authentication.</li>
+<li>`off`: (Default) Disable private authentication.</li>
                      * 
                      */
                     void SetPrivateAccess(const std::string& _privateAccess);
@@ -185,10 +189,11 @@ namespace TencentCloud
                     /**
                      * The origin type. Values:
 <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address </li>
-<li>`ORIGIN_GROUP`: Origin group </li>
-<li>`AWS_S3`: AWS S3 bucket address </li>
-<li>`SPACE`: EdgeOne Shield Space </li>
+<li>`COS`: COS bucket address</li>
+<li>`ORIGIN_GROUP`: Origin group</li>
+<li>`AWS_S3`: AWS S3 bucket address</li>
+<li>`LB`: Tencent Cloud CLB instance</li>
+<li>`SPACE`: EdgeOne Shield Space</li>
                      */
                     std::string m_originType;
                     bool m_originTypeHasBeenSet;
@@ -200,15 +205,15 @@ namespace TencentCloud
                     bool m_originHasBeenSet;
 
                     /**
-                     * ID of the secondary origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates that secondary origins are not used.
+                     * ID of the backup origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates not to use backup origins.
                      */
                     std::string m_backupOrigin;
                     bool m_backupOriginHasBeenSet;
 
                     /**
-                     * Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values: 
-<li>`on`: Enable private authentication.</li>
-<li>`off`: Disable private authentication.</li>If this field is not specified, the default value `off` is used.
+                     * Whether to allow access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values:
+u200c<li>`on`: Enable private authentication.</li>
+<li>`off`: (Default) Disable private authentication.</li>
                      */
                     std::string m_privateAccess;
                     bool m_privateAccessHasBeenSet;

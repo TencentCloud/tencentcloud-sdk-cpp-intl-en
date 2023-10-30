@@ -50,23 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The image processing type. Valid values:
-<li>`Scale`: Scaling</li>
-<li>`CenterCut`: Cropping</li>
-                     * @return Type The image processing type. Valid values:
-<li>`Scale`: Scaling</li>
-<li>`CenterCut`: Cropping</li>
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置The image processing type. Valid values:
-<li>`Scale`: Scaling</li>
-<li>`CenterCut`: Cropping</li>
-                     * @param _type The image processing type. Valid values:
-<li>`Scale`: Scaling</li>
-<li>`CenterCut`: Cropping</li>
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -144,9 +136,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The image processing type. Valid values:
-<li>`Scale`: Scaling</li>
-<li>`CenterCut`: Cropping</li>
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

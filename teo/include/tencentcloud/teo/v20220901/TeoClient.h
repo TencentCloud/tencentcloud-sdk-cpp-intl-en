@@ -47,6 +47,8 @@
 #include <tencentcloud/teo/v20220901/model/CreateRuleResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateSecurityIPGroupRequest.h>
 #include <tencentcloud/teo/v20220901/model/CreateSecurityIPGroupResponse.h>
+#include <tencentcloud/teo/v20220901/model/CreateSharedCNAMERequest.h>
+#include <tencentcloud/teo/v20220901/model/CreateSharedCNAMEResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateZoneRequest.h>
 #include <tencentcloud/teo/v20220901/model/CreateZoneResponse.h>
 #include <tencentcloud/teo/v20220901/model/DeleteAccelerationDomainsRequest.h>
@@ -203,6 +205,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateSecurityIPGroupResponse> CreateSecurityIPGroupOutcome;
                 typedef std::future<CreateSecurityIPGroupOutcome> CreateSecurityIPGroupOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CreateSecurityIPGroupRequest&, CreateSecurityIPGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateSecurityIPGroupAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateSharedCNAMEResponse> CreateSharedCNAMEOutcome;
+                typedef std::future<CreateSharedCNAMEOutcome> CreateSharedCNAMEOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::CreateSharedCNAMERequest&, CreateSharedCNAMEOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateSharedCNAMEAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateZoneResponse> CreateZoneOutcome;
                 typedef std::future<CreateZoneOutcome> CreateZoneOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CreateZoneRequest&, CreateZoneOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateZoneAsyncHandler;
@@ -447,9 +452,9 @@ namespace TencentCloud
                 CreatePrefetchTaskOutcomeCallable CreatePrefetchTaskCallable(const Model::CreatePrefetchTaskRequest& request);
 
                 /**
-                 *When there are resources updated on the origin with the TTL remaining valid, users cannot access the latest resources. In this case, you can purge the cache using this API. There are two methods: <li>Delete: This method deletes the node cache without verification and retrieves u200dthe latest resources from the origin when receiving a request.</li><li>Invalidate: This method marks the node cache as invalid and sends a request with the If-None-Match and If-Modified-Since headers to the origin. If the origin responses with 200, the latest resources are retrieved to be cached on the node. If a 304 response is returned, the latest resources are not cached on the node.
+                 *When the origin server resource is updated but the node cache TTL has not expired, the user will still access the old resource. To solve this problem, you can use this API to purge the node cache. There are two action options: <li>Delete directly: Delete the node cache directly without any verification. Trigger origin-pull when the resource is requested.</li><li>Mark as expired: Set the node resource as expired, and trigger origin-pull verification when the resource, that is, send an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin responds with 200, the node pulls new resources from the origin and update the cache. If the origin responds with 304, the node does not update the cache</li>.
 
-</li>For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1). </li>
+For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1).
                  * @param req CreatePurgeTaskRequest
                  * @return CreatePurgeTaskOutcome
                  */
@@ -474,6 +479,15 @@ namespace TencentCloud
                 CreateSecurityIPGroupOutcome CreateSecurityIPGroup(const Model::CreateSecurityIPGroupRequest &request);
                 void CreateSecurityIPGroupAsync(const Model::CreateSecurityIPGroupRequest& request, const CreateSecurityIPGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateSecurityIPGroupOutcomeCallable CreateSecurityIPGroupCallable(const Model::CreateSecurityIPGroupRequest& request);
+
+                /**
+                 *This API is used to create a shared CNAME.
+                 * @param req CreateSharedCNAMERequest
+                 * @return CreateSharedCNAMEOutcome
+                 */
+                CreateSharedCNAMEOutcome CreateSharedCNAME(const Model::CreateSharedCNAMERequest &request);
+                void CreateSharedCNAMEAsync(const Model::CreateSharedCNAMERequest& request, const CreateSharedCNAMEAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateSharedCNAMEOutcomeCallable CreateSharedCNAMECallable(const Model::CreateSharedCNAMERequest& request);
 
                 /**
                  *This API is used to access a new site.

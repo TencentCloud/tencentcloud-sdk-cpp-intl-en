@@ -43,27 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Metrics to query. Valid values:
-<li>`Traffic`: traffic in bytes</li>
-<li>`Bandwidth`: bandwidth in bps</li>
-<li>`Requests`: the number of requests</li>
-                     * @return Metric Metrics to query. Valid values:
-<li>`Traffic`: traffic in bytes</li>
-<li>`Bandwidth`: bandwidth in bps</li>
-<li>`Requests`: the number of requests</li>
+                     * 获取
+                     * @return Metric 
                      * 
                      */
                     std::string GetMetric() const;
 
                     /**
-                     * 设置Metrics to query. Valid values:
-<li>`Traffic`: traffic in bytes</li>
-<li>`Bandwidth`: bandwidth in bps</li>
-<li>`Requests`: the number of requests</li>
-                     * @param _metric Metrics to query. Valid values:
-<li>`Traffic`: traffic in bytes</li>
-<li>`Bandwidth`: bandwidth in bps</li>
-<li>`Requests`: the number of requests</li>
+                     * 设置
+                     * @param _metric 
                      * 
                      */
                     void SetMetric(const std::string& _metric);
@@ -466,10 +454,7 @@ If the difference between `StartTime` and `EndTime` is larger than 24 hours, the
                 private:
 
                     /**
-                     * Metrics to query. Valid values:
-<li>`Traffic`: traffic in bytes</li>
-<li>`Bandwidth`: bandwidth in bps</li>
-<li>`Requests`: the number of requests</li>
+                     * 
                      */
                     std::string m_metric;
                     bool m_metricHasBeenSet;

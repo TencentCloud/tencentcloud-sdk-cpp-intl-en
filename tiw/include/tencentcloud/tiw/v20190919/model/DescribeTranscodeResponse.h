@@ -233,6 +233,54 @@ Note: This parameter may return null, indicating that no valid values can be obt
                      */
                     bool ExtHasBeenSet() const;
 
+                    /**
+                     * 获取Document transcoding task creation time, unit: seconds.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * @return CreateTime Document transcoding task creation time, unit: seconds.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    uint64_t GetCreateTime() const;
+
+                    /**
+                     * 判断参数 CreateTime 是否已赋值
+                     * @return CreateTime 是否已赋值
+                     * 
+                     */
+                    bool CreateTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Document transcoding task assignment time, unit: seconds.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * @return AssignTime Document transcoding task assignment time, unit: seconds.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    uint64_t GetAssignTime() const;
+
+                    /**
+                     * 判断参数 AssignTime 是否已赋值
+                     * @return AssignTime 是否已赋值
+                     * 
+                     */
+                    bool AssignTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Document transcoding task finished time, unit: seconds.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * @return FinishedTime Document transcoding task finished time, unit: seconds.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    uint64_t GetFinishedTime() const;
+
+                    /**
+                     * 判断参数 FinishedTime 是否已赋值
+                     * @return FinishedTime 是否已赋值
+                     * 
+                     */
+                    bool FinishedTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -317,6 +365,27 @@ Note: This parameter may return null, indicating that no valid values can be obt
                      */
                     std::string m_ext;
                     bool m_extHasBeenSet;
+
+                    /**
+                     * Document transcoding task creation time, unit: seconds.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_createTime;
+                    bool m_createTimeHasBeenSet;
+
+                    /**
+                     * Document transcoding task assignment time, unit: seconds.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_assignTime;
+                    bool m_assignTimeHasBeenSet;
+
+                    /**
+                     * Document transcoding task finished time, unit: seconds.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_finishedTime;
+                    bool m_finishedTimeHasBeenSet;
 
                 };
             }

@@ -334,7 +334,9 @@ namespace TencentCloud
                 CreateApplicationOutcomeCallable CreateApplicationCallable(const Model::CreateApplicationRequest& request);
 
                 /**
-                 *This API is used to create an offline recording task.
+                 *课后录制服务已下线
+
+This API is used to create an offline recording task.
                  * @param req CreateOfflineRecordRequest
                  * @return CreateOfflineRecordOutcome
                  */
@@ -415,7 +417,9 @@ namespace TencentCloud
                 DescribeIMApplicationsOutcomeCallable DescribeIMApplicationsCallable(const Model::DescribeIMApplicationsRequest& request);
 
                 /**
-                 *This API is used to query the information about an offline recording task, including the recording progress and recording result.
+                 *课后录制服务已下线
+
+This API is used to query the information about an offline recording task, including the recording progress and recording result.
                  * @param req DescribeOfflineRecordRequest
                  * @return DescribeOfflineRecordOutcome
                  */
@@ -424,7 +428,9 @@ namespace TencentCloud
                 DescribeOfflineRecordOutcomeCallable DescribeOfflineRecordCallable(const Model::DescribeOfflineRecordRequest& request);
 
                 /**
-                 *This API is used to query the offline recording callback URL.
+                 *课后录制服务已下线
+
+This API is used to query the offline recording callback URL.
                  * @param req DescribeOfflineRecordCallbackRequest
                  * @return DescribeOfflineRecordCallbackOutcome
                  */
@@ -701,7 +707,9 @@ namespace TencentCloud
                 ResumeOnlineRecordOutcomeCallable ResumeOnlineRecordCallable(const Model::ResumeOnlineRecordRequest& request);
 
                 /**
-                 *This API is used to set the offline recording callback URL.
+                 *课后录制服务已下线
+
+This API is used to set the offline recording callback URL.
                  * @param req SetOfflineRecordCallbackRequest
                  * @return SetOfflineRecordCallbackOutcome
                  */

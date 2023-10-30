@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Server certificate ID, which is auto-generated when the certificate is being managed by the SSL Certificate Service
-                     * @return CertId Server certificate ID, which is auto-generated when the certificate is being managed by the SSL Certificate Service
+                     * 获取
+                     * @return CertId 
                      * 
                      */
                     std::string GetCertId() const;
 
                     /**
-                     * 设置Server certificate ID, which is auto-generated when the certificate is being managed by the SSL Certificate Service
-                     * @param _certId Server certificate ID, which is auto-generated when the certificate is being managed by the SSL Certificate Service
+                     * 设置
+                     * @param _certId 
                      * 
                      */
                     void SetCertId(const std::string& _certId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool PrivateKeyHasBeenSet() const;
 
                     /**
-                     * 获取Time when the certificate expires;Can be left blank when used as an input parameter.
-                     * @return ExpireTime Time when the certificate expires;Can be left blank when used as an input parameter.
+                     * 获取
+                     * @return ExpireTime 
                      * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
-                     * 设置Time when the certificate expires;Can be left blank when used as an input parameter.
-                     * @param _expireTime Time when the certificate expires;Can be left blank when used as an input parameter.
+                     * 设置
+                     * @param _expireTime 
                      * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
@@ -133,7 +133,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Server certificate ID, which is auto-generated when the certificate is being managed by the SSL Certificate Service
+                     * 
                      */
                     std::string m_certId;
                     bool m_certIdHasBeenSet;
@@ -151,7 +151,7 @@ namespace TencentCloud
                     bool m_privateKeyHasBeenSet;
 
                     /**
-                     * Time when the certificate expires;Can be left blank when used as an input parameter.
+                     * 
                      */
                     std::string m_expireTime;
                     bool m_expireTimeHasBeenSet;

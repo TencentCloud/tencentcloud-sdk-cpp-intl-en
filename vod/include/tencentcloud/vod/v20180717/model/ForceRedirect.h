@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Access forced redirect configuration switch:<li>on:Enable;</li> <li>off:Disable.</li>
-                     * @return Switch Access forced redirect configuration switch:<li>on:Enable;</li> <li>off:Disable.</li>
+                     * 获取
+                     * @return Switch 
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Access forced redirect configuration switch:<li>on:Enable;</li> <li>off:Disable.</li>
-                     * @param _switch Access forced redirect configuration switch:<li>on:Enable;</li> <li>off:Disable.</li>
+                     * 设置
+                     * @param _switch 
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Access forced redirect types: <li>http:forced HTTP redirect</li> <li>https: forced HTTPS redirect</li>
-                     * @return RedirectType Access forced redirect types: <li>http:forced HTTP redirect</li> <li>https: forced HTTPS redirect</li>
+                     * 获取
+                     * @return RedirectType 
                      * 
                      */
                     std::string GetRedirectType() const;
 
                     /**
-                     * 设置Access forced redirect types: <li>http:forced HTTP redirect</li> <li>https: forced HTTPS redirect</li>
-                     * @param _redirectType Access forced redirect types: <li>http:forced HTTP redirect</li> <li>https: forced HTTPS redirect</li>
+                     * 设置
+                     * @param _redirectType 
                      * 
                      */
                     void SetRedirectType(const std::string& _redirectType);
@@ -133,13 +133,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Access forced redirect configuration switch:<li>on:Enable;</li> <li>off:Disable.</li>
+                     * 
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Access forced redirect types: <li>http:forced HTTP redirect</li> <li>https: forced HTTPS redirect</li>
+                     * 
                      */
                     std::string m_redirectType;
                     bool m_redirectTypeHasBeenSet;

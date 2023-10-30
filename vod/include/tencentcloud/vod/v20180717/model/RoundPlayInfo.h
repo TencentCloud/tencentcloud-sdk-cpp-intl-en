@@ -152,6 +152,69 @@ namespace TencentCloud
                      */
                     bool DescHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return Status 
+                     * 
+                     */
+                    std::string GetStatus() const;
+
+                    /**
+                     * 设置
+                     * @param _status 
+                     * 
+                     */
+                    void SetStatus(const std::string& _status);
+
+                    /**
+                     * 判断参数 Status 是否已赋值
+                     * @return Status 是否已赋值
+                     * 
+                     */
+                    bool StatusHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return PlayBackMode 
+                     * 
+                     */
+                    std::string GetPlayBackMode() const;
+
+                    /**
+                     * 设置
+                     * @param _playBackMode 
+                     * 
+                     */
+                    void SetPlayBackMode(const std::string& _playBackMode);
+
+                    /**
+                     * 判断参数 PlayBackMode 是否已赋值
+                     * @return PlayBackMode 是否已赋值
+                     * 
+                     */
+                    bool PlayBackModeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return Url 
+                     * 
+                     */
+                    std::string GetUrl() const;
+
+                    /**
+                     * 设置
+                     * @param _url 
+                     * 
+                     */
+                    void SetUrl(const std::string& _url);
+
+                    /**
+                     * 判断参数 Url 是否已赋值
+                     * @return Url 是否已赋值
+                     * 
+                     */
+                    bool UrlHasBeenSet() const;
+
                 private:
 
                     /**
@@ -183,6 +246,24 @@ namespace TencentCloud
                      */
                     std::string m_desc;
                     bool m_descHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_status;
+                    bool m_statusHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_playBackMode;
+                    bool m_playBackModeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_url;
+                    bool m_urlHasBeenSet;
 
                 };
             }

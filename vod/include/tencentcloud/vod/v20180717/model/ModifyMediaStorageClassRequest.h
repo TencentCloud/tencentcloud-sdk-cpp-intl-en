@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The unique IDs of media files
-                     * @return FileIds The unique IDs of media files
+                     * 获取
+                     * @return FileIds 
                      * 
                      */
                     std::vector<std::string> GetFileIds() const;
 
                     /**
-                     * 设置The unique IDs of media files
-                     * @param _fileIds The unique IDs of media files
+                     * 设置
+                     * @param _fileIds 
                      * 
                      */
                     void SetFileIds(const std::vector<std::string>& _fileIds);
@@ -173,7 +173,7 @@ If the current storage class is DEEP ARCHIVE, the valid values for this paramete
                 private:
 
                     /**
-                     * The unique IDs of media files
+                     * 
                      */
                     std::vector<std::string> m_fileIds;
                     bool m_fileIdsHasBeenSet;

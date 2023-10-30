@@ -233,15 +233,15 @@ namespace TencentCloud
                     bool ImageSpriteDefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Display name of player for substreams with different resolutions.
-                     * @return ResolutionNames Display name of player for substreams with different resolutions.
+                     * 获取
+                     * @return ResolutionNames 
                      * 
                      */
                     std::vector<ResolutionNameInfo> GetResolutionNames() const;
 
                     /**
-                     * 设置Display name of player for substreams with different resolutions.
-                     * @param _resolutionNames Display name of player for substreams with different resolutions.
+                     * 设置
+                     * @param _resolutionNames 
                      * 
                      */
                     void SetResolutionNames(const std::vector<ResolutionNameInfo>& _resolutionNames);
@@ -384,7 +384,7 @@ namespace TencentCloud
                     bool m_imageSpriteDefinitionHasBeenSet;
 
                     /**
-                     * Display name of player for substreams with different resolutions.
+                     * 
                      */
                     std::vector<ResolutionNameInfo> m_resolutionNames;
                     bool m_resolutionNamesHasBeenSet;

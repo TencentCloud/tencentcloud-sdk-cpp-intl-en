@@ -173,23 +173,15 @@ namespace TencentCloud
                     bool SizeHasBeenSet() const;
 
                     /**
-                     * 获取The watermark type. Valid values:
-<li>Trace: Digital watermark</li>
-<li>None: Regular watermark</li>
-                     * @return DigitalWatermarkType The watermark type. Valid values:
-<li>Trace: Digital watermark</li>
-<li>None: Regular watermark</li>
+                     * 获取
+                     * @return DigitalWatermarkType 
                      * 
                      */
                     std::string GetDigitalWatermarkType() const;
 
                     /**
-                     * 设置The watermark type. Valid values:
-<li>Trace: Digital watermark</li>
-<li>None: Regular watermark</li>
-                     * @param _digitalWatermarkType The watermark type. Valid values:
-<li>Trace: Digital watermark</li>
-<li>None: Regular watermark</li>
+                     * 设置
+                     * @param _digitalWatermarkType 
                      * 
                      */
                     void SetDigitalWatermarkType(const std::string& _digitalWatermarkType);
@@ -221,6 +213,27 @@ namespace TencentCloud
                      * 
                      */
                     bool SubStreamSetHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return CopyRightWatermarkText 
+                     * 
+                     */
+                    std::string GetCopyRightWatermarkText() const;
+
+                    /**
+                     * 设置
+                     * @param _copyRightWatermarkText 
+                     * 
+                     */
+                    void SetCopyRightWatermarkText(const std::string& _copyRightWatermarkText);
+
+                    /**
+                     * 判断参数 CopyRightWatermarkText 是否已赋值
+                     * @return CopyRightWatermarkText 是否已赋值
+                     * 
+                     */
+                    bool CopyRightWatermarkTextHasBeenSet() const;
 
                 private:
 
@@ -260,9 +273,7 @@ namespace TencentCloud
                     bool m_sizeHasBeenSet;
 
                     /**
-                     * The watermark type. Valid values:
-<li>Trace: Digital watermark</li>
-<li>None: Regular watermark</li>
+                     * 
                      */
                     std::string m_digitalWatermarkType;
                     bool m_digitalWatermarkTypeHasBeenSet;
@@ -272,6 +283,12 @@ namespace TencentCloud
                      */
                     std::vector<MediaSubStreamInfoItem> m_subStreamSet;
                     bool m_subStreamSetHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_copyRightWatermarkText;
+                    bool m_copyRightWatermarkTextHasBeenSet;
 
                 };
             }

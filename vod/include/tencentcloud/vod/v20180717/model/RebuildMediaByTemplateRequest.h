@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool EndTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取The parameters for the output file of remastering.
-                     * @return OutputConfig The parameters for the output file of remastering.
+                     * 获取
+                     * @return OutputConfig 
                      * 
                      */
                     RebuildMediaOutputConfig GetOutputConfig() const;
 
                     /**
-                     * 设置The parameters for the output file of remastering.
-                     * @param _outputConfig The parameters for the output file of remastering.
+                     * 设置
+                     * @param _outputConfig 
                      * 
                      */
                     void SetOutputConfig(const RebuildMediaOutputConfig& _outputConfig);
@@ -286,7 +286,7 @@ namespace TencentCloud
                     bool m_endTimeOffsetHasBeenSet;
 
                     /**
-                     * The parameters for the output file of remastering.
+                     * 
                      */
                     RebuildMediaOutputConfig m_outputConfig;
                     bool m_outputConfigHasBeenSet;

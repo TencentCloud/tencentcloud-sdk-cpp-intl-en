@@ -14,21 +14,21 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/vod/v20180717/model/ProcessMediaResponse.h>
+#include <tencentcloud/teo/v20220901/model/CreateSharedCNAMEResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using TencentCloud::CoreInternalOutcome;
-using namespace TencentCloud::Vod::V20180717::Model;
+using namespace TencentCloud::Teo::V20220901::Model;
 using namespace std;
 
-ProcessMediaResponse::ProcessMediaResponse() :
-    m_taskIdHasBeenSet(false)
+CreateSharedCNAMEResponse::CreateSharedCNAMEResponse() :
+    m_sharedCNAMEHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome ProcessMediaResponse::Deserialize(const string &payload)
+CoreInternalOutcome CreateSharedCNAMEResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -62,32 +62,32 @@ CoreInternalOutcome ProcessMediaResponse::Deserialize(const string &payload)
     }
 
 
-    if (rsp.HasMember("TaskId") && !rsp["TaskId"].IsNull())
+    if (rsp.HasMember("SharedCNAME") && !rsp["SharedCNAME"].IsNull())
     {
-        if (!rsp["TaskId"].IsString())
+        if (!rsp["SharedCNAME"].IsString())
         {
-            return CoreInternalOutcome(Core::Error("response `TaskId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SharedCNAME` IsString=false incorrectly").SetRequestId(requestId));
         }
-        m_taskId = string(rsp["TaskId"].GetString());
-        m_taskIdHasBeenSet = true;
+        m_sharedCNAME = string(rsp["SharedCNAME"].GetString());
+        m_sharedCNAMEHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string ProcessMediaResponse::ToJsonString() const
+string CreateSharedCNAMEResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_taskIdHasBeenSet)
+    if (m_sharedCNAMEHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "TaskId";
+        string key = "SharedCNAME";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_taskId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_sharedCNAME.c_str(), allocator).Move(), allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -102,14 +102,14 @@ string ProcessMediaResponse::ToJsonString() const
 }
 
 
-string ProcessMediaResponse::GetTaskId() const
+string CreateSharedCNAMEResponse::GetSharedCNAME() const
 {
-    return m_taskId;
+    return m_sharedCNAME;
 }
 
-bool ProcessMediaResponse::TaskIdHasBeenSet() const
+bool CreateSharedCNAMEResponse::SharedCNAMEHasBeenSet() const
 {
-    return m_taskIdHasBeenSet;
+    return m_sharedCNAMEHasBeenSet;
 }
 
 

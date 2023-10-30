@@ -92,10 +92,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool VodTaskIdHasBeenSet() const;
 
                     /**
-                     * 获取Metadata of clipped video.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return MetaData Metadata of clipped video.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return MetaData 
                      * 
                      */
                     MediaMetaData GetMetaData() const;
@@ -144,8 +142,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_vodTaskIdHasBeenSet;
 
                     /**
-                     * Metadata of clipped video.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     MediaMetaData m_metaData;
                     bool m_metaDataHasBeenSet;
