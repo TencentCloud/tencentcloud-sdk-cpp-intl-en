@@ -45,8 +45,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return OwnershipVerification 
+                     * 获取Use the information returned by this parameter to verify the ownership of a domain name. For details, see [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1).
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @return OwnershipVerification Use the information returned by this parameter to verify the ownership of a domain name. For details, see [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1).
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     OwnershipVerification GetOwnershipVerification() const;
@@ -61,7 +63,8 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Use the information returned by this parameter to verify the ownership of a domain name. For details, see [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1).
+Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     OwnershipVerification m_ownershipVerification;
                     bool m_ownershipVerificationHasBeenSet;

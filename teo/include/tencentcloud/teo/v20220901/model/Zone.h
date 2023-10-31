@@ -28,6 +28,7 @@
 #include <tencentcloud/teo/v20220901/model/Resource.h>
 #include <tencentcloud/teo/v20220901/model/VanityNameServers.h>
 #include <tencentcloud/teo/v20220901/model/VanityNameServersIps.h>
+#include <tencentcloud/teo/v20220901/model/OwnershipVerification.h>
 
 
 namespace TencentCloud
@@ -51,15 +52,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The site ID.
-                     * @return ZoneId The site ID.
+                     * 获取Site ID.
+                     * @return ZoneId Site ID.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置The site ID.
-                     * @param _zoneId The site ID.
+                     * 设置Site ID.
+                     * @param _zoneId Site ID.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -136,30 +137,34 @@ namespace TencentCloud
 
                     /**
                      * 获取The site status. Values:
-<li>`active`: The name server is switched.</li>
-<li>`pending`: The name server is not switched.</li>
-<li>`moved`: The name server is moved.</li>
-<li>`deactivated`: The site is blocked.</li>
+u200c<li>`active`: The name server is switched to EdgeOne.</li>
+u200c<li>`pending`: The name server is not switched.</li>
+u200c<li>`moved`: The name server is changed to other service providers.</li>
+u200c<li>`deactivated`: The site is blocked.</li>
+<li>`initializing`: The site is not bound with any plan. </li>
                      * @return Status The site status. Values:
-<li>`active`: The name server is switched.</li>
-<li>`pending`: The name server is not switched.</li>
-<li>`moved`: The name server is moved.</li>
-<li>`deactivated`: The site is blocked.</li>
+u200c<li>`active`: The name server is switched to EdgeOne.</li>
+u200c<li>`pending`: The name server is not switched.</li>
+u200c<li>`moved`: The name server is changed to other service providers.</li>
+u200c<li>`deactivated`: The site is blocked.</li>
+<li>`initializing`: The site is not bound with any plan. </li>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置The site status. Values:
-<li>`active`: The name server is switched.</li>
-<li>`pending`: The name server is not switched.</li>
-<li>`moved`: The name server is moved.</li>
-<li>`deactivated`: The site is blocked.</li>
+u200c<li>`active`: The name server is switched to EdgeOne.</li>
+u200c<li>`pending`: The name server is not switched.</li>
+u200c<li>`moved`: The name server is changed to other service providers.</li>
+u200c<li>`deactivated`: The site is blocked.</li>
+<li>`initializing`: The site is not bound with any plan. </li>
                      * @param _status The site status. Values:
-<li>`active`: The name server is switched.</li>
-<li>`pending`: The name server is not switched.</li>
-<li>`moved`: The name server is moved.</li>
-<li>`deactivated`: The site is blocked.</li>
+u200c<li>`active`: The name server is switched to EdgeOne.</li>
+u200c<li>`pending`: The name server is not switched.</li>
+u200c<li>`moved`: The name server is changed to other service providers.</li>
+u200c<li>`deactivated`: The site is blocked.</li>
+<li>`initializing`: The site is not bound with any plan. </li>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -172,27 +177,31 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Access mode of the site. Values:
-<li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME record.</li>
-<li> `noDomainAccess`: Access without using a domain name </li>
-                     * @return Type Access mode of the site. Values:
-<li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME record.</li>
-<li> `noDomainAccess`: Access without using a domain name </li>
+                     * 获取Connection mode of the site. Values:
+<li>`full`: Connect via the name server.</li>
+<li>`partial`: Connect via the CNAME record.</li>
+<li>`noDomainAccess`: Connect without using a domain name
+ 
+                     * @return Type Connection mode of the site. Values:
+<li>`full`: Connect via the name server.</li>
+<li>`partial`: Connect via the CNAME record.</li>
+<li>`noDomainAccess`: Connect without using a domain name
+ 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Access mode of the site. Values:
-<li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME record.</li>
-<li> `noDomainAccess`: Access without using a domain name </li>
-                     * @param _type Access mode of the site. Values:
-<li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME record.</li>
-<li> `noDomainAccess`: Access without using a domain name </li>
+                     * 设置Connection mode of the site. Values:
+<li>`full`: Connect via the name server.</li>
+<li>`partial`: Connect via the CNAME record.</li>
+<li>`noDomainAccess`: Connect without using a domain name
+ 
+                     * @param _type Connection mode of the site. Values:
+<li>`full`: Connect via the name server.</li>
+<li>`partial`: Connect via the CNAME record.</li>
+<li>`noDomainAccess`: Connect without using a domain name
+ 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -538,15 +547,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsFakeHasBeenSet() const;
 
                     /**
-                     * 获取Lock status. Valid values: <li>`enable`: Normal. Modifying is allowed;</li><li>`disable`: Locked. Modifying is not allowed.</li>
-                     * @return LockStatus Lock status. Valid values: <li>`enable`: Normal. Modifying is allowed;</li><li>`disable`: Locked. Modifying is not allowed.</li>
+                     * 获取Lock status. Values: <li>`enable`: Normal. Modification is allowed.</li><li>`disable`: Locked. Modification is not allowed.</li><li>`plan_migrate`: Adjusting the plan. Modification is not allowed.</li> 
+                     * @return LockStatus Lock status. Values: <li>`enable`: Normal. Modification is allowed.</li><li>`disable`: Locked. Modification is not allowed.</li><li>`plan_migrate`: Adjusting the plan. Modification is not allowed.</li> 
                      * 
                      */
                     std::string GetLockStatus() const;
 
                     /**
-                     * 设置Lock status. Valid values: <li>`enable`: Normal. Modifying is allowed;</li><li>`disable`: Locked. Modifying is not allowed.</li>
-                     * @param _lockStatus Lock status. Valid values: <li>`enable`: Normal. Modifying is allowed;</li><li>`disable`: Locked. Modifying is not allowed.</li>
+                     * 设置Lock status. Values: <li>`enable`: Normal. Modification is allowed.</li><li>`disable`: Locked. Modification is not allowed.</li><li>`plan_migrate`: Adjusting the plan. Modification is not allowed.</li> 
+                     * @param _lockStatus Lock status. Values: <li>`enable`: Normal. Modification is allowed.</li><li>`disable`: Locked. Modification is not allowed.</li><li>`plan_migrate`: Adjusting the plan. Modification is not allowed.</li> 
                      * 
                      */
                     void SetLockStatus(const std::string& _lockStatus);
@@ -558,10 +567,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool LockStatusHasBeenSet() const;
 
+                    /**
+                     * 获取Ownership verification information
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @return OwnershipVerification Ownership verification information
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    OwnershipVerification GetOwnershipVerification() const;
+
+                    /**
+                     * 设置Ownership verification information
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @param _ownershipVerification Ownership verification information
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetOwnershipVerification(const OwnershipVerification& _ownershipVerification);
+
+                    /**
+                     * 判断参数 OwnershipVerification 是否已赋值
+                     * @return OwnershipVerification 是否已赋值
+                     * 
+                     */
+                    bool OwnershipVerificationHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The site ID.
+                     * Site ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
@@ -586,19 +620,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * The site status. Values:
-<li>`active`: The name server is switched.</li>
-<li>`pending`: The name server is not switched.</li>
-<li>`moved`: The name server is moved.</li>
-<li>`deactivated`: The site is blocked.</li>
+u200c<li>`active`: The name server is switched to EdgeOne.</li>
+u200c<li>`pending`: The name server is not switched.</li>
+u200c<li>`moved`: The name server is changed to other service providers.</li>
+u200c<li>`deactivated`: The site is blocked.</li>
+<li>`initializing`: The site is not bound with any plan. </li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Access mode of the site. Values:
-<li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME record.</li>
-<li> `noDomainAccess`: Access without using a domain name </li>
+                     * Connection mode of the site. Values:
+<li>`full`: Connect via the name server.</li>
+<li>`partial`: Connect via the CNAME record.</li>
+<li>`noDomainAccess`: Connect without using a domain name
+ 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
@@ -697,10 +733,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_isFakeHasBeenSet;
 
                     /**
-                     * Lock status. Valid values: <li>`enable`: Normal. Modifying is allowed;</li><li>`disable`: Locked. Modifying is not allowed.</li>
+                     * Lock status. Values: <li>`enable`: Normal. Modification is allowed.</li><li>`disable`: Locked. Modification is not allowed.</li><li>`plan_migrate`: Adjusting the plan. Modification is not allowed.</li> 
                      */
                     std::string m_lockStatus;
                     bool m_lockStatusHasBeenSet;
+
+                    /**
+                     * Ownership verification information
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     */
+                    OwnershipVerification m_ownershipVerification;
+                    bool m_ownershipVerificationHasBeenSet;
 
                 };
             }

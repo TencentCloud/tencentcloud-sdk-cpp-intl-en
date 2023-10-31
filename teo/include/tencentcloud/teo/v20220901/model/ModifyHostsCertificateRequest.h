@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取List of domain names that the certificate will be attached to.
-                     * @return Hosts List of domain names that the certificate will be attached to.
+                     * 获取Domain names that you need to modify the certificate configuration
+                     * @return Hosts Domain names that you need to modify the certificate configuration
                      * 
                      */
                     std::vector<std::string> GetHosts() const;
 
                     /**
-                     * 设置List of domain names that the certificate will be attached to.
-                     * @param _hosts List of domain names that the certificate will be attached to.
+                     * 设置Domain names that you need to modify the certificate configuration
+                     * @param _hosts Domain names that you need to modify the certificate configuration
                      * 
                      */
                     void SetHosts(const std::vector<std::string>& _hosts);
@@ -86,15 +86,48 @@ namespace TencentCloud
                     bool HostsHasBeenSet() const;
 
                     /**
-                     * 获取Certificate information. Note that only `CertId` is required. If it is not specified, the default certificate will be used.
-                     * @return ServerCertInfo Certificate information. Note that only `CertId` is required. If it is not specified, the default certificate will be used.
+                     * 获取Certificate configuration mode. Values:
+<li>`disable`: (Default) Do not configure the certificate</li>
+<li>`eofreecert`: Use a free certificate provided by EdgeOne</li>
+<li>`sslcert`: Configure an SSL certificate.</li>
+                     * @return Mode Certificate configuration mode. Values:
+<li>`disable`: (Default) Do not configure the certificate</li>
+<li>`eofreecert`: Use a free certificate provided by EdgeOne</li>
+<li>`sslcert`: Configure an SSL certificate.</li>
+                     * 
+                     */
+                    std::string GetMode() const;
+
+                    /**
+                     * 设置Certificate configuration mode. Values:
+<li>`disable`: (Default) Do not configure the certificate</li>
+<li>`eofreecert`: Use a free certificate provided by EdgeOne</li>
+<li>`sslcert`: Configure an SSL certificate.</li>
+                     * @param _mode Certificate configuration mode. Values:
+<li>`disable`: (Default) Do not configure the certificate</li>
+<li>`eofreecert`: Use a free certificate provided by EdgeOne</li>
+<li>`sslcert`: Configure an SSL certificate.</li>
+                     * 
+                     */
+                    void SetMode(const std::string& _mode);
+
+                    /**
+                     * 判断参数 Mode 是否已赋值
+                     * @return Mode 是否已赋值
+                     * 
+                     */
+                    bool ModeHasBeenSet() const;
+
+                    /**
+                     * 获取ID of the SSL certificate. It takes effect when `mode=sslcert`. To check the certificate ID, go to the [SSL Certificate](https://console.cloud.tencent.com/certoview) console.
+                     * @return ServerCertInfo ID of the SSL certificate. It takes effect when `mode=sslcert`. To check the certificate ID, go to the [SSL Certificate](https://console.cloud.tencent.com/certoview) console.
                      * 
                      */
                     std::vector<ServerCertInfo> GetServerCertInfo() const;
 
                     /**
-                     * 设置Certificate information. Note that only `CertId` is required. If it is not specified, the default certificate will be used.
-                     * @param _serverCertInfo Certificate information. Note that only `CertId` is required. If it is not specified, the default certificate will be used.
+                     * 设置ID of the SSL certificate. It takes effect when `mode=sslcert`. To check the certificate ID, go to the [SSL Certificate](https://console.cloud.tencent.com/certoview) console.
+                     * @param _serverCertInfo ID of the SSL certificate. It takes effect when `mode=sslcert`. To check the certificate ID, go to the [SSL Certificate](https://console.cloud.tencent.com/certoview) console.
                      * 
                      */
                     void SetServerCertInfo(const std::vector<ServerCertInfo>& _serverCertInfo);
@@ -108,30 +141,34 @@ namespace TencentCloud
 
                     /**
                      * 获取Whether the certificate is managed by EdgeOne. Values:
-<li>`apply`: Managed by EdgeOne.</li>
-<li>`none`: Not managed by EdgeOne.</li>If not specified, this field uses the default value `none`.
+<li>`none`: Not managed by EdgeOne</li>
+<li>`apply`: Managed by EdgeOne</li>
+Default value: `none`.
                      * @return ApplyType Whether the certificate is managed by EdgeOne. Values:
-<li>`apply`: Managed by EdgeOne.</li>
-<li>`none`: Not managed by EdgeOne.</li>If not specified, this field uses the default value `none`.
-                     * 
+<li>`none`: Not managed by EdgeOne</li>
+<li>`apply`: Managed by EdgeOne</li>
+Default value: `none`.
+                     * @deprecated
                      */
                     std::string GetApplyType() const;
 
                     /**
                      * 设置Whether the certificate is managed by EdgeOne. Values:
-<li>`apply`: Managed by EdgeOne.</li>
-<li>`none`: Not managed by EdgeOne.</li>If not specified, this field uses the default value `none`.
+<li>`none`: Not managed by EdgeOne</li>
+<li>`apply`: Managed by EdgeOne</li>
+Default value: `none`.
                      * @param _applyType Whether the certificate is managed by EdgeOne. Values:
-<li>`apply`: Managed by EdgeOne.</li>
-<li>`none`: Not managed by EdgeOne.</li>If not specified, this field uses the default value `none`.
-                     * 
+<li>`none`: Not managed by EdgeOne</li>
+<li>`apply`: Managed by EdgeOne</li>
+Default value: `none`.
+                     * @deprecated
                      */
                     void SetApplyType(const std::string& _applyType);
 
                     /**
                      * 判断参数 ApplyType 是否已赋值
                      * @return ApplyType 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool ApplyTypeHasBeenSet() const;
 
@@ -144,21 +181,31 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * List of domain names that the certificate will be attached to.
+                     * Domain names that you need to modify the certificate configuration
                      */
                     std::vector<std::string> m_hosts;
                     bool m_hostsHasBeenSet;
 
                     /**
-                     * Certificate information. Note that only `CertId` is required. If it is not specified, the default certificate will be used.
+                     * Certificate configuration mode. Values:
+<li>`disable`: (Default) Do not configure the certificate</li>
+<li>`eofreecert`: Use a free certificate provided by EdgeOne</li>
+<li>`sslcert`: Configure an SSL certificate.</li>
+                     */
+                    std::string m_mode;
+                    bool m_modeHasBeenSet;
+
+                    /**
+                     * ID of the SSL certificate. It takes effect when `mode=sslcert`. To check the certificate ID, go to the [SSL Certificate](https://console.cloud.tencent.com/certoview) console.
                      */
                     std::vector<ServerCertInfo> m_serverCertInfo;
                     bool m_serverCertInfoHasBeenSet;
 
                     /**
                      * Whether the certificate is managed by EdgeOne. Values:
-<li>`apply`: Managed by EdgeOne.</li>
-<li>`none`: Not managed by EdgeOne.</li>If not specified, this field uses the default value `none`.
+<li>`none`: Not managed by EdgeOne</li>
+<li>`apply`: Managed by EdgeOne</li>
+Default value: `none`.
                      */
                     std::string m_applyType;
                     bool m_applyTypeHasBeenSet;

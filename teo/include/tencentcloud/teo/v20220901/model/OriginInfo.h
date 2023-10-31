@@ -54,14 +54,14 @@ namespace TencentCloud
 <li>`ORIGIN_GROUP`: Origin group</li>
 <li>`AWS_S3`: AWS S3 bucket address</li>
 <li>`LB`: Tencent Cloud CLB instance</li>
-<li>`SPACE`: EdgeOne Shield Space</li>
+<li>`SPACE`: EdgeOne Shield Space</li>  
                      * @return OriginType The origin type. Values:
 <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
 <li>`COS`: COS bucket address</li>
 <li>`ORIGIN_GROUP`: Origin group</li>
 <li>`AWS_S3`: AWS S3 bucket address</li>
 <li>`LB`: Tencent Cloud CLB instance</li>
-<li>`SPACE`: EdgeOne Shield Space</li>
+<li>`SPACE`: EdgeOne Shield Space</li>  
                      * 
                      */
                     std::string GetOriginType() const;
@@ -73,14 +73,14 @@ namespace TencentCloud
 <li>`ORIGIN_GROUP`: Origin group</li>
 <li>`AWS_S3`: AWS S3 bucket address</li>
 <li>`LB`: Tencent Cloud CLB instance</li>
-<li>`SPACE`: EdgeOne Shield Space</li>
+<li>`SPACE`: EdgeOne Shield Space</li>  
                      * @param _originType The origin type. Values:
 <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
 <li>`COS`: COS bucket address</li>
 <li>`ORIGIN_GROUP`: Origin group</li>
 <li>`AWS_S3`: AWS S3 bucket address</li>
 <li>`LB`: Tencent Cloud CLB instance</li>
-<li>`SPACE`: EdgeOne Shield Space</li>
+<li>`SPACE`: EdgeOne Shield Space</li>  
                      * 
                      */
                     void SetOriginType(const std::string& _originType);
@@ -193,7 +193,7 @@ u200c<li>`on`: Enable private authentication.</li>
 <li>`ORIGIN_GROUP`: Origin group</li>
 <li>`AWS_S3`: AWS S3 bucket address</li>
 <li>`LB`: Tencent Cloud CLB instance</li>
-<li>`SPACE`: EdgeOne Shield Space</li>
+<li>`SPACE`: EdgeOne Shield Space</li>  
                      */
                     std::string m_originType;
                     bool m_originTypeHasBeenSet;

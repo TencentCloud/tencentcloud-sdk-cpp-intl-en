@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/teo/v20220901/model/OwnershipVerification.h>
 
 
 namespace TencentCloud
@@ -44,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The site ID.
-                     * @return ZoneId The site ID.
+                     * 获取Site ID.
+                     * @return ZoneId Site ID.
                      * 
                      */
                     std::string GetZoneId() const;
@@ -57,13 +58,54 @@ namespace TencentCloud
                      */
                     bool ZoneIdHasBeenSet() const;
 
+                    /**
+                     * 获取Site ownership verification information. After the site is created, you need to complete the ownership verification before the site can serve normally.
+
+If `Type=partial`, add TXT records to your DNS provider or add files to the root DNS server, and then call [VerifyOwnership]() to complete verification. For more information, see [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1).
+
+If `Type = full`, switch the DNS server as instructed by [Modifying DNS Server](https://intl.cloud.tencent.com/document/product/1552/90452?from_cn_redirect=1). Then call [VerifyOwnership]() to check the result.
+
+If `Type = noDomainAccess`, leave it blank. No action is required.
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @return OwnershipVerification Site ownership verification information. After the site is created, you need to complete the ownership verification before the site can serve normally.
+
+If `Type=partial`, add TXT records to your DNS provider or add files to the root DNS server, and then call [VerifyOwnership]() to complete verification. For more information, see [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1).
+
+If `Type = full`, switch the DNS server as instructed by [Modifying DNS Server](https://intl.cloud.tencent.com/document/product/1552/90452?from_cn_redirect=1). Then call [VerifyOwnership]() to check the result.
+
+If `Type = noDomainAccess`, leave it blank. No action is required.
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    OwnershipVerification GetOwnershipVerification() const;
+
+                    /**
+                     * 判断参数 OwnershipVerification 是否已赋值
+                     * @return OwnershipVerification 是否已赋值
+                     * 
+                     */
+                    bool OwnershipVerificationHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The site ID.
+                     * Site ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
+
+                    /**
+                     * Site ownership verification information. After the site is created, you need to complete the ownership verification before the site can serve normally.
+
+If `Type=partial`, add TXT records to your DNS provider or add files to the root DNS server, and then call [VerifyOwnership]() to complete verification. For more information, see [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1).
+
+If `Type = full`, switch the DNS server as instructed by [Modifying DNS Server](https://intl.cloud.tencent.com/document/product/1552/90452?from_cn_redirect=1). Then call [VerifyOwnership]() to check the result.
+
+If `Type = noDomainAccess`, leave it blank. No action is required.
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     */
+                    OwnershipVerification m_ownershipVerification;
+                    bool m_ownershipVerificationHasBeenSet;
 
                 };
             }

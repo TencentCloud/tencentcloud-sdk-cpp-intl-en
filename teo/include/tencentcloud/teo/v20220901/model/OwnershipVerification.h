@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Information of domain name ownership verification.
                 */
                 class OwnershipVerification : public AbstractModel
                 {
@@ -50,15 +50,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return DnsVerification 
+                     * 获取u200cInformation required for authentication using DNS resolution. It's applicable to sites connected via CNAME. See [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
+ 
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @return DnsVerification u200cInformation required for authentication using DNS resolution. It's applicable to sites connected via CNAME. See [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
+ 
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     DnsVerification GetDnsVerification() const;
 
                     /**
-                     * 设置
-                     * @param _dnsVerification 
+                     * 设置u200cInformation required for authentication using DNS resolution. It's applicable to sites connected via CNAME. See [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
+ 
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @param _dnsVerification u200cInformation required for authentication using DNS resolution. It's applicable to sites connected via CNAME. See [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
+ 
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDnsVerification(const DnsVerification& _dnsVerification);
@@ -71,15 +79,23 @@ namespace TencentCloud
                     bool DnsVerificationHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileVerification 
+                     * 获取u200cInformation required for verifying via a file. It's applicable to sites connected via CNAMEs. See [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
+ 
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @return FileVerification u200cInformation required for verifying via a file. It's applicable to sites connected via CNAMEs. See [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
+ 
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     FileVerification GetFileVerification() const;
 
                     /**
-                     * 设置
-                     * @param _fileVerification 
+                     * 设置u200cInformation required for verifying via a file. It's applicable to sites connected via CNAMEs. See [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
+ 
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @param _fileVerification u200cInformation required for verifying via a file. It's applicable to sites connected via CNAMEs. See [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
+ 
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetFileVerification(const FileVerification& _fileVerification);
@@ -92,15 +108,19 @@ namespace TencentCloud
                     bool FileVerificationHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return NsVerification 
+                     * 获取u200cInformation required for switching DNS servers. It's applicable to sites connected via NSs. For details, see [Modifying DNS Server](https://intl.cloud.tencent.com/document/product/1552/90452?from_cn_redirect=1).
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @return NsVerification u200cInformation required for switching DNS servers. It's applicable to sites connected via NSs. For details, see [Modifying DNS Server](https://intl.cloud.tencent.com/document/product/1552/90452?from_cn_redirect=1).
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     NsVerification GetNsVerification() const;
 
                     /**
-                     * 设置
-                     * @param _nsVerification 
+                     * 设置u200cInformation required for switching DNS servers. It's applicable to sites connected via NSs. For details, see [Modifying DNS Server](https://intl.cloud.tencent.com/document/product/1552/90452?from_cn_redirect=1).
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @param _nsVerification u200cInformation required for switching DNS servers. It's applicable to sites connected via NSs. For details, see [Modifying DNS Server](https://intl.cloud.tencent.com/document/product/1552/90452?from_cn_redirect=1).
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetNsVerification(const NsVerification& _nsVerification);
@@ -115,19 +135,24 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * u200cInformation required for authentication using DNS resolution. It's applicable to sites connected via CNAME. See [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
+ 
+Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     DnsVerification m_dnsVerification;
                     bool m_dnsVerificationHasBeenSet;
 
                     /**
-                     * 
+                     * u200cInformation required for verifying via a file. It's applicable to sites connected via CNAMEs. See [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
+ 
+Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     FileVerification m_fileVerification;
                     bool m_fileVerificationHasBeenSet;
 
                     /**
-                     * 
+                     * u200cInformation required for switching DNS servers. It's applicable to sites connected via NSs. For details, see [Modifying DNS Server](https://intl.cloud.tencent.com/document/product/1552/90452?from_cn_redirect=1).
+Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     NsVerification m_nsVerification;
                     bool m_nsVerificationHasBeenSet;

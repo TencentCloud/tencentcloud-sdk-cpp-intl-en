@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Subdomain 
+                     * 获取The host record.
+                     * @return Subdomain The host record.
                      * 
                      */
                     std::string GetSubdomain() const;
 
                     /**
-                     * 设置
-                     * @param _subdomain 
+                     * 设置The host record.
+                     * @param _subdomain The host record.
                      * 
                      */
                     void SetSubdomain(const std::string& _subdomain);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SubdomainHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RecordType 
+                     * 获取The record type.
+                     * @return RecordType The record type.
                      * 
                      */
                     std::string GetRecordType() const;
 
                     /**
-                     * 设置
-                     * @param _recordType 
+                     * 设置The record type.
+                     * @param _recordType The record type.
                      * 
                      */
                     void SetRecordType(const std::string& _recordType);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool RecordTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RecordValue 
+                     * 获取The record value.
+                     * @return RecordValue The record value.
                      * 
                      */
                     std::string GetRecordValue() const;
 
                     /**
-                     * 设置
-                     * @param _recordValue 
+                     * 设置The record value.
+                     * @param _recordValue The record value.
                      * 
                      */
                     void SetRecordValue(const std::string& _recordValue);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * The host record.
                      */
                     std::string m_subdomain;
                     bool m_subdomainHasBeenSet;
 
                     /**
-                     * 
+                     * The record type.
                      */
                     std::string m_recordType;
                     bool m_recordTypeHasBeenSet;
 
                     /**
-                     * 
+                     * The record value.
                      */
                     std::string m_recordValue;
                     bool m_recordValueHasBeenSet;

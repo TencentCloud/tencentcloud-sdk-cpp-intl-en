@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the site related with the accelerated domain name.
-                     * @return ZoneId ID of the site related with the accelerated domain name.
+                     * 获取ID of the site related with the acceleration domain name.
+                     * @return ZoneId ID of the site related with the acceleration domain name.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置ID of the site related with the accelerated domain name.
-                     * @param _zoneId ID of the site related with the accelerated domain name.
+                     * 设置ID of the site related with the acceleration domain name.
+                     * @param _zoneId ID of the site related with the acceleration domain name.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Accelerated domain name
-                     * @return DomainName Accelerated domain name
+                     * 获取Acceleration domain name
+                     * @return DomainName Acceleration domain name
                      * 
                      */
                     std::string GetDomainName() const;
 
                     /**
-                     * 设置Accelerated domain name
-                     * @param _domainName Accelerated domain name
+                     * 设置Acceleration domain name
+                     * @param _domainName Acceleration domain name
                      * 
                      */
                     void SetDomainName(const std::string& _domainName);
@@ -106,16 +106,100 @@ namespace TencentCloud
                      */
                     bool OriginInfoHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return OriginProtocol 
+                     * 
+                     */
+                    std::string GetOriginProtocol() const;
+
+                    /**
+                     * 设置
+                     * @param _originProtocol 
+                     * 
+                     */
+                    void SetOriginProtocol(const std::string& _originProtocol);
+
+                    /**
+                     * 判断参数 OriginProtocol 是否已赋值
+                     * @return OriginProtocol 是否已赋值
+                     * 
+                     */
+                    bool OriginProtocolHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return HttpOriginPort 
+                     * 
+                     */
+                    uint64_t GetHttpOriginPort() const;
+
+                    /**
+                     * 设置
+                     * @param _httpOriginPort 
+                     * 
+                     */
+                    void SetHttpOriginPort(const uint64_t& _httpOriginPort);
+
+                    /**
+                     * 判断参数 HttpOriginPort 是否已赋值
+                     * @return HttpOriginPort 是否已赋值
+                     * 
+                     */
+                    bool HttpOriginPortHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return HttpsOriginPort 
+                     * 
+                     */
+                    uint64_t GetHttpsOriginPort() const;
+
+                    /**
+                     * 设置
+                     * @param _httpsOriginPort 
+                     * 
+                     */
+                    void SetHttpsOriginPort(const uint64_t& _httpsOriginPort);
+
+                    /**
+                     * 判断参数 HttpsOriginPort 是否已赋值
+                     * @return HttpsOriginPort 是否已赋值
+                     * 
+                     */
+                    bool HttpsOriginPortHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return IPv6Status 
+                     * 
+                     */
+                    std::string GetIPv6Status() const;
+
+                    /**
+                     * 设置
+                     * @param _iPv6Status 
+                     * 
+                     */
+                    void SetIPv6Status(const std::string& _iPv6Status);
+
+                    /**
+                     * 判断参数 IPv6Status 是否已赋值
+                     * @return IPv6Status 是否已赋值
+                     * 
+                     */
+                    bool IPv6StatusHasBeenSet() const;
+
                 private:
 
                     /**
-                     * ID of the site related with the accelerated domain name.
+                     * ID of the site related with the acceleration domain name.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Accelerated domain name
+                     * Acceleration domain name
                      */
                     std::string m_domainName;
                     bool m_domainNameHasBeenSet;
@@ -125,6 +209,30 @@ namespace TencentCloud
                      */
                     OriginInfo m_originInfo;
                     bool m_originInfoHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_originProtocol;
+                    bool m_originProtocolHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_httpOriginPort;
+                    bool m_httpOriginPortHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_httpsOriginPort;
+                    bool m_httpsOriginPortHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_iPv6Status;
+                    bool m_iPv6StatusHasBeenSet;
 
                 };
             }

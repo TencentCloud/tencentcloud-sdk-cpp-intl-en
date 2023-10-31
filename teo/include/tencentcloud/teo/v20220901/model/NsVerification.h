@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Information required for switching DNS servers. It's applicable to sites connected via NSs.
                 */
                 class NsVerification : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return NameServers 
+                     * 获取The DNS server address assigned to the user when connecting a site to EO via NS. You need to switch the NameServer of the domain name to this address.
+                     * @return NameServers The DNS server address assigned to the user when connecting a site to EO via NS. You need to switch the NameServer of the domain name to this address.
                      * 
                      */
                     std::vector<std::string> GetNameServers() const;
 
                     /**
-                     * 设置
-                     * @param _nameServers 
+                     * 设置The DNS server address assigned to the user when connecting a site to EO via NS. You need to switch the NameServer of the domain name to this address.
+                     * @param _nameServers The DNS server address assigned to the user when connecting a site to EO via NS. You need to switch the NameServer of the domain name to this address.
                      * 
                      */
                     void SetNameServers(const std::vector<std::string>& _nameServers);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * The DNS server address assigned to the user when connecting a site to EO via NS. You need to switch the NameServer of the domain name to this address.
                      */
                     std::vector<std::string> m_nameServers;
                     bool m_nameServersHasBeenSet;

@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the site related with the accelerated domain name.
-                     * @return ZoneId ID of the site related with the accelerated domain name.
+                     * 获取ID of the site related with the acceleration domain name.
+                     * @return ZoneId ID of the site related with the acceleration domain name.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置ID of the site related with the accelerated domain name.
-                     * @param _zoneId ID of the site related with the accelerated domain name.
+                     * 设置ID of the site related with the acceleration domain name.
+                     * @param _zoneId ID of the site related with the acceleration domain name.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -65,39 +65,81 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Filters. Each filter can have up to 20 entries. See below for details: 
-<li>`domain-name`:<br>   <strong>Accelerated domain name</strong><br>   Type: String<br>Required: No 
-<li>`origin-type`:<br>   <strong>Type of the origin</strong><br>   Type: String<br>   Required: No 
-<li>`origin`:<br>   <strong>Primary origin</strong><br>   Type: String<br>   Required: No 
-<li>`backup-origin`:<br>   <strong>Secondary origin</strong><br>   Type: String<br>   Required: No 
-<li>`domain-cname`:<br>   <strong>Accelerated CNAME</strong><br>   Type: String<br>   Required: No 
-<li>`share-cname`:<br>   <strong> Shared CNAME</strong><br>   Type: String<br>   Required: No
-                     * @return Filters Filters. Each filter can have up to 20 entries. See below for details: 
-<li>`domain-name`:<br>   <strong>Accelerated domain name</strong><br>   Type: String<br>Required: No 
-<li>`origin-type`:<br>   <strong>Type of the origin</strong><br>   Type: String<br>   Required: No 
-<li>`origin`:<br>   <strong>Primary origin</strong><br>   Type: String<br>   Required: No 
-<li>`backup-origin`:<br>   <strong>Secondary origin</strong><br>   Type: String<br>   Required: No 
-<li>`domain-cname`:<br>   <strong>Accelerated CNAME</strong><br>   Type: String<br>   Required: No 
-<li>`share-cname`:<br>   <strong> Shared CNAME</strong><br>   Type: String<br>   Required: No
+                     * 获取Offset for paginated queries. Default value: 0.
+                     * @return Offset Offset for paginated queries. Default value: 0.
+                     * 
+                     */
+                    int64_t GetOffset() const;
+
+                    /**
+                     * 设置Offset for paginated queries. Default value: 0.
+                     * @param _offset Offset for paginated queries. Default value: 0.
+                     * 
+                     */
+                    void SetOffset(const int64_t& _offset);
+
+                    /**
+                     * 判断参数 Offset 是否已赋值
+                     * @return Offset 是否已赋值
+                     * 
+                     */
+                    bool OffsetHasBeenSet() const;
+
+                    /**
+                     * 获取Limit on paginated queries. Default value: 20. Maximum value: 200.
+                     * @return Limit Limit on paginated queries. Default value: 20. Maximum value: 200.
+                     * 
+                     */
+                    int64_t GetLimit() const;
+
+                    /**
+                     * 设置Limit on paginated queries. Default value: 20. Maximum value: 200.
+                     * @param _limit Limit on paginated queries. Default value: 20. Maximum value: 200.
+                     * 
+                     */
+                    void SetLimit(const int64_t& _limit);
+
+                    /**
+                     * 判断参数 Limit 是否已赋值
+                     * @return Limit 是否已赋值
+                     * 
+                     */
+                    bool LimitHasBeenSet() const;
+
+                    /**
+                     * 获取Filter conditions. Up to 20 values for each filter. If it is not passed in, all domain names related with the specific zone-id are returned. 
+<li>`domain-name`: Acceleration domain name</li>
+<li>`origin-type`: Type of the origin</li>
+<li>`origin`: Primary origin address</li>
+<li>`backup-origin`: Secondary origin address</li>
+<li>`domain-cname`: CNAME</li>
+<li>`share-cname`: Shared CNAME</li>
+                     * @return Filters Filter conditions. Up to 20 values for each filter. If it is not passed in, all domain names related with the specific zone-id are returned. 
+<li>`domain-name`: Acceleration domain name</li>
+<li>`origin-type`: Type of the origin</li>
+<li>`origin`: Primary origin address</li>
+<li>`backup-origin`: Secondary origin address</li>
+<li>`domain-cname`: CNAME</li>
+<li>`share-cname`: Shared CNAME</li>
                      * 
                      */
                     std::vector<AdvancedFilter> GetFilters() const;
 
                     /**
-                     * 设置Filters. Each filter can have up to 20 entries. See below for details: 
-<li>`domain-name`:<br>   <strong>Accelerated domain name</strong><br>   Type: String<br>Required: No 
-<li>`origin-type`:<br>   <strong>Type of the origin</strong><br>   Type: String<br>   Required: No 
-<li>`origin`:<br>   <strong>Primary origin</strong><br>   Type: String<br>   Required: No 
-<li>`backup-origin`:<br>   <strong>Secondary origin</strong><br>   Type: String<br>   Required: No 
-<li>`domain-cname`:<br>   <strong>Accelerated CNAME</strong><br>   Type: String<br>   Required: No 
-<li>`share-cname`:<br>   <strong> Shared CNAME</strong><br>   Type: String<br>   Required: No
-                     * @param _filters Filters. Each filter can have up to 20 entries. See below for details: 
-<li>`domain-name`:<br>   <strong>Accelerated domain name</strong><br>   Type: String<br>Required: No 
-<li>`origin-type`:<br>   <strong>Type of the origin</strong><br>   Type: String<br>   Required: No 
-<li>`origin`:<br>   <strong>Primary origin</strong><br>   Type: String<br>   Required: No 
-<li>`backup-origin`:<br>   <strong>Secondary origin</strong><br>   Type: String<br>   Required: No 
-<li>`domain-cname`:<br>   <strong>Accelerated CNAME</strong><br>   Type: String<br>   Required: No 
-<li>`share-cname`:<br>   <strong> Shared CNAME</strong><br>   Type: String<br>   Required: No
+                     * 设置Filter conditions. Up to 20 values for each filter. If it is not passed in, all domain names related with the specific zone-id are returned. 
+<li>`domain-name`: Acceleration domain name</li>
+<li>`origin-type`: Type of the origin</li>
+<li>`origin`: Primary origin address</li>
+<li>`backup-origin`: Secondary origin address</li>
+<li>`domain-cname`: CNAME</li>
+<li>`share-cname`: Shared CNAME</li>
+                     * @param _filters Filter conditions. Up to 20 values for each filter. If it is not passed in, all domain names related with the specific zone-id are returned. 
+<li>`domain-name`: Acceleration domain name</li>
+<li>`origin-type`: Type of the origin</li>
+<li>`origin`: Primary origin address</li>
+<li>`backup-origin`: Secondary origin address</li>
+<li>`domain-cname`: CNAME</li>
+<li>`share-cname`: Shared CNAME</li>
                      * 
                      */
                     void SetFilters(const std::vector<AdvancedFilter>& _filters);
@@ -110,23 +152,52 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取The sorting order. Values:
+                     * 获取Sort the returned results according to this field. Values include:
+<li>`created_on`: Creation time of the acceleration domain name</li>
+<li>`domain-name`: (Default) Acceleration domain name.</li> 
+                     * @return Order Sort the returned results according to this field. Values include:
+<li>`created_on`: Creation time of the acceleration domain name</li>
+<li>`domain-name`: (Default) Acceleration domain name.</li> 
+                     * 
+                     */
+                    std::string GetOrder() const;
+
+                    /**
+                     * 设置Sort the returned results according to this field. Values include:
+<li>`created_on`: Creation time of the acceleration domain name</li>
+<li>`domain-name`: (Default) Acceleration domain name.</li> 
+                     * @param _order Sort the returned results according to this field. Values include:
+<li>`created_on`: Creation time of the acceleration domain name</li>
+<li>`domain-name`: (Default) Acceleration domain name.</li> 
+                     * 
+                     */
+                    void SetOrder(const std::string& _order);
+
+                    /**
+                     * 判断参数 Order 是否已赋值
+                     * @return Order 是否已赋值
+                     * 
+                     */
+                    bool OrderHasBeenSet() const;
+
+                    /**
+                     * 获取Sort direction. If the field value is number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
 <li>`asc`: Ascending order.</li>
-<li>`desc`: Descending order.</li>Default value: `asc`.
-                     * @return Direction The sorting order. Values:
+<li>`desc`: Descending order.</li> Default value: `asc`.
+                     * @return Direction Sort direction. If the field value is number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
 <li>`asc`: Ascending order.</li>
-<li>`desc`: Descending order.</li>Default value: `asc`.
+<li>`desc`: Descending order.</li> Default value: `asc`.
                      * 
                      */
                     std::string GetDirection() const;
 
                     /**
-                     * 设置The sorting order. Values:
+                     * 设置Sort direction. If the field value is number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
 <li>`asc`: Ascending order.</li>
-<li>`desc`: Descending order.</li>Default value: `asc`.
-                     * @param _direction The sorting order. Values:
+<li>`desc`: Descending order.</li> Default value: `asc`.
+                     * @param _direction Sort direction. If the field value is number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
 <li>`asc`: Ascending order.</li>
-<li>`desc`: Descending order.</li>Default value: `asc`.
+<li>`desc`: Descending order.</li> Default value: `asc`.
                      * 
                      */
                     void SetDirection(const std::string& _direction);
@@ -167,105 +238,50 @@ namespace TencentCloud
                      */
                     bool MatchHasBeenSet() const;
 
-                    /**
-                     * 获取Limit on paginated queries. Default value: 20. Maximum value: 200.
-                     * @return Limit Limit on paginated queries. Default value: 20. Maximum value: 200.
-                     * 
-                     */
-                    int64_t GetLimit() const;
-
-                    /**
-                     * 设置Limit on paginated queries. Default value: 20. Maximum value: 200.
-                     * @param _limit Limit on paginated queries. Default value: 20. Maximum value: 200.
-                     * 
-                     */
-                    void SetLimit(const int64_t& _limit);
-
-                    /**
-                     * 判断参数 Limit 是否已赋值
-                     * @return Limit 是否已赋值
-                     * 
-                     */
-                    bool LimitHasBeenSet() const;
-
-                    /**
-                     * 获取Offset for paginated queries. Default value: 0.
-                     * @return Offset Offset for paginated queries. Default value: 0.
-                     * 
-                     */
-                    int64_t GetOffset() const;
-
-                    /**
-                     * 设置Offset for paginated queries. Default value: 0.
-                     * @param _offset Offset for paginated queries. Default value: 0.
-                     * 
-                     */
-                    void SetOffset(const int64_t& _offset);
-
-                    /**
-                     * 判断参数 Offset 是否已赋值
-                     * @return Offset 是否已赋值
-                     * 
-                     */
-                    bool OffsetHasBeenSet() const;
-
-                    /**
-                     * 获取The sorting criteria. Values:
-<li>`created_on`: Creation time of the accelerated domain name.</li>
-<li>`domain-name`: Acceleration domain name.</li>
-</li>Default value: `domain-name`.
-                     * @return Order The sorting criteria. Values:
-<li>`created_on`: Creation time of the accelerated domain name.</li>
-<li>`domain-name`: Acceleration domain name.</li>
-</li>Default value: `domain-name`.
-                     * 
-                     */
-                    std::string GetOrder() const;
-
-                    /**
-                     * 设置The sorting criteria. Values:
-<li>`created_on`: Creation time of the accelerated domain name.</li>
-<li>`domain-name`: Acceleration domain name.</li>
-</li>Default value: `domain-name`.
-                     * @param _order The sorting criteria. Values:
-<li>`created_on`: Creation time of the accelerated domain name.</li>
-<li>`domain-name`: Acceleration domain name.</li>
-</li>Default value: `domain-name`.
-                     * 
-                     */
-                    void SetOrder(const std::string& _order);
-
-                    /**
-                     * 判断参数 Order 是否已赋值
-                     * @return Order 是否已赋值
-                     * 
-                     */
-                    bool OrderHasBeenSet() const;
-
                 private:
 
                     /**
-                     * ID of the site related with the accelerated domain name.
+                     * ID of the site related with the acceleration domain name.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Filters. Each filter can have up to 20 entries. See below for details: 
-<li>`domain-name`:<br>   <strong>Accelerated domain name</strong><br>   Type: String<br>Required: No 
-<li>`origin-type`:<br>   <strong>Type of the origin</strong><br>   Type: String<br>   Required: No 
-<li>`origin`:<br>   <strong>Primary origin</strong><br>   Type: String<br>   Required: No 
-<li>`backup-origin`:<br>   <strong>Secondary origin</strong><br>   Type: String<br>   Required: No 
-<li>`domain-cname`:<br>   <strong>Accelerated CNAME</strong><br>   Type: String<br>   Required: No 
-<li>`share-cname`:<br>   <strong> Shared CNAME</strong><br>   Type: String<br>   Required: No
+                     * Offset for paginated queries. Default value: 0.
+                     */
+                    int64_t m_offset;
+                    bool m_offsetHasBeenSet;
+
+                    /**
+                     * Limit on paginated queries. Default value: 20. Maximum value: 200.
+                     */
+                    int64_t m_limit;
+                    bool m_limitHasBeenSet;
+
+                    /**
+                     * Filter conditions. Up to 20 values for each filter. If it is not passed in, all domain names related with the specific zone-id are returned. 
+<li>`domain-name`: Acceleration domain name</li>
+<li>`origin-type`: Type of the origin</li>
+<li>`origin`: Primary origin address</li>
+<li>`backup-origin`: Secondary origin address</li>
+<li>`domain-cname`: CNAME</li>
+<li>`share-cname`: Shared CNAME</li>
                      */
                     std::vector<AdvancedFilter> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * The sorting order. Values:
+                     * Sort the returned results according to this field. Values include:
+<li>`created_on`: Creation time of the acceleration domain name</li>
+<li>`domain-name`: (Default) Acceleration domain name.</li> 
+                     */
+                    std::string m_order;
+                    bool m_orderHasBeenSet;
+
+                    /**
+                     * Sort direction. If the field value is number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
 <li>`asc`: Ascending order.</li>
-<li>`desc`: Descending order.</li>Default value: `asc`.
+<li>`desc`: Descending order.</li> Default value: `asc`.
                      */
                     std::string m_direction;
                     bool m_directionHasBeenSet;
@@ -277,27 +293,6 @@ namespace TencentCloud
                      */
                     std::string m_match;
                     bool m_matchHasBeenSet;
-
-                    /**
-                     * Limit on paginated queries. Default value: 20. Maximum value: 200.
-                     */
-                    int64_t m_limit;
-                    bool m_limitHasBeenSet;
-
-                    /**
-                     * Offset for paginated queries. Default value: 0.
-                     */
-                    int64_t m_offset;
-                    bool m_offsetHasBeenSet;
-
-                    /**
-                     * The sorting criteria. Values:
-<li>`created_on`: Creation time of the accelerated domain name.</li>
-<li>`domain-name`: Acceleration domain name.</li>
-</li>Default value: `domain-name`.
-                     */
-                    std::string m_order;
-                    bool m_orderHasBeenSet;
 
                 };
             }

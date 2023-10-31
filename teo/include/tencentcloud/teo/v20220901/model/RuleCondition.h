@@ -84,43 +84,15 @@ namespace TencentCloud
                     bool OperatorHasBeenSet() const;
 
                     /**
-                     * 获取The match type. Values:
-<li>`filename`: File name</li>
-<li>`extension`: File extension</li>
-<li>`host`: Host</li>
-<li>`full_url`: Full URL, which indicates the complete URL path under the current site and must contain the HTTP protocol, host, and path.</li>
-<li>`url`: Partial URL under the current site</li><li>`client_country`: Country/Region of the client</li>
-<li>`query_string`: Query string in the request URL</li>
-<li>`request_header`: HTTP request header</li>
-                     * @return Target The match type. Values:
-<li>`filename`: File name</li>
-<li>`extension`: File extension</li>
-<li>`host`: Host</li>
-<li>`full_url`: Full URL, which indicates the complete URL path under the current site and must contain the HTTP protocol, host, and path.</li>
-<li>`url`: Partial URL under the current site</li><li>`client_country`: Country/Region of the client</li>
-<li>`query_string`: Query string in the request URL</li>
-<li>`request_header`: HTTP request header</li>
+                     * 获取Match fields. Values: <li>`filename`: File name;</li><li>`extension`: File suffix;</li><li>`host`: HOST;</li><li>`full_url`: The complete URL path under the current site, including the HTTP protocol, Host and path;</li><li>`url`: The URL path request under the current site;</li><li>`client_country`: Client country;</li><li>`query_string`: The query string of the URL requested under the current site;</li><li>`request_header`: HTTP request header. </li>
+                     * @return Target Match fields. Values: <li>`filename`: File name;</li><li>`extension`: File suffix;</li><li>`host`: HOST;</li><li>`full_url`: The complete URL path under the current site, including the HTTP protocol, Host and path;</li><li>`url`: The URL path request under the current site;</li><li>`client_country`: Client country;</li><li>`query_string`: The query string of the URL requested under the current site;</li><li>`request_header`: HTTP request header. </li>
                      * 
                      */
                     std::string GetTarget() const;
 
                     /**
-                     * 设置The match type. Values:
-<li>`filename`: File name</li>
-<li>`extension`: File extension</li>
-<li>`host`: Host</li>
-<li>`full_url`: Full URL, which indicates the complete URL path under the current site and must contain the HTTP protocol, host, and path.</li>
-<li>`url`: Partial URL under the current site</li><li>`client_country`: Country/Region of the client</li>
-<li>`query_string`: Query string in the request URL</li>
-<li>`request_header`: HTTP request header</li>
-                     * @param _target The match type. Values:
-<li>`filename`: File name</li>
-<li>`extension`: File extension</li>
-<li>`host`: Host</li>
-<li>`full_url`: Full URL, which indicates the complete URL path under the current site and must contain the HTTP protocol, host, and path.</li>
-<li>`url`: Partial URL under the current site</li><li>`client_country`: Country/Region of the client</li>
-<li>`query_string`: Query string in the request URL</li>
-<li>`request_header`: HTTP request header</li>
+                     * 设置Match fields. Values: <li>`filename`: File name;</li><li>`extension`: File suffix;</li><li>`host`: HOST;</li><li>`full_url`: The complete URL path under the current site, including the HTTP protocol, Host and path;</li><li>`url`: The URL path request under the current site;</li><li>`client_country`: Client country;</li><li>`query_string`: The query string of the URL requested under the current site;</li><li>`request_header`: HTTP request header. </li>
+                     * @param _target Match fields. Values: <li>`filename`: File name;</li><li>`extension`: File suffix;</li><li>`host`: HOST;</li><li>`full_url`: The complete URL path under the current site, including the HTTP protocol, Host and path;</li><li>`url`: The URL path request under the current site;</li><li>`client_country`: Client country;</li><li>`query_string`: The query string of the URL requested under the current site;</li><li>`request_header`: HTTP request header. </li>
                      * 
                      */
                     void SetTarget(const std::string& _target);
@@ -244,7 +216,7 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IgnoreNameCase Whether the parameter name is case insensitive. Default value: `false`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
+                     * @deprecated
                      */
                     bool GetIgnoreNameCase() const;
 
@@ -253,14 +225,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _ignoreNameCase Whether the parameter name is case insensitive. Default value: `false`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
+                     * @deprecated
                      */
                     void SetIgnoreNameCase(const bool& _ignoreNameCase);
 
                     /**
                      * 判断参数 IgnoreNameCase 是否已赋值
                      * @return IgnoreNameCase 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool IgnoreNameCaseHasBeenSet() const;
 
@@ -277,14 +249,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_operatorHasBeenSet;
 
                     /**
-                     * The match type. Values:
-<li>`filename`: File name</li>
-<li>`extension`: File extension</li>
-<li>`host`: Host</li>
-<li>`full_url`: Full URL, which indicates the complete URL path under the current site and must contain the HTTP protocol, host, and path.</li>
-<li>`url`: Partial URL under the current site</li><li>`client_country`: Country/Region of the client</li>
-<li>`query_string`: Query string in the request URL</li>
-<li>`request_header`: HTTP request header</li>
+                     * Match fields. Values: <li>`filename`: File name;</li><li>`extension`: File suffix;</li><li>`host`: HOST;</li><li>`full_url`: The complete URL path under the current site, including the HTTP protocol, Host and path;</li><li>`url`: The URL path request under the current site;</li><li>`client_country`: Client country;</li><li>`query_string`: The query string of the URL requested under the current site;</li><li>`request_header`: HTTP request header. </li>
                      */
                     std::string m_target;
                     bool m_targetHasBeenSet;

@@ -44,48 +44,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The site name.
-                     * @return ZoneName The site name.
-                     * 
-                     */
-                    std::string GetZoneName() const;
-
-                    /**
-                     * 设置The site name.
-                     * @param _zoneName The site name.
-                     * 
-                     */
-                    void SetZoneName(const std::string& _zoneName);
-
-                    /**
-                     * 判断参数 ZoneName 是否已赋值
-                     * @return ZoneName 是否已赋值
-                     * 
-                     */
-                    bool ZoneNameHasBeenSet() const;
-
-                    /**
-                     * 获取The access mode. Values:
-<li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME. Before using this access mode, first verify your site with the site verification API (IdentifyZone).<li>`noDomainAccess`: Access without using a domain name. If this value is passed, only the Tags field needs to be set. </li>
-If not specified, this field uses the default value `full`.
-                     * @return Type The access mode. Values:
-<li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME. Before using this access mode, first verify your site with the site verification API (IdentifyZone).<li>`noDomainAccess`: Access without using a domain name. If this value is passed, only the Tags field needs to be set. </li>
-If not specified, this field uses the default value `full`.
+                     * 获取Site access types. Options include:
+<li>`partial`: (Default) Access through a CNAME record</li>
+<li>`full`: Access through a name server</li>
+<li>`noDomainAccess`: Access without using a domain name</li>
+                     * @return Type Site access types. Options include:
+<li>`partial`: (Default) Access through a CNAME record</li>
+<li>`full`: Access through a name server</li>
+<li>`noDomainAccess`: Access without using a domain name</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置The access mode. Values:
-<li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME. Before using this access mode, first verify your site with the site verification API (IdentifyZone).<li>`noDomainAccess`: Access without using a domain name. If this value is passed, only the Tags field needs to be set. </li>
-If not specified, this field uses the default value `full`.
-                     * @param _type The access mode. Values:
-<li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME. Before using this access mode, first verify your site with the site verification API (IdentifyZone).<li>`noDomainAccess`: Access without using a domain name. If this value is passed, only the Tags field needs to be set. </li>
-If not specified, this field uses the default value `full`.
+                     * 设置Site access types. Options include:
+<li>`partial`: (Default) Access through a CNAME record</li>
+<li>`full`: Access through a name server</li>
+<li>`noDomainAccess`: Access without using a domain name</li>
+                     * @param _type Site access types. Options include:
+<li>`partial`: (Default) Access through a CNAME record</li>
+<li>`full`: Access through a name server</li>
+<li>`noDomainAccess`: Access without using a domain name</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -98,36 +77,111 @@ If not specified, this field uses the default value `full`.
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to skip scanning the existing DNS records of the site. Default value: false.
-                     * @return JumpStart Whether to skip scanning the existing DNS records of the site. Default value: false.
+                     * 获取Site name. For sites connected via CNAME/NS, pass in the secondary domain name (example.com). Leave it blank if the site is connected without a domain name. 
+                     * @return ZoneName Site name. For sites connected via CNAME/NS, pass in the secondary domain name (example.com). Leave it blank if the site is connected without a domain name. 
                      * 
                      */
-                    bool GetJumpStart() const;
+                    std::string GetZoneName() const;
 
                     /**
-                     * 设置Whether to skip scanning the existing DNS records of the site. Default value: false.
-                     * @param _jumpStart Whether to skip scanning the existing DNS records of the site. Default value: false.
+                     * 设置Site name. For sites connected via CNAME/NS, pass in the secondary domain name (example.com). Leave it blank if the site is connected without a domain name. 
+                     * @param _zoneName Site name. For sites connected via CNAME/NS, pass in the secondary domain name (example.com). Leave it blank if the site is connected without a domain name. 
                      * 
                      */
-                    void SetJumpStart(const bool& _jumpStart);
+                    void SetZoneName(const std::string& _zoneName);
 
                     /**
-                     * 判断参数 JumpStart 是否已赋值
-                     * @return JumpStart 是否已赋值
+                     * 判断参数 ZoneName 是否已赋值
+                     * @return ZoneName 是否已赋值
                      * 
                      */
-                    bool JumpStartHasBeenSet() const;
+                    bool ZoneNameHasBeenSet() const;
 
                     /**
-                     * 获取The resource tag.
-                     * @return Tags The resource tag.
+                     * 获取The acceleration area of the L7 domain name when `Type` is `partial` or `full`. When Type is `noDomainAccess`, please leave it blank.
+<li>`global`: Global AZs</li>
+<li>`mainland`: AZs in the Chinese mainland</li>
+<li>`overseas`: (Default) AZs outside the Chinese mainland </li>
+                     * @return Area The acceleration area of the L7 domain name when `Type` is `partial` or `full`. When Type is `noDomainAccess`, please leave it blank.
+<li>`global`: Global AZs</li>
+<li>`mainland`: AZs in the Chinese mainland</li>
+<li>`overseas`: (Default) AZs outside the Chinese mainland </li>
+                     * 
+                     */
+                    std::string GetArea() const;
+
+                    /**
+                     * 设置The acceleration area of the L7 domain name when `Type` is `partial` or `full`. When Type is `noDomainAccess`, please leave it blank.
+<li>`global`: Global AZs</li>
+<li>`mainland`: AZs in the Chinese mainland</li>
+<li>`overseas`: (Default) AZs outside the Chinese mainland </li>
+                     * @param _area The acceleration area of the L7 domain name when `Type` is `partial` or `full`. When Type is `noDomainAccess`, please leave it blank.
+<li>`global`: Global AZs</li>
+<li>`mainland`: AZs in the Chinese mainland</li>
+<li>`overseas`: (Default) AZs outside the Chinese mainland </li>
+                     * 
+                     */
+                    void SetArea(const std::string& _area);
+
+                    /**
+                     * 判断参数 Area 是否已赋值
+                     * @return Area 是否已赋值
+                     * 
+                     */
+                    bool AreaHasBeenSet() const;
+
+                    /**
+                     * 获取ID of the plan to which you want to bind the site. If you don't have an EdgeOne plan, purchase one in the EdgeOne console.
+                     * @return PlanId ID of the plan to which you want to bind the site. If you don't have an EdgeOne plan, purchase one in the EdgeOne console.
+                     * 
+                     */
+                    std::string GetPlanId() const;
+
+                    /**
+                     * 设置ID of the plan to which you want to bind the site. If you don't have an EdgeOne plan, purchase one in the EdgeOne console.
+                     * @param _planId ID of the plan to which you want to bind the site. If you don't have an EdgeOne plan, purchase one in the EdgeOne console.
+                     * 
+                     */
+                    void SetPlanId(const std::string& _planId);
+
+                    /**
+                     * 判断参数 PlanId 是否已赋值
+                     * @return PlanId 是否已赋值
+                     * 
+                     */
+                    bool PlanIdHasBeenSet() const;
+
+                    /**
+                     * 获取The site alias. It allows up to 20 characters, including [0-9], [a-z], [A-Z] and [-_]. For details, see [Glossary](https://intl.cloud.tencent.com/document/product/1552/70202?from_cn_redirect=1). If you don't want to use it, just leave it blank.
+                     * @return AliasZoneName The site alias. It allows up to 20 characters, including [0-9], [a-z], [A-Z] and [-_]. For details, see [Glossary](https://intl.cloud.tencent.com/document/product/1552/70202?from_cn_redirect=1). If you don't want to use it, just leave it blank.
+                     * 
+                     */
+                    std::string GetAliasZoneName() const;
+
+                    /**
+                     * 设置The site alias. It allows up to 20 characters, including [0-9], [a-z], [A-Z] and [-_]. For details, see [Glossary](https://intl.cloud.tencent.com/document/product/1552/70202?from_cn_redirect=1). If you don't want to use it, just leave it blank.
+                     * @param _aliasZoneName The site alias. It allows up to 20 characters, including [0-9], [a-z], [A-Z] and [-_]. For details, see [Glossary](https://intl.cloud.tencent.com/document/product/1552/70202?from_cn_redirect=1). If you don't want to use it, just leave it blank.
+                     * 
+                     */
+                    void SetAliasZoneName(const std::string& _aliasZoneName);
+
+                    /**
+                     * 判断参数 AliasZoneName 是否已赋值
+                     * @return AliasZoneName 是否已赋值
+                     * 
+                     */
+                    bool AliasZoneNameHasBeenSet() const;
+
+                    /**
+                     * 获取Tags of the site. To create tags, go to the [Tag Console](https://console.cloud.tencent.com/tag/taglist).
+                     * @return Tags Tags of the site. To create tags, go to the [Tag Console](https://console.cloud.tencent.com/tag/taglist).
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置The resource tag.
-                     * @param _tags The resource tag.
+                     * 设置Tags of the site. To create tags, go to the [Tag Console](https://console.cloud.tencent.com/tag/taglist).
+                     * @param _tags Tags of the site. To create tags, go to the [Tag Console](https://console.cloud.tencent.com/tag/taglist).
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -146,7 +200,7 @@ If not specified, this field uses the default value `full`.
                      * @return AllowDuplicates Whether to allow duplicate sites. Values:
 <li>`true`: Duplicate sites are allowed.</li>
 <li>`false`: Duplicate sites are not allowed.</li>If it is left empty, the default value `false` is used.
-                     * 
+                     * @deprecated
                      */
                     bool GetAllowDuplicates() const;
 
@@ -157,63 +211,78 @@ If not specified, this field uses the default value `full`.
                      * @param _allowDuplicates Whether to allow duplicate sites. Values:
 <li>`true`: Duplicate sites are allowed.</li>
 <li>`false`: Duplicate sites are not allowed.</li>If it is left empty, the default value `false` is used.
-                     * 
+                     * @deprecated
                      */
                     void SetAllowDuplicates(const bool& _allowDuplicates);
 
                     /**
                      * 判断参数 AllowDuplicates 是否已赋值
                      * @return AllowDuplicates 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool AllowDuplicatesHasBeenSet() const;
 
                     /**
-                     * 获取The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
-                     * @return AliasZoneName The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
-                     * 
+                     * 获取Whether to skip scanning the existing DNS records of the site. Default value: false.
+                     * @return JumpStart Whether to skip scanning the existing DNS records of the site. Default value: false.
+                     * @deprecated
                      */
-                    std::string GetAliasZoneName() const;
+                    bool GetJumpStart() const;
 
                     /**
-                     * 设置The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
-                     * @param _aliasZoneName The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
-                     * 
+                     * 设置Whether to skip scanning the existing DNS records of the site. Default value: false.
+                     * @param _jumpStart Whether to skip scanning the existing DNS records of the site. Default value: false.
+                     * @deprecated
                      */
-                    void SetAliasZoneName(const std::string& _aliasZoneName);
+                    void SetJumpStart(const bool& _jumpStart);
 
                     /**
-                     * 判断参数 AliasZoneName 是否已赋值
-                     * @return AliasZoneName 是否已赋值
-                     * 
+                     * 判断参数 JumpStart 是否已赋值
+                     * @return JumpStart 是否已赋值
+                     * @deprecated
                      */
-                    bool AliasZoneNameHasBeenSet() const;
+                    bool JumpStartHasBeenSet() const;
 
                 private:
 
                     /**
-                     * The site name.
-                     */
-                    std::string m_zoneName;
-                    bool m_zoneNameHasBeenSet;
-
-                    /**
-                     * The access mode. Values:
-<li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME. Before using this access mode, first verify your site with the site verification API (IdentifyZone).<li>`noDomainAccess`: Access without using a domain name. If this value is passed, only the Tags field needs to be set. </li>
-If not specified, this field uses the default value `full`.
+                     * Site access types. Options include:
+<li>`partial`: (Default) Access through a CNAME record</li>
+<li>`full`: Access through a name server</li>
+<li>`noDomainAccess`: Access without using a domain name</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Whether to skip scanning the existing DNS records of the site. Default value: false.
+                     * Site name. For sites connected via CNAME/NS, pass in the secondary domain name (example.com). Leave it blank if the site is connected without a domain name. 
                      */
-                    bool m_jumpStart;
-                    bool m_jumpStartHasBeenSet;
+                    std::string m_zoneName;
+                    bool m_zoneNameHasBeenSet;
 
                     /**
-                     * The resource tag.
+                     * The acceleration area of the L7 domain name when `Type` is `partial` or `full`. When Type is `noDomainAccess`, please leave it blank.
+<li>`global`: Global AZs</li>
+<li>`mainland`: AZs in the Chinese mainland</li>
+<li>`overseas`: (Default) AZs outside the Chinese mainland </li>
+                     */
+                    std::string m_area;
+                    bool m_areaHasBeenSet;
+
+                    /**
+                     * ID of the plan to which you want to bind the site. If you don't have an EdgeOne plan, purchase one in the EdgeOne console.
+                     */
+                    std::string m_planId;
+                    bool m_planIdHasBeenSet;
+
+                    /**
+                     * The site alias. It allows up to 20 characters, including [0-9], [a-z], [A-Z] and [-_]. For details, see [Glossary](https://intl.cloud.tencent.com/document/product/1552/70202?from_cn_redirect=1). If you don't want to use it, just leave it blank.
+                     */
+                    std::string m_aliasZoneName;
+                    bool m_aliasZoneNameHasBeenSet;
+
+                    /**
+                     * Tags of the site. To create tags, go to the [Tag Console](https://console.cloud.tencent.com/tag/taglist).
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
@@ -227,10 +296,10 @@ If not specified, this field uses the default value `full`.
                     bool m_allowDuplicatesHasBeenSet;
 
                     /**
-                     * The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+                     * Whether to skip scanning the existing DNS records of the site. Default value: false.
                      */
-                    std::string m_aliasZoneName;
-                    bool m_aliasZoneNameHasBeenSet;
+                    bool m_jumpStart;
+                    bool m_jumpStartHasBeenSet;
 
                 };
             }

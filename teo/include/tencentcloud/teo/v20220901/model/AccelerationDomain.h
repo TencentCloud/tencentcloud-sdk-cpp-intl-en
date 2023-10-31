@@ -25,6 +25,8 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/teo/v20220901/model/OriginDetail.h>
+#include <tencentcloud/teo/v20220901/model/OwnershipVerification.h>
+#include <tencentcloud/teo/v20220901/model/AccelerationDomainCertificate.h>
 
 
 namespace TencentCloud
@@ -48,50 +50,25 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Details of the origin.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OriginDetail Details of the origin.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取ID of the site.
+                     * @return ZoneId ID of the site.
                      * 
                      */
-                    OriginDetail GetOriginDetail() const;
+                    std::string GetZoneId() const;
 
                     /**
-                     * 设置Details of the origin.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _originDetail Details of the origin.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置ID of the site.
+                     * @param _zoneId ID of the site.
                      * 
                      */
-                    void SetOriginDetail(const OriginDetail& _originDetail);
+                    void SetZoneId(const std::string& _zoneId);
 
                     /**
-                     * 判断参数 OriginDetail 是否已赋值
-                     * @return OriginDetail 是否已赋值
+                     * 判断参数 ZoneId 是否已赋值
+                     * @return ZoneId 是否已赋值
                      * 
                      */
-                    bool OriginDetailHasBeenSet() const;
-
-                    /**
-                     * 获取Creation time of the accelerated domain name.
-                     * @return CreatedOn Creation time of the accelerated domain name.
-                     * 
-                     */
-                    std::string GetCreatedOn() const;
-
-                    /**
-                     * 设置Creation time of the accelerated domain name.
-                     * @param _createdOn Creation time of the accelerated domain name.
-                     * 
-                     */
-                    void SetCreatedOn(const std::string& _createdOn);
-
-                    /**
-                     * 判断参数 CreatedOn 是否已赋值
-                     * @return CreatedOn 是否已赋值
-                     * 
-                     */
-                    bool CreatedOnHasBeenSet() const;
+                    bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取Accelerated domain name
@@ -113,48 +90,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool DomainNameHasBeenSet() const;
-
-                    /**
-                     * 获取Modification time of the accelerated domain name.
-                     * @return ModifiedOn Modification time of the accelerated domain name.
-                     * 
-                     */
-                    std::string GetModifiedOn() const;
-
-                    /**
-                     * 设置Modification time of the accelerated domain name.
-                     * @param _modifiedOn Modification time of the accelerated domain name.
-                     * 
-                     */
-                    void SetModifiedOn(const std::string& _modifiedOn);
-
-                    /**
-                     * 判断参数 ModifiedOn 是否已赋值
-                     * @return ModifiedOn 是否已赋值
-                     * 
-                     */
-                    bool ModifiedOnHasBeenSet() const;
-
-                    /**
-                     * 获取ID of the site.
-                     * @return ZoneId ID of the site.
-                     * 
-                     */
-                    std::string GetZoneId() const;
-
-                    /**
-                     * 设置ID of the site.
-                     * @param _zoneId ID of the site.
-                     * 
-                     */
-                    void SetZoneId(const std::string& _zoneId);
-
-                    /**
-                     * 判断参数 ZoneId 是否已赋值
-                     * @return ZoneId 是否已赋值
-                     * 
-                     */
-                    bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取Status of the accelerated domain name. Values:
@@ -196,6 +131,115 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool DomainStatusHasBeenSet() const;
+
+                    /**
+                     * 获取Details of the origin.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return OriginDetail Details of the origin.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    OriginDetail GetOriginDetail() const;
+
+                    /**
+                     * 设置Details of the origin.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _originDetail Details of the origin.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetOriginDetail(const OriginDetail& _originDetail);
+
+                    /**
+                     * 判断参数 OriginDetail 是否已赋值
+                     * @return OriginDetail 是否已赋值
+                     * 
+                     */
+                    bool OriginDetailHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return OriginProtocol 
+                     * 
+                     */
+                    std::string GetOriginProtocol() const;
+
+                    /**
+                     * 设置
+                     * @param _originProtocol 
+                     * 
+                     */
+                    void SetOriginProtocol(const std::string& _originProtocol);
+
+                    /**
+                     * 判断参数 OriginProtocol 是否已赋值
+                     * @return OriginProtocol 是否已赋值
+                     * 
+                     */
+                    bool OriginProtocolHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return HttpOriginPort 
+                     * 
+                     */
+                    uint64_t GetHttpOriginPort() const;
+
+                    /**
+                     * 设置
+                     * @param _httpOriginPort 
+                     * 
+                     */
+                    void SetHttpOriginPort(const uint64_t& _httpOriginPort);
+
+                    /**
+                     * 判断参数 HttpOriginPort 是否已赋值
+                     * @return HttpOriginPort 是否已赋值
+                     * 
+                     */
+                    bool HttpOriginPortHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return HttpsOriginPort 
+                     * 
+                     */
+                    uint64_t GetHttpsOriginPort() const;
+
+                    /**
+                     * 设置
+                     * @param _httpsOriginPort 
+                     * 
+                     */
+                    void SetHttpsOriginPort(const uint64_t& _httpsOriginPort);
+
+                    /**
+                     * 判断参数 HttpsOriginPort 是否已赋值
+                     * @return HttpsOriginPort 是否已赋值
+                     * 
+                     */
+                    bool HttpsOriginPortHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return IPv6Status 
+                     * 
+                     */
+                    std::string GetIPv6Status() const;
+
+                    /**
+                     * 设置
+                     * @param _iPv6Status 
+                     * 
+                     */
+                    void SetIPv6Status(const std::string& _iPv6Status);
+
+                    /**
+                     * 判断参数 IPv6Status 是否已赋值
+                     * @return IPv6Status 是否已赋值
+                     * 
+                     */
+                    bool IPv6StatusHasBeenSet() const;
 
                     /**
                      * 获取The CNAME address.
@@ -243,38 +287,111 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool IdentificationStatusHasBeenSet() const;
 
+                    /**
+                     * 获取Creation time of the accelerated domain name.
+                     * @return CreatedOn Creation time of the accelerated domain name.
+                     * 
+                     */
+                    std::string GetCreatedOn() const;
+
+                    /**
+                     * 设置Creation time of the accelerated domain name.
+                     * @param _createdOn Creation time of the accelerated domain name.
+                     * 
+                     */
+                    void SetCreatedOn(const std::string& _createdOn);
+
+                    /**
+                     * 判断参数 CreatedOn 是否已赋值
+                     * @return CreatedOn 是否已赋值
+                     * 
+                     */
+                    bool CreatedOnHasBeenSet() const;
+
+                    /**
+                     * 获取Modification time of the accelerated domain name.
+                     * @return ModifiedOn Modification time of the accelerated domain name.
+                     * 
+                     */
+                    std::string GetModifiedOn() const;
+
+                    /**
+                     * 设置Modification time of the accelerated domain name.
+                     * @param _modifiedOn Modification time of the accelerated domain name.
+                     * 
+                     */
+                    void SetModifiedOn(const std::string& _modifiedOn);
+
+                    /**
+                     * 判断参数 ModifiedOn 是否已赋值
+                     * @return ModifiedOn 是否已赋值
+                     * 
+                     */
+                    bool ModifiedOnHasBeenSet() const;
+
+                    /**
+                     * 获取Information required to verify the ownership of a domain name.
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @return OwnershipVerification Information required to verify the ownership of a domain name.
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    OwnershipVerification GetOwnershipVerification() const;
+
+                    /**
+                     * 设置Information required to verify the ownership of a domain name.
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @param _ownershipVerification Information required to verify the ownership of a domain name.
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetOwnershipVerification(const OwnershipVerification& _ownershipVerification);
+
+                    /**
+                     * 判断参数 OwnershipVerification 是否已赋值
+                     * @return OwnershipVerification 是否已赋值
+                     * 
+                     */
+                    bool OwnershipVerificationHasBeenSet() const;
+
+                    /**
+                     * 获取Domain name certificate information
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @return Certificate Domain name certificate information
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    AccelerationDomainCertificate GetCertificate() const;
+
+                    /**
+                     * 设置Domain name certificate information
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @param _certificate Domain name certificate information
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetCertificate(const AccelerationDomainCertificate& _certificate);
+
+                    /**
+                     * 判断参数 Certificate 是否已赋值
+                     * @return Certificate 是否已赋值
+                     * 
+                     */
+                    bool CertificateHasBeenSet() const;
+
                 private:
-
-                    /**
-                     * Details of the origin.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     */
-                    OriginDetail m_originDetail;
-                    bool m_originDetailHasBeenSet;
-
-                    /**
-                     * Creation time of the accelerated domain name.
-                     */
-                    std::string m_createdOn;
-                    bool m_createdOnHasBeenSet;
-
-                    /**
-                     * Accelerated domain name
-                     */
-                    std::string m_domainName;
-                    bool m_domainNameHasBeenSet;
-
-                    /**
-                     * Modification time of the accelerated domain name.
-                     */
-                    std::string m_modifiedOn;
-                    bool m_modifiedOnHasBeenSet;
 
                     /**
                      * ID of the site.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
+
+                    /**
+                     * Accelerated domain name
+                     */
+                    std::string m_domainName;
+                    bool m_domainNameHasBeenSet;
 
                     /**
                      * Status of the accelerated domain name. Values:
@@ -288,6 +405,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_domainStatusHasBeenSet;
 
                     /**
+                     * Details of the origin.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    OriginDetail m_originDetail;
+                    bool m_originDetailHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_originProtocol;
+                    bool m_originProtocolHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_httpOriginPort;
+                    bool m_httpOriginPortHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_httpsOriginPort;
+                    bool m_httpsOriginPortHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_iPv6Status;
+                    bool m_iPv6StatusHasBeenSet;
+
+                    /**
                      * The CNAME address.
                      */
                     std::string m_cname;
@@ -299,6 +447,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_identificationStatus;
                     bool m_identificationStatusHasBeenSet;
+
+                    /**
+                     * Creation time of the accelerated domain name.
+                     */
+                    std::string m_createdOn;
+                    bool m_createdOnHasBeenSet;
+
+                    /**
+                     * Modification time of the accelerated domain name.
+                     */
+                    std::string m_modifiedOn;
+                    bool m_modifiedOnHasBeenSet;
+
+                    /**
+                     * Information required to verify the ownership of a domain name.
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     */
+                    OwnershipVerification m_ownershipVerification;
+                    bool m_ownershipVerificationHasBeenSet;
+
+                    /**
+                     * Domain name certificate information
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     */
+                    AccelerationDomainCertificate m_certificate;
+                    bool m_certificateHasBeenSet;
 
                 };
             }

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/teo/v20220901/model/CreateZoneResponse.h>
+#include <tencentcloud/teo/v20220901/model/VerifyOwnershipResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -23,13 +23,13 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Teo::V20220901::Model;
 using namespace std;
 
-CreateZoneResponse::CreateZoneResponse() :
-    m_zoneIdHasBeenSet(false),
-    m_ownershipVerificationHasBeenSet(false)
+VerifyOwnershipResponse::VerifyOwnershipResponse() :
+    m_statusHasBeenSet(false),
+    m_resultHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome CreateZoneResponse::Deserialize(const string &payload)
+CoreInternalOutcome VerifyOwnershipResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -63,58 +63,50 @@ CoreInternalOutcome CreateZoneResponse::Deserialize(const string &payload)
     }
 
 
-    if (rsp.HasMember("ZoneId") && !rsp["ZoneId"].IsNull())
+    if (rsp.HasMember("Status") && !rsp["Status"].IsNull())
     {
-        if (!rsp["ZoneId"].IsString())
+        if (!rsp["Status"].IsString())
         {
-            return CoreInternalOutcome(Core::Error("response `ZoneId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Status` IsString=false incorrectly").SetRequestId(requestId));
         }
-        m_zoneId = string(rsp["ZoneId"].GetString());
-        m_zoneIdHasBeenSet = true;
+        m_status = string(rsp["Status"].GetString());
+        m_statusHasBeenSet = true;
     }
 
-    if (rsp.HasMember("OwnershipVerification") && !rsp["OwnershipVerification"].IsNull())
+    if (rsp.HasMember("Result") && !rsp["Result"].IsNull())
     {
-        if (!rsp["OwnershipVerification"].IsObject())
+        if (!rsp["Result"].IsString())
         {
-            return CoreInternalOutcome(Core::Error("response `OwnershipVerification` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Result` IsString=false incorrectly").SetRequestId(requestId));
         }
-
-        CoreInternalOutcome outcome = m_ownershipVerification.Deserialize(rsp["OwnershipVerification"]);
-        if (!outcome.IsSuccess())
-        {
-            outcome.GetError().SetRequestId(requestId);
-            return outcome;
-        }
-
-        m_ownershipVerificationHasBeenSet = true;
+        m_result = string(rsp["Result"].GetString());
+        m_resultHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string CreateZoneResponse::ToJsonString() const
+string VerifyOwnershipResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_zoneIdHasBeenSet)
+    if (m_statusHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "ZoneId";
+        string key = "Status";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_zoneId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_status.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_ownershipVerificationHasBeenSet)
+    if (m_resultHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "OwnershipVerification";
+        string key = "Result";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
-        m_ownershipVerification.ToJsonObject(value[key.c_str()], allocator);
+        value.AddMember(iKey, rapidjson::Value(m_result.c_str(), allocator).Move(), allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -129,24 +121,24 @@ string CreateZoneResponse::ToJsonString() const
 }
 
 
-string CreateZoneResponse::GetZoneId() const
+string VerifyOwnershipResponse::GetStatus() const
 {
-    return m_zoneId;
+    return m_status;
 }
 
-bool CreateZoneResponse::ZoneIdHasBeenSet() const
+bool VerifyOwnershipResponse::StatusHasBeenSet() const
 {
-    return m_zoneIdHasBeenSet;
+    return m_statusHasBeenSet;
 }
 
-OwnershipVerification CreateZoneResponse::GetOwnershipVerification() const
+string VerifyOwnershipResponse::GetResult() const
 {
-    return m_ownershipVerification;
+    return m_result;
 }
 
-bool CreateZoneResponse::OwnershipVerificationHasBeenSet() const
+bool VerifyOwnershipResponse::ResultHasBeenSet() const
 {
-    return m_ownershipVerificationHasBeenSet;
+    return m_resultHasBeenSet;
 }
 
 
