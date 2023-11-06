@@ -3953,6 +3953,49 @@ VodClient::DescribeWordSamplesOutcomeCallable VodClient::DescribeWordSamplesCall
     return task->get_future();
 }
 
+VodClient::EditMediaOutcome VodClient::EditMedia(const EditMediaRequest &request)
+{
+    auto outcome = MakeRequest(request, "EditMedia");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        EditMediaResponse rsp = EditMediaResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return EditMediaOutcome(rsp);
+        else
+            return EditMediaOutcome(o.GetError());
+    }
+    else
+    {
+        return EditMediaOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::EditMediaAsync(const EditMediaRequest& request, const EditMediaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->EditMedia(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VodClient::EditMediaOutcomeCallable VodClient::EditMediaCallable(const EditMediaRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<EditMediaOutcome()>>(
+        [this, request]()
+        {
+            return this->EditMedia(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 VodClient::ExecuteFunctionOutcome VodClient::ExecuteFunction(const ExecuteFunctionRequest &request)
 {
     auto outcome = MakeRequest(request, "ExecuteFunction");
@@ -5279,6 +5322,49 @@ VodClient::ParseStreamingManifestOutcomeCallable VodClient::ParseStreamingManife
         [this, request]()
         {
             return this->ParseStreamingManifest(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VodClient::ProcessMediaOutcome VodClient::ProcessMedia(const ProcessMediaRequest &request)
+{
+    auto outcome = MakeRequest(request, "ProcessMedia");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ProcessMediaResponse rsp = ProcessMediaResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ProcessMediaOutcome(rsp);
+        else
+            return ProcessMediaOutcome(o.GetError());
+    }
+    else
+    {
+        return ProcessMediaOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::ProcessMediaAsync(const ProcessMediaRequest& request, const ProcessMediaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ProcessMedia(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VodClient::ProcessMediaOutcomeCallable VodClient::ProcessMediaCallable(const ProcessMediaRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ProcessMediaOutcome()>>(
+        [this, request]()
+        {
+            return this->ProcessMedia(request);
         }
     );
 
