@@ -180,13 +180,11 @@ u200c<li>`deactivated`: The site is blocked.</li>
                      * 获取Connection mode of the site. Values:
 <li>`full`: Connect via the name server.</li>
 <li>`partial`: Connect via the CNAME record.</li>
-<li>`noDomainAccess`: Connect without using a domain name
- 
+<li>`noDomainAccess`: Connect without using a domain name</li>
                      * @return Type Connection mode of the site. Values:
 <li>`full`: Connect via the name server.</li>
 <li>`partial`: Connect via the CNAME record.</li>
-<li>`noDomainAccess`: Connect without using a domain name
- 
+<li>`noDomainAccess`: Connect without using a domain name</li>
                      * 
                      */
                     std::string GetType() const;
@@ -195,13 +193,11 @@ u200c<li>`deactivated`: The site is blocked.</li>
                      * 设置Connection mode of the site. Values:
 <li>`full`: Connect via the name server.</li>
 <li>`partial`: Connect via the CNAME record.</li>
-<li>`noDomainAccess`: Connect without using a domain name
- 
+<li>`noDomainAccess`: Connect without using a domain name</li>
                      * @param _type Connection mode of the site. Values:
 <li>`full`: Connect via the name server.</li>
 <li>`partial`: Connect via the CNAME record.</li>
-<li>`noDomainAccess`: Connect without using a domain name
- 
+<li>`noDomainAccess`: Connect without using a domain name</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -633,8 +629,7 @@ u200c<li>`deactivated`: The site is blocked.</li>
                      * Connection mode of the site. Values:
 <li>`full`: Connect via the name server.</li>
 <li>`partial`: Connect via the CNAME record.</li>
-<li>`noDomainAccess`: Connect without using a domain name
- 
+<li>`noDomainAccess`: Connect without using a domain name</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

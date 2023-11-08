@@ -76,15 +76,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
-                     * @return AllowClientIPList The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
+                     * 获取Allowed client source. It supports IPv4/IPv6 addresses and CIDR blocks.
+                     * @return AllowClientIPList Allowed client source. It supports IPv4/IPv6 addresses and CIDR blocks.
                      * 
                      */
                     std::vector<std::string> GetAllowClientIPList() const;
 
                     /**
-                     * 设置The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
-                     * @param _allowClientIPList The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
+                     * 设置Allowed client source. It supports IPv4/IPv6 addresses and CIDR blocks.
+                     * @param _allowClientIPList Allowed client source. It supports IPv4/IPv6 addresses and CIDR blocks.
                      * 
                      */
                     void SetAllowClientIPList(const std::vector<std::string>& _allowClientIPList);
@@ -128,7 +128,7 @@ namespace TencentCloud
                     bool m_switchHasBeenSet;
 
                     /**
-                     * The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
+                     * Allowed client source. It supports IPv4/IPv6 addresses and CIDR blocks.
                      */
                     std::vector<std::string> m_allowClientIPList;
                     bool m_allowClientIPListHasBeenSet;
