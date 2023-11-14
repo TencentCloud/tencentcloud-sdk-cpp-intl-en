@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Pagination offset. If `Offset` is `0`, it indicates the first page. When `Limit` is `100`, if `Offset` is `100`, it indicates the second page; if `Offset` is `200`, it indicates the third page, and so on.
-                     * @return Limit Pagination offset. If `Offset` is `0`, it indicates the first page. When `Limit` is `100`, if `Offset` is `100`, it indicates the second page; if `Offset` is `200`, it indicates the third page, and so on.
+                     * 获取The number of entries returned at a time. The maximum value is `1000`.
+                     * @return Limit The number of entries returned at a time. The maximum value is `1000`.
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Pagination offset. If `Offset` is `0`, it indicates the first page. When `Limit` is `100`, if `Offset` is `100`, it indicates the second page; if `Offset` is `200`, it indicates the third page, and so on.
-                     * @param _limit Pagination offset. If `Offset` is `0`, it indicates the first page. When `Limit` is `100`, if `Offset` is `100`, it indicates the second page; if `Offset` is `200`, it indicates the third page, and so on.
+                     * 设置The number of entries returned at a time. The maximum value is `1000`.
+                     * @param _limit The number of entries returned at a time. The maximum value is `1000`.
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取The number of entries returned at a time. The maximum value is `1000`.
-                     * @return Offset The number of entries returned at a time. The maximum value is `1000`.
+                     * 获取Pagination offset. If `Offset` is `0`, it indicates the first page. When `Limit` is `100`, if `Offset` is `100`, it indicates the second page; if `Offset` is `200`, it indicates the third page, and so on.
+                     * @return Offset Pagination offset. If `Offset` is `0`, it indicates the first page. When `Limit` is `100`, if `Offset` is `100`, it indicates the second page; if `Offset` is `200`, it indicates the third page, and so on.
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置The number of entries returned at a time. The maximum value is `1000`.
-                     * @param _offset The number of entries returned at a time. The maximum value is `1000`.
+                     * 设置Pagination offset. If `Offset` is `0`, it indicates the first page. When `Limit` is `100`, if `Offset` is `100`, it indicates the second page; if `Offset` is `200`, it indicates the third page, and so on.
+                     * @param _offset Pagination offset. If `Offset` is `0`, it indicates the first page. When `Limit` is `100`, if `Offset` is `100`, it indicates the second page; if `Offset` is `200`, it indicates the third page, and so on.
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -150,13 +150,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Pagination offset. If `Offset` is `0`, it indicates the first page. When `Limit` is `100`, if `Offset` is `100`, it indicates the second page; if `Offset` is `200`, it indicates the third page, and so on.
+                     * The number of entries returned at a time. The maximum value is `1000`.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * The number of entries returned at a time. The maximum value is `1000`.
+                     * Pagination offset. If `Offset` is `0`, it indicates the first page. When `Limit` is `100`, if `Offset` is `100`, it indicates the second page; if `Offset` is `200`, it indicates the third page, and so on.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
