@@ -221,6 +221,48 @@ This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty
                      */
                     bool AllowIpListHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return MaxConcurrent 
+                     * 
+                     */
+                    uint64_t GetMaxConcurrent() const;
+
+                    /**
+                     * 设置
+                     * @param _maxConcurrent 
+                     * 
+                     */
+                    void SetMaxConcurrent(const uint64_t& _maxConcurrent);
+
+                    /**
+                     * 判断参数 MaxConcurrent 是否已赋值
+                     * @return MaxConcurrent 是否已赋值
+                     * 
+                     */
+                    bool MaxConcurrentHasBeenSet() const;
+
+                    /**
+                     * 获取The bound security group IDs.
+                     * @return SecurityGroupIds The bound security group IDs.
+                     * 
+                     */
+                    std::vector<std::string> GetSecurityGroupIds() const;
+
+                    /**
+                     * 设置The bound security group IDs.
+                     * @param _securityGroupIds The bound security group IDs.
+                     * 
+                     */
+                    void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
+
+                    /**
+                     * 判断参数 SecurityGroupIds 是否已赋值
+                     * @return SecurityGroupIds 是否已赋值
+                     * 
+                     */
+                    bool SecurityGroupIdsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -271,6 +313,18 @@ This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty
                      */
                     std::vector<std::string> m_allowIpList;
                     bool m_allowIpListHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_maxConcurrent;
+                    bool m_maxConcurrentHasBeenSet;
+
+                    /**
+                     * The bound security group IDs.
+                     */
+                    std::vector<std::string> m_securityGroupIds;
+                    bool m_securityGroupIdsHasBeenSet;
 
                 };
             }

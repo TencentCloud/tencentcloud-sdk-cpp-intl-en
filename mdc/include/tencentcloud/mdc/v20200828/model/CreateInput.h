@@ -26,6 +26,10 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mdc/v20200828/model/CreateInputSRTSettings.h>
 #include <tencentcloud/mdc/v20200828/model/CreateInputRTPSettings.h>
+#include <tencentcloud/mdc/v20200828/model/CreateInputRTMPPullSettings.h>
+#include <tencentcloud/mdc/v20200828/model/CreateInputRTSPPullSettings.h>
+#include <tencentcloud/mdc/v20200828/model/CreateInputHLSPullSettings.h>
+#include <tencentcloud/mdc/v20200828/model/ResilientStreamConf.h>
 
 
 namespace TencentCloud
@@ -195,6 +199,111 @@ namespace TencentCloud
                      */
                     bool FailOverHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return RTMPPullSettings 
+                     * 
+                     */
+                    CreateInputRTMPPullSettings GetRTMPPullSettings() const;
+
+                    /**
+                     * 设置
+                     * @param _rTMPPullSettings 
+                     * 
+                     */
+                    void SetRTMPPullSettings(const CreateInputRTMPPullSettings& _rTMPPullSettings);
+
+                    /**
+                     * 判断参数 RTMPPullSettings 是否已赋值
+                     * @return RTMPPullSettings 是否已赋值
+                     * 
+                     */
+                    bool RTMPPullSettingsHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return RTSPPullSettings 
+                     * 
+                     */
+                    CreateInputRTSPPullSettings GetRTSPPullSettings() const;
+
+                    /**
+                     * 设置
+                     * @param _rTSPPullSettings 
+                     * 
+                     */
+                    void SetRTSPPullSettings(const CreateInputRTSPPullSettings& _rTSPPullSettings);
+
+                    /**
+                     * 判断参数 RTSPPullSettings 是否已赋值
+                     * @return RTSPPullSettings 是否已赋值
+                     * 
+                     */
+                    bool RTSPPullSettingsHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return HLSPullSettings 
+                     * 
+                     */
+                    CreateInputHLSPullSettings GetHLSPullSettings() const;
+
+                    /**
+                     * 设置
+                     * @param _hLSPullSettings 
+                     * 
+                     */
+                    void SetHLSPullSettings(const CreateInputHLSPullSettings& _hLSPullSettings);
+
+                    /**
+                     * 判断参数 HLSPullSettings 是否已赋值
+                     * @return HLSPullSettings 是否已赋值
+                     * 
+                     */
+                    bool HLSPullSettingsHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ResilientStream 
+                     * 
+                     */
+                    ResilientStreamConf GetResilientStream() const;
+
+                    /**
+                     * 设置
+                     * @param _resilientStream 
+                     * 
+                     */
+                    void SetResilientStream(const ResilientStreamConf& _resilientStream);
+
+                    /**
+                     * 判断参数 ResilientStream 是否已赋值
+                     * @return ResilientStream 是否已赋值
+                     * 
+                     */
+                    bool ResilientStreamHasBeenSet() const;
+
+                    /**
+                     * 获取The bound security group IDs.
+                     * @return SecurityGroupIds The bound security group IDs.
+                     * 
+                     */
+                    std::vector<std::string> GetSecurityGroupIds() const;
+
+                    /**
+                     * 设置The bound security group IDs.
+                     * @param _securityGroupIds The bound security group IDs.
+                     * 
+                     */
+                    void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
+
+                    /**
+                     * 判断参数 SecurityGroupIds 是否已赋值
+                     * @return SecurityGroupIds 是否已赋值
+                     * 
+                     */
+                    bool SecurityGroupIdsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -238,6 +347,36 @@ namespace TencentCloud
                      */
                     std::string m_failOver;
                     bool m_failOverHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    CreateInputRTMPPullSettings m_rTMPPullSettings;
+                    bool m_rTMPPullSettingsHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    CreateInputRTSPPullSettings m_rTSPPullSettings;
+                    bool m_rTSPPullSettingsHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    CreateInputHLSPullSettings m_hLSPullSettings;
+                    bool m_hLSPullSettingsHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    ResilientStreamConf m_resilientStream;
+                    bool m_resilientStreamHasBeenSet;
+
+                    /**
+                     * The bound security group IDs.
+                     */
+                    std::vector<std::string> m_securityGroupIds;
+                    bool m_securityGroupIdsHasBeenSet;
 
                 };
             }

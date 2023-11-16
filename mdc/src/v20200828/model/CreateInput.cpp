@@ -27,7 +27,12 @@ CreateInput::CreateInput() :
     m_allowIpListHasBeenSet(false),
     m_sRTSettingsHasBeenSet(false),
     m_rTPSettingsHasBeenSet(false),
-    m_failOverHasBeenSet(false)
+    m_failOverHasBeenSet(false),
+    m_rTMPPullSettingsHasBeenSet(false),
+    m_rTSPPullSettingsHasBeenSet(false),
+    m_hLSPullSettingsHasBeenSet(false),
+    m_resilientStreamHasBeenSet(false),
+    m_securityGroupIdsHasBeenSet(false)
 {
 }
 
@@ -123,6 +128,87 @@ CoreInternalOutcome CreateInput::Deserialize(const rapidjson::Value &value)
         m_failOverHasBeenSet = true;
     }
 
+    if (value.HasMember("RTMPPullSettings") && !value["RTMPPullSettings"].IsNull())
+    {
+        if (!value["RTMPPullSettings"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `CreateInput.RTMPPullSettings` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_rTMPPullSettings.Deserialize(value["RTMPPullSettings"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_rTMPPullSettingsHasBeenSet = true;
+    }
+
+    if (value.HasMember("RTSPPullSettings") && !value["RTSPPullSettings"].IsNull())
+    {
+        if (!value["RTSPPullSettings"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `CreateInput.RTSPPullSettings` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_rTSPPullSettings.Deserialize(value["RTSPPullSettings"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_rTSPPullSettingsHasBeenSet = true;
+    }
+
+    if (value.HasMember("HLSPullSettings") && !value["HLSPullSettings"].IsNull())
+    {
+        if (!value["HLSPullSettings"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `CreateInput.HLSPullSettings` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_hLSPullSettings.Deserialize(value["HLSPullSettings"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_hLSPullSettingsHasBeenSet = true;
+    }
+
+    if (value.HasMember("ResilientStream") && !value["ResilientStream"].IsNull())
+    {
+        if (!value["ResilientStream"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `CreateInput.ResilientStream` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_resilientStream.Deserialize(value["ResilientStream"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_resilientStreamHasBeenSet = true;
+    }
+
+    if (value.HasMember("SecurityGroupIds") && !value["SecurityGroupIds"].IsNull())
+    {
+        if (!value["SecurityGroupIds"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `CreateInput.SecurityGroupIds` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["SecurityGroupIds"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            m_securityGroupIds.push_back((*itr).GetString());
+        }
+        m_securityGroupIdsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -191,6 +277,55 @@ void CreateInput::ToJsonObject(rapidjson::Value &value, rapidjson::Document::All
         string key = "FailOver";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_failOver.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_rTMPPullSettingsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RTMPPullSettings";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_rTMPPullSettings.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_rTSPPullSettingsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RTSPPullSettings";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_rTSPPullSettings.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_hLSPullSettingsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "HLSPullSettings";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_hLSPullSettings.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_resilientStreamHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ResilientStream";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_resilientStream.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_securityGroupIdsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SecurityGroupIds";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_securityGroupIds.begin(); itr != m_securityGroupIds.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
     }
 
 }
@@ -306,5 +441,85 @@ void CreateInput::SetFailOver(const string& _failOver)
 bool CreateInput::FailOverHasBeenSet() const
 {
     return m_failOverHasBeenSet;
+}
+
+CreateInputRTMPPullSettings CreateInput::GetRTMPPullSettings() const
+{
+    return m_rTMPPullSettings;
+}
+
+void CreateInput::SetRTMPPullSettings(const CreateInputRTMPPullSettings& _rTMPPullSettings)
+{
+    m_rTMPPullSettings = _rTMPPullSettings;
+    m_rTMPPullSettingsHasBeenSet = true;
+}
+
+bool CreateInput::RTMPPullSettingsHasBeenSet() const
+{
+    return m_rTMPPullSettingsHasBeenSet;
+}
+
+CreateInputRTSPPullSettings CreateInput::GetRTSPPullSettings() const
+{
+    return m_rTSPPullSettings;
+}
+
+void CreateInput::SetRTSPPullSettings(const CreateInputRTSPPullSettings& _rTSPPullSettings)
+{
+    m_rTSPPullSettings = _rTSPPullSettings;
+    m_rTSPPullSettingsHasBeenSet = true;
+}
+
+bool CreateInput::RTSPPullSettingsHasBeenSet() const
+{
+    return m_rTSPPullSettingsHasBeenSet;
+}
+
+CreateInputHLSPullSettings CreateInput::GetHLSPullSettings() const
+{
+    return m_hLSPullSettings;
+}
+
+void CreateInput::SetHLSPullSettings(const CreateInputHLSPullSettings& _hLSPullSettings)
+{
+    m_hLSPullSettings = _hLSPullSettings;
+    m_hLSPullSettingsHasBeenSet = true;
+}
+
+bool CreateInput::HLSPullSettingsHasBeenSet() const
+{
+    return m_hLSPullSettingsHasBeenSet;
+}
+
+ResilientStreamConf CreateInput::GetResilientStream() const
+{
+    return m_resilientStream;
+}
+
+void CreateInput::SetResilientStream(const ResilientStreamConf& _resilientStream)
+{
+    m_resilientStream = _resilientStream;
+    m_resilientStreamHasBeenSet = true;
+}
+
+bool CreateInput::ResilientStreamHasBeenSet() const
+{
+    return m_resilientStreamHasBeenSet;
+}
+
+vector<string> CreateInput::GetSecurityGroupIds() const
+{
+    return m_securityGroupIds;
+}
+
+void CreateInput::SetSecurityGroupIds(const vector<string>& _securityGroupIds)
+{
+    m_securityGroupIds = _securityGroupIds;
+    m_securityGroupIdsHasBeenSet = true;
+}
+
+bool CreateInput::SecurityGroupIdsHasBeenSet() const
+{
+    return m_securityGroupIdsHasBeenSet;
 }
 

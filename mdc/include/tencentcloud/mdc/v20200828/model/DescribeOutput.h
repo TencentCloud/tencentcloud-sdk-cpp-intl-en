@@ -29,6 +29,8 @@
 #include <tencentcloud/mdc/v20200828/model/DescribeOutputRTPSettings.h>
 #include <tencentcloud/mdc/v20200828/model/DescribeOutputRTMPSettings.h>
 #include <tencentcloud/mdc/v20200828/model/DescribeOutputRTMPPullSettings.h>
+#include <tencentcloud/mdc/v20200828/model/DescribeOutputRTSPPullSettings.h>
+#include <tencentcloud/mdc/v20200828/model/DescribeOutputHLSPullSettings.h>
 
 
 namespace TencentCloud
@@ -335,6 +337,90 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     bool AllowIpListHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return RTSPPullSettings 
+                     * 
+                     */
+                    DescribeOutputRTSPPullSettings GetRTSPPullSettings() const;
+
+                    /**
+                     * 设置
+                     * @param _rTSPPullSettings 
+                     * 
+                     */
+                    void SetRTSPPullSettings(const DescribeOutputRTSPPullSettings& _rTSPPullSettings);
+
+                    /**
+                     * 判断参数 RTSPPullSettings 是否已赋值
+                     * @return RTSPPullSettings 是否已赋值
+                     * 
+                     */
+                    bool RTSPPullSettingsHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return HLSPullSettings 
+                     * 
+                     */
+                    DescribeOutputHLSPullSettings GetHLSPullSettings() const;
+
+                    /**
+                     * 设置
+                     * @param _hLSPullSettings 
+                     * 
+                     */
+                    void SetHLSPullSettings(const DescribeOutputHLSPullSettings& _hLSPullSettings);
+
+                    /**
+                     * 判断参数 HLSPullSettings 是否已赋值
+                     * @return HLSPullSettings 是否已赋值
+                     * 
+                     */
+                    bool HLSPullSettingsHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return MaxConcurrent 
+                     * 
+                     */
+                    uint64_t GetMaxConcurrent() const;
+
+                    /**
+                     * 设置
+                     * @param _maxConcurrent 
+                     * 
+                     */
+                    void SetMaxConcurrent(const uint64_t& _maxConcurrent);
+
+                    /**
+                     * 判断参数 MaxConcurrent 是否已赋值
+                     * @return MaxConcurrent 是否已赋值
+                     * 
+                     */
+                    bool MaxConcurrentHasBeenSet() const;
+
+                    /**
+                     * 获取The bound security group IDs.
+                     * @return SecurityGroupIds The bound security group IDs.
+                     * 
+                     */
+                    std::vector<std::string> GetSecurityGroupIds() const;
+
+                    /**
+                     * 设置The bound security group IDs.
+                     * @param _securityGroupIds The bound security group IDs.
+                     * 
+                     */
+                    void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
+
+                    /**
+                     * 判断参数 SecurityGroupIds 是否已赋值
+                     * @return SecurityGroupIds 是否已赋值
+                     * 
+                     */
+                    bool SecurityGroupIdsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -416,6 +502,30 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::vector<std::string> m_allowIpList;
                     bool m_allowIpListHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    DescribeOutputRTSPPullSettings m_rTSPPullSettings;
+                    bool m_rTSPPullSettingsHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    DescribeOutputHLSPullSettings m_hLSPullSettings;
+                    bool m_hLSPullSettingsHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_maxConcurrent;
+                    bool m_maxConcurrentHasBeenSet;
+
+                    /**
+                     * The bound security group IDs.
+                     */
+                    std::vector<std::string> m_securityGroupIds;
+                    bool m_securityGroupIdsHasBeenSet;
 
                 };
             }

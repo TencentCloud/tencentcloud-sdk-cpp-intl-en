@@ -32,7 +32,11 @@ DescribeOutput::DescribeOutput() :
     m_rTPSettingsHasBeenSet(false),
     m_rTMPSettingsHasBeenSet(false),
     m_rTMPPullSettingsHasBeenSet(false),
-    m_allowIpListHasBeenSet(false)
+    m_allowIpListHasBeenSet(false),
+    m_rTSPPullSettingsHasBeenSet(false),
+    m_hLSPullSettingsHasBeenSet(false),
+    m_maxConcurrentHasBeenSet(false),
+    m_securityGroupIdsHasBeenSet(false)
 {
 }
 
@@ -202,6 +206,63 @@ CoreInternalOutcome DescribeOutput::Deserialize(const rapidjson::Value &value)
         m_allowIpListHasBeenSet = true;
     }
 
+    if (value.HasMember("RTSPPullSettings") && !value["RTSPPullSettings"].IsNull())
+    {
+        if (!value["RTSPPullSettings"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `DescribeOutput.RTSPPullSettings` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_rTSPPullSettings.Deserialize(value["RTSPPullSettings"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_rTSPPullSettingsHasBeenSet = true;
+    }
+
+    if (value.HasMember("HLSPullSettings") && !value["HLSPullSettings"].IsNull())
+    {
+        if (!value["HLSPullSettings"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `DescribeOutput.HLSPullSettings` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_hLSPullSettings.Deserialize(value["HLSPullSettings"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_hLSPullSettingsHasBeenSet = true;
+    }
+
+    if (value.HasMember("MaxConcurrent") && !value["MaxConcurrent"].IsNull())
+    {
+        if (!value["MaxConcurrent"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `DescribeOutput.MaxConcurrent` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_maxConcurrent = value["MaxConcurrent"].GetUint64();
+        m_maxConcurrentHasBeenSet = true;
+    }
+
+    if (value.HasMember("SecurityGroupIds") && !value["SecurityGroupIds"].IsNull())
+    {
+        if (!value["SecurityGroupIds"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `DescribeOutput.SecurityGroupIds` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["SecurityGroupIds"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            m_securityGroupIds.push_back((*itr).GetString());
+        }
+        m_securityGroupIdsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -316,6 +377,45 @@ void DescribeOutput::ToJsonObject(rapidjson::Value &value, rapidjson::Document::
         value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_allowIpList.begin(); itr != m_allowIpList.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_rTSPPullSettingsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RTSPPullSettings";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_rTSPPullSettings.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_hLSPullSettingsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "HLSPullSettings";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_hLSPullSettings.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_maxConcurrentHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MaxConcurrent";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_maxConcurrent, allocator);
+    }
+
+    if (m_securityGroupIdsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SecurityGroupIds";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_securityGroupIds.begin(); itr != m_securityGroupIds.end(); ++itr)
         {
             value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
@@ -514,5 +614,69 @@ void DescribeOutput::SetAllowIpList(const vector<string>& _allowIpList)
 bool DescribeOutput::AllowIpListHasBeenSet() const
 {
     return m_allowIpListHasBeenSet;
+}
+
+DescribeOutputRTSPPullSettings DescribeOutput::GetRTSPPullSettings() const
+{
+    return m_rTSPPullSettings;
+}
+
+void DescribeOutput::SetRTSPPullSettings(const DescribeOutputRTSPPullSettings& _rTSPPullSettings)
+{
+    m_rTSPPullSettings = _rTSPPullSettings;
+    m_rTSPPullSettingsHasBeenSet = true;
+}
+
+bool DescribeOutput::RTSPPullSettingsHasBeenSet() const
+{
+    return m_rTSPPullSettingsHasBeenSet;
+}
+
+DescribeOutputHLSPullSettings DescribeOutput::GetHLSPullSettings() const
+{
+    return m_hLSPullSettings;
+}
+
+void DescribeOutput::SetHLSPullSettings(const DescribeOutputHLSPullSettings& _hLSPullSettings)
+{
+    m_hLSPullSettings = _hLSPullSettings;
+    m_hLSPullSettingsHasBeenSet = true;
+}
+
+bool DescribeOutput::HLSPullSettingsHasBeenSet() const
+{
+    return m_hLSPullSettingsHasBeenSet;
+}
+
+uint64_t DescribeOutput::GetMaxConcurrent() const
+{
+    return m_maxConcurrent;
+}
+
+void DescribeOutput::SetMaxConcurrent(const uint64_t& _maxConcurrent)
+{
+    m_maxConcurrent = _maxConcurrent;
+    m_maxConcurrentHasBeenSet = true;
+}
+
+bool DescribeOutput::MaxConcurrentHasBeenSet() const
+{
+    return m_maxConcurrentHasBeenSet;
+}
+
+vector<string> DescribeOutput::GetSecurityGroupIds() const
+{
+    return m_securityGroupIds;
+}
+
+void DescribeOutput::SetSecurityGroupIds(const vector<string>& _securityGroupIds)
+{
+    m_securityGroupIds = _securityGroupIds;
+    m_securityGroupIdsHasBeenSet = true;
+}
+
+bool DescribeOutput::SecurityGroupIdsHasBeenSet() const
+{
+    return m_securityGroupIdsHasBeenSet;
 }
 
