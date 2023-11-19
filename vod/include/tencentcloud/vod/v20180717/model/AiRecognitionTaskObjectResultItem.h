@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool SegmentSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RecognitionSegmentSet 
+                     * 获取List of fragments in which the object appears.
+                     * @return RecognitionSegmentSet List of fragments in which the object appears.
                      * 
                      */
                     std::vector<AiRecognitionTaskObjectSegmentItem> GetRecognitionSegmentSet() const;
 
                     /**
-                     * 设置
-                     * @param _recognitionSegmentSet 
+                     * 设置List of fragments in which the object appears.
+                     * @param _recognitionSegmentSet List of fragments in which the object appears.
                      * 
                      */
                     void SetRecognitionSegmentSet(const std::vector<AiRecognitionTaskObjectSegmentItem>& _recognitionSegmentSet);
@@ -126,7 +126,7 @@ namespace TencentCloud
                     bool m_segmentSetHasBeenSet;
 
                     /**
-                     * 
+                     * List of fragments in which the object appears.
                      */
                     std::vector<AiRecognitionTaskObjectSegmentItem> m_recognitionSegmentSet;
                     bool m_recognitionSegmentSetHasBeenSet;

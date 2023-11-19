@@ -173,15 +173,27 @@ namespace TencentCloud
                     bool SizeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DigitalWatermarkType 
+                     * 获取Digital watermark type. Optional values:
+<li>Trace means traceability watermark processing; </li>
+<li>CopyRight means copyright watermark processing; </li>
+<li>None means no digital watermark processing. </li>
+                     * @return DigitalWatermarkType Digital watermark type. Optional values:
+<li>Trace means traceability watermark processing; </li>
+<li>CopyRight means copyright watermark processing; </li>
+<li>None means no digital watermark processing. </li>
                      * 
                      */
                     std::string GetDigitalWatermarkType() const;
 
                     /**
-                     * 设置
-                     * @param _digitalWatermarkType 
+                     * 设置Digital watermark type. Optional values:
+<li>Trace means traceability watermark processing; </li>
+<li>CopyRight means copyright watermark processing; </li>
+<li>None means no digital watermark processing. </li>
+                     * @param _digitalWatermarkType Digital watermark type. Optional values:
+<li>Trace means traceability watermark processing; </li>
+<li>CopyRight means copyright watermark processing; </li>
+<li>None means no digital watermark processing. </li>
                      * 
                      */
                     void SetDigitalWatermarkType(const std::string& _digitalWatermarkType);
@@ -215,15 +227,15 @@ namespace TencentCloud
                     bool SubStreamSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CopyRightWatermarkText 
+                     * 获取Copyright Information.
+                     * @return CopyRightWatermarkText Copyright Information.
                      * 
                      */
                     std::string GetCopyRightWatermarkText() const;
 
                     /**
-                     * 设置
-                     * @param _copyRightWatermarkText 
+                     * 设置Copyright Information.
+                     * @param _copyRightWatermarkText Copyright Information.
                      * 
                      */
                     void SetCopyRightWatermarkText(const std::string& _copyRightWatermarkText);
@@ -273,7 +285,10 @@ namespace TencentCloud
                     bool m_sizeHasBeenSet;
 
                     /**
-                     * 
+                     * Digital watermark type. Optional values:
+<li>Trace means traceability watermark processing; </li>
+<li>CopyRight means copyright watermark processing; </li>
+<li>None means no digital watermark processing. </li>
                      */
                     std::string m_digitalWatermarkType;
                     bool m_digitalWatermarkTypeHasBeenSet;
@@ -285,7 +300,7 @@ namespace TencentCloud
                     bool m_subStreamSetHasBeenSet;
 
                     /**
-                     * 
+                     * Copyright Information.
                      */
                     std::string m_copyRightWatermarkText;
                     bool m_copyRightWatermarkTextHasBeenSet;

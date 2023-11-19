@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取AWS S3 return-to-origin authentication configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+                     * @return Switch AWS S3 return-to-origin authentication configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置AWS S3 return-to-origin authentication configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+                     * @param _switch AWS S3 return-to-origin authentication configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -154,7 +154,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * AWS S3 return-to-origin authentication configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

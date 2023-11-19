@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Back-to-origin follow configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+                     * @return Switch Back-to-origin follow configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置Back-to-origin follow configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+                     * @param _switch Back-to-origin follow configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Back-to-origin follow configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

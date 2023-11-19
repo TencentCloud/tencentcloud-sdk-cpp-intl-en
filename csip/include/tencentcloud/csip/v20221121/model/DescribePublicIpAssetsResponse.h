@@ -92,9 +92,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool AssetLocationListHasBeenSet() const;
 
                     /**
-                     * 获取List of IPs
+                     * 获取List of IP types
 Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return IpTypeList List of IPs
+                     * @return IpTypeList List of IP types
 Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -194,7 +194,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_assetLocationListHasBeenSet;
 
                     /**
-                     * List of IPs
+                     * List of IP types
 Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     std::vector<FilterDataObject> m_ipTypeList;

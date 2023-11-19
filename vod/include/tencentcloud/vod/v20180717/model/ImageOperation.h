@@ -50,15 +50,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Image processing type. Optional types are:
+<li>Scale: image thumbnail processing;</li>
+<li>CenterCut: image cropping processing;</li>
+<li>Blur: image blur processing. </li>
+                     * @return Type Image processing type. Optional types are:
+<li>Scale: image thumbnail processing;</li>
+<li>CenterCut: image cropping processing;</li>
+<li>Blur: image blur processing. </li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置Image processing type. Optional types are:
+<li>Scale: image thumbnail processing;</li>
+<li>CenterCut: image cropping processing;</li>
+<li>Blur: image blur processing. </li>
+                     * @param _type Image processing type. Optional types are:
+<li>Scale: image thumbnail processing;</li>
+<li>CenterCut: image cropping processing;</li>
+<li>Blur: image blur processing. </li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -136,7 +148,10 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Image processing type. Optional types are:
+<li>Scale: image thumbnail processing;</li>
+<li>CenterCut: image cropping processing;</li>
+<li>Blur: image blur processing. </li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

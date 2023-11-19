@@ -78,9 +78,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool DataHasBeenSet() const;
 
                     /**
-                     * 获取List of protection status
+                     * 获取List of WAF protection status
 Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return DefenseStatusList List of protection status
+                     * @return DefenseStatusList List of WAF protection status
 Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -158,7 +158,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_dataHasBeenSet;
 
                     /**
-                     * List of protection status
+                     * List of WAF protection status
 Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     std::vector<FilterDataObject> m_defenseStatusList;

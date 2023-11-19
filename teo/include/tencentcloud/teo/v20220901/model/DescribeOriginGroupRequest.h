@@ -44,15 +44,36 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Offset for paginated queries. Default value: 0.
-                     * @return Offset Offset for paginated queries. Default value: 0.
+                     * 获取(Required) Site ID
+                     * @return ZoneId (Required) Site ID
+                     * 
+                     */
+                    std::string GetZoneId() const;
+
+                    /**
+                     * 设置(Required) Site ID
+                     * @param _zoneId (Required) Site ID
+                     * 
+                     */
+                    void SetZoneId(const std::string& _zoneId);
+
+                    /**
+                     * 判断参数 ZoneId 是否已赋值
+                     * @return ZoneId 是否已赋值
+                     * 
+                     */
+                    bool ZoneIdHasBeenSet() const;
+
+                    /**
+                     * 获取The paginated query offset. Default value: 0
+                     * @return Offset The paginated query offset. Default value: 0
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Offset for paginated queries. Default value: 0.
-                     * @param _offset Offset for paginated queries. Default value: 0.
+                     * 设置The paginated query offset. Default value: 0
+                     * @param _offset The paginated query offset. Default value: 0
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -65,15 +86,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Limit on paginated queries. Value range: 1-1000. Default value: 10.
-                     * @return Limit Limit on paginated queries. Value range: 1-1000. Default value: 10.
+                     * 获取Limit on paginated queries. Value range: 1-1000. Default value: 20.
+                     * @return Limit Limit on paginated queries. Value range: 1-1000. Default value: 20.
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Limit on paginated queries. Value range: 1-1000. Default value: 10.
-                     * @param _limit Limit on paginated queries. Value range: 1-1000. Default value: 10.
+                     * 设置Limit on paginated queries. Value range: 1-1000. Default value: 20.
+                     * @param _limit Limit on paginated queries. Value range: 1-1000. Default value: 20.
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -87,18 +108,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Filters. Each filter can have up to 20 entries. See below for details:
-<li>`zone-id`<br>   Filter by the specified <strong>site ID</strong>, such as zone-20hzkd4rdmy0<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`origin-group-id`:<br>   Filter by the specified <strong>origin group ID</strong>, such as origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`origin-group-name`:<br>   Filter by the specified <strong>origin group name</strong><br>   Type: String<br>   Required: No<br>   Fuzzy query: Supported (only one origin group name allowed in a query)</li>
+<li>`origin-group-id`<br>Filter by the <strong>origin group ID</strong>. Format: `origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a`<br>Fuzzy query is not supported</li><li>`origin-group-name`<br>Filter by the <strong>origin group name</strong><br>Fuzzy query is supported. When fuzzy query is used, only one origin groupsource site group name is supported</li>
                      * @return Filters Filters. Each filter can have up to 20 entries. See below for details:
-<li>`zone-id`<br>   Filter by the specified <strong>site ID</strong>, such as zone-20hzkd4rdmy0<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`origin-group-id`:<br>   Filter by the specified <strong>origin group ID</strong>, such as origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`origin-group-name`:<br>   Filter by the specified <strong>origin group name</strong><br>   Type: String<br>   Required: No<br>   Fuzzy query: Supported (only one origin group name allowed in a query)</li>
+<li>`origin-group-id`<br>Filter by the <strong>origin group ID</strong>. Format: `origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a`<br>Fuzzy query is not supported</li><li>`origin-group-name`<br>Filter by the <strong>origin group name</strong><br>Fuzzy query is supported. When fuzzy query is used, only one origin groupsource site group name is supported</li>
                      * 
                      */
                     std::vector<AdvancedFilter> GetFilters() const;
 
                     /**
                      * 设置Filters. Each filter can have up to 20 entries. See below for details:
-<li>`zone-id`<br>   Filter by the specified <strong>site ID</strong>, such as zone-20hzkd4rdmy0<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`origin-group-id`:<br>   Filter by the specified <strong>origin group ID</strong>, such as origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`origin-group-name`:<br>   Filter by the specified <strong>origin group name</strong><br>   Type: String<br>   Required: No<br>   Fuzzy query: Supported (only one origin group name allowed in a query)</li>
+<li>`origin-group-id`<br>Filter by the <strong>origin group ID</strong>. Format: `origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a`<br>Fuzzy query is not supported</li><li>`origin-group-name`<br>Filter by the <strong>origin group name</strong><br>Fuzzy query is supported. When fuzzy query is used, only one origin groupsource site group name is supported</li>
                      * @param _filters Filters. Each filter can have up to 20 entries. See below for details:
-<li>`zone-id`<br>   Filter by the specified <strong>site ID</strong>, such as zone-20hzkd4rdmy0<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`origin-group-id`:<br>   Filter by the specified <strong>origin group ID</strong>, such as origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`origin-group-name`:<br>   Filter by the specified <strong>origin group name</strong><br>   Type: String<br>   Required: No<br>   Fuzzy query: Supported (only one origin group name allowed in a query)</li>
+<li>`origin-group-id`<br>Filter by the <strong>origin group ID</strong>. Format: `origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a`<br>Fuzzy query is not supported</li><li>`origin-group-name`<br>Filter by the <strong>origin group name</strong><br>Fuzzy query is supported. When fuzzy query is used, only one origin groupsource site group name is supported</li>
                      * 
                      */
                     void SetFilters(const std::vector<AdvancedFilter>& _filters);
@@ -113,20 +134,26 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Offset for paginated queries. Default value: 0.
+                     * (Required) Site ID
+                     */
+                    std::string m_zoneId;
+                    bool m_zoneIdHasBeenSet;
+
+                    /**
+                     * The paginated query offset. Default value: 0
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Limit on paginated queries. Value range: 1-1000. Default value: 10.
+                     * Limit on paginated queries. Value range: 1-1000. Default value: 20.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
                      * Filters. Each filter can have up to 20 entries. See below for details:
-<li>`zone-id`<br>   Filter by the specified <strong>site ID</strong>, such as zone-20hzkd4rdmy0<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`origin-group-id`:<br>   Filter by the specified <strong>origin group ID</strong>, such as origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`origin-group-name`:<br>   Filter by the specified <strong>origin group name</strong><br>   Type: String<br>   Required: No<br>   Fuzzy query: Supported (only one origin group name allowed in a query)</li>
+<li>`origin-group-id`<br>Filter by the <strong>origin group ID</strong>. Format: `origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a`<br>Fuzzy query is not supported</li><li>`origin-group-name`<br>Filter by the <strong>origin group name</strong><br>Fuzzy query is supported. When fuzzy query is used, only one origin groupsource site group name is supported</li>
                      */
                     std::vector<AdvancedFilter> m_filters;
                     bool m_filtersHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Services referencing this origin group
                 */
                 class OriginGroupReference : public AbstractModel
                 {
@@ -47,15 +47,31 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return InstanceType 
+                     * 获取Services referencing the origin group. Values:
+<li>`AccelerationDomain`: Acceleration domain name</li>
+<li>`RuleEngine`: Rules engine</li>
+<li>`Loadbalance`: Load balancer</li>
+<li>`ApplicationProxy`: L4 proxy</li>
+                     * @return InstanceType Services referencing the origin group. Values:
+<li>`AccelerationDomain`: Acceleration domain name</li>
+<li>`RuleEngine`: Rules engine</li>
+<li>`Loadbalance`: Load balancer</li>
+<li>`ApplicationProxy`: L4 proxy</li>
                      * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置
-                     * @param _instanceType 
+                     * 设置Services referencing the origin group. Values:
+<li>`AccelerationDomain`: Acceleration domain name</li>
+<li>`RuleEngine`: Rules engine</li>
+<li>`Loadbalance`: Load balancer</li>
+<li>`ApplicationProxy`: L4 proxy</li>
+                     * @param _instanceType Services referencing the origin group. Values:
+<li>`AccelerationDomain`: Acceleration domain name</li>
+<li>`RuleEngine`: Rules engine</li>
+<li>`Loadbalance`: Load balancer</li>
+<li>`ApplicationProxy`: L4 proxy</li>
                      * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
@@ -68,15 +84,15 @@ namespace TencentCloud
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InstanceId 
+                     * 获取ID of the instances referencing the origin group
+                     * @return InstanceId ID of the instances referencing the origin group
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置
-                     * @param _instanceId 
+                     * 设置ID of the instances referencing the origin group
+                     * @param _instanceId ID of the instances referencing the origin group
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -89,15 +105,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InstanceName 
+                     * 获取Name of the instance referencing the origin group
+                     * @return InstanceName Name of the instance referencing the origin group
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置
-                     * @param _instanceName 
+                     * 设置Name of the instance referencing the origin group
+                     * @param _instanceName Name of the instance referencing the origin group
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -112,19 +128,23 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Services referencing the origin group. Values:
+<li>`AccelerationDomain`: Acceleration domain name</li>
+<li>`RuleEngine`: Rules engine</li>
+<li>`Loadbalance`: Load balancer</li>
+<li>`ApplicationProxy`: L4 proxy</li>
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * 
+                     * ID of the instances referencing the origin group
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * 
+                     * Name of the instance referencing the origin group
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;

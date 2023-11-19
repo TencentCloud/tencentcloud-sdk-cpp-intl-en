@@ -153,15 +153,27 @@ namespace TencentCloud
                     bool DescHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取Playback status, optional values:
+<li>Enabled: startup status;</li>
+<li>Disabled: stop status. </li>
+Default value: Enabled.
+                     * @return Status Playback status, optional values:
+<li>Enabled: startup status;</li>
+<li>Disabled: stop status. </li>
+Default value: Enabled.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置
-                     * @param _status 
+                     * 设置Playback status, optional values:
+<li>Enabled: startup status;</li>
+<li>Disabled: stop status. </li>
+Default value: Enabled.
+                     * @param _status Playback status, optional values:
+<li>Enabled: startup status;</li>
+<li>Disabled: stop status. </li>
+Default value: Enabled.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -174,15 +186,27 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PlayBackMode 
+                     * 获取Play mode, optional values:
+<li>Loop: Play the playlist in a loop;</li>
+<li>Linear: Play once, stop playing after the playlist is played. </li>
+Default value: Loop.
+                     * @return PlayBackMode Play mode, optional values:
+<li>Loop: Play the playlist in a loop;</li>
+<li>Linear: Play once, stop playing after the playlist is played. </li>
+Default value: Loop.
                      * 
                      */
                     std::string GetPlayBackMode() const;
 
                     /**
-                     * 设置
-                     * @param _playBackMode 
+                     * 设置Play mode, optional values:
+<li>Loop: Play the playlist in a loop;</li>
+<li>Linear: Play once, stop playing after the playlist is played. </li>
+Default value: Loop.
+                     * @param _playBackMode Play mode, optional values:
+<li>Loop: Play the playlist in a loop;</li>
+<li>Linear: Play once, stop playing after the playlist is played. </li>
+Default value: Loop.
                      * 
                      */
                     void SetPlayBackMode(const std::string& _playBackMode);
@@ -195,15 +219,15 @@ namespace TencentCloud
                     bool PlayBackModeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Url 
+                     * 获取Carousel playback address.
+                     * @return Url Carousel playback address.
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置
-                     * @param _url 
+                     * 设置Carousel playback address.
+                     * @param _url Carousel playback address.
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -248,19 +272,25 @@ namespace TencentCloud
                     bool m_descHasBeenSet;
 
                     /**
-                     * 
+                     * Playback status, optional values:
+<li>Enabled: startup status;</li>
+<li>Disabled: stop status. </li>
+Default value: Enabled.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * 
+                     * Play mode, optional values:
+<li>Loop: Play the playlist in a loop;</li>
+<li>Linear: Play once, stop playing after the playlist is played. </li>
+Default value: Loop.
                      */
                     std::string m_playBackMode;
                     bool m_playBackModeHasBeenSet;
 
                     /**
-                     * 
+                     * Carousel playback address.
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;

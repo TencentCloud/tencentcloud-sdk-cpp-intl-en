@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The site ID.
-                     * @return ZoneId The site ID.
+                     * 获取Site ID
+                     * @return ZoneId Site ID
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置The site ID.
-                     * @param _zoneId The site ID.
+                     * 设置Site ID
+                     * @param _zoneId Site ID
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -65,123 +65,86 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取The origin type. Values:
-<li>`self`: Customer origin</li>
-<li>`third_party`: Third-party origin</li>
-<li>`cos`: Tencent Cloud COS origin</li>
-                     * @return OriginType The origin type. Values:
-<li>`self`: Customer origin</li>
-<li>`third_party`: Third-party origin</li>
-<li>`cos`: Tencent Cloud COS origin</li>
+                     * 获取Origin group name. It can contain 1 to 200 characters ([a-z], [A-Z], [0-9] and [_-]).
+                     * @return Name Origin group name. It can contain 1 to 200 characters ([a-z], [A-Z], [0-9] and [_-]).
                      * 
                      */
-                    std::string GetOriginType() const;
+                    std::string GetName() const;
 
                     /**
-                     * 设置The origin type. Values:
-<li>`self`: Customer origin</li>
-<li>`third_party`: Third-party origin</li>
-<li>`cos`: Tencent Cloud COS origin</li>
-                     * @param _originType The origin type. Values:
-<li>`self`: Customer origin</li>
-<li>`third_party`: Third-party origin</li>
-<li>`cos`: Tencent Cloud COS origin</li>
+                     * 设置Origin group name. It can contain 1 to 200 characters ([a-z], [A-Z], [0-9] and [_-]).
+                     * @param _name Origin group name. It can contain 1 to 200 characters ([a-z], [A-Z], [0-9] and [_-]).
                      * 
                      */
-                    void SetOriginType(const std::string& _originType);
+                    void SetName(const std::string& _name);
 
                     /**
-                     * 判断参数 OriginType 是否已赋值
-                     * @return OriginType 是否已赋值
+                     * 判断参数 Name 是否已赋值
+                     * @return Name 是否已赋值
                      * 
                      */
-                    bool OriginTypeHasBeenSet() const;
+                    bool NameHasBeenSet() const;
 
                     /**
-                     * 获取The name of the origin group.
-                     * @return OriginGroupName The name of the origin group.
+                     * 获取(Required) Origin group type. Values:
+<li>`GENERAL`: General origin groups. It supports IPs and domain names. It can be referenced by DNS, Rule Engine, Layer 4 Proxy and General LoadBalancer. </li>
+<li>`HTTP`: HTTP-specific origin groups. It supports IPs/domain names and object storage buckets. It can be referenced by acceleration domain names, rule engines and HTTP LoadBalancer. It cannot be referenced by L4 proxies. </li>
+                     * @return Type (Required) Origin group type. Values:
+<li>`GENERAL`: General origin groups. It supports IPs and domain names. It can be referenced by DNS, Rule Engine, Layer 4 Proxy and General LoadBalancer. </li>
+<li>`HTTP`: HTTP-specific origin groups. It supports IPs/domain names and object storage buckets. It can be referenced by acceleration domain names, rule engines and HTTP LoadBalancer. It cannot be referenced by L4 proxies. </li>
                      * 
                      */
-                    std::string GetOriginGroupName() const;
+                    std::string GetType() const;
 
                     /**
-                     * 设置The name of the origin group.
-                     * @param _originGroupName The name of the origin group.
+                     * 设置(Required) Origin group type. Values:
+<li>`GENERAL`: General origin groups. It supports IPs and domain names. It can be referenced by DNS, Rule Engine, Layer 4 Proxy and General LoadBalancer. </li>
+<li>`HTTP`: HTTP-specific origin groups. It supports IPs/domain names and object storage buckets. It can be referenced by acceleration domain names, rule engines and HTTP LoadBalancer. It cannot be referenced by L4 proxies. </li>
+                     * @param _type (Required) Origin group type. Values:
+<li>`GENERAL`: General origin groups. It supports IPs and domain names. It can be referenced by DNS, Rule Engine, Layer 4 Proxy and General LoadBalancer. </li>
+<li>`HTTP`: HTTP-specific origin groups. It supports IPs/domain names and object storage buckets. It can be referenced by acceleration domain names, rule engines and HTTP LoadBalancer. It cannot be referenced by L4 proxies. </li>
                      * 
                      */
-                    void SetOriginGroupName(const std::string& _originGroupName);
+                    void SetType(const std::string& _type);
 
                     /**
-                     * 判断参数 OriginGroupName 是否已赋值
-                     * @return OriginGroupName 是否已赋值
+                     * 判断参数 Type 是否已赋值
+                     * @return Type 是否已赋值
                      * 
                      */
-                    bool OriginGroupNameHasBeenSet() const;
+                    bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取The origin configuration type when `OriginType=self`. Values:
-<li>`area`: Configure by region.</li>
-<li>`weight`: Configure by weight.</li>
-<li>`proto`: Configure by HTTP protocol.</li>When `OriginType=third_party/cos`, leave this field empty.
-                     * @return ConfigurationType The origin configuration type when `OriginType=self`. Values:
-<li>`area`: Configure by region.</li>
-<li>`weight`: Configure by weight.</li>
-<li>`proto`: Configure by HTTP protocol.</li>When `OriginType=third_party/cos`, leave this field empty.
+                     * 获取(Required) Origins in the origin group.
+                     * @return Records (Required) Origins in the origin group.
                      * 
                      */
-                    std::string GetConfigurationType() const;
+                    std::vector<OriginRecord> GetRecords() const;
 
                     /**
-                     * 设置The origin configuration type when `OriginType=self`. Values:
-<li>`area`: Configure by region.</li>
-<li>`weight`: Configure by weight.</li>
-<li>`proto`: Configure by HTTP protocol.</li>When `OriginType=third_party/cos`, leave this field empty.
-                     * @param _configurationType The origin configuration type when `OriginType=self`. Values:
-<li>`area`: Configure by region.</li>
-<li>`weight`: Configure by weight.</li>
-<li>`proto`: Configure by HTTP protocol.</li>When `OriginType=third_party/cos`, leave this field empty.
+                     * 设置(Required) Origins in the origin group.
+                     * @param _records (Required) Origins in the origin group.
                      * 
                      */
-                    void SetConfigurationType(const std::string& _configurationType);
+                    void SetRecords(const std::vector<OriginRecord>& _records);
 
                     /**
-                     * 判断参数 ConfigurationType 是否已赋值
-                     * @return ConfigurationType 是否已赋值
+                     * 判断参数 Records 是否已赋值
+                     * @return Records 是否已赋值
                      * 
                      */
-                    bool ConfigurationTypeHasBeenSet() const;
+                    bool RecordsHasBeenSet() const;
 
                     /**
-                     * 获取Details of the origin record.
-                     * @return OriginRecords Details of the origin record.
-                     * 
-                     */
-                    std::vector<OriginRecord> GetOriginRecords() const;
-
-                    /**
-                     * 设置Details of the origin record.
-                     * @param _originRecords Details of the origin record.
-                     * 
-                     */
-                    void SetOriginRecords(const std::vector<OriginRecord>& _originRecords);
-
-                    /**
-                     * 判断参数 OriginRecords 是否已赋值
-                     * @return OriginRecords 是否已赋值
-                     * 
-                     */
-                    bool OriginRecordsHasBeenSet() const;
-
-                    /**
-                     * 获取The origin domain. This field can be specified only when `OriginType=self`.
-                     * @return HostHeader The origin domain. This field can be specified only when `OriginType=self`.
+                     * 获取Host header used for origin-pull. It only works when `Type=HTTP`. The `HostHeader` specified in `RuleEngine` takes a higher priority over this configuration.
+                     * @return HostHeader Host header used for origin-pull. It only works when `Type=HTTP`. The `HostHeader` specified in `RuleEngine` takes a higher priority over this configuration.
                      * 
                      */
                     std::string GetHostHeader() const;
 
                     /**
-                     * 设置The origin domain. This field can be specified only when `OriginType=self`.
-                     * @param _hostHeader The origin domain. This field can be specified only when `OriginType=self`.
+                     * 设置Host header used for origin-pull. It only works when `Type=HTTP`. The `HostHeader` specified in `RuleEngine` takes a higher priority over this configuration.
+                     * @param _hostHeader Host header used for origin-pull. It only works when `Type=HTTP`. The `HostHeader` specified in `RuleEngine` takes a higher priority over this configuration.
                      * 
                      */
                     void SetHostHeader(const std::string& _hostHeader);
@@ -196,43 +159,33 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The site ID.
+                     * Site ID
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * The origin type. Values:
-<li>`self`: Customer origin</li>
-<li>`third_party`: Third-party origin</li>
-<li>`cos`: Tencent Cloud COS origin</li>
+                     * Origin group name. It can contain 1 to 200 characters ([a-z], [A-Z], [0-9] and [_-]).
                      */
-                    std::string m_originType;
-                    bool m_originTypeHasBeenSet;
+                    std::string m_name;
+                    bool m_nameHasBeenSet;
 
                     /**
-                     * The name of the origin group.
+                     * (Required) Origin group type. Values:
+<li>`GENERAL`: General origin groups. It supports IPs and domain names. It can be referenced by DNS, Rule Engine, Layer 4 Proxy and General LoadBalancer. </li>
+<li>`HTTP`: HTTP-specific origin groups. It supports IPs/domain names and object storage buckets. It can be referenced by acceleration domain names, rule engines and HTTP LoadBalancer. It cannot be referenced by L4 proxies. </li>
                      */
-                    std::string m_originGroupName;
-                    bool m_originGroupNameHasBeenSet;
+                    std::string m_type;
+                    bool m_typeHasBeenSet;
 
                     /**
-                     * The origin configuration type when `OriginType=self`. Values:
-<li>`area`: Configure by region.</li>
-<li>`weight`: Configure by weight.</li>
-<li>`proto`: Configure by HTTP protocol.</li>When `OriginType=third_party/cos`, leave this field empty.
+                     * (Required) Origins in the origin group.
                      */
-                    std::string m_configurationType;
-                    bool m_configurationTypeHasBeenSet;
+                    std::vector<OriginRecord> m_records;
+                    bool m_recordsHasBeenSet;
 
                     /**
-                     * Details of the origin record.
-                     */
-                    std::vector<OriginRecord> m_originRecords;
-                    bool m_originRecordsHasBeenSet;
-
-                    /**
-                     * The origin domain. This field can be specified only when `OriginType=self`.
+                     * Host header used for origin-pull. It only works when `Type=HTTP`. The `HostHeader` specified in `RuleEngine` takes a higher priority over this configuration.
                      */
                     std::string m_hostHeader;
                     bool m_hostHeaderHasBeenSet;

@@ -107,15 +107,31 @@ namespace TencentCloud
                     bool OriginInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OriginProtocol 
+                     * 获取Origin-pull protocol configuration. Values:
+<li>`FOLLOW`: Follow the protocol of origin</li>
+<li>`HTTP`: Send requests to the origin over HTTP</li>
+<li>`HTTPS`: Send requests to the origin over HTTPS</li>
+<li>Default: `FOLLOW`</li>
+                     * @return OriginProtocol Origin-pull protocol configuration. Values:
+<li>`FOLLOW`: Follow the protocol of origin</li>
+<li>`HTTP`: Send requests to the origin over HTTP</li>
+<li>`HTTPS`: Send requests to the origin over HTTPS</li>
+<li>Default: `FOLLOW`</li>
                      * 
                      */
                     std::string GetOriginProtocol() const;
 
                     /**
-                     * 设置
-                     * @param _originProtocol 
+                     * 设置Origin-pull protocol configuration. Values:
+<li>`FOLLOW`: Follow the protocol of origin</li>
+<li>`HTTP`: Send requests to the origin over HTTP</li>
+<li>`HTTPS`: Send requests to the origin over HTTPS</li>
+<li>Default: `FOLLOW`</li>
+                     * @param _originProtocol Origin-pull protocol configuration. Values:
+<li>`FOLLOW`: Follow the protocol of origin</li>
+<li>`HTTP`: Send requests to the origin over HTTP</li>
+<li>`HTTPS`: Send requests to the origin over HTTPS</li>
+<li>Default: `FOLLOW`</li>
                      * 
                      */
                     void SetOriginProtocol(const std::string& _originProtocol);
@@ -128,15 +144,15 @@ namespace TencentCloud
                     bool OriginProtocolHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HttpOriginPort 
+                     * 获取Ports for HTTP origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTP`. Port 80 is used if it's not specified. 
+                     * @return HttpOriginPort Ports for HTTP origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTP`. Port 80 is used if it's not specified. 
                      * 
                      */
                     uint64_t GetHttpOriginPort() const;
 
                     /**
-                     * 设置
-                     * @param _httpOriginPort 
+                     * 设置Ports for HTTP origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTP`. Port 80 is used if it's not specified. 
+                     * @param _httpOriginPort Ports for HTTP origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTP`. Port 80 is used if it's not specified. 
                      * 
                      */
                     void SetHttpOriginPort(const uint64_t& _httpOriginPort);
@@ -149,15 +165,15 @@ namespace TencentCloud
                     bool HttpOriginPortHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HttpsOriginPort 
+                     * 获取Ports for HTTPS origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTPS`. Port 443 is used if it's not specified. 
+                     * @return HttpsOriginPort Ports for HTTPS origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTPS`. Port 443 is used if it's not specified. 
                      * 
                      */
                     uint64_t GetHttpsOriginPort() const;
 
                     /**
-                     * 设置
-                     * @param _httpsOriginPort 
+                     * 设置Ports for HTTPS origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTPS`. Port 443 is used if it's not specified. 
+                     * @param _httpsOriginPort Ports for HTTPS origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTPS`. Port 443 is used if it's not specified. 
                      * 
                      */
                     void SetHttpsOriginPort(const uint64_t& _httpsOriginPort);
@@ -170,15 +186,31 @@ namespace TencentCloud
                     bool HttpsOriginPortHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IPv6Status 
+                     * 获取IPv6 status. Values:
+<li>`follow`: Follow the IPv6 configuration of the site</li>
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+<li>Default: `follow`</li>
+                     * @return IPv6Status IPv6 status. Values:
+<li>`follow`: Follow the IPv6 configuration of the site</li>
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+<li>Default: `follow`</li>
                      * 
                      */
                     std::string GetIPv6Status() const;
 
                     /**
-                     * 设置
-                     * @param _iPv6Status 
+                     * 设置IPv6 status. Values:
+<li>`follow`: Follow the IPv6 configuration of the site</li>
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+<li>Default: `follow`</li>
+                     * @param _iPv6Status IPv6 status. Values:
+<li>`follow`: Follow the IPv6 configuration of the site</li>
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+<li>Default: `follow`</li>
                      * 
                      */
                     void SetIPv6Status(const std::string& _iPv6Status);
@@ -211,25 +243,33 @@ namespace TencentCloud
                     bool m_originInfoHasBeenSet;
 
                     /**
-                     * 
+                     * Origin-pull protocol configuration. Values:
+<li>`FOLLOW`: Follow the protocol of origin</li>
+<li>`HTTP`: Send requests to the origin over HTTP</li>
+<li>`HTTPS`: Send requests to the origin over HTTPS</li>
+<li>Default: `FOLLOW`</li>
                      */
                     std::string m_originProtocol;
                     bool m_originProtocolHasBeenSet;
 
                     /**
-                     * 
+                     * Ports for HTTP origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTP`. Port 80 is used if it's not specified. 
                      */
                     uint64_t m_httpOriginPort;
                     bool m_httpOriginPortHasBeenSet;
 
                     /**
-                     * 
+                     * Ports for HTTPS origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTPS`. Port 443 is used if it's not specified. 
                      */
                     uint64_t m_httpsOriginPort;
                     bool m_httpsOriginPortHasBeenSet;
 
                     /**
-                     * 
+                     * IPv6 status. Values:
+<li>`follow`: Follow the IPv6 configuration of the site</li>
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+<li>Default: `follow`</li>
                      */
                     std::string m_iPv6Status;
                     bool m_iPv6StatusHasBeenSet;

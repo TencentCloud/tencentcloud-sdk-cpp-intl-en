@@ -119,15 +119,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TraceWatermarkHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CopyRightWatermark 
+                     * 获取Copyright watermark.
+                     * @return CopyRightWatermark Copyright watermark.
                      * 
                      */
                     CopyRightWatermarkInput GetCopyRightWatermark() const;
 
                     /**
-                     * 设置
-                     * @param _copyRightWatermark 
+                     * 设置Copyright watermark.
+                     * @param _copyRightWatermark Copyright watermark.
                      * 
                      */
                     void SetCopyRightWatermark(const CopyRightWatermarkInput& _copyRightWatermark);
@@ -269,7 +269,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_traceWatermarkHasBeenSet;
 
                     /**
-                     * 
+                     * Copyright watermark.
                      */
                     CopyRightWatermarkInput m_copyRightWatermark;
                     bool m_copyRightWatermarkHasBeenSet;

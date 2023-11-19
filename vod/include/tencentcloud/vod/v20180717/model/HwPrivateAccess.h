@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Huawei Cloud Object Storage back-to-origin authentication configuration switch, the value is: <li>on: on; </li> <li>off: off. </li>
+                     * @return Switch Huawei Cloud Object Storage back-to-origin authentication configuration switch, the value is: <li>on: on; </li> <li>off: off. </li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置Huawei Cloud Object Storage back-to-origin authentication configuration switch, the value is: <li>on: on; </li> <li>off: off. </li>
+                     * @param _switch Huawei Cloud Object Storage back-to-origin authentication configuration switch, the value is: <li>on: on; </li> <li>off: off. </li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -133,7 +133,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Huawei Cloud Object Storage back-to-origin authentication configuration switch, the value is: <li>on: on; </li> <li>off: off. </li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

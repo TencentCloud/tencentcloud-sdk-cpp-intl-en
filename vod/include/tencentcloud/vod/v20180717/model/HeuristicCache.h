@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Heuristic cache configuration
                 */
                 class HeuristicCache : public AbstractModel
                 {
@@ -48,15 +48,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Heuristic cache configuration switch, the values u200bu200bare: 
+<li>on: on; </li>
+<li>off: off. </li>
+                     * @return Switch Heuristic cache configuration switch, the values u200bu200bare: 
+<li>on: on; </li>
+<li>off: off. </li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置Heuristic cache configuration switch, the values u200bu200bare: 
+<li>on: on; </li>
+<li>off: off. </li>
+                     * @param _switch Heuristic cache configuration switch, the values u200bu200bare: 
+<li>on: on; </li>
+<li>off: off. </li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -69,15 +77,19 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CacheConfig 
+                     * 获取Custom heuristic cache time configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return CacheConfig Custom heuristic cache time configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     HeuristicCacheConfig GetCacheConfig() const;
 
                     /**
-                     * 设置
-                     * @param _cacheConfig 
+                     * 设置Custom heuristic cache time configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _cacheConfig Custom heuristic cache time configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetCacheConfig(const HeuristicCacheConfig& _cacheConfig);
@@ -92,13 +104,16 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Heuristic cache configuration switch, the values u200bu200bare: 
+<li>on: on; </li>
+<li>off: off. </li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * Custom heuristic cache time configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     HeuristicCacheConfig m_cacheConfig;
                     bool m_cacheConfigHasBeenSet;

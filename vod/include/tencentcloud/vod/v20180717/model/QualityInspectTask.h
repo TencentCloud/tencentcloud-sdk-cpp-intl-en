@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Error code, an empty string indicates success, other values indicate failure. Please refer to the [Video Processing Error Code](https://intl.cloud.tencent.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list for values.
-                     * @return ErrCodeExt Error code, an empty string indicates success, other values indicate failure. Please refer to the [Video Processing Error Code](https://intl.cloud.tencent.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list for values.
+                     * 获取Error code, an empty string indicates success, other values indicate failure. Please refer to the [Video Processing Error Code](https://www.tencentcloud.com/document/product/266/39145) list for values.
+                     * @return ErrCodeExt Error code, an empty string indicates success, other values indicate failure. Please refer to the [Video Processing Error Code](https://www.tencentcloud.com/document/product/266/39145) list for values.
                      * 
                      */
                     std::string GetErrCodeExt() const;
 
                     /**
-                     * 设置Error code, an empty string indicates success, other values indicate failure. Please refer to the [Video Processing Error Code](https://intl.cloud.tencent.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list for values.
-                     * @param _errCodeExt Error code, an empty string indicates success, other values indicate failure. Please refer to the [Video Processing Error Code](https://intl.cloud.tencent.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list for values.
+                     * 设置Error code, an empty string indicates success, other values indicate failure. Please refer to the [Video Processing Error Code](https://www.tencentcloud.com/document/product/266/39145) list for values.
+                     * @param _errCodeExt Error code, an empty string indicates success, other values indicate failure. Please refer to the [Video Processing Error Code](https://www.tencentcloud.com/document/product/266/39145) list for values.
                      * 
                      */
                     void SetErrCodeExt(const std::string& _errCodeExt);
@@ -134,15 +134,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Media quality inpection input metadata of audio and video.
-                     * @return MetaData Media quality inpection input metadata of audio and video.
+                     * 获取Media quality inspection input metadata of audio and video.
+                     * @return MetaData Media quality inspection input metadata of audio and video.
                      * 
                      */
                     MediaMetaData GetMetaData() const;
 
                     /**
-                     * 设置Media quality inpection input metadata of audio and video.
-                     * @param _metaData Media quality inpection input metadata of audio and video.
+                     * 设置Media quality inspection input metadata of audio and video.
+                     * @param _metaData Media quality inspection input metadata of audio and video.
                      * 
                      */
                     void SetMetaData(const MediaMetaData& _metaData);
@@ -218,15 +218,15 @@ namespace TencentCloud
                     bool SessionIdHasBeenSet() const;
 
                     /**
-                     * 获取Source context, used for transparent transmission of user request information. Upon completion of media quality inpection, the callback will return the value of this field, with a maximum length of 1000 characters.
-                     * @return SessionContext Source context, used for transparent transmission of user request information. Upon completion of media quality inpection, the callback will return the value of this field, with a maximum length of 1000 characters.
+                     * 获取Source context, used for transparent transmission of user request information. Upon completion of media quality inspection, the callback will return the value of this field, with a maximum length of 1000 characters.
+                     * @return SessionContext Source context, used for transparent transmission of user request information. Upon completion of media quality inspection, the callback will return the value of this field, with a maximum length of 1000 characters.
                      * 
                      */
                     std::string GetSessionContext() const;
 
                     /**
-                     * 设置Source context, used for transparent transmission of user request information. Upon completion of media quality inpection, the callback will return the value of this field, with a maximum length of 1000 characters.
-                     * @param _sessionContext Source context, used for transparent transmission of user request information. Upon completion of media quality inpection, the callback will return the value of this field, with a maximum length of 1000 characters.
+                     * 设置Source context, used for transparent transmission of user request information. Upon completion of media quality inspection, the callback will return the value of this field, with a maximum length of 1000 characters.
+                     * @param _sessionContext Source context, used for transparent transmission of user request information. Upon completion of media quality inspection, the callback will return the value of this field, with a maximum length of 1000 characters.
                      * 
                      */
                     void SetSessionContext(const std::string& _sessionContext);
@@ -253,7 +253,7 @@ namespace TencentCloud
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Error code, an empty string indicates success, other values indicate failure. Please refer to the [Video Processing Error Code](https://intl.cloud.tencent.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list for values.
+                     * Error code, an empty string indicates success, other values indicate failure. Please refer to the [Video Processing Error Code](https://www.tencentcloud.com/document/product/266/39145) list for values.
                      */
                     std::string m_errCodeExt;
                     bool m_errCodeExtHasBeenSet;
@@ -265,7 +265,7 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Media quality inpection input metadata of audio and video.
+                     * Media quality inspection input metadata of audio and video.
                      */
                     MediaMetaData m_metaData;
                     bool m_metaDataHasBeenSet;
@@ -289,7 +289,7 @@ namespace TencentCloud
                     bool m_sessionIdHasBeenSet;
 
                     /**
-                     * Source context, used for transparent transmission of user request information. Upon completion of media quality inpection, the callback will return the value of this field, with a maximum length of 1000 characters.
+                     * Source context, used for transparent transmission of user request information. Upon completion of media quality inspection, the callback will return the value of this field, with a maximum length of 1000 characters.
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;

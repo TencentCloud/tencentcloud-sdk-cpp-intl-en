@@ -168,18 +168,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取Unique ID of Multi-cloud asset
+                     * 获取The ID specific for an asset synched from another cloud platform
 Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Arn Unique ID of Multi-cloud asset
+                     * @return Arn The ID specific for an asset synched from another cloud platform
 Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetArn() const;
 
                     /**
-                     * 设置Unique ID of Multi-cloud asset
+                     * 设置The ID specific for an asset synched from another cloud platform
 Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _arn Unique ID of Multi-cloud asset
+                     * @param _arn The ID specific for an asset synched from another cloud platform
 Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -229,7 +229,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_regionHasBeenSet;
 
                     /**
-                     * Unique ID of Multi-cloud asset
+                     * The ID specific for an asset synched from another cloud platform
 Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     std::string m_arn;

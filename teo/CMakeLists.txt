@@ -96,6 +96,7 @@ set(teo_public_header_model
   include/tencentcloud/teo/v20220901/model/ModifyAccelerationDomainStatusesResponse.h
   include/tencentcloud/teo/v20220901/model/Zone.h
   include/tencentcloud/teo/v20220901/model/DescribeRulesSettingResponse.h
+  include/tencentcloud/teo/v20220901/model/BindSecurityTemplateToEntityResponse.h
   include/tencentcloud/teo/v20220901/model/RuleExtraParameter.h
   include/tencentcloud/teo/v20220901/model/BindSharedCNAMEMap.h
   include/tencentcloud/teo/v20220901/model/RulesSettingAction.h
@@ -127,6 +128,7 @@ set(teo_public_header_model
   include/tencentcloud/teo/v20220901/model/CreatePrefetchTaskRequest.h
   include/tencentcloud/teo/v20220901/model/DeleteApplicationProxyRuleRequest.h
   include/tencentcloud/teo/v20220901/model/BindSharedCNAMEResponse.h
+  include/tencentcloud/teo/v20220901/model/TemplateScope.h
   include/tencentcloud/teo/v20220901/model/DescribeTopL7AnalysisDataRequest.h
   include/tencentcloud/teo/v20220901/model/FileAscriptionInfo.h
   include/tencentcloud/teo/v20220901/model/DeleteSharedCNAMERequest.h
@@ -143,6 +145,7 @@ set(teo_public_header_model
   include/tencentcloud/teo/v20220901/model/WafRule.h
   include/tencentcloud/teo/v20220901/model/SecurityConfig.h
   include/tencentcloud/teo/v20220901/model/DescribePrefetchTasksRequest.h
+  include/tencentcloud/teo/v20220901/model/DescribeSecurityTemplateBindingsResponse.h
   include/tencentcloud/teo/v20220901/model/MaxAge.h
   include/tencentcloud/teo/v20220901/model/ModifyAliasDomainStatusResponse.h
   include/tencentcloud/teo/v20220901/model/RuleCodeActionParams.h
@@ -202,6 +205,7 @@ set(teo_public_header_model
   include/tencentcloud/teo/v20220901/model/CertificateInfo.h
   include/tencentcloud/teo/v20220901/model/CreatePlanForZoneRequest.h
   include/tencentcloud/teo/v20220901/model/ModifyAliasDomainStatusRequest.h
+  include/tencentcloud/teo/v20220901/model/BindSecurityTemplateToEntityRequest.h
   include/tencentcloud/teo/v20220901/model/TimingDataItem.h
   include/tencentcloud/teo/v20220901/model/CreateApplicationProxyRequest.h
   include/tencentcloud/teo/v20220901/model/CC.h
@@ -229,6 +233,7 @@ set(teo_public_header_model
   include/tencentcloud/teo/v20220901/model/DeleteOriginGroupResponse.h
   include/tencentcloud/teo/v20220901/model/Header.h
   include/tencentcloud/teo/v20220901/model/RuleAndConditions.h
+  include/tencentcloud/teo/v20220901/model/SecurityTemplateBinding.h
   include/tencentcloud/teo/v20220901/model/DropPageConfig.h
   include/tencentcloud/teo/v20220901/model/SecEntry.h
   include/tencentcloud/teo/v20220901/model/DescribeIdentificationsRequest.h
@@ -260,6 +265,7 @@ set(teo_public_header_model
   include/tencentcloud/teo/v20220901/model/DescribeRulesSettingRequest.h
   include/tencentcloud/teo/v20220901/model/DescribeZonesResponse.h
   include/tencentcloud/teo/v20220901/model/ModifyAliasDomainResponse.h
+  include/tencentcloud/teo/v20220901/model/EntityStatus.h
   include/tencentcloud/teo/v20220901/model/RewriteAction.h
   include/tencentcloud/teo/v20220901/model/CheckCnameStatusRequest.h
   include/tencentcloud/teo/v20220901/model/DeleteAliasDomainRequest.h
@@ -287,6 +293,7 @@ set(teo_public_header_model
   include/tencentcloud/teo/v20220901/model/OriginGroup.h
   include/tencentcloud/teo/v20220901/model/ModifySecurityIPGroupRequest.h
   include/tencentcloud/teo/v20220901/model/AccelerationDomainCertificate.h
+  include/tencentcloud/teo/v20220901/model/DescribeSecurityTemplateBindingsRequest.h
   include/tencentcloud/teo/v20220901/model/AlgDetectResult.h
   include/tencentcloud/teo/v20220901/model/QueryString.h
   include/tencentcloud/teo/v20220901/model/DefaultServerCertInfo.h
@@ -674,6 +681,7 @@ set(teo_src
   src/v20220901/model/ModifyAccelerationDomainStatusesResponse.cpp
   src/v20220901/model/Zone.cpp
   src/v20220901/model/DescribeRulesSettingResponse.cpp
+  src/v20220901/model/BindSecurityTemplateToEntityResponse.cpp
   src/v20220901/model/RuleExtraParameter.cpp
   src/v20220901/model/BindSharedCNAMEMap.cpp
   src/v20220901/model/RulesSettingAction.cpp
@@ -705,6 +713,7 @@ set(teo_src
   src/v20220901/model/CreatePrefetchTaskRequest.cpp
   src/v20220901/model/DeleteApplicationProxyRuleRequest.cpp
   src/v20220901/model/BindSharedCNAMEResponse.cpp
+  src/v20220901/model/TemplateScope.cpp
   src/v20220901/model/DescribeTopL7AnalysisDataRequest.cpp
   src/v20220901/model/FileAscriptionInfo.cpp
   src/v20220901/model/DeleteSharedCNAMERequest.cpp
@@ -721,6 +730,7 @@ set(teo_src
   src/v20220901/model/WafRule.cpp
   src/v20220901/model/SecurityConfig.cpp
   src/v20220901/model/DescribePrefetchTasksRequest.cpp
+  src/v20220901/model/DescribeSecurityTemplateBindingsResponse.cpp
   src/v20220901/model/MaxAge.cpp
   src/v20220901/model/ModifyAliasDomainStatusResponse.cpp
   src/v20220901/model/RuleCodeActionParams.cpp
@@ -780,6 +790,7 @@ set(teo_src
   src/v20220901/model/CertificateInfo.cpp
   src/v20220901/model/CreatePlanForZoneRequest.cpp
   src/v20220901/model/ModifyAliasDomainStatusRequest.cpp
+  src/v20220901/model/BindSecurityTemplateToEntityRequest.cpp
   src/v20220901/model/TimingDataItem.cpp
   src/v20220901/model/CreateApplicationProxyRequest.cpp
   src/v20220901/model/CC.cpp
@@ -807,6 +818,7 @@ set(teo_src
   src/v20220901/model/DeleteOriginGroupResponse.cpp
   src/v20220901/model/Header.cpp
   src/v20220901/model/RuleAndConditions.cpp
+  src/v20220901/model/SecurityTemplateBinding.cpp
   src/v20220901/model/DropPageConfig.cpp
   src/v20220901/model/SecEntry.cpp
   src/v20220901/model/DescribeIdentificationsRequest.cpp
@@ -838,6 +850,7 @@ set(teo_src
   src/v20220901/model/DescribeRulesSettingRequest.cpp
   src/v20220901/model/DescribeZonesResponse.cpp
   src/v20220901/model/ModifyAliasDomainResponse.cpp
+  src/v20220901/model/EntityStatus.cpp
   src/v20220901/model/RewriteAction.cpp
   src/v20220901/model/CheckCnameStatusRequest.cpp
   src/v20220901/model/DeleteAliasDomainRequest.cpp
@@ -865,6 +878,7 @@ set(teo_src
   src/v20220901/model/OriginGroup.cpp
   src/v20220901/model/ModifySecurityIPGroupRequest.cpp
   src/v20220901/model/AccelerationDomainCertificate.cpp
+  src/v20220901/model/DescribeSecurityTemplateBindingsRequest.cpp
   src/v20220901/model/AlgDetectResult.cpp
   src/v20220901/model/QueryString.cpp
   src/v20220901/model/DefaultServerCertInfo.cpp

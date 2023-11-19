@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Access forced jump configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+                     * @return Switch Access forced jump configuration switch, value: <li>on: on; </li> <li>off: off. </li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置Access forced jump configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+                     * @param _switch Access forced jump configuration switch, value: <li>on: on; </li> <li>off: off. </li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RedirectType 
+                     * 获取Access forced jump type: <li>http: forced http jump</li> <li>https: forced https jump</li>
+                     * @return RedirectType Access forced jump type: <li>http: forced http jump</li> <li>https: forced https jump</li>
                      * 
                      */
                     std::string GetRedirectType() const;
 
                     /**
-                     * 设置
-                     * @param _redirectType 
+                     * 设置Access forced jump type: <li>http: forced http jump</li> <li>https: forced https jump</li>
+                     * @param _redirectType Access forced jump type: <li>http: forced http jump</li> <li>https: forced https jump</li>
                      * 
                      */
                     void SetRedirectType(const std::string& _redirectType);
@@ -133,13 +133,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Access forced jump configuration switch, value: <li>on: on; </li> <li>off: off. </li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * Access forced jump type: <li>http: forced http jump</li> <li>https: forced https jump</li>
                      */
                     std::string m_redirectType;
                     bool m_redirectTypeHasBeenSet;

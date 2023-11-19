@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取The remaster template ID.
-                     * @return Definition The remaster template ID.
+                     * 获取Rebuild Media Template ID.
+                     * @return Definition Rebuild Media Template ID.
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置The remaster template ID.
-                     * @param _definition The remaster template ID.
+                     * 设置Rebuild Media Template ID.
+                     * @param _definition Rebuild Media Template ID.
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool EndTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OutputConfig 
+                     * 获取New file configuration after rebuild.
+                     * @return OutputConfig New file configuration after rebuild.
                      * 
                      */
                     RebuildMediaOutputConfig GetOutputConfig() const;
 
                     /**
-                     * 设置
-                     * @param _outputConfig 
+                     * 设置New file configuration after rebuild.
+                     * @param _outputConfig New file configuration after rebuild.
                      * 
                      */
                     void SetOutputConfig(const RebuildMediaOutputConfig& _outputConfig);
@@ -262,7 +262,7 @@ namespace TencentCloud
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * The remaster template ID.
+                     * Rebuild Media Template ID.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
@@ -286,7 +286,7 @@ namespace TencentCloud
                     bool m_endTimeOffsetHasBeenSet;
 
                     /**
-                     * 
+                     * New file configuration after rebuild.
                      */
                     RebuildMediaOutputConfig m_outputConfig;
                     bool m_outputConfigHasBeenSet;

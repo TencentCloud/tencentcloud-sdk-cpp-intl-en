@@ -204,15 +204,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ProgressHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BeginProcessTime 
+                     * 获取The time when the point-in-time screenshot task started to be executed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+                     * @return BeginProcessTime The time when the point-in-time screenshot task started to be executed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
                      * 
                      */
                     std::string GetBeginProcessTime() const;
 
                     /**
-                     * 设置
-                     * @param _beginProcessTime 
+                     * 设置The time when the point-in-time screenshot task started to be executed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+                     * @param _beginProcessTime The time when the point-in-time screenshot task started to be executed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
                      * 
                      */
                     void SetBeginProcessTime(const std::string& _beginProcessTime);
@@ -225,15 +225,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool BeginProcessTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FinishTime 
+                     * 获取The time when the point-in-time screenshot task is completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+                     * @return FinishTime The time when the point-in-time screenshot task is completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
                      * 
                      */
                     std::string GetFinishTime() const;
 
                     /**
-                     * 设置
-                     * @param _finishTime 
+                     * 设置The time when the point-in-time screenshot task is completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+                     * @param _finishTime The time when the point-in-time screenshot task is completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
                      * 
                      */
                     void SetFinishTime(const std::string& _finishTime);
@@ -292,13 +292,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_progressHasBeenSet;
 
                     /**
-                     * 
+                     * The time when the point-in-time screenshot task started to be executed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
                      */
                     std::string m_beginProcessTime;
                     bool m_beginProcessTimeHasBeenSet;
 
                     /**
-                     * 
+                     * The time when the point-in-time screenshot task is completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
                      */
                     std::string m_finishTime;
                     bool m_finishTimeHasBeenSet;

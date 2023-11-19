@@ -101,15 +101,19 @@ namespace TencentCloud
                     bool SampleIntervalHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RowCount 
+                     * 获取The number of rows of small images in the sprite image. 
+Note: The number of rows of the small image will affect the height of the final large image. The maximum height of the large image is 15,000 pixels. The height of the large image is the product of the number of rows of the small image and the height of the small image.
+                     * @return RowCount The number of rows of small images in the sprite image. 
+Note: The number of rows of the small image will affect the height of the final large image. The maximum height of the large image is 15,000 pixels. The height of the large image is the product of the number of rows of the small image and the height of the small image.
                      * 
                      */
                     uint64_t GetRowCount() const;
 
                     /**
-                     * 设置
-                     * @param _rowCount 
+                     * 设置The number of rows of small images in the sprite image. 
+Note: The number of rows of the small image will affect the height of the final large image. The maximum height of the large image is 15,000 pixels. The height of the large image is the product of the number of rows of the small image and the height of the small image.
+                     * @param _rowCount The number of rows of small images in the sprite image. 
+Note: The number of rows of the small image will affect the height of the final large image. The maximum height of the large image is 15,000 pixels. The height of the large image is the product of the number of rows of the small image and the height of the small image.
                      * 
                      */
                     void SetRowCount(const uint64_t& _rowCount);
@@ -122,15 +126,19 @@ namespace TencentCloud
                     bool RowCountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ColumnCount 
+                     * 获取The number of columns of small images in the sprite image. 
+Note: The number of columns of the small image will affect the width of the final large image. The maximum width of the large image is 15,000 pixels. The width of the large image is the product of the number of columns of the small image and the width of the small image.
+                     * @return ColumnCount The number of columns of small images in the sprite image. 
+Note: The number of columns of the small image will affect the width of the final large image. The maximum width of the large image is 15,000 pixels. The width of the large image is the product of the number of columns of the small image and the width of the small image.
                      * 
                      */
                     uint64_t GetColumnCount() const;
 
                     /**
-                     * 设置
-                     * @param _columnCount 
+                     * 设置The number of columns of small images in the sprite image. 
+Note: The number of columns of the small image will affect the width of the final large image. The maximum width of the large image is 15,000 pixels. The width of the large image is the product of the number of columns of the small image and the width of the small image.
+                     * @param _columnCount The number of columns of small images in the sprite image. 
+Note: The number of columns of the small image will affect the width of the final large image. The maximum width of the large image is 15,000 pixels. The width of the large image is the product of the number of columns of the small image and the width of the small image.
                      * 
                      */
                     void SetColumnCount(const uint64_t& _columnCount);
@@ -239,15 +247,39 @@ Default value: black.
                     bool FillTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Width 
+                     * 获取The maximum value of the width (or long side) of the small image in the sprite image, value range: 0 and [128, 4096], unit: px. 
+<li>When Width and Height are both 0, the resolution is from the same source;</li>
+<li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li>
+< li>When Width is non-0 and Height is 0, the Height is scaled proportionally; </li>
+<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
+Default value: 0. 
+Note: The width of the small image will affect the width of the final large image. The maximum width of the large image is 15,000 pixels. The width of the large image is the product of the number of columns of the small image and the width of the small image.
+                     * @return Width The maximum value of the width (or long side) of the small image in the sprite image, value range: 0 and [128, 4096], unit: px. 
+<li>When Width and Height are both 0, the resolution is from the same source;</li>
+<li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li>
+< li>When Width is non-0 and Height is 0, the Height is scaled proportionally; </li>
+<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
+Default value: 0. 
+Note: The width of the small image will affect the width of the final large image. The maximum width of the large image is 15,000 pixels. The width of the large image is the product of the number of columns of the small image and the width of the small image.
                      * 
                      */
                     uint64_t GetWidth() const;
 
                     /**
-                     * 设置
-                     * @param _width 
+                     * 设置The maximum value of the width (or long side) of the small image in the sprite image, value range: 0 and [128, 4096], unit: px. 
+<li>When Width and Height are both 0, the resolution is from the same source;</li>
+<li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li>
+< li>When Width is non-0 and Height is 0, the Height is scaled proportionally; </li>
+<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
+Default value: 0. 
+Note: The width of the small image will affect the width of the final large image. The maximum width of the large image is 15,000 pixels. The width of the large image is the product of the number of columns of the small image and the width of the small image.
+                     * @param _width The maximum value of the width (or long side) of the small image in the sprite image, value range: 0 and [128, 4096], unit: px. 
+<li>When Width and Height are both 0, the resolution is from the same source;</li>
+<li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li>
+< li>When Width is non-0 and Height is 0, the Height is scaled proportionally; </li>
+<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
+Default value: 0. 
+Note: The width of the small image will affect the width of the final large image. The maximum width of the large image is 15,000 pixels. The width of the large image is the product of the number of columns of the small image and the width of the small image.
                      * 
                      */
                     void SetWidth(const uint64_t& _width);
@@ -260,15 +292,39 @@ Default value: black.
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Height 
+                     * 获取The maximum value of the height (or short side) of the small image in the sprite image, value range: 0 and [128, 4096], unit: px. 
+<li>When Width and Height are both 0, the resolution is from the same source;</li>
+<li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li>
+< li>When Width is non-0 and Height is 0, the Height is scaled proportionally; </li>
+<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
+Default value: 0. 
+Note: The height of the small image will affect the height of the final large image. The maximum height of the large image is 15,000 pixels. The height of the large image is the product of the number of rows of the small image and the height of the small image.
+                     * @return Height The maximum value of the height (or short side) of the small image in the sprite image, value range: 0 and [128, 4096], unit: px. 
+<li>When Width and Height are both 0, the resolution is from the same source;</li>
+<li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li>
+< li>When Width is non-0 and Height is 0, the Height is scaled proportionally; </li>
+<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
+Default value: 0. 
+Note: The height of the small image will affect the height of the final large image. The maximum height of the large image is 15,000 pixels. The height of the large image is the product of the number of rows of the small image and the height of the small image.
                      * 
                      */
                     uint64_t GetHeight() const;
 
                     /**
-                     * 设置
-                     * @param _height 
+                     * 设置The maximum value of the height (or short side) of the small image in the sprite image, value range: 0 and [128, 4096], unit: px. 
+<li>When Width and Height are both 0, the resolution is from the same source;</li>
+<li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li>
+< li>When Width is non-0 and Height is 0, the Height is scaled proportionally; </li>
+<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
+Default value: 0. 
+Note: The height of the small image will affect the height of the final large image. The maximum height of the large image is 15,000 pixels. The height of the large image is the product of the number of rows of the small image and the height of the small image.
+                     * @param _height The maximum value of the height (or short side) of the small image in the sprite image, value range: 0 and [128, 4096], unit: px. 
+<li>When Width and Height are both 0, the resolution is from the same source;</li>
+<li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li>
+< li>When Width is non-0 and Height is 0, the Height is scaled proportionally; </li>
+<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
+Default value: 0. 
+Note: The height of the small image will affect the height of the final large image. The maximum height of the large image is 15,000 pixels. The height of the large image is the product of the number of rows of the small image and the height of the small image.
                      * 
                      */
                     void SetHeight(const uint64_t& _height);
@@ -369,13 +425,15 @@ Default: jpg
                     bool m_sampleIntervalHasBeenSet;
 
                     /**
-                     * 
+                     * The number of rows of small images in the sprite image. 
+Note: The number of rows of the small image will affect the height of the final large image. The maximum height of the large image is 15,000 pixels. The height of the large image is the product of the number of rows of the small image and the height of the small image.
                      */
                     uint64_t m_rowCount;
                     bool m_rowCountHasBeenSet;
 
                     /**
-                     * 
+                     * The number of columns of small images in the sprite image. 
+Note: The number of columns of the small image will affect the width of the final large image. The maximum width of the large image is 15,000 pixels. The width of the large image is the product of the number of columns of the small image and the width of the small image.
                      */
                     uint64_t m_columnCount;
                     bool m_columnCountHasBeenSet;
@@ -408,13 +466,25 @@ Default value: black.
                     bool m_fillTypeHasBeenSet;
 
                     /**
-                     * 
+                     * The maximum value of the width (or long side) of the small image in the sprite image, value range: 0 and [128, 4096], unit: px. 
+<li>When Width and Height are both 0, the resolution is from the same source;</li>
+<li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li>
+< li>When Width is non-0 and Height is 0, the Height is scaled proportionally; </li>
+<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
+Default value: 0. 
+Note: The width of the small image will affect the width of the final large image. The maximum width of the large image is 15,000 pixels. The width of the large image is the product of the number of columns of the small image and the width of the small image.
                      */
                     uint64_t m_width;
                     bool m_widthHasBeenSet;
 
                     /**
-                     * 
+                     * The maximum value of the height (or short side) of the small image in the sprite image, value range: 0 and [128, 4096], unit: px. 
+<li>When Width and Height are both 0, the resolution is from the same source;</li>
+<li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li>
+< li>When Width is non-0 and Height is 0, the Height is scaled proportionally; </li>
+<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
+Default value: 0. 
+Note: The height of the small image will affect the height of the final large image. The maximum height of the large image is 15,000 pixels. The height of the large image is the product of the number of rows of the small image and the height of the small image.
                      */
                     uint64_t m_height;
                     bool m_heightHasBeenSet;

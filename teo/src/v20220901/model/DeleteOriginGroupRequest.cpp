@@ -24,7 +24,7 @@ using namespace std;
 
 DeleteOriginGroupRequest::DeleteOriginGroupRequest() :
     m_zoneIdHasBeenSet(false),
-    m_originGroupIdHasBeenSet(false)
+    m_groupIdHasBeenSet(false)
 {
 }
 
@@ -43,12 +43,12 @@ string DeleteOriginGroupRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_zoneId.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_originGroupIdHasBeenSet)
+    if (m_groupIdHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "OriginGroupId";
+        string key = "GroupId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_originGroupId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_groupId.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -75,20 +75,20 @@ bool DeleteOriginGroupRequest::ZoneIdHasBeenSet() const
     return m_zoneIdHasBeenSet;
 }
 
-string DeleteOriginGroupRequest::GetOriginGroupId() const
+string DeleteOriginGroupRequest::GetGroupId() const
 {
-    return m_originGroupId;
+    return m_groupId;
 }
 
-void DeleteOriginGroupRequest::SetOriginGroupId(const string& _originGroupId)
+void DeleteOriginGroupRequest::SetGroupId(const string& _groupId)
 {
-    m_originGroupId = _originGroupId;
-    m_originGroupIdHasBeenSet = true;
+    m_groupId = _groupId;
+    m_groupIdHasBeenSet = true;
 }
 
-bool DeleteOriginGroupRequest::OriginGroupIdHasBeenSet() const
+bool DeleteOriginGroupRequest::GroupIdHasBeenSet() const
 {
-    return m_originGroupIdHasBeenSet;
+    return m_groupIdHasBeenSet;
 }
 
 

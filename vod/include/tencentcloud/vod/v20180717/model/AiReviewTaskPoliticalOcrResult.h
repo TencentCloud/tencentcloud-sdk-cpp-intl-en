@@ -183,15 +183,15 @@ Note: This field may return `null`, indicating that no valid value can be found.
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Progress 
+                     * 获取Audio and video review OCR text involves the task progress of inappropriate information, the value range is [0-100].
+                     * @return Progress Audio and video review OCR text involves the task progress of inappropriate information, the value range is [0-100].
                      * 
                      */
                     int64_t GetProgress() const;
 
                     /**
-                     * 设置
-                     * @param _progress 
+                     * 设置Audio and video review OCR text involves the task progress of inappropriate information, the value range is [0-100].
+                     * @param _progress Audio and video review OCR text involves the task progress of inappropriate information, the value range is [0-100].
                      * 
                      */
                     void SetProgress(const int64_t& _progress);
@@ -244,7 +244,7 @@ Note: This field may return `null`, indicating that no valid value can be found.
                     bool m_outputHasBeenSet;
 
                     /**
-                     * 
+                     * Audio and video review OCR text involves the task progress of inappropriate information, the value range is [0-100].
                      */
                     int64_t m_progress;
                     bool m_progressHasBeenSet;

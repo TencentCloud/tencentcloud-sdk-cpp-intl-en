@@ -43,15 +43,35 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Metric 
+                     * 获取Query indicators, the values u200bu200bare:
+<li>Traffic: traffic, unit is Byte. </li>
+<li>Bandwidth: Bandwidth, unit is Bps. </li>
+<li>Requests: Number of requests. </li>
+<li>QUICRequests: Number of QUIC requests. </li>
+<li>IpVisit: Number of IP visits. </li>
+                     * @return Metric Query indicators, the values u200bu200bare:
+<li>Traffic: traffic, unit is Byte. </li>
+<li>Bandwidth: Bandwidth, unit is Bps. </li>
+<li>Requests: Number of requests. </li>
+<li>QUICRequests: Number of QUIC requests. </li>
+<li>IpVisit: Number of IP visits. </li>
                      * 
                      */
                     std::string GetMetric() const;
 
                     /**
-                     * 设置
-                     * @param _metric 
+                     * 设置Query indicators, the values u200bu200bare:
+<li>Traffic: traffic, unit is Byte. </li>
+<li>Bandwidth: Bandwidth, unit is Bps. </li>
+<li>Requests: Number of requests. </li>
+<li>QUICRequests: Number of QUIC requests. </li>
+<li>IpVisit: Number of IP visits. </li>
+                     * @param _metric Query indicators, the values u200bu200bare:
+<li>Traffic: traffic, unit is Byte. </li>
+<li>Bandwidth: Bandwidth, unit is Bps. </li>
+<li>Requests: Number of requests. </li>
+<li>QUICRequests: Number of QUIC requests. </li>
+<li>IpVisit: Number of IP visits. </li>
                      * 
                      */
                     void SetMetric(const std::string& _metric);
@@ -454,7 +474,12 @@ If the difference between `StartTime` and `EndTime` is larger than 24 hours, the
                 private:
 
                     /**
-                     * 
+                     * Query indicators, the values u200bu200bare:
+<li>Traffic: traffic, unit is Byte. </li>
+<li>Bandwidth: Bandwidth, unit is Bps. </li>
+<li>Requests: Number of requests. </li>
+<li>QUICRequests: Number of QUIC requests. </li>
+<li>IpVisit: Number of IP visits. </li>
                      */
                     std::string m_metric;
                     bool m_metricHasBeenSet;

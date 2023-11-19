@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SecretKey 
+                     * 获取The key to calculate the signature; only uppercase and lowercase letters and numbers are allowed, with a length of 6~32 characters.
+                     * @return SecretKey The key to calculate the signature; only uppercase and lowercase letters and numbers are allowed, with a length of 6~32 characters.
                      * 
                      */
                     std::string GetSecretKey() const;
 
                     /**
-                     * 设置
-                     * @param _secretKey 
+                     * 设置The key to calculate the signature; only uppercase and lowercase letters and numbers are allowed, with a length of 6~32 characters.
+                     * @param _secretKey The key to calculate the signature; only uppercase and lowercase letters and numbers are allowed, with a length of 6~32 characters.
                      * 
                      */
                     void SetSecretKey(const std::string& _secretKey);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SecretKeyHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExpireTime 
+                     * 获取Signature expiration time setting; the unit is seconds, and the maximum value can be set to 630720000.
+                     * @return ExpireTime Signature expiration time setting; the unit is seconds, and the maximum value can be set to 630720000.
                      * 
                      */
                     uint64_t GetExpireTime() const;
 
                     /**
-                     * 设置
-                     * @param _expireTime 
+                     * 设置Signature expiration time setting; the unit is seconds, and the maximum value can be set to 630720000.
+                     * @param _expireTime Signature expiration time setting; the unit is seconds, and the maximum value can be set to 630720000.
                      * 
                      */
                     void SetExpireTime(const uint64_t& _expireTime);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileExtensions 
+                     * 获取File extension list settings for authentication/non-authentication; if the character * is included, it means all files.
+                     * @return FileExtensions File extension list settings for authentication/non-authentication; if the character * is included, it means all files.
                      * 
                      */
                     std::vector<std::string> GetFileExtensions() const;
 
                     /**
-                     * 设置
-                     * @param _fileExtensions 
+                     * 设置File extension list settings for authentication/non-authentication; if the character * is included, it means all files.
+                     * @param _fileExtensions File extension list settings for authentication/non-authentication; if the character * is included, it means all files.
                      * 
                      */
                     void SetFileExtensions(const std::vector<std::string>& _fileExtensions);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool FileExtensionsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FilterType 
+                     * 获取whitelist: whitelist, indicating that all types except the FileExtensions list will be authenticated; blacklist: blacklist, indicating that only the types in FileExtensions will be authenticated.
+                     * @return FilterType whitelist: whitelist, indicating that all types except the FileExtensions list will be authenticated; blacklist: blacklist, indicating that only the types in FileExtensions will be authenticated.
                      * 
                      */
                     std::string GetFilterType() const;
 
                     /**
-                     * 设置
-                     * @param _filterType 
+                     * 设置whitelist: whitelist, indicating that all types except the FileExtensions list will be authenticated; blacklist: blacklist, indicating that only the types in FileExtensions will be authenticated.
+                     * @param _filterType whitelist: whitelist, indicating that all types except the FileExtensions list will be authenticated; blacklist: blacklist, indicating that only the types in FileExtensions will be authenticated.
                      * 
                      */
                     void SetFilterType(const std::string& _filterType);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool FilterTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BackupSecretKey 
+                     * 获取Alternate key for calculating signature; only uppercase and lowercase letters and numbers are allowed, length 6~32 characters.
+                     * @return BackupSecretKey Alternate key for calculating signature; only uppercase and lowercase letters and numbers are allowed, length 6~32 characters.
                      * 
                      */
                     std::string GetBackupSecretKey() const;
 
                     /**
-                     * 设置
-                     * @param _backupSecretKey 
+                     * 设置Alternate key for calculating signature; only uppercase and lowercase letters and numbers are allowed, length 6~32 characters.
+                     * @param _backupSecretKey Alternate key for calculating signature; only uppercase and lowercase letters and numbers are allowed, length 6~32 characters.
                      * 
                      */
                     void SetBackupSecretKey(const std::string& _backupSecretKey);
@@ -154,31 +154,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * The key to calculate the signature; only uppercase and lowercase letters and numbers are allowed, with a length of 6~32 characters.
                      */
                     std::string m_secretKey;
                     bool m_secretKeyHasBeenSet;
 
                     /**
-                     * 
+                     * Signature expiration time setting; the unit is seconds, and the maximum value can be set to 630720000.
                      */
                     uint64_t m_expireTime;
                     bool m_expireTimeHasBeenSet;
 
                     /**
-                     * 
+                     * File extension list settings for authentication/non-authentication; if the character * is included, it means all files.
                      */
                     std::vector<std::string> m_fileExtensions;
                     bool m_fileExtensionsHasBeenSet;
 
                     /**
-                     * 
+                     * whitelist: whitelist, indicating that all types except the FileExtensions list will be authenticated; blacklist: blacklist, indicating that only the types in FileExtensions will be authenticated.
                      */
                     std::string m_filterType;
                     bool m_filterTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Alternate key for calculating signature; only uppercase and lowercase letters and numbers are allowed, length 6~32 characters.
                      */
                     std::string m_backupSecretKey;
                     bool m_backupSecretKeyHasBeenSet;

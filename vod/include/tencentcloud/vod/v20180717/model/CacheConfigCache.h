@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Path cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+                     * @return Switch Path cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置Path cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+                     * @param _switch Path cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool CacheTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CompareMaxAge 
+                     * 获取Advanced cache expiration configuration. When enabled, the max-age value returned by the origin site will be compared with the cache expiration time set in CacheRules, and the minimum value will be used to cache the node. Values: <li>on: enabled; </li> <li >off: off. </li>
+                     * @return CompareMaxAge Advanced cache expiration configuration. When enabled, the max-age value returned by the origin site will be compared with the cache expiration time set in CacheRules, and the minimum value will be used to cache the node. Values: <li>on: enabled; </li> <li >off: off. </li>
                      * 
                      */
                     std::string GetCompareMaxAge() const;
 
                     /**
-                     * 设置
-                     * @param _compareMaxAge 
+                     * 设置Advanced cache expiration configuration. When enabled, the max-age value returned by the origin site will be compared with the cache expiration time set in CacheRules, and the minimum value will be used to cache the node. Values: <li>on: enabled; </li> <li >off: off. </li>
+                     * @param _compareMaxAge Advanced cache expiration configuration. When enabled, the max-age value returned by the origin site will be compared with the cache expiration time set in CacheRules, and the minimum value will be used to cache the node. Values: <li>on: enabled; </li> <li >off: off. </li>
                      * 
                      */
                     void SetCompareMaxAge(const std::string& _compareMaxAge);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool CompareMaxAgeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IgnoreCacheControl 
+                     * 获取Force caching, values: <li>on: on; </li> <li>off: off. </li>
+                     * @return IgnoreCacheControl Force caching, values: <li>on: on; </li> <li>off: off. </li>
                      * 
                      */
                     std::string GetIgnoreCacheControl() const;
 
                     /**
-                     * 设置
-                     * @param _ignoreCacheControl 
+                     * 设置Force caching, values: <li>on: on; </li> <li>off: off. </li>
+                     * @param _ignoreCacheControl Force caching, values: <li>on: on; </li> <li>off: off. </li>
                      * 
                      */
                     void SetIgnoreCacheControl(const std::string& _ignoreCacheControl);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool IgnoreCacheControlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IgnoreSetCookie 
+                     * 获取When the origin site returns the Set-Cookie header, whether the node caches the header and body: <li>on: on, does not cache the header and body;</li> <li>off: off, follows user customization Node caching rules. </li>
+                     * @return IgnoreSetCookie When the origin site returns the Set-Cookie header, whether the node caches the header and body: <li>on: on, does not cache the header and body;</li> <li>off: off, follows user customization Node caching rules. </li>
                      * 
                      */
                     std::string GetIgnoreSetCookie() const;
 
                     /**
-                     * 设置
-                     * @param _ignoreSetCookie 
+                     * 设置When the origin site returns the Set-Cookie header, whether the node caches the header and body: <li>on: on, does not cache the header and body;</li> <li>off: off, follows user customization Node caching rules. </li>
+                     * @param _ignoreSetCookie When the origin site returns the Set-Cookie header, whether the node caches the header and body: <li>on: on, does not cache the header and body;</li> <li>off: off, follows user customization Node caching rules. </li>
                      * 
                      */
                     void SetIgnoreSetCookie(const std::string& _ignoreSetCookie);
@@ -154,7 +154,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Path cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
@@ -166,19 +166,19 @@ namespace TencentCloud
                     bool m_cacheTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Advanced cache expiration configuration. When enabled, the max-age value returned by the origin site will be compared with the cache expiration time set in CacheRules, and the minimum value will be used to cache the node. Values: <li>on: enabled; </li> <li >off: off. </li>
                      */
                     std::string m_compareMaxAge;
                     bool m_compareMaxAgeHasBeenSet;
 
                     /**
-                     * 
+                     * Force caching, values: <li>on: on; </li> <li>off: off. </li>
                      */
                     std::string m_ignoreCacheControl;
                     bool m_ignoreCacheControlHasBeenSet;
 
                     /**
-                     * 
+                     * When the origin site returns the Set-Cookie header, whether the node caches the header and body: <li>on: on, does not cache the header and body;</li> <li>off: off, follows user customization Node caching rules. </li>
                      */
                     std::string m_ignoreSetCookie;
                     bool m_ignoreSetCookieHasBeenSet;

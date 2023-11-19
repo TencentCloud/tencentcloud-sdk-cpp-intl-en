@@ -844,18 +844,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool PortCountHasBeenSet() const;
 
                     /**
-                     * 获取Network attacks
+                     * 获取Number of network attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Attack Network attacks
+                     * @return Attack Number of network attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetAttack() const;
 
                     /**
-                     * 设置Network attacks
+                     * 设置Number of network attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _attack Network attacks
+                     * @param _attack Number of network attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -869,18 +869,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool AttackHasBeenSet() const;
 
                     /**
-                     * 获取Network access
+                     * 获取Number of network access requests
 Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Access Network access
+                     * @return Access Number of network access requests
 Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetAccess() const;
 
                     /**
-                     * 设置Network access
+                     * 设置Number of network access requests
 Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _access Network access
+                     * @param _access Number of network access requests
 Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -894,18 +894,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool AccessHasBeenSet() const;
 
                     /**
-                     * 获取Network interception
+                     * 获取Number of blocked attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Intercept Network interception
+                     * @return Intercept Number of blocked attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetIntercept() const;
 
                     /**
-                     * 设置Network interception
+                     * 设置Number of blocked attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _intercept Network interception
+                     * @param _intercept Number of blocked attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -1544,21 +1544,21 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_portCountHasBeenSet;
 
                     /**
-                     * Network attacks
+                     * Number of network attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_attack;
                     bool m_attackHasBeenSet;
 
                     /**
-                     * Network access
+                     * Number of network access requests
 Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_access;
                     bool m_accessHasBeenSet;
 
                     /**
-                     * Network interception
+                     * Number of blocked attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_intercept;

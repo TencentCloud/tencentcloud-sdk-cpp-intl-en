@@ -47,19 +47,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The ID of the block page, which can be obtained from the CreateSecurityDropPage API.
-If 0 is passed, the default block page will be used.
-                     * @return PageId The ID of the block page, which can be obtained from the CreateSecurityDropPage API.
-If 0 is passed, the default block page will be used.
+                     * 获取The ID of the block page. Specify `0` to use the default block page. 
+(Disused) If 0 is passed, the default block page will be used.
+                     * @return PageId The ID of the block page. Specify `0` to use the default block page. 
+(Disused) If 0 is passed, the default block page will be used.
                      * 
                      */
                     int64_t GetPageId() const;
 
                     /**
-                     * 设置The ID of the block page, which can be obtained from the CreateSecurityDropPage API.
-If 0 is passed, the default block page will be used.
-                     * @param _pageId The ID of the block page, which can be obtained from the CreateSecurityDropPage API.
-If 0 is passed, the default block page will be used.
+                     * 设置The ID of the block page. Specify `0` to use the default block page. 
+(Disused) If 0 is passed, the default block page will be used.
+                     * @param _pageId The ID of the block page. Specify `0` to use the default block page. 
+(Disused) If 0 is passed, the default block page will be used.
                      * 
                      */
                     void SetPageId(const int64_t& _pageId);
@@ -72,15 +72,15 @@ If 0 is passed, the default block page will be used.
                     bool PageIdHasBeenSet() const;
 
                     /**
-                     * 获取The HTTP status code of the block page. Value range: 100-600.
-                     * @return StatusCode The HTTP status code of the block page. Value range: 100-600.
+                     * 获取The HTTP status code to trigger the block page. Range: 100-600, excluding 3xx codes. Code 566: Requests blocked by managed rules. Code 567: Requests blocked by web security rules (except managed rules).
+                     * @return StatusCode The HTTP status code to trigger the block page. Range: 100-600, excluding 3xx codes. Code 566: Requests blocked by managed rules. Code 567: Requests blocked by web security rules (except managed rules).
                      * 
                      */
                     int64_t GetStatusCode() const;
 
                     /**
-                     * 设置The HTTP status code of the block page. Value range: 100-600.
-                     * @param _statusCode The HTTP status code of the block page. Value range: 100-600.
+                     * 设置The HTTP status code to trigger the block page. Range: 100-600, excluding 3xx codes. Code 566: Requests blocked by managed rules. Code 567: Requests blocked by web security rules (except managed rules).
+                     * @param _statusCode The HTTP status code to trigger the block page. Range: 100-600, excluding 3xx codes. Code 566: Requests blocked by managed rules. Code 567: Requests blocked by web security rules (except managed rules).
                      * 
                      */
                     void SetStatusCode(const int64_t& _statusCode);
@@ -115,22 +115,22 @@ If 0 is passed, the default block page will be used.
 
                     /**
                      * 获取Type of the block page. Values:
-<li>`file`: Block page file</li>
-<li>`url`: Block page URL</li>
+<li>`page`: Return the specified page.</li>
+
                      * @return Type Type of the block page. Values:
-<li>`file`: Block page file</li>
-<li>`url`: Block page URL</li>
+<li>`page`: Return the specified page.</li>
+
                      * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Type of the block page. Values:
-<li>`file`: Block page file</li>
-<li>`url`: Block page URL</li>
+<li>`page`: Return the specified page.</li>
+
                      * @param _type Type of the block page. Values:
-<li>`file`: Block page file</li>
-<li>`url`: Block page URL</li>
+<li>`page`: Return the specified page.</li>
+
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -142,17 +142,38 @@ If 0 is passed, the default block page will be used.
                      */
                     bool TypeHasBeenSet() const;
 
+                    /**
+                     * 获取ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Type=page`.
+                     * @return CustomResponseId ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Type=page`.
+                     * 
+                     */
+                    std::string GetCustomResponseId() const;
+
+                    /**
+                     * 设置ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Type=page`.
+                     * @param _customResponseId ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Type=page`.
+                     * 
+                     */
+                    void SetCustomResponseId(const std::string& _customResponseId);
+
+                    /**
+                     * 判断参数 CustomResponseId 是否已赋值
+                     * @return CustomResponseId 是否已赋值
+                     * 
+                     */
+                    bool CustomResponseIdHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The ID of the block page, which can be obtained from the CreateSecurityDropPage API.
-If 0 is passed, the default block page will be used.
+                     * The ID of the block page. Specify `0` to use the default block page. 
+(Disused) If 0 is passed, the default block page will be used.
                      */
                     int64_t m_pageId;
                     bool m_pageIdHasBeenSet;
 
                     /**
-                     * The HTTP status code of the block page. Value range: 100-600.
+                     * The HTTP status code to trigger the block page. Range: 100-600, excluding 3xx codes. Code 566: Requests blocked by managed rules. Code 567: Requests blocked by web security rules (except managed rules).
                      */
                     int64_t m_statusCode;
                     bool m_statusCodeHasBeenSet;
@@ -165,11 +186,17 @@ If 0 is passed, the default block page will be used.
 
                     /**
                      * Type of the block page. Values:
-<li>`file`: Block page file</li>
-<li>`url`: Block page URL</li>
+<li>`page`: Return the specified page.</li>
+
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
+
+                    /**
+                     * ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Type=page`.
+                     */
+                    std::string m_customResponseId;
+                    bool m_customResponseIdHasBeenSet;
 
                 };
             }

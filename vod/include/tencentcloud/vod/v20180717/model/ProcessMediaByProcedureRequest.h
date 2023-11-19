@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool SessionContextHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SessionId 
+                     * 获取Identification code used for deduplication. If there is a request with the same identification code within 7 days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
+                     * @return SessionId Identification code used for deduplication. If there is a request with the same identification code within 7 days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置
-                     * @param _sessionId 
+                     * 设置Identification code used for deduplication. If there is a request with the same identification code within 7 days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
+                     * @param _sessionId Identification code used for deduplication. If there is a request with the same identification code within 7 days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -249,7 +249,7 @@ namespace TencentCloud
                     bool m_sessionContextHasBeenSet;
 
                     /**
-                     * 
+                     * Identification code used for deduplication. If there is a request with the same identification code within 7 days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;

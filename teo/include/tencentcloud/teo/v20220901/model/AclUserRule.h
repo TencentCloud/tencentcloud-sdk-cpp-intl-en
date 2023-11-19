@@ -69,43 +69,43 @@ namespace TencentCloud
                     bool RuleNameHasBeenSet() const;
 
                     /**
-                     * 获取The rule action. Values:
-<li>`trans`: Allow the request.</li>
-<li>`drop`: Block the request.</li>
-<li>`monitor`: Observe the request.</li>
-<li>`ban`: Block the IP.</li>
-<li>`redirect`: Redirect the request.</li>
-<li>`page`: Return the specified page.</li>
-<li>`alg`: Verify the request by Javascript challenge.</li>
-                     * @return Action The rule action. Values:
-<li>`trans`: Allow the request.</li>
-<li>`drop`: Block the request.</li>
-<li>`monitor`: Observe the request.</li>
-<li>`ban`: Block the IP.</li>
-<li>`redirect`: Redirect the request.</li>
-<li>`page`: Return the specified page.</li>
-<li>`alg`: Verify the request by Javascript challenge.</li>
+                     * 获取The action. Values:
+<li>`trans`: Allow</li>
+<li>`drop`: Block the request</li>
+<li>`monitor`: Observe</li>
+<li>`ban`: Block the IP</li>
+<li>`redirect`: Redirect the request</li>
+<li>`page`: Return the specified page</li>
+<li>`alg`: JavaScript challenge</li>
+                     * @return Action The action. Values:
+<li>`trans`: Allow</li>
+<li>`drop`: Block the request</li>
+<li>`monitor`: Observe</li>
+<li>`ban`: Block the IP</li>
+<li>`redirect`: Redirect the request</li>
+<li>`page`: Return the specified page</li>
+<li>`alg`: JavaScript challenge</li>
                      * 
                      */
                     std::string GetAction() const;
 
                     /**
-                     * 设置The rule action. Values:
-<li>`trans`: Allow the request.</li>
-<li>`drop`: Block the request.</li>
-<li>`monitor`: Observe the request.</li>
-<li>`ban`: Block the IP.</li>
-<li>`redirect`: Redirect the request.</li>
-<li>`page`: Return the specified page.</li>
-<li>`alg`: Verify the request by Javascript challenge.</li>
-                     * @param _action The rule action. Values:
-<li>`trans`: Allow the request.</li>
-<li>`drop`: Block the request.</li>
-<li>`monitor`: Observe the request.</li>
-<li>`ban`: Block the IP.</li>
-<li>`redirect`: Redirect the request.</li>
-<li>`page`: Return the specified page.</li>
-<li>`alg`: Verify the request by Javascript challenge.</li>
+                     * 设置The action. Values:
+<li>`trans`: Allow</li>
+<li>`drop`: Block the request</li>
+<li>`monitor`: Observe</li>
+<li>`ban`: Block the IP</li>
+<li>`redirect`: Redirect the request</li>
+<li>`page`: Return the specified page</li>
+<li>`alg`: JavaScript challenge</li>
+                     * @param _action The action. Values:
+<li>`trans`: Allow</li>
+<li>`drop`: Block the request</li>
+<li>`monitor`: Observe</li>
+<li>`ban`: Block the IP</li>
+<li>`redirect`: Redirect the request</li>
+<li>`page`: Return the specified page</li>
+<li>`alg`: JavaScript challenge</li>
                      * 
                      */
                     void SetAction(const std::string& _action);
@@ -189,19 +189,15 @@ namespace TencentCloud
                     bool RulePriorityHasBeenSet() const;
 
                     /**
-                     * 获取The rule ID, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RuleID The rule ID, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Rule ID, which is only used as an output parameter.
+                     * @return RuleID Rule ID, which is only used as an output parameter.
                      * 
                      */
                     int64_t GetRuleID() const;
 
                     /**
-                     * 设置The rule ID, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _ruleID The rule ID, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Rule ID, which is only used as an output parameter.
+                     * @param _ruleID Rule ID, which is only used as an output parameter.
                      * 
                      */
                     void SetRuleID(const int64_t& _ruleID);
@@ -215,18 +211,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取The update time, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UpdateTime The update time, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置The update time, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _updateTime The update time, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -239,19 +231,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取The IP blocking duration. Value range: 0 seconds - 2 days. Default value: 0 seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PunishTime The IP blocking duration. Value range: 0 seconds - 2 days. Default value: 0 seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取IP ban duration. Range: 0-2 days. It's required when `Action=ban`. 
+                     * @return PunishTime IP ban duration. Range: 0-2 days. It's required when `Action=ban`. 
                      * 
                      */
                     int64_t GetPunishTime() const;
 
                     /**
-                     * 设置The IP blocking duration. Value range: 0 seconds - 2 days. Default value: 0 seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _punishTime The IP blocking duration. Value range: 0 seconds - 2 days. Default value: 0 seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置IP ban duration. Range: 0-2 days. It's required when `Action=ban`. 
+                     * @param _punishTime IP ban duration. Range: 0-2 days. It's required when `Action=ban`. 
                      * 
                      */
                     void SetPunishTime(const int64_t& _punishTime);
@@ -264,31 +252,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PunishTimeHasBeenSet() const;
 
                     /**
-                     * 获取The unit of the IP blocking duration. Values:
+                     * 获取The unit of the IP ban duration. Values:
 <li>`second`: Second</li>
 <li>`minutes`: Minute</li>
-<li>`hour`: Hour</li>Default value: second.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PunishTimeUnit The unit of the IP blocking duration. Values:
+<li>`hour`: Hour</li>Default value: `second`.
+                     * @return PunishTimeUnit The unit of the IP ban duration. Values:
 <li>`second`: Second</li>
 <li>`minutes`: Minute</li>
-<li>`hour`: Hour</li>Default value: second.
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`hour`: Hour</li>Default value: `second`.
                      * 
                      */
                     std::string GetPunishTimeUnit() const;
 
                     /**
-                     * 设置The unit of the IP blocking duration. Values:
+                     * 设置The unit of the IP ban duration. Values:
 <li>`second`: Second</li>
 <li>`minutes`: Minute</li>
-<li>`hour`: Hour</li>Default value: second.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _punishTimeUnit The unit of the IP blocking duration. Values:
+<li>`hour`: Hour</li>Default value: `second`.
+                     * @param _punishTimeUnit The unit of the IP ban duration. Values:
 <li>`second`: Second</li>
 <li>`minutes`: Minute</li>
-<li>`hour`: Hour</li>Default value: second.
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`hour`: Hour</li>Default value: `second`.
                      * 
                      */
                     void SetPunishTimeUnit(const std::string& _punishTimeUnit);
@@ -301,19 +285,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PunishTimeUnitHasBeenSet() const;
 
                     /**
-                     * 获取The name of the custom page, which defaults to an empty string.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Name The name of the custom page, which defaults to an empty string.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Name of the custom return page. It's required when `Action=page`.	
+                     * @return Name Name of the custom return page. It's required when `Action=page`.	
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置The name of the custom page, which defaults to an empty string.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _name The name of the custom page, which defaults to an empty string.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Name of the custom return page. It's required when `Action=page`.	
+                     * @param _name Name of the custom return page. It's required when `Action=page`.	
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -326,19 +306,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取The ID of the custom page, which defaults to 0.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PageId The ID of the custom page, which defaults to 0.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取(Disused) ID of the custom return page. The default value is 0, which means that the system default blocking page is used. 
+                     * @return PageId (Disused) ID of the custom return page. The default value is 0, which means that the system default blocking page is used. 
                      * 
                      */
                     int64_t GetPageId() const;
 
                     /**
-                     * 设置The ID of the custom page, which defaults to 0.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _pageId The ID of the custom page, which defaults to 0.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置(Disused) ID of the custom return page. The default value is 0, which means that the system default blocking page is used. 
+                     * @param _pageId (Disused) ID of the custom return page. The default value is 0, which means that the system default blocking page is used. 
                      * 
                      */
                     void SetPageId(const int64_t& _pageId);
@@ -351,44 +327,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PageIdHasBeenSet() const;
 
                     /**
-                     * 获取The redirection URL, which must be a subdomain name of the site. It defaults to an empty string.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RedirectUrl The redirection URL, which must be a subdomain name of the site. It defaults to an empty string.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
+                     * @return CustomResponseId ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
                      * 
                      */
-                    std::string GetRedirectUrl() const;
+                    std::string GetCustomResponseId() const;
 
                     /**
-                     * 设置The redirection URL, which must be a subdomain name of the site. It defaults to an empty string.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _redirectUrl The redirection URL, which must be a subdomain name of the site. It defaults to an empty string.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
+                     * @param _customResponseId ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
                      * 
                      */
-                    void SetRedirectUrl(const std::string& _redirectUrl);
+                    void SetCustomResponseId(const std::string& _customResponseId);
 
                     /**
-                     * 判断参数 RedirectUrl 是否已赋值
-                     * @return RedirectUrl 是否已赋值
+                     * 判断参数 CustomResponseId 是否已赋值
+                     * @return CustomResponseId 是否已赋值
                      * 
                      */
-                    bool RedirectUrlHasBeenSet() const;
+                    bool CustomResponseIdHasBeenSet() const;
 
                     /**
-                     * 获取The response code returned after redirection, which defaults to 0.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ResponseCode The response code returned after redirection, which defaults to 0.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
+                     * @return ResponseCode The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
                      * 
                      */
                     int64_t GetResponseCode() const;
 
                     /**
-                     * 设置The response code returned after redirection, which defaults to 0.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _responseCode The response code returned after redirection, which defaults to 0.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
+                     * @param _responseCode The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
                      * 
                      */
                     void SetResponseCode(const int64_t& _responseCode);
@@ -400,6 +368,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ResponseCodeHasBeenSet() const;
 
+                    /**
+                     * 获取The redirection URL. It's required when `Action=redirect`.	
+                     * @return RedirectUrl The redirection URL. It's required when `Action=redirect`.	
+                     * 
+                     */
+                    std::string GetRedirectUrl() const;
+
+                    /**
+                     * 设置The redirection URL. It's required when `Action=redirect`.	
+                     * @param _redirectUrl The redirection URL. It's required when `Action=redirect`.	
+                     * 
+                     */
+                    void SetRedirectUrl(const std::string& _redirectUrl);
+
+                    /**
+                     * 判断参数 RedirectUrl 是否已赋值
+                     * @return RedirectUrl 是否已赋值
+                     * 
+                     */
+                    bool RedirectUrlHasBeenSet() const;
+
                 private:
 
                     /**
@@ -409,14 +398,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_ruleNameHasBeenSet;
 
                     /**
-                     * The rule action. Values:
-<li>`trans`: Allow the request.</li>
-<li>`drop`: Block the request.</li>
-<li>`monitor`: Observe the request.</li>
-<li>`ban`: Block the IP.</li>
-<li>`redirect`: Redirect the request.</li>
-<li>`page`: Return the specified page.</li>
-<li>`alg`: Verify the request by Javascript challenge.</li>
+                     * The action. Values:
+<li>`trans`: Allow</li>
+<li>`drop`: Block the request</li>
+<li>`monitor`: Observe</li>
+<li>`ban`: Block the IP</li>
+<li>`redirect`: Redirect the request</li>
+<li>`page`: Return the specified page</li>
+<li>`alg`: JavaScript challenge</li>
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;
@@ -442,63 +431,61 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_rulePriorityHasBeenSet;
 
                     /**
-                     * The rule ID, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Rule ID, which is only used as an output parameter.
                      */
                     int64_t m_ruleID;
                     bool m_ruleIDHasBeenSet;
 
                     /**
                      * The update time, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * The IP blocking duration. Value range: 0 seconds - 2 days. Default value: 0 seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * IP ban duration. Range: 0-2 days. It's required when `Action=ban`. 
                      */
                     int64_t m_punishTime;
                     bool m_punishTimeHasBeenSet;
 
                     /**
-                     * The unit of the IP blocking duration. Values:
+                     * The unit of the IP ban duration. Values:
 <li>`second`: Second</li>
 <li>`minutes`: Minute</li>
-<li>`hour`: Hour</li>Default value: second.
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`hour`: Hour</li>Default value: `second`.
                      */
                     std::string m_punishTimeUnit;
                     bool m_punishTimeUnitHasBeenSet;
 
                     /**
-                     * The name of the custom page, which defaults to an empty string.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Name of the custom return page. It's required when `Action=page`.	
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * The ID of the custom page, which defaults to 0.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * (Disused) ID of the custom return page. The default value is 0, which means that the system default blocking page is used. 
                      */
                     int64_t m_pageId;
                     bool m_pageIdHasBeenSet;
 
                     /**
-                     * The redirection URL, which must be a subdomain name of the site. It defaults to an empty string.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
                      */
-                    std::string m_redirectUrl;
-                    bool m_redirectUrlHasBeenSet;
+                    std::string m_customResponseId;
+                    bool m_customResponseIdHasBeenSet;
 
                     /**
-                     * The response code returned after redirection, which defaults to 0.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
                      */
                     int64_t m_responseCode;
                     bool m_responseCodeHasBeenSet;
+
+                    /**
+                     * The redirection URL. It's required when `Action=redirect`.	
+                     */
+                    std::string m_redirectUrl;
+                    bool m_redirectUrlHasBeenSet;
 
                 };
             }

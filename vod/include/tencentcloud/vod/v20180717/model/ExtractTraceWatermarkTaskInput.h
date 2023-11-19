@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileId 
+                     * 获取Media file ID. The original media file ID corresponding to the URL.
+                     * @return FileId Media file ID. The original media file ID corresponding to the URL.
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置
-                     * @param _fileId 
+                     * 设置Media file ID. The original media file ID corresponding to the URL.
+                     * @param _fileId Media file ID. The original media file ID corresponding to the URL.
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -97,7 +97,7 @@ namespace TencentCloud
                     bool m_urlHasBeenSet;
 
                     /**
-                     * 
+                     * Media file ID. The original media file ID corresponding to the URL.
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;

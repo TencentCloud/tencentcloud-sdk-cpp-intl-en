@@ -89,15 +89,27 @@ namespace TencentCloud
                     bool FaceIdsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FaceContents 
+                     * 获取Face image [Base64](https://tools.ietf.org/html/rfc4648) Encoded string collection, only supports jpeg and png image formats. 
+<li>When Type is add or reset, this field is required;</li>
+<li>Array length limit: 5 pictures. </li>
+Note: The picture must be a clear frontal photo of a single person, with a pixel size of no less than 200*200.
+                     * @return FaceContents Face image [Base64](https://tools.ietf.org/html/rfc4648) Encoded string collection, only supports jpeg and png image formats. 
+<li>When Type is add or reset, this field is required;</li>
+<li>Array length limit: 5 pictures. </li>
+Note: The picture must be a clear frontal photo of a single person, with a pixel size of no less than 200*200.
                      * 
                      */
                     std::vector<std::string> GetFaceContents() const;
 
                     /**
-                     * 设置
-                     * @param _faceContents 
+                     * 设置Face image [Base64](https://tools.ietf.org/html/rfc4648) Encoded string collection, only supports jpeg and png image formats. 
+<li>When Type is add or reset, this field is required;</li>
+<li>Array length limit: 5 pictures. </li>
+Note: The picture must be a clear frontal photo of a single person, with a pixel size of no less than 200*200.
+                     * @param _faceContents Face image [Base64](https://tools.ietf.org/html/rfc4648) Encoded string collection, only supports jpeg and png image formats. 
+<li>When Type is add or reset, this field is required;</li>
+<li>Array length limit: 5 pictures. </li>
+Note: The picture must be a clear frontal photo of a single person, with a pixel size of no less than 200*200.
                      * 
                      */
                     void SetFaceContents(const std::vector<std::string>& _faceContents);
@@ -124,7 +136,10 @@ namespace TencentCloud
                     bool m_faceIdsHasBeenSet;
 
                     /**
-                     * 
+                     * Face image [Base64](https://tools.ietf.org/html/rfc4648) Encoded string collection, only supports jpeg and png image formats. 
+<li>When Type is add or reset, this field is required;</li>
+<li>Array length limit: 5 pictures. </li>
+Note: The picture must be a clear frontal photo of a single person, with a pixel size of no less than 200*200.
                      */
                     std::vector<std::string> m_faceContents;
                     bool m_faceContentsHasBeenSet;

@@ -46,15 +46,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return InputType 
+                     * 获取Input the type of video. The possible values u200bu200bare File and Stream.
+                     * @return InputType Input the type of video. The possible values u200bu200bare File and Stream.
                      * 
                      */
                     std::string GetInputType() const;
 
                     /**
-                     * 设置
-                     * @param _inputType 
+                     * 设置Input the type of video. The possible values u200bu200bare File and Stream.
+                     * @param _inputType Input the type of video. The possible values u200bu200bare File and Stream.
                      * 
                      */
                     void SetInputType(const std::string& _inputType);
@@ -67,15 +67,15 @@ namespace TencentCloud
                     bool InputTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取</b>VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.</b>
+                     * @return SubAppId </b>VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置</b>VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.</b>
+                     * @param _subAppId </b>VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -88,15 +88,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileInfos 
+                     * 获取Input video file information, required when InputType is File.
+                     * @return FileInfos Input video file information, required when InputType is File.
                      * 
                      */
                     std::vector<EditMediaFileInfo> GetFileInfos() const;
 
                     /**
-                     * 设置
-                     * @param _fileInfos 
+                     * 设置Input video file information, required when InputType is File.
+                     * @param _fileInfos Input video file information, required when InputType is File.
                      * 
                      */
                     void SetFileInfos(const std::vector<EditMediaFileInfo>& _fileInfos);
@@ -109,15 +109,15 @@ namespace TencentCloud
                     bool FileInfosHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StreamInfos 
+                     * 获取nput stream information, required when InputType is Stream.
+                     * @return StreamInfos nput stream information, required when InputType is Stream.
                      * 
                      */
                     std::vector<EditMediaStreamInfo> GetStreamInfos() const;
 
                     /**
-                     * 设置
-                     * @param _streamInfos 
+                     * 设置nput stream information, required when InputType is Stream.
+                     * @param _streamInfos nput stream information, required when InputType is Stream.
                      * 
                      */
                     void SetStreamInfos(const std::vector<EditMediaStreamInfo>& _streamInfos);
@@ -130,15 +130,23 @@ namespace TencentCloud
                     bool StreamInfosHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取EditMedia template ID. The values u200bu200bare 10 and 20. If left blank, the 10 template is used. 
+<li>10: When splicing, the input with the highest resolution is used as the benchmark;</li>
+<li>20: When splicing, the input with the highest code rate is used as the benchmark. </li>
+                     * @return Definition EditMedia template ID. The values u200bu200bare 10 and 20. If left blank, the 10 template is used. 
+<li>10: When splicing, the input with the highest resolution is used as the benchmark;</li>
+<li>20: When splicing, the input with the highest code rate is used as the benchmark. </li>
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _definition 
+                     * 设置EditMedia template ID. The values u200bu200bare 10 and 20. If left blank, the 10 template is used. 
+<li>10: When splicing, the input with the highest resolution is used as the benchmark;</li>
+<li>20: When splicing, the input with the highest code rate is used as the benchmark. </li>
+                     * @param _definition EditMedia template ID. The values u200bu200bare 10 and 20. If left blank, the 10 template is used. 
+<li>10: When splicing, the input with the highest resolution is used as the benchmark;</li>
+<li>20: When splicing, the input with the highest code rate is used as the benchmark. </li>
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -151,15 +159,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ProcedureName 
+                     * 获取Task flow template name, if you want Fill in when executing the task flow on the generated new video.
+                     * @return ProcedureName Task flow template name, if you want Fill in when executing the task flow on the generated new video.
                      * 
                      */
                     std::string GetProcedureName() const;
 
                     /**
-                     * 设置
-                     * @param _procedureName 
+                     * 设置Task flow template name, if you want Fill in when executing the task flow on the generated new video.
+                     * @param _procedureName Task flow template name, if you want Fill in when executing the task flow on the generated new video.
                      * 
                      */
                     void SetProcedureName(const std::string& _procedureName);
@@ -172,15 +180,15 @@ namespace TencentCloud
                     bool ProcedureNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OutputConfig 
+                     * 获取The file configuration generated after editing.
+                     * @return OutputConfig The file configuration generated after editing.
                      * 
                      */
                     EditMediaOutputConfig GetOutputConfig() const;
 
                     /**
-                     * 设置
-                     * @param _outputConfig 
+                     * 设置The file configuration generated after editing.
+                     * @param _outputConfig The file configuration generated after editing.
                      * 
                      */
                     void SetOutputConfig(const EditMediaOutputConfig& _outputConfig);
@@ -193,15 +201,15 @@ namespace TencentCloud
                     bool OutputConfigHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SessionContext 
+                     * 获取Identifies the source context, which is used to transparently transmit user request information. This field value will be returned in the EditMediaComplete callback and task flow status change callback, with a maximum length of 1000 characters.
+                     * @return SessionContext Identifies the source context, which is used to transparently transmit user request information. This field value will be returned in the EditMediaComplete callback and task flow status change callback, with a maximum length of 1000 characters.
                      * 
                      */
                     std::string GetSessionContext() const;
 
                     /**
-                     * 设置
-                     * @param _sessionContext 
+                     * 设置Identifies the source context, which is used to transparently transmit user request information. This field value will be returned in the EditMediaComplete callback and task flow status change callback, with a maximum length of 1000 characters.
+                     * @param _sessionContext Identifies the source context, which is used to transparently transmit user request information. This field value will be returned in the EditMediaComplete callback and task flow status change callback, with a maximum length of 1000 characters.
                      * 
                      */
                     void SetSessionContext(const std::string& _sessionContext);
@@ -214,15 +222,15 @@ namespace TencentCloud
                     bool SessionContextHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TasksPriority 
+                     * 获取The priority of the task. The larger the value, the higher the priority. The value range is -10 to 10. If left blank, it means 0.
+                     * @return TasksPriority The priority of the task. The larger the value, the higher the priority. The value range is -10 to 10. If left blank, it means 0.
                      * 
                      */
                     int64_t GetTasksPriority() const;
 
                     /**
-                     * 设置
-                     * @param _tasksPriority 
+                     * 设置The priority of the task. The larger the value, the higher the priority. The value range is -10 to 10. If left blank, it means 0.
+                     * @param _tasksPriority The priority of the task. The larger the value, the higher the priority. The value range is -10 to 10. If left blank, it means 0.
                      * 
                      */
                     void SetTasksPriority(const int64_t& _tasksPriority);
@@ -235,15 +243,15 @@ namespace TencentCloud
                     bool TasksPriorityHasBeenSet() const;
 
                     /**
-                     * 获取Used to identify duplicate requests. After you send a request, if any request with the same `SessionId` has already been sent in the last three days (72 hours), an error message will be returned. `SessionId` contains up to 50 characters. If this parameter is not carried or is an empty string, no deduplication will be performed.
-                     * @return SessionId Used to identify duplicate requests. After you send a request, if any request with the same `SessionId` has already been sent in the last three days (72 hours), an error message will be returned. `SessionId` contains up to 50 characters. If this parameter is not carried or is an empty string, no deduplication will be performed.
+                     * 获取The identification code used for task deduplication. If there is a request with the same identification code within three days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
+                     * @return SessionId The identification code used for task deduplication. If there is a request with the same identification code within three days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置Used to identify duplicate requests. After you send a request, if any request with the same `SessionId` has already been sent in the last three days (72 hours), an error message will be returned. `SessionId` contains up to 50 characters. If this parameter is not carried or is an empty string, no deduplication will be performed.
-                     * @param _sessionId Used to identify duplicate requests. After you send a request, if any request with the same `SessionId` has already been sent in the last three days (72 hours), an error message will be returned. `SessionId` contains up to 50 characters. If this parameter is not carried or is an empty string, no deduplication will be performed.
+                     * 设置The identification code used for task deduplication. If there is a request with the same identification code within three days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
+                     * @param _sessionId The identification code used for task deduplication. If there is a request with the same identification code within three days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -256,15 +264,15 @@ namespace TencentCloud
                     bool SessionIdHasBeenSet() const;
 
                     /**
-                     * 获取Reserved field for special purposes.
-                     * @return ExtInfo Reserved field for special purposes.
+                     * 获取Reserved fields, used for special purposes.
+                     * @return ExtInfo Reserved fields, used for special purposes.
                      * 
                      */
                     std::string GetExtInfo() const;
 
                     /**
-                     * 设置Reserved field for special purposes.
-                     * @param _extInfo Reserved field for special purposes.
+                     * 设置Reserved fields, used for special purposes.
+                     * @param _extInfo Reserved fields, used for special purposes.
                      * 
                      */
                     void SetExtInfo(const std::string& _extInfo);
@@ -279,67 +287,69 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Input the type of video. The possible values u200bu200bare File and Stream.
                      */
                     std::string m_inputType;
                     bool m_inputTypeHasBeenSet;
 
                     /**
-                     * 
+                     * </b>VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * 
+                     * Input video file information, required when InputType is File.
                      */
                     std::vector<EditMediaFileInfo> m_fileInfos;
                     bool m_fileInfosHasBeenSet;
 
                     /**
-                     * 
+                     * nput stream information, required when InputType is Stream.
                      */
                     std::vector<EditMediaStreamInfo> m_streamInfos;
                     bool m_streamInfosHasBeenSet;
 
                     /**
-                     * 
+                     * EditMedia template ID. The values u200bu200bare 10 and 20. If left blank, the 10 template is used. 
+<li>10: When splicing, the input with the highest resolution is used as the benchmark;</li>
+<li>20: When splicing, the input with the highest code rate is used as the benchmark. </li>
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * 
+                     * Task flow template name, if you want Fill in when executing the task flow on the generated new video.
                      */
                     std::string m_procedureName;
                     bool m_procedureNameHasBeenSet;
 
                     /**
-                     * 
+                     * The file configuration generated after editing.
                      */
                     EditMediaOutputConfig m_outputConfig;
                     bool m_outputConfigHasBeenSet;
 
                     /**
-                     * 
+                     * Identifies the source context, which is used to transparently transmit user request information. This field value will be returned in the EditMediaComplete callback and task flow status change callback, with a maximum length of 1000 characters.
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;
 
                     /**
-                     * 
+                     * The priority of the task. The larger the value, the higher the priority. The value range is -10 to 10. If left blank, it means 0.
                      */
                     int64_t m_tasksPriority;
                     bool m_tasksPriorityHasBeenSet;
 
                     /**
-                     * Used to identify duplicate requests. After you send a request, if any request with the same `SessionId` has already been sent in the last three days (72 hours), an error message will be returned. `SessionId` contains up to 50 characters. If this parameter is not carried or is an empty string, no deduplication will be performed.
+                     * The identification code used for task deduplication. If there is a request with the same identification code within three days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;
 
                     /**
-                     * Reserved field for special purposes.
+                     * Reserved fields, used for special purposes.
                      */
                     std::string m_extInfo;
                     bool m_extInfoHasBeenSet;

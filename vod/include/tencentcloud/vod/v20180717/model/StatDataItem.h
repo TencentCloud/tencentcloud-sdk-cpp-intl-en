@@ -76,35 +76,43 @@ namespace TencentCloud
                     bool TimeHasBeenSet() const;
 
                     /**
-                     * 获取The data size.
-<li>Storage capacity in bytes.</li>
-<li>Transcoding duration in seconds.</li>
-<li>Traffic in bytes.</li>
-<li>Bandwidth in bps.</li>
-<li>Live stream clip duration in seconds.</li>
-                     * @return Value The data size.
-<li>Storage capacity in bytes.</li>
-<li>Transcoding duration in seconds.</li>
-<li>Traffic in bytes.</li>
-<li>Bandwidth in bps.</li>
-<li>Live stream clip duration in seconds.</li>
+                     * 获取Data size. 
+<li>The data of the storage space, the unit is bytes. </li>
+<li>Transcoding duration data, unit is seconds. </li>
+<li>Traffic data, unit is bytes. </li>
+<li>Bandwidth data, unit is bits per second. </li>
+<li>Live broadcast clip data, the unit is seconds. </li>
+<li>Carousel data, unit is seconds. </li>
+<li>The number of sub-applications, the unit is one. </li>
+                     * @return Value Data size. 
+<li>The data of the storage space, the unit is bytes. </li>
+<li>Transcoding duration data, unit is seconds. </li>
+<li>Traffic data, unit is bytes. </li>
+<li>Bandwidth data, unit is bits per second. </li>
+<li>Live broadcast clip data, the unit is seconds. </li>
+<li>Carousel data, unit is seconds. </li>
+<li>The number of sub-applications, the unit is one. </li>
                      * 
                      */
                     int64_t GetValue() const;
 
                     /**
-                     * 设置The data size.
-<li>Storage capacity in bytes.</li>
-<li>Transcoding duration in seconds.</li>
-<li>Traffic in bytes.</li>
-<li>Bandwidth in bps.</li>
-<li>Live stream clip duration in seconds.</li>
-                     * @param _value The data size.
-<li>Storage capacity in bytes.</li>
-<li>Transcoding duration in seconds.</li>
-<li>Traffic in bytes.</li>
-<li>Bandwidth in bps.</li>
-<li>Live stream clip duration in seconds.</li>
+                     * 设置Data size. 
+<li>The data of the storage space, the unit is bytes. </li>
+<li>Transcoding duration data, unit is seconds. </li>
+<li>Traffic data, unit is bytes. </li>
+<li>Bandwidth data, unit is bits per second. </li>
+<li>Live broadcast clip data, the unit is seconds. </li>
+<li>Carousel data, unit is seconds. </li>
+<li>The number of sub-applications, the unit is one. </li>
+                     * @param _value Data size. 
+<li>The data of the storage space, the unit is bytes. </li>
+<li>Transcoding duration data, unit is seconds. </li>
+<li>Traffic data, unit is bytes. </li>
+<li>Bandwidth data, unit is bits per second. </li>
+<li>Live broadcast clip data, the unit is seconds. </li>
+<li>Carousel data, unit is seconds. </li>
+<li>The number of sub-applications, the unit is one. </li>
                      * 
                      */
                     void SetValue(const int64_t& _value);
@@ -127,12 +135,14 @@ namespace TencentCloud
                     bool m_timeHasBeenSet;
 
                     /**
-                     * The data size.
-<li>Storage capacity in bytes.</li>
-<li>Transcoding duration in seconds.</li>
-<li>Traffic in bytes.</li>
-<li>Bandwidth in bps.</li>
-<li>Live stream clip duration in seconds.</li>
+                     * Data size. 
+<li>The data of the storage space, the unit is bytes. </li>
+<li>Transcoding duration data, unit is seconds. </li>
+<li>Traffic data, unit is bytes. </li>
+<li>Bandwidth data, unit is bits per second. </li>
+<li>Live broadcast clip data, the unit is seconds. </li>
+<li>Carousel data, unit is seconds. </li>
+<li>The number of sub-applications, the unit is one. </li>
                      */
                     int64_t m_value;
                     bool m_valueHasBeenSet;

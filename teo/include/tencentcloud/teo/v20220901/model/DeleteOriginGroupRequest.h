@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The site ID.
-                     * @return ZoneId The site ID.
+                     * 获取ID of the site.
+                     * @return ZoneId ID of the site.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置The site ID.
-                     * @param _zoneId The site ID.
+                     * 设置ID of the site.
+                     * @param _zoneId ID of the site.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -64,39 +64,39 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取The ID of the origin group.
-                     * @return OriginGroupId The ID of the origin group.
+                     * 获取(Required) Origin group IDe group ID. This parameter is required.
+                     * @return GroupId (Required) Origin group IDe group ID. This parameter is required.
                      * 
                      */
-                    std::string GetOriginGroupId() const;
+                    std::string GetGroupId() const;
 
                     /**
-                     * 设置The ID of the origin group.
-                     * @param _originGroupId The ID of the origin group.
+                     * 设置(Required) Origin group IDe group ID. This parameter is required.
+                     * @param _groupId (Required) Origin group IDe group ID. This parameter is required.
                      * 
                      */
-                    void SetOriginGroupId(const std::string& _originGroupId);
+                    void SetGroupId(const std::string& _groupId);
 
                     /**
-                     * 判断参数 OriginGroupId 是否已赋值
-                     * @return OriginGroupId 是否已赋值
+                     * 判断参数 GroupId 是否已赋值
+                     * @return GroupId 是否已赋值
                      * 
                      */
-                    bool OriginGroupIdHasBeenSet() const;
+                    bool GroupIdHasBeenSet() const;
 
                 private:
 
                     /**
-                     * The site ID.
+                     * ID of the site.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * The ID of the origin group.
+                     * (Required) Origin group IDe group ID. This parameter is required.
                      */
-                    std::string m_originGroupId;
-                    bool m_originGroupIdHasBeenSet;
+                    std::string m_groupId;
+                    bool m_groupIdHasBeenSet;
 
                 };
             }

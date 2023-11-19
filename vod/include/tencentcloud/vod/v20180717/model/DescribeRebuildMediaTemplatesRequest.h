@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The remaster template IDs.
-                     * @return Definitions The remaster template IDs.
+                     * 获取List of rebuild media templates.
+                     * @return Definitions List of rebuild media templates.
                      * 
                      */
                     std::vector<int64_t> GetDefinitions() const;
 
                     /**
-                     * 设置The remaster template IDs.
-                     * @param _definitions The remaster template IDs.
+                     * 设置List of rebuild media templates.
+                     * @param _definitions List of rebuild media templates.
                      * 
                      */
                     void SetDefinitions(const std::vector<int64_t>& _definitions);
@@ -158,7 +158,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The remaster template IDs.
+                     * List of rebuild media templates.
                      */
                     std::vector<int64_t> m_definitions;
                     bool m_definitionsHasBeenSet;

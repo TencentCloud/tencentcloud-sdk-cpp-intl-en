@@ -373,18 +373,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool AccessHasBeenSet() const;
 
                     /**
-                     * 获取Network interception
+                     * 获取Number of blocked attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Intercept Network interception
+                     * @return Intercept Number of blocked attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetIntercept() const;
 
                     /**
-                     * 设置Network interception
+                     * 设置Number of blocked attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _intercept Network interception
+                     * @param _intercept Number of blocked attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -998,18 +998,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool VerifyStatusHasBeenSet() const;
 
                     /**
-                     * 获取Bot access data
+                     * 获取u200cNumber of bot attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return BotAccessCount Bot access data
+                     * @return BotAccessCount u200cNumber of bot attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetBotAccessCount() const;
 
                     /**
-                     * 设置Bot access data
+                     * 设置u200cNumber of bot attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _botAccessCount Bot access data
+                     * @param _botAccessCount u200cNumber of bot attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -1116,7 +1116,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_accessHasBeenSet;
 
                     /**
-                     * Network interception
+                     * Number of blocked attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_intercept;
@@ -1291,7 +1291,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_verifyStatusHasBeenSet;
 
                     /**
-                     * Bot access data
+                     * u200cNumber of bot attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     int64_t m_botAccessCount;

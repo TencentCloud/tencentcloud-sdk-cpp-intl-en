@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return MaxAgeType 
+                     * 获取Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
+                     * @return MaxAgeType Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
                      * 
                      */
                     std::string GetMaxAgeType() const;
 
                     /**
-                     * 设置
-                     * @param _maxAgeType 
+                     * 设置Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
+                     * @param _maxAgeType Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
                      * 
                      */
                     void SetMaxAgeType(const std::string& _maxAgeType);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool MaxAgeTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MaxAgeContents 
+                     * 获取Matching content under the corresponding type of MaxAgeType: <li>Fill in * when all is used; </li> <li> Fill in suffix name when file is used, such as jpg, txt; </li> <li> Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li> <b>Note: all rules cannot be deleted. They follow the origin site by default and can be modified. </b>
+                     * @return MaxAgeContents Matching content under the corresponding type of MaxAgeType: <li>Fill in * when all is used; </li> <li> Fill in suffix name when file is used, such as jpg, txt; </li> <li> Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li> <b>Note: all rules cannot be deleted. They follow the origin site by default and can be modified. </b>
                      * 
                      */
                     std::vector<std::string> GetMaxAgeContents() const;
 
                     /**
-                     * 设置
-                     * @param _maxAgeContents 
+                     * 设置Matching content under the corresponding type of MaxAgeType: <li>Fill in * when all is used; </li> <li> Fill in suffix name when file is used, such as jpg, txt; </li> <li> Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li> <b>Note: all rules cannot be deleted. They follow the origin site by default and can be modified. </b>
+                     * @param _maxAgeContents Matching content under the corresponding type of MaxAgeType: <li>Fill in * when all is used; </li> <li> Fill in suffix name when file is used, such as jpg, txt; </li> <li> Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li> <b>Note: all rules cannot be deleted. They follow the origin site by default and can be modified. </b>
                      * 
                      */
                     void SetMaxAgeContents(const std::vector<std::string>& _maxAgeContents);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool MaxAgeContentsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MaxAgeTime 
+                     * 获取MaxAge time setting, unit second; <b>Note: The time is 0, which means no caching. </b>
+                     * @return MaxAgeTime MaxAge time setting, unit second; <b>Note: The time is 0, which means no caching. </b>
                      * 
                      */
                     uint64_t GetMaxAgeTime() const;
 
                     /**
-                     * 设置
-                     * @param _maxAgeTime 
+                     * 设置MaxAge time setting, unit second; <b>Note: The time is 0, which means no caching. </b>
+                     * @param _maxAgeTime MaxAge time setting, unit second; <b>Note: The time is 0, which means no caching. </b>
                      * 
                      */
                     void SetMaxAgeTime(const uint64_t& _maxAgeTime);
@@ -133,19 +133,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
                      */
                     std::string m_maxAgeType;
                     bool m_maxAgeTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Matching content under the corresponding type of MaxAgeType: <li>Fill in * when all is used; </li> <li> Fill in suffix name when file is used, such as jpg, txt; </li> <li> Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li> <b>Note: all rules cannot be deleted. They follow the origin site by default and can be modified. </b>
                      */
                     std::vector<std::string> m_maxAgeContents;
                     bool m_maxAgeContentsHasBeenSet;
 
                     /**
-                     * 
+                     * MaxAge time setting, unit second; <b>Note: The time is 0, which means no caching. </b>
                      */
                     uint64_t m_maxAgeTime;
                     bool m_maxAgeTimeHasBeenSet;

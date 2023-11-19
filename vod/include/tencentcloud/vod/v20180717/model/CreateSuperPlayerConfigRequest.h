@@ -269,15 +269,43 @@ This parameter is required if `AudioVideoType` is `Transcode`.
                     bool ImageSpriteDefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ResolutionNames 
+                     * 获取The player displays names for substreams of different resolutions. If left unfilled or filled in a blank array, the default configuration is used:
+<li>MinEdgeLength: 240, Name: smooth;</li>
+<li>MinEdgeLength: 480, Name: SD; </li>
+<li>MinEdgeLength: 720, Name: HD; </li>
+<li>MinEdgeLength: 1080, Name: Full HD; </li>
+<li>MinEdgeLength: 1440, Name: 2K; </li>
+<li>MinEdgeLength: 2160, Name: 4K; </li>
+<li>MinEdgeLength: 4320, Name: 8K. </li>
+                     * @return ResolutionNames The player displays names for substreams of different resolutions. If left unfilled or filled in a blank array, the default configuration is used:
+<li>MinEdgeLength: 240, Name: smooth;</li>
+<li>MinEdgeLength: 480, Name: SD; </li>
+<li>MinEdgeLength: 720, Name: HD; </li>
+<li>MinEdgeLength: 1080, Name: Full HD; </li>
+<li>MinEdgeLength: 1440, Name: 2K; </li>
+<li>MinEdgeLength: 2160, Name: 4K; </li>
+<li>MinEdgeLength: 4320, Name: 8K. </li>
                      * 
                      */
                     std::vector<ResolutionNameInfo> GetResolutionNames() const;
 
                     /**
-                     * 设置
-                     * @param _resolutionNames 
+                     * 设置The player displays names for substreams of different resolutions. If left unfilled or filled in a blank array, the default configuration is used:
+<li>MinEdgeLength: 240, Name: smooth;</li>
+<li>MinEdgeLength: 480, Name: SD; </li>
+<li>MinEdgeLength: 720, Name: HD; </li>
+<li>MinEdgeLength: 1080, Name: Full HD; </li>
+<li>MinEdgeLength: 1440, Name: 2K; </li>
+<li>MinEdgeLength: 2160, Name: 4K; </li>
+<li>MinEdgeLength: 4320, Name: 8K. </li>
+                     * @param _resolutionNames The player displays names for substreams of different resolutions. If left unfilled or filled in a blank array, the default configuration is used:
+<li>MinEdgeLength: 240, Name: smooth;</li>
+<li>MinEdgeLength: 480, Name: SD; </li>
+<li>MinEdgeLength: 720, Name: HD; </li>
+<li>MinEdgeLength: 1080, Name: Full HD; </li>
+<li>MinEdgeLength: 1440, Name: 2K; </li>
+<li>MinEdgeLength: 2160, Name: 4K; </li>
+<li>MinEdgeLength: 4320, Name: 8K. </li>
                      * 
                      */
                     void SetResolutionNames(const std::vector<ResolutionNameInfo>& _resolutionNames);
@@ -425,7 +453,14 @@ This parameter is required if `AudioVideoType` is `Transcode`.
                     bool m_imageSpriteDefinitionHasBeenSet;
 
                     /**
-                     * 
+                     * The player displays names for substreams of different resolutions. If left unfilled or filled in a blank array, the default configuration is used:
+<li>MinEdgeLength: 240, Name: smooth;</li>
+<li>MinEdgeLength: 480, Name: SD; </li>
+<li>MinEdgeLength: 720, Name: HD; </li>
+<li>MinEdgeLength: 1080, Name: Full HD; </li>
+<li>MinEdgeLength: 1440, Name: 2K; </li>
+<li>MinEdgeLength: 2160, Name: 4K; </li>
+<li>MinEdgeLength: 4320, Name: 8K. </li>
                      */
                     std::vector<ResolutionNameInfo> m_resolutionNames;
                     bool m_resolutionNamesHasBeenSet;

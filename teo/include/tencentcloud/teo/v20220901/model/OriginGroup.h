@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return GroupId 
+                     * 获取The ID of the origin group.
+                     * @return GroupId The ID of the origin group.
                      * 
                      */
                     std::string GetGroupId() const;
 
                     /**
-                     * 设置
-                     * @param _groupId 
+                     * 设置The ID of the origin group.
+                     * @param _groupId The ID of the origin group.
                      * 
                      */
                     void SetGroupId(const std::string& _groupId);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool GroupIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Name 
+                     * 获取The name of the origin group.
+                     * @return Name The name of the origin group.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置
-                     * @param _name 
+                     * 设置The name of the origin group.
+                     * @param _name The name of the origin group.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -91,15 +91,23 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取The origin group type. Values:
+<li>`GENERAL`: General origin group</li>
+<li>`HTTP`: HTTP-specific origin group</li>
+                     * @return Type The origin group type. Values:
+<li>`GENERAL`: General origin group</li>
+<li>`HTTP`: HTTP-specific origin group</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置The origin group type. Values:
+<li>`GENERAL`: General origin group</li>
+<li>`HTTP`: HTTP-specific origin group</li>
+                     * @param _type The origin group type. Values:
+<li>`GENERAL`: General origin group</li>
+<li>`HTTP`: HTTP-specific origin group</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -112,15 +120,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Records 
+                     * 获取Details of the origin record.
+                     * @return Records Details of the origin record.
                      * 
                      */
                     std::vector<OriginRecord> GetRecords() const;
 
                     /**
-                     * 设置
-                     * @param _records 
+                     * 设置Details of the origin record.
+                     * @param _records Details of the origin record.
                      * 
                      */
                     void SetRecords(const std::vector<OriginRecord>& _records);
@@ -133,15 +141,15 @@ namespace TencentCloud
                     bool RecordsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return References 
+                     * 获取List of instances referencing this origin group.	
+                     * @return References List of instances referencing this origin group.	
                      * 
                      */
                     std::vector<OriginGroupReference> GetReferences() const;
 
                     /**
-                     * 设置
-                     * @param _references 
+                     * 设置List of instances referencing this origin group.	
+                     * @param _references List of instances referencing this origin group.	
                      * 
                      */
                     void SetReferences(const std::vector<OriginGroupReference>& _references);
@@ -154,15 +162,15 @@ namespace TencentCloud
                     bool ReferencesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CreateTime 
+                     * 获取Creation time of the origin group.
+                     * @return CreateTime Creation time of the origin group.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置
-                     * @param _createTime 
+                     * 设置Creation time of the origin group.
+                     * @param _createTime Creation time of the origin group.
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -223,37 +231,39 @@ Note: This field may return·null, indicating that no valid values can be obtain
                 private:
 
                     /**
-                     * 
+                     * The ID of the origin group.
                      */
                     std::string m_groupId;
                     bool m_groupIdHasBeenSet;
 
                     /**
-                     * 
+                     * The name of the origin group.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * 
+                     * The origin group type. Values:
+<li>`GENERAL`: General origin group</li>
+<li>`HTTP`: HTTP-specific origin group</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * Details of the origin record.
                      */
                     std::vector<OriginRecord> m_records;
                     bool m_recordsHasBeenSet;
 
                     /**
-                     * 
+                     * List of instances referencing this origin group.	
                      */
                     std::vector<OriginGroupReference> m_references;
                     bool m_referencesHasBeenSet;
 
                     /**
-                     * 
+                     * Creation time of the origin group.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;

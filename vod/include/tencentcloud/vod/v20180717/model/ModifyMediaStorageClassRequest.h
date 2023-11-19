@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return FileIds 
+                     * 获取Media file unique identifier list, maximum length: 100.
+                     * @return FileIds Media file unique identifier list, maximum length: 100.
                      * 
                      */
                     std::vector<std::string> GetFileIds() const;
 
                     /**
-                     * 设置
-                     * @param _fileIds 
+                     * 设置Media file unique identifier list, maximum length: 100.
+                     * @param _fileIds Media file unique identifier list, maximum length: 100.
                      * 
                      */
                     void SetFileIds(const std::vector<std::string>& _fileIds);
@@ -173,7 +173,7 @@ If the current storage class is DEEP ARCHIVE, the valid values for this paramete
                 private:
 
                     /**
-                     * 
+                     * Media file unique identifier list, maximum length: 100.
                      */
                     std::vector<std::string> m_fileIds;
                     bool m_fileIdsHasBeenSet;

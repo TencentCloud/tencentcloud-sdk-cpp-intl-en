@@ -43,19 +43,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of domain names. If this parameter is left empty, all domain names will be listed.
-<li>Maximum number of domain names listed: 20</li>
-                     * @return Domains List of domain names. If this parameter is left empty, all domain names will be listed.
-<li>Maximum number of domain names listed: 20</li>
+                     * 获取Domain name list. When this field is left blank, all domain name information will be listed by default. The limitations of this field are as follows:
+<li>The maximum number of domain names is 20. </li>
+                     * @return Domains Domain name list. When this field is left blank, all domain name information will be listed by default. The limitations of this field are as follows:
+<li>The maximum number of domain names is 20. </li>
                      * 
                      */
                     std::vector<std::string> GetDomains() const;
 
                     /**
-                     * 设置List of domain names. If this parameter is left empty, all domain names will be listed.
-<li>Maximum number of domain names listed: 20</li>
-                     * @param _domains List of domain names. If this parameter is left empty, all domain names will be listed.
-<li>Maximum number of domain names listed: 20</li>
+                     * 设置Domain name list. When this field is left blank, all domain name information will be listed by default. The limitations of this field are as follows:
+<li>The maximum number of domain names is 20. </li>
+                     * @param _domains Domain name list. When this field is left blank, all domain name information will be listed by default. The limitations of this field are as follows:
+<li>The maximum number of domain names is 20. </li>
                      * 
                      */
                     void SetDomains(const std::vector<std::string>& _domains);
@@ -133,8 +133,8 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of domain names. If this parameter is left empty, all domain names will be listed.
-<li>Maximum number of domain names listed: 20</li>
+                     * Domain name list. When this field is left blank, all domain name information will be listed by default. The limitations of this field are as follows:
+<li>The maximum number of domain names is 20. </li>
                      */
                     std::vector<std::string> m_domains;
                     bool m_domainsHasBeenSet;

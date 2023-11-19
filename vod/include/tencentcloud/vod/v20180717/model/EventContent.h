@@ -193,14 +193,18 @@ namespace TencentCloud
 
                     /**
                      * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return FileUploadEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     FileUploadTask GetFileUploadEvent() const;
 
                     /**
                      * 设置
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _fileUploadEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetFileUploadEvent(const FileUploadTask& _fileUploadEvent);
@@ -214,14 +218,18 @@ namespace TencentCloud
 
                     /**
                      * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return ProcedureStateChangeEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     ProcedureTask GetProcedureStateChangeEvent() const;
 
                     /**
                      * 设置
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _procedureStateChangeEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetProcedureStateChangeEvent(const ProcedureTask& _procedureStateChangeEvent);
@@ -235,14 +243,18 @@ namespace TencentCloud
 
                     /**
                      * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return FileDeleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     FileDeleteTask GetFileDeleteEvent() const;
 
                     /**
                      * 设置
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _fileDeleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetFileDeleteEvent(const FileDeleteTask& _fileDeleteEvent);
@@ -256,14 +268,18 @@ namespace TencentCloud
 
                     /**
                      * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return PullCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     PullUploadTask GetPullCompleteEvent() const;
 
                     /**
                      * 设置
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _pullCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetPullCompleteEvent(const PullUploadTask& _pullCompleteEvent);
@@ -277,14 +293,18 @@ namespace TencentCloud
 
                     /**
                      * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return EditMediaCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     EditMediaTask GetEditMediaCompleteEvent() const;
 
                     /**
                      * 设置
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _editMediaCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetEditMediaCompleteEvent(const EditMediaTask& _editMediaCompleteEvent);
@@ -297,19 +317,19 @@ namespace TencentCloud
                     bool EditMediaCompleteEventHasBeenSet() const;
 
                     /**
-                     * 获取The notification for completing video splitting, which is valid if the event type is `SplitMediaComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SplitMediaCompleteEvent The notification for completing video splitting, which is valid if the event type is `SplitMediaComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return SplitMediaCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     SplitMediaTask GetSplitMediaCompleteEvent() const;
 
                     /**
-                     * 设置The notification for completing video splitting, which is valid if the event type is `SplitMediaComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _splitMediaCompleteEvent The notification for completing video splitting, which is valid if the event type is `SplitMediaComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _splitMediaCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetSplitMediaCompleteEvent(const SplitMediaTask& _splitMediaCompleteEvent);
@@ -323,14 +343,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return ComposeMediaCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     ComposeMediaTask GetComposeMediaCompleteEvent() const;
 
                     /**
                      * 设置
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _composeMediaCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetComposeMediaCompleteEvent(const ComposeMediaTask& _composeMediaCompleteEvent);
@@ -344,14 +368,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return ClipCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     ClipTask2017 GetClipCompleteEvent() const;
 
                     /**
                      * 设置
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _clipCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetClipCompleteEvent(const ClipTask2017& _clipCompleteEvent);
@@ -365,14 +393,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return TranscodeCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     TranscodeTask2017 GetTranscodeCompleteEvent() const;
 
                     /**
                      * 设置
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _transcodeCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetTranscodeCompleteEvent(const TranscodeTask2017& _transcodeCompleteEvent);
@@ -386,14 +418,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return CreateImageSpriteCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     CreateImageSpriteTask2017 GetCreateImageSpriteCompleteEvent() const;
 
                     /**
                      * 设置
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _createImageSpriteCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetCreateImageSpriteCompleteEvent(const CreateImageSpriteTask2017& _createImageSpriteCompleteEvent);
@@ -407,14 +443,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return ConcatCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     ConcatTask2017 GetConcatCompleteEvent() const;
 
                     /**
                      * 设置
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _concatCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetConcatCompleteEvent(const ConcatTask2017& _concatCompleteEvent);
@@ -428,14 +468,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return SnapshotByTimeOffsetCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     SnapshotByTimeOffsetTask2017 GetSnapshotByTimeOffsetCompleteEvent() const;
 
                     /**
                      * 设置
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _snapshotByTimeOffsetCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetSnapshotByTimeOffsetCompleteEvent(const SnapshotByTimeOffsetTask2017& _snapshotByTimeOffsetCompleteEvent);
@@ -449,14 +493,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return WechatPublishCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     WechatPublishTask GetWechatPublishCompleteEvent() const;
 
                     /**
                      * 设置
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _wechatPublishCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetWechatPublishCompleteEvent(const WechatPublishTask& _wechatPublishCompleteEvent);
@@ -470,14 +518,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return WechatMiniProgramPublishCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     WechatMiniProgramPublishTask GetWechatMiniProgramPublishCompleteEvent() const;
 
                     /**
                      * 设置
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _wechatMiniProgramPublishCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetWechatMiniProgramPublishCompleteEvent(const WechatMiniProgramPublishTask& _wechatMiniProgramPublishCompleteEvent);
@@ -490,19 +542,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool WechatMiniProgramPublishCompleteEventHasBeenSet() const;
 
                     /**
-                     * 获取The notification for completing watermark removal. This parameter is valid only if the event type is `RemoveWatermark`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RemoveWatermarkCompleteEvent The notification for completing watermark removal. This parameter is valid only if the event type is `RemoveWatermark`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return RemoveWatermarkCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     RemoveWatermarkTask GetRemoveWatermarkCompleteEvent() const;
 
                     /**
-                     * 设置The notification for completing watermark removal. This parameter is valid only if the event type is `RemoveWatermark`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _removeWatermarkCompleteEvent The notification for completing watermark removal. This parameter is valid only if the event type is `RemoveWatermark`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _removeWatermarkCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetRemoveWatermarkCompleteEvent(const RemoveWatermarkTask& _removeWatermarkCompleteEvent);
@@ -515,19 +567,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RemoveWatermarkCompleteEventHasBeenSet() const;
 
                     /**
-                     * 获取The notification for completing video retrieval. This parameter is valid if the event type is `RestoreMediaComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RestoreMediaCompleteEvent The notification for completing video retrieval. This parameter is valid if the event type is `RestoreMediaComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return RestoreMediaCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     RestoreMediaTask GetRestoreMediaCompleteEvent() const;
 
                     /**
-                     * 设置The notification for completing video retrieval. This parameter is valid if the event type is `RestoreMediaComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _restoreMediaCompleteEvent The notification for completing video retrieval. This parameter is valid if the event type is `RestoreMediaComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _restoreMediaCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetRestoreMediaCompleteEvent(const RestoreMediaTask& _restoreMediaCompleteEvent);
@@ -540,19 +592,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RestoreMediaCompleteEventHasBeenSet() const;
 
                     /**
-                     * 获取The notification for completing audio/video remastering. This parameter is valid only if the event type is `RebuildMediaComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RebuildMediaCompleteEvent The notification for completing audio/video remastering. This parameter is valid only if the event type is `RebuildMediaComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return RebuildMediaCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     RebuildMediaTask GetRebuildMediaCompleteEvent() const;
 
                     /**
-                     * 设置The notification for completing audio/video remastering. This parameter is valid only if the event type is `RebuildMediaComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _rebuildMediaCompleteEvent The notification for completing audio/video remastering. This parameter is valid only if the event type is `RebuildMediaComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _rebuildMediaCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetRebuildMediaCompleteEvent(const RebuildMediaTask& _rebuildMediaCompleteEvent);
@@ -565,19 +617,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RebuildMediaCompleteEventHasBeenSet() const;
 
                     /**
-                     * 获取The notification for completing digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ExtractTraceWatermarkCompleteEvent The notification for completing digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return ExtractTraceWatermarkCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     ExtractTraceWatermarkTask GetExtractTraceWatermarkCompleteEvent() const;
 
                     /**
-                     * 设置The notification for completing digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _extractTraceWatermarkCompleteEvent The notification for completing digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _extractTraceWatermarkCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetExtractTraceWatermarkCompleteEvent(const ExtractTraceWatermarkTask& _extractTraceWatermarkCompleteEvent);
@@ -591,14 +643,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return ExtractCopyRightWatermarkCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     ExtractCopyRightWatermarkTask GetExtractCopyRightWatermarkCompleteEvent() const;
 
                     /**
                      * 设置
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _extractCopyRightWatermarkCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetExtractCopyRightWatermarkCompleteEvent(const ExtractCopyRightWatermarkTask& _extractCopyRightWatermarkCompleteEvent);
@@ -612,14 +668,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return ReviewAudioVideoCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     ReviewAudioVideoTask GetReviewAudioVideoCompleteEvent() const;
 
                     /**
                      * 设置
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _reviewAudioVideoCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetReviewAudioVideoCompleteEvent(const ReviewAudioVideoTask& _reviewAudioVideoCompleteEvent);
@@ -633,14 +693,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return ReduceMediaBitrateCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     ReduceMediaBitrateTask GetReduceMediaBitrateCompleteEvent() const;
 
                     /**
                      * 设置
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _reduceMediaBitrateCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetReduceMediaBitrateCompleteEvent(const ReduceMediaBitrateTask& _reduceMediaBitrateCompleteEvent);
@@ -654,14 +718,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return DescribeFileAttributesCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     DescribeFileAttributesTask GetDescribeFileAttributesCompleteEvent() const;
 
                     /**
                      * 设置
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _describeFileAttributesCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetDescribeFileAttributesCompleteEvent(const DescribeFileAttributesTask& _describeFileAttributesCompleteEvent);
@@ -675,14 +743,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return QualityInspectCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     QualityInspectTask GetQualityInspectCompleteEvent() const;
 
                     /**
                      * 设置
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _qualityInspectCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetQualityInspectCompleteEvent(const QualityInspectTask& _qualityInspectCompleteEvent);
@@ -730,143 +802,161 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     FileUploadTask m_fileUploadEvent;
                     bool m_fileUploadEventHasBeenSet;
 
                     /**
                      * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     ProcedureTask m_procedureStateChangeEvent;
                     bool m_procedureStateChangeEventHasBeenSet;
 
                     /**
                      * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     FileDeleteTask m_fileDeleteEvent;
                     bool m_fileDeleteEventHasBeenSet;
 
                     /**
                      * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     PullUploadTask m_pullCompleteEvent;
                     bool m_pullCompleteEventHasBeenSet;
 
                     /**
                      * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     EditMediaTask m_editMediaCompleteEvent;
                     bool m_editMediaCompleteEventHasBeenSet;
 
                     /**
-                     * The notification for completing video splitting, which is valid if the event type is `SplitMediaComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     SplitMediaTask m_splitMediaCompleteEvent;
                     bool m_splitMediaCompleteEventHasBeenSet;
 
                     /**
                      * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     ComposeMediaTask m_composeMediaCompleteEvent;
                     bool m_composeMediaCompleteEventHasBeenSet;
 
                     /**
                      * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     ClipTask2017 m_clipCompleteEvent;
                     bool m_clipCompleteEventHasBeenSet;
 
                     /**
                      * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     TranscodeTask2017 m_transcodeCompleteEvent;
                     bool m_transcodeCompleteEventHasBeenSet;
 
                     /**
                      * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     CreateImageSpriteTask2017 m_createImageSpriteCompleteEvent;
                     bool m_createImageSpriteCompleteEventHasBeenSet;
 
                     /**
                      * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     ConcatTask2017 m_concatCompleteEvent;
                     bool m_concatCompleteEventHasBeenSet;
 
                     /**
                      * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     SnapshotByTimeOffsetTask2017 m_snapshotByTimeOffsetCompleteEvent;
                     bool m_snapshotByTimeOffsetCompleteEventHasBeenSet;
 
                     /**
                      * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     WechatPublishTask m_wechatPublishCompleteEvent;
                     bool m_wechatPublishCompleteEventHasBeenSet;
 
                     /**
                      * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     WechatMiniProgramPublishTask m_wechatMiniProgramPublishCompleteEvent;
                     bool m_wechatMiniProgramPublishCompleteEventHasBeenSet;
 
                     /**
-                     * The notification for completing watermark removal. This parameter is valid only if the event type is `RemoveWatermark`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     RemoveWatermarkTask m_removeWatermarkCompleteEvent;
                     bool m_removeWatermarkCompleteEventHasBeenSet;
 
                     /**
-                     * The notification for completing video retrieval. This parameter is valid if the event type is `RestoreMediaComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     RestoreMediaTask m_restoreMediaCompleteEvent;
                     bool m_restoreMediaCompleteEventHasBeenSet;
 
                     /**
-                     * The notification for completing audio/video remastering. This parameter is valid only if the event type is `RebuildMediaComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     RebuildMediaTask m_rebuildMediaCompleteEvent;
                     bool m_rebuildMediaCompleteEventHasBeenSet;
 
                     /**
-                     * The notification for completing digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     ExtractTraceWatermarkTask m_extractTraceWatermarkCompleteEvent;
                     bool m_extractTraceWatermarkCompleteEventHasBeenSet;
 
                     /**
                      * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     ExtractCopyRightWatermarkTask m_extractCopyRightWatermarkCompleteEvent;
                     bool m_extractCopyRightWatermarkCompleteEventHasBeenSet;
 
                     /**
                      * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     ReviewAudioVideoTask m_reviewAudioVideoCompleteEvent;
                     bool m_reviewAudioVideoCompleteEventHasBeenSet;
 
                     /**
                      * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     ReduceMediaBitrateTask m_reduceMediaBitrateCompleteEvent;
                     bool m_reduceMediaBitrateCompleteEventHasBeenSet;
 
                     /**
                      * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     DescribeFileAttributesTask m_describeFileAttributesCompleteEvent;
                     bool m_describeFileAttributesCompleteEventHasBeenSet;
 
                     /**
                      * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     QualityInspectTask m_qualityInspectCompleteEvent;
                     bool m_qualityInspectCompleteEventHasBeenSet;

@@ -95,15 +95,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TransitionsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MediaTransitions 
+                     * 获取Transition operation list. Image transition operations and audio transition operations support at most one each.
+                     * @return MediaTransitions Transition operation list. Image transition operations and audio transition operations support at most one each.
                      * 
                      */
                     std::vector<TransitionOperation> GetMediaTransitions() const;
 
                     /**
-                     * 设置
-                     * @param _mediaTransitions 
+                     * 设置Transition operation list. Image transition operations and audio transition operations support at most one each.
+                     * @param _mediaTransitions Transition operation list. Image transition operations and audio transition operations support at most one each.
                      * 
                      */
                     void SetMediaTransitions(const std::vector<TransitionOperation>& _mediaTransitions);
@@ -131,7 +131,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_transitionsHasBeenSet;
 
                     /**
-                     * 
+                     * Transition operation list. Image transition operations and audio transition operations support at most one each.
                      */
                     std::vector<TransitionOperation> m_mediaTransitions;
                     bool m_mediaTransitionsHasBeenSet;

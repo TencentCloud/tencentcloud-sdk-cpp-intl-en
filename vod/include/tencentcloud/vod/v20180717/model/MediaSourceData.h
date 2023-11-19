@@ -113,19 +113,15 @@ namespace TencentCloud
                     bool LiveRecordInfoHasBeenSet() const;
 
                     /**
-                     * 获取The TRTC recording information.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TrtcRecordInfo The TRTC recording information.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取TRTC recording information, valid when the file source is TrtcRecord.
+                     * @return TrtcRecordInfo TRTC recording information, valid when the file source is TrtcRecord.
                      * 
                      */
                     TrtcRecordInfo GetTrtcRecordInfo() const;
 
                     /**
-                     * 设置The TRTC recording information.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _trtcRecordInfo The TRTC recording information.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置TRTC recording information, valid when the file source is TrtcRecord.
+                     * @param _trtcRecordInfo TRTC recording information, valid when the file source is TrtcRecord.
                      * 
                      */
                     void SetTrtcRecordInfo(const TrtcRecordInfo& _trtcRecordInfo);
@@ -179,8 +175,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_liveRecordInfoHasBeenSet;
 
                     /**
-                     * The TRTC recording information.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * TRTC recording information, valid when the file source is TrtcRecord.
                      */
                     TrtcRecordInfo m_trtcRecordInfo;
                     bool m_trtcRecordInfoHasBeenSet;

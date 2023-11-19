@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Path cache does not cache configuration configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+                     * @return Switch Path cache does not cache configuration configuration switch, value: <li>on: on; </li> <li>off: off. </li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置Path cache does not cache configuration configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+                     * @param _switch Path cache does not cache configuration configuration switch, value: <li>on: on; </li> <li>off: off. </li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Revalidate 
+                     * 获取Always return to the origin site for verification, value: <li>on: on; </li> <li>off: off. </li>
+                     * @return Revalidate Always return to the origin site for verification, value: <li>on: on; </li> <li>off: off. </li>
                      * 
                      */
                     std::string GetRevalidate() const;
 
                     /**
-                     * 设置
-                     * @param _revalidate 
+                     * 设置Always return to the origin site for verification, value: <li>on: on; </li> <li>off: off. </li>
+                     * @param _revalidate Always return to the origin site for verification, value: <li>on: on; </li> <li>off: off. </li>
                      * 
                      */
                     void SetRevalidate(const std::string& _revalidate);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Path cache does not cache configuration configuration switch, value: <li>on: on; </li> <li>off: off. </li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * Always return to the origin site for verification, value: <li>on: on; </li> <li>off: off. </li>
                      */
                     std::string m_revalidate;
                     bool m_revalidateHasBeenSet;

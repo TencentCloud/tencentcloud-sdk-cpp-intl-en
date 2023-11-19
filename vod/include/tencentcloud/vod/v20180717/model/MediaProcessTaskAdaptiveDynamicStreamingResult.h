@@ -196,15 +196,15 @@ namespace TencentCloud
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BeginProcessTime 
+                     * 获取The time when the conversion to adaptive code stream task starts, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+                     * @return BeginProcessTime The time when the conversion to adaptive code stream task starts, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
                      * 
                      */
                     std::string GetBeginProcessTime() const;
 
                     /**
-                     * 设置
-                     * @param _beginProcessTime 
+                     * 设置The time when the conversion to adaptive code stream task starts, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+                     * @param _beginProcessTime The time when the conversion to adaptive code stream task starts, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
                      * 
                      */
                     void SetBeginProcessTime(const std::string& _beginProcessTime);
@@ -217,15 +217,15 @@ namespace TencentCloud
                     bool BeginProcessTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FinishTime 
+                     * 获取The time when the adaptive code stream conversion task is completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+                     * @return FinishTime The time when the adaptive code stream conversion task is completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
                      * 
                      */
                     std::string GetFinishTime() const;
 
                     /**
-                     * 设置
-                     * @param _finishTime 
+                     * 设置The time when the adaptive code stream conversion task is completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+                     * @param _finishTime The time when the adaptive code stream conversion task is completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
                      * 
                      */
                     void SetFinishTime(const std::string& _finishTime);
@@ -282,13 +282,13 @@ namespace TencentCloud
                     bool m_outputHasBeenSet;
 
                     /**
-                     * 
+                     * The time when the conversion to adaptive code stream task starts, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
                      */
                     std::string m_beginProcessTime;
                     bool m_beginProcessTimeHasBeenSet;
 
                     /**
-                     * 
+                     * The time when the adaptive code stream conversion task is completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
                      */
                     std::string m_finishTime;
                     bool m_finishTimeHasBeenSet;

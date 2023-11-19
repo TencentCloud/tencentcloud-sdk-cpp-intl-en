@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取The details of the remaster templates.
-                     * @return RebuildMediaTemplateSet The details of the remaster templates.
+                     * 获取Rebuild media template details list.
+                     * @return RebuildMediaTemplateSet Rebuild media template details list.
                      * 
                      */
                     std::vector<RebuildMediaTemplate> GetRebuildMediaTemplateSet() const;
@@ -81,7 +81,7 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * The details of the remaster templates.
+                     * Rebuild media template details list.
                      */
                     std::vector<RebuildMediaTemplate> m_rebuildMediaTemplateSet;
                     bool m_rebuildMediaTemplateSetHasBeenSet;

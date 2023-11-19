@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取The IDs of the moderation templates to query. Array length limit: 100.
-                     * @return Definitions The IDs of the moderation templates to query. Array length limit: 100.
+                     * 获取The audit template uniquely identifies the filtering conditions, and the array length limit is: 100.
+                     * @return Definitions The audit template uniquely identifies the filtering conditions, and the array length limit is: 100.
                      * 
                      */
                     std::vector<int64_t> GetDefinitions() const;
 
                     /**
-                     * 设置The IDs of the moderation templates to query. Array length limit: 100.
-                     * @param _definitions The IDs of the moderation templates to query. Array length limit: 100.
+                     * 设置The audit template uniquely identifies the filtering conditions, and the array length limit is: 100.
+                     * @param _definitions The audit template uniquely identifies the filtering conditions, and the array length limit is: 100.
                      * 
                      */
                     void SetDefinitions(const std::vector<int64_t>& _definitions);
@@ -164,7 +164,7 @@ namespace TencentCloud
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * The IDs of the moderation templates to query. Array length limit: 100.
+                     * The audit template uniquely identifies the filtering conditions, and the array length limit is: 100.
                      */
                     std::vector<int64_t> m_definitions;
                     bool m_definitionsHasBeenSet;

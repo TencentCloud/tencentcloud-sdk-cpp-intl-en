@@ -167,7 +167,9 @@ namespace TencentCloud
 
                     /**
                      * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return ProcedureTask 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     ProcedureTask GetProcedureTask() const;
@@ -181,7 +183,9 @@ namespace TencentCloud
 
                     /**
                      * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return EditMediaTask 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     EditMediaTask GetEditMediaTask() const;
@@ -195,7 +199,9 @@ namespace TencentCloud
 
                     /**
                      * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return WechatPublishTask 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     WechatPublishTask GetWechatPublishTask() const;
@@ -209,7 +215,9 @@ namespace TencentCloud
 
                     /**
                      * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return ComposeMediaTask 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     ComposeMediaTask GetComposeMediaTask() const;
@@ -223,7 +231,9 @@ namespace TencentCloud
 
                     /**
                      * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return SplitMediaTask 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     SplitMediaTask GetSplitMediaTask() const;
@@ -237,7 +247,9 @@ namespace TencentCloud
 
                     /**
                      * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return WechatMiniProgramPublishTask 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     WechatMiniProgramPublishTask GetWechatMiniProgramPublishTask() const;
@@ -251,7 +263,9 @@ namespace TencentCloud
 
                     /**
                      * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return PullUploadTask 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     PullUploadTask GetPullUploadTask() const;
@@ -265,7 +279,9 @@ namespace TencentCloud
 
                     /**
                      * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return TranscodeTask 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     TranscodeTask2017 GetTranscodeTask() const;
@@ -279,7 +295,9 @@ namespace TencentCloud
 
                     /**
                      * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return ConcatTask 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     ConcatTask2017 GetConcatTask() const;
@@ -293,7 +311,9 @@ namespace TencentCloud
 
                     /**
                      * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return ClipTask 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     ClipTask2017 GetClipTask() const;
@@ -307,7 +327,9 @@ namespace TencentCloud
 
                     /**
                      * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return CreateImageSpriteTask 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     CreateImageSpriteTask2017 GetCreateImageSpriteTask() const;
@@ -321,7 +343,9 @@ namespace TencentCloud
 
                     /**
                      * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return SnapshotByTimeOffsetTask 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     SnapshotByTimeOffsetTask2017 GetSnapshotByTimeOffsetTask() const;
@@ -335,7 +359,9 @@ namespace TencentCloud
 
                     /**
                      * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return RemoveWatermarkTask 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     RemoveWatermarkTask GetRemoveWatermarkTask() const;
@@ -349,7 +375,9 @@ namespace TencentCloud
 
                     /**
                      * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return RebuildMediaTask 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     RebuildMediaTask GetRebuildMediaTask() const;
@@ -363,7 +391,9 @@ namespace TencentCloud
 
                     /**
                      * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return ExtractTraceWatermarkTask 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     ExtractTraceWatermarkTask GetExtractTraceWatermarkTask() const;
@@ -377,7 +407,9 @@ namespace TencentCloud
 
                     /**
                      * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return ExtractCopyRightWatermarkTask 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     ExtractCopyRightWatermarkTask GetExtractCopyRightWatermarkTask() const;
@@ -391,7 +423,9 @@ namespace TencentCloud
 
                     /**
                      * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return ReviewAudioVideoTask 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     ReviewAudioVideoTask GetReviewAudioVideoTask() const;
@@ -405,7 +439,9 @@ namespace TencentCloud
 
                     /**
                      * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return ReduceMediaBitrateTask 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     ReduceMediaBitrateTask GetReduceMediaBitrateTask() const;
@@ -419,7 +455,9 @@ namespace TencentCloud
 
                     /**
                      * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return DescribeFileAttributesTask 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     DescribeFileAttributesTask GetDescribeFileAttributesTask() const;
@@ -433,7 +471,9 @@ namespace TencentCloud
 
                     /**
                      * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return QualityInspectTask 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     QualityInspectTask GetQualityInspectTask() const;
@@ -495,120 +535,140 @@ namespace TencentCloud
 
                     /**
                      * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     ProcedureTask m_procedureTask;
                     bool m_procedureTaskHasBeenSet;
 
                     /**
                      * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     EditMediaTask m_editMediaTask;
                     bool m_editMediaTaskHasBeenSet;
 
                     /**
                      * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     WechatPublishTask m_wechatPublishTask;
                     bool m_wechatPublishTaskHasBeenSet;
 
                     /**
                      * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     ComposeMediaTask m_composeMediaTask;
                     bool m_composeMediaTaskHasBeenSet;
 
                     /**
                      * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     SplitMediaTask m_splitMediaTask;
                     bool m_splitMediaTaskHasBeenSet;
 
                     /**
                      * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     WechatMiniProgramPublishTask m_wechatMiniProgramPublishTask;
                     bool m_wechatMiniProgramPublishTaskHasBeenSet;
 
                     /**
                      * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     PullUploadTask m_pullUploadTask;
                     bool m_pullUploadTaskHasBeenSet;
 
                     /**
                      * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     TranscodeTask2017 m_transcodeTask;
                     bool m_transcodeTaskHasBeenSet;
 
                     /**
                      * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     ConcatTask2017 m_concatTask;
                     bool m_concatTaskHasBeenSet;
 
                     /**
                      * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     ClipTask2017 m_clipTask;
                     bool m_clipTaskHasBeenSet;
 
                     /**
                      * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     CreateImageSpriteTask2017 m_createImageSpriteTask;
                     bool m_createImageSpriteTaskHasBeenSet;
 
                     /**
                      * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     SnapshotByTimeOffsetTask2017 m_snapshotByTimeOffsetTask;
                     bool m_snapshotByTimeOffsetTaskHasBeenSet;
 
                     /**
                      * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     RemoveWatermarkTask m_removeWatermarkTask;
                     bool m_removeWatermarkTaskHasBeenSet;
 
                     /**
                      * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     RebuildMediaTask m_rebuildMediaTask;
                     bool m_rebuildMediaTaskHasBeenSet;
 
                     /**
                      * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     ExtractTraceWatermarkTask m_extractTraceWatermarkTask;
                     bool m_extractTraceWatermarkTaskHasBeenSet;
 
                     /**
                      * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     ExtractCopyRightWatermarkTask m_extractCopyRightWatermarkTask;
                     bool m_extractCopyRightWatermarkTaskHasBeenSet;
 
                     /**
                      * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     ReviewAudioVideoTask m_reviewAudioVideoTask;
                     bool m_reviewAudioVideoTaskHasBeenSet;
 
                     /**
                      * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     ReduceMediaBitrateTask m_reduceMediaBitrateTask;
                     bool m_reduceMediaBitrateTaskHasBeenSet;
 
                     /**
                      * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     DescribeFileAttributesTask m_describeFileAttributesTask;
                     bool m_describeFileAttributesTaskHasBeenSet;
 
                     /**
                      * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     QualityInspectTask m_qualityInspectTask;
                     bool m_qualityInspectTaskHasBeenSet;

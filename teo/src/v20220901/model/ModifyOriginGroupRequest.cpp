@@ -24,11 +24,10 @@ using namespace std;
 
 ModifyOriginGroupRequest::ModifyOriginGroupRequest() :
     m_zoneIdHasBeenSet(false),
-    m_originGroupIdHasBeenSet(false),
-    m_originTypeHasBeenSet(false),
-    m_originGroupNameHasBeenSet(false),
-    m_configurationTypeHasBeenSet(false),
-    m_originRecordsHasBeenSet(false),
+    m_groupIdHasBeenSet(false),
+    m_nameHasBeenSet(false),
+    m_typeHasBeenSet(false),
+    m_recordsHasBeenSet(false),
     m_hostHeaderHasBeenSet(false)
 {
 }
@@ -48,47 +47,39 @@ string ModifyOriginGroupRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_zoneId.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_originGroupIdHasBeenSet)
+    if (m_groupIdHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "OriginGroupId";
+        string key = "GroupId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_originGroupId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_groupId.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_originTypeHasBeenSet)
+    if (m_nameHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "OriginType";
+        string key = "Name";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_originType.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_originGroupNameHasBeenSet)
+    if (m_typeHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "OriginGroupName";
+        string key = "Type";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_originGroupName.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_type.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_configurationTypeHasBeenSet)
+    if (m_recordsHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "ConfigurationType";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_configurationType.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_originRecordsHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "OriginRecords";
+        string key = "Records";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
-        for (auto itr = m_originRecords.begin(); itr != m_originRecords.end(); ++itr, ++i)
+        for (auto itr = m_records.begin(); itr != m_records.end(); ++itr, ++i)
         {
             d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(d[key.c_str()][i], allocator);
@@ -127,84 +118,68 @@ bool ModifyOriginGroupRequest::ZoneIdHasBeenSet() const
     return m_zoneIdHasBeenSet;
 }
 
-string ModifyOriginGroupRequest::GetOriginGroupId() const
+string ModifyOriginGroupRequest::GetGroupId() const
 {
-    return m_originGroupId;
+    return m_groupId;
 }
 
-void ModifyOriginGroupRequest::SetOriginGroupId(const string& _originGroupId)
+void ModifyOriginGroupRequest::SetGroupId(const string& _groupId)
 {
-    m_originGroupId = _originGroupId;
-    m_originGroupIdHasBeenSet = true;
+    m_groupId = _groupId;
+    m_groupIdHasBeenSet = true;
 }
 
-bool ModifyOriginGroupRequest::OriginGroupIdHasBeenSet() const
+bool ModifyOriginGroupRequest::GroupIdHasBeenSet() const
 {
-    return m_originGroupIdHasBeenSet;
+    return m_groupIdHasBeenSet;
 }
 
-string ModifyOriginGroupRequest::GetOriginType() const
+string ModifyOriginGroupRequest::GetName() const
 {
-    return m_originType;
+    return m_name;
 }
 
-void ModifyOriginGroupRequest::SetOriginType(const string& _originType)
+void ModifyOriginGroupRequest::SetName(const string& _name)
 {
-    m_originType = _originType;
-    m_originTypeHasBeenSet = true;
+    m_name = _name;
+    m_nameHasBeenSet = true;
 }
 
-bool ModifyOriginGroupRequest::OriginTypeHasBeenSet() const
+bool ModifyOriginGroupRequest::NameHasBeenSet() const
 {
-    return m_originTypeHasBeenSet;
+    return m_nameHasBeenSet;
 }
 
-string ModifyOriginGroupRequest::GetOriginGroupName() const
+string ModifyOriginGroupRequest::GetType() const
 {
-    return m_originGroupName;
+    return m_type;
 }
 
-void ModifyOriginGroupRequest::SetOriginGroupName(const string& _originGroupName)
+void ModifyOriginGroupRequest::SetType(const string& _type)
 {
-    m_originGroupName = _originGroupName;
-    m_originGroupNameHasBeenSet = true;
+    m_type = _type;
+    m_typeHasBeenSet = true;
 }
 
-bool ModifyOriginGroupRequest::OriginGroupNameHasBeenSet() const
+bool ModifyOriginGroupRequest::TypeHasBeenSet() const
 {
-    return m_originGroupNameHasBeenSet;
+    return m_typeHasBeenSet;
 }
 
-string ModifyOriginGroupRequest::GetConfigurationType() const
+vector<OriginRecord> ModifyOriginGroupRequest::GetRecords() const
 {
-    return m_configurationType;
+    return m_records;
 }
 
-void ModifyOriginGroupRequest::SetConfigurationType(const string& _configurationType)
+void ModifyOriginGroupRequest::SetRecords(const vector<OriginRecord>& _records)
 {
-    m_configurationType = _configurationType;
-    m_configurationTypeHasBeenSet = true;
+    m_records = _records;
+    m_recordsHasBeenSet = true;
 }
 
-bool ModifyOriginGroupRequest::ConfigurationTypeHasBeenSet() const
+bool ModifyOriginGroupRequest::RecordsHasBeenSet() const
 {
-    return m_configurationTypeHasBeenSet;
-}
-
-vector<OriginRecord> ModifyOriginGroupRequest::GetOriginRecords() const
-{
-    return m_originRecords;
-}
-
-void ModifyOriginGroupRequest::SetOriginRecords(const vector<OriginRecord>& _originRecords)
-{
-    m_originRecords = _originRecords;
-    m_originRecordsHasBeenSet = true;
-}
-
-bool ModifyOriginGroupRequest::OriginRecordsHasBeenSet() const
-{
-    return m_originRecordsHasBeenSet;
+    return m_recordsHasBeenSet;
 }
 
 string ModifyOriginGroupRequest::GetHostHeader() const

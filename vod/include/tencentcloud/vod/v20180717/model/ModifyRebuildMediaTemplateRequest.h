@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The remaster template ID.
-                     * @return Definition The remaster template ID.
+                     * 获取Rebuild Media Template ID.
+                     * @return Definition Rebuild Media Template ID.
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置The remaster template ID.
-                     * @param _definition The remaster template ID.
+                     * 设置Rebuild Media Template ID.
+                     * @param _definition Rebuild Media Template ID.
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取The remaster template name.
-                     * @return Name The remaster template name.
+                     * 获取Rebuild Media Template Name.
+                     * @return Name Rebuild Media Template Name.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置The remaster template name.
-                     * @param _name The remaster template name.
+                     * 设置Rebuild Media Template Name.
+                     * @param _name Rebuild Media Template Name.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取The template description.
-                     * @return Comment The template description.
+                     * 获取Rebuild media template description.
+                     * @return Comment Rebuild media template description.
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置The template description.
-                     * @param _comment The template description.
+                     * 设置Rebuild media template description.
+                     * @param _comment Rebuild media template description.
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RebuildVideoInfo 
+                     * 获取Rebuild media video control information.
+                     * @return RebuildVideoInfo Rebuild media video control information.
                      * 
                      */
                     RebuildVideoInfo GetRebuildVideoInfo() const;
 
                     /**
-                     * 设置
-                     * @param _rebuildVideoInfo 
+                     * 设置Rebuild media video control information.
+                     * @param _rebuildVideoInfo Rebuild media video control information.
                      * 
                      */
                     void SetRebuildVideoInfo(const RebuildVideoInfo& _rebuildVideoInfo);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool RebuildVideoInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RebuildAudioInfo 
+                     * 获取Rebuild media audio control information.
+                     * @return RebuildAudioInfo Rebuild media audio control information.
                      * 
                      */
                     RebuildAudioInfo GetRebuildAudioInfo() const;
 
                     /**
-                     * 设置
-                     * @param _rebuildAudioInfo 
+                     * 设置Rebuild media audio control information.
+                     * @param _rebuildAudioInfo Rebuild media audio control information.
                      * 
                      */
                     void SetRebuildAudioInfo(const RebuildAudioInfo& _rebuildAudioInfo);
@@ -296,7 +296,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The remaster template ID.
+                     * Rebuild Media Template ID.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
@@ -308,25 +308,25 @@ namespace TencentCloud
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * The remaster template name.
+                     * Rebuild Media Template Name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * The template description.
+                     * Rebuild media template description.
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * 
+                     * Rebuild media video control information.
                      */
                     RebuildVideoInfo m_rebuildVideoInfo;
                     bool m_rebuildVideoInfoHasBeenSet;
 
                     /**
-                     * 
+                     * Rebuild media audio control information.
                      */
                     RebuildAudioInfo m_rebuildAudioInfo;
                     bool m_rebuildAudioInfoHasBeenSet;

@@ -158,15 +158,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OriginDetailHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OriginProtocol 
+                     * 获取Origin-pull protocol configuration. Values:
+<li>`FOLLOW`: Follow the protocol of origin</li>
+<li>`HTTP`: Send requests to the origin over HTTP</li>
+<li>`HTTPS`: Send requests to the origin over HTTPS</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @return OriginProtocol Origin-pull protocol configuration. Values:
+<li>`FOLLOW`: Follow the protocol of origin</li>
+<li>`HTTP`: Send requests to the origin over HTTP</li>
+<li>`HTTPS`: Send requests to the origin over HTTPS</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetOriginProtocol() const;
 
                     /**
-                     * 设置
-                     * @param _originProtocol 
+                     * 设置Origin-pull protocol configuration. Values:
+<li>`FOLLOW`: Follow the protocol of origin</li>
+<li>`HTTP`: Send requests to the origin over HTTP</li>
+<li>`HTTPS`: Send requests to the origin over HTTPS</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @param _originProtocol Origin-pull protocol configuration. Values:
+<li>`FOLLOW`: Follow the protocol of origin</li>
+<li>`HTTP`: Send requests to the origin over HTTP</li>
+<li>`HTTPS`: Send requests to the origin over HTTPS</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetOriginProtocol(const std::string& _originProtocol);
@@ -179,15 +195,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OriginProtocolHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HttpOriginPort 
+                     * 获取The port used for HTTP origin-pull requests
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @return HttpOriginPort The port used for HTTP origin-pull requests
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetHttpOriginPort() const;
 
                     /**
-                     * 设置
-                     * @param _httpOriginPort 
+                     * 设置The port used for HTTP origin-pull requests
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @param _httpOriginPort The port used for HTTP origin-pull requests
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHttpOriginPort(const uint64_t& _httpOriginPort);
@@ -200,15 +220,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HttpOriginPortHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HttpsOriginPort 
+                     * 获取The port used for HTTPS origin-pull requests
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @return HttpsOriginPort The port used for HTTPS origin-pull requests
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetHttpsOriginPort() const;
 
                     /**
-                     * 设置
-                     * @param _httpsOriginPort 
+                     * 设置The port used for HTTPS origin-pull requests
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @param _httpsOriginPort The port used for HTTPS origin-pull requests
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHttpsOriginPort(const uint64_t& _httpsOriginPort);
@@ -221,15 +245,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HttpsOriginPortHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IPv6Status 
+                     * 获取IPv6 status. Values:
+<li>`follow`: Follow the IPv6 configuration of the site</li>
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @return IPv6Status IPv6 status. Values:
+<li>`follow`: Follow the IPv6 configuration of the site</li>
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetIPv6Status() const;
 
                     /**
-                     * 设置
-                     * @param _iPv6Status 
+                     * 设置IPv6 status. Values:
+<li>`follow`: Follow the IPv6 configuration of the site</li>
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @param _iPv6Status IPv6 status. Values:
+<li>`follow`: Follow the IPv6 configuration of the site</li>
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIPv6Status(const std::string& _iPv6Status);
@@ -412,25 +452,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_originDetailHasBeenSet;
 
                     /**
-                     * 
+                     * Origin-pull protocol configuration. Values:
+<li>`FOLLOW`: Follow the protocol of origin</li>
+<li>`HTTP`: Send requests to the origin over HTTP</li>
+<li>`HTTPS`: Send requests to the origin over HTTPS</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     std::string m_originProtocol;
                     bool m_originProtocolHasBeenSet;
 
                     /**
-                     * 
+                     * The port used for HTTP origin-pull requests
+Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_httpOriginPort;
                     bool m_httpOriginPortHasBeenSet;
 
                     /**
-                     * 
+                     * The port used for HTTPS origin-pull requests
+Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_httpsOriginPort;
                     bool m_httpsOriginPortHasBeenSet;
 
                     /**
-                     * 
+                     * IPv6 status. Values:
+<li>`follow`: Follow the IPv6 configuration of the site</li>
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     std::string m_iPv6Status;
                     bool m_iPv6StatusHasBeenSet;

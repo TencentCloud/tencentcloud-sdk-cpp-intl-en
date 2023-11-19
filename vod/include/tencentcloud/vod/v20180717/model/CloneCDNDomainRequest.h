@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool ReferenceDomainHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.
+                     * @return SubAppId VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.
+                     * @param _subAppId VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -120,7 +120,7 @@ namespace TencentCloud
                     bool m_referenceDomainHasBeenSet;
 
                     /**
-                     * 
+                     * VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;

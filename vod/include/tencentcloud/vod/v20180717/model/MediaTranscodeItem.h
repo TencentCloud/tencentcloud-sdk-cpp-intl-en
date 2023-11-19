@@ -74,15 +74,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取For transcoding specification ID, see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1). 
+<font color=red>Note: A value of 0 represents the original file. </font>
+                     * @return Definition For transcoding specification ID, see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1). 
+<font color=red>Note: A value of 0 represents the original file. </font>
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _definition 
+                     * 设置For transcoding specification ID, see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1). 
+<font color=red>Note: A value of 0 represents the original file. </font>
+                     * @param _definition For transcoding specification ID, see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1). 
+<font color=red>Note: A value of 0 represents the original file. </font>
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -379,7 +383,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_urlHasBeenSet;
 
                     /**
-                     * 
+                     * For transcoding specification ID, see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1). 
+<font color=red>Note: A value of 0 represents the original file. </font>
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;

@@ -51,15 +51,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Anti-hotlink configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+                     * @return Switch Anti-hotlink configuration switch, value: <li>on: on; </li> <li>off: off. </li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置Anti-hotlink configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+                     * @param _switch Anti-hotlink configuration switch, value: <li>on: on; </li> <li>off: off. </li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -158,7 +158,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Anti-hotlink configuration switch, value: <li>on: on; </li> <li>off: off. </li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

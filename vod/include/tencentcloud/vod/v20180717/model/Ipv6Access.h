@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Domain name enables ipv6 access configuration switch. The value is: <li>on: on; </li> <li>off: off. </li>
+                     * @return Switch Domain name enables ipv6 access configuration switch. The value is: <li>on: on; </li> <li>off: off. </li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置Domain name enables ipv6 access configuration switch. The value is: <li>on: on; </li> <li>off: off. </li>
+                     * @param _switch Domain name enables ipv6 access configuration switch. The value is: <li>on: on; </li> <li>off: off. </li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Domain name enables ipv6 access configuration switch. The value is: <li>on: on; </li> <li>off: off. </li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

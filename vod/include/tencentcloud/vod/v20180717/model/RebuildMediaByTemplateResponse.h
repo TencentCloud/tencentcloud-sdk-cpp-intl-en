@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The ID of the remaster task. You need to provide this ID to query the task status.
-                     * @return TaskId The ID of the remaster task. You need to provide this ID to query the task status.
+                     * 获取The task ID of the rebuild, through which the status of the rebuild task can be queried.
+                     * @return TaskId The task ID of the rebuild, through which the status of the rebuild task can be queried.
                      * 
                      */
                     std::string GetTaskId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The ID of the remaster task. You need to provide this ID to query the task status.
+                     * The task ID of the rebuild, through which the status of the rebuild task can be queried.
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;

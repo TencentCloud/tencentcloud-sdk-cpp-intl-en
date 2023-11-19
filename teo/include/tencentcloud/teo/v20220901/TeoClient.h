@@ -23,6 +23,8 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
+#include <tencentcloud/teo/v20220901/model/BindSecurityTemplateToEntityRequest.h>
+#include <tencentcloud/teo/v20220901/model/BindSecurityTemplateToEntityResponse.h>
 #include <tencentcloud/teo/v20220901/model/BindSharedCNAMERequest.h>
 #include <tencentcloud/teo/v20220901/model/BindSharedCNAMEResponse.h>
 #include <tencentcloud/teo/v20220901/model/BindZoneToPlanRequest.h>
@@ -107,6 +109,8 @@
 #include <tencentcloud/teo/v20220901/model/DescribeRulesResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeRulesSettingRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeRulesSettingResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeSecurityTemplateBindingsRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeSecurityTemplateBindingsResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeTimingL4DataRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeTimingL4DataResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeTimingL7AnalysisDataRequest.h>
@@ -175,6 +179,9 @@ namespace TencentCloud
                 TeoClient(const Credential &credential, const std::string &region);
                 TeoClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
+                typedef Outcome<Core::Error, Model::BindSecurityTemplateToEntityResponse> BindSecurityTemplateToEntityOutcome;
+                typedef std::future<BindSecurityTemplateToEntityOutcome> BindSecurityTemplateToEntityOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::BindSecurityTemplateToEntityRequest&, BindSecurityTemplateToEntityOutcome, const std::shared_ptr<const AsyncCallerContext>&)> BindSecurityTemplateToEntityAsyncHandler;
                 typedef Outcome<Core::Error, Model::BindSharedCNAMEResponse> BindSharedCNAMEOutcome;
                 typedef std::future<BindSharedCNAMEOutcome> BindSharedCNAMEOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::BindSharedCNAMERequest&, BindSharedCNAMEOutcome, const std::shared_ptr<const AsyncCallerContext>&)> BindSharedCNAMEAsyncHandler;
@@ -301,6 +308,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeRulesSettingResponse> DescribeRulesSettingOutcome;
                 typedef std::future<DescribeRulesSettingOutcome> DescribeRulesSettingOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeRulesSettingRequest&, DescribeRulesSettingOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRulesSettingAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeSecurityTemplateBindingsResponse> DescribeSecurityTemplateBindingsOutcome;
+                typedef std::future<DescribeSecurityTemplateBindingsOutcome> DescribeSecurityTemplateBindingsOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeSecurityTemplateBindingsRequest&, DescribeSecurityTemplateBindingsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSecurityTemplateBindingsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeTimingL4DataResponse> DescribeTimingL4DataOutcome;
                 typedef std::future<DescribeTimingL4DataOutcome> DescribeTimingL4DataOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeTimingL4DataRequest&, DescribeTimingL4DataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTimingL4DataAsyncHandler;
@@ -386,6 +396,15 @@ namespace TencentCloud
 
 
                 /**
+                 *This API is used to bind/unbind a domain name to/from a specific policy template. 
+                 * @param req BindSecurityTemplateToEntityRequest
+                 * @return BindSecurityTemplateToEntityOutcome
+                 */
+                BindSecurityTemplateToEntityOutcome BindSecurityTemplateToEntity(const Model::BindSecurityTemplateToEntityRequest &request);
+                void BindSecurityTemplateToEntityAsync(const Model::BindSecurityTemplateToEntityRequest& request, const BindSecurityTemplateToEntityAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                BindSecurityTemplateToEntityOutcomeCallable BindSecurityTemplateToEntityCallable(const Model::BindSecurityTemplateToEntityRequest& request);
+
+                /**
                  *This API is used to bind/unbind a domain name to/from a shared CNAME. It is now only available to beta users.
                  * @param req BindSharedCNAMERequest
                  * @return BindSharedCNAMEOutcome
@@ -451,7 +470,7 @@ For sites connected via the CNAME, if you have not verified the ownership of the
                 CreateApplicationProxyRuleOutcomeCallable CreateApplicationProxyRuleCallable(const Model::CreateApplicationProxyRuleRequest& request);
 
                 /**
-                 *This API is used to create an origin group.
+                 *This API is used to create an origin group for easy management. The created origin server group can be used for **adding acceleration domain names** and **layer-4 proxy configuration**.
                  * @param req CreateOriginGroupRequest
                  * @return CreateOriginGroupOutcome
                  */
@@ -563,7 +582,7 @@ If there are already EdgeOne plans under the current account, it is recommended 
                 DeleteApplicationProxyRuleOutcomeCallable DeleteApplicationProxyRuleCallable(const Model::DeleteApplicationProxyRuleRequest& request);
 
                 /**
-                 *This API is used to delete an origin group.
+                 *This API is used to delete an origin group. Note that an origin group can not be deleted if it is referenced by services (e.g. L4 Proxy, domain name service, load balancing, rule engines). 
                  * @param req DeleteOriginGroupRequest
                  * @return DeleteOriginGroupOutcome
                  */
@@ -770,6 +789,15 @@ If there are already EdgeOne plans under the current account, it is recommended 
                 DescribeRulesSettingOutcomeCallable DescribeRulesSettingCallable(const Model::DescribeRulesSettingRequest& request);
 
                 /**
+                 *This API is used to query bindings of a policy template.
+                 * @param req DescribeSecurityTemplateBindingsRequest
+                 * @return DescribeSecurityTemplateBindingsOutcome
+                 */
+                DescribeSecurityTemplateBindingsOutcome DescribeSecurityTemplateBindings(const Model::DescribeSecurityTemplateBindingsRequest &request);
+                void DescribeSecurityTemplateBindingsAsync(const Model::DescribeSecurityTemplateBindingsRequest& request, const DescribeSecurityTemplateBindingsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeSecurityTemplateBindingsOutcomeCallable DescribeSecurityTemplateBindingsCallable(const Model::DescribeSecurityTemplateBindingsRequest& request);
+
+                /**
                  *This API is used to query the list of L4 traffic data recorded over time.
                  * @param req DescribeTimingL4DataRequest
                  * @return DescribeTimingL4DataOutcome
@@ -943,7 +971,7 @@ To use an external certificate, upload the certificate to [SSL Certificates Cons
                 ModifyHostsCertificateOutcomeCallable ModifyHostsCertificateCallable(const Model::ModifyHostsCertificateRequest& request);
 
                 /**
-                 *This API is used to modify an origin group.
+                 *This API is used to modify the configuration of an origin group. The original configuration will be overwritten. 
                  * @param req ModifyOriginGroupRequest
                  * @return ModifyOriginGroupOutcome
                  */

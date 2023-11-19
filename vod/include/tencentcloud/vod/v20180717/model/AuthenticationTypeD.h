@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Timestamp anti-hotlinking mode D configuration; The access URL format of timestamp anti-hotlinking mode D is: http://DomainName/FileName?sign=md5hash&t=timestamp; where timestamp is a decimal or hexadecimal UNIX timestamp; md5hash: MD5 (custom key + file path + timestamp).
                 */
                 class AuthenticationTypeD : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SecretKey 
+                     * 获取The key to calculate the signature; only uppercase and lowercase letters and numbers are allowed, with a length of 6~32 characters.
+                     * @return SecretKey The key to calculate the signature; only uppercase and lowercase letters and numbers are allowed, with a length of 6~32 characters.
                      * 
                      */
                     std::string GetSecretKey() const;
 
                     /**
-                     * 设置
-                     * @param _secretKey 
+                     * 设置The key to calculate the signature; only uppercase and lowercase letters and numbers are allowed, with a length of 6~32 characters.
+                     * @param _secretKey The key to calculate the signature; only uppercase and lowercase letters and numbers are allowed, with a length of 6~32 characters.
                      * 
                      */
                     void SetSecretKey(const std::string& _secretKey);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SecretKeyHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExpireTime 
+                     * 获取Signature expiration time setting; the unit is seconds, and the maximum value can be set to 630720000.
+                     * @return ExpireTime Signature expiration time setting; the unit is seconds, and the maximum value can be set to 630720000.
                      * 
                      */
                     uint64_t GetExpireTime() const;
 
                     /**
-                     * 设置
-                     * @param _expireTime 
+                     * 设置Signature expiration time setting; the unit is seconds, and the maximum value can be set to 630720000.
+                     * @param _expireTime Signature expiration time setting; the unit is seconds, and the maximum value can be set to 630720000.
                      * 
                      */
                     void SetExpireTime(const uint64_t& _expireTime);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileExtensions 
+                     * 获取File extension list settings for authentication/non-authentication; if the character * is included, it means all files.
+                     * @return FileExtensions File extension list settings for authentication/non-authentication; if the character * is included, it means all files.
                      * 
                      */
                     std::vector<std::string> GetFileExtensions() const;
 
                     /**
-                     * 设置
-                     * @param _fileExtensions 
+                     * 设置File extension list settings for authentication/non-authentication; if the character * is included, it means all files.
+                     * @param _fileExtensions File extension list settings for authentication/non-authentication; if the character * is included, it means all files.
                      * 
                      */
                     void SetFileExtensions(const std::vector<std::string>& _fileExtensions);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool FileExtensionsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FilterType 
+                     * 获取whitelist: whitelist, indicating that all types except the FileExtensions list will be authenticated; blacklist: blacklist, indicating that only the types in FileExtensions will be authenticated.
+                     * @return FilterType whitelist: whitelist, indicating that all types except the FileExtensions list will be authenticated; blacklist: blacklist, indicating that only the types in FileExtensions will be authenticated.
                      * 
                      */
                     std::string GetFilterType() const;
 
                     /**
-                     * 设置
-                     * @param _filterType 
+                     * 设置whitelist: whitelist, indicating that all types except the FileExtensions list will be authenticated; blacklist: blacklist, indicating that only the types in FileExtensions will be authenticated.
+                     * @param _filterType whitelist: whitelist, indicating that all types except the FileExtensions list will be authenticated; blacklist: blacklist, indicating that only the types in FileExtensions will be authenticated.
                      * 
                      */
                     void SetFilterType(const std::string& _filterType);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool FilterTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SignParam 
+                     * 获取Signature parameter name setting; only uppercase and lowercase letters, numbers or underscores are allowed, the length is 1~100 characters, and it cannot start with a number.
+                     * @return SignParam Signature parameter name setting; only uppercase and lowercase letters, numbers or underscores are allowed, the length is 1~100 characters, and it cannot start with a number.
                      * 
                      */
                     std::string GetSignParam() const;
 
                     /**
-                     * 设置
-                     * @param _signParam 
+                     * 设置Signature parameter name setting; only uppercase and lowercase letters, numbers or underscores are allowed, the length is 1~100 characters, and it cannot start with a number.
+                     * @param _signParam Signature parameter name setting; only uppercase and lowercase letters, numbers or underscores are allowed, the length is 1~100 characters, and it cannot start with a number.
                      * 
                      */
                     void SetSignParam(const std::string& _signParam);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool SignParamHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TimeParam 
+                     * 获取Timestamp parameter name setting; only uppercase and lowercase letters, numbers or underscores are allowed, the length is 1~100 characters, and it cannot start with a number.
+                     * @return TimeParam Timestamp parameter name setting; only uppercase and lowercase letters, numbers or underscores are allowed, the length is 1~100 characters, and it cannot start with a number.
                      * 
                      */
                     std::string GetTimeParam() const;
 
                     /**
-                     * 设置
-                     * @param _timeParam 
+                     * 设置Timestamp parameter name setting; only uppercase and lowercase letters, numbers or underscores are allowed, the length is 1~100 characters, and it cannot start with a number.
+                     * @param _timeParam Timestamp parameter name setting; only uppercase and lowercase letters, numbers or underscores are allowed, the length is 1~100 characters, and it cannot start with a number.
                      * 
                      */
                     void SetTimeParam(const std::string& _timeParam);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool TimeParamHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TimeFormat 
+                     * 获取Timestamp base setting: <li>dec: decimal</li> <li>hex: hexadecimal</li>
+                     * @return TimeFormat Timestamp base setting: <li>dec: decimal</li> <li>hex: hexadecimal</li>
                      * 
                      */
                     std::string GetTimeFormat() const;
 
                     /**
-                     * 设置
-                     * @param _timeFormat 
+                     * 设置Timestamp base setting: <li>dec: decimal</li> <li>hex: hexadecimal</li>
+                     * @param _timeFormat Timestamp base setting: <li>dec: decimal</li> <li>hex: hexadecimal</li>
                      * 
                      */
                     void SetTimeFormat(const std::string& _timeFormat);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool TimeFormatHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BackupSecretKey 
+                     * 获取Alternate key for calculating signature; only uppercase and lowercase letters and numbers are allowed, length 6~32 characters.
+                     * @return BackupSecretKey Alternate key for calculating signature; only uppercase and lowercase letters and numbers are allowed, length 6~32 characters.
                      * 
                      */
                     std::string GetBackupSecretKey() const;
 
                     /**
-                     * 设置
-                     * @param _backupSecretKey 
+                     * 设置Alternate key for calculating signature; only uppercase and lowercase letters and numbers are allowed, length 6~32 characters.
+                     * @param _backupSecretKey Alternate key for calculating signature; only uppercase and lowercase letters and numbers are allowed, length 6~32 characters.
                      * 
                      */
                     void SetBackupSecretKey(const std::string& _backupSecretKey);
@@ -217,49 +217,49 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * The key to calculate the signature; only uppercase and lowercase letters and numbers are allowed, with a length of 6~32 characters.
                      */
                     std::string m_secretKey;
                     bool m_secretKeyHasBeenSet;
 
                     /**
-                     * 
+                     * Signature expiration time setting; the unit is seconds, and the maximum value can be set to 630720000.
                      */
                     uint64_t m_expireTime;
                     bool m_expireTimeHasBeenSet;
 
                     /**
-                     * 
+                     * File extension list settings for authentication/non-authentication; if the character * is included, it means all files.
                      */
                     std::vector<std::string> m_fileExtensions;
                     bool m_fileExtensionsHasBeenSet;
 
                     /**
-                     * 
+                     * whitelist: whitelist, indicating that all types except the FileExtensions list will be authenticated; blacklist: blacklist, indicating that only the types in FileExtensions will be authenticated.
                      */
                     std::string m_filterType;
                     bool m_filterTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Signature parameter name setting; only uppercase and lowercase letters, numbers or underscores are allowed, the length is 1~100 characters, and it cannot start with a number.
                      */
                     std::string m_signParam;
                     bool m_signParamHasBeenSet;
 
                     /**
-                     * 
+                     * Timestamp parameter name setting; only uppercase and lowercase letters, numbers or underscores are allowed, the length is 1~100 characters, and it cannot start with a number.
                      */
                     std::string m_timeParam;
                     bool m_timeParamHasBeenSet;
 
                     /**
-                     * 
+                     * Timestamp base setting: <li>dec: decimal</li> <li>hex: hexadecimal</li>
                      */
                     std::string m_timeFormat;
                     bool m_timeFormatHasBeenSet;
 
                     /**
-                     * 
+                     * Alternate key for calculating signature; only uppercase and lowercase letters and numbers are allowed, length 6~32 characters.
                      */
                     std::string m_backupSecretKey;
                     bool m_backupSecretKeyHasBeenSet;

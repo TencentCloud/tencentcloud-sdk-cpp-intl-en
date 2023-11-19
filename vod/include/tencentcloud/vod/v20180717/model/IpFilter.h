@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取IP black and white list configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+                     * @return Switch IP black and white list configuration switch, value: <li>on: on; </li> <li>off: off. </li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置IP black and white list configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+                     * @param _switch IP black and white list configuration switch, value: <li>on: on; </li> <li>off: off. </li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FilterType 
+                     * 获取IP blacklist and whitelist types: <li>whitelist: whitelist;</li> <li>blacklist: blacklist. </li>
+                     * @return FilterType IP blacklist and whitelist types: <li>whitelist: whitelist;</li> <li>blacklist: blacklist. </li>
                      * 
                      */
                     std::string GetFilterType() const;
 
                     /**
-                     * 设置
-                     * @param _filterType 
+                     * 设置IP blacklist and whitelist types: <li>whitelist: whitelist;</li> <li>blacklist: blacklist. </li>
+                     * @param _filterType IP blacklist and whitelist types: <li>whitelist: whitelist;</li> <li>blacklist: blacklist. </li>
                      * 
                      */
                     void SetFilterType(const std::string& _filterType);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool FilterTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Filters 
+                     * 获取IP black and white list, supports: IP in the form of X.X.X.X, or network segment in the form of /8, /16, /24; Can populate up to 50 whitelists or 50 blacklists.
+                     * @return Filters IP black and white list, supports: IP in the form of X.X.X.X, or network segment in the form of /8, /16, /24; Can populate up to 50 whitelists or 50 blacklists.
                      * 
                      */
                     std::vector<std::string> GetFilters() const;
 
                     /**
-                     * 设置
-                     * @param _filters 
+                     * 设置IP black and white list, supports: IP in the form of X.X.X.X, or network segment in the form of /8, /16, /24; Can populate up to 50 whitelists or 50 blacklists.
+                     * @param _filters IP black and white list, supports: IP in the form of X.X.X.X, or network segment in the form of /8, /16, /24; Can populate up to 50 whitelists or 50 blacklists.
                      * 
                      */
                     void SetFilters(const std::vector<std::string>& _filters);
@@ -134,19 +134,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * IP black and white list configuration switch, value: <li>on: on; </li> <li>off: off. </li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * IP blacklist and whitelist types: <li>whitelist: whitelist;</li> <li>blacklist: blacklist. </li>
                      */
                     std::string m_filterType;
                     bool m_filterTypeHasBeenSet;
 
                     /**
-                     * 
+                     * IP black and white list, supports: IP in the form of X.X.X.X, or network segment in the form of /8, /16, /24; Can populate up to 50 whitelists or 50 blacklists.
                      */
                     std::vector<std::string> m_filters;
                     bool m_filtersHasBeenSet;

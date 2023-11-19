@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StartTimeOffset 
+                     * 获取Offset time of the start of the video clip, unit: seconds.
+                     * @return StartTimeOffset Offset time of the start of the video clip, unit: seconds.
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置
-                     * @param _startTimeOffset 
+                     * 设置Offset time of the start of the video clip, unit: seconds.
+                     * @param _startTimeOffset Offset time of the start of the video clip, unit: seconds.
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EndTimeOffset 
+                     * 获取Offset time at the end of the video clip, unit: seconds.
+                     * @return EndTimeOffset Offset time at the end of the video clip, unit: seconds.
                      * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置
-                     * @param _endTimeOffset 
+                     * 设置Offset time at the end of the video clip, unit: seconds.
+                     * @param _endTimeOffset Offset time at the end of the video clip, unit: seconds.
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -118,13 +118,13 @@ namespace TencentCloud
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * 
+                     * Offset time of the start of the video clip, unit: seconds.
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * 
+                     * Offset time at the end of the video clip, unit: seconds.
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;

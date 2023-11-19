@@ -69,6 +69,39 @@ namespace TencentCloud
                     bool RecordHasBeenSet() const;
 
                     /**
+                     * 获取The origin type. Values:
+<li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
+<li>`COS`: COS bucket address</li>
+<li>`AWS_S3`: AWS S3 bucket address
+                     * @return Type The origin type. Values:
+<li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
+<li>`COS`: COS bucket address</li>
+<li>`AWS_S3`: AWS S3 bucket address
+                     * 
+                     */
+                    std::string GetType() const;
+
+                    /**
+                     * 设置The origin type. Values:
+<li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
+<li>`COS`: COS bucket address</li>
+<li>`AWS_S3`: AWS S3 bucket address
+                     * @param _type The origin type. Values:
+<li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
+<li>`COS`: COS bucket address</li>
+<li>`AWS_S3`: AWS S3 bucket address
+                     * 
+                     */
+                    void SetType(const std::string& _type);
+
+                    /**
+                     * 判断参数 Type 是否已赋值
+                     * @return Type 是否已赋值
+                     * 
+                     */
+                    bool TypeHasBeenSet() const;
+
+                    /**
                      * 获取The origin record ID.
                      * @return RecordId The origin record ID.
                      * 
@@ -90,56 +123,19 @@ namespace TencentCloud
                     bool RecordIdHasBeenSet() const;
 
                     /**
-                     * 获取The origin port. Value rang: 1-65535.
-                     * @return Port The origin port. Value rang: 1-65535.
-                     * 
-                     */
-                    uint64_t GetPort() const;
-
-                    /**
-                     * 设置The origin port. Value rang: 1-65535.
-                     * @param _port The origin port. Value rang: 1-65535.
-                     * 
-                     */
-                    void SetPort(const uint64_t& _port);
-
-                    /**
-                     * 判断参数 Port 是否已赋值
-                     * @return Port 是否已赋值
-                     * 
-                     */
-                    bool PortHasBeenSet() const;
-
-                    /**
-                     * 获取The weight when `ConfigurationType=weight`.
-If 0 or no value is passed, the weight of each origin in a group will be 0 or left empty, indicating that origin-pull is performed by round-robin.
-If a value between 1-100 is passed, the total weight of multiple origins in a group should be 100, indicating that origin-pull is performed by weight.
-The weight when `ConfigurationType=proto`.
-If 0 or no value is passed, the weight of each origin in a group will be 0 or left empty, indicating that origin-pull is performed by round-robin.
-If a value between 1-100 is passed, the total weight of multiple origins with the same protocol in a group should be 100, indicating that origin-pull is performed by weight.
-                     * @return Weight The weight when `ConfigurationType=weight`.
-If 0 or no value is passed, the weight of each origin in a group will be 0 or left empty, indicating that origin-pull is performed by round-robin.
-If a value between 1-100 is passed, the total weight of multiple origins in a group should be 100, indicating that origin-pull is performed by weight.
-The weight when `ConfigurationType=proto`.
-If 0 or no value is passed, the weight of each origin in a group will be 0 or left empty, indicating that origin-pull is performed by round-robin.
-If a value between 1-100 is passed, the total weight of multiple origins with the same protocol in a group should be 100, indicating that origin-pull is performed by weight.
+                     * 获取Weight of an origin. Range: 0-100. If it is not specified, a random weight is assigned. If `0` is passed in, there is no traffic scheduled to this origin.
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @return Weight Weight of an origin. Range: 0-100. If it is not specified, a random weight is assigned. If `0` is passed in, there is no traffic scheduled to this origin.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetWeight() const;
 
                     /**
-                     * 设置The weight when `ConfigurationType=weight`.
-If 0 or no value is passed, the weight of each origin in a group will be 0 or left empty, indicating that origin-pull is performed by round-robin.
-If a value between 1-100 is passed, the total weight of multiple origins in a group should be 100, indicating that origin-pull is performed by weight.
-The weight when `ConfigurationType=proto`.
-If 0 or no value is passed, the weight of each origin in a group will be 0 or left empty, indicating that origin-pull is performed by round-robin.
-If a value between 1-100 is passed, the total weight of multiple origins with the same protocol in a group should be 100, indicating that origin-pull is performed by weight.
-                     * @param _weight The weight when `ConfigurationType=weight`.
-If 0 or no value is passed, the weight of each origin in a group will be 0 or left empty, indicating that origin-pull is performed by round-robin.
-If a value between 1-100 is passed, the total weight of multiple origins in a group should be 100, indicating that origin-pull is performed by weight.
-The weight when `ConfigurationType=proto`.
-If 0 or no value is passed, the weight of each origin in a group will be 0 or left empty, indicating that origin-pull is performed by round-robin.
-If a value between 1-100 is passed, the total weight of multiple origins with the same protocol in a group should be 100, indicating that origin-pull is performed by weight.
+                     * 设置Weight of an origin. Range: 0-100. If it is not specified, a random weight is assigned. If `0` is passed in, there is no traffic scheduled to this origin.
+Note: This field may return·null, indicating that no valid values can be obtained.
+                     * @param _weight Weight of an origin. Range: 0-100. If it is not specified, a random weight is assigned. If `0` is passed in, there is no traffic scheduled to this origin.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetWeight(const uint64_t& _weight);
@@ -152,97 +148,27 @@ If a value between 1-100 is passed, the total weight of multiple origins with th
                     bool WeightHasBeenSet() const;
 
                     /**
-                     * 获取The origin protocol when `ConfigurationType=proto`, indicating that origin-pull is performed by protocol.
-<li>`http`: HTTP protocol</li>
-<li>`https`: HTTPS protocol</li>
-                     * @return Proto The origin protocol when `ConfigurationType=proto`, indicating that origin-pull is performed by protocol.
-<li>`http`: HTTP protocol</li>
-<li>`https`: HTTPS protocol</li>
-                     * 
-                     */
-                    std::string GetProto() const;
-
-                    /**
-                     * 设置The origin protocol when `ConfigurationType=proto`, indicating that origin-pull is performed by protocol.
-<li>`http`: HTTP protocol</li>
-<li>`https`: HTTPS protocol</li>
-                     * @param _proto The origin protocol when `ConfigurationType=proto`, indicating that origin-pull is performed by protocol.
-<li>`http`: HTTP protocol</li>
-<li>`https`: HTTPS protocol</li>
-                     * 
-                     */
-                    void SetProto(const std::string& _proto);
-
-                    /**
-                     * 判断参数 Proto 是否已赋值
-                     * @return Proto 是否已赋值
-                     * 
-                     */
-                    bool ProtoHasBeenSet() const;
-
-                    /**
-                     * 获取The region when `ConfigurationType=area`, which is specified by country code (ISO 3166 alpha-2) or continent code. If not specified, it indicates all regions. Supported continent codes:
-<li>`Asia`</li>
-<li>`Europe`</li>
-<li>`Africa`</li>
-<li>`Oceania`</li>
-<li>`Americas`</li>An origin group must have at least one origin configured with all regions.
-                     * @return Area The region when `ConfigurationType=area`, which is specified by country code (ISO 3166 alpha-2) or continent code. If not specified, it indicates all regions. Supported continent codes:
-<li>`Asia`</li>
-<li>`Europe`</li>
-<li>`Africa`</li>
-<li>`Oceania`</li>
-<li>`Americas`</li>An origin group must have at least one origin configured with all regions.
-                     * 
-                     */
-                    std::vector<std::string> GetArea() const;
-
-                    /**
-                     * 设置The region when `ConfigurationType=area`, which is specified by country code (ISO 3166 alpha-2) or continent code. If not specified, it indicates all regions. Supported continent codes:
-<li>`Asia`</li>
-<li>`Europe`</li>
-<li>`Africa`</li>
-<li>`Oceania`</li>
-<li>`Americas`</li>An origin group must have at least one origin configured with all regions.
-                     * @param _area The region when `ConfigurationType=area`, which is specified by country code (ISO 3166 alpha-2) or continent code. If not specified, it indicates all regions. Supported continent codes:
-<li>`Asia`</li>
-<li>`Europe`</li>
-<li>`Africa`</li>
-<li>`Oceania`</li>
-<li>`Americas`</li>An origin group must have at least one origin configured with all regions.
-                     * 
-                     */
-                    void SetArea(const std::vector<std::string>& _area);
-
-                    /**
-                     * 判断参数 Area 是否已赋值
-                     * @return Area 是否已赋值
-                     * 
-                     */
-                    bool AreaHasBeenSet() const;
-
-                    /**
-                     * 获取It is valid only when `OriginType=third_part`.
-Whether the origin group is private. Values:
+                     * 获取Whether to enable private authentication. It is valid when `OriginType=COS/AWS_S3`. Values:
 <li>`true`: Yes.</li>
-<li>`false`: No.</li>If not specified, it defaults to false.
-                     * @return Private It is valid only when `OriginType=third_part`.
-Whether the origin group is private. Values:
+<li>`false`: No.</li>Default: `false`.
+
+                     * @return Private Whether to enable private authentication. It is valid when `OriginType=COS/AWS_S3`. Values:
 <li>`true`: Yes.</li>
-<li>`false`: No.</li>If not specified, it defaults to false.
+<li>`false`: No.</li>Default: `false`.
+
                      * 
                      */
                     bool GetPrivate() const;
 
                     /**
-                     * 设置It is valid only when `OriginType=third_part`.
-Whether the origin group is private. Values:
+                     * 设置Whether to enable private authentication. It is valid when `OriginType=COS/AWS_S3`. Values:
 <li>`true`: Yes.</li>
-<li>`false`: No.</li>If not specified, it defaults to false.
-                     * @param _private It is valid only when `OriginType=third_part`.
-Whether the origin group is private. Values:
+<li>`false`: No.</li>Default: `false`.
+
+                     * @param _private Whether to enable private authentication. It is valid when `OriginType=COS/AWS_S3`. Values:
 <li>`true`: Yes.</li>
-<li>`false`: No.</li>If not specified, it defaults to false.
+<li>`false`: No.</li>Default: `false`.
+
                      * 
                      */
                     void SetPrivate(const bool& _private);
@@ -255,15 +181,15 @@ Whether the origin group is private. Values:
                     bool PrivateHasBeenSet() const;
 
                     /**
-                     * 获取The authentication parameter, which is used when `Private=true`.
-                     * @return PrivateParameters The authentication parameter, which is used when `Private=true`.
+                     * 获取Private authentication parameters. This field is valid when `Private=true`.
+                     * @return PrivateParameters Private authentication parameters. This field is valid when `Private=true`.
                      * 
                      */
                     std::vector<PrivateParameter> GetPrivateParameters() const;
 
                     /**
-                     * 设置The authentication parameter, which is used when `Private=true`.
-                     * @param _privateParameters The authentication parameter, which is used when `Private=true`.
+                     * 设置Private authentication parameters. This field is valid when `Private=true`.
+                     * @param _privateParameters Private authentication parameters. This field is valid when `Private=true`.
                      * 
                      */
                     void SetPrivateParameters(const std::vector<PrivateParameter>& _privateParameters);
@@ -284,58 +210,38 @@ Whether the origin group is private. Values:
                     bool m_recordHasBeenSet;
 
                     /**
+                     * The origin type. Values:
+<li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
+<li>`COS`: COS bucket address</li>
+<li>`AWS_S3`: AWS S3 bucket address
+                     */
+                    std::string m_type;
+                    bool m_typeHasBeenSet;
+
+                    /**
                      * The origin record ID.
                      */
                     std::string m_recordId;
                     bool m_recordIdHasBeenSet;
 
                     /**
-                     * The origin port. Value rang: 1-65535.
-                     */
-                    uint64_t m_port;
-                    bool m_portHasBeenSet;
-
-                    /**
-                     * The weight when `ConfigurationType=weight`.
-If 0 or no value is passed, the weight of each origin in a group will be 0 or left empty, indicating that origin-pull is performed by round-robin.
-If a value between 1-100 is passed, the total weight of multiple origins in a group should be 100, indicating that origin-pull is performed by weight.
-The weight when `ConfigurationType=proto`.
-If 0 or no value is passed, the weight of each origin in a group will be 0 or left empty, indicating that origin-pull is performed by round-robin.
-If a value between 1-100 is passed, the total weight of multiple origins with the same protocol in a group should be 100, indicating that origin-pull is performed by weight.
+                     * Weight of an origin. Range: 0-100. If it is not specified, a random weight is assigned. If `0` is passed in, there is no traffic scheduled to this origin.
+Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_weight;
                     bool m_weightHasBeenSet;
 
                     /**
-                     * The origin protocol when `ConfigurationType=proto`, indicating that origin-pull is performed by protocol.
-<li>`http`: HTTP protocol</li>
-<li>`https`: HTTPS protocol</li>
-                     */
-                    std::string m_proto;
-                    bool m_protoHasBeenSet;
-
-                    /**
-                     * The region when `ConfigurationType=area`, which is specified by country code (ISO 3166 alpha-2) or continent code. If not specified, it indicates all regions. Supported continent codes:
-<li>`Asia`</li>
-<li>`Europe`</li>
-<li>`Africa`</li>
-<li>`Oceania`</li>
-<li>`Americas`</li>An origin group must have at least one origin configured with all regions.
-                     */
-                    std::vector<std::string> m_area;
-                    bool m_areaHasBeenSet;
-
-                    /**
-                     * It is valid only when `OriginType=third_part`.
-Whether the origin group is private. Values:
+                     * Whether to enable private authentication. It is valid when `OriginType=COS/AWS_S3`. Values:
 <li>`true`: Yes.</li>
-<li>`false`: No.</li>If not specified, it defaults to false.
+<li>`false`: No.</li>Default: `false`.
+
                      */
                     bool m_private;
                     bool m_privateHasBeenSet;
 
                     /**
-                     * The authentication parameter, which is used when `Private=true`.
+                     * Private authentication parameters. This field is valid when `Private=true`.
                      */
                     std::vector<PrivateParameter> m_privateParameters;
                     bool m_privateParametersHasBeenSet;

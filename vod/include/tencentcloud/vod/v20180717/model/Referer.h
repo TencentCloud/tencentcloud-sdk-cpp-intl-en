@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取referer Blacklist and whitelist configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+                     * @return Switch referer Blacklist and whitelist configuration switch, value: <li>on: on; </li> <li>off: off. </li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置referer Blacklist and whitelist configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+                     * @param _switch referer Blacklist and whitelist configuration switch, value: <li>on: on; </li> <li>off: off. </li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -92,7 +92,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * referer Blacklist and whitelist configuration switch, value: <li>on: on; </li> <li>off: off. </li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

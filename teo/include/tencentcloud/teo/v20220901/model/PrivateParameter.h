@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Origin authentication parameter
+                * Private authentication parameters of object storage origins
                 */
                 class PrivateParameter : public AbstractModel
                 {
@@ -50,9 +50,13 @@ namespace TencentCloud
                      * 获取The parameter name. Values
 <li>`AccessKeyId`: Access Key ID</li>
 <li>`SecretAccessKey`: Secret Access Key</li>
+<li>`SignatureVersion`: Signature version. Values: `v2`, `v4`</li>
+<li>`Region`: Region of the storage bucket</li>
                      * @return Name The parameter name. Values
 <li>`AccessKeyId`: Access Key ID</li>
 <li>`SecretAccessKey`: Secret Access Key</li>
+<li>`SignatureVersion`: Signature version. Values: `v2`, `v4`</li>
+<li>`Region`: Region of the storage bucket</li>
                      * 
                      */
                     std::string GetName() const;
@@ -61,9 +65,13 @@ namespace TencentCloud
                      * 设置The parameter name. Values
 <li>`AccessKeyId`: Access Key ID</li>
 <li>`SecretAccessKey`: Secret Access Key</li>
+<li>`SignatureVersion`: Signature version. Values: `v2`, `v4`</li>
+<li>`Region`: Region of the storage bucket</li>
                      * @param _name The parameter name. Values
 <li>`AccessKeyId`: Access Key ID</li>
 <li>`SecretAccessKey`: Secret Access Key</li>
+<li>`SignatureVersion`: Signature version. Values: `v2`, `v4`</li>
+<li>`Region`: Region of the storage bucket</li>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -102,6 +110,8 @@ namespace TencentCloud
                      * The parameter name. Values
 <li>`AccessKeyId`: Access Key ID</li>
 <li>`SecretAccessKey`: Secret Access Key</li>
+<li>`SignatureVersion`: Signature version. Values: `v2`, `v4`</li>
+<li>`Region`: Region of the storage bucket</li>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;

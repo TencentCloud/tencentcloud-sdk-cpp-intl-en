@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The information of a file on a playlist.
+                * Carousel media file information
                 */
                 class RoundPlayListItemInfo : public AbstractModel
                 {

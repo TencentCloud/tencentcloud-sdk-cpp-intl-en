@@ -153,15 +153,27 @@ namespace TencentCloud
                     bool DescHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PlayBackMode 
+                     * 获取Play mode, optional values:
+<li>Loop: Play the playlist in a loop;</li>
+<li>Linear: Play once, stop playing after the playlist is played. </li>
+Default value：Loop。
+                     * @return PlayBackMode Play mode, optional values:
+<li>Loop: Play the playlist in a loop;</li>
+<li>Linear: Play once, stop playing after the playlist is played. </li>
+Default value：Loop。
                      * 
                      */
                     std::string GetPlayBackMode() const;
 
                     /**
-                     * 设置
-                     * @param _playBackMode 
+                     * 设置Play mode, optional values:
+<li>Loop: Play the playlist in a loop;</li>
+<li>Linear: Play once, stop playing after the playlist is played. </li>
+Default value：Loop。
+                     * @param _playBackMode Play mode, optional values:
+<li>Loop: Play the playlist in a loop;</li>
+<li>Linear: Play once, stop playing after the playlist is played. </li>
+Default value：Loop。
                      * 
                      */
                     void SetPlayBackMode(const std::string& _playBackMode);
@@ -207,7 +219,10 @@ namespace TencentCloud
                     bool m_descHasBeenSet;
 
                     /**
-                     * 
+                     * Play mode, optional values:
+<li>Loop: Play the playlist in a loop;</li>
+<li>Linear: Play once, stop playing after the playlist is played. </li>
+Default value：Loop。
                      */
                     std::string m_playBackMode;
                     bool m_playBackModeHasBeenSet;

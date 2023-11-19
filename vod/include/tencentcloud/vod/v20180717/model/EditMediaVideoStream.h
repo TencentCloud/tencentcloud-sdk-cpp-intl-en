@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Video stream configuration information
                 */
                 class EditMediaVideoStream : public AbstractModel
                 {
@@ -47,15 +47,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ResolutionAdaptive 
+                     * 获取Resolution adaptive, optional values:
+<li>open: open, at this time, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed, at this time , Width represents the width of the video, and Height represents the height of the video. </li>
+Default value: open.
+                     * @return ResolutionAdaptive Resolution adaptive, optional values:
+<li>open: open, at this time, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed, at this time , Width represents the width of the video, and Height represents the height of the video. </li>
+Default value: open.
                      * 
                      */
                     std::string GetResolutionAdaptive() const;
 
                     /**
-                     * 设置
-                     * @param _resolutionAdaptive 
+                     * 设置Resolution adaptive, optional values:
+<li>open: open, at this time, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed, at this time , Width represents the width of the video, and Height represents the height of the video. </li>
+Default value: open.
+                     * @param _resolutionAdaptive Resolution adaptive, optional values:
+<li>open: open, at this time, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed, at this time , Width represents the width of the video, and Height represents the height of the video. </li>
+Default value: open.
                      * 
                      */
                     void SetResolutionAdaptive(const std::string& _resolutionAdaptive);
@@ -68,15 +80,27 @@ namespace TencentCloud
                     bool ResolutionAdaptiveHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Width 
+                     * 获取Resolution adaptive, optional values:
+<li>open: open, at this time, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed, at this time , Width represents the width of the video, and Height represents the height of the video. </li>
+Default value: open.
+                     * @return Width Resolution adaptive, optional values:
+<li>open: open, at this time, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed, at this time , Width represents the width of the video, and Height represents the height of the video. </li>
+Default value: open.
                      * 
                      */
                     uint64_t GetWidth() const;
 
                     /**
-                     * 设置
-                     * @param _width 
+                     * 设置Resolution adaptive, optional values:
+<li>open: open, at this time, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed, at this time , Width represents the width of the video, and Height represents the height of the video. </li>
+Default value: open.
+                     * @param _width Resolution adaptive, optional values:
+<li>open: open, at this time, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed, at this time , Width represents the width of the video, and Height represents the height of the video. </li>
+Default value: open.
                      * 
                      */
                     void SetWidth(const uint64_t& _width);
@@ -89,15 +113,35 @@ namespace TencentCloud
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Height 
+                     * 获取The maximum value of the video stream height (or short side), value range: 0 and [128, 4096], unit: px. 
+<li>When Width and Height are both 0, the resolution is based on the base resolution;</li>
+<li>When Width is 0 and Height is non-0, Width is scaled according to the base resolution;</li> li>
+<li>When Width is non-0 and Height is 0, the Height is scaled according to the base resolution; </li>
+<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
+Default value: 0.
+                     * @return Height The maximum value of the video stream height (or short side), value range: 0 and [128, 4096], unit: px. 
+<li>When Width and Height are both 0, the resolution is based on the base resolution;</li>
+<li>When Width is 0 and Height is non-0, Width is scaled according to the base resolution;</li> li>
+<li>When Width is non-0 and Height is 0, the Height is scaled according to the base resolution; </li>
+<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
+Default value: 0.
                      * 
                      */
                     uint64_t GetHeight() const;
 
                     /**
-                     * 设置
-                     * @param _height 
+                     * 设置The maximum value of the video stream height (or short side), value range: 0 and [128, 4096], unit: px. 
+<li>When Width and Height are both 0, the resolution is based on the base resolution;</li>
+<li>When Width is 0 and Height is non-0, Width is scaled according to the base resolution;</li> li>
+<li>When Width is non-0 and Height is 0, the Height is scaled according to the base resolution; </li>
+<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
+Default value: 0.
+                     * @param _height The maximum value of the video stream height (or short side), value range: 0 and [128, 4096], unit: px. 
+<li>When Width and Height are both 0, the resolution is based on the base resolution;</li>
+<li>When Width is 0 and Height is non-0, Width is scaled according to the base resolution;</li> li>
+<li>When Width is non-0 and Height is 0, the Height is scaled according to the base resolution; </li>
+<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
+Default value: 0.
                      * 
                      */
                     void SetHeight(const uint64_t& _height);
@@ -110,15 +154,23 @@ namespace TencentCloud
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Fps 
+                     * 获取Video frame rate, value range: [0, 100], unit: Hz. 
+When the value is 0, the frame rate will be automatically set for the video. 
+The default value is 0.
+                     * @return Fps Video frame rate, value range: [0, 100], unit: Hz. 
+When the value is 0, the frame rate will be automatically set for the video. 
+The default value is 0.
                      * 
                      */
                     int64_t GetFps() const;
 
                     /**
-                     * 设置
-                     * @param _fps 
+                     * 设置Video frame rate, value range: [0, 100], unit: Hz. 
+When the value is 0, the frame rate will be automatically set for the video. 
+The default value is 0.
+                     * @param _fps Video frame rate, value range: [0, 100], unit: Hz. 
+When the value is 0, the frame rate will be automatically set for the video. 
+The default value is 0.
                      * 
                      */
                     void SetFps(const int64_t& _fps);
@@ -133,25 +185,38 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Resolution adaptive, optional values:
+<li>open: open, at this time, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed, at this time , Width represents the width of the video, and Height represents the height of the video. </li>
+Default value: open.
                      */
                     std::string m_resolutionAdaptive;
                     bool m_resolutionAdaptiveHasBeenSet;
 
                     /**
-                     * 
+                     * Resolution adaptive, optional values:
+<li>open: open, at this time, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed, at this time , Width represents the width of the video, and Height represents the height of the video. </li>
+Default value: open.
                      */
                     uint64_t m_width;
                     bool m_widthHasBeenSet;
 
                     /**
-                     * 
+                     * The maximum value of the video stream height (or short side), value range: 0 and [128, 4096], unit: px. 
+<li>When Width and Height are both 0, the resolution is based on the base resolution;</li>
+<li>When Width is 0 and Height is non-0, Width is scaled according to the base resolution;</li> li>
+<li>When Width is non-0 and Height is 0, the Height is scaled according to the base resolution; </li>
+<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
+Default value: 0.
                      */
                     uint64_t m_height;
                     bool m_heightHasBeenSet;
 
                     /**
-                     * 
+                     * Video frame rate, value range: [0, 100], unit: Hz. 
+When the value is 0, the frame rate will be automatically set for the video. 
+The default value is 0.
                      */
                     int64_t m_fps;
                     bool m_fpsHasBeenSet;

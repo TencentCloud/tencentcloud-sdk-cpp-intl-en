@@ -47,18 +47,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Type of the query action. `1`: Query emergency vulnerabilities; `2`: Query all vulnerabilities; `3`: Query a specific vulnerability. When `Id=3`, `CVEId` is required. 
+                     * 获取Vulnerability ID
 Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Id Type of the query action. `1`: Query emergency vulnerabilities; `2`: Query all vulnerabilities; `3`: Query a specific vulnerability. When `Id=3`, `CVEId` is required. 
+                     * @return Id Vulnerability ID
 Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetId() const;
 
                     /**
-                     * 设置Type of the query action. `1`: Query emergency vulnerabilities; `2`: Query all vulnerabilities; `3`: Query a specific vulnerability. When `Id=3`, `CVEId` is required. 
+                     * 设置Vulnerability ID
 Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _id Type of the query action. `1`: Query emergency vulnerabilities; `2`: Query all vulnerabilities; `3`: Query a specific vulnerability. When `Id=3`, `CVEId` is required. 
+                     * @param _id Vulnerability ID
 Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -422,18 +422,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool ProSupportHasBeenSet() const;
 
                     /**
-                     * 获取Published or not, `0`: Not published; `1`: Published.
+                     * 获取Specify whether the vulnerability is published as an emergency vulnerability. `1`: Published as an emergency vulnerability; `0`: Not an emergency vulnerability.
 Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return IsPublish Published or not, `0`: Not published; `1`: Published.
+                     * @return IsPublish Specify whether the vulnerability is published as an emergency vulnerability. `1`: Published as an emergency vulnerability; `0`: Not an emergency vulnerability.
 Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetIsPublish() const;
 
                     /**
-                     * 设置Published or not, `0`: Not published; `1`: Published.
+                     * 设置Specify whether the vulnerability is published as an emergency vulnerability. `1`: Published as an emergency vulnerability; `0`: Not an emergency vulnerability.
 Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _isPublish Published or not, `0`: Not published; `1`: Published.
+                     * @param _isPublish Specify whether the vulnerability is published as an emergency vulnerability. `1`: Published as an emergency vulnerability; `0`: Not an emergency vulnerability.
 Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -447,18 +447,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool IsPublishHasBeenSet() const;
 
                     /**
-                     * 获取Release time
+                     * 获取Disclosure time of the vulnerability. 
 Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return ReleaseTime Release time
+                     * @return ReleaseTime Disclosure time of the vulnerability. 
 Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetReleaseTime() const;
 
                     /**
-                     * 设置Release time
+                     * 设置Disclosure time of the vulnerability. 
 Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _releaseTime Release time
+                     * @param _releaseTime Disclosure time of the vulnerability. 
 Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -472,18 +472,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool ReleaseTimeHasBeenSet() const;
 
                     /**
-                     * 获取Creation time
+                     * 获取The time when the vulnerability is added to the vulnerability database.
 Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
-                     * @return CreateTime Creation time
+                     * @return CreateTime The time when the vulnerability is added to the vulnerability database.
 Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time
+                     * 设置The time when the vulnerability is added to the vulnerability database.
 Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
-                     * @param _createTime Creation time
+                     * @param _createTime The time when the vulnerability is added to the vulnerability database.
 Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
@@ -497,18 +497,18 @@ Note: u200dThis field may return `null`, indicating that no valid values can be 
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Update time
+                     * 获取The last update time of the vulnerability in the database
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UpdateTime Update time
+                     * @return UpdateTime The last update time of the vulnerability in the database
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Update time
+                     * 设置The last update time of the vulnerability in the database
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _updateTime Update time
+                     * @param _updateTime The last update time of the vulnerability in the database
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -549,7 +549,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
                 private:
 
                     /**
-                     * Type of the query action. `1`: Query emergency vulnerabilities; `2`: Query all vulnerabilities; `3`: Query a specific vulnerability. When `Id=3`, `CVEId` is required. 
+                     * Vulnerability ID
 Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_id;
@@ -654,28 +654,28 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_proSupportHasBeenSet;
 
                     /**
-                     * Published or not, `0`: Not published; `1`: Published.
+                     * Specify whether the vulnerability is published as an emergency vulnerability. `1`: Published as an emergency vulnerability; `0`: Not an emergency vulnerability.
 Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_isPublish;
                     bool m_isPublishHasBeenSet;
 
                     /**
-                     * Release time
+                     * Disclosure time of the vulnerability. 
 Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     std::string m_releaseTime;
                     bool m_releaseTimeHasBeenSet;
 
                     /**
-                     * Creation time
+                     * The time when the vulnerability is added to the vulnerability database.
 Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Update time
+                     * The last update time of the vulnerability in the database
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_updateTime;

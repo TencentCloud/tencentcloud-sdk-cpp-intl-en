@@ -74,8 +74,8 @@ namespace TencentCloud
                     bool DataHasBeenSet() const;
 
                     /**
-                     * 获取List of status
-                     * @return StatusLists List of status
+                     * 获取List of risk handling status
+                     * @return StatusLists List of risk handling status
                      * 
                      */
                     std::vector<FilterDataObject> GetStatusLists() const;
@@ -158,7 +158,7 @@ namespace TencentCloud
                     bool m_dataHasBeenSet;
 
                     /**
-                     * List of status
+                     * List of risk handling status
                      */
                     std::vector<FilterDataObject> m_statusLists;
                     bool m_statusListsHasBeenSet;

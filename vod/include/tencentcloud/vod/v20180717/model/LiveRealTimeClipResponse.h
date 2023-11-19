@@ -93,7 +93,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return MetaData 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     MediaMetaData GetMetaData() const;
@@ -143,6 +145,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     MediaMetaData m_metaData;
                     bool m_metaDataHasBeenSet;

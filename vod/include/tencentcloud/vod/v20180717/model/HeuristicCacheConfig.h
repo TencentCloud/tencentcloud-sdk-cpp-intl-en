@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return HeuristicCacheTimeSwitch 
+                     * 获取Heuristic custom time cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+                     * @return HeuristicCacheTimeSwitch Heuristic custom time cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
                      * 
                      */
                     std::string GetHeuristicCacheTimeSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _heuristicCacheTimeSwitch 
+                     * 设置Heuristic custom time cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+                     * @param _heuristicCacheTimeSwitch Heuristic custom time cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
                      * 
                      */
                     void SetHeuristicCacheTimeSwitch(const std::string& _heuristicCacheTimeSwitch);
@@ -91,7 +91,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Heuristic custom time cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
                      */
                     std::string m_heuristicCacheTimeSwitch;
                     bool m_heuristicCacheTimeSwitchHasBeenSet;

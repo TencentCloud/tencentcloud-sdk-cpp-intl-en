@@ -70,51 +70,59 @@ namespace TencentCloud
                     bool RuleNameHasBeenSet() const;
 
                     /**
-                     * 获取Action. Valid values: 
-<li>`drop`: Block;</li>
-<li>`monitor`: Observe;</li>
-<li>`trans`: Allow;</li>
-<li>`alg`: JavaScript challenge;</li>
-<li>`captcha`: Managed challenge;</li>
-<li>`random`: Random action;</li>
-<li>`silence`: Silence;</li>
-<li>`shortdelay`: Add short latency;</li>
-<li>`longdelay`: Add long latency.</li>
-                     * @return Action Action. Valid values: 
-<li>`drop`: Block;</li>
-<li>`monitor`: Observe;</li>
-<li>`trans`: Allow;</li>
-<li>`alg`: JavaScript challenge;</li>
-<li>`captcha`: Managed challenge;</li>
-<li>`random`: Random action;</li>
-<li>`silence`: Silence;</li>
-<li>`shortdelay`: Add short latency;</li>
-<li>`longdelay`: Add long latency.</li>
+                     * 获取The action. Values:
+<li>`drop`: Block the request</li>
+<li>`monitor`: Observe</li>
+<li>`trans`: Allow</li>
+<li>`redirect`: Redirect the request</li>
+<li>`page`: Return the specified page</li>
+<li>`alg`: JavaScript challenge</li>
+<li>`captcha`: Managed challenge</li>
+<li>`random`: Handle the request randomly by the weight</li>
+<li>`silence`: Keep the connection but do not response to the client</li>
+<li>`shortdelay`: Add a short latency period</li>
+<li>`longdelay`: Add a long latency period</li>
+                     * @return Action The action. Values:
+<li>`drop`: Block the request</li>
+<li>`monitor`: Observe</li>
+<li>`trans`: Allow</li>
+<li>`redirect`: Redirect the request</li>
+<li>`page`: Return the specified page</li>
+<li>`alg`: JavaScript challenge</li>
+<li>`captcha`: Managed challenge</li>
+<li>`random`: Handle the request randomly by the weight</li>
+<li>`silence`: Keep the connection but do not response to the client</li>
+<li>`shortdelay`: Add a short latency period</li>
+<li>`longdelay`: Add a long latency period</li>
                      * 
                      */
                     std::string GetAction() const;
 
                     /**
-                     * 设置Action. Valid values: 
-<li>`drop`: Block;</li>
-<li>`monitor`: Observe;</li>
-<li>`trans`: Allow;</li>
-<li>`alg`: JavaScript challenge;</li>
-<li>`captcha`: Managed challenge;</li>
-<li>`random`: Random action;</li>
-<li>`silence`: Silence;</li>
-<li>`shortdelay`: Add short latency;</li>
-<li>`longdelay`: Add long latency.</li>
-                     * @param _action Action. Valid values: 
-<li>`drop`: Block;</li>
-<li>`monitor`: Observe;</li>
-<li>`trans`: Allow;</li>
-<li>`alg`: JavaScript challenge;</li>
-<li>`captcha`: Managed challenge;</li>
-<li>`random`: Random action;</li>
-<li>`silence`: Silence;</li>
-<li>`shortdelay`: Add short latency;</li>
-<li>`longdelay`: Add long latency.</li>
+                     * 设置The action. Values:
+<li>`drop`: Block the request</li>
+<li>`monitor`: Observe</li>
+<li>`trans`: Allow</li>
+<li>`redirect`: Redirect the request</li>
+<li>`page`: Return the specified page</li>
+<li>`alg`: JavaScript challenge</li>
+<li>`captcha`: Managed challenge</li>
+<li>`random`: Handle the request randomly by the weight</li>
+<li>`silence`: Keep the connection but do not response to the client</li>
+<li>`shortdelay`: Add a short latency period</li>
+<li>`longdelay`: Add a long latency period</li>
+                     * @param _action The action. Values:
+<li>`drop`: Block the request</li>
+<li>`monitor`: Observe</li>
+<li>`trans`: Allow</li>
+<li>`redirect`: Redirect the request</li>
+<li>`page`: Return the specified page</li>
+<li>`alg`: JavaScript challenge</li>
+<li>`captcha`: Managed challenge</li>
+<li>`random`: Handle the request randomly by the weight</li>
+<li>`silence`: Keep the connection but do not response to the client</li>
+<li>`shortdelay`: Add a short latency period</li>
+<li>`longdelay`: Add a long latency period</li>
                      * 
                      */
                     void SetAction(const std::string& _action);
@@ -198,19 +206,15 @@ namespace TencentCloud
                     bool RulePriorityHasBeenSet() const;
 
                     /**
-                     * 获取The rule ID, which is only used as an output parameter.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return RuleID The rule ID, which is only used as an output parameter.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Rule ID, which is only used as an output parameter.
+                     * @return RuleID Rule ID, which is only used as an output parameter.
                      * 
                      */
                     int64_t GetRuleID() const;
 
                     /**
-                     * 设置The rule ID, which is only used as an output parameter.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _ruleID The rule ID, which is only used as an output parameter.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Rule ID, which is only used as an output parameter.
+                     * @param _ruleID Rule ID, which is only used as an output parameter.
                      * 
                      */
                     void SetRuleID(const int64_t& _ruleID);
@@ -246,10 +250,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     /**
                      * 获取The filter. Values:
 <li>`sip`: Client IP</li>
-Note: This field may return `null`, indicating that no valid values can be obtained.
+This parameter is left empty by default.
                      * @return FreqFields The filter. Values:
 <li>`sip`: Client IP</li>
-Note: This field may return `null`, indicating that no valid values can be obtained.
+This parameter is left empty by default.
                      * 
                      */
                     std::vector<std::string> GetFreqFields() const;
@@ -257,10 +261,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     /**
                      * 设置The filter. Values:
 <li>`sip`: Client IP</li>
-Note: This field may return `null`, indicating that no valid values can be obtained.
+This parameter is left empty by default.
                      * @param _freqFields The filter. Values:
 <li>`sip`: Client IP</li>
-Note: This field may return `null`, indicating that no valid values can be obtained.
+This parameter is left empty by default.
                      * 
                      */
                     void SetFreqFields(const std::vector<std::string>& _freqFields);
@@ -273,19 +277,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool FreqFieldsHasBeenSet() const;
 
                     /**
-                     * 获取Updated time
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return UpdateTime Updated time
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取The update time, which is only used as an output parameter.
+                     * @return UpdateTime The update time, which is only used as an output parameter.
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Updated time
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _updateTime Updated time
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置The update time, which is only used as an output parameter.
+                     * @param _updateTime The update time, which is only used as an output parameter.
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -298,27 +298,27 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取The statistical dimension. Values:
-<li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
-<li>`client_to_eo`: Requests from the client to EdgeOne</li>
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return FreqScope The statistical dimension. Values:
-<li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
-<li>`client_to_eo`: Requests from the client to EdgeOne</li>
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Query scope. Values:
+<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne.</li>
+<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
+Default: `source_to_eo`.
+                     * @return FreqScope Query scope. Values:
+<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne.</li>
+<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
+Default: `source_to_eo`.
                      * 
                      */
                     std::vector<std::string> GetFreqScope() const;
 
                     /**
-                     * 设置The statistical dimension. Values:
-<li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
-<li>`client_to_eo`: Requests from the client to EdgeOne</li>
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _freqScope The statistical dimension. Values:
-<li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
-<li>`client_to_eo`: Requests from the client to EdgeOne</li>
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Query scope. Values:
+<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne.</li>
+<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
+Default: `source_to_eo`.
+                     * @param _freqScope Query scope. Values:
+<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne.</li>
+<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
+Default: `source_to_eo`.
                      * 
                      */
                     void SetFreqScope(const std::vector<std::string>& _freqScope);
@@ -330,6 +330,90 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool FreqScopeHasBeenSet() const;
 
+                    /**
+                     * 获取Name of the custom return page. It's required when `Action=page`.
+                     * @return Name Name of the custom return page. It's required when `Action=page`.
+                     * 
+                     */
+                    std::string GetName() const;
+
+                    /**
+                     * 设置Name of the custom return page. It's required when `Action=page`.
+                     * @param _name Name of the custom return page. It's required when `Action=page`.
+                     * 
+                     */
+                    void SetName(const std::string& _name);
+
+                    /**
+                     * 判断参数 Name 是否已赋值
+                     * @return Name 是否已赋值
+                     * 
+                     */
+                    bool NameHasBeenSet() const;
+
+                    /**
+                     * 获取ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
+                     * @return CustomResponseId ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
+                     * 
+                     */
+                    std::string GetCustomResponseId() const;
+
+                    /**
+                     * 设置ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
+                     * @param _customResponseId ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
+                     * 
+                     */
+                    void SetCustomResponseId(const std::string& _customResponseId);
+
+                    /**
+                     * 判断参数 CustomResponseId 是否已赋值
+                     * @return CustomResponseId 是否已赋值
+                     * 
+                     */
+                    bool CustomResponseIdHasBeenSet() const;
+
+                    /**
+                     * 获取The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
+                     * @return ResponseCode The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
+                     * 
+                     */
+                    int64_t GetResponseCode() const;
+
+                    /**
+                     * 设置The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
+                     * @param _responseCode The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
+                     * 
+                     */
+                    void SetResponseCode(const int64_t& _responseCode);
+
+                    /**
+                     * 判断参数 ResponseCode 是否已赋值
+                     * @return ResponseCode 是否已赋值
+                     * 
+                     */
+                    bool ResponseCodeHasBeenSet() const;
+
+                    /**
+                     * 获取The redirection URL. It's required when `Action=redirect`.
+                     * @return RedirectUrl The redirection URL. It's required when `Action=redirect`.
+                     * 
+                     */
+                    std::string GetRedirectUrl() const;
+
+                    /**
+                     * 设置The redirection URL. It's required when `Action=redirect`.
+                     * @param _redirectUrl The redirection URL. It's required when `Action=redirect`.
+                     * 
+                     */
+                    void SetRedirectUrl(const std::string& _redirectUrl);
+
+                    /**
+                     * 判断参数 RedirectUrl 是否已赋值
+                     * @return RedirectUrl 是否已赋值
+                     * 
+                     */
+                    bool RedirectUrlHasBeenSet() const;
+
                 private:
 
                     /**
@@ -339,16 +423,18 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_ruleNameHasBeenSet;
 
                     /**
-                     * Action. Valid values: 
-<li>`drop`: Block;</li>
-<li>`monitor`: Observe;</li>
-<li>`trans`: Allow;</li>
-<li>`alg`: JavaScript challenge;</li>
-<li>`captcha`: Managed challenge;</li>
-<li>`random`: Random action;</li>
-<li>`silence`: Silence;</li>
-<li>`shortdelay`: Add short latency;</li>
-<li>`longdelay`: Add long latency.</li>
+                     * The action. Values:
+<li>`drop`: Block the request</li>
+<li>`monitor`: Observe</li>
+<li>`trans`: Allow</li>
+<li>`redirect`: Redirect the request</li>
+<li>`page`: Return the specified page</li>
+<li>`alg`: JavaScript challenge</li>
+<li>`captcha`: Managed challenge</li>
+<li>`random`: Handle the request randomly by the weight</li>
+<li>`silence`: Keep the connection but do not response to the client</li>
+<li>`shortdelay`: Add a short latency period</li>
+<li>`longdelay`: Add a long latency period</li>
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;
@@ -374,8 +460,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_rulePriorityHasBeenSet;
 
                     /**
-                     * The rule ID, which is only used as an output parameter.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Rule ID, which is only used as an output parameter.
                      */
                     int64_t m_ruleID;
                     bool m_ruleIDHasBeenSet;
@@ -389,26 +474,49 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     /**
                      * The filter. Values:
 <li>`sip`: Client IP</li>
-Note: This field may return `null`, indicating that no valid values can be obtained.
+This parameter is left empty by default.
                      */
                     std::vector<std::string> m_freqFields;
                     bool m_freqFieldsHasBeenSet;
 
                     /**
-                     * Updated time
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * The update time, which is only used as an output parameter.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * The statistical dimension. Values:
-<li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
-<li>`client_to_eo`: Requests from the client to EdgeOne</li>
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Query scope. Values:
+<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne.</li>
+<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
+Default: `source_to_eo`.
                      */
                     std::vector<std::string> m_freqScope;
                     bool m_freqScopeHasBeenSet;
+
+                    /**
+                     * Name of the custom return page. It's required when `Action=page`.
+                     */
+                    std::string m_name;
+                    bool m_nameHasBeenSet;
+
+                    /**
+                     * ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
+                     */
+                    std::string m_customResponseId;
+                    bool m_customResponseIdHasBeenSet;
+
+                    /**
+                     * The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
+                     */
+                    int64_t m_responseCode;
+                    bool m_responseCodeHasBeenSet;
+
+                    /**
+                     * The redirection URL. It's required when `Action=redirect`.
+                     */
+                    std::string m_redirectUrl;
+                    bool m_redirectUrlHasBeenSet;
 
                 };
             }

@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool Md5HasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Sha1 
+                     * 获取The Sha1 value of the media file.
+                     * @return Sha1 The Sha1 value of the media file.
                      * 
                      */
                     std::string GetSha1() const;
 
                     /**
-                     * 设置
-                     * @param _sha1 
+                     * 设置The Sha1 value of the media file.
+                     * @param _sha1 The Sha1 value of the media file.
                      * 
                      */
                     void SetSha1(const std::string& _sha1);
@@ -97,7 +97,7 @@ namespace TencentCloud
                     bool m_md5HasBeenSet;
 
                     /**
-                     * 
+                     * The Sha1 value of the media file.
                      */
                     std::string m_sha1;
                     bool m_sha1HasBeenSet;

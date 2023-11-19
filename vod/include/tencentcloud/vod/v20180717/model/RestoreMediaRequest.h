@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The IDs of media files.
-                     * @return FileIds The IDs of media files.
+                     * 获取Media file unique identifier list, maximum length: 100.
+                     * @return FileIds Media file unique identifier list, maximum length: 100.
                      * 
                      */
                     std::vector<std::string> GetFileIds() const;
 
                     /**
-                     * 设置The IDs of media files.
-                     * @param _fileIds The IDs of media files.
+                     * 设置Media file unique identifier list, maximum length: 100.
+                     * @param _fileIds Media file unique identifier list, maximum length: 100.
                      * 
                      */
                     void SetFileIds(const std::vector<std::string>& _fileIds);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取The number of days during which the restored files will remain available.
-                     * @return RestoreDay The number of days during which the restored files will remain available.
+                     * 获取The accessible duration of the unfrozen temporary media files must be greater than 0, and the unit is "days".
+                     * @return RestoreDay The accessible duration of the unfrozen temporary media files must be greater than 0, and the unit is "days".
                      * 
                      */
                     uint64_t GetRestoreDay() const;
 
                     /**
-                     * 设置The number of days during which the restored files will remain available.
-                     * @param _restoreDay The number of days during which the restored files will remain available.
+                     * 设置The accessible duration of the unfrozen temporary media files must be greater than 0, and the unit is "days".
+                     * @param _restoreDay The accessible duration of the unfrozen temporary media files must be greater than 0, and the unit is "days".
                      * 
                      */
                     void SetRestoreDay(const uint64_t& _restoreDay);
@@ -153,7 +153,7 @@ If the current storage class is DEEP ARCHIVE, the valid values for this paramete
                 private:
 
                     /**
-                     * The IDs of media files.
+                     * Media file unique identifier list, maximum length: 100.
                      */
                     std::vector<std::string> m_fileIds;
                     bool m_fileIdsHasBeenSet;
@@ -165,7 +165,7 @@ If the current storage class is DEEP ARCHIVE, the valid values for this paramete
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * The number of days during which the restored files will remain available.
+                     * The accessible duration of the unfrozen temporary media files must be greater than 0, and the unit is "days".
                      */
                     uint64_t m_restoreDay;
                     bool m_restoreDayHasBeenSet;

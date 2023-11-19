@@ -140,15 +140,31 @@ Note: the frame rate of all substreams must be the same; otherwise, the frame ra
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DrmType 
+                     * 获取DRM scheme type, value range:
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
+The default value is an empty string. It is an empty string, indicating that the video will not be DRM protected.
+                     * @return DrmType DRM scheme type, value range:
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
+The default value is an empty string. It is an empty string, indicating that the video will not be DRM protected.
                      * 
                      */
                     std::string GetDrmType() const;
 
                     /**
-                     * 设置
-                     * @param _drmType 
+                     * 设置DRM scheme type, value range:
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
+The default value is an empty string. It is an empty string, indicating that the video will not be DRM protected.
+                     * @param _drmType DRM scheme type, value range:
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
+The default value is an empty string. It is an empty string, indicating that the video will not be DRM protected.
                      * 
                      */
                     void SetDrmType(const std::string& _drmType);
@@ -343,7 +359,11 @@ Note: the frame rate of all substreams must be the same; otherwise, the frame ra
                     bool m_nameHasBeenSet;
 
                     /**
-                     * 
+                     * DRM scheme type, value range:
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
+The default value is an empty string. It is an empty string, indicating that the video will not be DRM protected.
                      */
                     std::string m_drmType;
                     bool m_drmTypeHasBeenSet;
