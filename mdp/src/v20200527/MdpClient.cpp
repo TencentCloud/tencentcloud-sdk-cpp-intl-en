@@ -169,6 +169,49 @@ MdpClient::CreateStreamPackageChannelEndpointOutcomeCallable MdpClient::CreateSt
     return task->get_future();
 }
 
+MdpClient::CreateStreamPackageHarvestJobOutcome MdpClient::CreateStreamPackageHarvestJob(const CreateStreamPackageHarvestJobRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateStreamPackageHarvestJob");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateStreamPackageHarvestJobResponse rsp = CreateStreamPackageHarvestJobResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateStreamPackageHarvestJobOutcome(rsp);
+        else
+            return CreateStreamPackageHarvestJobOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateStreamPackageHarvestJobOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::CreateStreamPackageHarvestJobAsync(const CreateStreamPackageHarvestJobRequest& request, const CreateStreamPackageHarvestJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateStreamPackageHarvestJob(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::CreateStreamPackageHarvestJobOutcomeCallable MdpClient::CreateStreamPackageHarvestJobCallable(const CreateStreamPackageHarvestJobRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateStreamPackageHarvestJobOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateStreamPackageHarvestJob(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 MdpClient::DeleteStreamPackageChannelEndpointsOutcome MdpClient::DeleteStreamPackageChannelEndpoints(const DeleteStreamPackageChannelEndpointsRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteStreamPackageChannelEndpoints");
@@ -255,6 +298,92 @@ MdpClient::DeleteStreamPackageChannelsOutcomeCallable MdpClient::DeleteStreamPac
     return task->get_future();
 }
 
+MdpClient::DeleteStreamPackageHarvestJobOutcome MdpClient::DeleteStreamPackageHarvestJob(const DeleteStreamPackageHarvestJobRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteStreamPackageHarvestJob");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteStreamPackageHarvestJobResponse rsp = DeleteStreamPackageHarvestJobResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteStreamPackageHarvestJobOutcome(rsp);
+        else
+            return DeleteStreamPackageHarvestJobOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteStreamPackageHarvestJobOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::DeleteStreamPackageHarvestJobAsync(const DeleteStreamPackageHarvestJobRequest& request, const DeleteStreamPackageHarvestJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteStreamPackageHarvestJob(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::DeleteStreamPackageHarvestJobOutcomeCallable MdpClient::DeleteStreamPackageHarvestJobCallable(const DeleteStreamPackageHarvestJobRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteStreamPackageHarvestJobOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteStreamPackageHarvestJob(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdpClient::DeleteStreamPackageHarvestJobsOutcome MdpClient::DeleteStreamPackageHarvestJobs(const DeleteStreamPackageHarvestJobsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteStreamPackageHarvestJobs");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteStreamPackageHarvestJobsResponse rsp = DeleteStreamPackageHarvestJobsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteStreamPackageHarvestJobsOutcome(rsp);
+        else
+            return DeleteStreamPackageHarvestJobsOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteStreamPackageHarvestJobsOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::DeleteStreamPackageHarvestJobsAsync(const DeleteStreamPackageHarvestJobsRequest& request, const DeleteStreamPackageHarvestJobsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteStreamPackageHarvestJobs(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::DeleteStreamPackageHarvestJobsOutcomeCallable MdpClient::DeleteStreamPackageHarvestJobsCallable(const DeleteStreamPackageHarvestJobsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteStreamPackageHarvestJobsOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteStreamPackageHarvestJobs(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 MdpClient::DescribeStreamPackageChannelOutcome MdpClient::DescribeStreamPackageChannel(const DescribeStreamPackageChannelRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeStreamPackageChannel");
@@ -334,6 +463,92 @@ MdpClient::DescribeStreamPackageChannelsOutcomeCallable MdpClient::DescribeStrea
         [this, request]()
         {
             return this->DescribeStreamPackageChannels(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdpClient::DescribeStreamPackageHarvestJobOutcome MdpClient::DescribeStreamPackageHarvestJob(const DescribeStreamPackageHarvestJobRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeStreamPackageHarvestJob");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeStreamPackageHarvestJobResponse rsp = DescribeStreamPackageHarvestJobResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeStreamPackageHarvestJobOutcome(rsp);
+        else
+            return DescribeStreamPackageHarvestJobOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeStreamPackageHarvestJobOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::DescribeStreamPackageHarvestJobAsync(const DescribeStreamPackageHarvestJobRequest& request, const DescribeStreamPackageHarvestJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeStreamPackageHarvestJob(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::DescribeStreamPackageHarvestJobOutcomeCallable MdpClient::DescribeStreamPackageHarvestJobCallable(const DescribeStreamPackageHarvestJobRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeStreamPackageHarvestJobOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeStreamPackageHarvestJob(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdpClient::DescribeStreamPackageHarvestJobsOutcome MdpClient::DescribeStreamPackageHarvestJobs(const DescribeStreamPackageHarvestJobsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeStreamPackageHarvestJobs");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeStreamPackageHarvestJobsResponse rsp = DescribeStreamPackageHarvestJobsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeStreamPackageHarvestJobsOutcome(rsp);
+        else
+            return DescribeStreamPackageHarvestJobsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeStreamPackageHarvestJobsOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::DescribeStreamPackageHarvestJobsAsync(const DescribeStreamPackageHarvestJobsRequest& request, const DescribeStreamPackageHarvestJobsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeStreamPackageHarvestJobs(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::DescribeStreamPackageHarvestJobsOutcomeCallable MdpClient::DescribeStreamPackageHarvestJobsCallable(const DescribeStreamPackageHarvestJobsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeStreamPackageHarvestJobsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeStreamPackageHarvestJobs(request);
         }
     );
 

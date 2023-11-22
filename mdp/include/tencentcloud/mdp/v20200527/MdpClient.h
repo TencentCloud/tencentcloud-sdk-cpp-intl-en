@@ -29,14 +29,24 @@
 #include <tencentcloud/mdp/v20200527/model/CreateStreamPackageChannelResponse.h>
 #include <tencentcloud/mdp/v20200527/model/CreateStreamPackageChannelEndpointRequest.h>
 #include <tencentcloud/mdp/v20200527/model/CreateStreamPackageChannelEndpointResponse.h>
+#include <tencentcloud/mdp/v20200527/model/CreateStreamPackageHarvestJobRequest.h>
+#include <tencentcloud/mdp/v20200527/model/CreateStreamPackageHarvestJobResponse.h>
 #include <tencentcloud/mdp/v20200527/model/DeleteStreamPackageChannelEndpointsRequest.h>
 #include <tencentcloud/mdp/v20200527/model/DeleteStreamPackageChannelEndpointsResponse.h>
 #include <tencentcloud/mdp/v20200527/model/DeleteStreamPackageChannelsRequest.h>
 #include <tencentcloud/mdp/v20200527/model/DeleteStreamPackageChannelsResponse.h>
+#include <tencentcloud/mdp/v20200527/model/DeleteStreamPackageHarvestJobRequest.h>
+#include <tencentcloud/mdp/v20200527/model/DeleteStreamPackageHarvestJobResponse.h>
+#include <tencentcloud/mdp/v20200527/model/DeleteStreamPackageHarvestJobsRequest.h>
+#include <tencentcloud/mdp/v20200527/model/DeleteStreamPackageHarvestJobsResponse.h>
 #include <tencentcloud/mdp/v20200527/model/DescribeStreamPackageChannelRequest.h>
 #include <tencentcloud/mdp/v20200527/model/DescribeStreamPackageChannelResponse.h>
 #include <tencentcloud/mdp/v20200527/model/DescribeStreamPackageChannelsRequest.h>
 #include <tencentcloud/mdp/v20200527/model/DescribeStreamPackageChannelsResponse.h>
+#include <tencentcloud/mdp/v20200527/model/DescribeStreamPackageHarvestJobRequest.h>
+#include <tencentcloud/mdp/v20200527/model/DescribeStreamPackageHarvestJobResponse.h>
+#include <tencentcloud/mdp/v20200527/model/DescribeStreamPackageHarvestJobsRequest.h>
+#include <tencentcloud/mdp/v20200527/model/DescribeStreamPackageHarvestJobsResponse.h>
 #include <tencentcloud/mdp/v20200527/model/ModifyStreamPackageChannelRequest.h>
 #include <tencentcloud/mdp/v20200527/model/ModifyStreamPackageChannelResponse.h>
 #include <tencentcloud/mdp/v20200527/model/ModifyStreamPackageChannelEndpointRequest.h>
@@ -68,18 +78,33 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateStreamPackageChannelEndpointResponse> CreateStreamPackageChannelEndpointOutcome;
                 typedef std::future<CreateStreamPackageChannelEndpointOutcome> CreateStreamPackageChannelEndpointOutcomeCallable;
                 typedef std::function<void(const MdpClient*, const Model::CreateStreamPackageChannelEndpointRequest&, CreateStreamPackageChannelEndpointOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateStreamPackageChannelEndpointAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateStreamPackageHarvestJobResponse> CreateStreamPackageHarvestJobOutcome;
+                typedef std::future<CreateStreamPackageHarvestJobOutcome> CreateStreamPackageHarvestJobOutcomeCallable;
+                typedef std::function<void(const MdpClient*, const Model::CreateStreamPackageHarvestJobRequest&, CreateStreamPackageHarvestJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateStreamPackageHarvestJobAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteStreamPackageChannelEndpointsResponse> DeleteStreamPackageChannelEndpointsOutcome;
                 typedef std::future<DeleteStreamPackageChannelEndpointsOutcome> DeleteStreamPackageChannelEndpointsOutcomeCallable;
                 typedef std::function<void(const MdpClient*, const Model::DeleteStreamPackageChannelEndpointsRequest&, DeleteStreamPackageChannelEndpointsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteStreamPackageChannelEndpointsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteStreamPackageChannelsResponse> DeleteStreamPackageChannelsOutcome;
                 typedef std::future<DeleteStreamPackageChannelsOutcome> DeleteStreamPackageChannelsOutcomeCallable;
                 typedef std::function<void(const MdpClient*, const Model::DeleteStreamPackageChannelsRequest&, DeleteStreamPackageChannelsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteStreamPackageChannelsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteStreamPackageHarvestJobResponse> DeleteStreamPackageHarvestJobOutcome;
+                typedef std::future<DeleteStreamPackageHarvestJobOutcome> DeleteStreamPackageHarvestJobOutcomeCallable;
+                typedef std::function<void(const MdpClient*, const Model::DeleteStreamPackageHarvestJobRequest&, DeleteStreamPackageHarvestJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteStreamPackageHarvestJobAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteStreamPackageHarvestJobsResponse> DeleteStreamPackageHarvestJobsOutcome;
+                typedef std::future<DeleteStreamPackageHarvestJobsOutcome> DeleteStreamPackageHarvestJobsOutcomeCallable;
+                typedef std::function<void(const MdpClient*, const Model::DeleteStreamPackageHarvestJobsRequest&, DeleteStreamPackageHarvestJobsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteStreamPackageHarvestJobsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeStreamPackageChannelResponse> DescribeStreamPackageChannelOutcome;
                 typedef std::future<DescribeStreamPackageChannelOutcome> DescribeStreamPackageChannelOutcomeCallable;
                 typedef std::function<void(const MdpClient*, const Model::DescribeStreamPackageChannelRequest&, DescribeStreamPackageChannelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStreamPackageChannelAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeStreamPackageChannelsResponse> DescribeStreamPackageChannelsOutcome;
                 typedef std::future<DescribeStreamPackageChannelsOutcome> DescribeStreamPackageChannelsOutcomeCallable;
                 typedef std::function<void(const MdpClient*, const Model::DescribeStreamPackageChannelsRequest&, DescribeStreamPackageChannelsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStreamPackageChannelsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeStreamPackageHarvestJobResponse> DescribeStreamPackageHarvestJobOutcome;
+                typedef std::future<DescribeStreamPackageHarvestJobOutcome> DescribeStreamPackageHarvestJobOutcomeCallable;
+                typedef std::function<void(const MdpClient*, const Model::DescribeStreamPackageHarvestJobRequest&, DescribeStreamPackageHarvestJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStreamPackageHarvestJobAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeStreamPackageHarvestJobsResponse> DescribeStreamPackageHarvestJobsOutcome;
+                typedef std::future<DescribeStreamPackageHarvestJobsOutcome> DescribeStreamPackageHarvestJobsOutcomeCallable;
+                typedef std::function<void(const MdpClient*, const Model::DescribeStreamPackageHarvestJobsRequest&, DescribeStreamPackageHarvestJobsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStreamPackageHarvestJobsAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyStreamPackageChannelResponse> ModifyStreamPackageChannelOutcome;
                 typedef std::future<ModifyStreamPackageChannelOutcome> ModifyStreamPackageChannelOutcomeCallable;
                 typedef std::function<void(const MdpClient*, const Model::ModifyStreamPackageChannelRequest&, ModifyStreamPackageChannelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyStreamPackageChannelAsyncHandler;
@@ -123,6 +148,15 @@ namespace TencentCloud
                 CreateStreamPackageChannelEndpointOutcomeCallable CreateStreamPackageChannelEndpointCallable(const Model::CreateStreamPackageChannelEndpointRequest& request);
 
                 /**
+                 *Create HarvestJob.
+                 * @param req CreateStreamPackageHarvestJobRequest
+                 * @return CreateStreamPackageHarvestJobOutcome
+                 */
+                CreateStreamPackageHarvestJobOutcome CreateStreamPackageHarvestJob(const Model::CreateStreamPackageHarvestJobRequest &request);
+                void CreateStreamPackageHarvestJobAsync(const Model::CreateStreamPackageHarvestJobRequest& request, const CreateStreamPackageHarvestJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateStreamPackageHarvestJobOutcomeCallable CreateStreamPackageHarvestJobCallable(const Model::CreateStreamPackageHarvestJobRequest& request);
+
+                /**
                  *This API is used to delete endpoints from a StreamPackage channel in batches.
                  * @param req DeleteStreamPackageChannelEndpointsRequest
                  * @return DeleteStreamPackageChannelEndpointsOutcome
@@ -141,6 +175,24 @@ namespace TencentCloud
                 DeleteStreamPackageChannelsOutcomeCallable DeleteStreamPackageChannelsCallable(const Model::DeleteStreamPackageChannelsRequest& request);
 
                 /**
+                 *Delete HarvestJob.
+                 * @param req DeleteStreamPackageHarvestJobRequest
+                 * @return DeleteStreamPackageHarvestJobOutcome
+                 */
+                DeleteStreamPackageHarvestJobOutcome DeleteStreamPackageHarvestJob(const Model::DeleteStreamPackageHarvestJobRequest &request);
+                void DeleteStreamPackageHarvestJobAsync(const Model::DeleteStreamPackageHarvestJobRequest& request, const DeleteStreamPackageHarvestJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteStreamPackageHarvestJobOutcomeCallable DeleteStreamPackageHarvestJobCallable(const Model::DeleteStreamPackageHarvestJobRequest& request);
+
+                /**
+                 *Deleting HarvestJobs in Batch.
+                 * @param req DeleteStreamPackageHarvestJobsRequest
+                 * @return DeleteStreamPackageHarvestJobsOutcome
+                 */
+                DeleteStreamPackageHarvestJobsOutcome DeleteStreamPackageHarvestJobs(const Model::DeleteStreamPackageHarvestJobsRequest &request);
+                void DeleteStreamPackageHarvestJobsAsync(const Model::DeleteStreamPackageHarvestJobsRequest& request, const DeleteStreamPackageHarvestJobsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteStreamPackageHarvestJobsOutcomeCallable DeleteStreamPackageHarvestJobsCallable(const Model::DeleteStreamPackageHarvestJobsRequest& request);
+
+                /**
                  *This API is used to query the information of a StreamPackage channel.
                  * @param req DescribeStreamPackageChannelRequest
                  * @return DescribeStreamPackageChannelOutcome
@@ -157,6 +209,24 @@ namespace TencentCloud
                 DescribeStreamPackageChannelsOutcome DescribeStreamPackageChannels(const Model::DescribeStreamPackageChannelsRequest &request);
                 void DescribeStreamPackageChannelsAsync(const Model::DescribeStreamPackageChannelsRequest& request, const DescribeStreamPackageChannelsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeStreamPackageChannelsOutcomeCallable DescribeStreamPackageChannelsCallable(const Model::DescribeStreamPackageChannelsRequest& request);
+
+                /**
+                 *Query HarvestJob.
+                 * @param req DescribeStreamPackageHarvestJobRequest
+                 * @return DescribeStreamPackageHarvestJobOutcome
+                 */
+                DescribeStreamPackageHarvestJobOutcome DescribeStreamPackageHarvestJob(const Model::DescribeStreamPackageHarvestJobRequest &request);
+                void DescribeStreamPackageHarvestJobAsync(const Model::DescribeStreamPackageHarvestJobRequest& request, const DescribeStreamPackageHarvestJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeStreamPackageHarvestJobOutcomeCallable DescribeStreamPackageHarvestJobCallable(const Model::DescribeStreamPackageHarvestJobRequest& request);
+
+                /**
+                 *Batch query HarvestJob.
+                 * @param req DescribeStreamPackageHarvestJobsRequest
+                 * @return DescribeStreamPackageHarvestJobsOutcome
+                 */
+                DescribeStreamPackageHarvestJobsOutcome DescribeStreamPackageHarvestJobs(const Model::DescribeStreamPackageHarvestJobsRequest &request);
+                void DescribeStreamPackageHarvestJobsAsync(const Model::DescribeStreamPackageHarvestJobsRequest& request, const DescribeStreamPackageHarvestJobsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeStreamPackageHarvestJobsOutcomeCallable DescribeStreamPackageHarvestJobsCallable(const Model::DescribeStreamPackageHarvestJobsRequest& request);
 
                 /**
                  *This API is used to modify a StreamPackage channel.

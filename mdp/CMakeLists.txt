@@ -20,69 +20,91 @@ set(mdp_public_header
 
 set(mdp_public_header_model
   include/tencentcloud/mdp/v20200527/model/DeleteStreamPackageChannelsRequest.h
+  include/tencentcloud/mdp/v20200527/model/CreateStreamPackageHarvestJobRequest.h
+  include/tencentcloud/mdp/v20200527/model/DescribeStreamPackageHarvestJobRequest.h
   include/tencentcloud/mdp/v20200527/model/PointInfo.h
   include/tencentcloud/mdp/v20200527/model/DeleteStreamPackageChannelsResponse.h
   include/tencentcloud/mdp/v20200527/model/BindNewLVBDomainWithChannelResponse.h
+  include/tencentcloud/mdp/v20200527/model/DescribeStreamPackageHarvestJobResponse.h
   include/tencentcloud/mdp/v20200527/model/DescribeStreamPackageChannelsResponse.h
   include/tencentcloud/mdp/v20200527/model/DescribeStreamPackageChannelsRequest.h
   include/tencentcloud/mdp/v20200527/model/ModifyStreamPackageChannelEndpointResponse.h
   include/tencentcloud/mdp/v20200527/model/ModifyStreamPackageChannelInputAuthInfoResponse.h
+  include/tencentcloud/mdp/v20200527/model/EndpointAuthInfo.h
+  include/tencentcloud/mdp/v20200527/model/DescribeStreamPackageHarvestJobsRequest.h
+  include/tencentcloud/mdp/v20200527/model/DeleteStreamPackageHarvestJobResponse.h
+  include/tencentcloud/mdp/v20200527/model/DeleteStreamPackageHarvestJobsRequest.h
   include/tencentcloud/mdp/v20200527/model/CreateStreamPackageChannelResponse.h
   include/tencentcloud/mdp/v20200527/model/CreateStreamPackageChannelEndpointResponse.h
   include/tencentcloud/mdp/v20200527/model/DeleteStreamPackageChannelEndpointsRequest.h
+  include/tencentcloud/mdp/v20200527/model/CreateStreamPackageHarvestJobResponse.h
   include/tencentcloud/mdp/v20200527/model/ChannelInfo.h
   include/tencentcloud/mdp/v20200527/model/CacheInfo.h
   include/tencentcloud/mdp/v20200527/model/DeleteStreamPackageChannelEndpointsResponse.h
   include/tencentcloud/mdp/v20200527/model/InputInfo.h
   include/tencentcloud/mdp/v20200527/model/InputAuthInfo.h
   include/tencentcloud/mdp/v20200527/model/UnbindCdnDomainWithChannelRequest.h
+  include/tencentcloud/mdp/v20200527/model/HarvestJobResp.h
   include/tencentcloud/mdp/v20200527/model/EndpointInfo.h
   include/tencentcloud/mdp/v20200527/model/DescribeStreamPackageChannelRequest.h
+  include/tencentcloud/mdp/v20200527/model/DescribeStreamPackageHarvestJobsResponse.h
   include/tencentcloud/mdp/v20200527/model/ModifyStreamPackageChannelRequest.h
   include/tencentcloud/mdp/v20200527/model/ModifyStreamPackageChannelEndpointRequest.h
   include/tencentcloud/mdp/v20200527/model/CacheInfoInfo.h
   include/tencentcloud/mdp/v20200527/model/CreateStreamPackageChannelEndpointRequest.h
   include/tencentcloud/mdp/v20200527/model/UnbindCdnDomainWithChannelResponse.h
+  include/tencentcloud/mdp/v20200527/model/DeleteStreamPackageHarvestJobRequest.h
   include/tencentcloud/mdp/v20200527/model/CreateStreamPackageChannelRequest.h
   include/tencentcloud/mdp/v20200527/model/ModifyStreamPackageChannelInputAuthInfoRequest.h
   include/tencentcloud/mdp/v20200527/model/BindNewLVBDomainWithChannelRequest.h
   include/tencentcloud/mdp/v20200527/model/DescribeStreamPackageChannelResponse.h
   include/tencentcloud/mdp/v20200527/model/ModifyStreamPackageChannelResponse.h
-  include/tencentcloud/mdp/v20200527/model/EndpointAuthInfo.h
+  include/tencentcloud/mdp/v20200527/model/DeleteStreamPackageHarvestJobsResponse.h
   )
 
 set(mdp_src
   src/v20200527/MdpClient.cpp
   src/v20200527/model/DeleteStreamPackageChannelsRequest.cpp
+  src/v20200527/model/CreateStreamPackageHarvestJobRequest.cpp
+  src/v20200527/model/DescribeStreamPackageHarvestJobRequest.cpp
   src/v20200527/model/PointInfo.cpp
   src/v20200527/model/DeleteStreamPackageChannelsResponse.cpp
   src/v20200527/model/BindNewLVBDomainWithChannelResponse.cpp
+  src/v20200527/model/DescribeStreamPackageHarvestJobResponse.cpp
   src/v20200527/model/DescribeStreamPackageChannelsResponse.cpp
   src/v20200527/model/DescribeStreamPackageChannelsRequest.cpp
   src/v20200527/model/ModifyStreamPackageChannelEndpointResponse.cpp
   src/v20200527/model/ModifyStreamPackageChannelInputAuthInfoResponse.cpp
+  src/v20200527/model/EndpointAuthInfo.cpp
+  src/v20200527/model/DescribeStreamPackageHarvestJobsRequest.cpp
+  src/v20200527/model/DeleteStreamPackageHarvestJobResponse.cpp
+  src/v20200527/model/DeleteStreamPackageHarvestJobsRequest.cpp
   src/v20200527/model/CreateStreamPackageChannelResponse.cpp
   src/v20200527/model/CreateStreamPackageChannelEndpointResponse.cpp
   src/v20200527/model/DeleteStreamPackageChannelEndpointsRequest.cpp
+  src/v20200527/model/CreateStreamPackageHarvestJobResponse.cpp
   src/v20200527/model/ChannelInfo.cpp
   src/v20200527/model/CacheInfo.cpp
   src/v20200527/model/DeleteStreamPackageChannelEndpointsResponse.cpp
   src/v20200527/model/InputInfo.cpp
   src/v20200527/model/InputAuthInfo.cpp
   src/v20200527/model/UnbindCdnDomainWithChannelRequest.cpp
+  src/v20200527/model/HarvestJobResp.cpp
   src/v20200527/model/EndpointInfo.cpp
   src/v20200527/model/DescribeStreamPackageChannelRequest.cpp
+  src/v20200527/model/DescribeStreamPackageHarvestJobsResponse.cpp
   src/v20200527/model/ModifyStreamPackageChannelRequest.cpp
   src/v20200527/model/ModifyStreamPackageChannelEndpointRequest.cpp
   src/v20200527/model/CacheInfoInfo.cpp
   src/v20200527/model/CreateStreamPackageChannelEndpointRequest.cpp
   src/v20200527/model/UnbindCdnDomainWithChannelResponse.cpp
+  src/v20200527/model/DeleteStreamPackageHarvestJobRequest.cpp
   src/v20200527/model/CreateStreamPackageChannelRequest.cpp
   src/v20200527/model/ModifyStreamPackageChannelInputAuthInfoRequest.cpp
   src/v20200527/model/BindNewLVBDomainWithChannelRequest.cpp
   src/v20200527/model/DescribeStreamPackageChannelResponse.cpp
   src/v20200527/model/ModifyStreamPackageChannelResponse.cpp
-  src/v20200527/model/EndpointAuthInfo.cpp
+  src/v20200527/model/DeleteStreamPackageHarvestJobsResponse.cpp
   )
 
 set(mdp_include
