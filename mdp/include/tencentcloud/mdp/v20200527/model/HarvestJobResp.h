@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * HarvestJob Response parameter structure
+                * HarvestJob response info.
                 */
                 class HarvestJobResp : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Job ID, a globally unique identifier.
-                     * @return ID Job ID, a globally unique identifier.
+                     * 获取HarvestJob ID, a globally unique identifier.
+                     * @return ID HarvestJob ID, a globally unique identifier.
                      * 
                      */
                     std::string GetID() const;
 
                     /**
-                     * 设置Job ID, a globally unique identifier.
-                     * @param _iD Job ID, a globally unique identifier.
+                     * 设置HarvestJob ID, a globally unique identifier.
+                     * @param _iD HarvestJob ID, a globally unique identifier.
                      * 
                      */
                     void SetID(const std::string& _iD);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool TimeFormatHasBeenSet() const;
 
                     /**
-                     * 获取Job start time.
-                     * @return StartTime Job start time.
+                     * 获取HarvestJob start time.
+                     * @return StartTime HarvestJob start time.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Job start time.
-                     * @param _startTime Job start time.
+                     * 设置HarvestJob start time.
+                     * @param _startTime HarvestJob start time.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Job end time.
-                     * @return EndTime Job end time.
+                     * 获取HarvestJob end time.
+                     * @return EndTime HarvestJob end time.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置Job end time.
-                     * @param _endTime Job end time.
+                     * 设置HarvestJob end time.
+                     * @param _endTime HarvestJob end time.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Job error message.
-                     * @return ErrMessage Job error message.
+                     * 获取HarvestJob error message.
+                     * @return ErrMessage HarvestJob error message.
                      * 
                      */
                     std::string GetErrMessage() const;
 
                     /**
-                     * 设置Job error message.
-                     * @param _errMessage Job error message.
+                     * 设置HarvestJob error message.
+                     * @param _errMessage HarvestJob error message.
                      * 
                      */
                     void SetErrMessage(const std::string& _errMessage);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool ErrMessageHasBeenSet() const;
 
                     /**
-                     * 获取Job creation time, timestamp in seconds.
-                     * @return CreateTime Job creation time, timestamp in seconds.
+                     * 获取HarvestJob creation time, timestamp in seconds.
+                     * @return CreateTime HarvestJob creation time, timestamp in seconds.
                      * 
                      */
                     uint64_t GetCreateTime() const;
 
                     /**
-                     * 设置Job creation time, timestamp in seconds.
-                     * @param _createTime Job creation time, timestamp in seconds.
+                     * 设置HarvestJob creation time, timestamp in seconds.
+                     * @param _createTime HarvestJob creation time, timestamp in seconds.
                      * 
                      */
                     void SetCreateTime(const uint64_t& _createTime);
@@ -322,7 +322,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Job ID, a globally unique identifier.
+                     * HarvestJob ID, a globally unique identifier.
                      */
                     std::string m_iD;
                     bool m_iDHasBeenSet;
@@ -346,13 +346,13 @@ namespace TencentCloud
                     bool m_timeFormatHasBeenSet;
 
                     /**
-                     * Job start time.
+                     * HarvestJob start time.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Job end time.
+                     * HarvestJob end time.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
@@ -376,13 +376,13 @@ namespace TencentCloud
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Job error message.
+                     * HarvestJob error message.
                      */
                     std::string m_errMessage;
                     bool m_errMessageHasBeenSet;
 
                     /**
-                     * Job creation time, timestamp in seconds.
+                     * HarvestJob creation time, timestamp in seconds.
                      */
                     uint64_t m_createTime;
                     bool m_createTimeHasBeenSet;

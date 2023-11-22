@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task ID, a globally unique identifier.
-                     * @return ID Task ID, a globally unique identifier.
+                     * 获取HarvestJob ID, a globally unique identifier.
+                     * @return ID HarvestJob ID, a globally unique identifier.
                      * 
                      */
                     std::string GetID() const;
 
                     /**
-                     * 设置Task ID, a globally unique identifier.
-                     * @param _iD Task ID, a globally unique identifier.
+                     * 设置HarvestJob ID, a globally unique identifier.
+                     * @param _iD HarvestJob ID, a globally unique identifier.
                      * 
                      */
                     void SetID(const std::string& _iD);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Task ID, a globally unique identifier.
+                     * HarvestJob ID, a globally unique identifier.
                      */
                     std::string m_iD;
                     bool m_iDHasBeenSet;
