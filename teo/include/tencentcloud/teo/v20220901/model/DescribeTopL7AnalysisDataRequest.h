@@ -191,15 +191,15 @@ namespace TencentCloud
                     bool MetricNameHasBeenSet() const;
 
                     /**
-                     * 获取(Required) List of sites. No query results are returned if this field is not specified.
-                     * @return ZoneIds (Required) List of sites. No query results are returned if this field is not specified.
+                     * 获取ZoneId set. This parameter is required.
+                     * @return ZoneIds ZoneId set. This parameter is required.
                      * 
                      */
                     std::vector<std::string> GetZoneIds() const;
 
                     /**
-                     * 设置(Required) List of sites. No query results are returned if this field is not specified.
-                     * @param _zoneIds (Required) List of sites. No query results are returned if this field is not specified.
+                     * 设置ZoneId set. This parameter is required.
+                     * @param _zoneIds ZoneId set. This parameter is required.
                      * 
                      */
                     void SetZoneIds(const std::vector<std::string>& _zoneIds);
@@ -433,7 +433,7 @@ namespace TencentCloud
                     bool m_metricNameHasBeenSet;
 
                     /**
-                     * (Required) List of sites. No query results are returned if this field is not specified.
+                     * ZoneId set. This parameter is required.
                      */
                     std::vector<std::string> m_zoneIds;
                     bool m_zoneIdsHasBeenSet;

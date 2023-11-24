@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取List of sites. This parameter is required. A `null` will be returned if it is left empty.
-                     * @return ZoneIds List of sites. This parameter is required. A `null` will be returned if it is left empty.
+                     * 获取ZoneId set. This parameter is required.
+                     * @return ZoneIds ZoneId set. This parameter is required.
                      * 
                      */
                     std::vector<std::string> GetZoneIds() const;
 
                     /**
-                     * 设置List of sites. This parameter is required. A `null` will be returned if it is left empty.
-                     * @param _zoneIds List of sites. This parameter is required. A `null` will be returned if it is left empty.
+                     * 设置ZoneId set. This parameter is required.
+                     * @param _zoneIds ZoneId set. This parameter is required.
                      * 
                      */
                     void SetZoneIds(const std::vector<std::string>& _zoneIds);
@@ -183,7 +183,7 @@ namespace TencentCloud
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * List of sites. This parameter is required. A `null` will be returned if it is left empty.
+                     * ZoneId set. This parameter is required.
                      */
                     std::vector<std::string> m_zoneIds;
                     bool m_zoneIdsHasBeenSet;

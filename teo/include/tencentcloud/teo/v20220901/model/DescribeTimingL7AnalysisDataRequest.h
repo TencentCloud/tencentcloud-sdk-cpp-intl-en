@@ -86,43 +86,43 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取The metric to query. Values:
-<li>`l7Flow_outFlux`: Traffic used for EdgeOne responses</li>
-<li>`l7Flow_inFlux`: Traffic used for EdgeOne requests</li>
-<li>`l7Flow_outBandwidth`: Bandwidth used for EdgeOne responses</li>
-<li>`l7Flow_inBandwidth`: Bandwidth used for EdgeOne requests</li>
-<li>`l7Flow_request`: Access requests</li>
-<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
-<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
-                     * @return MetricNames The metric to query. Values:
-<li>`l7Flow_outFlux`: Traffic used for EdgeOne responses</li>
-<li>`l7Flow_inFlux`: Traffic used for EdgeOne requests</li>
-<li>`l7Flow_outBandwidth`: Bandwidth used for EdgeOne responses</li>
-<li>`l7Flow_inBandwidth`: Bandwidth used for EdgeOne requests</li>
-<li>`l7Flow_request`: Access requests</li>
-<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
-<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
+                     * 获取Indicator list. Values: 
+<li>l7Flow_outFlux: Edgeone response traffic;</li>
+<li>l7Flow_inFlux: Edgeone request traffic;</li>
+<li>l7Flow_outBandwidth: Edgeone response bandwidth;</li>
+<li>l7Flow_inBandwidth: Edgeone request bandwidth;</li>
+<li>l7Flow_request: Number of access requests;</li>
+<li>l7Flow_flux: Uplink + downlink traffic of access requests;< li>
+<li>l7Flow_bandwidth: Uplink + downlink bandwidth of access requests. </li>
+                     * @return MetricNames Indicator list. Values: 
+<li>l7Flow_outFlux: Edgeone response traffic;</li>
+<li>l7Flow_inFlux: Edgeone request traffic;</li>
+<li>l7Flow_outBandwidth: Edgeone response bandwidth;</li>
+<li>l7Flow_inBandwidth: Edgeone request bandwidth;</li>
+<li>l7Flow_request: Number of access requests;</li>
+<li>l7Flow_flux: Uplink + downlink traffic of access requests;< li>
+<li>l7Flow_bandwidth: Uplink + downlink bandwidth of access requests. </li>
                      * 
                      */
                     std::vector<std::string> GetMetricNames() const;
 
                     /**
-                     * 设置The metric to query. Values:
-<li>`l7Flow_outFlux`: Traffic used for EdgeOne responses</li>
-<li>`l7Flow_inFlux`: Traffic used for EdgeOne requests</li>
-<li>`l7Flow_outBandwidth`: Bandwidth used for EdgeOne responses</li>
-<li>`l7Flow_inBandwidth`: Bandwidth used for EdgeOne requests</li>
-<li>`l7Flow_request`: Access requests</li>
-<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
-<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
-                     * @param _metricNames The metric to query. Values:
-<li>`l7Flow_outFlux`: Traffic used for EdgeOne responses</li>
-<li>`l7Flow_inFlux`: Traffic used for EdgeOne requests</li>
-<li>`l7Flow_outBandwidth`: Bandwidth used for EdgeOne responses</li>
-<li>`l7Flow_inBandwidth`: Bandwidth used for EdgeOne requests</li>
-<li>`l7Flow_request`: Access requests</li>
-<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
-<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
+                     * 设置Indicator list. Values: 
+<li>l7Flow_outFlux: Edgeone response traffic;</li>
+<li>l7Flow_inFlux: Edgeone request traffic;</li>
+<li>l7Flow_outBandwidth: Edgeone response bandwidth;</li>
+<li>l7Flow_inBandwidth: Edgeone request bandwidth;</li>
+<li>l7Flow_request: Number of access requests;</li>
+<li>l7Flow_flux: Uplink + downlink traffic of access requests;< li>
+<li>l7Flow_bandwidth: Uplink + downlink bandwidth of access requests. </li>
+                     * @param _metricNames Indicator list. Values: 
+<li>l7Flow_outFlux: Edgeone response traffic;</li>
+<li>l7Flow_inFlux: Edgeone request traffic;</li>
+<li>l7Flow_outBandwidth: Edgeone response bandwidth;</li>
+<li>l7Flow_inBandwidth: Edgeone request bandwidth;</li>
+<li>l7Flow_request: Number of access requests;</li>
+<li>l7Flow_flux: Uplink + downlink traffic of access requests;< li>
+<li>l7Flow_bandwidth: Uplink + downlink bandwidth of access requests. </li>
                      * 
                      */
                     void SetMetricNames(const std::vector<std::string>& _metricNames);
@@ -135,19 +135,15 @@ namespace TencentCloud
                     bool MetricNamesHasBeenSet() const;
 
                     /**
-                     * 获取List of sites
-Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
-                     * @return ZoneIds List of sites
-Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
+                     * 获取ZoneId set. This parameter is required.
+                     * @return ZoneIds ZoneId set. This parameter is required.
                      * 
                      */
                     std::vector<std::string> GetZoneIds() const;
 
                     /**
-                     * 设置List of sites
-Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
-                     * @param _zoneIds List of sites
-Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
+                     * 设置ZoneId set. This parameter is required.
+                     * @param _zoneIds ZoneId set. This parameter is required.
                      * 
                      */
                     void SetZoneIds(const std::vector<std::string>& _zoneIds);
@@ -333,21 +329,20 @@ Enter the IDs of sites to query. The maximum query period is determined by the <
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * The metric to query. Values:
-<li>`l7Flow_outFlux`: Traffic used for EdgeOne responses</li>
-<li>`l7Flow_inFlux`: Traffic used for EdgeOne requests</li>
-<li>`l7Flow_outBandwidth`: Bandwidth used for EdgeOne responses</li>
-<li>`l7Flow_inBandwidth`: Bandwidth used for EdgeOne requests</li>
-<li>`l7Flow_request`: Access requests</li>
-<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
-<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
+                     * Indicator list. Values: 
+<li>l7Flow_outFlux: Edgeone response traffic;</li>
+<li>l7Flow_inFlux: Edgeone request traffic;</li>
+<li>l7Flow_outBandwidth: Edgeone response bandwidth;</li>
+<li>l7Flow_inBandwidth: Edgeone request bandwidth;</li>
+<li>l7Flow_request: Number of access requests;</li>
+<li>l7Flow_flux: Uplink + downlink traffic of access requests;< li>
+<li>l7Flow_bandwidth: Uplink + downlink bandwidth of access requests. </li>
                      */
                     std::vector<std::string> m_metricNames;
                     bool m_metricNamesHasBeenSet;
 
                     /**
-                     * List of sites
-Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
+                     * ZoneId set. This parameter is required.
                      */
                     std::vector<std::string> m_zoneIds;
                     bool m_zoneIdsHasBeenSet;

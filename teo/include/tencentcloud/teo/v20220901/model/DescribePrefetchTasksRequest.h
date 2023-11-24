@@ -44,6 +44,31 @@ namespace TencentCloud
 
 
                     /**
+                     * 获取ZoneId. 
+The parameter is required.
+                     * @return ZoneId ZoneId. 
+The parameter is required.
+                     * 
+                     */
+                    std::string GetZoneId() const;
+
+                    /**
+                     * 设置ZoneId. 
+The parameter is required.
+                     * @param _zoneId ZoneId. 
+The parameter is required.
+                     * 
+                     */
+                    void SetZoneId(const std::string& _zoneId);
+
+                    /**
+                     * 判断参数 ZoneId 是否已赋值
+                     * @return ZoneId 是否已赋值
+                     * 
+                     */
+                    bool ZoneIdHasBeenSet() const;
+
+                    /**
                      * 获取Start time of the query.
                      * @return StartTime Start time of the query.
                      * 
@@ -128,19 +153,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-1379afjk91u32h (up to one entry)<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`job-id`:<br>   Filter by <strong>task ID</strong>, such as 1379afjk91u32h (up to one entry)<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`target`:<br>   Filter by <strong>target resource</strong>, such as http://www.qq.com/1.txt (up to one entry)<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`domains`:<br>   Filter by <strong>domain name</strong>, such as www.qq.com<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`statuses`:<br>   Filter by <strong>task status</strong><br>   Required: No<br>   Fuzzy query: Not supported<br>   Values:<br>   `processing`: The task is in progress.<br>   `success`: The task succeeded.<br>   `failed`: The task failed.<br>   `timeout`: The task timed out.</li>
-                     * @return Filters Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-1379afjk91u32h (up to one entry)<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`job-id`:<br>   Filter by <strong>task ID</strong>, such as 1379afjk91u32h (up to one entry)<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`target`:<br>   Filter by <strong>target resource</strong>, such as http://www.qq.com/1.txt (up to one entry)<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`domains`:<br>   Filter by <strong>domain name</strong>, such as www.qq.com<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`statuses`:<br>   Filter by <strong>task status</strong><br>   Required: No<br>   Fuzzy query: Not supported<br>   Values:<br>   `processing`: The task is in progress.<br>   `success`: The task succeeded.<br>   `failed`: The task failed.<br>   `timeout`: The task timed out.</li>
+                     * 获取Filtering condition. The maximum value of Filters.Values is 20. Detailed filtering conditions: <li>job-id<br>    Filter based on [<strong>task ID</strong>]. job-id format: 1379afjk91u32h. Multiple values are not supported. <br>    Type: String<br>    Required: No. <br>    Fuzz query: Not supported. </li><li>target<br>    Filter based on [<strong>target resource information</strong>]. target format: http://www.qq.com/1.txt. Multiple values are not supported. <br>    Type: String<br>    Required: No. <br>    Fuzz query: Not supported. </li><li>domains<br>    Filter based on [<strong>domain name</strong>]. domains format: www.qq.com. <br>    Type: String<br>    Required: No. <br>    Fuzz query: Not supported. </li><li>statuses<br>    Filter based on [<strong>task status</strong>]. <br>    Required: No<br>    Fuzz query: Not supported. <br>    Options:<br>    processing: Processing<br>    success: Success<br>    failed: Failure<br>    timeout: Timeout</li>
+                     * @return Filters Filtering condition. The maximum value of Filters.Values is 20. Detailed filtering conditions: <li>job-id<br>    Filter based on [<strong>task ID</strong>]. job-id format: 1379afjk91u32h. Multiple values are not supported. <br>    Type: String<br>    Required: No. <br>    Fuzz query: Not supported. </li><li>target<br>    Filter based on [<strong>target resource information</strong>]. target format: http://www.qq.com/1.txt. Multiple values are not supported. <br>    Type: String<br>    Required: No. <br>    Fuzz query: Not supported. </li><li>domains<br>    Filter based on [<strong>domain name</strong>]. domains format: www.qq.com. <br>    Type: String<br>    Required: No. <br>    Fuzz query: Not supported. </li><li>statuses<br>    Filter based on [<strong>task status</strong>]. <br>    Required: No<br>    Fuzz query: Not supported. <br>    Options:<br>    processing: Processing<br>    success: Success<br>    failed: Failure<br>    timeout: Timeout</li>
                      * 
                      */
                     std::vector<AdvancedFilter> GetFilters() const;
 
                     /**
-                     * 设置Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-1379afjk91u32h (up to one entry)<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`job-id`:<br>   Filter by <strong>task ID</strong>, such as 1379afjk91u32h (up to one entry)<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`target`:<br>   Filter by <strong>target resource</strong>, such as http://www.qq.com/1.txt (up to one entry)<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`domains`:<br>   Filter by <strong>domain name</strong>, such as www.qq.com<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`statuses`:<br>   Filter by <strong>task status</strong><br>   Required: No<br>   Fuzzy query: Not supported<br>   Values:<br>   `processing`: The task is in progress.<br>   `success`: The task succeeded.<br>   `failed`: The task failed.<br>   `timeout`: The task timed out.</li>
-                     * @param _filters Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-1379afjk91u32h (up to one entry)<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`job-id`:<br>   Filter by <strong>task ID</strong>, such as 1379afjk91u32h (up to one entry)<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`target`:<br>   Filter by <strong>target resource</strong>, such as http://www.qq.com/1.txt (up to one entry)<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`domains`:<br>   Filter by <strong>domain name</strong>, such as www.qq.com<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`statuses`:<br>   Filter by <strong>task status</strong><br>   Required: No<br>   Fuzzy query: Not supported<br>   Values:<br>   `processing`: The task is in progress.<br>   `success`: The task succeeded.<br>   `failed`: The task failed.<br>   `timeout`: The task timed out.</li>
+                     * 设置Filtering condition. The maximum value of Filters.Values is 20. Detailed filtering conditions: <li>job-id<br>    Filter based on [<strong>task ID</strong>]. job-id format: 1379afjk91u32h. Multiple values are not supported. <br>    Type: String<br>    Required: No. <br>    Fuzz query: Not supported. </li><li>target<br>    Filter based on [<strong>target resource information</strong>]. target format: http://www.qq.com/1.txt. Multiple values are not supported. <br>    Type: String<br>    Required: No. <br>    Fuzz query: Not supported. </li><li>domains<br>    Filter based on [<strong>domain name</strong>]. domains format: www.qq.com. <br>    Type: String<br>    Required: No. <br>    Fuzz query: Not supported. </li><li>statuses<br>    Filter based on [<strong>task status</strong>]. <br>    Required: No<br>    Fuzz query: Not supported. <br>    Options:<br>    processing: Processing<br>    success: Success<br>    failed: Failure<br>    timeout: Timeout</li>
+                     * @param _filters Filtering condition. The maximum value of Filters.Values is 20. Detailed filtering conditions: <li>job-id<br>    Filter based on [<strong>task ID</strong>]. job-id format: 1379afjk91u32h. Multiple values are not supported. <br>    Type: String<br>    Required: No. <br>    Fuzz query: Not supported. </li><li>target<br>    Filter based on [<strong>target resource information</strong>]. target format: http://www.qq.com/1.txt. Multiple values are not supported. <br>    Type: String<br>    Required: No. <br>    Fuzz query: Not supported. </li><li>domains<br>    Filter based on [<strong>domain name</strong>]. domains format: www.qq.com. <br>    Type: String<br>    Required: No. <br>    Fuzz query: Not supported. </li><li>statuses<br>    Filter based on [<strong>task status</strong>]. <br>    Required: No<br>    Fuzz query: Not supported. <br>    Options:<br>    processing: Processing<br>    success: Success<br>    failed: Failure<br>    timeout: Timeout</li>
                      * 
                      */
                     void SetFilters(const std::vector<AdvancedFilter>& _filters);
@@ -153,6 +174,13 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                 private:
+
+                    /**
+                     * ZoneId. 
+The parameter is required.
+                     */
+                    std::string m_zoneId;
+                    bool m_zoneIdHasBeenSet;
 
                     /**
                      * Start time of the query.
@@ -179,8 +207,7 @@ namespace TencentCloud
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-1379afjk91u32h (up to one entry)<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`job-id`:<br>   Filter by <strong>task ID</strong>, such as 1379afjk91u32h (up to one entry)<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`target`:<br>   Filter by <strong>target resource</strong>, such as http://www.qq.com/1.txt (up to one entry)<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`domains`:<br>   Filter by <strong>domain name</strong>, such as www.qq.com<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`statuses`:<br>   Filter by <strong>task status</strong><br>   Required: No<br>   Fuzzy query: Not supported<br>   Values:<br>   `processing`: The task is in progress.<br>   `success`: The task succeeded.<br>   `failed`: The task failed.<br>   `timeout`: The task timed out.</li>
+                     * Filtering condition. The maximum value of Filters.Values is 20. Detailed filtering conditions: <li>job-id<br>    Filter based on [<strong>task ID</strong>]. job-id format: 1379afjk91u32h. Multiple values are not supported. <br>    Type: String<br>    Required: No. <br>    Fuzz query: Not supported. </li><li>target<br>    Filter based on [<strong>target resource information</strong>]. target format: http://www.qq.com/1.txt. Multiple values are not supported. <br>    Type: String<br>    Required: No. <br>    Fuzz query: Not supported. </li><li>domains<br>    Filter based on [<strong>domain name</strong>]. domains format: www.qq.com. <br>    Type: String<br>    Required: No. <br>    Fuzz query: Not supported. </li><li>statuses<br>    Filter based on [<strong>task status</strong>]. <br>    Required: No<br>    Fuzz query: Not supported. <br>    Options:<br>    processing: Processing<br>    success: Success<br>    failed: Failure<br>    timeout: Timeout</li>
                      */
                     std::vector<AdvancedFilter> m_filters;
                     bool m_filtersHasBeenSet;

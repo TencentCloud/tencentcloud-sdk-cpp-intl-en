@@ -76,15 +76,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Allowed client source. It supports IPv4/IPv6 addresses and CIDR blocks.
-                     * @return AllowClientIPList Allowed client source. It supports IPv4/IPv6 addresses and CIDR blocks.
+                     * 获取Allowed client source. IPv4 and IPv6 addresses and network segments are supported. 0.0.0.0/0 indicates that all IPv4 clients can be debugged, and ::/0 indicates that all IPv6 clients can be debugged.
+                     * @return AllowClientIPList Allowed client source. IPv4 and IPv6 addresses and network segments are supported. 0.0.0.0/0 indicates that all IPv4 clients can be debugged, and ::/0 indicates that all IPv6 clients can be debugged.
                      * 
                      */
                     std::vector<std::string> GetAllowClientIPList() const;
 
                     /**
-                     * 设置Allowed client source. It supports IPv4/IPv6 addresses and CIDR blocks.
-                     * @param _allowClientIPList Allowed client source. It supports IPv4/IPv6 addresses and CIDR blocks.
+                     * 设置Allowed client source. IPv4 and IPv6 addresses and network segments are supported. 0.0.0.0/0 indicates that all IPv4 clients can be debugged, and ::/0 indicates that all IPv6 clients can be debugged.
+                     * @param _allowClientIPList Allowed client source. IPv4 and IPv6 addresses and network segments are supported. 0.0.0.0/0 indicates that all IPv4 clients can be debugged, and ::/0 indicates that all IPv6 clients can be debugged.
                      * 
                      */
                     void SetAllowClientIPList(const std::vector<std::string>& _allowClientIPList);
@@ -128,7 +128,7 @@ namespace TencentCloud
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Allowed client source. It supports IPv4/IPv6 addresses and CIDR blocks.
+                     * Allowed client source. IPv4 and IPv6 addresses and network segments are supported. 0.0.0.0/0 indicates that all IPv4 clients can be debugged, and ::/0 indicates that all IPv6 clients can be debugged.
                      */
                     std::vector<std::string> m_allowClientIPList;
                     bool m_allowClientIPListHasBeenSet;

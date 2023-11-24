@@ -139,19 +139,15 @@ namespace TencentCloud
                     bool MetricNamesHasBeenSet() const;
 
                     /**
-                     * 获取List of sites
-Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
-                     * @return ZoneIds List of sites
-Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
+                     * 获取ZoneId set. This parameter is required.
+                     * @return ZoneIds ZoneId set. This parameter is required.
                      * 
                      */
                     std::vector<std::string> GetZoneIds() const;
 
                     /**
-                     * 设置List of sites
-Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
-                     * @param _zoneIds List of sites
-Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
+                     * 设置ZoneId set. This parameter is required.
+                     * @param _zoneIds ZoneId set. This parameter is required.
                      * 
                      */
                     void SetZoneIds(const std::vector<std::string>& _zoneIds);
@@ -164,15 +160,15 @@ Enter the IDs of sites to query. The maximum query period is determined by the <
                     bool ZoneIdsHasBeenSet() const;
 
                     /**
-                     * 获取List of subdomain names to be queried. All subdomain names will be selected if this field is not specified.
-                     * @return Domains List of subdomain names to be queried. All subdomain names will be selected if this field is not specified.
+                     * 获取Queried domain name set. This parameter has been discarded.
+                     * @return Domains Queried domain name set. This parameter has been discarded.
                      * 
                      */
                     std::vector<std::string> GetDomains() const;
 
                     /**
-                     * 设置List of subdomain names to be queried. All subdomain names will be selected if this field is not specified.
-                     * @param _domains List of subdomain names to be queried. All subdomain names will be selected if this field is not specified.
+                     * 设置Queried domain name set. This parameter has been discarded.
+                     * @param _domains Queried domain name set. This parameter has been discarded.
                      * 
                      */
                     void SetDomains(const std::vector<std::string>& _domains);
@@ -259,27 +255,31 @@ Enter the IDs of sites to query. The maximum query period is determined by the <
                     bool IntervalHasBeenSet() const;
 
                     /**
-                     * 获取Filters
-<li>`socket`:<br>u2003u2003 Filter by the specified <strong>HTTP protocol type</strong><br>u2003u2003 Values:<br>u2003u2003 `HTTP`: HTTP protocol;<br>u2003u2003 `HTTPS`: HTTPS protocol;<br>u2003u2003 `QUIC`: QUIC protocol.</li>
-<li>`tagKey`:<br>u2003u2003 Filter by the specified <strong>tag key</strong></li>
-<li>`tagValue`<br>u2003u2003 Filter by the specified <strong>tag value</strong></li>
-                     * @return Filters Filters
-<li>`socket`:<br>u2003u2003 Filter by the specified <strong>HTTP protocol type</strong><br>u2003u2003 Values:<br>u2003u2003 `HTTP`: HTTP protocol;<br>u2003u2003 `HTTPS`: HTTPS protocol;<br>u2003u2003 `QUIC`: QUIC protocol.</li>
-<li>`tagKey`:<br>u2003u2003 Filter by the specified <strong>tag key</strong></li>
-<li>`tagValue`<br>u2003u2003 Filter by the specified <strong>tag value</strong></li>
+                     * 获取Filtering condition. The detailed filtering condition key values are as follows: 
+<li>socket<br>    Filter based on [<strong>HTTP protocol type</strong>]. <br>    Corresponding value options: <br>    HTTP: HTTP protocol；<br>    HTTPS: HTTPS protocol;<br>    QUIC: QUIC protocol. </li>
+<li>domains<br>    Filter based on [<strong>domain name</strong>]. </li>
+<li>tagKey<br>    Filter based on [<strong>Tag Key</strong>]. </li>
+<li>tagValue<br>    Filter based on [<strong>Tag Value</strong>]. </li>
+                     * @return Filters Filtering condition. The detailed filtering condition key values are as follows: 
+<li>socket<br>    Filter based on [<strong>HTTP protocol type</strong>]. <br>    Corresponding value options: <br>    HTTP: HTTP protocol；<br>    HTTPS: HTTPS protocol;<br>    QUIC: QUIC protocol. </li>
+<li>domains<br>    Filter based on [<strong>domain name</strong>]. </li>
+<li>tagKey<br>    Filter based on [<strong>Tag Key</strong>]. </li>
+<li>tagValue<br>    Filter based on [<strong>Tag Value</strong>]. </li>
                      * 
                      */
                     std::vector<QueryCondition> GetFilters() const;
 
                     /**
-                     * 设置Filters
-<li>`socket`:<br>u2003u2003 Filter by the specified <strong>HTTP protocol type</strong><br>u2003u2003 Values:<br>u2003u2003 `HTTP`: HTTP protocol;<br>u2003u2003 `HTTPS`: HTTPS protocol;<br>u2003u2003 `QUIC`: QUIC protocol.</li>
-<li>`tagKey`:<br>u2003u2003 Filter by the specified <strong>tag key</strong></li>
-<li>`tagValue`<br>u2003u2003 Filter by the specified <strong>tag value</strong></li>
-                     * @param _filters Filters
-<li>`socket`:<br>u2003u2003 Filter by the specified <strong>HTTP protocol type</strong><br>u2003u2003 Values:<br>u2003u2003 `HTTP`: HTTP protocol;<br>u2003u2003 `HTTPS`: HTTPS protocol;<br>u2003u2003 `QUIC`: QUIC protocol.</li>
-<li>`tagKey`:<br>u2003u2003 Filter by the specified <strong>tag key</strong></li>
-<li>`tagValue`<br>u2003u2003 Filter by the specified <strong>tag value</strong></li>
+                     * 设置Filtering condition. The detailed filtering condition key values are as follows: 
+<li>socket<br>    Filter based on [<strong>HTTP protocol type</strong>]. <br>    Corresponding value options: <br>    HTTP: HTTP protocol；<br>    HTTPS: HTTPS protocol;<br>    QUIC: QUIC protocol. </li>
+<li>domains<br>    Filter based on [<strong>domain name</strong>]. </li>
+<li>tagKey<br>    Filter based on [<strong>Tag Key</strong>]. </li>
+<li>tagValue<br>    Filter based on [<strong>Tag Value</strong>]. </li>
+                     * @param _filters Filtering condition. The detailed filtering condition key values are as follows: 
+<li>socket<br>    Filter based on [<strong>HTTP protocol type</strong>]. <br>    Corresponding value options: <br>    HTTP: HTTP protocol；<br>    HTTPS: HTTPS protocol;<br>    QUIC: QUIC protocol. </li>
+<li>domains<br>    Filter based on [<strong>domain name</strong>]. </li>
+<li>tagKey<br>    Filter based on [<strong>Tag Key</strong>]. </li>
+<li>tagValue<br>    Filter based on [<strong>Tag Value</strong>]. </li>
                      * 
                      */
                     void SetFilters(const std::vector<QueryCondition>& _filters);
@@ -353,14 +353,13 @@ Enter the IDs of sites to query. The maximum query period is determined by the <
                     bool m_metricNamesHasBeenSet;
 
                     /**
-                     * List of sites
-Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
+                     * ZoneId set. This parameter is required.
                      */
                     std::vector<std::string> m_zoneIds;
                     bool m_zoneIdsHasBeenSet;
 
                     /**
-                     * List of subdomain names to be queried. All subdomain names will be selected if this field is not specified.
+                     * Queried domain name set. This parameter has been discarded.
                      */
                     std::vector<std::string> m_domains;
                     bool m_domainsHasBeenSet;
@@ -386,10 +385,11 @@ Enter the IDs of sites to query. The maximum query period is determined by the <
                     bool m_intervalHasBeenSet;
 
                     /**
-                     * Filters
-<li>`socket`:<br>u2003u2003 Filter by the specified <strong>HTTP protocol type</strong><br>u2003u2003 Values:<br>u2003u2003 `HTTP`: HTTP protocol;<br>u2003u2003 `HTTPS`: HTTPS protocol;<br>u2003u2003 `QUIC`: QUIC protocol.</li>
-<li>`tagKey`:<br>u2003u2003 Filter by the specified <strong>tag key</strong></li>
-<li>`tagValue`<br>u2003u2003 Filter by the specified <strong>tag value</strong></li>
+                     * Filtering condition. The detailed filtering condition key values are as follows: 
+<li>socket<br>    Filter based on [<strong>HTTP protocol type</strong>]. <br>    Corresponding value options: <br>    HTTP: HTTP protocol；<br>    HTTPS: HTTPS protocol;<br>    QUIC: QUIC protocol. </li>
+<li>domains<br>    Filter based on [<strong>domain name</strong>]. </li>
+<li>tagKey<br>    Filter based on [<strong>Tag Key</strong>]. </li>
+<li>tagValue<br>    Filter based on [<strong>Tag Value</strong>]. </li>
                      */
                     std::vector<QueryCondition> m_filters;
                     bool m_filtersHasBeenSet;

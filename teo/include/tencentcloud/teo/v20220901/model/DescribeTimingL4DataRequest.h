@@ -86,35 +86,31 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Metric to query. Values:
-<li>`l4Flow_connections`: Access connections;</li>
-<li>`l4Flow_flux`: Access traffic;</li>
-<li>`l4Flow_inFlux`: Inbound traffic;</li>
-<li>`l4Flow_outFlux`: Outbound traffic;</li>
-<li>`l4Flow_outPkt`: Outbound packets.</li>
-                     * @return MetricNames Metric to query. Values:
-<li>`l4Flow_connections`: Access connections;</li>
-<li>`l4Flow_flux`: Access traffic;</li>
-<li>`l4Flow_inFlux`: Inbound traffic;</li>
-<li>`l4Flow_outFlux`: Outbound traffic;</li>
-<li>`l4Flow_outPkt`: Outbound packets.</li>
+                     * 获取Query indicator. Values: 
+<li>l4Flow_connections: Number of access connections;</li>
+<li>l4Flow_flux: Total access traffic;</li>
+<li>l4Flow_inFlux: Ingress access traffic;</li>
+<li>l4Flow_outFlux: Egress access traffic. </li>
+                     * @return MetricNames Query indicator. Values: 
+<li>l4Flow_connections: Number of access connections;</li>
+<li>l4Flow_flux: Total access traffic;</li>
+<li>l4Flow_inFlux: Ingress access traffic;</li>
+<li>l4Flow_outFlux: Egress access traffic. </li>
                      * 
                      */
                     std::vector<std::string> GetMetricNames() const;
 
                     /**
-                     * 设置Metric to query. Values:
-<li>`l4Flow_connections`: Access connections;</li>
-<li>`l4Flow_flux`: Access traffic;</li>
-<li>`l4Flow_inFlux`: Inbound traffic;</li>
-<li>`l4Flow_outFlux`: Outbound traffic;</li>
-<li>`l4Flow_outPkt`: Outbound packets.</li>
-                     * @param _metricNames Metric to query. Values:
-<li>`l4Flow_connections`: Access connections;</li>
-<li>`l4Flow_flux`: Access traffic;</li>
-<li>`l4Flow_inFlux`: Inbound traffic;</li>
-<li>`l4Flow_outFlux`: Outbound traffic;</li>
-<li>`l4Flow_outPkt`: Outbound packets.</li>
+                     * 设置Query indicator. Values: 
+<li>l4Flow_connections: Number of access connections;</li>
+<li>l4Flow_flux: Total access traffic;</li>
+<li>l4Flow_inFlux: Ingress access traffic;</li>
+<li>l4Flow_outFlux: Egress access traffic. </li>
+                     * @param _metricNames Query indicator. Values: 
+<li>l4Flow_connections: Number of access connections;</li>
+<li>l4Flow_flux: Total access traffic;</li>
+<li>l4Flow_inFlux: Ingress access traffic;</li>
+<li>l4Flow_outFlux: Egress access traffic. </li>
                      * 
                      */
                     void SetMetricNames(const std::vector<std::string>& _metricNames);
@@ -127,23 +123,15 @@ namespace TencentCloud
                     bool MetricNamesHasBeenSet() const;
 
                     /**
-                     * 获取List of sites
-If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
-Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. 
-                     * @return ZoneIds List of sites
-If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
-Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. 
+                     * 获取ZoneId set. This parameter is required.
+                     * @return ZoneIds ZoneId set. This parameter is required.
                      * 
                      */
                     std::vector<std::string> GetZoneIds() const;
 
                     /**
-                     * 设置List of sites
-If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
-Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. 
-                     * @param _zoneIds List of sites
-If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
-Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. 
+                     * 设置ZoneId set. This parameter is required.
+                     * @param _zoneIds ZoneId set. This parameter is required.
                      * 
                      */
                     void SetZoneIds(const std::vector<std::string>& _zoneIds);
@@ -290,20 +278,17 @@ Enter the IDs of sites to query. The maximum query period is determined by the <
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Metric to query. Values:
-<li>`l4Flow_connections`: Access connections;</li>
-<li>`l4Flow_flux`: Access traffic;</li>
-<li>`l4Flow_inFlux`: Inbound traffic;</li>
-<li>`l4Flow_outFlux`: Outbound traffic;</li>
-<li>`l4Flow_outPkt`: Outbound packets.</li>
+                     * Query indicator. Values: 
+<li>l4Flow_connections: Number of access connections;</li>
+<li>l4Flow_flux: Total access traffic;</li>
+<li>l4Flow_inFlux: Ingress access traffic;</li>
+<li>l4Flow_outFlux: Egress access traffic. </li>
                      */
                     std::vector<std::string> m_metricNames;
                     bool m_metricNamesHasBeenSet;
 
                     /**
-                     * List of sites
-If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
-Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. 
+                     * ZoneId set. This parameter is required.
                      */
                     std::vector<std::string> m_zoneIds;
                     bool m_zoneIdsHasBeenSet;
