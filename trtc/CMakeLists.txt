@@ -34,10 +34,12 @@ set(trtc_public_header_model
   include/tencentcloud/trtc/v20190722/model/AbnormalEvent.h
   include/tencentcloud/trtc/v20190722/model/ScaleInfomation.h
   include/tencentcloud/trtc/v20190722/model/AgentParams.h
+  include/tencentcloud/trtc/v20190722/model/VideoEncodeParams.h
   include/tencentcloud/trtc/v20190722/model/DescribeUserEventResponse.h
   include/tencentcloud/trtc/v20190722/model/VideoEncode.h
   include/tencentcloud/trtc/v20190722/model/DescribeCallDetailInfoRequest.h
   include/tencentcloud/trtc/v20190722/model/DescribeUserInfoRequest.h
+  include/tencentcloud/trtc/v20190722/model/AudioEncodeParams.h
   include/tencentcloud/trtc/v20190722/model/CloudStorage.h
   include/tencentcloud/trtc/v20190722/model/DescribeTrtcUsageResponse.h
   include/tencentcloud/trtc/v20190722/model/TimeValue.h
@@ -49,7 +51,9 @@ set(trtc_public_header_model
   include/tencentcloud/trtc/v20190722/model/DescribeCallDetailInfoResponse.h
   include/tencentcloud/trtc/v20190722/model/McuCustomCrop.h
   include/tencentcloud/trtc/v20190722/model/DescribeMixTranscodingUsageRequest.h
+  include/tencentcloud/trtc/v20190722/model/DescribeStreamIngestResponse.h
   include/tencentcloud/trtc/v20190722/model/MixTranscodeParams.h
+  include/tencentcloud/trtc/v20190722/model/StopStreamIngestRequest.h
   include/tencentcloud/trtc/v20190722/model/SubscribeStreamUserIds.h
   include/tencentcloud/trtc/v20190722/model/WaterMarkImage.h
   include/tencentcloud/trtc/v20190722/model/McuUserInfoParams.h
@@ -58,7 +62,7 @@ set(trtc_public_header_model
   include/tencentcloud/trtc/v20190722/model/DescribeTrtcUsageRequest.h
   include/tencentcloud/trtc/v20190722/model/DescribeRoomInfoResponse.h
   include/tencentcloud/trtc/v20190722/model/McuLayoutParams.h
-  include/tencentcloud/trtc/v20190722/model/RecordParams.h
+  include/tencentcloud/trtc/v20190722/model/StartStreamIngestRequest.h
   include/tencentcloud/trtc/v20190722/model/DescribeUserInfoResponse.h
   include/tencentcloud/trtc/v20190722/model/McuWaterMarkImage.h
   include/tencentcloud/trtc/v20190722/model/StartPublishCdnStreamResponse.h
@@ -88,6 +92,7 @@ set(trtc_public_header_model
   include/tencentcloud/trtc/v20190722/model/VideoParams.h
   include/tencentcloud/trtc/v20190722/model/StartPublishCdnStreamRequest.h
   include/tencentcloud/trtc/v20190722/model/DismissRoomByStrRoomIdRequest.h
+  include/tencentcloud/trtc/v20190722/model/StartStreamIngestResponse.h
   include/tencentcloud/trtc/v20190722/model/DeleteCloudRecordingRequest.h
   include/tencentcloud/trtc/v20190722/model/SetUserBlockedByStrRoomIdRequest.h
   include/tencentcloud/trtc/v20190722/model/DescribeTrtcRoomUsageRequest.h
@@ -97,14 +102,17 @@ set(trtc_public_header_model
   include/tencentcloud/trtc/v20190722/model/DescribeUnusualEventResponse.h
   include/tencentcloud/trtc/v20190722/model/ModifyCloudRecordingResponse.h
   include/tencentcloud/trtc/v20190722/model/DescribeCloudRecordingResponse.h
+  include/tencentcloud/trtc/v20190722/model/StopStreamIngestResponse.h
   include/tencentcloud/trtc/v20190722/model/MixUserInfo.h
   include/tencentcloud/trtc/v20190722/model/DismissRoomResponse.h
+  include/tencentcloud/trtc/v20190722/model/UpdatePublishCdnStreamRequest.h
   include/tencentcloud/trtc/v20190722/model/MaxVideoUser.h
   include/tencentcloud/trtc/v20190722/model/McuSeiParams.h
   include/tencentcloud/trtc/v20190722/model/UpdatePublishCdnStreamResponse.h
   include/tencentcloud/trtc/v20190722/model/McuWaterMarkText.h
   include/tencentcloud/trtc/v20190722/model/RemoveUserByStrRoomIdRequest.h
-  include/tencentcloud/trtc/v20190722/model/UpdatePublishCdnStreamRequest.h
+  include/tencentcloud/trtc/v20190722/model/RecordParams.h
+  include/tencentcloud/trtc/v20190722/model/DescribeStreamIngestRequest.h
   include/tencentcloud/trtc/v20190722/model/McuAudioParams.h
   include/tencentcloud/trtc/v20190722/model/McuPublishCdnParam.h
   include/tencentcloud/trtc/v20190722/model/AudioParams.h
@@ -133,10 +141,12 @@ set(trtc_src
   src/v20190722/model/AbnormalEvent.cpp
   src/v20190722/model/ScaleInfomation.cpp
   src/v20190722/model/AgentParams.cpp
+  src/v20190722/model/VideoEncodeParams.cpp
   src/v20190722/model/DescribeUserEventResponse.cpp
   src/v20190722/model/VideoEncode.cpp
   src/v20190722/model/DescribeCallDetailInfoRequest.cpp
   src/v20190722/model/DescribeUserInfoRequest.cpp
+  src/v20190722/model/AudioEncodeParams.cpp
   src/v20190722/model/CloudStorage.cpp
   src/v20190722/model/DescribeTrtcUsageResponse.cpp
   src/v20190722/model/TimeValue.cpp
@@ -148,7 +158,9 @@ set(trtc_src
   src/v20190722/model/DescribeCallDetailInfoResponse.cpp
   src/v20190722/model/McuCustomCrop.cpp
   src/v20190722/model/DescribeMixTranscodingUsageRequest.cpp
+  src/v20190722/model/DescribeStreamIngestResponse.cpp
   src/v20190722/model/MixTranscodeParams.cpp
+  src/v20190722/model/StopStreamIngestRequest.cpp
   src/v20190722/model/SubscribeStreamUserIds.cpp
   src/v20190722/model/WaterMarkImage.cpp
   src/v20190722/model/McuUserInfoParams.cpp
@@ -157,7 +169,7 @@ set(trtc_src
   src/v20190722/model/DescribeTrtcUsageRequest.cpp
   src/v20190722/model/DescribeRoomInfoResponse.cpp
   src/v20190722/model/McuLayoutParams.cpp
-  src/v20190722/model/RecordParams.cpp
+  src/v20190722/model/StartStreamIngestRequest.cpp
   src/v20190722/model/DescribeUserInfoResponse.cpp
   src/v20190722/model/McuWaterMarkImage.cpp
   src/v20190722/model/StartPublishCdnStreamResponse.cpp
@@ -187,6 +199,7 @@ set(trtc_src
   src/v20190722/model/VideoParams.cpp
   src/v20190722/model/StartPublishCdnStreamRequest.cpp
   src/v20190722/model/DismissRoomByStrRoomIdRequest.cpp
+  src/v20190722/model/StartStreamIngestResponse.cpp
   src/v20190722/model/DeleteCloudRecordingRequest.cpp
   src/v20190722/model/SetUserBlockedByStrRoomIdRequest.cpp
   src/v20190722/model/DescribeTrtcRoomUsageRequest.cpp
@@ -196,14 +209,17 @@ set(trtc_src
   src/v20190722/model/DescribeUnusualEventResponse.cpp
   src/v20190722/model/ModifyCloudRecordingResponse.cpp
   src/v20190722/model/DescribeCloudRecordingResponse.cpp
+  src/v20190722/model/StopStreamIngestResponse.cpp
   src/v20190722/model/MixUserInfo.cpp
   src/v20190722/model/DismissRoomResponse.cpp
+  src/v20190722/model/UpdatePublishCdnStreamRequest.cpp
   src/v20190722/model/MaxVideoUser.cpp
   src/v20190722/model/McuSeiParams.cpp
   src/v20190722/model/UpdatePublishCdnStreamResponse.cpp
   src/v20190722/model/McuWaterMarkText.cpp
   src/v20190722/model/RemoveUserByStrRoomIdRequest.cpp
-  src/v20190722/model/UpdatePublishCdnStreamRequest.cpp
+  src/v20190722/model/RecordParams.cpp
+  src/v20190722/model/DescribeStreamIngestRequest.cpp
   src/v20190722/model/McuAudioParams.cpp
   src/v20190722/model/McuPublishCdnParam.cpp
   src/v20190722/model/AudioParams.cpp

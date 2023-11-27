@@ -41,6 +41,8 @@
 #include <tencentcloud/trtc/v20190722/model/DescribeRoomInfoResponse.h>
 #include <tencentcloud/trtc/v20190722/model/DescribeScaleInfoRequest.h>
 #include <tencentcloud/trtc/v20190722/model/DescribeScaleInfoResponse.h>
+#include <tencentcloud/trtc/v20190722/model/DescribeStreamIngestRequest.h>
+#include <tencentcloud/trtc/v20190722/model/DescribeStreamIngestResponse.h>
 #include <tencentcloud/trtc/v20190722/model/DescribeTrtcRoomUsageRequest.h>
 #include <tencentcloud/trtc/v20190722/model/DescribeTrtcRoomUsageResponse.h>
 #include <tencentcloud/trtc/v20190722/model/DescribeTrtcUsageRequest.h>
@@ -67,8 +69,12 @@
 #include <tencentcloud/trtc/v20190722/model/SetUserBlockedByStrRoomIdResponse.h>
 #include <tencentcloud/trtc/v20190722/model/StartPublishCdnStreamRequest.h>
 #include <tencentcloud/trtc/v20190722/model/StartPublishCdnStreamResponse.h>
+#include <tencentcloud/trtc/v20190722/model/StartStreamIngestRequest.h>
+#include <tencentcloud/trtc/v20190722/model/StartStreamIngestResponse.h>
 #include <tencentcloud/trtc/v20190722/model/StopPublishCdnStreamRequest.h>
 #include <tencentcloud/trtc/v20190722/model/StopPublishCdnStreamResponse.h>
+#include <tencentcloud/trtc/v20190722/model/StopStreamIngestRequest.h>
+#include <tencentcloud/trtc/v20190722/model/StopStreamIngestResponse.h>
 #include <tencentcloud/trtc/v20190722/model/UpdatePublishCdnStreamRequest.h>
 #include <tencentcloud/trtc/v20190722/model/UpdatePublishCdnStreamResponse.h>
 
@@ -112,6 +118,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeScaleInfoResponse> DescribeScaleInfoOutcome;
                 typedef std::future<DescribeScaleInfoOutcome> DescribeScaleInfoOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::DescribeScaleInfoRequest&, DescribeScaleInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeScaleInfoAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeStreamIngestResponse> DescribeStreamIngestOutcome;
+                typedef std::future<DescribeStreamIngestOutcome> DescribeStreamIngestOutcomeCallable;
+                typedef std::function<void(const TrtcClient*, const Model::DescribeStreamIngestRequest&, DescribeStreamIngestOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStreamIngestAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeTrtcRoomUsageResponse> DescribeTrtcRoomUsageOutcome;
                 typedef std::future<DescribeTrtcRoomUsageOutcome> DescribeTrtcRoomUsageOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::DescribeTrtcRoomUsageRequest&, DescribeTrtcRoomUsageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTrtcRoomUsageAsyncHandler;
@@ -151,9 +160,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::StartPublishCdnStreamResponse> StartPublishCdnStreamOutcome;
                 typedef std::future<StartPublishCdnStreamOutcome> StartPublishCdnStreamOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::StartPublishCdnStreamRequest&, StartPublishCdnStreamOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StartPublishCdnStreamAsyncHandler;
+                typedef Outcome<Core::Error, Model::StartStreamIngestResponse> StartStreamIngestOutcome;
+                typedef std::future<StartStreamIngestOutcome> StartStreamIngestOutcomeCallable;
+                typedef std::function<void(const TrtcClient*, const Model::StartStreamIngestRequest&, StartStreamIngestOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StartStreamIngestAsyncHandler;
                 typedef Outcome<Core::Error, Model::StopPublishCdnStreamResponse> StopPublishCdnStreamOutcome;
                 typedef std::future<StopPublishCdnStreamOutcome> StopPublishCdnStreamOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::StopPublishCdnStreamRequest&, StopPublishCdnStreamOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StopPublishCdnStreamAsyncHandler;
+                typedef Outcome<Core::Error, Model::StopStreamIngestResponse> StopStreamIngestOutcome;
+                typedef std::future<StopStreamIngestOutcome> StopStreamIngestOutcomeCallable;
+                typedef std::function<void(const TrtcClient*, const Model::StopStreamIngestRequest&, StopStreamIngestOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StopStreamIngestAsyncHandler;
                 typedef Outcome<Core::Error, Model::UpdatePublishCdnStreamResponse> UpdatePublishCdnStreamOutcome;
                 typedef std::future<UpdatePublishCdnStreamOutcome> UpdatePublishCdnStreamOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::UpdatePublishCdnStreamRequest&, UpdatePublishCdnStreamOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdatePublishCdnStreamAsyncHandler;
@@ -273,6 +288,15 @@ If a recording file is being uploaded to VOD, the response parameter `StorageFil
                 DescribeScaleInfoOutcome DescribeScaleInfo(const Model::DescribeScaleInfoRequest &request);
                 void DescribeScaleInfoAsync(const Model::DescribeScaleInfoRequest& request, const DescribeScaleInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeScaleInfoOutcomeCallable DescribeScaleInfoCallable(const Model::DescribeScaleInfoRequest& request);
+
+                /**
+                 *You can query the status of the Relay task.
+                 * @param req DescribeStreamIngestRequest
+                 * @return DescribeStreamIngestOutcome
+                 */
+                DescribeStreamIngestOutcome DescribeStreamIngest(const Model::DescribeStreamIngestRequest &request);
+                void DescribeStreamIngestAsync(const Model::DescribeStreamIngestRequest& request, const DescribeStreamIngestAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeStreamIngestOutcomeCallable DescribeStreamIngestCallable(const Model::DescribeStreamIngestRequest& request);
 
                 /**
                  *This API is used to query usage data grouped by room.
@@ -464,6 +488,15 @@ Usage Precautions:
                 StartPublishCdnStreamOutcomeCallable StartPublishCdnStreamCallable(const Model::StartPublishCdnStreamRequest& request);
 
                 /**
+                 *Push an online media stream to the TRTC room.
+                 * @param req StartStreamIngestRequest
+                 * @return StartStreamIngestOutcome
+                 */
+                StartStreamIngestOutcome StartStreamIngest(const Model::StartStreamIngestRequest &request);
+                void StartStreamIngestAsync(const Model::StartStreamIngestRequest& request, const StartStreamIngestAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                StartStreamIngestOutcomeCallable StartStreamIngestCallable(const Model::StartStreamIngestRequest& request);
+
+                /**
                  *This API is used to stop a relaying task.
                  * @param req StopPublishCdnStreamRequest
                  * @return StopPublishCdnStreamOutcome
@@ -471,6 +504,15 @@ Usage Precautions:
                 StopPublishCdnStreamOutcome StopPublishCdnStream(const Model::StopPublishCdnStreamRequest &request);
                 void StopPublishCdnStreamAsync(const Model::StopPublishCdnStreamRequest& request, const StopPublishCdnStreamAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 StopPublishCdnStreamOutcomeCallable StopPublishCdnStreamCallable(const Model::StopPublishCdnStreamRequest& request);
+
+                /**
+                 *Stop a Pull stream Relay task.
+                 * @param req StopStreamIngestRequest
+                 * @return StopStreamIngestOutcome
+                 */
+                StopStreamIngestOutcome StopStreamIngest(const Model::StopStreamIngestRequest &request);
+                void StopStreamIngestAsync(const Model::StopStreamIngestRequest& request, const StopStreamIngestAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                StopStreamIngestOutcomeCallable StopStreamIngestCallable(const Model::StopStreamIngestRequest& request);
 
                 /**
                  *This API is used to change the parameters of a relaying task.
