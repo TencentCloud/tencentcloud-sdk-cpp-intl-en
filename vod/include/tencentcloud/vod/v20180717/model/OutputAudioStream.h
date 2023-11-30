@@ -153,6 +153,31 @@ Default value: 2.
                      */
                     bool AudioChannelHasBeenSet() const;
 
+                    /**
+                     * 获取The bit rate of the audio stream, value range: 0 and [26, 256], unit: kbps. 
+When the value is 0, the audio bitrate will be automatically set.
+                     * @return Bitrate The bit rate of the audio stream, value range: 0 and [26, 256], unit: kbps. 
+When the value is 0, the audio bitrate will be automatically set.
+                     * 
+                     */
+                    int64_t GetBitrate() const;
+
+                    /**
+                     * 设置The bit rate of the audio stream, value range: 0 and [26, 256], unit: kbps. 
+When the value is 0, the audio bitrate will be automatically set.
+                     * @param _bitrate The bit rate of the audio stream, value range: 0 and [26, 256], unit: kbps. 
+When the value is 0, the audio bitrate will be automatically set.
+                     * 
+                     */
+                    void SetBitrate(const int64_t& _bitrate);
+
+                    /**
+                     * 判断参数 Bitrate 是否已赋值
+                     * @return Bitrate 是否已赋值
+                     * 
+                     */
+                    bool BitrateHasBeenSet() const;
+
                 private:
 
                     /**
@@ -183,6 +208,13 @@ Default value: 2.
                      */
                     int64_t m_audioChannel;
                     bool m_audioChannelHasBeenSet;
+
+                    /**
+                     * The bit rate of the audio stream, value range: 0 and [26, 256], unit: kbps. 
+When the value is 0, the audio bitrate will be automatically set.
+                     */
+                    int64_t m_bitrate;
+                    bool m_bitrateHasBeenSet;
 
                 };
             }

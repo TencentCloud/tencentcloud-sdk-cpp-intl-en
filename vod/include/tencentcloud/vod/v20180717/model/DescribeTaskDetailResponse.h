@@ -41,6 +41,7 @@
 #include <tencentcloud/vod/v20180717/model/ReduceMediaBitrateTask.h>
 #include <tencentcloud/vod/v20180717/model/DescribeFileAttributesTask.h>
 #include <tencentcloud/vod/v20180717/model/QualityInspectTask.h>
+#include <tencentcloud/vod/v20180717/model/QualityEnhanceTask.h>
 
 
 namespace TencentCloud
@@ -485,6 +486,22 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool QualityInspectTaskHasBeenSet() const;
 
+                    /**
+                     * 获取Media Quality Enhance task information. This field has a value only when TaskType is QualityEnhance.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return QualityEnhanceTask Media Quality Enhance task information. This field has a value only when TaskType is QualityEnhance.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    QualityEnhanceTask GetQualityEnhanceTask() const;
+
+                    /**
+                     * 判断参数 QualityEnhanceTask 是否已赋值
+                     * @return QualityEnhanceTask 是否已赋值
+                     * 
+                     */
+                    bool QualityEnhanceTaskHasBeenSet() const;
+
                 private:
 
                     /**
@@ -672,6 +689,13 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     QualityInspectTask m_qualityInspectTask;
                     bool m_qualityInspectTaskHasBeenSet;
+
+                    /**
+                     * Media Quality Enhance task information. This field has a value only when TaskType is QualityEnhance.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    QualityEnhanceTask m_qualityEnhanceTask;
+                    bool m_qualityEnhanceTaskHasBeenSet;
 
                 };
             }

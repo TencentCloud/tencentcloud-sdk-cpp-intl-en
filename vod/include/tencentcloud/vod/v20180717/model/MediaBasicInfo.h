@@ -448,23 +448,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CategoryHasBeenSet() const;
 
                     /**
-                     * 获取The file status. Valid values: `Normal`, `Forbidden`.
-
-*Note: This field is not supported yet.	
-                     * @return Status The file status. Valid values: `Normal`, `Forbidden`.
-
-*Note: This field is not supported yet.	
+                     * 获取File status: Normal: normal, Forbidden: banned.
+                     * @return Status File status: Normal: normal, Forbidden: banned.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置The file status. Valid values: `Normal`, `Forbidden`.
-
-*Note: This field is not supported yet.	
-                     * @param _status The file status. Valid values: `Normal`, `Forbidden`.
-
-*Note: This field is not supported yet.	
+                     * 设置File status: Normal: normal, Forbidden: banned.
+                     * @param _status File status: Normal: normal, Forbidden: banned.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -628,9 +620,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_categoryHasBeenSet;
 
                     /**
-                     * The file status. Valid values: `Normal`, `Forbidden`.
-
-*Note: This field is not supported yet.	
+                     * File status: Normal: normal, Forbidden: banned.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

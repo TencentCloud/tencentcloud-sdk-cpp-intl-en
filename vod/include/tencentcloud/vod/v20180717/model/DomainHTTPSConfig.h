@@ -71,6 +71,27 @@ namespace TencentCloud
                      */
                     bool CertExpireTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Certificate ID in Tencent Cloud SSL product.
+                     * @return CloudCertId Certificate ID in Tencent Cloud SSL product.
+                     * 
+                     */
+                    std::string GetCloudCertId() const;
+
+                    /**
+                     * 设置Certificate ID in Tencent Cloud SSL product.
+                     * @param _cloudCertId Certificate ID in Tencent Cloud SSL product.
+                     * 
+                     */
+                    void SetCloudCertId(const std::string& _cloudCertId);
+
+                    /**
+                     * 判断参数 CloudCertId 是否已赋值
+                     * @return CloudCertId 是否已赋值
+                     * 
+                     */
+                    bool CloudCertIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -79,6 +100,12 @@ namespace TencentCloud
                      */
                     std::string m_certExpireTime;
                     bool m_certExpireTimeHasBeenSet;
+
+                    /**
+                     * Certificate ID in Tencent Cloud SSL product.
+                     */
+                    std::string m_cloudCertId;
+                    bool m_cloudCertIdHasBeenSet;
 
                 };
             }

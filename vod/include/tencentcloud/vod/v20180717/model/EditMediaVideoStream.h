@@ -47,6 +47,68 @@ namespace TencentCloud
 
 
                     /**
+                     * 获取The encoding format of the video stream, optional values:
+<li>libx264: H.264 encoding;</li>
+<li>libx265: H.265 encoding;</li>
+<li>av1: AOMedia Video 1 encoding;</li>
+<li>H.266: H.266 encoding. </li>
+                     * @return Codec The encoding format of the video stream, optional values:
+<li>libx264: H.264 encoding;</li>
+<li>libx265: H.265 encoding;</li>
+<li>av1: AOMedia Video 1 encoding;</li>
+<li>H.266: H.266 encoding. </li>
+                     * 
+                     */
+                    std::string GetCodec() const;
+
+                    /**
+                     * 设置The encoding format of the video stream, optional values:
+<li>libx264: H.264 encoding;</li>
+<li>libx265: H.265 encoding;</li>
+<li>av1: AOMedia Video 1 encoding;</li>
+<li>H.266: H.266 encoding. </li>
+                     * @param _codec The encoding format of the video stream, optional values:
+<li>libx264: H.264 encoding;</li>
+<li>libx265: H.265 encoding;</li>
+<li>av1: AOMedia Video 1 encoding;</li>
+<li>H.266: H.266 encoding. </li>
+                     * 
+                     */
+                    void SetCodec(const std::string& _codec);
+
+                    /**
+                     * 判断参数 Codec 是否已赋值
+                     * @return Codec 是否已赋值
+                     * 
+                     */
+                    bool CodecHasBeenSet() const;
+
+                    /**
+                     * 获取The bit rate of the video stream, value range: 0 and [128, 35000], unit: kbps. 
+When the value is 0 or left blank, it means automatically selecting the best video bit rate.
+                     * @return Bitrate The bit rate of the video stream, value range: 0 and [128, 35000], unit: kbps. 
+When the value is 0 or left blank, it means automatically selecting the best video bit rate.
+                     * 
+                     */
+                    uint64_t GetBitrate() const;
+
+                    /**
+                     * 设置The bit rate of the video stream, value range: 0 and [128, 35000], unit: kbps. 
+When the value is 0 or left blank, it means automatically selecting the best video bit rate.
+                     * @param _bitrate The bit rate of the video stream, value range: 0 and [128, 35000], unit: kbps. 
+When the value is 0 or left blank, it means automatically selecting the best video bit rate.
+                     * 
+                     */
+                    void SetBitrate(const uint64_t& _bitrate);
+
+                    /**
+                     * 判断参数 Bitrate 是否已赋值
+                     * @return Bitrate 是否已赋值
+                     * 
+                     */
+                    bool BitrateHasBeenSet() const;
+
+                    /**
                      * 获取Resolution adaptive, optional values:
 <li>open: open, at this time, Width represents the long side of the video, and Height represents the short side of the video;</li>
 <li>close: closed, at this time , Width represents the width of the video, and Height represents the height of the video. </li>
@@ -183,6 +245,23 @@ The default value is 0.
                     bool FpsHasBeenSet() const;
 
                 private:
+
+                    /**
+                     * The encoding format of the video stream, optional values:
+<li>libx264: H.264 encoding;</li>
+<li>libx265: H.265 encoding;</li>
+<li>av1: AOMedia Video 1 encoding;</li>
+<li>H.266: H.266 encoding. </li>
+                     */
+                    std::string m_codec;
+                    bool m_codecHasBeenSet;
+
+                    /**
+                     * The bit rate of the video stream, value range: 0 and [128, 35000], unit: kbps. 
+When the value is 0 or left blank, it means automatically selecting the best video bit rate.
+                     */
+                    uint64_t m_bitrate;
+                    bool m_bitrateHasBeenSet;
 
                     /**
                      * Resolution adaptive, optional values:
