@@ -48,10 +48,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies whether to enable the bandwidth cap
+                     * 获取Whether to enable usage limit. Values:
 `on`: Enable
 `off`: Disable
-                     * @return Switch Specifies whether to enable the bandwidth cap
+                     * @return Switch Whether to enable usage limit. Values:
 `on`: Enable
 `off`: Disable
                      * 
@@ -59,10 +59,10 @@ namespace TencentCloud
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Specifies whether to enable the bandwidth cap
+                     * 设置Whether to enable usage limit. Values:
 `on`: Enable
 `off`: Disable
-                     * @param _switch Specifies whether to enable the bandwidth cap
+                     * @param _switch Whether to enable usage limit. Values:
 `on`: Enable
 `off`: Disable
                      * 
@@ -156,27 +156,27 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool LastTriggerTimeHasBeenSet() const;
 
                     /**
-                     * 获取Indicates whether to trigger alerts when the upper limit is reached
+                     * 获取Whether to enable alerts for usage limit. Values:
 `on`: Enable
 `off`: Disable
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return AlertSwitch Indicates whether to trigger alerts when the upper limit is reached
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return AlertSwitch Whether to enable alerts for usage limit. Values:
 `on`: Enable
 `off`: Disable
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetAlertSwitch() const;
 
                     /**
-                     * 设置Indicates whether to trigger alerts when the upper limit is reached
+                     * 设置Whether to enable alerts for usage limit. Values:
 `on`: Enable
 `off`: Disable
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _alertSwitch Indicates whether to trigger alerts when the upper limit is reached
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param _alertSwitch Whether to enable alerts for usage limit. Values:
 `on`: Enable
 `off`: Disable
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAlertSwitch(const std::string& _alertSwitch);
@@ -299,7 +299,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * Specifies whether to enable the bandwidth cap
+                     * Whether to enable usage limit. Values:
 `on`: Enable
 `off`: Disable
                      */
@@ -329,10 +329,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_lastTriggerTimeHasBeenSet;
 
                     /**
-                     * Indicates whether to trigger alerts when the upper limit is reached
+                     * Whether to enable alerts for usage limit. Values:
 `on`: Enable
 `off`: Disable
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_alertSwitch;
                     bool m_alertSwitchHasBeenSet;

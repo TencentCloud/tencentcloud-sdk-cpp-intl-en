@@ -43,27 +43,31 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies a service region.
-`mainland`: queries billing methods within Mainland China;
-`overseas`: queries billing methods outside Mainland China.
-Default value: `mainland`.
-                     * @return Area Specifies a service region.
-`mainland`: queries billing methods within Mainland China;
-`overseas`: queries billing methods outside Mainland China.
-Default value: `mainland`.
+                     * 获取Specifies the service area.
+`mainland`: Queries billing methods available in the Chinese mainland.
+`overseas`: Queries billing methods available in the regions outside the Chinese mainland.
+`Global`: Queries billing methods available across the globe.
+If it is not specified, it defaults to `mainland`.
+                     * @return Area Specifies the service area.
+`mainland`: Queries billing methods available in the Chinese mainland.
+`overseas`: Queries billing methods available in the regions outside the Chinese mainland.
+`Global`: Queries billing methods available across the globe.
+If it is not specified, it defaults to `mainland`.
                      * 
                      */
                     std::string GetArea() const;
 
                     /**
-                     * 设置Specifies a service region.
-`mainland`: queries billing methods within Mainland China;
-`overseas`: queries billing methods outside Mainland China.
-Default value: `mainland`.
-                     * @param _area Specifies a service region.
-`mainland`: queries billing methods within Mainland China;
-`overseas`: queries billing methods outside Mainland China.
-Default value: `mainland`.
+                     * 设置Specifies the service area.
+`mainland`: Queries billing methods available in the Chinese mainland.
+`overseas`: Queries billing methods available in the regions outside the Chinese mainland.
+`Global`: Queries billing methods available across the globe.
+If it is not specified, it defaults to `mainland`.
+                     * @param _area Specifies the service area.
+`mainland`: Queries billing methods available in the Chinese mainland.
+`overseas`: Queries billing methods available in the regions outside the Chinese mainland.
+`Global`: Queries billing methods available across the globe.
+If it is not specified, it defaults to `mainland`.
                      * 
                      */
                     void SetArea(const std::string& _area);
@@ -96,13 +100,47 @@ Default value: `mainland`.
                      */
                     bool ProductHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies resources.
+`flux`: Traffic package
+`https`: HTTPS requests
+It defaults to `flux` if not specified. 
+                     * @return Type Specifies resources.
+`flux`: Traffic package
+`https`: HTTPS requests
+It defaults to `flux` if not specified. 
+                     * 
+                     */
+                    std::string GetType() const;
+
+                    /**
+                     * 设置Specifies resources.
+`flux`: Traffic package
+`https`: HTTPS requests
+It defaults to `flux` if not specified. 
+                     * @param _type Specifies resources.
+`flux`: Traffic package
+`https`: HTTPS requests
+It defaults to `flux` if not specified. 
+                     * 
+                     */
+                    void SetType(const std::string& _type);
+
+                    /**
+                     * 判断参数 Type 是否已赋值
+                     * @return Type 是否已赋值
+                     * 
+                     */
+                    bool TypeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Specifies a service region.
-`mainland`: queries billing methods within Mainland China;
-`overseas`: queries billing methods outside Mainland China.
-Default value: `mainland`.
+                     * Specifies the service area.
+`mainland`: Queries billing methods available in the Chinese mainland.
+`overseas`: Queries billing methods available in the regions outside the Chinese mainland.
+`Global`: Queries billing methods available across the globe.
+If it is not specified, it defaults to `mainland`.
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;
@@ -112,6 +150,15 @@ Default value: `mainland`.
                      */
                     std::string m_product;
                     bool m_productHasBeenSet;
+
+                    /**
+                     * Specifies resources.
+`flux`: Traffic package
+`https`: HTTPS requests
+It defaults to `flux` if not specified. 
+                     */
+                    std::string m_type;
+                    bool m_typeHasBeenSet;
 
                 };
             }

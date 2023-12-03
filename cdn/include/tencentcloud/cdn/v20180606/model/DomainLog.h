@@ -159,6 +159,31 @@ namespace TencentCloud
                      */
                     bool LogNameHasBeenSet() const;
 
+                    /**
+                     * 获取File size, in bytes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return FileSize File size, in bytes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetFileSize() const;
+
+                    /**
+                     * 设置File size, in bytes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param _fileSize File size, in bytes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetFileSize(const int64_t& _fileSize);
+
+                    /**
+                     * 判断参数 FileSize 是否已赋值
+                     * @return FileSize 是否已赋值
+                     * 
+                     */
+                    bool FileSizeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -192,6 +217,13 @@ namespace TencentCloud
                      */
                     std::string m_logName;
                     bool m_logNameHasBeenSet;
+
+                    /**
+                     * File size, in bytes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_fileSize;
+                    bool m_fileSizeHasBeenSet;
 
                 };
             }

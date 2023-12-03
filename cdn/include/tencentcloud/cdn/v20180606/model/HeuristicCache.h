@@ -48,19 +48,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取`on`: Enable
+                     * 获取Whether to enable heuristic caching. Values:
+`on`: Enable
 `off`: Disable
-                     * @return Switch `on`: Enable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * @return Switch Whether to enable heuristic caching. Values:
+`on`: Enable
 `off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置`on`: Enable
+                     * 设置Whether to enable heuristic caching. Values:
+`on`: Enable
 `off`: Disable
-                     * @param _switch `on`: Enable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * @param _switch Whether to enable heuristic caching. Values:
+`on`: Enable
 `off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -74,14 +82,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Heuristic cache validity configuration
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      * @return CacheConfig Heuristic cache validity configuration
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      * 
                      */
                     CacheConfig GetCacheConfig() const;
 
                     /**
                      * 设置Heuristic cache validity configuration
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      * @param _cacheConfig Heuristic cache validity configuration
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCacheConfig(const CacheConfig& _cacheConfig);
@@ -96,14 +108,17 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * `on`: Enable
+                     * Whether to enable heuristic caching. Values:
+`on`: Enable
 `off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
                      * Heuristic cache validity configuration
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      */
                     CacheConfig m_cacheConfig;
                     bool m_cacheConfigHasBeenSet;

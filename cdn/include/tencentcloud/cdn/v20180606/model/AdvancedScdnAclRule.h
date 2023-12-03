@@ -181,7 +181,7 @@ namespace TencentCloud
                     bool LogicOperatorHasBeenSet() const;
 
                     /**
-                     * 获取Match value
+                     * 获取Matched value.
 When `MatchKey` is `protocol`,
 Values: `HTTP` and `HTTPS`.
 
@@ -244,11 +244,10 @@ When `MatchKey` is `ipCountry`, valid values include:
 `AI`: Anguilla
 `VA`: Vatican
 `SK`: Slovakia
-`RU`: Russia
 `GB`: United Kingdom
 `CZ`: Czech Republic
 `UA`: Ukraine
-`TR`: Turkey
+`TR`: Türkiye
 `SI`: Slovenia
 `SE`: Sweden
 `RS`: Republic of Serbia
@@ -385,7 +384,7 @@ When `MatchKey` is `ipCountry`, valid values include:
 `AO`: Angola
 
 When MatchKey is `ipArea`, valid values include:
-`OTHER`: other areas
+`OTHER`: Other areas
 `AS`: Asia
 `EU`: Europe
 `AN`: Antarctica
@@ -396,7 +395,7 @@ When MatchKey is `ipArea`, valid values include:
 
 When MatchKey is `index`,
 valid value is `/;/index.html`.
-                     * @return MatchValue Match value
+                     * @return MatchValue Matched value.
 When `MatchKey` is `protocol`,
 Values: `HTTP` and `HTTPS`.
 
@@ -459,11 +458,10 @@ When `MatchKey` is `ipCountry`, valid values include:
 `AI`: Anguilla
 `VA`: Vatican
 `SK`: Slovakia
-`RU`: Russia
 `GB`: United Kingdom
 `CZ`: Czech Republic
 `UA`: Ukraine
-`TR`: Turkey
+`TR`: Türkiye
 `SI`: Slovenia
 `SE`: Sweden
 `RS`: Republic of Serbia
@@ -600,7 +598,7 @@ When `MatchKey` is `ipCountry`, valid values include:
 `AO`: Angola
 
 When MatchKey is `ipArea`, valid values include:
-`OTHER`: other areas
+`OTHER`: Other areas
 `AS`: Asia
 `EU`: Europe
 `AN`: Antarctica
@@ -616,7 +614,7 @@ valid value is `/;/index.html`.
                     std::vector<std::string> GetMatchValue() const;
 
                     /**
-                     * 设置Match value
+                     * 设置Matched value.
 When `MatchKey` is `protocol`,
 Values: `HTTP` and `HTTPS`.
 
@@ -679,11 +677,10 @@ When `MatchKey` is `ipCountry`, valid values include:
 `AI`: Anguilla
 `VA`: Vatican
 `SK`: Slovakia
-`RU`: Russia
 `GB`: United Kingdom
 `CZ`: Czech Republic
 `UA`: Ukraine
-`TR`: Turkey
+`TR`: Türkiye
 `SI`: Slovenia
 `SE`: Sweden
 `RS`: Republic of Serbia
@@ -820,7 +817,7 @@ When `MatchKey` is `ipCountry`, valid values include:
 `AO`: Angola
 
 When MatchKey is `ipArea`, valid values include:
-`OTHER`: other areas
+`OTHER`: Other areas
 `AS`: Asia
 `EU`: Europe
 `AN`: Antarctica
@@ -831,7 +828,7 @@ When MatchKey is `ipArea`, valid values include:
 
 When MatchKey is `index`,
 valid value is `/;/index.html`.
-                     * @param _matchValue Match value
+                     * @param _matchValue Matched value.
 When `MatchKey` is `protocol`,
 Values: `HTTP` and `HTTPS`.
 
@@ -894,11 +891,10 @@ When `MatchKey` is `ipCountry`, valid values include:
 `AI`: Anguilla
 `VA`: Vatican
 `SK`: Slovakia
-`RU`: Russia
 `GB`: United Kingdom
 `CZ`: Czech Republic
 `UA`: Ukraine
-`TR`: Turkey
+`TR`: Türkiye
 `SI`: Slovenia
 `SE`: Sweden
 `RS`: Republic of Serbia
@@ -1035,7 +1031,7 @@ When `MatchKey` is `ipCountry`, valid values include:
 `AO`: Angola
 
 When MatchKey is `ipArea`, valid values include:
-`OTHER`: other areas
+`OTHER`: Other areas
 `AS`: Asia
 `EU`: Europe
 `AN`: Antarctica
@@ -1137,7 +1133,7 @@ valid value is `/;/index.html`.
                     bool m_logicOperatorHasBeenSet;
 
                     /**
-                     * Match value
+                     * Matched value.
 When `MatchKey` is `protocol`,
 Values: `HTTP` and `HTTPS`.
 
@@ -1200,11 +1196,10 @@ When `MatchKey` is `ipCountry`, valid values include:
 `AI`: Anguilla
 `VA`: Vatican
 `SK`: Slovakia
-`RU`: Russia
 `GB`: United Kingdom
 `CZ`: Czech Republic
 `UA`: Ukraine
-`TR`: Turkey
+`TR`: Türkiye
 `SI`: Slovenia
 `SE`: Sweden
 `RS`: Republic of Serbia
@@ -1341,7 +1336,7 @@ When `MatchKey` is `ipCountry`, valid values include:
 `AO`: Angola
 
 When MatchKey is `ipArea`, valid values include:
-`OTHER`: other areas
+`OTHER`: Other areas
 `AS`: Asia
 `EU`: Europe
 `AN`: Antarctica

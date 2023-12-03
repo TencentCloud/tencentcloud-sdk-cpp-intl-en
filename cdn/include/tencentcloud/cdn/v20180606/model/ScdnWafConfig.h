@@ -50,15 +50,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable WAF. Valid values: `on` and `off`.
-                     * @return Switch Whether to enable WAF. Valid values: `on` and `off`.
+                     * 获取Whether to enable SCDN WAF configuration. Values:
+`on`: Enable
+`off`: Disable
+                     * @return Switch Whether to enable SCDN WAF configuration. Values:
+`on`: Enable
+`off`: Disable
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable WAF. Valid values: `on` and `off`.
-                     * @param _switch Whether to enable WAF. Valid values: `on` and `off`.
+                     * 设置Whether to enable SCDN WAF configuration. Values:
+`on`: Enable
+`off`: Disable
+                     * @param _switch Whether to enable SCDN WAF configuration. Values:
+`on`: Enable
+`off`: Disable
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -121,19 +129,27 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool ErrorPageHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable Web shell blocking. Valid values: `on` and `off`. Default value: `off`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return WebShellSwitch Whether to enable Web shell blocking. Valid values: `on` and `off`. Default value: `off`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Whether to enable webshell blocking. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return WebShellSwitch Whether to enable webshell blocking. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetWebShellSwitch() const;
 
                     /**
-                     * 设置Whether to enable Web shell blocking. Valid values: `on` and `off`. Default value: `off`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _webShellSwitch Whether to enable Web shell blocking. Valid values: `on` and `off`. Default value: `off`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Whether to enable webshell blocking. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param _webShellSwitch Whether to enable webshell blocking. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetWebShellSwitch(const std::string& _webShellSwitch);
@@ -196,19 +212,27 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool LevelHasBeenSet() const;
 
                     /**
-                     * 获取WAF sub-rule switch
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return SubRuleSwitch WAF sub-rule switch
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Whether to enable WAF sub-rules. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return SubRuleSwitch Whether to enable WAF sub-rules. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<WafSubRuleStatus> GetSubRuleSwitch() const;
 
                     /**
-                     * 设置WAF sub-rule switch
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _subRuleSwitch WAF sub-rule switch
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Whether to enable WAF sub-rules. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param _subRuleSwitch Whether to enable WAF sub-rules. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSubRuleSwitch(const std::vector<WafSubRuleStatus>& _subRuleSwitch);
@@ -223,7 +247,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * Whether to enable WAF. Valid values: `on` and `off`.
+                     * Whether to enable SCDN WAF configuration. Values:
+`on`: Enable
+`off`: Disable
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
@@ -243,8 +269,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_errorPageHasBeenSet;
 
                     /**
-                     * Whether to enable Web shell blocking. Valid values: `on` and `off`. Default value: `off`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Whether to enable webshell blocking. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_webShellSwitch;
                     bool m_webShellSwitchHasBeenSet;
@@ -264,8 +292,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_levelHasBeenSet;
 
                     /**
-                     * WAF sub-rule switch
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Whether to enable WAF sub-rules. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::vector<WafSubRuleStatus> m_subRuleSwitch;
                     bool m_subRuleSwitchHasBeenSet;

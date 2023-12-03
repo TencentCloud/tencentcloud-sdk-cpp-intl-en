@@ -24,7 +24,8 @@ QueryCreditAllocationHistoryData::QueryCreditAllocationHistoryData() :
     m_allocatedTimeHasBeenSet(false),
     m_operatorHasBeenSet(false),
     m_creditHasBeenSet(false),
-    m_allocatedCreditHasBeenSet(false)
+    m_allocatedCreditHasBeenSet(false),
+    m_clientCreditAfterHasBeenSet(false)
 {
 }
 
@@ -73,6 +74,16 @@ CoreInternalOutcome QueryCreditAllocationHistoryData::Deserialize(const rapidjso
         m_allocatedCreditHasBeenSet = true;
     }
 
+    if (value.HasMember("ClientCreditAfter") && !value["ClientCreditAfter"].IsNull())
+    {
+        if (!value["ClientCreditAfter"].IsLosslessDouble())
+        {
+            return CoreInternalOutcome(Core::Error("response `QueryCreditAllocationHistoryData.ClientCreditAfter` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
+        }
+        m_clientCreditAfter = value["ClientCreditAfter"].GetDouble();
+        m_clientCreditAfterHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -110,6 +121,14 @@ void QueryCreditAllocationHistoryData::ToJsonObject(rapidjson::Value &value, rap
         string key = "AllocatedCredit";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_allocatedCredit, allocator);
+    }
+
+    if (m_clientCreditAfterHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ClientCreditAfter";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_clientCreditAfter, allocator);
     }
 
 }
@@ -177,5 +196,21 @@ void QueryCreditAllocationHistoryData::SetAllocatedCredit(const double& _allocat
 bool QueryCreditAllocationHistoryData::AllocatedCreditHasBeenSet() const
 {
     return m_allocatedCreditHasBeenSet;
+}
+
+double QueryCreditAllocationHistoryData::GetClientCreditAfter() const
+{
+    return m_clientCreditAfter;
+}
+
+void QueryCreditAllocationHistoryData::SetClientCreditAfter(const double& _clientCreditAfter)
+{
+    m_clientCreditAfter = _clientCreditAfter;
+    m_clientCreditAfterHasBeenSet = true;
+}
+
+bool QueryCreditAllocationHistoryData::ClientCreditAfterHasBeenSet() const
+{
+    return m_clientCreditAfterHasBeenSet;
 }
 

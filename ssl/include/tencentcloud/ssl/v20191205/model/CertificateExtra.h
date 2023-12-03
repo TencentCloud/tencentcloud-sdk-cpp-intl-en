@@ -196,6 +196,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool SMCertHasBeenSet() const;
 
+                    /**
+                     * 获取Company type
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return CompanyType Company type
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    int64_t GetCompanyType() const;
+
+                    /**
+                     * 设置Company type
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _companyType Company type
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetCompanyType(const int64_t& _companyType);
+
+                    /**
+                     * 判断参数 CompanyType 是否已赋值
+                     * @return CompanyType 是否已赋值
+                     * 
+                     */
+                    bool CompanyTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -239,6 +264,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_sMCert;
                     bool m_sMCertHasBeenSet;
+
+                    /**
+                     * Company type
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    int64_t m_companyType;
+                    bool m_companyTypeHasBeenSet;
 
                 };
             }

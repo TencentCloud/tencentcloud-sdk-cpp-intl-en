@@ -47,19 +47,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Switch. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return Switch Switch. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Whether to enable WebpAdapter for image optimization. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * @return Switch Whether to enable WebpAdapter for image optimization. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Switch. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _switch Switch. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Whether to enable WebpAdapter for image optimization. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * @param _switch Whether to enable WebpAdapter for image optimization. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -74,8 +82,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * Switch. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Whether to enable WebpAdapter for image optimization. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

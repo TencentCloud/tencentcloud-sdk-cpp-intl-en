@@ -47,27 +47,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取SEO configuration switch
+                     * 获取Whether to enable SEO. Values:
 `on`: Enable
 `off`: Disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return Switch SEO configuration switch
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Switch Whether to enable SEO. Values:
 `on`: Enable
 `off`: Disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置SEO configuration switch
+                     * 设置Whether to enable SEO. Values:
 `on`: Enable
 `off`: Disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _switch SEO configuration switch
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param _switch Whether to enable SEO. Values:
 `on`: Enable
 `off`: Disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -82,10 +82,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * SEO configuration switch
+                     * Whether to enable SEO. Values:
 `on`: Enable
 `off`: Disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

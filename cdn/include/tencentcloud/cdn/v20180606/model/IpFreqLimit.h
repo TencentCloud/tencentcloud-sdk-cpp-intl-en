@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Access limit configuration for a single IP of a single node. This is disabled by default. 
+                * Access limit configuration for a single IP of a single node. This is disabled by default.
                 */
                 class IpFreqLimit : public AbstractModel
                 {
@@ -47,10 +47,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取IP access limit configuration switch
+                     * 获取Whether to enable IP rate limit. Values:
 `on`: Enable
 `off`: Disable
-                     * @return Switch IP access limit configuration switch
+                     * @return Switch Whether to enable IP rate limit. Values:
 `on`: Enable
 `off`: Disable
                      * 
@@ -58,10 +58,10 @@ namespace TencentCloud
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置IP access limit configuration switch
+                     * 设置Whether to enable IP rate limit. Values:
 `on`: Enable
 `off`: Disable
-                     * @param _switch IP access limit configuration switch
+                     * @param _switch Whether to enable IP rate limit. Values:
 `on`: Enable
 `off`: Disable
                      * 
@@ -107,7 +107,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * IP access limit configuration switch
+                     * Whether to enable IP rate limit. Values:
 `on`: Enable
 `off`: Disable
                      */

@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Configuration switch
-                     * @return Switch Configuration switch
+                     * 获取Whether to enable the custom origin-pull request to follow the host when a 302 code is returned. Values:
+`on`: Enable
+`off`: Disable
+                     * @return Switch Whether to enable the custom origin-pull request to follow the host when a 302 code is returned. Values:
+`on`: Enable
+`off`: Disable
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Configuration switch
-                     * @param _switch Configuration switch
+                     * 设置Whether to enable the custom origin-pull request to follow the host when a 302 code is returned. Values:
+`on`: Enable
+`off`: Disable
+                     * @param _switch Whether to enable the custom origin-pull request to follow the host when a 302 code is returned. Values:
+`on`: Enable
+`off`: Disable
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -112,7 +120,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Configuration switch
+                     * Whether to enable the custom origin-pull request to follow the host when a 302 code is returned. Values:
+`on`: Enable
+`off`: Disable
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

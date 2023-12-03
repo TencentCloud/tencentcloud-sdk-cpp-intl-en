@@ -47,27 +47,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取No-cache configuration switch
+                     * 获取Whether to enable no-caching at the path. Values:
 `on`: Enable
 `off`: Disable
-Note: this field may return null, indicating that no valid value is obtained.
-                     * @return Switch No-cache configuration switch
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Switch Whether to enable no-caching at the path. Values:
 `on`: Enable
 `off`: Disable
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置No-cache configuration switch
+                     * 设置Whether to enable no-caching at the path. Values:
 `on`: Enable
 `off`: Disable
-Note: this field may return null, indicating that no valid value is obtained.
-                     * @param _switch No-cache configuration switch
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param _switch Whether to enable no-caching at the path. Values:
 `on`: Enable
 `off`: Disable
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -119,10 +119,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * No-cache configuration switch
+                     * Whether to enable no-caching at the path. Values:
 `on`: Enable
 `off`: Disable
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

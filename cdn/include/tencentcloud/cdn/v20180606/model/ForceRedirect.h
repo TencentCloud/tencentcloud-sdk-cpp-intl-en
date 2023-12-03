@@ -47,27 +47,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Access forced redirect configuration switch
+                     * 获取Whether to enable forced HTTPS redirects. Values:
 `on`: Enable
 `off`: Disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return Switch Access forced redirect configuration switch
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Switch Whether to enable forced HTTPS redirects. Values:
 `on`: Enable
 `off`: Disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Access forced redirect configuration switch
+                     * 设置Whether to enable forced HTTPS redirects. Values:
 `on`: Enable
 `off`: Disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _switch Access forced redirect configuration switch
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param _switch Whether to enable forced HTTPS redirects. Values:
 `on`: Enable
 `off`: Disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -169,10 +169,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * Access forced redirect configuration switch
+                     * Whether to enable forced HTTPS redirects. Values:
 `on`: Enable
 `off`: Disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

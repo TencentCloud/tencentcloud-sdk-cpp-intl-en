@@ -39,6 +39,8 @@
 #include <tencentcloud/teo/v20220901/model/CreateApplicationProxyResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateApplicationProxyRuleRequest.h>
 #include <tencentcloud/teo/v20220901/model/CreateApplicationProxyRuleResponse.h>
+#include <tencentcloud/teo/v20220901/model/CreateConfigGroupVersionRequest.h>
+#include <tencentcloud/teo/v20220901/model/CreateConfigGroupVersionResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateOriginGroupRequest.h>
 #include <tencentcloud/teo/v20220901/model/CreateOriginGroupResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreatePlanForZoneRequest.h>
@@ -73,6 +75,8 @@
 #include <tencentcloud/teo/v20220901/model/DeleteSharedCNAMEResponse.h>
 #include <tencentcloud/teo/v20220901/model/DeleteZoneRequest.h>
 #include <tencentcloud/teo/v20220901/model/DeleteZoneResponse.h>
+#include <tencentcloud/teo/v20220901/model/DeployConfigGroupVersionRequest.h>
+#include <tencentcloud/teo/v20220901/model/DeployConfigGroupVersionResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeAccelerationDomainsRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeAccelerationDomainsResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeAliasDomainsRequest.h>
@@ -81,6 +85,10 @@
 #include <tencentcloud/teo/v20220901/model/DescribeApplicationProxiesResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeAvailablePlansRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeAvailablePlansResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeConfigGroupVersionDetailRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeConfigGroupVersionDetailResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeConfigGroupVersionsRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeConfigGroupVersionsResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeContentQuotaRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeContentQuotaResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeDDoSAttackDataRequest.h>
@@ -91,6 +99,10 @@
 #include <tencentcloud/teo/v20220901/model/DescribeDDoSAttackTopDataResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeDefaultCertificatesRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeDefaultCertificatesResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeDeployHistoryRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeDeployHistoryResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeEnvironmentsRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeEnvironmentsResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeHostsSettingRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeHostsSettingResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeIdentificationsRequest.h>
@@ -203,6 +215,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateApplicationProxyRuleResponse> CreateApplicationProxyRuleOutcome;
                 typedef std::future<CreateApplicationProxyRuleOutcome> CreateApplicationProxyRuleOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CreateApplicationProxyRuleRequest&, CreateApplicationProxyRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateApplicationProxyRuleAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateConfigGroupVersionResponse> CreateConfigGroupVersionOutcome;
+                typedef std::future<CreateConfigGroupVersionOutcome> CreateConfigGroupVersionOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::CreateConfigGroupVersionRequest&, CreateConfigGroupVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateConfigGroupVersionAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateOriginGroupResponse> CreateOriginGroupOutcome;
                 typedef std::future<CreateOriginGroupOutcome> CreateOriginGroupOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CreateOriginGroupRequest&, CreateOriginGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateOriginGroupAsyncHandler;
@@ -254,6 +269,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteZoneResponse> DeleteZoneOutcome;
                 typedef std::future<DeleteZoneOutcome> DeleteZoneOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DeleteZoneRequest&, DeleteZoneOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteZoneAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeployConfigGroupVersionResponse> DeployConfigGroupVersionOutcome;
+                typedef std::future<DeployConfigGroupVersionOutcome> DeployConfigGroupVersionOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DeployConfigGroupVersionRequest&, DeployConfigGroupVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeployConfigGroupVersionAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAccelerationDomainsResponse> DescribeAccelerationDomainsOutcome;
                 typedef std::future<DescribeAccelerationDomainsOutcome> DescribeAccelerationDomainsOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeAccelerationDomainsRequest&, DescribeAccelerationDomainsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAccelerationDomainsAsyncHandler;
@@ -266,6 +284,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeAvailablePlansResponse> DescribeAvailablePlansOutcome;
                 typedef std::future<DescribeAvailablePlansOutcome> DescribeAvailablePlansOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeAvailablePlansRequest&, DescribeAvailablePlansOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAvailablePlansAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeConfigGroupVersionDetailResponse> DescribeConfigGroupVersionDetailOutcome;
+                typedef std::future<DescribeConfigGroupVersionDetailOutcome> DescribeConfigGroupVersionDetailOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeConfigGroupVersionDetailRequest&, DescribeConfigGroupVersionDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeConfigGroupVersionDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeConfigGroupVersionsResponse> DescribeConfigGroupVersionsOutcome;
+                typedef std::future<DescribeConfigGroupVersionsOutcome> DescribeConfigGroupVersionsOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeConfigGroupVersionsRequest&, DescribeConfigGroupVersionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeConfigGroupVersionsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeContentQuotaResponse> DescribeContentQuotaOutcome;
                 typedef std::future<DescribeContentQuotaOutcome> DescribeContentQuotaOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeContentQuotaRequest&, DescribeContentQuotaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeContentQuotaAsyncHandler;
@@ -281,6 +305,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeDefaultCertificatesResponse> DescribeDefaultCertificatesOutcome;
                 typedef std::future<DescribeDefaultCertificatesOutcome> DescribeDefaultCertificatesOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeDefaultCertificatesRequest&, DescribeDefaultCertificatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDefaultCertificatesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDeployHistoryResponse> DescribeDeployHistoryOutcome;
+                typedef std::future<DescribeDeployHistoryOutcome> DescribeDeployHistoryOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeDeployHistoryRequest&, DescribeDeployHistoryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDeployHistoryAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeEnvironmentsResponse> DescribeEnvironmentsOutcome;
+                typedef std::future<DescribeEnvironmentsOutcome> DescribeEnvironmentsOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeEnvironmentsRequest&, DescribeEnvironmentsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeEnvironmentsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeHostsSettingResponse> DescribeHostsSettingOutcome;
                 typedef std::future<DescribeHostsSettingOutcome> DescribeHostsSettingOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeHostsSettingRequest&, DescribeHostsSettingOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeHostsSettingAsyncHandler;
@@ -470,6 +500,15 @@ For sites connected via the CNAME, if you have not verified the ownership of the
                 CreateApplicationProxyRuleOutcomeCallable CreateApplicationProxyRuleCallable(const Model::CreateApplicationProxyRuleRequest& request);
 
                 /**
+                 *This API is used to create a new version for the specified configuration group in version management mode. The version management feature is currently undergoing beta testing and is accessible only to users on the whitelist.
+                 * @param req CreateConfigGroupVersionRequest
+                 * @return CreateConfigGroupVersionOutcome
+                 */
+                CreateConfigGroupVersionOutcome CreateConfigGroupVersion(const Model::CreateConfigGroupVersionRequest &request);
+                void CreateConfigGroupVersionAsync(const Model::CreateConfigGroupVersionRequest& request, const CreateConfigGroupVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateConfigGroupVersionOutcomeCallable CreateConfigGroupVersionCallable(const Model::CreateConfigGroupVersionRequest& request);
+
+                /**
                  *This API is used to create an origin group for easy management. The created origin server group can be used for **adding acceleration domain names** and **layer-4 proxy configuration**.
                  * @param req CreateOriginGroupRequest
                  * @return CreateOriginGroupOutcome
@@ -497,9 +536,9 @@ For sites connected via the CNAME, if you have not verified the ownership of the
                 CreatePrefetchTaskOutcomeCallable CreatePrefetchTaskCallable(const Model::CreatePrefetchTaskRequest& request);
 
                 /**
-                 *When the origin server resource is updated but the node cache TTL has not expired, the user will still access the old resource. To solve this problem, you can use this API to purge the node cache. There are two action options: <li>Delete directly: Delete the node cache directly without any verification. Trigger origin-pull when the resource is requested.</li><li>Mark as expired: Set the node resource as expired, and trigger origin-pull verification when the resource, that is, send an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin responds with 200, the node pulls new resources from the origin and update the cache. If the origin responds with 304, the node does not update the cache</li>.
+                 *When there are resources updated on the origin with the TTL remaining valid, users cannot access the latest resources. In this case, you can purge the cache using this API. There are two methods: <li>Delete: This method deletes the node cache without verification and retrieves the latest resources from the origin when receiving a request.</li><li>Invalidate: This method marks the node cache as invalid and sends a request with the If-None-Match and If-Modified-Since headers to the origin. If the origin responses with 200, the latest resources are retrieved to be cached on the node. If a 304 response is returned, the latest resources are not cached on the node.
 
-For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1).
+</li>For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1). </li>
                  * @param req CreatePurgeTaskRequest
                  * @return CreatePurgeTaskOutcome
                  */
@@ -627,6 +666,15 @@ If there are already EdgeOne plans under the current account, it is recommended 
                 DeleteZoneOutcomeCallable DeleteZoneCallable(const Model::DeleteZoneRequest& request);
 
                 /**
+                 *This API is used to release versions in version management mode. Users can deploy the version to either the testing environment or the production environment by specifying the EnvId parameter. The version management feature is currently undergoing beta testing and is accessible only to users on the whitelist.
+                 * @param req DeployConfigGroupVersionRequest
+                 * @return DeployConfigGroupVersionOutcome
+                 */
+                DeployConfigGroupVersionOutcome DeployConfigGroupVersion(const Model::DeployConfigGroupVersionRequest &request);
+                void DeployConfigGroupVersionAsync(const Model::DeployConfigGroupVersionRequest& request, const DeployConfigGroupVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeployConfigGroupVersionOutcomeCallable DeployConfigGroupVersionCallable(const Model::DeployConfigGroupVersionRequest& request);
+
+                /**
                  *This API is used to query domain name information of a site, including the acceleration domain name, origin, and domain name status. You can query the information of all domain names, or specific domain names by specifying filters information.
                  * @param req DescribeAccelerationDomainsRequest
                  * @return DescribeAccelerationDomainsOutcome
@@ -661,6 +709,24 @@ If there are already EdgeOne plans under the current account, it is recommended 
                 DescribeAvailablePlansOutcome DescribeAvailablePlans(const Model::DescribeAvailablePlansRequest &request);
                 void DescribeAvailablePlansAsync(const Model::DescribeAvailablePlansRequest& request, const DescribeAvailablePlansAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeAvailablePlansOutcomeCallable DescribeAvailablePlansCallable(const Model::DescribeAvailablePlansRequest& request);
+
+                /**
+                 *This API is used to obtain detailed information about a version in version management mode. The response includes the version ID, description, status, creation time, configuration group information, and the content of the version configuration file. The version management feature is currently undergoing beta testing and is accessible only to users on the whitelist.
+                 * @param req DescribeConfigGroupVersionDetailRequest
+                 * @return DescribeConfigGroupVersionDetailOutcome
+                 */
+                DescribeConfigGroupVersionDetailOutcome DescribeConfigGroupVersionDetail(const Model::DescribeConfigGroupVersionDetailRequest &request);
+                void DescribeConfigGroupVersionDetailAsync(const Model::DescribeConfigGroupVersionDetailRequest& request, const DescribeConfigGroupVersionDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeConfigGroupVersionDetailOutcomeCallable DescribeConfigGroupVersionDetailCallable(const Model::DescribeConfigGroupVersionDetailRequest& request);
+
+                /**
+                 *This API is used to query the version list for the specified configuration group in version management mode. The version management feature is currently undergoing beta testing and is accessible only to users on the whitelist.
+                 * @param req DescribeConfigGroupVersionsRequest
+                 * @return DescribeConfigGroupVersionsOutcome
+                 */
+                DescribeConfigGroupVersionsOutcome DescribeConfigGroupVersions(const Model::DescribeConfigGroupVersionsRequest &request);
+                void DescribeConfigGroupVersionsAsync(const Model::DescribeConfigGroupVersionsRequest& request, const DescribeConfigGroupVersionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeConfigGroupVersionsOutcomeCallable DescribeConfigGroupVersionsCallable(const Model::DescribeConfigGroupVersionsRequest& request);
 
                 /**
                  *This API is used to query content management quotas.
@@ -706,6 +772,24 @@ If there are already EdgeOne plans under the current account, it is recommended 
                 DescribeDefaultCertificatesOutcome DescribeDefaultCertificates(const Model::DescribeDefaultCertificatesRequest &request);
                 void DescribeDefaultCertificatesAsync(const Model::DescribeDefaultCertificatesRequest& request, const DescribeDefaultCertificatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeDefaultCertificatesOutcomeCallable DescribeDefaultCertificatesCallable(const Model::DescribeDefaultCertificatesRequest& request);
+
+                /**
+                 *This API is used to query the release history of versions in the production or test environment in version management mode. The version management feature is currently undergoing beta testing and is accessible only to users on the whitelist.
+                 * @param req DescribeDeployHistoryRequest
+                 * @return DescribeDeployHistoryOutcome
+                 */
+                DescribeDeployHistoryOutcome DescribeDeployHistory(const Model::DescribeDeployHistoryRequest &request);
+                void DescribeDeployHistoryAsync(const Model::DescribeDeployHistoryRequest& request, const DescribeDeployHistoryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDeployHistoryOutcomeCallable DescribeDeployHistoryCallable(const Model::DescribeDeployHistoryRequest& request);
+
+                /**
+                 *This API is used to query environment information in version management mode. The response includes the environment ID, type, and current effective version. The version management feature is currently undergoing beta testing and is accessible only to users on the whitelist.
+                 * @param req DescribeEnvironmentsRequest
+                 * @return DescribeEnvironmentsOutcome
+                 */
+                DescribeEnvironmentsOutcome DescribeEnvironments(const Model::DescribeEnvironmentsRequest &request);
+                void DescribeEnvironmentsAsync(const Model::DescribeEnvironmentsRequest& request, const DescribeEnvironmentsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeEnvironmentsOutcomeCallable DescribeEnvironmentsCallable(const Model::DescribeEnvironmentsRequest& request);
 
                 /**
                  *This API is used to query detailed domain name configuration.

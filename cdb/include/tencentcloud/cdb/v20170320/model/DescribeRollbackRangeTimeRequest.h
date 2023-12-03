@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Whether the clone instance and the source instance are in one AZ. Valid values: `true` (yes), `false` (no).
-                     * @return IsRemoteZone Whether the clone instance and the source instance are in one AZ. Valid values: `true` (yes), `false` (no).
+                     * 获取Whether the clone instance and the source instance are in the same AZ. Valid values: `true` (yes), `false` (no).
+                     * @return IsRemoteZone Whether the clone instance and the source instance are in the same AZ. Valid values: `true` (yes), `false` (no).
                      * 
                      */
                     std::string GetIsRemoteZone() const;
 
                     /**
-                     * 设置Whether the clone instance and the source instance are in one AZ. Valid values: `true` (yes), `false` (no).
-                     * @param _isRemoteZone Whether the clone instance and the source instance are in one AZ. Valid values: `true` (yes), `false` (no).
+                     * 设置Whether the clone instance and the source instance are in the same AZ. Valid values: `true` (yes), `false` (no).
+                     * @param _isRemoteZone Whether the clone instance and the source instance are in the same AZ. Valid values: `true` (yes), `false` (no).
                      * 
                      */
                     void SetIsRemoteZone(const std::string& _isRemoteZone);
@@ -114,7 +114,7 @@ namespace TencentCloud
                     bool m_instanceIdsHasBeenSet;
 
                     /**
-                     * Whether the clone instance and the source instance are in one AZ. Valid values: `true` (yes), `false` (no).
+                     * Whether the clone instance and the source instance are in the same AZ. Valid values: `true` (yes), `false` (no).
                      */
                     std::string m_isRemoteZone;
                     bool m_isRemoteZoneHasBeenSet;

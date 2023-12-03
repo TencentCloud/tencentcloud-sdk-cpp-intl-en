@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cdb/v20170320/model/LogRuleTemplateInfo.h>
 
 
 namespace TencentCloud
@@ -300,18 +301,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Number of scanned rows
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CheckRows Number of scanned rows
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetCheckRows() const;
 
                     /**
                      * 设置Number of scanned rows
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _checkRows Number of scanned rows
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCheckRows(const int64_t& _checkRows);
@@ -324,19 +325,19 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                     bool CheckRowsHasBeenSet() const;
 
                     /**
-                     * 获取CPU u200dexecution time (μs)
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-                     * @return CpuTime CPU u200dexecution time (μs)
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 获取CPU execution time (μs)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CpuTime CPU execution time (μs)
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     double GetCpuTime() const;
 
                     /**
-                     * 设置CPU u200dexecution time (μs)
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-                     * @param _cpuTime CPU u200dexecution time (μs)
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 设置CPU execution time (μs)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _cpuTime CPU execution time (μs)
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCpuTime(const double& _cpuTime);
@@ -350,18 +351,18 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
                     /**
                      * 获取IO wait time (μs)
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IoWaitTime IO wait time (μs)
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetIoWaitTime() const;
 
                     /**
                      * 设置IO wait time (μs)
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _ioWaitTime IO wait time (μs)
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIoWaitTime(const uint64_t& _ioWaitTime);
@@ -375,18 +376,18 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
                     /**
                      * 获取Lock wait time (μs)
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LockWaitTime Lock wait time (μs)
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetLockWaitTime() const;
 
                     /**
                      * 设置Lock wait time (μs)
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _lockWaitTime Lock wait time (μs)
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLockWaitTime(const uint64_t& _lockWaitTime);
@@ -400,18 +401,18 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
                     /**
                      * 获取Start time, which forms a time accurate to nanoseconds with·`timestamp`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NsTime Start time, which forms a time accurate to nanoseconds with·`timestamp`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetNsTime() const;
 
                     /**
                      * 设置Start time, which forms a time accurate to nanoseconds with·`timestamp`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _nsTime Start time, which forms a time accurate to nanoseconds with·`timestamp`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetNsTime(const uint64_t& _nsTime);
@@ -424,19 +425,19 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                     bool NsTimeHasBeenSet() const;
 
                     /**
-                     * 获取Transaction u200dduration (μs)
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-                     * @return TrxLivingTime Transaction u200dduration (μs)
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 获取Transaction duration (μs)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TrxLivingTime Transaction duration (μs)
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetTrxLivingTime() const;
 
                     /**
-                     * 设置Transaction u200dduration (μs)
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-                     * @param _trxLivingTime Transaction u200dduration (μs)
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 设置Transaction duration (μs)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _trxLivingTime Transaction duration (μs)
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTrxLivingTime(const uint64_t& _trxLivingTime);
@@ -447,6 +448,31 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                      * 
                      */
                     bool TrxLivingTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Basic information on the rule template hit by the log.
+Note: The return value may be null, indicating that no valid data can be obtained.
+                     * @return TemplateInfo Basic information on the rule template hit by the log.
+Note: The return value may be null, indicating that no valid data can be obtained.
+                     * 
+                     */
+                    std::vector<LogRuleTemplateInfo> GetTemplateInfo() const;
+
+                    /**
+                     * 设置Basic information on the rule template hit by the log.
+Note: The return value may be null, indicating that no valid data can be obtained.
+                     * @param _templateInfo Basic information on the rule template hit by the log.
+Note: The return value may be null, indicating that no valid data can be obtained.
+                     * 
+                     */
+                    void SetTemplateInfo(const std::vector<LogRuleTemplateInfo>& _templateInfo);
+
+                    /**
+                     * 判断参数 TemplateInfo 是否已赋值
+                     * @return TemplateInfo 是否已赋值
+                     * 
+                     */
+                    bool TemplateInfoHasBeenSet() const;
 
                 private:
 
@@ -524,45 +550,52 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
                     /**
                      * Number of scanned rows
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_checkRows;
                     bool m_checkRowsHasBeenSet;
 
                     /**
-                     * CPU u200dexecution time (μs)
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * CPU execution time (μs)
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     double m_cpuTime;
                     bool m_cpuTimeHasBeenSet;
 
                     /**
                      * IO wait time (μs)
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_ioWaitTime;
                     bool m_ioWaitTimeHasBeenSet;
 
                     /**
                      * Lock wait time (μs)
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_lockWaitTime;
                     bool m_lockWaitTimeHasBeenSet;
 
                     /**
                      * Start time, which forms a time accurate to nanoseconds with·`timestamp`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_nsTime;
                     bool m_nsTimeHasBeenSet;
 
                     /**
-                     * Transaction u200dduration (μs)
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * Transaction duration (μs)
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_trxLivingTime;
                     bool m_trxLivingTimeHasBeenSet;
+
+                    /**
+                     * Basic information on the rule template hit by the log.
+Note: The return value may be null, indicating that no valid data can be obtained.
+                     */
+                    std::vector<LogRuleTemplateInfo> m_templateInfo;
+                    bool m_templateInfoHasBeenSet;
 
                 };
             }

@@ -76,15 +76,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Allowed client source. IPv4 and IPv6 addresses and network segments are supported. 0.0.0.0/0 indicates that all IPv4 clients can be debugged, and ::/0 indicates that all IPv6 clients can be debugged.
-                     * @return AllowClientIPList Allowed client source. IPv4 and IPv6 addresses and network segments are supported. 0.0.0.0/0 indicates that all IPv4 clients can be debugged, and ::/0 indicates that all IPv6 clients can be debugged.
+                     * 获取The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
+                     * @return AllowClientIPList The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
                      * 
                      */
                     std::vector<std::string> GetAllowClientIPList() const;
 
                     /**
-                     * 设置Allowed client source. IPv4 and IPv6 addresses and network segments are supported. 0.0.0.0/0 indicates that all IPv4 clients can be debugged, and ::/0 indicates that all IPv6 clients can be debugged.
-                     * @param _allowClientIPList Allowed client source. IPv4 and IPv6 addresses and network segments are supported. 0.0.0.0/0 indicates that all IPv4 clients can be debugged, and ::/0 indicates that all IPv6 clients can be debugged.
+                     * 设置The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
+                     * @param _allowClientIPList The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
                      * 
                      */
                     void SetAllowClientIPList(const std::vector<std::string>& _allowClientIPList);
@@ -97,15 +97,15 @@ namespace TencentCloud
                     bool AllowClientIPListHasBeenSet() const;
 
                     /**
-                     * 获取The time when the standard debugging setting expires. If it is exceeded, this feature u200dbecomes invalid.
-                     * @return ExpireTime The time when the standard debugging setting expires. If it is exceeded, this feature u200dbecomes invalid.
+                     * 获取The time when the standard debugging setting expires. If it is exceeded, this feature becomes invalid.
+                     * @return ExpireTime The time when the standard debugging setting expires. If it is exceeded, this feature becomes invalid.
                      * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
-                     * 设置The time when the standard debugging setting expires. If it is exceeded, this feature u200dbecomes invalid.
-                     * @param _expireTime The time when the standard debugging setting expires. If it is exceeded, this feature u200dbecomes invalid.
+                     * 设置The time when the standard debugging setting expires. If it is exceeded, this feature becomes invalid.
+                     * @param _expireTime The time when the standard debugging setting expires. If it is exceeded, this feature becomes invalid.
                      * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
@@ -128,13 +128,13 @@ namespace TencentCloud
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Allowed client source. IPv4 and IPv6 addresses and network segments are supported. 0.0.0.0/0 indicates that all IPv4 clients can be debugged, and ::/0 indicates that all IPv6 clients can be debugged.
+                     * The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
                      */
                     std::vector<std::string> m_allowClientIPList;
                     bool m_allowClientIPListHasBeenSet;
 
                     /**
-                     * The time when the standard debugging setting expires. If it is exceeded, this feature u200dbecomes invalid.
+                     * The time when the standard debugging setting expires. If it is exceeded, this feature becomes invalid.
                      */
                     std::string m_expireTime;
                     bool m_expireTimeHasBeenSet;

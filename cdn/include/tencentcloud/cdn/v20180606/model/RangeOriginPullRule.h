@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies whether Range GETs is enabled
-                     * @return Switch Specifies whether Range GETs is enabled
+                     * 获取Whether to enable Range GETs. Values:
+`on`: Enable
+`off`: Disable
+                     * @return Switch Whether to enable Range GETs. Values:
+`on`: Enable
+`off`: Disable
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Specifies whether Range GETs is enabled
-                     * @param _switch Specifies whether Range GETs is enabled
+                     * 设置Whether to enable Range GETs. Values:
+`on`: Enable
+`off`: Disable
+                     * @param _switch Whether to enable Range GETs. Values:
+`on`: Enable
+`off`: Disable
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -144,7 +152,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * Specifies whether Range GETs is enabled
+                     * Whether to enable Range GETs. Values:
+`on`: Enable
+`off`: Disable
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

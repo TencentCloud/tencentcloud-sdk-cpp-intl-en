@@ -48,19 +48,31 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Authentication switch, which can be on or off.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Switch Authentication switch, which can be on or off.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Whether to enable advanced origin-pull authentication. Values:
+`on`: Enable
+`off`: Disable
+
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Switch Whether to enable advanced origin-pull authentication. Values:
+`on`: Enable
+`off`: Disable
+
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Authentication switch, which can be on or off.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _switch Authentication switch, which can be on or off.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Whether to enable advanced origin-pull authentication. Values:
+`on`: Enable
+`off`: Disable
+
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param _switch Whether to enable advanced origin-pull authentication. Values:
+`on`: Enable
+`off`: Disable
+
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -100,8 +112,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * Authentication switch, which can be on or off.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Whether to enable advanced origin-pull authentication. Values:
+`on`: Enable
+`off`: Disable
+
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

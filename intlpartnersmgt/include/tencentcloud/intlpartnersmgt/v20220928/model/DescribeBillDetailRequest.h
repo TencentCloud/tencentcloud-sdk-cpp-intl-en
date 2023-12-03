@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool MonthHasBeenSet() const;
 
                     /**
-                     * 获取A pagination parameter that specifies the number of entries per page
-                     * @return PageSize A pagination parameter that specifies the number of entries per page
+                     * 获取Page parameter: Indicates the number of entries per page. The maximum value is 200.
+                     * @return PageSize Page parameter: Indicates the number of entries per page. The maximum value is 200.
                      * 
                      */
                     int64_t GetPageSize() const;
 
                     /**
-                     * 设置A pagination parameter that specifies the number of entries per page
-                     * @param _pageSize A pagination parameter that specifies the number of entries per page
+                     * 设置Page parameter: Indicates the number of entries per page. The maximum value is 200.
+                     * @param _pageSize Page parameter: Indicates the number of entries per page. The maximum value is 200.
                      * 
                      */
                     void SetPageSize(const int64_t& _pageSize);
@@ -156,7 +156,7 @@ namespace TencentCloud
                     bool m_monthHasBeenSet;
 
                     /**
-                     * A pagination parameter that specifies the number of entries per page
+                     * Page parameter: Indicates the number of entries per page. The maximum value is 200.
                      */
                     int64_t m_pageSize;
                     bool m_pageSizeHasBeenSet;

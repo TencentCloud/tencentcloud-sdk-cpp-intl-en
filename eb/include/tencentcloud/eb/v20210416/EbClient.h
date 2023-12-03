@@ -47,6 +47,8 @@
 #include <tencentcloud/eb/v20210416/model/DeleteTargetResponse.h>
 #include <tencentcloud/eb/v20210416/model/DeleteTransformationRequest.h>
 #include <tencentcloud/eb/v20210416/model/DeleteTransformationResponse.h>
+#include <tencentcloud/eb/v20210416/model/DescribeLogTagValueRequest.h>
+#include <tencentcloud/eb/v20210416/model/DescribeLogTagValueResponse.h>
 #include <tencentcloud/eb/v20210416/model/GetEventBusRequest.h>
 #include <tencentcloud/eb/v20210416/model/GetEventBusResponse.h>
 #include <tencentcloud/eb/v20210416/model/GetRuleRequest.h>
@@ -61,6 +63,8 @@
 #include <tencentcloud/eb/v20210416/model/ListRulesResponse.h>
 #include <tencentcloud/eb/v20210416/model/ListTargetsRequest.h>
 #include <tencentcloud/eb/v20210416/model/ListTargetsResponse.h>
+#include <tencentcloud/eb/v20210416/model/SearchLogRequest.h>
+#include <tencentcloud/eb/v20210416/model/SearchLogResponse.h>
 #include <tencentcloud/eb/v20210416/model/UpdateConnectionRequest.h>
 #include <tencentcloud/eb/v20210416/model/UpdateConnectionResponse.h>
 #include <tencentcloud/eb/v20210416/model/UpdateEventBusRequest.h>
@@ -121,6 +125,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteTransformationResponse> DeleteTransformationOutcome;
                 typedef std::future<DeleteTransformationOutcome> DeleteTransformationOutcomeCallable;
                 typedef std::function<void(const EbClient*, const Model::DeleteTransformationRequest&, DeleteTransformationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteTransformationAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeLogTagValueResponse> DescribeLogTagValueOutcome;
+                typedef std::future<DescribeLogTagValueOutcome> DescribeLogTagValueOutcomeCallable;
+                typedef std::function<void(const EbClient*, const Model::DescribeLogTagValueRequest&, DescribeLogTagValueOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLogTagValueAsyncHandler;
                 typedef Outcome<Core::Error, Model::GetEventBusResponse> GetEventBusOutcome;
                 typedef std::future<GetEventBusOutcome> GetEventBusOutcomeCallable;
                 typedef std::function<void(const EbClient*, const Model::GetEventBusRequest&, GetEventBusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetEventBusAsyncHandler;
@@ -142,6 +149,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ListTargetsResponse> ListTargetsOutcome;
                 typedef std::future<ListTargetsOutcome> ListTargetsOutcomeCallable;
                 typedef std::function<void(const EbClient*, const Model::ListTargetsRequest&, ListTargetsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListTargetsAsyncHandler;
+                typedef Outcome<Core::Error, Model::SearchLogResponse> SearchLogOutcome;
+                typedef std::future<SearchLogOutcome> SearchLogOutcomeCallable;
+                typedef std::function<void(const EbClient*, const Model::SearchLogRequest&, SearchLogOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SearchLogAsyncHandler;
                 typedef Outcome<Core::Error, Model::UpdateConnectionResponse> UpdateConnectionOutcome;
                 typedef std::future<UpdateConnectionOutcome> UpdateConnectionOutcomeCallable;
                 typedef std::function<void(const EbClient*, const Model::UpdateConnectionRequest&, UpdateConnectionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateConnectionAsyncHandler;
@@ -269,6 +279,15 @@ namespace TencentCloud
                 DeleteTransformationOutcomeCallable DeleteTransformationCallable(const Model::DeleteTransformationRequest& request);
 
                 /**
+                 *This API is used to query log searching metric values.
+                 * @param req DescribeLogTagValueRequest
+                 * @return DescribeLogTagValueOutcome
+                 */
+                DescribeLogTagValueOutcome DescribeLogTagValue(const Model::DescribeLogTagValueRequest &request);
+                void DescribeLogTagValueAsync(const Model::DescribeLogTagValueRequest& request, const DescribeLogTagValueAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeLogTagValueOutcomeCallable DescribeLogTagValueCallable(const Model::DescribeLogTagValueRequest& request);
+
+                /**
                  *This API is used to get the details of an event bus.
                  * @param req GetEventBusRequest
                  * @return GetEventBusOutcome
@@ -330,6 +349,15 @@ namespace TencentCloud
                 ListTargetsOutcome ListTargets(const Model::ListTargetsRequest &request);
                 void ListTargetsAsync(const Model::ListTargetsRequest& request, const ListTargetsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ListTargetsOutcomeCallable ListTargetsCallable(const Model::ListTargetsRequest& request);
+
+                /**
+                 *This API is used to query logs. 
+                 * @param req SearchLogRequest
+                 * @return SearchLogOutcome
+                 */
+                SearchLogOutcome SearchLog(const Model::SearchLogRequest &request);
+                void SearchLogAsync(const Model::SearchLogRequest& request, const SearchLogAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SearchLogOutcomeCallable SearchLogCallable(const Model::SearchLogRequest& request);
 
                 /**
                  *This API is used to update an event connector.

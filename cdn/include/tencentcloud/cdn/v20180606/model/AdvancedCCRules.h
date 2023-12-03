@@ -119,19 +119,27 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool FrequencyLimitHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable IP penalty. Valid values: `on` and `off`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return PunishmentSwitch Whether to enable IP penalty. Valid values: `on` and `off`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Whether to enable IP blocking. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * @return PunishmentSwitch Whether to enable IP blocking. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetPunishmentSwitch() const;
 
                     /**
-                     * 设置Whether to enable IP penalty. Valid values: `on` and `off`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _punishmentSwitch Whether to enable IP penalty. Valid values: `on` and `off`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Whether to enable IP blocking. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * @param _punishmentSwitch Whether to enable IP blocking. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetPunishmentSwitch(const std::string& _punishmentSwitch);
@@ -244,19 +252,27 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool ConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable the rule. Values: `on` (enable), `off` (disable).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Switch Whether to enable the rule. Values: `on` (enable), `off` (disable).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether to enable custom CC rules. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * @return Switch Whether to enable custom CC rules. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable the rule. Values: `on` (enable), `off` (disable).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _switch Whether to enable the rule. Values: `on` (enable), `off` (disable).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether to enable custom CC rules. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * @param _switch Whether to enable custom CC rules. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -291,8 +307,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_frequencyLimitHasBeenSet;
 
                     /**
-                     * Whether to enable IP penalty. Valid values: `on` and `off`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Whether to enable IP blocking. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      */
                     std::string m_punishmentSwitch;
                     bool m_punishmentSwitchHasBeenSet;
@@ -326,8 +344,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_configureHasBeenSet;
 
                     /**
-                     * Whether to enable the rule. Values: `on` (enable), `off` (disable).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether to enable custom CC rules. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

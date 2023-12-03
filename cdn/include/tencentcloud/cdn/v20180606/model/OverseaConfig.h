@@ -62,7 +62,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Specific configuration for domain names outside mainland China. UpdateDomainConfig API only supports modification of some region configurations. A list of differences that may exist for older configurations will be provided for a compatibility check. The supported configuration list is as follows:
+                * Specific configuration for domain names outside the Chinese mainland. The `UpdateDomainConfig` API only supports modification of some region configurations. A list of differences that may exist for older configurations will be provided for a compatibility check. The supported configuration list is as follows:
 + Authentication
 + BandwidthAlert
 + ErrorPage

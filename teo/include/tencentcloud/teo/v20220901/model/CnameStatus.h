@@ -69,18 +69,18 @@ namespace TencentCloud
 
                     /**
                      * 获取The CNAME address.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Cname The CNAME address.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCname() const;
 
                     /**
                      * 设置The CNAME address.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _cname The CNAME address.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCname(const std::string& _cname);
@@ -96,11 +96,11 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                      * 获取The CNAME status. Values:
 <li>`active`: Activated</li>
 <li>`moved`: Not activated </li>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Status The CNAME status. Values:
 <li>`active`: Activated</li>
 <li>`moved`: Not activated </li>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetStatus() const;
@@ -109,11 +109,11 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                      * 设置The CNAME status. Values:
 <li>`active`: Activated</li>
 <li>`moved`: Not activated </li>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _status The CNAME status. Values:
 <li>`active`: Activated</li>
 <li>`moved`: Not activated </li>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -135,7 +135,7 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
                     /**
                      * The CNAME address.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_cname;
                     bool m_cnameHasBeenSet;
@@ -144,7 +144,7 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                      * The CNAME status. Values:
 <li>`active`: Activated</li>
 <li>`moved`: Not activated </li>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

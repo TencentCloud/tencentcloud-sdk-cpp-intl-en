@@ -47,10 +47,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cross-border origin-pull optimization configuration switch
+                     * 获取Whether to enable cross-MLC-border origin-pull optimization. Values:
 `on`: Enable
 `off`: Disable
-                     * @return Switch Cross-border origin-pull optimization configuration switch
+                     * @return Switch Whether to enable cross-MLC-border origin-pull optimization. Values:
 `on`: Enable
 `off`: Disable
                      * 
@@ -58,10 +58,10 @@ namespace TencentCloud
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Cross-border origin-pull optimization configuration switch
+                     * 设置Whether to enable cross-MLC-border origin-pull optimization. Values:
 `on`: Enable
 `off`: Disable
-                     * @param _switch Cross-border origin-pull optimization configuration switch
+                     * @param _switch Whether to enable cross-MLC-border origin-pull optimization. Values:
 `on`: Enable
 `off`: Disable
                      * 
@@ -111,7 +111,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * Cross-border origin-pull optimization configuration switch
+                     * Whether to enable cross-MLC-border origin-pull optimization. Values:
 `on`: Enable
 `off`: Disable
                      */

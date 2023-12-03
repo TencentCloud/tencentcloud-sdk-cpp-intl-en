@@ -211,15 +211,15 @@ namespace TencentCloud
                     bool CsrEncryptAlgoHasBeenSet() const;
 
                     /**
-                     * 获取Key pair parameter. RSA supports only the 2048-bit key and ECC supports only prime256v1.
-                     * @return CsrKeyParameter Key pair parameter. RSA supports only the 2048-bit key and ECC supports only prime256v1.
+                     * 获取Key pair parameters. RSA supports only 2048. ECC supports only prime256v1. When the encryption algorithm is set to ECC, this parameter is mandatory.
+                     * @return CsrKeyParameter Key pair parameters. RSA supports only 2048. ECC supports only prime256v1. When the encryption algorithm is set to ECC, this parameter is mandatory.
                      * 
                      */
                     std::string GetCsrKeyParameter() const;
 
                     /**
-                     * 设置Key pair parameter. RSA supports only the 2048-bit key and ECC supports only prime256v1.
-                     * @param _csrKeyParameter Key pair parameter. RSA supports only the 2048-bit key and ECC supports only prime256v1.
+                     * 设置Key pair parameters. RSA supports only 2048. ECC supports only prime256v1. When the encryption algorithm is set to ECC, this parameter is mandatory.
+                     * @param _csrKeyParameter Key pair parameters. RSA supports only 2048. ECC supports only prime256v1. When the encryption algorithm is set to ECC, this parameter is mandatory.
                      * 
                      */
                     void SetCsrKeyParameter(const std::string& _csrKeyParameter);
@@ -387,7 +387,7 @@ namespace TencentCloud
                     bool m_csrEncryptAlgoHasBeenSet;
 
                     /**
-                     * Key pair parameter. RSA supports only the 2048-bit key and ECC supports only prime256v1.
+                     * Key pair parameters. RSA supports only 2048. ECC supports only prime256v1. When the encryption algorithm is set to ECC, this parameter is mandatory.
                      */
                     std::string m_csrKeyParameter;
                     bool m_csrKeyParameterHasBeenSet;

@@ -73,6 +73,7 @@ set(cdn_public_header_model
   include/tencentcloud/cdn/v20180606/model/SimpleCache.h
   include/tencentcloud/cdn/v20180606/model/DeleteClsLogTopicRequest.h
   include/tencentcloud/cdn/v20180606/model/UserAgentFilter.h
+  include/tencentcloud/cdn/v20180606/model/ModifyDomainConfigRequest.h
   include/tencentcloud/cdn/v20180606/model/DescribeCdnOriginIpRequest.h
   include/tencentcloud/cdn/v20180606/model/UpdatePayTypeResponse.h
   include/tencentcloud/cdn/v20180606/model/TopicInfo.h
@@ -166,6 +167,7 @@ set(cdn_public_header_model
   include/tencentcloud/cdn/v20180606/model/IpFreqLimit.h
   include/tencentcloud/cdn/v20180606/model/CreateClsLogTopicRequest.h
   include/tencentcloud/cdn/v20180606/model/CacheOptResult.h
+  include/tencentcloud/cdn/v20180606/model/OriginSni.h
   include/tencentcloud/cdn/v20180606/model/StopCdnDomainRequest.h
   include/tencentcloud/cdn/v20180606/model/DescribeMapInfoResponse.h
   include/tencentcloud/cdn/v20180606/model/DescribeMapInfoRequest.h
@@ -206,6 +208,7 @@ set(cdn_public_header_model
   include/tencentcloud/cdn/v20180606/model/ClsLogObject.h
   include/tencentcloud/cdn/v20180606/model/RegionMapRelation.h
   include/tencentcloud/cdn/v20180606/model/PurgePathCacheRequest.h
+  include/tencentcloud/cdn/v20180606/model/ModifyDomainConfigResponse.h
   include/tencentcloud/cdn/v20180606/model/CreateScdnFailedLogTaskResponse.h
   include/tencentcloud/cdn/v20180606/model/CdnData.h
   include/tencentcloud/cdn/v20180606/model/PurgeUrlsCacheRequest.h
@@ -323,6 +326,7 @@ set(cdn_src
   src/v20180606/model/SimpleCache.cpp
   src/v20180606/model/DeleteClsLogTopicRequest.cpp
   src/v20180606/model/UserAgentFilter.cpp
+  src/v20180606/model/ModifyDomainConfigRequest.cpp
   src/v20180606/model/DescribeCdnOriginIpRequest.cpp
   src/v20180606/model/UpdatePayTypeResponse.cpp
   src/v20180606/model/TopicInfo.cpp
@@ -416,6 +420,7 @@ set(cdn_src
   src/v20180606/model/IpFreqLimit.cpp
   src/v20180606/model/CreateClsLogTopicRequest.cpp
   src/v20180606/model/CacheOptResult.cpp
+  src/v20180606/model/OriginSni.cpp
   src/v20180606/model/StopCdnDomainRequest.cpp
   src/v20180606/model/DescribeMapInfoResponse.cpp
   src/v20180606/model/DescribeMapInfoRequest.cpp
@@ -456,6 +461,7 @@ set(cdn_src
   src/v20180606/model/ClsLogObject.cpp
   src/v20180606/model/RegionMapRelation.cpp
   src/v20180606/model/PurgePathCacheRequest.cpp
+  src/v20180606/model/ModifyDomainConfigResponse.cpp
   src/v20180606/model/CreateScdnFailedLogTaskResponse.cpp
   src/v20180606/model/CdnData.cpp
   src/v20180606/model/PurgeUrlsCacheRequest.cpp

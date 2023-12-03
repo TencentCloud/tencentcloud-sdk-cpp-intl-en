@@ -48,10 +48,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取IP blocklist/allowlist configuration switch
+                     * 获取Whether to enable IP blocklist/allowlist. Values:
 `on`: Enable
 `off`: Disable
-                     * @return Switch IP blocklist/allowlist configuration switch
+                     * @return Switch Whether to enable IP blocklist/allowlist. Values:
 `on`: Enable
 `off`: Disable
                      * 
@@ -59,10 +59,10 @@ namespace TencentCloud
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置IP blocklist/allowlist configuration switch
+                     * 设置Whether to enable IP blocklist/allowlist. Values:
 `on`: Enable
 `off`: Disable
-                     * @param _switch IP blocklist/allowlist configuration switch
+                     * @param _switch Whether to enable IP blocklist/allowlist. Values:
 `on`: Enable
 `off`: Disable
                      * 
@@ -195,7 +195,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * IP blocklist/allowlist configuration switch
+                     * Whether to enable IP blocklist/allowlist. Values:
 `on`: Enable
 `off`: Disable
                      */

@@ -51,27 +51,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Hotlink protection configuration switch
+                     * 获取Whether to enable hot linking protection. Values:
 `on`: Enable
 `off`: Disable
-When this is enabled, one mode needs to be configured. Other modes need to be set to null.
-                     * @return Switch Hotlink protection configuration switch
+Only one advanced configuration can be enabled. Set the rests to `null`.
+                     * @return Switch Whether to enable hot linking protection. Values:
 `on`: Enable
 `off`: Disable
-When this is enabled, one mode needs to be configured. Other modes need to be set to null.
+Only one advanced configuration can be enabled. Set the rests to `null`.
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Hotlink protection configuration switch
+                     * 设置Whether to enable hot linking protection. Values:
 `on`: Enable
 `off`: Disable
-When this is enabled, one mode needs to be configured. Other modes need to be set to null.
-                     * @param _switch Hotlink protection configuration switch
+Only one advanced configuration can be enabled. Set the rests to `null`.
+                     * @param _switch Whether to enable hot linking protection. Values:
 `on`: Enable
 `off`: Disable
-When this is enabled, one mode needs to be configured. Other modes need to be set to null.
+Only one advanced configuration can be enabled. Set the rests to `null`.
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -82,6 +82,43 @@ When this is enabled, one mode needs to be configured. Other modes need to be se
                      * 
                      */
                     bool SwitchHasBeenSet() const;
+
+                    /**
+                     * 获取Authentication algorithm. Values:
+`md5`: Calculate the hash using MD5.
+`sha256`: Calculate the hash using SHA-256.
+Default value: `md5`.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * @return AuthAlgorithm Authentication algorithm. Values:
+`md5`: Calculate the hash using MD5.
+`sha256`: Calculate the hash using SHA-256.
+Default value: `md5`.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetAuthAlgorithm() const;
+
+                    /**
+                     * 设置Authentication algorithm. Values:
+`md5`: Calculate the hash using MD5.
+`sha256`: Calculate the hash using SHA-256.
+Default value: `md5`.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * @param _authAlgorithm Authentication algorithm. Values:
+`md5`: Calculate the hash using MD5.
+`sha256`: Calculate the hash using SHA-256.
+Default value: `md5`.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetAuthAlgorithm(const std::string& _authAlgorithm);
+
+                    /**
+                     * 判断参数 AuthAlgorithm 是否已赋值
+                     * @return AuthAlgorithm 是否已赋值
+                     * 
+                     */
+                    bool AuthAlgorithmHasBeenSet() const;
 
                     /**
                      * 获取Timestamp hotlink protection mode A configuration
@@ -186,13 +223,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * Hotlink protection configuration switch
+                     * Whether to enable hot linking protection. Values:
 `on`: Enable
 `off`: Disable
-When this is enabled, one mode needs to be configured. Other modes need to be set to null.
+Only one advanced configuration can be enabled. Set the rests to `null`.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
+
+                    /**
+                     * Authentication algorithm. Values:
+`md5`: Calculate the hash using MD5.
+`sha256`: Calculate the hash using SHA-256.
+Default value: `md5`.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_authAlgorithm;
+                    bool m_authAlgorithmHasBeenSet;
 
                     /**
                      * Timestamp hotlink protection mode A configuration

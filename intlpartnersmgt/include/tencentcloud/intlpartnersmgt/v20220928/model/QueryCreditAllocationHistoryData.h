@@ -130,6 +130,31 @@ namespace TencentCloud
                      */
                     bool AllocatedCreditHasBeenSet() const;
 
+                    /**
+                     * 获取Available credits after allocation
+Note: The return value may be null, indicating that no valid data can be obtained.
+                     * @return ClientCreditAfter Available credits after allocation
+Note: The return value may be null, indicating that no valid data can be obtained.
+                     * 
+                     */
+                    double GetClientCreditAfter() const;
+
+                    /**
+                     * 设置Available credits after allocation
+Note: The return value may be null, indicating that no valid data can be obtained.
+                     * @param _clientCreditAfter Available credits after allocation
+Note: The return value may be null, indicating that no valid data can be obtained.
+                     * 
+                     */
+                    void SetClientCreditAfter(const double& _clientCreditAfter);
+
+                    /**
+                     * 判断参数 ClientCreditAfter 是否已赋值
+                     * @return ClientCreditAfter 是否已赋值
+                     * 
+                     */
+                    bool ClientCreditAfterHasBeenSet() const;
+
                 private:
 
                     /**
@@ -155,6 +180,13 @@ namespace TencentCloud
                      */
                     double m_allocatedCredit;
                     bool m_allocatedCreditHasBeenSet;
+
+                    /**
+                     * Available credits after allocation
+Note: The return value may be null, indicating that no valid data can be obtained.
+                     */
+                    double m_clientCreditAfter;
+                    bool m_clientCreditAfterHasBeenSet;
 
                 };
             }

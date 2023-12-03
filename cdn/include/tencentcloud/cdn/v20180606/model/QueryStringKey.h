@@ -47,19 +47,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to use `QueryString` as part of `CacheKey`. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return Switch Whether to use `QueryString` as part of `CacheKey`. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Whether to include `QueryString` as part of `CacheKey`. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Switch Whether to include `QueryString` as part of `CacheKey`. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to use `QueryString` as part of `CacheKey`. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _switch Whether to use `QueryString` as part of `CacheKey`. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Whether to include `QueryString` as part of `CacheKey`. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param _switch Whether to include `QueryString` as part of `CacheKey`. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -97,19 +105,35 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool ReorderHasBeenSet() const;
 
                     /**
-                     * 获取Includes/excludes query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeCustom`
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Action Includes/excludes query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeCustom`
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether to include URL parameters. Values:
+`includeAll`: Include all parameters.
+`excludeAll`: Exclude all parameters.
+`includeCustom`: Include custom parameters.
+`excludeCustom`: Exclude custom parameters.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Action Whether to include URL parameters. Values:
+`includeAll`: Include all parameters.
+`excludeAll`: Exclude all parameters.
+`includeCustom`: Include custom parameters.
+`excludeCustom`: Exclude custom parameters.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetAction() const;
 
                     /**
-                     * 设置Includes/excludes query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeCustom`
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _action Includes/excludes query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeCustom`
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether to include URL parameters. Values:
+`includeAll`: Include all parameters.
+`excludeAll`: Exclude all parameters.
+`includeCustom`: Include custom parameters.
+`excludeCustom`: Exclude custom parameters.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param _action Whether to include URL parameters. Values:
+`includeAll`: Include all parameters.
+`excludeAll`: Exclude all parameters.
+`includeCustom`: Include custom parameters.
+`excludeCustom`: Exclude custom parameters.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAction(const std::string& _action);
@@ -149,8 +173,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * Whether to use `QueryString` as part of `CacheKey`. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Whether to include `QueryString` as part of `CacheKey`. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
@@ -163,8 +189,12 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_reorderHasBeenSet;
 
                     /**
-                     * Includes/excludes query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeCustom`
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether to include URL parameters. Values:
+`includeAll`: Include all parameters.
+`excludeAll`: Exclude all parameters.
+`includeCustom`: Include custom parameters.
+`excludeCustom`: Exclude custom parameters.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;

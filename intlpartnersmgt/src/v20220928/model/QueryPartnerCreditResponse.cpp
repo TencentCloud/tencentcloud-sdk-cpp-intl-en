@@ -26,7 +26,9 @@ using namespace std;
 QueryPartnerCreditResponse::QueryPartnerCreditResponse() :
     m_allocatedCreditHasBeenSet(false),
     m_totalCreditHasBeenSet(false),
-    m_remainingCreditHasBeenSet(false)
+    m_remainingCreditHasBeenSet(false),
+    m_customerTotalCreditHasBeenSet(false),
+    m_customerRemainingCreditHasBeenSet(false)
 {
 }
 
@@ -94,6 +96,26 @@ CoreInternalOutcome QueryPartnerCreditResponse::Deserialize(const string &payloa
         m_remainingCreditHasBeenSet = true;
     }
 
+    if (rsp.HasMember("CustomerTotalCredit") && !rsp["CustomerTotalCredit"].IsNull())
+    {
+        if (!rsp["CustomerTotalCredit"].IsLosslessDouble())
+        {
+            return CoreInternalOutcome(Core::Error("response `CustomerTotalCredit` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
+        }
+        m_customerTotalCredit = rsp["CustomerTotalCredit"].GetDouble();
+        m_customerTotalCreditHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("CustomerRemainingCredit") && !rsp["CustomerRemainingCredit"].IsNull())
+    {
+        if (!rsp["CustomerRemainingCredit"].IsLosslessDouble())
+        {
+            return CoreInternalOutcome(Core::Error("response `CustomerRemainingCredit` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
+        }
+        m_customerRemainingCredit = rsp["CustomerRemainingCredit"].GetDouble();
+        m_customerRemainingCreditHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -126,6 +148,22 @@ string QueryPartnerCreditResponse::ToJsonString() const
         string key = "RemainingCredit";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_remainingCredit, allocator);
+    }
+
+    if (m_customerTotalCreditHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CustomerTotalCredit";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_customerTotalCredit, allocator);
+    }
+
+    if (m_customerRemainingCreditHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CustomerRemainingCredit";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_customerRemainingCredit, allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -168,6 +206,26 @@ double QueryPartnerCreditResponse::GetRemainingCredit() const
 bool QueryPartnerCreditResponse::RemainingCreditHasBeenSet() const
 {
     return m_remainingCreditHasBeenSet;
+}
+
+double QueryPartnerCreditResponse::GetCustomerTotalCredit() const
+{
+    return m_customerTotalCredit;
+}
+
+bool QueryPartnerCreditResponse::CustomerTotalCreditHasBeenSet() const
+{
+    return m_customerTotalCreditHasBeenSet;
+}
+
+double QueryPartnerCreditResponse::GetCustomerRemainingCredit() const
+{
+    return m_customerRemainingCredit;
+}
+
+bool QueryPartnerCreditResponse::CustomerRemainingCreditHasBeenSet() const
+{
+    return m_customerRemainingCreditHasBeenSet;
 }
 
 

@@ -44,20 +44,20 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Billing modes:
+                     * 获取Billing type
 `flux`: Bill by traffic
 `bandwidth`: Bill by bandwidth
 `request`: Bill by the number of requests
-`flux_sep`: Disused field
-`bandwidth_sep`: Disused field
-When you change a daily billing mode to another, and there is network usage on the day of change, this field shows the new billing mode, which takes effect from the next day. If there is no network usage on the day of change, this field shows the new billing mode directly.
-                     * @return PayType Billing modes:
+`flux_sep`: Bill by dynamic and static traffic separately 
+`bandwidth_sep`: Bill by dynamic and static bandwidth separately
+If you incur any usage when switching the billing mode, the new mode will take effect the next day. If no usage is incurred, the new mode takes effect immediately.
+                     * @return PayType Billing type
 `flux`: Bill by traffic
 `bandwidth`: Bill by bandwidth
 `request`: Bill by the number of requests
-`flux_sep`: Disused field
-`bandwidth_sep`: Disused field
-When you change a daily billing mode to another, and there is network usage on the day of change, this field shows the new billing mode, which takes effect from the next day. If there is no network usage on the day of change, this field shows the new billing mode directly.
+`flux_sep`: Bill by dynamic and static traffic separately 
+`bandwidth_sep`: Bill by dynamic and static bandwidth separately
+If you incur any usage when switching the billing mode, the new mode will take effect the next day. If no usage is incurred, the new mode takes effect immediately.
                      * 
                      */
                     std::string GetPayType() const;
@@ -70,14 +70,14 @@ When you change a daily billing mode to another, and there is network usage on t
                     bool PayTypeHasBeenSet() const;
 
                     /**
-                     * 获取Billing cycle:
+                     * 获取Billing cycle
 `day`: Daily
-`month`: Monthly 
-`hour`: Hourly 
-                     * @return BillingCycle Billing cycle:
+`month`: Monthly
+`hour`: Hourly
+                     * @return BillingCycle Billing cycle
 `day`: Daily
-`month`: Monthly 
-`hour`: Hourly 
+`month`: Monthly
+`hour`: Hourly
                      * 
                      */
                     std::string GetBillingCycle() const;
@@ -90,16 +90,18 @@ When you change a daily billing mode to another, and there is network usage on t
                     bool BillingCycleHasBeenSet() const;
 
                     /**
-                     * 获取`monthMax`: Billed by the monthly average of daily peak traffic (monthly settlement)
-`day95`: Billed by the daily 95th percentile bandwidth (monthly settlement)
-`month95`: Billed by the monthly 95th percentile bandwidth (monthly settlement)
-`sum`: Billed by the total traffic/total requests (daily or monthly settlement)
-`max`: Billed by the peak bandwidth (daily settlement)
-                     * @return StatType `monthMax`: Billed by the monthly average of daily peak traffic (monthly settlement)
-`day95`: Billed by the daily 95th percentile bandwidth (monthly settlement)
-`month95`: Billed by the monthly 95th percentile bandwidth (monthly settlement)
-`sum`: Billed by the total traffic/total requests (daily or monthly settlement)
-`max`: Billed by the peak bandwidth (daily settlement)
+                     * 获取Statistic data
+`monthMax`: Billed monthly based on the monthly average daily peak traffic
+`day95`: Billed monthly based on the daily 95th percentile bandwidth
+`month95`: Billed monthly based on the monthly 95th percentile bandwidth
+`sum`: Billed daily/monthly based on the total traffic or requests
+`max`: Billed daily based on the peak bandwidth
+                     * @return StatType Statistic data
+`monthMax`: Billed monthly based on the monthly average daily peak traffic
+`day95`: Billed monthly based on the daily 95th percentile bandwidth
+`month95`: Billed monthly based on the monthly 95th percentile bandwidth
+`sum`: Billed daily/monthly based on the total traffic or requests
+`max`: Billed daily based on the peak bandwidth
                      * 
                      */
                     std::string GetStatType() const;
@@ -112,10 +114,10 @@ When you change a daily billing mode to another, and there is network usage on t
                     bool StatTypeHasBeenSet() const;
 
                     /**
-                     * 获取Billing method for regions outside the Chinese mainland:
+                     * 获取Regionl billing
 `all`: Unified billing for all regions
 `multiple`: Region-specific billing
-                     * @return RegionType Billing method for regions outside the Chinese mainland:
+                     * @return RegionType Regionl billing
 `all`: Unified billing for all regions
 `multiple`: Region-specific billing
                      * 
@@ -130,18 +132,18 @@ When you change a daily billing mode to another, and there is network usage on t
                     bool RegionTypeHasBeenSet() const;
 
                     /**
-                     * 获取The current billing mode in effect:
-`flux`: Billed by traffic
-`bandwidth`: Billed by bandwidth
-`request`: Billed by the number of requests
-`flux_sep`: Disused field
-`bandwidth_sep`: Disused field
-                     * @return CurrentPayType The current billing mode in effect:
-`flux`: Billed by traffic
-`bandwidth`: Billed by bandwidth
-`request`: Billed by the number of requests
-`flux_sep`: Disused field
-`bandwidth_sep`: Disused field
+                     * 获取Current billing mode
+`flux`: Bill by traffic
+`bandwidth`: Bill by bandwidth
+`request`: Bill by the number of requests
+`flux_sep`: Bill by dynamic and static traffic separately 
+`bandwidth_sep`: Bill by dynamic and static bandwidth separately
+                     * @return CurrentPayType Current billing mode
+`flux`: Bill by traffic
+`bandwidth`: Bill by bandwidth
+`request`: Bill by the number of requests
+`flux_sep`: Bill by dynamic and static traffic separately 
+`bandwidth_sep`: Bill by dynamic and static bandwidth separately
                      * 
                      */
                     std::string GetCurrentPayType() const;
@@ -156,38 +158,39 @@ When you change a daily billing mode to another, and there is network usage on t
                 private:
 
                     /**
-                     * Billing modes:
+                     * Billing type
 `flux`: Bill by traffic
 `bandwidth`: Bill by bandwidth
 `request`: Bill by the number of requests
-`flux_sep`: Disused field
-`bandwidth_sep`: Disused field
-When you change a daily billing mode to another, and there is network usage on the day of change, this field shows the new billing mode, which takes effect from the next day. If there is no network usage on the day of change, this field shows the new billing mode directly.
+`flux_sep`: Bill by dynamic and static traffic separately 
+`bandwidth_sep`: Bill by dynamic and static bandwidth separately
+If you incur any usage when switching the billing mode, the new mode will take effect the next day. If no usage is incurred, the new mode takes effect immediately.
                      */
                     std::string m_payType;
                     bool m_payTypeHasBeenSet;
 
                     /**
-                     * Billing cycle:
+                     * Billing cycle
 `day`: Daily
-`month`: Monthly 
-`hour`: Hourly 
+`month`: Monthly
+`hour`: Hourly
                      */
                     std::string m_billingCycle;
                     bool m_billingCycleHasBeenSet;
 
                     /**
-                     * `monthMax`: Billed by the monthly average of daily peak traffic (monthly settlement)
-`day95`: Billed by the daily 95th percentile bandwidth (monthly settlement)
-`month95`: Billed by the monthly 95th percentile bandwidth (monthly settlement)
-`sum`: Billed by the total traffic/total requests (daily or monthly settlement)
-`max`: Billed by the peak bandwidth (daily settlement)
+                     * Statistic data
+`monthMax`: Billed monthly based on the monthly average daily peak traffic
+`day95`: Billed monthly based on the daily 95th percentile bandwidth
+`month95`: Billed monthly based on the monthly 95th percentile bandwidth
+`sum`: Billed daily/monthly based on the total traffic or requests
+`max`: Billed daily based on the peak bandwidth
                      */
                     std::string m_statType;
                     bool m_statTypeHasBeenSet;
 
                     /**
-                     * Billing method for regions outside the Chinese mainland:
+                     * Regionl billing
 `all`: Unified billing for all regions
 `multiple`: Region-specific billing
                      */
@@ -195,12 +198,12 @@ When you change a daily billing mode to another, and there is network usage on t
                     bool m_regionTypeHasBeenSet;
 
                     /**
-                     * The current billing mode in effect:
-`flux`: Billed by traffic
-`bandwidth`: Billed by bandwidth
-`request`: Billed by the number of requests
-`flux_sep`: Disused field
-`bandwidth_sep`: Disused field
+                     * Current billing mode
+`flux`: Bill by traffic
+`bandwidth`: Bill by bandwidth
+`request`: Bill by the number of requests
+`flux_sep`: Bill by dynamic and static traffic separately 
+`bandwidth_sep`: Bill by dynamic and static bandwidth separately
                      */
                     std::string m_currentPayType;
                     bool m_currentPayTypeHasBeenSet;

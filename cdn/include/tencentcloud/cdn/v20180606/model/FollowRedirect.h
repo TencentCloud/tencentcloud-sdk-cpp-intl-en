@@ -48,10 +48,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Origin-pull follow-redirect switch
+                     * 获取Whether to enable origin-pull to follow the origin configuration. Values:
 `on`: Enable
 `off`: Disable
-                     * @return Switch Origin-pull follow-redirect switch
+                     * @return Switch Whether to enable origin-pull to follow the origin configuration. Values:
 `on`: Enable
 `off`: Disable
                      * 
@@ -59,10 +59,10 @@ namespace TencentCloud
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Origin-pull follow-redirect switch
+                     * 设置Whether to enable origin-pull to follow the origin configuration. Values:
 `on`: Enable
 `off`: Disable
-                     * @param _switch Origin-pull follow-redirect switch
+                     * @param _switch Whether to enable origin-pull to follow the origin configuration. Values:
 `on`: Enable
 `off`: Disable
                      * 
@@ -104,7 +104,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Origin-pull follow-redirect switch
+                     * Whether to enable origin-pull to follow the origin configuration. Values:
 `on`: Enable
 `off`: Disable
                      */

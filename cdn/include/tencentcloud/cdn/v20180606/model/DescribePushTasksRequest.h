@@ -173,11 +173,11 @@ You must specify either a task ID or a starting time.
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Specifies a region for your query:
+                     * 获取Specifies a region to query the prefetch records
 `mainland`: Chinese mainland
 `overseas`: Outside the Chinese mainland
 `global`: Globe
-                     * @return Area Specifies a region for your query:
+                     * @return Area Specifies a region to query the prefetch records
 `mainland`: Chinese mainland
 `overseas`: Outside the Chinese mainland
 `global`: Globe
@@ -186,11 +186,11 @@ You must specify either a task ID or a starting time.
                     std::string GetArea() const;
 
                     /**
-                     * 设置Specifies a region for your query:
+                     * 设置Specifies a region to query the prefetch records
 `mainland`: Chinese mainland
 `overseas`: Outside the Chinese mainland
 `global`: Globe
-                     * @param _area Specifies a region for your query:
+                     * @param _area Specifies a region to query the prefetch records
 `mainland`: Chinese mainland
 `overseas`: Outside the Chinese mainland
 `global`: Globe
@@ -282,7 +282,7 @@ You must specify either a task ID or a starting time.
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Specifies a region for your query:
+                     * Specifies a region to query the prefetch records
 `mainland`: Chinese mainland
 `overseas`: Outside the Chinese mainland
 `global`: Globe

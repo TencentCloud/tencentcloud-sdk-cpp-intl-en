@@ -172,19 +172,27 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool AlertPercentageHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable the alarm threshold trigger. Values: `on`, `off`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return AlertSwitch Whether to enable the alarm threshold trigger. Values: `on`, `off`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Whether to enable alerts for cumulative usage limit. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return AlertSwitch Whether to enable alerts for cumulative usage limit. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetAlertSwitch() const;
 
                     /**
-                     * 设置Whether to enable the alarm threshold trigger. Values: `on`, `off`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _alertSwitch Whether to enable the alarm threshold trigger. Values: `on`, `off`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Whether to enable alerts for cumulative usage limit. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param _alertSwitch Whether to enable alerts for cumulative usage limit. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAlertSwitch(const std::string& _alertSwitch);
@@ -243,19 +251,27 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool CycleHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable usage limit configuration. Values: `on`, `off`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return Switch Whether to enable usage limit configuration. Values: `on`, `off`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Whether to enable cumulative usage limit. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Switch Whether to enable cumulative usage limit. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable usage limit configuration. Values: `on`, `off`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _switch Whether to enable usage limit configuration. Values: `on`, `off`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Whether to enable cumulative usage limit. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param _switch Whether to enable cumulative usage limit. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -305,8 +321,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_alertPercentageHasBeenSet;
 
                     /**
-                     * Whether to enable the alarm threshold trigger. Values: `on`, `off`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Whether to enable alerts for cumulative usage limit. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_alertSwitch;
                     bool m_alertSwitchHasBeenSet;
@@ -325,8 +343,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_cycleHasBeenSet;
 
                     /**
-                     * Whether to enable usage limit configuration. Values: `on`, `off`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Whether to enable cumulative usage limit. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

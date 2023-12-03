@@ -50,27 +50,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取HTTPS configuration switch
+                     * 获取Whether to enable HTTPS. Values:
 `on`: Enable
 `off`: Disable
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Switch HTTPS configuration switch
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Switch Whether to enable HTTPS. Values:
 `on`: Enable
 `off`: Disable
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置HTTPS configuration switch
+                     * 设置Whether to enable HTTPS. Values:
 `on`: Enable
 `off`: Disable
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _switch HTTPS configuration switch
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param _switch Whether to enable HTTPS. Values:
 `on`: Enable
 `off`: Disable
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -370,10 +370,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * HTTPS configuration switch
+                     * Whether to enable HTTPS. Values:
 `on`: Enable
 `off`: Disable
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

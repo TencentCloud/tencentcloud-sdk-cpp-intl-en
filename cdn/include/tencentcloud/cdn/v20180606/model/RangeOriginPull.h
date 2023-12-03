@@ -48,10 +48,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Range GETs configuration switch
+                     * 获取Whether to enable Range GETs. Values:
 `on`: Enable
 `off`: Disable
-                     * @return Switch Range GETs configuration switch
+                     * @return Switch Whether to enable Range GETs. Values:
 `on`: Enable
 `off`: Disable
                      * 
@@ -59,10 +59,10 @@ namespace TencentCloud
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Range GETs configuration switch
+                     * 设置Whether to enable Range GETs. Values:
 `on`: Enable
 `off`: Disable
-                     * @param _switch Range GETs configuration switch
+                     * @param _switch Whether to enable Range GETs. Values:
 `on`: Enable
 `off`: Disable
                      * 
@@ -104,7 +104,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * Range GETs configuration switch
+                     * Whether to enable Range GETs. Values:
 `on`: Enable
 `off`: Disable
                      */

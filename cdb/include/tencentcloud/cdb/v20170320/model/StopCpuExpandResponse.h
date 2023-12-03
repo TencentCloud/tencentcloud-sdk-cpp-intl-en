@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Async task ID, which can be passed in by calling the u200c`DescribeAsyncRequest` API for task progress query.
-                     * @return AsyncRequestId Async task ID, which can be passed in by calling the u200c`DescribeAsyncRequest` API for task progress query.
+                     * 获取Async task ID, which can be passed in by calling the `DescribeAsyncRequest` API for task progress query.
+                     * @return AsyncRequestId Async task ID, which can be passed in by calling the `DescribeAsyncRequest` API for task progress query.
                      * 
                      */
                     std::string GetAsyncRequestId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Async task ID, which can be passed in by calling the u200c`DescribeAsyncRequest` API for task progress query.
+                     * Async task ID, which can be passed in by calling the `DescribeAsyncRequest` API for task progress query.
                      */
                     std::string m_asyncRequestId;
                     bool m_asyncRequestIdHasBeenSet;

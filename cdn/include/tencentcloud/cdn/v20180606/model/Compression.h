@@ -48,10 +48,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Smart compression configuration switch
+                     * 获取Whether to enable smart compression. Values:
 `on`: Enable
 `off`: Disable
-                     * @return Switch Smart compression configuration switch
+                     * @return Switch Whether to enable smart compression. Values:
 `on`: Enable
 `off`: Disable
                      * 
@@ -59,10 +59,10 @@ namespace TencentCloud
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Smart compression configuration switch
+                     * 设置Whether to enable smart compression. Values:
 `on`: Enable
 `off`: Disable
-                     * @param _switch Smart compression configuration switch
+                     * @param _switch Whether to enable smart compression. Values:
 `on`: Enable
 `off`: Disable
                      * 
@@ -104,7 +104,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * Smart compression configuration switch
+                     * Whether to enable smart compression. Values:
 `on`: Enable
 `off`: Disable
                      */

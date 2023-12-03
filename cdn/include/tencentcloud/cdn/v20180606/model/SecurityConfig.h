@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取on|off
-                     * @return Switch on|off
+                     * 获取Whether to enable SCDN. Values:
+`on`: Enable
+`off`: Disable
+                     * @return Switch Whether to enable SCDN. Values:
+`on`: Enable
+`off`: Disable
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置on|off
-                     * @param _switch on|off
+                     * 设置Whether to enable SCDN. Values:
+`on`: Enable
+`off`: Disable
+                     * @param _switch Whether to enable SCDN. Values:
+`on`: Enable
+`off`: Disable
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -70,7 +78,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * on|off
+                     * Whether to enable SCDN. Values:
+`on`: Enable
+`off`: Disable
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

@@ -47,19 +47,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to use `CacheTag` as part of `CacheKey`
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return Switch Whether to use `CacheTag` as part of `CacheKey`
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Whether to include `CacheTag` as part of `CacheKey`. Values:
+`on`: Yes
+`off`: No
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Switch Whether to include `CacheTag` as part of `CacheKey`. Values:
+`on`: Yes
+`off`: No
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to use `CacheTag` as part of `CacheKey`
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _switch Whether to use `CacheTag` as part of `CacheKey`
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Whether to include `CacheTag` as part of `CacheKey`. Values:
+`on`: Yes
+`off`: No
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param _switch Whether to include `CacheTag` as part of `CacheKey`. Values:
+`on`: Yes
+`off`: No
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -99,8 +107,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * Whether to use `CacheTag` as part of `CacheKey`
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Whether to include `CacheTag` as part of `CacheKey`. Values:
+`on`: Yes
+`off`: No
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

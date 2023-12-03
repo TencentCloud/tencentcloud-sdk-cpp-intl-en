@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable. Valid values: on, off.
-                     * @return Switch Whether to enable. Valid values: on, off.
+                     * 获取Whether to enable HSTS. Values:
+`on`: Enable
+`off`: Disable
+                     * @return Switch Whether to enable HSTS. Values:
+`on`: Enable
+`off`: Disable
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable. Valid values: on, off.
-                     * @param _switch Whether to enable. Valid values: on, off.
+                     * 设置Whether to enable HSTS. Values:
+`on`: Enable
+`off`: Disable
+                     * @param _switch Whether to enable HSTS. Values:
+`on`: Enable
+`off`: Disable
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -120,7 +128,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * Whether to enable. Valid values: on, off.
+                     * Whether to enable HSTS. Values:
+`on`: Enable
+`off`: Disable
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

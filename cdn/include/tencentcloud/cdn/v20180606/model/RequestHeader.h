@@ -48,10 +48,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Custom request header configuration switch
+                     * 获取Whether to enable custom request headers. Values:
 `on`: Enable
 `off`: Disable
-                     * @return Switch Custom request header configuration switch
+                     * @return Switch Whether to enable custom request headers. Values:
 `on`: Enable
 `off`: Disable
                      * 
@@ -59,10 +59,10 @@ namespace TencentCloud
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Custom request header configuration switch
+                     * 设置Whether to enable custom request headers. Values:
 `on`: Enable
 `off`: Disable
-                     * @param _switch Custom request header configuration switch
+                     * @param _switch Whether to enable custom request headers. Values:
 `on`: Enable
 `off`: Disable
                      * 
@@ -104,7 +104,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * Custom request header configuration switch
+                     * Whether to enable custom request headers. Values:
 `on`: Enable
 `off`: Disable
                      */

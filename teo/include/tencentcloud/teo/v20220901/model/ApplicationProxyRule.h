@@ -350,18 +350,18 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
                     /**
                      * 获取Rule tag.
-Note: u200dThis field may returnu200d·`nullu200d`, indicating that no valid values can be obtained.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      * @return RuleTag Rule tag.
-Note: u200dThis field may returnu200d·`nullu200d`, indicating that no valid values can be obtained.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRuleTag() const;
 
                     /**
                      * 设置Rule tag.
-Note: u200dThis field may returnu200d·`nullu200d`, indicating that no valid values can be obtained.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      * @param _ruleTag Rule tag.
-Note: u200dThis field may returnu200d·`nullu200d`, indicating that no valid values can be obtained.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRuleTag(const std::string& _ruleTag);
@@ -460,7 +460,7 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
                     /**
                      * Rule tag.
-Note: u200dThis field may returnu200d·`nullu200d`, indicating that no valid values can be obtained.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      */
                     std::string m_ruleTag;
                     bool m_ruleTagHasBeenSet;

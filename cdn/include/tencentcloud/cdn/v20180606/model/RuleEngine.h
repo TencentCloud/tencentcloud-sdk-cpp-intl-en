@@ -47,10 +47,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies whether to enable rule engine
+                     * 获取Whether to enable rule engine. Values:
 `on`: Enable
 `off`: Disable
-                     * @return Switch Specifies whether to enable rule engine
+                     * @return Switch Whether to enable rule engine. Values:
 `on`: Enable
 `off`: Disable
                      * 
@@ -58,10 +58,10 @@ namespace TencentCloud
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Specifies whether to enable rule engine
+                     * 设置Whether to enable rule engine. Values:
 `on`: Enable
 `off`: Disable
-                     * @param _switch Specifies whether to enable rule engine
+                     * @param _switch Whether to enable rule engine. Values:
 `on`: Enable
 `off`: Disable
                      * 
@@ -103,7 +103,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * Specifies whether to enable rule engine
+                     * Whether to enable rule engine. Values:
 `on`: Enable
 `off`: Disable
                      */

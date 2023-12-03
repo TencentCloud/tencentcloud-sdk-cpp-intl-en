@@ -108,11 +108,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 获取Whether to enable force cache. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable </li>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IgnoreCacheControl Whether to enable force cache. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable </li>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @deprecated
                      */
                     std::string GetIgnoreCacheControl() const;
@@ -121,11 +121,11 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                      * 设置Whether to enable force cache. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable </li>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _ignoreCacheControl Whether to enable force cache. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable </li>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @deprecated
                      */
                     void SetIgnoreCacheControl(const std::string& _ignoreCacheControl);
@@ -159,7 +159,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * Whether to enable force cache. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable </li>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_ignoreCacheControl;
                     bool m_ignoreCacheControlHasBeenSet;

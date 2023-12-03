@@ -110,34 +110,34 @@ namespace TencentCloud
                     bool DownloadUrlHasBeenSet() const;
 
                     /**
-                     * 获取Current status of the resources in violation
+                     * 获取Current status of non-compliant resource
 `forbid`: Blocked
 `release`: Unblocked
 `delay`: Processing delayed
-`reject`: Appeal dismissed. The status is still blocked.
+`reject`: Appeal dismissed. It is still in `forbid` status.
 `complain`: Appeal in process
-                     * @return UrlStatus Current status of the resources in violation
+                     * @return UrlStatus Current status of non-compliant resource
 `forbid`: Blocked
 `release`: Unblocked
 `delay`: Processing delayed
-`reject`: Appeal dismissed. The status is still blocked.
+`reject`: Appeal dismissed. It is still in `forbid` status.
 `complain`: Appeal in process
                      * 
                      */
                     std::string GetUrlStatus() const;
 
                     /**
-                     * 设置Current status of the resources in violation
+                     * 设置Current status of non-compliant resource
 `forbid`: Blocked
 `release`: Unblocked
 `delay`: Processing delayed
-`reject`: Appeal dismissed. The status is still blocked.
+`reject`: Appeal dismissed. It is still in `forbid` status.
 `complain`: Appeal in process
-                     * @param _urlStatus Current status of the resources in violation
+                     * @param _urlStatus Current status of non-compliant resource
 `forbid`: Blocked
 `release`: Unblocked
 `delay`: Processing delayed
-`reject`: Appeal dismissed. The status is still blocked.
+`reject`: Appeal dismissed. It is still in `forbid` status.
 `complain`: Appeal in process
                      * 
                      */
@@ -213,11 +213,11 @@ namespace TencentCloud
                     bool m_downloadUrlHasBeenSet;
 
                     /**
-                     * Current status of the resources in violation
+                     * Current status of non-compliant resource
 `forbid`: Blocked
 `release`: Unblocked
 `delay`: Processing delayed
-`reject`: Appeal dismissed. The status is still blocked.
+`reject`: Appeal dismissed. It is still in `forbid` status.
 `complain`: Appeal in process
                      */
                     std::string m_urlStatus;

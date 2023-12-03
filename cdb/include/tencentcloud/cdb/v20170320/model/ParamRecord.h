@@ -133,21 +133,21 @@ namespace TencentCloud
                     /**
                      * 获取Whether the parameter is modified successfully
                      * @return IsSucess Whether the parameter is modified successfully
-                     * 
+                     * @deprecated
                      */
                     bool GetIsSucess() const;
 
                     /**
                      * 设置Whether the parameter is modified successfully
                      * @param _isSucess Whether the parameter is modified successfully
-                     * 
+                     * @deprecated
                      */
                     void SetIsSucess(const bool& _isSucess);
 
                     /**
                      * 判断参数 IsSucess 是否已赋值
                      * @return IsSucess 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool IsSucessHasBeenSet() const;
 
@@ -171,6 +171,27 @@ namespace TencentCloud
                      * 
                      */
                     bool ModifyTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Indicates whether the parameter is modified successfully.
+                     * @return IsSuccess Indicates whether the parameter is modified successfully.
+                     * 
+                     */
+                    bool GetIsSuccess() const;
+
+                    /**
+                     * 设置Indicates whether the parameter is modified successfully.
+                     * @param _isSuccess Indicates whether the parameter is modified successfully.
+                     * 
+                     */
+                    void SetIsSuccess(const bool& _isSuccess);
+
+                    /**
+                     * 判断参数 IsSuccess 是否已赋值
+                     * @return IsSuccess 是否已赋值
+                     * 
+                     */
+                    bool IsSuccessHasBeenSet() const;
 
                 private:
 
@@ -209,6 +230,12 @@ namespace TencentCloud
                      */
                     std::string m_modifyTime;
                     bool m_modifyTimeHasBeenSet;
+
+                    /**
+                     * Indicates whether the parameter is modified successfully.
+                     */
+                    bool m_isSuccess;
+                    bool m_isSuccessHasBeenSet;
 
                 };
             }

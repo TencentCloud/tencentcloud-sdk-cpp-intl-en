@@ -67,10 +67,10 @@ namespace TencentCloud
                     /**
                      * 获取Access mode of the site. Values:
 <li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME u200drecord. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
+<li> `partial`: Access through a CNAME record. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
                      * @return Type Access mode of the site. Values:
 <li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME u200drecord. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
+<li> `partial`: Access through a CNAME record. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
                      * 
                      */
                     std::string GetType() const;
@@ -78,10 +78,10 @@ namespace TencentCloud
                     /**
                      * 设置Access mode of the site. Values:
 <li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME u200drecord. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
+<li> `partial`: Access through a CNAME record. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
                      * @param _type Access mode of the site. Values:
 <li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME u200drecord. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
+<li> `partial`: Access through a CNAME record. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -200,7 +200,7 @@ namespace TencentCloud
                     /**
                      * Access mode of the site. Values:
 <li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME u200drecord. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
+<li> `partial`: Access through a CNAME record. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

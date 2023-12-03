@@ -48,10 +48,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable URL rewriting
+                     * 获取Whether to enable URL rewriting. Values:
 `on`: Enable
 `off`: Disable
-                     * @return Switch Whether to enable URL rewriting
+                     * @return Switch Whether to enable URL rewriting. Values:
 `on`: Enable
 `off`: Disable
                      * 
@@ -59,10 +59,10 @@ namespace TencentCloud
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable URL rewriting
+                     * 设置Whether to enable URL rewriting. Values:
 `on`: Enable
 `off`: Disable
-                     * @param _switch Whether to enable URL rewriting
+                     * @param _switch Whether to enable URL rewriting. Values:
 `on`: Enable
 `off`: Disable
                      * 
@@ -104,7 +104,7 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * Whether to enable URL rewriting
+                     * Whether to enable URL rewriting. Values:
 `on`: Enable
 `off`: Disable
                      */

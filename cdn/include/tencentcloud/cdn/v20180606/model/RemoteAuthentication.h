@@ -50,27 +50,27 @@ If only `Server` is configured, all parameters of `RemoteAuthenticationRules` wi
 
 
                     /**
-                     * 获取Remote authentication switch
-`on`: enable
-`off`: disable
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Switch Remote authentication switch
-`on`: enable
-`off`: disable
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Whether to enable remote authentication. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Switch Whether to enable remote authentication. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Remote authentication switch
-`on`: enable
-`off`: disable
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _switch Remote authentication switch
-`on`: enable
-`off`: disable
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Whether to enable remote authentication. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param _switch Whether to enable remote authentication. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -135,10 +135,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * Remote authentication switch
-`on`: enable
-`off`: disable
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Whether to enable remote authentication. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

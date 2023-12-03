@@ -59,6 +59,10 @@
 #include <tencentcloud/ssl/v20191205/model/DescribeCertificatesResponse.h>
 #include <tencentcloud/ssl/v20191205/model/DescribeHostTeoInstanceListRequest.h>
 #include <tencentcloud/ssl/v20191205/model/DescribeHostTeoInstanceListResponse.h>
+#include <tencentcloud/ssl/v20191205/model/DescribeHostUpdateRecordRequest.h>
+#include <tencentcloud/ssl/v20191205/model/DescribeHostUpdateRecordResponse.h>
+#include <tencentcloud/ssl/v20191205/model/DescribeHostUpdateRecordDetailRequest.h>
+#include <tencentcloud/ssl/v20191205/model/DescribeHostUpdateRecordDetailResponse.h>
 #include <tencentcloud/ssl/v20191205/model/DownloadCertificateRequest.h>
 #include <tencentcloud/ssl/v20191205/model/DownloadCertificateResponse.h>
 #include <tencentcloud/ssl/v20191205/model/ModifyCSRRequest.h>
@@ -73,6 +77,12 @@
 #include <tencentcloud/ssl/v20191205/model/ReplaceCertificateResponse.h>
 #include <tencentcloud/ssl/v20191205/model/SubmitCertificateInformationRequest.h>
 #include <tencentcloud/ssl/v20191205/model/SubmitCertificateInformationResponse.h>
+#include <tencentcloud/ssl/v20191205/model/UpdateCertificateInstanceRequest.h>
+#include <tencentcloud/ssl/v20191205/model/UpdateCertificateInstanceResponse.h>
+#include <tencentcloud/ssl/v20191205/model/UpdateCertificateRecordRetryRequest.h>
+#include <tencentcloud/ssl/v20191205/model/UpdateCertificateRecordRetryResponse.h>
+#include <tencentcloud/ssl/v20191205/model/UpdateCertificateRecordRollbackRequest.h>
+#include <tencentcloud/ssl/v20191205/model/UpdateCertificateRecordRollbackResponse.h>
 #include <tencentcloud/ssl/v20191205/model/UploadCertificateRequest.h>
 #include <tencentcloud/ssl/v20191205/model/UploadCertificateResponse.h>
 #include <tencentcloud/ssl/v20191205/model/UploadConfirmLetterRequest.h>
@@ -145,6 +155,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeHostTeoInstanceListResponse> DescribeHostTeoInstanceListOutcome;
                 typedef std::future<DescribeHostTeoInstanceListOutcome> DescribeHostTeoInstanceListOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::DescribeHostTeoInstanceListRequest&, DescribeHostTeoInstanceListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeHostTeoInstanceListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeHostUpdateRecordResponse> DescribeHostUpdateRecordOutcome;
+                typedef std::future<DescribeHostUpdateRecordOutcome> DescribeHostUpdateRecordOutcomeCallable;
+                typedef std::function<void(const SslClient*, const Model::DescribeHostUpdateRecordRequest&, DescribeHostUpdateRecordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeHostUpdateRecordAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeHostUpdateRecordDetailResponse> DescribeHostUpdateRecordDetailOutcome;
+                typedef std::future<DescribeHostUpdateRecordDetailOutcome> DescribeHostUpdateRecordDetailOutcomeCallable;
+                typedef std::function<void(const SslClient*, const Model::DescribeHostUpdateRecordDetailRequest&, DescribeHostUpdateRecordDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeHostUpdateRecordDetailAsyncHandler;
                 typedef Outcome<Core::Error, Model::DownloadCertificateResponse> DownloadCertificateOutcome;
                 typedef std::future<DownloadCertificateOutcome> DownloadCertificateOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::DownloadCertificateRequest&, DownloadCertificateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DownloadCertificateAsyncHandler;
@@ -166,6 +182,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::SubmitCertificateInformationResponse> SubmitCertificateInformationOutcome;
                 typedef std::future<SubmitCertificateInformationOutcome> SubmitCertificateInformationOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::SubmitCertificateInformationRequest&, SubmitCertificateInformationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SubmitCertificateInformationAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateCertificateInstanceResponse> UpdateCertificateInstanceOutcome;
+                typedef std::future<UpdateCertificateInstanceOutcome> UpdateCertificateInstanceOutcomeCallable;
+                typedef std::function<void(const SslClient*, const Model::UpdateCertificateInstanceRequest&, UpdateCertificateInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateCertificateInstanceAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateCertificateRecordRetryResponse> UpdateCertificateRecordRetryOutcome;
+                typedef std::future<UpdateCertificateRecordRetryOutcome> UpdateCertificateRecordRetryOutcomeCallable;
+                typedef std::function<void(const SslClient*, const Model::UpdateCertificateRecordRetryRequest&, UpdateCertificateRecordRetryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateCertificateRecordRetryAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateCertificateRecordRollbackResponse> UpdateCertificateRecordRollbackOutcome;
+                typedef std::future<UpdateCertificateRecordRollbackOutcome> UpdateCertificateRecordRollbackOutcomeCallable;
+                typedef std::function<void(const SslClient*, const Model::UpdateCertificateRecordRollbackRequest&, UpdateCertificateRecordRollbackOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateCertificateRecordRollbackAsyncHandler;
                 typedef Outcome<Core::Error, Model::UploadCertificateResponse> UploadCertificateOutcome;
                 typedef std::future<UploadCertificateOutcome> UploadCertificateOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::UploadCertificateRequest&, UploadCertificateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UploadCertificateAsyncHandler;
@@ -338,6 +363,24 @@ namespace TencentCloud
                 DescribeHostTeoInstanceListOutcomeCallable DescribeHostTeoInstanceListCallable(const Model::DescribeHostTeoInstanceListRequest& request);
 
                 /**
+                 *Query certificate cloud resource update record list
+                 * @param req DescribeHostUpdateRecordRequest
+                 * @return DescribeHostUpdateRecordOutcome
+                 */
+                DescribeHostUpdateRecordOutcome DescribeHostUpdateRecord(const Model::DescribeHostUpdateRecordRequest &request);
+                void DescribeHostUpdateRecordAsync(const Model::DescribeHostUpdateRecordRequest& request, const DescribeHostUpdateRecordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeHostUpdateRecordOutcomeCallable DescribeHostUpdateRecordCallable(const Model::DescribeHostUpdateRecordRequest& request);
+
+                /**
+                 *Query certificate cloud resource update record details list
+                 * @param req DescribeHostUpdateRecordDetailRequest
+                 * @return DescribeHostUpdateRecordDetailOutcome
+                 */
+                DescribeHostUpdateRecordDetailOutcome DescribeHostUpdateRecordDetail(const Model::DescribeHostUpdateRecordDetailRequest &request);
+                void DescribeHostUpdateRecordDetailAsync(const Model::DescribeHostUpdateRecordDetailRequest& request, const DescribeHostUpdateRecordDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeHostUpdateRecordDetailOutcomeCallable DescribeHostUpdateRecordDetailCallable(const Model::DescribeHostUpdateRecordDetailRequest& request);
+
+                /**
                  *This API is used to download a certificate.
                  * @param req DownloadCertificateRequest
                  * @return DownloadCertificateOutcome
@@ -399,6 +442,33 @@ namespace TencentCloud
                 SubmitCertificateInformationOutcome SubmitCertificateInformation(const Model::SubmitCertificateInformationRequest &request);
                 void SubmitCertificateInformationAsync(const Model::SubmitCertificateInformationRequest& request, const SubmitCertificateInformationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 SubmitCertificateInformationOutcomeCallable SubmitCertificateInformationCallable(const Model::SubmitCertificateInformationRequest& request);
+
+                /**
+                 *This API is used to update old certificate resources with one click and is an asynchronous interface. After this API is called, the returned DeployRecordId being 0 indicates that the task is in progress, and the returned DeployRecordId being greater than 0 indicates that the task is successfully created. If the creation fails, an exception is returned.
+                 * @param req UpdateCertificateInstanceRequest
+                 * @return UpdateCertificateInstanceOutcome
+                 */
+                UpdateCertificateInstanceOutcome UpdateCertificateInstance(const Model::UpdateCertificateInstanceRequest &request);
+                void UpdateCertificateInstanceAsync(const Model::UpdateCertificateInstanceRequest& request, const UpdateCertificateInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateCertificateInstanceOutcomeCallable UpdateCertificateInstanceCallable(const Model::UpdateCertificateInstanceRequest& request);
+
+                /**
+                 *Cloud resource update deployment retry record
+                 * @param req UpdateCertificateRecordRetryRequest
+                 * @return UpdateCertificateRecordRetryOutcome
+                 */
+                UpdateCertificateRecordRetryOutcome UpdateCertificateRecordRetry(const Model::UpdateCertificateRecordRetryRequest &request);
+                void UpdateCertificateRecordRetryAsync(const Model::UpdateCertificateRecordRetryRequest& request, const UpdateCertificateRecordRetryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateCertificateRecordRetryOutcomeCallable UpdateCertificateRecordRetryCallable(const Model::UpdateCertificateRecordRetryRequest& request);
+
+                /**
+                 *Cloud resource update one-click rollback
+                 * @param req UpdateCertificateRecordRollbackRequest
+                 * @return UpdateCertificateRecordRollbackOutcome
+                 */
+                UpdateCertificateRecordRollbackOutcome UpdateCertificateRecordRollback(const Model::UpdateCertificateRecordRollbackRequest &request);
+                void UpdateCertificateRecordRollbackAsync(const Model::UpdateCertificateRecordRollbackRequest& request, const UpdateCertificateRecordRollbackAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateCertificateRecordRollbackOutcomeCallable UpdateCertificateRecordRollbackCallable(const Model::UpdateCertificateRecordRollbackRequest& request);
 
                 /**
                  *This API is used to upload a certificate.

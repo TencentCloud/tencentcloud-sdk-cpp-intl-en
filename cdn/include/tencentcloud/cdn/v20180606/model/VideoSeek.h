@@ -47,10 +47,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Video dragging switch
+                     * 获取Whether to enable video dragging. Values:
 `on`: Enable
 `off`: Disable
-                     * @return Switch Video dragging switch
+                     * @return Switch Whether to enable video dragging. Values:
 `on`: Enable
 `off`: Disable
                      * 
@@ -58,10 +58,10 @@ namespace TencentCloud
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Video dragging switch
+                     * 设置Whether to enable video dragging. Values:
 `on`: Enable
 `off`: Disable
-                     * @param _switch Video dragging switch
+                     * @param _switch Whether to enable video dragging. Values:
 `on`: Enable
 `off`: Disable
                      * 
@@ -78,7 +78,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Video dragging switch
+                     * Whether to enable video dragging. Values:
 `on`: Enable
 `off`: Disable
                      */

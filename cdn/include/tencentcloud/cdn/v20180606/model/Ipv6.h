@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * IPv6 activation configurations, which cannot be changed.
+                * IPv6 origin configuration (changes not allowed).
                 */
                 class Ipv6 : public AbstractModel
                 {
@@ -47,19 +47,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable the IPv6 feature for a domain name. Values include `on` or `off`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return Switch Whether to enable the IPv6 feature for a domain name. Values include `on` or `off`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Whether to enable an IPv6 address for the origin server. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Switch Whether to enable an IPv6 address for the origin server. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable the IPv6 feature for a domain name. Values include `on` or `off`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _switch Whether to enable the IPv6 feature for a domain name. Values include `on` or `off`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Whether to enable an IPv6 address for the origin server. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param _switch Whether to enable an IPv6 address for the origin server. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -74,8 +82,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * Whether to enable the IPv6 feature for a domain name. Values include `on` or `off`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Whether to enable an IPv6 address for the origin server. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

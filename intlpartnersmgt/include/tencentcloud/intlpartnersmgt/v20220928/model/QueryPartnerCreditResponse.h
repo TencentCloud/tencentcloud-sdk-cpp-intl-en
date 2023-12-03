@@ -85,6 +85,34 @@ namespace TencentCloud
                      */
                     bool RemainingCreditHasBeenSet() const;
 
+                    /**
+                     * 获取Allocated quota for the client
+                     * @return CustomerTotalCredit Allocated quota for the client
+                     * 
+                     */
+                    double GetCustomerTotalCredit() const;
+
+                    /**
+                     * 判断参数 CustomerTotalCredit 是否已赋值
+                     * @return CustomerTotalCredit 是否已赋值
+                     * 
+                     */
+                    bool CustomerTotalCreditHasBeenSet() const;
+
+                    /**
+                     * 获取Remaining quota for the client
+                     * @return CustomerRemainingCredit Remaining quota for the client
+                     * 
+                     */
+                    double GetCustomerRemainingCredit() const;
+
+                    /**
+                     * 判断参数 CustomerRemainingCredit 是否已赋值
+                     * @return CustomerRemainingCredit 是否已赋值
+                     * 
+                     */
+                    bool CustomerRemainingCreditHasBeenSet() const;
+
                 private:
 
                     /**
@@ -104,6 +132,18 @@ namespace TencentCloud
                      */
                     double m_remainingCredit;
                     bool m_remainingCreditHasBeenSet;
+
+                    /**
+                     * Allocated quota for the client
+                     */
+                    double m_customerTotalCredit;
+                    bool m_customerTotalCreditHasBeenSet;
+
+                    /**
+                     * Remaining quota for the client
+                     */
+                    double m_customerRemainingCredit;
+                    bool m_customerRemainingCreditHasBeenSet;
 
                 };
             }

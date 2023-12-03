@@ -50,7 +50,8 @@ BillDetailData::BillDetailData() :
     m_currencyHasBeenSet(false),
     m_totalAmountAfterDiscountHasBeenSet(false),
     m_voucherDeductionHasBeenSet(false),
-    m_totalCostHasBeenSet(false)
+    m_totalCostHasBeenSet(false),
+    m_idHasBeenSet(false)
 {
 }
 
@@ -359,6 +360,16 @@ CoreInternalOutcome BillDetailData::Deserialize(const rapidjson::Value &value)
         m_totalCostHasBeenSet = true;
     }
 
+    if (value.HasMember("Id") && !value["Id"].IsNull())
+    {
+        if (!value["Id"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `BillDetailData.Id` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_id = string(value["Id"].GetString());
+        m_idHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -604,6 +615,14 @@ void BillDetailData::ToJsonObject(rapidjson::Value &value, rapidjson::Document::
         string key = "TotalCost";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_totalCost.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_idHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Id";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_id.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -1087,5 +1106,21 @@ void BillDetailData::SetTotalCost(const string& _totalCost)
 bool BillDetailData::TotalCostHasBeenSet() const
 {
     return m_totalCostHasBeenSet;
+}
+
+string BillDetailData::GetId() const
+{
+    return m_id;
+}
+
+void BillDetailData::SetId(const string& _id)
+{
+    m_id = _id;
+    m_idHasBeenSet = true;
+}
+
+bool BillDetailData::IdHasBeenSet() const
+{
+    return m_idHasBeenSet;
 }
 

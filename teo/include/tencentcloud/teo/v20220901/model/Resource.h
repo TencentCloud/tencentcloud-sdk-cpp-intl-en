@@ -302,12 +302,12 @@ namespace TencentCloud
 <li>`plan`: Plan resources</li>
 <li>`pay-as-you-go`: Pay-as-you-go resources </li>
 <li>`value-added`: Value-added resources </li>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Group The resource type. Values:
 <li>`plan`: Plan resources</li>
 <li>`pay-as-you-go`: Pay-as-you-go resources </li>
 <li>`value-added`: Value-added resources </li>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetGroup() const;
@@ -317,12 +317,12 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 <li>`plan`: Plan resources</li>
 <li>`pay-as-you-go`: Pay-as-you-go resources </li>
 <li>`value-added`: Value-added resources </li>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _group The resource type. Values:
 <li>`plan`: Plan resources</li>
 <li>`pay-as-you-go`: Pay-as-you-go resources </li>
 <li>`value-added`: Value-added resources </li>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetGroup(const std::string& _group);
@@ -336,18 +336,18 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
                     /**
                      * 获取The sites that are associated with the current resources.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ZoneNumber The sites that are associated with the current resources.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetZoneNumber() const;
 
                     /**
                      * 设置The sites that are associated with the current resources.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _zoneNumber The sites that are associated with the current resources.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetZoneNumber(const int64_t& _zoneNumber);
@@ -436,14 +436,14 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 <li>`plan`: Plan resources</li>
 <li>`pay-as-you-go`: Pay-as-you-go resources </li>
 <li>`value-added`: Value-added resources </li>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_group;
                     bool m_groupHasBeenSet;
 
                     /**
                      * The sites that are associated with the current resources.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_zoneNumber;
                     bool m_zoneNumberHasBeenSet;

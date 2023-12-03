@@ -48,10 +48,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Follow origin server switch configuration
+                     * 获取Whether to follow the origin configuration for path cache. Values:
 `on`: Enable
 `off`: Disable
-                     * @return Switch Follow origin server switch configuration
+                     * @return Switch Whether to follow the origin configuration for path cache. Values:
 `on`: Enable
 `off`: Disable
                      * 
@@ -59,10 +59,10 @@ namespace TencentCloud
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Follow origin server switch configuration
+                     * 设置Whether to follow the origin configuration for path cache. Values:
 `on`: Enable
 `off`: Disable
-                     * @param _switch Follow origin server switch configuration
+                     * @param _switch Whether to follow the origin configuration for path cache. Values:
 `on`: Enable
 `off`: Disable
                      * 
@@ -104,7 +104,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * Follow origin server switch configuration
+                     * Whether to follow the origin configuration for path cache. Values:
 `on`: Enable
 `off`: Disable
                      */

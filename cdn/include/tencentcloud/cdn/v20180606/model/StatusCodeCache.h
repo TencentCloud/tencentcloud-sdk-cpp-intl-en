@@ -48,27 +48,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Status code cache expiration configuration switch
+                     * 获取Whether to enable status code caching. Values:
 `on`: Enable
 `off`: Disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return Switch Status code cache expiration configuration switch
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Switch Whether to enable status code caching. Values:
 `on`: Enable
 `off`: Disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Status code cache expiration configuration switch
+                     * 设置Whether to enable status code caching. Values:
 `on`: Enable
 `off`: Disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _switch Status code cache expiration configuration switch
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param _switch Whether to enable status code caching. Values:
 `on`: Enable
 `off`: Disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -108,10 +108,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * Status code cache expiration configuration switch
+                     * Whether to enable status code caching. Values:
 `on`: Enable
 `off`: Disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

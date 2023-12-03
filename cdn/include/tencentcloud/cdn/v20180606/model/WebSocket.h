@@ -36,6 +36,7 @@ namespace TencentCloud
             {
                 /**
                 * WebSocket configuration.
+WebSocket is an ECDN feature. You can enable it in the ECDN domain name configuration.
                 */
                 class WebSocket : public AbstractModel
                 {
@@ -47,23 +48,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable custom WebSocket timeout setting. When it’s `off`: WebSocket connection is supported, and the default timeout period is 15 seconds. To change the timeout period, please set it to `on`.
+                     * 获取Whether to enable WebSocket connection timeout. Values:
+`on`: When it's enabled, the connection timeout can be configured.
+`off`: When it's disabled, the connection timeout is set to 15 seconds by default.
 
-* WebSocket is an ECDN feature. You can enable it in the ECDN domain name configuration.
-                     * @return Switch Whether to enable custom WebSocket timeout setting. When it’s `off`: WebSocket connection is supported, and the default timeout period is 15 seconds. To change the timeout period, please set it to `on`.
+                     * @return Switch Whether to enable WebSocket connection timeout. Values:
+`on`: When it's enabled, the connection timeout can be configured.
+`off`: When it's disabled, the connection timeout is set to 15 seconds by default.
 
-* WebSocket is an ECDN feature. You can enable it in the ECDN domain name configuration.
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable custom WebSocket timeout setting. When it’s `off`: WebSocket connection is supported, and the default timeout period is 15 seconds. To change the timeout period, please set it to `on`.
+                     * 设置Whether to enable WebSocket connection timeout. Values:
+`on`: When it's enabled, the connection timeout can be configured.
+`off`: When it's disabled, the connection timeout is set to 15 seconds by default.
 
-* WebSocket is an ECDN feature. You can enable it in the ECDN domain name configuration.
-                     * @param _switch Whether to enable custom WebSocket timeout setting. When it’s `off`: WebSocket connection is supported, and the default timeout period is 15 seconds. To change the timeout period, please set it to `on`.
+                     * @param _switch Whether to enable WebSocket connection timeout. Values:
+`on`: When it's enabled, the connection timeout can be configured.
+`off`: When it's disabled, the connection timeout is set to 15 seconds by default.
 
-* WebSocket is an ECDN feature. You can enable it in the ECDN domain name configuration.
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -103,9 +108,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * Whether to enable custom WebSocket timeout setting. When it’s `off`: WebSocket connection is supported, and the default timeout period is 15 seconds. To change the timeout period, please set it to `on`.
+                     * Whether to enable WebSocket connection timeout. Values:
+`on`: When it's enabled, the connection timeout can be configured.
+`off`: When it's disabled, the connection timeout is set to 15 seconds by default.
 
-* WebSocket is an ECDN feature. You can enable it in the ECDN domain name configuration.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

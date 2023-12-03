@@ -45,9 +45,9 @@ namespace TencentCloud
 
                     /**
                      * 获取Policy type. Valid values: `auto`, `manual`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Type Policy type. Valid values: `auto`, `manual`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetType() const;
@@ -61,9 +61,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
                     /**
                      * 获取Manually expanded CPU, which is valid when `Type` is `manual`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ExpandCpu Manually expanded CPU, which is valid when `Type` is `manual`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetExpandCpu() const;
@@ -77,9 +77,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
                     /**
                      * 获取Automatic expansion policy, which is valid when `Type` is `auto`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AutoStrategy Automatic expansion policy, which is valid when `Type` is `auto`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetAutoStrategy() const;
@@ -95,21 +95,21 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
                     /**
                      * Policy type. Valid values: `auto`, `manual`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
                      * Manually expanded CPU, which is valid when `Type` is `manual`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_expandCpu;
                     bool m_expandCpuHasBeenSet;
 
                     /**
                      * Automatic expansion policy, which is valid when `Type` is `auto`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_autoStrategy;
                     bool m_autoStrategyHasBeenSet;

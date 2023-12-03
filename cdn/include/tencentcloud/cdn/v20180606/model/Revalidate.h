@@ -47,19 +47,31 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to always forward to the origin server for verification. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return Switch Whether to always forward to the origin server for verification. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Whether to enable origin-pull authentication. Values:
+`on`: Enable
+`off`: Disable
+
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Switch Whether to enable origin-pull authentication. Values:
+`on`: Enable
+`off`: Disable
+
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to always forward to the origin server for verification. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _switch Whether to always forward to the origin server for verification. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Whether to enable origin-pull authentication. Values:
+`on`: Enable
+`off`: Disable
+
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param _switch Whether to enable origin-pull authentication. Values:
+`on`: Enable
+`off`: Disable
+
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -99,8 +111,11 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * Whether to always forward to the origin server for verification. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Whether to enable origin-pull authentication. Values:
+`on`: Enable
+`off`: Disable
+
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

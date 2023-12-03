@@ -619,18 +619,18 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * 获取Standard debugging configuration.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StandardDebug Standard debugging configuration.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     StandardDebug GetStandardDebug() const;
 
                     /**
                      * 设置Standard debugging configuration.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _standardDebug Standard debugging configuration.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetStandardDebug(const StandardDebug& _standardDebug);
@@ -800,7 +800,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * Standard debugging configuration.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     StandardDebug m_standardDebug;
                     bool m_standardDebugHasBeenSet;

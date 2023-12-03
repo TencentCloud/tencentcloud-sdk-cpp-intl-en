@@ -48,10 +48,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Referer blacklist/whitelist configuration switch
+                     * 获取Whether to enable referer blocklist/allowlist. Values:
 `on`: Enable
 `off`: Disable
-                     * @return Switch Referer blacklist/whitelist configuration switch
+                     * @return Switch Whether to enable referer blocklist/allowlist. Values:
 `on`: Enable
 `off`: Disable
                      * 
@@ -59,10 +59,10 @@ namespace TencentCloud
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Referer blacklist/whitelist configuration switch
+                     * 设置Whether to enable referer blocklist/allowlist. Values:
 `on`: Enable
 `off`: Disable
-                     * @param _switch Referer blacklist/whitelist configuration switch
+                     * @param _switch Whether to enable referer blocklist/allowlist. Values:
 `on`: Enable
 `off`: Disable
                      * 
@@ -104,7 +104,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * Referer blacklist/whitelist configuration switch
+                     * Whether to enable referer blocklist/allowlist. Values:
 `on`: Enable
 `off`: Disable
                      */

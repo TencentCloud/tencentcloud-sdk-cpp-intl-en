@@ -137,23 +137,19 @@ The original configuration will apply if this field is not specified.
                     bool SessionPersistTimeHasBeenSet() const;
 
                     /**
-                     * 获取The proxy type. Values:
-<li>`hostname`: The proxy is created by subdomain name.</li>
-<li>`instance`: The proxy is created by instance.</li>If not specified, this field uses the default value `instance`.
-                     * @return ProxyType The proxy type. Values:
-<li>`hostname`: The proxy is created by subdomain name.</li>
-<li>`instance`: The proxy is created by instance.</li>If not specified, this field uses the default value `instance`.
+                     * 获取L4 proxy mode. Valid values: 
+<li>instance: Instance mode. </li>If it is not specified, instance is used by default.
+                     * @return ProxyType L4 proxy mode. Valid values: 
+<li>instance: Instance mode. </li>If it is not specified, instance is used by default.
                      * 
                      */
                     std::string GetProxyType() const;
 
                     /**
-                     * 设置The proxy type. Values:
-<li>`hostname`: The proxy is created by subdomain name.</li>
-<li>`instance`: The proxy is created by instance.</li>If not specified, this field uses the default value `instance`.
-                     * @param _proxyType The proxy type. Values:
-<li>`hostname`: The proxy is created by subdomain name.</li>
-<li>`instance`: The proxy is created by instance.</li>If not specified, this field uses the default value `instance`.
+                     * 设置L4 proxy mode. Valid values: 
+<li>instance: Instance mode. </li>If it is not specified, instance is used by default.
+                     * @param _proxyType L4 proxy mode. Valid values: 
+<li>instance: Instance mode. </li>If it is not specified, instance is used by default.
                      * 
                      */
                     void SetProxyType(const std::string& _proxyType);
@@ -236,9 +232,8 @@ The original configuration will apply if this field is not specified.
                     bool m_sessionPersistTimeHasBeenSet;
 
                     /**
-                     * The proxy type. Values:
-<li>`hostname`: The proxy is created by subdomain name.</li>
-<li>`instance`: The proxy is created by instance.</li>If not specified, this field uses the default value `instance`.
+                     * L4 proxy mode. Valid values: 
+<li>instance: Instance mode. </li>If it is not specified, instance is used by default.
                      */
                     std::string m_proxyType;
                     bool m_proxyTypeHasBeenSet;

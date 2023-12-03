@@ -36,6 +36,7 @@ namespace TencentCloud
             {
                 /**
                 * Shared CNAME configuration
+ShareCname is only available to beta users. Submit a ticket if you need it.
                 */
                 class ShareCname : public AbstractModel
                 {
@@ -47,23 +48,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies whether to enable Shared CNAME. If it is set to `off`, the default CNAME is used. If it is set to `on`, a shared CNAME is used.
+                     * 获取Whether to enable Shared CNAME. Values:
+`on`: Enable. When enabled, it uses a shared CNAME.
+`off`: Disable. When disabled, it uses a default CNAME.
 
-* ShareCname is only available to beta users. To use this feature, please submit a ticket for application.
-                     * @return Switch Specifies whether to enable Shared CNAME. If it is set to `off`, the default CNAME is used. If it is set to `on`, a shared CNAME is used.
+                     * @return Switch Whether to enable Shared CNAME. Values:
+`on`: Enable. When enabled, it uses a shared CNAME.
+`off`: Disable. When disabled, it uses a default CNAME.
 
-* ShareCname is only available to beta users. To use this feature, please submit a ticket for application.
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Specifies whether to enable Shared CNAME. If it is set to `off`, the default CNAME is used. If it is set to `on`, a shared CNAME is used.
+                     * 设置Whether to enable Shared CNAME. Values:
+`on`: Enable. When enabled, it uses a shared CNAME.
+`off`: Disable. When disabled, it uses a default CNAME.
 
-* ShareCname is only available to beta users. To use this feature, please submit a ticket for application.
-                     * @param _switch Specifies whether to enable Shared CNAME. If it is set to `off`, the default CNAME is used. If it is set to `on`, a shared CNAME is used.
+                     * @param _switch Whether to enable Shared CNAME. Values:
+`on`: Enable. When enabled, it uses a shared CNAME.
+`off`: Disable. When disabled, it uses a default CNAME.
 
-* ShareCname is only available to beta users. To use this feature, please submit a ticket for application.
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -103,9 +108,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * Specifies whether to enable Shared CNAME. If it is set to `off`, the default CNAME is used. If it is set to `on`, a shared CNAME is used.
+                     * Whether to enable Shared CNAME. Values:
+`on`: Enable. When enabled, it uses a shared CNAME.
+`off`: Disable. When disabled, it uses a default CNAME.
 
-* ShareCname is only available to beta users. To use this feature, please submit a ticket for application.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

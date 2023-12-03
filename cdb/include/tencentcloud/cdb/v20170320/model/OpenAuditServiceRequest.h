@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool AuditRuleFiltersHasBeenSet() const;
 
                     /**
-                     * 获取Rule template ID If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied.
-                     * @return RuleTemplateIds Rule template ID If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied.
+                     * 获取Rule template ID. If both this parameter and AuditRuleFilters are not specified, all SQL statements will be recorded.
+                     * @return RuleTemplateIds Rule template ID. If both this parameter and AuditRuleFilters are not specified, all SQL statements will be recorded.
                      * 
                      */
                     std::vector<std::string> GetRuleTemplateIds() const;
 
                     /**
-                     * 设置Rule template ID If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied.
-                     * @param _ruleTemplateIds Rule template ID If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied.
+                     * 设置Rule template ID. If both this parameter and AuditRuleFilters are not specified, all SQL statements will be recorded.
+                     * @param _ruleTemplateIds Rule template ID. If both this parameter and AuditRuleFilters are not specified, all SQL statements will be recorded.
                      * 
                      */
                     void SetRuleTemplateIds(const std::vector<std::string>& _ruleTemplateIds);
@@ -147,6 +147,27 @@ namespace TencentCloud
                      * 
                      */
                     bool RuleTemplateIdsHasBeenSet() const;
+
+                    /**
+                     * 获取Audit type. Valid values: true: Record all; false: Record by rules (default value).
+                     * @return AuditAll Audit type. Valid values: true: Record all; false: Record by rules (default value).
+                     * 
+                     */
+                    bool GetAuditAll() const;
+
+                    /**
+                     * 设置Audit type. Valid values: true: Record all; false: Record by rules (default value).
+                     * @param _auditAll Audit type. Valid values: true: Record all; false: Record by rules (default value).
+                     * 
+                     */
+                    void SetAuditAll(const bool& _auditAll);
+
+                    /**
+                     * 判断参数 AuditAll 是否已赋值
+                     * @return AuditAll 是否已赋值
+                     * 
+                     */
+                    bool AuditAllHasBeenSet() const;
 
                 private:
 
@@ -175,10 +196,16 @@ namespace TencentCloud
                     bool m_auditRuleFiltersHasBeenSet;
 
                     /**
-                     * Rule template ID If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied.
+                     * Rule template ID. If both this parameter and AuditRuleFilters are not specified, all SQL statements will be recorded.
                      */
                     std::vector<std::string> m_ruleTemplateIds;
                     bool m_ruleTemplateIdsHasBeenSet;
+
+                    /**
+                     * Audit type. Valid values: true: Record all; false: Record by rules (default value).
+                     */
+                    bool m_auditAll;
+                    bool m_auditAllHasBeenSet;
 
                 };
             }

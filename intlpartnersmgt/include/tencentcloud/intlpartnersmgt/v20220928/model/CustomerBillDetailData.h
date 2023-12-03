@@ -749,6 +749,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool TotalCostHasBeenSet() const;
 
+                    /**
+                     * 获取ID
+Note: The return value may be null, indicating that no valid data can be obtained.
+                     * @return Id ID
+Note: The return value may be null, indicating that no valid data can be obtained.
+                     * 
+                     */
+                    std::string GetId() const;
+
+                    /**
+                     * 设置ID
+Note: The return value may be null, indicating that no valid data can be obtained.
+                     * @param _id ID
+Note: The return value may be null, indicating that no valid data can be obtained.
+                     * 
+                     */
+                    void SetId(const std::string& _id);
+
+                    /**
+                     * 判断参数 Id 是否已赋值
+                     * @return Id 是否已赋值
+                     * 
+                     */
+                    bool IdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -946,6 +971,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_totalCost;
                     bool m_totalCostHasBeenSet;
+
+                    /**
+                     * ID
+Note: The return value may be null, indicating that no valid data can be obtained.
+                     */
+                    std::string m_id;
+                    bool m_idHasBeenSet;
 
                 };
             }

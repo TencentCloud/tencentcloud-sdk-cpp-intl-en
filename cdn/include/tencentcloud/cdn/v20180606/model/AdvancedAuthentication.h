@@ -53,15 +53,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Hotlink protection configuration switch (which can be on or off). If it is enabled, only one mode can and must be configured, while other modes are null.
-                     * @return Switch Hotlink protection configuration switch (which can be on or off). If it is enabled, only one mode can and must be configured, while other modes are null.
+                     * 获取Whether to enable hot linking protection. Values:
+`on`: Enable
+`off`: Disable
+Only one advanced configuration can be enabled. Set the rests to `null`.
+                     * @return Switch Whether to enable hot linking protection. Values:
+`on`: Enable
+`off`: Disable
+Only one advanced configuration can be enabled. Set the rests to `null`.
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Hotlink protection configuration switch (which can be on or off). If it is enabled, only one mode can and must be configured, while other modes are null.
-                     * @param _switch Hotlink protection configuration switch (which can be on or off). If it is enabled, only one mode can and must be configured, while other modes are null.
+                     * 设置Whether to enable hot linking protection. Values:
+`on`: Enable
+`off`: Disable
+Only one advanced configuration can be enabled. Set the rests to `null`.
+                     * @param _switch Whether to enable hot linking protection. Values:
+`on`: Enable
+`off`: Disable
+Only one advanced configuration can be enabled. Set the rests to `null`.
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -226,7 +238,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * Hotlink protection configuration switch (which can be on or off). If it is enabled, only one mode can and must be configured, while other modes are null.
+                     * Whether to enable hot linking protection. Values:
+`on`: Enable
+`off`: Disable
+Only one advanced configuration can be enabled. Set the rests to `null`.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

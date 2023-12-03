@@ -814,6 +814,92 @@ SslClient::DescribeHostTeoInstanceListOutcomeCallable SslClient::DescribeHostTeo
     return task->get_future();
 }
 
+SslClient::DescribeHostUpdateRecordOutcome SslClient::DescribeHostUpdateRecord(const DescribeHostUpdateRecordRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeHostUpdateRecord");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeHostUpdateRecordResponse rsp = DescribeHostUpdateRecordResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeHostUpdateRecordOutcome(rsp);
+        else
+            return DescribeHostUpdateRecordOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeHostUpdateRecordOutcome(outcome.GetError());
+    }
+}
+
+void SslClient::DescribeHostUpdateRecordAsync(const DescribeHostUpdateRecordRequest& request, const DescribeHostUpdateRecordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeHostUpdateRecord(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SslClient::DescribeHostUpdateRecordOutcomeCallable SslClient::DescribeHostUpdateRecordCallable(const DescribeHostUpdateRecordRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeHostUpdateRecordOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeHostUpdateRecord(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SslClient::DescribeHostUpdateRecordDetailOutcome SslClient::DescribeHostUpdateRecordDetail(const DescribeHostUpdateRecordDetailRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeHostUpdateRecordDetail");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeHostUpdateRecordDetailResponse rsp = DescribeHostUpdateRecordDetailResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeHostUpdateRecordDetailOutcome(rsp);
+        else
+            return DescribeHostUpdateRecordDetailOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeHostUpdateRecordDetailOutcome(outcome.GetError());
+    }
+}
+
+void SslClient::DescribeHostUpdateRecordDetailAsync(const DescribeHostUpdateRecordDetailRequest& request, const DescribeHostUpdateRecordDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeHostUpdateRecordDetail(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SslClient::DescribeHostUpdateRecordDetailOutcomeCallable SslClient::DescribeHostUpdateRecordDetailCallable(const DescribeHostUpdateRecordDetailRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeHostUpdateRecordDetailOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeHostUpdateRecordDetail(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 SslClient::DownloadCertificateOutcome SslClient::DownloadCertificate(const DownloadCertificateRequest &request)
 {
     auto outcome = MakeRequest(request, "DownloadCertificate");
@@ -1108,6 +1194,135 @@ SslClient::SubmitCertificateInformationOutcomeCallable SslClient::SubmitCertific
         [this, request]()
         {
             return this->SubmitCertificateInformation(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SslClient::UpdateCertificateInstanceOutcome SslClient::UpdateCertificateInstance(const UpdateCertificateInstanceRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdateCertificateInstance");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdateCertificateInstanceResponse rsp = UpdateCertificateInstanceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdateCertificateInstanceOutcome(rsp);
+        else
+            return UpdateCertificateInstanceOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdateCertificateInstanceOutcome(outcome.GetError());
+    }
+}
+
+void SslClient::UpdateCertificateInstanceAsync(const UpdateCertificateInstanceRequest& request, const UpdateCertificateInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->UpdateCertificateInstance(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SslClient::UpdateCertificateInstanceOutcomeCallable SslClient::UpdateCertificateInstanceCallable(const UpdateCertificateInstanceRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<UpdateCertificateInstanceOutcome()>>(
+        [this, request]()
+        {
+            return this->UpdateCertificateInstance(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SslClient::UpdateCertificateRecordRetryOutcome SslClient::UpdateCertificateRecordRetry(const UpdateCertificateRecordRetryRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdateCertificateRecordRetry");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdateCertificateRecordRetryResponse rsp = UpdateCertificateRecordRetryResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdateCertificateRecordRetryOutcome(rsp);
+        else
+            return UpdateCertificateRecordRetryOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdateCertificateRecordRetryOutcome(outcome.GetError());
+    }
+}
+
+void SslClient::UpdateCertificateRecordRetryAsync(const UpdateCertificateRecordRetryRequest& request, const UpdateCertificateRecordRetryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->UpdateCertificateRecordRetry(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SslClient::UpdateCertificateRecordRetryOutcomeCallable SslClient::UpdateCertificateRecordRetryCallable(const UpdateCertificateRecordRetryRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<UpdateCertificateRecordRetryOutcome()>>(
+        [this, request]()
+        {
+            return this->UpdateCertificateRecordRetry(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SslClient::UpdateCertificateRecordRollbackOutcome SslClient::UpdateCertificateRecordRollback(const UpdateCertificateRecordRollbackRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdateCertificateRecordRollback");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdateCertificateRecordRollbackResponse rsp = UpdateCertificateRecordRollbackResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdateCertificateRecordRollbackOutcome(rsp);
+        else
+            return UpdateCertificateRecordRollbackOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdateCertificateRecordRollbackOutcome(outcome.GetError());
+    }
+}
+
+void SslClient::UpdateCertificateRecordRollbackAsync(const UpdateCertificateRecordRollbackRequest& request, const UpdateCertificateRecordRollbackAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->UpdateCertificateRecordRollback(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SslClient::UpdateCertificateRecordRollbackOutcomeCallable SslClient::UpdateCertificateRecordRollbackCallable(const UpdateCertificateRecordRollbackRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<UpdateCertificateRecordRollbackOutcome()>>(
+        [this, request]()
+        {
+            return this->UpdateCertificateRecordRollback(request);
         }
     );
 

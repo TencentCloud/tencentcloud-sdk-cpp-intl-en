@@ -47,19 +47,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取`on`: Enable
+                     * 获取Whether to enable heuristic cache validity. Values:
+`on`: Enable
 `off`: Disable
-                     * @return HeuristicCacheTimeSwitch `on`: Enable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * @return HeuristicCacheTimeSwitch Whether to enable heuristic cache validity. Values:
+`on`: Enable
 `off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetHeuristicCacheTimeSwitch() const;
 
                     /**
-                     * 设置`on`: Enable
+                     * 设置Whether to enable heuristic cache validity. Values:
+`on`: Enable
 `off`: Disable
-                     * @param _heuristicCacheTimeSwitch `on`: Enable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * @param _heuristicCacheTimeSwitch Whether to enable heuristic cache validity. Values:
+`on`: Enable
 `off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHeuristicCacheTimeSwitch(const std::string& _heuristicCacheTimeSwitch);
@@ -73,14 +81,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Unit: Second
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      * @return HeuristicCacheTime Unit: Second
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetHeuristicCacheTime() const;
 
                     /**
                      * 设置Unit: Second
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      * @param _heuristicCacheTime Unit: Second
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHeuristicCacheTime(const int64_t& _heuristicCacheTime);
@@ -95,14 +107,17 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * `on`: Enable
+                     * Whether to enable heuristic cache validity. Values:
+`on`: Enable
 `off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      */
                     std::string m_heuristicCacheTimeSwitch;
                     bool m_heuristicCacheTimeSwitchHasBeenSet;
 
                     /**
                      * Unit: Second
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      */
                     int64_t m_heuristicCacheTime;
                     bool m_heuristicCacheTimeHasBeenSet;

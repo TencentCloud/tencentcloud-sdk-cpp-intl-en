@@ -47,10 +47,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Origin server header cache switch
+                     * 获取Whether to enable response header caching. Values:
 `on`: Enable
 `off`: Disable
-                     * @return Switch Origin server header cache switch
+                     * @return Switch Whether to enable response header caching. Values:
 `on`: Enable
 `off`: Disable
                      * 
@@ -58,10 +58,10 @@ namespace TencentCloud
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Origin server header cache switch
+                     * 设置Whether to enable response header caching. Values:
 `on`: Enable
 `off`: Disable
-                     * @param _switch Origin server header cache switch
+                     * @param _switch Whether to enable response header caching. Values:
 `on`: Enable
 `off`: Disable
                      * 
@@ -78,7 +78,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Origin server header cache switch
+                     * Whether to enable response header caching. Values:
 `on`: Enable
 `off`: Disable
                      */

@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cdb/v20170320/model/AutoStrategy.h>
 
 
 namespace TencentCloud
@@ -42,7 +43,120 @@ namespace TencentCloud
                     std::string ToJsonString() const;
 
 
+                    /**
+                     * 获取Instance ID.
+                     * @return InstanceId Instance ID.
+                     * 
+                     */
+                    std::string GetInstanceId() const;
+
+                    /**
+                     * 设置Instance ID.
+                     * @param _instanceId Instance ID.
+                     * 
+                     */
+                    void SetInstanceId(const std::string& _instanceId);
+
+                    /**
+                     * 判断参数 InstanceId 是否已赋值
+                     * @return InstanceId 是否已赋值
+                     * 
+                     */
+                    bool InstanceIdHasBeenSet() const;
+
+                    /**
+                     * 获取Scale-out mode. Valid values: auto and
+manual.
+                     * @return Type Scale-out mode. Valid values: auto and
+manual.
+                     * 
+                     */
+                    std::string GetType() const;
+
+                    /**
+                     * 设置Scale-out mode. Valid values: auto and
+manual.
+                     * @param _type Scale-out mode. Valid values: auto and
+manual.
+                     * 
+                     */
+                    void SetType(const std::string& _type);
+
+                    /**
+                     * 判断参数 Type 是否已赋值
+                     * @return Type 是否已赋值
+                     * 
+                     */
+                    bool TypeHasBeenSet() const;
+
+                    /**
+                     * 获取Number of CPU cores to increase during manual scale-out. This parameter is required when Type is set to manual.
+                     * @return ExpandCpu Number of CPU cores to increase during manual scale-out. This parameter is required when Type is set to manual.
+                     * 
+                     */
+                    int64_t GetExpandCpu() const;
+
+                    /**
+                     * 设置Number of CPU cores to increase during manual scale-out. This parameter is required when Type is set to manual.
+                     * @param _expandCpu Number of CPU cores to increase during manual scale-out. This parameter is required when Type is set to manual.
+                     * 
+                     */
+                    void SetExpandCpu(const int64_t& _expandCpu);
+
+                    /**
+                     * 判断参数 ExpandCpu 是否已赋值
+                     * @return ExpandCpu 是否已赋值
+                     * 
+                     */
+                    bool ExpandCpuHasBeenSet() const;
+
+                    /**
+                     * 获取Automatic scale-out policy. This parameter is required when Type is set to auto.
+                     * @return AutoStrategy Automatic scale-out policy. This parameter is required when Type is set to auto.
+                     * 
+                     */
+                    AutoStrategy GetAutoStrategy() const;
+
+                    /**
+                     * 设置Automatic scale-out policy. This parameter is required when Type is set to auto.
+                     * @param _autoStrategy Automatic scale-out policy. This parameter is required when Type is set to auto.
+                     * 
+                     */
+                    void SetAutoStrategy(const AutoStrategy& _autoStrategy);
+
+                    /**
+                     * 判断参数 AutoStrategy 是否已赋值
+                     * @return AutoStrategy 是否已赋值
+                     * 
+                     */
+                    bool AutoStrategyHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * Instance ID.
+                     */
+                    std::string m_instanceId;
+                    bool m_instanceIdHasBeenSet;
+
+                    /**
+                     * Scale-out mode. Valid values: auto and
+manual.
+                     */
+                    std::string m_type;
+                    bool m_typeHasBeenSet;
+
+                    /**
+                     * Number of CPU cores to increase during manual scale-out. This parameter is required when Type is set to manual.
+                     */
+                    int64_t m_expandCpu;
+                    bool m_expandCpuHasBeenSet;
+
+                    /**
+                     * Automatic scale-out policy. This parameter is required when Type is set to auto.
+                     */
+                    AutoStrategy m_autoStrategy;
+                    bool m_autoStrategyHasBeenSet;
 
                 };
             }

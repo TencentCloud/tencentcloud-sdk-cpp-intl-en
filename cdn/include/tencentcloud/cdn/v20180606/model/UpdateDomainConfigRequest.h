@@ -318,15 +318,15 @@ namespace TencentCloud
                     bool ErrorPageHasBeenSet() const;
 
                     /**
-                     * 获取Request header configuration
-                     * @return RequestHeader Request header configuration
+                     * 获取Origin-pull request header configuration.
+                     * @return RequestHeader Origin-pull request header configuration.
                      * 
                      */
                     RequestHeader GetRequestHeader() const;
 
                     /**
-                     * 设置Request header configuration
-                     * @param _requestHeader Request header configuration
+                     * 设置Origin-pull request header configuration.
+                     * @param _requestHeader Origin-pull request header configuration.
                      * 
                      */
                     void SetRequestHeader(const RequestHeader& _requestHeader);
@@ -1216,7 +1216,7 @@ After switching to global acceleration, configurations of the domain name will b
                     bool m_errorPageHasBeenSet;
 
                     /**
-                     * Request header configuration
+                     * Origin-pull request header configuration.
                      */
                     RequestHeader m_requestHeader;
                     bool m_requestHeaderHasBeenSet;

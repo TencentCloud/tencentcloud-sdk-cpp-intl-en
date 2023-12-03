@@ -48,10 +48,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Downstream speed configuration switch
+                     * 获取Whether to enable downstream speed limit. Values:
 `on`: Enable
 `off`: Disable
-                     * @return Switch Downstream speed configuration switch
+                     * @return Switch Whether to enable downstream speed limit. Values:
 `on`: Enable
 `off`: Disable
                      * 
@@ -59,10 +59,10 @@ namespace TencentCloud
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Downstream speed configuration switch
+                     * 设置Whether to enable downstream speed limit. Values:
 `on`: Enable
 `off`: Disable
-                     * @param _switch Downstream speed configuration switch
+                     * @param _switch Whether to enable downstream speed limit. Values:
 `on`: Enable
 `off`: Disable
                      * 
@@ -104,7 +104,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * Downstream speed configuration switch
+                     * Whether to enable downstream speed limit. Values:
 `on`: Enable
 `off`: Disable
                      */

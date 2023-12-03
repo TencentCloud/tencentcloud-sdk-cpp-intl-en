@@ -60,9 +60,9 @@ namespace TencentCloud
 
                     /**
                      * 获取Audit log details
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Items Audit log details
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<AuditLog> GetItems() const;
@@ -84,7 +84,7 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
                     /**
                      * Audit log details
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<AuditLog> m_items;
                     bool m_itemsHasBeenSet;

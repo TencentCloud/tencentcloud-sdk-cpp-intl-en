@@ -173,15 +173,31 @@ namespace TencentCloud
                     bool BindTimeHasBeenSet() const;
 
                     /**
-                     * 获取Account status Valid values: `0` (Not frozen),  `1` (Frozen).  Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AccountStatus Account status Valid values: `0` (Not frozen),  `1` (Frozen).  Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Account status
+0: Normal
+1: Forcibly mandatory (this function is not supported yet)
+2. Mandatory arrears
+Note: The return value may be null, indicating that no valid data can be obtained.
+                     * @return AccountStatus Account status
+0: Normal
+1: Forcibly mandatory (this function is not supported yet)
+2. Mandatory arrears
+Note: The return value may be null, indicating that no valid data can be obtained.
                      * 
                      */
                     std::string GetAccountStatus() const;
 
                     /**
-                     * 设置Account status Valid values: `0` (Not frozen),  `1` (Frozen).  Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _accountStatus Account status Valid values: `0` (Not frozen),  `1` (Frozen).  Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Account status
+0: Normal
+1: Forcibly mandatory (this function is not supported yet)
+2. Mandatory arrears
+Note: The return value may be null, indicating that no valid data can be obtained.
+                     * @param _accountStatus Account status
+0: Normal
+1: Forcibly mandatory (this function is not supported yet)
+2. Mandatory arrears
+Note: The return value may be null, indicating that no valid data can be obtained.
                      * 
                      */
                     void SetAccountStatus(const std::string& _accountStatus);
@@ -194,15 +210,39 @@ namespace TencentCloud
                     bool AccountStatusHasBeenSet() const;
 
                     /**
-                     * 获取Identity verification status Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AuthStatus Identity verification status Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Identity verification status
+-1: Files not uploaded
+0: Not submitted for review
+1: Under review
+2: Review error
+3: Approved
+Note: The return value may be null, indicating that no valid data can be obtained.
+                     * @return AuthStatus Identity verification status
+-1: Files not uploaded
+0: Not submitted for review
+1: Under review
+2: Review error
+3: Approved
+Note: The return value may be null, indicating that no valid data can be obtained.
                      * 
                      */
                     std::string GetAuthStatus() const;
 
                     /**
-                     * 设置Identity verification status Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _authStatus Identity verification status Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Identity verification status
+-1: Files not uploaded
+0: Not submitted for review
+1: Under review
+2: Review error
+3: Approved
+Note: The return value may be null, indicating that no valid data can be obtained.
+                     * @param _authStatus Identity verification status
+-1: Files not uploaded
+0: Not submitted for review
+1: Under review
+2: Review error
+3: Approved
+Note: The return value may be null, indicating that no valid data can be obtained.
                      * 
                      */
                     void SetAuthStatus(const std::string& _authStatus);
@@ -253,13 +293,23 @@ namespace TencentCloud
                     bool m_bindTimeHasBeenSet;
 
                     /**
-                     * Account status Valid values: `0` (Not frozen),  `1` (Frozen).  Note: This field may return null, indicating that no valid values can be obtained.
+                     * Account status
+0: Normal
+1: Forcibly mandatory (this function is not supported yet)
+2. Mandatory arrears
+Note: The return value may be null, indicating that no valid data can be obtained.
                      */
                     std::string m_accountStatus;
                     bool m_accountStatusHasBeenSet;
 
                     /**
-                     * Identity verification status Note: This field may return null, indicating that no valid values can be obtained.
+                     * Identity verification status
+-1: Files not uploaded
+0: Not submitted for review
+1: Under review
+2: Review error
+3: Approved
+Note: The return value may be null, indicating that no valid data can be obtained.
                      */
                     std::string m_authStatus;
                     bool m_authStatusHasBeenSet;

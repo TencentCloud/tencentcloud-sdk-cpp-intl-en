@@ -28,6 +28,7 @@
 #include <tencentcloud/ssl/v20191205/model/ProjectInfo.h>
 #include <tencentcloud/ssl/v20191205/model/Tags.h>
 #include <tencentcloud/ssl/v20191205/model/PreAuditInfo.h>
+#include <tencentcloud/ssl/v20191205/model/SupportDownloadType.h>
 
 
 namespace TencentCloud
@@ -684,19 +685,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool IsVulnerabilityHasBeenSet() const;
 
                     /**
-                     * 获取Whether the certificate can be reissued
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return RenewAble Whether the certificate can be reissued
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether it can be renewed 
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return RenewAble Whether it can be renewed 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     bool GetRenewAble() const;
 
                     /**
-                     * 设置Whether the certificate can be reissued
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _renewAble Whether the certificate can be reissued
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether it can be renewed 
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _renewAble Whether it can be renewed 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetRenewAble(const bool& _renewAble);
@@ -1083,6 +1084,290 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool HostingRenewCertIdHasBeenSet() const;
 
+                    /**
+                     * 获取Existing renewed certificate ID
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return HasRenewOrder Existing renewed certificate ID
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    std::string GetHasRenewOrder() const;
+
+                    /**
+                     * 设置Existing renewed certificate ID
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _hasRenewOrder Existing renewed certificate ID
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetHasRenewOrder(const std::string& _hasRenewOrder);
+
+                    /**
+                     * 判断参数 HasRenewOrder 是否已赋值
+                     * @return HasRenewOrder 是否已赋值
+                     * 
+                     */
+                    bool HasRenewOrderHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the original certificate is deleted when a certificate is reissued.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return ReplaceOriCertIsDelete Whether the original certificate is deleted when a certificate is reissued.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    bool GetReplaceOriCertIsDelete() const;
+
+                    /**
+                     * 设置Whether the original certificate is deleted when a certificate is reissued.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _replaceOriCertIsDelete Whether the original certificate is deleted when a certificate is reissued.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetReplaceOriCertIsDelete(const bool& _replaceOriCertIsDelete);
+
+                    /**
+                     * 判断参数 ReplaceOriCertIsDelete 是否已赋值
+                     * @return ReplaceOriCertIsDelete 是否已赋值
+                     * 
+                     */
+                    bool ReplaceOriCertIsDeleteHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the certificate is expiring soon. A certificate is considered to be expiring soon when there are 30 days or less left.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return IsExpiring Whether the certificate is expiring soon. A certificate is considered to be expiring soon when there are 30 days or less left.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    bool GetIsExpiring() const;
+
+                    /**
+                     * 设置Whether the certificate is expiring soon. A certificate is considered to be expiring soon when there are 30 days or less left.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _isExpiring Whether the certificate is expiring soon. A certificate is considered to be expiring soon when there are 30 days or less left.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetIsExpiring(const bool& _isExpiring);
+
+                    /**
+                     * 判断参数 IsExpiring 是否已赋值
+                     * @return IsExpiring 是否已赋值
+                     * 
+                     */
+                    bool IsExpiringHasBeenSet() const;
+
+                    /**
+                     * 获取Validation expiration time for the addition of the DV certificate
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return DVAuthDeadline Validation expiration time for the addition of the DV certificate
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    std::string GetDVAuthDeadline() const;
+
+                    /**
+                     * 设置Validation expiration time for the addition of the DV certificate
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _dVAuthDeadline Validation expiration time for the addition of the DV certificate
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetDVAuthDeadline(const std::string& _dVAuthDeadline);
+
+                    /**
+                     * 判断参数 DVAuthDeadline 是否已赋值
+                     * @return DVAuthDeadline 是否已赋值
+                     * 
+                     */
+                    bool DVAuthDeadlineHasBeenSet() const;
+
+                    /**
+                     * 获取Domain name validation pass time
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return ValidationPassedTime Domain name validation pass time
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    std::string GetValidationPassedTime() const;
+
+                    /**
+                     * 设置Domain name validation pass time
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _validationPassedTime Domain name validation pass time
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetValidationPassedTime(const std::string& _validationPassedTime);
+
+                    /**
+                     * 判断参数 ValidationPassedTime 是否已赋值
+                     * @return ValidationPassedTime 是否已赋值
+                     * 
+                     */
+                    bool ValidationPassedTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Multiple domain names with which the certificate is associated
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return CertSANs Multiple domain names with which the certificate is associated
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    std::vector<std::string> GetCertSANs() const;
+
+                    /**
+                     * 设置Multiple domain names with which the certificate is associated
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _certSANs Multiple domain names with which the certificate is associated
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetCertSANs(const std::vector<std::string>& _certSANs);
+
+                    /**
+                     * 判断参数 CertSANs 是否已赋值
+                     * @return CertSANs 是否已赋值
+                     * 
+                     */
+                    bool CertSANsHasBeenSet() const;
+
+                    /**
+                     * 获取Domain name validation rejection information
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return AwaitingValidationMsg Domain name validation rejection information
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    std::string GetAwaitingValidationMsg() const;
+
+                    /**
+                     * 设置Domain name validation rejection information
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _awaitingValidationMsg Domain name validation rejection information
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetAwaitingValidationMsg(const std::string& _awaitingValidationMsg);
+
+                    /**
+                     * 判断参数 AwaitingValidationMsg 是否已赋值
+                     * @return AwaitingValidationMsg 是否已赋值
+                     * 
+                     */
+                    bool AwaitingValidationMsgHasBeenSet() const;
+
+                    /**
+                     * 获取Whether downloading is allowed
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return AllowDownload Whether downloading is allowed
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    bool GetAllowDownload() const;
+
+                    /**
+                     * 设置Whether downloading is allowed
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _allowDownload Whether downloading is allowed
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetAllowDownload(const bool& _allowDownload);
+
+                    /**
+                     * 判断参数 AllowDownload 是否已赋值
+                     * @return AllowDownload 是否已赋值
+                     * 
+                     */
+                    bool AllowDownloadHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return IsDNSPODResolve 
+                     * 
+                     */
+                    bool GetIsDNSPODResolve() const;
+
+                    /**
+                     * 设置
+                     * @param _isDNSPODResolve 
+                     * 
+                     */
+                    void SetIsDNSPODResolve(const bool& _isDNSPODResolve);
+
+                    /**
+                     * 判断参数 IsDNSPODResolve 是否已赋值
+                     * @return IsDNSPODResolve 是否已赋值
+                     * 
+                     */
+                    bool IsDNSPODResolveHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return IsPackage 
+                     * 
+                     */
+                    bool GetIsPackage() const;
+
+                    /**
+                     * 设置
+                     * @param _isPackage 
+                     * 
+                     */
+                    void SetIsPackage(const bool& _isPackage);
+
+                    /**
+                     * 判断参数 IsPackage 是否已赋值
+                     * @return IsPackage 是否已赋值
+                     * 
+                     */
+                    bool IsPackageHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return KeyPasswordCustomFlag 
+                     * 
+                     */
+                    bool GetKeyPasswordCustomFlag() const;
+
+                    /**
+                     * 设置
+                     * @param _keyPasswordCustomFlag 
+                     * 
+                     */
+                    void SetKeyPasswordCustomFlag(const bool& _keyPasswordCustomFlag);
+
+                    /**
+                     * 判断参数 KeyPasswordCustomFlag 是否已赋值
+                     * @return KeyPasswordCustomFlag 是否已赋值
+                     * 
+                     */
+                    bool KeyPasswordCustomFlagHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return SupportDownloadType 
+                     * 
+                     */
+                    SupportDownloadType GetSupportDownloadType() const;
+
+                    /**
+                     * 设置
+                     * @param _supportDownloadType 
+                     * 
+                     */
+                    void SetSupportDownloadType(const SupportDownloadType& _supportDownloadType);
+
+                    /**
+                     * 判断参数 SupportDownloadType 是否已赋值
+                     * @return SupportDownloadType 是否已赋值
+                     * 
+                     */
+                    bool SupportDownloadTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1263,8 +1548,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_isVulnerabilityHasBeenSet;
 
                     /**
-                     * Whether the certificate can be reissued
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Whether it can be renewed 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     bool m_renewAble;
                     bool m_renewAbleHasBeenSet;
@@ -1373,6 +1658,86 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_hostingRenewCertId;
                     bool m_hostingRenewCertIdHasBeenSet;
+
+                    /**
+                     * Existing renewed certificate ID
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string m_hasRenewOrder;
+                    bool m_hasRenewOrderHasBeenSet;
+
+                    /**
+                     * Whether the original certificate is deleted when a certificate is reissued.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    bool m_replaceOriCertIsDelete;
+                    bool m_replaceOriCertIsDeleteHasBeenSet;
+
+                    /**
+                     * Whether the certificate is expiring soon. A certificate is considered to be expiring soon when there are 30 days or less left.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    bool m_isExpiring;
+                    bool m_isExpiringHasBeenSet;
+
+                    /**
+                     * Validation expiration time for the addition of the DV certificate
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string m_dVAuthDeadline;
+                    bool m_dVAuthDeadlineHasBeenSet;
+
+                    /**
+                     * Domain name validation pass time
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string m_validationPassedTime;
+                    bool m_validationPassedTimeHasBeenSet;
+
+                    /**
+                     * Multiple domain names with which the certificate is associated
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::vector<std::string> m_certSANs;
+                    bool m_certSANsHasBeenSet;
+
+                    /**
+                     * Domain name validation rejection information
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string m_awaitingValidationMsg;
+                    bool m_awaitingValidationMsgHasBeenSet;
+
+                    /**
+                     * Whether downloading is allowed
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    bool m_allowDownload;
+                    bool m_allowDownloadHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_isDNSPODResolve;
+                    bool m_isDNSPODResolveHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_isPackage;
+                    bool m_isPackageHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_keyPasswordCustomFlag;
+                    bool m_keyPasswordCustomFlagHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    SupportDownloadType m_supportDownloadType;
+                    bool m_supportDownloadTypeHasBeenSet;
 
                 };
             }

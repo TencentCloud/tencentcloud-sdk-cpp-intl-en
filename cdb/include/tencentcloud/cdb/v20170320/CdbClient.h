@@ -123,6 +123,8 @@
 #include <tencentcloud/cdb/v20170320/model/DescribeDBInstanceGTIDResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeDBInstanceInfoRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeDBInstanceInfoResponse.h>
+#include <tencentcloud/cdb/v20170320/model/DescribeDBInstanceLogToCLSRequest.h>
+#include <tencentcloud/cdb/v20170320/model/DescribeDBInstanceLogToCLSResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeDBInstanceRebootTimeRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeDBInstanceRebootTimeResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeDBInstancesRequest.h>
@@ -213,6 +215,8 @@
 #include <tencentcloud/cdb/v20170320/model/ModifyCdbProxyAddressVipAndVPortResponse.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyCdbProxyParamRequest.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyCdbProxyParamResponse.h>
+#include <tencentcloud/cdb/v20170320/model/ModifyDBInstanceLogToCLSRequest.h>
+#include <tencentcloud/cdb/v20170320/model/ModifyDBInstanceLogToCLSResponse.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyDBInstanceNameRequest.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyDBInstanceNameResponse.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyDBInstanceProjectRequest.h>
@@ -451,6 +455,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeDBInstanceInfoResponse> DescribeDBInstanceInfoOutcome;
                 typedef std::future<DescribeDBInstanceInfoOutcome> DescribeDBInstanceInfoOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeDBInstanceInfoRequest&, DescribeDBInstanceInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBInstanceInfoAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDBInstanceLogToCLSResponse> DescribeDBInstanceLogToCLSOutcome;
+                typedef std::future<DescribeDBInstanceLogToCLSOutcome> DescribeDBInstanceLogToCLSOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::DescribeDBInstanceLogToCLSRequest&, DescribeDBInstanceLogToCLSOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBInstanceLogToCLSAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDBInstanceRebootTimeResponse> DescribeDBInstanceRebootTimeOutcome;
                 typedef std::future<DescribeDBInstanceRebootTimeOutcome> DescribeDBInstanceRebootTimeOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeDBInstanceRebootTimeRequest&, DescribeDBInstanceRebootTimeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBInstanceRebootTimeAsyncHandler;
@@ -586,6 +593,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyCdbProxyParamResponse> ModifyCdbProxyParamOutcome;
                 typedef std::future<ModifyCdbProxyParamOutcome> ModifyCdbProxyParamOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::ModifyCdbProxyParamRequest&, ModifyCdbProxyParamOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyCdbProxyParamAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyDBInstanceLogToCLSResponse> ModifyDBInstanceLogToCLSOutcome;
+                typedef std::future<ModifyDBInstanceLogToCLSOutcome> ModifyDBInstanceLogToCLSOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::ModifyDBInstanceLogToCLSRequest&, ModifyDBInstanceLogToCLSOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDBInstanceLogToCLSAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyDBInstanceNameResponse> ModifyDBInstanceNameOutcome;
                 typedef std::future<ModifyDBInstanceNameOutcome> ModifyDBInstanceNameOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::ModifyDBInstanceNameRequest&, ModifyDBInstanceNameOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDBInstanceNameAsyncHandler;
@@ -1170,6 +1180,15 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
                 DescribeDBInstanceInfoOutcomeCallable DescribeDBInstanceInfoCallable(const Model::DescribeDBInstanceInfoRequest& request);
 
                 /**
+                 *The API DescribeDBInstanceLogToCLS is used to query the configurations of sending slow and error logs of an instance (InstanceId) filtered by AppId and Region to Cloud Log Service (CLS).
+                 * @param req DescribeDBInstanceLogToCLSRequest
+                 * @return DescribeDBInstanceLogToCLSOutcome
+                 */
+                DescribeDBInstanceLogToCLSOutcome DescribeDBInstanceLogToCLS(const Model::DescribeDBInstanceLogToCLSRequest &request);
+                void DescribeDBInstanceLogToCLSAsync(const Model::DescribeDBInstanceLogToCLSRequest& request, const DescribeDBInstanceLogToCLSAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDBInstanceLogToCLSOutcomeCallable DescribeDBInstanceLogToCLSCallable(const Model::DescribeDBInstanceLogToCLSRequest& request);
+
+                /**
                  *This API (DescribeDBInstanceRebootTime) is used to query the estimated time needed for a TencentDB instance to restart.
                  * @param req DescribeDBInstanceRebootTimeRequest
                  * @return DescribeDBInstanceRebootTimeOutcome
@@ -1390,7 +1409,7 @@ Note: the HTTP response packet will be very large if it contain a single large s
                 DescribeSlowLogDataOutcomeCallable DescribeSlowLogDataCallable(const Model::DescribeSlowLogDataRequest& request);
 
                 /**
-                 *This API (DescribeSlowLogs) is used to query the slow logs of a TencentDB instance.
+                 *The API DescribeSlowLogs is used to obtain slow query logs of a cloud database (CDB) instance. Note: If the size of logs to be queried is too large, the operation may time out. It is recommended that you select a shorter time range, such as one hour.
                  * @param req DescribeSlowLogsRequest
                  * @return DescribeSlowLogsOutcome
                  */
@@ -1584,6 +1603,15 @@ Note that when modifying account permissions, you need to pass in the full permi
                 ModifyCdbProxyParamOutcome ModifyCdbProxyParam(const Model::ModifyCdbProxyParamRequest &request);
                 void ModifyCdbProxyParamAsync(const Model::ModifyCdbProxyParamRequest& request, const ModifyCdbProxyParamAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyCdbProxyParamOutcomeCallable ModifyCdbProxyParamCallable(const Model::ModifyCdbProxyParamRequest& request);
+
+                /**
+                 *This API is used to enable or disable the feature of sending CDB slow and error logs to CLS.
+                 * @param req ModifyDBInstanceLogToCLSRequest
+                 * @return ModifyDBInstanceLogToCLSOutcome
+                 */
+                ModifyDBInstanceLogToCLSOutcome ModifyDBInstanceLogToCLS(const Model::ModifyDBInstanceLogToCLSRequest &request);
+                void ModifyDBInstanceLogToCLSAsync(const Model::ModifyDBInstanceLogToCLSRequest& request, const ModifyDBInstanceLogToCLSAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyDBInstanceLogToCLSOutcomeCallable ModifyDBInstanceLogToCLSCallable(const Model::ModifyDBInstanceLogToCLSRequest& request);
 
                 /**
                  *This API (ModifyDBInstanceName) is used to rename a TencentDB instance.
