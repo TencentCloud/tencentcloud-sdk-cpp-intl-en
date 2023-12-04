@@ -413,6 +413,69 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     bool TagsHasBeenSet() const;
 
+                    /**
+                     * 获取Cluster ID
+                     * @return ClusterID Cluster ID
+                     * 
+                     */
+                    std::string GetClusterID() const;
+
+                    /**
+                     * 设置Cluster ID
+                     * @param _clusterID Cluster ID
+                     * 
+                     */
+                    void SetClusterID(const std::string& _clusterID);
+
+                    /**
+                     * 判断参数 ClusterID 是否已赋值
+                     * @return ClusterID 是否已赋值
+                     * 
+                     */
+                    bool ClusterIDHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ClusterName 
+                     * 
+                     */
+                    std::string GetClusterName() const;
+
+                    /**
+                     * 设置
+                     * @param _clusterName 
+                     * 
+                     */
+                    void SetClusterName(const std::string& _clusterName);
+
+                    /**
+                     * 判断参数 ClusterName 是否已赋值
+                     * @return ClusterName 是否已赋值
+                     * 
+                     */
+                    bool ClusterNameHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ClusterAccessedStatus 
+                     * 
+                     */
+                    std::string GetClusterAccessedStatus() const;
+
+                    /**
+                     * 设置
+                     * @param _clusterAccessedStatus 
+                     * 
+                     */
+                    void SetClusterAccessedStatus(const std::string& _clusterAccessedStatus);
+
+                    /**
+                     * 判断参数 ClusterAccessedStatus 是否已赋值
+                     * @return ClusterAccessedStatus 是否已赋值
+                     * 
+                     */
+                    bool ClusterAccessedStatusHasBeenSet() const;
+
                 private:
 
                     /**
@@ -518,6 +581,24 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::vector<TagInfo> m_tags;
                     bool m_tagsHasBeenSet;
+
+                    /**
+                     * Cluster ID
+                     */
+                    std::string m_clusterID;
+                    bool m_clusterIDHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_clusterName;
+                    bool m_clusterNameHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_clusterAccessedStatus;
+                    bool m_clusterAccessedStatusHasBeenSet;
 
                 };
             }

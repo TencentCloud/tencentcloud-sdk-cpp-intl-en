@@ -323,6 +323,90 @@ namespace TencentCloud
                      */
                     bool HostUnInstallCntHasBeenSet() const;
 
+                    /**
+                     * 获取Number of super nodes
+                     * @return SuperNodeCnt Number of super nodes
+                     * 
+                     */
+                    uint64_t GetSuperNodeCnt() const;
+
+                    /**
+                     * 判断参数 SuperNodeCnt 是否已赋值
+                     * @return SuperNodeCnt 是否已赋值
+                     * 
+                     */
+                    bool SuperNodeCntHasBeenSet() const;
+
+                    /**
+                     * 获取Number of running super nodes
+                     * @return SuperNodeRunningCnt Number of running super nodes
+                     * 
+                     */
+                    uint64_t GetSuperNodeRunningCnt() const;
+
+                    /**
+                     * 判断参数 SuperNodeRunningCnt 是否已赋值
+                     * @return SuperNodeRunningCnt 是否已赋值
+                     * 
+                     */
+                    bool SuperNodeRunningCntHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return TodayNewImageCnt 
+                     * 
+                     */
+                    uint64_t GetTodayNewImageCnt() const;
+
+                    /**
+                     * 判断参数 TodayNewImageCnt 是否已赋值
+                     * @return TodayNewImageCnt 是否已赋值
+                     * 
+                     */
+                    bool TodayNewImageCntHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return TodayUnsafeImageCnt 
+                     * 
+                     */
+                    uint64_t GetTodayUnsafeImageCnt() const;
+
+                    /**
+                     * 判断参数 TodayUnsafeImageCnt 是否已赋值
+                     * @return TodayUnsafeImageCnt 是否已赋值
+                     * 
+                     */
+                    bool TodayUnsafeImageCntHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return RecommendedFixImageCnt 
+                     * 
+                     */
+                    uint64_t GetRecommendedFixImageCnt() const;
+
+                    /**
+                     * 判断参数 RecommendedFixImageCnt 是否已赋值
+                     * @return RecommendedFixImageCnt 是否已赋值
+                     * 
+                     */
+                    bool RecommendedFixImageCntHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ScannedImageCnt 
+                     * 
+                     */
+                    uint64_t GetScannedImageCnt() const;
+
+                    /**
+                     * 判断参数 ScannedImageCnt 是否已赋值
+                     * @return ScannedImageCnt 是否已赋值
+                     * 
+                     */
+                    bool ScannedImageCntHasBeenSet() const;
+
                 private:
 
                     /**
@@ -444,6 +528,42 @@ namespace TencentCloud
                      */
                     uint64_t m_hostUnInstallCnt;
                     bool m_hostUnInstallCntHasBeenSet;
+
+                    /**
+                     * Number of super nodes
+                     */
+                    uint64_t m_superNodeCnt;
+                    bool m_superNodeCntHasBeenSet;
+
+                    /**
+                     * Number of running super nodes
+                     */
+                    uint64_t m_superNodeRunningCnt;
+                    bool m_superNodeRunningCntHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_todayNewImageCnt;
+                    bool m_todayNewImageCntHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_todayUnsafeImageCnt;
+                    bool m_todayUnsafeImageCntHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_recommendedFixImageCnt;
+                    bool m_recommendedFixImageCntHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_scannedImageCnt;
+                    bool m_scannedImageCntHasBeenSet;
 
                 };
             }

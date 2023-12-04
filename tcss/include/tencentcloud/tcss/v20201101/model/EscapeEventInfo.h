@@ -47,39 +47,43 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Event type
-   `ESCAPE_HOST_ACESS_FILE`: Host file access escape.
-   `ESCAPE_MOUNT_NAMESPACE`: Mount namespace escape.
-   `ESCAPE_PRIVILEDGE`: Program privilege escalation escape.
-   `ESCAPE_PRIVILEDGE_CONTAINER_START`: Privileged container startup escape.
-   `ESCAPE_MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
-   `ESCAPE_SYSCALL`: Syscall escape.
-                     * @return EventType Event type
-   `ESCAPE_HOST_ACESS_FILE`: Host file access escape.
-   `ESCAPE_MOUNT_NAMESPACE`: Mount namespace escape.
-   `ESCAPE_PRIVILEDGE`: Program privilege escalation escape.
-   `ESCAPE_PRIVILEDGE_CONTAINER_START`: Privileged container startup escape.
-   `ESCAPE_MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
-   `ESCAPE_SYSCALL`: Syscall escape.
+                     * 获取Event type.
+   `ESCAPE_CGROUPS`: Cgroup escape.
+   `ESCAPE_TAMPER_SENSITIVE_FILE`: File tamper escape.
+   `ESCAPE_DOCKER_API`: Docker API access escape.
+   `ESCAPE_VUL_OCCURRED`: Vulnerability exploit.
+   `MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
+   `PRIVILEGE_CONTAINER_START`: Privileged container.
+   `PRIVILEGE`: Program privilege escalation escape.
+                     * @return EventType Event type.
+   `ESCAPE_CGROUPS`: Cgroup escape.
+   `ESCAPE_TAMPER_SENSITIVE_FILE`: File tamper escape.
+   `ESCAPE_DOCKER_API`: Docker API access escape.
+   `ESCAPE_VUL_OCCURRED`: Vulnerability exploit.
+   `MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
+   `PRIVILEGE_CONTAINER_START`: Privileged container.
+   `PRIVILEGE`: Program privilege escalation escape.
                      * 
                      */
                     std::string GetEventType() const;
 
                     /**
-                     * 设置Event type
-   `ESCAPE_HOST_ACESS_FILE`: Host file access escape.
-   `ESCAPE_MOUNT_NAMESPACE`: Mount namespace escape.
-   `ESCAPE_PRIVILEDGE`: Program privilege escalation escape.
-   `ESCAPE_PRIVILEDGE_CONTAINER_START`: Privileged container startup escape.
-   `ESCAPE_MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
-   `ESCAPE_SYSCALL`: Syscall escape.
-                     * @param _eventType Event type
-   `ESCAPE_HOST_ACESS_FILE`: Host file access escape.
-   `ESCAPE_MOUNT_NAMESPACE`: Mount namespace escape.
-   `ESCAPE_PRIVILEDGE`: Program privilege escalation escape.
-   `ESCAPE_PRIVILEDGE_CONTAINER_START`: Privileged container startup escape.
-   `ESCAPE_MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
-   `ESCAPE_SYSCALL`: Syscall escape.
+                     * 设置Event type.
+   `ESCAPE_CGROUPS`: Cgroup escape.
+   `ESCAPE_TAMPER_SENSITIVE_FILE`: File tamper escape.
+   `ESCAPE_DOCKER_API`: Docker API access escape.
+   `ESCAPE_VUL_OCCURRED`: Vulnerability exploit.
+   `MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
+   `PRIVILEGE_CONTAINER_START`: Privileged container.
+   `PRIVILEGE`: Program privilege escalation escape.
+                     * @param _eventType Event type.
+   `ESCAPE_CGROUPS`: Cgroup escape.
+   `ESCAPE_TAMPER_SENSITIVE_FILE`: File tamper escape.
+   `ESCAPE_DOCKER_API`: Docker API access escape.
+   `ESCAPE_VUL_OCCURRED`: Vulnerability exploit.
+   `MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
+   `PRIVILEGE_CONTAINER_START`: Privileged container.
+   `PRIVILEGE`: Program privilege escalation escape.
                      * 
                      */
                     void SetEventType(const std::string& _eventType);
@@ -635,16 +639,185 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ContainerStatusHasBeenSet() const;
 
+                    /**
+                     * 获取ID of the cluster where the node resides
+                     * @return ClusterID ID of the cluster where the node resides
+                     * 
+                     */
+                    std::string GetClusterID() const;
+
+                    /**
+                     * 设置ID of the cluster where the node resides
+                     * @param _clusterID ID of the cluster where the node resides
+                     * 
+                     */
+                    void SetClusterID(const std::string& _clusterID);
+
+                    /**
+                     * 判断参数 ClusterID 是否已赋值
+                     * @return ClusterID 是否已赋值
+                     * 
+                     */
+                    bool ClusterIDHasBeenSet() const;
+
+                    /**
+                     * 获取Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+                     * @return NodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+                     * 
+                     */
+                    std::string GetNodeType() const;
+
+                    /**
+                     * 设置Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+                     * @param _nodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+                     * 
+                     */
+                    void SetNodeType(const std::string& _nodeType);
+
+                    /**
+                     * 判断参数 NodeType 是否已赋值
+                     * @return NodeType 是否已赋值
+                     * 
+                     */
+                    bool NodeTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Pod IP
+                     * @return PodIP Pod IP
+                     * 
+                     */
+                    std::string GetPodIP() const;
+
+                    /**
+                     * 设置Pod IP
+                     * @param _podIP Pod IP
+                     * 
+                     */
+                    void SetPodIP(const std::string& _podIP);
+
+                    /**
+                     * 判断参数 PodIP 是否已赋值
+                     * @return PodIP 是否已赋值
+                     * 
+                     */
+                    bool PodIPHasBeenSet() const;
+
+                    /**
+                     * 获取Unique node ID
+                     * @return NodeUniqueID Unique node ID
+                     * 
+                     */
+                    std::string GetNodeUniqueID() const;
+
+                    /**
+                     * 设置Unique node ID
+                     * @param _nodeUniqueID Unique node ID
+                     * 
+                     */
+                    void SetNodeUniqueID(const std::string& _nodeUniqueID);
+
+                    /**
+                     * 判断参数 NodeUniqueID 是否已赋值
+                     * @return NodeUniqueID 是否已赋值
+                     * 
+                     */
+                    bool NodeUniqueIDHasBeenSet() const;
+
+                    /**
+                     * 获取Node public IP
+                     * @return PublicIP Node public IP
+                     * 
+                     */
+                    std::string GetPublicIP() const;
+
+                    /**
+                     * 设置Node public IP
+                     * @param _publicIP Node public IP
+                     * 
+                     */
+                    void SetPublicIP(const std::string& _publicIP);
+
+                    /**
+                     * 判断参数 PublicIP 是否已赋值
+                     * @return PublicIP 是否已赋值
+                     * 
+                     */
+                    bool PublicIPHasBeenSet() const;
+
+                    /**
+                     * 获取Node ID
+                     * @return NodeID Node ID
+                     * 
+                     */
+                    std::string GetNodeID() const;
+
+                    /**
+                     * 设置Node ID
+                     * @param _nodeID Node ID
+                     * 
+                     */
+                    void SetNodeID(const std::string& _nodeID);
+
+                    /**
+                     * 判断参数 NodeID 是否已赋值
+                     * @return NodeID 是否已赋值
+                     * 
+                     */
+                    bool NodeIDHasBeenSet() const;
+
+                    /**
+                     * 获取Private IP of the node
+                     * @return HostIP Private IP of the node
+                     * 
+                     */
+                    std::string GetHostIP() const;
+
+                    /**
+                     * 设置Private IP of the node
+                     * @param _hostIP Private IP of the node
+                     * 
+                     */
+                    void SetHostIP(const std::string& _hostIP);
+
+                    /**
+                     * 判断参数 HostIP 是否已赋值
+                     * @return HostIP 是否已赋值
+                     * 
+                     */
+                    bool HostIPHasBeenSet() const;
+
+                    /**
+                     * 获取Cluster name
+                     * @return ClusterName Cluster name
+                     * 
+                     */
+                    std::string GetClusterName() const;
+
+                    /**
+                     * 设置Cluster name
+                     * @param _clusterName Cluster name
+                     * 
+                     */
+                    void SetClusterName(const std::string& _clusterName);
+
+                    /**
+                     * 判断参数 ClusterName 是否已赋值
+                     * @return ClusterName 是否已赋值
+                     * 
+                     */
+                    bool ClusterNameHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Event type
-   `ESCAPE_HOST_ACESS_FILE`: Host file access escape.
-   `ESCAPE_MOUNT_NAMESPACE`: Mount namespace escape.
-   `ESCAPE_PRIVILEDGE`: Program privilege escalation escape.
-   `ESCAPE_PRIVILEDGE_CONTAINER_START`: Privileged container startup escape.
-   `ESCAPE_MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
-   `ESCAPE_SYSCALL`: Syscall escape.
+                     * Event type.
+   `ESCAPE_CGROUPS`: Cgroup escape.
+   `ESCAPE_TAMPER_SENSITIVE_FILE`: File tamper escape.
+   `ESCAPE_DOCKER_API`: Docker API access escape.
+   `ESCAPE_VUL_OCCURRED`: Vulnerability exploit.
+   `MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
+   `PRIVILEGE_CONTAINER_START`: Privileged container.
+   `PRIVILEGE`: Program privilege escalation escape.
                      */
                     std::string m_eventType;
                     bool m_eventTypeHasBeenSet;
@@ -799,6 +972,54 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_containerStatus;
                     bool m_containerStatusHasBeenSet;
+
+                    /**
+                     * ID of the cluster where the node resides
+                     */
+                    std::string m_clusterID;
+                    bool m_clusterIDHasBeenSet;
+
+                    /**
+                     * Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+                     */
+                    std::string m_nodeType;
+                    bool m_nodeTypeHasBeenSet;
+
+                    /**
+                     * Pod IP
+                     */
+                    std::string m_podIP;
+                    bool m_podIPHasBeenSet;
+
+                    /**
+                     * Unique node ID
+                     */
+                    std::string m_nodeUniqueID;
+                    bool m_nodeUniqueIDHasBeenSet;
+
+                    /**
+                     * Node public IP
+                     */
+                    std::string m_publicIP;
+                    bool m_publicIPHasBeenSet;
+
+                    /**
+                     * Node ID
+                     */
+                    std::string m_nodeID;
+                    bool m_nodeIDHasBeenSet;
+
+                    /**
+                     * Private IP of the node
+                     */
+                    std::string m_hostIP;
+                    bool m_hostIPHasBeenSet;
+
+                    /**
+                     * Cluster name
+                     */
+                    std::string m_clusterName;
+                    bool m_clusterNameHasBeenSet;
 
                 };
             }

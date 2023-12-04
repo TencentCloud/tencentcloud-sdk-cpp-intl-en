@@ -51,7 +51,7 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Component Component name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
+                     * @deprecated
                      */
                     std::string GetComponent() const;
 
@@ -60,14 +60,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _component Component name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
+                     * @deprecated
                      */
                     void SetComponent(const std::string& _component);
 
                     /**
                      * 判断参数 Component 是否已赋值
                      * @return Component 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool ComponentHasBeenSet() const;
 
@@ -96,6 +96,106 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool VersionHasBeenSet() const;
 
+                    /**
+                     * 获取Fixed version
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * @return FixedVersion Fixed version
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetFixedVersion() const;
+
+                    /**
+                     * 设置Fixed version
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * @param _fixedVersion Fixed version
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetFixedVersion(const std::string& _fixedVersion);
+
+                    /**
+                     * 判断参数 FixedVersion 是否已赋值
+                     * @return FixedVersion 是否已赋值
+                     * 
+                     */
+                    bool FixedVersionHasBeenSet() const;
+
+                    /**
+                     * 获取Path
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * @return Path Path
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetPath() const;
+
+                    /**
+                     * 设置Path
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * @param _path Path
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetPath(const std::string& _path);
+
+                    /**
+                     * 判断参数 Path 是否已赋值
+                     * @return Path 是否已赋值
+                     * 
+                     */
+                    bool PathHasBeenSet() const;
+
+                    /**
+                     * 获取Type
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * @return Type Type
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetType() const;
+
+                    /**
+                     * 设置Type
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * @param _type Type
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetType(const std::string& _type);
+
+                    /**
+                     * 判断参数 Type 是否已赋值
+                     * @return Type 是否已赋值
+                     * 
+                     */
+                    bool TypeHasBeenSet() const;
+
+                    /**
+                     * 获取Add-on name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Name Add-on name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetName() const;
+
+                    /**
+                     * 设置Add-on name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _name Add-on name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetName(const std::string& _name);
+
+                    /**
+                     * 判断参数 Name 是否已赋值
+                     * @return Name 是否已赋值
+                     * 
+                     */
+                    bool NameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -111,6 +211,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_version;
                     bool m_versionHasBeenSet;
+
+                    /**
+                     * Fixed version
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_fixedVersion;
+                    bool m_fixedVersionHasBeenSet;
+
+                    /**
+                     * Path
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_path;
+                    bool m_pathHasBeenSet;
+
+                    /**
+                     * Type
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_type;
+                    bool m_typeHasBeenSet;
+
+                    /**
+                     * Add-on name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_name;
+                    bool m_nameHasBeenSet;
 
                 };
             }

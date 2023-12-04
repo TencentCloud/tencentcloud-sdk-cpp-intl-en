@@ -72,35 +72,35 @@ namespace TencentCloud
                     bool AutoGeneratePasswordHasBeenSet() const;
 
                     /**
-                     * 获取Instace login password.
-For Windows instances, the password must contain 12 to 30 characters of the following types. It cannot start with “/” and cannot include the username.
-<li>[a-z]</li>
-<li>[A-Z]</li>
-<li>[0-9]</li>
-<li>[()`~!@#$%^&*-+=_|{}[]:;' <>,.?/]</li>
-                     * @return Password Instace login password.
-For Windows instances, the password must contain 12 to 30 characters of the following types. It cannot start with “/” and cannot include the username.
-<li>[a-z]</li>
-<li>[A-Z]</li>
-<li>[0-9]</li>
-<li>[()`~!@#$%^&*-+=_|{}[]:;' <>,.?/]</li>
+                     * 获取Instance login password. 
+For Windows instances, the password must contain 12 to 30 characters of the following types. It cannot start with “/” and cannot include the username. 
+<li>Lowercase letters: [a–z]</li>
+<li>Uppercase letters: [A–Z]</li>
+<li>Digits: 0-9</li>
+<li>Symbols: ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/</li>
+                     * @return Password Instance login password. 
+For Windows instances, the password must contain 12 to 30 characters of the following types. It cannot start with “/” and cannot include the username. 
+<li>Lowercase letters: [a–z]</li>
+<li>Uppercase letters: [A–Z]</li>
+<li>Digits: 0-9</li>
+<li>Symbols: ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/</li>
                      * 
                      */
                     std::string GetPassword() const;
 
                     /**
-                     * 设置Instace login password.
-For Windows instances, the password must contain 12 to 30 characters of the following types. It cannot start with “/” and cannot include the username.
-<li>[a-z]</li>
-<li>[A-Z]</li>
-<li>[0-9]</li>
-<li>[()`~!@#$%^&*-+=_|{}[]:;' <>,.?/]</li>
-                     * @param _password Instace login password.
-For Windows instances, the password must contain 12 to 30 characters of the following types. It cannot start with “/” and cannot include the username.
-<li>[a-z]</li>
-<li>[A-Z]</li>
-<li>[0-9]</li>
-<li>[()`~!@#$%^&*-+=_|{}[]:;' <>,.?/]</li>
+                     * 设置Instance login password. 
+For Windows instances, the password must contain 12 to 30 characters of the following types. It cannot start with “/” and cannot include the username. 
+<li>Lowercase letters: [a–z]</li>
+<li>Uppercase letters: [A–Z]</li>
+<li>Digits: 0-9</li>
+<li>Symbols: ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/</li>
+                     * @param _password Instance login password. 
+For Windows instances, the password must contain 12 to 30 characters of the following types. It cannot start with “/” and cannot include the username. 
+<li>Lowercase letters: [a–z]</li>
+<li>Uppercase letters: [A–Z]</li>
+<li>Digits: 0-9</li>
+<li>Symbols: ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/</li>
                      * 
                      */
                     void SetPassword(const std::string& _password);
@@ -112,6 +112,27 @@ For Windows instances, the password must contain 12 to 30 characters of the foll
                      */
                     bool PasswordHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return KeyIds 
+                     * 
+                     */
+                    std::vector<std::string> GetKeyIds() const;
+
+                    /**
+                     * 设置
+                     * @param _keyIds 
+                     * 
+                     */
+                    void SetKeyIds(const std::vector<std::string>& _keyIds);
+
+                    /**
+                     * 判断参数 KeyIds 是否已赋值
+                     * @return KeyIds 是否已赋值
+                     * 
+                     */
+                    bool KeyIdsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -122,15 +143,21 @@ For Windows instances, the password must contain 12 to 30 characters of the foll
                     bool m_autoGeneratePasswordHasBeenSet;
 
                     /**
-                     * Instace login password.
-For Windows instances, the password must contain 12 to 30 characters of the following types. It cannot start with “/” and cannot include the username.
-<li>[a-z]</li>
-<li>[A-Z]</li>
-<li>[0-9]</li>
-<li>[()`~!@#$%^&*-+=_|{}[]:;' <>,.?/]</li>
+                     * Instance login password. 
+For Windows instances, the password must contain 12 to 30 characters of the following types. It cannot start with “/” and cannot include the username. 
+<li>Lowercase letters: [a–z]</li>
+<li>Uppercase letters: [A–Z]</li>
+<li>Digits: 0-9</li>
+<li>Symbols: ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/</li>
                      */
                     std::string m_password;
                     bool m_passwordHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<std::string> m_keyIds;
+                    bool m_keyIdsHasBeenSet;
 
                 };
             }

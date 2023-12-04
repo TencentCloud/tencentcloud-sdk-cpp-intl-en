@@ -194,27 +194,6 @@ namespace TencentCloud
                     bool NodeNameHasBeenSet() const;
 
                     /**
-                     * 获取Pod name
-                     * @return PodName Pod name
-                     * 
-                     */
-                    std::string GetPodName() const;
-
-                    /**
-                     * 设置Pod name
-                     * @param _podName Pod name
-                     * 
-                     */
-                    void SetPodName(const std::string& _podName);
-
-                    /**
-                     * 判断参数 PodName 是否已赋值
-                     * @return PodName 是否已赋值
-                     * 
-                     */
-                    bool PodNameHasBeenSet() const;
-
-                    /**
                      * 获取Status. `EVENT_UNDEAL`: Pending.
     `EVENT_DEALED`: Processed.
     `EVENT_INGNORE`: Ignored.
@@ -560,6 +539,300 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ContainerIsolateOperationSrcHasBeenSet() const;
 
+                    /**
+                     * 获取Node ID
+                     * @return NodeID Node ID
+                     * 
+                     */
+                    std::string GetNodeID() const;
+
+                    /**
+                     * 设置Node ID
+                     * @param _nodeID Node ID
+                     * 
+                     */
+                    void SetNodeID(const std::string& _nodeID);
+
+                    /**
+                     * 判断参数 NodeID 是否已赋值
+                     * @return NodeID 是否已赋值
+                     * 
+                     */
+                    bool NodeIDHasBeenSet() const;
+
+                    /**
+                     * 获取Node type. Valid values: `NORMAL` (general node), `SUPER` (super node)
+                     * @return NodeType Node type. Valid values: `NORMAL` (general node), `SUPER` (super node)
+                     * 
+                     */
+                    std::string GetNodeType() const;
+
+                    /**
+                     * 设置Node type. Valid values: `NORMAL` (general node), `SUPER` (super node)
+                     * @param _nodeType Node type. Valid values: `NORMAL` (general node), `SUPER` (super node)
+                     * 
+                     */
+                    void SetNodeType(const std::string& _nodeType);
+
+                    /**
+                     * 判断参数 NodeType 是否已赋值
+                     * @return NodeType 是否已赋值
+                     * 
+                     */
+                    bool NodeTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Node subnet ID
+                     * @return NodeSubNetID Node subnet ID
+                     * 
+                     */
+                    std::string GetNodeSubNetID() const;
+
+                    /**
+                     * 设置Node subnet ID
+                     * @param _nodeSubNetID Node subnet ID
+                     * 
+                     */
+                    void SetNodeSubNetID(const std::string& _nodeSubNetID);
+
+                    /**
+                     * 判断参数 NodeSubNetID 是否已赋值
+                     * @return NodeSubNetID 是否已赋值
+                     * 
+                     */
+                    bool NodeSubNetIDHasBeenSet() const;
+
+                    /**
+                     * 获取Node subnet name
+                     * @return NodeSubNetName Node subnet name
+                     * 
+                     */
+                    std::string GetNodeSubNetName() const;
+
+                    /**
+                     * 设置Node subnet name
+                     * @param _nodeSubNetName Node subnet name
+                     * 
+                     */
+                    void SetNodeSubNetName(const std::string& _nodeSubNetName);
+
+                    /**
+                     * 判断参数 NodeSubNetName 是否已赋值
+                     * @return NodeSubNetName 是否已赋值
+                     * 
+                     */
+                    bool NodeSubNetNameHasBeenSet() const;
+
+                    /**
+                     * 获取Subnet IP range
+                     * @return NodeSubNetCIDR Subnet IP range
+                     * 
+                     */
+                    std::string GetNodeSubNetCIDR() const;
+
+                    /**
+                     * 设置Subnet IP range
+                     * @param _nodeSubNetCIDR Subnet IP range
+                     * 
+                     */
+                    void SetNodeSubNetCIDR(const std::string& _nodeSubNetCIDR);
+
+                    /**
+                     * 判断参数 NodeSubNetCIDR 是否已赋值
+                     * @return NodeSubNetCIDR 是否已赋值
+                     * 
+                     */
+                    bool NodeSubNetCIDRHasBeenSet() const;
+
+                    /**
+                     * 获取Pod name
+                     * @return PodName Pod name
+                     * 
+                     */
+                    std::string GetPodName() const;
+
+                    /**
+                     * 设置Pod name
+                     * @param _podName Pod name
+                     * 
+                     */
+                    void SetPodName(const std::string& _podName);
+
+                    /**
+                     * 判断参数 PodName 是否已赋值
+                     * @return PodName 是否已赋值
+                     * 
+                     */
+                    bool PodNameHasBeenSet() const;
+
+                    /**
+                     * 获取Pod IP
+                     * @return PodIP Pod IP
+                     * 
+                     */
+                    std::string GetPodIP() const;
+
+                    /**
+                     * 设置Pod IP
+                     * @param _podIP Pod IP
+                     * 
+                     */
+                    void SetPodIP(const std::string& _podIP);
+
+                    /**
+                     * 判断参数 PodIP 是否已赋值
+                     * @return PodIP 是否已赋值
+                     * 
+                     */
+                    bool PodIPHasBeenSet() const;
+
+                    /**
+                     * 获取Pod status
+                     * @return PodStatus Pod status
+                     * 
+                     */
+                    std::string GetPodStatus() const;
+
+                    /**
+                     * 设置Pod status
+                     * @param _podStatus Pod status
+                     * 
+                     */
+                    void SetPodStatus(const std::string& _podStatus);
+
+                    /**
+                     * 判断参数 PodStatus 是否已赋值
+                     * @return PodStatus 是否已赋值
+                     * 
+                     */
+                    bool PodStatusHasBeenSet() const;
+
+                    /**
+                     * 获取Cluster ID
+                     * @return ClusterID Cluster ID
+                     * 
+                     */
+                    std::string GetClusterID() const;
+
+                    /**
+                     * 设置Cluster ID
+                     * @param _clusterID Cluster ID
+                     * 
+                     */
+                    void SetClusterID(const std::string& _clusterID);
+
+                    /**
+                     * 判断参数 ClusterID 是否已赋值
+                     * @return ClusterID 是否已赋值
+                     * 
+                     */
+                    bool ClusterIDHasBeenSet() const;
+
+                    /**
+                     * 获取Cluster name
+                     * @return ClusterName Cluster name
+                     * 
+                     */
+                    std::string GetClusterName() const;
+
+                    /**
+                     * 设置Cluster name
+                     * @param _clusterName Cluster name
+                     * 
+                     */
+                    void SetClusterName(const std::string& _clusterName);
+
+                    /**
+                     * 判断参数 ClusterName 是否已赋值
+                     * @return ClusterName 是否已赋值
+                     * 
+                     */
+                    bool ClusterNameHasBeenSet() const;
+
+                    /**
+                     * 获取Unique node ID
+                     * @return NodeUniqueID Unique node ID
+                     * 
+                     */
+                    std::string GetNodeUniqueID() const;
+
+                    /**
+                     * 设置Unique node ID
+                     * @param _nodeUniqueID Unique node ID
+                     * 
+                     */
+                    void SetNodeUniqueID(const std::string& _nodeUniqueID);
+
+                    /**
+                     * 判断参数 NodeUniqueID 是否已赋值
+                     * @return NodeUniqueID 是否已赋值
+                     * 
+                     */
+                    bool NodeUniqueIDHasBeenSet() const;
+
+                    /**
+                     * 获取uuid
+                     * @return HostID uuid
+                     * 
+                     */
+                    std::string GetHostID() const;
+
+                    /**
+                     * 设置uuid
+                     * @param _hostID uuid
+                     * 
+                     */
+                    void SetHostID(const std::string& _hostID);
+
+                    /**
+                     * 判断参数 HostID 是否已赋值
+                     * @return HostID 是否已赋值
+                     * 
+                     */
+                    bool HostIDHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return Namespace 
+                     * 
+                     */
+                    std::string GetNamespace() const;
+
+                    /**
+                     * 设置
+                     * @param _namespace 
+                     * 
+                     */
+                    void SetNamespace(const std::string& _namespace);
+
+                    /**
+                     * 判断参数 Namespace 是否已赋值
+                     * @return Namespace 是否已赋值
+                     * 
+                     */
+                    bool NamespaceHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return WorkloadType 
+                     * 
+                     */
+                    std::string GetWorkloadType() const;
+
+                    /**
+                     * 设置
+                     * @param _workloadType 
+                     * 
+                     */
+                    void SetWorkloadType(const std::string& _workloadType);
+
+                    /**
+                     * 判断参数 WorkloadType 是否已赋值
+                     * @return WorkloadType 是否已赋值
+                     * 
+                     */
+                    bool WorkloadTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -603,12 +876,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_nodeName;
                     bool m_nodeNameHasBeenSet;
-
-                    /**
-                     * Pod name
-                     */
-                    std::string m_podName;
-                    bool m_podNameHasBeenSet;
 
                     /**
                      * Status. `EVENT_UNDEAL`: Pending.
@@ -703,6 +970,90 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_containerIsolateOperationSrc;
                     bool m_containerIsolateOperationSrcHasBeenSet;
+
+                    /**
+                     * Node ID
+                     */
+                    std::string m_nodeID;
+                    bool m_nodeIDHasBeenSet;
+
+                    /**
+                     * Node type. Valid values: `NORMAL` (general node), `SUPER` (super node)
+                     */
+                    std::string m_nodeType;
+                    bool m_nodeTypeHasBeenSet;
+
+                    /**
+                     * Node subnet ID
+                     */
+                    std::string m_nodeSubNetID;
+                    bool m_nodeSubNetIDHasBeenSet;
+
+                    /**
+                     * Node subnet name
+                     */
+                    std::string m_nodeSubNetName;
+                    bool m_nodeSubNetNameHasBeenSet;
+
+                    /**
+                     * Subnet IP range
+                     */
+                    std::string m_nodeSubNetCIDR;
+                    bool m_nodeSubNetCIDRHasBeenSet;
+
+                    /**
+                     * Pod name
+                     */
+                    std::string m_podName;
+                    bool m_podNameHasBeenSet;
+
+                    /**
+                     * Pod IP
+                     */
+                    std::string m_podIP;
+                    bool m_podIPHasBeenSet;
+
+                    /**
+                     * Pod status
+                     */
+                    std::string m_podStatus;
+                    bool m_podStatusHasBeenSet;
+
+                    /**
+                     * Cluster ID
+                     */
+                    std::string m_clusterID;
+                    bool m_clusterIDHasBeenSet;
+
+                    /**
+                     * Cluster name
+                     */
+                    std::string m_clusterName;
+                    bool m_clusterNameHasBeenSet;
+
+                    /**
+                     * Unique node ID
+                     */
+                    std::string m_nodeUniqueID;
+                    bool m_nodeUniqueIDHasBeenSet;
+
+                    /**
+                     * uuid
+                     */
+                    std::string m_hostID;
+                    bool m_hostIDHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_namespace;
+                    bool m_namespaceHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_workloadType;
+                    bool m_workloadTypeHasBeenSet;
 
                 };
             }

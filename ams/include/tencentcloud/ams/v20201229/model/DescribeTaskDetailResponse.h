@@ -47,9 +47,9 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取This field is used to return the task ID (in the `Results` parameter) after an audio moderation task is created. It is used to identify the moderation task for which to query the details.
+                     * 获取
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TaskId This field is used to return the task ID (in the `Results` parameter) after an audio moderation task is created. It is used to identify the moderation task for which to query the details.
+                     * @return TaskId 
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -63,9 +63,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取This field is used to return the data ID parameter passed in within the `Tasks` parameter when the audio moderation API is called for easier data identification and management.
+                     * 获取
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return DataId This field is used to return the data ID parameter passed in within the `Tasks` parameter when the audio moderation API is called for easier data identification and management.
+                     * @return DataId 
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -79,9 +79,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DataIdHasBeenSet() const;
 
                     /**
-                     * 获取This field is used to return the `BizType` parameter passed in when the audio moderation API is called for easier data identification and management.
+                     * 获取
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return BizType This field is used to return the `BizType` parameter passed in when the audio moderation API is called for easier data identification and management.
+                     * @return BizType 
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -95,9 +95,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool BizTypeHasBeenSet() const;
 
                     /**
-                     * 获取This field is used to return the task name in the `TaskInput` parameter passed in when the audio moderation API is called for easier task identification and management.
+                     * 获取
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Name This field is used to return the task name in the `TaskInput` parameter passed in when the audio moderation API is called for easier task identification and management.
+                     * @return Name 
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -111,11 +111,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取This field is used to return the task status of the queried content.
-<br>Valid values: **FINISH** (task completed), **PENDING** (task pending), **RUNNING** (task in progress), **ERROR** (task error), **CANCELLED** (task canceled).
+                     * 获取
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Status This field is used to return the task status of the queried content.
-<br>Valid values: **FINISH** (task completed), **PENDING** (task pending), **RUNNING** (task in progress), **ERROR** (task error), **CANCELLED** (task canceled).
+                     * @return Status 
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -129,9 +127,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取This field is used to return the audio moderation type passed in when the audio moderation API is called. Valid values: **AUDIO** (audio on demand), **LIVE_AUDIO** (audio live streaming). Default value: AUDIO.
+                     * 获取
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Type This field is used to return the audio moderation type passed in when the audio moderation API is called. Valid values: **AUDIO** (audio on demand), **LIVE_AUDIO** (audio live streaming). Default value: AUDIO.
+                     * @return Type 
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -145,9 +143,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取This field is used to return the operation suggestion for the maliciousness tag. When you get the determination result, the returned value indicates the operation suggested by the system. We recommend you handle different types of violations and suggestions according to your business needs. <br>Returned values: **Block**, **Review**, **Pass**.
+                     * 获取
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Suggestion This field is used to return the operation suggestion for the maliciousness tag. When you get the determination result, the returned value indicates the operation suggested by the system. We recommend you handle different types of violations and suggestions according to your business needs. <br>Returned values: **Block**, **Review**, **Pass**.
+                     * @return Suggestion 
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -161,10 +159,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取Label of the malicious content detected. <br>Values: **Porn**: pornographic; **Abuse**: abusive; **Ad**: advertising; **Custom**: custom type of non-compliant content and other offensive, unsafe, or inappropriate types of content.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return Labels Label of the malicious content detected. <br>Values: **Porn**: pornographic; **Abuse**: abusive; **Ad**: advertising; **Custom**: custom type of non-compliant content and other offensive, unsafe, or inappropriate types of content.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return Labels 
+Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<TaskLabel> GetLabels() const;
@@ -177,9 +175,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool LabelsHasBeenSet() const;
 
                     /**
-                     * 获取This field is used to return the media content information of the moderation service, mainly including the input file type and access URL.
+                     * 获取
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return InputInfo This field is used to return the media content information of the moderation service, mainly including the input file type and access URL.
+                     * @return InputInfo 
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -193,9 +191,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool InputInfoHasBeenSet() const;
 
                     /**
-                     * 获取This field is used to return the recognized text content of an audio file. **Up to the first 1,000 characters** can be recognized.
+                     * 获取
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return AudioText This field is used to return the recognized text content of an audio file. **Up to the first 1,000 characters** can be recognized.
+                     * @return AudioText 
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -209,9 +207,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool AudioTextHasBeenSet() const;
 
                     /**
-                     * 获取This field is used to return the moderation result of an audio segment, mainly including the start time and audio moderation result.<br>For the specific output content, see the detailed description of the `AudioSegments` and `AudioResult` data structures.
+                     * 获取
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return AudioSegments This field is used to return the moderation result of an audio segment, mainly including the start time and audio moderation result.<br>For the specific output content, see the detailed description of the `AudioSegments` and `AudioResult` data structures.
+                     * @return AudioSegments 
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -225,9 +223,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool AudioSegmentsHasBeenSet() const;
 
                     /**
-                     * 获取If the task status is `Error`, this field will return the error type; otherwise, null will be returned by default.
+                     * 获取
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ErrorType If the task status is `Error`, this field will return the error type; otherwise, null will be returned by default.
+                     * @return ErrorType 
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -241,9 +239,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ErrorTypeHasBeenSet() const;
 
                     /**
-                     * 获取If the task status is `Error`, this field will return the error message; otherwise, null will be returned by default.
+                     * 获取
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ErrorDescription If the task status is `Error`, this field will return the error message; otherwise, null will be returned by default.
+                     * @return ErrorDescription 
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -257,9 +255,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ErrorDescriptionHasBeenSet() const;
 
                     /**
-                     * 获取This field is used to return the creation time of the queried task in ISO 8601 format.
+                     * 获取
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return CreatedAt This field is used to return the creation time of the queried task in ISO 8601 format.
+                     * @return CreatedAt 
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -273,9 +271,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CreatedAtHasBeenSet() const;
 
                     /**
-                     * 获取This field is used to return the last update time of the queried task in ISO 8601 format.
+                     * 获取
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return UpdatedAt This field is used to return the last update time of the queried task in ISO 8601 format.
+                     * @return UpdatedAt 
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -289,10 +287,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool UpdatedAtHasBeenSet() const;
 
                     /**
-                     * 获取If the recognition result is normal, this parameter is returned with the value `Normal`. If malicious content is recognized, the tag with the highest priority in the result of `Labels` is returned.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return Label If the recognition result is normal, this parameter is returned with the value `Normal`. If malicious content is recognized, the tag with the highest priority in the result of `Labels` is returned.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return Label 
+Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetLabel() const;
@@ -307,114 +305,113 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * This field is used to return the task ID (in the `Results` parameter) after an audio moderation task is created. It is used to identify the moderation task for which to query the details.
+                     * 
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * This field is used to return the data ID parameter passed in within the `Tasks` parameter when the audio moderation API is called for easier data identification and management.
+                     * 
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_dataId;
                     bool m_dataIdHasBeenSet;
 
                     /**
-                     * This field is used to return the `BizType` parameter passed in when the audio moderation API is called for easier data identification and management.
+                     * 
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_bizType;
                     bool m_bizTypeHasBeenSet;
 
                     /**
-                     * This field is used to return the task name in the `TaskInput` parameter passed in when the audio moderation API is called for easier task identification and management.
+                     * 
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * This field is used to return the task status of the queried content.
-<br>Valid values: **FINISH** (task completed), **PENDING** (task pending), **RUNNING** (task in progress), **ERROR** (task error), **CANCELLED** (task canceled).
+                     * 
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * This field is used to return the audio moderation type passed in when the audio moderation API is called. Valid values: **AUDIO** (audio on demand), **LIVE_AUDIO** (audio live streaming). Default value: AUDIO.
+                     * 
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * This field is used to return the operation suggestion for the maliciousness tag. When you get the determination result, the returned value indicates the operation suggested by the system. We recommend you handle different types of violations and suggestions according to your business needs. <br>Returned values: **Block**, **Review**, **Pass**.
+                     * 
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_suggestion;
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * Label of the malicious content detected. <br>Values: **Porn**: pornographic; **Abuse**: abusive; **Ad**: advertising; **Custom**: custom type of non-compliant content and other offensive, unsafe, or inappropriate types of content.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<TaskLabel> m_labels;
                     bool m_labelsHasBeenSet;
 
                     /**
-                     * This field is used to return the media content information of the moderation service, mainly including the input file type and access URL.
+                     * 
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     InputInfo m_inputInfo;
                     bool m_inputInfoHasBeenSet;
 
                     /**
-                     * This field is used to return the recognized text content of an audio file. **Up to the first 1,000 characters** can be recognized.
+                     * 
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_audioText;
                     bool m_audioTextHasBeenSet;
 
                     /**
-                     * This field is used to return the moderation result of an audio segment, mainly including the start time and audio moderation result.<br>For the specific output content, see the detailed description of the `AudioSegments` and `AudioResult` data structures.
+                     * 
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<AudioSegments> m_audioSegments;
                     bool m_audioSegmentsHasBeenSet;
 
                     /**
-                     * If the task status is `Error`, this field will return the error type; otherwise, null will be returned by default.
+                     * 
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_errorType;
                     bool m_errorTypeHasBeenSet;
 
                     /**
-                     * If the task status is `Error`, this field will return the error message; otherwise, null will be returned by default.
+                     * 
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_errorDescription;
                     bool m_errorDescriptionHasBeenSet;
 
                     /**
-                     * This field is used to return the creation time of the queried task in ISO 8601 format.
+                     * 
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_createdAt;
                     bool m_createdAtHasBeenSet;
 
                     /**
-                     * This field is used to return the last update time of the queried task in ISO 8601 format.
+                     * 
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_updatedAt;
                     bool m_updatedAtHasBeenSet;
 
                     /**
-                     * If the recognition result is normal, this parameter is returned with the value `Normal`. If malicious content is recognized, the tag with the highest priority in the result of `Labels` is returned.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_label;
                     bool m_labelHasBeenSet;

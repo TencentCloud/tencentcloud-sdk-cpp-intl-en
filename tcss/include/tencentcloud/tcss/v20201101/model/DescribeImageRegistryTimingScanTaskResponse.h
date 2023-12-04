@@ -107,14 +107,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * 获取Scan of all images
                      * @return All Scan of all images
-                     * 
+                     * @deprecated
                      */
                     bool GetAll() const;
 
                     /**
                      * 判断参数 All 是否已赋值
                      * @return All 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool AllHasBeenSet() const;
 
@@ -149,6 +149,92 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool IdHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to scan the latest image tag
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * @return Latest Whether to scan the latest image tag
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    bool GetLatest() const;
+
+                    /**
+                     * 判断参数 Latest 是否已赋值
+                     * @return Latest 是否已赋值
+                     * 
+                     */
+                    bool LatestHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ScanEndTime 
+                     * 
+                     */
+                    std::string GetScanEndTime() const;
+
+                    /**
+                     * 判断参数 ScanEndTime 是否已赋值
+                     * @return ScanEndTime 是否已赋值
+                     * 
+                     */
+                    bool ScanEndTimeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return RegistryType 
+                     * 
+                     */
+                    std::vector<std::string> GetRegistryType() const;
+
+                    /**
+                     * 判断参数 RegistryType 是否已赋值
+                     * @return RegistryType 是否已赋值
+                     * 
+                     */
+                    bool RegistryTypeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ContainerRunning 
+                     * 
+                     */
+                    bool GetContainerRunning() const;
+
+                    /**
+                     * 判断参数 ContainerRunning 是否已赋值
+                     * @return ContainerRunning 是否已赋值
+                     * 
+                     */
+                    bool ContainerRunningHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ScanScope 
+                     * 
+                     */
+                    uint64_t GetScanScope() const;
+
+                    /**
+                     * 判断参数 ScanScope 是否已赋值
+                     * @return ScanScope 是否已赋值
+                     * 
+                     */
+                    bool ScanScopeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return Namespace 
+                     * 
+                     */
+                    std::vector<std::string> GetNamespace() const;
+
+                    /**
+                     * 判断参数 Namespace 是否已赋值
+                     * @return Namespace 是否已赋值
+                     * 
+                     */
+                    bool NamespaceHasBeenSet() const;
 
                 private:
 
@@ -197,6 +283,43 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<uint64_t> m_id;
                     bool m_idHasBeenSet;
+
+                    /**
+                     * Whether to scan the latest image tag
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     */
+                    bool m_latest;
+                    bool m_latestHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_scanEndTime;
+                    bool m_scanEndTimeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<std::string> m_registryType;
+                    bool m_registryTypeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_containerRunning;
+                    bool m_containerRunningHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_scanScope;
+                    bool m_scanScopeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<std::string> m_namespace;
+                    bool m_namespaceHasBeenSet;
 
                 };
             }

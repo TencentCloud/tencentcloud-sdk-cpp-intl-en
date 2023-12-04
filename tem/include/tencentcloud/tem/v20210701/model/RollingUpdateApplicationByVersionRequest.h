@@ -252,6 +252,27 @@ namespace TencentCloud
                      */
                     bool MinAvailableHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to enable force release
+                     * @return Force Whether to enable force release
+                     * 
+                     */
+                    bool GetForce() const;
+
+                    /**
+                     * 设置Whether to enable force release
+                     * @param _force Whether to enable force release
+                     * 
+                     */
+                    void SetForce(const bool& _force);
+
+                    /**
+                     * 判断参数 Force 是否已赋值
+                     * @return Force 是否已赋值
+                     * 
+                     */
+                    bool ForceHasBeenSet() const;
+
                 private:
 
                     /**
@@ -313,6 +334,12 @@ namespace TencentCloud
                      */
                     int64_t m_minAvailable;
                     bool m_minAvailableHasBeenSet;
+
+                    /**
+                     * Whether to enable force release
+                     */
+                    bool m_force;
+                    bool m_forceHasBeenSet;
 
                 };
             }

@@ -48,15 +48,19 @@ See the basic concepts at https://intl.cloud.tencent.com/document/product/436/44
 
 
                     /**
-                     * 获取This field indicates a bucket name in Tencent Cloud COS. For more information on buckets, see [Basic Concepts](https://intl.cloud.tencent.com/document/product/436/44352?from_cn_redirect=1).
-                     * @return Bucket This field indicates a bucket name in Tencent Cloud COS. For more information on buckets, see [Basic Concepts](https://intl.cloud.tencent.com/document/product/436/44352?from_cn_redirect=1).
+                     * 获取This field indicates a bucket name in Tencent Cloud COS. For more information on buckets, see Basic Concepts (https://intl.cloud.tencent.com/document/product/436/44352?from_cn_redirect=1). 
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return Bucket This field indicates a bucket name in Tencent Cloud COS. For more information on buckets, see Basic Concepts (https://intl.cloud.tencent.com/document/product/436/44352?from_cn_redirect=1). 
+Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetBucket() const;
 
                     /**
-                     * 设置This field indicates a bucket name in Tencent Cloud COS. For more information on buckets, see [Basic Concepts](https://intl.cloud.tencent.com/document/product/436/44352?from_cn_redirect=1).
-                     * @param _bucket This field indicates a bucket name in Tencent Cloud COS. For more information on buckets, see [Basic Concepts](https://intl.cloud.tencent.com/document/product/436/44352?from_cn_redirect=1).
+                     * 设置This field indicates a bucket name in Tencent Cloud COS. For more information on buckets, see Basic Concepts (https://intl.cloud.tencent.com/document/product/436/44352?from_cn_redirect=1). 
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param _bucket This field indicates a bucket name in Tencent Cloud COS. For more information on buckets, see Basic Concepts (https://intl.cloud.tencent.com/document/product/436/44352?from_cn_redirect=1). 
+Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetBucket(const std::string& _bucket);
@@ -69,15 +73,19 @@ See the basic concepts at https://intl.cloud.tencent.com/document/product/436/44
                     bool BucketHasBeenSet() const;
 
                     /**
-                     * 获取This field indicates a region where a Tencent Cloud managed data center is deployed. COS data is stored in buckets in these regions.
-                     * @return Region This field indicates a region where a Tencent Cloud managed data center is deployed. COS data is stored in buckets in these regions.
+                     * 获取This field indicates a region where a Tencent Cloud COS managed data center is deployed. COS data is stored in buckets in these regions. 
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return Region This field indicates a region where a Tencent Cloud COS managed data center is deployed. COS data is stored in buckets in these regions. 
+Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置This field indicates a region where a Tencent Cloud managed data center is deployed. COS data is stored in buckets in these regions.
-                     * @param _region This field indicates a region where a Tencent Cloud managed data center is deployed. COS data is stored in buckets in these regions.
+                     * 设置This field indicates a region where a Tencent Cloud COS managed data center is deployed. COS data is stored in buckets in these regions. 
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param _region This field indicates a region where a Tencent Cloud COS managed data center is deployed. COS data is stored in buckets in these regions. 
+Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -90,15 +98,19 @@ See the basic concepts at https://intl.cloud.tencent.com/document/product/436/44
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取This field indicates an object key in Tencent Cloud COS. An object is stored in a bucket as a basic storage unit. You can manage objects through the Tencent Cloud console, API, or SDK. For more information on objects, see [Object Overview](https://intl.cloud.tencent.com/document/product/436/13324?from_cn_redirect=1).
-                     * @return Object This field indicates an object key in Tencent Cloud COS. An object is stored in a bucket as a basic storage unit. You can manage objects through the Tencent Cloud console, API, or SDK. For more information on objects, see [Object Overview](https://intl.cloud.tencent.com/document/product/436/13324?from_cn_redirect=1).
+                     * 获取This field indicates an object key in Tencent Cloud COS. Object z is stored in a bucket as a basic storage unit. You can manage objects through the Tencent Cloud console, API, or SDK. For more information on objects, see Object Overview (https://intl.cloud.tencent.com/document/product/436/13324?from_cn_redirect=1). 
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return Object This field indicates an object key in Tencent Cloud COS. Object z is stored in a bucket as a basic storage unit. You can manage objects through the Tencent Cloud console, API, or SDK. For more information on objects, see Object Overview (https://intl.cloud.tencent.com/document/product/436/13324?from_cn_redirect=1). 
+Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetObject() const;
 
                     /**
-                     * 设置This field indicates an object key in Tencent Cloud COS. An object is stored in a bucket as a basic storage unit. You can manage objects through the Tencent Cloud console, API, or SDK. For more information on objects, see [Object Overview](https://intl.cloud.tencent.com/document/product/436/13324?from_cn_redirect=1).
-                     * @param _object This field indicates an object key in Tencent Cloud COS. An object is stored in a bucket as a basic storage unit. You can manage objects through the Tencent Cloud console, API, or SDK. For more information on objects, see [Object Overview](https://intl.cloud.tencent.com/document/product/436/13324?from_cn_redirect=1).
+                     * 设置This field indicates an object key in Tencent Cloud COS. Object z is stored in a bucket as a basic storage unit. You can manage objects through the Tencent Cloud console, API, or SDK. For more information on objects, see Object Overview (https://intl.cloud.tencent.com/document/product/436/13324?from_cn_redirect=1). 
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param _object This field indicates an object key in Tencent Cloud COS. Object z is stored in a bucket as a basic storage unit. You can manage objects through the Tencent Cloud console, API, or SDK. For more information on objects, see Object Overview (https://intl.cloud.tencent.com/document/product/436/13324?from_cn_redirect=1). 
+Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetObject(const std::string& _object);
@@ -113,19 +125,22 @@ See the basic concepts at https://intl.cloud.tencent.com/document/product/436/44
                 private:
 
                     /**
-                     * This field indicates a bucket name in Tencent Cloud COS. For more information on buckets, see [Basic Concepts](https://intl.cloud.tencent.com/document/product/436/44352?from_cn_redirect=1).
+                     * This field indicates a bucket name in Tencent Cloud COS. For more information on buckets, see Basic Concepts (https://intl.cloud.tencent.com/document/product/436/44352?from_cn_redirect=1). 
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_bucket;
                     bool m_bucketHasBeenSet;
 
                     /**
-                     * This field indicates a region where a Tencent Cloud managed data center is deployed. COS data is stored in buckets in these regions.
+                     * This field indicates a region where a Tencent Cloud COS managed data center is deployed. COS data is stored in buckets in these regions. 
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * This field indicates an object key in Tencent Cloud COS. An object is stored in a bucket as a basic storage unit. You can manage objects through the Tencent Cloud console, API, or SDK. For more information on objects, see [Object Overview](https://intl.cloud.tencent.com/document/product/436/13324?from_cn_redirect=1).
+                     * This field indicates an object key in Tencent Cloud COS. Object z is stored in a bucket as a basic storage unit. You can manage objects through the Tencent Cloud console, API, or SDK. For more information on objects, see Object Overview (https://intl.cloud.tencent.com/document/product/436/13324?from_cn_redirect=1). 
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_object;
                     bool m_objectHasBeenSet;

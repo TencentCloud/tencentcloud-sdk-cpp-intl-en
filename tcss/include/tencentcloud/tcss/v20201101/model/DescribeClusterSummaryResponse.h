@@ -197,6 +197,62 @@ namespace TencentCloud
                      */
                     bool NotImportedClusterCountHasBeenSet() const;
 
+                    /**
+                     * 获取Number of EKS clusters
+                     * @return ServerlessClusterCount Number of EKS clusters
+                     * 
+                     */
+                    uint64_t GetServerlessClusterCount() const;
+
+                    /**
+                     * 判断参数 ServerlessClusterCount 是否已赋值
+                     * @return ServerlessClusterCount 是否已赋值
+                     * 
+                     */
+                    bool ServerlessClusterCountHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return TkeClusterCount 
+                     * 
+                     */
+                    uint64_t GetTkeClusterCount() const;
+
+                    /**
+                     * 判断参数 TkeClusterCount 是否已赋值
+                     * @return TkeClusterCount 是否已赋值
+                     * 
+                     */
+                    bool TkeClusterCountHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return UserCreateTencentClusterCount 
+                     * 
+                     */
+                    uint64_t GetUserCreateTencentClusterCount() const;
+
+                    /**
+                     * 判断参数 UserCreateTencentClusterCount 是否已赋值
+                     * @return UserCreateTencentClusterCount 是否已赋值
+                     * 
+                     */
+                    bool UserCreateTencentClusterCountHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return UserCreateHybridClusterCount 
+                     * 
+                     */
+                    uint64_t GetUserCreateHybridClusterCount() const;
+
+                    /**
+                     * 判断参数 UserCreateHybridClusterCount 是否已赋值
+                     * @return UserCreateHybridClusterCount 是否已赋值
+                     * 
+                     */
+                    bool UserCreateHybridClusterCountHasBeenSet() const;
+
                 private:
 
                     /**
@@ -264,6 +320,30 @@ namespace TencentCloud
                      */
                     uint64_t m_notImportedClusterCount;
                     bool m_notImportedClusterCountHasBeenSet;
+
+                    /**
+                     * Number of EKS clusters
+                     */
+                    uint64_t m_serverlessClusterCount;
+                    bool m_serverlessClusterCountHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_tkeClusterCount;
+                    bool m_tkeClusterCountHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_userCreateTencentClusterCount;
+                    bool m_userCreateTencentClusterCountHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_userCreateHybridClusterCount;
+                    bool m_userCreateHybridClusterCountHasBeenSet;
 
                 };
             }

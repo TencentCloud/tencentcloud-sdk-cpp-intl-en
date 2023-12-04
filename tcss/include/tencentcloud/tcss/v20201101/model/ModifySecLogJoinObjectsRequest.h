@@ -117,6 +117,39 @@ K8s API: k8s_api
                      */
                     bool UnBindListHasBeenSet() const;
 
+                    /**
+                     * 获取Node type.
+`NORMAL`: General node (default)
+`SUPER`: Super node
+
+                     * @return NodeType Node type.
+`NORMAL`: General node (default)
+`SUPER`: Super node
+
+                     * 
+                     */
+                    std::string GetNodeType() const;
+
+                    /**
+                     * 设置Node type.
+`NORMAL`: General node (default)
+`SUPER`: Super node
+
+                     * @param _nodeType Node type.
+`NORMAL`: General node (default)
+`SUPER`: Super node
+
+                     * 
+                     */
+                    void SetNodeType(const std::string& _nodeType);
+
+                    /**
+                     * 判断参数 NodeType 是否已赋值
+                     * @return NodeType 是否已赋值
+                     * 
+                     */
+                    bool NodeTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -139,6 +172,15 @@ K8s API: k8s_api
                      */
                     std::vector<std::string> m_unBindList;
                     bool m_unBindListHasBeenSet;
+
+                    /**
+                     * Node type.
+`NORMAL`: General node (default)
+`SUPER`: Super node
+
+                     */
+                    std::string m_nodeType;
+                    bool m_nodeTypeHasBeenSet;
 
                 };
             }

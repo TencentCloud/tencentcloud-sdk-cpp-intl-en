@@ -239,6 +239,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool UinHasBeenSet() const;
 
+                    /**
+                     * 获取The policy ID.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * @return PolicyId The policy ID.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    uint64_t GetPolicyId() const;
+
+                    /**
+                     * 设置The policy ID.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * @param _policyId The policy ID.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetPolicyId(const uint64_t& _policyId);
+
+                    /**
+                     * 判断参数 PolicyId 是否已赋值
+                     * @return PolicyId 是否已赋值
+                     * 
+                     */
+                    bool PolicyIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -295,6 +320,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_uin;
                     bool m_uinHasBeenSet;
+
+                    /**
+                     * The policy ID.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_policyId;
+                    bool m_policyIdHasBeenSet;
 
                 };
             }

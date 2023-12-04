@@ -42,7 +42,61 @@ namespace TencentCloud
                     std::string ToJsonString() const;
 
 
+                    /**
+                     * 获取
+                     * @return All 
+                     * 
+                     */
+                    bool GetAll() const;
+
+                    /**
+                     * 设置
+                     * @param _all 
+                     * 
+                     */
+                    void SetAll(const bool& _all);
+
+                    /**
+                     * 判断参数 All 是否已赋值
+                     * @return All 是否已赋值
+                     * 
+                     */
+                    bool AllHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return RegistryIds 
+                     * 
+                     */
+                    std::vector<uint64_t> GetRegistryIds() const;
+
+                    /**
+                     * 设置
+                     * @param _registryIds 
+                     * 
+                     */
+                    void SetRegistryIds(const std::vector<uint64_t>& _registryIds);
+
+                    /**
+                     * 判断参数 RegistryIds 是否已赋值
+                     * @return RegistryIds 是否已赋值
+                     * 
+                     */
+                    bool RegistryIdsHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * 
+                     */
+                    bool m_all;
+                    bool m_allHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<uint64_t> m_registryIds;
+                    bool m_registryIdsHasBeenSet;
 
                 };
             }

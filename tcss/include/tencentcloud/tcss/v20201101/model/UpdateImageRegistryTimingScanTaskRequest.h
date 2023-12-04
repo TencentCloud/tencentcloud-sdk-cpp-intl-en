@@ -151,21 +151,21 @@ namespace TencentCloud
                     /**
                      * 获取Whether to scan all
                      * @return All Whether to scan all
-                     * 
+                     * @deprecated
                      */
                     bool GetAll() const;
 
                     /**
                      * 设置Whether to scan all
                      * @param _all Whether to scan all
-                     * 
+                     * @deprecated
                      */
                     void SetAll(const bool& _all);
 
                     /**
                      * 判断参数 All 是否已赋值
                      * @return All 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool AllHasBeenSet() const;
 
@@ -189,6 +189,132 @@ namespace TencentCloud
                      * 
                      */
                     bool IdHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to scan for the latest version
+                     * @return Latest Whether to scan for the latest version
+                     * 
+                     */
+                    bool GetLatest() const;
+
+                    /**
+                     * 设置Whether to scan for the latest version
+                     * @param _latest Whether to scan for the latest version
+                     * 
+                     */
+                    void SetLatest(const bool& _latest);
+
+                    /**
+                     * 判断参数 Latest 是否已赋值
+                     * @return Latest 是否已赋值
+                     * 
+                     */
+                    bool LatestHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ContainerRunning 
+                     * 
+                     */
+                    bool GetContainerRunning() const;
+
+                    /**
+                     * 设置
+                     * @param _containerRunning 
+                     * 
+                     */
+                    void SetContainerRunning(const bool& _containerRunning);
+
+                    /**
+                     * 判断参数 ContainerRunning 是否已赋值
+                     * @return ContainerRunning 是否已赋值
+                     * 
+                     */
+                    bool ContainerRunningHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ScanEndTime 
+                     * 
+                     */
+                    std::string GetScanEndTime() const;
+
+                    /**
+                     * 设置
+                     * @param _scanEndTime 
+                     * 
+                     */
+                    void SetScanEndTime(const std::string& _scanEndTime);
+
+                    /**
+                     * 判断参数 ScanEndTime 是否已赋值
+                     * @return ScanEndTime 是否已赋值
+                     * 
+                     */
+                    bool ScanEndTimeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ScanScope 
+                     * 
+                     */
+                    uint64_t GetScanScope() const;
+
+                    /**
+                     * 设置
+                     * @param _scanScope 
+                     * 
+                     */
+                    void SetScanScope(const uint64_t& _scanScope);
+
+                    /**
+                     * 判断参数 ScanScope 是否已赋值
+                     * @return ScanScope 是否已赋值
+                     * 
+                     */
+                    bool ScanScopeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return RegistryType 
+                     * 
+                     */
+                    std::vector<std::string> GetRegistryType() const;
+
+                    /**
+                     * 设置
+                     * @param _registryType 
+                     * 
+                     */
+                    void SetRegistryType(const std::vector<std::string>& _registryType);
+
+                    /**
+                     * 判断参数 RegistryType 是否已赋值
+                     * @return RegistryType 是否已赋值
+                     * 
+                     */
+                    bool RegistryTypeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return Namespace 
+                     * 
+                     */
+                    std::vector<std::string> GetNamespace() const;
+
+                    /**
+                     * 设置
+                     * @param _namespace 
+                     * 
+                     */
+                    void SetNamespace(const std::vector<std::string>& _namespace);
+
+                    /**
+                     * 判断参数 Namespace 是否已赋值
+                     * @return Namespace 是否已赋值
+                     * 
+                     */
+                    bool NamespaceHasBeenSet() const;
 
                 private:
 
@@ -233,6 +359,42 @@ namespace TencentCloud
                      */
                     std::vector<uint64_t> m_id;
                     bool m_idHasBeenSet;
+
+                    /**
+                     * Whether to scan for the latest version
+                     */
+                    bool m_latest;
+                    bool m_latestHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_containerRunning;
+                    bool m_containerRunningHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_scanEndTime;
+                    bool m_scanEndTimeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_scanScope;
+                    bool m_scanScopeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<std::string> m_registryType;
+                    bool m_registryTypeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<std::string> m_namespace;
+                    bool m_namespaceHasBeenSet;
 
                 };
             }

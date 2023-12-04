@@ -147,6 +147,76 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool SupportDefenseVulCountHasBeenSet() const;
 
+                    /**
+                     * 获取Number of normal nodes
+                     * @return HostNodeCount Number of normal nodes
+                     * 
+                     */
+                    int64_t GetHostNodeCount() const;
+
+                    /**
+                     * 判断参数 HostNodeCount 是否已赋值
+                     * @return HostNodeCount 是否已赋值
+                     * 
+                     */
+                    bool HostNodeCountHasBeenSet() const;
+
+                    /**
+                     * 获取Super node scope
+                     * @return SuperScope Super node scope
+                     * 
+                     */
+                    int64_t GetSuperScope() const;
+
+                    /**
+                     * 判断参数 SuperScope 是否已赋值
+                     * @return SuperScope 是否已赋值
+                     * 
+                     */
+                    bool SuperScopeHasBeenSet() const;
+
+                    /**
+                     * 获取Number of super nodes
+                     * @return SuperNodeCount Number of super nodes
+                     * 
+                     */
+                    int64_t GetSuperNodeCount() const;
+
+                    /**
+                     * 判断参数 SuperNodeCount 是否已赋值
+                     * @return SuperNodeCount 是否已赋值
+                     * 
+                     */
+                    bool SuperNodeCountHasBeenSet() const;
+
+                    /**
+                     * 获取List of super node IDs
+                     * @return SuperNodeIds List of super node IDs
+                     * 
+                     */
+                    std::vector<std::string> GetSuperNodeIds() const;
+
+                    /**
+                     * 判断参数 SuperNodeIds 是否已赋值
+                     * @return SuperNodeIds 是否已赋值
+                     * 
+                     */
+                    bool SuperNodeIdsHasBeenSet() const;
+
+                    /**
+                     * 获取Total number of super nodes with TCSS activated
+                     * @return NodeTotalCount Total number of super nodes with TCSS activated
+                     * 
+                     */
+                    int64_t GetNodeTotalCount() const;
+
+                    /**
+                     * 判断参数 NodeTotalCount 是否已赋值
+                     * @return NodeTotalCount 是否已赋值
+                     * 
+                     */
+                    bool NodeTotalCountHasBeenSet() const;
+
                 private:
 
                     /**
@@ -193,6 +263,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_supportDefenseVulCount;
                     bool m_supportDefenseVulCountHasBeenSet;
+
+                    /**
+                     * Number of normal nodes
+                     */
+                    int64_t m_hostNodeCount;
+                    bool m_hostNodeCountHasBeenSet;
+
+                    /**
+                     * Super node scope
+                     */
+                    int64_t m_superScope;
+                    bool m_superScopeHasBeenSet;
+
+                    /**
+                     * Number of super nodes
+                     */
+                    int64_t m_superNodeCount;
+                    bool m_superNodeCountHasBeenSet;
+
+                    /**
+                     * List of super node IDs
+                     */
+                    std::vector<std::string> m_superNodeIds;
+                    bool m_superNodeIdsHasBeenSet;
+
+                    /**
+                     * Total number of super nodes with TCSS activated
+                     */
+                    int64_t m_nodeTotalCount;
+                    bool m_nodeTotalCountHasBeenSet;
 
                 };
             }

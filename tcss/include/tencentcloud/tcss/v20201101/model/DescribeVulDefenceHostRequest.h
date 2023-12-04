@@ -44,23 +44,39 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Filter
-<li>Status- String - Required: No - Plugin status. Valid values: `SUCCESS` (normal); `FAIL` (abnormal); `NO_DEFENCE` (not defended).</li>
-<li>KeyWords- string - Required: No - Server name/IP</li>
-                     * @return Filters Filter
-<li>Status- String - Required: No - Plugin status. Valid values: `SUCCESS` (normal); `FAIL` (abnormal); `NO_DEFENCE` (not defended).</li>
-<li>KeyWords- string - Required: No - Server name/IP</li>
+                     * 获取Filter condition
+<li>`Status`: String - Required: No - Plugin status. Values: `SUCCESS` (normal); `FAIL` (abnormal); `NO_DEFENCE` (not defended).</li>
+<li>`HostName`: String - Required: No - Server/Super node name</li>
+<li>`HostIP`: String - Required: No - Server IP </li>
+<li>`NodeType`: String  - Required: No - Node type</li>
+<li>`HostName` - String - Required: No - Super node name </li>
+<li>`NodeSubNetCIDR`: String - Required: No - Super node CIDR block</li>
+                     * @return Filters Filter condition
+<li>`Status`: String - Required: No - Plugin status. Values: `SUCCESS` (normal); `FAIL` (abnormal); `NO_DEFENCE` (not defended).</li>
+<li>`HostName`: String - Required: No - Server/Super node name</li>
+<li>`HostIP`: String - Required: No - Server IP </li>
+<li>`NodeType`: String  - Required: No - Node type</li>
+<li>`HostName` - String - Required: No - Super node name </li>
+<li>`NodeSubNetCIDR`: String - Required: No - Super node CIDR block</li>
                      * 
                      */
                     std::vector<RunTimeFilters> GetFilters() const;
 
                     /**
-                     * 设置Filter
-<li>Status- String - Required: No - Plugin status. Valid values: `SUCCESS` (normal); `FAIL` (abnormal); `NO_DEFENCE` (not defended).</li>
-<li>KeyWords- string - Required: No - Server name/IP</li>
-                     * @param _filters Filter
-<li>Status- String - Required: No - Plugin status. Valid values: `SUCCESS` (normal); `FAIL` (abnormal); `NO_DEFENCE` (not defended).</li>
-<li>KeyWords- string - Required: No - Server name/IP</li>
+                     * 设置Filter condition
+<li>`Status`: String - Required: No - Plugin status. Values: `SUCCESS` (normal); `FAIL` (abnormal); `NO_DEFENCE` (not defended).</li>
+<li>`HostName`: String - Required: No - Server/Super node name</li>
+<li>`HostIP`: String - Required: No - Server IP </li>
+<li>`NodeType`: String  - Required: No - Node type</li>
+<li>`HostName` - String - Required: No - Super node name </li>
+<li>`NodeSubNetCIDR`: String - Required: No - Super node CIDR block</li>
+                     * @param _filters Filter condition
+<li>`Status`: String - Required: No - Plugin status. Values: `SUCCESS` (normal); `FAIL` (abnormal); `NO_DEFENCE` (not defended).</li>
+<li>`HostName`: String - Required: No - Server/Super node name</li>
+<li>`HostIP`: String - Required: No - Server IP </li>
+<li>`NodeType`: String  - Required: No - Node type</li>
+<li>`HostName` - String - Required: No - Super node name </li>
+<li>`NodeSubNetCIDR`: String - Required: No - Super node CIDR block</li>
                      * 
                      */
                     void SetFilters(const std::vector<RunTimeFilters>& _filters);
@@ -159,9 +175,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Filter
-<li>Status- String - Required: No - Plugin status. Valid values: `SUCCESS` (normal); `FAIL` (abnormal); `NO_DEFENCE` (not defended).</li>
-<li>KeyWords- string - Required: No - Server name/IP</li>
+                     * Filter condition
+<li>`Status`: String - Required: No - Plugin status. Values: `SUCCESS` (normal); `FAIL` (abnormal); `NO_DEFENCE` (not defended).</li>
+<li>`HostName`: String - Required: No - Server/Super node name</li>
+<li>`HostIP`: String - Required: No - Server IP </li>
+<li>`NodeType`: String  - Required: No - Node type</li>
+<li>`HostName` - String - Required: No - Super node name </li>
+<li>`NodeSubNetCIDR`: String - Required: No - Super node CIDR block</li>
                      */
                     std::vector<RunTimeFilters> m_filters;
                     bool m_filtersHasBeenSet;

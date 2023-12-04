@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool CodecsHasBeenSet() const;
 
                     /**
-                     * 获取This field is used to return the segment length of the input streaming media file in seconds. It is **15 seconds by default** and is customizable.
-                     * @return Duration This field is used to return the segment length of the input streaming media file in seconds. It is **15 seconds by default** and is customizable.
+                     * 获取This field is used to return the segment length of the input streaming media file in milliseconds.** It is 15 seconds** by default and is customizable.
+                     * @return Duration This field is used to return the segment length of the input streaming media file in milliseconds.** It is 15 seconds** by default and is customizable.
                      * 
                      */
                     int64_t GetDuration() const;
 
                     /**
-                     * 设置This field is used to return the segment length of the input streaming media file in seconds. It is **15 seconds by default** and is customizable.
-                     * @param _duration This field is used to return the segment length of the input streaming media file in seconds. It is **15 seconds by default** and is customizable.
+                     * 设置This field is used to return the segment length of the input streaming media file in milliseconds.** It is 15 seconds** by default and is customizable.
+                     * @param _duration This field is used to return the segment length of the input streaming media file in milliseconds.** It is 15 seconds** by default and is customizable.
                      * 
                      */
                     void SetDuration(const int64_t& _duration);
@@ -160,7 +160,7 @@ namespace TencentCloud
                     bool m_codecsHasBeenSet;
 
                     /**
-                     * This field is used to return the segment length of the input streaming media file in seconds. It is **15 seconds by default** and is customizable.
+                     * This field is used to return the segment length of the input streaming media file in milliseconds.** It is 15 seconds** by default and is customizable.
                      */
                     int64_t m_duration;
                     bool m_durationHasBeenSet;

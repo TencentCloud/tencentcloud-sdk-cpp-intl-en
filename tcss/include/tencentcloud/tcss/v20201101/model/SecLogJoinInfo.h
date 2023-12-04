@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of accessed servers
-                     * @return Count Number of accessed servers
+                     * 获取Number of connected general nodes
+                     * @return Count Number of connected general nodes
                      * 
                      */
                     uint64_t GetCount() const;
 
                     /**
-                     * 设置Number of accessed servers
-                     * @param _count Number of accessed servers
+                     * 设置Number of connected general nodes
+                     * @param _count Number of connected general nodes
                      * 
                      */
                     void SetCount(const uint64_t& _count);
@@ -66,6 +66,27 @@ namespace TencentCloud
                      * 
                      */
                     bool CountHasBeenSet() const;
+
+                    /**
+                     * 获取Number of connected super nodes
+                     * @return SuperNodeCount Number of connected super nodes
+                     * 
+                     */
+                    uint64_t GetSuperNodeCount() const;
+
+                    /**
+                     * 设置Number of connected super nodes
+                     * @param _superNodeCount Number of connected super nodes
+                     * 
+                     */
+                    void SetSuperNodeCount(const uint64_t& _superNodeCount);
+
+                    /**
+                     * 判断参数 SuperNodeCount 是否已赋值
+                     * @return SuperNodeCount 是否已赋值
+                     * 
+                     */
+                    bool SuperNodeCountHasBeenSet() const;
 
                     /**
                      * 获取Whether it is accessed. Valid values: `true` (accessed); `false` (not accessed).
@@ -128,10 +149,16 @@ K8s API: "k8s_api"
                 private:
 
                     /**
-                     * Number of accessed servers
+                     * Number of connected general nodes
                      */
                     uint64_t m_count;
                     bool m_countHasBeenSet;
+
+                    /**
+                     * Number of connected super nodes
+                     */
+                    uint64_t m_superNodeCount;
+                    bool m_superNodeCountHasBeenSet;
 
                     /**
                      * Whether it is accessed. Valid values: `true` (accessed); `false` (not accessed).

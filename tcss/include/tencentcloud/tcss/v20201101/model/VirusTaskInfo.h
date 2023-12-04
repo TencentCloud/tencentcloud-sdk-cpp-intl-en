@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool ImageIdHasBeenSet() const;
 
                     /**
-                     * 获取Server name
-                     * @return HostName Server name
+                     * 获取Node name
+                     * @return HostName Node name
                      * 
                      */
                     std::string GetHostName() const;
 
                     /**
-                     * 设置Server name
-                     * @param _hostName Server name
+                     * 设置Node name
+                     * @param _hostName Node name
                      * 
                      */
                     void SetHostName(const std::string& _hostName);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool HostNameHasBeenSet() const;
 
                     /**
-                     * 获取Server IP
-                     * @return HostIp Server IP
+                     * 获取Private IP of the node
+                     * @return HostIp Private IP of the node
                      * 
                      */
                     std::string GetHostIp() const;
 
                     /**
-                     * 设置Server IP
-                     * @param _hostIp Server IP
+                     * 设置Private IP of the node
+                     * @param _hostIp Private IP of the node
                      * 
                      */
                     void SetHostIp(const std::string& _hostIp);
@@ -378,6 +378,69 @@ namespace TencentCloud
                      */
                     bool ErrorMsgHasBeenSet() const;
 
+                    /**
+                     * 获取Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+                     * @return NodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+                     * 
+                     */
+                    std::string GetNodeType() const;
+
+                    /**
+                     * 设置Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+                     * @param _nodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+                     * 
+                     */
+                    void SetNodeType(const std::string& _nodeType);
+
+                    /**
+                     * 判断参数 NodeType 是否已赋值
+                     * @return NodeType 是否已赋值
+                     * 
+                     */
+                    bool NodeTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Public IP of the node
+                     * @return PublicIP Public IP of the node
+                     * 
+                     */
+                    std::string GetPublicIP() const;
+
+                    /**
+                     * 设置Public IP of the node
+                     * @param _publicIP Public IP of the node
+                     * 
+                     */
+                    void SetPublicIP(const std::string& _publicIP);
+
+                    /**
+                     * 判断参数 PublicIP 是否已赋值
+                     * @return PublicIP 是否已赋值
+                     * 
+                     */
+                    bool PublicIPHasBeenSet() const;
+
+                    /**
+                     * 获取Node ID
+                     * @return NodeID Node ID
+                     * 
+                     */
+                    std::string GetNodeID() const;
+
+                    /**
+                     * 设置Node ID
+                     * @param _nodeID Node ID
+                     * 
+                     */
+                    void SetNodeID(const std::string& _nodeID);
+
+                    /**
+                     * 判断参数 NodeID 是否已赋值
+                     * @return NodeID 是否已赋值
+                     * 
+                     */
+                    bool NodeIDHasBeenSet() const;
+
                 private:
 
                     /**
@@ -405,13 +468,13 @@ namespace TencentCloud
                     bool m_imageIdHasBeenSet;
 
                     /**
-                     * Server name
+                     * Node name
                      */
                     std::string m_hostName;
                     bool m_hostNameHasBeenSet;
 
                     /**
-                     * Server IP
+                     * Private IP of the node
                      */
                     std::string m_hostIp;
                     bool m_hostIpHasBeenSet;
@@ -471,6 +534,24 @@ namespace TencentCloud
                      */
                     std::string m_errorMsg;
                     bool m_errorMsgHasBeenSet;
+
+                    /**
+                     * Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+                     */
+                    std::string m_nodeType;
+                    bool m_nodeTypeHasBeenSet;
+
+                    /**
+                     * Public IP of the node
+                     */
+                    std::string m_publicIP;
+                    bool m_publicIPHasBeenSet;
+
+                    /**
+                     * Node ID
+                     */
+                    std::string m_nodeID;
+                    bool m_nodeIDHasBeenSet;
 
                 };
             }

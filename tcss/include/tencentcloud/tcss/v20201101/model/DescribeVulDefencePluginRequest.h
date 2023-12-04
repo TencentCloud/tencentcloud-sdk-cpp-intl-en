@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Server host ID, i.e., QUuid
-                     * @return HostID Server host ID, i.e., QUuid
+                     * 获取Host ID or unique super node ID
+                     * @return HostID Host ID or unique super node ID
                      * 
                      */
                     std::string GetHostID() const;
 
                     /**
-                     * 设置Server host ID, i.e., QUuid
-                     * @param _hostID Server host ID, i.e., QUuid
+                     * 设置Host ID or unique super node ID
+                     * @param _hostID Host ID or unique super node ID
                      * 
                      */
                     void SetHostID(const std::string& _hostID);
@@ -107,19 +107,27 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Filter
-<li>Status- String - Required: No - Plugin status. Valid values: `INJECTING` (injecting); `SUCCESS` (injected successfully); `FAIL` (injection failed); `TIMEOUT` (plugin timed out); `QUIT` (plugin exited).</li>
-                     * @return Filters Filter
-<li>Status- String - Required: No - Plugin status. Valid values: `INJECTING` (injecting); `SUCCESS` (injected successfully); `FAIL` (injection failed); `TIMEOUT` (plugin timed out); `QUIT` (plugin exited).</li>
+                     * 获取Filter condition
+<li>
+Status- String - Required: No - Plugin status. Valid values: `INJECTING` (injecting); `SUCCESS` (injected successfully); `FAIL` (injection failed); `TIMEOUT` (plugin timed out); `QUIT` (plugin exited).
+</li>
+                     * @return Filters Filter condition
+<li>
+Status- String - Required: No - Plugin status. Valid values: `INJECTING` (injecting); `SUCCESS` (injected successfully); `FAIL` (injection failed); `TIMEOUT` (plugin timed out); `QUIT` (plugin exited).
+</li>
                      * 
                      */
                     std::vector<RunTimeFilters> GetFilters() const;
 
                     /**
-                     * 设置Filter
-<li>Status- String - Required: No - Plugin status. Valid values: `INJECTING` (injecting); `SUCCESS` (injected successfully); `FAIL` (injection failed); `TIMEOUT` (plugin timed out); `QUIT` (plugin exited).</li>
-                     * @param _filters Filter
-<li>Status- String - Required: No - Plugin status. Valid values: `INJECTING` (injecting); `SUCCESS` (injected successfully); `FAIL` (injection failed); `TIMEOUT` (plugin timed out); `QUIT` (plugin exited).</li>
+                     * 设置Filter condition
+<li>
+Status- String - Required: No - Plugin status. Valid values: `INJECTING` (injecting); `SUCCESS` (injected successfully); `FAIL` (injection failed); `TIMEOUT` (plugin timed out); `QUIT` (plugin exited).
+</li>
+                     * @param _filters Filter condition
+<li>
+Status- String - Required: No - Plugin status. Valid values: `INJECTING` (injecting); `SUCCESS` (injected successfully); `FAIL` (injection failed); `TIMEOUT` (plugin timed out); `QUIT` (plugin exited).
+</li>
                      * 
                      */
                     void SetFilters(const std::vector<RunTimeFilters>& _filters);
@@ -134,7 +142,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Server host ID, i.e., QUuid
+                     * Host ID or unique super node ID
                      */
                     std::string m_hostID;
                     bool m_hostIDHasBeenSet;
@@ -152,8 +160,10 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Filter
-<li>Status- String - Required: No - Plugin status. Valid values: `INJECTING` (injecting); `SUCCESS` (injected successfully); `FAIL` (injection failed); `TIMEOUT` (plugin timed out); `QUIT` (plugin exited).</li>
+                     * Filter condition
+<li>
+Status- String - Required: No - Plugin status. Valid values: `INJECTING` (injecting); `SUCCESS` (injected successfully); `FAIL` (injection failed); `TIMEOUT` (plugin timed out); `QUIT` (plugin exited).
+</li>
                      */
                     std::vector<RunTimeFilters> m_filters;
                     bool m_filtersHasBeenSet;

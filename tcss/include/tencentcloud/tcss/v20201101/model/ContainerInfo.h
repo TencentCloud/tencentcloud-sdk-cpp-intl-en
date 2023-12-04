@@ -498,6 +498,216 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool IsolateTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Super node ID
+                     * @return NodeID Super node ID
+                     * 
+                     */
+                    std::string GetNodeID() const;
+
+                    /**
+                     * 设置Super node ID
+                     * @param _nodeID Super node ID
+                     * 
+                     */
+                    void SetNodeID(const std::string& _nodeID);
+
+                    /**
+                     * 判断参数 NodeID 是否已赋值
+                     * @return NodeID 是否已赋值
+                     * 
+                     */
+                    bool NodeIDHasBeenSet() const;
+
+                    /**
+                     * 获取Pod IP
+                     * @return PodIP Pod IP
+                     * 
+                     */
+                    std::string GetPodIP() const;
+
+                    /**
+                     * 设置Pod IP
+                     * @param _podIP Pod IP
+                     * 
+                     */
+                    void SetPodIP(const std::string& _podIP);
+
+                    /**
+                     * 判断参数 PodIP 是否已赋值
+                     * @return PodIP 是否已赋值
+                     * 
+                     */
+                    bool PodIPHasBeenSet() const;
+
+                    /**
+                     * 获取Pod name
+                     * @return PodName Pod name
+                     * 
+                     */
+                    std::string GetPodName() const;
+
+                    /**
+                     * 设置Pod name
+                     * @param _podName Pod name
+                     * 
+                     */
+                    void SetPodName(const std::string& _podName);
+
+                    /**
+                     * 判断参数 PodName 是否已赋值
+                     * @return PodName 是否已赋值
+                     * 
+                     */
+                    bool PodNameHasBeenSet() const;
+
+                    /**
+                     * 获取Node type. Valid values: `NORMAL` (general node), `SUPER` (super node)
+                     * @return NodeType Node type. Valid values: `NORMAL` (general node), `SUPER` (super node)
+                     * 
+                     */
+                    std::string GetNodeType() const;
+
+                    /**
+                     * 设置Node type. Valid values: `NORMAL` (general node), `SUPER` (super node)
+                     * @param _nodeType Node type. Valid values: `NORMAL` (general node), `SUPER` (super node)
+                     * 
+                     */
+                    void SetNodeType(const std::string& _nodeType);
+
+                    /**
+                     * 判断参数 NodeType 是否已赋值
+                     * @return NodeType 是否已赋值
+                     * 
+                     */
+                    bool NodeTypeHasBeenSet() const;
+
+                    /**
+                     * 获取UID of the super node
+                     * @return NodeUniqueID UID of the super node
+                     * 
+                     */
+                    std::string GetNodeUniqueID() const;
+
+                    /**
+                     * 设置UID of the super node
+                     * @param _nodeUniqueID UID of the super node
+                     * 
+                     */
+                    void SetNodeUniqueID(const std::string& _nodeUniqueID);
+
+                    /**
+                     * 判断参数 NodeUniqueID 是否已赋值
+                     * @return NodeUniqueID 是否已赋值
+                     * 
+                     */
+                    bool NodeUniqueIDHasBeenSet() const;
+
+                    /**
+                     * 获取Number of CPU cores used by the pod
+                     * @return PodCpu Number of CPU cores used by the pod
+                     * 
+                     */
+                    int64_t GetPodCpu() const;
+
+                    /**
+                     * 设置Number of CPU cores used by the pod
+                     * @param _podCpu Number of CPU cores used by the pod
+                     * 
+                     */
+                    void SetPodCpu(const int64_t& _podCpu);
+
+                    /**
+                     * 判断参数 PodCpu 是否已赋值
+                     * @return PodCpu 是否已赋值
+                     * 
+                     */
+                    bool PodCpuHasBeenSet() const;
+
+                    /**
+                     * 获取Memory specification of the Pod
+                     * @return PodMem Memory specification of the Pod
+                     * 
+                     */
+                    int64_t GetPodMem() const;
+
+                    /**
+                     * 设置Memory specification of the Pod
+                     * @param _podMem Memory specification of the Pod
+                     * 
+                     */
+                    void SetPodMem(const int64_t& _podMem);
+
+                    /**
+                     * 判断参数 PodMem 是否已赋值
+                     * @return PodMem 是否已赋值
+                     * 
+                     */
+                    bool PodMemHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ClusterName 
+                     * 
+                     */
+                    std::string GetClusterName() const;
+
+                    /**
+                     * 设置
+                     * @param _clusterName 
+                     * 
+                     */
+                    void SetClusterName(const std::string& _clusterName);
+
+                    /**
+                     * 判断参数 ClusterName 是否已赋值
+                     * @return ClusterName 是否已赋值
+                     * 
+                     */
+                    bool ClusterNameHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ClusterID 
+                     * 
+                     */
+                    std::string GetClusterID() const;
+
+                    /**
+                     * 设置
+                     * @param _clusterID 
+                     * 
+                     */
+                    void SetClusterID(const std::string& _clusterID);
+
+                    /**
+                     * 判断参数 ClusterID 是否已赋值
+                     * @return ClusterID 是否已赋值
+                     * 
+                     */
+                    bool ClusterIDHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return PodUid 
+                     * 
+                     */
+                    std::string GetPodUid() const;
+
+                    /**
+                     * 设置
+                     * @param _podUid 
+                     * 
+                     */
+                    void SetPodUid(const std::string& _podUid);
+
+                    /**
+                     * 判断参数 PodUid 是否已赋值
+                     * @return PodUid 是否已赋值
+                     * 
+                     */
+                    bool PodUidHasBeenSet() const;
+
                 private:
 
                     /**
@@ -627,6 +837,66 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_isolateTime;
                     bool m_isolateTimeHasBeenSet;
+
+                    /**
+                     * Super node ID
+                     */
+                    std::string m_nodeID;
+                    bool m_nodeIDHasBeenSet;
+
+                    /**
+                     * Pod IP
+                     */
+                    std::string m_podIP;
+                    bool m_podIPHasBeenSet;
+
+                    /**
+                     * Pod name
+                     */
+                    std::string m_podName;
+                    bool m_podNameHasBeenSet;
+
+                    /**
+                     * Node type. Valid values: `NORMAL` (general node), `SUPER` (super node)
+                     */
+                    std::string m_nodeType;
+                    bool m_nodeTypeHasBeenSet;
+
+                    /**
+                     * UID of the super node
+                     */
+                    std::string m_nodeUniqueID;
+                    bool m_nodeUniqueIDHasBeenSet;
+
+                    /**
+                     * Number of CPU cores used by the pod
+                     */
+                    int64_t m_podCpu;
+                    bool m_podCpuHasBeenSet;
+
+                    /**
+                     * Memory specification of the Pod
+                     */
+                    int64_t m_podMem;
+                    bool m_podMemHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_clusterName;
+                    bool m_clusterNameHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_clusterID;
+                    bool m_clusterIDHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_podUid;
+                    bool m_podUidHasBeenSet;
 
                 };
             }

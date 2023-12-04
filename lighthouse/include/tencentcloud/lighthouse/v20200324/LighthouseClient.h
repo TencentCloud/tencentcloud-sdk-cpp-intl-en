@@ -33,6 +33,8 @@
 #include <tencentcloud/lighthouse/v20200324/model/AttachDisksResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/CreateBlueprintRequest.h>
 #include <tencentcloud/lighthouse/v20200324/model/CreateBlueprintResponse.h>
+#include <tencentcloud/lighthouse/v20200324/model/CreateDisksRequest.h>
+#include <tencentcloud/lighthouse/v20200324/model/CreateDisksResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/CreateFirewallRulesRequest.h>
 #include <tencentcloud/lighthouse/v20200324/model/CreateFirewallRulesResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/CreateInstanceSnapshotRequest.h>
@@ -125,6 +127,8 @@
 #include <tencentcloud/lighthouse/v20200324/model/InquirePriceRenewDisksResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/InquirePriceRenewInstancesRequest.h>
 #include <tencentcloud/lighthouse/v20200324/model/InquirePriceRenewInstancesResponse.h>
+#include <tencentcloud/lighthouse/v20200324/model/IsolateDisksRequest.h>
+#include <tencentcloud/lighthouse/v20200324/model/IsolateDisksResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/IsolateInstancesRequest.h>
 #include <tencentcloud/lighthouse/v20200324/model/IsolateInstancesResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/ModifyBlueprintAttributeRequest.h>
@@ -149,6 +153,10 @@
 #include <tencentcloud/lighthouse/v20200324/model/ModifySnapshotAttributeResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/RebootInstancesRequest.h>
 #include <tencentcloud/lighthouse/v20200324/model/RebootInstancesResponse.h>
+#include <tencentcloud/lighthouse/v20200324/model/RenewDisksRequest.h>
+#include <tencentcloud/lighthouse/v20200324/model/RenewDisksResponse.h>
+#include <tencentcloud/lighthouse/v20200324/model/RenewInstancesRequest.h>
+#include <tencentcloud/lighthouse/v20200324/model/RenewInstancesResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/ResetAttachCcnRequest.h>
 #include <tencentcloud/lighthouse/v20200324/model/ResetAttachCcnResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/ResetInstanceRequest.h>
@@ -192,6 +200,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateBlueprintResponse> CreateBlueprintOutcome;
                 typedef std::future<CreateBlueprintOutcome> CreateBlueprintOutcomeCallable;
                 typedef std::function<void(const LighthouseClient*, const Model::CreateBlueprintRequest&, CreateBlueprintOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateBlueprintAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateDisksResponse> CreateDisksOutcome;
+                typedef std::future<CreateDisksOutcome> CreateDisksOutcomeCallable;
+                typedef std::function<void(const LighthouseClient*, const Model::CreateDisksRequest&, CreateDisksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDisksAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateFirewallRulesResponse> CreateFirewallRulesOutcome;
                 typedef std::future<CreateFirewallRulesOutcome> CreateFirewallRulesOutcomeCallable;
                 typedef std::function<void(const LighthouseClient*, const Model::CreateFirewallRulesRequest&, CreateFirewallRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateFirewallRulesAsyncHandler;
@@ -330,6 +341,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::InquirePriceRenewInstancesResponse> InquirePriceRenewInstancesOutcome;
                 typedef std::future<InquirePriceRenewInstancesOutcome> InquirePriceRenewInstancesOutcomeCallable;
                 typedef std::function<void(const LighthouseClient*, const Model::InquirePriceRenewInstancesRequest&, InquirePriceRenewInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquirePriceRenewInstancesAsyncHandler;
+                typedef Outcome<Core::Error, Model::IsolateDisksResponse> IsolateDisksOutcome;
+                typedef std::future<IsolateDisksOutcome> IsolateDisksOutcomeCallable;
+                typedef std::function<void(const LighthouseClient*, const Model::IsolateDisksRequest&, IsolateDisksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> IsolateDisksAsyncHandler;
                 typedef Outcome<Core::Error, Model::IsolateInstancesResponse> IsolateInstancesOutcome;
                 typedef std::future<IsolateInstancesOutcome> IsolateInstancesOutcomeCallable;
                 typedef std::function<void(const LighthouseClient*, const Model::IsolateInstancesRequest&, IsolateInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> IsolateInstancesAsyncHandler;
@@ -366,6 +380,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::RebootInstancesResponse> RebootInstancesOutcome;
                 typedef std::future<RebootInstancesOutcome> RebootInstancesOutcomeCallable;
                 typedef std::function<void(const LighthouseClient*, const Model::RebootInstancesRequest&, RebootInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RebootInstancesAsyncHandler;
+                typedef Outcome<Core::Error, Model::RenewDisksResponse> RenewDisksOutcome;
+                typedef std::future<RenewDisksOutcome> RenewDisksOutcomeCallable;
+                typedef std::function<void(const LighthouseClient*, const Model::RenewDisksRequest&, RenewDisksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RenewDisksAsyncHandler;
+                typedef Outcome<Core::Error, Model::RenewInstancesResponse> RenewInstancesOutcome;
+                typedef std::future<RenewInstancesOutcome> RenewInstancesOutcomeCallable;
+                typedef std::function<void(const LighthouseClient*, const Model::RenewInstancesRequest&, RenewInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RenewInstancesAsyncHandler;
                 typedef Outcome<Core::Error, Model::ResetAttachCcnResponse> ResetAttachCcnOutcome;
                 typedef std::future<ResetAttachCcnOutcome> ResetAttachCcnOutcomeCallable;
                 typedef std::function<void(const LighthouseClient*, const Model::ResetAttachCcnRequest&, ResetAttachCcnOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResetAttachCcnAsyncHandler;
@@ -443,6 +463,15 @@ namespace TencentCloud
                 CreateBlueprintOutcome CreateBlueprint(const Model::CreateBlueprintRequest &request);
                 void CreateBlueprintAsync(const Model::CreateBlueprintRequest& request, const CreateBlueprintAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateBlueprintOutcomeCallable CreateBlueprintCallable(const Model::CreateBlueprintRequest& request);
+
+                /**
+                 *This API is used to create one or more cloud disks.
+                 * @param req CreateDisksRequest
+                 * @return CreateDisksOutcome
+                 */
+                CreateDisksOutcome CreateDisks(const Model::CreateDisksRequest &request);
+                void CreateDisksAsync(const Model::CreateDisksRequest& request, const CreateDisksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateDisksOutcomeCallable CreateDisksCallable(const Model::CreateDisksRequest& request);
 
                 /**
                  *This API is used to add a firewall rule on an instance.
@@ -816,7 +845,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 DescribeZonesOutcomeCallable DescribeZonesCallable(const Model::DescribeZonesRequest& request);
 
                 /**
-                 *This API is used to unassociate a CCN instance.
+                 *This API is used to disassociate with a CCN instance.
                  * @param req DetachCcnRequest
                  * @return DetachCcnOutcome
                  */
@@ -901,6 +930,20 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 InquirePriceRenewInstancesOutcome InquirePriceRenewInstances(const Model::InquirePriceRenewInstancesRequest &request);
                 void InquirePriceRenewInstancesAsync(const Model::InquirePriceRenewInstancesRequest& request, const InquirePriceRenewInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 InquirePriceRenewInstancesOutcomeCallable InquirePriceRenewInstancesCallable(const Model::InquirePriceRenewInstancesRequest& request);
+
+                /**
+                 *This API is used to return one or more Lighthouse cloud disks.
+
+You can only perform this operation on `UNATTACHED` disks.
+After the successful call of the API, the cloud disk goes to the SHUTDOWN state.
+Up to 20 instances are supported at one time. 
+This API is async. After the request is sent, a `RequestId` is returned. At this time, the operation is not completed yet. To check the result, you need to call  [DescribeDisks](https://intl.cloud.tencent.com/document/product/1207/66093?from_cn_redirect=1). If the latest operation status (LatestOperationState) of the disk is `SUCCESS`, the operation is successful.
+                 * @param req IsolateDisksRequest
+                 * @return IsolateDisksOutcome
+                 */
+                IsolateDisksOutcome IsolateDisks(const Model::IsolateDisksRequest &request);
+                void IsolateDisksAsync(const Model::IsolateDisksRequest& request, const IsolateDisksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                IsolateDisksOutcomeCallable IsolateDisksCallable(const Model::IsolateDisksRequest& request);
 
                 /**
                  *This API is used to return one or more Lighthouse instances. 
@@ -1049,6 +1092,31 @@ In the `FirewallRules` parameter:
                 RebootInstancesOutcome RebootInstances(const Model::RebootInstancesRequest &request);
                 void RebootInstancesAsync(const Model::RebootInstancesRequest& request, const RebootInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 RebootInstancesOutcomeCallable RebootInstancesCallable(const Model::RebootInstancesRequest& request);
+
+                /**
+                 *This API is used to renew one or more Lighthouse cloud disks.
+
+This operation can only be performed on data disks with the status of `ATTACHED`, `UNATTACHED` or `SHUTDOWN`.
+Up to 50 cloud disks are supported at one time.
+This API is async. After the request is sent, a `RequestId` is returned. At this time, the operation is not completed yet. To check the result, you need to call  [DescribeDisks](https://intl.cloud.tencent.com/document/product/1207/66093?from_cn_redirect=1). If the latest operation status (LatestOperationState) of the disk is `SUCCESS`, the operation is successful.
+                 * @param req RenewDisksRequest
+                 * @return RenewDisksOutcome
+                 */
+                RenewDisksOutcome RenewDisks(const Model::RenewDisksRequest &request);
+                void RenewDisksAsync(const Model::RenewDisksRequest& request, const RenewDisksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RenewDisksOutcomeCallable RenewDisksCallable(const Model::RenewDisksRequest& request);
+
+                /**
+                 *This API is used to renew one or more Lighthouse instances.
+* You can only perform this operation on instances whose status is `RUNNING`, `STOPPED` and `SHUTDOWN`.
+* Batch operations are supported. Up to 100 instances are supported in each request.
+* This API is async. After the request is sent successfully, a `RequestId` will be returned. At this time, the operation is not completed immediately. The result of the instance operation can be queried by calling the `DescribeInstances` API. If the latest operation status (LatestOperationState) of the instance is `SUCCESS`, the operation is successful.
+                 * @param req RenewInstancesRequest
+                 * @return RenewInstancesOutcome
+                 */
+                RenewInstancesOutcome RenewInstances(const Model::RenewInstancesRequest &request);
+                void RenewInstancesAsync(const Model::RenewInstancesRequest& request, const RenewInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RenewInstancesOutcomeCallable RenewInstancesCallable(const Model::RenewInstancesRequest& request);
 
                 /**
                  *This API is used to apply for association again after a CCN instance association application expires.

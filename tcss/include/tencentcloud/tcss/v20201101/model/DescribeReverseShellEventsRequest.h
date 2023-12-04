@@ -86,15 +86,19 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Filter parameter. "Filters":[{"Name":"Status","Values":["2"]}]
-                     * @return Filters Filter parameter. "Filters":[{"Name":"Status","Values":["2"]}]
+                     * 获取Filter parameters
+`InnerNetAlarmShow` - int - Required: Values: `1` (show private network alert); `0` (do not show)
+                     * @return Filters Filter parameters
+`InnerNetAlarmShow` - int - Required: Values: `1` (show private network alert); `0` (do not show)
                      * 
                      */
                     std::vector<RunTimeFilters> GetFilters() const;
 
                     /**
-                     * 设置Filter parameter. "Filters":[{"Name":"Status","Values":["2"]}]
-                     * @param _filters Filter parameter. "Filters":[{"Name":"Status","Values":["2"]}]
+                     * 设置Filter parameters
+`InnerNetAlarmShow` - int - Required: Values: `1` (show private network alert); `0` (do not show)
+                     * @param _filters Filter parameters
+`InnerNetAlarmShow` - int - Required: Values: `1` (show private network alert); `0` (do not show)
                      * 
                      */
                     void SetFilters(const std::vector<RunTimeFilters>& _filters);
@@ -163,7 +167,8 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Filter parameter. "Filters":[{"Name":"Status","Values":["2"]}]
+                     * Filter parameters
+`InnerNetAlarmShow` - int - Required: Values: `1` (show private network alert); `0` (do not show)
                      */
                     std::vector<RunTimeFilters> m_filters;
                     bool m_filtersHasBeenSet;

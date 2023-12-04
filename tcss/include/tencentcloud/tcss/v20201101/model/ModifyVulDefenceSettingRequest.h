@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool IsEnabledHasBeenSet() const;
 
                     /**
-                     * 获取Scope of servers for which to enable exploit prevention. Valid values: `0` (specified servers); `1` (all servers). This parameter is required when `IsEnabled` is `1`.
-                     * @return Scope Scope of servers for which to enable exploit prevention. Valid values: `0` (specified servers); `1` (all servers). This parameter is required when `IsEnabled` is `1`.
+                     * 获取Servers to enable exploit prevention. Values: `0` (custom); `1` (all).
+                     * @return Scope Servers to enable exploit prevention. Values: `0` (custom); `1` (all).
                      * 
                      */
                     int64_t GetScope() const;
 
                     /**
-                     * 设置Scope of servers for which to enable exploit prevention. Valid values: `0` (specified servers); `1` (all servers). This parameter is required when `IsEnabled` is `1`.
-                     * @param _scope Scope of servers for which to enable exploit prevention. Valid values: `0` (specified servers); `1` (all servers). This parameter is required when `IsEnabled` is `1`.
+                     * 设置Servers to enable exploit prevention. Values: `0` (custom); `1` (all).
+                     * @param _scope Servers to enable exploit prevention. Values: `0` (custom); `1` (all).
                      * 
                      */
                     void SetScope(const int64_t& _scope);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool ScopeHasBeenSet() const;
 
                     /**
-                     * 获取Specified servers for which to enable exploit prevention. This parameter is required when `Scope` is `0`.
-                     * @return HostIDs Specified servers for which to enable exploit prevention. This parameter is required when `Scope` is `0`.
+                     * 获取Specified servers with exploit prevention enabled
+                     * @return HostIDs Specified servers with exploit prevention enabled
                      * 
                      */
                     std::vector<std::string> GetHostIDs() const;
 
                     /**
-                     * 设置Specified servers for which to enable exploit prevention. This parameter is required when `Scope` is `0`.
-                     * @param _hostIDs Specified servers for which to enable exploit prevention. This parameter is required when `Scope` is `0`.
+                     * 设置Specified servers with exploit prevention enabled
+                     * @param _hostIDs Specified servers with exploit prevention enabled
                      * 
                      */
                     void SetHostIDs(const std::vector<std::string>& _hostIDs);
@@ -105,6 +105,48 @@ namespace TencentCloud
                      */
                     bool HostIDsHasBeenSet() const;
 
+                    /**
+                     * 获取Super nodes to enable exploit prevention. Values: `0` (custom); `1` (all).
+                     * @return SuperScope Super nodes to enable exploit prevention. Values: `0` (custom); `1` (all).
+                     * 
+                     */
+                    int64_t GetSuperScope() const;
+
+                    /**
+                     * 设置Super nodes to enable exploit prevention. Values: `0` (custom); `1` (all).
+                     * @param _superScope Super nodes to enable exploit prevention. Values: `0` (custom); `1` (all).
+                     * 
+                     */
+                    void SetSuperScope(const int64_t& _superScope);
+
+                    /**
+                     * 判断参数 SuperScope 是否已赋值
+                     * @return SuperScope 是否已赋值
+                     * 
+                     */
+                    bool SuperScopeHasBeenSet() const;
+
+                    /**
+                     * 获取List of super node IDs
+                     * @return NodeIds List of super node IDs
+                     * 
+                     */
+                    std::vector<std::string> GetNodeIds() const;
+
+                    /**
+                     * 设置List of super node IDs
+                     * @param _nodeIds List of super node IDs
+                     * 
+                     */
+                    void SetNodeIds(const std::vector<std::string>& _nodeIds);
+
+                    /**
+                     * 判断参数 NodeIds 是否已赋值
+                     * @return NodeIds 是否已赋值
+                     * 
+                     */
+                    bool NodeIdsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -114,16 +156,28 @@ namespace TencentCloud
                     bool m_isEnabledHasBeenSet;
 
                     /**
-                     * Scope of servers for which to enable exploit prevention. Valid values: `0` (specified servers); `1` (all servers). This parameter is required when `IsEnabled` is `1`.
+                     * Servers to enable exploit prevention. Values: `0` (custom); `1` (all).
                      */
                     int64_t m_scope;
                     bool m_scopeHasBeenSet;
 
                     /**
-                     * Specified servers for which to enable exploit prevention. This parameter is required when `Scope` is `0`.
+                     * Specified servers with exploit prevention enabled
                      */
                     std::vector<std::string> m_hostIDs;
                     bool m_hostIDsHasBeenSet;
+
+                    /**
+                     * Super nodes to enable exploit prevention. Values: `0` (custom); `1` (all).
+                     */
+                    int64_t m_superScope;
+                    bool m_superScopeHasBeenSet;
+
+                    /**
+                     * List of super node IDs
+                     */
+                    std::vector<std::string> m_nodeIds;
+                    bool m_nodeIdsHasBeenSet;
 
                 };
             }

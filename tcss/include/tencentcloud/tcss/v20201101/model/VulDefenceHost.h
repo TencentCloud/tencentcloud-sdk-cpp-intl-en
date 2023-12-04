@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Server name
-                     * @return HostName Server name
+                     * 获取General node/Super node name
+                     * @return HostName General node/Super node name
                      * 
                      */
                     std::string GetHostName() const;
 
                     /**
-                     * 设置Server name
-                     * @param _hostName Server name
+                     * 设置General node/Super node name
+                     * @param _hostName General node/Super node name
                      * 
                      */
                     void SetHostName(const std::string& _hostName);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool HostIPHasBeenSet() const;
 
                     /**
-                     * 获取Server QUuid
-                     * @return HostID Server QUuid
+                     * 获取Node QUuid/Super node ID
+                     * @return HostID Node QUuid/Super node ID
                      * 
                      */
                     std::string GetHostID() const;
 
                     /**
-                     * 设置Server QUuid
-                     * @param _hostID Server QUuid
+                     * 设置Node QUuid/Super node ID
+                     * @param _hostID Node QUuid/Super node ID
                      * 
                      */
                     void SetHostID(const std::string& _hostID);
@@ -193,10 +193,178 @@ namespace TencentCloud
                      */
                     bool ModifyTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+                     * @return NodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+                     * 
+                     */
+                    std::string GetNodeType() const;
+
+                    /**
+                     * 设置Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+                     * @param _nodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+                     * 
+                     */
+                    void SetNodeType(const std::string& _nodeType);
+
+                    /**
+                     * 判断参数 NodeType 是否已赋值
+                     * @return NodeType 是否已赋值
+                     * 
+                     */
+                    bool NodeTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Super node subnet name
+                     * @return NodeSubNetName Super node subnet name
+                     * 
+                     */
+                    std::string GetNodeSubNetName() const;
+
+                    /**
+                     * 设置Super node subnet name
+                     * @param _nodeSubNetName Super node subnet name
+                     * 
+                     */
+                    void SetNodeSubNetName(const std::string& _nodeSubNetName);
+
+                    /**
+                     * 判断参数 NodeSubNetName 是否已赋值
+                     * @return NodeSubNetName 是否已赋值
+                     * 
+                     */
+                    bool NodeSubNetNameHasBeenSet() const;
+
+                    /**
+                     * 获取Super node subnet IP range
+                     * @return NodeSubNetCIDR Super node subnet IP range
+                     * 
+                     */
+                    std::string GetNodeSubNetCIDR() const;
+
+                    /**
+                     * 设置Super node subnet IP range
+                     * @param _nodeSubNetCIDR Super node subnet IP range
+                     * 
+                     */
+                    void SetNodeSubNetCIDR(const std::string& _nodeSubNetCIDR);
+
+                    /**
+                     * 判断参数 NodeSubNetCIDR 是否已赋值
+                     * @return NodeSubNetCIDR 是否已赋值
+                     * 
+                     */
+                    bool NodeSubNetCIDRHasBeenSet() const;
+
+                    /**
+                     * 获取Super node subnet ID
+                     * @return NodeSubNetID Super node subnet ID
+                     * 
+                     */
+                    std::string GetNodeSubNetID() const;
+
+                    /**
+                     * 设置Super node subnet ID
+                     * @param _nodeSubNetID Super node subnet ID
+                     * 
+                     */
+                    void SetNodeSubNetID(const std::string& _nodeSubNetID);
+
+                    /**
+                     * 判断参数 NodeSubNetID 是否已赋值
+                     * @return NodeSubNetID 是否已赋值
+                     * 
+                     */
+                    bool NodeSubNetIDHasBeenSet() const;
+
+                    /**
+                     * 获取UID of a super node
+                     * @return NodeUniqueID UID of a super node
+                     * 
+                     */
+                    std::string GetNodeUniqueID() const;
+
+                    /**
+                     * 设置UID of a super node
+                     * @param _nodeUniqueID UID of a super node
+                     * 
+                     */
+                    void SetNodeUniqueID(const std::string& _nodeUniqueID);
+
+                    /**
+                     * 判断参数 NodeUniqueID 是否已赋值
+                     * @return NodeUniqueID 是否已赋值
+                     * 
+                     */
+                    bool NodeUniqueIDHasBeenSet() const;
+
+                    /**
+                     * 获取ID of a super node
+                     * @return NodeID ID of a super node
+                     * 
+                     */
+                    std::string GetNodeID() const;
+
+                    /**
+                     * 设置ID of a super node
+                     * @param _nodeID ID of a super node
+                     * 
+                     */
+                    void SetNodeID(const std::string& _nodeID);
+
+                    /**
+                     * 判断参数 NodeID 是否已赋值
+                     * @return NodeID 是否已赋值
+                     * 
+                     */
+                    bool NodeIDHasBeenSet() const;
+
+                    /**
+                     * 获取Pod IP
+                     * @return PodIP Pod IP
+                     * 
+                     */
+                    std::string GetPodIP() const;
+
+                    /**
+                     * 设置Pod IP
+                     * @param _podIP Pod IP
+                     * 
+                     */
+                    void SetPodIP(const std::string& _podIP);
+
+                    /**
+                     * 判断参数 PodIP 是否已赋值
+                     * @return PodIP 是否已赋值
+                     * 
+                     */
+                    bool PodIPHasBeenSet() const;
+
+                    /**
+                     * 获取Pod name
+                     * @return PodName Pod name
+                     * 
+                     */
+                    std::string GetPodName() const;
+
+                    /**
+                     * 设置Pod name
+                     * @param _podName Pod name
+                     * 
+                     */
+                    void SetPodName(const std::string& _podName);
+
+                    /**
+                     * 判断参数 PodName 是否已赋值
+                     * @return PodName 是否已赋值
+                     * 
+                     */
+                    bool PodNameHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Server name
+                     * General node/Super node name
                      */
                     std::string m_hostName;
                     bool m_hostNameHasBeenSet;
@@ -208,7 +376,7 @@ namespace TencentCloud
                     bool m_hostIPHasBeenSet;
 
                     /**
-                     * Server QUuid
+                     * Node QUuid/Super node ID
                      */
                     std::string m_hostID;
                     bool m_hostIDHasBeenSet;
@@ -236,6 +404,54 @@ namespace TencentCloud
                      */
                     std::string m_modifyTime;
                     bool m_modifyTimeHasBeenSet;
+
+                    /**
+                     * Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+                     */
+                    std::string m_nodeType;
+                    bool m_nodeTypeHasBeenSet;
+
+                    /**
+                     * Super node subnet name
+                     */
+                    std::string m_nodeSubNetName;
+                    bool m_nodeSubNetNameHasBeenSet;
+
+                    /**
+                     * Super node subnet IP range
+                     */
+                    std::string m_nodeSubNetCIDR;
+                    bool m_nodeSubNetCIDRHasBeenSet;
+
+                    /**
+                     * Super node subnet ID
+                     */
+                    std::string m_nodeSubNetID;
+                    bool m_nodeSubNetIDHasBeenSet;
+
+                    /**
+                     * UID of a super node
+                     */
+                    std::string m_nodeUniqueID;
+                    bool m_nodeUniqueIDHasBeenSet;
+
+                    /**
+                     * ID of a super node
+                     */
+                    std::string m_nodeID;
+                    bool m_nodeIDHasBeenSet;
+
+                    /**
+                     * Pod IP
+                     */
+                    std::string m_podIP;
+                    bool m_podIPHasBeenSet;
+
+                    /**
+                     * Pod name
+                     */
+                    std::string m_podName;
+                    bool m_podNameHasBeenSet;
 
                 };
             }

@@ -97,18 +97,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ScoreHasBeenSet() const;
 
                     /**
-                     * 获取This parameter is used to return the start time of the segment of an audio file under the corresponding language tag in milliseconds.
+                     * 获取This parameter is used to return the start time of the segment of an audio file under the corresponding language tag in seconds. 
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return StartTime This parameter is used to return the start time of the segment of an audio file under the corresponding language tag in milliseconds.
+                     * @return StartTime This parameter is used to return the start time of the segment of an audio file under the corresponding language tag in seconds. 
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     double GetStartTime() const;
 
                     /**
-                     * 设置This parameter is used to return the start time of the segment of an audio file under the corresponding language tag in milliseconds.
+                     * 设置This parameter is used to return the start time of the segment of an audio file under the corresponding language tag in seconds. 
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _startTime This parameter is used to return the start time of the segment of an audio file under the corresponding language tag in milliseconds.
+                     * @param _startTime This parameter is used to return the start time of the segment of an audio file under the corresponding language tag in seconds. 
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -122,18 +122,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取This parameter is used to return the end time of the segment of an audio file under the corresponding language tag in milliseconds.
+                     * 获取This parameter is used to return the end time of the segment of an audio file under the corresponding language tag in seconds. 
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return EndTime This parameter is used to return the end time of the segment of an audio file under the corresponding language tag in milliseconds.
+                     * @return EndTime This parameter is used to return the end time of the segment of an audio file under the corresponding language tag in seconds. 
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     double GetEndTime() const;
 
                     /**
-                     * 设置This parameter is used to return the end time of the segment of an audio file under the corresponding language tag in milliseconds.
+                     * 设置This parameter is used to return the end time of the segment of an audio file under the corresponding language tag in seconds. 
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _endTime This parameter is used to return the end time of the segment of an audio file under the corresponding language tag in milliseconds.
+                     * @param _endTime This parameter is used to return the end time of the segment of an audio file under the corresponding language tag in seconds. 
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -188,14 +188,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_scoreHasBeenSet;
 
                     /**
-                     * This parameter is used to return the start time of the segment of an audio file under the corresponding language tag in milliseconds.
+                     * This parameter is used to return the start time of the segment of an audio file under the corresponding language tag in seconds. 
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     double m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * This parameter is used to return the end time of the segment of an audio file under the corresponding language tag in milliseconds.
+                     * This parameter is used to return the end time of the segment of an audio file under the corresponding language tag in seconds. 
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     double m_endTime;

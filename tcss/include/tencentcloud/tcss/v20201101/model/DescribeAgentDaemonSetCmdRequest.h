@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tcss/v20201101/model/ClusterCustomParameters.h>
 
 
 namespace TencentCloud
@@ -147,6 +148,27 @@ namespace TencentCloud
                      */
                     bool ExpireDateHasBeenSet() const;
 
+                    /**
+                     * 获取Custom parameters of the cluster
+                     * @return ClusterCustomParameters Custom parameters of the cluster
+                     * 
+                     */
+                    std::vector<ClusterCustomParameters> GetClusterCustomParameters() const;
+
+                    /**
+                     * 设置Custom parameters of the cluster
+                     * @param _clusterCustomParameters Custom parameters of the cluster
+                     * 
+                     */
+                    void SetClusterCustomParameters(const std::vector<ClusterCustomParameters>& _clusterCustomParameters);
+
+                    /**
+                     * 判断参数 ClusterCustomParameters 是否已赋值
+                     * @return ClusterCustomParameters 是否已赋值
+                     * 
+                     */
+                    bool ClusterCustomParametersHasBeenSet() const;
+
                 private:
 
                     /**
@@ -178,6 +200,12 @@ namespace TencentCloud
                      */
                     std::string m_expireDate;
                     bool m_expireDateHasBeenSet;
+
+                    /**
+                     * Custom parameters of the cluster
+                     */
+                    std::vector<ClusterCustomParameters> m_clusterCustomParameters;
+                    bool m_clusterCustomParametersHasBeenSet;
 
                 };
             }

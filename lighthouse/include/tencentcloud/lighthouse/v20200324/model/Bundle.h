@@ -91,22 +91,22 @@ namespace TencentCloud
 
                     /**
                      * 获取System disk type.
-Valid values: 
-<li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: HDD cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: Premium Cloud Storage</li>
+Values: 
+<li>`CLOUD_SSD`: SSD cloud disks</li><li>`CLOUD_PREMIUM`: Premium cloud disks</li>
                      * @return SystemDiskType System disk type.
-Valid values: 
-<li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: HDD cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: Premium Cloud Storage</li>
+Values: 
+<li>`CLOUD_SSD`: SSD cloud disks</li><li>`CLOUD_PREMIUM`: Premium cloud disks</li>
                      * 
                      */
                     std::string GetSystemDiskType() const;
 
                     /**
                      * 设置System disk type.
-Valid values: 
-<li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: HDD cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: Premium Cloud Storage</li>
+Values: 
+<li>`CLOUD_SSD`: SSD cloud disks</li><li>`CLOUD_PREMIUM`: Premium cloud disks</li>
                      * @param _systemDiskType System disk type.
-Valid values: 
-<li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: HDD cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: Premium Cloud Storage</li>
+Values: 
+<li>`CLOUD_SSD`: SSD cloud disks</li><li>`CLOUD_PREMIUM`: Premium cloud disks</li>
                      * 
                      */
                     void SetSystemDiskType(const std::string& _systemDiskType);
@@ -119,15 +119,15 @@ Valid values:
                     bool SystemDiskTypeHasBeenSet() const;
 
                     /**
-                     * 获取System disk size.
-                     * @return SystemDiskSize System disk size.
+                     * 获取System disk size in GB.
+                     * @return SystemDiskSize System disk size in GB.
                      * 
                      */
                     int64_t GetSystemDiskSize() const;
 
                     /**
-                     * 设置System disk size.
-                     * @param _systemDiskSize System disk size.
+                     * 设置System disk size in GB.
+                     * @param _systemDiskSize System disk size in GB.
                      * 
                      */
                     void SetSystemDiskSize(const int64_t& _systemDiskSize);
@@ -140,15 +140,15 @@ Valid values:
                     bool SystemDiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取Monthly network traffic in Gb.
-                     * @return MonthlyTraffic Monthly network traffic in Gb.
+                     * 获取Monthly network traffic in GB.
+                     * @return MonthlyTraffic Monthly network traffic in GB.
                      * 
                      */
                     int64_t GetMonthlyTraffic() const;
 
                     /**
-                     * 设置Monthly network traffic in Gb.
-                     * @param _monthlyTraffic Monthly network traffic in Gb.
+                     * 设置Monthly network traffic in GB.
+                     * @param _monthlyTraffic Monthly network traffic in GB.
                      * 
                      */
                     void SetMonthlyTraffic(const int64_t& _monthlyTraffic);
@@ -442,20 +442,20 @@ Valid values:
 
                     /**
                      * System disk type.
-Valid values: 
-<li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: HDD cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: Premium Cloud Storage</li>
+Values: 
+<li>`CLOUD_SSD`: SSD cloud disks</li><li>`CLOUD_PREMIUM`: Premium cloud disks</li>
                      */
                     std::string m_systemDiskType;
                     bool m_systemDiskTypeHasBeenSet;
 
                     /**
-                     * System disk size.
+                     * System disk size in GB.
                      */
                     int64_t m_systemDiskSize;
                     bool m_systemDiskSizeHasBeenSet;
 
                     /**
-                     * Monthly network traffic in Gb.
+                     * Monthly network traffic in GB.
                      */
                     int64_t m_monthlyTraffic;
                     bool m_monthlyTrafficHasBeenSet;

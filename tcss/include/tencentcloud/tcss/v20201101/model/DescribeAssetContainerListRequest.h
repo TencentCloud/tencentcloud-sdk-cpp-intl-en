@@ -86,43 +86,63 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Filter
-<li>ContainerName - String - Required: No - Container name</li>
-<li>Status - String - Required: No - Container status. Valid values: `0` (created); `1` (running); `2` (paused); `3` (restarting); `4` (removing); `5` (exited); `6` (dead).</li>
-<li>Runas - String - Required: No - Operator</li>
-<li>ImageName- String - Required: No - Image name</li>
-<li>HostIP- string - Required: No - Server IP</li>
-<li>OrderBy - String - Required: No - Sorting field, which supports dynamic sorting by `cpu_usage` or `mem_usage` such as ["cpu_usage","+"]. '+' indicates ascending, and '-' indicates descending.</li>
-<li>NetStatus - String - Required: No - Container network status. Valid values: `normal`, `isolated`, `isolating`, `isolate_failed`, `restoring`, `restore_failed`.</li>
-                     * @return Filters Filter
-<li>ContainerName - String - Required: No - Container name</li>
-<li>Status - String - Required: No - Container status. Valid values: `0` (created); `1` (running); `2` (paused); `3` (restarting); `4` (removing); `5` (exited); `6` (dead).</li>
-<li>Runas - String - Required: No - Operator</li>
-<li>ImageName- String - Required: No - Image name</li>
-<li>HostIP- string - Required: No - Server IP</li>
-<li>OrderBy - String - Required: No - Sorting field, which supports dynamic sorting by `cpu_usage` or `mem_usage` such as ["cpu_usage","+"]. '+' indicates ascending, and '-' indicates descending.</li>
-<li>NetStatus - String - Required: No - Container network status. Valid values: `normal`, `isolated`, `isolating`, `isolate_failed`, `restoring`, `restore_failed`.</li>
+                     * 获取Filter condition
+<li>`ContainerName`: String - Required: No - Container name</li>
+<li>`Status` - String - Required: No - Container status. Values: `0` (created); `1` (running); `2` (paused); `3` (restarting); `4` (removing); `5` (exited); `6` (dead).</li>
+<li>`Runas`: String - Required: No - Operator</li>
+<li>`ImageName`: String - Required: No - Image name</li>
+<li>`HostIP`: String - Required: No - Server IP</li>
+<li>`OrderBy` - String - Required: No - Sorting field, which supports dynamic sorting by `cpu_usage` or `mem_usage` such as ["cpu_usage","+"]. '+' indicates ascending, and '-' indicates descending.</li>
+<li>`NetStatus`: String - Required: No - Container network status. Values: `normal`, `isolated`, `isolating`, `isolate_failed`, `restoring`, `restore_failed`.</li>
+<li>`PodID`: String - Required: No- Pod ID </li>
+<li>`NodeUniqueID`: String - Required: No - Super Node</li>
+<li>`PodUid`: String - Required: No - Pod</li>
+<li>`PodIP`: String - Required: No - Pod IP</li>
+<li>`NodeType`: String - Required: No - Values: `NORMAL` (general nodes), `SUPER` (super nodes)</li>
+                     * @return Filters Filter condition
+<li>`ContainerName`: String - Required: No - Container name</li>
+<li>`Status` - String - Required: No - Container status. Values: `0` (created); `1` (running); `2` (paused); `3` (restarting); `4` (removing); `5` (exited); `6` (dead).</li>
+<li>`Runas`: String - Required: No - Operator</li>
+<li>`ImageName`: String - Required: No - Image name</li>
+<li>`HostIP`: String - Required: No - Server IP</li>
+<li>`OrderBy` - String - Required: No - Sorting field, which supports dynamic sorting by `cpu_usage` or `mem_usage` such as ["cpu_usage","+"]. '+' indicates ascending, and '-' indicates descending.</li>
+<li>`NetStatus`: String - Required: No - Container network status. Values: `normal`, `isolated`, `isolating`, `isolate_failed`, `restoring`, `restore_failed`.</li>
+<li>`PodID`: String - Required: No- Pod ID </li>
+<li>`NodeUniqueID`: String - Required: No - Super Node</li>
+<li>`PodUid`: String - Required: No - Pod</li>
+<li>`PodIP`: String - Required: No - Pod IP</li>
+<li>`NodeType`: String - Required: No - Values: `NORMAL` (general nodes), `SUPER` (super nodes)</li>
                      * 
                      */
                     std::vector<AssetFilters> GetFilters() const;
 
                     /**
-                     * 设置Filter
-<li>ContainerName - String - Required: No - Container name</li>
-<li>Status - String - Required: No - Container status. Valid values: `0` (created); `1` (running); `2` (paused); `3` (restarting); `4` (removing); `5` (exited); `6` (dead).</li>
-<li>Runas - String - Required: No - Operator</li>
-<li>ImageName- String - Required: No - Image name</li>
-<li>HostIP- string - Required: No - Server IP</li>
-<li>OrderBy - String - Required: No - Sorting field, which supports dynamic sorting by `cpu_usage` or `mem_usage` such as ["cpu_usage","+"]. '+' indicates ascending, and '-' indicates descending.</li>
-<li>NetStatus - String - Required: No - Container network status. Valid values: `normal`, `isolated`, `isolating`, `isolate_failed`, `restoring`, `restore_failed`.</li>
-                     * @param _filters Filter
-<li>ContainerName - String - Required: No - Container name</li>
-<li>Status - String - Required: No - Container status. Valid values: `0` (created); `1` (running); `2` (paused); `3` (restarting); `4` (removing); `5` (exited); `6` (dead).</li>
-<li>Runas - String - Required: No - Operator</li>
-<li>ImageName- String - Required: No - Image name</li>
-<li>HostIP- string - Required: No - Server IP</li>
-<li>OrderBy - String - Required: No - Sorting field, which supports dynamic sorting by `cpu_usage` or `mem_usage` such as ["cpu_usage","+"]. '+' indicates ascending, and '-' indicates descending.</li>
-<li>NetStatus - String - Required: No - Container network status. Valid values: `normal`, `isolated`, `isolating`, `isolate_failed`, `restoring`, `restore_failed`.</li>
+                     * 设置Filter condition
+<li>`ContainerName`: String - Required: No - Container name</li>
+<li>`Status` - String - Required: No - Container status. Values: `0` (created); `1` (running); `2` (paused); `3` (restarting); `4` (removing); `5` (exited); `6` (dead).</li>
+<li>`Runas`: String - Required: No - Operator</li>
+<li>`ImageName`: String - Required: No - Image name</li>
+<li>`HostIP`: String - Required: No - Server IP</li>
+<li>`OrderBy` - String - Required: No - Sorting field, which supports dynamic sorting by `cpu_usage` or `mem_usage` such as ["cpu_usage","+"]. '+' indicates ascending, and '-' indicates descending.</li>
+<li>`NetStatus`: String - Required: No - Container network status. Values: `normal`, `isolated`, `isolating`, `isolate_failed`, `restoring`, `restore_failed`.</li>
+<li>`PodID`: String - Required: No- Pod ID </li>
+<li>`NodeUniqueID`: String - Required: No - Super Node</li>
+<li>`PodUid`: String - Required: No - Pod</li>
+<li>`PodIP`: String - Required: No - Pod IP</li>
+<li>`NodeType`: String - Required: No - Values: `NORMAL` (general nodes), `SUPER` (super nodes)</li>
+                     * @param _filters Filter condition
+<li>`ContainerName`: String - Required: No - Container name</li>
+<li>`Status` - String - Required: No - Container status. Values: `0` (created); `1` (running); `2` (paused); `3` (restarting); `4` (removing); `5` (exited); `6` (dead).</li>
+<li>`Runas`: String - Required: No - Operator</li>
+<li>`ImageName`: String - Required: No - Image name</li>
+<li>`HostIP`: String - Required: No - Server IP</li>
+<li>`OrderBy` - String - Required: No - Sorting field, which supports dynamic sorting by `cpu_usage` or `mem_usage` such as ["cpu_usage","+"]. '+' indicates ascending, and '-' indicates descending.</li>
+<li>`NetStatus`: String - Required: No - Container network status. Values: `normal`, `isolated`, `isolating`, `isolate_failed`, `restoring`, `restore_failed`.</li>
+<li>`PodID`: String - Required: No- Pod ID </li>
+<li>`NodeUniqueID`: String - Required: No - Super Node</li>
+<li>`PodUid`: String - Required: No - Pod</li>
+<li>`PodIP`: String - Required: No - Pod IP</li>
+<li>`NodeType`: String - Required: No - Values: `NORMAL` (general nodes), `SUPER` (super nodes)</li>
                      * 
                      */
                     void SetFilters(const std::vector<AssetFilters>& _filters);
@@ -191,14 +211,19 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Filter
-<li>ContainerName - String - Required: No - Container name</li>
-<li>Status - String - Required: No - Container status. Valid values: `0` (created); `1` (running); `2` (paused); `3` (restarting); `4` (removing); `5` (exited); `6` (dead).</li>
-<li>Runas - String - Required: No - Operator</li>
-<li>ImageName- String - Required: No - Image name</li>
-<li>HostIP- string - Required: No - Server IP</li>
-<li>OrderBy - String - Required: No - Sorting field, which supports dynamic sorting by `cpu_usage` or `mem_usage` such as ["cpu_usage","+"]. '+' indicates ascending, and '-' indicates descending.</li>
-<li>NetStatus - String - Required: No - Container network status. Valid values: `normal`, `isolated`, `isolating`, `isolate_failed`, `restoring`, `restore_failed`.</li>
+                     * Filter condition
+<li>`ContainerName`: String - Required: No - Container name</li>
+<li>`Status` - String - Required: No - Container status. Values: `0` (created); `1` (running); `2` (paused); `3` (restarting); `4` (removing); `5` (exited); `6` (dead).</li>
+<li>`Runas`: String - Required: No - Operator</li>
+<li>`ImageName`: String - Required: No - Image name</li>
+<li>`HostIP`: String - Required: No - Server IP</li>
+<li>`OrderBy` - String - Required: No - Sorting field, which supports dynamic sorting by `cpu_usage` or `mem_usage` such as ["cpu_usage","+"]. '+' indicates ascending, and '-' indicates descending.</li>
+<li>`NetStatus`: String - Required: No - Container network status. Values: `normal`, `isolated`, `isolating`, `isolate_failed`, `restoring`, `restore_failed`.</li>
+<li>`PodID`: String - Required: No- Pod ID </li>
+<li>`NodeUniqueID`: String - Required: No - Super Node</li>
+<li>`PodUid`: String - Required: No - Pod</li>
+<li>`PodIP`: String - Required: No - Pod IP</li>
+<li>`NodeType`: String - Required: No - Values: `NORMAL` (general nodes), `SUPER` (super nodes)</li>
                      */
                     std::vector<AssetFilters> m_filters;
                     bool m_filtersHasBeenSet;

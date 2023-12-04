@@ -43,7 +43,13 @@ DescribeAssetSummaryResponse::DescribeAssetSummaryResponse() :
     m_webServiceCntHasBeenSet(false),
     m_latestImageScanTimeHasBeenSet(false),
     m_imageUnsafeCntHasBeenSet(false),
-    m_hostUnInstallCntHasBeenSet(false)
+    m_hostUnInstallCntHasBeenSet(false),
+    m_superNodeCntHasBeenSet(false),
+    m_superNodeRunningCntHasBeenSet(false),
+    m_todayNewImageCntHasBeenSet(false),
+    m_todayUnsafeImageCntHasBeenSet(false),
+    m_recommendedFixImageCntHasBeenSet(false),
+    m_scannedImageCntHasBeenSet(false)
 {
 }
 
@@ -281,6 +287,66 @@ CoreInternalOutcome DescribeAssetSummaryResponse::Deserialize(const string &payl
         m_hostUnInstallCntHasBeenSet = true;
     }
 
+    if (rsp.HasMember("SuperNodeCnt") && !rsp["SuperNodeCnt"].IsNull())
+    {
+        if (!rsp["SuperNodeCnt"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `SuperNodeCnt` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_superNodeCnt = rsp["SuperNodeCnt"].GetUint64();
+        m_superNodeCntHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("SuperNodeRunningCnt") && !rsp["SuperNodeRunningCnt"].IsNull())
+    {
+        if (!rsp["SuperNodeRunningCnt"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `SuperNodeRunningCnt` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_superNodeRunningCnt = rsp["SuperNodeRunningCnt"].GetUint64();
+        m_superNodeRunningCntHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("TodayNewImageCnt") && !rsp["TodayNewImageCnt"].IsNull())
+    {
+        if (!rsp["TodayNewImageCnt"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `TodayNewImageCnt` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_todayNewImageCnt = rsp["TodayNewImageCnt"].GetUint64();
+        m_todayNewImageCntHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("TodayUnsafeImageCnt") && !rsp["TodayUnsafeImageCnt"].IsNull())
+    {
+        if (!rsp["TodayUnsafeImageCnt"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `TodayUnsafeImageCnt` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_todayUnsafeImageCnt = rsp["TodayUnsafeImageCnt"].GetUint64();
+        m_todayUnsafeImageCntHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("RecommendedFixImageCnt") && !rsp["RecommendedFixImageCnt"].IsNull())
+    {
+        if (!rsp["RecommendedFixImageCnt"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `RecommendedFixImageCnt` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_recommendedFixImageCnt = rsp["RecommendedFixImageCnt"].GetUint64();
+        m_recommendedFixImageCntHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("ScannedImageCnt") && !rsp["ScannedImageCnt"].IsNull())
+    {
+        if (!rsp["ScannedImageCnt"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ScannedImageCnt` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_scannedImageCnt = rsp["ScannedImageCnt"].GetUint64();
+        m_scannedImageCntHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -449,6 +515,54 @@ string DescribeAssetSummaryResponse::ToJsonString() const
         string key = "HostUnInstallCnt";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_hostUnInstallCnt, allocator);
+    }
+
+    if (m_superNodeCntHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SuperNodeCnt";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_superNodeCnt, allocator);
+    }
+
+    if (m_superNodeRunningCntHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SuperNodeRunningCnt";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_superNodeRunningCnt, allocator);
+    }
+
+    if (m_todayNewImageCntHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TodayNewImageCnt";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_todayNewImageCnt, allocator);
+    }
+
+    if (m_todayUnsafeImageCntHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TodayUnsafeImageCnt";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_todayUnsafeImageCnt, allocator);
+    }
+
+    if (m_recommendedFixImageCntHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RecommendedFixImageCnt";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_recommendedFixImageCnt, allocator);
+    }
+
+    if (m_scannedImageCntHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ScannedImageCnt";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_scannedImageCnt, allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -661,6 +775,66 @@ uint64_t DescribeAssetSummaryResponse::GetHostUnInstallCnt() const
 bool DescribeAssetSummaryResponse::HostUnInstallCntHasBeenSet() const
 {
     return m_hostUnInstallCntHasBeenSet;
+}
+
+uint64_t DescribeAssetSummaryResponse::GetSuperNodeCnt() const
+{
+    return m_superNodeCnt;
+}
+
+bool DescribeAssetSummaryResponse::SuperNodeCntHasBeenSet() const
+{
+    return m_superNodeCntHasBeenSet;
+}
+
+uint64_t DescribeAssetSummaryResponse::GetSuperNodeRunningCnt() const
+{
+    return m_superNodeRunningCnt;
+}
+
+bool DescribeAssetSummaryResponse::SuperNodeRunningCntHasBeenSet() const
+{
+    return m_superNodeRunningCntHasBeenSet;
+}
+
+uint64_t DescribeAssetSummaryResponse::GetTodayNewImageCnt() const
+{
+    return m_todayNewImageCnt;
+}
+
+bool DescribeAssetSummaryResponse::TodayNewImageCntHasBeenSet() const
+{
+    return m_todayNewImageCntHasBeenSet;
+}
+
+uint64_t DescribeAssetSummaryResponse::GetTodayUnsafeImageCnt() const
+{
+    return m_todayUnsafeImageCnt;
+}
+
+bool DescribeAssetSummaryResponse::TodayUnsafeImageCntHasBeenSet() const
+{
+    return m_todayUnsafeImageCntHasBeenSet;
+}
+
+uint64_t DescribeAssetSummaryResponse::GetRecommendedFixImageCnt() const
+{
+    return m_recommendedFixImageCnt;
+}
+
+bool DescribeAssetSummaryResponse::RecommendedFixImageCntHasBeenSet() const
+{
+    return m_recommendedFixImageCntHasBeenSet;
+}
+
+uint64_t DescribeAssetSummaryResponse::GetScannedImageCnt() const
+{
+    return m_scannedImageCnt;
+}
+
+bool DescribeAssetSummaryResponse::ScannedImageCntHasBeenSet() const
+{
+    return m_scannedImageCntHasBeenSet;
 }
 
 

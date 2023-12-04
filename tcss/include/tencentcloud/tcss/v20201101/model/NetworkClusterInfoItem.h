@@ -302,6 +302,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool NetworkPolicyPluginErrorHasBeenSet() const;
 
+                    /**
+                     * 获取Cluster network plugin
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * @return ClusterNetworkSettings Cluster network plugin
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetClusterNetworkSettings() const;
+
+                    /**
+                     * 设置Cluster network plugin
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * @param _clusterNetworkSettings Cluster network plugin
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetClusterNetworkSettings(const std::string& _clusterNetworkSettings);
+
+                    /**
+                     * 判断参数 ClusterNetworkSettings 是否已赋值
+                     * @return ClusterNetworkSettings 是否已赋值
+                     * 
+                     */
+                    bool ClusterNetworkSettingsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -376,6 +401,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_networkPolicyPluginError;
                     bool m_networkPolicyPluginErrorHasBeenSet;
+
+                    /**
+                     * Cluster network plugin
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_clusterNetworkSettings;
+                    bool m_clusterNetworkSettingsHasBeenSet;
 
                 };
             }

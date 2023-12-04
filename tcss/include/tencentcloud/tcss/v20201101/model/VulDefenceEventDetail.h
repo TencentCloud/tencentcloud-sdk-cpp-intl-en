@@ -342,15 +342,15 @@ namespace TencentCloud
                     bool EventIDHasBeenSet() const;
 
                     /**
-                     * 获取Server name
-                     * @return HostName Server name
+                     * 获取General node/Super node name
+                     * @return HostName General node/Super node name
                      * 
                      */
                     std::string GetHostName() const;
 
                     /**
-                     * 设置Server name
-                     * @param _hostName Server name
+                     * 设置General node/Super node name
+                     * @param _hostName General node/Super node name
                      * 
                      */
                     void SetHostName(const std::string& _hostName);
@@ -664,19 +664,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ServerArgHasBeenSet() const;
 
                     /**
-                     * 获取Server QUuid
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return QUUID Server QUuid
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Node QUuid/Super node ID
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * @return QUUID Node QUuid/Super node ID
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetQUUID() const;
 
                     /**
-                     * 设置Server QUuid
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _qUUID Server QUuid
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Node QUuid/Super node ID
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * @param _qUUID Node QUuid/Super node ID
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetQUUID(const std::string& _qUUID);
@@ -918,6 +918,237 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     bool RaspDetailHasBeenSet() const;
 
+                    /**
+                     * 获取Super node subnet name
+                     * @return NodeSubNetName Super node subnet name
+                     * 
+                     */
+                    std::string GetNodeSubNetName() const;
+
+                    /**
+                     * 设置Super node subnet name
+                     * @param _nodeSubNetName Super node subnet name
+                     * 
+                     */
+                    void SetNodeSubNetName(const std::string& _nodeSubNetName);
+
+                    /**
+                     * 判断参数 NodeSubNetName 是否已赋值
+                     * @return NodeSubNetName 是否已赋值
+                     * 
+                     */
+                    bool NodeSubNetNameHasBeenSet() const;
+
+                    /**
+                     * 获取Super node subnet IP range
+                     * @return NodeSubNetCIDR Super node subnet IP range
+                     * 
+                     */
+                    std::string GetNodeSubNetCIDR() const;
+
+                    /**
+                     * 设置Super node subnet IP range
+                     * @param _nodeSubNetCIDR Super node subnet IP range
+                     * 
+                     */
+                    void SetNodeSubNetCIDR(const std::string& _nodeSubNetCIDR);
+
+                    /**
+                     * 判断参数 NodeSubNetCIDR 是否已赋值
+                     * @return NodeSubNetCIDR 是否已赋值
+                     * 
+                     */
+                    bool NodeSubNetCIDRHasBeenSet() const;
+
+                    /**
+                     * 获取Pod IP
+                     * @return PodIP Pod IP
+                     * 
+                     */
+                    std::string GetPodIP() const;
+
+                    /**
+                     * 设置Pod IP
+                     * @param _podIP Pod IP
+                     * 
+                     */
+                    void SetPodIP(const std::string& _podIP);
+
+                    /**
+                     * 判断参数 PodIP 是否已赋值
+                     * @return PodIP 是否已赋值
+                     * 
+                     */
+                    bool PodIPHasBeenSet() const;
+
+                    /**
+                     * 获取Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+                     * @return NodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+                     * 
+                     */
+                    std::string GetNodeType() const;
+
+                    /**
+                     * 设置Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+                     * @param _nodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+                     * 
+                     */
+                    void SetNodeType(const std::string& _nodeType);
+
+                    /**
+                     * 判断参数 NodeType 是否已赋值
+                     * @return NodeType 是否已赋值
+                     * 
+                     */
+                    bool NodeTypeHasBeenSet() const;
+
+                    /**
+                     * 获取ID of a super node
+                     * @return NodeID ID of a super node
+                     * 
+                     */
+                    std::string GetNodeID() const;
+
+                    /**
+                     * 设置ID of a super node
+                     * @param _nodeID ID of a super node
+                     * 
+                     */
+                    void SetNodeID(const std::string& _nodeID);
+
+                    /**
+                     * 判断参数 NodeID 是否已赋值
+                     * @return NodeID 是否已赋值
+                     * 
+                     */
+                    bool NodeIDHasBeenSet() const;
+
+                    /**
+                     * 获取UID of a super node
+                     * @return NodeUniqueID UID of a super node
+                     * 
+                     */
+                    std::string GetNodeUniqueID() const;
+
+                    /**
+                     * 设置UID of a super node
+                     * @param _nodeUniqueID UID of a super node
+                     * 
+                     */
+                    void SetNodeUniqueID(const std::string& _nodeUniqueID);
+
+                    /**
+                     * 判断参数 NodeUniqueID 是否已赋值
+                     * @return NodeUniqueID 是否已赋值
+                     * 
+                     */
+                    bool NodeUniqueIDHasBeenSet() const;
+
+                    /**
+                     * 获取Super node subnet ID
+                     * @return NodeSubNetID Super node subnet ID
+                     * 
+                     */
+                    std::string GetNodeSubNetID() const;
+
+                    /**
+                     * 设置Super node subnet ID
+                     * @param _nodeSubNetID Super node subnet ID
+                     * 
+                     */
+                    void SetNodeSubNetID(const std::string& _nodeSubNetID);
+
+                    /**
+                     * 判断参数 NodeSubNetID 是否已赋值
+                     * @return NodeSubNetID 是否已赋值
+                     * 
+                     */
+                    bool NodeSubNetIDHasBeenSet() const;
+
+                    /**
+                     * 获取Cluster ID
+                     * @return ClusterID Cluster ID
+                     * 
+                     */
+                    std::string GetClusterID() const;
+
+                    /**
+                     * 设置Cluster ID
+                     * @param _clusterID Cluster ID
+                     * 
+                     */
+                    void SetClusterID(const std::string& _clusterID);
+
+                    /**
+                     * 判断参数 ClusterID 是否已赋值
+                     * @return ClusterID 是否已赋值
+                     * 
+                     */
+                    bool ClusterIDHasBeenSet() const;
+
+                    /**
+                     * 获取Cluster name
+                     * @return ClusterName Cluster name
+                     * 
+                     */
+                    std::string GetClusterName() const;
+
+                    /**
+                     * 设置Cluster name
+                     * @param _clusterName Cluster name
+                     * 
+                     */
+                    void SetClusterName(const std::string& _clusterName);
+
+                    /**
+                     * 判断参数 ClusterName 是否已赋值
+                     * @return ClusterName 是否已赋值
+                     * 
+                     */
+                    bool ClusterNameHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return Namespace 
+                     * 
+                     */
+                    std::string GetNamespace() const;
+
+                    /**
+                     * 设置
+                     * @param _namespace 
+                     * 
+                     */
+                    void SetNamespace(const std::string& _namespace);
+
+                    /**
+                     * 判断参数 Namespace 是否已赋值
+                     * @return Namespace 是否已赋值
+                     * 
+                     */
+                    bool NamespaceHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return WorkloadType 
+                     * 
+                     */
+                    std::string GetWorkloadType() const;
+
+                    /**
+                     * 设置
+                     * @param _workloadType 
+                     * 
+                     */
+                    void SetWorkloadType(const std::string& _workloadType);
+
+                    /**
+                     * 判断参数 WorkloadType 是否已赋值
+                     * @return WorkloadType 是否已赋值
+                     * 
+                     */
+                    bool WorkloadTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1005,7 +1236,7 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool m_eventIDHasBeenSet;
 
                     /**
-                     * Server name
+                     * General node/Super node name
                      */
                     std::string m_hostName;
                     bool m_hostNameHasBeenSet;
@@ -1096,8 +1327,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_serverArgHasBeenSet;
 
                     /**
-                     * Server QUuid
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Node QUuid/Super node ID
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      */
                     std::string m_qUUID;
                     bool m_qUUIDHasBeenSet;
@@ -1163,6 +1394,72 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::vector<RaspInfo> m_raspDetail;
                     bool m_raspDetailHasBeenSet;
+
+                    /**
+                     * Super node subnet name
+                     */
+                    std::string m_nodeSubNetName;
+                    bool m_nodeSubNetNameHasBeenSet;
+
+                    /**
+                     * Super node subnet IP range
+                     */
+                    std::string m_nodeSubNetCIDR;
+                    bool m_nodeSubNetCIDRHasBeenSet;
+
+                    /**
+                     * Pod IP
+                     */
+                    std::string m_podIP;
+                    bool m_podIPHasBeenSet;
+
+                    /**
+                     * Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+                     */
+                    std::string m_nodeType;
+                    bool m_nodeTypeHasBeenSet;
+
+                    /**
+                     * ID of a super node
+                     */
+                    std::string m_nodeID;
+                    bool m_nodeIDHasBeenSet;
+
+                    /**
+                     * UID of a super node
+                     */
+                    std::string m_nodeUniqueID;
+                    bool m_nodeUniqueIDHasBeenSet;
+
+                    /**
+                     * Super node subnet ID
+                     */
+                    std::string m_nodeSubNetID;
+                    bool m_nodeSubNetIDHasBeenSet;
+
+                    /**
+                     * Cluster ID
+                     */
+                    std::string m_clusterID;
+                    bool m_clusterIDHasBeenSet;
+
+                    /**
+                     * Cluster name
+                     */
+                    std::string m_clusterName;
+                    bool m_clusterNameHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_namespace;
+                    bool m_namespaceHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_workloadType;
+                    bool m_workloadTypeHasBeenSet;
 
                 };
             }

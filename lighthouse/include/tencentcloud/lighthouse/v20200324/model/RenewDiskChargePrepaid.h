@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Purchase duration.
-                     * @return Period Purchase duration.
+                     * 获取Renewal period
+                     * @return Period Renewal period
                      * 
                      */
                     int64_t GetPeriod() const;
 
                     /**
-                     * 设置Purchase duration.
-                     * @param _period Purchase duration.
+                     * 设置Renewal period
+                     * @param _period Renewal period
                      * 
                      */
                     void SetPeriod(const int64_t& _period);
@@ -68,15 +68,31 @@ namespace TencentCloud
                     bool PeriodHasBeenSet() const;
 
                     /**
-                     * 获取Whether Auto-Renewal is enabled 
-                     * @return RenewFlag Whether Auto-Renewal is enabled 
+                     * 获取Whether to renew the disk automatically. Values:
+
+`NOTIFY_AND_AUTO_RENEW`: Trigger expiration notification and renew automatically; `NOTIFY_AND_MANUAL_RENEW`: Trigger expiration notification but do not renew; `DISABLE_NOTIFY_AND_MANUAL_RENEW`: Do not trigger the notification and do not renew.
+
+Default: `NOTIFY_AND_MANUAL_RENEW`. If `NOTIFY_AND_AUTO_RENEW` is specified, the instance is automatically renewed on a monthly basis when the account balance is sufficient.
+                     * @return RenewFlag Whether to renew the disk automatically. Values:
+
+`NOTIFY_AND_AUTO_RENEW`: Trigger expiration notification and renew automatically; `NOTIFY_AND_MANUAL_RENEW`: Trigger expiration notification but do not renew; `DISABLE_NOTIFY_AND_MANUAL_RENEW`: Do not trigger the notification and do not renew.
+
+Default: `NOTIFY_AND_MANUAL_RENEW`. If `NOTIFY_AND_AUTO_RENEW` is specified, the instance is automatically renewed on a monthly basis when the account balance is sufficient.
                      * 
                      */
                     std::string GetRenewFlag() const;
 
                     /**
-                     * 设置Whether Auto-Renewal is enabled 
-                     * @param _renewFlag Whether Auto-Renewal is enabled 
+                     * 设置Whether to renew the disk automatically. Values:
+
+`NOTIFY_AND_AUTO_RENEW`: Trigger expiration notification and renew automatically; `NOTIFY_AND_MANUAL_RENEW`: Trigger expiration notification but do not renew; `DISABLE_NOTIFY_AND_MANUAL_RENEW`: Do not trigger the notification and do not renew.
+
+Default: `NOTIFY_AND_MANUAL_RENEW`. If `NOTIFY_AND_AUTO_RENEW` is specified, the instance is automatically renewed on a monthly basis when the account balance is sufficient.
+                     * @param _renewFlag Whether to renew the disk automatically. Values:
+
+`NOTIFY_AND_AUTO_RENEW`: Trigger expiration notification and renew automatically; `NOTIFY_AND_MANUAL_RENEW`: Trigger expiration notification but do not renew; `DISABLE_NOTIFY_AND_MANUAL_RENEW`: Do not trigger the notification and do not renew.
+
+Default: `NOTIFY_AND_MANUAL_RENEW`. If `NOTIFY_AND_AUTO_RENEW` is specified, the instance is automatically renewed on a monthly basis when the account balance is sufficient.
                      * 
                      */
                     void SetRenewFlag(const std::string& _renewFlag);
@@ -89,15 +105,15 @@ namespace TencentCloud
                     bool RenewFlagHasBeenSet() const;
 
                     /**
-                     * 获取Duration unit. Default value: "m" (month).
-                     * @return TimeUnit Duration unit. Default value: "m" (month).
+                     * 获取Unit of the period. Values: `m` (month).
+                     * @return TimeUnit Unit of the period. Values: `m` (month).
                      * 
                      */
                     std::string GetTimeUnit() const;
 
                     /**
-                     * 设置Duration unit. Default value: "m" (month).
-                     * @param _timeUnit Duration unit. Default value: "m" (month).
+                     * 设置Unit of the period. Values: `m` (month).
+                     * @param _timeUnit Unit of the period. Values: `m` (month).
                      * 
                      */
                     void SetTimeUnit(const std::string& _timeUnit);
@@ -110,15 +126,15 @@ namespace TencentCloud
                     bool TimeUnitHasBeenSet() const;
 
                     /**
-                     * 获取Expiration time of the current instance.
-                     * @return CurInstanceDeadline Expiration time of the current instance.
+                     * 获取Expiration time of the current instance, such as "2018-01-01 00:00:00". Specify this parameter to align the expiration time of the instance and attached cloud disks. `CurInstanceDeadline` and `Period` cannot be both specified.
+                     * @return CurInstanceDeadline Expiration time of the current instance, such as "2018-01-01 00:00:00". Specify this parameter to align the expiration time of the instance and attached cloud disks. `CurInstanceDeadline` and `Period` cannot be both specified.
                      * 
                      */
                     std::string GetCurInstanceDeadline() const;
 
                     /**
-                     * 设置Expiration time of the current instance.
-                     * @param _curInstanceDeadline Expiration time of the current instance.
+                     * 设置Expiration time of the current instance, such as "2018-01-01 00:00:00". Specify this parameter to align the expiration time of the instance and attached cloud disks. `CurInstanceDeadline` and `Period` cannot be both specified.
+                     * @param _curInstanceDeadline Expiration time of the current instance, such as "2018-01-01 00:00:00". Specify this parameter to align the expiration time of the instance and attached cloud disks. `CurInstanceDeadline` and `Period` cannot be both specified.
                      * 
                      */
                     void SetCurInstanceDeadline(const std::string& _curInstanceDeadline);
@@ -133,25 +149,29 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Purchase duration.
+                     * Renewal period
                      */
                     int64_t m_period;
                     bool m_periodHasBeenSet;
 
                     /**
-                     * Whether Auto-Renewal is enabled 
+                     * Whether to renew the disk automatically. Values:
+
+`NOTIFY_AND_AUTO_RENEW`: Trigger expiration notification and renew automatically; `NOTIFY_AND_MANUAL_RENEW`: Trigger expiration notification but do not renew; `DISABLE_NOTIFY_AND_MANUAL_RENEW`: Do not trigger the notification and do not renew.
+
+Default: `NOTIFY_AND_MANUAL_RENEW`. If `NOTIFY_AND_AUTO_RENEW` is specified, the instance is automatically renewed on a monthly basis when the account balance is sufficient.
                      */
                     std::string m_renewFlag;
                     bool m_renewFlagHasBeenSet;
 
                     /**
-                     * Duration unit. Default value: "m" (month).
+                     * Unit of the period. Values: `m` (month).
                      */
                     std::string m_timeUnit;
                     bool m_timeUnitHasBeenSet;
 
                     /**
-                     * Expiration time of the current instance.
+                     * Expiration time of the current instance, such as "2018-01-01 00:00:00". Specify this parameter to align the expiration time of the instance and attached cloud disks. `CurInstanceDeadline` and `Period` cannot be both specified.
                      */
                     std::string m_curInstanceDeadline;
                     bool m_curInstanceDeadlineHasBeenSet;

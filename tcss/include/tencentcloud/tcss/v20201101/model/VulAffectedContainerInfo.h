@@ -214,6 +214,132 @@ namespace TencentCloud
                      */
                     bool PublicIPHasBeenSet() const;
 
+                    /**
+                     * 获取Cluster ID
+                     * @return ClusterID Cluster ID
+                     * 
+                     */
+                    std::string GetClusterID() const;
+
+                    /**
+                     * 设置Cluster ID
+                     * @param _clusterID Cluster ID
+                     * 
+                     */
+                    void SetClusterID(const std::string& _clusterID);
+
+                    /**
+                     * 判断参数 ClusterID 是否已赋值
+                     * @return ClusterID 是否已赋值
+                     * 
+                     */
+                    bool ClusterIDHasBeenSet() const;
+
+                    /**
+                     * 获取Cluster name
+                     * @return ClusterName Cluster name
+                     * 
+                     */
+                    std::string GetClusterName() const;
+
+                    /**
+                     * 设置Cluster name
+                     * @param _clusterName Cluster name
+                     * 
+                     */
+                    void SetClusterName(const std::string& _clusterName);
+
+                    /**
+                     * 判断参数 ClusterName 是否已赋值
+                     * @return ClusterName 是否已赋值
+                     * 
+                     */
+                    bool ClusterNameHasBeenSet() const;
+
+                    /**
+                     * 获取Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+                     * @return NodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+                     * 
+                     */
+                    std::string GetNodeType() const;
+
+                    /**
+                     * 设置Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+                     * @param _nodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+                     * 
+                     */
+                    void SetNodeType(const std::string& _nodeType);
+
+                    /**
+                     * 判断参数 NodeType 是否已赋值
+                     * @return NodeType 是否已赋值
+                     * 
+                     */
+                    bool NodeTypeHasBeenSet() const;
+
+                    /**
+                     * 获取UID of a super node
+                     * @return NodeUniqueID UID of a super node
+                     * 
+                     */
+                    std::string GetNodeUniqueID() const;
+
+                    /**
+                     * 设置UID of a super node
+                     * @param _nodeUniqueID UID of a super node
+                     * 
+                     */
+                    void SetNodeUniqueID(const std::string& _nodeUniqueID);
+
+                    /**
+                     * 判断参数 NodeUniqueID 是否已赋值
+                     * @return NodeUniqueID 是否已赋值
+                     * 
+                     */
+                    bool NodeUniqueIDHasBeenSet() const;
+
+                    /**
+                     * 获取ID of a super node
+                     * @return NodeID ID of a super node
+                     * 
+                     */
+                    std::string GetNodeID() const;
+
+                    /**
+                     * 设置ID of a super node
+                     * @param _nodeID ID of a super node
+                     * 
+                     */
+                    void SetNodeID(const std::string& _nodeID);
+
+                    /**
+                     * 判断参数 NodeID 是否已赋值
+                     * @return NodeID 是否已赋值
+                     * 
+                     */
+                    bool NodeIDHasBeenSet() const;
+
+                    /**
+                     * 获取Super node name
+                     * @return NodeName Super node name
+                     * 
+                     */
+                    std::string GetNodeName() const;
+
+                    /**
+                     * 设置Super node name
+                     * @param _nodeName Super node name
+                     * 
+                     */
+                    void SetNodeName(const std::string& _nodeName);
+
+                    /**
+                     * 判断参数 NodeName 是否已赋值
+                     * @return NodeName 是否已赋值
+                     * 
+                     */
+                    bool NodeNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -263,6 +389,42 @@ namespace TencentCloud
                      */
                     std::string m_publicIP;
                     bool m_publicIPHasBeenSet;
+
+                    /**
+                     * Cluster ID
+                     */
+                    std::string m_clusterID;
+                    bool m_clusterIDHasBeenSet;
+
+                    /**
+                     * Cluster name
+                     */
+                    std::string m_clusterName;
+                    bool m_clusterNameHasBeenSet;
+
+                    /**
+                     * Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+                     */
+                    std::string m_nodeType;
+                    bool m_nodeTypeHasBeenSet;
+
+                    /**
+                     * UID of a super node
+                     */
+                    std::string m_nodeUniqueID;
+                    bool m_nodeUniqueIDHasBeenSet;
+
+                    /**
+                     * ID of a super node
+                     */
+                    std::string m_nodeID;
+                    bool m_nodeIDHasBeenSet;
+
+                    /**
+                     * Super node name
+                     */
+                    std::string m_nodeName;
+                    bool m_nodeNameHasBeenSet;
 
                 };
             }

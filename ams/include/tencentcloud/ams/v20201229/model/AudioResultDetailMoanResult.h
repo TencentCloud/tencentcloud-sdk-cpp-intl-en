@@ -93,15 +93,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ScoreHasBeenSet() const;
 
                     /**
-                     * 获取This field is used to return the start time of the segment of an audio file under the corresponding moan tag in milliseconds.
-                     * @return StartTime This field is used to return the start time of the segment of an audio file under the corresponding moan tag in milliseconds.
+                     * 获取This field is used to return the start time of the segment of an audio file under the corresponding moan tag in seconds.
+                     * @return StartTime This field is used to return the start time of the segment of an audio file under the corresponding moan tag in seconds.
                      * 
                      */
                     double GetStartTime() const;
 
                     /**
-                     * 设置This field is used to return the start time of the segment of an audio file under the corresponding moan tag in milliseconds.
-                     * @param _startTime This field is used to return the start time of the segment of an audio file under the corresponding moan tag in milliseconds.
+                     * 设置This field is used to return the start time of the segment of an audio file under the corresponding moan tag in seconds.
+                     * @param _startTime This field is used to return the start time of the segment of an audio file under the corresponding moan tag in seconds.
                      * 
                      */
                     void SetStartTime(const double& _startTime);
@@ -114,15 +114,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取This field is used to return the end time of the segment of an audio file under the corresponding moan tag in milliseconds.
-                     * @return EndTime This field is used to return the end time of the segment of an audio file under the corresponding moan tag in milliseconds.
+                     * 获取This field is used to return the end time of the segment of an audio file under the corresponding moan tag in seconds.
+                     * @return EndTime This field is used to return the end time of the segment of an audio file under the corresponding moan tag in seconds.
                      * 
                      */
                     double GetEndTime() const;
 
                     /**
-                     * 设置This field is used to return the end time of the segment of an audio file under the corresponding moan tag in milliseconds.
-                     * @param _endTime This field is used to return the end time of the segment of an audio file under the corresponding moan tag in milliseconds.
+                     * 设置This field is used to return the end time of the segment of an audio file under the corresponding moan tag in seconds.
+                     * @param _endTime This field is used to return the end time of the segment of an audio file under the corresponding moan tag in seconds.
                      * 
                      */
                     void SetEndTime(const double& _endTime);
@@ -217,13 +217,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_scoreHasBeenSet;
 
                     /**
-                     * This field is used to return the start time of the segment of an audio file under the corresponding moan tag in milliseconds.
+                     * This field is used to return the start time of the segment of an audio file under the corresponding moan tag in seconds.
                      */
                     double m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * This field is used to return the end time of the segment of an audio file under the corresponding moan tag in milliseconds.
+                     * This field is used to return the end time of the segment of an audio file under the corresponding moan tag in seconds.
                      */
                     double m_endTime;
                     bool m_endTimeHasBeenSet;

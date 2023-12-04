@@ -205,15 +205,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取This field is used to return the length of an audio file in seconds.
-                     * @return Duration This field is used to return the length of an audio file in seconds.
+                     * 获取This field is used to return the length of an audio file in milliseconds.
+                     * @return Duration This field is used to return the length of an audio file in milliseconds.
                      * 
                      */
                     std::string GetDuration() const;
 
                     /**
-                     * 设置This field is used to return the length of an audio file in seconds.
-                     * @param _duration This field is used to return the length of an audio file in seconds.
+                     * 设置This field is used to return the length of an audio file in milliseconds.
+                     * @param _duration This field is used to return the length of an audio file in milliseconds.
                      * 
                      */
                     void SetDuration(const std::string& _duration);
@@ -405,7 +405,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_urlHasBeenSet;
 
                     /**
-                     * This field is used to return the length of an audio file in seconds.
+                     * This field is used to return the length of an audio file in milliseconds.
                      */
                     std::string m_duration;
                     bool m_durationHasBeenSet;

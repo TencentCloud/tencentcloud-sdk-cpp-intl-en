@@ -40,7 +40,17 @@ ContainerInfo::ContainerInfo() :
     m_netStatusHasBeenSet(false),
     m_netSubStatusHasBeenSet(false),
     m_isolateSourceHasBeenSet(false),
-    m_isolateTimeHasBeenSet(false)
+    m_isolateTimeHasBeenSet(false),
+    m_nodeIDHasBeenSet(false),
+    m_podIPHasBeenSet(false),
+    m_podNameHasBeenSet(false),
+    m_nodeTypeHasBeenSet(false),
+    m_nodeUniqueIDHasBeenSet(false),
+    m_podCpuHasBeenSet(false),
+    m_podMemHasBeenSet(false),
+    m_clusterNameHasBeenSet(false),
+    m_clusterIDHasBeenSet(false),
+    m_podUidHasBeenSet(false)
 {
 }
 
@@ -249,6 +259,106 @@ CoreInternalOutcome ContainerInfo::Deserialize(const rapidjson::Value &value)
         m_isolateTimeHasBeenSet = true;
     }
 
+    if (value.HasMember("NodeID") && !value["NodeID"].IsNull())
+    {
+        if (!value["NodeID"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ContainerInfo.NodeID` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_nodeID = string(value["NodeID"].GetString());
+        m_nodeIDHasBeenSet = true;
+    }
+
+    if (value.HasMember("PodIP") && !value["PodIP"].IsNull())
+    {
+        if (!value["PodIP"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ContainerInfo.PodIP` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_podIP = string(value["PodIP"].GetString());
+        m_podIPHasBeenSet = true;
+    }
+
+    if (value.HasMember("PodName") && !value["PodName"].IsNull())
+    {
+        if (!value["PodName"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ContainerInfo.PodName` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_podName = string(value["PodName"].GetString());
+        m_podNameHasBeenSet = true;
+    }
+
+    if (value.HasMember("NodeType") && !value["NodeType"].IsNull())
+    {
+        if (!value["NodeType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ContainerInfo.NodeType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_nodeType = string(value["NodeType"].GetString());
+        m_nodeTypeHasBeenSet = true;
+    }
+
+    if (value.HasMember("NodeUniqueID") && !value["NodeUniqueID"].IsNull())
+    {
+        if (!value["NodeUniqueID"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ContainerInfo.NodeUniqueID` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_nodeUniqueID = string(value["NodeUniqueID"].GetString());
+        m_nodeUniqueIDHasBeenSet = true;
+    }
+
+    if (value.HasMember("PodCpu") && !value["PodCpu"].IsNull())
+    {
+        if (!value["PodCpu"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ContainerInfo.PodCpu` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_podCpu = value["PodCpu"].GetInt64();
+        m_podCpuHasBeenSet = true;
+    }
+
+    if (value.HasMember("PodMem") && !value["PodMem"].IsNull())
+    {
+        if (!value["PodMem"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ContainerInfo.PodMem` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_podMem = value["PodMem"].GetInt64();
+        m_podMemHasBeenSet = true;
+    }
+
+    if (value.HasMember("ClusterName") && !value["ClusterName"].IsNull())
+    {
+        if (!value["ClusterName"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ContainerInfo.ClusterName` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_clusterName = string(value["ClusterName"].GetString());
+        m_clusterNameHasBeenSet = true;
+    }
+
+    if (value.HasMember("ClusterID") && !value["ClusterID"].IsNull())
+    {
+        if (!value["ClusterID"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ContainerInfo.ClusterID` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_clusterID = string(value["ClusterID"].GetString());
+        m_clusterIDHasBeenSet = true;
+    }
+
+    if (value.HasMember("PodUid") && !value["PodUid"].IsNull())
+    {
+        if (!value["PodUid"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ContainerInfo.PodUid` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_podUid = string(value["PodUid"].GetString());
+        m_podUidHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -414,6 +524,86 @@ void ContainerInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::A
         string key = "IsolateTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_isolateTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_nodeIDHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NodeID";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_nodeID.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_podIPHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PodIP";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_podIP.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_podNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PodName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_podName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_nodeTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NodeType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_nodeType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_nodeUniqueIDHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NodeUniqueID";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_nodeUniqueID.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_podCpuHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PodCpu";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_podCpu, allocator);
+    }
+
+    if (m_podMemHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PodMem";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_podMem, allocator);
+    }
+
+    if (m_clusterNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ClusterName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_clusterName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_clusterIDHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ClusterID";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_clusterID.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_podUidHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PodUid";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_podUid.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -737,5 +927,165 @@ void ContainerInfo::SetIsolateTime(const string& _isolateTime)
 bool ContainerInfo::IsolateTimeHasBeenSet() const
 {
     return m_isolateTimeHasBeenSet;
+}
+
+string ContainerInfo::GetNodeID() const
+{
+    return m_nodeID;
+}
+
+void ContainerInfo::SetNodeID(const string& _nodeID)
+{
+    m_nodeID = _nodeID;
+    m_nodeIDHasBeenSet = true;
+}
+
+bool ContainerInfo::NodeIDHasBeenSet() const
+{
+    return m_nodeIDHasBeenSet;
+}
+
+string ContainerInfo::GetPodIP() const
+{
+    return m_podIP;
+}
+
+void ContainerInfo::SetPodIP(const string& _podIP)
+{
+    m_podIP = _podIP;
+    m_podIPHasBeenSet = true;
+}
+
+bool ContainerInfo::PodIPHasBeenSet() const
+{
+    return m_podIPHasBeenSet;
+}
+
+string ContainerInfo::GetPodName() const
+{
+    return m_podName;
+}
+
+void ContainerInfo::SetPodName(const string& _podName)
+{
+    m_podName = _podName;
+    m_podNameHasBeenSet = true;
+}
+
+bool ContainerInfo::PodNameHasBeenSet() const
+{
+    return m_podNameHasBeenSet;
+}
+
+string ContainerInfo::GetNodeType() const
+{
+    return m_nodeType;
+}
+
+void ContainerInfo::SetNodeType(const string& _nodeType)
+{
+    m_nodeType = _nodeType;
+    m_nodeTypeHasBeenSet = true;
+}
+
+bool ContainerInfo::NodeTypeHasBeenSet() const
+{
+    return m_nodeTypeHasBeenSet;
+}
+
+string ContainerInfo::GetNodeUniqueID() const
+{
+    return m_nodeUniqueID;
+}
+
+void ContainerInfo::SetNodeUniqueID(const string& _nodeUniqueID)
+{
+    m_nodeUniqueID = _nodeUniqueID;
+    m_nodeUniqueIDHasBeenSet = true;
+}
+
+bool ContainerInfo::NodeUniqueIDHasBeenSet() const
+{
+    return m_nodeUniqueIDHasBeenSet;
+}
+
+int64_t ContainerInfo::GetPodCpu() const
+{
+    return m_podCpu;
+}
+
+void ContainerInfo::SetPodCpu(const int64_t& _podCpu)
+{
+    m_podCpu = _podCpu;
+    m_podCpuHasBeenSet = true;
+}
+
+bool ContainerInfo::PodCpuHasBeenSet() const
+{
+    return m_podCpuHasBeenSet;
+}
+
+int64_t ContainerInfo::GetPodMem() const
+{
+    return m_podMem;
+}
+
+void ContainerInfo::SetPodMem(const int64_t& _podMem)
+{
+    m_podMem = _podMem;
+    m_podMemHasBeenSet = true;
+}
+
+bool ContainerInfo::PodMemHasBeenSet() const
+{
+    return m_podMemHasBeenSet;
+}
+
+string ContainerInfo::GetClusterName() const
+{
+    return m_clusterName;
+}
+
+void ContainerInfo::SetClusterName(const string& _clusterName)
+{
+    m_clusterName = _clusterName;
+    m_clusterNameHasBeenSet = true;
+}
+
+bool ContainerInfo::ClusterNameHasBeenSet() const
+{
+    return m_clusterNameHasBeenSet;
+}
+
+string ContainerInfo::GetClusterID() const
+{
+    return m_clusterID;
+}
+
+void ContainerInfo::SetClusterID(const string& _clusterID)
+{
+    m_clusterID = _clusterID;
+    m_clusterIDHasBeenSet = true;
+}
+
+bool ContainerInfo::ClusterIDHasBeenSet() const
+{
+    return m_clusterIDHasBeenSet;
+}
+
+string ContainerInfo::GetPodUid() const
+{
+    return m_podUid;
+}
+
+void ContainerInfo::SetPodUid(const string& _podUid)
+{
+    m_podUid = _podUid;
+    m_podUidHasBeenSet = true;
+}
+
+bool ContainerInfo::PodUidHasBeenSet() const
+{
+    return m_podUidHasBeenSet;
 }
 

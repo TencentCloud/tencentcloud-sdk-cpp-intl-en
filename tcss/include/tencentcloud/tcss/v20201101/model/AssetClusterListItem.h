@@ -146,9 +146,11 @@ namespace TencentCloud
                      * 获取Cluster type:
 `CT_TKE`: TKE cluster
 `CT_USER_CREATE`: External cluster
+`CT_TKE_SERVERLESS`: TKE Serverless cluster
                      * @return ClusterType Cluster type:
 `CT_TKE`: TKE cluster
 `CT_USER_CREATE`: External cluster
+`CT_TKE_SERVERLESS`: TKE Serverless cluster
                      * 
                      */
                     std::string GetClusterType() const;
@@ -157,9 +159,11 @@ namespace TencentCloud
                      * 设置Cluster type:
 `CT_TKE`: TKE cluster
 `CT_USER_CREATE`: External cluster
+`CT_TKE_SERVERLESS`: TKE Serverless cluster
                      * @param _clusterType Cluster type:
 `CT_TKE`: TKE cluster
 `CT_USER_CREATE`: External cluster
+`CT_TKE_SERVERLESS`: TKE Serverless cluster
                      * 
                      */
                     void SetClusterType(const std::string& _clusterType);
@@ -170,6 +174,69 @@ namespace TencentCloud
                      * 
                      */
                     bool ClusterTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Cluster version
+                     * @return ClusterVersion Cluster version
+                     * 
+                     */
+                    std::string GetClusterVersion() const;
+
+                    /**
+                     * 设置Cluster version
+                     * @param _clusterVersion Cluster version
+                     * 
+                     */
+                    void SetClusterVersion(const std::string& _clusterVersion);
+
+                    /**
+                     * 判断参数 ClusterVersion 是否已赋值
+                     * @return ClusterVersion 是否已赋值
+                     * 
+                     */
+                    bool ClusterVersionHasBeenSet() const;
+
+                    /**
+                     * 获取MEM usage
+                     * @return MemLimit MEM usage
+                     * 
+                     */
+                    int64_t GetMemLimit() const;
+
+                    /**
+                     * 设置MEM usage
+                     * @param _memLimit MEM usage
+                     * 
+                     */
+                    void SetMemLimit(const int64_t& _memLimit);
+
+                    /**
+                     * 判断参数 MemLimit 是否已赋值
+                     * @return MemLimit 是否已赋值
+                     * 
+                     */
+                    bool MemLimitHasBeenSet() const;
+
+                    /**
+                     * 获取cpu
+                     * @return CpuLimit cpu
+                     * 
+                     */
+                    int64_t GetCpuLimit() const;
+
+                    /**
+                     * 设置cpu
+                     * @param _cpuLimit cpu
+                     * 
+                     */
+                    void SetCpuLimit(const int64_t& _cpuLimit);
+
+                    /**
+                     * 判断参数 CpuLimit 是否已赋值
+                     * @return CpuLimit 是否已赋值
+                     * 
+                     */
+                    bool CpuLimitHasBeenSet() const;
 
                 private:
 
@@ -204,9 +271,28 @@ namespace TencentCloud
                      * Cluster type:
 `CT_TKE`: TKE cluster
 `CT_USER_CREATE`: External cluster
+`CT_TKE_SERVERLESS`: TKE Serverless cluster
                      */
                     std::string m_clusterType;
                     bool m_clusterTypeHasBeenSet;
+
+                    /**
+                     * Cluster version
+                     */
+                    std::string m_clusterVersion;
+                    bool m_clusterVersionHasBeenSet;
+
+                    /**
+                     * MEM usage
+                     */
+                    int64_t m_memLimit;
+                    bool m_memLimitHasBeenSet;
+
+                    /**
+                     * cpu
+                     */
+                    int64_t m_cpuLimit;
+                    bool m_cpuLimitHasBeenSet;
 
                 };
             }

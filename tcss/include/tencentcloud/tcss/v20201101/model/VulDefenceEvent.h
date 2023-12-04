@@ -546,19 +546,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ContainerIsolateOperationSrcHasBeenSet() const;
 
                     /**
-                     * 获取Server QUuid
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return QUUID Server QUuid
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Node QUuid/Super node ID
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * @return QUUID Node QUuid/Super node ID
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetQUUID() const;
 
                     /**
-                     * 设置Server QUuid
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _qUUID Server QUuid
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Node QUuid/Super node ID
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * @param _qUUID Node QUuid/Super node ID
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetQUUID(const std::string& _qUUID);
@@ -596,19 +596,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HostIPHasBeenSet() const;
 
                     /**
-                     * 获取Server name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HostName Server name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取General node/Super node name
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * @return HostName General node/Super node name
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetHostName() const;
 
                     /**
-                     * 设置Server name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _hostName Server name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置General node/Super node name
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * @param _hostName General node/Super node name
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHostName(const std::string& _hostName);
@@ -619,6 +619,132 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool HostNameHasBeenSet() const;
+
+                    /**
+                     * 获取Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+                     * @return NodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+                     * 
+                     */
+                    std::string GetNodeType() const;
+
+                    /**
+                     * 设置Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+                     * @param _nodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+                     * 
+                     */
+                    void SetNodeType(const std::string& _nodeType);
+
+                    /**
+                     * 判断参数 NodeType 是否已赋值
+                     * @return NodeType 是否已赋值
+                     * 
+                     */
+                    bool NodeTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Public IP
+                     * @return PublicIP Public IP
+                     * 
+                     */
+                    std::string GetPublicIP() const;
+
+                    /**
+                     * 设置Public IP
+                     * @param _publicIP Public IP
+                     * 
+                     */
+                    void SetPublicIP(const std::string& _publicIP);
+
+                    /**
+                     * 判断参数 PublicIP 是否已赋值
+                     * @return PublicIP 是否已赋值
+                     * 
+                     */
+                    bool PublicIPHasBeenSet() const;
+
+                    /**
+                     * 获取UID of a super node
+                     * @return NodeUniqueID UID of a super node
+                     * 
+                     */
+                    std::string GetNodeUniqueID() const;
+
+                    /**
+                     * 设置UID of a super node
+                     * @param _nodeUniqueID UID of a super node
+                     * 
+                     */
+                    void SetNodeUniqueID(const std::string& _nodeUniqueID);
+
+                    /**
+                     * 判断参数 NodeUniqueID 是否已赋值
+                     * @return NodeUniqueID 是否已赋值
+                     * 
+                     */
+                    bool NodeUniqueIDHasBeenSet() const;
+
+                    /**
+                     * 获取ID of a super node
+                     * @return NodeID ID of a super node
+                     * 
+                     */
+                    std::string GetNodeID() const;
+
+                    /**
+                     * 设置ID of a super node
+                     * @param _nodeID ID of a super node
+                     * 
+                     */
+                    void SetNodeID(const std::string& _nodeID);
+
+                    /**
+                     * 判断参数 NodeID 是否已赋值
+                     * @return NodeID 是否已赋值
+                     * 
+                     */
+                    bool NodeIDHasBeenSet() const;
+
+                    /**
+                     * 获取Cluster ID
+                     * @return ClusterID Cluster ID
+                     * 
+                     */
+                    std::string GetClusterID() const;
+
+                    /**
+                     * 设置Cluster ID
+                     * @param _clusterID Cluster ID
+                     * 
+                     */
+                    void SetClusterID(const std::string& _clusterID);
+
+                    /**
+                     * 判断参数 ClusterID 是否已赋值
+                     * @return ClusterID 是否已赋值
+                     * 
+                     */
+                    bool ClusterIDHasBeenSet() const;
+
+                    /**
+                     * 获取Cluster name
+                     * @return ClusterName Cluster name
+                     * 
+                     */
+                    std::string GetClusterName() const;
+
+                    /**
+                     * 设置Cluster name
+                     * @param _clusterName Cluster name
+                     * 
+                     */
+                    void SetClusterName(const std::string& _clusterName);
+
+                    /**
+                     * 判断参数 ClusterName 是否已赋值
+                     * @return ClusterName 是否已赋值
+                     * 
+                     */
+                    bool ClusterNameHasBeenSet() const;
 
                 private:
 
@@ -762,8 +888,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_containerIsolateOperationSrcHasBeenSet;
 
                     /**
-                     * Server QUuid
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Node QUuid/Super node ID
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      */
                     std::string m_qUUID;
                     bool m_qUUIDHasBeenSet;
@@ -776,11 +902,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_hostIPHasBeenSet;
 
                     /**
-                     * Server name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * General node/Super node name
+Note: This field may return·`null`, indicating that no valid values can be obtained.
                      */
                     std::string m_hostName;
                     bool m_hostNameHasBeenSet;
+
+                    /**
+                     * Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+                     */
+                    std::string m_nodeType;
+                    bool m_nodeTypeHasBeenSet;
+
+                    /**
+                     * Public IP
+                     */
+                    std::string m_publicIP;
+                    bool m_publicIPHasBeenSet;
+
+                    /**
+                     * UID of a super node
+                     */
+                    std::string m_nodeUniqueID;
+                    bool m_nodeUniqueIDHasBeenSet;
+
+                    /**
+                     * ID of a super node
+                     */
+                    std::string m_nodeID;
+                    bool m_nodeIDHasBeenSet;
+
+                    /**
+                     * Cluster ID
+                     */
+                    std::string m_clusterID;
+                    bool m_clusterIDHasBeenSet;
+
+                    /**
+                     * Cluster name
+                     */
+                    std::string m_clusterName;
+                    bool m_clusterNameHasBeenSet;
 
                 };
             }

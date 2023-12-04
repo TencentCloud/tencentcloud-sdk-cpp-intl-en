@@ -42,7 +42,61 @@ namespace TencentCloud
                     std::string ToJsonString() const;
 
 
+                    /**
+                     * 获取
+                     * @return ClusterIDs 
+                     * 
+                     */
+                    std::vector<std::string> GetClusterIDs() const;
+
+                    /**
+                     * 设置
+                     * @param _clusterIDs 
+                     * 
+                     */
+                    void SetClusterIDs(const std::vector<std::string>& _clusterIDs);
+
+                    /**
+                     * 判断参数 ClusterIDs 是否已赋值
+                     * @return ClusterIDs 是否已赋值
+                     * 
+                     */
+                    bool ClusterIDsHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return IsSyncListOnly 
+                     * 
+                     */
+                    bool GetIsSyncListOnly() const;
+
+                    /**
+                     * 设置
+                     * @param _isSyncListOnly 
+                     * 
+                     */
+                    void SetIsSyncListOnly(const bool& _isSyncListOnly);
+
+                    /**
+                     * 判断参数 IsSyncListOnly 是否已赋值
+                     * @return IsSyncListOnly 是否已赋值
+                     * 
+                     */
+                    bool IsSyncListOnlyHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * 
+                     */
+                    std::vector<std::string> m_clusterIDs;
+                    bool m_clusterIDsHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_isSyncListOnly;
+                    bool m_isSyncListOnlyHasBeenSet;
 
                 };
             }
