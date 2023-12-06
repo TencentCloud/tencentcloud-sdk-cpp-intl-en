@@ -235,6 +235,8 @@
 #include <tencentcloud/vod/v20180717/model/EditMediaResponse.h>
 #include <tencentcloud/vod/v20180717/model/EnhanceMediaByTemplateRequest.h>
 #include <tencentcloud/vod/v20180717/model/EnhanceMediaByTemplateResponse.h>
+#include <tencentcloud/vod/v20180717/model/EnhanceMediaQualityRequest.h>
+#include <tencentcloud/vod/v20180717/model/EnhanceMediaQualityResponse.h>
 #include <tencentcloud/vod/v20180717/model/ExecuteFunctionRequest.h>
 #include <tencentcloud/vod/v20180717/model/ExecuteFunctionResponse.h>
 #include <tencentcloud/vod/v20180717/model/ExtractCopyRightWatermarkRequest.h>
@@ -685,6 +687,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::EnhanceMediaByTemplateResponse> EnhanceMediaByTemplateOutcome;
                 typedef std::future<EnhanceMediaByTemplateOutcome> EnhanceMediaByTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::EnhanceMediaByTemplateRequest&, EnhanceMediaByTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EnhanceMediaByTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::EnhanceMediaQualityResponse> EnhanceMediaQualityOutcome;
+                typedef std::future<EnhanceMediaQualityOutcome> EnhanceMediaQualityOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::EnhanceMediaQualityRequest&, EnhanceMediaQualityOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EnhanceMediaQualityAsyncHandler;
                 typedef Outcome<Core::Error, Model::ExecuteFunctionResponse> ExecuteFunctionOutcome;
                 typedef std::future<ExecuteFunctionOutcome> ExecuteFunctionOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ExecuteFunctionRequest&, ExecuteFunctionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ExecuteFunctionAsyncHandler;
@@ -1927,6 +1932,15 @@ If event notification is used, the type of event notification is [Video editing 
                 EnhanceMediaByTemplateOutcome EnhanceMediaByTemplate(const Model::EnhanceMediaByTemplateRequest &request);
                 void EnhanceMediaByTemplateAsync(const Model::EnhanceMediaByTemplateRequest& request, const EnhanceMediaByTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 EnhanceMediaByTemplateOutcomeCallable EnhanceMediaByTemplateCallable(const Model::EnhanceMediaByTemplateRequest& request);
+
+                /**
+                 *Initiate a Remaster task for audio and video media in VOD
+                 * @param req EnhanceMediaQualityRequest
+                 * @return EnhanceMediaQualityOutcome
+                 */
+                EnhanceMediaQualityOutcome EnhanceMediaQuality(const Model::EnhanceMediaQualityRequest &request);
+                void EnhanceMediaQualityAsync(const Model::EnhanceMediaQualityRequest& request, const EnhanceMediaQualityAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                EnhanceMediaQualityOutcomeCallable EnhanceMediaQualityCallable(const Model::EnhanceMediaQualityRequest& request);
 
                 /**
                  *This API is only used in special scenarios of custom development. Unless requested by VOD customer service, please do not call it.

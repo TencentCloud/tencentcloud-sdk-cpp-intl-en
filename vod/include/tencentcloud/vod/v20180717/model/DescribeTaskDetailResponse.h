@@ -76,9 +76,9 @@ namespace TencentCloud
 <li>`FastClipMedia`: Quick clipping</li>
 <li>`RemoveWatermarkTask`: Watermark removal</li>
 <li>`DescribeFileAttributesTask`: Getting file attributes</li>
-<li>`RebuildMedia`; Remastering audio/video</li>
 <li> `ReviewAudioVideo`: Moderation</li>
 <li>`ExtractTraceWatermark`: Digital watermark extraction</li>
+<li>`QualityEnhance：Enhance audio/video</li>
                      * @return TaskType The task type. Valid values:
 <li>`Procedure`: Video processing</li>
 <li>`EditMedia`: Video editing</li>
@@ -90,9 +90,9 @@ namespace TencentCloud
 <li>`FastClipMedia`: Quick clipping</li>
 <li>`RemoveWatermarkTask`: Watermark removal</li>
 <li>`DescribeFileAttributesTask`: Getting file attributes</li>
-<li>`RebuildMedia`; Remastering audio/video</li>
 <li> `ReviewAudioVideo`: Moderation</li>
 <li>`ExtractTraceWatermark`: Digital watermark extraction</li>
+<li>`QualityEnhance：Enhance audio/video</li>
                      * 
                      */
                     std::string GetTaskType() const;
@@ -516,9 +516,9 @@ Note: This field may return null, indicating that no valid value can be obtained
 <li>`FastClipMedia`: Quick clipping</li>
 <li>`RemoveWatermarkTask`: Watermark removal</li>
 <li>`DescribeFileAttributesTask`: Getting file attributes</li>
-<li>`RebuildMedia`; Remastering audio/video</li>
 <li> `ReviewAudioVideo`: Moderation</li>
 <li>`ExtractTraceWatermark`: Digital watermark extraction</li>
+<li>`QualityEnhance：Enhance audio/video</li>
                      */
                     std::string m_taskType;
                     bool m_taskTypeHasBeenSet;

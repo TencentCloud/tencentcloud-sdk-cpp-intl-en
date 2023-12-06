@@ -47,6 +47,7 @@
 #include <tencentcloud/vod/v20180717/model/ReduceMediaBitrateTask.h>
 #include <tencentcloud/vod/v20180717/model/DescribeFileAttributesTask.h>
 #include <tencentcloud/vod/v20180717/model/QualityInspectTask.h>
+#include <tencentcloud/vod/v20180717/model/QualityEnhanceTask.h>
 
 
 namespace TencentCloud
@@ -766,6 +767,31 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool QualityInspectCompleteEventHasBeenSet() const;
 
+                    /**
+                     * 获取Remaster completion event, valid when the event type is QualityEnhanceComplete.
+Pay attention to: this field may return null, indicating that no valid value can be obtained
+                     * @return QualityEnhanceCompleteEvent Remaster completion event, valid when the event type is QualityEnhanceComplete.
+Pay attention to: this field may return null, indicating that no valid value can be obtained
+                     * 
+                     */
+                    QualityEnhanceTask GetQualityEnhanceCompleteEvent() const;
+
+                    /**
+                     * 设置Remaster completion event, valid when the event type is QualityEnhanceComplete.
+Pay attention to: this field may return null, indicating that no valid value can be obtained
+                     * @param _qualityEnhanceCompleteEvent Remaster completion event, valid when the event type is QualityEnhanceComplete.
+Pay attention to: this field may return null, indicating that no valid value can be obtained
+                     * 
+                     */
+                    void SetQualityEnhanceCompleteEvent(const QualityEnhanceTask& _qualityEnhanceCompleteEvent);
+
+                    /**
+                     * 判断参数 QualityEnhanceCompleteEvent 是否已赋值
+                     * @return QualityEnhanceCompleteEvent 是否已赋值
+                     * 
+                     */
+                    bool QualityEnhanceCompleteEventHasBeenSet() const;
+
                 private:
 
                     /**
@@ -960,6 +986,13 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     QualityInspectTask m_qualityInspectCompleteEvent;
                     bool m_qualityInspectCompleteEventHasBeenSet;
+
+                    /**
+                     * Remaster completion event, valid when the event type is QualityEnhanceComplete.
+Pay attention to: this field may return null, indicating that no valid value can be obtained
+                     */
+                    QualityEnhanceTask m_qualityEnhanceCompleteEvent;
+                    bool m_qualityEnhanceCompleteEventHasBeenSet;
 
                 };
             }
