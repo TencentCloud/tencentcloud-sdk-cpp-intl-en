@@ -27,8 +27,6 @@
 #include <tencentcloud/tiw/v20190919/model/ApplyTiwTrialResponse.h>
 #include <tencentcloud/tiw/v20190919/model/CreateApplicationRequest.h>
 #include <tencentcloud/tiw/v20190919/model/CreateApplicationResponse.h>
-#include <tencentcloud/tiw/v20190919/model/CreateOfflineRecordRequest.h>
-#include <tencentcloud/tiw/v20190919/model/CreateOfflineRecordResponse.h>
 #include <tencentcloud/tiw/v20190919/model/CreateSnapshotTaskRequest.h>
 #include <tencentcloud/tiw/v20190919/model/CreateSnapshotTaskResponse.h>
 #include <tencentcloud/tiw/v20190919/model/CreateTranscodeRequest.h>
@@ -45,10 +43,6 @@
 #include <tencentcloud/tiw/v20190919/model/DescribeBoardSDKLogResponse.h>
 #include <tencentcloud/tiw/v20190919/model/DescribeIMApplicationsRequest.h>
 #include <tencentcloud/tiw/v20190919/model/DescribeIMApplicationsResponse.h>
-#include <tencentcloud/tiw/v20190919/model/DescribeOfflineRecordRequest.h>
-#include <tencentcloud/tiw/v20190919/model/DescribeOfflineRecordResponse.h>
-#include <tencentcloud/tiw/v20190919/model/DescribeOfflineRecordCallbackRequest.h>
-#include <tencentcloud/tiw/v20190919/model/DescribeOfflineRecordCallbackResponse.h>
 #include <tencentcloud/tiw/v20190919/model/DescribeOnlineRecordRequest.h>
 #include <tencentcloud/tiw/v20190919/model/DescribeOnlineRecordResponse.h>
 #include <tencentcloud/tiw/v20190919/model/DescribeOnlineRecordCallbackRequest.h>
@@ -107,8 +101,6 @@
 #include <tencentcloud/tiw/v20190919/model/PauseOnlineRecordResponse.h>
 #include <tencentcloud/tiw/v20190919/model/ResumeOnlineRecordRequest.h>
 #include <tencentcloud/tiw/v20190919/model/ResumeOnlineRecordResponse.h>
-#include <tencentcloud/tiw/v20190919/model/SetOfflineRecordCallbackRequest.h>
-#include <tencentcloud/tiw/v20190919/model/SetOfflineRecordCallbackResponse.h>
 #include <tencentcloud/tiw/v20190919/model/SetOnlineRecordCallbackRequest.h>
 #include <tencentcloud/tiw/v20190919/model/SetOnlineRecordCallbackResponse.h>
 #include <tencentcloud/tiw/v20190919/model/SetOnlineRecordCallbackKeyRequest.h>
@@ -153,9 +145,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateApplicationResponse> CreateApplicationOutcome;
                 typedef std::future<CreateApplicationOutcome> CreateApplicationOutcomeCallable;
                 typedef std::function<void(const TiwClient*, const Model::CreateApplicationRequest&, CreateApplicationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateApplicationAsyncHandler;
-                typedef Outcome<Core::Error, Model::CreateOfflineRecordResponse> CreateOfflineRecordOutcome;
-                typedef std::future<CreateOfflineRecordOutcome> CreateOfflineRecordOutcomeCallable;
-                typedef std::function<void(const TiwClient*, const Model::CreateOfflineRecordRequest&, CreateOfflineRecordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateOfflineRecordAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateSnapshotTaskResponse> CreateSnapshotTaskOutcome;
                 typedef std::future<CreateSnapshotTaskOutcome> CreateSnapshotTaskOutcomeCallable;
                 typedef std::function<void(const TiwClient*, const Model::CreateSnapshotTaskRequest&, CreateSnapshotTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateSnapshotTaskAsyncHandler;
@@ -180,12 +169,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeIMApplicationsResponse> DescribeIMApplicationsOutcome;
                 typedef std::future<DescribeIMApplicationsOutcome> DescribeIMApplicationsOutcomeCallable;
                 typedef std::function<void(const TiwClient*, const Model::DescribeIMApplicationsRequest&, DescribeIMApplicationsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeIMApplicationsAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeOfflineRecordResponse> DescribeOfflineRecordOutcome;
-                typedef std::future<DescribeOfflineRecordOutcome> DescribeOfflineRecordOutcomeCallable;
-                typedef std::function<void(const TiwClient*, const Model::DescribeOfflineRecordRequest&, DescribeOfflineRecordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeOfflineRecordAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeOfflineRecordCallbackResponse> DescribeOfflineRecordCallbackOutcome;
-                typedef std::future<DescribeOfflineRecordCallbackOutcome> DescribeOfflineRecordCallbackOutcomeCallable;
-                typedef std::function<void(const TiwClient*, const Model::DescribeOfflineRecordCallbackRequest&, DescribeOfflineRecordCallbackOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeOfflineRecordCallbackAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeOnlineRecordResponse> DescribeOnlineRecordOutcome;
                 typedef std::future<DescribeOnlineRecordOutcome> DescribeOnlineRecordOutcomeCallable;
                 typedef std::function<void(const TiwClient*, const Model::DescribeOnlineRecordRequest&, DescribeOnlineRecordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeOnlineRecordAsyncHandler;
@@ -273,9 +256,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ResumeOnlineRecordResponse> ResumeOnlineRecordOutcome;
                 typedef std::future<ResumeOnlineRecordOutcome> ResumeOnlineRecordOutcomeCallable;
                 typedef std::function<void(const TiwClient*, const Model::ResumeOnlineRecordRequest&, ResumeOnlineRecordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResumeOnlineRecordAsyncHandler;
-                typedef Outcome<Core::Error, Model::SetOfflineRecordCallbackResponse> SetOfflineRecordCallbackOutcome;
-                typedef std::future<SetOfflineRecordCallbackOutcome> SetOfflineRecordCallbackOutcomeCallable;
-                typedef std::function<void(const TiwClient*, const Model::SetOfflineRecordCallbackRequest&, SetOfflineRecordCallbackOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SetOfflineRecordCallbackAsyncHandler;
                 typedef Outcome<Core::Error, Model::SetOnlineRecordCallbackResponse> SetOnlineRecordCallbackOutcome;
                 typedef std::future<SetOnlineRecordCallbackOutcome> SetOnlineRecordCallbackOutcomeCallable;
                 typedef std::function<void(const TiwClient*, const Model::SetOnlineRecordCallbackRequest&, SetOnlineRecordCallbackOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SetOnlineRecordCallbackAsyncHandler;
@@ -332,17 +312,6 @@ namespace TencentCloud
                 CreateApplicationOutcome CreateApplication(const Model::CreateApplicationRequest &request);
                 void CreateApplicationAsync(const Model::CreateApplicationRequest& request, const CreateApplicationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateApplicationOutcomeCallable CreateApplicationCallable(const Model::CreateApplicationRequest& request);
-
-                /**
-                 *课后录制服务已下线
-
-This API is used to create an offline recording task.
-                 * @param req CreateOfflineRecordRequest
-                 * @return CreateOfflineRecordOutcome
-                 */
-                CreateOfflineRecordOutcome CreateOfflineRecord(const Model::CreateOfflineRecordRequest &request);
-                void CreateOfflineRecordAsync(const Model::CreateOfflineRecordRequest& request, const CreateOfflineRecordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                CreateOfflineRecordOutcomeCallable CreateOfflineRecordCallable(const Model::CreateOfflineRecordRequest& request);
 
                 /**
                  *This API is used to create a whiteboard snapshot task. If a callback URL is provided, the whiteboard snapshot result is sent to the callback URL after the task is complete.
@@ -415,28 +384,6 @@ This API is used to create an offline recording task.
                 DescribeIMApplicationsOutcome DescribeIMApplications(const Model::DescribeIMApplicationsRequest &request);
                 void DescribeIMApplicationsAsync(const Model::DescribeIMApplicationsRequest& request, const DescribeIMApplicationsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeIMApplicationsOutcomeCallable DescribeIMApplicationsCallable(const Model::DescribeIMApplicationsRequest& request);
-
-                /**
-                 *课后录制服务已下线
-
-This API is used to query the information about an offline recording task, including the recording progress and recording result.
-                 * @param req DescribeOfflineRecordRequest
-                 * @return DescribeOfflineRecordOutcome
-                 */
-                DescribeOfflineRecordOutcome DescribeOfflineRecord(const Model::DescribeOfflineRecordRequest &request);
-                void DescribeOfflineRecordAsync(const Model::DescribeOfflineRecordRequest& request, const DescribeOfflineRecordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeOfflineRecordOutcomeCallable DescribeOfflineRecordCallable(const Model::DescribeOfflineRecordRequest& request);
-
-                /**
-                 *课后录制服务已下线
-
-This API is used to query the offline recording callback URL.
-                 * @param req DescribeOfflineRecordCallbackRequest
-                 * @return DescribeOfflineRecordCallbackOutcome
-                 */
-                DescribeOfflineRecordCallbackOutcome DescribeOfflineRecordCallback(const Model::DescribeOfflineRecordCallbackRequest &request);
-                void DescribeOfflineRecordCallbackAsync(const Model::DescribeOfflineRecordCallbackRequest& request, const DescribeOfflineRecordCallbackAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeOfflineRecordCallbackOutcomeCallable DescribeOfflineRecordCallbackCallable(const Model::DescribeOfflineRecordCallbackRequest& request);
 
                 /**
                  *This API is used to query the status and result of a real-time recording task.
@@ -707,18 +654,7 @@ This API is used to query the offline recording callback URL.
                 ResumeOnlineRecordOutcomeCallable ResumeOnlineRecordCallable(const Model::ResumeOnlineRecordRequest& request);
 
                 /**
-                 *课后录制服务已下线
-
-This API is used to set the offline recording callback URL.
-                 * @param req SetOfflineRecordCallbackRequest
-                 * @return SetOfflineRecordCallbackOutcome
-                 */
-                SetOfflineRecordCallbackOutcome SetOfflineRecordCallback(const Model::SetOfflineRecordCallbackRequest &request);
-                void SetOfflineRecordCallbackAsync(const Model::SetOfflineRecordCallbackRequest& request, const SetOfflineRecordCallbackAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                SetOfflineRecordCallbackOutcomeCallable SetOfflineRecordCallbackCallable(const Model::SetOfflineRecordCallbackRequest& request);
-
-                /**
-                 *This API is used to set the real-time recording callback address. For the callback format, please [see here](https://intl.cloud.tencent.com/document/product/1137/40258?from_cn_redirect=1).
+                 *This API is used to set the real-time recording callback address. For the callback format, please [see here](https://www.tencentcloud.com/document/product/1176/55569).
                  * @param req SetOnlineRecordCallbackRequest
                  * @return SetOnlineRecordCallbackOutcome
                  */
@@ -727,7 +663,7 @@ This API is used to set the offline recording callback URL.
                 SetOnlineRecordCallbackOutcomeCallable SetOnlineRecordCallbackCallable(const Model::SetOnlineRecordCallbackRequest& request);
 
                 /**
-                 *This API is used to set the callback authentication key for real-time recording. For more information, see [Event Notification](https://intl.cloud.tencent.com/document/product/1137/40257?from_cn_redirect=1).
+                 *This API is used to set the callback authentication key for real-time recording. For more information, see [Event Notification](https://www.tencentcloud.com/document/product/1176/55569).
                  * @param req SetOnlineRecordCallbackKeyRequest
                  * @return SetOnlineRecordCallbackKeyOutcome
                  */
@@ -736,7 +672,7 @@ This API is used to set the offline recording callback URL.
                 SetOnlineRecordCallbackKeyOutcomeCallable SetOnlineRecordCallbackKeyCallable(const Model::SetOnlineRecordCallbackKeyRequest& request);
 
                 /**
-                 *This API is used to set the callback address for document transcoding. For the callback format, please [see here](https://intl.cloud.tencent.com/document/product/1137/40260?from_cn_redirect=1).
+                 *This API is used to set the callback address for document transcoding. For the callback format, please [see here](https://www.tencentcloud.com/document/product/1176/55569).
                  * @param req SetTranscodeCallbackRequest
                  * @return SetTranscodeCallbackOutcome
                  */
@@ -745,7 +681,7 @@ This API is used to set the offline recording callback URL.
                 SetTranscodeCallbackOutcomeCallable SetTranscodeCallbackCallable(const Model::SetTranscodeCallbackRequest& request);
 
                 /**
-                 *This API is used to set the callback authentication key for document transcoding. For more information, see [Event Notification](https://intl.cloud.tencent.com/document/product/1137/40257?from_cn_redirect=1).
+                 *This API is used to set the callback authentication key for document transcoding. For more information, see [Event Notification](https://www.tencentcloud.com/document/product/1176/55569).
                  * @param req SetTranscodeCallbackKeyRequest
                  * @return SetTranscodeCallbackKeyOutcome
                  */
@@ -772,7 +708,7 @@ This API is used to set the offline recording callback URL.
                 SetVideoGenerationTaskCallbackKeyOutcomeCallable SetVideoGenerationTaskCallbackKeyCallable(const Model::SetVideoGenerationTaskCallbackKeyRequest& request);
 
                 /**
-                 *This API is used to set the whiteboard push callback URL. For more information, see [Event Notification](https://intl.cloud.tencent.com/document/product/1137/40257?from_cn_redirect=1).
+                 *This API is used to set the whiteboard push callback URL. For more information, see [Event Notification](https://www.tencentcloud.com/document/product/1176/55569).
                  * @param req SetWhiteboardPushCallbackRequest
                  * @return SetWhiteboardPushCallbackOutcome
                  */
@@ -781,7 +717,7 @@ This API is used to set the offline recording callback URL.
                 SetWhiteboardPushCallbackOutcomeCallable SetWhiteboardPushCallbackCallable(const Model::SetWhiteboardPushCallbackRequest& request);
 
                 /**
-                 *This API is used to set the callback authentication key for whiteboard push. For more information, see [Event Notification](https://intl.cloud.tencent.com/document/product/1137/40257?from_cn_redirect=1).
+                 *This API is used to set the callback authentication key for whiteboard push. For more information, see [Event Notification](https://www.tencentcloud.com/document/product/1176/55569).
                  * @param req SetWhiteboardPushCallbackKeyRequest
                  * @return SetWhiteboardPushCallbackKeyOutcome
                  */

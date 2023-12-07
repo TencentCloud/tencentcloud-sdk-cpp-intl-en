@@ -65,18 +65,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Callback address for the document transcoding progress. If an empty string is passed in, the existing callback address will be deleted. The callback address only supports the HTTP or HTTPS protocol, so the callback address must start with `http://` or `https://`.
-For more information about the callback format, please [see here](https://intl.cloud.tencent.com/document/product/1137/40260?from_cn_redirect=1).
+For more information about the callback format, please [see here](https://www.tencentcloud.com/document/product/1176/55569).
                      * @return Callback Callback address for the document transcoding progress. If an empty string is passed in, the existing callback address will be deleted. The callback address only supports the HTTP or HTTPS protocol, so the callback address must start with `http://` or `https://`.
-For more information about the callback format, please [see here](https://intl.cloud.tencent.com/document/product/1137/40260?from_cn_redirect=1).
+For more information about the callback format, please [see here](https://www.tencentcloud.com/document/product/1176/55569).
                      * 
                      */
                     std::string GetCallback() const;
 
                     /**
                      * 设置Callback address for the document transcoding progress. If an empty string is passed in, the existing callback address will be deleted. The callback address only supports the HTTP or HTTPS protocol, so the callback address must start with `http://` or `https://`.
-For more information about the callback format, please [see here](https://intl.cloud.tencent.com/document/product/1137/40260?from_cn_redirect=1).
+For more information about the callback format, please [see here](https://www.tencentcloud.com/document/product/1176/55569).
                      * @param _callback Callback address for the document transcoding progress. If an empty string is passed in, the existing callback address will be deleted. The callback address only supports the HTTP or HTTPS protocol, so the callback address must start with `http://` or `https://`.
-For more information about the callback format, please [see here](https://intl.cloud.tencent.com/document/product/1137/40260?from_cn_redirect=1).
+For more information about the callback format, please [see here](https://www.tencentcloud.com/document/product/1176/55569).
                      * 
                      */
                     void SetCallback(const std::string& _callback);
@@ -98,7 +98,7 @@ For more information about the callback format, please [see here](https://intl.c
 
                     /**
                      * Callback address for the document transcoding progress. If an empty string is passed in, the existing callback address will be deleted. The callback address only supports the HTTP or HTTPS protocol, so the callback address must start with `http://` or `https://`.
-For more information about the callback format, please [see here](https://intl.cloud.tencent.com/document/product/1137/40260?from_cn_redirect=1).
+For more information about the callback format, please [see here](https://www.tencentcloud.com/document/product/1176/55569).
                      */
                     std::string m_callback;
                     bool m_callbackHasBeenSet;

@@ -19,7 +19,6 @@ set(tiw_public_header
   )
 
 set(tiw_public_header_model
-  include/tencentcloud/tiw/v20190919/model/DescribeOfflineRecordCallbackRequest.h
   include/tencentcloud/tiw/v20190919/model/Canvas.h
   include/tencentcloud/tiw/v20190919/model/StopOnlineRecordResponse.h
   include/tencentcloud/tiw/v20190919/model/SetVideoGenerationTaskCallbackKeyRequest.h
@@ -31,7 +30,6 @@ set(tiw_public_header_model
   include/tencentcloud/tiw/v20190919/model/DescribeWhiteboardApplicationConfigResponse.h
   include/tencentcloud/tiw/v20190919/model/WhiteboardPushResult.h
   include/tencentcloud/tiw/v20190919/model/CreateSnapshotTaskResponse.h
-  include/tencentcloud/tiw/v20190919/model/DescribeOfflineRecordResponse.h
   include/tencentcloud/tiw/v20190919/model/ModifyApplicationResponse.h
   include/tencentcloud/tiw/v20190919/model/CreateTranscodeResponse.h
   include/tencentcloud/tiw/v20190919/model/DescribeUserResourcesResponse.h
@@ -65,8 +63,6 @@ set(tiw_public_header_model
   include/tencentcloud/tiw/v20190919/model/DescribeApplicationInfosRequest.h
   include/tencentcloud/tiw/v20190919/model/DescribeApplicationUsageRequest.h
   include/tencentcloud/tiw/v20190919/model/SnapshotResult.h
-  include/tencentcloud/tiw/v20190919/model/DescribeOfflineRecordCallbackResponse.h
-  include/tencentcloud/tiw/v20190919/model/CreateOfflineRecordResponse.h
   include/tencentcloud/tiw/v20190919/model/SetVideoGenerationTaskCallbackKeyResponse.h
   include/tencentcloud/tiw/v20190919/model/DescribeVideoGenerationTaskResponse.h
   include/tencentcloud/tiw/v20190919/model/DataItem.h
@@ -79,7 +75,7 @@ set(tiw_public_header_model
   include/tencentcloud/tiw/v20190919/model/ApplyTiwTrialRequest.h
   include/tencentcloud/tiw/v20190919/model/DescribeTranscodeCallbackResponse.h
   include/tencentcloud/tiw/v20190919/model/DescribeUserListResponse.h
-  include/tencentcloud/tiw/v20190919/model/ModifyAutoRenewFlagResponse.h
+  include/tencentcloud/tiw/v20190919/model/ModifyWhiteboardBucketConfigResponse.h
   include/tencentcloud/tiw/v20190919/model/DescribeTIWDailyUsageRequest.h
   include/tencentcloud/tiw/v20190919/model/DescribeWhiteboardBucketConfigResponse.h
   include/tencentcloud/tiw/v20190919/model/MixStream.h
@@ -90,7 +86,6 @@ set(tiw_public_header_model
   include/tencentcloud/tiw/v20190919/model/AuthParam.h
   include/tencentcloud/tiw/v20190919/model/Detail.h
   include/tencentcloud/tiw/v20190919/model/StartWhiteboardPushRequest.h
-  include/tencentcloud/tiw/v20190919/model/CreateOfflineRecordRequest.h
   include/tencentcloud/tiw/v20190919/model/UserListItem.h
   include/tencentcloud/tiw/v20190919/model/DescribeVideoGenerationTaskCallbackResponse.h
   include/tencentcloud/tiw/v20190919/model/WhiteboardPushTaskSearchResult.h
@@ -103,7 +98,6 @@ set(tiw_public_header_model
   include/tencentcloud/tiw/v20190919/model/RecordTaskSearchResult.h
   include/tencentcloud/tiw/v20190919/model/SetTranscodeCallbackResponse.h
   include/tencentcloud/tiw/v20190919/model/StopOnlineRecordRequest.h
-  include/tencentcloud/tiw/v20190919/model/SetOfflineRecordCallbackRequest.h
   include/tencentcloud/tiw/v20190919/model/SetVideoGenerationTaskCallbackResponse.h
   include/tencentcloud/tiw/v20190919/model/ApplicationItem.h
   include/tencentcloud/tiw/v20190919/model/ModifyWhiteboardApplicationConfigResponse.h
@@ -117,13 +111,12 @@ set(tiw_public_header_model
   include/tencentcloud/tiw/v20190919/model/CreateVideoGenerationTaskResponse.h
   include/tencentcloud/tiw/v20190919/model/Whiteboard.h
   include/tencentcloud/tiw/v20190919/model/PauseOnlineRecordResponse.h
-  include/tencentcloud/tiw/v20190919/model/ModifyWhiteboardBucketConfigResponse.h
+  include/tencentcloud/tiw/v20190919/model/ModifyAutoRenewFlagResponse.h
   include/tencentcloud/tiw/v20190919/model/CreateSnapshotTaskRequest.h
   include/tencentcloud/tiw/v20190919/model/DescribeTranscodeResponse.h
   include/tencentcloud/tiw/v20190919/model/SetOnlineRecordCallbackKeyRequest.h
   include/tencentcloud/tiw/v20190919/model/ModifyApplicationRequest.h
   include/tencentcloud/tiw/v20190919/model/DescribeOnlineRecordCallbackResponse.h
-  include/tencentcloud/tiw/v20190919/model/SetOfflineRecordCallbackResponse.h
   include/tencentcloud/tiw/v20190919/model/RecordControl.h
   include/tencentcloud/tiw/v20190919/model/DescribeQualityMetricsResponse.h
   include/tencentcloud/tiw/v20190919/model/TranscodeTaskResult.h
@@ -160,13 +153,11 @@ set(tiw_public_header_model
   include/tencentcloud/tiw/v20190919/model/TranscodeTaskSearchResult.h
   include/tencentcloud/tiw/v20190919/model/CreateApplicationResponse.h
   include/tencentcloud/tiw/v20190919/model/StopWhiteboardPushRequest.h
-  include/tencentcloud/tiw/v20190919/model/DescribeOfflineRecordRequest.h
   include/tencentcloud/tiw/v20190919/model/DescribeRecordSearchRequest.h
   )
 
 set(tiw_src
   src/v20190919/TiwClient.cpp
-  src/v20190919/model/DescribeOfflineRecordCallbackRequest.cpp
   src/v20190919/model/Canvas.cpp
   src/v20190919/model/StopOnlineRecordResponse.cpp
   src/v20190919/model/SetVideoGenerationTaskCallbackKeyRequest.cpp
@@ -178,7 +169,6 @@ set(tiw_src
   src/v20190919/model/DescribeWhiteboardApplicationConfigResponse.cpp
   src/v20190919/model/WhiteboardPushResult.cpp
   src/v20190919/model/CreateSnapshotTaskResponse.cpp
-  src/v20190919/model/DescribeOfflineRecordResponse.cpp
   src/v20190919/model/ModifyApplicationResponse.cpp
   src/v20190919/model/CreateTranscodeResponse.cpp
   src/v20190919/model/DescribeUserResourcesResponse.cpp
@@ -212,8 +202,6 @@ set(tiw_src
   src/v20190919/model/DescribeApplicationInfosRequest.cpp
   src/v20190919/model/DescribeApplicationUsageRequest.cpp
   src/v20190919/model/SnapshotResult.cpp
-  src/v20190919/model/DescribeOfflineRecordCallbackResponse.cpp
-  src/v20190919/model/CreateOfflineRecordResponse.cpp
   src/v20190919/model/SetVideoGenerationTaskCallbackKeyResponse.cpp
   src/v20190919/model/DescribeVideoGenerationTaskResponse.cpp
   src/v20190919/model/DataItem.cpp
@@ -226,7 +214,7 @@ set(tiw_src
   src/v20190919/model/ApplyTiwTrialRequest.cpp
   src/v20190919/model/DescribeTranscodeCallbackResponse.cpp
   src/v20190919/model/DescribeUserListResponse.cpp
-  src/v20190919/model/ModifyAutoRenewFlagResponse.cpp
+  src/v20190919/model/ModifyWhiteboardBucketConfigResponse.cpp
   src/v20190919/model/DescribeTIWDailyUsageRequest.cpp
   src/v20190919/model/DescribeWhiteboardBucketConfigResponse.cpp
   src/v20190919/model/MixStream.cpp
@@ -237,7 +225,6 @@ set(tiw_src
   src/v20190919/model/AuthParam.cpp
   src/v20190919/model/Detail.cpp
   src/v20190919/model/StartWhiteboardPushRequest.cpp
-  src/v20190919/model/CreateOfflineRecordRequest.cpp
   src/v20190919/model/UserListItem.cpp
   src/v20190919/model/DescribeVideoGenerationTaskCallbackResponse.cpp
   src/v20190919/model/WhiteboardPushTaskSearchResult.cpp
@@ -250,7 +237,6 @@ set(tiw_src
   src/v20190919/model/RecordTaskSearchResult.cpp
   src/v20190919/model/SetTranscodeCallbackResponse.cpp
   src/v20190919/model/StopOnlineRecordRequest.cpp
-  src/v20190919/model/SetOfflineRecordCallbackRequest.cpp
   src/v20190919/model/SetVideoGenerationTaskCallbackResponse.cpp
   src/v20190919/model/ApplicationItem.cpp
   src/v20190919/model/ModifyWhiteboardApplicationConfigResponse.cpp
@@ -264,13 +250,12 @@ set(tiw_src
   src/v20190919/model/CreateVideoGenerationTaskResponse.cpp
   src/v20190919/model/Whiteboard.cpp
   src/v20190919/model/PauseOnlineRecordResponse.cpp
-  src/v20190919/model/ModifyWhiteboardBucketConfigResponse.cpp
+  src/v20190919/model/ModifyAutoRenewFlagResponse.cpp
   src/v20190919/model/CreateSnapshotTaskRequest.cpp
   src/v20190919/model/DescribeTranscodeResponse.cpp
   src/v20190919/model/SetOnlineRecordCallbackKeyRequest.cpp
   src/v20190919/model/ModifyApplicationRequest.cpp
   src/v20190919/model/DescribeOnlineRecordCallbackResponse.cpp
-  src/v20190919/model/SetOfflineRecordCallbackResponse.cpp
   src/v20190919/model/RecordControl.cpp
   src/v20190919/model/DescribeQualityMetricsResponse.cpp
   src/v20190919/model/TranscodeTaskResult.cpp
@@ -307,7 +292,6 @@ set(tiw_src
   src/v20190919/model/TranscodeTaskSearchResult.cpp
   src/v20190919/model/CreateApplicationResponse.cpp
   src/v20190919/model/StopWhiteboardPushRequest.cpp
-  src/v20190919/model/DescribeOfflineRecordRequest.cpp
   src/v20190919/model/DescribeRecordSearchRequest.cpp
   )
 
