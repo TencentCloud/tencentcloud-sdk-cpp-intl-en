@@ -47,15 +47,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to automatically redirect to RedirectUrl after successful verification. Default value: false.
-                     * @return AutoSkip Whether to automatically redirect to RedirectUrl after successful verification. Default value: false.
+                     * 获取When the verification passed, whether to skip the result page and automatically jump to RedirectURL. The default value is false.
+Example value: false
+                     * @return AutoSkip When the verification passed, whether to skip the result page and automatically jump to RedirectURL. The default value is false.
+Example value: false
                      * 
                      */
                     bool GetAutoSkip() const;
 
                     /**
-                     * 设置Whether to automatically redirect to RedirectUrl after successful verification. Default value: false.
-                     * @param _autoSkip Whether to automatically redirect to RedirectUrl after successful verification. Default value: false.
+                     * 设置When the verification passed, whether to skip the result page and automatically jump to RedirectURL. The default value is false.
+Example value: false
+                     * @param _autoSkip When the verification passed, whether to skip the result page and automatically jump to RedirectURL. The default value is false.
+Example value: false
                      * 
                      */
                     void SetAutoSkip(const bool& _autoSkip);
@@ -67,13 +71,143 @@ namespace TencentCloud
                      */
                     bool AutoSkipHasBeenSet() const;
 
+                    /**
+                     * 获取Detection mode, parameter values are as follows:
+1: OCR+living detection & face comparison;
+2: Living detection & face comparison;
+3: Living detection;
+The default value is 2.
+Example value: 3
+                     * @return CheckMode Detection mode, parameter values are as follows:
+1: OCR+living detection & face comparison;
+2: Living detection & face comparison;
+3: Living detection;
+The default value is 2.
+Example value: 3
+                     * 
+                     */
+                    int64_t GetCheckMode() const;
+
+                    /**
+                     * 设置Detection mode, parameter values are as follows:
+1: OCR+living detection & face comparison;
+2: Living detection & face comparison;
+3: Living detection;
+The default value is 2.
+Example value: 3
+                     * @param _checkMode Detection mode, parameter values are as follows:
+1: OCR+living detection & face comparison;
+2: Living detection & face comparison;
+3: Living detection;
+The default value is 2.
+Example value: 3
+                     * 
+                     */
+                    void SetCheckMode(const int64_t& _checkMode);
+
+                    /**
+                     * 判断参数 CheckMode 是否已赋值
+                     * @return CheckMode 是否已赋值
+                     * 
+                     */
+                    bool CheckModeHasBeenSet() const;
+
+                    /**
+                     * 获取The type of lisence used for verification. The following types are supported.
+1.HKIDCard: Hong Kong (China) ID card
+2.MLIDCard: Malaysia ID card
+3.IndonesiaIDCard: Indonesia ID card
+4.PhilippinesVoteID: Philippines VoteID card
+5.PhilippinesDrivingLicense: Philippines driving license
+6.PhilippinesTinID: Philippines TinID card
+7.PhilippinesSSSID: Philippines SSSID card
+8.PhilippinesUMID: Philippines UMID card
+9.InternationalIDPassport: ID cards of Hong Kong, Macao and Taiwan (China), and international passport.
+Example: HKIDCard
+                     * @return IDCardType The type of lisence used for verification. The following types are supported.
+1.HKIDCard: Hong Kong (China) ID card
+2.MLIDCard: Malaysia ID card
+3.IndonesiaIDCard: Indonesia ID card
+4.PhilippinesVoteID: Philippines VoteID card
+5.PhilippinesDrivingLicense: Philippines driving license
+6.PhilippinesTinID: Philippines TinID card
+7.PhilippinesSSSID: Philippines SSSID card
+8.PhilippinesUMID: Philippines UMID card
+9.InternationalIDPassport: ID cards of Hong Kong, Macao and Taiwan (China), and international passport.
+Example: HKIDCard
+                     * 
+                     */
+                    std::string GetIDCardType() const;
+
+                    /**
+                     * 设置The type of lisence used for verification. The following types are supported.
+1.HKIDCard: Hong Kong (China) ID card
+2.MLIDCard: Malaysia ID card
+3.IndonesiaIDCard: Indonesia ID card
+4.PhilippinesVoteID: Philippines VoteID card
+5.PhilippinesDrivingLicense: Philippines driving license
+6.PhilippinesTinID: Philippines TinID card
+7.PhilippinesSSSID: Philippines SSSID card
+8.PhilippinesUMID: Philippines UMID card
+9.InternationalIDPassport: ID cards of Hong Kong, Macao and Taiwan (China), and international passport.
+Example: HKIDCard
+                     * @param _iDCardType The type of lisence used for verification. The following types are supported.
+1.HKIDCard: Hong Kong (China) ID card
+2.MLIDCard: Malaysia ID card
+3.IndonesiaIDCard: Indonesia ID card
+4.PhilippinesVoteID: Philippines VoteID card
+5.PhilippinesDrivingLicense: Philippines driving license
+6.PhilippinesTinID: Philippines TinID card
+7.PhilippinesSSSID: Philippines SSSID card
+8.PhilippinesUMID: Philippines UMID card
+9.InternationalIDPassport: ID cards of Hong Kong, Macao and Taiwan (China), and international passport.
+Example: HKIDCard
+                     * 
+                     */
+                    void SetIDCardType(const std::string& _iDCardType);
+
+                    /**
+                     * 判断参数 IDCardType 是否已赋值
+                     * @return IDCardType 是否已赋值
+                     * 
+                     */
+                    bool IDCardTypeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Whether to automatically redirect to RedirectUrl after successful verification. Default value: false.
+                     * When the verification passed, whether to skip the result page and automatically jump to RedirectURL. The default value is false.
+Example value: false
                      */
                     bool m_autoSkip;
                     bool m_autoSkipHasBeenSet;
+
+                    /**
+                     * Detection mode, parameter values are as follows:
+1: OCR+living detection & face comparison;
+2: Living detection & face comparison;
+3: Living detection;
+The default value is 2.
+Example value: 3
+                     */
+                    int64_t m_checkMode;
+                    bool m_checkModeHasBeenSet;
+
+                    /**
+                     * The type of lisence used for verification. The following types are supported.
+1.HKIDCard: Hong Kong (China) ID card
+2.MLIDCard: Malaysia ID card
+3.IndonesiaIDCard: Indonesia ID card
+4.PhilippinesVoteID: Philippines VoteID card
+5.PhilippinesDrivingLicense: Philippines driving license
+6.PhilippinesTinID: Philippines TinID card
+7.PhilippinesSSSID: Philippines SSSID card
+8.PhilippinesUMID: Philippines UMID card
+9.InternationalIDPassport: ID cards of Hong Kong, Macao and Taiwan (China), and international passport.
+Example: HKIDCard
+                     */
+                    std::string m_iDCardType;
+                    bool m_iDCardTypeHasBeenSet;
 
                 };
             }

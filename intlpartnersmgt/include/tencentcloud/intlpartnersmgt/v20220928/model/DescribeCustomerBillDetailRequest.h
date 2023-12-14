@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool MonthHasBeenSet() const;
 
                     /**
-                     * 获取Page parameter: Indicates the number of entries per page. The maximum value is 200.
-                     * @return PageSize Page parameter: Indicates the number of entries per page. The maximum value is 200.
+                     * 获取Page parameter: Indicates the number of entries per page. Value range: [1, 200]
+                     * @return PageSize Page parameter: Indicates the number of entries per page. Value range: [1, 200]
                      * 
                      */
                     int64_t GetPageSize() const;
 
                     /**
-                     * 设置Page parameter: Indicates the number of entries per page. The maximum value is 200.
-                     * @param _pageSize Page parameter: Indicates the number of entries per page. The maximum value is 200.
+                     * 设置Page parameter: Indicates the number of entries per page. Value range: [1, 200]
+                     * @param _pageSize Page parameter: Indicates the number of entries per page. Value range: [1, 200]
                      * 
                      */
                     void SetPageSize(const int64_t& _pageSize);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool PageSizeHasBeenSet() const;
 
                     /**
-                     * 获取A pagination parameter that specifies the current page number
-                     * @return Page A pagination parameter that specifies the current page number
+                     * 获取Page parameter: Indicates the current page number. The minimum value is 1.
+                     * @return Page Page parameter: Indicates the current page number. The minimum value is 1.
                      * 
                      */
                     int64_t GetPage() const;
 
                     /**
-                     * 设置A pagination parameter that specifies the current page number
-                     * @param _page A pagination parameter that specifies the current page number
+                     * 设置Page parameter: Indicates the current page number. The minimum value is 1.
+                     * @param _page Page parameter: Indicates the current page number. The minimum value is 1.
                      * 
                      */
                     void SetPage(const int64_t& _page);
@@ -324,13 +324,13 @@ namespace TencentCloud
                     bool m_monthHasBeenSet;
 
                     /**
-                     * Page parameter: Indicates the number of entries per page. The maximum value is 200.
+                     * Page parameter: Indicates the number of entries per page. Value range: [1, 200]
                      */
                     int64_t m_pageSize;
                     bool m_pageSizeHasBeenSet;
 
                     /**
-                     * A pagination parameter that specifies the current page number
+                     * Page parameter: Indicates the current page number. The minimum value is 1.
                      */
                     int64_t m_page;
                     bool m_pageHasBeenSet;

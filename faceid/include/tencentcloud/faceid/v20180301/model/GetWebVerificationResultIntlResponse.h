@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/faceid/v20180301/model/VerificationDetail.h>
+#include <tencentcloud/faceid/v20180301/model/OCRResult.h>
 
 
 namespace TencentCloud
@@ -126,6 +127,36 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                      */
                     bool BestFrameBase64HasBeenSet() const;
 
+                    /**
+                     * 获取Card recognize result.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return OCRResult Card recognize result.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<OCRResult> GetOCRResult() const;
+
+                    /**
+                     * 判断参数 OCRResult 是否已赋值
+                     * @return OCRResult 是否已赋值
+                     * 
+                     */
+                    bool OCRResultHasBeenSet() const;
+
+                    /**
+                     * 获取The passthrough parameter of the business, max 1,000 characters, which will be returned in GetWebVerificationResultIntl.
+                     * @return Extra The passthrough parameter of the business, max 1,000 characters, which will be returned in GetWebVerificationResultIntl.
+                     * 
+                     */
+                    std::string GetExtra() const;
+
+                    /**
+                     * 判断参数 Extra 是否已赋值
+                     * @return Extra 是否已赋值
+                     * 
+                     */
+                    bool ExtraHasBeenSet() const;
+
                 private:
 
                     /**
@@ -163,6 +194,19 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                      */
                     std::string m_bestFrameBase64;
                     bool m_bestFrameBase64HasBeenSet;
+
+                    /**
+                     * Card recognize result.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<OCRResult> m_oCRResult;
+                    bool m_oCRResultHasBeenSet;
+
+                    /**
+                     * The passthrough parameter of the business, max 1,000 characters, which will be returned in GetWebVerificationResultIntl.
+                     */
+                    std::string m_extra;
+                    bool m_extraHasBeenSet;
 
                 };
             }

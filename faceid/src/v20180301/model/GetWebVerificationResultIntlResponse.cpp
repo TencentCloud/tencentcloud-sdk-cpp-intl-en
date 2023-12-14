@@ -28,7 +28,9 @@ GetWebVerificationResultIntlResponse::GetWebVerificationResultIntlResponse() :
     m_errorMsgHasBeenSet(false),
     m_verificationDetailListHasBeenSet(false),
     m_videoBase64HasBeenSet(false),
-    m_bestFrameBase64HasBeenSet(false)
+    m_bestFrameBase64HasBeenSet(false),
+    m_oCRResultHasBeenSet(false),
+    m_extraHasBeenSet(false)
 {
 }
 
@@ -126,6 +128,36 @@ CoreInternalOutcome GetWebVerificationResultIntlResponse::Deserialize(const stri
         m_bestFrameBase64HasBeenSet = true;
     }
 
+    if (rsp.HasMember("OCRResult") && !rsp["OCRResult"].IsNull())
+    {
+        if (!rsp["OCRResult"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `OCRResult` is not array type"));
+
+        const rapidjson::Value &tmpValue = rsp["OCRResult"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            OCRResult item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_oCRResult.push_back(item);
+        }
+        m_oCRResultHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("Extra") && !rsp["Extra"].IsNull())
+    {
+        if (!rsp["Extra"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Extra` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_extra = string(rsp["Extra"].GetString());
+        m_extraHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -181,6 +213,29 @@ string GetWebVerificationResultIntlResponse::ToJsonString() const
         string key = "BestFrameBase64";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_bestFrameBase64.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_oCRResultHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OCRResult";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_oCRResult.begin(); itr != m_oCRResult.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_extraHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Extra";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_extra.c_str(), allocator).Move(), allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -243,6 +298,26 @@ string GetWebVerificationResultIntlResponse::GetBestFrameBase64() const
 bool GetWebVerificationResultIntlResponse::BestFrameBase64HasBeenSet() const
 {
     return m_bestFrameBase64HasBeenSet;
+}
+
+vector<OCRResult> GetWebVerificationResultIntlResponse::GetOCRResult() const
+{
+    return m_oCRResult;
+}
+
+bool GetWebVerificationResultIntlResponse::OCRResultHasBeenSet() const
+{
+    return m_oCRResultHasBeenSet;
+}
+
+string GetWebVerificationResultIntlResponse::GetExtra() const
+{
+    return m_extra;
+}
+
+bool GetWebVerificationResultIntlResponse::ExtraHasBeenSet() const
+{
+    return m_extraHasBeenSet;
 }
 
 
