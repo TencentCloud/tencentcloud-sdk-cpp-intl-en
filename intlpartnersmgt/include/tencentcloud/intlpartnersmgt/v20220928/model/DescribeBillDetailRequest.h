@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The queried month in u200dthe format of “YYYY-MM”, such as 2023-01.
-                     * @return Month The queried month in u200dthe format of “YYYY-MM”, such as 2023-01.
+                     * 获取The queried month in the format of “YYYY-MM”, such as 2023-01.
+                     * @return Month The queried month in the format of “YYYY-MM”, such as 2023-01.
                      * 
                      */
                     std::string GetMonth() const;
 
                     /**
-                     * 设置The queried month in u200dthe format of “YYYY-MM”, such as 2023-01.
-                     * @param _month The queried month in u200dthe format of “YYYY-MM”, such as 2023-01.
+                     * 设置The queried month in the format of “YYYY-MM”, such as 2023-01.
+                     * @param _month The queried month in the format of “YYYY-MM”, such as 2023-01.
                      * 
                      */
                     void SetMonth(const std::string& _month);
@@ -150,7 +150,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The queried month in u200dthe format of “YYYY-MM”, such as 2023-01.
+                     * The queried month in the format of “YYYY-MM”, such as 2023-01.
                      */
                     std::string m_month;
                     bool m_monthHasBeenSet;
