@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Page size. The default value is 0.
-                     * @return Limit Page size. The default value is 0.
+                     * 获取Number of entries per page. Default: 15; maximum: 1,000.
+                     * @return Limit Number of entries per page. Default: 15; maximum: 1,000.
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Page size. The default value is 0.
-                     * @param _limit Page size. The default value is 0.
+                     * 设置Number of entries per page. Default: 15; maximum: 1,000.
+                     * @param _limit Number of entries per page. Default: 15; maximum: 1,000.
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -126,6 +126,27 @@ namespace TencentCloud
                      */
                     bool ShowProjectHasBeenSet() const;
 
+                    /**
+                     * 获取Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.
+                     * @return Category Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.
+                     * 
+                     */
+                    std::string GetCategory() const;
+
+                    /**
+                     * 设置Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.
+                     * @param _category Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.
+                     * 
+                     */
+                    void SetCategory(const std::string& _category);
+
+                    /**
+                     * 判断参数 Category 是否已赋值
+                     * @return Category 是否已赋值
+                     * 
+                     */
+                    bool CategoryHasBeenSet() const;
+
                 private:
 
                     /**
@@ -141,7 +162,7 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Page size. The default value is 0.
+                     * Number of entries per page. Default: 15; maximum: 1,000.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
@@ -151,6 +172,12 @@ namespace TencentCloud
                      */
                     uint64_t m_showProject;
                     bool m_showProjectHasBeenSet;
+
+                    /**
+                     * Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.
+                     */
+                    std::string m_category;
+                    bool m_categoryHasBeenSet;
 
                 };
             }

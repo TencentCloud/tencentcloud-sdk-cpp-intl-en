@@ -126,6 +126,27 @@ namespace TencentCloud
                      */
                     bool LimitHasBeenSet() const;
 
+                    /**
+                     * 获取Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.
+                     * @return Category Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.
+                     * 
+                     */
+                    std::string GetCategory() const;
+
+                    /**
+                     * 设置Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.
+                     * @param _category Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.
+                     * 
+                     */
+                    void SetCategory(const std::string& _category);
+
+                    /**
+                     * 判断参数 Category 是否已赋值
+                     * @return Category 是否已赋值
+                     * 
+                     */
+                    bool CategoryHasBeenSet() const;
+
                 private:
 
                     /**
@@ -151,6 +172,12 @@ namespace TencentCloud
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
+
+                    /**
+                     * Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.
+                     */
+                    std::string m_category;
+                    bool m_categoryHasBeenSet;
 
                 };
             }

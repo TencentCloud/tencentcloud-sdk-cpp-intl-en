@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool ResourceRegionHasBeenSet() const;
 
                     /**
-                     * 获取Unique resource ID
-                     * @return ResourceIds Unique resource ID
+                     * 获取List of unique resource IDs, which can contain no more than 20 IDs.
+                     * @return ResourceIds List of unique resource IDs, which can contain no more than 20 IDs.
                      * 
                      */
                     std::vector<std::string> GetResourceIds() const;
 
                     /**
-                     * 设置Unique resource ID
-                     * @param _resourceIds Unique resource ID
+                     * 设置List of unique resource IDs, which can contain no more than 20 IDs.
+                     * @param _resourceIds List of unique resource IDs, which can contain no more than 20 IDs.
                      * 
                      */
                     void SetResourceIds(const std::vector<std::string>& _resourceIds);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool ResourceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Resource tag key
-                     * @return TagKeys Resource tag key
+                     * 获取List of resource tag keys, which can contain no more than 20 keys.
+                     * @return TagKeys List of resource tag keys, which can contain no more than 20 keys.
                      * 
                      */
                     std::vector<std::string> GetTagKeys() const;
 
                     /**
-                     * 设置Resource tag key
-                     * @param _tagKeys Resource tag key
+                     * 设置List of resource tag keys, which can contain no more than 20 keys.
+                     * @param _tagKeys List of resource tag keys, which can contain no more than 20 keys.
                      * 
                      */
                     void SetTagKeys(const std::vector<std::string>& _tagKeys);
@@ -210,13 +210,13 @@ namespace TencentCloud
                     bool m_resourceRegionHasBeenSet;
 
                     /**
-                     * Unique resource ID
+                     * List of unique resource IDs, which can contain no more than 20 IDs.
                      */
                     std::vector<std::string> m_resourceIds;
                     bool m_resourceIdsHasBeenSet;
 
                     /**
-                     * Resource tag key
+                     * List of resource tag keys, which can contain no more than 20 keys.
                      */
                     std::vector<std::string> m_tagKeys;
                     bool m_tagKeysHasBeenSet;

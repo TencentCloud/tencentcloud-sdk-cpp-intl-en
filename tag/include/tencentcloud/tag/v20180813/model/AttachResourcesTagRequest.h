@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Resource service name (the third segment in the six-segment resource description)
-                     * @return ServiceType Resource service name (the third segment in the six-segment resource description)
+                     * 获取Service short name, which is the third segment of the six-segment resource format. For more information on the format, see https://intl.cloud.tencent.com/document/product/651/89122?from_cn_redirect=1
+                     * @return ServiceType Service short name, which is the third segment of the six-segment resource format. For more information on the format, see https://intl.cloud.tencent.com/document/product/651/89122?from_cn_redirect=1
                      * 
                      */
                     std::string GetServiceType() const;
 
                     /**
-                     * 设置Resource service name (the third segment in the six-segment resource description)
-                     * @param _serviceType Resource service name (the third segment in the six-segment resource description)
+                     * 设置Service short name, which is the third segment of the six-segment resource format. For more information on the format, see https://intl.cloud.tencent.com/document/product/651/89122?from_cn_redirect=1
+                     * @param _serviceType Service short name, which is the third segment of the six-segment resource format. For more information on the format, see https://intl.cloud.tencent.com/document/product/651/89122?from_cn_redirect=1
                      * 
                      */
                     void SetServiceType(const std::string& _serviceType);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool ResourceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Tag key
-                     * @return TagKey Tag key
+                     * 获取The tag key that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1
+                     * @return TagKey The tag key that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1
                      * 
                      */
                     std::string GetTagKey() const;
 
                     /**
-                     * 设置Tag key
-                     * @param _tagKey Tag key
+                     * 设置The tag key that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1
+                     * @param _tagKey The tag key that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1
                      * 
                      */
                     void SetTagKey(const std::string& _tagKey);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool TagKeyHasBeenSet() const;
 
                     /**
-                     * 获取Tag value
-                     * @return TagValue Tag value
+                     * 获取The tag value that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1
+                     * @return TagValue The tag value that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1
                      * 
                      */
                     std::string GetTagValue() const;
 
                     /**
-                     * 设置Tag value
-                     * @param _tagValue Tag value
+                     * 设置The tag value that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1
+                     * @param _tagValue The tag value that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1
                      * 
                      */
                     void SetTagValue(const std::string& _tagValue);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool TagValueHasBeenSet() const;
 
                     /**
-                     * 获取Resource region. If resources have the region attribute, this field is required; otherwise, it is optional.
-                     * @return ResourceRegion Resource region. If resources have the region attribute, this field is required; otherwise, it is optional.
+                     * 获取Region of the resource. This parameter can be left blank if region is not involved. The region must correspond to resources specified by ResourceIds.N. Once the region is specified, all resources specified by ResourceIds.N must locate in this region. Example: ap-beijing.
+                     * @return ResourceRegion Region of the resource. This parameter can be left blank if region is not involved. The region must correspond to resources specified by ResourceIds.N. Once the region is specified, all resources specified by ResourceIds.N must locate in this region. Example: ap-beijing.
                      * 
                      */
                     std::string GetResourceRegion() const;
 
                     /**
-                     * 设置Resource region. If resources have the region attribute, this field is required; otherwise, it is optional.
-                     * @param _resourceRegion Resource region. If resources have the region attribute, this field is required; otherwise, it is optional.
+                     * 设置Region of the resource. This parameter can be left blank if region is not involved. The region must correspond to resources specified by ResourceIds.N. Once the region is specified, all resources specified by ResourceIds.N must locate in this region. Example: ap-beijing.
+                     * @param _resourceRegion Region of the resource. This parameter can be left blank if region is not involved. The region must correspond to resources specified by ResourceIds.N. Once the region is specified, all resources specified by ResourceIds.N must locate in this region. Example: ap-beijing.
                      * 
                      */
                     void SetResourceRegion(const std::string& _resourceRegion);
@@ -171,7 +171,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Resource service name (the third segment in the six-segment resource description)
+                     * Service short name, which is the third segment of the six-segment resource format. For more information on the format, see https://intl.cloud.tencent.com/document/product/651/89122?from_cn_redirect=1
                      */
                     std::string m_serviceType;
                     bool m_serviceTypeHasBeenSet;
@@ -183,19 +183,19 @@ namespace TencentCloud
                     bool m_resourceIdsHasBeenSet;
 
                     /**
-                     * Tag key
+                     * The tag key that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1
                      */
                     std::string m_tagKey;
                     bool m_tagKeyHasBeenSet;
 
                     /**
-                     * Tag value
+                     * The tag value that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1
                      */
                     std::string m_tagValue;
                     bool m_tagValueHasBeenSet;
 
                     /**
-                     * Resource region. If resources have the region attribute, this field is required; otherwise, it is optional.
+                     * Region of the resource. This parameter can be left blank if region is not involved. The region must correspond to resources specified by ResourceIds.N. Once the region is specified, all resources specified by ResourceIds.N must locate in this region. Example: ap-beijing.
                      */
                     std::string m_resourceRegion;
                     bool m_resourceRegionHasBeenSet;
