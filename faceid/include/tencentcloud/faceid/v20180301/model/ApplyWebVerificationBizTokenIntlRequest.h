@@ -44,44 +44,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The Base64-encoded string (max 8 MB in size) of the photo to be compared.
-                     * @return CompareImageBase64 The Base64-encoded string (max 8 MB in size) of the photo to be compared.
-                     * 
-                     */
-                    std::string GetCompareImageBase64() const;
-
-                    /**
-                     * 设置The Base64-encoded string (max 8 MB in size) of the photo to be compared.
-                     * @param _compareImageBase64 The Base64-encoded string (max 8 MB in size) of the photo to be compared.
-                     * 
-                     */
-                    void SetCompareImageBase64(const std::string& _compareImageBase64);
-
-                    /**
-                     * 判断参数 CompareImageBase64 是否已赋值
-                     * @return CompareImageBase64 是否已赋值
-                     * 
-                     */
-                    bool CompareImageBase64HasBeenSet() const;
-
-                    /**
                      * 获取The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
-Example: https://www.tencentcloud.com/products/faceid.
 After the verification process is completed, the BizToken of this process will be spliced to the callback URL in the format of https://www.tencentcloud.com/products/faceid?token={BizToken} before redirect.
+Example: https://www.tencentcloud.com/products/faceid.
                      * @return RedirectURL The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
-Example: https://www.tencentcloud.com/products/faceid.
 After the verification process is completed, the BizToken of this process will be spliced to the callback URL in the format of https://www.tencentcloud.com/products/faceid?token={BizToken} before redirect.
+Example: https://www.tencentcloud.com/products/faceid.
                      * 
                      */
                     std::string GetRedirectURL() const;
 
                     /**
                      * 设置The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
-Example: https://www.tencentcloud.com/products/faceid.
 After the verification process is completed, the BizToken of this process will be spliced to the callback URL in the format of https://www.tencentcloud.com/products/faceid?token={BizToken} before redirect.
+Example: https://www.tencentcloud.com/products/faceid.
                      * @param _redirectURL The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
-Example: https://www.tencentcloud.com/products/faceid.
 After the verification process is completed, the BizToken of this process will be spliced to the callback URL in the format of https://www.tencentcloud.com/products/faceid?token={BizToken} before redirect.
+Example: https://www.tencentcloud.com/products/faceid.
                      * 
                      */
                     void SetRedirectURL(const std::string& _redirectURL);
@@ -92,6 +71,31 @@ After the verification process is completed, the BizToken of this process will b
                      * 
                      */
                     bool RedirectURLHasBeenSet() const;
+
+                    /**
+                     * 获取The Base64-encoded string (max 8 MB in size) of the photo to be compared.The Data URI scheme header needs to be removed from the encoded string
+Example: xhBQAAACBjSFJNAAB6****AAAASUVORK5CYII=
+                     * @return CompareImageBase64 The Base64-encoded string (max 8 MB in size) of the photo to be compared.The Data URI scheme header needs to be removed from the encoded string
+Example: xhBQAAACBjSFJNAAB6****AAAASUVORK5CYII=
+                     * 
+                     */
+                    std::string GetCompareImageBase64() const;
+
+                    /**
+                     * 设置The Base64-encoded string (max 8 MB in size) of the photo to be compared.The Data URI scheme header needs to be removed from the encoded string
+Example: xhBQAAACBjSFJNAAB6****AAAASUVORK5CYII=
+                     * @param _compareImageBase64 The Base64-encoded string (max 8 MB in size) of the photo to be compared.The Data URI scheme header needs to be removed from the encoded string
+Example: xhBQAAACBjSFJNAAB6****AAAASUVORK5CYII=
+                     * 
+                     */
+                    void SetCompareImageBase64(const std::string& _compareImageBase64);
+
+                    /**
+                     * 判断参数 CompareImageBase64 是否已赋值
+                     * @return CompareImageBase64 是否已赋值
+                     * 
+                     */
+                    bool CompareImageBase64HasBeenSet() const;
 
                     /**
                      * 获取The passthrough parameter of the business, max 1,000 characters, which will be returned in GetWebVerificationResultIntl.
@@ -116,14 +120,18 @@ After the verification process is completed, the BizToken of this process will b
 
                     /**
                      * 获取The parameter control the page configuration.
+Example: {"AutoSkip": true,"CheckMode": 1,"IdCardType": "HKIDCard"}
                      * @return Config The parameter control the page configuration.
+Example: {"AutoSkip": true,"CheckMode": 1,"IdCardType": "HKIDCard"}
                      * 
                      */
                     WebVerificationConfigIntl GetConfig() const;
 
                     /**
                      * 设置The parameter control the page configuration.
+Example: {"AutoSkip": true,"CheckMode": 1,"IdCardType": "HKIDCard"}
                      * @param _config The parameter control the page configuration.
+Example: {"AutoSkip": true,"CheckMode": 1,"IdCardType": "HKIDCard"}
                      * 
                      */
                     void SetConfig(const WebVerificationConfigIntl& _config);
@@ -138,18 +146,19 @@ After the verification process is completed, the BizToken of this process will b
                 private:
 
                     /**
-                     * The Base64-encoded string (max 8 MB in size) of the photo to be compared.
-                     */
-                    std::string m_compareImageBase64;
-                    bool m_compareImageBase64HasBeenSet;
-
-                    /**
                      * The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
-Example: https://www.tencentcloud.com/products/faceid.
 After the verification process is completed, the BizToken of this process will be spliced to the callback URL in the format of https://www.tencentcloud.com/products/faceid?token={BizToken} before redirect.
+Example: https://www.tencentcloud.com/products/faceid.
                      */
                     std::string m_redirectURL;
                     bool m_redirectURLHasBeenSet;
+
+                    /**
+                     * The Base64-encoded string (max 8 MB in size) of the photo to be compared.The Data URI scheme header needs to be removed from the encoded string
+Example: xhBQAAACBjSFJNAAB6****AAAASUVORK5CYII=
+                     */
+                    std::string m_compareImageBase64;
+                    bool m_compareImageBase64HasBeenSet;
 
                     /**
                      * The passthrough parameter of the business, max 1,000 characters, which will be returned in GetWebVerificationResultIntl.
@@ -159,6 +168,7 @@ After the verification process is completed, the BizToken of this process will b
 
                     /**
                      * The parameter control the page configuration.
+Example: {"AutoSkip": true,"CheckMode": 1,"IdCardType": "HKIDCard"}
                      */
                     WebVerificationConfigIntl m_config;
                     bool m_configHasBeenSet;

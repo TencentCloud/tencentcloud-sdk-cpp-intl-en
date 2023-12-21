@@ -23,8 +23,8 @@ using namespace TencentCloud::Faceid::V20180301::Model;
 using namespace std;
 
 ApplyWebVerificationBizTokenIntlRequest::ApplyWebVerificationBizTokenIntlRequest() :
-    m_compareImageBase64HasBeenSet(false),
     m_redirectURLHasBeenSet(false),
+    m_compareImageBase64HasBeenSet(false),
     m_extraHasBeenSet(false),
     m_configHasBeenSet(false)
 {
@@ -37,20 +37,20 @@ string ApplyWebVerificationBizTokenIntlRequest::ToJsonString() const
     rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
-    if (m_compareImageBase64HasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "CompareImageBase64";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_compareImageBase64.c_str(), allocator).Move(), allocator);
-    }
-
     if (m_redirectURLHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RedirectURL";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_redirectURL.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_compareImageBase64HasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CompareImageBase64";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_compareImageBase64.c_str(), allocator).Move(), allocator);
     }
 
     if (m_extraHasBeenSet)
@@ -78,22 +78,6 @@ string ApplyWebVerificationBizTokenIntlRequest::ToJsonString() const
 }
 
 
-string ApplyWebVerificationBizTokenIntlRequest::GetCompareImageBase64() const
-{
-    return m_compareImageBase64;
-}
-
-void ApplyWebVerificationBizTokenIntlRequest::SetCompareImageBase64(const string& _compareImageBase64)
-{
-    m_compareImageBase64 = _compareImageBase64;
-    m_compareImageBase64HasBeenSet = true;
-}
-
-bool ApplyWebVerificationBizTokenIntlRequest::CompareImageBase64HasBeenSet() const
-{
-    return m_compareImageBase64HasBeenSet;
-}
-
 string ApplyWebVerificationBizTokenIntlRequest::GetRedirectURL() const
 {
     return m_redirectURL;
@@ -108,6 +92,22 @@ void ApplyWebVerificationBizTokenIntlRequest::SetRedirectURL(const string& _redi
 bool ApplyWebVerificationBizTokenIntlRequest::RedirectURLHasBeenSet() const
 {
     return m_redirectURLHasBeenSet;
+}
+
+string ApplyWebVerificationBizTokenIntlRequest::GetCompareImageBase64() const
+{
+    return m_compareImageBase64;
+}
+
+void ApplyWebVerificationBizTokenIntlRequest::SetCompareImageBase64(const string& _compareImageBase64)
+{
+    m_compareImageBase64 = _compareImageBase64;
+    m_compareImageBase64HasBeenSet = true;
+}
+
+bool ApplyWebVerificationBizTokenIntlRequest::CompareImageBase64HasBeenSet() const
+{
+    return m_compareImageBase64HasBeenSet;
 }
 
 string ApplyWebVerificationBizTokenIntlRequest::GetExtra() const
