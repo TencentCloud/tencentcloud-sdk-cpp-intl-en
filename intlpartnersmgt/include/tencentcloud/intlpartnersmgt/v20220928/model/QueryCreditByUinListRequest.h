@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取User list
-                     * @return UinList User list
+                     * 获取List of user. Array length value: 1-50.
+                     * @return UinList List of user. Array length value: 1-50.
                      * 
                      */
                     std::vector<uint64_t> GetUinList() const;
 
                     /**
-                     * 设置User list
-                     * @param _uinList User list
+                     * 设置List of user. Array length value: 1-50.
+                     * @param _uinList List of user. Array length value: 1-50.
                      * 
                      */
                     void SetUinList(const std::vector<uint64_t>& _uinList);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * User list
+                     * List of user. Array length value: 1-50.
                      */
                     std::vector<uint64_t> m_uinList;
                     bool m_uinListHasBeenSet;
