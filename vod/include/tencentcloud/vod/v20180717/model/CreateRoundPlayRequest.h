@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool RoundPlaylistHasBeenSet() const;
 
                     /**
-                     * 获取<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
-                     * @return SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * 获取<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
-                     * @param _subAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * 设置<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * @param _subAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -156,11 +156,11 @@ namespace TencentCloud
                      * 获取Play mode, optional values:
 <li>Loop: Play the playlist in a loop;</li>
 <li>Linear: Play once, stop playing after the playlist is played. </li>
-Default value：Loop。
+Default value: Loop.
                      * @return PlayBackMode Play mode, optional values:
 <li>Loop: Play the playlist in a loop;</li>
 <li>Linear: Play once, stop playing after the playlist is played. </li>
-Default value：Loop。
+Default value: Loop.
                      * 
                      */
                     std::string GetPlayBackMode() const;
@@ -169,11 +169,11 @@ Default value：Loop。
                      * 设置Play mode, optional values:
 <li>Loop: Play the playlist in a loop;</li>
 <li>Linear: Play once, stop playing after the playlist is played. </li>
-Default value：Loop。
+Default value: Loop.
                      * @param _playBackMode Play mode, optional values:
 <li>Loop: Play the playlist in a loop;</li>
 <li>Linear: Play once, stop playing after the playlist is played. </li>
-Default value：Loop。
+Default value: Loop.
                      * 
                      */
                     void SetPlayBackMode(const std::string& _playBackMode);
@@ -201,7 +201,7 @@ Default value：Loop。
                     bool m_roundPlaylistHasBeenSet;
 
                     /**
-                     * <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
@@ -222,7 +222,7 @@ Default value：Loop。
                      * Play mode, optional values:
 <li>Loop: Play the playlist in a loop;</li>
 <li>Linear: Play once, stop playing after the playlist is played. </li>
-Default value：Loop。
+Default value: Loop.
                      */
                     std::string m_playBackMode;
                     bool m_playBackModeHasBeenSet;
