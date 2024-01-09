@@ -47,27 +47,31 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cloud disk type
-<li>`CLOUD_SSD`: SSD</li>
-<li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
-<li>`CLOUD_HSSD`: Enhanced SSD</li>
-                     * @return DiskType Cloud disk type
-<li>`CLOUD_SSD`: SSD</li>
-<li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
-<li>`CLOUD_HSSD`: Enhanced SSD</li>
+                     * 获取Disk type
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>CLOUD_PREMIUM: Premium cloud disk.</li>
+<li>CLOUD_HSSD: Enhanced SSD.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DiskType Disk type
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>CLOUD_PREMIUM: Premium cloud disk.</li>
+<li>CLOUD_HSSD: Enhanced SSD.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDiskType() const;
 
                     /**
-                     * 设置Cloud disk type
-<li>`CLOUD_SSD`: SSD</li>
-<li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
-<li>`CLOUD_HSSD`: Enhanced SSD</li>
-                     * @param _diskType Cloud disk type
-<li>`CLOUD_SSD`: SSD</li>
-<li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
-<li>`CLOUD_HSSD`: Enhanced SSD</li>
+                     * 设置Disk type
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>CLOUD_PREMIUM: Premium cloud disk.</li>
+<li>CLOUD_HSSD: Enhanced SSD.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _diskType Disk type
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>CLOUD_PREMIUM: Premium cloud disk.</li>
+<li>CLOUD_HSSD: Enhanced SSD.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDiskType(const std::string& _diskType);
@@ -80,15 +84,15 @@ namespace TencentCloud
                     bool DiskTypeHasBeenSet() const;
 
                     /**
-                     * 获取Cloud disk size
-                     * @return Volume Cloud disk size
+                     * 获取Cloud disk sizeNote: This field may return null, indicating that no valid values can be obtained.
+                     * @return Volume Cloud disk sizeNote: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetVolume() const;
 
                     /**
-                     * 设置Cloud disk size
-                     * @param _volume Cloud disk size
+                     * 设置Cloud disk sizeNote: This field may return null, indicating that no valid values can be obtained.
+                     * @param _volume Cloud disk sizeNote: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetVolume(const int64_t& _volume);
@@ -101,15 +105,15 @@ namespace TencentCloud
                     bool VolumeHasBeenSet() const;
 
                     /**
-                     * 获取Number of cloud disks of this type
-                     * @return Count Number of cloud disks of this type
+                     * 获取Number of cloud disks of this typeNote: This field may return null, indicating that no valid values can be obtained.
+                     * @return Count Number of cloud disks of this typeNote: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetCount() const;
 
                     /**
-                     * 设置Number of cloud disks of this type
-                     * @param _count Number of cloud disks of this type
+                     * 设置Number of cloud disks of this typeNote: This field may return null, indicating that no valid values can be obtained.
+                     * @param _count Number of cloud disks of this typeNote: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCount(const int64_t& _count);
@@ -124,22 +128,23 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cloud disk type
-<li>`CLOUD_SSD`: SSD</li>
-<li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
-<li>`CLOUD_HSSD`: Enhanced SSD</li>
+                     * Disk type
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>CLOUD_PREMIUM: Premium cloud disk.</li>
+<li>CLOUD_HSSD: Enhanced SSD.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_diskType;
                     bool m_diskTypeHasBeenSet;
 
                     /**
-                     * Cloud disk size
+                     * Cloud disk sizeNote: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_volume;
                     bool m_volumeHasBeenSet;
 
                     /**
-                     * Number of cloud disks of this type
+                     * Number of cloud disks of this typeNote: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_count;
                     bool m_countHasBeenSet;

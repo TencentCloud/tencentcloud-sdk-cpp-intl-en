@@ -1300,6 +1300,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool TradeVersionHasBeenSet() const;
 
+                    /**
+                     * 获取Status of each component. Zookeeper: STARTED; ResourceManager: STARTED. STARTED indicates "already in operation"; STOPPED indicates "ceased".
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ServicesStatus Status of each component. Zookeeper: STARTED; ResourceManager: STARTED. STARTED indicates "already in operation"; STOPPED indicates "ceased".
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetServicesStatus() const;
+
+                    /**
+                     * 设置Status of each component. Zookeeper: STARTED; ResourceManager: STARTED. STARTED indicates "already in operation"; STOPPED indicates "ceased".
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _servicesStatus Status of each component. Zookeeper: STARTED; ResourceManager: STARTED. STARTED indicates "already in operation"; STOPPED indicates "ceased".
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetServicesStatus(const std::string& _servicesStatus);
+
+                    /**
+                     * 判断参数 ServicesStatus 是否已赋值
+                     * @return ServicesStatus 是否已赋值
+                     * 
+                     */
+                    bool ServicesStatusHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1651,6 +1676,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_tradeVersion;
                     bool m_tradeVersionHasBeenSet;
+
+                    /**
+                     * Status of each component. Zookeeper: STARTED; ResourceManager: STARTED. STARTED indicates "already in operation"; STOPPED indicates "ceased".
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_servicesStatus;
+                    bool m_servicesStatusHasBeenSet;
 
                 };
             }

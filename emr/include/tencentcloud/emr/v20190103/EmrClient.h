@@ -29,10 +29,14 @@
 #include <tencentcloud/emr/v20190103/model/CreateClusterResponse.h>
 #include <tencentcloud/emr/v20190103/model/CreateInstanceRequest.h>
 #include <tencentcloud/emr/v20190103/model/CreateInstanceResponse.h>
+#include <tencentcloud/emr/v20190103/model/DescribeAutoScaleRecordsRequest.h>
+#include <tencentcloud/emr/v20190103/model/DescribeAutoScaleRecordsResponse.h>
 #include <tencentcloud/emr/v20190103/model/DescribeClusterNodesRequest.h>
 #include <tencentcloud/emr/v20190103/model/DescribeClusterNodesResponse.h>
 #include <tencentcloud/emr/v20190103/model/DescribeEmrApplicationStaticsRequest.h>
 #include <tencentcloud/emr/v20190103/model/DescribeEmrApplicationStaticsResponse.h>
+#include <tencentcloud/emr/v20190103/model/DescribeHiveQueriesRequest.h>
+#include <tencentcloud/emr/v20190103/model/DescribeHiveQueriesResponse.h>
 #include <tencentcloud/emr/v20190103/model/DescribeInstancesRequest.h>
 #include <tencentcloud/emr/v20190103/model/DescribeInstancesResponse.h>
 #include <tencentcloud/emr/v20190103/model/DescribeInstancesListRequest.h>
@@ -53,6 +57,10 @@
 #include <tencentcloud/emr/v20190103/model/ModifyResourceScheduleConfigResponse.h>
 #include <tencentcloud/emr/v20190103/model/ModifyResourceSchedulerRequest.h>
 #include <tencentcloud/emr/v20190103/model/ModifyResourceSchedulerResponse.h>
+#include <tencentcloud/emr/v20190103/model/ModifyResourcesTagsRequest.h>
+#include <tencentcloud/emr/v20190103/model/ModifyResourcesTagsResponse.h>
+#include <tencentcloud/emr/v20190103/model/ModifyUserManagerPwdRequest.h>
+#include <tencentcloud/emr/v20190103/model/ModifyUserManagerPwdResponse.h>
 #include <tencentcloud/emr/v20190103/model/ScaleOutClusterRequest.h>
 #include <tencentcloud/emr/v20190103/model/ScaleOutClusterResponse.h>
 #include <tencentcloud/emr/v20190103/model/ScaleOutInstanceRequest.h>
@@ -88,12 +96,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateInstanceResponse> CreateInstanceOutcome;
                 typedef std::future<CreateInstanceOutcome> CreateInstanceOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::CreateInstanceRequest&, CreateInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateInstanceAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAutoScaleRecordsResponse> DescribeAutoScaleRecordsOutcome;
+                typedef std::future<DescribeAutoScaleRecordsOutcome> DescribeAutoScaleRecordsOutcomeCallable;
+                typedef std::function<void(const EmrClient*, const Model::DescribeAutoScaleRecordsRequest&, DescribeAutoScaleRecordsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAutoScaleRecordsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeClusterNodesResponse> DescribeClusterNodesOutcome;
                 typedef std::future<DescribeClusterNodesOutcome> DescribeClusterNodesOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::DescribeClusterNodesRequest&, DescribeClusterNodesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeClusterNodesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeEmrApplicationStaticsResponse> DescribeEmrApplicationStaticsOutcome;
                 typedef std::future<DescribeEmrApplicationStaticsOutcome> DescribeEmrApplicationStaticsOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::DescribeEmrApplicationStaticsRequest&, DescribeEmrApplicationStaticsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeEmrApplicationStaticsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeHiveQueriesResponse> DescribeHiveQueriesOutcome;
+                typedef std::future<DescribeHiveQueriesOutcome> DescribeHiveQueriesOutcomeCallable;
+                typedef std::function<void(const EmrClient*, const Model::DescribeHiveQueriesRequest&, DescribeHiveQueriesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeHiveQueriesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeInstancesResponse> DescribeInstancesOutcome;
                 typedef std::future<DescribeInstancesOutcome> DescribeInstancesOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::DescribeInstancesRequest&, DescribeInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstancesAsyncHandler;
@@ -124,6 +138,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyResourceSchedulerResponse> ModifyResourceSchedulerOutcome;
                 typedef std::future<ModifyResourceSchedulerOutcome> ModifyResourceSchedulerOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::ModifyResourceSchedulerRequest&, ModifyResourceSchedulerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyResourceSchedulerAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyResourcesTagsResponse> ModifyResourcesTagsOutcome;
+                typedef std::future<ModifyResourcesTagsOutcome> ModifyResourcesTagsOutcomeCallable;
+                typedef std::function<void(const EmrClient*, const Model::ModifyResourcesTagsRequest&, ModifyResourcesTagsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyResourcesTagsAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyUserManagerPwdResponse> ModifyUserManagerPwdOutcome;
+                typedef std::future<ModifyUserManagerPwdOutcome> ModifyUserManagerPwdOutcomeCallable;
+                typedef std::function<void(const EmrClient*, const Model::ModifyUserManagerPwdRequest&, ModifyUserManagerPwdOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyUserManagerPwdAsyncHandler;
                 typedef Outcome<Core::Error, Model::ScaleOutClusterResponse> ScaleOutClusterOutcome;
                 typedef std::future<ScaleOutClusterOutcome> ScaleOutClusterOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::ScaleOutClusterRequest&, ScaleOutClusterOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ScaleOutClusterAsyncHandler;
@@ -174,6 +194,15 @@ This API is used to add user lists (user management).
                 CreateInstanceOutcomeCallable CreateInstanceCallable(const Model::CreateInstanceRequest& request);
 
                 /**
+                 *This API is used to inquiry detailed records of cluster autoscaling.
+                 * @param req DescribeAutoScaleRecordsRequest
+                 * @return DescribeAutoScaleRecordsOutcome
+                 */
+                DescribeAutoScaleRecordsOutcome DescribeAutoScaleRecords(const Model::DescribeAutoScaleRecordsRequest &request);
+                void DescribeAutoScaleRecordsAsync(const Model::DescribeAutoScaleRecordsRequest& request, const DescribeAutoScaleRecordsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAutoScaleRecordsOutcomeCallable DescribeAutoScaleRecordsCallable(const Model::DescribeAutoScaleRecordsRequest& request);
+
+                /**
                  *This API is used to query the information of nodes in a cluster.
                  * @param req DescribeClusterNodesRequest
                  * @return DescribeClusterNodesOutcome
@@ -190,6 +219,15 @@ This API is used to add user lists (user management).
                 DescribeEmrApplicationStaticsOutcome DescribeEmrApplicationStatics(const Model::DescribeEmrApplicationStaticsRequest &request);
                 void DescribeEmrApplicationStaticsAsync(const Model::DescribeEmrApplicationStaticsRequest& request, const DescribeEmrApplicationStaticsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeEmrApplicationStaticsOutcomeCallable DescribeEmrApplicationStaticsCallable(const Model::DescribeEmrApplicationStaticsRequest& request);
+
+                /**
+                 *This API is used to inquiry Hive query data.
+                 * @param req DescribeHiveQueriesRequest
+                 * @return DescribeHiveQueriesOutcome
+                 */
+                DescribeHiveQueriesOutcome DescribeHiveQueries(const Model::DescribeHiveQueriesRequest &request);
+                void DescribeHiveQueriesAsync(const Model::DescribeHiveQueriesRequest& request, const DescribeHiveQueriesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeHiveQueriesOutcomeCallable DescribeHiveQueriesCallable(const Model::DescribeHiveQueriesRequest& request);
 
                 /**
                  *This API is used to query the information of instances in a cluster.
@@ -283,6 +321,24 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
                 ModifyResourceSchedulerOutcomeCallable ModifyResourceSchedulerCallable(const Model::ModifyResourceSchedulerRequest& request);
 
                 /**
+                 *This API is used to forcibly modify tags.
+                 * @param req ModifyResourcesTagsRequest
+                 * @return ModifyResourcesTagsOutcome
+                 */
+                ModifyResourcesTagsOutcome ModifyResourcesTags(const Model::ModifyResourcesTagsRequest &request);
+                void ModifyResourcesTagsAsync(const Model::ModifyResourcesTagsRequest& request, const ModifyResourcesTagsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyResourcesTagsOutcomeCallable ModifyResourcesTagsCallable(const Model::ModifyResourcesTagsRequest& request);
+
+                /**
+                 *This API is used to change user password (user management).
+                 * @param req ModifyUserManagerPwdRequest
+                 * @return ModifyUserManagerPwdOutcome
+                 */
+                ModifyUserManagerPwdOutcome ModifyUserManagerPwd(const Model::ModifyUserManagerPwdRequest &request);
+                void ModifyUserManagerPwdAsync(const Model::ModifyUserManagerPwdRequest& request, const ModifyUserManagerPwdAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyUserManagerPwdOutcomeCallable ModifyUserManagerPwdCallable(const Model::ModifyUserManagerPwdRequest& request);
+
+                /**
                  *This API is used to scale out a cluster.
                  * @param req ScaleOutClusterRequest
                  * @return ScaleOutClusterOutcome
@@ -301,7 +357,7 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
                 ScaleOutInstanceOutcomeCallable ScaleOutInstanceCallable(const Model::ScaleOutInstanceRequest& request);
 
                 /**
-                 *This API is used to start or stop the monitor or services.
+                 *This API is used to start, stop, or restart services.
                  * @param req StartStopServiceOrMonitorRequest
                  * @return StartStopServiceOrMonitorOutcome
                  */

@@ -76,18 +76,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RollingRestartSwitchHasBeenSet() const;
 
                     /**
-                     * 获取The number of nodes to be restarted per batch in rolling restart, with a maximum value of 99,999.
+                     * 获取The quantity of restarts per batch during a rolling restart, with the maximum number of restarts being 99999
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BatchSize The number of nodes to be restarted per batch in rolling restart, with a maximum value of 99,999.
+                     * @return BatchSize The quantity of restarts per batch during a rolling restart, with the maximum number of restarts being 99999
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetBatchSize() const;
 
                     /**
-                     * 设置The number of nodes to be restarted per batch in rolling restart, with a maximum value of 99,999.
+                     * 设置The quantity of restarts per batch during a rolling restart, with the maximum number of restarts being 99999
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _batchSize The number of nodes to be restarted per batch in rolling restart, with a maximum value of 99,999.
+                     * @param _batchSize The quantity of restarts per batch during a rolling restart, with the maximum number of restarts being 99999
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -161,7 +161,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_rollingRestartSwitchHasBeenSet;
 
                     /**
-                     * The number of nodes to be restarted per batch in rolling restart, with a maximum value of 99,999.
+                     * The quantity of restarts per batch during a rolling restart, with the maximum number of restarts being 99999
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_batchSize;

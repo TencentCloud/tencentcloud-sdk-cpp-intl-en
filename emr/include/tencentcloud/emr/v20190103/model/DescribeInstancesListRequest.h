@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool OrderFieldHasBeenSet() const;
 
                     /**
-                     * 获取Sort ascending or descending based on `OrderField`. Valid values:<li>0: Descending.</li><li>1: Ascending.</li>Default value: `0`.
-                     * @return Asc Sort ascending or descending based on `OrderField`. Valid values:<li>0: Descending.</li><li>1: Ascending.</li>Default value: `0`.
+                     * 获取Sort according to OrderField in ascending or descending order. Valid range:<li>0: Descending order.</li><li>1: Ascending order.</li>Default: 0.
+                     * @return Asc Sort according to OrderField in ascending or descending order. Valid range:<li>0: Descending order.</li><li>1: Ascending order.</li>Default: 0.
                      * 
                      */
                     int64_t GetAsc() const;
 
                     /**
-                     * 设置Sort ascending or descending based on `OrderField`. Valid values:<li>0: Descending.</li><li>1: Ascending.</li>Default value: `0`.
-                     * @param _asc Sort ascending or descending based on `OrderField`. Valid values:<li>0: Descending.</li><li>1: Ascending.</li>Default value: `0`.
+                     * 设置Sort according to OrderField in ascending or descending order. Valid range:<li>0: Descending order.</li><li>1: Ascending order.</li>Default: 0.
+                     * @param _asc Sort according to OrderField in ascending or descending order. Valid range:<li>0: Descending order.</li><li>1: Ascending order.</li>Default: 0.
                      * 
                      */
                     void SetAsc(const int64_t& _asc);
@@ -196,7 +196,7 @@ namespace TencentCloud
                     bool m_orderFieldHasBeenSet;
 
                     /**
-                     * Sort ascending or descending based on `OrderField`. Valid values:<li>0: Descending.</li><li>1: Ascending.</li>Default value: `0`.
+                     * Sort according to OrderField in ascending or descending order. Valid range:<li>0: Descending order.</li><li>1: Ascending order.</li>Default: 0.
                      */
                     int64_t m_asc;
                     bool m_ascHasBeenSet;
