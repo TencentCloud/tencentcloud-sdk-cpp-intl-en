@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The error event ID. For details, see https://intl.cloud.tencent.com/document/product/647/44916?from_cn_redirect=1
-                     * @return AbnormalEventId The error event ID. For details, see https://intl.cloud.tencent.com/document/product/647/44916?from_cn_redirect=1
+                     * 获取The error event ID. For details, see https://www.tencentcloud.com/document/product/647/37906?has_map=1
+                     * @return AbnormalEventId The error event ID. For details, see https://www.tencentcloud.com/document/product/647/37906?has_map=1
                      * 
                      */
                     uint64_t GetAbnormalEventId() const;
 
                     /**
-                     * 设置The error event ID. For details, see https://intl.cloud.tencent.com/document/product/647/44916?from_cn_redirect=1
-                     * @param _abnormalEventId The error event ID. For details, see https://intl.cloud.tencent.com/document/product/647/44916?from_cn_redirect=1
+                     * 设置The error event ID. For details, see https://www.tencentcloud.com/document/product/647/37906?has_map=1
+                     * @param _abnormalEventId The error event ID. For details, see https://www.tencentcloud.com/document/product/647/37906?has_map=1
                      * 
                      */
                     void SetAbnormalEventId(const uint64_t& _abnormalEventId);
@@ -95,7 +95,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The error event ID. For details, see https://intl.cloud.tencent.com/document/product/647/44916?from_cn_redirect=1
+                     * The error event ID. For details, see https://www.tencentcloud.com/document/product/647/37906?has_map=1
                      */
                     uint64_t m_abnormalEventId;
                     bool m_abnormalEventIdHasBeenSet;

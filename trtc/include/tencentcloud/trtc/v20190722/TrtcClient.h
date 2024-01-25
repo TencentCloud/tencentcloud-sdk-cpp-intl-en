@@ -43,6 +43,14 @@
 #include <tencentcloud/trtc/v20190722/model/DescribeScaleInfoResponse.h>
 #include <tencentcloud/trtc/v20190722/model/DescribeStreamIngestRequest.h>
 #include <tencentcloud/trtc/v20190722/model/DescribeStreamIngestResponse.h>
+#include <tencentcloud/trtc/v20190722/model/DescribeTRTCMarketQualityDataRequest.h>
+#include <tencentcloud/trtc/v20190722/model/DescribeTRTCMarketQualityDataResponse.h>
+#include <tencentcloud/trtc/v20190722/model/DescribeTRTCMarketScaleDataRequest.h>
+#include <tencentcloud/trtc/v20190722/model/DescribeTRTCMarketScaleDataResponse.h>
+#include <tencentcloud/trtc/v20190722/model/DescribeTRTCRealTimeQualityDataRequest.h>
+#include <tencentcloud/trtc/v20190722/model/DescribeTRTCRealTimeQualityDataResponse.h>
+#include <tencentcloud/trtc/v20190722/model/DescribeTRTCRealTimeScaleDataRequest.h>
+#include <tencentcloud/trtc/v20190722/model/DescribeTRTCRealTimeScaleDataResponse.h>
 #include <tencentcloud/trtc/v20190722/model/DescribeTrtcRoomUsageRequest.h>
 #include <tencentcloud/trtc/v20190722/model/DescribeTrtcRoomUsageResponse.h>
 #include <tencentcloud/trtc/v20190722/model/DescribeTrtcUsageRequest.h>
@@ -121,6 +129,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeStreamIngestResponse> DescribeStreamIngestOutcome;
                 typedef std::future<DescribeStreamIngestOutcome> DescribeStreamIngestOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::DescribeStreamIngestRequest&, DescribeStreamIngestOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStreamIngestAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeTRTCMarketQualityDataResponse> DescribeTRTCMarketQualityDataOutcome;
+                typedef std::future<DescribeTRTCMarketQualityDataOutcome> DescribeTRTCMarketQualityDataOutcomeCallable;
+                typedef std::function<void(const TrtcClient*, const Model::DescribeTRTCMarketQualityDataRequest&, DescribeTRTCMarketQualityDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTRTCMarketQualityDataAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeTRTCMarketScaleDataResponse> DescribeTRTCMarketScaleDataOutcome;
+                typedef std::future<DescribeTRTCMarketScaleDataOutcome> DescribeTRTCMarketScaleDataOutcomeCallable;
+                typedef std::function<void(const TrtcClient*, const Model::DescribeTRTCMarketScaleDataRequest&, DescribeTRTCMarketScaleDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTRTCMarketScaleDataAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeTRTCRealTimeQualityDataResponse> DescribeTRTCRealTimeQualityDataOutcome;
+                typedef std::future<DescribeTRTCRealTimeQualityDataOutcome> DescribeTRTCRealTimeQualityDataOutcomeCallable;
+                typedef std::function<void(const TrtcClient*, const Model::DescribeTRTCRealTimeQualityDataRequest&, DescribeTRTCRealTimeQualityDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTRTCRealTimeQualityDataAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeTRTCRealTimeScaleDataResponse> DescribeTRTCRealTimeScaleDataOutcome;
+                typedef std::future<DescribeTRTCRealTimeScaleDataOutcome> DescribeTRTCRealTimeScaleDataOutcomeCallable;
+                typedef std::function<void(const TrtcClient*, const Model::DescribeTRTCRealTimeScaleDataRequest&, DescribeTRTCRealTimeScaleDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTRTCRealTimeScaleDataAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeTrtcRoomUsageResponse> DescribeTrtcRoomUsageOutcome;
                 typedef std::future<DescribeTrtcRoomUsageOutcome> DescribeTrtcRoomUsageOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::DescribeTrtcRoomUsageRequest&, DescribeTrtcRoomUsageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTrtcRoomUsageAsyncHandler;
@@ -297,6 +317,62 @@ If a recording file is being uploaded to VOD, the response parameter `StorageFil
                 DescribeStreamIngestOutcome DescribeStreamIngest(const Model::DescribeStreamIngestRequest &request);
                 void DescribeStreamIngestAsync(const Model::DescribeStreamIngestRequest& request, const DescribeStreamIngestAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeStreamIngestOutcomeCallable DescribeStreamIngestCallable(const Model::DescribeStreamIngestRequest& request);
+
+                /**
+                 *Query TRTC Monitoring Dashboard - Data Dashboard Quality Metrics (including the following metrics)
+joinSuccessRate: Join channel success rate.
+joinSuccessIn5sRate: Join channel success rate within 5s.
+audioFreezeRate: Audio stutter rate.
+videoFreezeRate: Video stutter rate.
+networkDelay: Lag rate.
+Note:
+1. To call the API, you need to activate the monitoring dashboard Standard Edition and Premium Edition, the monitoring dashboard Free Edition does not support calling. Monitoring dashboard version features and billing overview: https://trtc.io/document/54481.
+2. The query time range depends on the monitoring dashboard function version, premium edition can query the last 30 days.
+                 * @param req DescribeTRTCMarketQualityDataRequest
+                 * @return DescribeTRTCMarketQualityDataOutcome
+                 */
+                DescribeTRTCMarketQualityDataOutcome DescribeTRTCMarketQualityData(const Model::DescribeTRTCMarketQualityDataRequest &request);
+                void DescribeTRTCMarketQualityDataAsync(const Model::DescribeTRTCMarketQualityDataRequest& request, const DescribeTRTCMarketQualityDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeTRTCMarketQualityDataOutcomeCallable DescribeTRTCMarketQualityDataCallable(const Model::DescribeTRTCMarketQualityDataRequest& request);
+
+                /**
+                 *Query TRTC Monitoring Dashboard - Data Dashboard Scale Metrics (will return userCount, roomCount, peakCurrentUsers, peakCurrentChannels)
+- userCount: number of users in the call,
+- roomCount: number of rooms in the call, counted as one call channel from the time a user joins the channel to the time all users leave the channel.
+- peakCurrentChannels: peak number of channels online at the same time.
+- peakCurrentUsers: peak number of users online at the same time.
+Note:
+1. To call the interface, you need to activate the monitoring dashboard Standard Edition and Premium Edition, the monitoring dashboard Free Edition does not support calling, for monitoring dashboard version features and billing overview: https://trtc.io/document/54481.
+2. The query time range depends on the monitoring dashboard function version, premium edition can query up to 60 days.
+                 * @param req DescribeTRTCMarketScaleDataRequest
+                 * @return DescribeTRTCMarketScaleDataOutcome
+                 */
+                DescribeTRTCMarketScaleDataOutcome DescribeTRTCMarketScaleData(const Model::DescribeTRTCMarketScaleDataRequest &request);
+                void DescribeTRTCMarketScaleDataAsync(const Model::DescribeTRTCMarketScaleDataRequest& request, const DescribeTRTCMarketScaleDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeTRTCMarketScaleDataOutcomeCallable DescribeTRTCMarketScaleDataCallable(const Model::DescribeTRTCMarketScaleDataRequest& request);
+
+                /**
+                 *Query TRTC Monitoring Dashboard - Real-Time Monitoring Quality Metrics (return the following metrics)
+ -Video stutter rate
+ -Audio stutter rate
+ Note:
+ 1. To call the API, you need to activate the Monitoring Dashboard Standard Edition and Premium Edition. The Monitoring Dashboard Free Edition does not support calling. For monitoring dashboard version features and billing overview, please visit: https://trtc.io/document/54481.
+ 2. The query time range depends on the monitoring dashboard function version. The premium edition can query up to 1 hours
+                 * @param req DescribeTRTCRealTimeQualityDataRequest
+                 * @return DescribeTRTCRealTimeQualityDataOutcome
+                 */
+                DescribeTRTCRealTimeQualityDataOutcome DescribeTRTCRealTimeQualityData(const Model::DescribeTRTCRealTimeQualityDataRequest &request);
+                void DescribeTRTCRealTimeQualityDataAsync(const Model::DescribeTRTCRealTimeQualityDataRequest& request, const DescribeTRTCRealTimeQualityDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeTRTCRealTimeQualityDataOutcomeCallable DescribeTRTCRealTimeQualityDataCallable(const Model::DescribeTRTCRealTimeQualityDataRequest& request);
+
+                /**
+                 *Query TRTC Monitoring Dashboard - Real-Time Monitoring Scale Metrics (the following metrics will be returned) -userCount (Online users) -roomCount (Online rooms) Note: 1. To call the interface, you need to activate the monitoring dashboard Standard Edition and Premium Edition, the monitoring dashboard Free Edition does not support calling. For monitoring dashboard version features and billing overview, please visit: https://trtc.io/document/54481. 2. The query time range depends on the function version of the monitoring dashboard. The premium edition can query the last 1 hours
+                 * @param req DescribeTRTCRealTimeScaleDataRequest
+                 * @return DescribeTRTCRealTimeScaleDataOutcome
+                 */
+                DescribeTRTCRealTimeScaleDataOutcome DescribeTRTCRealTimeScaleData(const Model::DescribeTRTCRealTimeScaleDataRequest &request);
+                void DescribeTRTCRealTimeScaleDataAsync(const Model::DescribeTRTCRealTimeScaleDataRequest& request, const DescribeTRTCRealTimeScaleDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeTRTCRealTimeScaleDataOutcomeCallable DescribeTRTCRealTimeScaleDataCallable(const Model::DescribeTRTCRealTimeScaleDataRequest& request);
 
                 /**
                  *This API is used to query usage data grouped by room.
