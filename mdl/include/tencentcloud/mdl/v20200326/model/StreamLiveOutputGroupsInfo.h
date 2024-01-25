@@ -146,18 +146,18 @@ If the type is RTMP or RTP, only one output is allowed; if it is HLS or DASH, 1-
                     bool DestinationsHasBeenSet() const;
 
                     /**
-                     * 获取HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE outputs
+                     * 获取HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE/HLS_STREAM_PACKAGE outputs.
 Note: this field may return `null`, indicating that no valid value was found.
-                     * @return HlsRemuxSettings HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE outputs
+                     * @return HlsRemuxSettings HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE/HLS_STREAM_PACKAGE outputs.
 Note: this field may return `null`, indicating that no valid value was found.
                      * 
                      */
                     HlsRemuxSettingsInfo GetHlsRemuxSettings() const;
 
                     /**
-                     * 设置HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE outputs
+                     * 设置HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE/HLS_STREAM_PACKAGE outputs.
 Note: this field may return `null`, indicating that no valid value was found.
-                     * @param _hlsRemuxSettings HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE outputs
+                     * @param _hlsRemuxSettings HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE/HLS_STREAM_PACKAGE outputs.
 Note: this field may return `null`, indicating that no valid value was found.
                      * 
                      */
@@ -299,7 +299,7 @@ If the type is RTMP or RTP, only one output is allowed; if it is HLS or DASH, 1-
                     bool m_destinationsHasBeenSet;
 
                     /**
-                     * HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE outputs
+                     * HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE/HLS_STREAM_PACKAGE outputs.
 Note: this field may return `null`, indicating that no valid value was found.
                      */
                     HlsRemuxSettingsInfo m_hlsRemuxSettings;
