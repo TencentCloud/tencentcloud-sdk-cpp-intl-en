@@ -51,14 +51,14 @@ namespace TencentCloud
                      * @return SubBackupId ID of the remote backup subtask
                      * 
                      */
-                    std::vector<int64_t> GetSubBackupId() const;
+                    int64_t GetSubBackupId() const;
 
                     /**
                      * 设置ID of the remote backup subtask
                      * @param _subBackupId ID of the remote backup subtask
                      * 
                      */
-                    void SetSubBackupId(const std::vector<int64_t>& _subBackupId);
+                    void SetSubBackupId(const int64_t& _subBackupId);
 
                     /**
                      * 判断参数 SubBackupId 是否已赋值
@@ -177,7 +177,7 @@ namespace TencentCloud
                     /**
                      * ID of the remote backup subtask
                      */
-                    std::vector<int64_t> m_subBackupId;
+                    int64_t m_subBackupId;
                     bool m_subBackupIdHasBeenSet;
 
                     /**
