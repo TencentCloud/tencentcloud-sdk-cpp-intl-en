@@ -126,6 +126,49 @@ CarClient::CreateSessionOutcomeCallable CarClient::CreateSessionCallable(const C
     return task->get_future();
 }
 
+CarClient::DescribeConcurrentCountOutcome CarClient::DescribeConcurrentCount(const DescribeConcurrentCountRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeConcurrentCount");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeConcurrentCountResponse rsp = DescribeConcurrentCountResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeConcurrentCountOutcome(rsp);
+        else
+            return DescribeConcurrentCountOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeConcurrentCountOutcome(outcome.GetError());
+    }
+}
+
+void CarClient::DescribeConcurrentCountAsync(const DescribeConcurrentCountRequest& request, const DescribeConcurrentCountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeConcurrentCount(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CarClient::DescribeConcurrentCountOutcomeCallable CarClient::DescribeConcurrentCountCallable(const DescribeConcurrentCountRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeConcurrentCountOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeConcurrentCount(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CarClient::DestroySessionOutcome CarClient::DestroySession(const DestroySessionRequest &request)
 {
     auto outcome = MakeRequest(request, "DestroySession");

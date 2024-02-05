@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取The application version ID.
-                     * @return ApplicationVersionId The application version ID.
+                     * 获取Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of other versions is requested, you need to specify the version through this field.
+                     * @return ApplicationVersionId Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of other versions is requested, you need to specify the version through this field.
                      * 
                      */
                     std::string GetApplicationVersionId() const;
 
                     /**
-                     * 设置The application version ID.
-                     * @param _applicationVersionId The application version ID.
+                     * 设置Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of other versions is requested, you need to specify the version through this field.
+                     * @param _applicationVersionId Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of other versions is requested, you need to specify the version through this field.
                      * 
                      */
                     void SetApplicationVersionId(const std::string& _applicationVersionId);
@@ -168,7 +168,7 @@ namespace TencentCloud
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * The application version ID.
+                     * Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of other versions is requested, you need to specify the version through this field.
                      */
                     std::string m_applicationVersionId;
                     bool m_applicationVersionIdHasBeenSet;

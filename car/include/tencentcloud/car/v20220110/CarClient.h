@@ -27,6 +27,8 @@
 #include <tencentcloud/car/v20220110/model/ApplyConcurrentResponse.h>
 #include <tencentcloud/car/v20220110/model/CreateSessionRequest.h>
 #include <tencentcloud/car/v20220110/model/CreateSessionResponse.h>
+#include <tencentcloud/car/v20220110/model/DescribeConcurrentCountRequest.h>
+#include <tencentcloud/car/v20220110/model/DescribeConcurrentCountResponse.h>
 #include <tencentcloud/car/v20220110/model/DestroySessionRequest.h>
 #include <tencentcloud/car/v20220110/model/DestroySessionResponse.h>
 #include <tencentcloud/car/v20220110/model/StartPublishStreamRequest.h>
@@ -55,6 +57,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateSessionResponse> CreateSessionOutcome;
                 typedef std::future<CreateSessionOutcome> CreateSessionOutcomeCallable;
                 typedef std::function<void(const CarClient*, const Model::CreateSessionRequest&, CreateSessionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateSessionAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeConcurrentCountResponse> DescribeConcurrentCountOutcome;
+                typedef std::future<DescribeConcurrentCountOutcome> DescribeConcurrentCountOutcomeCallable;
+                typedef std::function<void(const CarClient*, const Model::DescribeConcurrentCountRequest&, DescribeConcurrentCountOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeConcurrentCountAsyncHandler;
                 typedef Outcome<Core::Error, Model::DestroySessionResponse> DestroySessionOutcome;
                 typedef std::future<DestroySessionOutcome> DestroySessionOutcomeCallable;
                 typedef std::function<void(const CarClient*, const Model::DestroySessionRequest&, DestroySessionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DestroySessionAsyncHandler;
@@ -89,7 +94,16 @@ namespace TencentCloud
                 CreateSessionOutcomeCallable CreateSessionCallable(const Model::CreateSessionRequest& request);
 
                 /**
-                 *This API is used to terminate a session.
+                 *Obtain the concurrency count.
+                 * @param req DescribeConcurrentCountRequest
+                 * @return DescribeConcurrentCountOutcome
+                 */
+                DescribeConcurrentCountOutcome DescribeConcurrentCount(const Model::DescribeConcurrentCountRequest &request);
+                void DescribeConcurrentCountAsync(const Model::DescribeConcurrentCountRequest& request, const DescribeConcurrentCountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeConcurrentCountOutcomeCallable DescribeConcurrentCountCallable(const Model::DescribeConcurrentCountRequest& request);
+
+                /**
+                 *Terminate the session. If stream push has been initiated in this session, then the stream push will end upon session termination.
                  * @param req DestroySessionRequest
                  * @return DestroySessionOutcome
                  */
@@ -98,7 +112,7 @@ namespace TencentCloud
                 DestroySessionOutcomeCallable DestroySessionCallable(const Model::DestroySessionRequest& request);
 
                 /**
-                 *This API is used to start stream push.
+                 *Initiate stream push. The codec for the stream push is automatically adjusted based on the client's (SDK) capabilities, with a default order of H265, H264, VP8, and VP9.
                  * @param req StartPublishStreamRequest
                  * @return StartPublishStreamOutcome
                  */
@@ -107,7 +121,7 @@ namespace TencentCloud
                 StartPublishStreamOutcomeCallable StartPublishStreamCallable(const Model::StartPublishStreamRequest& request);
 
                 /**
-                 *This API is used to start stream push to the specified URL. It is billed separately. For billing details, see the [Push to third-party address](https://intl.cloud.tencent.com/document/product/1547/72168?from_cn_redirect=1#98ac188a-d122-4caf-88be-05268ecefdf6) section.
+                 *Initiate stream push to the specified URL. The codec for the stream push is automatically adjusted based on the client's (SDK) capabilities, with a default order of H265, H264, VP8, and VP9. This stream push method will be charged separately. For details about the charging method, see [Charging for Stream Push to Specified URL](https://intl.cloud.tencent.com/document/product/1547/72168?from_cn_redirect=1#98ac188a-d122-4caf-88be-05268ecefdf6).
                  * @param req StartPublishStreamWithURLRequest
                  * @return StartPublishStreamWithURLOutcome
                  */
