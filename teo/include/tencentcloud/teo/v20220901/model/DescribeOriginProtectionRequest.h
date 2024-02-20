@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of sites to be queried. All sites will be selected if this field is not specified.
-                     * @return ZoneIds List of sites to be queried. All sites will be selected if this field is not specified.
+                     * 获取Set of site IDs to be queried. This is a required parameter.
+                     * @return ZoneIds Set of site IDs to be queried. This is a required parameter.
                      * 
                      */
                     std::vector<std::string> GetZoneIds() const;
 
                     /**
-                     * 设置List of sites to be queried. All sites will be selected if this field is not specified.
-                     * @param _zoneIds List of sites to be queried. All sites will be selected if this field is not specified.
+                     * 设置Set of site IDs to be queried. This is a required parameter.
+                     * @param _zoneIds Set of site IDs to be queried. This is a required parameter.
                      * 
                      */
                     void SetZoneIds(const std::vector<std::string>& _zoneIds);
@@ -138,7 +138,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of sites to be queried. All sites will be selected if this field is not specified.
+                     * Set of site IDs to be queried. This is a required parameter.
                      */
                     std::vector<std::string> m_zoneIds;
                     bool m_zoneIdsHasBeenSet;

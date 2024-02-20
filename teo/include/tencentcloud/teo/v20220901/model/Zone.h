@@ -177,27 +177,31 @@ u200c<li>`deactivated`: The site is blocked.</li>
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Connection mode of the site. Values:
-<li>`full`: Connect via the name server.</li>
-<li>`partial`: Connect via the CNAME record.</li>
-<li>`noDomainAccess`: Connect without using a domain name</li>
-                     * @return Type Connection mode of the site. Values:
-<li>`full`: Connect via the name server.</li>
-<li>`partial`: Connect via the CNAME record.</li>
-<li>`noDomainAccess`: Connect without using a domain name</li>
+                     * 获取Site connection method, valid values:
+<li>full: Connect via NS;</li>
+<li>partial: Connect via CNAME;</li>
+<li>noDomainAccess: Connect without using a domain name;</li>
+<li>vodeo: Connect by default when VODEO is enabled.</li>
+                     * @return Type Site connection method, valid values:
+<li>full: Connect via NS;</li>
+<li>partial: Connect via CNAME;</li>
+<li>noDomainAccess: Connect without using a domain name;</li>
+<li>vodeo: Connect by default when VODEO is enabled.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Connection mode of the site. Values:
-<li>`full`: Connect via the name server.</li>
-<li>`partial`: Connect via the CNAME record.</li>
-<li>`noDomainAccess`: Connect without using a domain name</li>
-                     * @param _type Connection mode of the site. Values:
-<li>`full`: Connect via the name server.</li>
-<li>`partial`: Connect via the CNAME record.</li>
-<li>`noDomainAccess`: Connect without using a domain name</li>
+                     * 设置Site connection method, valid values:
+<li>full: Connect via NS;</li>
+<li>partial: Connect via CNAME;</li>
+<li>noDomainAccess: Connect without using a domain name;</li>
+<li>vodeo: Connect by default when VODEO is enabled.</li>
+                     * @param _type Site connection method, valid values:
+<li>full: Connect via NS;</li>
+<li>partial: Connect via CNAME;</li>
+<li>noDomainAccess: Connect without using a domain name;</li>
+<li>vodeo: Connect by default when VODEO is enabled.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -626,10 +630,11 @@ u200c<li>`deactivated`: The site is blocked.</li>
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Connection mode of the site. Values:
-<li>`full`: Connect via the name server.</li>
-<li>`partial`: Connect via the CNAME record.</li>
-<li>`noDomainAccess`: Connect without using a domain name</li>
+                     * Site connection method, valid values:
+<li>full: Connect via NS;</li>
+<li>partial: Connect via CNAME;</li>
+<li>noDomainAccess: Connect without using a domain name;</li>
+<li>vodeo: Connect by default when VODEO is enabled.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

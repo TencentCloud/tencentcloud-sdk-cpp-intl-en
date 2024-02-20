@@ -69,15 +69,15 @@ The parameter is required.
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Start time of the query.
-                     * @return StartTime Start time of the query.
+                     * 获取Start time of the query. Either time or job-id is required.
+                     * @return StartTime Start time of the query. Either time or job-id is required.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Start time of the query.
-                     * @param _startTime Start time of the query.
+                     * 设置Start time of the query. Either time or job-id is required.
+                     * @param _startTime Start time of the query. Either time or job-id is required.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -90,15 +90,15 @@ The parameter is required.
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time of the query.
-                     * @return EndTime End time of the query.
+                     * 获取End time of the query. Either time or job-id is required.
+                     * @return EndTime End time of the query. Either time or job-id is required.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End time of the query.
-                     * @param _endTime End time of the query.
+                     * 设置End time of the query. Either time or job-id is required.
+                     * @param _endTime End time of the query. Either time or job-id is required.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -183,13 +183,13 @@ The parameter is required.
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Start time of the query.
+                     * Start time of the query. Either time or job-id is required.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End time of the query.
+                     * End time of the query. Either time or job-id is required.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;

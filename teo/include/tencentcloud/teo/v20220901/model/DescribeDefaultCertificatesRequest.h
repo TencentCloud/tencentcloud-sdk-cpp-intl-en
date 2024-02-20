@@ -44,6 +44,27 @@ namespace TencentCloud
 
 
                     /**
+                     * 获取Zone ID.
+                     * @return ZoneId Zone ID.
+                     * 
+                     */
+                    std::string GetZoneId() const;
+
+                    /**
+                     * 设置Zone ID.
+                     * @param _zoneId Zone ID.
+                     * 
+                     */
+                    void SetZoneId(const std::string& _zoneId);
+
+                    /**
+                     * 判断参数 ZoneId 是否已赋值
+                     * @return ZoneId 是否已赋值
+                     * 
+                     */
+                    bool ZoneIdHasBeenSet() const;
+
+                    /**
                      * 获取Filter criteria. Each filter criteria can have up to 5 entries.
 <li>`zone-id`: <br>Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li>
                      * @return Filters Filter criteria. Each filter criteria can have up to 5 entries.
@@ -111,6 +132,12 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                 private:
+
+                    /**
+                     * Zone ID.
+                     */
+                    std::string m_zoneId;
+                    bool m_zoneIdHasBeenSet;
 
                     /**
                      * Filter criteria. Each filter criteria can have up to 5 entries.

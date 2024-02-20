@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Private authentication parameters of object storage origins
+                * Private authentication parameters for Cloud Object Storage origin server
                 */
                 class PrivateParameter : public AbstractModel
                 {
@@ -47,31 +47,31 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The parameter name. Values
-<li>`AccessKeyId`: Access Key ID</li>
-<li>`SecretAccessKey`: Secret Access Key</li>
-<li>`SignatureVersion`: Signature version. Values: `v2`, `v4`</li>
-<li>`Region`: Region of the storage bucket</li>
-                     * @return Name The parameter name. Values
-<li>`AccessKeyId`: Access Key ID</li>
-<li>`SecretAccessKey`: Secret Access Key</li>
-<li>`SignatureVersion`: Signature version. Values: `v2`, `v4`</li>
-<li>`Region`: Region of the storage bucket</li>
+                     * 获取The name of the private authentication parameter. Valid values:
+<li>AccessKeyId: Access Key ID for authentication;</li>
+<li>SecretAccessKey: Secret Access Key for authentication;</li>
+<li>SignatureVersion: Authentication version, v2 or v4;</li>
+<li>Region: The region of the storage bucket.</li>
+                     * @return Name The name of the private authentication parameter. Valid values:
+<li>AccessKeyId: Access Key ID for authentication;</li>
+<li>SecretAccessKey: Secret Access Key for authentication;</li>
+<li>SignatureVersion: Authentication version, v2 or v4;</li>
+<li>Region: The region of the storage bucket.</li>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置The parameter name. Values
-<li>`AccessKeyId`: Access Key ID</li>
-<li>`SecretAccessKey`: Secret Access Key</li>
-<li>`SignatureVersion`: Signature version. Values: `v2`, `v4`</li>
-<li>`Region`: Region of the storage bucket</li>
-                     * @param _name The parameter name. Values
-<li>`AccessKeyId`: Access Key ID</li>
-<li>`SecretAccessKey`: Secret Access Key</li>
-<li>`SignatureVersion`: Signature version. Values: `v2`, `v4`</li>
-<li>`Region`: Region of the storage bucket</li>
+                     * 设置The name of the private authentication parameter. Valid values:
+<li>AccessKeyId: Access Key ID for authentication;</li>
+<li>SecretAccessKey: Secret Access Key for authentication;</li>
+<li>SignatureVersion: Authentication version, v2 or v4;</li>
+<li>Region: The region of the storage bucket.</li>
+                     * @param _name The name of the private authentication parameter. Valid values:
+<li>AccessKeyId: Access Key ID for authentication;</li>
+<li>SecretAccessKey: Secret Access Key for authentication;</li>
+<li>SignatureVersion: Authentication version, v2 or v4;</li>
+<li>Region: The region of the storage bucket.</li>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -107,11 +107,11 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The parameter name. Values
-<li>`AccessKeyId`: Access Key ID</li>
-<li>`SecretAccessKey`: Secret Access Key</li>
-<li>`SignatureVersion`: Signature version. Values: `v2`, `v4`</li>
-<li>`Region`: Region of the storage bucket</li>
+                     * The name of the private authentication parameter. Valid values:
+<li>AccessKeyId: Access Key ID for authentication;</li>
+<li>SecretAccessKey: Secret Access Key for authentication;</li>
+<li>SignatureVersion: Authentication version, v2 or v4;</li>
+<li>Region: The region of the storage bucket.</li>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;

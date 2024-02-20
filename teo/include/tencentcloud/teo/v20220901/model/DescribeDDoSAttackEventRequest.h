@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start time of the query period.
-                     * @return StartTime Start time of the query period.
+                     * 获取Start time. Time range: 30 days.
+                     * @return StartTime Start time. Time range: 30 days.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Start time of the query period.
-                     * @param _startTime Start time of the query period.
+                     * 设置Start time. Time range: 30 days.
+                     * @param _startTime Start time. Time range: 30 days.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time of the query period.
-                     * @return EndTime End time of the query period.
+                     * 获取End time. Time range: 30 days.
+                     * @return EndTime End time. Time range: 30 days.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End time of the query period.
-                     * @param _endTime End time of the query period.
+                     * 设置End time. Time range: 30 days.
+                     * @param _endTime End time. Time range: 30 days.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool PolicyIdsHasBeenSet() const;
 
                     /**
-                     * 获取(Required) List of sites. No query results are returned if this field is not specified.
-                     * @return ZoneIds (Required) List of sites. No query results are returned if this field is not specified.
+                     * 获取ZoneId set. This parameter is required.
+                     * @return ZoneIds ZoneId set. This parameter is required.
                      * 
                      */
                     std::vector<std::string> GetZoneIds() const;
 
                     /**
-                     * 设置(Required) List of sites. No query results are returned if this field is not specified.
-                     * @param _zoneIds (Required) List of sites. No query results are returned if this field is not specified.
+                     * 设置ZoneId set. This parameter is required.
+                     * @param _zoneIds ZoneId set. This parameter is required.
                      * 
                      */
                     void SetZoneIds(const std::vector<std::string>& _zoneIds);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Whether to display the details.
-                     * @return ShowDetail Whether to display the details.
+                     * 获取Parameter to show attack details. If it is configured as false, only the number of attacks is returned without details. If it is configured as true, attack details are returned.
+                     * @return ShowDetail Parameter to show attack details. If it is configured as false, only the number of attacks is returned without details. If it is configured as true, attack details are returned.
                      * 
                      */
                     bool GetShowDetail() const;
 
                     /**
-                     * 设置Whether to display the details.
-                     * @param _showDetail Whether to display the details.
+                     * 设置Parameter to show attack details. If it is configured as false, only the number of attacks is returned without details. If it is configured as true, attack details are returned.
+                     * @param _showDetail Parameter to show attack details. If it is configured as false, only the number of attacks is returned without details. If it is configured as true, attack details are returned.
                      * 
                      */
                     void SetShowDetail(const bool& _showDetail);
@@ -283,13 +283,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Start time of the query period.
+                     * Start time. Time range: 30 days.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End time of the query period.
+                     * End time. Time range: 30 days.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
@@ -301,7 +301,7 @@ namespace TencentCloud
                     bool m_policyIdsHasBeenSet;
 
                     /**
-                     * (Required) List of sites. No query results are returned if this field is not specified.
+                     * ZoneId set. This parameter is required.
                      */
                     std::vector<std::string> m_zoneIds;
                     bool m_zoneIdsHasBeenSet;
@@ -319,7 +319,7 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Whether to display the details.
+                     * Parameter to show attack details. If it is configured as false, only the number of attacks is returned without details. If it is configured as true, attack details are returned.
                      */
                     bool m_showDetail;
                     bool m_showDetailHasBeenSet;

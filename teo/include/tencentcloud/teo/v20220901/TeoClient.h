@@ -41,6 +41,10 @@
 #include <tencentcloud/teo/v20220901/model/CreateApplicationProxyRuleResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateConfigGroupVersionRequest.h>
 #include <tencentcloud/teo/v20220901/model/CreateConfigGroupVersionResponse.h>
+#include <tencentcloud/teo/v20220901/model/CreateL4ProxyRequest.h>
+#include <tencentcloud/teo/v20220901/model/CreateL4ProxyResponse.h>
+#include <tencentcloud/teo/v20220901/model/CreateL4ProxyRulesRequest.h>
+#include <tencentcloud/teo/v20220901/model/CreateL4ProxyRulesResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateOriginGroupRequest.h>
 #include <tencentcloud/teo/v20220901/model/CreateOriginGroupResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreatePlanForZoneRequest.h>
@@ -65,6 +69,10 @@
 #include <tencentcloud/teo/v20220901/model/DeleteApplicationProxyResponse.h>
 #include <tencentcloud/teo/v20220901/model/DeleteApplicationProxyRuleRequest.h>
 #include <tencentcloud/teo/v20220901/model/DeleteApplicationProxyRuleResponse.h>
+#include <tencentcloud/teo/v20220901/model/DeleteL4ProxyRequest.h>
+#include <tencentcloud/teo/v20220901/model/DeleteL4ProxyResponse.h>
+#include <tencentcloud/teo/v20220901/model/DeleteL4ProxyRulesRequest.h>
+#include <tencentcloud/teo/v20220901/model/DeleteL4ProxyRulesResponse.h>
 #include <tencentcloud/teo/v20220901/model/DeleteOriginGroupRequest.h>
 #include <tencentcloud/teo/v20220901/model/DeleteOriginGroupResponse.h>
 #include <tencentcloud/teo/v20220901/model/DeleteRulesRequest.h>
@@ -85,6 +93,8 @@
 #include <tencentcloud/teo/v20220901/model/DescribeApplicationProxiesResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeAvailablePlansRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeAvailablePlansResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeBillingDataRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeBillingDataResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeConfigGroupVersionDetailRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeConfigGroupVersionDetailResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeConfigGroupVersionsRequest.h>
@@ -105,8 +115,14 @@
 #include <tencentcloud/teo/v20220901/model/DescribeEnvironmentsResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeHostsSettingRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeHostsSettingResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeIPRegionRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeIPRegionResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeIdentificationsRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeIdentificationsResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeL4ProxyRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeL4ProxyResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeL4ProxyRulesRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeL4ProxyRulesResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeOriginGroupRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeOriginGroupResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeOriginProtectionRequest.h>
@@ -161,6 +177,14 @@
 #include <tencentcloud/teo/v20220901/model/ModifyApplicationProxyStatusResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyHostsCertificateRequest.h>
 #include <tencentcloud/teo/v20220901/model/ModifyHostsCertificateResponse.h>
+#include <tencentcloud/teo/v20220901/model/ModifyL4ProxyRequest.h>
+#include <tencentcloud/teo/v20220901/model/ModifyL4ProxyResponse.h>
+#include <tencentcloud/teo/v20220901/model/ModifyL4ProxyRulesRequest.h>
+#include <tencentcloud/teo/v20220901/model/ModifyL4ProxyRulesResponse.h>
+#include <tencentcloud/teo/v20220901/model/ModifyL4ProxyRulesStatusRequest.h>
+#include <tencentcloud/teo/v20220901/model/ModifyL4ProxyRulesStatusResponse.h>
+#include <tencentcloud/teo/v20220901/model/ModifyL4ProxyStatusRequest.h>
+#include <tencentcloud/teo/v20220901/model/ModifyL4ProxyStatusResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyOriginGroupRequest.h>
 #include <tencentcloud/teo/v20220901/model/ModifyOriginGroupResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyRuleRequest.h>
@@ -218,6 +242,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateConfigGroupVersionResponse> CreateConfigGroupVersionOutcome;
                 typedef std::future<CreateConfigGroupVersionOutcome> CreateConfigGroupVersionOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CreateConfigGroupVersionRequest&, CreateConfigGroupVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateConfigGroupVersionAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateL4ProxyResponse> CreateL4ProxyOutcome;
+                typedef std::future<CreateL4ProxyOutcome> CreateL4ProxyOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::CreateL4ProxyRequest&, CreateL4ProxyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateL4ProxyAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateL4ProxyRulesResponse> CreateL4ProxyRulesOutcome;
+                typedef std::future<CreateL4ProxyRulesOutcome> CreateL4ProxyRulesOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::CreateL4ProxyRulesRequest&, CreateL4ProxyRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateL4ProxyRulesAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateOriginGroupResponse> CreateOriginGroupOutcome;
                 typedef std::future<CreateOriginGroupOutcome> CreateOriginGroupOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CreateOriginGroupRequest&, CreateOriginGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateOriginGroupAsyncHandler;
@@ -254,6 +284,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteApplicationProxyRuleResponse> DeleteApplicationProxyRuleOutcome;
                 typedef std::future<DeleteApplicationProxyRuleOutcome> DeleteApplicationProxyRuleOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DeleteApplicationProxyRuleRequest&, DeleteApplicationProxyRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteApplicationProxyRuleAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteL4ProxyResponse> DeleteL4ProxyOutcome;
+                typedef std::future<DeleteL4ProxyOutcome> DeleteL4ProxyOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DeleteL4ProxyRequest&, DeleteL4ProxyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteL4ProxyAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteL4ProxyRulesResponse> DeleteL4ProxyRulesOutcome;
+                typedef std::future<DeleteL4ProxyRulesOutcome> DeleteL4ProxyRulesOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DeleteL4ProxyRulesRequest&, DeleteL4ProxyRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteL4ProxyRulesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteOriginGroupResponse> DeleteOriginGroupOutcome;
                 typedef std::future<DeleteOriginGroupOutcome> DeleteOriginGroupOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DeleteOriginGroupRequest&, DeleteOriginGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteOriginGroupAsyncHandler;
@@ -284,6 +320,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeAvailablePlansResponse> DescribeAvailablePlansOutcome;
                 typedef std::future<DescribeAvailablePlansOutcome> DescribeAvailablePlansOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeAvailablePlansRequest&, DescribeAvailablePlansOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAvailablePlansAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBillingDataResponse> DescribeBillingDataOutcome;
+                typedef std::future<DescribeBillingDataOutcome> DescribeBillingDataOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeBillingDataRequest&, DescribeBillingDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBillingDataAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeConfigGroupVersionDetailResponse> DescribeConfigGroupVersionDetailOutcome;
                 typedef std::future<DescribeConfigGroupVersionDetailOutcome> DescribeConfigGroupVersionDetailOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeConfigGroupVersionDetailRequest&, DescribeConfigGroupVersionDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeConfigGroupVersionDetailAsyncHandler;
@@ -314,9 +353,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeHostsSettingResponse> DescribeHostsSettingOutcome;
                 typedef std::future<DescribeHostsSettingOutcome> DescribeHostsSettingOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeHostsSettingRequest&, DescribeHostsSettingOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeHostsSettingAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeIPRegionResponse> DescribeIPRegionOutcome;
+                typedef std::future<DescribeIPRegionOutcome> DescribeIPRegionOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeIPRegionRequest&, DescribeIPRegionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeIPRegionAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeIdentificationsResponse> DescribeIdentificationsOutcome;
                 typedef std::future<DescribeIdentificationsOutcome> DescribeIdentificationsOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeIdentificationsRequest&, DescribeIdentificationsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeIdentificationsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeL4ProxyResponse> DescribeL4ProxyOutcome;
+                typedef std::future<DescribeL4ProxyOutcome> DescribeL4ProxyOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeL4ProxyRequest&, DescribeL4ProxyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeL4ProxyAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeL4ProxyRulesResponse> DescribeL4ProxyRulesOutcome;
+                typedef std::future<DescribeL4ProxyRulesOutcome> DescribeL4ProxyRulesOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeL4ProxyRulesRequest&, DescribeL4ProxyRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeL4ProxyRulesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeOriginGroupResponse> DescribeOriginGroupOutcome;
                 typedef std::future<DescribeOriginGroupOutcome> DescribeOriginGroupOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeOriginGroupRequest&, DescribeOriginGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeOriginGroupAsyncHandler;
@@ -398,6 +446,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyHostsCertificateResponse> ModifyHostsCertificateOutcome;
                 typedef std::future<ModifyHostsCertificateOutcome> ModifyHostsCertificateOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ModifyHostsCertificateRequest&, ModifyHostsCertificateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyHostsCertificateAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyL4ProxyResponse> ModifyL4ProxyOutcome;
+                typedef std::future<ModifyL4ProxyOutcome> ModifyL4ProxyOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::ModifyL4ProxyRequest&, ModifyL4ProxyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyL4ProxyAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyL4ProxyRulesResponse> ModifyL4ProxyRulesOutcome;
+                typedef std::future<ModifyL4ProxyRulesOutcome> ModifyL4ProxyRulesOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::ModifyL4ProxyRulesRequest&, ModifyL4ProxyRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyL4ProxyRulesAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyL4ProxyRulesStatusResponse> ModifyL4ProxyRulesStatusOutcome;
+                typedef std::future<ModifyL4ProxyRulesStatusOutcome> ModifyL4ProxyRulesStatusOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::ModifyL4ProxyRulesStatusRequest&, ModifyL4ProxyRulesStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyL4ProxyRulesStatusAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyL4ProxyStatusResponse> ModifyL4ProxyStatusOutcome;
+                typedef std::future<ModifyL4ProxyStatusOutcome> ModifyL4ProxyStatusOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::ModifyL4ProxyStatusRequest&, ModifyL4ProxyStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyL4ProxyStatusAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyOriginGroupResponse> ModifyOriginGroupOutcome;
                 typedef std::future<ModifyOriginGroupOutcome> ModifyOriginGroupOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ModifyOriginGroupRequest&, ModifyOriginGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyOriginGroupAsyncHandler;
@@ -482,7 +542,7 @@ For sites connected via the CNAME, if you have not verified the ownership of the
                 CreateAliasDomainOutcomeCallable CreateAliasDomainCallable(const Model::CreateAliasDomainRequest& request);
 
                 /**
-                 *This API is used to create an application proxy.
+                 *This API is on an earlier version. If you want to call it, please switch to the latest version [CreateL4Proxy] (https://intl.cloud.tencent.com/document/product/1552/103417?from_cn_redirect=1).
                  * @param req CreateApplicationProxyRequest
                  * @return CreateApplicationProxyOutcome
                  */
@@ -491,7 +551,7 @@ For sites connected via the CNAME, if you have not verified the ownership of the
                 CreateApplicationProxyOutcomeCallable CreateApplicationProxyCallable(const Model::CreateApplicationProxyRequest& request);
 
                 /**
-                 *This API is used to create an application proxy rule.
+                 *This API is on an earlier version. If you want to call it, please switch to the latest version. For details, see [CreateL4ProxyRules] (https://intl.cloud.tencent.com/document/product/1552/103416?from_cn_redirect=1).
                  * @param req CreateApplicationProxyRuleRequest
                  * @return CreateApplicationProxyRuleOutcome
                  */
@@ -507,6 +567,24 @@ For sites connected via the CNAME, if you have not verified the ownership of the
                 CreateConfigGroupVersionOutcome CreateConfigGroupVersion(const Model::CreateConfigGroupVersionRequest &request);
                 void CreateConfigGroupVersionAsync(const Model::CreateConfigGroupVersionRequest& request, const CreateConfigGroupVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateConfigGroupVersionOutcomeCallable CreateConfigGroupVersionCallable(const Model::CreateConfigGroupVersionRequest& request);
+
+                /**
+                 *This API is used to create Layer 4 proxy instances.
+                 * @param req CreateL4ProxyRequest
+                 * @return CreateL4ProxyOutcome
+                 */
+                CreateL4ProxyOutcome CreateL4Proxy(const Model::CreateL4ProxyRequest &request);
+                void CreateL4ProxyAsync(const Model::CreateL4ProxyRequest& request, const CreateL4ProxyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateL4ProxyOutcomeCallable CreateL4ProxyCallable(const Model::CreateL4ProxyRequest& request);
+
+                /**
+                 *This API is used to create Layer 4 proxy instance rules, supporting both individual and batch creation.
+                 * @param req CreateL4ProxyRulesRequest
+                 * @return CreateL4ProxyRulesOutcome
+                 */
+                CreateL4ProxyRulesOutcome CreateL4ProxyRules(const Model::CreateL4ProxyRulesRequest &request);
+                void CreateL4ProxyRulesAsync(const Model::CreateL4ProxyRulesRequest& request, const CreateL4ProxyRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateL4ProxyRulesOutcomeCallable CreateL4ProxyRulesCallable(const Model::CreateL4ProxyRulesRequest& request);
 
                 /**
                  *This API is used to create an origin group for easy management. The created origin server group can be used for **adding acceleration domain names** and **layer-4 proxy configuration**.
@@ -603,7 +681,7 @@ If there are already EdgeOne plans under the current account, it is recommended 
                 DeleteAliasDomainOutcomeCallable DeleteAliasDomainCallable(const Model::DeleteAliasDomainRequest& request);
 
                 /**
-                 *This API is used to delete an application proxy.
+                 *This API is on an earlier version. If you want to call it, please switch to the latest version. For details, see [DeleteL4Proxy] (https://intl.cloud.tencent.com/document/product/1552/103415?from_cn_redirect=1).
                  * @param req DeleteApplicationProxyRequest
                  * @return DeleteApplicationProxyOutcome
                  */
@@ -612,13 +690,31 @@ If there are already EdgeOne plans under the current account, it is recommended 
                 DeleteApplicationProxyOutcomeCallable DeleteApplicationProxyCallable(const Model::DeleteApplicationProxyRequest& request);
 
                 /**
-                 *This API is used to delete an application proxy rule.
+                 *This API is on an earlier version. If you want to call it, please switch to the latest version. For details, see [DeleteL4ProxyRules] (https://intl.cloud.tencent.com/document/product/1552/103414?from_cn_redirect=1).
                  * @param req DeleteApplicationProxyRuleRequest
                  * @return DeleteApplicationProxyRuleOutcome
                  */
                 DeleteApplicationProxyRuleOutcome DeleteApplicationProxyRule(const Model::DeleteApplicationProxyRuleRequest &request);
                 void DeleteApplicationProxyRuleAsync(const Model::DeleteApplicationProxyRuleRequest& request, const DeleteApplicationProxyRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteApplicationProxyRuleOutcomeCallable DeleteApplicationProxyRuleCallable(const Model::DeleteApplicationProxyRuleRequest& request);
+
+                /**
+                 *This API is used to delete a Layer 4 proxy instance.
+                 * @param req DeleteL4ProxyRequest
+                 * @return DeleteL4ProxyOutcome
+                 */
+                DeleteL4ProxyOutcome DeleteL4Proxy(const Model::DeleteL4ProxyRequest &request);
+                void DeleteL4ProxyAsync(const Model::DeleteL4ProxyRequest& request, const DeleteL4ProxyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteL4ProxyOutcomeCallable DeleteL4ProxyCallable(const Model::DeleteL4ProxyRequest& request);
+
+                /**
+                 *This API is used to delete Layer 4 proxy forwarding rules, supporting both individual and batch operation.
+                 * @param req DeleteL4ProxyRulesRequest
+                 * @return DeleteL4ProxyRulesOutcome
+                 */
+                DeleteL4ProxyRulesOutcome DeleteL4ProxyRules(const Model::DeleteL4ProxyRulesRequest &request);
+                void DeleteL4ProxyRulesAsync(const Model::DeleteL4ProxyRulesRequest& request, const DeleteL4ProxyRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteL4ProxyRulesOutcomeCallable DeleteL4ProxyRulesCallable(const Model::DeleteL4ProxyRulesRequest& request);
 
                 /**
                  *This API is used to delete an origin group. Note that an origin group can not be deleted if it is referenced by services (e.g. L4 Proxy, domain name service, load balancing, rule engines). 
@@ -693,7 +789,7 @@ If there are already EdgeOne plans under the current account, it is recommended 
                 DescribeAliasDomainsOutcomeCallable DescribeAliasDomainsCallable(const Model::DescribeAliasDomainsRequest& request);
 
                 /**
-                 *This API is used to query the list of application proxies.
+                 *This API is on an earlier version. If you want to call it, please switch to the latest version. In the latest version, this API has been split into two APIs: one for querying the Layer 4 proxy instance list and the other for querying Layer 4 forwarding rules. For details, see [DescribeL4Proxy] (https://intl.cloud.tencent.com/document/product/1552/103413?from_cn_redirect=1) and [DescribeL4ProxyRules] (https://intl.cloud.tencent.com/document/product/1552/103412?from_cn_redirect=1).
                  * @param req DescribeApplicationProxiesRequest
                  * @return DescribeApplicationProxiesOutcome
                  */
@@ -709,6 +805,15 @@ If there are already EdgeOne plans under the current account, it is recommended 
                 DescribeAvailablePlansOutcome DescribeAvailablePlans(const Model::DescribeAvailablePlansRequest &request);
                 void DescribeAvailablePlansAsync(const Model::DescribeAvailablePlansRequest& request, const DescribeAvailablePlansAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeAvailablePlansOutcomeCallable DescribeAvailablePlansCallable(const Model::DescribeAvailablePlansRequest& request);
+
+                /**
+                 *This API is used to query billing data.
+                 * @param req DescribeBillingDataRequest
+                 * @return DescribeBillingDataOutcome
+                 */
+                DescribeBillingDataOutcome DescribeBillingData(const Model::DescribeBillingDataRequest &request);
+                void DescribeBillingDataAsync(const Model::DescribeBillingDataRequest& request, const DescribeBillingDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBillingDataOutcomeCallable DescribeBillingDataCallable(const Model::DescribeBillingDataRequest& request);
 
                 /**
                  *This API is used to obtain detailed information about a version in version management mode. The response includes the version ID, description, status, creation time, configuration group information, and the content of the version configuration file. The version management feature is currently undergoing beta testing and is accessible only to users on the whitelist.
@@ -801,6 +906,15 @@ If there are already EdgeOne plans under the current account, it is recommended 
                 DescribeHostsSettingOutcomeCallable DescribeHostsSettingCallable(const Model::DescribeHostsSettingRequest& request);
 
                 /**
+                 *This API is used to check if the IP is an EdgeOne IP.
+                 * @param req DescribeIPRegionRequest
+                 * @return DescribeIPRegionOutcome
+                 */
+                DescribeIPRegionOutcome DescribeIPRegion(const Model::DescribeIPRegionRequest &request);
+                void DescribeIPRegionAsync(const Model::DescribeIPRegionRequest& request, const DescribeIPRegionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeIPRegionOutcomeCallable DescribeIPRegionCallable(const Model::DescribeIPRegionRequest& request);
+
+                /**
                  *This API is used to query the verification information of a site.
                  * @param req DescribeIdentificationsRequest
                  * @return DescribeIdentificationsOutcome
@@ -808,6 +922,24 @@ If there are already EdgeOne plans under the current account, it is recommended 
                 DescribeIdentificationsOutcome DescribeIdentifications(const Model::DescribeIdentificationsRequest &request);
                 void DescribeIdentificationsAsync(const Model::DescribeIdentificationsRequest& request, const DescribeIdentificationsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeIdentificationsOutcomeCallable DescribeIdentificationsCallable(const Model::DescribeIdentificationsRequest& request);
+
+                /**
+                 *This API is used to query a Layer 4 proxy instance list.
+                 * @param req DescribeL4ProxyRequest
+                 * @return DescribeL4ProxyOutcome
+                 */
+                DescribeL4ProxyOutcome DescribeL4Proxy(const Model::DescribeL4ProxyRequest &request);
+                void DescribeL4ProxyAsync(const Model::DescribeL4ProxyRequest& request, const DescribeL4ProxyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeL4ProxyOutcomeCallable DescribeL4ProxyCallable(const Model::DescribeL4ProxyRequest& request);
+
+                /**
+                 *This API is used to query the forwarding rule list under a Layer 4 proxy instance.
+                 * @param req DescribeL4ProxyRulesRequest
+                 * @return DescribeL4ProxyRulesOutcome
+                 */
+                DescribeL4ProxyRulesOutcome DescribeL4ProxyRules(const Model::DescribeL4ProxyRulesRequest &request);
+                void DescribeL4ProxyRulesAsync(const Model::DescribeL4ProxyRulesRequest& request, const DescribeL4ProxyRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeL4ProxyRulesOutcomeCallable DescribeL4ProxyRulesCallable(const Model::DescribeL4ProxyRulesRequest& request);
 
                 /**
                  *This API is used to obtain a list of origin groups.
@@ -1008,7 +1140,8 @@ If there are already EdgeOne plans under the current account, it is recommended 
                 ModifyAliasDomainStatusOutcomeCallable ModifyAliasDomainStatusCallable(const Model::ModifyAliasDomainStatusRequest& request);
 
                 /**
-                 *This API is used to modify an application proxy.
+                 *This API is on an earlier version. If you want to call it, please switch to the latest version. For details, see [ModifyL4Proxy
+] (https://intl.cloud.tencent.com/document/product/1552/103411?from_cn_redirect=1).
                  * @param req ModifyApplicationProxyRequest
                  * @return ModifyApplicationProxyOutcome
                  */
@@ -1017,7 +1150,7 @@ If there are already EdgeOne plans under the current account, it is recommended 
                 ModifyApplicationProxyOutcomeCallable ModifyApplicationProxyCallable(const Model::ModifyApplicationProxyRequest& request);
 
                 /**
-                 *This API is used to modify an application proxy rule.
+                 *This API is on an earlier version. If you want to call it, please switch to the latest version. For details, see [ModifyL4ProxyRules] (https://intl.cloud.tencent.com/document/product/1552/103410?from_cn_redirect=1).
                  * @param req ModifyApplicationProxyRuleRequest
                  * @return ModifyApplicationProxyRuleOutcome
                  */
@@ -1026,7 +1159,8 @@ If there are already EdgeOne plans under the current account, it is recommended 
                 ModifyApplicationProxyRuleOutcomeCallable ModifyApplicationProxyRuleCallable(const Model::ModifyApplicationProxyRuleRequest& request);
 
                 /**
-                 *This API is used to modify the status of an application proxy rule.
+                 *This API is on an earlier version. If you want to call it, please switch to the latest version. For details, see [ModifyL4ProxyRulesStatus
+] (https://intl.cloud.tencent.com/document/product/1552/103409?from_cn_redirect=1).
                  * @param req ModifyApplicationProxyRuleStatusRequest
                  * @return ModifyApplicationProxyRuleStatusOutcome
                  */
@@ -1035,7 +1169,7 @@ If there are already EdgeOne plans under the current account, it is recommended 
                 ModifyApplicationProxyRuleStatusOutcomeCallable ModifyApplicationProxyRuleStatusCallable(const Model::ModifyApplicationProxyRuleStatusRequest& request);
 
                 /**
-                 *This API is used to modify the status of an application proxy.
+                 *This API is on an earlier version. If you want to call it, please switch to the latest version. For details, see [ModifyL4ProxyStatus] (https://intl.cloud.tencent.com/document/product/1552/103408?from_cn_redirect=1).
                  * @param req ModifyApplicationProxyStatusRequest
                  * @return ModifyApplicationProxyStatusOutcome
                  */
@@ -1053,6 +1187,42 @@ To use an external certificate, upload the certificate to [SSL Certificates Cons
                 ModifyHostsCertificateOutcome ModifyHostsCertificate(const Model::ModifyHostsCertificateRequest &request);
                 void ModifyHostsCertificateAsync(const Model::ModifyHostsCertificateRequest& request, const ModifyHostsCertificateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyHostsCertificateOutcomeCallable ModifyHostsCertificateCallable(const Model::ModifyHostsCertificateRequest& request);
+
+                /**
+                 *This API is used to modify the configuration of a Layer 4 proxy instance.
+                 * @param req ModifyL4ProxyRequest
+                 * @return ModifyL4ProxyOutcome
+                 */
+                ModifyL4ProxyOutcome ModifyL4Proxy(const Model::ModifyL4ProxyRequest &request);
+                void ModifyL4ProxyAsync(const Model::ModifyL4ProxyRequest& request, const ModifyL4ProxyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyL4ProxyOutcomeCallable ModifyL4ProxyCallable(const Model::ModifyL4ProxyRequest& request);
+
+                /**
+                 *This API is used to modify Layer 4 proxy forwarding rules, supporting both individual and batch modification.
+                 * @param req ModifyL4ProxyRulesRequest
+                 * @return ModifyL4ProxyRulesOutcome
+                 */
+                ModifyL4ProxyRulesOutcome ModifyL4ProxyRules(const Model::ModifyL4ProxyRulesRequest &request);
+                void ModifyL4ProxyRulesAsync(const Model::ModifyL4ProxyRulesRequest& request, const ModifyL4ProxyRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyL4ProxyRulesOutcomeCallable ModifyL4ProxyRulesCallable(const Model::ModifyL4ProxyRulesRequest& request);
+
+                /**
+                 *This API is used to start or stop Layer 4 proxy forwarding rules, supporting both individual and batch operation.
+                 * @param req ModifyL4ProxyRulesStatusRequest
+                 * @return ModifyL4ProxyRulesStatusOutcome
+                 */
+                ModifyL4ProxyRulesStatusOutcome ModifyL4ProxyRulesStatus(const Model::ModifyL4ProxyRulesStatusRequest &request);
+                void ModifyL4ProxyRulesStatusAsync(const Model::ModifyL4ProxyRulesStatusRequest& request, const ModifyL4ProxyRulesStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyL4ProxyRulesStatusOutcomeCallable ModifyL4ProxyRulesStatusCallable(const Model::ModifyL4ProxyRulesStatusRequest& request);
+
+                /**
+                 *This API is used to enable or disable a Layer 4 proxy instance.
+                 * @param req ModifyL4ProxyStatusRequest
+                 * @return ModifyL4ProxyStatusOutcome
+                 */
+                ModifyL4ProxyStatusOutcome ModifyL4ProxyStatus(const Model::ModifyL4ProxyStatusRequest &request);
+                void ModifyL4ProxyStatusAsync(const Model::ModifyL4ProxyStatusRequest& request, const ModifyL4ProxyStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyL4ProxyStatusOutcomeCallable ModifyL4ProxyStatusCallable(const Model::ModifyL4ProxyStatusRequest& request);
 
                 /**
                  *This API is used to modify the configuration of an origin group. The original configuration will be overwritten. 

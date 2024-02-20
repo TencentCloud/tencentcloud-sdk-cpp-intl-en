@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取IP group information, including IP and IP mask.
-                     * @return Content IP group information, including IP and IP mask.
+                     * 获取IP group content. Only supports IP and IP mask.
+                     * @return Content IP group content. Only supports IP and IP mask.
                      * 
                      */
                     std::vector<std::string> GetContent() const;
 
                     /**
-                     * 设置IP group information, including IP and IP mask.
-                     * @param _content IP group information, including IP and IP mask.
+                     * 设置IP group content. Only supports IP and IP mask.
+                     * @param _content IP group content. Only supports IP and IP mask.
                      * 
                      */
                     void SetContent(const std::vector<std::string>& _content);
@@ -124,7 +124,7 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * IP group information, including IP and IP mask.
+                     * IP group content. Only supports IP and IP mask.
                      */
                     std::vector<std::string> m_content;
                     bool m_contentHasBeenSet;

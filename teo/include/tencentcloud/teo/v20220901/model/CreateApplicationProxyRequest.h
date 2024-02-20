@@ -179,23 +179,15 @@ Instance name when `ProxyType=instance`.
                     bool AccelerateTypeHasBeenSet() const;
 
                     /**
-                     * 获取The proxy type. Values:
-<li>`hostname`: The proxy is created by subdomain name.</li>
-<li>`instance`: The proxy is created by instance.</li>If not specified, this field uses the default value `instance`.
-                     * @return ProxyType The proxy type. Values:
-<li>`hostname`: The proxy is created by subdomain name.</li>
-<li>`instance`: The proxy is created by instance.</li>If not specified, this field uses the default value `instance`.
+                     * 获取Layer 4 proxy mode, with value: <li>instance: instance mode.</li>If not specified, the default value instance will be used.
+                     * @return ProxyType Layer 4 proxy mode, with value: <li>instance: instance mode.</li>If not specified, the default value instance will be used.
                      * 
                      */
                     std::string GetProxyType() const;
 
                     /**
-                     * 设置The proxy type. Values:
-<li>`hostname`: The proxy is created by subdomain name.</li>
-<li>`instance`: The proxy is created by instance.</li>If not specified, this field uses the default value `instance`.
-                     * @param _proxyType The proxy type. Values:
-<li>`hostname`: The proxy is created by subdomain name.</li>
-<li>`instance`: The proxy is created by instance.</li>If not specified, this field uses the default value `instance`.
+                     * 设置Layer 4 proxy mode, with value: <li>instance: instance mode.</li>If not specified, the default value instance will be used.
+                     * @param _proxyType Layer 4 proxy mode, with value: <li>instance: instance mode.</li>If not specified, the default value instance will be used.
                      * 
                      */
                     void SetProxyType(const std::string& _proxyType);
@@ -343,9 +335,7 @@ Instance name when `ProxyType=instance`.
                     bool m_accelerateTypeHasBeenSet;
 
                     /**
-                     * The proxy type. Values:
-<li>`hostname`: The proxy is created by subdomain name.</li>
-<li>`instance`: The proxy is created by instance.</li>If not specified, this field uses the default value `instance`.
+                     * Layer 4 proxy mode, with value: <li>instance: instance mode.</li>If not specified, the default value instance will be used.
                      */
                     std::string m_proxyType;
                     bool m_proxyTypeHasBeenSet;

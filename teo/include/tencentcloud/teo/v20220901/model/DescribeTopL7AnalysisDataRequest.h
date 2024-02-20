@@ -212,15 +212,15 @@ namespace TencentCloud
                     bool ZoneIdsHasBeenSet() const;
 
                     /**
-                     * 获取Queries the top n rows of data. Maximum value: 1000. Top 10 rows of data will be queried if this field is not specified.
-                     * @return Limit Queries the top n rows of data. Maximum value: 1000. Top 10 rows of data will be queried if this field is not specified.
+                     * 获取Queries the top N data entries. Maximum value: 1000. Top 10 data entries will be queried if this field is not specified.
+                     * @return Limit Queries the top N data entries. Maximum value: 1000. Top 10 data entries will be queried if this field is not specified.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Queries the top n rows of data. Maximum value: 1000. Top 10 rows of data will be queried if this field is not specified.
-                     * @param _limit Queries the top n rows of data. Maximum value: 1000. Top 10 rows of data will be queried if this field is not specified.
+                     * 设置Queries the top N data entries. Maximum value: 1000. Top 10 data entries will be queried if this field is not specified.
+                     * @param _limit Queries the top N data entries. Maximum value: 1000. Top 10 data entries will be queried if this field is not specified.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -439,7 +439,7 @@ namespace TencentCloud
                     bool m_zoneIdsHasBeenSet;
 
                     /**
-                     * Queries the top n rows of data. Maximum value: 1000. Top 10 rows of data will be queried if this field is not specified.
+                     * Queries the top N data entries. Maximum value: 1000. Top 10 data entries will be queried if this field is not specified.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

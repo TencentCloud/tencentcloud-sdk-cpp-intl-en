@@ -144,15 +144,15 @@ namespace TencentCloud
                     bool ZoneIdsHasBeenSet() const;
 
                     /**
-                     * 获取Top rows of data to query. Maximum value: 1000. Top 10 rows of data are queried if this field is not specified.
-                     * @return Limit Top rows of data to query. Maximum value: 1000. Top 10 rows of data are queried if this field is not specified.
+                     * 获取The number of data entries to be queried. The maximum value is 1000. If it is not specified, the value 10 is used by default, indicating that the top 10 data entries.
+                     * @return Limit The number of data entries to be queried. The maximum value is 1000. If it is not specified, the value 10 is used by default, indicating that the top 10 data entries.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Top rows of data to query. Maximum value: 1000. Top 10 rows of data are queried if this field is not specified.
-                     * @param _limit Top rows of data to query. Maximum value: 1000. Top 10 rows of data are queried if this field is not specified.
+                     * 设置The number of data entries to be queried. The maximum value is 1000. If it is not specified, the value 10 is used by default, indicating that the top 10 data entries.
+                     * @param _limit The number of data entries to be queried. The maximum value is 1000. If it is not specified, the value 10 is used by default, indicating that the top 10 data entries.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -314,7 +314,7 @@ namespace TencentCloud
                     bool m_zoneIdsHasBeenSet;
 
                     /**
-                     * Top rows of data to query. Maximum value: 1000. Top 10 rows of data are queried if this field is not specified.
+                     * The number of data entries to be queried. The maximum value is 1000. If it is not specified, the value 10 is used by default, indicating that the top 10 data entries.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

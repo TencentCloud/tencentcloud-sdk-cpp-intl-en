@@ -57,19 +57,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The settings of the managed rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return WafConfig The settings of the managed rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Managed rule. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return WafConfig Managed rule. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     WafConfig GetWafConfig() const;
 
                     /**
-                     * 设置The settings of the managed rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _wafConfig The settings of the managed rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Managed rule. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _wafConfig Managed rule. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetWafConfig(const WafConfig& _wafConfig);
@@ -82,19 +82,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool WafConfigHasBeenSet() const;
 
                     /**
-                     * 获取The settings of the rate limiting rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RateLimitConfig The settings of the rate limiting rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Rate limiting. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return RateLimitConfig Rate limiting. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     RateLimitConfig GetRateLimitConfig() const;
 
                     /**
-                     * 设置The settings of the rate limiting rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _rateLimitConfig The settings of the rate limiting rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Rate limiting. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _rateLimitConfig Rate limiting. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetRateLimitConfig(const RateLimitConfig& _rateLimitConfig);
@@ -107,19 +107,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RateLimitConfigHasBeenSet() const;
 
                     /**
-                     * 获取The settings of the custom rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AclConfig The settings of the custom rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Custom rule. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return AclConfig Custom rule. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     AclConfig GetAclConfig() const;
 
                     /**
-                     * 设置The settings of the custom rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _aclConfig The settings of the custom rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Custom rule. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _aclConfig Custom rule. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetAclConfig(const AclConfig& _aclConfig);
@@ -132,19 +132,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AclConfigHasBeenSet() const;
 
                     /**
-                     * 获取The settings of the bot configuration. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BotConfig The settings of the bot configuration. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Bot configuration. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return BotConfig Bot configuration. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     BotConfig GetBotConfig() const;
 
                     /**
-                     * 设置The settings of the bot configuration. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _botConfig The settings of the bot configuration. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Bot configuration. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _botConfig Bot configuration. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetBotConfig(const BotConfig& _botConfig);
@@ -157,19 +157,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BotConfigHasBeenSet() const;
 
                     /**
-                     * 获取The switch setting of the layer-7 protection. If it is null, the setting that was last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SwitchConfig The switch setting of the layer-7 protection. If it is null, the setting that was last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Switch setting of the 7-layer protection. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return SwitchConfig Switch setting of the 7-layer protection. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     SwitchConfig GetSwitchConfig() const;
 
                     /**
-                     * 设置The switch setting of the layer-7 protection. If it is null, the setting that was last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _switchConfig The switch setting of the layer-7 protection. If it is null, the setting that was last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Switch setting of the 7-layer protection. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _switchConfig Switch setting of the 7-layer protection. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetSwitchConfig(const SwitchConfig& _switchConfig);
@@ -182,19 +178,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SwitchConfigHasBeenSet() const;
 
                     /**
-                     * 获取The settings of the basic access control rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IpTableConfig The settings of the basic access control rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Basic access control. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return IpTableConfig Basic access control. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     IpTableConfig GetIpTableConfig() const;
 
                     /**
-                     * 设置The settings of the basic access control rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _ipTableConfig The settings of the basic access control rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Basic access control. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _ipTableConfig Basic access control. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetIpTableConfig(const IpTableConfig& _ipTableConfig);
@@ -207,19 +203,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IpTableConfigHasBeenSet() const;
 
                     /**
-                     * 获取The settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ExceptConfig The settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Exception rule configuration. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return ExceptConfig Exception rule configuration. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     ExceptConfig GetExceptConfig() const;
 
                     /**
-                     * 设置The settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _exceptConfig The settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Exception rule configuration. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _exceptConfig Exception rule configuration. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetExceptConfig(const ExceptConfig& _exceptConfig);
@@ -232,19 +224,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ExceptConfigHasBeenSet() const;
 
                     /**
-                     * 获取The settings of the custom block page. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DropPageConfig The settings of the custom block page. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Custom block page settings. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return DropPageConfig Custom block page settings. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     DropPageConfig GetDropPageConfig() const;
 
                     /**
-                     * 设置The settings of the custom block page. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dropPageConfig The settings of the custom block page. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Custom block page settings. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _dropPageConfig Custom block page settings. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetDropPageConfig(const DropPageConfig& _dropPageConfig);
@@ -282,19 +270,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool TemplateConfigHasBeenSet() const;
 
                     /**
-                     * 获取Slow attack defense configuration. If it is `null`, the previous setting is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return SlowPostConfig Slow attack defense configuration. If it is `null`, the previous setting is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Settings for slow attack defense. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return SlowPostConfig Settings for slow attack defense. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     SlowPostConfig GetSlowPostConfig() const;
 
                     /**
-                     * 设置Slow attack defense configuration. If it is `null`, the previous setting is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _slowPostConfig Slow attack defense configuration. If it is `null`, the previous setting is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Settings for slow attack defense. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _slowPostConfig Settings for slow attack defense. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetSlowPostConfig(const SlowPostConfig& _slowPostConfig);
@@ -309,57 +293,54 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * The settings of the managed rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Managed rule. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     WafConfig m_wafConfig;
                     bool m_wafConfigHasBeenSet;
 
                     /**
-                     * The settings of the rate limiting rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Rate limiting. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     RateLimitConfig m_rateLimitConfig;
                     bool m_rateLimitConfigHasBeenSet;
 
                     /**
-                     * The settings of the custom rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Custom rule. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     AclConfig m_aclConfig;
                     bool m_aclConfigHasBeenSet;
 
                     /**
-                     * The settings of the bot configuration. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Bot configuration. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     BotConfig m_botConfig;
                     bool m_botConfigHasBeenSet;
 
                     /**
-                     * The switch setting of the layer-7 protection. If it is null, the setting that was last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Switch setting of the 7-layer protection. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     SwitchConfig m_switchConfig;
                     bool m_switchConfigHasBeenSet;
 
                     /**
-                     * The settings of the basic access control rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Basic access control. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     IpTableConfig m_ipTableConfig;
                     bool m_ipTableConfigHasBeenSet;
 
                     /**
-                     * The settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Exception rule configuration. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     ExceptConfig m_exceptConfig;
                     bool m_exceptConfigHasBeenSet;
 
                     /**
-                     * The settings of the custom block page. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Custom block page settings. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     DropPageConfig m_dropPageConfig;
                     bool m_dropPageConfigHasBeenSet;
@@ -372,8 +353,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_templateConfigHasBeenSet;
 
                     /**
-                     * Slow attack defense configuration. If it is `null`, the previous setting is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Settings for slow attack defense. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     SlowPostConfig m_slowPostConfig;
                     bool m_slowPostConfigHasBeenSet;

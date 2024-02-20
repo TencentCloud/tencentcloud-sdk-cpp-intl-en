@@ -359,6 +359,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ZoneNumberHasBeenSet() const;
 
+                    /**
+                     * 获取Resource tag type. Valid values:
+<li>vodeo: vodeo resource.</li>
+                     * @return Type Resource tag type. Valid values:
+<li>vodeo: vodeo resource.</li>
+                     * 
+                     */
+                    std::string GetType() const;
+
+                    /**
+                     * 设置Resource tag type. Valid values:
+<li>vodeo: vodeo resource.</li>
+                     * @param _type Resource tag type. Valid values:
+<li>vodeo: vodeo resource.</li>
+                     * 
+                     */
+                    void SetType(const std::string& _type);
+
+                    /**
+                     * 判断参数 Type 是否已赋值
+                     * @return Type 是否已赋值
+                     * 
+                     */
+                    bool TypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -447,6 +472,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_zoneNumber;
                     bool m_zoneNumberHasBeenSet;
+
+                    /**
+                     * Resource tag type. Valid values:
+<li>vodeo: vodeo resource.</li>
+                     */
+                    std::string m_type;
+                    bool m_typeHasBeenSet;
 
                 };
             }

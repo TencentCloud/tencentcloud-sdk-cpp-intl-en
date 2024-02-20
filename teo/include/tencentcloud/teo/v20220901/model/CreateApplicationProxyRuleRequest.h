@@ -143,23 +143,19 @@ namespace TencentCloud
                     bool PortHasBeenSet() const;
 
                     /**
-                     * 获取The origin type. Values:
-<li>`custom`: Specified origins</li>
-<li>`origins`: Origin group</li>
-                     * @return OriginType The origin type. Values:
-<li>`custom`: Specified origins</li>
-<li>`origins`: Origin group</li>
+                     * 获取Origin server type. Valid values:<li>custom: Manually added;</li>
+<li>loadbalancer: Cloud Load Balancer;</li><li>origins: Origin server group.</li>
+                     * @return OriginType Origin server type. Valid values:<li>custom: Manually added;</li>
+<li>loadbalancer: Cloud Load Balancer;</li><li>origins: Origin server group.</li>
                      * 
                      */
                     std::string GetOriginType() const;
 
                     /**
-                     * 设置The origin type. Values:
-<li>`custom`: Specified origins</li>
-<li>`origins`: Origin group</li>
-                     * @param _originType The origin type. Values:
-<li>`custom`: Specified origins</li>
-<li>`origins`: Origin group</li>
+                     * 设置Origin server type. Valid values:<li>custom: Manually added;</li>
+<li>loadbalancer: Cloud Load Balancer;</li><li>origins: Origin server group.</li>
+                     * @param _originType Origin server type. Valid values:<li>custom: Manually added;</li>
+<li>loadbalancer: Cloud Load Balancer;</li><li>origins: Origin server group.</li>
                      * 
                      */
                     void SetOriginType(const std::string& _originType);
@@ -172,23 +168,15 @@ namespace TencentCloud
                     bool OriginTypeHasBeenSet() const;
 
                     /**
-                     * 获取Origin server information:
-<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
-<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
-                     * @return OriginValue Origin server information:
-<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
-<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+                     * 获取Details of the origin server:<li>When OriginType is custom, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or OriginValue=["test.com"];</li><li>When OriginType is loadbalancer, it indicates a single Cloud Load Balancer, such as ["lb-xdffsfasdfs"];</li><li>When OriginType is origins, it requires one and only one element, which represents an origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+                     * @return OriginValue Details of the origin server:<li>When OriginType is custom, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or OriginValue=["test.com"];</li><li>When OriginType is loadbalancer, it indicates a single Cloud Load Balancer, such as ["lb-xdffsfasdfs"];</li><li>When OriginType is origins, it requires one and only one element, which represents an origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
                      * 
                      */
                     std::vector<std::string> GetOriginValue() const;
 
                     /**
-                     * 设置Origin server information:
-<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
-<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
-                     * @param _originValue Origin server information:
-<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
-<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+                     * 设置Details of the origin server:<li>When OriginType is custom, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or OriginValue=["test.com"];</li><li>When OriginType is loadbalancer, it indicates a single Cloud Load Balancer, such as ["lb-xdffsfasdfs"];</li><li>When OriginType is origins, it requires one and only one element, which represents an origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+                     * @param _originValue Details of the origin server:<li>When OriginType is custom, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or OriginValue=["test.com"];</li><li>When OriginType is loadbalancer, it indicates a single Cloud Load Balancer, such as ["lb-xdffsfasdfs"];</li><li>When OriginType is origins, it requires one and only one element, which represents an origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
                      * 
                      */
                     void SetOriginValue(const std::vector<std::string>& _originValue);
@@ -368,17 +356,14 @@ namespace TencentCloud
                     bool m_portHasBeenSet;
 
                     /**
-                     * The origin type. Values:
-<li>`custom`: Specified origins</li>
-<li>`origins`: Origin group</li>
+                     * Origin server type. Valid values:<li>custom: Manually added;</li>
+<li>loadbalancer: Cloud Load Balancer;</li><li>origins: Origin server group.</li>
                      */
                     std::string m_originType;
                     bool m_originTypeHasBeenSet;
 
                     /**
-                     * Origin server information:
-<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
-<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+                     * Details of the origin server:<li>When OriginType is custom, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or OriginValue=["test.com"];</li><li>When OriginType is loadbalancer, it indicates a single Cloud Load Balancer, such as ["lb-xdffsfasdfs"];</li><li>When OriginType is origins, it requires one and only one element, which represents an origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
                      */
                     std::vector<std::string> m_originValue;
                     bool m_originValueHasBeenSet;

@@ -48,31 +48,43 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The origin type. Values:
-<li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address</li>
-<li>`ORIGIN_GROUP`: Origin group</li>
-<li>`AWS_S3`: AWS S3 bucket address</li>
-                     * @return OriginType The origin type. Values:
-<li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address</li>
-<li>`ORIGIN_GROUP`: Origin group</li>
-<li>`AWS_S3`: AWS S3 bucket address</li>
+                     * 获取Origin server type. Valid values:
+<li>IP_DOMAIN: IPV4, IPV6, or domain type origin server;</li>
+<li>COS: Tencent Cloud Object Storage origin server;</li>
+<li>AWS_S3: AWS S3 Cloud Object Storage origin server;</li>
+<li>ORIGIN_GROUP: Origin group type origin server;</li>
+<li>VODEO: Video on Demand (hybrid cloud edition);</li>
+<li>SPACE: Origin shield, currently only available to the whitelist;</li>
+<li>LB: Cloud Load Balancer, currently only available to the whitelist.</li>
+                     * @return OriginType Origin server type. Valid values:
+<li>IP_DOMAIN: IPV4, IPV6, or domain type origin server;</li>
+<li>COS: Tencent Cloud Object Storage origin server;</li>
+<li>AWS_S3: AWS S3 Cloud Object Storage origin server;</li>
+<li>ORIGIN_GROUP: Origin group type origin server;</li>
+<li>VODEO: Video on Demand (hybrid cloud edition);</li>
+<li>SPACE: Origin shield, currently only available to the whitelist;</li>
+<li>LB: Cloud Load Balancer, currently only available to the whitelist.</li>
                      * 
                      */
                     std::string GetOriginType() const;
 
                     /**
-                     * 设置The origin type. Values:
-<li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address</li>
-<li>`ORIGIN_GROUP`: Origin group</li>
-<li>`AWS_S3`: AWS S3 bucket address</li>
-                     * @param _originType The origin type. Values:
-<li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address</li>
-<li>`ORIGIN_GROUP`: Origin group</li>
-<li>`AWS_S3`: AWS S3 bucket address</li>
+                     * 设置Origin server type. Valid values:
+<li>IP_DOMAIN: IPV4, IPV6, or domain type origin server;</li>
+<li>COS: Tencent Cloud Object Storage origin server;</li>
+<li>AWS_S3: AWS S3 Cloud Object Storage origin server;</li>
+<li>ORIGIN_GROUP: Origin group type origin server;</li>
+<li>VODEO: Video on Demand (hybrid cloud edition);</li>
+<li>SPACE: Origin shield, currently only available to the whitelist;</li>
+<li>LB: Cloud Load Balancer, currently only available to the whitelist.</li>
+                     * @param _originType Origin server type. Valid values:
+<li>IP_DOMAIN: IPV4, IPV6, or domain type origin server;</li>
+<li>COS: Tencent Cloud Object Storage origin server;</li>
+<li>AWS_S3: AWS S3 Cloud Object Storage origin server;</li>
+<li>ORIGIN_GROUP: Origin group type origin server;</li>
+<li>VODEO: Video on Demand (hybrid cloud edition);</li>
+<li>SPACE: Origin shield, currently only available to the whitelist;</li>
+<li>LB: Cloud Load Balancer, currently only available to the whitelist.</li>
                      * 
                      */
                     void SetOriginType(const std::string& _originType);
@@ -85,15 +97,39 @@ namespace TencentCloud
                     bool OriginTypeHasBeenSet() const;
 
                     /**
-                     * 获取The origin address. Enter the origin group ID if `OriginType=ORIGIN_GROUP`.
-                     * @return Origin The origin address. Enter the origin group ID if `OriginType=ORIGIN_GROUP`.
+                     * 获取Origin server address, varying depending on the value of OriginType:
+<li>When OriginType is IP_DOMAIN, this parameter is IPv4 address, IPv6 address, or domain name;</li>
+<li>When OriginType is COS, this parameter is the COS bucket's access domain;</li>
+<li>When OriginType is AWS_S3, this parameter is the S3 bucket's access domain;</li>
+<li>When OriginType is ORIGIN_GROUP, this parameter is the origin group ID;</li>
+<li>When OriginType is VODEO, if VodeoDistributionRange is ALL, this parameter is "all-buckets-in-vodeo-application"; if VodeoDistributionRange is Bucket, this parameter is the corresponding bucket domain.</li>
+
+                     * @return Origin Origin server address, varying depending on the value of OriginType:
+<li>When OriginType is IP_DOMAIN, this parameter is IPv4 address, IPv6 address, or domain name;</li>
+<li>When OriginType is COS, this parameter is the COS bucket's access domain;</li>
+<li>When OriginType is AWS_S3, this parameter is the S3 bucket's access domain;</li>
+<li>When OriginType is ORIGIN_GROUP, this parameter is the origin group ID;</li>
+<li>When OriginType is VODEO, if VodeoDistributionRange is ALL, this parameter is "all-buckets-in-vodeo-application"; if VodeoDistributionRange is Bucket, this parameter is the corresponding bucket domain.</li>
+
                      * 
                      */
                     std::string GetOrigin() const;
 
                     /**
-                     * 设置The origin address. Enter the origin group ID if `OriginType=ORIGIN_GROUP`.
-                     * @param _origin The origin address. Enter the origin group ID if `OriginType=ORIGIN_GROUP`.
+                     * 设置Origin server address, varying depending on the value of OriginType:
+<li>When OriginType is IP_DOMAIN, this parameter is IPv4 address, IPv6 address, or domain name;</li>
+<li>When OriginType is COS, this parameter is the COS bucket's access domain;</li>
+<li>When OriginType is AWS_S3, this parameter is the S3 bucket's access domain;</li>
+<li>When OriginType is ORIGIN_GROUP, this parameter is the origin group ID;</li>
+<li>When OriginType is VODEO, if VodeoDistributionRange is ALL, this parameter is "all-buckets-in-vodeo-application"; if VodeoDistributionRange is Bucket, this parameter is the corresponding bucket domain.</li>
+
+                     * @param _origin Origin server address, varying depending on the value of OriginType:
+<li>When OriginType is IP_DOMAIN, this parameter is IPv4 address, IPv6 address, or domain name;</li>
+<li>When OriginType is COS, this parameter is the COS bucket's access domain;</li>
+<li>When OriginType is AWS_S3, this parameter is the S3 bucket's access domain;</li>
+<li>When OriginType is ORIGIN_GROUP, this parameter is the origin group ID;</li>
+<li>When OriginType is VODEO, if VodeoDistributionRange is ALL, this parameter is "all-buckets-in-vodeo-application"; if VodeoDistributionRange is Bucket, this parameter is the corresponding bucket domain.</li>
+
                      * 
                      */
                     void SetOrigin(const std::string& _origin);
@@ -106,15 +142,15 @@ namespace TencentCloud
                     bool OriginHasBeenSet() const;
 
                     /**
-                     * 获取ID of the secondary origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates that secondary origins are not used.
-                     * @return BackupOrigin ID of the secondary origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates that secondary origins are not used.
+                     * 获取Secondary origin group ID. This parameter is valid only when OriginType is ORIGIN_GROUP and a secondary origin group is configured.
+                     * @return BackupOrigin Secondary origin group ID. This parameter is valid only when OriginType is ORIGIN_GROUP and a secondary origin group is configured.
                      * 
                      */
                     std::string GetBackupOrigin() const;
 
                     /**
-                     * 设置ID of the secondary origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates that secondary origins are not used.
-                     * @param _backupOrigin ID of the secondary origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates that secondary origins are not used.
+                     * 设置Secondary origin group ID. This parameter is valid only when OriginType is ORIGIN_GROUP and a secondary origin group is configured.
+                     * @param _backupOrigin Secondary origin group ID. This parameter is valid only when OriginType is ORIGIN_GROUP and a secondary origin group is configured.
                      * 
                      */
                     void SetBackupOrigin(const std::string& _backupOrigin);
@@ -127,15 +163,15 @@ namespace TencentCloud
                     bool BackupOriginHasBeenSet() const;
 
                     /**
-                     * 获取Name of the primary origin group (valid when `OriginType=ORIGIN_GROUP`).
-                     * @return OriginGroupName Name of the primary origin group (valid when `OriginType=ORIGIN_GROUP`).
+                     * 获取Primary origin group name. This parameter returns a value when OriginType is ORIGIN_GROUP.
+                     * @return OriginGroupName Primary origin group name. This parameter returns a value when OriginType is ORIGIN_GROUP.
                      * 
                      */
                     std::string GetOriginGroupName() const;
 
                     /**
-                     * 设置Name of the primary origin group (valid when `OriginType=ORIGIN_GROUP`).
-                     * @param _originGroupName Name of the primary origin group (valid when `OriginType=ORIGIN_GROUP`).
+                     * 设置Primary origin group name. This parameter returns a value when OriginType is ORIGIN_GROUP.
+                     * @param _originGroupName Primary origin group name. This parameter returns a value when OriginType is ORIGIN_GROUP.
                      * 
                      */
                     void SetOriginGroupName(const std::string& _originGroupName);
@@ -148,15 +184,15 @@ namespace TencentCloud
                     bool OriginGroupNameHasBeenSet() const;
 
                     /**
-                     * 获取Name of the secondary origin group (valid when `OriginType=ORIGIN_GROUP` and `BackupOrigin` is specified).
-                     * @return BackOriginGroupName Name of the secondary origin group (valid when `OriginType=ORIGIN_GROUP` and `BackupOrigin` is specified).
+                     * 获取Secondary origin group name. This parameter is valid only when OriginType is ORIGIN_GROUP and a secondary origin group is configured.
+                     * @return BackOriginGroupName Secondary origin group name. This parameter is valid only when OriginType is ORIGIN_GROUP and a secondary origin group is configured.
                      * 
                      */
                     std::string GetBackOriginGroupName() const;
 
                     /**
-                     * 设置Name of the secondary origin group (valid when `OriginType=ORIGIN_GROUP` and `BackupOrigin` is specified).
-                     * @param _backOriginGroupName Name of the secondary origin group (valid when `OriginType=ORIGIN_GROUP` and `BackupOrigin` is specified).
+                     * 设置Secondary origin group name. This parameter is valid only when OriginType is ORIGIN_GROUP and a secondary origin group is configured.
+                     * @param _backOriginGroupName Secondary origin group name. This parameter is valid only when OriginType is ORIGIN_GROUP and a secondary origin group is configured.
                      * 
                      */
                     void SetBackOriginGroupName(const std::string& _backOriginGroupName);
@@ -169,27 +205,27 @@ namespace TencentCloud
                     bool BackOriginGroupNameHasBeenSet() const;
 
                     /**
-                     * 获取Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values:
-<li>`on`: Enable private authentication.</li>
-<li>`off`: Disable private authentication.</li>
-If this field is not specified, the default value `off` is used.
-                     * @return PrivateAccess Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values:
-<li>`on`: Enable private authentication.</li>
-<li>`off`: Disable private authentication.</li>
-If this field is not specified, the default value `off` is used.
+                     * 获取Whether access to the private Cloud Object Storage origin server is allowed. This parameter is valid only when OriginType is COS or AWS_S3. Valid values:
+<li>on: Enable private authentication;</li>
+<li>off: Disable private authentication.</li>
+If it is not specified, off is the default value.
+                     * @return PrivateAccess Whether access to the private Cloud Object Storage origin server is allowed. This parameter is valid only when OriginType is COS or AWS_S3. Valid values:
+<li>on: Enable private authentication;</li>
+<li>off: Disable private authentication.</li>
+If it is not specified, off is the default value.
                      * 
                      */
                     std::string GetPrivateAccess() const;
 
                     /**
-                     * 设置Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values:
-<li>`on`: Enable private authentication.</li>
-<li>`off`: Disable private authentication.</li>
-If this field is not specified, the default value `off` is used.
-                     * @param _privateAccess Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values:
-<li>`on`: Enable private authentication.</li>
-<li>`off`: Disable private authentication.</li>
-If this field is not specified, the default value `off` is used.
+                     * 设置Whether access to the private Cloud Object Storage origin server is allowed. This parameter is valid only when OriginType is COS or AWS_S3. Valid values:
+<li>on: Enable private authentication;</li>
+<li>off: Disable private authentication.</li>
+If it is not specified, off is the default value.
+                     * @param _privateAccess Whether access to the private Cloud Object Storage origin server is allowed. This parameter is valid only when OriginType is COS or AWS_S3. Valid values:
+<li>on: Enable private authentication;</li>
+<li>off: Disable private authentication.</li>
+If it is not specified, off is the default value.
                      * 
                      */
                     void SetPrivateAccess(const std::string& _privateAccess);
@@ -202,18 +238,18 @@ If this field is not specified, the default value `off` is used.
                     bool PrivateAccessHasBeenSet() const;
 
                     /**
-                     * 获取The private authentication parameters. This field is valid when `PrivateAccess=on`.
+                     * 获取Private authentication parameter. This parameter is valid only when PrivateAccess is on.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PrivateParameters The private authentication parameters. This field is valid when `PrivateAccess=on`.
+                     * @return PrivateParameters Private authentication parameter. This parameter is valid only when PrivateAccess is on.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<PrivateParameter> GetPrivateParameters() const;
 
                     /**
-                     * 设置The private authentication parameters. This field is valid when `PrivateAccess=on`.
+                     * 设置Private authentication parameter. This parameter is valid only when PrivateAccess is on.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _privateParameters The private authentication parameters. This field is valid when `PrivateAccess=on`.
+                     * @param _privateParameters Private authentication parameter. This parameter is valid only when PrivateAccess is on.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -226,57 +262,147 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool PrivateParametersHasBeenSet() const;
 
+                    /**
+                     * 获取MO sub-application ID
+                     * @return VodeoSubAppId MO sub-application ID
+                     * 
+                     */
+                    int64_t GetVodeoSubAppId() const;
+
+                    /**
+                     * 设置MO sub-application ID
+                     * @param _vodeoSubAppId MO sub-application ID
+                     * 
+                     */
+                    void SetVodeoSubAppId(const int64_t& _vodeoSubAppId);
+
+                    /**
+                     * 判断参数 VodeoSubAppId 是否已赋值
+                     * @return VodeoSubAppId 是否已赋值
+                     * 
+                     */
+                    bool VodeoSubAppIdHasBeenSet() const;
+
+                    /**
+                     * 获取MO distribution range. Valid values: <li>All: All</li> <li>Bucket: Bucket</li>
+                     * @return VodeoDistributionRange MO distribution range. Valid values: <li>All: All</li> <li>Bucket: Bucket</li>
+                     * 
+                     */
+                    std::string GetVodeoDistributionRange() const;
+
+                    /**
+                     * 设置MO distribution range. Valid values: <li>All: All</li> <li>Bucket: Bucket</li>
+                     * @param _vodeoDistributionRange MO distribution range. Valid values: <li>All: All</li> <li>Bucket: Bucket</li>
+                     * 
+                     */
+                    void SetVodeoDistributionRange(const std::string& _vodeoDistributionRange);
+
+                    /**
+                     * 判断参数 VodeoDistributionRange 是否已赋值
+                     * @return VodeoDistributionRange 是否已赋值
+                     * 
+                     */
+                    bool VodeoDistributionRangeHasBeenSet() const;
+
+                    /**
+                     * 获取MO bucket ID, required when the distribution range (DistributionRange) is bucket (Bucket)
+                     * @return VodeoBucketId MO bucket ID, required when the distribution range (DistributionRange) is bucket (Bucket)
+                     * 
+                     */
+                    std::string GetVodeoBucketId() const;
+
+                    /**
+                     * 设置MO bucket ID, required when the distribution range (DistributionRange) is bucket (Bucket)
+                     * @param _vodeoBucketId MO bucket ID, required when the distribution range (DistributionRange) is bucket (Bucket)
+                     * 
+                     */
+                    void SetVodeoBucketId(const std::string& _vodeoBucketId);
+
+                    /**
+                     * 判断参数 VodeoBucketId 是否已赋值
+                     * @return VodeoBucketId 是否已赋值
+                     * 
+                     */
+                    bool VodeoBucketIdHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The origin type. Values:
-<li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address</li>
-<li>`ORIGIN_GROUP`: Origin group</li>
-<li>`AWS_S3`: AWS S3 bucket address</li>
+                     * Origin server type. Valid values:
+<li>IP_DOMAIN: IPV4, IPV6, or domain type origin server;</li>
+<li>COS: Tencent Cloud Object Storage origin server;</li>
+<li>AWS_S3: AWS S3 Cloud Object Storage origin server;</li>
+<li>ORIGIN_GROUP: Origin group type origin server;</li>
+<li>VODEO: Video on Demand (hybrid cloud edition);</li>
+<li>SPACE: Origin shield, currently only available to the whitelist;</li>
+<li>LB: Cloud Load Balancer, currently only available to the whitelist.</li>
                      */
                     std::string m_originType;
                     bool m_originTypeHasBeenSet;
 
                     /**
-                     * The origin address. Enter the origin group ID if `OriginType=ORIGIN_GROUP`.
+                     * Origin server address, varying depending on the value of OriginType:
+<li>When OriginType is IP_DOMAIN, this parameter is IPv4 address, IPv6 address, or domain name;</li>
+<li>When OriginType is COS, this parameter is the COS bucket's access domain;</li>
+<li>When OriginType is AWS_S3, this parameter is the S3 bucket's access domain;</li>
+<li>When OriginType is ORIGIN_GROUP, this parameter is the origin group ID;</li>
+<li>When OriginType is VODEO, if VodeoDistributionRange is ALL, this parameter is "all-buckets-in-vodeo-application"; if VodeoDistributionRange is Bucket, this parameter is the corresponding bucket domain.</li>
+
                      */
                     std::string m_origin;
                     bool m_originHasBeenSet;
 
                     /**
-                     * ID of the secondary origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates that secondary origins are not used.
+                     * Secondary origin group ID. This parameter is valid only when OriginType is ORIGIN_GROUP and a secondary origin group is configured.
                      */
                     std::string m_backupOrigin;
                     bool m_backupOriginHasBeenSet;
 
                     /**
-                     * Name of the primary origin group (valid when `OriginType=ORIGIN_GROUP`).
+                     * Primary origin group name. This parameter returns a value when OriginType is ORIGIN_GROUP.
                      */
                     std::string m_originGroupName;
                     bool m_originGroupNameHasBeenSet;
 
                     /**
-                     * Name of the secondary origin group (valid when `OriginType=ORIGIN_GROUP` and `BackupOrigin` is specified).
+                     * Secondary origin group name. This parameter is valid only when OriginType is ORIGIN_GROUP and a secondary origin group is configured.
                      */
                     std::string m_backOriginGroupName;
                     bool m_backOriginGroupNameHasBeenSet;
 
                     /**
-                     * Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values:
-<li>`on`: Enable private authentication.</li>
-<li>`off`: Disable private authentication.</li>
-If this field is not specified, the default value `off` is used.
+                     * Whether access to the private Cloud Object Storage origin server is allowed. This parameter is valid only when OriginType is COS or AWS_S3. Valid values:
+<li>on: Enable private authentication;</li>
+<li>off: Disable private authentication.</li>
+If it is not specified, off is the default value.
                      */
                     std::string m_privateAccess;
                     bool m_privateAccessHasBeenSet;
 
                     /**
-                     * The private authentication parameters. This field is valid when `PrivateAccess=on`.
+                     * Private authentication parameter. This parameter is valid only when PrivateAccess is on.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<PrivateParameter> m_privateParameters;
                     bool m_privateParametersHasBeenSet;
+
+                    /**
+                     * MO sub-application ID
+                     */
+                    int64_t m_vodeoSubAppId;
+                    bool m_vodeoSubAppIdHasBeenSet;
+
+                    /**
+                     * MO distribution range. Valid values: <li>All: All</li> <li>Bucket: Bucket</li>
+                     */
+                    std::string m_vodeoDistributionRange;
+                    bool m_vodeoDistributionRangeHasBeenSet;
+
+                    /**
+                     * MO bucket ID, required when the distribution range (DistributionRange) is bucket (Bucket)
+                     */
+                    std::string m_vodeoBucketId;
+                    bool m_vodeoBucketIdHasBeenSet;
 
                 };
             }

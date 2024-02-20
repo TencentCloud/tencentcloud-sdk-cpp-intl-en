@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the site.
-                     * @return ZoneId ID of the site.
+                     * 获取Zone ID.
+                     * @return ZoneId Zone ID.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置ID of the site.
-                     * @param _zoneId ID of the site.
+                     * 设置Zone ID.
+                     * @param _zoneId Zone ID.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取(Required) Origin group IDe group ID. This parameter is required.
-                     * @return GroupId (Required) Origin group IDe group ID. This parameter is required.
+                     * 获取Origin server group ID. This parameter is required.
+                     * @return GroupId Origin server group ID. This parameter is required.
                      * 
                      */
                     std::string GetGroupId() const;
 
                     /**
-                     * 设置(Required) Origin group IDe group ID. This parameter is required.
-                     * @param _groupId (Required) Origin group IDe group ID. This parameter is required.
+                     * 设置Origin server group ID. This parameter is required.
+                     * @param _groupId Origin server group ID. This parameter is required.
                      * 
                      */
                     void SetGroupId(const std::string& _groupId);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the site.
+                     * Zone ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * (Required) Origin group IDe group ID. This parameter is required.
+                     * Origin server group ID. This parameter is required.
                      */
                     std::string m_groupId;
                     bool m_groupIdHasBeenSet;
