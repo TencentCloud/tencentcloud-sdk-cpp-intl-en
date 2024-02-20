@@ -48,7 +48,8 @@ CustomerBillDetailData::CustomerBillDetailData() :
     m_originalCostHasBeenSet(false),
     m_currencyHasBeenSet(false),
     m_totalCostHasBeenSet(false),
-    m_idHasBeenSet(false)
+    m_idHasBeenSet(false),
+    m_tagsHasBeenSet(false)
 {
 }
 
@@ -337,6 +338,26 @@ CoreInternalOutcome CustomerBillDetailData::Deserialize(const rapidjson::Value &
         m_idHasBeenSet = true;
     }
 
+    if (value.HasMember("Tags") && !value["Tags"].IsNull())
+    {
+        if (!value["Tags"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `CustomerBillDetailData.Tags` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["Tags"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            TagInfo item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_tags.push_back(item);
+        }
+        m_tagsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -566,6 +587,21 @@ void CustomerBillDetailData::ToJsonObject(rapidjson::Value &value, rapidjson::Do
         string key = "Id";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_id.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_tagsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Tags";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
     }
 
 }
@@ -1017,5 +1053,21 @@ void CustomerBillDetailData::SetId(const string& _id)
 bool CustomerBillDetailData::IdHasBeenSet() const
 {
     return m_idHasBeenSet;
+}
+
+vector<TagInfo> CustomerBillDetailData::GetTags() const
+{
+    return m_tags;
+}
+
+void CustomerBillDetailData::SetTags(const vector<TagInfo>& _tags)
+{
+    m_tags = _tags;
+    m_tagsHasBeenSet = true;
+}
+
+bool CustomerBillDetailData::TagsHasBeenSet() const
+{
+    return m_tagsHasBeenSet;
 }
 

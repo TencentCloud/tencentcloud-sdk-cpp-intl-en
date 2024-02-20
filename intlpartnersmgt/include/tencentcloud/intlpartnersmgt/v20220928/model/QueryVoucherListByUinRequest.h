@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of customer UIN. Array length value:1-20.
-                     * @return ClientUins List of customer UIN. Array length value:1-20.
+                     * 获取Customer UIN list. Array length value: 1-20.
+                     * @return ClientUins Customer UIN list. Array length value: 1-20.
                      * 
                      */
                     std::vector<uint64_t> GetClientUins() const;
 
                     /**
-                     * 设置List of customer UIN. Array length value:1-20.
-                     * @param _clientUins List of customer UIN. Array length value:1-20.
+                     * 设置Customer UIN list. Array length value: 1-20.
+                     * @param _clientUins Customer UIN list. Array length value: 1-20.
                      * 
                      */
                     void SetClientUins(const std::vector<uint64_t>& _clientUins);
@@ -87,7 +87,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of customer UIN. Array length value:1-20.
+                     * Customer UIN list. Array length value: 1-20.
                      */
                     std::vector<uint64_t> m_clientUins;
                     bool m_clientUinsHasBeenSet;

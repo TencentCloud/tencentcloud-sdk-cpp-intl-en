@@ -48,6 +48,7 @@ set(intlpartnersmgt_public_header_model
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerUinResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillSummaryByRegionRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryVoucherPoolResponse.h
+  include/tencentcloud/intlpartnersmgt/v20220928/model/TagInfo.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerBillDetailRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerBillDetailResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryAccountVerificationStatusRequest.h
@@ -109,6 +110,7 @@ set(intlpartnersmgt_src
   src/v20220928/model/DescribeCustomerUinResponse.cpp
   src/v20220928/model/DescribeBillSummaryByRegionRequest.cpp
   src/v20220928/model/QueryVoucherPoolResponse.cpp
+  src/v20220928/model/TagInfo.cpp
   src/v20220928/model/DescribeCustomerBillDetailRequest.cpp
   src/v20220928/model/DescribeCustomerBillDetailResponse.cpp
   src/v20220928/model/QueryAccountVerificationStatusRequest.cpp

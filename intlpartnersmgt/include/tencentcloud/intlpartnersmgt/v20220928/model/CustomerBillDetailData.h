@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/TagInfo.h>
 
 
 namespace TencentCloud
@@ -774,6 +775,27 @@ Note: The return value may be null, indicating that no valid data can be obtaine
                      */
                     bool IdHasBeenSet() const;
 
+                    /**
+                     * 获取Tag informationNote: This field may return null, indicating that no valid values can be obtained.
+                     * @return Tags Tag informationNote: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<TagInfo> GetTags() const;
+
+                    /**
+                     * 设置Tag informationNote: This field may return null, indicating that no valid values can be obtained.
+                     * @param _tags Tag informationNote: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetTags(const std::vector<TagInfo>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     * 
+                     */
+                    bool TagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -978,6 +1000,12 @@ Note: The return value may be null, indicating that no valid data can be obtaine
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
+
+                    /**
+                     * Tag informationNote: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<TagInfo> m_tags;
+                    bool m_tagsHasBeenSet;
 
                 };
             }
