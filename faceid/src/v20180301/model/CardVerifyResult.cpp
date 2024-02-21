@@ -25,7 +25,8 @@ CardVerifyResult::CardVerifyResult() :
     m_cardVideoHasBeenSet(false),
     m_cardImageHasBeenSet(false),
     m_cardInfoOcrJsonHasBeenSet(false),
-    m_requestIdHasBeenSet(false)
+    m_requestIdHasBeenSet(false),
+    m_cardInfoHasBeenSet(false)
 {
 }
 
@@ -105,6 +106,23 @@ CoreInternalOutcome CardVerifyResult::Deserialize(const rapidjson::Value &value)
         m_requestIdHasBeenSet = true;
     }
 
+    if (value.HasMember("CardInfo") && !value["CardInfo"].IsNull())
+    {
+        if (!value["CardInfo"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `CardVerifyResult.CardInfo` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_cardInfo.Deserialize(value["CardInfo"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_cardInfoHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -153,6 +171,15 @@ void CardVerifyResult::ToJsonObject(rapidjson::Value &value, rapidjson::Document
         string key = "RequestId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_requestId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_cardInfoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CardInfo";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_cardInfo.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -236,5 +263,21 @@ void CardVerifyResult::SetRequestId(const string& _requestId)
 bool CardVerifyResult::RequestIdHasBeenSet() const
 {
     return m_requestIdHasBeenSet;
+}
+
+CardInfo CardVerifyResult::GetCardInfo() const
+{
+    return m_cardInfo;
+}
+
+void CardVerifyResult::SetCardInfo(const CardInfo& _cardInfo)
+{
+    m_cardInfo = _cardInfo;
+    m_cardInfoHasBeenSet = true;
+}
+
+bool CardVerifyResult::CardInfoHasBeenSet() const
+{
+    return m_cardInfoHasBeenSet;
 }
 

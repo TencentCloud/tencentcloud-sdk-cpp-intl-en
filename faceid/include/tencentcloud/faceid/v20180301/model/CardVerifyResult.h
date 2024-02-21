@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/faceid/v20180301/model/FileInfo.h>
+#include <tencentcloud/faceid/v20180301/model/CardInfo.h>
 
 
 namespace TencentCloud
@@ -544,6 +545,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool RequestIdHasBeenSet() const;
 
+                    /**
+                     * 获取The recognition results of ID card
+                     * @return CardInfo The recognition results of ID card
+                     * 
+                     */
+                    CardInfo GetCardInfo() const;
+
+                    /**
+                     * 设置The recognition results of ID card
+                     * @param _cardInfo The recognition results of ID card
+                     * 
+                     */
+                    void SetCardInfo(const CardInfo& _cardInfo);
+
+                    /**
+                     * 判断参数 CardInfo 是否已赋值
+                     * @return CardInfo 是否已赋值
+                     * 
+                     */
+                    bool CardInfoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -673,6 +695,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_requestId;
                     bool m_requestIdHasBeenSet;
+
+                    /**
+                     * The recognition results of ID card
+                     */
+                    CardInfo m_cardInfo;
+                    bool m_cardInfoHasBeenSet;
 
                 };
             }
