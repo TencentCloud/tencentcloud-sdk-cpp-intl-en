@@ -47,6 +47,27 @@ namespace TencentCloud
 
 
                     /**
+                     * 获取When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered.
+                     * @return AutoSkipStartPage When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered.
+                     * 
+                     */
+                    bool GetAutoSkipStartPage() const;
+
+                    /**
+                     * 设置When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered.
+                     * @param _autoSkipStartPage When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered.
+                     * 
+                     */
+                    void SetAutoSkipStartPage(const bool& _autoSkipStartPage);
+
+                    /**
+                     * 判断参数 AutoSkipStartPage 是否已赋值
+                     * @return AutoSkipStartPage 是否已赋值
+                     * 
+                     */
+                    bool AutoSkipStartPageHasBeenSet() const;
+
+                    /**
                      * 获取When the verification passed, whether to skip the result page and automatically jump to RedirectURL. The default value is false.
 Example value: false
                      * @return AutoSkip When the verification passed, whether to skip the result page and automatically jump to RedirectURL. The default value is false.
@@ -173,7 +194,34 @@ Example: HKIDCard
                      */
                     bool IDCardTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to turn off document alarms, the default is false (the alarm detection function is turned on). When enabled, the identity authentication process will be intercepted based on the alarm status of the certificate. If you need to use the document authentication function, please contact us.
+                     * @return DisableCheckOcrWarnings Whether to turn off document alarms, the default is false (the alarm detection function is turned on). When enabled, the identity authentication process will be intercepted based on the alarm status of the certificate. If you need to use the document authentication function, please contact us.
+                     * 
+                     */
+                    bool GetDisableCheckOcrWarnings() const;
+
+                    /**
+                     * 设置Whether to turn off document alarms, the default is false (the alarm detection function is turned on). When enabled, the identity authentication process will be intercepted based on the alarm status of the certificate. If you need to use the document authentication function, please contact us.
+                     * @param _disableCheckOcrWarnings Whether to turn off document alarms, the default is false (the alarm detection function is turned on). When enabled, the identity authentication process will be intercepted based on the alarm status of the certificate. If you need to use the document authentication function, please contact us.
+                     * 
+                     */
+                    void SetDisableCheckOcrWarnings(const bool& _disableCheckOcrWarnings);
+
+                    /**
+                     * 判断参数 DisableCheckOcrWarnings 是否已赋值
+                     * @return DisableCheckOcrWarnings 是否已赋值
+                     * 
+                     */
+                    bool DisableCheckOcrWarningsHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered.
+                     */
+                    bool m_autoSkipStartPage;
+                    bool m_autoSkipStartPageHasBeenSet;
 
                     /**
                      * When the verification passed, whether to skip the result page and automatically jump to RedirectURL. The default value is false.
@@ -208,6 +256,12 @@ Example: HKIDCard
                      */
                     std::string m_iDCardType;
                     bool m_iDCardTypeHasBeenSet;
+
+                    /**
+                     * Whether to turn off document alarms, the default is false (the alarm detection function is turned on). When enabled, the identity authentication process will be intercepted based on the alarm status of the certificate. If you need to use the document authentication function, please contact us.
+                     */
+                    bool m_disableCheckOcrWarnings;
+                    bool m_disableCheckOcrWarningsHasBeenSet;
 
                 };
             }

@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/faceid/v20180301/model/Address.h>
 
 
 namespace TencentCloud
@@ -352,15 +353,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Gender on the license
-- M：male
-- F：female
-- X：other gender
+- M: male
+- F: female
+- X: other gender
 Note: This field may return null, indicating that no valid values can be obtained.
 Example: M
                      * @return Sex Gender on the license
-- M：male
-- F：female
-- X：other gender
+- M: male
+- F: female
+- X: other gender
 Note: This field may return null, indicating that no valid values can be obtained.
 Example: M
                      * 
@@ -369,15 +370,15 @@ Example: M
 
                     /**
                      * 设置Gender on the license
-- M：male
-- F：female
-- X：other gender
+- M: male
+- F: female
+- X: other gender
 Note: This field may return null, indicating that no valid values can be obtained.
 Example: M
                      * @param _sex Gender on the license
-- M：male
-- F：female
-- X：other gender
+- M: male
+- F: female
+- X: other gender
 Note: This field may return null, indicating that no valid values can be obtained.
 Example: M
                      * 
@@ -520,6 +521,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool RegistrationNumberHasBeenSet() const;
 
+                    /**
+                     * 获取Address
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Address Address
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    Address GetAddress() const;
+
+                    /**
+                     * 设置Address
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _address Address
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetAddress(const Address& _address);
+
+                    /**
+                     * 判断参数 Address 是否已赋值
+                     * @return Address 是否已赋值
+                     * 
+                     */
+                    bool AddressHasBeenSet() const;
+
                 private:
 
                     /**
@@ -609,9 +635,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Gender on the license
-- M：male
-- F：female
-- X：other gender
+- M: male
+- F: female
+- X: other gender
 Note: This field may return null, indicating that no valid values can be obtained.
 Example: M
                      */
@@ -653,6 +679,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_registrationNumber;
                     bool m_registrationNumberHasBeenSet;
+
+                    /**
+                     * Address
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    Address m_address;
+                    bool m_addressHasBeenSet;
 
                 };
             }

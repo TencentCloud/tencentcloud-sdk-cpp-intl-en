@@ -38,7 +38,8 @@ GeneralCard::GeneralCard() :
     m_birthdayHasBeenSet(false),
     m_birthPlaceHasBeenSet(false),
     m_nationalityHasBeenSet(false),
-    m_registrationNumberHasBeenSet(false)
+    m_registrationNumberHasBeenSet(false),
+    m_addressHasBeenSet(false)
 {
 }
 
@@ -227,6 +228,23 @@ CoreInternalOutcome GeneralCard::Deserialize(const rapidjson::Value &value)
         m_registrationNumberHasBeenSet = true;
     }
 
+    if (value.HasMember("Address") && !value["Address"].IsNull())
+    {
+        if (!value["Address"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `GeneralCard.Address` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_address.Deserialize(value["Address"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_addressHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -376,6 +394,15 @@ void GeneralCard::ToJsonObject(rapidjson::Value &value, rapidjson::Document::All
         string key = "RegistrationNumber";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_registrationNumber.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_addressHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Address";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_address.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -667,5 +694,21 @@ void GeneralCard::SetRegistrationNumber(const string& _registrationNumber)
 bool GeneralCard::RegistrationNumberHasBeenSet() const
 {
     return m_registrationNumberHasBeenSet;
+}
+
+Address GeneralCard::GetAddress() const
+{
+    return m_address;
+}
+
+void GeneralCard::SetAddress(const Address& _address)
+{
+    m_address = _address;
+    m_addressHasBeenSet = true;
+}
+
+bool GeneralCard::AddressHasBeenSet() const
+{
+    return m_addressHasBeenSet;
 }
 

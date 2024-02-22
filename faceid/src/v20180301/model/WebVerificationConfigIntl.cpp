@@ -21,9 +21,11 @@ using namespace TencentCloud::Faceid::V20180301::Model;
 using namespace std;
 
 WebVerificationConfigIntl::WebVerificationConfigIntl() :
+    m_autoSkipStartPageHasBeenSet(false),
     m_autoSkipHasBeenSet(false),
     m_checkModeHasBeenSet(false),
-    m_iDCardTypeHasBeenSet(false)
+    m_iDCardTypeHasBeenSet(false),
+    m_disableCheckOcrWarningsHasBeenSet(false)
 {
 }
 
@@ -31,6 +33,16 @@ CoreInternalOutcome WebVerificationConfigIntl::Deserialize(const rapidjson::Valu
 {
     string requestId = "";
 
+
+    if (value.HasMember("AutoSkipStartPage") && !value["AutoSkipStartPage"].IsNull())
+    {
+        if (!value["AutoSkipStartPage"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `WebVerificationConfigIntl.AutoSkipStartPage` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_autoSkipStartPage = value["AutoSkipStartPage"].GetBool();
+        m_autoSkipStartPageHasBeenSet = true;
+    }
 
     if (value.HasMember("AutoSkip") && !value["AutoSkip"].IsNull())
     {
@@ -62,12 +74,30 @@ CoreInternalOutcome WebVerificationConfigIntl::Deserialize(const rapidjson::Valu
         m_iDCardTypeHasBeenSet = true;
     }
 
+    if (value.HasMember("DisableCheckOcrWarnings") && !value["DisableCheckOcrWarnings"].IsNull())
+    {
+        if (!value["DisableCheckOcrWarnings"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `WebVerificationConfigIntl.DisableCheckOcrWarnings` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_disableCheckOcrWarnings = value["DisableCheckOcrWarnings"].GetBool();
+        m_disableCheckOcrWarningsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
 void WebVerificationConfigIntl::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
+
+    if (m_autoSkipStartPageHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AutoSkipStartPage";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_autoSkipStartPage, allocator);
+    }
 
     if (m_autoSkipHasBeenSet)
     {
@@ -93,8 +123,32 @@ void WebVerificationConfigIntl::ToJsonObject(rapidjson::Value &value, rapidjson:
         value.AddMember(iKey, rapidjson::Value(m_iDCardType.c_str(), allocator).Move(), allocator);
     }
 
+    if (m_disableCheckOcrWarningsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DisableCheckOcrWarnings";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_disableCheckOcrWarnings, allocator);
+    }
+
 }
 
+
+bool WebVerificationConfigIntl::GetAutoSkipStartPage() const
+{
+    return m_autoSkipStartPage;
+}
+
+void WebVerificationConfigIntl::SetAutoSkipStartPage(const bool& _autoSkipStartPage)
+{
+    m_autoSkipStartPage = _autoSkipStartPage;
+    m_autoSkipStartPageHasBeenSet = true;
+}
+
+bool WebVerificationConfigIntl::AutoSkipStartPageHasBeenSet() const
+{
+    return m_autoSkipStartPageHasBeenSet;
+}
 
 bool WebVerificationConfigIntl::GetAutoSkip() const
 {
@@ -142,5 +196,21 @@ void WebVerificationConfigIntl::SetIDCardType(const string& _iDCardType)
 bool WebVerificationConfigIntl::IDCardTypeHasBeenSet() const
 {
     return m_iDCardTypeHasBeenSet;
+}
+
+bool WebVerificationConfigIntl::GetDisableCheckOcrWarnings() const
+{
+    return m_disableCheckOcrWarnings;
+}
+
+void WebVerificationConfigIntl::SetDisableCheckOcrWarnings(const bool& _disableCheckOcrWarnings)
+{
+    m_disableCheckOcrWarnings = _disableCheckOcrWarnings;
+    m_disableCheckOcrWarningsHasBeenSet = true;
+}
+
+bool WebVerificationConfigIntl::DisableCheckOcrWarningsHasBeenSet() const
+{
+    return m_disableCheckOcrWarningsHasBeenSet;
 }
 
