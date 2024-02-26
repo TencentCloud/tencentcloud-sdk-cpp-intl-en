@@ -40,6 +40,49 @@ FaceidClient::FaceidClient(const Credential &credential, const string &region, c
 }
 
 
+FaceidClient::ApplyCardVerificationOutcome FaceidClient::ApplyCardVerification(const ApplyCardVerificationRequest &request)
+{
+    auto outcome = MakeRequest(request, "ApplyCardVerification");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ApplyCardVerificationResponse rsp = ApplyCardVerificationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ApplyCardVerificationOutcome(rsp);
+        else
+            return ApplyCardVerificationOutcome(o.GetError());
+    }
+    else
+    {
+        return ApplyCardVerificationOutcome(outcome.GetError());
+    }
+}
+
+void FaceidClient::ApplyCardVerificationAsync(const ApplyCardVerificationRequest& request, const ApplyCardVerificationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ApplyCardVerification(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+FaceidClient::ApplyCardVerificationOutcomeCallable FaceidClient::ApplyCardVerificationCallable(const ApplyCardVerificationRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ApplyCardVerificationOutcome()>>(
+        [this, request]()
+        {
+            return this->ApplyCardVerification(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 FaceidClient::ApplyLivenessTokenOutcome FaceidClient::ApplyLivenessToken(const ApplyLivenessTokenRequest &request)
 {
     auto outcome = MakeRequest(request, "ApplyLivenessToken");
@@ -377,6 +420,49 @@ FaceidClient::GenerateReflectSequenceOutcomeCallable FaceidClient::GenerateRefle
         [this, request]()
         {
             return this->GenerateReflectSequence(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+FaceidClient::GetCardVerificationResultOutcome FaceidClient::GetCardVerificationResult(const GetCardVerificationResultRequest &request)
+{
+    auto outcome = MakeRequest(request, "GetCardVerificationResult");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        GetCardVerificationResultResponse rsp = GetCardVerificationResultResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return GetCardVerificationResultOutcome(rsp);
+        else
+            return GetCardVerificationResultOutcome(o.GetError());
+    }
+    else
+    {
+        return GetCardVerificationResultOutcome(outcome.GetError());
+    }
+}
+
+void FaceidClient::GetCardVerificationResultAsync(const GetCardVerificationResultRequest& request, const GetCardVerificationResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->GetCardVerificationResult(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+FaceidClient::GetCardVerificationResultOutcomeCallable FaceidClient::GetCardVerificationResultCallable(const GetCardVerificationResultRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<GetCardVerificationResultOutcome()>>(
+        [this, request]()
+        {
+            return this->GetCardVerificationResult(request);
         }
     );
 

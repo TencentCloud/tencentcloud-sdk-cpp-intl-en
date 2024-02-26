@@ -23,6 +23,8 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
+#include <tencentcloud/faceid/v20180301/model/ApplyCardVerificationRequest.h>
+#include <tencentcloud/faceid/v20180301/model/ApplyCardVerificationResponse.h>
 #include <tencentcloud/faceid/v20180301/model/ApplyLivenessTokenRequest.h>
 #include <tencentcloud/faceid/v20180301/model/ApplyLivenessTokenResponse.h>
 #include <tencentcloud/faceid/v20180301/model/ApplySdkVerificationTokenRequest.h>
@@ -39,6 +41,8 @@
 #include <tencentcloud/faceid/v20180301/model/DetectReflectLivenessAndCompareResponse.h>
 #include <tencentcloud/faceid/v20180301/model/GenerateReflectSequenceRequest.h>
 #include <tencentcloud/faceid/v20180301/model/GenerateReflectSequenceResponse.h>
+#include <tencentcloud/faceid/v20180301/model/GetCardVerificationResultRequest.h>
+#include <tencentcloud/faceid/v20180301/model/GetCardVerificationResultResponse.h>
 #include <tencentcloud/faceid/v20180301/model/GetFaceIdResultIntlRequest.h>
 #include <tencentcloud/faceid/v20180301/model/GetFaceIdResultIntlResponse.h>
 #include <tencentcloud/faceid/v20180301/model/GetFaceIdTokenIntlRequest.h>
@@ -69,6 +73,9 @@ namespace TencentCloud
                 FaceidClient(const Credential &credential, const std::string &region);
                 FaceidClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
+                typedef Outcome<Core::Error, Model::ApplyCardVerificationResponse> ApplyCardVerificationOutcome;
+                typedef std::future<ApplyCardVerificationOutcome> ApplyCardVerificationOutcomeCallable;
+                typedef std::function<void(const FaceidClient*, const Model::ApplyCardVerificationRequest&, ApplyCardVerificationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ApplyCardVerificationAsyncHandler;
                 typedef Outcome<Core::Error, Model::ApplyLivenessTokenResponse> ApplyLivenessTokenOutcome;
                 typedef std::future<ApplyLivenessTokenOutcome> ApplyLivenessTokenOutcomeCallable;
                 typedef std::function<void(const FaceidClient*, const Model::ApplyLivenessTokenRequest&, ApplyLivenessTokenOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ApplyLivenessTokenAsyncHandler;
@@ -93,6 +100,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::GenerateReflectSequenceResponse> GenerateReflectSequenceOutcome;
                 typedef std::future<GenerateReflectSequenceOutcome> GenerateReflectSequenceOutcomeCallable;
                 typedef std::function<void(const FaceidClient*, const Model::GenerateReflectSequenceRequest&, GenerateReflectSequenceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GenerateReflectSequenceAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetCardVerificationResultResponse> GetCardVerificationResultOutcome;
+                typedef std::future<GetCardVerificationResultOutcome> GetCardVerificationResultOutcomeCallable;
+                typedef std::function<void(const FaceidClient*, const Model::GetCardVerificationResultRequest&, GetCardVerificationResultOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetCardVerificationResultAsyncHandler;
                 typedef Outcome<Core::Error, Model::GetFaceIdResultIntlResponse> GetFaceIdResultIntlOutcome;
                 typedef std::future<GetFaceIdResultIntlOutcome> GetFaceIdResultIntlOutcomeCallable;
                 typedef std::function<void(const FaceidClient*, const Model::GetFaceIdResultIntlRequest&, GetFaceIdResultIntlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetFaceIdResultIntlAsyncHandler;
@@ -119,6 +129,15 @@ namespace TencentCloud
                 typedef std::function<void(const FaceidClient*, const Model::VideoLivenessCompareRequest&, VideoLivenessCompareOutcome, const std::shared_ptr<const AsyncCallerContext>&)> VideoLivenessCompareAsyncHandler;
 
 
+
+                /**
+                 *The types of national cards supported by the API and whether instructions on the back of the card are required are as follows:  <table> <thead> <tr> <td style="width:200px"Nationality</td> <td style="width:200px">CardType</td> <td style="width:200px">Back side required</td> </tr> </thead> <tbody> <tr> <td>Indonesia</td> <td>ID card</td> <td>No</td> </tr> <tr> <td>Indonesia</td> <td>Drving license</td> <td>No</td> </tr> <tr> <td>Hongkong</td> <td>ID card</td> <td>Yes</td> </tr> <tr> <td>Thailand</td> <td>ID card</td> <td>No</td> </tr> <tr> <td>Thailand</td> <td>Drving license</td> <td>Yes</td> </tr> <tr> <td>Malaysia</td> <td>ID card</td> <td>Yes</td> </tr> <tr> <td>Malaysia</td> <td>Drving license</td> <td>Yes</td> </tr> <tr> <td>Singapore</td> <td>ID card</td> <td>Yes</td> </tr> <tr> <td>Singapore</td> <td>Drving license</td> <td>Yes</td> </tr> <tr> <td>Philippine</td> <td>ID card</td> <td>Yes</td> </tr> <tr> <td>Philippine</td> <td>Drving license</td> <td>No</td> </tr> <tr> <td>Japan</td> <td>ID card</td> <td>Yes</td> </tr> <tr> <td>Japan</td> <td>Drving license</td> <td>No</td> </tr> </tbody> </table>
+                 * @param req ApplyCardVerificationRequest
+                 * @return ApplyCardVerificationOutcome
+                 */
+                ApplyCardVerificationOutcome ApplyCardVerification(const Model::ApplyCardVerificationRequest &request);
+                void ApplyCardVerificationAsync(const Model::ApplyCardVerificationRequest& request, const ApplyCardVerificationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ApplyCardVerificationOutcomeCallable ApplyCardVerificationCallable(const Model::ApplyCardVerificationRequest& request);
 
                 /**
                  *This API is used to apply for a token before calling the liveness detection service each time. This token is required for initiating the verification process and getting the result after the verification is completed.
@@ -194,6 +213,15 @@ The data generated with the SDK must be stored in COS, and the region of the COS
                 GenerateReflectSequenceOutcome GenerateReflectSequence(const Model::GenerateReflectSequenceRequest &request);
                 void GenerateReflectSequenceAsync(const Model::GenerateReflectSequenceRequest& request, const GenerateReflectSequenceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 GenerateReflectSequenceOutcomeCallable GenerateReflectSequenceCallable(const Model::GenerateReflectSequenceRequest& request);
+
+                /**
+                 *The interface supports obtaining the certificate authentication result based on the token.
+                 * @param req GetCardVerificationResultRequest
+                 * @return GetCardVerificationResultOutcome
+                 */
+                GetCardVerificationResultOutcome GetCardVerificationResult(const Model::GetCardVerificationResultRequest &request);
+                void GetCardVerificationResultAsync(const Model::GetCardVerificationResultRequest& request, const GetCardVerificationResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetCardVerificationResultOutcomeCallable GetCardVerificationResultCallable(const Model::GetCardVerificationResultRequest& request);
 
                 /**
                  *This API is used to get the verification result with the corresponding SDK token after the identity verification process is completed. The SDK token is valid for two hours (2*3,600s) after generation and can be called multiple times.
