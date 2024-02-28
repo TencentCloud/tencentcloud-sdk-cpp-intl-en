@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/as/v20180419/model/ServiceSettings.h>
 #include <tencentcloud/as/v20180419/model/SpotMixedAllocationPolicy.h>
+#include <tencentcloud/as/v20180419/model/InstanceNameIndexSettings.h>
 
 
 namespace TencentCloud
@@ -602,6 +603,27 @@ This parameter is valid only when `InstanceAllocationPolicy` is set to `SPOT_MIX
                      */
                     bool CapacityRebalanceHasBeenSet() const;
 
+                    /**
+                     * 获取Instance name sequencing settings. When enabled, an incremental numeric sequence will be appended to the names of instances automatically created within the scaling group.
+                     * @return InstanceNameIndexSettings Instance name sequencing settings. When enabled, an incremental numeric sequence will be appended to the names of instances automatically created within the scaling group.
+                     * 
+                     */
+                    InstanceNameIndexSettings GetInstanceNameIndexSettings() const;
+
+                    /**
+                     * 设置Instance name sequencing settings. When enabled, an incremental numeric sequence will be appended to the names of instances automatically created within the scaling group.
+                     * @param _instanceNameIndexSettings Instance name sequencing settings. When enabled, an incremental numeric sequence will be appended to the names of instances automatically created within the scaling group.
+                     * 
+                     */
+                    void SetInstanceNameIndexSettings(const InstanceNameIndexSettings& _instanceNameIndexSettings);
+
+                    /**
+                     * 判断参数 InstanceNameIndexSettings 是否已赋值
+                     * @return InstanceNameIndexSettings 是否已赋值
+                     * 
+                     */
+                    bool InstanceNameIndexSettingsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -759,6 +781,12 @@ This parameter is valid only when `InstanceAllocationPolicy` is set to `SPOT_MIX
                      */
                     bool m_capacityRebalance;
                     bool m_capacityRebalanceHasBeenSet;
+
+                    /**
+                     * Instance name sequencing settings. When enabled, an incremental numeric sequence will be appended to the names of instances automatically created within the scaling group.
+                     */
+                    InstanceNameIndexSettings m_instanceNameIndexSettings;
+                    bool m_instanceNameIndexSettingsHasBeenSet;
 
                 };
             }

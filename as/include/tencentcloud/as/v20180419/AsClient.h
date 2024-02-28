@@ -27,6 +27,8 @@
 #include <tencentcloud/as/v20180419/model/AttachInstancesResponse.h>
 #include <tencentcloud/as/v20180419/model/AttachLoadBalancersRequest.h>
 #include <tencentcloud/as/v20180419/model/AttachLoadBalancersResponse.h>
+#include <tencentcloud/as/v20180419/model/CancelInstanceRefreshRequest.h>
+#include <tencentcloud/as/v20180419/model/CancelInstanceRefreshResponse.h>
 #include <tencentcloud/as/v20180419/model/ClearLaunchConfigurationAttributesRequest.h>
 #include <tencentcloud/as/v20180419/model/ClearLaunchConfigurationAttributesResponse.h>
 #include <tencentcloud/as/v20180419/model/CompleteLifecycleActionRequest.h>
@@ -75,6 +77,8 @@
 #include <tencentcloud/as/v20180419/model/DescribeLifecycleHooksResponse.h>
 #include <tencentcloud/as/v20180419/model/DescribeNotificationConfigurationsRequest.h>
 #include <tencentcloud/as/v20180419/model/DescribeNotificationConfigurationsResponse.h>
+#include <tencentcloud/as/v20180419/model/DescribeRefreshActivitiesRequest.h>
+#include <tencentcloud/as/v20180419/model/DescribeRefreshActivitiesResponse.h>
 #include <tencentcloud/as/v20180419/model/DescribeScalingPoliciesRequest.h>
 #include <tencentcloud/as/v20180419/model/DescribeScalingPoliciesResponse.h>
 #include <tencentcloud/as/v20180419/model/DescribeScheduledActionsRequest.h>
@@ -89,6 +93,8 @@
 #include <tencentcloud/as/v20180419/model/EnableAutoScalingGroupResponse.h>
 #include <tencentcloud/as/v20180419/model/ExecuteScalingPolicyRequest.h>
 #include <tencentcloud/as/v20180419/model/ExecuteScalingPolicyResponse.h>
+#include <tencentcloud/as/v20180419/model/ExitStandbyRequest.h>
+#include <tencentcloud/as/v20180419/model/ExitStandbyResponse.h>
 #include <tencentcloud/as/v20180419/model/ModifyAutoScalingGroupRequest.h>
 #include <tencentcloud/as/v20180419/model/ModifyAutoScalingGroupResponse.h>
 #include <tencentcloud/as/v20180419/model/ModifyDesiredCapacityRequest.h>
@@ -109,6 +115,10 @@
 #include <tencentcloud/as/v20180419/model/ModifyScheduledActionResponse.h>
 #include <tencentcloud/as/v20180419/model/RemoveInstancesRequest.h>
 #include <tencentcloud/as/v20180419/model/RemoveInstancesResponse.h>
+#include <tencentcloud/as/v20180419/model/ResumeInstanceRefreshRequest.h>
+#include <tencentcloud/as/v20180419/model/ResumeInstanceRefreshResponse.h>
+#include <tencentcloud/as/v20180419/model/RollbackInstanceRefreshRequest.h>
+#include <tencentcloud/as/v20180419/model/RollbackInstanceRefreshResponse.h>
 #include <tencentcloud/as/v20180419/model/ScaleInInstancesRequest.h>
 #include <tencentcloud/as/v20180419/model/ScaleInInstancesResponse.h>
 #include <tencentcloud/as/v20180419/model/ScaleOutInstancesRequest.h>
@@ -117,8 +127,12 @@
 #include <tencentcloud/as/v20180419/model/SetInstancesProtectionResponse.h>
 #include <tencentcloud/as/v20180419/model/StartAutoScalingInstancesRequest.h>
 #include <tencentcloud/as/v20180419/model/StartAutoScalingInstancesResponse.h>
+#include <tencentcloud/as/v20180419/model/StartInstanceRefreshRequest.h>
+#include <tencentcloud/as/v20180419/model/StartInstanceRefreshResponse.h>
 #include <tencentcloud/as/v20180419/model/StopAutoScalingInstancesRequest.h>
 #include <tencentcloud/as/v20180419/model/StopAutoScalingInstancesResponse.h>
+#include <tencentcloud/as/v20180419/model/StopInstanceRefreshRequest.h>
+#include <tencentcloud/as/v20180419/model/StopInstanceRefreshResponse.h>
 #include <tencentcloud/as/v20180419/model/UpgradeLaunchConfigurationRequest.h>
 #include <tencentcloud/as/v20180419/model/UpgradeLaunchConfigurationResponse.h>
 #include <tencentcloud/as/v20180419/model/UpgradeLifecycleHookRequest.h>
@@ -143,6 +157,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::AttachLoadBalancersResponse> AttachLoadBalancersOutcome;
                 typedef std::future<AttachLoadBalancersOutcome> AttachLoadBalancersOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::AttachLoadBalancersRequest&, AttachLoadBalancersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AttachLoadBalancersAsyncHandler;
+                typedef Outcome<Core::Error, Model::CancelInstanceRefreshResponse> CancelInstanceRefreshOutcome;
+                typedef std::future<CancelInstanceRefreshOutcome> CancelInstanceRefreshOutcomeCallable;
+                typedef std::function<void(const AsClient*, const Model::CancelInstanceRefreshRequest&, CancelInstanceRefreshOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CancelInstanceRefreshAsyncHandler;
                 typedef Outcome<Core::Error, Model::ClearLaunchConfigurationAttributesResponse> ClearLaunchConfigurationAttributesOutcome;
                 typedef std::future<ClearLaunchConfigurationAttributesOutcome> ClearLaunchConfigurationAttributesOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::ClearLaunchConfigurationAttributesRequest&, ClearLaunchConfigurationAttributesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ClearLaunchConfigurationAttributesAsyncHandler;
@@ -215,6 +232,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeNotificationConfigurationsResponse> DescribeNotificationConfigurationsOutcome;
                 typedef std::future<DescribeNotificationConfigurationsOutcome> DescribeNotificationConfigurationsOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::DescribeNotificationConfigurationsRequest&, DescribeNotificationConfigurationsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeNotificationConfigurationsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRefreshActivitiesResponse> DescribeRefreshActivitiesOutcome;
+                typedef std::future<DescribeRefreshActivitiesOutcome> DescribeRefreshActivitiesOutcomeCallable;
+                typedef std::function<void(const AsClient*, const Model::DescribeRefreshActivitiesRequest&, DescribeRefreshActivitiesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRefreshActivitiesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeScalingPoliciesResponse> DescribeScalingPoliciesOutcome;
                 typedef std::future<DescribeScalingPoliciesOutcome> DescribeScalingPoliciesOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::DescribeScalingPoliciesRequest&, DescribeScalingPoliciesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeScalingPoliciesAsyncHandler;
@@ -236,6 +256,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ExecuteScalingPolicyResponse> ExecuteScalingPolicyOutcome;
                 typedef std::future<ExecuteScalingPolicyOutcome> ExecuteScalingPolicyOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::ExecuteScalingPolicyRequest&, ExecuteScalingPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ExecuteScalingPolicyAsyncHandler;
+                typedef Outcome<Core::Error, Model::ExitStandbyResponse> ExitStandbyOutcome;
+                typedef std::future<ExitStandbyOutcome> ExitStandbyOutcomeCallable;
+                typedef std::function<void(const AsClient*, const Model::ExitStandbyRequest&, ExitStandbyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ExitStandbyAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyAutoScalingGroupResponse> ModifyAutoScalingGroupOutcome;
                 typedef std::future<ModifyAutoScalingGroupOutcome> ModifyAutoScalingGroupOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::ModifyAutoScalingGroupRequest&, ModifyAutoScalingGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAutoScalingGroupAsyncHandler;
@@ -266,6 +289,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::RemoveInstancesResponse> RemoveInstancesOutcome;
                 typedef std::future<RemoveInstancesOutcome> RemoveInstancesOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::RemoveInstancesRequest&, RemoveInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RemoveInstancesAsyncHandler;
+                typedef Outcome<Core::Error, Model::ResumeInstanceRefreshResponse> ResumeInstanceRefreshOutcome;
+                typedef std::future<ResumeInstanceRefreshOutcome> ResumeInstanceRefreshOutcomeCallable;
+                typedef std::function<void(const AsClient*, const Model::ResumeInstanceRefreshRequest&, ResumeInstanceRefreshOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResumeInstanceRefreshAsyncHandler;
+                typedef Outcome<Core::Error, Model::RollbackInstanceRefreshResponse> RollbackInstanceRefreshOutcome;
+                typedef std::future<RollbackInstanceRefreshOutcome> RollbackInstanceRefreshOutcomeCallable;
+                typedef std::function<void(const AsClient*, const Model::RollbackInstanceRefreshRequest&, RollbackInstanceRefreshOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RollbackInstanceRefreshAsyncHandler;
                 typedef Outcome<Core::Error, Model::ScaleInInstancesResponse> ScaleInInstancesOutcome;
                 typedef std::future<ScaleInInstancesOutcome> ScaleInInstancesOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::ScaleInInstancesRequest&, ScaleInInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ScaleInInstancesAsyncHandler;
@@ -278,9 +307,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::StartAutoScalingInstancesResponse> StartAutoScalingInstancesOutcome;
                 typedef std::future<StartAutoScalingInstancesOutcome> StartAutoScalingInstancesOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::StartAutoScalingInstancesRequest&, StartAutoScalingInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StartAutoScalingInstancesAsyncHandler;
+                typedef Outcome<Core::Error, Model::StartInstanceRefreshResponse> StartInstanceRefreshOutcome;
+                typedef std::future<StartInstanceRefreshOutcome> StartInstanceRefreshOutcomeCallable;
+                typedef std::function<void(const AsClient*, const Model::StartInstanceRefreshRequest&, StartInstanceRefreshOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StartInstanceRefreshAsyncHandler;
                 typedef Outcome<Core::Error, Model::StopAutoScalingInstancesResponse> StopAutoScalingInstancesOutcome;
                 typedef std::future<StopAutoScalingInstancesOutcome> StopAutoScalingInstancesOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::StopAutoScalingInstancesRequest&, StopAutoScalingInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StopAutoScalingInstancesAsyncHandler;
+                typedef Outcome<Core::Error, Model::StopInstanceRefreshResponse> StopInstanceRefreshOutcome;
+                typedef std::future<StopInstanceRefreshOutcome> StopInstanceRefreshOutcomeCallable;
+                typedef std::function<void(const AsClient*, const Model::StopInstanceRefreshRequest&, StopInstanceRefreshOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StopInstanceRefreshAsyncHandler;
                 typedef Outcome<Core::Error, Model::UpgradeLaunchConfigurationResponse> UpgradeLaunchConfigurationOutcome;
                 typedef std::future<UpgradeLaunchConfigurationOutcome> UpgradeLaunchConfigurationOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::UpgradeLaunchConfigurationRequest&, UpgradeLaunchConfigurationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpgradeLaunchConfigurationAsyncHandler;
@@ -310,6 +345,18 @@ namespace TencentCloud
                 AttachLoadBalancersOutcome AttachLoadBalancers(const Model::AttachLoadBalancersRequest &request);
                 void AttachLoadBalancersAsync(const Model::AttachLoadBalancersRequest& request, const AttachLoadBalancersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 AttachLoadBalancersOutcomeCallable AttachLoadBalancersCallable(const Model::AttachLoadBalancersRequest& request);
+
+                /**
+                 *This API is used to cancel the instance refresh activity of the scaling group.
+* Batches that have already been refreshed or are currently being refreshed remain unaffected; batches pending refresh will be canceled.
+* If a refresh fails, the affected instances will remain in the standby status and require manual intervention by the user to either attempt to exit the standby status or destroy the instances.
+* Rollback operations are not allowed after cancellation, and resuming is also unsupported.
+                 * @param req CancelInstanceRefreshRequest
+                 * @return CancelInstanceRefreshOutcome
+                 */
+                CancelInstanceRefreshOutcome CancelInstanceRefresh(const Model::CancelInstanceRefreshRequest &request);
+                void CancelInstanceRefreshAsync(const Model::CancelInstanceRefreshRequest& request, const CancelInstanceRefreshAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CancelInstanceRefreshOutcomeCallable CancelInstanceRefreshCallable(const Model::CancelInstanceRefreshRequest& request);
 
                 /**
                  *This API is used to clear specific attributes of the launch configuration.
@@ -601,6 +648,15 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
                 DescribeNotificationConfigurationsOutcomeCallable DescribeNotificationConfigurationsCallable(const Model::DescribeNotificationConfigurationsRequest& request);
 
                 /**
+                 *This API (DescribeRefreshActivities) is used to query the instance refresh activity records of a scaling group.
+                 * @param req DescribeRefreshActivitiesRequest
+                 * @return DescribeRefreshActivitiesOutcome
+                 */
+                DescribeRefreshActivitiesOutcome DescribeRefreshActivities(const Model::DescribeRefreshActivitiesRequest &request);
+                void DescribeRefreshActivitiesAsync(const Model::DescribeRefreshActivitiesRequest& request, const DescribeRefreshActivitiesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRefreshActivitiesOutcomeCallable DescribeRefreshActivitiesCallable(const Model::DescribeRefreshActivitiesRequest& request);
+
+                /**
                  *This API (DescribeScalingPolicies) is used to query alarm trigger policies.
                  * @param req DescribeScalingPoliciesRequest
                  * @return DescribeScalingPoliciesOutcome
@@ -685,6 +741,17 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
                 ExecuteScalingPolicyOutcome ExecuteScalingPolicy(const Model::ExecuteScalingPolicyRequest &request);
                 void ExecuteScalingPolicyAsync(const Model::ExecuteScalingPolicyRequest& request, const ExecuteScalingPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ExecuteScalingPolicyOutcomeCallable ExecuteScalingPolicyCallable(const Model::ExecuteScalingPolicyRequest& request);
+
+                /**
+                 *This API is used to exit instances from the standby status in the scaling group.
+* When an instance is in standby status, its load balancer weight is set to 0. Upon exiting the standby status, the weight value automatically gets restored.
+* Initiating power-on/power-off actions on instances that are in standby status also results in them exiting from the standby status.
+                 * @param req ExitStandbyRequest
+                 * @return ExitStandbyOutcome
+                 */
+                ExitStandbyOutcome ExitStandby(const Model::ExitStandbyRequest &request);
+                void ExitStandbyAsync(const Model::ExitStandbyRequest& request, const ExitStandbyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ExitStandbyOutcomeCallable ExitStandbyCallable(const Model::ExitStandbyRequest& request);
 
                 /**
                  *This API (ModifyAutoScalingGroup) is used to modify an auto scaling group.
@@ -788,6 +855,28 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
                 RemoveInstancesOutcomeCallable RemoveInstancesCallable(const Model::RemoveInstancesRequest& request);
 
                 /**
+                 *This API is used to resume the paused instance refresh activity, allowing it to retry failed instances in the current batch or proceed with refreshing subsequent batches. Note that calling this interface is ineffective when the activity is not in a paused status.
+                 * @param req ResumeInstanceRefreshRequest
+                 * @return ResumeInstanceRefreshOutcome
+                 */
+                ResumeInstanceRefreshOutcome ResumeInstanceRefresh(const Model::ResumeInstanceRefreshRequest &request);
+                void ResumeInstanceRefreshAsync(const Model::ResumeInstanceRefreshRequest& request, const ResumeInstanceRefreshAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ResumeInstanceRefreshOutcomeCallable ResumeInstanceRefreshCallable(const Model::ResumeInstanceRefreshRequest& request);
+
+                /**
+                 *This API is used to generate a new instance refresh activity, which also supports batched refreshing and operations such as pausing, resuming, and canceling. The interface returns the RefreshActivityId for the rollback activity.
+* Instances pending refresh in the original activity are updated to a canceled status. Nonexistent instances are disregarded, while instances in all other statuses proceed to enter the rollback process.
+* Instances that were being refreshed in the original activity will not be immediately terminated; instead, the rollback activity will be executed after their refresh has been completed.
+* Rollback is supported for activities that are in a paused status or those with the most recent successful refresh; it is not supported for activities in other statuses.
+* When the original refresh activity involves reinstalling instances, for the ImageId parameter, it will automatically restore to the image ID before the rollback; for parameters such as UserData, EnhancedService, LoginSettings, and HostName, they will still be retrieved from the launch configuration, requiring users to manually modify the launch configuration before initiating the rollback.
+                 * @param req RollbackInstanceRefreshRequest
+                 * @return RollbackInstanceRefreshOutcome
+                 */
+                RollbackInstanceRefreshOutcome RollbackInstanceRefresh(const Model::RollbackInstanceRefreshRequest &request);
+                void RollbackInstanceRefreshAsync(const Model::RollbackInstanceRefreshRequest& request, const RollbackInstanceRefreshAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RollbackInstanceRefreshOutcomeCallable RollbackInstanceRefreshCallable(const Model::RollbackInstanceRefreshRequest& request);
+
+                /**
                  *This API is used to reduce the specified number of instances from the scaling group.
 * There is no on going scaling task.
 * This API is valid even when the scaling group is disabled. For more details, see [DisableAutoScalingGroup](https://intl.cloud.tencent.com/document/api/377/20435?from_cn_redirect=1).
@@ -838,6 +927,20 @@ When scale-in protection is enabled, the instance will not be removed in scale-i
                 StartAutoScalingInstancesOutcomeCallable StartAutoScalingInstancesCallable(const Model::StartAutoScalingInstancesRequest& request);
 
                 /**
+                 *This API is used to refresh running CVM instances in the scaling group and return the RefreshActivityId for the instance refresh activity based on parameters in the launch configuration.
+* For refresh methods involving reinstallation (currently only reinstallation is supported), during reinstallation, only the ImageId, UserData, EnhancedService, HostName, and LoginSettings parameters will be fetched from the launch configuration for refreshing; other parameters of the instance will not be refreshed.
+* During the instance refresh process (including paused status), the scaling group will be disabled. It is not recommended to modify the associated launch configuration during a refresh, as this may impact the refresh parameters, leading to inconsistent instance configurations.
+* In rolling update mode, instance refreshes are performed in multiple batches. If there are failed refreshes within a batch, the activity will enter a failed paused status.
+* Instances pending refresh that are removed or destroyed will be marked as NOT_FOUND status, but they will not block the instance refresh activity.
+* Even if a running instance has parameters consistent with the latest launch configuration, it can still undergo another refresh.
+                 * @param req StartInstanceRefreshRequest
+                 * @return StartInstanceRefreshOutcome
+                 */
+                StartInstanceRefreshOutcome StartInstanceRefresh(const Model::StartInstanceRefreshRequest &request);
+                void StartInstanceRefreshAsync(const Model::StartInstanceRefreshRequest& request, const StartInstanceRefreshAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                StartInstanceRefreshOutcomeCallable StartInstanceRefreshCallable(const Model::StartInstanceRefreshRequest& request);
+
+                /**
                  *This API is used to shut down CVM instances in a scaling group.
 * Use the `SOFT_FIRST` shutdown, which means the CVM will be forcibly shut down if the soft shutdown fails.
 * Shutting down instances in the `IN_SERVICE` status will reduce the desired capacity, but the desired capacity cannot be less than the minimum value.
@@ -851,10 +954,23 @@ When scale-in protection is enabled, the instance will not be removed in scale-i
                 StopAutoScalingInstancesOutcomeCallable StopAutoScalingInstancesCallable(const Model::StopAutoScalingInstancesRequest& request);
 
                 /**
-                 *This API is used to upgrade a launch configuration.
+                 *This API is used to pause the ongoing instance refresh activity.
+* In the paused status, the scaling group will also be disabled.
+* Instances that are currently being updated will not be paused, instances pending updates will have their updates paused.
+                 * @param req StopInstanceRefreshRequest
+                 * @return StopInstanceRefreshOutcome
+                 */
+                StopInstanceRefreshOutcome StopInstanceRefresh(const Model::StopInstanceRefreshRequest &request);
+                void StopInstanceRefreshAsync(const Model::StopInstanceRefreshRequest& request, const StopInstanceRefreshAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                StopInstanceRefreshOutcomeCallable StopInstanceRefreshCallable(const Model::StopInstanceRefreshRequest& request);
 
-* This API is used to upgrade a launch configuration in a "completely overriding" manner, i.e., it uniformly sets a new configuration according to the API parameters regardless of the original parameters. If optional fields are left empty, their default values will be used.
-* After the launch configuration is upgraded, the existing instances that have been created by it will not be changed, but new instances will be created according to the new configuration.
+                /**
+                 *已有替代接口ModifyLaunchConfiguration。该接口存在覆盖参数风险，目前官网已隐藏
+
+There is a replacement API: ModifyLaunchConfiguration. This API carries the risk of parameter overwriting, and it has currently been hidden on the official website.
+This API (UpgradeLaunchConfiguration) is used to upgrade the launch configuration.
+* This API is used to upgrade the launch configuration, adopting an "entirely overwrite" approach. Regardless of previous parameter settings, they will be uniformly replaced with new configurations as specified in the interface parameters. For non-mandatory fields, if not filled in, default values will be assigned.
+* After upgrading and modifying the launch configuration, existing instances that have been scaled out using this configuration will not undergo any changes. Subsequently, newly added instances using this upgraded launch configuration will be scaled out according to the new configuration.
                  * @param req UpgradeLaunchConfigurationRequest
                  * @return UpgradeLaunchConfigurationOutcome
                  */

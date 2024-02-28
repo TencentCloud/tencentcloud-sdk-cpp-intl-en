@@ -292,15 +292,15 @@ If a model in InstanceTypes does not exist or has been discontinued, a verificat
                     bool InternetAccessibleHasBeenSet() const;
 
                     /**
-                     * 获取Login settings of the instance. You can use this parameter to set the login method, password, and key of the instance or keep the login settings of the original image. By default, a random password will be generated and sent to you via the Message Center.
-                     * @return LoginSettings Login settings of the instance. You can use this parameter to set the login method, password, and key of the instance or keep the login settings of the original image. By default, a random password will be generated and sent to you via the Message Center.
+                     * 获取This parameter is now invalid and should not be used. Upgrading the launch configuration API does not allow modification or overwriting of the LoginSettings parameter. LoginSettings will not change after upgrade.
+                     * @return LoginSettings This parameter is now invalid and should not be used. Upgrading the launch configuration API does not allow modification or overwriting of the LoginSettings parameter. LoginSettings will not change after upgrade.
                      * 
                      */
                     LoginSettings GetLoginSettings() const;
 
                     /**
-                     * 设置Login settings of the instance. You can use this parameter to set the login method, password, and key of the instance or keep the login settings of the original image. By default, a random password will be generated and sent to you via the Message Center.
-                     * @param _loginSettings Login settings of the instance. You can use this parameter to set the login method, password, and key of the instance or keep the login settings of the original image. By default, a random password will be generated and sent to you via the Message Center.
+                     * 设置This parameter is now invalid and should not be used. Upgrading the launch configuration API does not allow modification or overwriting of the LoginSettings parameter. LoginSettings will not change after upgrade.
+                     * @param _loginSettings This parameter is now invalid and should not be used. Upgrading the launch configuration API does not allow modification or overwriting of the LoginSettings parameter. LoginSettings will not change after upgrade.
                      * 
                      */
                     void SetLoginSettings(const LoginSettings& _loginSettings);
@@ -621,7 +621,7 @@ If a model in InstanceTypes does not exist or has been discontinued, a verificat
                     bool m_internetAccessibleHasBeenSet;
 
                     /**
-                     * Login settings of the instance. You can use this parameter to set the login method, password, and key of the instance or keep the login settings of the original image. By default, a random password will be generated and sent to you via the Message Center.
+                     * This parameter is now invalid and should not be used. Upgrading the launch configuration API does not allow modification or overwriting of the LoginSettings parameter. LoginSettings will not change after upgrade.
                      */
                     LoginSettings m_loginSettings;
                     bool m_loginSettingsHasBeenSet;

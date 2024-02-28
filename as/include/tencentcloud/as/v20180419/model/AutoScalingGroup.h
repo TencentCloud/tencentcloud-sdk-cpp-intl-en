@@ -28,6 +28,7 @@
 #include <tencentcloud/as/v20180419/model/Tag.h>
 #include <tencentcloud/as/v20180419/model/ServiceSettings.h>
 #include <tencentcloud/as/v20180419/model/SpotMixedAllocationPolicy.h>
+#include <tencentcloud/as/v20180419/model/InstanceNameIndexSettings.h>
 
 
 namespace TencentCloud
@@ -769,6 +770,31 @@ A valid value will be returned only when `InstanceAllocationPolicy` is set to `S
                      */
                     bool CapacityRebalanceHasBeenSet() const;
 
+                    /**
+                     * 获取Instance name sequencing settings.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return InstanceNameIndexSettings Instance name sequencing settings.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    InstanceNameIndexSettings GetInstanceNameIndexSettings() const;
+
+                    /**
+                     * 设置Instance name sequencing settings.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _instanceNameIndexSettings Instance name sequencing settings.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetInstanceNameIndexSettings(const InstanceNameIndexSettings& _instanceNameIndexSettings);
+
+                    /**
+                     * 判断参数 InstanceNameIndexSettings 是否已赋值
+                     * @return InstanceNameIndexSettings 是否已赋值
+                     * 
+                     */
+                    bool InstanceNameIndexSettingsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -973,6 +999,13 @@ A valid value will be returned only when `InstanceAllocationPolicy` is set to `S
                      */
                     bool m_capacityRebalance;
                     bool m_capacityRebalanceHasBeenSet;
+
+                    /**
+                     * Instance name sequencing settings.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    InstanceNameIndexSettings m_instanceNameIndexSettings;
+                    bool m_instanceNameIndexSettingsHasBeenSet;
 
                 };
             }

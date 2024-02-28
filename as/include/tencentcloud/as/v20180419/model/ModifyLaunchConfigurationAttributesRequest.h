@@ -30,6 +30,7 @@
 #include <tencentcloud/as/v20180419/model/InstanceNameSettings.h>
 #include <tencentcloud/as/v20180419/model/EnhancedService.h>
 #include <tencentcloud/as/v20180419/model/IPv6InternetAccessible.h>
+#include <tencentcloud/as/v20180419/model/LoginSettings.h>
 
 
 namespace TencentCloud
@@ -592,6 +593,27 @@ Note: This field is default to empty
                      */
                     bool DisasterRecoverGroupIdsHasBeenSet() const;
 
+                    /**
+                     * 获取Instance login settings, which include passwords, keys, or the original login settings inherited from the image. <br>Please note that specifying new login settings will overwrite the existing ones. For instance, if you previously used a password for login and then use this parameter to switch the login settings to a key, the original password will be removed.
+                     * @return LoginSettings Instance login settings, which include passwords, keys, or the original login settings inherited from the image. <br>Please note that specifying new login settings will overwrite the existing ones. For instance, if you previously used a password for login and then use this parameter to switch the login settings to a key, the original password will be removed.
+                     * 
+                     */
+                    LoginSettings GetLoginSettings() const;
+
+                    /**
+                     * 设置Instance login settings, which include passwords, keys, or the original login settings inherited from the image. <br>Please note that specifying new login settings will overwrite the existing ones. For instance, if you previously used a password for login and then use this parameter to switch the login settings to a key, the original password will be removed.
+                     * @param _loginSettings Instance login settings, which include passwords, keys, or the original login settings inherited from the image. <br>Please note that specifying new login settings will overwrite the existing ones. For instance, if you previously used a password for login and then use this parameter to switch the login settings to a key, the original password will be removed.
+                     * 
+                     */
+                    void SetLoginSettings(const LoginSettings& _loginSettings);
+
+                    /**
+                     * 判断参数 LoginSettings 是否已赋值
+                     * @return LoginSettings 是否已赋值
+                     * 
+                     */
+                    bool LoginSettingsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -744,6 +766,12 @@ Note: This field is default to empty
                      */
                     std::vector<std::string> m_disasterRecoverGroupIds;
                     bool m_disasterRecoverGroupIdsHasBeenSet;
+
+                    /**
+                     * Instance login settings, which include passwords, keys, or the original login settings inherited from the image. <br>Please note that specifying new login settings will overwrite the existing ones. For instance, if you previously used a password for login and then use this parameter to switch the login settings to a key, the original password will be removed.
+                     */
+                    LoginSettings m_loginSettings;
+                    bool m_loginSettingsHasBeenSet;
 
                 };
             }
