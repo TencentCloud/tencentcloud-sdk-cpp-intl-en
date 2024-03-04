@@ -61,8 +61,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool ServiceAccountsHasBeenSet() const;
 
                     /**
-                     * 获取Number of service accounts
-                     * @return TotalCount Number of service accounts
+                     * 获取Number of service level accounts.
+                     * @return TotalCount Number of service level accounts.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -84,7 +84,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_serviceAccountsHasBeenSet;
 
                     /**
-                     * Number of service accounts
+                     * Number of service level accounts.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

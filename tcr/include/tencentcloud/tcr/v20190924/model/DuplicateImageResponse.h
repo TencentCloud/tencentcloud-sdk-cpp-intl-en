@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_TCR_V20190924_MODEL_MODIFYCUSTOMACCOUNTRESPONSE_H_
-#define TENCENTCLOUD_TCR_V20190924_MODEL_MODIFYCUSTOMACCOUNTRESPONSE_H_
+#ifndef TENCENTCLOUD_TCR_V20190924_MODEL_DUPLICATEIMAGERESPONSE_H_
+#define TENCENTCLOUD_TCR_V20190924_MODEL_DUPLICATEIMAGERESPONSE_H_
 
 #include <string>
 #include <vector>
@@ -32,13 +32,13 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * ModifyCustomAccount response structure.
+                * DuplicateImage response structure.
                 */
-                class ModifyCustomAccountResponse : public AbstractModel
+                class DuplicateImageResponse : public AbstractModel
                 {
                 public:
-                    ModifyCustomAccountResponse();
-                    ~ModifyCustomAccountResponse() = default;
+                    DuplicateImageResponse();
+                    ~DuplicateImageResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
@@ -51,4 +51,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_TCR_V20190924_MODEL_MODIFYCUSTOMACCOUNTRESPONSE_H_
+#endif // !TENCENTCLOUD_TCR_V20190924_MODEL_DUPLICATEIMAGERESPONSE_H_

@@ -72,19 +72,19 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool ResourceHasBeenSet() const;
 
                     /**
-                     * 获取Action. Valid values: `tcr:PushRepository`, `tcr:PullRepository`
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return Actions Action. Valid values: `tcr:PushRepository`, `tcr:PullRepository`
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Actions. Currently only support: tcr:PushRepository, tcr:PullRepository, tcr:CreateRepository, tcr:CreateHelmChart, tcr:DescribeHelmCharts.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return Actions Actions. Currently only support: tcr:PushRepository, tcr:PullRepository, tcr:CreateRepository, tcr:CreateHelmChart, tcr:DescribeHelmCharts.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::vector<std::string> GetActions() const;
 
                     /**
-                     * 设置Action. Valid values: `tcr:PushRepository`, `tcr:PullRepository`
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _actions Action. Valid values: `tcr:PushRepository`, `tcr:PullRepository`
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Actions. Currently only support: tcr:PushRepository, tcr:PullRepository, tcr:CreateRepository, tcr:CreateHelmChart, tcr:DescribeHelmCharts.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _actions Actions. Currently only support: tcr:PushRepository, tcr:PullRepository, tcr:CreateRepository, tcr:CreateHelmChart, tcr:DescribeHelmCharts.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetActions(const std::vector<std::string>& _actions);
@@ -106,8 +106,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_resourceHasBeenSet;
 
                     /**
-                     * Action. Valid values: `tcr:PushRepository`, `tcr:PullRepository`
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Actions. Currently only support: tcr:PushRepository, tcr:PullRepository, tcr:CreateRepository, tcr:CreateHelmChart, tcr:DescribeHelmCharts.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::vector<std::string> m_actions;
                     bool m_actionsHasBeenSet;

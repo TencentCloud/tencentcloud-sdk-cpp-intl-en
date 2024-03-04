@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cloud tag key
-                     * @return Key Cloud tag key
+                     * 获取Cloud tag key.Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return Key Cloud tag key.Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetKey() const;
 
                     /**
-                     * 设置Cloud tag key
-                     * @param _key Cloud tag key
+                     * 设置Cloud tag key.Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _key Cloud tag key.Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetKey(const std::string& _key);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool KeyHasBeenSet() const;
 
                     /**
-                     * 获取Cloud tag value
-                     * @return Value Cloud tag value
+                     * 获取Cloud tag value.Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return Value Cloud tag value.Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetValue() const;
 
                     /**
-                     * 设置Cloud tag value
-                     * @param _value Cloud tag value
+                     * 设置Cloud tag value.Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _value Cloud tag value.Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetValue(const std::string& _value);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cloud tag key
+                     * Cloud tag key.Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_key;
                     bool m_keyHasBeenSet;
 
                     /**
-                     * Cloud tag value
+                     * Cloud tag value.Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;

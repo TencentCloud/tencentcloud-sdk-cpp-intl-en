@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/tcr/v20190924/model/DescribeCustomAccountsResponse.h>
+#include <tencentcloud/tcr/v20190924/model/ModifyServiceAccountPasswordResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -23,13 +23,12 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Tcr::V20190924::Model;
 using namespace std;
 
-DescribeCustomAccountsResponse::DescribeCustomAccountsResponse() :
-    m_customAccountsHasBeenSet(false),
-    m_totalCountHasBeenSet(false)
+ModifyServiceAccountPasswordResponse::ModifyServiceAccountPasswordResponse() :
+    m_passwordHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome DescribeCustomAccountsResponse::Deserialize(const string &payload)
+CoreInternalOutcome ModifyServiceAccountPasswordResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -63,67 +62,32 @@ CoreInternalOutcome DescribeCustomAccountsResponse::Deserialize(const string &pa
     }
 
 
-    if (rsp.HasMember("CustomAccounts") && !rsp["CustomAccounts"].IsNull())
+    if (rsp.HasMember("Password") && !rsp["Password"].IsNull())
     {
-        if (!rsp["CustomAccounts"].IsArray())
-            return CoreInternalOutcome(Core::Error("response `CustomAccounts` is not array type"));
-
-        const rapidjson::Value &tmpValue = rsp["CustomAccounts"];
-        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        if (!rsp["Password"].IsString())
         {
-            CustomAccount item;
-            CoreInternalOutcome outcome = item.Deserialize(*itr);
-            if (!outcome.IsSuccess())
-            {
-                outcome.GetError().SetRequestId(requestId);
-                return outcome;
-            }
-            m_customAccounts.push_back(item);
+            return CoreInternalOutcome(Core::Error("response `Password` IsString=false incorrectly").SetRequestId(requestId));
         }
-        m_customAccountsHasBeenSet = true;
-    }
-
-    if (rsp.HasMember("TotalCount") && !rsp["TotalCount"].IsNull())
-    {
-        if (!rsp["TotalCount"].IsInt64())
-        {
-            return CoreInternalOutcome(Core::Error("response `TotalCount` IsInt64=false incorrectly").SetRequestId(requestId));
-        }
-        m_totalCount = rsp["TotalCount"].GetInt64();
-        m_totalCountHasBeenSet = true;
+        m_password = string(rsp["Password"].GetString());
+        m_passwordHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string DescribeCustomAccountsResponse::ToJsonString() const
+string ModifyServiceAccountPasswordResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_customAccountsHasBeenSet)
+    if (m_passwordHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "CustomAccounts";
+        string key = "Password";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
-
-        int i=0;
-        for (auto itr = m_customAccounts.begin(); itr != m_customAccounts.end(); ++itr, ++i)
-        {
-            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
-            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
-        }
-    }
-
-    if (m_totalCountHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "TotalCount";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_totalCount, allocator);
+        value.AddMember(iKey, rapidjson::Value(m_password.c_str(), allocator).Move(), allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -138,24 +102,14 @@ string DescribeCustomAccountsResponse::ToJsonString() const
 }
 
 
-vector<CustomAccount> DescribeCustomAccountsResponse::GetCustomAccounts() const
+string ModifyServiceAccountPasswordResponse::GetPassword() const
 {
-    return m_customAccounts;
+    return m_password;
 }
 
-bool DescribeCustomAccountsResponse::CustomAccountsHasBeenSet() const
+bool ModifyServiceAccountPasswordResponse::PasswordHasBeenSet() const
 {
-    return m_customAccountsHasBeenSet;
-}
-
-int64_t DescribeCustomAccountsResponse::GetTotalCount() const
-{
-    return m_totalCount;
-}
-
-bool DescribeCustomAccountsResponse::TotalCountHasBeenSet() const
-{
-    return m_totalCountHasBeenSet;
+    return m_passwordHasBeenSet;
 }
 
 

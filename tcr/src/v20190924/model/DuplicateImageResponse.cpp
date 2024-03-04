@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/tcr/v20190924/model/DeleteCustomAccountResponse.h>
+#include <tencentcloud/tcr/v20190924/model/DuplicateImageResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -23,11 +23,11 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Tcr::V20190924::Model;
 using namespace std;
 
-DeleteCustomAccountResponse::DeleteCustomAccountResponse()
+DuplicateImageResponse::DuplicateImageResponse()
 {
 }
 
-CoreInternalOutcome DeleteCustomAccountResponse::Deserialize(const string &payload)
+CoreInternalOutcome DuplicateImageResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -65,7 +65,7 @@ CoreInternalOutcome DeleteCustomAccountResponse::Deserialize(const string &paylo
     return CoreInternalOutcome(true);
 }
 
-string DeleteCustomAccountResponse::ToJsonString() const
+string DuplicateImageResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();

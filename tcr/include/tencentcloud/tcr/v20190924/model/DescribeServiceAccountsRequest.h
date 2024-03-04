@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool AllHasBeenSet() const;
 
                     /**
-                     * 获取Whether to fill in permission information
-                     * @return EmbedPermission Whether to fill in permission information
+                     * 获取Whether to fill in permission information.
+                     * @return EmbedPermission Whether to fill in permission information.
                      * 
                      */
                     bool GetEmbedPermission() const;
 
                     /**
-                     * 设置Whether to fill in permission information
-                     * @param _embedPermission Whether to fill in permission information
+                     * 设置Whether to fill in permission information.
+                     * @param _embedPermission Whether to fill in permission information.
                      * 
                      */
                     void SetEmbedPermission(const bool& _embedPermission);
@@ -184,7 +184,7 @@ namespace TencentCloud
                     bool m_allHasBeenSet;
 
                     /**
-                     * Whether to fill in permission information
+                     * Whether to fill in permission information.
                      */
                     bool m_embedPermission;
                     bool m_embedPermissionHasBeenSet;

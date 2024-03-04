@@ -378,6 +378,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool RenewFlagHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to enable instance deletion protection. false indicates it is not enabled.
+                     * @return DeletionProtection Whether to enable instance deletion protection. false indicates it is not enabled.
+                     * 
+                     */
+                    bool GetDeletionProtection() const;
+
+                    /**
+                     * 设置Whether to enable instance deletion protection. false indicates it is not enabled.
+                     * @param _deletionProtection Whether to enable instance deletion protection. false indicates it is not enabled.
+                     * 
+                     */
+                    void SetDeletionProtection(const bool& _deletionProtection);
+
+                    /**
+                     * 判断参数 DeletionProtection 是否已赋值
+                     * @return DeletionProtection 是否已赋值
+                     * 
+                     */
+                    bool DeletionProtectionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -473,6 +494,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_renewFlag;
                     bool m_renewFlagHasBeenSet;
+
+                    /**
+                     * Whether to enable instance deletion protection. false indicates it is not enabled.
+                     */
+                    bool m_deletionProtection;
+                    bool m_deletionProtectionHasBeenSet;
 
                 };
             }

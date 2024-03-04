@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/tcr/v20190924/model/DeleteCustomAccountRequest.h>
+#include <tencentcloud/tcr/v20190924/model/ModifyServiceAccountPasswordRequest.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -22,13 +22,15 @@
 using namespace TencentCloud::Tcr::V20190924::Model;
 using namespace std;
 
-DeleteCustomAccountRequest::DeleteCustomAccountRequest() :
+ModifyServiceAccountPasswordRequest::ModifyServiceAccountPasswordRequest() :
     m_registryIdHasBeenSet(false),
-    m_nameHasBeenSet(false)
+    m_nameHasBeenSet(false),
+    m_randomHasBeenSet(false),
+    m_passwordHasBeenSet(false)
 {
 }
 
-string DeleteCustomAccountRequest::ToJsonString() const
+string ModifyServiceAccountPasswordRequest::ToJsonString() const
 {
     rapidjson::Document d;
     d.SetObject();
@@ -51,6 +53,22 @@ string DeleteCustomAccountRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
     }
 
+    if (m_randomHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Random";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_random, allocator);
+    }
+
+    if (m_passwordHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Password";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_password.c_str(), allocator).Move(), allocator);
+    }
+
 
     rapidjson::StringBuffer buffer;
     rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
@@ -59,36 +77,68 @@ string DeleteCustomAccountRequest::ToJsonString() const
 }
 
 
-string DeleteCustomAccountRequest::GetRegistryId() const
+string ModifyServiceAccountPasswordRequest::GetRegistryId() const
 {
     return m_registryId;
 }
 
-void DeleteCustomAccountRequest::SetRegistryId(const string& _registryId)
+void ModifyServiceAccountPasswordRequest::SetRegistryId(const string& _registryId)
 {
     m_registryId = _registryId;
     m_registryIdHasBeenSet = true;
 }
 
-bool DeleteCustomAccountRequest::RegistryIdHasBeenSet() const
+bool ModifyServiceAccountPasswordRequest::RegistryIdHasBeenSet() const
 {
     return m_registryIdHasBeenSet;
 }
 
-string DeleteCustomAccountRequest::GetName() const
+string ModifyServiceAccountPasswordRequest::GetName() const
 {
     return m_name;
 }
 
-void DeleteCustomAccountRequest::SetName(const string& _name)
+void ModifyServiceAccountPasswordRequest::SetName(const string& _name)
 {
     m_name = _name;
     m_nameHasBeenSet = true;
 }
 
-bool DeleteCustomAccountRequest::NameHasBeenSet() const
+bool ModifyServiceAccountPasswordRequest::NameHasBeenSet() const
 {
     return m_nameHasBeenSet;
+}
+
+bool ModifyServiceAccountPasswordRequest::GetRandom() const
+{
+    return m_random;
+}
+
+void ModifyServiceAccountPasswordRequest::SetRandom(const bool& _random)
+{
+    m_random = _random;
+    m_randomHasBeenSet = true;
+}
+
+bool ModifyServiceAccountPasswordRequest::RandomHasBeenSet() const
+{
+    return m_randomHasBeenSet;
+}
+
+string ModifyServiceAccountPasswordRequest::GetPassword() const
+{
+    return m_password;
+}
+
+void ModifyServiceAccountPasswordRequest::SetPassword(const string& _password)
+{
+    m_password = _password;
+    m_passwordHasBeenSet = true;
+}
+
+bool ModifyServiceAccountPasswordRequest::PasswordHasBeenSet() const
+{
+    return m_passwordHasBeenSet;
 }
 
 
