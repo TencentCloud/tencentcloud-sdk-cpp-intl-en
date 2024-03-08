@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Slow query details
-                     * @return InstanceSlowlogDetail Slow query details
+                     * 获取Due to the naming irregularity of this parameter. It is recommended to use the parameter InstanceSlowLogDetail instead. Details of slow queries.
+                     * @return InstanceSlowlogDetail Due to the naming irregularity of this parameter. It is recommended to use the parameter InstanceSlowLogDetail instead. Details of slow queries.
                      * 
                      */
                     std::vector<InstanceSlowlogDetail> GetInstanceSlowlogDetail() const;
@@ -72,6 +72,20 @@ namespace TencentCloud
                      */
                     bool InstanceSlowlogDetailHasBeenSet() const;
 
+                    /**
+                     * 获取Details of slow queries.
+                     * @return InstanceSlowLogDetail Details of slow queries.
+                     * 
+                     */
+                    std::vector<InstanceSlowlogDetail> GetInstanceSlowLogDetail() const;
+
+                    /**
+                     * 判断参数 InstanceSlowLogDetail 是否已赋值
+                     * @return InstanceSlowLogDetail 是否已赋值
+                     * 
+                     */
+                    bool InstanceSlowLogDetailHasBeenSet() const;
+
                 private:
 
                     /**
@@ -81,10 +95,16 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Slow query details
+                     * Due to the naming irregularity of this parameter. It is recommended to use the parameter InstanceSlowLogDetail instead. Details of slow queries.
                      */
                     std::vector<InstanceSlowlogDetail> m_instanceSlowlogDetail;
                     bool m_instanceSlowlogDetailHasBeenSet;
+
+                    /**
+                     * Details of slow queries.
+                     */
+                    std::vector<InstanceSlowlogDetail> m_instanceSlowLogDetail;
+                    bool m_instanceSlowLogDetailHasBeenSet;
 
                 };
             }

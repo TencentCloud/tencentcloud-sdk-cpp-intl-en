@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Hot key
-                     * @return Key Hot key
+                     * 获取The name of the hot key.
+                     * @return Key The name of the hot key.
                      * 
                      */
                     std::string GetKey() const;
 
                     /**
-                     * 设置Hot key
-                     * @param _key Hot key
+                     * 设置The name of the hot key.
+                     * @param _key The name of the hot key.
                      * 
                      */
                     void SetKey(const std::string& _key);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool KeyHasBeenSet() const;
 
                     /**
-                     * 获取Type
-                     * @return Type Type
+                     * 获取Key type.
+                     * @return Type Key type.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Type
-                     * @param _type Type
+                     * 设置Key type.
+                     * @param _type Key type.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Count
-                     * @return Count Count
+                     * 获取Number of accesses for the hot key in a specified time period.
+                     * @return Count Number of accesses for the hot key in a specified time period.
                      * 
                      */
                     int64_t GetCount() const;
 
                     /**
-                     * 设置Count
-                     * @param _count Count
+                     * 设置Number of accesses for the hot key in a specified time period.
+                     * @param _count Number of accesses for the hot key in a specified time period.
                      * 
                      */
                     void SetCount(const int64_t& _count);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Hot key
+                     * The name of the hot key.
                      */
                     std::string m_key;
                     bool m_keyHasBeenSet;
 
                     /**
-                     * Type
+                     * Key type.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Count
+                     * Number of accesses for the hot key in a specified time period.
                      */
                     int64_t m_count;
                     bool m_countHasBeenSet;

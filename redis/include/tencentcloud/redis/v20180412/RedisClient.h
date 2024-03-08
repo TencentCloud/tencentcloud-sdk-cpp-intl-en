@@ -99,6 +99,8 @@
 #include <tencentcloud/redis/v20180412/model/DescribeInstanceSecurityGroupResponse.h>
 #include <tencentcloud/redis/v20180412/model/DescribeInstanceShardsRequest.h>
 #include <tencentcloud/redis/v20180412/model/DescribeInstanceShardsResponse.h>
+#include <tencentcloud/redis/v20180412/model/DescribeInstanceSupportFeatureRequest.h>
+#include <tencentcloud/redis/v20180412/model/DescribeInstanceSupportFeatureResponse.h>
 #include <tencentcloud/redis/v20180412/model/DescribeInstanceZoneInfoRequest.h>
 #include <tencentcloud/redis/v20180412/model/DescribeInstanceZoneInfoResponse.h>
 #include <tencentcloud/redis/v20180412/model/DescribeInstancesRequest.h>
@@ -159,6 +161,8 @@
 #include <tencentcloud/redis/v20180412/model/ModifyInstanceResponse.h>
 #include <tencentcloud/redis/v20180412/model/ModifyInstanceAccountRequest.h>
 #include <tencentcloud/redis/v20180412/model/ModifyInstanceAccountResponse.h>
+#include <tencentcloud/redis/v20180412/model/ModifyInstanceAvailabilityZonesRequest.h>
+#include <tencentcloud/redis/v20180412/model/ModifyInstanceAvailabilityZonesResponse.h>
 #include <tencentcloud/redis/v20180412/model/ModifyInstanceParamsRequest.h>
 #include <tencentcloud/redis/v20180412/model/ModifyInstanceParamsResponse.h>
 #include <tencentcloud/redis/v20180412/model/ModifyInstanceReadOnlyRequest.h>
@@ -183,6 +187,8 @@
 #include <tencentcloud/redis/v20180412/model/RestoreInstanceResponse.h>
 #include <tencentcloud/redis/v20180412/model/StartupInstanceRequest.h>
 #include <tencentcloud/redis/v20180412/model/StartupInstanceResponse.h>
+#include <tencentcloud/redis/v20180412/model/SwitchAccessNewInstanceRequest.h>
+#include <tencentcloud/redis/v20180412/model/SwitchAccessNewInstanceResponse.h>
 #include <tencentcloud/redis/v20180412/model/SwitchInstanceVipRequest.h>
 #include <tencentcloud/redis/v20180412/model/SwitchInstanceVipResponse.h>
 #include <tencentcloud/redis/v20180412/model/SwitchProxyRequest.h>
@@ -325,6 +331,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeInstanceShardsResponse> DescribeInstanceShardsOutcome;
                 typedef std::future<DescribeInstanceShardsOutcome> DescribeInstanceShardsOutcomeCallable;
                 typedef std::function<void(const RedisClient*, const Model::DescribeInstanceShardsRequest&, DescribeInstanceShardsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstanceShardsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeInstanceSupportFeatureResponse> DescribeInstanceSupportFeatureOutcome;
+                typedef std::future<DescribeInstanceSupportFeatureOutcome> DescribeInstanceSupportFeatureOutcomeCallable;
+                typedef std::function<void(const RedisClient*, const Model::DescribeInstanceSupportFeatureRequest&, DescribeInstanceSupportFeatureOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstanceSupportFeatureAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeInstanceZoneInfoResponse> DescribeInstanceZoneInfoOutcome;
                 typedef std::future<DescribeInstanceZoneInfoOutcome> DescribeInstanceZoneInfoOutcomeCallable;
                 typedef std::function<void(const RedisClient*, const Model::DescribeInstanceZoneInfoRequest&, DescribeInstanceZoneInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstanceZoneInfoAsyncHandler;
@@ -415,6 +424,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyInstanceAccountResponse> ModifyInstanceAccountOutcome;
                 typedef std::future<ModifyInstanceAccountOutcome> ModifyInstanceAccountOutcomeCallable;
                 typedef std::function<void(const RedisClient*, const Model::ModifyInstanceAccountRequest&, ModifyInstanceAccountOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstanceAccountAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyInstanceAvailabilityZonesResponse> ModifyInstanceAvailabilityZonesOutcome;
+                typedef std::future<ModifyInstanceAvailabilityZonesOutcome> ModifyInstanceAvailabilityZonesOutcomeCallable;
+                typedef std::function<void(const RedisClient*, const Model::ModifyInstanceAvailabilityZonesRequest&, ModifyInstanceAvailabilityZonesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstanceAvailabilityZonesAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyInstanceParamsResponse> ModifyInstanceParamsOutcome;
                 typedef std::future<ModifyInstanceParamsOutcome> ModifyInstanceParamsOutcomeCallable;
                 typedef std::function<void(const RedisClient*, const Model::ModifyInstanceParamsRequest&, ModifyInstanceParamsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstanceParamsAsyncHandler;
@@ -451,6 +463,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::StartupInstanceResponse> StartupInstanceOutcome;
                 typedef std::future<StartupInstanceOutcome> StartupInstanceOutcomeCallable;
                 typedef std::function<void(const RedisClient*, const Model::StartupInstanceRequest&, StartupInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StartupInstanceAsyncHandler;
+                typedef Outcome<Core::Error, Model::SwitchAccessNewInstanceResponse> SwitchAccessNewInstanceOutcome;
+                typedef std::future<SwitchAccessNewInstanceOutcome> SwitchAccessNewInstanceOutcomeCallable;
+                typedef std::function<void(const RedisClient*, const Model::SwitchAccessNewInstanceRequest&, SwitchAccessNewInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SwitchAccessNewInstanceAsyncHandler;
                 typedef Outcome<Core::Error, Model::SwitchInstanceVipResponse> SwitchInstanceVipOutcome;
                 typedef std::future<SwitchInstanceVipOutcome> SwitchInstanceVipOutcomeCallable;
                 typedef std::function<void(const RedisClient*, const Model::SwitchInstanceVipRequest&, SwitchInstanceVipOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SwitchInstanceVipAsyncHandler;
@@ -566,7 +581,7 @@ namespace TencentCloud
                 CloseSSLOutcomeCallable CloseSSLCallable(const Model::CloseSSLRequest& request);
 
                 /**
-                 *This API is used to create an instance sub-account.
+                 *This API is used to customize the account for accessing the instance.
                  * @param req CreateInstanceAccountRequest
                  * @return CreateInstanceAccountOutcome
                  */
@@ -816,6 +831,15 @@ namespace TencentCloud
                 DescribeInstanceShardsOutcome DescribeInstanceShards(const Model::DescribeInstanceShardsRequest &request);
                 void DescribeInstanceShardsAsync(const Model::DescribeInstanceShardsRequest& request, const DescribeInstanceShardsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeInstanceShardsOutcomeCallable DescribeInstanceShardsCallable(const Model::DescribeInstanceShardsRequest& request);
+
+                /**
+                 *This API (DescribeInstanceSupportFeature) is used to query the supported features of the instance.
+                 * @param req DescribeInstanceSupportFeatureRequest
+                 * @return DescribeInstanceSupportFeatureOutcome
+                 */
+                DescribeInstanceSupportFeatureOutcome DescribeInstanceSupportFeature(const Model::DescribeInstanceSupportFeatureRequest &request);
+                void DescribeInstanceSupportFeatureAsync(const Model::DescribeInstanceSupportFeatureRequest& request, const DescribeInstanceSupportFeatureAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeInstanceSupportFeatureOutcomeCallable DescribeInstanceSupportFeatureCallable(const Model::DescribeInstanceSupportFeatureRequest& request);
 
                 /**
                  *This API is used to query the details of a Redis node.
@@ -1088,6 +1112,15 @@ namespace TencentCloud
                 ModifyInstanceAccountOutcomeCallable ModifyInstanceAccountCallable(const Model::ModifyInstanceAccountRequest& request);
 
                 /**
+                 *This API is used to change the availability zone of the instance.
+                 * @param req ModifyInstanceAvailabilityZonesRequest
+                 * @return ModifyInstanceAvailabilityZonesOutcome
+                 */
+                ModifyInstanceAvailabilityZonesOutcome ModifyInstanceAvailabilityZones(const Model::ModifyInstanceAvailabilityZonesRequest &request);
+                void ModifyInstanceAvailabilityZonesAsync(const Model::ModifyInstanceAvailabilityZonesRequest& request, const ModifyInstanceAvailabilityZonesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyInstanceAvailabilityZonesOutcomeCallable ModifyInstanceAvailabilityZonesCallable(const Model::ModifyInstanceAvailabilityZonesRequest& request);
+
+                /**
                  *This API is used to modify the parameters of TencentDB for Redis instances
                  * @param req ModifyInstanceParamsRequest
                  * @return ModifyInstanceParamsOutcome
@@ -1194,6 +1227,15 @@ namespace TencentCloud
                 StartupInstanceOutcome StartupInstance(const Model::StartupInstanceRequest &request);
                 void StartupInstanceAsync(const Model::StartupInstanceRequest& request, const StartupInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 StartupInstanceOutcomeCallable StartupInstanceCallable(const Model::StartupInstanceRequest& request);
+
+                /**
+                 *This API is used to immediately switch instances that are in the time window pending switch operation. Users can manually initiate this operation.
+                 * @param req SwitchAccessNewInstanceRequest
+                 * @return SwitchAccessNewInstanceOutcome
+                 */
+                SwitchAccessNewInstanceOutcome SwitchAccessNewInstance(const Model::SwitchAccessNewInstanceRequest &request);
+                void SwitchAccessNewInstanceAsync(const Model::SwitchAccessNewInstanceRequest& request, const SwitchAccessNewInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SwitchAccessNewInstanceOutcomeCallable SwitchAccessNewInstanceCallable(const Model::SwitchAccessNewInstanceRequest& request);
 
                 /**
                  *This API is used to swap the VIPs of instances for instance disaster recovery switch in scenarios where cross-AZ disaster recovery is supported through DTS. After the VIPs of the source and target instances are swapped, the target instance can be written into and the DTS sync task between them will be disconnected.

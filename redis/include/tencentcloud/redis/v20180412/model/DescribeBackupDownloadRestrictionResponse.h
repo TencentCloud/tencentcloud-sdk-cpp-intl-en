@@ -115,8 +115,12 @@ namespace TencentCloud
                     bool LimitVpcHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID of the custom backup file download address, which will be displayed if `LimitType` is `Customize`.
-                     * @return LimitIp VPC ID of the custom backup file download address, which will be displayed if `LimitType` is `Customize`.
+                     * 获取Custom VPC IP address for downloading backup files.
+ This parameter is displayed when the **LimitType** parameter is set to **Customize**.
+
+                     * @return LimitIp Custom VPC IP address for downloading backup files.
+ This parameter is displayed when the **LimitType** parameter is set to **Customize**.
+
                      * 
                      */
                     std::vector<std::string> GetLimitIp() const;
@@ -162,7 +166,9 @@ namespace TencentCloud
                     bool m_limitVpcHasBeenSet;
 
                     /**
-                     * VPC ID of the custom backup file download address, which will be displayed if `LimitType` is `Customize`.
+                     * Custom VPC IP address for downloading backup files.
+ This parameter is displayed when the **LimitType** parameter is set to **Customize**.
+
                      */
                     std::vector<std::string> m_limitIp;
                     bool m_limitIpHasBeenSet;

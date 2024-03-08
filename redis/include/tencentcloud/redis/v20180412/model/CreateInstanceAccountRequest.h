@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取Instance ID.
+                     * @return InstanceId Instance ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置Instance ID.
+                     * @param _instanceId Instance ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,23 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Sub-account name
-                     * @return AccountName Sub-account name
+                     * 获取Custom the name of the database to access.
+- Contains only letters, digits, underscores, and hyphens.
+- The length cannot exceed 32 characters.
+                     * @return AccountName Custom the name of the database to access.
+- Contains only letters, digits, underscores, and hyphens.
+- The length cannot exceed 32 characters.
                      * 
                      */
                     std::string GetAccountName() const;
 
                     /**
-                     * 设置Sub-account name
-                     * @param _accountName Sub-account name
+                     * 设置Custom the name of the database to access.
+- Contains only letters, digits, underscores, and hyphens.
+- The length cannot exceed 32 characters.
+                     * @param _accountName Custom the name of the database to access.
+- Contains only letters, digits, underscores, and hyphens.
+- The length cannot exceed 32 characters.
                      * 
                      */
                     void SetAccountName(const std::string& _accountName);
@@ -85,39 +93,27 @@ namespace TencentCloud
                     bool AccountNameHasBeenSet() const;
 
                     /**
-                     * 获取1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
-2. It cannot start with a slash (/).
-3. It must contain characters in at least two of the following types:
-    a. Lowercase letters (a–z)
-    b. Uppercase letters (A–Z)
-    c. Digits (0–9)
-    d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
-                     * @return AccountPassword 1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
-2. It cannot start with a slash (/).
-3. It must contain characters in at least two of the following types:
-    a. Lowercase letters (a–z)
-    b. Uppercase letters (A–Z)
-    c. Digits (0–9)
-    d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
+                     * 获取Set a password for the customized account. The password complexity requirements are as follows:
+- Value range: [8, 32].
+- Contains at least two types of characters from the following categories: lowercase letters, uppercase letters, digits, and characters ()`~!@#$%^&*-+=_|{}[]:;<>,.? /.- Cannot start with "/".
+
+                     * @return AccountPassword Set a password for the customized account. The password complexity requirements are as follows:
+- Value range: [8, 32].
+- Contains at least two types of characters from the following categories: lowercase letters, uppercase letters, digits, and characters ()`~!@#$%^&*-+=_|{}[]:;<>,.? /.- Cannot start with "/".
+
                      * 
                      */
                     std::string GetAccountPassword() const;
 
                     /**
-                     * 设置1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
-2. It cannot start with a slash (/).
-3. It must contain characters in at least two of the following types:
-    a. Lowercase letters (a–z)
-    b. Uppercase letters (A–Z)
-    c. Digits (0–9)
-    d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
-                     * @param _accountPassword 1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
-2. It cannot start with a slash (/).
-3. It must contain characters in at least two of the following types:
-    a. Lowercase letters (a–z)
-    b. Uppercase letters (A–Z)
-    c. Digits (0–9)
-    d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
+                     * 设置Set a password for the customized account. The password complexity requirements are as follows:
+- Value range: [8, 32].
+- Contains at least two types of characters from the following categories: lowercase letters, uppercase letters, digits, and characters ()`~!@#$%^&*-+=_|{}[]:;<>,.? /.- Cannot start with "/".
+
+                     * @param _accountPassword Set a password for the customized account. The password complexity requirements are as follows:
+- Value range: [8, 32].
+- Contains at least two types of characters from the following categories: lowercase letters, uppercase letters, digits, and characters ()`~!@#$%^&*-+=_|{}[]:;<>,.? /.- Cannot start with "/".
+
                      * 
                      */
                     void SetAccountPassword(const std::string& _accountPassword);
@@ -130,15 +126,19 @@ namespace TencentCloud
                     bool AccountPasswordHasBeenSet() const;
 
                     /**
-                     * 获取Routing policy. Valid values: master (master node); replication (replica node)
-                     * @return ReadonlyPolicy Routing policy. Valid values: master (master node); replication (replica node)
+                     * 获取The read requests for the designated account are routed to either the master node or replica nodes. If the Read-Only Replica is not enabled, the selection of replica nodes is not supported.
+- master: Master node.- replication: Replica node.
+                     * @return ReadonlyPolicy The read requests for the designated account are routed to either the master node or replica nodes. If the Read-Only Replica is not enabled, the selection of replica nodes is not supported.
+- master: Master node.- replication: Replica node.
                      * 
                      */
                     std::vector<std::string> GetReadonlyPolicy() const;
 
                     /**
-                     * 设置Routing policy. Valid values: master (master node); replication (replica node)
-                     * @param _readonlyPolicy Routing policy. Valid values: master (master node); replication (replica node)
+                     * 设置The read requests for the designated account are routed to either the master node or replica nodes. If the Read-Only Replica is not enabled, the selection of replica nodes is not supported.
+- master: Master node.- replication: Replica node.
+                     * @param _readonlyPolicy The read requests for the designated account are routed to either the master node or replica nodes. If the Read-Only Replica is not enabled, the selection of replica nodes is not supported.
+- master: Master node.- replication: Replica node.
                      * 
                      */
                     void SetReadonlyPolicy(const std::vector<std::string>& _readonlyPolicy);
@@ -151,15 +151,23 @@ namespace TencentCloud
                     bool ReadonlyPolicyHasBeenSet() const;
 
                     /**
-                     * 获取Read/Write policy. Valid values: r (read-only); rw (read/write).
-                     * @return Privilege Read/Write policy. Valid values: r (read-only); rw (read/write).
+                     * 获取The read/write permission of the account supports the selection of read-only and read/write permissions.
+- r: read-only
+- rw: Read/Write permission.
+                     * @return Privilege The read/write permission of the account supports the selection of read-only and read/write permissions.
+- r: read-only
+- rw: Read/Write permission.
                      * 
                      */
                     std::string GetPrivilege() const;
 
                     /**
-                     * 设置Read/Write policy. Valid values: r (read-only); rw (read/write).
-                     * @param _privilege Read/Write policy. Valid values: r (read-only); rw (read/write).
+                     * 设置The read/write permission of the account supports the selection of read-only and read/write permissions.
+- r: read-only
+- rw: Read/Write permission.
+                     * @param _privilege The read/write permission of the account supports the selection of read-only and read/write permissions.
+- r: read-only
+- rw: Read/Write permission.
                      * 
                      */
                     void SetPrivilege(const std::string& _privilege);
@@ -172,15 +180,15 @@ namespace TencentCloud
                     bool PrivilegeHasBeenSet() const;
 
                     /**
-                     * 获取Sub-account description information
-                     * @return Remark Sub-account description information
+                     * 获取Sub-account description information, with a length of [0, 64] bytes, supports Chinese characters.
+                     * @return Remark Sub-account description information, with a length of [0, 64] bytes, supports Chinese characters.
                      * 
                      */
                     std::string GetRemark() const;
 
                     /**
-                     * 设置Sub-account description information
-                     * @param _remark Sub-account description information
+                     * 设置Sub-account description information, with a length of [0, 64] bytes, supports Chinese characters.
+                     * @param _remark Sub-account description information, with a length of [0, 64] bytes, supports Chinese characters.
                      * 
                      */
                     void SetRemark(const std::string& _remark);
@@ -195,43 +203,45 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * Instance ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Sub-account name
+                     * Custom the name of the database to access.
+- Contains only letters, digits, underscores, and hyphens.
+- The length cannot exceed 32 characters.
                      */
                     std::string m_accountName;
                     bool m_accountNameHasBeenSet;
 
                     /**
-                     * 1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
-2. It cannot start with a slash (/).
-3. It must contain characters in at least two of the following types:
-    a. Lowercase letters (a–z)
-    b. Uppercase letters (A–Z)
-    c. Digits (0–9)
-    d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
+                     * Set a password for the customized account. The password complexity requirements are as follows:
+- Value range: [8, 32].
+- Contains at least two types of characters from the following categories: lowercase letters, uppercase letters, digits, and characters ()`~!@#$%^&*-+=_|{}[]:;<>,.? /.- Cannot start with "/".
+
                      */
                     std::string m_accountPassword;
                     bool m_accountPasswordHasBeenSet;
 
                     /**
-                     * Routing policy. Valid values: master (master node); replication (replica node)
+                     * The read requests for the designated account are routed to either the master node or replica nodes. If the Read-Only Replica is not enabled, the selection of replica nodes is not supported.
+- master: Master node.- replication: Replica node.
                      */
                     std::vector<std::string> m_readonlyPolicy;
                     bool m_readonlyPolicyHasBeenSet;
 
                     /**
-                     * Read/Write policy. Valid values: r (read-only); rw (read/write).
+                     * The read/write permission of the account supports the selection of read-only and read/write permissions.
+- r: read-only
+- rw: Read/Write permission.
                      */
                     std::string m_privilege;
                     bool m_privilegeHasBeenSet;
 
                     /**
-                     * Sub-account description information
+                     * Sub-account description information, with a length of [0, 64] bytes, supports Chinese characters.
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;

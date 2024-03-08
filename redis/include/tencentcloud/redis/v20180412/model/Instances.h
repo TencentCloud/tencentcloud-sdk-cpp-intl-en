@@ -303,18 +303,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VipHasBeenSet() const;
 
                     /**
-                     * 获取Internal parameter, which can be ignored.
+                     * 获取Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Vip6 Internal parameter, which can be ignored.
+                     * @return Vip6 Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetVip6() const;
 
                     /**
-                     * 设置Internal parameter, which can be ignored.
+                     * 设置Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _vip6 Internal parameter, which can be ignored.
+                     * @param _vip6 Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -326,6 +326,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool Vip6HasBeenSet() const;
+
+                    /**
+                     * 获取Internal parameters, which can be ignored by users.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IPv6 Internal parameters, which can be ignored by users.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetIPv6() const;
+
+                    /**
+                     * 设置Internal parameters, which can be ignored by users.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _iPv6 Internal parameters, which can be ignored by users.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetIPv6(const std::string& _iPv6);
+
+                    /**
+                     * 判断参数 IPv6 是否已赋值
+                     * @return IPv6 是否已赋值
+                     * 
+                     */
+                    bool IPv6HasBeenSet() const;
 
                     /**
                      * 获取VPC ID, such as `75101`.
@@ -590,11 +615,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_vipHasBeenSet;
 
                     /**
-                     * Internal parameter, which can be ignored.
+                     * Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_vip6;
                     bool m_vip6HasBeenSet;
+
+                    /**
+                     * Internal parameters, which can be ignored by users.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_iPv6;
+                    bool m_iPv6HasBeenSet;
 
                     /**
                      * VPC ID, such as `75101`.

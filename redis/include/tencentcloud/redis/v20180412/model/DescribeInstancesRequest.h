@@ -115,15 +115,19 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance list sorting criteria. The enumerated values are as listed below:  <ul><li>`projectId`:  Project ID.  </li><li>`createtime`:  Instance creation time.  </li><li>`instancename`:  Instance name.  </li><li>`type`:  Instance type. </li><li>`curDeadline`:  Instance expiration time. </li></ul>
-                     * @return OrderBy Instance list sorting criteria. The enumerated values are as listed below:  <ul><li>`projectId`:  Project ID.  </li><li>`createtime`:  Instance creation time.  </li><li>`instancename`:  Instance name.  </li><li>`type`:  Instance type. </li><li>`curDeadline`:  Instance expiration time. </li></ul>
+                     * 获取The instance list is sorted according to the following enumeration valid values:
+- projectId: By project ID.- createtime: By the creation time of instances.- instancename: By the name of instances.- type: By the type of instances.- curDeadline: By the expiration time of instances.
+                     * @return OrderBy The instance list is sorted according to the following enumeration valid values:
+- projectId: By project ID.- createtime: By the creation time of instances.- instancename: By the name of instances.- type: By the type of instances.- curDeadline: By the expiration time of instances.
                      * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
-                     * 设置Instance list sorting criteria. The enumerated values are as listed below:  <ul><li>`projectId`:  Project ID.  </li><li>`createtime`:  Instance creation time.  </li><li>`instancename`:  Instance name.  </li><li>`type`:  Instance type. </li><li>`curDeadline`:  Instance expiration time. </li></ul>
-                     * @param _orderBy Instance list sorting criteria. The enumerated values are as listed below:  <ul><li>`projectId`:  Project ID.  </li><li>`createtime`:  Instance creation time.  </li><li>`instancename`:  Instance name.  </li><li>`type`:  Instance type. </li><li>`curDeadline`:  Instance expiration time. </li></ul>
+                     * 设置The instance list is sorted according to the following enumeration valid values:
+- projectId: By project ID.- createtime: By the creation time of instances.- instancename: By the name of instances.- type: By the type of instances.- curDeadline: By the expiration time of instances.
+                     * @param _orderBy The instance list is sorted according to the following enumeration valid values:
+- projectId: By project ID.- createtime: By the creation time of instances.- instancename: By the name of instances.- type: By the type of instances.- curDeadline: By the expiration time of instances.
                      * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
@@ -136,15 +140,23 @@ namespace TencentCloud
                     bool OrderByHasBeenSet() const;
 
                     /**
-                     * 获取Instance sorting order. <ul><li>`1`: Descending. </li><li>`0`: Ascending. Default value: `1`.</li></ul>
-                     * @return OrderType Instance sorting order. <ul><li>`1`: Descending. </li><li>`0`: Ascending. Default value: `1`.</li></ul>
+                     * 获取For instance sorting order, the default is descending order.
+- 1: Descending order.
+- 0: Ascending order.
+                     * @return OrderType For instance sorting order, the default is descending order.
+- 1: Descending order.
+- 0: Ascending order.
                      * 
                      */
                     int64_t GetOrderType() const;
 
                     /**
-                     * 设置Instance sorting order. <ul><li>`1`: Descending. </li><li>`0`: Ascending. Default value: `1`.</li></ul>
-                     * @param _orderType Instance sorting order. <ul><li>`1`: Descending. </li><li>`0`: Ascending. Default value: `1`.</li></ul>
+                     * 设置For instance sorting order, the default is descending order.
+- 1: Descending order.
+- 0: Ascending order.
+                     * @param _orderType For instance sorting order, the default is descending order.
+- 1: Descending order.
+- 0: Ascending order.
                      * 
                      */
                     void SetOrderType(const int64_t& _orderType);
@@ -199,15 +211,15 @@ namespace TencentCloud
                     bool SubnetIdsHasBeenSet() const;
 
                     /**
-                     * 获取Keywords for fuzzy query. which can be used to fuzzy query an instance by its ID or name.
-                     * @return SearchKey Keywords for fuzzy query. which can be used to fuzzy query an instance by its ID or name.
+                     * 获取Setting keywords field for fuzzy query, only instance names support fuzzy query.
+                     * @return SearchKey Setting keywords field for fuzzy query, only instance names support fuzzy query.
                      * 
                      */
                     std::string GetSearchKey() const;
 
                     /**
-                     * 设置Keywords for fuzzy query. which can be used to fuzzy query an instance by its ID or name.
-                     * @param _searchKey Keywords for fuzzy query. which can be used to fuzzy query an instance by its ID or name.
+                     * 设置Setting keywords field for fuzzy query, only instance names support fuzzy query.
+                     * @param _searchKey Setting keywords field for fuzzy query, only instance names support fuzzy query.
                      * 
                      */
                     void SetSearchKey(const std::string& _searchKey);
@@ -325,15 +337,35 @@ namespace TencentCloud
                     bool RegionIdsHasBeenSet() const;
 
                     /**
-                     * 获取Instance status. <ul><li>`0`: Uninitialized. </li><li>`1`: In the process. </li><li>`2`: Running. </li><li>`-2`: Isolated. </li><li>`-3`: To be deleted. </li></ul>
-                     * @return Status Instance status. <ul><li>`0`: Uninitialized. </li><li>`1`: In the process. </li><li>`2`: Running. </li><li>`-2`: Isolated. </li><li>`-3`: To be deleted. </li></ul>
+                     * 获取Instance status.
+- 0: To be initialized.
+- 1: In process.
+- 2: Running.
+- -2: Isolated.
+- -3: Pending Delete.
+                     * @return Status Instance status.
+- 0: To be initialized.
+- 1: In process.
+- 2: Running.
+- -2: Isolated.
+- -3: Pending Delete.
                      * 
                      */
                     std::vector<int64_t> GetStatus() const;
 
                     /**
-                     * 设置Instance status. <ul><li>`0`: Uninitialized. </li><li>`1`: In the process. </li><li>`2`: Running. </li><li>`-2`: Isolated. </li><li>`-3`: To be deleted. </li></ul>
-                     * @param _status Instance status. <ul><li>`0`: Uninitialized. </li><li>`1`: In the process. </li><li>`2`: Running. </li><li>`-2`: Isolated. </li><li>`-3`: To be deleted. </li></ul>
+                     * 设置Instance status.
+- 0: To be initialized.
+- 1: In process.
+- 2: Running.
+- -2: Isolated.
+- -3: Pending Delete.
+                     * @param _status Instance status.
+- 0: To be initialized.
+- 1: In process.
+- 2: Running.
+- -2: Isolated.
+- -3: Pending Delete.
                      * 
                      */
                     void SetStatus(const std::vector<int64_t>& _status);
@@ -346,15 +378,23 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Instance architecture. <ul><li>`1`: Standalone edition. </li><li>`2`: Master-replica edition. </li><li>`3`: Cluster edition. </li></ul>
-                     * @return TypeVersion Instance architecture. <ul><li>`1`: Standalone edition. </li><li>`2`: Master-replica edition. </li><li>`3`: Cluster edition. </li></ul>
+                     * 获取Instance architecture version.
+- 1: Single-node edition.
+- 2: Master-replica edition.- 3: Cluster edition.
+                     * @return TypeVersion Instance architecture version.
+- 1: Single-node edition.
+- 2: Master-replica edition.- 3: Cluster edition.
                      * 
                      */
                     int64_t GetTypeVersion() const;
 
                     /**
-                     * 设置Instance architecture. <ul><li>`1`: Standalone edition. </li><li>`2`: Master-replica edition. </li><li>`3`: Cluster edition. </li></ul>
-                     * @param _typeVersion Instance architecture. <ul><li>`1`: Standalone edition. </li><li>`2`: Master-replica edition. </li><li>`3`: Cluster edition. </li></ul>
+                     * 设置Instance architecture version.
+- 1: Single-node edition.
+- 2: Master-replica edition.- 3: Cluster edition.
+                     * @param _typeVersion Instance architecture version.
+- 1: Single-node edition.
+- 2: Master-replica edition.- 3: Cluster edition.
                      * 
                      */
                     void SetTypeVersion(const int64_t& _typeVersion);
@@ -388,15 +428,27 @@ namespace TencentCloud
                     bool EngineNameHasBeenSet() const;
 
                     /**
-                     * 获取Renewal mode. Valid values:  <ul><li>`0`:  Manual renewal </li><li>`1`:  Auto-renewal </li><li>`2`:  No renewal upon expiration </ul>
-                     * @return AutoRenew Renewal mode. Valid values:  <ul><li>`0`:  Manual renewal </li><li>`1`:  Auto-renewal </li><li>`2`:  No renewal upon expiration </ul>
+                     * 获取Renewal pattern.
+- 0: Manual renewal.
+- 1: Automatic renewal.
+- 2: No renewal after expiry.
+                     * @return AutoRenew Renewal pattern.
+- 0: Manual renewal.
+- 1: Automatic renewal.
+- 2: No renewal after expiry.
                      * 
                      */
                     std::vector<int64_t> GetAutoRenew() const;
 
                     /**
-                     * 设置Renewal mode. Valid values:  <ul><li>`0`:  Manual renewal </li><li>`1`:  Auto-renewal </li><li>`2`:  No renewal upon expiration </ul>
-                     * @param _autoRenew Renewal mode. Valid values:  <ul><li>`0`:  Manual renewal </li><li>`1`:  Auto-renewal </li><li>`2`:  No renewal upon expiration </ul>
+                     * 设置Renewal pattern.
+- 0: Manual renewal.
+- 1: Automatic renewal.
+- 2: No renewal after expiry.
+                     * @param _autoRenew Renewal pattern.
+- 0: Manual renewal.
+- 1: Automatic renewal.
+- 2: No renewal after expiry.
                      * 
                      */
                     void SetAutoRenew(const std::vector<int64_t>& _autoRenew);
@@ -451,15 +503,19 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Array of the search keywords, which can query the instance by its ID, name, IP address.
-                     * @return SearchKeys Array of the search keywords, which can query the instance by its ID, name, IP address.
+                     * 获取This parameter is of array type and supports the configuration of instance names, instance IDs, and IP addresses. Among these, the instance name is fuzzy matching while the instance ID and IP address are precise matching.
+- Each element in the array is used for a union-based matching query.- When both **InstanceId** and **SearchKeys** are configured simultaneously, their intersection will be used for the matching query.
+                     * @return SearchKeys This parameter is of array type and supports the configuration of instance names, instance IDs, and IP addresses. Among these, the instance name is fuzzy matching while the instance ID and IP address are precise matching.
+- Each element in the array is used for a union-based matching query.- When both **InstanceId** and **SearchKeys** are configured simultaneously, their intersection will be used for the matching query.
                      * 
                      */
                     std::vector<std::string> GetSearchKeys() const;
 
                     /**
-                     * 设置Array of the search keywords, which can query the instance by its ID, name, IP address.
-                     * @param _searchKeys Array of the search keywords, which can query the instance by its ID, name, IP address.
+                     * 设置This parameter is of array type and supports the configuration of instance names, instance IDs, and IP addresses. Among these, the instance name is fuzzy matching while the instance ID and IP address are precise matching.
+- Each element in the array is used for a union-based matching query.- When both **InstanceId** and **SearchKeys** are configured simultaneously, their intersection will be used for the matching query.
+                     * @param _searchKeys This parameter is of array type and supports the configuration of instance names, instance IDs, and IP addresses. Among these, the instance name is fuzzy matching while the instance ID and IP address are precise matching.
+- Each element in the array is used for a union-based matching query.- When both **InstanceId** and **SearchKeys** are configured simultaneously, their intersection will be used for the matching query.
                      * 
                      */
                     void SetSearchKeys(const std::vector<std::string>& _searchKeys);
@@ -556,15 +612,23 @@ namespace TencentCloud
                     bool TagKeysHasBeenSet() const;
 
                     /**
-                     * 获取Instance product version.  If this parameter is not passed in or the array is empty, the instances will not be filtered based this parameter by default.  <ul><li>`local`:  Local disk edition.  </li><li>`cdc`:  Dedicated cluster edition.  </li></ul>
-                     * @return ProductVersions Instance product version.  If this parameter is not passed in or the array is empty, the instances will not be filtered based this parameter by default.  <ul><li>`local`:  Local disk edition.  </li><li>`cdc`:  Dedicated cluster edition.  </li></ul>
+                     * 获取The product version of the instance. If this parameter is not configured or the array is set to empty, instances will not be filtered based on this parameter by default.
+- local: local Disk Edition.- cdc: Cluster dedicated edition.
+
+                     * @return ProductVersions The product version of the instance. If this parameter is not configured or the array is set to empty, instances will not be filtered based on this parameter by default.
+- local: local Disk Edition.- cdc: Cluster dedicated edition.
+
                      * 
                      */
                     std::vector<std::string> GetProductVersions() const;
 
                     /**
-                     * 设置Instance product version.  If this parameter is not passed in or the array is empty, the instances will not be filtered based this parameter by default.  <ul><li>`local`:  Local disk edition.  </li><li>`cdc`:  Dedicated cluster edition.  </li></ul>
-                     * @param _productVersions Instance product version.  If this parameter is not passed in or the array is empty, the instances will not be filtered based this parameter by default.  <ul><li>`local`:  Local disk edition.  </li><li>`cdc`:  Dedicated cluster edition.  </li></ul>
+                     * 设置The product version of the instance. If this parameter is not configured or the array is set to empty, instances will not be filtered based on this parameter by default.
+- local: local Disk Edition.- cdc: Cluster dedicated edition.
+
+                     * @param _productVersions The product version of the instance. If this parameter is not configured or the array is set to empty, instances will not be filtered based on this parameter by default.
+- local: local Disk Edition.- cdc: Cluster dedicated edition.
+
                      * 
                      */
                     void SetProductVersions(const std::vector<std::string>& _productVersions);
@@ -598,15 +662,19 @@ namespace TencentCloud
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
-                     * 获取AZ deployment mode. <ul><li>`singleaz`: Single-AZ. </li><li>`1`: Multi-AZ. </li></ul>
-                     * @return AzMode AZ deployment mode. <ul><li>`singleaz`: Single-AZ. </li><li>`1`: Multi-AZ. </li></ul>
+                     * 获取Availability zone mode.
+- singleaz: Single availability zone.- multiaz: Multiple availability zones.
+                     * @return AzMode Availability zone mode.
+- singleaz: Single availability zone.- multiaz: Multiple availability zones.
                      * 
                      */
                     std::string GetAzMode() const;
 
                     /**
-                     * 设置AZ deployment mode. <ul><li>`singleaz`: Single-AZ. </li><li>`1`: Multi-AZ. </li></ul>
-                     * @param _azMode AZ deployment mode. <ul><li>`singleaz`: Single-AZ. </li><li>`1`: Multi-AZ. </li></ul>
+                     * 设置Availability zone mode.
+- singleaz: Single availability zone.- multiaz: Multiple availability zones.
+                     * @param _azMode Availability zone mode.
+- singleaz: Single availability zone.- multiaz: Multiple availability zones.
                      * 
                      */
                     void SetAzMode(const std::string& _azMode);
@@ -641,13 +709,16 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Instance list sorting criteria. The enumerated values are as listed below:  <ul><li>`projectId`:  Project ID.  </li><li>`createtime`:  Instance creation time.  </li><li>`instancename`:  Instance name.  </li><li>`type`:  Instance type. </li><li>`curDeadline`:  Instance expiration time. </li></ul>
+                     * The instance list is sorted according to the following enumeration valid values:
+- projectId: By project ID.- createtime: By the creation time of instances.- instancename: By the name of instances.- type: By the type of instances.- curDeadline: By the expiration time of instances.
                      */
                     std::string m_orderBy;
                     bool m_orderByHasBeenSet;
 
                     /**
-                     * Instance sorting order. <ul><li>`1`: Descending. </li><li>`0`: Ascending. Default value: `1`.</li></ul>
+                     * For instance sorting order, the default is descending order.
+- 1: Descending order.
+- 0: Ascending order.
                      */
                     int64_t m_orderType;
                     bool m_orderTypeHasBeenSet;
@@ -665,7 +736,7 @@ namespace TencentCloud
                     bool m_subnetIdsHasBeenSet;
 
                     /**
-                     * Keywords for fuzzy query. which can be used to fuzzy query an instance by its ID or name.
+                     * Setting keywords field for fuzzy query, only instance names support fuzzy query.
                      */
                     std::string m_searchKey;
                     bool m_searchKeyHasBeenSet;
@@ -701,13 +772,20 @@ namespace TencentCloud
                     bool m_regionIdsHasBeenSet;
 
                     /**
-                     * Instance status. <ul><li>`0`: Uninitialized. </li><li>`1`: In the process. </li><li>`2`: Running. </li><li>`-2`: Isolated. </li><li>`-3`: To be deleted. </li></ul>
+                     * Instance status.
+- 0: To be initialized.
+- 1: In process.
+- 2: Running.
+- -2: Isolated.
+- -3: Pending Delete.
                      */
                     std::vector<int64_t> m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Instance architecture. <ul><li>`1`: Standalone edition. </li><li>`2`: Master-replica edition. </li><li>`3`: Cluster edition. </li></ul>
+                     * Instance architecture version.
+- 1: Single-node edition.
+- 2: Master-replica edition.- 3: Cluster edition.
                      */
                     int64_t m_typeVersion;
                     bool m_typeVersionHasBeenSet;
@@ -719,7 +797,10 @@ namespace TencentCloud
                     bool m_engineNameHasBeenSet;
 
                     /**
-                     * Renewal mode. Valid values:  <ul><li>`0`:  Manual renewal </li><li>`1`:  Auto-renewal </li><li>`2`:  No renewal upon expiration </ul>
+                     * Renewal pattern.
+- 0: Manual renewal.
+- 1: Automatic renewal.
+- 2: No renewal after expiry.
                      */
                     std::vector<int64_t> m_autoRenew;
                     bool m_autoRenewHasBeenSet;
@@ -737,7 +818,8 @@ namespace TencentCloud
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Array of the search keywords, which can query the instance by its ID, name, IP address.
+                     * This parameter is of array type and supports the configuration of instance names, instance IDs, and IP addresses. Among these, the instance name is fuzzy matching while the instance ID and IP address are precise matching.
+- Each element in the array is used for a union-based matching query.- When both **InstanceId** and **SearchKeys** are configured simultaneously, their intersection will be used for the matching query.
                      */
                     std::vector<std::string> m_searchKeys;
                     bool m_searchKeysHasBeenSet;
@@ -767,7 +849,9 @@ namespace TencentCloud
                     bool m_tagKeysHasBeenSet;
 
                     /**
-                     * Instance product version.  If this parameter is not passed in or the array is empty, the instances will not be filtered based this parameter by default.  <ul><li>`local`:  Local disk edition.  </li><li>`cdc`:  Dedicated cluster edition.  </li></ul>
+                     * The product version of the instance. If this parameter is not configured or the array is set to empty, instances will not be filtered based on this parameter by default.
+- local: local Disk Edition.- cdc: Cluster dedicated edition.
+
                      */
                     std::vector<std::string> m_productVersions;
                     bool m_productVersionsHasBeenSet;
@@ -779,7 +863,8 @@ namespace TencentCloud
                     bool m_instanceIdsHasBeenSet;
 
                     /**
-                     * AZ deployment mode. <ul><li>`singleaz`: Single-AZ. </li><li>`1`: Multi-AZ. </li></ul>
+                     * Availability zone mode.
+- singleaz: Single availability zone.- multiaz: Multiple availability zones.
                      */
                     std::string m_azMode;
                     bool m_azModeHasBeenSet;

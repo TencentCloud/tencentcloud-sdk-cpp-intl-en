@@ -355,23 +355,23 @@ namespace TencentCloud
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to support read-only replicas
-- `true`: Supported.
--`false`: Not supported.
-                     * @return EnableRepicaReadOnly Whether to support read-only replicas
-- `true`: Supported.
--`false`: Not supported.
+                     * 获取Due to spelling inconsistency in this parameter name, it is recommended to use the **EnableReplicaReadOnly** parameter instead. Its meaning refers to whether the Read-Only Replica is supported.
+- true: Supported.
+- false: Not supported.
+                     * @return EnableRepicaReadOnly Due to spelling inconsistency in this parameter name, it is recommended to use the **EnableReplicaReadOnly** parameter instead. Its meaning refers to whether the Read-Only Replica is supported.
+- true: Supported.
+- false: Not supported.
                      * 
                      */
                     bool GetEnableRepicaReadOnly() const;
 
                     /**
-                     * 设置Whether to support read-only replicas
-- `true`: Supported.
--`false`: Not supported.
-                     * @param _enableRepicaReadOnly Whether to support read-only replicas
-- `true`: Supported.
--`false`: Not supported.
+                     * 设置Due to spelling inconsistency in this parameter name, it is recommended to use the **EnableReplicaReadOnly** parameter instead. Its meaning refers to whether the Read-Only Replica is supported.
+- true: Supported.
+- false: Not supported.
+                     * @param _enableRepicaReadOnly Due to spelling inconsistency in this parameter name, it is recommended to use the **EnableReplicaReadOnly** parameter instead. Its meaning refers to whether the Read-Only Replica is supported.
+- true: Supported.
+- false: Not supported.
                      * 
                      */
                     void SetEnableRepicaReadOnly(const bool& _enableRepicaReadOnly);
@@ -382,6 +382,39 @@ namespace TencentCloud
                      * 
                      */
                     bool EnableRepicaReadOnlyHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the Read-Only Replica is supported.
+- true: Supported.
+- false: Not supported.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return EnableReplicaReadOnly Whether the Read-Only Replica is supported.
+- true: Supported.
+- false: Not supported.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    bool GetEnableReplicaReadOnly() const;
+
+                    /**
+                     * 设置Whether the Read-Only Replica is supported.
+- true: Supported.
+- false: Not supported.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _enableReplicaReadOnly Whether the Read-Only Replica is supported.
+- true: Supported.
+- false: Not supported.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetEnableReplicaReadOnly(const bool& _enableReplicaReadOnly);
+
+                    /**
+                     * 判断参数 EnableReplicaReadOnly 是否已赋值
+                     * @return EnableReplicaReadOnly 是否已赋值
+                     * 
+                     */
+                    bool EnableReplicaReadOnlyHasBeenSet() const;
 
                 private:
 
@@ -472,12 +505,21 @@ namespace TencentCloud
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * Whether to support read-only replicas
-- `true`: Supported.
--`false`: Not supported.
+                     * Due to spelling inconsistency in this parameter name, it is recommended to use the **EnableReplicaReadOnly** parameter instead. Its meaning refers to whether the Read-Only Replica is supported.
+- true: Supported.
+- false: Not supported.
                      */
                     bool m_enableRepicaReadOnly;
                     bool m_enableRepicaReadOnlyHasBeenSet;
+
+                    /**
+                     * Whether the Read-Only Replica is supported.
+- true: Supported.
+- false: Not supported.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    bool m_enableReplicaReadOnly;
+                    bool m_enableReplicaReadOnlyHasBeenSet;
 
                 };
             }

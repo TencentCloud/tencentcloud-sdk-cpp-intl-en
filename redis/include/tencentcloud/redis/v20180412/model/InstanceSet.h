@@ -138,15 +138,15 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li><li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li><li>`16`: Chengdu. </li><li>`17`: Frankfurt. </li><li>`18`: Seoul. </li><li>`19`: Chongqing. </li><li>`21`: Mumbai. </li><li>`22`: East US (Virginia). </li><li>`23`: Bangkok. </li><li>`24`: Moscow. </li><li>`25`: Tokyo. </li></ul>
-                     * @return RegionId Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li><li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li><li>`16`: Chengdu. </li><li>`17`: Frankfurt. </li><li>`18`: Seoul. </li><li>`19`: Chongqing. </li><li>`21`: Mumbai. </li><li>`22`: East US (Virginia). </li><li>`23`: Bangkok. </li><li>`24`: Moscow. </li><li>`25`: Tokyo. </li></ul>
+                     * 获取Region IDs. <ul><li>1: Guangzhou. </li><li>4: Shanghai. </li><li>5: Hong Kong, China. </li><li>6: Toronto. </li><li>8: Beijing. </li><li>9: Singapore. </li><li>15: West US (Silicon Valley). </li><li>16: Chengdu. </li><li>17: Frankfurt. </li><li>18: Seoul. </li><li>19: Chongqing. </li><li>21: Mumbai. </li><li>22: East US (Virginia). </li><li>23: Bangkok. </li><li>25: Tokyo. </li></ul>
+                     * @return RegionId Region IDs. <ul><li>1: Guangzhou. </li><li>4: Shanghai. </li><li>5: Hong Kong, China. </li><li>6: Toronto. </li><li>8: Beijing. </li><li>9: Singapore. </li><li>15: West US (Silicon Valley). </li><li>16: Chengdu. </li><li>17: Frankfurt. </li><li>18: Seoul. </li><li>19: Chongqing. </li><li>21: Mumbai. </li><li>22: East US (Virginia). </li><li>23: Bangkok. </li><li>25: Tokyo. </li></ul>
                      * 
                      */
                     int64_t GetRegionId() const;
 
                     /**
-                     * 设置Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li><li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li><li>`16`: Chengdu. </li><li>`17`: Frankfurt. </li><li>`18`: Seoul. </li><li>`19`: Chongqing. </li><li>`21`: Mumbai. </li><li>`22`: East US (Virginia). </li><li>`23`: Bangkok. </li><li>`24`: Moscow. </li><li>`25`: Tokyo. </li></ul>
-                     * @param _regionId Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li><li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li><li>`16`: Chengdu. </li><li>`17`: Frankfurt. </li><li>`18`: Seoul. </li><li>`19`: Chongqing. </li><li>`21`: Mumbai. </li><li>`22`: East US (Virginia). </li><li>`23`: Bangkok. </li><li>`24`: Moscow. </li><li>`25`: Tokyo. </li></ul>
+                     * 设置Region IDs. <ul><li>1: Guangzhou. </li><li>4: Shanghai. </li><li>5: Hong Kong, China. </li><li>6: Toronto. </li><li>8: Beijing. </li><li>9: Singapore. </li><li>15: West US (Silicon Valley). </li><li>16: Chengdu. </li><li>17: Frankfurt. </li><li>18: Seoul. </li><li>19: Chongqing. </li><li>21: Mumbai. </li><li>22: East US (Virginia). </li><li>23: Bangkok. </li><li>25: Tokyo. </li></ul>
+                     * @param _regionId Region IDs. <ul><li>1: Guangzhou. </li><li>4: Shanghai. </li><li>5: Hong Kong, China. </li><li>6: Toronto. </li><li>8: Beijing. </li><li>9: Singapore. </li><li>15: West US (Silicon Valley). </li><li>16: Chengdu. </li><li>17: Frankfurt. </li><li>18: Seoul. </li><li>19: Chongqing. </li><li>21: Mumbai. </li><li>22: East US (Virginia). </li><li>23: Bangkok. </li><li>25: Tokyo. </li></ul>
                      * 
                      */
                     void SetRegionId(const int64_t& _regionId);
@@ -962,19 +962,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool PasswordFreeHasBeenSet() const;
 
                     /**
-                     * 获取Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return Vip6 Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Vip6 Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetVip6() const;
 
                     /**
-                     * 设置Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _vip6 Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _vip6 Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetVip6(const std::string& _vip6);
@@ -985,6 +985,31 @@ Note: This field may return null, indicating that no valid value can be obtained
                      * 
                      */
                     bool Vip6HasBeenSet() const;
+
+                    /**
+                     * 获取Internal parameters, which can be ignored by users.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IPv6 Internal parameters, which can be ignored by users.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetIPv6() const;
+
+                    /**
+                     * 设置Internal parameters, which can be ignored by users.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _iPv6 Internal parameters, which can be ignored by users.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetIPv6(const std::string& _iPv6);
+
+                    /**
+                     * 判断参数 IPv6 是否已赋值
+                     * @return IPv6 是否已赋值
+                     * 
+                     */
+                    bool IPv6HasBeenSet() const;
 
                     /**
                      * 获取Read-only instance flag (internal parameter, which can be ignored)
@@ -1364,7 +1389,7 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li><li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li><li>`16`: Chengdu. </li><li>`17`: Frankfurt. </li><li>`18`: Seoul. </li><li>`19`: Chongqing. </li><li>`21`: Mumbai. </li><li>`22`: East US (Virginia). </li><li>`23`: Bangkok. </li><li>`24`: Moscow. </li><li>`25`: Tokyo. </li></ul>
+                     * Region IDs. <ul><li>1: Guangzhou. </li><li>4: Shanghai. </li><li>5: Hong Kong, China. </li><li>6: Toronto. </li><li>8: Beijing. </li><li>9: Singapore. </li><li>15: West US (Silicon Valley). </li><li>16: Chengdu. </li><li>17: Frankfurt. </li><li>18: Seoul. </li><li>19: Chongqing. </li><li>21: Mumbai. </li><li>22: East US (Virginia). </li><li>23: Bangkok. </li><li>25: Tokyo. </li></ul>
                      */
                     int64_t m_regionId;
                     bool m_regionIdHasBeenSet;
@@ -1597,11 +1622,18 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_passwordFreeHasBeenSet;
 
                     /**
-                     * Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_vip6;
                     bool m_vip6HasBeenSet;
+
+                    /**
+                     * Internal parameters, which can be ignored by users.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_iPv6;
+                    bool m_iPv6HasBeenSet;
 
                     /**
                      * Read-only instance flag (internal parameter, which can be ignored)

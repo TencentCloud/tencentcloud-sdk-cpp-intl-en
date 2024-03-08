@@ -173,15 +173,19 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Node role. <ul><li>`Master`: Master node</li><li>`Slave`: Replica node</li></ul>
-                     * @return Role Node role. <ul><li>`Master`: Master node</li><li>`Slave`: Replica node</li></ul>
+                     * 获取Node role.
+- master: Master node.- slave: Replica node.
+                     * @return Role Node role.
+- master: Master node.- slave: Replica node.
                      * 
                      */
                     std::string GetRole() const;
 
                     /**
-                     * 设置Node role. <ul><li>`Master`: Master node</li><li>`Slave`: Replica node</li></ul>
-                     * @param _role Node role. <ul><li>`Master`: Master node</li><li>`Slave`: Replica node</li></ul>
+                     * 设置Node role.
+- master: Master node.- slave: Replica node.
+                     * @param _role Node role.
+- master: Master node.- slave: Replica node.
                      * 
                      */
                     void SetRole(const std::string& _role);
@@ -233,7 +237,8 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Node role. <ul><li>`Master`: Master node</li><li>`Slave`: Replica node</li></ul>
+                     * Node role.
+- master: Master node.- slave: Replica node.
                      */
                     std::string m_role;
                     bool m_roleHasBeenSet;
