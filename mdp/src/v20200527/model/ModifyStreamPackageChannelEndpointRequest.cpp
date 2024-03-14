@@ -26,7 +26,14 @@ ModifyStreamPackageChannelEndpointRequest::ModifyStreamPackageChannelEndpointReq
     m_idHasBeenSet(false),
     m_urlHasBeenSet(false),
     m_nameHasBeenSet(false),
-    m_authInfoHasBeenSet(false)
+    m_authInfoHasBeenSet(false),
+    m_protocolHasBeenSet(false),
+    m_timeShiftEnableHasBeenSet(false),
+    m_timeShiftDurationHasBeenSet(false),
+    m_sSAIEnableHasBeenSet(false),
+    m_sSAIInfoHasBeenSet(false),
+    m_customUrlParamIndexHasBeenSet(false),
+    m_customUrlParamHasBeenSet(false)
 {
 }
 
@@ -68,6 +75,63 @@ string ModifyStreamPackageChannelEndpointRequest::ToJsonString() const
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_authInfo.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_protocolHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Protocol";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_protocol.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_timeShiftEnableHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TimeShiftEnable";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_timeShiftEnable, allocator);
+    }
+
+    if (m_timeShiftDurationHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TimeShiftDuration";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_timeShiftDuration, allocator);
+    }
+
+    if (m_sSAIEnableHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SSAIEnable";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_sSAIEnable, allocator);
+    }
+
+    if (m_sSAIInfoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SSAIInfo";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_sSAIInfo.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_customUrlParamIndexHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CustomUrlParamIndex";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_customUrlParamIndex, allocator);
+    }
+
+    if (m_customUrlParamHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CustomUrlParam";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_customUrlParam.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -140,6 +204,118 @@ void ModifyStreamPackageChannelEndpointRequest::SetAuthInfo(const EndpointAuthIn
 bool ModifyStreamPackageChannelEndpointRequest::AuthInfoHasBeenSet() const
 {
     return m_authInfoHasBeenSet;
+}
+
+string ModifyStreamPackageChannelEndpointRequest::GetProtocol() const
+{
+    return m_protocol;
+}
+
+void ModifyStreamPackageChannelEndpointRequest::SetProtocol(const string& _protocol)
+{
+    m_protocol = _protocol;
+    m_protocolHasBeenSet = true;
+}
+
+bool ModifyStreamPackageChannelEndpointRequest::ProtocolHasBeenSet() const
+{
+    return m_protocolHasBeenSet;
+}
+
+bool ModifyStreamPackageChannelEndpointRequest::GetTimeShiftEnable() const
+{
+    return m_timeShiftEnable;
+}
+
+void ModifyStreamPackageChannelEndpointRequest::SetTimeShiftEnable(const bool& _timeShiftEnable)
+{
+    m_timeShiftEnable = _timeShiftEnable;
+    m_timeShiftEnableHasBeenSet = true;
+}
+
+bool ModifyStreamPackageChannelEndpointRequest::TimeShiftEnableHasBeenSet() const
+{
+    return m_timeShiftEnableHasBeenSet;
+}
+
+uint64_t ModifyStreamPackageChannelEndpointRequest::GetTimeShiftDuration() const
+{
+    return m_timeShiftDuration;
+}
+
+void ModifyStreamPackageChannelEndpointRequest::SetTimeShiftDuration(const uint64_t& _timeShiftDuration)
+{
+    m_timeShiftDuration = _timeShiftDuration;
+    m_timeShiftDurationHasBeenSet = true;
+}
+
+bool ModifyStreamPackageChannelEndpointRequest::TimeShiftDurationHasBeenSet() const
+{
+    return m_timeShiftDurationHasBeenSet;
+}
+
+bool ModifyStreamPackageChannelEndpointRequest::GetSSAIEnable() const
+{
+    return m_sSAIEnable;
+}
+
+void ModifyStreamPackageChannelEndpointRequest::SetSSAIEnable(const bool& _sSAIEnable)
+{
+    m_sSAIEnable = _sSAIEnable;
+    m_sSAIEnableHasBeenSet = true;
+}
+
+bool ModifyStreamPackageChannelEndpointRequest::SSAIEnableHasBeenSet() const
+{
+    return m_sSAIEnableHasBeenSet;
+}
+
+SSAIConf ModifyStreamPackageChannelEndpointRequest::GetSSAIInfo() const
+{
+    return m_sSAIInfo;
+}
+
+void ModifyStreamPackageChannelEndpointRequest::SetSSAIInfo(const SSAIConf& _sSAIInfo)
+{
+    m_sSAIInfo = _sSAIInfo;
+    m_sSAIInfoHasBeenSet = true;
+}
+
+bool ModifyStreamPackageChannelEndpointRequest::SSAIInfoHasBeenSet() const
+{
+    return m_sSAIInfoHasBeenSet;
+}
+
+uint64_t ModifyStreamPackageChannelEndpointRequest::GetCustomUrlParamIndex() const
+{
+    return m_customUrlParamIndex;
+}
+
+void ModifyStreamPackageChannelEndpointRequest::SetCustomUrlParamIndex(const uint64_t& _customUrlParamIndex)
+{
+    m_customUrlParamIndex = _customUrlParamIndex;
+    m_customUrlParamIndexHasBeenSet = true;
+}
+
+bool ModifyStreamPackageChannelEndpointRequest::CustomUrlParamIndexHasBeenSet() const
+{
+    return m_customUrlParamIndexHasBeenSet;
+}
+
+string ModifyStreamPackageChannelEndpointRequest::GetCustomUrlParam() const
+{
+    return m_customUrlParam;
+}
+
+void ModifyStreamPackageChannelEndpointRequest::SetCustomUrlParam(const string& _customUrlParam)
+{
+    m_customUrlParam = _customUrlParam;
+    m_customUrlParamHasBeenSet = true;
+}
+
+bool ModifyStreamPackageChannelEndpointRequest::CustomUrlParamHasBeenSet() const
+{
+    return m_customUrlParamHasBeenSet;
 }
 
 

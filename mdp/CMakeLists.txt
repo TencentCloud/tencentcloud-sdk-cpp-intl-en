@@ -30,11 +30,12 @@ set(mdp_public_header_model
   include/tencentcloud/mdp/v20200527/model/DescribeStreamPackageChannelsRequest.h
   include/tencentcloud/mdp/v20200527/model/ModifyStreamPackageChannelEndpointResponse.h
   include/tencentcloud/mdp/v20200527/model/ModifyStreamPackageChannelInputAuthInfoResponse.h
-  include/tencentcloud/mdp/v20200527/model/EndpointAuthInfo.h
+  include/tencentcloud/mdp/v20200527/model/AliasValueConf.h
   include/tencentcloud/mdp/v20200527/model/DescribeStreamPackageHarvestJobsRequest.h
   include/tencentcloud/mdp/v20200527/model/DeleteStreamPackageHarvestJobResponse.h
   include/tencentcloud/mdp/v20200527/model/DeleteStreamPackageHarvestJobsRequest.h
   include/tencentcloud/mdp/v20200527/model/CreateStreamPackageChannelResponse.h
+  include/tencentcloud/mdp/v20200527/model/EndpointAuthInfo.h
   include/tencentcloud/mdp/v20200527/model/CreateStreamPackageChannelEndpointResponse.h
   include/tencentcloud/mdp/v20200527/model/DeleteStreamPackageChannelEndpointsRequest.h
   include/tencentcloud/mdp/v20200527/model/CreateStreamPackageHarvestJobResponse.h
@@ -44,6 +45,7 @@ set(mdp_public_header_model
   include/tencentcloud/mdp/v20200527/model/InputInfo.h
   include/tencentcloud/mdp/v20200527/model/InputAuthInfo.h
   include/tencentcloud/mdp/v20200527/model/UnbindCdnDomainWithChannelRequest.h
+  include/tencentcloud/mdp/v20200527/model/SSAIConf.h
   include/tencentcloud/mdp/v20200527/model/HarvestJobResp.h
   include/tencentcloud/mdp/v20200527/model/EndpointInfo.h
   include/tencentcloud/mdp/v20200527/model/DescribeStreamPackageChannelRequest.h
@@ -60,6 +62,7 @@ set(mdp_public_header_model
   include/tencentcloud/mdp/v20200527/model/DescribeStreamPackageChannelResponse.h
   include/tencentcloud/mdp/v20200527/model/ModifyStreamPackageChannelResponse.h
   include/tencentcloud/mdp/v20200527/model/DeleteStreamPackageHarvestJobsResponse.h
+  include/tencentcloud/mdp/v20200527/model/ConfigAliasesInfo.h
   )
 
 set(mdp_src
@@ -75,11 +78,12 @@ set(mdp_src
   src/v20200527/model/DescribeStreamPackageChannelsRequest.cpp
   src/v20200527/model/ModifyStreamPackageChannelEndpointResponse.cpp
   src/v20200527/model/ModifyStreamPackageChannelInputAuthInfoResponse.cpp
-  src/v20200527/model/EndpointAuthInfo.cpp
+  src/v20200527/model/AliasValueConf.cpp
   src/v20200527/model/DescribeStreamPackageHarvestJobsRequest.cpp
   src/v20200527/model/DeleteStreamPackageHarvestJobResponse.cpp
   src/v20200527/model/DeleteStreamPackageHarvestJobsRequest.cpp
   src/v20200527/model/CreateStreamPackageChannelResponse.cpp
+  src/v20200527/model/EndpointAuthInfo.cpp
   src/v20200527/model/CreateStreamPackageChannelEndpointResponse.cpp
   src/v20200527/model/DeleteStreamPackageChannelEndpointsRequest.cpp
   src/v20200527/model/CreateStreamPackageHarvestJobResponse.cpp
@@ -89,6 +93,7 @@ set(mdp_src
   src/v20200527/model/InputInfo.cpp
   src/v20200527/model/InputAuthInfo.cpp
   src/v20200527/model/UnbindCdnDomainWithChannelRequest.cpp
+  src/v20200527/model/SSAIConf.cpp
   src/v20200527/model/HarvestJobResp.cpp
   src/v20200527/model/EndpointInfo.cpp
   src/v20200527/model/DescribeStreamPackageChannelRequest.cpp
@@ -105,6 +110,7 @@ set(mdp_src
   src/v20200527/model/DescribeStreamPackageChannelResponse.cpp
   src/v20200527/model/ModifyStreamPackageChannelResponse.cpp
   src/v20200527/model/DeleteStreamPackageHarvestJobsResponse.cpp
+  src/v20200527/model/ConfigAliasesInfo.cpp
   )
 
 set(mdp_include
