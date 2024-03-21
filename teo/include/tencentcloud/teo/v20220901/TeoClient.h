@@ -39,6 +39,8 @@
 #include <tencentcloud/teo/v20220901/model/CreateApplicationProxyResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateApplicationProxyRuleRequest.h>
 #include <tencentcloud/teo/v20220901/model/CreateApplicationProxyRuleResponse.h>
+#include <tencentcloud/teo/v20220901/model/CreateCLSIndexRequest.h>
+#include <tencentcloud/teo/v20220901/model/CreateCLSIndexResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateConfigGroupVersionRequest.h>
 #include <tencentcloud/teo/v20220901/model/CreateConfigGroupVersionResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateL4ProxyRequest.h>
@@ -53,6 +55,8 @@
 #include <tencentcloud/teo/v20220901/model/CreatePrefetchTaskResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreatePurgeTaskRequest.h>
 #include <tencentcloud/teo/v20220901/model/CreatePurgeTaskResponse.h>
+#include <tencentcloud/teo/v20220901/model/CreateRealtimeLogDeliveryTaskRequest.h>
+#include <tencentcloud/teo/v20220901/model/CreateRealtimeLogDeliveryTaskResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateRuleRequest.h>
 #include <tencentcloud/teo/v20220901/model/CreateRuleResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateSecurityIPGroupRequest.h>
@@ -75,6 +79,8 @@
 #include <tencentcloud/teo/v20220901/model/DeleteL4ProxyRulesResponse.h>
 #include <tencentcloud/teo/v20220901/model/DeleteOriginGroupRequest.h>
 #include <tencentcloud/teo/v20220901/model/DeleteOriginGroupResponse.h>
+#include <tencentcloud/teo/v20220901/model/DeleteRealtimeLogDeliveryTaskRequest.h>
+#include <tencentcloud/teo/v20220901/model/DeleteRealtimeLogDeliveryTaskResponse.h>
 #include <tencentcloud/teo/v20220901/model/DeleteRulesRequest.h>
 #include <tencentcloud/teo/v20220901/model/DeleteRulesResponse.h>
 #include <tencentcloud/teo/v20220901/model/DeleteSecurityIPGroupRequest.h>
@@ -133,6 +139,8 @@
 #include <tencentcloud/teo/v20220901/model/DescribePrefetchTasksResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribePurgeTasksRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribePurgeTasksResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeRealtimeLogDeliveryTasksRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeRealtimeLogDeliveryTasksResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeRulesRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeRulesResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeRulesSettingRequest.h>
@@ -187,6 +195,8 @@
 #include <tencentcloud/teo/v20220901/model/ModifyL4ProxyStatusResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyOriginGroupRequest.h>
 #include <tencentcloud/teo/v20220901/model/ModifyOriginGroupResponse.h>
+#include <tencentcloud/teo/v20220901/model/ModifyRealtimeLogDeliveryTaskRequest.h>
+#include <tencentcloud/teo/v20220901/model/ModifyRealtimeLogDeliveryTaskResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyRuleRequest.h>
 #include <tencentcloud/teo/v20220901/model/ModifyRuleResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifySecurityIPGroupRequest.h>
@@ -239,6 +249,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateApplicationProxyRuleResponse> CreateApplicationProxyRuleOutcome;
                 typedef std::future<CreateApplicationProxyRuleOutcome> CreateApplicationProxyRuleOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CreateApplicationProxyRuleRequest&, CreateApplicationProxyRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateApplicationProxyRuleAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateCLSIndexResponse> CreateCLSIndexOutcome;
+                typedef std::future<CreateCLSIndexOutcome> CreateCLSIndexOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::CreateCLSIndexRequest&, CreateCLSIndexOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCLSIndexAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateConfigGroupVersionResponse> CreateConfigGroupVersionOutcome;
                 typedef std::future<CreateConfigGroupVersionOutcome> CreateConfigGroupVersionOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CreateConfigGroupVersionRequest&, CreateConfigGroupVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateConfigGroupVersionAsyncHandler;
@@ -260,6 +273,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreatePurgeTaskResponse> CreatePurgeTaskOutcome;
                 typedef std::future<CreatePurgeTaskOutcome> CreatePurgeTaskOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CreatePurgeTaskRequest&, CreatePurgeTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreatePurgeTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateRealtimeLogDeliveryTaskResponse> CreateRealtimeLogDeliveryTaskOutcome;
+                typedef std::future<CreateRealtimeLogDeliveryTaskOutcome> CreateRealtimeLogDeliveryTaskOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::CreateRealtimeLogDeliveryTaskRequest&, CreateRealtimeLogDeliveryTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateRealtimeLogDeliveryTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateRuleResponse> CreateRuleOutcome;
                 typedef std::future<CreateRuleOutcome> CreateRuleOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CreateRuleRequest&, CreateRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateRuleAsyncHandler;
@@ -293,6 +309,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteOriginGroupResponse> DeleteOriginGroupOutcome;
                 typedef std::future<DeleteOriginGroupOutcome> DeleteOriginGroupOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DeleteOriginGroupRequest&, DeleteOriginGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteOriginGroupAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteRealtimeLogDeliveryTaskResponse> DeleteRealtimeLogDeliveryTaskOutcome;
+                typedef std::future<DeleteRealtimeLogDeliveryTaskOutcome> DeleteRealtimeLogDeliveryTaskOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DeleteRealtimeLogDeliveryTaskRequest&, DeleteRealtimeLogDeliveryTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteRealtimeLogDeliveryTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteRulesResponse> DeleteRulesOutcome;
                 typedef std::future<DeleteRulesOutcome> DeleteRulesOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DeleteRulesRequest&, DeleteRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteRulesAsyncHandler;
@@ -380,6 +399,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribePurgeTasksResponse> DescribePurgeTasksOutcome;
                 typedef std::future<DescribePurgeTasksOutcome> DescribePurgeTasksOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribePurgeTasksRequest&, DescribePurgeTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePurgeTasksAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRealtimeLogDeliveryTasksResponse> DescribeRealtimeLogDeliveryTasksOutcome;
+                typedef std::future<DescribeRealtimeLogDeliveryTasksOutcome> DescribeRealtimeLogDeliveryTasksOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeRealtimeLogDeliveryTasksRequest&, DescribeRealtimeLogDeliveryTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRealtimeLogDeliveryTasksAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeRulesResponse> DescribeRulesOutcome;
                 typedef std::future<DescribeRulesOutcome> DescribeRulesOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeRulesRequest&, DescribeRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRulesAsyncHandler;
@@ -461,6 +483,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyOriginGroupResponse> ModifyOriginGroupOutcome;
                 typedef std::future<ModifyOriginGroupOutcome> ModifyOriginGroupOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ModifyOriginGroupRequest&, ModifyOriginGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyOriginGroupAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyRealtimeLogDeliveryTaskResponse> ModifyRealtimeLogDeliveryTaskOutcome;
+                typedef std::future<ModifyRealtimeLogDeliveryTaskOutcome> ModifyRealtimeLogDeliveryTaskOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::ModifyRealtimeLogDeliveryTaskRequest&, ModifyRealtimeLogDeliveryTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyRealtimeLogDeliveryTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyRuleResponse> ModifyRuleOutcome;
                 typedef std::future<ModifyRuleOutcome> ModifyRuleOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ModifyRuleRequest&, ModifyRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyRuleAsyncHandler;
@@ -560,6 +585,15 @@ For sites connected via the CNAME, if you have not verified the ownership of the
                 CreateApplicationProxyRuleOutcomeCallable CreateApplicationProxyRuleCallable(const Model::CreateApplicationProxyRuleRequest& request);
 
                 /**
+                 *This API is used to create key-value indexes for relevant delivered log fields in the corresponding Tencent Cloud CLS log topic for a specified real-time log delivery task (task-id). If such indexes have been created in CLS, this API will append indexes through merging.
+                 * @param req CreateCLSIndexRequest
+                 * @return CreateCLSIndexOutcome
+                 */
+                CreateCLSIndexOutcome CreateCLSIndex(const Model::CreateCLSIndexRequest &request);
+                void CreateCLSIndexAsync(const Model::CreateCLSIndexRequest& request, const CreateCLSIndexAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateCLSIndexOutcomeCallable CreateCLSIndexCallable(const Model::CreateCLSIndexRequest& request);
+
+                /**
                  *This API is used to create a new version for the specified configuration group in version management mode. The version management feature is currently undergoing beta testing and is accessible only to users on the whitelist.
                  * @param req CreateConfigGroupVersionRequest
                  * @return CreateConfigGroupVersionOutcome
@@ -623,6 +657,16 @@ For sites connected via the CNAME, if you have not verified the ownership of the
                 CreatePurgeTaskOutcome CreatePurgeTask(const Model::CreatePurgeTaskRequest &request);
                 void CreatePurgeTaskAsync(const Model::CreatePurgeTaskRequest& request, const CreatePurgeTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreatePurgeTaskOutcomeCallable CreatePurgeTaskCallable(const Model::CreatePurgeTaskRequest& request);
+
+                /**
+                 *This API is used to create real-time log delivery tasks. This API has the following restrictions:
+Under the same combination of data delivery type (LogType) and data delivery area (Area), an entity (Layer 7 domain or Layer 4 proxy instance) can be added to only one real-time log delivery task. It is recommended to first query the real-time log delivery task list by entity through the [DescribeRealtimeLogDeliveryTasks](https://tcloud4api.woa.com/document/product/1657/343539?!preview&!document=1) API to check whether an entity has been added to a real-time log delivery task.
+                 * @param req CreateRealtimeLogDeliveryTaskRequest
+                 * @return CreateRealtimeLogDeliveryTaskOutcome
+                 */
+                CreateRealtimeLogDeliveryTaskOutcome CreateRealtimeLogDeliveryTask(const Model::CreateRealtimeLogDeliveryTaskRequest &request);
+                void CreateRealtimeLogDeliveryTaskAsync(const Model::CreateRealtimeLogDeliveryTaskRequest& request, const CreateRealtimeLogDeliveryTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateRealtimeLogDeliveryTaskOutcomeCallable CreateRealtimeLogDeliveryTaskCallable(const Model::CreateRealtimeLogDeliveryTaskRequest& request);
 
                 /**
                  *This API is used to create a rule in the rule engine.
@@ -724,6 +768,15 @@ If there are already EdgeOne plans under the current account, it is recommended 
                 DeleteOriginGroupOutcome DeleteOriginGroup(const Model::DeleteOriginGroupRequest &request);
                 void DeleteOriginGroupAsync(const Model::DeleteOriginGroupRequest& request, const DeleteOriginGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteOriginGroupOutcomeCallable DeleteOriginGroupCallable(const Model::DeleteOriginGroupRequest& request);
+
+                /**
+                 *This API is used to delete a real-time log delivery task.
+                 * @param req DeleteRealtimeLogDeliveryTaskRequest
+                 * @return DeleteRealtimeLogDeliveryTaskOutcome
+                 */
+                DeleteRealtimeLogDeliveryTaskOutcome DeleteRealtimeLogDeliveryTask(const Model::DeleteRealtimeLogDeliveryTaskRequest &request);
+                void DeleteRealtimeLogDeliveryTaskAsync(const Model::DeleteRealtimeLogDeliveryTaskRequest& request, const DeleteRealtimeLogDeliveryTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteRealtimeLogDeliveryTaskOutcomeCallable DeleteRealtimeLogDeliveryTaskCallable(const Model::DeleteRealtimeLogDeliveryTaskRequest& request);
 
                 /**
                  *This API is used to batch delete rules from the rule engine.
@@ -987,6 +1040,15 @@ If there are already EdgeOne plans under the current account, it is recommended 
                 DescribePurgeTasksOutcomeCallable DescribePurgeTasksCallable(const Model::DescribePurgeTasksRequest& request);
 
                 /**
+                 *This API is used to query the real-time log delivery task list.
+                 * @param req DescribeRealtimeLogDeliveryTasksRequest
+                 * @return DescribeRealtimeLogDeliveryTasksOutcome
+                 */
+                DescribeRealtimeLogDeliveryTasksOutcome DescribeRealtimeLogDeliveryTasks(const Model::DescribeRealtimeLogDeliveryTasksRequest &request);
+                void DescribeRealtimeLogDeliveryTasksAsync(const Model::DescribeRealtimeLogDeliveryTasksRequest& request, const DescribeRealtimeLogDeliveryTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRealtimeLogDeliveryTasksOutcomeCallable DescribeRealtimeLogDeliveryTasksCallable(const Model::DescribeRealtimeLogDeliveryTasksRequest& request);
+
+                /**
                  *This API is used to query the rules in the rule engine.
                  * @param req DescribeRulesRequest
                  * @return DescribeRulesOutcome
@@ -1232,6 +1294,15 @@ To use an external certificate, upload the certificate to [SSL Certificates Cons
                 ModifyOriginGroupOutcome ModifyOriginGroup(const Model::ModifyOriginGroupRequest &request);
                 void ModifyOriginGroupAsync(const Model::ModifyOriginGroupRequest& request, const ModifyOriginGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyOriginGroupOutcomeCallable ModifyOriginGroupCallable(const Model::ModifyOriginGroupRequest& request);
+
+                /**
+                 *This API is used to modify the real-time log delivery task configuration. This API has the following restrictions:<li>Does not support modifying the destination type of the real-time log delivery task (TaskType);</li><li>Does not support modifying the data delivery type (LogType)</li><li>Does not support modifying the data delivery area (Area)</li><li>Does not support modifying the detailed destination configuration, such as log set and log topic, when the destination of the original real-time log delivery task is Tencent Cloud CLS.</li>
+                 * @param req ModifyRealtimeLogDeliveryTaskRequest
+                 * @return ModifyRealtimeLogDeliveryTaskOutcome
+                 */
+                ModifyRealtimeLogDeliveryTaskOutcome ModifyRealtimeLogDeliveryTask(const Model::ModifyRealtimeLogDeliveryTaskRequest &request);
+                void ModifyRealtimeLogDeliveryTaskAsync(const Model::ModifyRealtimeLogDeliveryTaskRequest& request, const ModifyRealtimeLogDeliveryTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyRealtimeLogDeliveryTaskOutcomeCallable ModifyRealtimeLogDeliveryTaskCallable(const Model::ModifyRealtimeLogDeliveryTaskRequest& request);
 
                 /**
                  *This API is used to modify a rule in the rule engine.

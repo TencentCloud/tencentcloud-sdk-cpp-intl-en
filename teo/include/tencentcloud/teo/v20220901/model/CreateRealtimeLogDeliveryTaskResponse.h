@@ -14,14 +14,13 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_TEO_V20220901_MODEL_DESCRIBEBILLINGDATARESPONSE_H_
-#define TENCENTCLOUD_TEO_V20220901_MODEL_DESCRIBEBILLINGDATARESPONSE_H_
+#ifndef TENCENTCLOUD_TEO_V20220901_MODEL_CREATEREALTIMELOGDELIVERYTASKRESPONSE_H_
+#define TENCENTCLOUD_TEO_V20220901_MODEL_CREATEREALTIMELOGDELIVERYTASKRESPONSE_H_
 
 #include <string>
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/teo/v20220901/model/BillingData.h>
 
 
 namespace TencentCloud
@@ -33,41 +32,38 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * DescribeBillingData response structure.
+                * CreateRealtimeLogDeliveryTask response structure.
                 */
-                class DescribeBillingDataResponse : public AbstractModel
+                class CreateRealtimeLogDeliveryTaskResponse : public AbstractModel
                 {
                 public:
-                    DescribeBillingDataResponse();
-                    ~DescribeBillingDataResponse() = default;
+                    CreateRealtimeLogDeliveryTaskResponse();
+                    ~CreateRealtimeLogDeliveryTaskResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Data 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The ID of the successfully created task.
+                     * @return TaskId The ID of the successfully created task.
                      * 
                      */
-                    std::vector<BillingData> GetData() const;
+                    std::string GetTaskId() const;
 
                     /**
-                     * 判断参数 Data 是否已赋值
-                     * @return Data 是否已赋值
+                     * 判断参数 TaskId 是否已赋值
+                     * @return TaskId 是否已赋值
                      * 
                      */
-                    bool DataHasBeenSet() const;
+                    bool TaskIdHasBeenSet() const;
 
                 private:
 
                     /**
-                     * 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The ID of the successfully created task.
                      */
-                    std::vector<BillingData> m_data;
-                    bool m_dataHasBeenSet;
+                    std::string m_taskId;
+                    bool m_taskIdHasBeenSet;
 
                 };
             }
@@ -75,4 +71,4 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 }
 
-#endif // !TENCENTCLOUD_TEO_V20220901_MODEL_DESCRIBEBILLINGDATARESPONSE_H_
+#endif // !TENCENTCLOUD_TEO_V20220901_MODEL_CREATEREALTIMELOGDELIVERYTASKRESPONSE_H_

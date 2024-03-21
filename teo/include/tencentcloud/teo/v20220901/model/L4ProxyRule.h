@@ -405,6 +405,27 @@ Note: Do not set this parameter when L4ProxyRule is used as an input parameter i
                      */
                     bool StatusHasBeenSet() const;
 
+                    /**
+                     * 获取BuID.
+                     * @return BuId BuID.
+                     * 
+                     */
+                    std::string GetBuId() const;
+
+                    /**
+                     * 设置BuID.
+                     * @param _buId BuID.
+                     * 
+                     */
+                    void SetBuId(const std::string& _buId);
+
+                    /**
+                     * 判断参数 BuId 是否已赋值
+                     * @return BuId 是否已赋值
+                     * 
+                     */
+                    bool BuIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -504,6 +525,12 @@ Note: Do not set this parameter when L4ProxyRule is used as an input parameter i
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
+
+                    /**
+                     * BuID.
+                     */
+                    std::string m_buId;
+                    bool m_buIdHasBeenSet;
 
                 };
             }
