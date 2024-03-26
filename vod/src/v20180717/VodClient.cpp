@@ -4770,6 +4770,49 @@ VodClient::ExtractTraceWatermarkOutcomeCallable VodClient::ExtractTraceWatermark
     return task->get_future();
 }
 
+VodClient::FastEditMediaOutcome VodClient::FastEditMedia(const FastEditMediaRequest &request)
+{
+    auto outcome = MakeRequest(request, "FastEditMedia");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        FastEditMediaResponse rsp = FastEditMediaResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return FastEditMediaOutcome(rsp);
+        else
+            return FastEditMediaOutcome(o.GetError());
+    }
+    else
+    {
+        return FastEditMediaOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::FastEditMediaAsync(const FastEditMediaRequest& request, const FastEditMediaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->FastEditMedia(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VodClient::FastEditMediaOutcomeCallable VodClient::FastEditMediaCallable(const FastEditMediaRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<FastEditMediaOutcome()>>(
+        [this, request]()
+        {
+            return this->FastEditMedia(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 VodClient::ForbidMediaDistributionOutcome VodClient::ForbidMediaDistribution(const ForbidMediaDistributionRequest &request)
 {
     auto outcome = MakeRequest(request, "ForbidMediaDistribution");

@@ -243,6 +243,8 @@
 #include <tencentcloud/vod/v20180717/model/ExtractCopyRightWatermarkResponse.h>
 #include <tencentcloud/vod/v20180717/model/ExtractTraceWatermarkRequest.h>
 #include <tencentcloud/vod/v20180717/model/ExtractTraceWatermarkResponse.h>
+#include <tencentcloud/vod/v20180717/model/FastEditMediaRequest.h>
+#include <tencentcloud/vod/v20180717/model/FastEditMediaResponse.h>
 #include <tencentcloud/vod/v20180717/model/ForbidMediaDistributionRequest.h>
 #include <tencentcloud/vod/v20180717/model/ForbidMediaDistributionResponse.h>
 #include <tencentcloud/vod/v20180717/model/InspectMediaQualityRequest.h>
@@ -699,6 +701,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ExtractTraceWatermarkResponse> ExtractTraceWatermarkOutcome;
                 typedef std::future<ExtractTraceWatermarkOutcome> ExtractTraceWatermarkOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ExtractTraceWatermarkRequest&, ExtractTraceWatermarkOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ExtractTraceWatermarkAsyncHandler;
+                typedef Outcome<Core::Error, Model::FastEditMediaResponse> FastEditMediaOutcome;
+                typedef std::future<FastEditMediaOutcome> FastEditMediaOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::FastEditMediaRequest&, FastEditMediaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> FastEditMediaAsyncHandler;
                 typedef Outcome<Core::Error, Model::ForbidMediaDistributionResponse> ForbidMediaDistributionOutcome;
                 typedef std::future<ForbidMediaDistributionOutcome> ForbidMediaDistributionOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ForbidMediaDistributionRequest&, ForbidMediaDistributionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ForbidMediaDistributionAsyncHandler;
@@ -1968,6 +1973,15 @@ If event notification is used, the type of event notification is [Video editing 
                 ExtractTraceWatermarkOutcome ExtractTraceWatermark(const Model::ExtractTraceWatermarkRequest &request);
                 void ExtractTraceWatermarkAsync(const Model::ExtractTraceWatermarkRequest& request, const ExtractTraceWatermarkAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ExtractTraceWatermarkOutcomeCallable ExtractTraceWatermarkCallable(const Model::ExtractTraceWatermarkRequest& request);
+
+                /**
+                 *Implement fast splicing and editing of HLS videos to generate new HLS format media.
+                 * @param req FastEditMediaRequest
+                 * @return FastEditMediaOutcome
+                 */
+                FastEditMediaOutcome FastEditMedia(const Model::FastEditMediaRequest &request);
+                void FastEditMediaAsync(const Model::FastEditMediaRequest& request, const FastEditMediaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                FastEditMediaOutcomeCallable FastEditMediaCallable(const Model::FastEditMediaRequest& request);
 
                 /**
                  ** After a media file is forbidden, except previewing it in the VOD Console, accessing the URLs of its various resources (such as source file, output files, and screenshots) in other scenarios will return error 403.
