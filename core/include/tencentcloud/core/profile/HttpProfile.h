@@ -29,6 +29,7 @@ namespace TencentCloud
         enum Scheme
         {
             HTTPS,
+            HTTP
         };
         enum Method
         {
@@ -46,6 +47,7 @@ namespace TencentCloud
         int64_t GetConnectTimeout() const;
         void SetKeepAlive(bool flag=false);
         bool IsKeepAlive() const;
+        HttpProfile::Scheme GetProtocol() const;
 
         HttpProfile(const HttpProfile &o) :
             m_reqMethod(o.m_reqMethod),
@@ -67,14 +69,6 @@ namespace TencentCloud
                 m_reqTimeout = o.m_reqTimeout;
                 m_connectTimeout = o.m_connectTimeout;
                 m_keepAlive = o.m_keepAlive;
-            }
-            return *this;
-        }
-        HttpProfile & operator=(HttpProfile &&o)
-        {
-            if (this != &o)
-            {
-                *this = std::move(o);
             }
             return *this;
         }

@@ -14,30 +14,22 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_CORE_ABSTRACTMODEL_H_
-#define TENCENTCLOUD_CORE_ABSTRACTMODEL_H_
+#ifndef TENCENTCLOUD_CORE_COMMONCLIENT_H_
+#define TENCENTCLOUD_CORE_COMMONCLIENT_H_
 
-#include <string>
-#include "Outcome.h"
-#include "Error.h"
+#include <tencentcloud/core/AbstractClient.h>
+#include <tencentcloud/core/Credential.h>
+#include <tencentcloud/core/profile/ClientProfile.h>
 
 namespace TencentCloud
 {
-    typedef Outcome<Core::Error, bool> CoreInternalOutcome;
-    class AbstractModel
+    class CommonClient : public AbstractClient
     {
     public:
-        AbstractModel();
-        ~AbstractModel();
-        std::string GetRequestId() const;
-        virtual std::string ToJsonString() const;
-
-    protected:
-        void SetRequestId(const std::string &requestId);
-
-    private:
-        std::string m_requestId;
+        // CommonClient(const std::string &service, const std::string &version, const Credential &credential, const std::string &region, const std::string &endpoint);
+        CommonClient(const std::string &service, const std::string &version, const Credential &credential, const std::string &region, const ClientProfile &profile);
+        ~CommonClient();
     };
 }
 
-#endif // !TENCENTCLOUD_CORE_ABSTRACTMODEL_H_
+#endif // !TENCENTCLOUD_CORE_COMMONCLIENT_H_
