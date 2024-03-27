@@ -29,7 +29,7 @@ void ClientProfile::SetHttpProfile(const HttpProfile &httpProfile)
     m_httpProfile = httpProfile;
 }
 
-HttpProfile ClientProfile::GetHttpProfile()
+HttpProfile ClientProfile::GetHttpProfile() const
 {
     return m_httpProfile;
 }

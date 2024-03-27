@@ -20,6 +20,7 @@ set(core_public_header
     include/tencentcloud/core/AbstractClient.h
     include/tencentcloud/core/AbstractModel.h
     include/tencentcloud/core/AsyncCallerContext.h
+    include/tencentcloud/core/CommonClient.h
     include/tencentcloud/core/Config.h
     include/tencentcloud/core/Credential.h
     include/tencentcloud/core/Error.h
@@ -56,6 +57,7 @@ set(core_src
     src/AbstractClient.cpp
     src/AbstractModel.cpp
     src/AsyncCallerContext.cpp
+    src/CommonClient.cpp
     src/Credential.cpp
     src/Executor.cpp
     src/NetworkProxy.cpp
@@ -76,7 +78,7 @@ include_directories("include/tencentcloud/core/utils/rapidjson")
 find_package(CURL REQUIRED)
 find_package(OpenSSL REQUIRED)
 
-include_directories(${CURL_INCLUDE_DIR})
+include_directories(${CURL_INCLUDE_DIRS})
 include_directories(${OPENSSL_INCLUDE_DIR})
 
 add_library(core ${LIB_TYPE}
@@ -99,7 +101,6 @@ target_include_directories(core
     PRIVATE include )
 
 target_link_libraries(core
-    uuid
     ${OPENSSL_LIBRARIES}
     ${CURL_LIBRARIES} )
 
