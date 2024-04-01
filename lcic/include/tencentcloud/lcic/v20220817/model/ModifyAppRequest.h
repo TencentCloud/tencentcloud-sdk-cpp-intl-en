@@ -105,6 +105,48 @@ namespace TencentCloud
                      */
                     bool CallbackKeyHasBeenSet() const;
 
+                    /**
+                     * 获取Transfer Id
+                     * @return TransferId Transfer Id
+                     * 
+                     */
+                    std::string GetTransferId() const;
+
+                    /**
+                     * 设置Transfer Id
+                     * @param _transferId Transfer Id
+                     * 
+                     */
+                    void SetTransferId(const std::string& _transferId);
+
+                    /**
+                     * 判断参数 TransferId 是否已赋值
+                     * @return TransferId 是否已赋值
+                     * 
+                     */
+                    bool TransferIdHasBeenSet() const;
+
+                    /**
+                     * 获取Transfer Url
+                     * @return TransferUrl Transfer Url
+                     * 
+                     */
+                    std::string GetTransferUrl() const;
+
+                    /**
+                     * 设置Transfer Url
+                     * @param _transferUrl Transfer Url
+                     * 
+                     */
+                    void SetTransferUrl(const std::string& _transferUrl);
+
+                    /**
+                     * 判断参数 TransferUrl 是否已赋值
+                     * @return TransferUrl 是否已赋值
+                     * 
+                     */
+                    bool TransferUrlHasBeenSet() const;
+
                 private:
 
                     /**
@@ -124,6 +166,18 @@ namespace TencentCloud
                      */
                     std::string m_callbackKey;
                     bool m_callbackKeyHasBeenSet;
+
+                    /**
+                     * Transfer Id
+                     */
+                    std::string m_transferId;
+                    bool m_transferIdHasBeenSet;
+
+                    /**
+                     * Transfer Url
+                     */
+                    std::string m_transferUrl;
+                    bool m_transferUrlHasBeenSet;
 
                 };
             }

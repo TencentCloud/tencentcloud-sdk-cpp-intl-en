@@ -428,6 +428,237 @@ namespace TencentCloud
                      */
                     bool EnableDirectControlHasBeenSet() const;
 
+                    /**
+                     * 获取Turn on focus mode. 0 Watch all character audio and video (default) 1 Watch only teachers and assistants
+                     * @return InteractionMode Turn on focus mode. 0 Watch all character audio and video (default) 1 Watch only teachers and assistants
+                     * 
+                     */
+                    int64_t GetInteractionMode() const;
+
+                    /**
+                     * 设置Turn on focus mode. 0 Watch all character audio and video (default) 1 Watch only teachers and assistants
+                     * @param _interactionMode Turn on focus mode. 0 Watch all character audio and video (default) 1 Watch only teachers and assistants
+                     * 
+                     */
+                    void SetInteractionMode(const int64_t& _interactionMode);
+
+                    /**
+                     * 判断参数 InteractionMode 是否已赋值
+                     * @return InteractionMode 是否已赋值
+                     * 
+                     */
+                    bool InteractionModeHasBeenSet() const;
+
+                    /**
+                     * 获取Horizontal and vertical screen. 0: Horizontal screen  (default); 1: Vertical screen , currently only support mobile video type
+                     * @return VideoOrientation Horizontal and vertical screen. 0: Horizontal screen  (default); 1: Vertical screen , currently only support mobile video type
+                     * 
+                     */
+                    uint64_t GetVideoOrientation() const;
+
+                    /**
+                     * 设置Horizontal and vertical screen. 0: Horizontal screen  (default); 1: Vertical screen , currently only support mobile video type
+                     * @param _videoOrientation Horizontal and vertical screen. 0: Horizontal screen  (default); 1: Vertical screen , currently only support mobile video type
+                     * 
+                     */
+                    void SetVideoOrientation(const uint64_t& _videoOrientation);
+
+                    /**
+                     * 判断参数 VideoOrientation 是否已赋值
+                     * @return VideoOrientation 是否已赋值
+                     * 
+                     */
+                    bool VideoOrientationHasBeenSet() const;
+
+                    /**
+                     * 获取Enable after-class grading. 0: not on (default) 1: on
+                     * @return IsGradingRequiredPostClass Enable after-class grading. 0: not on (default) 1: on
+                     * 
+                     */
+                    int64_t GetIsGradingRequiredPostClass() const;
+
+                    /**
+                     * 设置Enable after-class grading. 0: not on (default) 1: on
+                     * @param _isGradingRequiredPostClass Enable after-class grading. 0: not on (default) 1: on
+                     * 
+                     */
+                    void SetIsGradingRequiredPostClass(const int64_t& _isGradingRequiredPostClass);
+
+                    /**
+                     * 判断参数 IsGradingRequiredPostClass 是否已赋值
+                     * @return IsGradingRequiredPostClass 是否已赋值
+                     * 
+                     */
+                    bool IsGradingRequiredPostClassHasBeenSet() const;
+
+                    /**
+                     * 获取Room Type: 0 Small Classroom(default); 1 Lecture Hall(public class)
+                     * @return RoomType Room Type: 0 Small Classroom(default); 1 Lecture Hall(public class)
+                     * 
+                     */
+                    int64_t GetRoomType() const;
+
+                    /**
+                     * 设置Room Type: 0 Small Classroom(default); 1 Lecture Hall(public class)
+                     * @param _roomType Room Type: 0 Small Classroom(default); 1 Lecture Hall(public class)
+                     * 
+                     */
+                    void SetRoomType(const int64_t& _roomType);
+
+                    /**
+                     * 判断参数 RoomType 是否已赋值
+                     * @return RoomType 是否已赋值
+                     * 
+                     */
+                    bool RoomTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Drag class time: unit: minutes. 0: no limit (default), -1: can't drag class, greater than 0: the time of dragging class. maximum value: 120 minutes.
+                     * @return EndDelayTime Drag class time: unit: minutes. 0: no limit (default), -1: can't drag class, greater than 0: the time of dragging class. maximum value: 120 minutes.
+                     * 
+                     */
+                    int64_t GetEndDelayTime() const;
+
+                    /**
+                     * 设置Drag class time: unit: minutes. 0: no limit (default), -1: can't drag class, greater than 0: the time of dragging class. maximum value: 120 minutes.
+                     * @param _endDelayTime Drag class time: unit: minutes. 0: no limit (default), -1: can't drag class, greater than 0: the time of dragging class. maximum value: 120 minutes.
+                     * 
+                     */
+                    void SetEndDelayTime(const int64_t& _endDelayTime);
+
+                    /**
+                     * 判断参数 EndDelayTime 是否已赋值
+                     * @return EndDelayTime 是否已赋值
+                     * 
+                     */
+                    bool EndDelayTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Live type: 0 regular (default) 1 Simulated Live
+                     * @return LiveType Live type: 0 regular (default) 1 Simulated Live
+                     * 
+                     */
+                    uint64_t GetLiveType() const;
+
+                    /**
+                     * 设置Live type: 0 regular (default) 1 Simulated Live
+                     * @param _liveType Live type: 0 regular (default) 1 Simulated Live
+                     * 
+                     */
+                    void SetLiveType(const uint64_t& _liveType);
+
+                    /**
+                     * 判断参数 LiveType 是否已赋值
+                     * @return LiveType 是否已赋值
+                     * 
+                     */
+                    bool LiveTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Simulated Live link
+                     * @return RecordLiveUrl Simulated Live link
+                     * 
+                     */
+                    std::string GetRecordLiveUrl() const;
+
+                    /**
+                     * 设置Simulated Live link
+                     * @param _recordLiveUrl Simulated Live link
+                     * 
+                     */
+                    void SetRecordLiveUrl(const std::string& _recordLiveUrl);
+
+                    /**
+                     * 判断参数 RecordLiveUrl 是否已赋值
+                     * @return RecordLiveUrl 是否已赋值
+                     * 
+                     */
+                    bool RecordLiveUrlHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to start the lesson automatically: 0 not automatic lesson (default) 1 automatic lesson live_type=1 is valid when
+                     * @return EnableAutoStart Whether to start the lesson automatically: 0 not automatic lesson (default) 1 automatic lesson live_type=1 is valid when
+                     * 
+                     */
+                    uint64_t GetEnableAutoStart() const;
+
+                    /**
+                     * 设置Whether to start the lesson automatically: 0 not automatic lesson (default) 1 automatic lesson live_type=1 is valid when
+                     * @param _enableAutoStart Whether to start the lesson automatically: 0 not automatic lesson (default) 1 automatic lesson live_type=1 is valid when
+                     * 
+                     */
+                    void SetEnableAutoStart(const uint64_t& _enableAutoStart);
+
+                    /**
+                     * 判断参数 EnableAutoStart 是否已赋值
+                     * @return EnableAutoStart 是否已赋值
+                     * 
+                     */
+                    bool EnableAutoStartHasBeenSet() const;
+
+                    /**
+                     * 获取Recorded file background image, support png, jpg, jpeg, bmp format, does not support transparent channel for the time being
+                     * @return RecordBackground Recorded file background image, support png, jpg, jpeg, bmp format, does not support transparent channel for the time being
+                     * 
+                     */
+                    std::string GetRecordBackground() const;
+
+                    /**
+                     * 设置Recorded file background image, support png, jpg, jpeg, bmp format, does not support transparent channel for the time being
+                     * @param _recordBackground Recorded file background image, support png, jpg, jpeg, bmp format, does not support transparent channel for the time being
+                     * 
+                     */
+                    void SetRecordBackground(const std::string& _recordBackground);
+
+                    /**
+                     * 判断参数 RecordBackground 是否已赋值
+                     * @return RecordBackground 是否已赋值
+                     * 
+                     */
+                    bool RecordBackgroundHasBeenSet() const;
+
+                    /**
+                     * 获取Record customized scene, only recordlayout=9 this parameter is valid, the data content for the user-defined scene parameters, data format for the json key-value pairs, where the key-value pairs of the value for the string type.
+                     * @return RecordScene Record customized scene, only recordlayout=9 this parameter is valid, the data content for the user-defined scene parameters, data format for the json key-value pairs, where the key-value pairs of the value for the string type.
+                     * 
+                     */
+                    std::string GetRecordScene() const;
+
+                    /**
+                     * 设置Record customized scene, only recordlayout=9 this parameter is valid, the data content for the user-defined scene parameters, data format for the json key-value pairs, where the key-value pairs of the value for the string type.
+                     * @param _recordScene Record customized scene, only recordlayout=9 this parameter is valid, the data content for the user-defined scene parameters, data format for the json key-value pairs, where the key-value pairs of the value for the string type.
+                     * 
+                     */
+                    void SetRecordScene(const std::string& _recordScene);
+
+                    /**
+                     * 判断参数 RecordScene 是否已赋值
+                     * @return RecordScene 是否已赋值
+                     * 
+                     */
+                    bool RecordSceneHasBeenSet() const;
+
+                    /**
+                     * 获取Record customized language, only when recordlayout=9, this parameter is valid.
+                     * @return RecordLang Record customized language, only when recordlayout=9, this parameter is valid.
+                     * @deprecated
+                     */
+                    std::string GetRecordLang() const;
+
+                    /**
+                     * 设置Record customized language, only when recordlayout=9, this parameter is valid.
+                     * @param _recordLang Record customized language, only when recordlayout=9, this parameter is valid.
+                     * @deprecated
+                     */
+                    void SetRecordLang(const std::string& _recordLang);
+
+                    /**
+                     * 判断参数 RecordLang 是否已赋值
+                     * @return RecordLang 是否已赋值
+                     * @deprecated
+                     */
+                    bool RecordLangHasBeenSet() const;
+
                 private:
 
                     /**
@@ -539,6 +770,72 @@ namespace TencentCloud
                      */
                     uint64_t m_enableDirectControl;
                     bool m_enableDirectControlHasBeenSet;
+
+                    /**
+                     * Turn on focus mode. 0 Watch all character audio and video (default) 1 Watch only teachers and assistants
+                     */
+                    int64_t m_interactionMode;
+                    bool m_interactionModeHasBeenSet;
+
+                    /**
+                     * Horizontal and vertical screen. 0: Horizontal screen  (default); 1: Vertical screen , currently only support mobile video type
+                     */
+                    uint64_t m_videoOrientation;
+                    bool m_videoOrientationHasBeenSet;
+
+                    /**
+                     * Enable after-class grading. 0: not on (default) 1: on
+                     */
+                    int64_t m_isGradingRequiredPostClass;
+                    bool m_isGradingRequiredPostClassHasBeenSet;
+
+                    /**
+                     * Room Type: 0 Small Classroom(default); 1 Lecture Hall(public class)
+                     */
+                    int64_t m_roomType;
+                    bool m_roomTypeHasBeenSet;
+
+                    /**
+                     * Drag class time: unit: minutes. 0: no limit (default), -1: can't drag class, greater than 0: the time of dragging class. maximum value: 120 minutes.
+                     */
+                    int64_t m_endDelayTime;
+                    bool m_endDelayTimeHasBeenSet;
+
+                    /**
+                     * Live type: 0 regular (default) 1 Simulated Live
+                     */
+                    uint64_t m_liveType;
+                    bool m_liveTypeHasBeenSet;
+
+                    /**
+                     * Simulated Live link
+                     */
+                    std::string m_recordLiveUrl;
+                    bool m_recordLiveUrlHasBeenSet;
+
+                    /**
+                     * Whether to start the lesson automatically: 0 not automatic lesson (default) 1 automatic lesson live_type=1 is valid when
+                     */
+                    uint64_t m_enableAutoStart;
+                    bool m_enableAutoStartHasBeenSet;
+
+                    /**
+                     * Recorded file background image, support png, jpg, jpeg, bmp format, does not support transparent channel for the time being
+                     */
+                    std::string m_recordBackground;
+                    bool m_recordBackgroundHasBeenSet;
+
+                    /**
+                     * Record customized scene, only recordlayout=9 this parameter is valid, the data content for the user-defined scene parameters, data format for the json key-value pairs, where the key-value pairs of the value for the string type.
+                     */
+                    std::string m_recordScene;
+                    bool m_recordSceneHasBeenSet;
+
+                    /**
+                     * Record customized language, only when recordlayout=9, this parameter is valid.
+                     */
+                    std::string m_recordLang;
+                    bool m_recordLangHasBeenSet;
 
                 };
             }

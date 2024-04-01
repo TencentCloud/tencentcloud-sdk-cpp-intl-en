@@ -96,6 +96,90 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool UserIdHasBeenSet() const;
 
+                    /**
+                     * 获取User device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Wechat Mini Program.
+                     * @return Device User device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Wechat Mini Program.
+                     * 
+                     */
+                    uint64_t GetDevice() const;
+
+                    /**
+                     * 设置User device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Wechat Mini Program.
+                     * @param _device User device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Wechat Mini Program.
+                     * 
+                     */
+                    void SetDevice(const uint64_t& _device);
+
+                    /**
+                     * 判断参数 Device 是否已赋值
+                     * @return Device 是否已赋值
+                     * 
+                     */
+                    bool DeviceHasBeenSet() const;
+
+                    /**
+                     * 获取Recording time. Unit: seconds
+                     * @return Duration Recording time. Unit: seconds
+                     * 
+                     */
+                    uint64_t GetDuration() const;
+
+                    /**
+                     * 设置Recording time. Unit: seconds
+                     * @param _duration Recording time. Unit: seconds
+                     * 
+                     */
+                    void SetDuration(const uint64_t& _duration);
+
+                    /**
+                     * 判断参数 Duration 是否已赋值
+                     * @return Duration 是否已赋值
+                     * 
+                     */
+                    bool DurationHasBeenSet() const;
+
+                    /**
+                     * 获取Recorded file size
+                     * @return RecordSize Recorded file size
+                     * 
+                     */
+                    uint64_t GetRecordSize() const;
+
+                    /**
+                     * 设置Recorded file size
+                     * @param _recordSize Recorded file size
+                     * 
+                     */
+                    void SetRecordSize(const uint64_t& _recordSize);
+
+                    /**
+                     * 判断参数 RecordSize 是否已赋值
+                     * @return RecordSize 是否已赋值
+                     * 
+                     */
+                    bool RecordSizeHasBeenSet() const;
+
+                    /**
+                     * 获取Recording url
+                     * @return RecordUrl Recording url
+                     * 
+                     */
+                    std::string GetRecordUrl() const;
+
+                    /**
+                     * 设置Recording url
+                     * @param _recordUrl Recording url
+                     * 
+                     */
+                    void SetRecordUrl(const std::string& _recordUrl);
+
+                    /**
+                     * 判断参数 RecordUrl 是否已赋值
+                     * @return RecordUrl 是否已赋值
+                     * 
+                     */
+                    bool RecordUrlHasBeenSet() const;
+
                 private:
 
                     /**
@@ -111,6 +195,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_userId;
                     bool m_userIdHasBeenSet;
+
+                    /**
+                     * User device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Wechat Mini Program.
+                     */
+                    uint64_t m_device;
+                    bool m_deviceHasBeenSet;
+
+                    /**
+                     * Recording time. Unit: seconds
+                     */
+                    uint64_t m_duration;
+                    bool m_durationHasBeenSet;
+
+                    /**
+                     * Recorded file size
+                     */
+                    uint64_t m_recordSize;
+                    bool m_recordSizeHasBeenSet;
+
+                    /**
+                     * Recording url
+                     */
+                    std::string m_recordUrl;
+                    bool m_recordUrlHasBeenSet;
 
                 };
             }

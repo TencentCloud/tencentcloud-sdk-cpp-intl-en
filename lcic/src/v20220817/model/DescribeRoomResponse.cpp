@@ -29,6 +29,7 @@ DescribeRoomResponse::DescribeRoomResponse() :
     m_endTimeHasBeenSet(false),
     m_teacherIdHasBeenSet(false),
     m_sdkAppIdHasBeenSet(false),
+    m_audienceTypeHasBeenSet(false),
     m_resolutionHasBeenSet(false),
     m_maxMicNumberHasBeenSet(false),
     m_autoMicHasBeenSet(false),
@@ -39,7 +40,20 @@ DescribeRoomResponse::DescribeRoomResponse() :
     m_recordUrlHasBeenSet(false),
     m_statusHasBeenSet(false),
     m_groupIdHasBeenSet(false),
-    m_enableDirectControlHasBeenSet(false)
+    m_enableDirectControlHasBeenSet(false),
+    m_interactionModeHasBeenSet(false),
+    m_videoOrientationHasBeenSet(false),
+    m_isGradingRequiredPostClassHasBeenSet(false),
+    m_roomTypeHasBeenSet(false),
+    m_videoDurationHasBeenSet(false),
+    m_endDelayTimeHasBeenSet(false),
+    m_liveTypeHasBeenSet(false),
+    m_recordLiveUrlHasBeenSet(false),
+    m_enableAutoStartHasBeenSet(false),
+    m_recordBackgroundHasBeenSet(false),
+    m_rTMPStreamingURLHasBeenSet(false),
+    m_recordSceneHasBeenSet(false),
+    m_recordLangHasBeenSet(false)
 {
 }
 
@@ -125,6 +139,16 @@ CoreInternalOutcome DescribeRoomResponse::Deserialize(const string &payload)
         }
         m_sdkAppId = rsp["SdkAppId"].GetUint64();
         m_sdkAppIdHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("AudienceType") && !rsp["AudienceType"].IsNull())
+    {
+        if (!rsp["AudienceType"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `AudienceType` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_audienceType = rsp["AudienceType"].GetUint64();
+        m_audienceTypeHasBeenSet = true;
     }
 
     if (rsp.HasMember("Resolution") && !rsp["Resolution"].IsNull())
@@ -240,6 +264,136 @@ CoreInternalOutcome DescribeRoomResponse::Deserialize(const string &payload)
         m_enableDirectControlHasBeenSet = true;
     }
 
+    if (rsp.HasMember("InteractionMode") && !rsp["InteractionMode"].IsNull())
+    {
+        if (!rsp["InteractionMode"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `InteractionMode` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_interactionMode = rsp["InteractionMode"].GetInt64();
+        m_interactionModeHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("VideoOrientation") && !rsp["VideoOrientation"].IsNull())
+    {
+        if (!rsp["VideoOrientation"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `VideoOrientation` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_videoOrientation = rsp["VideoOrientation"].GetUint64();
+        m_videoOrientationHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("IsGradingRequiredPostClass") && !rsp["IsGradingRequiredPostClass"].IsNull())
+    {
+        if (!rsp["IsGradingRequiredPostClass"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `IsGradingRequiredPostClass` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_isGradingRequiredPostClass = rsp["IsGradingRequiredPostClass"].GetInt64();
+        m_isGradingRequiredPostClassHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("RoomType") && !rsp["RoomType"].IsNull())
+    {
+        if (!rsp["RoomType"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `RoomType` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_roomType = rsp["RoomType"].GetInt64();
+        m_roomTypeHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("VideoDuration") && !rsp["VideoDuration"].IsNull())
+    {
+        if (!rsp["VideoDuration"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `VideoDuration` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_videoDuration = rsp["VideoDuration"].GetUint64();
+        m_videoDurationHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("EndDelayTime") && !rsp["EndDelayTime"].IsNull())
+    {
+        if (!rsp["EndDelayTime"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `EndDelayTime` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_endDelayTime = rsp["EndDelayTime"].GetInt64();
+        m_endDelayTimeHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("LiveType") && !rsp["LiveType"].IsNull())
+    {
+        if (!rsp["LiveType"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `LiveType` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_liveType = rsp["LiveType"].GetUint64();
+        m_liveTypeHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("RecordLiveUrl") && !rsp["RecordLiveUrl"].IsNull())
+    {
+        if (!rsp["RecordLiveUrl"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `RecordLiveUrl` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_recordLiveUrl = string(rsp["RecordLiveUrl"].GetString());
+        m_recordLiveUrlHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("EnableAutoStart") && !rsp["EnableAutoStart"].IsNull())
+    {
+        if (!rsp["EnableAutoStart"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `EnableAutoStart` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_enableAutoStart = rsp["EnableAutoStart"].GetUint64();
+        m_enableAutoStartHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("RecordBackground") && !rsp["RecordBackground"].IsNull())
+    {
+        if (!rsp["RecordBackground"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `RecordBackground` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_recordBackground = string(rsp["RecordBackground"].GetString());
+        m_recordBackgroundHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("RTMPStreamingURL") && !rsp["RTMPStreamingURL"].IsNull())
+    {
+        if (!rsp["RTMPStreamingURL"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `RTMPStreamingURL` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_rTMPStreamingURL = string(rsp["RTMPStreamingURL"].GetString());
+        m_rTMPStreamingURLHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("RecordScene") && !rsp["RecordScene"].IsNull())
+    {
+        if (!rsp["RecordScene"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `RecordScene` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_recordScene = string(rsp["RecordScene"].GetString());
+        m_recordSceneHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("RecordLang") && !rsp["RecordLang"].IsNull())
+    {
+        if (!rsp["RecordLang"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `RecordLang` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_recordLang = string(rsp["RecordLang"].GetString());
+        m_recordLangHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -288,6 +442,14 @@ string DescribeRoomResponse::ToJsonString() const
         string key = "SdkAppId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_sdkAppId, allocator);
+    }
+
+    if (m_audienceTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AudienceType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_audienceType, allocator);
     }
 
     if (m_resolutionHasBeenSet)
@@ -383,6 +545,110 @@ string DescribeRoomResponse::ToJsonString() const
         value.AddMember(iKey, m_enableDirectControl, allocator);
     }
 
+    if (m_interactionModeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InteractionMode";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_interactionMode, allocator);
+    }
+
+    if (m_videoOrientationHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "VideoOrientation";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_videoOrientation, allocator);
+    }
+
+    if (m_isGradingRequiredPostClassHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsGradingRequiredPostClass";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_isGradingRequiredPostClass, allocator);
+    }
+
+    if (m_roomTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RoomType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_roomType, allocator);
+    }
+
+    if (m_videoDurationHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "VideoDuration";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_videoDuration, allocator);
+    }
+
+    if (m_endDelayTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EndDelayTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_endDelayTime, allocator);
+    }
+
+    if (m_liveTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "LiveType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_liveType, allocator);
+    }
+
+    if (m_recordLiveUrlHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RecordLiveUrl";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_recordLiveUrl.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_enableAutoStartHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EnableAutoStart";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_enableAutoStart, allocator);
+    }
+
+    if (m_recordBackgroundHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RecordBackground";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_recordBackground.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_rTMPStreamingURLHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RTMPStreamingURL";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_rTMPStreamingURL.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_recordSceneHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RecordScene";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_recordScene.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_recordLangHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RecordLang";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_recordLang.c_str(), allocator).Move(), allocator);
+    }
+
     rapidjson::Value iKey(rapidjson::kStringType);
     string key = "RequestId";
     iKey.SetString(key.c_str(), allocator);
@@ -443,6 +709,16 @@ uint64_t DescribeRoomResponse::GetSdkAppId() const
 bool DescribeRoomResponse::SdkAppIdHasBeenSet() const
 {
     return m_sdkAppIdHasBeenSet;
+}
+
+uint64_t DescribeRoomResponse::GetAudienceType() const
+{
+    return m_audienceType;
+}
+
+bool DescribeRoomResponse::AudienceTypeHasBeenSet() const
+{
+    return m_audienceTypeHasBeenSet;
 }
 
 uint64_t DescribeRoomResponse::GetResolution() const
@@ -553,6 +829,136 @@ uint64_t DescribeRoomResponse::GetEnableDirectControl() const
 bool DescribeRoomResponse::EnableDirectControlHasBeenSet() const
 {
     return m_enableDirectControlHasBeenSet;
+}
+
+int64_t DescribeRoomResponse::GetInteractionMode() const
+{
+    return m_interactionMode;
+}
+
+bool DescribeRoomResponse::InteractionModeHasBeenSet() const
+{
+    return m_interactionModeHasBeenSet;
+}
+
+uint64_t DescribeRoomResponse::GetVideoOrientation() const
+{
+    return m_videoOrientation;
+}
+
+bool DescribeRoomResponse::VideoOrientationHasBeenSet() const
+{
+    return m_videoOrientationHasBeenSet;
+}
+
+int64_t DescribeRoomResponse::GetIsGradingRequiredPostClass() const
+{
+    return m_isGradingRequiredPostClass;
+}
+
+bool DescribeRoomResponse::IsGradingRequiredPostClassHasBeenSet() const
+{
+    return m_isGradingRequiredPostClassHasBeenSet;
+}
+
+int64_t DescribeRoomResponse::GetRoomType() const
+{
+    return m_roomType;
+}
+
+bool DescribeRoomResponse::RoomTypeHasBeenSet() const
+{
+    return m_roomTypeHasBeenSet;
+}
+
+uint64_t DescribeRoomResponse::GetVideoDuration() const
+{
+    return m_videoDuration;
+}
+
+bool DescribeRoomResponse::VideoDurationHasBeenSet() const
+{
+    return m_videoDurationHasBeenSet;
+}
+
+int64_t DescribeRoomResponse::GetEndDelayTime() const
+{
+    return m_endDelayTime;
+}
+
+bool DescribeRoomResponse::EndDelayTimeHasBeenSet() const
+{
+    return m_endDelayTimeHasBeenSet;
+}
+
+uint64_t DescribeRoomResponse::GetLiveType() const
+{
+    return m_liveType;
+}
+
+bool DescribeRoomResponse::LiveTypeHasBeenSet() const
+{
+    return m_liveTypeHasBeenSet;
+}
+
+string DescribeRoomResponse::GetRecordLiveUrl() const
+{
+    return m_recordLiveUrl;
+}
+
+bool DescribeRoomResponse::RecordLiveUrlHasBeenSet() const
+{
+    return m_recordLiveUrlHasBeenSet;
+}
+
+uint64_t DescribeRoomResponse::GetEnableAutoStart() const
+{
+    return m_enableAutoStart;
+}
+
+bool DescribeRoomResponse::EnableAutoStartHasBeenSet() const
+{
+    return m_enableAutoStartHasBeenSet;
+}
+
+string DescribeRoomResponse::GetRecordBackground() const
+{
+    return m_recordBackground;
+}
+
+bool DescribeRoomResponse::RecordBackgroundHasBeenSet() const
+{
+    return m_recordBackgroundHasBeenSet;
+}
+
+string DescribeRoomResponse::GetRTMPStreamingURL() const
+{
+    return m_rTMPStreamingURL;
+}
+
+bool DescribeRoomResponse::RTMPStreamingURLHasBeenSet() const
+{
+    return m_rTMPStreamingURLHasBeenSet;
+}
+
+string DescribeRoomResponse::GetRecordScene() const
+{
+    return m_recordScene;
+}
+
+bool DescribeRoomResponse::RecordSceneHasBeenSet() const
+{
+    return m_recordSceneHasBeenSet;
+}
+
+string DescribeRoomResponse::GetRecordLang() const
+{
+    return m_recordLang;
+}
+
+bool DescribeRoomResponse::RecordLangHasBeenSet() const
+{
+    return m_recordLangHasBeenSet;
 }
 
 

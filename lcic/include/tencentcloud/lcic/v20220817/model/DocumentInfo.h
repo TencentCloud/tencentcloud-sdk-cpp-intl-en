@@ -69,15 +69,15 @@ Used by actions: DescribeDocumentsByRoom.
                     bool DocumentIdHasBeenSet() const;
 
                     /**
-                     * 获取The document’s original URL. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DocumentUrl The document’s original URL. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The document's original URL. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DocumentUrl The document's original URL. Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDocumentUrl() const;
 
                     /**
-                     * 设置The document’s original URL. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _documentUrl The document’s original URL. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The document's original URL. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _documentUrl The document's original URL. Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDocumentUrl(const std::string& _documentUrl);
@@ -111,15 +111,15 @@ Used by actions: DescribeDocumentsByRoom.
                     bool DocumentNameHasBeenSet() const;
 
                     /**
-                     * 获取The user ID of the document’s owner. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Owner The user ID of the document’s owner. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The user ID of the document's owner. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Owner The user ID of the document's owner. Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetOwner() const;
 
                     /**
-                     * 设置The user ID of the document’s owner. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _owner The user ID of the document’s owner. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The user ID of the document's owner. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _owner The user ID of the document's owner. Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetOwner(const std::string& _owner);
@@ -441,6 +441,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool CoverHasBeenSet() const;
 
+                    /**
+                     * 获取Document preview address
+                     * @return Preview Document preview address
+                     * 
+                     */
+                    std::string GetPreview() const;
+
+                    /**
+                     * 设置Document preview address
+                     * @param _preview Document preview address
+                     * 
+                     */
+                    void SetPreview(const std::string& _preview);
+
+                    /**
+                     * 判断参数 Preview 是否已赋值
+                     * @return Preview 是否已赋值
+                     * 
+                     */
+                    bool PreviewHasBeenSet() const;
+
                 private:
 
                     /**
@@ -450,7 +471,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_documentIdHasBeenSet;
 
                     /**
-                     * The document’s original URL. Note: This field may return null, indicating that no valid values can be obtained.
+                     * The document's original URL. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_documentUrl;
                     bool m_documentUrlHasBeenSet;
@@ -462,7 +483,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_documentNameHasBeenSet;
 
                     /**
-                     * The user ID of the document’s owner. Note: This field may return null, indicating that no valid values can be obtained.
+                     * The user ID of the document's owner. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_owner;
                     bool m_ownerHasBeenSet;
@@ -554,6 +575,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_cover;
                     bool m_coverHasBeenSet;
+
+                    /**
+                     * Document preview address
+                     */
+                    std::string m_preview;
+                    bool m_previewHasBeenSet;
 
                 };
             }

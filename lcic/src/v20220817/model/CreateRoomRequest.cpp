@@ -40,7 +40,18 @@ CreateRoomRequest::CreateRoomRequest() :
     m_audienceTypeHasBeenSet(false),
     m_recordLayoutHasBeenSet(false),
     m_groupIdHasBeenSet(false),
-    m_enableDirectControlHasBeenSet(false)
+    m_enableDirectControlHasBeenSet(false),
+    m_interactionModeHasBeenSet(false),
+    m_videoOrientationHasBeenSet(false),
+    m_isGradingRequiredPostClassHasBeenSet(false),
+    m_roomTypeHasBeenSet(false),
+    m_endDelayTimeHasBeenSet(false),
+    m_liveTypeHasBeenSet(false),
+    m_recordLiveUrlHasBeenSet(false),
+    m_enableAutoStartHasBeenSet(false),
+    m_recordBackgroundHasBeenSet(false),
+    m_recordSceneHasBeenSet(false),
+    m_recordLangHasBeenSet(false)
 {
 }
 
@@ -198,6 +209,94 @@ string CreateRoomRequest::ToJsonString() const
         string key = "EnableDirectControl";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_enableDirectControl, allocator);
+    }
+
+    if (m_interactionModeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InteractionMode";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_interactionMode, allocator);
+    }
+
+    if (m_videoOrientationHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "VideoOrientation";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_videoOrientation, allocator);
+    }
+
+    if (m_isGradingRequiredPostClassHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsGradingRequiredPostClass";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_isGradingRequiredPostClass, allocator);
+    }
+
+    if (m_roomTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RoomType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_roomType, allocator);
+    }
+
+    if (m_endDelayTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EndDelayTime";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_endDelayTime, allocator);
+    }
+
+    if (m_liveTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "LiveType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_liveType, allocator);
+    }
+
+    if (m_recordLiveUrlHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RecordLiveUrl";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_recordLiveUrl.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_enableAutoStartHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EnableAutoStart";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_enableAutoStart, allocator);
+    }
+
+    if (m_recordBackgroundHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RecordBackground";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_recordBackground.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_recordSceneHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RecordScene";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_recordScene.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_recordLangHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RecordLang";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_recordLang.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -494,6 +593,182 @@ void CreateRoomRequest::SetEnableDirectControl(const uint64_t& _enableDirectCont
 bool CreateRoomRequest::EnableDirectControlHasBeenSet() const
 {
     return m_enableDirectControlHasBeenSet;
+}
+
+int64_t CreateRoomRequest::GetInteractionMode() const
+{
+    return m_interactionMode;
+}
+
+void CreateRoomRequest::SetInteractionMode(const int64_t& _interactionMode)
+{
+    m_interactionMode = _interactionMode;
+    m_interactionModeHasBeenSet = true;
+}
+
+bool CreateRoomRequest::InteractionModeHasBeenSet() const
+{
+    return m_interactionModeHasBeenSet;
+}
+
+uint64_t CreateRoomRequest::GetVideoOrientation() const
+{
+    return m_videoOrientation;
+}
+
+void CreateRoomRequest::SetVideoOrientation(const uint64_t& _videoOrientation)
+{
+    m_videoOrientation = _videoOrientation;
+    m_videoOrientationHasBeenSet = true;
+}
+
+bool CreateRoomRequest::VideoOrientationHasBeenSet() const
+{
+    return m_videoOrientationHasBeenSet;
+}
+
+int64_t CreateRoomRequest::GetIsGradingRequiredPostClass() const
+{
+    return m_isGradingRequiredPostClass;
+}
+
+void CreateRoomRequest::SetIsGradingRequiredPostClass(const int64_t& _isGradingRequiredPostClass)
+{
+    m_isGradingRequiredPostClass = _isGradingRequiredPostClass;
+    m_isGradingRequiredPostClassHasBeenSet = true;
+}
+
+bool CreateRoomRequest::IsGradingRequiredPostClassHasBeenSet() const
+{
+    return m_isGradingRequiredPostClassHasBeenSet;
+}
+
+int64_t CreateRoomRequest::GetRoomType() const
+{
+    return m_roomType;
+}
+
+void CreateRoomRequest::SetRoomType(const int64_t& _roomType)
+{
+    m_roomType = _roomType;
+    m_roomTypeHasBeenSet = true;
+}
+
+bool CreateRoomRequest::RoomTypeHasBeenSet() const
+{
+    return m_roomTypeHasBeenSet;
+}
+
+int64_t CreateRoomRequest::GetEndDelayTime() const
+{
+    return m_endDelayTime;
+}
+
+void CreateRoomRequest::SetEndDelayTime(const int64_t& _endDelayTime)
+{
+    m_endDelayTime = _endDelayTime;
+    m_endDelayTimeHasBeenSet = true;
+}
+
+bool CreateRoomRequest::EndDelayTimeHasBeenSet() const
+{
+    return m_endDelayTimeHasBeenSet;
+}
+
+uint64_t CreateRoomRequest::GetLiveType() const
+{
+    return m_liveType;
+}
+
+void CreateRoomRequest::SetLiveType(const uint64_t& _liveType)
+{
+    m_liveType = _liveType;
+    m_liveTypeHasBeenSet = true;
+}
+
+bool CreateRoomRequest::LiveTypeHasBeenSet() const
+{
+    return m_liveTypeHasBeenSet;
+}
+
+string CreateRoomRequest::GetRecordLiveUrl() const
+{
+    return m_recordLiveUrl;
+}
+
+void CreateRoomRequest::SetRecordLiveUrl(const string& _recordLiveUrl)
+{
+    m_recordLiveUrl = _recordLiveUrl;
+    m_recordLiveUrlHasBeenSet = true;
+}
+
+bool CreateRoomRequest::RecordLiveUrlHasBeenSet() const
+{
+    return m_recordLiveUrlHasBeenSet;
+}
+
+uint64_t CreateRoomRequest::GetEnableAutoStart() const
+{
+    return m_enableAutoStart;
+}
+
+void CreateRoomRequest::SetEnableAutoStart(const uint64_t& _enableAutoStart)
+{
+    m_enableAutoStart = _enableAutoStart;
+    m_enableAutoStartHasBeenSet = true;
+}
+
+bool CreateRoomRequest::EnableAutoStartHasBeenSet() const
+{
+    return m_enableAutoStartHasBeenSet;
+}
+
+string CreateRoomRequest::GetRecordBackground() const
+{
+    return m_recordBackground;
+}
+
+void CreateRoomRequest::SetRecordBackground(const string& _recordBackground)
+{
+    m_recordBackground = _recordBackground;
+    m_recordBackgroundHasBeenSet = true;
+}
+
+bool CreateRoomRequest::RecordBackgroundHasBeenSet() const
+{
+    return m_recordBackgroundHasBeenSet;
+}
+
+string CreateRoomRequest::GetRecordScene() const
+{
+    return m_recordScene;
+}
+
+void CreateRoomRequest::SetRecordScene(const string& _recordScene)
+{
+    m_recordScene = _recordScene;
+    m_recordSceneHasBeenSet = true;
+}
+
+bool CreateRoomRequest::RecordSceneHasBeenSet() const
+{
+    return m_recordSceneHasBeenSet;
+}
+
+string CreateRoomRequest::GetRecordLang() const
+{
+    return m_recordLang;
+}
+
+void CreateRoomRequest::SetRecordLang(const string& _recordLang)
+{
+    m_recordLang = _recordLang;
+    m_recordLangHasBeenSet = true;
+}
+
+bool CreateRoomRequest::RecordLangHasBeenSet() const
+{
+    return m_recordLangHasBeenSet;
 }
 
 

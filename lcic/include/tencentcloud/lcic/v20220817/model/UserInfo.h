@@ -147,6 +147,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool AvatarHasBeenSet() const;
 
+                    /**
+                     * 获取User's Id in the client system
+                     * @return OriginId User's Id in the client system
+                     * 
+                     */
+                    std::string GetOriginId() const;
+
+                    /**
+                     * 设置User's Id in the client system
+                     * @param _originId User's Id in the client system
+                     * 
+                     */
+                    void SetOriginId(const std::string& _originId);
+
+                    /**
+                     * 判断参数 OriginId 是否已赋值
+                     * @return OriginId 是否已赋值
+                     * 
+                     */
+                    bool OriginIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -176,6 +197,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_avatar;
                     bool m_avatarHasBeenSet;
+
+                    /**
+                     * User's Id in the client system
+                     */
+                    std::string m_originId;
+                    bool m_originIdHasBeenSet;
 
                 };
             }

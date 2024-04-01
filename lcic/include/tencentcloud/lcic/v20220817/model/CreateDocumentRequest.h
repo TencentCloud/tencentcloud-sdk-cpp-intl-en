@@ -210,6 +210,27 @@ namespace TencentCloud
                      */
                     bool DocumentSizeHasBeenSet() const;
 
+                    /**
+                     * 获取Whether or not to enable automatic processing for unsupported elements. Default: off. The automatically processed elements are as follows: 1. Ink: Remove unsupported ink (e.g. WPS Ink) 2. Auto Page Turn: Remove all auto page turn settings on the PPT and set it to mouse click to turn the page 3. Corrupted Audio/Video: Remove references to corrupted audio/video on the PPT
+                     * @return AutoHandleUnsupportedElement Whether or not to enable automatic processing for unsupported elements. Default: off. The automatically processed elements are as follows: 1. Ink: Remove unsupported ink (e.g. WPS Ink) 2. Auto Page Turn: Remove all auto page turn settings on the PPT and set it to mouse click to turn the page 3. Corrupted Audio/Video: Remove references to corrupted audio/video on the PPT
+                     * 
+                     */
+                    bool GetAutoHandleUnsupportedElement() const;
+
+                    /**
+                     * 设置Whether or not to enable automatic processing for unsupported elements. Default: off. The automatically processed elements are as follows: 1. Ink: Remove unsupported ink (e.g. WPS Ink) 2. Auto Page Turn: Remove all auto page turn settings on the PPT and set it to mouse click to turn the page 3. Corrupted Audio/Video: Remove references to corrupted audio/video on the PPT
+                     * @param _autoHandleUnsupportedElement Whether or not to enable automatic processing for unsupported elements. Default: off. The automatically processed elements are as follows: 1. Ink: Remove unsupported ink (e.g. WPS Ink) 2. Auto Page Turn: Remove all auto page turn settings on the PPT and set it to mouse click to turn the page 3. Corrupted Audio/Video: Remove references to corrupted audio/video on the PPT
+                     * 
+                     */
+                    void SetAutoHandleUnsupportedElement(const bool& _autoHandleUnsupportedElement);
+
+                    /**
+                     * 判断参数 AutoHandleUnsupportedElement 是否已赋值
+                     * @return AutoHandleUnsupportedElement 是否已赋值
+                     * 
+                     */
+                    bool AutoHandleUnsupportedElementHasBeenSet() const;
+
                 private:
 
                     /**
@@ -259,6 +280,12 @@ namespace TencentCloud
                      */
                     uint64_t m_documentSize;
                     bool m_documentSizeHasBeenSet;
+
+                    /**
+                     * Whether or not to enable automatic processing for unsupported elements. Default: off. The automatically processed elements are as follows: 1. Ink: Remove unsupported ink (e.g. WPS Ink) 2. Auto Page Turn: Remove all auto page turn settings on the PPT and set it to mouse click to turn the page 3. Corrupted Audio/Video: Remove references to corrupted audio/video on the PPT
+                     */
+                    bool m_autoHandleUnsupportedElement;
+                    bool m_autoHandleUnsupportedElementHasBeenSet;
 
                 };
             }

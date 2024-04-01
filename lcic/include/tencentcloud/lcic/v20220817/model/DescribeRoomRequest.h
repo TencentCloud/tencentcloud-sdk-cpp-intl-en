@@ -63,6 +63,27 @@ namespace TencentCloud
                      */
                     bool RoomIdHasBeenSet() const;
 
+                    /**
+                     * 获取Request RTMP  stream link, 0: no, 1: yes, default is 0.
+                     * @return RTMPStreamingURL Request RTMP  stream link, 0: no, 1: yes, default is 0.
+                     * 
+                     */
+                    uint64_t GetRTMPStreamingURL() const;
+
+                    /**
+                     * 设置Request RTMP  stream link, 0: no, 1: yes, default is 0.
+                     * @param _rTMPStreamingURL Request RTMP  stream link, 0: no, 1: yes, default is 0.
+                     * 
+                     */
+                    void SetRTMPStreamingURL(const uint64_t& _rTMPStreamingURL);
+
+                    /**
+                     * 判断参数 RTMPStreamingURL 是否已赋值
+                     * @return RTMPStreamingURL 是否已赋值
+                     * 
+                     */
+                    bool RTMPStreamingURLHasBeenSet() const;
+
                 private:
 
                     /**
@@ -70,6 +91,12 @@ namespace TencentCloud
                      */
                     uint64_t m_roomId;
                     bool m_roomIdHasBeenSet;
+
+                    /**
+                     * Request RTMP  stream link, 0: no, 1: yes, default is 0.
+                     */
+                    uint64_t m_rTMPStreamingURL;
+                    bool m_rTMPStreamingURLHasBeenSet;
 
                 };
             }

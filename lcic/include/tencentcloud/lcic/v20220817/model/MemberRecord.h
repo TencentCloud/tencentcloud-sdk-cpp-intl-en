@@ -279,15 +279,15 @@ Used by actions: DescribeCurrentMemberList, DescribeRoomStatistics.
                     bool RewordsHasBeenSet() const;
 
                     /**
-                     * 获取The user’s IP address.
-                     * @return IPAddress The user’s IP address.
+                     * 获取The user's IP address.
+                     * @return IPAddress The user's IP address.
                      * 
                      */
                     std::string GetIPAddress() const;
 
                     /**
-                     * 设置The user’s IP address.
-                     * @param _iPAddress The user’s IP address.
+                     * 设置The user's IP address.
+                     * @param _iPAddress The user's IP address.
                      * 
                      */
                     void SetIPAddress(const std::string& _iPAddress);
@@ -300,15 +300,15 @@ Used by actions: DescribeCurrentMemberList, DescribeRoomStatistics.
                     bool IPAddressHasBeenSet() const;
 
                     /**
-                     * 获取The user’s location.
-                     * @return Location The user’s location.
+                     * 获取The user's location.
+                     * @return Location The user's location.
                      * 
                      */
                     std::string GetLocation() const;
 
                     /**
-                     * 设置The user’s location.
-                     * @param _location The user’s location.
+                     * 设置The user's location.
+                     * @param _location The user's location.
                      * 
                      */
                     void SetLocation(const std::string& _location);
@@ -321,15 +321,15 @@ Used by actions: DescribeCurrentMemberList, DescribeRoomStatistics.
                     bool LocationHasBeenSet() const;
 
                     /**
-                     * 获取The user’s device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
-                     * @return Device The user’s device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
+                     * 获取The user's device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
+                     * @return Device The user's device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
                      * 
                      */
                     int64_t GetDevice() const;
 
                     /**
-                     * 设置The user’s device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
-                     * @param _device The user’s device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
+                     * 设置The user's device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
+                     * @param _device The user's device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
                      * 
                      */
                     void SetDevice(const int64_t& _device);
@@ -475,6 +475,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool StageHasBeenSet() const;
 
+                    /**
+                     * 获取User status. 0 is not present, 1 is online, 2 is offline, 3 is kicked, 4 is permanently kicked, 5 is temporarily offline
+                     * @return CurrentState User status. 0 is not present, 1 is online, 2 is offline, 3 is kicked, 4 is permanently kicked, 5 is temporarily offline
+                     * 
+                     */
+                    uint64_t GetCurrentState() const;
+
+                    /**
+                     * 设置User status. 0 is not present, 1 is online, 2 is offline, 3 is kicked, 4 is permanently kicked, 5 is temporarily offline
+                     * @param _currentState User status. 0 is not present, 1 is online, 2 is offline, 3 is kicked, 4 is permanently kicked, 5 is temporarily offline
+                     * 
+                     */
+                    void SetCurrentState(const uint64_t& _currentState);
+
+                    /**
+                     * 判断参数 CurrentState 是否已赋值
+                     * @return CurrentState 是否已赋值
+                     * 
+                     */
+                    bool CurrentStateHasBeenSet() const;
+
                 private:
 
                     /**
@@ -544,19 +565,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_rewordsHasBeenSet;
 
                     /**
-                     * The user’s IP address.
+                     * The user's IP address.
                      */
                     std::string m_iPAddress;
                     bool m_iPAddressHasBeenSet;
 
                     /**
-                     * The user’s location.
+                     * The user's location.
                      */
                     std::string m_location;
                     bool m_locationHasBeenSet;
 
                     /**
-                     * The user’s device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
+                     * The user's device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
                      */
                     int64_t m_device;
                     bool m_deviceHasBeenSet;
@@ -598,6 +619,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_stage;
                     bool m_stageHasBeenSet;
+
+                    /**
+                     * User status. 0 is not present, 1 is online, 2 is offline, 3 is kicked, 4 is permanently kicked, 5 is temporarily offline
+                     */
+                    uint64_t m_currentState;
+                    bool m_currentStateHasBeenSet;
 
                 };
             }

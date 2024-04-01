@@ -379,6 +379,237 @@ Note: This field may return null, indicating that no valid value was found.
                      */
                     bool EnableDirectControlHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return InteractionMode 
+                     * 
+                     */
+                    int64_t GetInteractionMode() const;
+
+                    /**
+                     * 设置
+                     * @param _interactionMode 
+                     * 
+                     */
+                    void SetInteractionMode(const int64_t& _interactionMode);
+
+                    /**
+                     * 判断参数 InteractionMode 是否已赋值
+                     * @return InteractionMode 是否已赋值
+                     * 
+                     */
+                    bool InteractionModeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return VideoOrientation 
+                     * 
+                     */
+                    int64_t GetVideoOrientation() const;
+
+                    /**
+                     * 设置
+                     * @param _videoOrientation 
+                     * 
+                     */
+                    void SetVideoOrientation(const int64_t& _videoOrientation);
+
+                    /**
+                     * 判断参数 VideoOrientation 是否已赋值
+                     * @return VideoOrientation 是否已赋值
+                     * 
+                     */
+                    bool VideoOrientationHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return IsGradingRequiredPostClass 
+                     * 
+                     */
+                    int64_t GetIsGradingRequiredPostClass() const;
+
+                    /**
+                     * 设置
+                     * @param _isGradingRequiredPostClass 
+                     * 
+                     */
+                    void SetIsGradingRequiredPostClass(const int64_t& _isGradingRequiredPostClass);
+
+                    /**
+                     * 判断参数 IsGradingRequiredPostClass 是否已赋值
+                     * @return IsGradingRequiredPostClass 是否已赋值
+                     * 
+                     */
+                    bool IsGradingRequiredPostClassHasBeenSet() const;
+
+                    /**
+                     * 获取Room Type: 0 Small Classroom(default); 1 Lecture Hall(public class)
+                     * @return RoomType Room Type: 0 Small Classroom(default); 1 Lecture Hall(public class)
+                     * 
+                     */
+                    int64_t GetRoomType() const;
+
+                    /**
+                     * 设置Room Type: 0 Small Classroom(default); 1 Lecture Hall(public class)
+                     * @param _roomType Room Type: 0 Small Classroom(default); 1 Lecture Hall(public class)
+                     * 
+                     */
+                    void SetRoomType(const int64_t& _roomType);
+
+                    /**
+                     * 判断参数 RoomType 是否已赋值
+                     * @return RoomType 是否已赋值
+                     * 
+                     */
+                    bool RoomTypeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return EndDelayTime 
+                     * 
+                     */
+                    int64_t GetEndDelayTime() const;
+
+                    /**
+                     * 设置
+                     * @param _endDelayTime 
+                     * 
+                     */
+                    void SetEndDelayTime(const int64_t& _endDelayTime);
+
+                    /**
+                     * 判断参数 EndDelayTime 是否已赋值
+                     * @return EndDelayTime 是否已赋值
+                     * 
+                     */
+                    bool EndDelayTimeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return LiveType 
+                     * 
+                     */
+                    uint64_t GetLiveType() const;
+
+                    /**
+                     * 设置
+                     * @param _liveType 
+                     * 
+                     */
+                    void SetLiveType(const uint64_t& _liveType);
+
+                    /**
+                     * 判断参数 LiveType 是否已赋值
+                     * @return LiveType 是否已赋值
+                     * 
+                     */
+                    bool LiveTypeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return RecordLiveUrl 
+                     * 
+                     */
+                    std::string GetRecordLiveUrl() const;
+
+                    /**
+                     * 设置
+                     * @param _recordLiveUrl 
+                     * 
+                     */
+                    void SetRecordLiveUrl(const std::string& _recordLiveUrl);
+
+                    /**
+                     * 判断参数 RecordLiveUrl 是否已赋值
+                     * @return RecordLiveUrl 是否已赋值
+                     * 
+                     */
+                    bool RecordLiveUrlHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return EnableAutoStart 
+                     * 
+                     */
+                    uint64_t GetEnableAutoStart() const;
+
+                    /**
+                     * 设置
+                     * @param _enableAutoStart 
+                     * 
+                     */
+                    void SetEnableAutoStart(const uint64_t& _enableAutoStart);
+
+                    /**
+                     * 判断参数 EnableAutoStart 是否已赋值
+                     * @return EnableAutoStart 是否已赋值
+                     * 
+                     */
+                    bool EnableAutoStartHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return RecordBackground 
+                     * 
+                     */
+                    std::string GetRecordBackground() const;
+
+                    /**
+                     * 设置
+                     * @param _recordBackground 
+                     * 
+                     */
+                    void SetRecordBackground(const std::string& _recordBackground);
+
+                    /**
+                     * 判断参数 RecordBackground 是否已赋值
+                     * @return RecordBackground 是否已赋值
+                     * 
+                     */
+                    bool RecordBackgroundHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return RecordScene 
+                     * 
+                     */
+                    std::string GetRecordScene() const;
+
+                    /**
+                     * 设置
+                     * @param _recordScene 
+                     * 
+                     */
+                    void SetRecordScene(const std::string& _recordScene);
+
+                    /**
+                     * 判断参数 RecordScene 是否已赋值
+                     * @return RecordScene 是否已赋值
+                     * 
+                     */
+                    bool RecordSceneHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return RecordLang 
+                     * 
+                     */
+                    std::string GetRecordLang() const;
+
+                    /**
+                     * 设置
+                     * @param _recordLang 
+                     * 
+                     */
+                    void SetRecordLang(const std::string& _recordLang);
+
+                    /**
+                     * 判断参数 RecordLang 是否已赋值
+                     * @return RecordLang 是否已赋值
+                     * 
+                     */
+                    bool RecordLangHasBeenSet() const;
+
                 private:
 
                     /**
@@ -473,6 +704,72 @@ Note: This field may return null, indicating that no valid value was found.
                      */
                     uint64_t m_enableDirectControl;
                     bool m_enableDirectControlHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_interactionMode;
+                    bool m_interactionModeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_videoOrientation;
+                    bool m_videoOrientationHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_isGradingRequiredPostClass;
+                    bool m_isGradingRequiredPostClassHasBeenSet;
+
+                    /**
+                     * Room Type: 0 Small Classroom(default); 1 Lecture Hall(public class)
+                     */
+                    int64_t m_roomType;
+                    bool m_roomTypeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_endDelayTime;
+                    bool m_endDelayTimeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_liveType;
+                    bool m_liveTypeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_recordLiveUrl;
+                    bool m_recordLiveUrlHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_enableAutoStart;
+                    bool m_enableAutoStartHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_recordBackground;
+                    bool m_recordBackgroundHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_recordScene;
+                    bool m_recordSceneHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_recordLang;
+                    bool m_recordLangHasBeenSet;
 
                 };
             }

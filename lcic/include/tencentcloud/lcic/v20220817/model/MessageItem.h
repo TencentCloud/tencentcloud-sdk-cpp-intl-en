@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/lcic/v20220817/model/CustomMsgContent.h>
 
 
 namespace TencentCloud
@@ -121,6 +122,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ImageMessageHasBeenSet() const;
 
+                    /**
+                     * 获取Customize the message content. Vaild when message type=2.
+                     * @return CustomMessage Customize the message content. Vaild when message type=2.
+                     * 
+                     */
+                    CustomMsgContent GetCustomMessage() const;
+
+                    /**
+                     * 设置Customize the message content. Vaild when message type=2.
+                     * @param _customMessage Customize the message content. Vaild when message type=2.
+                     * 
+                     */
+                    void SetCustomMessage(const CustomMsgContent& _customMessage);
+
+                    /**
+                     * 判断参数 CustomMessage 是否已赋值
+                     * @return CustomMessage 是否已赋值
+                     * 
+                     */
+                    bool CustomMessageHasBeenSet() const;
+
                 private:
 
                     /**
@@ -143,6 +165,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_imageMessage;
                     bool m_imageMessageHasBeenSet;
+
+                    /**
+                     * Customize the message content. Vaild when message type=2.
+                     */
+                    CustomMsgContent m_customMessage;
+                    bool m_customMessageHasBeenSet;
 
                 };
             }

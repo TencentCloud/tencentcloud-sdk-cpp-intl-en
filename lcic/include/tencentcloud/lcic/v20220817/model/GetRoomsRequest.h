@@ -151,6 +151,27 @@ namespace TencentCloud
                      */
                     bool LimitHasBeenSet() const;
 
+                    /**
+                     * 获取Classroom status. Default display all classes, 0 is not started, 1 is in class, 2 is finished, 3 is expired
+                     * @return Status Classroom status. Default display all classes, 0 is not started, 1 is in class, 2 is finished, 3 is expired
+                     * 
+                     */
+                    std::vector<uint64_t> GetStatus() const;
+
+                    /**
+                     * 设置Classroom status. Default display all classes, 0 is not started, 1 is in class, 2 is finished, 3 is expired
+                     * @param _status Classroom status. Default display all classes, 0 is not started, 1 is in class, 2 is finished, 3 is expired
+                     * 
+                     */
+                    void SetStatus(const std::vector<uint64_t>& _status);
+
+                    /**
+                     * 判断参数 Status 是否已赋值
+                     * @return Status 是否已赋值
+                     * 
+                     */
+                    bool StatusHasBeenSet() const;
+
                 private:
 
                     /**
@@ -183,6 +204,12 @@ namespace TencentCloud
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
+
+                    /**
+                     * Classroom status. Default display all classes, 0 is not started, 1 is in class, 2 is finished, 3 is expired
+                     */
+                    std::vector<uint64_t> m_status;
+                    bool m_statusHasBeenSet;
 
                 };
             }
