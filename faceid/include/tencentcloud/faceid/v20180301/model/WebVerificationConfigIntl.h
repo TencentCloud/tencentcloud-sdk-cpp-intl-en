@@ -215,6 +215,111 @@ Example: HKIDCard
                      */
                     bool DisableCheckOcrWarningsHasBeenSet() const;
 
+                    /**
+                     * 获取Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;default value is 3
+                     * @return SecurityLevel Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;default value is 3
+                     * 
+                     */
+                    int64_t GetSecurityLevel() const;
+
+                    /**
+                     * 设置Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;default value is 3
+                     * @param _securityLevel Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;default value is 3
+                     * 
+                     */
+                    void SetSecurityLevel(const int64_t& _securityLevel);
+
+                    /**
+                     * 判断参数 SecurityLevel 是否已赋值
+                     * @return SecurityLevel 是否已赋值
+                     * 
+                     */
+                    bool SecurityLevelHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to skip the agreement page, the default is false. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page.
+                     * @return SkipPrivacyPolicy Whether to skip the agreement page, the default is false. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page.
+                     * 
+                     */
+                    bool GetSkipPrivacyPolicy() const;
+
+                    /**
+                     * 设置Whether to skip the agreement page, the default is false. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page.
+                     * @param _skipPrivacyPolicy Whether to skip the agreement page, the default is false. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page.
+                     * 
+                     */
+                    void SetSkipPrivacyPolicy(const bool& _skipPrivacyPolicy);
+
+                    /**
+                     * 判断参数 SkipPrivacyPolicy 是否已赋值
+                     * @return SkipPrivacyPolicy 是否已赋值
+                     * 
+                     */
+                    bool SkipPrivacyPolicyHasBeenSet() const;
+
+                    /**
+                     * 获取The default value is false. If it is false, the original ID image will be displayed. If it is true, the cut ID image will be displayed.
+                     * @return IdCardCutReturn The default value is false. If it is false, the original ID image will be displayed. If it is true, the cut ID image will be displayed.
+                     * 
+                     */
+                    bool GetIdCardCutReturn() const;
+
+                    /**
+                     * 设置The default value is false. If it is false, the original ID image will be displayed. If it is true, the cut ID image will be displayed.
+                     * @param _idCardCutReturn The default value is false. If it is false, the original ID image will be displayed. If it is true, the cut ID image will be displayed.
+                     * 
+                     */
+                    void SetIdCardCutReturn(const bool& _idCardCutReturn);
+
+                    /**
+                     * 判断参数 IdCardCutReturn 是否已赋值
+                     * @return IdCardCutReturn 是否已赋值
+                     * 
+                     */
+                    bool IdCardCutReturnHasBeenSet() const;
+
+                    /**
+                     * 获取Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72+1". If the format is incorrect, the default value color will be used.
+                     * @return ThemeColor Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72+1". If the format is incorrect, the default value color will be used.
+                     * 
+                     */
+                    std::string GetThemeColor() const;
+
+                    /**
+                     * 设置Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72+1". If the format is incorrect, the default value color will be used.
+                     * @param _themeColor Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72+1". If the format is incorrect, the default value color will be used.
+                     * 
+                     */
+                    void SetThemeColor(const std::string& _themeColor);
+
+                    /**
+                     * 判断参数 ThemeColor 是否已赋值
+                     * @return ThemeColor 是否已赋值
+                     * 
+                     */
+                    bool ThemeColorHasBeenSet() const;
+
+                    /**
+                     * 获取International language, the default value is en (English). Currently supported: th: Thai; en: English;
+                     * @return Language International language, the default value is en (English). Currently supported: th: Thai; en: English;
+                     * 
+                     */
+                    std::string GetLanguage() const;
+
+                    /**
+                     * 设置International language, the default value is en (English). Currently supported: th: Thai; en: English;
+                     * @param _language International language, the default value is en (English). Currently supported: th: Thai; en: English;
+                     * 
+                     */
+                    void SetLanguage(const std::string& _language);
+
+                    /**
+                     * 判断参数 Language 是否已赋值
+                     * @return Language 是否已赋值
+                     * 
+                     */
+                    bool LanguageHasBeenSet() const;
+
                 private:
 
                     /**
@@ -262,6 +367,36 @@ Example: HKIDCard
                      */
                     bool m_disableCheckOcrWarnings;
                     bool m_disableCheckOcrWarningsHasBeenSet;
+
+                    /**
+                     * Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;default value is 3
+                     */
+                    int64_t m_securityLevel;
+                    bool m_securityLevelHasBeenSet;
+
+                    /**
+                     * Whether to skip the agreement page, the default is false. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page.
+                     */
+                    bool m_skipPrivacyPolicy;
+                    bool m_skipPrivacyPolicyHasBeenSet;
+
+                    /**
+                     * The default value is false. If it is false, the original ID image will be displayed. If it is true, the cut ID image will be displayed.
+                     */
+                    bool m_idCardCutReturn;
+                    bool m_idCardCutReturnHasBeenSet;
+
+                    /**
+                     * Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72+1". If the format is incorrect, the default value color will be used.
+                     */
+                    std::string m_themeColor;
+                    bool m_themeColorHasBeenSet;
+
+                    /**
+                     * International language, the default value is en (English). Currently supported: th: Thai; en: English;
+                     */
+                    std::string m_language;
+                    bool m_languageHasBeenSet;
 
                 };
             }

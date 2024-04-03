@@ -25,7 +25,12 @@ WebVerificationConfigIntl::WebVerificationConfigIntl() :
     m_autoSkipHasBeenSet(false),
     m_checkModeHasBeenSet(false),
     m_iDCardTypeHasBeenSet(false),
-    m_disableCheckOcrWarningsHasBeenSet(false)
+    m_disableCheckOcrWarningsHasBeenSet(false),
+    m_securityLevelHasBeenSet(false),
+    m_skipPrivacyPolicyHasBeenSet(false),
+    m_idCardCutReturnHasBeenSet(false),
+    m_themeColorHasBeenSet(false),
+    m_languageHasBeenSet(false)
 {
 }
 
@@ -84,6 +89,56 @@ CoreInternalOutcome WebVerificationConfigIntl::Deserialize(const rapidjson::Valu
         m_disableCheckOcrWarningsHasBeenSet = true;
     }
 
+    if (value.HasMember("SecurityLevel") && !value["SecurityLevel"].IsNull())
+    {
+        if (!value["SecurityLevel"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `WebVerificationConfigIntl.SecurityLevel` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_securityLevel = value["SecurityLevel"].GetInt64();
+        m_securityLevelHasBeenSet = true;
+    }
+
+    if (value.HasMember("SkipPrivacyPolicy") && !value["SkipPrivacyPolicy"].IsNull())
+    {
+        if (!value["SkipPrivacyPolicy"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `WebVerificationConfigIntl.SkipPrivacyPolicy` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_skipPrivacyPolicy = value["SkipPrivacyPolicy"].GetBool();
+        m_skipPrivacyPolicyHasBeenSet = true;
+    }
+
+    if (value.HasMember("IdCardCutReturn") && !value["IdCardCutReturn"].IsNull())
+    {
+        if (!value["IdCardCutReturn"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `WebVerificationConfigIntl.IdCardCutReturn` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_idCardCutReturn = value["IdCardCutReturn"].GetBool();
+        m_idCardCutReturnHasBeenSet = true;
+    }
+
+    if (value.HasMember("ThemeColor") && !value["ThemeColor"].IsNull())
+    {
+        if (!value["ThemeColor"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `WebVerificationConfigIntl.ThemeColor` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_themeColor = string(value["ThemeColor"].GetString());
+        m_themeColorHasBeenSet = true;
+    }
+
+    if (value.HasMember("Language") && !value["Language"].IsNull())
+    {
+        if (!value["Language"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `WebVerificationConfigIntl.Language` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_language = string(value["Language"].GetString());
+        m_languageHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -129,6 +184,46 @@ void WebVerificationConfigIntl::ToJsonObject(rapidjson::Value &value, rapidjson:
         string key = "DisableCheckOcrWarnings";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_disableCheckOcrWarnings, allocator);
+    }
+
+    if (m_securityLevelHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SecurityLevel";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_securityLevel, allocator);
+    }
+
+    if (m_skipPrivacyPolicyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SkipPrivacyPolicy";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_skipPrivacyPolicy, allocator);
+    }
+
+    if (m_idCardCutReturnHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IdCardCutReturn";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_idCardCutReturn, allocator);
+    }
+
+    if (m_themeColorHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ThemeColor";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_themeColor.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_languageHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Language";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_language.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -212,5 +307,85 @@ void WebVerificationConfigIntl::SetDisableCheckOcrWarnings(const bool& _disableC
 bool WebVerificationConfigIntl::DisableCheckOcrWarningsHasBeenSet() const
 {
     return m_disableCheckOcrWarningsHasBeenSet;
+}
+
+int64_t WebVerificationConfigIntl::GetSecurityLevel() const
+{
+    return m_securityLevel;
+}
+
+void WebVerificationConfigIntl::SetSecurityLevel(const int64_t& _securityLevel)
+{
+    m_securityLevel = _securityLevel;
+    m_securityLevelHasBeenSet = true;
+}
+
+bool WebVerificationConfigIntl::SecurityLevelHasBeenSet() const
+{
+    return m_securityLevelHasBeenSet;
+}
+
+bool WebVerificationConfigIntl::GetSkipPrivacyPolicy() const
+{
+    return m_skipPrivacyPolicy;
+}
+
+void WebVerificationConfigIntl::SetSkipPrivacyPolicy(const bool& _skipPrivacyPolicy)
+{
+    m_skipPrivacyPolicy = _skipPrivacyPolicy;
+    m_skipPrivacyPolicyHasBeenSet = true;
+}
+
+bool WebVerificationConfigIntl::SkipPrivacyPolicyHasBeenSet() const
+{
+    return m_skipPrivacyPolicyHasBeenSet;
+}
+
+bool WebVerificationConfigIntl::GetIdCardCutReturn() const
+{
+    return m_idCardCutReturn;
+}
+
+void WebVerificationConfigIntl::SetIdCardCutReturn(const bool& _idCardCutReturn)
+{
+    m_idCardCutReturn = _idCardCutReturn;
+    m_idCardCutReturnHasBeenSet = true;
+}
+
+bool WebVerificationConfigIntl::IdCardCutReturnHasBeenSet() const
+{
+    return m_idCardCutReturnHasBeenSet;
+}
+
+string WebVerificationConfigIntl::GetThemeColor() const
+{
+    return m_themeColor;
+}
+
+void WebVerificationConfigIntl::SetThemeColor(const string& _themeColor)
+{
+    m_themeColor = _themeColor;
+    m_themeColorHasBeenSet = true;
+}
+
+bool WebVerificationConfigIntl::ThemeColorHasBeenSet() const
+{
+    return m_themeColorHasBeenSet;
+}
+
+string WebVerificationConfigIntl::GetLanguage() const
+{
+    return m_language;
+}
+
+void WebVerificationConfigIntl::SetLanguage(const string& _language)
+{
+    m_language = _language;
+    m_languageHasBeenSet = true;
+}
+
+bool WebVerificationConfigIntl::LanguageHasBeenSet() const
+{
+    return m_languageHasBeenSet;
 }
 
