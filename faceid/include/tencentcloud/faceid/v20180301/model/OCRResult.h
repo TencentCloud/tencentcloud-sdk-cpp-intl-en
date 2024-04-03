@@ -135,6 +135,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool RequestIdHasBeenSet() const;
 
+                    /**
+                     * 获取Base64 of cropped image of ID card
+                     * @return CardCutImageBase64 Base64 of cropped image of ID card
+                     * 
+                     */
+                    std::string GetCardCutImageBase64() const;
+
+                    /**
+                     * 设置Base64 of cropped image of ID card
+                     * @param _cardCutImageBase64 Base64 of cropped image of ID card
+                     * 
+                     */
+                    void SetCardCutImageBase64(const std::string& _cardCutImageBase64);
+
+                    /**
+                     * 判断参数 CardCutImageBase64 是否已赋值
+                     * @return CardCutImageBase64 是否已赋值
+                     * 
+                     */
+                    bool CardCutImageBase64HasBeenSet() const;
+
+                    /**
+                     * 获取Base64 of the cropped image on the reverse side of the ID card
+                     * @return CardBackCutImageBase64 Base64 of the cropped image on the reverse side of the ID card
+                     * 
+                     */
+                    std::string GetCardBackCutImageBase64() const;
+
+                    /**
+                     * 设置Base64 of the cropped image on the reverse side of the ID card
+                     * @param _cardBackCutImageBase64 Base64 of the cropped image on the reverse side of the ID card
+                     * 
+                     */
+                    void SetCardBackCutImageBase64(const std::string& _cardBackCutImageBase64);
+
+                    /**
+                     * 判断参数 CardBackCutImageBase64 是否已赋值
+                     * @return CardBackCutImageBase64 是否已赋值
+                     * 
+                     */
+                    bool CardBackCutImageBase64HasBeenSet() const;
+
                 private:
 
                     /**
@@ -161,6 +203,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_requestId;
                     bool m_requestIdHasBeenSet;
+
+                    /**
+                     * Base64 of cropped image of ID card
+                     */
+                    std::string m_cardCutImageBase64;
+                    bool m_cardCutImageBase64HasBeenSet;
+
+                    /**
+                     * Base64 of the cropped image on the reverse side of the ID card
+                     */
+                    std::string m_cardBackCutImageBase64;
+                    bool m_cardBackCutImageBase64HasBeenSet;
 
                 };
             }
