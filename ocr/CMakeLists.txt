@@ -75,6 +75,7 @@ set(ocr_public_header_model
   include/tencentcloud/ocr/v20181119/model/RecognizeThaiIDCardOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/MotorVehicleSaleInvoice.h
   include/tencentcloud/ocr/v20181119/model/TableOCRRequest.h
+  include/tencentcloud/ocr/v20181119/model/PassportRecognizeInfos.h
   include/tencentcloud/ocr/v20181119/model/TaxiTicket.h
   include/tencentcloud/ocr/v20181119/model/LicensePlateOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/GeneralBasicOCRRequest.h
@@ -176,6 +177,7 @@ set(ocr_src
   src/v20181119/model/RecognizeThaiIDCardOCRRequest.cpp
   src/v20181119/model/MotorVehicleSaleInvoice.cpp
   src/v20181119/model/TableOCRRequest.cpp
+  src/v20181119/model/PassportRecognizeInfos.cpp
   src/v20181119/model/TaxiTicket.cpp
   src/v20181119/model/LicensePlateOCRRequest.cpp
   src/v20181119/model/GeneralBasicOCRRequest.cpp

@@ -44,19 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`zone-name`: <br>Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li>
-                     * @return Filters Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`zone-name`: <br>Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li>
+                     * 获取Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>zone-name: Filter by site name.</li>
+                     * @return Filters Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>zone-name: Filter by site name.</li>
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`zone-name`: <br>Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li>
-                     * @param _filters Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`zone-name`: <br>Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li>
+                     * 设置Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>zone-name: Filter by site name.</li>
+                     * @param _filters Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>zone-name: Filter by site name.</li>
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -113,8 +109,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`zone-name`: <br>Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li>
+                     * Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>zone-name: Filter by site name.</li>
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

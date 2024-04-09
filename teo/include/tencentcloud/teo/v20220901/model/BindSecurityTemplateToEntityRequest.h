@@ -118,15 +118,31 @@ namespace TencentCloud
                     bool OperateHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the policy template ID to bind or unbind.
-                     * @return TemplateId Specifies the policy template ID to bind or unbind.
+                     * 获取Specifies the ID of the policy template or the site's global policy to be bound or unbound.
+- To bind to a policy template, or unbind from it, specify the policy template ID.
+- To bind to the site's global policy, or unbind from it, use the @ZoneLevel@domain parameter value.
+
+Note: After unbinding, the domain name will use an independent policy and rule quota will be calculated separately. Please make sure there is sufficient rule quota before unbinding.
+                     * @return TemplateId Specifies the ID of the policy template or the site's global policy to be bound or unbound.
+- To bind to a policy template, or unbind from it, specify the policy template ID.
+- To bind to the site's global policy, or unbind from it, use the @ZoneLevel@domain parameter value.
+
+Note: After unbinding, the domain name will use an independent policy and rule quota will be calculated separately. Please make sure there is sufficient rule quota before unbinding.
                      * 
                      */
                     std::string GetTemplateId() const;
 
                     /**
-                     * 设置Specifies the policy template ID to bind or unbind.
-                     * @param _templateId Specifies the policy template ID to bind or unbind.
+                     * 设置Specifies the ID of the policy template or the site's global policy to be bound or unbound.
+- To bind to a policy template, or unbind from it, specify the policy template ID.
+- To bind to the site's global policy, or unbind from it, use the @ZoneLevel@domain parameter value.
+
+Note: After unbinding, the domain name will use an independent policy and rule quota will be calculated separately. Please make sure there is sufficient rule quota before unbinding.
+                     * @param _templateId Specifies the ID of the policy template or the site's global policy to be bound or unbound.
+- To bind to a policy template, or unbind from it, specify the policy template ID.
+- To bind to the site's global policy, or unbind from it, use the @ZoneLevel@domain parameter value.
+
+Note: After unbinding, the domain name will use an independent policy and rule quota will be calculated separately. Please make sure there is sufficient rule quota before unbinding.
                      * 
                      */
                     void SetTemplateId(const std::string& _templateId);
@@ -191,7 +207,11 @@ namespace TencentCloud
                     bool m_operateHasBeenSet;
 
                     /**
-                     * Specifies the policy template ID to bind or unbind.
+                     * Specifies the ID of the policy template or the site's global policy to be bound or unbound.
+- To bind to a policy template, or unbind from it, specify the policy template ID.
+- To bind to the site's global policy, or unbind from it, use the @ZoneLevel@domain parameter value.
+
+Note: After unbinding, the domain name will use an independent policy and rule quota will be calculated separately. Please make sure there is sufficient rule quota before unbinding.
                      */
                     std::string m_templateId;
                     bool m_templateIdHasBeenSet;

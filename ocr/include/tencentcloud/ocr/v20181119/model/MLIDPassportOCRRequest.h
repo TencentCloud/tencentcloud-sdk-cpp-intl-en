@@ -64,15 +64,19 @@ namespace TencentCloud
                     bool ImageBase64HasBeenSet() const;
 
                     /**
-                     * 获取Whether to return an image. Default value: false.
-                     * @return RetImage Whether to return an image. Default value: false.
+                     * 获取Whether to return an image. 
+Default value: false.
+                     * @return RetImage Whether to return an image. 
+Default value: false.
                      * 
                      */
                     bool GetRetImage() const;
 
                     /**
-                     * 设置Whether to return an image. Default value: false.
-                     * @param _retImage Whether to return an image. Default value: false.
+                     * 设置Whether to return an image. 
+Default value: false.
+                     * @param _retImage Whether to return an image. 
+Default value: false.
                      * 
                      */
                     void SetRetImage(const bool& _retImage);
@@ -84,6 +88,43 @@ namespace TencentCloud
                      */
                     bool RetImageHasBeenSet() const;
 
+                    /**
+                     * 获取URL address of image. (This field is not supported outside Chinese mainland)
+Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
+Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+The download speed and stability of non-Tencent Cloud URLs may be low.
+                     * @return ImageUrl URL address of image. (This field is not supported outside Chinese mainland)
+Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
+Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+The download speed and stability of non-Tencent Cloud URLs may be low.
+                     * 
+                     */
+                    std::string GetImageUrl() const;
+
+                    /**
+                     * 设置URL address of image. (This field is not supported outside Chinese mainland)
+Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
+Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+The download speed and stability of non-Tencent Cloud URLs may be low.
+                     * @param _imageUrl URL address of image. (This field is not supported outside Chinese mainland)
+Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
+Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+The download speed and stability of non-Tencent Cloud URLs may be low.
+                     * 
+                     */
+                    void SetImageUrl(const std::string& _imageUrl);
+
+                    /**
+                     * 判断参数 ImageUrl 是否已赋值
+                     * @return ImageUrl 是否已赋值
+                     * 
+                     */
+                    bool ImageUrlHasBeenSet() const;
+
                 private:
 
                     /**
@@ -93,10 +134,21 @@ namespace TencentCloud
                     bool m_imageBase64HasBeenSet;
 
                     /**
-                     * Whether to return an image. Default value: false.
+                     * Whether to return an image. 
+Default value: false.
                      */
                     bool m_retImage;
                     bool m_retImageHasBeenSet;
+
+                    /**
+                     * URL address of image. (This field is not supported outside Chinese mainland)
+Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
+Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+The download speed and stability of non-Tencent Cloud URLs may be low.
+                     */
+                    std::string m_imageUrl;
+                    bool m_imageUrlHasBeenSet;
 
                 };
             }

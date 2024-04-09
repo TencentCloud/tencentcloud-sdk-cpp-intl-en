@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/teo/v20220901/model/DescribeTopL7AnalysisDataResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeSecurityIPGroupInfoResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -23,13 +23,13 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Teo::V20220901::Model;
 using namespace std;
 
-DescribeTopL7AnalysisDataResponse::DescribeTopL7AnalysisDataResponse() :
+DescribeSecurityIPGroupInfoResponse::DescribeSecurityIPGroupInfoResponse() :
     m_totalCountHasBeenSet(false),
-    m_dataHasBeenSet(false)
+    m_iPGroupsHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome DescribeTopL7AnalysisDataResponse::Deserialize(const string &payload)
+CoreInternalOutcome DescribeSecurityIPGroupInfoResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -73,31 +73,31 @@ CoreInternalOutcome DescribeTopL7AnalysisDataResponse::Deserialize(const string 
         m_totalCountHasBeenSet = true;
     }
 
-    if (rsp.HasMember("Data") && !rsp["Data"].IsNull())
+    if (rsp.HasMember("IPGroups") && !rsp["IPGroups"].IsNull())
     {
-        if (!rsp["Data"].IsArray())
-            return CoreInternalOutcome(Core::Error("response `Data` is not array type"));
+        if (!rsp["IPGroups"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `IPGroups` is not array type"));
 
-        const rapidjson::Value &tmpValue = rsp["Data"];
+        const rapidjson::Value &tmpValue = rsp["IPGroups"];
         for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
-            TopDataRecord item;
+            IPGroup item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
             if (!outcome.IsSuccess())
             {
                 outcome.GetError().SetRequestId(requestId);
                 return outcome;
             }
-            m_data.push_back(item);
+            m_iPGroups.push_back(item);
         }
-        m_dataHasBeenSet = true;
+        m_iPGroupsHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string DescribeTopL7AnalysisDataResponse::ToJsonString() const
+string DescribeSecurityIPGroupInfoResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
@@ -111,15 +111,15 @@ string DescribeTopL7AnalysisDataResponse::ToJsonString() const
         value.AddMember(iKey, m_totalCount, allocator);
     }
 
-    if (m_dataHasBeenSet)
+    if (m_iPGroupsHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Data";
+        string key = "IPGroups";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
-        for (auto itr = m_data.begin(); itr != m_data.end(); ++itr, ++i)
+        for (auto itr = m_iPGroups.begin(); itr != m_iPGroups.end(); ++itr, ++i)
         {
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
@@ -138,24 +138,24 @@ string DescribeTopL7AnalysisDataResponse::ToJsonString() const
 }
 
 
-uint64_t DescribeTopL7AnalysisDataResponse::GetTotalCount() const
+uint64_t DescribeSecurityIPGroupInfoResponse::GetTotalCount() const
 {
     return m_totalCount;
 }
 
-bool DescribeTopL7AnalysisDataResponse::TotalCountHasBeenSet() const
+bool DescribeSecurityIPGroupInfoResponse::TotalCountHasBeenSet() const
 {
     return m_totalCountHasBeenSet;
 }
 
-vector<TopDataRecord> DescribeTopL7AnalysisDataResponse::GetData() const
+vector<IPGroup> DescribeSecurityIPGroupInfoResponse::GetIPGroups() const
 {
-    return m_data;
+    return m_iPGroups;
 }
 
-bool DescribeTopL7AnalysisDataResponse::DataHasBeenSet() const
+bool DescribeSecurityIPGroupInfoResponse::IPGroupsHasBeenSet() const
 {
-    return m_dataHasBeenSet;
+    return m_iPGroupsHasBeenSet;
 }
 
 

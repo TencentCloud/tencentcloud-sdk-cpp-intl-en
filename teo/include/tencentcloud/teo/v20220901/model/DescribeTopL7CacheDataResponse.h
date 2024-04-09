@@ -45,6 +45,20 @@ namespace TencentCloud
 
 
                     /**
+                     * 获取Total number of query results.
+                     * @return TotalCount Total number of query results.
+                     * 
+                     */
+                    uint64_t GetTotalCount() const;
+
+                    /**
+                     * 判断参数 TotalCount 是否已赋值
+                     * @return TotalCount 是否已赋值
+                     * 
+                     */
+                    bool TotalCountHasBeenSet() const;
+
+                    /**
                      * 获取The list of cached L7 top-ranked traffic data.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Data The list of cached L7 top-ranked traffic data.
@@ -60,21 +74,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool DataHasBeenSet() const;
 
-                    /**
-                     * 获取Total number of query results.
-                     * @return TotalCount Total number of query results.
-                     * 
-                     */
-                    uint64_t GetTotalCount() const;
-
-                    /**
-                     * 判断参数 TotalCount 是否已赋值
-                     * @return TotalCount 是否已赋值
-                     * 
-                     */
-                    bool TotalCountHasBeenSet() const;
-
                 private:
+
+                    /**
+                     * Total number of query results.
+                     */
+                    uint64_t m_totalCount;
+                    bool m_totalCountHasBeenSet;
 
                     /**
                      * The list of cached L7 top-ranked traffic data.
@@ -82,12 +88,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<TopDataRecord> m_data;
                     bool m_dataHasBeenSet;
-
-                    /**
-                     * Total number of query results.
-                     */
-                    uint64_t m_totalCount;
-                    bool m_totalCountHasBeenSet;
 
                 };
             }

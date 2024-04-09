@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/ocr/v20181119/model/PassportRecognizeInfos.h>
 
 
 namespace TencentCloud
@@ -143,12 +144,12 @@ namespace TencentCloud
 
                     /**
                      * 获取Alarm codes
--9103 Alarm for spoofed document
--9102 Alarm for photocopied document (including black & white and color ones)
+-9102 Alarm for photocopy on a paper document (including black & white and color ones)
+-9103 Alarm for photocopy on an electronic device
 -9106 Alarm for covered card
                      * @return Warn Alarm codes
--9103 Alarm for spoofed document
--9102 Alarm for photocopied document (including black & white and color ones)
+-9102 Alarm for photocopy on a paper document (including black & white and color ones)
+-9103 Alarm for photocopy on an electronic device
 -9106 Alarm for covered card
                      * 
                      */
@@ -265,6 +266,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool GivenNameHasBeenSet() const;
 
+                    /**
+                     * 获取Type (in Machine Readable Zone)
+                     * @return Type Type (in Machine Readable Zone)
+                     * 
+                     */
+                    std::string GetType() const;
+
+                    /**
+                     * 判断参数 Type 是否已赋值
+                     * @return Type 是否已赋值
+                     * 
+                     */
+                    bool TypeHasBeenSet() const;
+
+                    /**
+                     * 获取Document content in Information Zone
+                     * @return PassportRecognizeInfos Document content in Information Zone
+                     * 
+                     */
+                    PassportRecognizeInfos GetPassportRecognizeInfos() const;
+
+                    /**
+                     * 判断参数 PassportRecognizeInfos 是否已赋值
+                     * @return PassportRecognizeInfos 是否已赋值
+                     * 
+                     */
+                    bool PassportRecognizeInfosHasBeenSet() const;
+
                 private:
 
                     /**
@@ -311,8 +340,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Alarm codes
--9103 Alarm for spoofed document
--9102 Alarm for photocopied document (including black & white and color ones)
+-9102 Alarm for photocopy on a paper document (including black & white and color ones)
+-9103 Alarm for photocopy on an electronic device
 -9106 Alarm for covered card
                      */
                     std::vector<int64_t> m_warn;
@@ -363,6 +392,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_givenName;
                     bool m_givenNameHasBeenSet;
+
+                    /**
+                     * Type (in Machine Readable Zone)
+                     */
+                    std::string m_type;
+                    bool m_typeHasBeenSet;
+
+                    /**
+                     * Document content in Information Zone
+                     */
+                    PassportRecognizeInfos m_passportRecognizeInfos;
+                    bool m_passportRecognizeInfosHasBeenSet;
 
                 };
             }

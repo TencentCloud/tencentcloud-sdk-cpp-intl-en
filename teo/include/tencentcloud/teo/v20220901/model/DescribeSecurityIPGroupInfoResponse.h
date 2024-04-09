@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_TEO_V20220901_MODEL_DESCRIBETIMINGL7CACHEDATARESPONSE_H_
-#define TENCENTCLOUD_TEO_V20220901_MODEL_DESCRIBETIMINGL7CACHEDATARESPONSE_H_
+#ifndef TENCENTCLOUD_TEO_V20220901_MODEL_DESCRIBESECURITYIPGROUPINFORESPONSE_H_
+#define TENCENTCLOUD_TEO_V20220901_MODEL_DESCRIBESECURITYIPGROUPINFORESPONSE_H_
 
 #include <string>
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/teo/v20220901/model/TimingDataRecord.h>
+#include <tencentcloud/teo/v20220901/model/IPGroup.h>
 
 
 namespace TencentCloud
@@ -33,20 +33,20 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * DescribeTimingL7CacheData response structure.
+                * DescribeSecurityIPGroupInfo response structure.
                 */
-                class DescribeTimingL7CacheDataResponse : public AbstractModel
+                class DescribeSecurityIPGroupInfoResponse : public AbstractModel
                 {
                 public:
-                    DescribeTimingL7CacheDataResponse();
-                    ~DescribeTimingL7CacheDataResponse() = default;
+                    DescribeSecurityIPGroupInfoResponse();
+                    ~DescribeSecurityIPGroupInfoResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Total number of query results.
-                     * @return TotalCount Total number of query results.
+                     * 获取The number of IP groups that meet the conditions.
+                     * @return TotalCount The number of IP groups that meet the conditions.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,35 +59,32 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取The list of cached L7 time-series data.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Data The list of cached L7 time-series data.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Detailed configuration information of the IP group, including the ID, name, and IP/network segment list of each IP group.
+                     * @return IPGroups Detailed configuration information of the IP group, including the ID, name, and IP/network segment list of each IP group.
                      * 
                      */
-                    std::vector<TimingDataRecord> GetData() const;
+                    std::vector<IPGroup> GetIPGroups() const;
 
                     /**
-                     * 判断参数 Data 是否已赋值
-                     * @return Data 是否已赋值
+                     * 判断参数 IPGroups 是否已赋值
+                     * @return IPGroups 是否已赋值
                      * 
                      */
-                    bool DataHasBeenSet() const;
+                    bool IPGroupsHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Total number of query results.
+                     * The number of IP groups that meet the conditions.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * The list of cached L7 time-series data.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Detailed configuration information of the IP group, including the ID, name, and IP/network segment list of each IP group.
                      */
-                    std::vector<TimingDataRecord> m_data;
-                    bool m_dataHasBeenSet;
+                    std::vector<IPGroup> m_iPGroups;
+                    bool m_iPGroupsHasBeenSet;
 
                 };
             }
@@ -95,4 +92,4 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 }
 
-#endif // !TENCENTCLOUD_TEO_V20220901_MODEL_DESCRIBETIMINGL7CACHEDATARESPONSE_H_
+#endif // !TENCENTCLOUD_TEO_V20220901_MODEL_DESCRIBESECURITYIPGROUPINFORESPONSE_H_

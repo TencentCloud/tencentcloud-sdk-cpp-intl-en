@@ -283,19 +283,15 @@ namespace TencentCloud
                     bool SampleHasBeenSet() const;
 
                     /**
-                     * 获取The configuration information of CLS.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CLS The configuration information of CLS.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CLS Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     CLSTopic GetCLS() const;
 
                     /**
-                     * 设置The configuration information of CLS.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cLS The configuration information of CLS.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _cLS Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCLS(const CLSTopic& _cLS);
@@ -308,19 +304,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CLSHasBeenSet() const;
 
                     /**
-                     * 获取The configuration information of the custom HTTP service.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CustomEndpoint The configuration information of the custom HTTP service.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CustomEndpoint Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     CustomEndpoint GetCustomEndpoint() const;
 
                     /**
-                     * 设置The configuration information of the custom HTTP service.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _customEndpoint The configuration information of the custom HTTP service.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _customEndpoint Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCustomEndpoint(const CustomEndpoint& _customEndpoint);
@@ -333,19 +325,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CustomEndpointHasBeenSet() const;
 
                     /**
-                     * 获取The configuration information of the AWS S3-compatible bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return S3 The configuration information of the AWS S3-compatible bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return S3 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     S3 GetS3() const;
 
                     /**
-                     * 设置The configuration information of the AWS S3-compatible bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _s3 The configuration information of the AWS S3-compatible bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _s3 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetS3(const S3& _s3);
@@ -468,22 +456,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_sampleHasBeenSet;
 
                     /**
-                     * The configuration information of CLS.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     CLSTopic m_cLS;
                     bool m_cLSHasBeenSet;
 
                     /**
-                     * The configuration information of the custom HTTP service.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     CustomEndpoint m_customEndpoint;
                     bool m_customEndpointHasBeenSet;
 
                     /**
-                     * The configuration information of the AWS S3-compatible bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     S3 m_s3;
                     bool m_s3HasBeenSet;

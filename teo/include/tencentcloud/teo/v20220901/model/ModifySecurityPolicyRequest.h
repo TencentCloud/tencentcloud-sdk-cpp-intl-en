@@ -86,15 +86,23 @@ namespace TencentCloud
                     bool SecurityConfigHasBeenSet() const;
 
                     /**
-                     * 获取The subdomain name/L4 proxy. You must specify either "Entity" or "TemplateId".
-                     * @return Entity The subdomain name/L4 proxy. You must specify either "Entity" or "TemplateId".
+                     * 获取Subdomain/application name.
+
+Note: When both this parameter and the TemplateId parameter are specified, this parameter will not take effect. Do not specify this parameter and the TemplateId parameter at the same time.
+                     * @return Entity Subdomain/application name.
+
+Note: When both this parameter and the TemplateId parameter are specified, this parameter will not take effect. Do not specify this parameter and the TemplateId parameter at the same time.
                      * 
                      */
                     std::string GetEntity() const;
 
                     /**
-                     * 设置The subdomain name/L4 proxy. You must specify either "Entity" or "TemplateId".
-                     * @param _entity The subdomain name/L4 proxy. You must specify either "Entity" or "TemplateId".
+                     * 设置Subdomain/application name.
+
+Note: When both this parameter and the TemplateId parameter are specified, this parameter will not take effect. Do not specify this parameter and the TemplateId parameter at the same time.
+                     * @param _entity Subdomain/application name.
+
+Note: When both this parameter and the TemplateId parameter are specified, this parameter will not take effect. Do not specify this parameter and the TemplateId parameter at the same time.
                      * 
                      */
                     void SetEntity(const std::string& _entity);
@@ -107,15 +115,31 @@ namespace TencentCloud
                     bool EntityHasBeenSet() const;
 
                     /**
-                     * 获取The template ID. You must specify either this field or "Entity".
-                     * @return TemplateId The template ID. You must specify either this field or "Entity".
+                     * 获取Specifies the policy template ID, or the site's global policy.
+- To configure a policy template, specify the policy template ID.
+- To configure the site's global policy, use the @ZoneLevel@Domain parameter value.
+
+Note: When this parameter is used, the Entity parameter will not take effect. Do not use this parameter and the Entity parameter at the same time.
+                     * @return TemplateId Specifies the policy template ID, or the site's global policy.
+- To configure a policy template, specify the policy template ID.
+- To configure the site's global policy, use the @ZoneLevel@Domain parameter value.
+
+Note: When this parameter is used, the Entity parameter will not take effect. Do not use this parameter and the Entity parameter at the same time.
                      * 
                      */
                     std::string GetTemplateId() const;
 
                     /**
-                     * 设置The template ID. You must specify either this field or "Entity".
-                     * @param _templateId The template ID. You must specify either this field or "Entity".
+                     * 设置Specifies the policy template ID, or the site's global policy.
+- To configure a policy template, specify the policy template ID.
+- To configure the site's global policy, use the @ZoneLevel@Domain parameter value.
+
+Note: When this parameter is used, the Entity parameter will not take effect. Do not use this parameter and the Entity parameter at the same time.
+                     * @param _templateId Specifies the policy template ID, or the site's global policy.
+- To configure a policy template, specify the policy template ID.
+- To configure the site's global policy, use the @ZoneLevel@Domain parameter value.
+
+Note: When this parameter is used, the Entity parameter will not take effect. Do not use this parameter and the Entity parameter at the same time.
                      * 
                      */
                     void SetTemplateId(const std::string& _templateId);
@@ -142,13 +166,19 @@ namespace TencentCloud
                     bool m_securityConfigHasBeenSet;
 
                     /**
-                     * The subdomain name/L4 proxy. You must specify either "Entity" or "TemplateId".
+                     * Subdomain/application name.
+
+Note: When both this parameter and the TemplateId parameter are specified, this parameter will not take effect. Do not specify this parameter and the TemplateId parameter at the same time.
                      */
                     std::string m_entity;
                     bool m_entityHasBeenSet;
 
                     /**
-                     * The template ID. You must specify either this field or "Entity".
+                     * Specifies the policy template ID, or the site's global policy.
+- To configure a policy template, specify the policy template ID.
+- To configure the site's global policy, use the @ZoneLevel@Domain parameter value.
+
+Note: When this parameter is used, the Entity parameter will not take effect. Do not use this parameter and the Entity parameter at the same time.
                      */
                     std::string m_templateId;
                     bool m_templateIdHasBeenSet;

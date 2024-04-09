@@ -106,23 +106,23 @@ namespace TencentCloud
                     bool RuleIdHasBeenSet() const;
 
                     /**
-                     * 获取The origin type. Values:
-<li>`custom`: Specified origins</li>
-<li>`origins`: Origin group</li></li>The original configuration will apply if this field is not specified.
-                     * @return OriginType The origin type. Values:
-<li>`custom`: Specified origins</li>
-<li>`origins`: Origin group</li></li>The original configuration will apply if this field is not specified.
+                     * 获取Origin server type. Valid values:
+<li>custom: Manually added;</li>
+<li>origins: Origin server group.</li>
+                     * @return OriginType Origin server type. Valid values:
+<li>custom: Manually added;</li>
+<li>origins: Origin server group.</li>
                      * 
                      */
                     std::string GetOriginType() const;
 
                     /**
-                     * 设置The origin type. Values:
-<li>`custom`: Specified origins</li>
-<li>`origins`: Origin group</li></li>The original configuration will apply if this field is not specified.
-                     * @param _originType The origin type. Values:
-<li>`custom`: Specified origins</li>
-<li>`origins`: Origin group</li></li>The original configuration will apply if this field is not specified.
+                     * 设置Origin server type. Valid values:
+<li>custom: Manually added;</li>
+<li>origins: Origin server group.</li>
+                     * @param _originType Origin server type. Valid values:
+<li>custom: Manually added;</li>
+<li>origins: Origin server group.</li>
                      * 
                      */
                     void SetOriginType(const std::string& _originType);
@@ -387,9 +387,9 @@ The original configuration will apply if this field is not specified.
                     bool m_ruleIdHasBeenSet;
 
                     /**
-                     * The origin type. Values:
-<li>`custom`: Specified origins</li>
-<li>`origins`: Origin group</li></li>The original configuration will apply if this field is not specified.
+                     * Origin server type. Valid values:
+<li>custom: Manually added;</li>
+<li>origins: Origin server group.</li>
                      */
                     std::string m_originType;
                     bool m_originTypeHasBeenSet;
