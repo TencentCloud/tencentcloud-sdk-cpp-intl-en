@@ -45,82 +45,78 @@ namespace TencentCloud
 
                     /**
                      * 获取<li> name
-Filter by **notification group name**.
-Type: String
-Required: No
+Filter by Notification Channel Group Name.Type: String
+Required: No</li>
 <li> alarmNoticeId
-Filter by **notification group ID**.
-Type: String
-Required: No
+Filter by Notification Channel Group ID.Type: String
+Required: No</li>
 <li> uid
-Filter by **recipient ID**.
-Type: String
-Required: No
+Filter by Receiving User ID.Type: String
+Required: No</li>
 <li> groupId
-Filter by **recipient ID**.
-Type: String
-Required: No
+Filter by Receiving User Group ID.Type: String
+Required: No</li>
 
-Each request can have up to 10 `Filters` and 5 `Filter.Values`.
+<li> deliverFlag
+Filter by Delivery Status.Type: String
+Required: No
+Optional Values: "1": Not Enabled, "2": Enabled, "3": Delivery Exception</li>The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
                      * @return Filters <li> name
-Filter by **notification group name**.
-Type: String
-Required: No
+Filter by Notification Channel Group Name.Type: String
+Required: No</li>
 <li> alarmNoticeId
-Filter by **notification group ID**.
-Type: String
-Required: No
+Filter by Notification Channel Group ID.Type: String
+Required: No</li>
 <li> uid
-Filter by **recipient ID**.
-Type: String
-Required: No
+Filter by Receiving User ID.Type: String
+Required: No</li>
 <li> groupId
-Filter by **recipient ID**.
-Type: String
-Required: No
+Filter by Receiving User Group ID.Type: String
+Required: No</li>
 
-Each request can have up to 10 `Filters` and 5 `Filter.Values`.
+<li> deliverFlag
+Filter by Delivery Status.Type: String
+Required: No
+Optional Values: "1": Not Enabled, "2": Enabled, "3": Delivery Exception</li>The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置<li> name
-Filter by **notification group name**.
-Type: String
-Required: No
+Filter by Notification Channel Group Name.Type: String
+Required: No</li>
 <li> alarmNoticeId
-Filter by **notification group ID**.
-Type: String
-Required: No
+Filter by Notification Channel Group ID.Type: String
+Required: No</li>
 <li> uid
-Filter by **recipient ID**.
-Type: String
-Required: No
+Filter by Receiving User ID.Type: String
+Required: No</li>
 <li> groupId
-Filter by **recipient ID**.
-Type: String
-Required: No
+Filter by Receiving User Group ID.Type: String
+Required: No</li>
 
-Each request can have up to 10 `Filters` and 5 `Filter.Values`.
+<li> deliverFlag
+Filter by Delivery Status.Type: String
+Required: No
+Optional Values: "1": Not Enabled, "2": Enabled, "3": Delivery Exception</li>The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
                      * @param _filters <li> name
-Filter by **notification group name**.
-Type: String
-Required: No
+Filter by Notification Channel Group Name.Type: String
+Required: No</li>
 <li> alarmNoticeId
-Filter by **notification group ID**.
-Type: String
-Required: No
+Filter by Notification Channel Group ID.Type: String
+Required: No</li>
 <li> uid
-Filter by **recipient ID**.
-Type: String
-Required: No
+Filter by Receiving User ID.Type: String
+Required: No</li>
 <li> groupId
-Filter by **recipient ID**.
-Type: String
-Required: No
+Filter by Receiving User Group ID.Type: String
+Required: No</li>
 
-Each request can have up to 10 `Filters` and 5 `Filter.Values`.
+<li> deliverFlag
+Filter by Delivery Status.Type: String
+Required: No
+Optional Values: "1": Not Enabled, "2": Enabled, "3": Delivery Exception</li>The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -178,23 +174,22 @@ Each request can have up to 10 `Filters` and 5 `Filter.Values`.
 
                     /**
                      * <li> name
-Filter by **notification group name**.
-Type: String
-Required: No
+Filter by Notification Channel Group Name.Type: String
+Required: No</li>
 <li> alarmNoticeId
-Filter by **notification group ID**.
-Type: String
-Required: No
+Filter by Notification Channel Group ID.Type: String
+Required: No</li>
 <li> uid
-Filter by **recipient ID**.
-Type: String
-Required: No
+Filter by Receiving User ID.Type: String
+Required: No</li>
 <li> groupId
-Filter by **recipient ID**.
-Type: String
-Required: No
+Filter by Receiving User Group ID.Type: String
+Required: No</li>
 
-Each request can have up to 10 `Filters` and 5 `Filter.Values`.
+<li> deliverFlag
+Filter by Delivery Status.Type: String
+Required: No
+Optional Values: "1": Not Enabled, "2": Enabled, "3": Delivery Exception</li>The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

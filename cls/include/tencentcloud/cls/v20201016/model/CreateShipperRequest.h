@@ -318,6 +318,27 @@ namespace TencentCloud
                      */
                     bool EndTimeHasBeenSet() const;
 
+                    /**
+                     * 获取COS bucket storage type
+                     * @return StorageType COS bucket storage type
+                     * 
+                     */
+                    std::string GetStorageType() const;
+
+                    /**
+                     * 设置COS bucket storage type
+                     * @param _storageType COS bucket storage type
+                     * 
+                     */
+                    void SetStorageType(const std::string& _storageType);
+
+                    /**
+                     * 判断参数 StorageType 是否已赋值
+                     * @return StorageType 是否已赋值
+                     * 
+                     */
+                    bool StorageTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -397,6 +418,12 @@ namespace TencentCloud
                      */
                     int64_t m_endTime;
                     bool m_endTimeHasBeenSet;
+
+                    /**
+                     * COS bucket storage type
+                     */
+                    std::string m_storageType;
+                    bool m_storageTypeHasBeenSet;
 
                 };
             }

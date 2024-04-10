@@ -115,6 +115,31 @@ Queries all logs using * or an empty string
                     bool QueryHasBeenSet() const;
 
                     /**
+                     * 获取Retrieval syntax rule, default is 0, recommended to use 1 (CQL syntax).0: Lucene syntax, 1: CQL syntax.
+For detailed explanation, refer to <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Retrieve Syntax Rules</a>
+                     * @return SyntaxRule Retrieval syntax rule, default is 0, recommended to use 1 (CQL syntax).0: Lucene syntax, 1: CQL syntax.
+For detailed explanation, refer to <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Retrieve Syntax Rules</a>
+                     * 
+                     */
+                    uint64_t GetSyntaxRule() const;
+
+                    /**
+                     * 设置Retrieval syntax rule, default is 0, recommended to use 1 (CQL syntax).0: Lucene syntax, 1: CQL syntax.
+For detailed explanation, refer to <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Retrieve Syntax Rules</a>
+                     * @param _syntaxRule Retrieval syntax rule, default is 0, recommended to use 1 (CQL syntax).0: Lucene syntax, 1: CQL syntax.
+For detailed explanation, refer to <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Retrieve Syntax Rules</a>
+                     * 
+                     */
+                    void SetSyntaxRule(const uint64_t& _syntaxRule);
+
+                    /**
+                     * 判断参数 SyntaxRule 是否已赋值
+                     * @return SyntaxRule 是否已赋值
+                     * 
+                     */
+                    bool SyntaxRuleHasBeenSet() const;
+
+                    /**
                      * 获取- The ID of the log topic to be searched for. Only one log topic can be specified.
 - To search for multiple log topics at a time, use the `Topics` parameter.
                      * @return TopicId - The ID of the log topic to be searched for. Only one log topic can be specified.
@@ -140,27 +165,44 @@ Queries all logs using * or an empty string
                     bool TopicIdHasBeenSet() const;
 
                     /**
-                     * 获取The number of raw logs returned by a single query. Maximum value: 1000. You need to use `Context` to continue to get logs.
-Notes:
-* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
-* To limit the number of analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
-                     * @return Limit The number of raw logs returned by a single query. Maximum value: 1000. You need to use `Context` to continue to get logs.
-Notes:
-* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
-* To limit the number of analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
+                     * 获取- The IDs of the log topics (up to 20) to be searched for.
+- To search for a single log topic, use the `TopicId` parameter.
+- You cannot use both `TopicId` and `Topics`.
+                     * @return Topics - The IDs of the log topics (up to 20) to be searched for.
+- To search for a single log topic, use the `TopicId` parameter.
+- You cannot use both `TopicId` and `Topics`.
+                     * 
+                     */
+                    std::vector<MultiTopicSearchInformation> GetTopics() const;
+
+                    /**
+                     * 设置- The IDs of the log topics (up to 20) to be searched for.
+- To search for a single log topic, use the `TopicId` parameter.
+- You cannot use both `TopicId` and `Topics`.
+                     * @param _topics - The IDs of the log topics (up to 20) to be searched for.
+- To search for a single log topic, use the `TopicId` parameter.
+- You cannot use both `TopicId` and `Topics`.
+                     * 
+                     */
+                    void SetTopics(const std::vector<MultiTopicSearchInformation>& _topics);
+
+                    /**
+                     * 判断参数 Topics 是否已赋值
+                     * @return Topics 是否已赋值
+                     * 
+                     */
+                    bool TopicsHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies the number of raw logs returned in a single query, default is 100, maximum is 1000. To obtain subsequent logs, use the Context parameter.Note:* This is only valid when the search and analysis statement (Query) does not contain SQL* Method for specifying SQL result count refers to <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>
+                     * @return Limit Specifies the number of raw logs returned in a single query, default is 100, maximum is 1000. To obtain subsequent logs, use the Context parameter.Note:* This is only valid when the search and analysis statement (Query) does not contain SQL* Method for specifying SQL result count refers to <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置The number of raw logs returned by a single query. Maximum value: 1000. You need to use `Context` to continue to get logs.
-Notes:
-* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
-* To limit the number of analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
-                     * @param _limit The number of raw logs returned by a single query. Maximum value: 1000. You need to use `Context` to continue to get logs.
-Notes:
-* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
-* To limit the number of analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
+                     * 设置Specifies the number of raw logs returned in a single query, default is 100, maximum is 1000. To obtain subsequent logs, use the Context parameter.Note:* This is only valid when the search and analysis statement (Query) does not contain SQL* Method for specifying SQL result count refers to <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>
+                     * @param _limit Specifies the number of raw logs returned in a single query, default is 100, maximum is 1000. To obtain subsequent logs, use the Context parameter.Note:* This is only valid when the search and analysis statement (Query) does not contain SQL* Method for specifying SQL result count refers to <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -171,43 +213,6 @@ Notes:
                      * 
                      */
                     bool LimitHasBeenSet() const;
-
-                    /**
-                     * 获取You can pass through the `Context` value (validity: an hour) returned by the API last time to continue to get logs (up to 10,000 raw logs).
-Notes:
-* Do not modify any other parameters while passing through the `Context` parameter.
-* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
-* To continue to get analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
-                     * @return Context You can pass through the `Context` value (validity: an hour) returned by the API last time to continue to get logs (up to 10,000 raw logs).
-Notes:
-* Do not modify any other parameters while passing through the `Context` parameter.
-* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
-* To continue to get analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
-                     * 
-                     */
-                    std::string GetContext() const;
-
-                    /**
-                     * 设置You can pass through the `Context` value (validity: an hour) returned by the API last time to continue to get logs (up to 10,000 raw logs).
-Notes:
-* Do not modify any other parameters while passing through the `Context` parameter.
-* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
-* To continue to get analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
-                     * @param _context You can pass through the `Context` value (validity: an hour) returned by the API last time to continue to get logs (up to 10,000 raw logs).
-Notes:
-* Do not modify any other parameters while passing through the `Context` parameter.
-* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
-* To continue to get analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
-                     * 
-                     */
-                    void SetContext(const std::string& _context);
-
-                    /**
-                     * 判断参数 Context 是否已赋值
-                     * @return Context 是否已赋值
-                     * 
-                     */
-                    bool ContextHasBeenSet() const;
 
                     /**
                      * 获取Time order of the logs returned. Valid values: `asc` (ascending); `desc`: (descending). Default value: `desc`
@@ -243,33 +248,25 @@ Notes:
                     bool SortHasBeenSet() const;
 
                     /**
-                     * 获取If the value is `true`, the new response method will be used, and the output parameters `AnalysisRecords` and `Columns` will be valid.
-If the value is `false`, the old response method will be used, and the output parameters `AnalysisResults` and `ColNames` will be valid.
-The two response methods differ slightly in terms of encoding format. You are advised to use the new method (`true`).
-                     * @return UseNewAnalysis If the value is `true`, the new response method will be used, and the output parameters `AnalysisRecords` and `Columns` will be valid.
-If the value is `false`, the old response method will be used, and the output parameters `AnalysisResults` and `ColNames` will be valid.
-The two response methods differ slightly in terms of encoding format. You are advised to use the new method (`true`).
+                     * 获取Pass the Context value returned by the last API call to retrieve more subsequent logs. A total of up to 10,000 raw logs can be obtained, with an expiration time of 1 hour.Note:* When passing this parameter, do not modify any other parameters except for this one* Only applicable for single log topic retrieval. When retrieving multiple log topics, use the Context in Topics.* This is only valid when the retrieval analysis statement (Query) does not contain SQL. For obtaining subsequent SQL results, refer to <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>
+                     * @return Context Pass the Context value returned by the last API call to retrieve more subsequent logs. A total of up to 10,000 raw logs can be obtained, with an expiration time of 1 hour.Note:* When passing this parameter, do not modify any other parameters except for this one* Only applicable for single log topic retrieval. When retrieving multiple log topics, use the Context in Topics.* This is only valid when the retrieval analysis statement (Query) does not contain SQL. For obtaining subsequent SQL results, refer to <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>
                      * 
                      */
-                    bool GetUseNewAnalysis() const;
+                    std::string GetContext() const;
 
                     /**
-                     * 设置If the value is `true`, the new response method will be used, and the output parameters `AnalysisRecords` and `Columns` will be valid.
-If the value is `false`, the old response method will be used, and the output parameters `AnalysisResults` and `ColNames` will be valid.
-The two response methods differ slightly in terms of encoding format. You are advised to use the new method (`true`).
-                     * @param _useNewAnalysis If the value is `true`, the new response method will be used, and the output parameters `AnalysisRecords` and `Columns` will be valid.
-If the value is `false`, the old response method will be used, and the output parameters `AnalysisResults` and `ColNames` will be valid.
-The two response methods differ slightly in terms of encoding format. You are advised to use the new method (`true`).
+                     * 设置Pass the Context value returned by the last API call to retrieve more subsequent logs. A total of up to 10,000 raw logs can be obtained, with an expiration time of 1 hour.Note:* When passing this parameter, do not modify any other parameters except for this one* Only applicable for single log topic retrieval. When retrieving multiple log topics, use the Context in Topics.* This is only valid when the retrieval analysis statement (Query) does not contain SQL. For obtaining subsequent SQL results, refer to <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>
+                     * @param _context Pass the Context value returned by the last API call to retrieve more subsequent logs. A total of up to 10,000 raw logs can be obtained, with an expiration time of 1 hour.Note:* When passing this parameter, do not modify any other parameters except for this one* Only applicable for single log topic retrieval. When retrieving multiple log topics, use the Context in Topics.* This is only valid when the retrieval analysis statement (Query) does not contain SQL. For obtaining subsequent SQL results, refer to <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>
                      * 
                      */
-                    void SetUseNewAnalysis(const bool& _useNewAnalysis);
+                    void SetContext(const std::string& _context);
 
                     /**
-                     * 判断参数 UseNewAnalysis 是否已赋值
-                     * @return UseNewAnalysis 是否已赋值
+                     * 判断参数 Context 是否已赋值
+                     * @return Context 是否已赋值
                      * 
                      */
-                    bool UseNewAnalysisHasBeenSet() const;
+                    bool ContextHasBeenSet() const;
 
                     /**
                      * 获取Indicates whether to sample raw logs before statistical analysis (`Query` includes SQL statements).
@@ -309,62 +306,33 @@ Default value: `1`
                     bool SamplingRateHasBeenSet() const;
 
                     /**
-                     * 获取Search syntax
-`0` (default): Lucene; `1`: CQL.
-For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Syntax Rules</a>
-                     * @return SyntaxRule Search syntax
-`0` (default): Lucene; `1`: CQL.
-For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Syntax Rules</a>
+                     * 获取If the value is `true`, the new response method will be used, and the output parameters `AnalysisRecords` and `Columns` will be valid.
+If the value is `false`, the old response method will be used, and the output parameters `AnalysisResults` and `ColNames` will be valid.
+The two response methods differ slightly in terms of encoding format. You are advised to use the new method (`true`).
+                     * @return UseNewAnalysis If the value is `true`, the new response method will be used, and the output parameters `AnalysisRecords` and `Columns` will be valid.
+If the value is `false`, the old response method will be used, and the output parameters `AnalysisResults` and `ColNames` will be valid.
+The two response methods differ slightly in terms of encoding format. You are advised to use the new method (`true`).
                      * 
                      */
-                    uint64_t GetSyntaxRule() const;
+                    bool GetUseNewAnalysis() const;
 
                     /**
-                     * 设置Search syntax
-`0` (default): Lucene; `1`: CQL.
-For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Syntax Rules</a>
-                     * @param _syntaxRule Search syntax
-`0` (default): Lucene; `1`: CQL.
-For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Syntax Rules</a>
+                     * 设置If the value is `true`, the new response method will be used, and the output parameters `AnalysisRecords` and `Columns` will be valid.
+If the value is `false`, the old response method will be used, and the output parameters `AnalysisResults` and `ColNames` will be valid.
+The two response methods differ slightly in terms of encoding format. You are advised to use the new method (`true`).
+                     * @param _useNewAnalysis If the value is `true`, the new response method will be used, and the output parameters `AnalysisRecords` and `Columns` will be valid.
+If the value is `false`, the old response method will be used, and the output parameters `AnalysisResults` and `ColNames` will be valid.
+The two response methods differ slightly in terms of encoding format. You are advised to use the new method (`true`).
                      * 
                      */
-                    void SetSyntaxRule(const uint64_t& _syntaxRule);
+                    void SetUseNewAnalysis(const bool& _useNewAnalysis);
 
                     /**
-                     * 判断参数 SyntaxRule 是否已赋值
-                     * @return SyntaxRule 是否已赋值
+                     * 判断参数 UseNewAnalysis 是否已赋值
+                     * @return UseNewAnalysis 是否已赋值
                      * 
                      */
-                    bool SyntaxRuleHasBeenSet() const;
-
-                    /**
-                     * 获取- The IDs of the log topics (up to 20) to be searched for.
-- To search for a single log topic, use the `TopicId` parameter.
-- You cannot use both `TopicId` and `Topics`.
-                     * @return Topics - The IDs of the log topics (up to 20) to be searched for.
-- To search for a single log topic, use the `TopicId` parameter.
-- You cannot use both `TopicId` and `Topics`.
-                     * 
-                     */
-                    std::vector<MultiTopicSearchInformation> GetTopics() const;
-
-                    /**
-                     * 设置- The IDs of the log topics (up to 20) to be searched for.
-- To search for a single log topic, use the `TopicId` parameter.
-- You cannot use both `TopicId` and `Topics`.
-                     * @param _topics - The IDs of the log topics (up to 20) to be searched for.
-- To search for a single log topic, use the `TopicId` parameter.
-- You cannot use both `TopicId` and `Topics`.
-                     * 
-                     */
-                    void SetTopics(const std::vector<MultiTopicSearchInformation>& _topics);
-
-                    /**
-                     * 判断参数 Topics 是否已赋值
-                     * @return Topics 是否已赋值
-                     * 
-                     */
-                    bool TopicsHasBeenSet() const;
+                    bool UseNewAnalysisHasBeenSet() const;
 
                 private:
 
@@ -389,6 +357,13 @@ Queries all logs using * or an empty string
                     bool m_queryHasBeenSet;
 
                     /**
+                     * Retrieval syntax rule, default is 0, recommended to use 1 (CQL syntax).0: Lucene syntax, 1: CQL syntax.
+For detailed explanation, refer to <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Retrieve Syntax Rules</a>
+                     */
+                    uint64_t m_syntaxRule;
+                    bool m_syntaxRuleHasBeenSet;
+
+                    /**
                      * - The ID of the log topic to be searched for. Only one log topic can be specified.
 - To search for multiple log topics at a time, use the `Topics` parameter.
                      */
@@ -396,23 +371,18 @@ Queries all logs using * or an empty string
                     bool m_topicIdHasBeenSet;
 
                     /**
-                     * The number of raw logs returned by a single query. Maximum value: 1000. You need to use `Context` to continue to get logs.
-Notes:
-* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
-* To limit the number of analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
+                     * - The IDs of the log topics (up to 20) to be searched for.
+- To search for a single log topic, use the `TopicId` parameter.
+- You cannot use both `TopicId` and `Topics`.
+                     */
+                    std::vector<MultiTopicSearchInformation> m_topics;
+                    bool m_topicsHasBeenSet;
+
+                    /**
+                     * Specifies the number of raw logs returned in a single query, default is 100, maximum is 1000. To obtain subsequent logs, use the Context parameter.Note:* This is only valid when the search and analysis statement (Query) does not contain SQL* Method for specifying SQL result count refers to <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
-
-                    /**
-                     * You can pass through the `Context` value (validity: an hour) returned by the API last time to continue to get logs (up to 10,000 raw logs).
-Notes:
-* Do not modify any other parameters while passing through the `Context` parameter.
-* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
-* To continue to get analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
-                     */
-                    std::string m_context;
-                    bool m_contextHasBeenSet;
 
                     /**
                      * Time order of the logs returned. Valid values: `asc` (ascending); `desc`: (descending). Default value: `desc`
@@ -424,12 +394,10 @@ Notes:
                     bool m_sortHasBeenSet;
 
                     /**
-                     * If the value is `true`, the new response method will be used, and the output parameters `AnalysisRecords` and `Columns` will be valid.
-If the value is `false`, the old response method will be used, and the output parameters `AnalysisResults` and `ColNames` will be valid.
-The two response methods differ slightly in terms of encoding format. You are advised to use the new method (`true`).
+                     * Pass the Context value returned by the last API call to retrieve more subsequent logs. A total of up to 10,000 raw logs can be obtained, with an expiration time of 1 hour.Note:* When passing this parameter, do not modify any other parameters except for this one* Only applicable for single log topic retrieval. When retrieving multiple log topics, use the Context in Topics.* This is only valid when the retrieval analysis statement (Query) does not contain SQL. For obtaining subsequent SQL results, refer to <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>
                      */
-                    bool m_useNewAnalysis;
-                    bool m_useNewAnalysisHasBeenSet;
+                    std::string m_context;
+                    bool m_contextHasBeenSet;
 
                     /**
                      * Indicates whether to sample raw logs before statistical analysis (`Query` includes SQL statements).
@@ -442,20 +410,12 @@ Default value: `1`
                     bool m_samplingRateHasBeenSet;
 
                     /**
-                     * Search syntax
-`0` (default): Lucene; `1`: CQL.
-For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Syntax Rules</a>
+                     * If the value is `true`, the new response method will be used, and the output parameters `AnalysisRecords` and `Columns` will be valid.
+If the value is `false`, the old response method will be used, and the output parameters `AnalysisResults` and `ColNames` will be valid.
+The two response methods differ slightly in terms of encoding format. You are advised to use the new method (`true`).
                      */
-                    uint64_t m_syntaxRule;
-                    bool m_syntaxRuleHasBeenSet;
-
-                    /**
-                     * - The IDs of the log topics (up to 20) to be searched for.
-- To search for a single log topic, use the `TopicId` parameter.
-- You cannot use both `TopicId` and `Topics`.
-                     */
-                    std::vector<MultiTopicSearchInformation> m_topics;
-                    bool m_topicsHasBeenSet;
+                    bool m_useNewAnalysis;
+                    bool m_useNewAnalysisHasBeenSet;
 
                 };
             }

@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cls/v20201016/model/NoticeReceiver.h>
 #include <tencentcloud/cls/v20201016/model/WebCallback.h>
+#include <tencentcloud/cls/v20201016/model/NoticeRule.h>
 
 
 namespace TencentCloud
@@ -66,27 +67,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Notification type. Valid values:
-<li> `Trigger`: alarm triggered
-<li> `Recovery`: alarm cleared
-<li> `All`: alarm triggered and alarm cleared
-                     * @return Type Notification type. Valid values:
-<li> `Trigger`: alarm triggered
-<li> `Recovery`: alarm cleared
-<li> `All`: alarm triggered and alarm cleared
+                     * 获取Notification type. Optional Values:<li> Trigger - Alarm triggered </li><li> Recovery - Alarm recovery</li><li> All - Alarm triggered and alarm recovery</li>
+                     * @return Type Notification type. Optional Values:<li> Trigger - Alarm triggered </li><li> Recovery - Alarm recovery</li><li> All - Alarm triggered and alarm recovery</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Notification type. Valid values:
-<li> `Trigger`: alarm triggered
-<li> `Recovery`: alarm cleared
-<li> `All`: alarm triggered and alarm cleared
-                     * @param _type Notification type. Valid values:
-<li> `Trigger`: alarm triggered
-<li> `Recovery`: alarm cleared
-<li> `All`: alarm triggered and alarm cleared
+                     * 设置Notification type. Optional Values:<li> Trigger - Alarm triggered </li><li> Recovery - Alarm recovery</li><li> All - Alarm triggered and alarm recovery</li>
+                     * @param _type Notification type. Optional Values:<li> Trigger - Alarm triggered </li><li> Recovery - Alarm recovery</li><li> All - Alarm triggered and alarm recovery</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -140,6 +129,27 @@ namespace TencentCloud
                      */
                     bool WebCallbacksHasBeenSet() const;
 
+                    /**
+                     * 获取Notification RulesNote: - Type, NoticeReceivers, and WebCallbacks form one set of configurations, and NoticeRules form another set. The two sets of configurations are mutually exclusive.
+                     * @return NoticeRules Notification RulesNote: - Type, NoticeReceivers, and WebCallbacks form one set of configurations, and NoticeRules form another set. The two sets of configurations are mutually exclusive.
+                     * 
+                     */
+                    std::vector<NoticeRule> GetNoticeRules() const;
+
+                    /**
+                     * 设置Notification RulesNote: - Type, NoticeReceivers, and WebCallbacks form one set of configurations, and NoticeRules form another set. The two sets of configurations are mutually exclusive.
+                     * @param _noticeRules Notification RulesNote: - Type, NoticeReceivers, and WebCallbacks form one set of configurations, and NoticeRules form another set. The two sets of configurations are mutually exclusive.
+                     * 
+                     */
+                    void SetNoticeRules(const std::vector<NoticeRule>& _noticeRules);
+
+                    /**
+                     * 判断参数 NoticeRules 是否已赋值
+                     * @return NoticeRules 是否已赋值
+                     * 
+                     */
+                    bool NoticeRulesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -149,10 +159,7 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Notification type. Valid values:
-<li> `Trigger`: alarm triggered
-<li> `Recovery`: alarm cleared
-<li> `All`: alarm triggered and alarm cleared
+                     * Notification type. Optional Values:<li> Trigger - Alarm triggered </li><li> Recovery - Alarm recovery</li><li> All - Alarm triggered and alarm recovery</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
@@ -168,6 +175,12 @@ namespace TencentCloud
                      */
                     std::vector<WebCallback> m_webCallbacks;
                     bool m_webCallbacksHasBeenSet;
+
+                    /**
+                     * Notification RulesNote: - Type, NoticeReceivers, and WebCallbacks form one set of configurations, and NoticeRules form another set. The two sets of configurations are mutually exclusive.
+                     */
+                    std::vector<NoticeRule> m_noticeRules;
+                    bool m_noticeRulesHasBeenSet;
 
                 };
             }

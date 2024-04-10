@@ -21,8 +21,8 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/cls/v20201016/model/KafkaProtocolInfo.h>
 #include <tencentcloud/cls/v20201016/model/LogRechargeRuleInfo.h>
+#include <tencentcloud/cls/v20201016/model/KafkaProtocolInfo.h>
 
 
 namespace TencentCloud
@@ -150,6 +150,27 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
+                     * 获取Log Import Rules.
+                     * @return LogRechargeRule Log Import Rules.
+                     * 
+                     */
+                    LogRechargeRuleInfo GetLogRechargeRule() const;
+
+                    /**
+                     * 设置Log Import Rules.
+                     * @param _logRechargeRule Log Import Rules.
+                     * 
+                     */
+                    void SetLogRechargeRule(const LogRechargeRuleInfo& _logRechargeRule);
+
+                    /**
+                     * 判断参数 LogRechargeRule 是否已赋值
+                     * @return LogRechargeRule 是否已赋值
+                     * 
+                     */
+                    bool LogRechargeRuleHasBeenSet() const;
+
+                    /**
                      * 获取CKafka instance ID, which is required when `KafkaType` is set to `0`
                      * @return KafkaInstance CKafka instance ID, which is required when `KafkaType` is set to `0`
                      * 
@@ -213,15 +234,15 @@ namespace TencentCloud
                     bool IsEncryptionAddrHasBeenSet() const;
 
                     /**
-                     * 获取Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
-                     * @return Protocol Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
+                     * 获取Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
+                     * @return Protocol Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
                      * 
                      */
                     KafkaProtocolInfo GetProtocol() const;
 
                     /**
-                     * 设置Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
-                     * @param _protocol Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
+                     * 设置Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
+                     * @param _protocol Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
                      * 
                      */
                     void SetProtocol(const KafkaProtocolInfo& _protocol);
@@ -253,27 +274,6 @@ namespace TencentCloud
                      * 
                      */
                     bool ConsumerGroupNameHasBeenSet() const;
-
-                    /**
-                     * 获取Log import rule
-                     * @return LogRechargeRule Log import rule
-                     * 
-                     */
-                    LogRechargeRuleInfo GetLogRechargeRule() const;
-
-                    /**
-                     * 设置Log import rule
-                     * @param _logRechargeRule Log import rule
-                     * 
-                     */
-                    void SetLogRechargeRule(const LogRechargeRuleInfo& _logRechargeRule);
-
-                    /**
-                     * 判断参数 LogRechargeRule 是否已赋值
-                     * @return LogRechargeRule 是否已赋值
-                     * 
-                     */
-                    bool LogRechargeRuleHasBeenSet() const;
 
                 private:
 
@@ -308,6 +308,12 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
+                     * Log Import Rules.
+                     */
+                    LogRechargeRuleInfo m_logRechargeRule;
+                    bool m_logRechargeRuleHasBeenSet;
+
+                    /**
                      * CKafka instance ID, which is required when `KafkaType` is set to `0`
                      */
                     std::string m_kafkaInstance;
@@ -326,7 +332,7 @@ namespace TencentCloud
                     bool m_isEncryptionAddrHasBeenSet;
 
                     /**
-                     * Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
+                     * Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
                      */
                     KafkaProtocolInfo m_protocol;
                     bool m_protocolHasBeenSet;
@@ -336,12 +342,6 @@ namespace TencentCloud
                      */
                     std::string m_consumerGroupName;
                     bool m_consumerGroupNameHasBeenSet;
-
-                    /**
-                     * Log import rule
-                     */
-                    LogRechargeRuleInfo m_logRechargeRule;
-                    bool m_logRechargeRuleHasBeenSet;
 
                 };
             }

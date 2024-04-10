@@ -297,6 +297,27 @@ namespace TencentCloud
                      */
                     bool FilenameModeHasBeenSet() const;
 
+                    /**
+                     * 获取COS Bucket Type
+                     * @return StorageType COS Bucket Type
+                     * 
+                     */
+                    std::string GetStorageType() const;
+
+                    /**
+                     * 设置COS Bucket Type
+                     * @param _storageType COS Bucket Type
+                     * 
+                     */
+                    void SetStorageType(const std::string& _storageType);
+
+                    /**
+                     * 判断参数 StorageType 是否已赋值
+                     * @return StorageType 是否已赋值
+                     * 
+                     */
+                    bool StorageTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -370,6 +391,12 @@ namespace TencentCloud
                      */
                     uint64_t m_filenameMode;
                     bool m_filenameModeHasBeenSet;
+
+                    /**
+                     * COS Bucket Type
+                     */
+                    std::string m_storageType;
+                    bool m_storageTypeHasBeenSet;
 
                 };
             }

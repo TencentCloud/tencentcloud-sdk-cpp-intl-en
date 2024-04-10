@@ -28,6 +28,7 @@
 #include <tencentcloud/cls/v20201016/model/MonitorTime.h>
 #include <tencentcloud/cls/v20201016/model/CallBackInfo.h>
 #include <tencentcloud/cls/v20201016/model/AnalysisDimensional.h>
+#include <tencentcloud/cls/v20201016/model/MultiCondition.h>
 
 
 namespace TencentCloud
@@ -114,15 +115,15 @@ namespace TencentCloud
                     bool MonitorTimeHasBeenSet() const;
 
                     /**
-                     * 获取Trigger condition
-                     * @return Condition Trigger condition
+                     * 获取Single trigger condition. Mutually exclusive with the MultiConditions parameter.
+                     * @return Condition Single trigger condition. Mutually exclusive with the MultiConditions parameter.
                      * 
                      */
                     std::string GetCondition() const;
 
                     /**
-                     * 设置Trigger condition
-                     * @param _condition Trigger condition
+                     * 设置Single trigger condition. Mutually exclusive with the MultiConditions parameter.
+                     * @param _condition Single trigger condition. Mutually exclusive with the MultiConditions parameter.
                      * 
                      */
                     void SetCondition(const std::string& _condition);
@@ -356,6 +357,115 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool AnalysisHasBeenSet() const;
 
+                    /**
+                     * 获取Group trigger status. 1: Enabled, 0: Disabled (default)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return GroupTriggerStatus Group trigger status. 1: Enabled, 0: Disabled (default)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    bool GetGroupTriggerStatus() const;
+
+                    /**
+                     * 设置Group trigger status. 1: Enabled, 0: Disabled (default)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _groupTriggerStatus Group trigger status. 1: Enabled, 0: Disabled (default)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetGroupTriggerStatus(const bool& _groupTriggerStatus);
+
+                    /**
+                     * 判断参数 GroupTriggerStatus 是否已赋值
+                     * @return GroupTriggerStatus 是否已赋值
+                     * 
+                     */
+                    bool GroupTriggerStatusHasBeenSet() const;
+
+                    /**
+                     * 获取Group Trigger ConditionsNote: This field may return null, indicating that no valid values can be obtained.
+                     * @return GroupTriggerCondition Group Trigger ConditionsNote: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<std::string> GetGroupTriggerCondition() const;
+
+                    /**
+                     * 设置Group Trigger ConditionsNote: This field may return null, indicating that no valid values can be obtained.
+                     * @param _groupTriggerCondition Group Trigger ConditionsNote: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetGroupTriggerCondition(const std::vector<std::string>& _groupTriggerCondition);
+
+                    /**
+                     * 判断参数 GroupTriggerCondition 是否已赋值
+                     * @return GroupTriggerCondition 是否已赋值
+                     * 
+                     */
+                    bool GroupTriggerConditionHasBeenSet() const;
+
+                    /**
+                     * 获取Type of the monitored object. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MonitorObjectType Type of the monitored object. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    uint64_t GetMonitorObjectType() const;
+
+                    /**
+                     * 设置Type of the monitored object. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _monitorObjectType Type of the monitored object. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetMonitorObjectType(const uint64_t& _monitorObjectType);
+
+                    /**
+                     * 判断参数 MonitorObjectType 是否已赋值
+                     * @return MonitorObjectType 是否已赋值
+                     * 
+                     */
+                    bool MonitorObjectTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Alarm severity. 0: warning (Warn); 1: Reminder (Info); 2: urgent (Critical).Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AlarmLevel Alarm severity. 0: warning (Warn); 1: Reminder (Info); 2: urgent (Critical).Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    uint64_t GetAlarmLevel() const;
+
+                    /**
+                     * 设置Alarm severity. 0: warning (Warn); 1: Reminder (Info); 2: urgent (Critical).Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _alarmLevel Alarm severity. 0: warning (Warn); 1: Reminder (Info); 2: urgent (Critical).Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetAlarmLevel(const uint64_t& _alarmLevel);
+
+                    /**
+                     * 判断参数 AlarmLevel 是否已赋值
+                     * @return AlarmLevel 是否已赋值
+                     * 
+                     */
+                    bool AlarmLevelHasBeenSet() const;
+
+                    /**
+                     * 获取Multiple trigger conditions. Exclusive with Condition.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MultiConditions Multiple trigger conditions. Exclusive with Condition.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<MultiCondition> GetMultiConditions() const;
+
+                    /**
+                     * 设置Multiple trigger conditions. Exclusive with Condition.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _multiConditions Multiple trigger conditions. Exclusive with Condition.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetMultiConditions(const std::vector<MultiCondition>& _multiConditions);
+
+                    /**
+                     * 判断参数 MultiConditions 是否已赋值
+                     * @return MultiConditions 是否已赋值
+                     * 
+                     */
+                    bool MultiConditionsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -377,7 +487,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_monitorTimeHasBeenSet;
 
                     /**
-                     * Trigger condition
+                     * Single trigger condition. Mutually exclusive with the MultiConditions parameter.
                      */
                     std::string m_condition;
                     bool m_conditionHasBeenSet;
@@ -444,6 +554,37 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     std::vector<AnalysisDimensional> m_analysis;
                     bool m_analysisHasBeenSet;
+
+                    /**
+                     * Group trigger status. 1: Enabled, 0: Disabled (default)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    bool m_groupTriggerStatus;
+                    bool m_groupTriggerStatusHasBeenSet;
+
+                    /**
+                     * Group Trigger ConditionsNote: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_groupTriggerCondition;
+                    bool m_groupTriggerConditionHasBeenSet;
+
+                    /**
+                     * Type of the monitored object. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_monitorObjectType;
+                    bool m_monitorObjectTypeHasBeenSet;
+
+                    /**
+                     * Alarm severity. 0: warning (Warn); 1: Reminder (Info); 2: urgent (Critical).Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_alarmLevel;
+                    bool m_alarmLevelHasBeenSet;
+
+                    /**
+                     * Multiple trigger conditions. Exclusive with Condition.Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<MultiCondition> m_multiConditions;
+                    bool m_multiConditionsHasBeenSet;
 
                 };
             }

@@ -87,15 +87,15 @@ namespace TencentCloud
                     bool KafkaTypeHasBeenSet() const;
 
                     /**
-                     * 获取List of Kafka topics to import data from. Separate multiple topics with commas (,).
-                     * @return UserKafkaTopics List of Kafka topics to import data from. Separate multiple topics with commas (,).
+                     * 获取List of Kafka-related topics that the user needs to import, separated by commas. Supports up to 100 topics.
+                     * @return UserKafkaTopics List of Kafka-related topics that the user needs to import, separated by commas. Supports up to 100 topics.
                      * 
                      */
                     std::string GetUserKafkaTopics() const;
 
                     /**
-                     * 设置List of Kafka topics to import data from. Separate multiple topics with commas (,).
-                     * @param _userKafkaTopics List of Kafka topics to import data from. Separate multiple topics with commas (,).
+                     * 设置List of Kafka-related topics that the user needs to import, separated by commas. Supports up to 100 topics.
+                     * @param _userKafkaTopics List of Kafka-related topics that the user needs to import, separated by commas. Supports up to 100 topics.
                      * 
                      */
                     void SetUserKafkaTopics(const std::string& _userKafkaTopics);
@@ -129,15 +129,19 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取CKafka instance ID, which is required when `KafkaType` is set to `0`
-                     * @return KafkaInstance CKafka instance ID, which is required when `KafkaType` is set to `0`
+                     * 获取Tencent Cloud CKafka instance ID.
+KafkaInstance is required when KafkaType is 0
+                     * @return KafkaInstance Tencent Cloud CKafka instance ID.
+KafkaInstance is required when KafkaType is 0
                      * 
                      */
                     std::string GetKafkaInstance() const;
 
                     /**
-                     * 设置CKafka instance ID, which is required when `KafkaType` is set to `0`
-                     * @param _kafkaInstance CKafka instance ID, which is required when `KafkaType` is set to `0`
+                     * 设置Tencent Cloud CKafka instance ID.
+KafkaInstance is required when KafkaType is 0
+                     * @param _kafkaInstance Tencent Cloud CKafka instance ID.
+KafkaInstance is required when KafkaType is 0
                      * 
                      */
                     void SetKafkaInstance(const std::string& _kafkaInstance);
@@ -150,15 +154,15 @@ namespace TencentCloud
                     bool KafkaInstanceHasBeenSet() const;
 
                     /**
-                     * 获取Service address
-                     * @return ServerAddr Service address
+                     * 获取Service AddressServerAddr is required when KafkaType is 1
+                     * @return ServerAddr Service AddressServerAddr is required when KafkaType is 1
                      * 
                      */
                     std::string GetServerAddr() const;
 
                     /**
-                     * 设置Service address
-                     * @param _serverAddr Service address
+                     * 设置Service AddressServerAddr is required when KafkaType is 1
+                     * @param _serverAddr Service AddressServerAddr is required when KafkaType is 1
                      * 
                      */
                     void SetServerAddr(const std::string& _serverAddr);
@@ -171,15 +175,19 @@ namespace TencentCloud
                     bool ServerAddrHasBeenSet() const;
 
                     /**
-                     * 获取Whether the service address uses an encrypted connection
-                     * @return IsEncryptionAddr Whether the service address uses an encrypted connection
+                     * 获取Whether ServerAddr is a secure connection.
+Valid when KafkaType is 1.
+                     * @return IsEncryptionAddr Whether ServerAddr is a secure connection.
+Valid when KafkaType is 1.
                      * 
                      */
                     bool GetIsEncryptionAddr() const;
 
                     /**
-                     * 设置Whether the service address uses an encrypted connection
-                     * @param _isEncryptionAddr Whether the service address uses an encrypted connection
+                     * 设置Whether ServerAddr is a secure connection.
+Valid when KafkaType is 1.
+                     * @param _isEncryptionAddr Whether ServerAddr is a secure connection.
+Valid when KafkaType is 1.
                      * 
                      */
                     void SetIsEncryptionAddr(const bool& _isEncryptionAddr);
@@ -192,15 +200,15 @@ namespace TencentCloud
                     bool IsEncryptionAddrHasBeenSet() const;
 
                     /**
-                     * 获取Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
-                     * @return Protocol Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
+                     * 获取Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
+                     * @return Protocol Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
                      * 
                      */
                     KafkaProtocolInfo GetProtocol() const;
 
                     /**
-                     * 设置Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
-                     * @param _protocol Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
+                     * 设置Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
+                     * @param _protocol Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
                      * 
                      */
                     void SetProtocol(const KafkaProtocolInfo& _protocol);
@@ -269,7 +277,7 @@ namespace TencentCloud
                     bool m_kafkaTypeHasBeenSet;
 
                     /**
-                     * List of Kafka topics to import data from. Separate multiple topics with commas (,).
+                     * List of Kafka-related topics that the user needs to import, separated by commas. Supports up to 100 topics.
                      */
                     std::string m_userKafkaTopics;
                     bool m_userKafkaTopicsHasBeenSet;
@@ -281,25 +289,27 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * CKafka instance ID, which is required when `KafkaType` is set to `0`
+                     * Tencent Cloud CKafka instance ID.
+KafkaInstance is required when KafkaType is 0
                      */
                     std::string m_kafkaInstance;
                     bool m_kafkaInstanceHasBeenSet;
 
                     /**
-                     * Service address
+                     * Service AddressServerAddr is required when KafkaType is 1
                      */
                     std::string m_serverAddr;
                     bool m_serverAddrHasBeenSet;
 
                     /**
-                     * Whether the service address uses an encrypted connection
+                     * Whether ServerAddr is a secure connection.
+Valid when KafkaType is 1.
                      */
                     bool m_isEncryptionAddr;
                     bool m_isEncryptionAddrHasBeenSet;
 
                     /**
-                     * Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
+                     * Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
                      */
                     KafkaProtocolInfo m_protocol;
                     bool m_protocolHasBeenSet;

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Log topic information
+                * Basic Topic Information
                 */
                 class TopicInfo : public AbstractModel
                 {
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool LogsetIdHasBeenSet() const;
 
                     /**
-                     * 获取Log topic ID
-                     * @return TopicId Log topic ID
+                     * 获取 Topic ID
+                     * @return TopicId  Topic ID
                      * 
                      */
                     std::string GetTopicId() const;
 
                     /**
-                     * 设置Log topic ID
-                     * @param _topicId Log topic ID
+                     * 设置 Topic ID
+                     * @param _topicId  Topic ID
                      * 
                      */
                     void SetTopicId(const std::string& _topicId);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool TopicIdHasBeenSet() const;
 
                     /**
-                     * 获取Log topic name
-                     * @return TopicName Log topic name
+                     * 获取Topic Name
+                     * @return TopicName Topic Name
                      * 
                      */
                     std::string GetTopicName() const;
 
                     /**
-                     * 设置Log topic name
-                     * @param _topicName Log topic name
+                     * 设置Topic Name
+                     * @param _topicName Topic Name
                      * 
                      */
                     void SetTopicName(const std::string& _topicName);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool PartitionCountHasBeenSet() const;
 
                     /**
-                     * 获取Whether index is enabled
-                     * @return Index Whether index is enabled
+                     * 获取Whether the topic has indexing enabled (the topic type must be log topic)
+                     * @return Index Whether the topic has indexing enabled (the topic type must be log topic)
                      * 
                      */
                     bool GetIndex() const;
 
                     /**
-                     * 设置Whether index is enabled
-                     * @param _index Whether index is enabled
+                     * 设置Whether the topic has indexing enabled (the topic type must be log topic)
+                     * @param _index Whether the topic has indexing enabled (the topic type must be log topic)
                      * 
                      */
                     void SetIndex(const bool& _index);
@@ -153,19 +153,15 @@ namespace TencentCloud
                     bool IndexHasBeenSet() const;
 
                     /**
-                     * 获取Cloud product identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AssumerName Cloud product identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Cloud product identifier. When the topic is created by other cloud products, this field displays the name of the cloud product, such as CDN, TKE.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AssumerName Cloud product identifier. When the topic is created by other cloud products, this field displays the name of the cloud product, such as CDN, TKE.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetAssumerName() const;
 
                     /**
-                     * 设置Cloud product identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _assumerName Cloud product identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Cloud product identifier. When the topic is created by other cloud products, this field displays the name of the cloud product, such as CDN, TKE.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _assumerName Cloud product identifier. When the topic is created by other cloud products, this field displays the name of the cloud product, such as CDN, TKE.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAssumerName(const std::string& _assumerName);
@@ -199,15 +195,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Whether collection is enabled in the log topic
-                     * @return Status Whether collection is enabled in the log topic
+                     * 获取Whether the topic has log collection enabled. true: collection enabled; false: collection disabled.Log collection is enabled by default when creating a log topic, and this field can be modified by calling ModifyTopic through the SDK.The console currently does not support modifying this parameter.
+                     * @return Status Whether the topic has log collection enabled. true: collection enabled; false: collection disabled.Log collection is enabled by default when creating a log topic, and this field can be modified by calling ModifyTopic through the SDK.The console currently does not support modifying this parameter.
                      * 
                      */
                     bool GetStatus() const;
 
                     /**
-                     * 设置Whether collection is enabled in the log topic
-                     * @param _status Whether collection is enabled in the log topic
+                     * 设置Whether the topic has log collection enabled. true: collection enabled; false: collection disabled.Log collection is enabled by default when creating a log topic, and this field can be modified by calling ModifyTopic through the SDK.The console currently does not support modifying this parameter.
+                     * @param _status Whether the topic has log collection enabled. true: collection enabled; false: collection disabled.Log collection is enabled by default when creating a log topic, and this field can be modified by calling ModifyTopic through the SDK.The console currently does not support modifying this parameter.
                      * 
                      */
                     void SetStatus(const bool& _status);
@@ -220,19 +216,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Information of tags bound to log topic
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Tags Information of tags bound to log topic
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Tag information bound to the topicNote: This field may return null, indicating that no valid values can be obtained.
+                     * @return Tags Tag information bound to the topicNote: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置Information of tags bound to log topic
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _tags Information of tags bound to log topic
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Tag information bound to the topicNote: This field may return null, indicating that no valid values can be obtained.
+                     * @param _tags Tag information bound to the topicNote: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -295,19 +287,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool MaxSplitPartitionsHasBeenSet() const;
 
                     /**
-                     * 获取Log topic storage class
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return StorageType Log topic storage class
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Storage type of the topicNote: This field may return null, indicating that no valid values can be obtained.
+                     * @return StorageType Storage type of the topicNote: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetStorageType() const;
 
                     /**
-                     * 设置Log topic storage class
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _storageType Log topic storage class
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Storage type of the topicNote: This field may return null, indicating that no valid values can be obtained.
+                     * @param _storageType Storage type of the topicNote: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetStorageType(const std::string& _storageType);
@@ -370,18 +358,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SubAssumerNameHasBeenSet() const;
 
                     /**
-                     * 获取Log topic description
+                     * 获取Topic description
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Describes Log topic description
+                     * @return Describes Topic description
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDescribes() const;
 
                     /**
-                     * 设置Log topic description
+                     * 设置Topic description
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _describes Log topic description
+                     * @param _describes Topic description
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -395,22 +383,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DescribesHasBeenSet() const;
 
                     /**
-                     * 获取The lifecycle of hot storage when log transitioning is enabled. The value of `hotPeriod` is smaller than that of `Period`.
-The hot storage period is the value of `hotPeriod`, and the cold storage period is the value of `Period` minus the value of `hotPeriod`.
+                     * 获取Enable log sinking, with the lifecycle of standard storage, where hotPeriod < Period.For standard storage, hotPeriod is used, and for infrequent access storage, it is Period-hotPeriod. (The topic type must be a log topic)HotPeriod=0 indicates that log sinking is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HotPeriod The lifecycle of hot storage when log transitioning is enabled. The value of `hotPeriod` is smaller than that of `Period`.
-The hot storage period is the value of `hotPeriod`, and the cold storage period is the value of `Period` minus the value of `hotPeriod`.
+                     * @return HotPeriod Enable log sinking, with the lifecycle of standard storage, where hotPeriod < Period.For standard storage, hotPeriod is used, and for infrequent access storage, it is Period-hotPeriod. (The topic type must be a log topic)HotPeriod=0 indicates that log sinking is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetHotPeriod() const;
 
                     /**
-                     * 设置The lifecycle of hot storage when log transitioning is enabled. The value of `hotPeriod` is smaller than that of `Period`.
-The hot storage period is the value of `hotPeriod`, and the cold storage period is the value of `Period` minus the value of `hotPeriod`.
+                     * 设置Enable log sinking, with the lifecycle of standard storage, where hotPeriod < Period.For standard storage, hotPeriod is used, and for infrequent access storage, it is Period-hotPeriod. (The topic type must be a log topic)HotPeriod=0 indicates that log sinking is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _hotPeriod The lifecycle of hot storage when log transitioning is enabled. The value of `hotPeriod` is smaller than that of `Period`.
-The hot storage period is the value of `hotPeriod`, and the cold storage period is the value of `Period` minus the value of `hotPeriod`.
+                     * @param _hotPeriod Enable log sinking, with the lifecycle of standard storage, where hotPeriod < Period.For standard storage, hotPeriod is used, and for infrequent access storage, it is Period-hotPeriod. (The topic type must be a log topic)HotPeriod=0 indicates that log sinking is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -423,6 +407,60 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool HotPeriodHasBeenSet() const;
 
+                    /**
+                     * 获取Topic type.
+- 0:  log  Topic  
+- 1: Metric Topic
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return BizType Topic type.
+- 0:  log  Topic  
+- 1: Metric Topic
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    uint64_t GetBizType() const;
+
+                    /**
+                     * 设置Topic type.
+- 0:  log  Topic  
+- 1: Metric Topic
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _bizType Topic type.
+- 0:  log  Topic  
+- 1: Metric Topic
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetBizType(const uint64_t& _bizType);
+
+                    /**
+                     * 判断参数 BizType 是否已赋值
+                     * @return BizType 是否已赋值
+                     * 
+                     */
+                    bool BizTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Free authentication switch. false: disabled; true: enabled.After enabling, anonymous access to the log topic will be supported for specified operations. For details, please refer to Log Topic (https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IsWebTracking Free authentication switch. false: disabled; true: enabled.After enabling, anonymous access to the log topic will be supported for specified operations. For details, please refer to Log Topic (https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    bool GetIsWebTracking() const;
+
+                    /**
+                     * 设置Free authentication switch. false: disabled; true: enabled.After enabling, anonymous access to the log topic will be supported for specified operations. For details, please refer to Log Topic (https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _isWebTracking Free authentication switch. false: disabled; true: enabled.After enabling, anonymous access to the log topic will be supported for specified operations. For details, please refer to Log Topic (https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetIsWebTracking(const bool& _isWebTracking);
+
+                    /**
+                     * 判断参数 IsWebTracking 是否已赋值
+                     * @return IsWebTracking 是否已赋值
+                     * 
+                     */
+                    bool IsWebTrackingHasBeenSet() const;
+
                 private:
 
                     /**
@@ -432,13 +470,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_logsetIdHasBeenSet;
 
                     /**
-                     * Log topic ID
+                     *  Topic ID
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;
 
                     /**
-                     * Log topic name
+                     * Topic Name
                      */
                     std::string m_topicName;
                     bool m_topicNameHasBeenSet;
@@ -450,14 +488,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_partitionCountHasBeenSet;
 
                     /**
-                     * Whether index is enabled
+                     * Whether the topic has indexing enabled (the topic type must be log topic)
                      */
                     bool m_index;
                     bool m_indexHasBeenSet;
 
                     /**
-                     * Cloud product identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Cloud product identifier. When the topic is created by other cloud products, this field displays the name of the cloud product, such as CDN, TKE.Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_assumerName;
                     bool m_assumerNameHasBeenSet;
@@ -469,14 +506,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Whether collection is enabled in the log topic
+                     * Whether the topic has log collection enabled. true: collection enabled; false: collection disabled.Log collection is enabled by default when creating a log topic, and this field can be modified by calling ModifyTopic through the SDK.The console currently does not support modifying this parameter.
                      */
                     bool m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Information of tags bound to log topic
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Tag information bound to the topicNote: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
@@ -496,8 +532,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_maxSplitPartitionsHasBeenSet;
 
                     /**
-                     * Log topic storage class
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Storage type of the topicNote: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_storageType;
                     bool m_storageTypeHasBeenSet;
@@ -517,19 +552,33 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_subAssumerNameHasBeenSet;
 
                     /**
-                     * Log topic description
+                     * Topic description
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_describes;
                     bool m_describesHasBeenSet;
 
                     /**
-                     * The lifecycle of hot storage when log transitioning is enabled. The value of `hotPeriod` is smaller than that of `Period`.
-The hot storage period is the value of `hotPeriod`, and the cold storage period is the value of `Period` minus the value of `hotPeriod`.
+                     * Enable log sinking, with the lifecycle of standard storage, where hotPeriod < Period.For standard storage, hotPeriod is used, and for infrequent access storage, it is Period-hotPeriod. (The topic type must be a log topic)HotPeriod=0 indicates that log sinking is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_hotPeriod;
                     bool m_hotPeriodHasBeenSet;
+
+                    /**
+                     * Topic type.
+- 0:  log  Topic  
+- 1: Metric Topic
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_bizType;
+                    bool m_bizTypeHasBeenSet;
+
+                    /**
+                     * Free authentication switch. false: disabled; true: enabled.After enabling, anonymous access to the log topic will be supported for specified operations. For details, please refer to Log Topic (https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    bool m_isWebTracking;
+                    bool m_isWebTrackingHasBeenSet;
 
                 };
             }

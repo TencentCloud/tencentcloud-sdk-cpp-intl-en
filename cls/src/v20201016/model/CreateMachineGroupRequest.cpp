@@ -30,7 +30,9 @@ CreateMachineGroupRequest::CreateMachineGroupRequest() :
     m_updateStartTimeHasBeenSet(false),
     m_updateEndTimeHasBeenSet(false),
     m_serviceLoggingHasBeenSet(false),
-    m_metaTagsHasBeenSet(false)
+    m_delayCleanupTimeHasBeenSet(false),
+    m_metaTagsHasBeenSet(false),
+    m_oSTypeHasBeenSet(false)
 {
 }
 
@@ -105,6 +107,14 @@ string CreateMachineGroupRequest::ToJsonString() const
         d.AddMember(iKey, m_serviceLogging, allocator);
     }
 
+    if (m_delayCleanupTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DelayCleanupTime";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_delayCleanupTime, allocator);
+    }
+
     if (m_metaTagsHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -118,6 +128,14 @@ string CreateMachineGroupRequest::ToJsonString() const
             d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(d[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_oSTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OSType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_oSType, allocator);
     }
 
 
@@ -240,6 +258,22 @@ bool CreateMachineGroupRequest::ServiceLoggingHasBeenSet() const
     return m_serviceLoggingHasBeenSet;
 }
 
+int64_t CreateMachineGroupRequest::GetDelayCleanupTime() const
+{
+    return m_delayCleanupTime;
+}
+
+void CreateMachineGroupRequest::SetDelayCleanupTime(const int64_t& _delayCleanupTime)
+{
+    m_delayCleanupTime = _delayCleanupTime;
+    m_delayCleanupTimeHasBeenSet = true;
+}
+
+bool CreateMachineGroupRequest::DelayCleanupTimeHasBeenSet() const
+{
+    return m_delayCleanupTimeHasBeenSet;
+}
+
 vector<MetaTagInfo> CreateMachineGroupRequest::GetMetaTags() const
 {
     return m_metaTags;
@@ -254,6 +288,22 @@ void CreateMachineGroupRequest::SetMetaTags(const vector<MetaTagInfo>& _metaTags
 bool CreateMachineGroupRequest::MetaTagsHasBeenSet() const
 {
     return m_metaTagsHasBeenSet;
+}
+
+uint64_t CreateMachineGroupRequest::GetOSType() const
+{
+    return m_oSType;
+}
+
+void CreateMachineGroupRequest::SetOSType(const uint64_t& _oSType)
+{
+    m_oSType = _oSType;
+    m_oSTypeHasBeenSet = true;
+}
+
+bool CreateMachineGroupRequest::OSTypeHasBeenSet() const
+{
+    return m_oSTypeHasBeenSet;
 }
 
 

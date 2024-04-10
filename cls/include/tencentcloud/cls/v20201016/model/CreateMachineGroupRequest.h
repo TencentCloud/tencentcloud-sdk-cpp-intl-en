@@ -193,6 +193,27 @@ namespace TencentCloud
                     bool ServiceLoggingHasBeenSet() const;
 
                     /**
+                     * 获取Offline cleaning time for machines in machine group
+                     * @return DelayCleanupTime Offline cleaning time for machines in machine group
+                     * 
+                     */
+                    int64_t GetDelayCleanupTime() const;
+
+                    /**
+                     * 设置Offline cleaning time for machines in machine group
+                     * @param _delayCleanupTime Offline cleaning time for machines in machine group
+                     * 
+                     */
+                    void SetDelayCleanupTime(const int64_t& _delayCleanupTime);
+
+                    /**
+                     * 判断参数 DelayCleanupTime 是否已赋值
+                     * @return DelayCleanupTime 是否已赋值
+                     * 
+                     */
+                    bool DelayCleanupTimeHasBeenSet() const;
+
+                    /**
                      * 获取Metadata information list of a machine group
                      * @return MetaTags Metadata information list of a machine group
                      * 
@@ -212,6 +233,27 @@ namespace TencentCloud
                      * 
                      */
                     bool MetaTagsHasBeenSet() const;
+
+                    /**
+                     * 获取System type, default 0, 0: Linux, 1: Windows
+                     * @return OSType System type, default 0, 0: Linux, 1: Windows
+                     * 
+                     */
+                    uint64_t GetOSType() const;
+
+                    /**
+                     * 设置System type, default 0, 0: Linux, 1: Windows
+                     * @param _oSType System type, default 0, 0: Linux, 1: Windows
+                     * 
+                     */
+                    void SetOSType(const uint64_t& _oSType);
+
+                    /**
+                     * 判断参数 OSType 是否已赋值
+                     * @return OSType 是否已赋值
+                     * 
+                     */
+                    bool OSTypeHasBeenSet() const;
 
                 private:
 
@@ -258,10 +300,22 @@ namespace TencentCloud
                     bool m_serviceLoggingHasBeenSet;
 
                     /**
+                     * Offline cleaning time for machines in machine group
+                     */
+                    int64_t m_delayCleanupTime;
+                    bool m_delayCleanupTimeHasBeenSet;
+
+                    /**
                      * Metadata information list of a machine group
                      */
                     std::vector<MetaTagInfo> m_metaTags;
                     bool m_metaTagsHasBeenSet;
+
+                    /**
+                     * System type, default 0, 0: Linux, 1: Windows
+                     */
+                    uint64_t m_oSType;
+                    bool m_oSTypeHasBeenSet;
 
                 };
             }

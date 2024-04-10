@@ -27,6 +27,8 @@
 #include <tencentcloud/cls/v20201016/model/AddMachineGroupInfoResponse.h>
 #include <tencentcloud/cls/v20201016/model/ApplyConfigToMachineGroupRequest.h>
 #include <tencentcloud/cls/v20201016/model/ApplyConfigToMachineGroupResponse.h>
+#include <tencentcloud/cls/v20201016/model/CheckFunctionRequest.h>
+#include <tencentcloud/cls/v20201016/model/CheckFunctionResponse.h>
 #include <tencentcloud/cls/v20201016/model/CheckRechargeKafkaServerRequest.h>
 #include <tencentcloud/cls/v20201016/model/CheckRechargeKafkaServerResponse.h>
 #include <tencentcloud/cls/v20201016/model/CloseKafkaConsumerRequest.h>
@@ -35,6 +37,8 @@
 #include <tencentcloud/cls/v20201016/model/CreateAlarmResponse.h>
 #include <tencentcloud/cls/v20201016/model/CreateAlarmNoticeRequest.h>
 #include <tencentcloud/cls/v20201016/model/CreateAlarmNoticeResponse.h>
+#include <tencentcloud/cls/v20201016/model/CreateAlarmShieldRequest.h>
+#include <tencentcloud/cls/v20201016/model/CreateAlarmShieldResponse.h>
 #include <tencentcloud/cls/v20201016/model/CreateConfigRequest.h>
 #include <tencentcloud/cls/v20201016/model/CreateConfigResponse.h>
 #include <tencentcloud/cls/v20201016/model/CreateConsumerRequest.h>
@@ -43,6 +47,8 @@
 #include <tencentcloud/cls/v20201016/model/CreateCosRechargeResponse.h>
 #include <tencentcloud/cls/v20201016/model/CreateDataTransformRequest.h>
 #include <tencentcloud/cls/v20201016/model/CreateDataTransformResponse.h>
+#include <tencentcloud/cls/v20201016/model/CreateDeliverCloudFunctionRequest.h>
+#include <tencentcloud/cls/v20201016/model/CreateDeliverCloudFunctionResponse.h>
 #include <tencentcloud/cls/v20201016/model/CreateExportRequest.h>
 #include <tencentcloud/cls/v20201016/model/CreateExportResponse.h>
 #include <tencentcloud/cls/v20201016/model/CreateIndexRequest.h>
@@ -53,6 +59,8 @@
 #include <tencentcloud/cls/v20201016/model/CreateLogsetResponse.h>
 #include <tencentcloud/cls/v20201016/model/CreateMachineGroupRequest.h>
 #include <tencentcloud/cls/v20201016/model/CreateMachineGroupResponse.h>
+#include <tencentcloud/cls/v20201016/model/CreateScheduledSqlRequest.h>
+#include <tencentcloud/cls/v20201016/model/CreateScheduledSqlResponse.h>
 #include <tencentcloud/cls/v20201016/model/CreateShipperRequest.h>
 #include <tencentcloud/cls/v20201016/model/CreateShipperResponse.h>
 #include <tencentcloud/cls/v20201016/model/CreateTopicRequest.h>
@@ -61,6 +69,8 @@
 #include <tencentcloud/cls/v20201016/model/DeleteAlarmResponse.h>
 #include <tencentcloud/cls/v20201016/model/DeleteAlarmNoticeRequest.h>
 #include <tencentcloud/cls/v20201016/model/DeleteAlarmNoticeResponse.h>
+#include <tencentcloud/cls/v20201016/model/DeleteAlarmShieldRequest.h>
+#include <tencentcloud/cls/v20201016/model/DeleteAlarmShieldResponse.h>
 #include <tencentcloud/cls/v20201016/model/DeleteConfigRequest.h>
 #include <tencentcloud/cls/v20201016/model/DeleteConfigResponse.h>
 #include <tencentcloud/cls/v20201016/model/DeleteConfigFromMachineGroupRequest.h>
@@ -81,12 +91,16 @@
 #include <tencentcloud/cls/v20201016/model/DeleteMachineGroupResponse.h>
 #include <tencentcloud/cls/v20201016/model/DeleteMachineGroupInfoRequest.h>
 #include <tencentcloud/cls/v20201016/model/DeleteMachineGroupInfoResponse.h>
+#include <tencentcloud/cls/v20201016/model/DeleteScheduledSqlRequest.h>
+#include <tencentcloud/cls/v20201016/model/DeleteScheduledSqlResponse.h>
 #include <tencentcloud/cls/v20201016/model/DeleteShipperRequest.h>
 #include <tencentcloud/cls/v20201016/model/DeleteShipperResponse.h>
 #include <tencentcloud/cls/v20201016/model/DeleteTopicRequest.h>
 #include <tencentcloud/cls/v20201016/model/DeleteTopicResponse.h>
 #include <tencentcloud/cls/v20201016/model/DescribeAlarmNoticesRequest.h>
 #include <tencentcloud/cls/v20201016/model/DescribeAlarmNoticesResponse.h>
+#include <tencentcloud/cls/v20201016/model/DescribeAlarmShieldsRequest.h>
+#include <tencentcloud/cls/v20201016/model/DescribeAlarmShieldsResponse.h>
 #include <tencentcloud/cls/v20201016/model/DescribeAlarmsRequest.h>
 #include <tencentcloud/cls/v20201016/model/DescribeAlarmsResponse.h>
 #include <tencentcloud/cls/v20201016/model/DescribeAlertRecordHistoryRequest.h>
@@ -105,6 +119,8 @@
 #include <tencentcloud/cls/v20201016/model/DescribeExportsResponse.h>
 #include <tencentcloud/cls/v20201016/model/DescribeIndexRequest.h>
 #include <tencentcloud/cls/v20201016/model/DescribeIndexResponse.h>
+#include <tencentcloud/cls/v20201016/model/DescribeKafkaConsumerRequest.h>
+#include <tencentcloud/cls/v20201016/model/DescribeKafkaConsumerResponse.h>
 #include <tencentcloud/cls/v20201016/model/DescribeKafkaRechargesRequest.h>
 #include <tencentcloud/cls/v20201016/model/DescribeKafkaRechargesResponse.h>
 #include <tencentcloud/cls/v20201016/model/DescribeLogContextRequest.h>
@@ -121,6 +137,8 @@
 #include <tencentcloud/cls/v20201016/model/DescribeMachinesResponse.h>
 #include <tencentcloud/cls/v20201016/model/DescribePartitionsRequest.h>
 #include <tencentcloud/cls/v20201016/model/DescribePartitionsResponse.h>
+#include <tencentcloud/cls/v20201016/model/DescribeScheduledSqlInfoRequest.h>
+#include <tencentcloud/cls/v20201016/model/DescribeScheduledSqlInfoResponse.h>
 #include <tencentcloud/cls/v20201016/model/DescribeShipperTasksRequest.h>
 #include <tencentcloud/cls/v20201016/model/DescribeShipperTasksResponse.h>
 #include <tencentcloud/cls/v20201016/model/DescribeShippersRequest.h>
@@ -135,6 +153,8 @@
 #include <tencentcloud/cls/v20201016/model/ModifyAlarmResponse.h>
 #include <tencentcloud/cls/v20201016/model/ModifyAlarmNoticeRequest.h>
 #include <tencentcloud/cls/v20201016/model/ModifyAlarmNoticeResponse.h>
+#include <tencentcloud/cls/v20201016/model/ModifyAlarmShieldRequest.h>
+#include <tencentcloud/cls/v20201016/model/ModifyAlarmShieldResponse.h>
 #include <tencentcloud/cls/v20201016/model/ModifyConfigRequest.h>
 #include <tencentcloud/cls/v20201016/model/ModifyConfigResponse.h>
 #include <tencentcloud/cls/v20201016/model/ModifyConsumerRequest.h>
@@ -145,12 +165,16 @@
 #include <tencentcloud/cls/v20201016/model/ModifyDataTransformResponse.h>
 #include <tencentcloud/cls/v20201016/model/ModifyIndexRequest.h>
 #include <tencentcloud/cls/v20201016/model/ModifyIndexResponse.h>
+#include <tencentcloud/cls/v20201016/model/ModifyKafkaConsumerRequest.h>
+#include <tencentcloud/cls/v20201016/model/ModifyKafkaConsumerResponse.h>
 #include <tencentcloud/cls/v20201016/model/ModifyKafkaRechargeRequest.h>
 #include <tencentcloud/cls/v20201016/model/ModifyKafkaRechargeResponse.h>
 #include <tencentcloud/cls/v20201016/model/ModifyLogsetRequest.h>
 #include <tencentcloud/cls/v20201016/model/ModifyLogsetResponse.h>
 #include <tencentcloud/cls/v20201016/model/ModifyMachineGroupRequest.h>
 #include <tencentcloud/cls/v20201016/model/ModifyMachineGroupResponse.h>
+#include <tencentcloud/cls/v20201016/model/ModifyScheduledSqlRequest.h>
+#include <tencentcloud/cls/v20201016/model/ModifyScheduledSqlResponse.h>
 #include <tencentcloud/cls/v20201016/model/ModifyShipperRequest.h>
 #include <tencentcloud/cls/v20201016/model/ModifyShipperResponse.h>
 #include <tencentcloud/cls/v20201016/model/ModifyTopicRequest.h>
@@ -159,8 +183,14 @@
 #include <tencentcloud/cls/v20201016/model/OpenKafkaConsumerResponse.h>
 #include <tencentcloud/cls/v20201016/model/PreviewKafkaRechargeRequest.h>
 #include <tencentcloud/cls/v20201016/model/PreviewKafkaRechargeResponse.h>
+#include <tencentcloud/cls/v20201016/model/QueryMetricRequest.h>
+#include <tencentcloud/cls/v20201016/model/QueryMetricResponse.h>
+#include <tencentcloud/cls/v20201016/model/QueryRangeMetricRequest.h>
+#include <tencentcloud/cls/v20201016/model/QueryRangeMetricResponse.h>
 #include <tencentcloud/cls/v20201016/model/RetryShipperTaskRequest.h>
 #include <tencentcloud/cls/v20201016/model/RetryShipperTaskResponse.h>
+#include <tencentcloud/cls/v20201016/model/SearchCosRechargeInfoRequest.h>
+#include <tencentcloud/cls/v20201016/model/SearchCosRechargeInfoResponse.h>
 #include <tencentcloud/cls/v20201016/model/SearchLogRequest.h>
 #include <tencentcloud/cls/v20201016/model/SearchLogResponse.h>
 #include <tencentcloud/cls/v20201016/model/SplitPartitionRequest.h>
@@ -187,6 +217,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ApplyConfigToMachineGroupResponse> ApplyConfigToMachineGroupOutcome;
                 typedef std::future<ApplyConfigToMachineGroupOutcome> ApplyConfigToMachineGroupOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::ApplyConfigToMachineGroupRequest&, ApplyConfigToMachineGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ApplyConfigToMachineGroupAsyncHandler;
+                typedef Outcome<Core::Error, Model::CheckFunctionResponse> CheckFunctionOutcome;
+                typedef std::future<CheckFunctionOutcome> CheckFunctionOutcomeCallable;
+                typedef std::function<void(const ClsClient*, const Model::CheckFunctionRequest&, CheckFunctionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CheckFunctionAsyncHandler;
                 typedef Outcome<Core::Error, Model::CheckRechargeKafkaServerResponse> CheckRechargeKafkaServerOutcome;
                 typedef std::future<CheckRechargeKafkaServerOutcome> CheckRechargeKafkaServerOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::CheckRechargeKafkaServerRequest&, CheckRechargeKafkaServerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CheckRechargeKafkaServerAsyncHandler;
@@ -199,6 +232,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateAlarmNoticeResponse> CreateAlarmNoticeOutcome;
                 typedef std::future<CreateAlarmNoticeOutcome> CreateAlarmNoticeOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::CreateAlarmNoticeRequest&, CreateAlarmNoticeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAlarmNoticeAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateAlarmShieldResponse> CreateAlarmShieldOutcome;
+                typedef std::future<CreateAlarmShieldOutcome> CreateAlarmShieldOutcomeCallable;
+                typedef std::function<void(const ClsClient*, const Model::CreateAlarmShieldRequest&, CreateAlarmShieldOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAlarmShieldAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateConfigResponse> CreateConfigOutcome;
                 typedef std::future<CreateConfigOutcome> CreateConfigOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::CreateConfigRequest&, CreateConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateConfigAsyncHandler;
@@ -211,6 +247,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateDataTransformResponse> CreateDataTransformOutcome;
                 typedef std::future<CreateDataTransformOutcome> CreateDataTransformOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::CreateDataTransformRequest&, CreateDataTransformOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDataTransformAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateDeliverCloudFunctionResponse> CreateDeliverCloudFunctionOutcome;
+                typedef std::future<CreateDeliverCloudFunctionOutcome> CreateDeliverCloudFunctionOutcomeCallable;
+                typedef std::function<void(const ClsClient*, const Model::CreateDeliverCloudFunctionRequest&, CreateDeliverCloudFunctionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDeliverCloudFunctionAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateExportResponse> CreateExportOutcome;
                 typedef std::future<CreateExportOutcome> CreateExportOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::CreateExportRequest&, CreateExportOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateExportAsyncHandler;
@@ -226,6 +265,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateMachineGroupResponse> CreateMachineGroupOutcome;
                 typedef std::future<CreateMachineGroupOutcome> CreateMachineGroupOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::CreateMachineGroupRequest&, CreateMachineGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateMachineGroupAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateScheduledSqlResponse> CreateScheduledSqlOutcome;
+                typedef std::future<CreateScheduledSqlOutcome> CreateScheduledSqlOutcomeCallable;
+                typedef std::function<void(const ClsClient*, const Model::CreateScheduledSqlRequest&, CreateScheduledSqlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateScheduledSqlAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateShipperResponse> CreateShipperOutcome;
                 typedef std::future<CreateShipperOutcome> CreateShipperOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::CreateShipperRequest&, CreateShipperOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateShipperAsyncHandler;
@@ -238,6 +280,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteAlarmNoticeResponse> DeleteAlarmNoticeOutcome;
                 typedef std::future<DeleteAlarmNoticeOutcome> DeleteAlarmNoticeOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::DeleteAlarmNoticeRequest&, DeleteAlarmNoticeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAlarmNoticeAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteAlarmShieldResponse> DeleteAlarmShieldOutcome;
+                typedef std::future<DeleteAlarmShieldOutcome> DeleteAlarmShieldOutcomeCallable;
+                typedef std::function<void(const ClsClient*, const Model::DeleteAlarmShieldRequest&, DeleteAlarmShieldOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAlarmShieldAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteConfigResponse> DeleteConfigOutcome;
                 typedef std::future<DeleteConfigOutcome> DeleteConfigOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::DeleteConfigRequest&, DeleteConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteConfigAsyncHandler;
@@ -268,6 +313,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteMachineGroupInfoResponse> DeleteMachineGroupInfoOutcome;
                 typedef std::future<DeleteMachineGroupInfoOutcome> DeleteMachineGroupInfoOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::DeleteMachineGroupInfoRequest&, DeleteMachineGroupInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteMachineGroupInfoAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteScheduledSqlResponse> DeleteScheduledSqlOutcome;
+                typedef std::future<DeleteScheduledSqlOutcome> DeleteScheduledSqlOutcomeCallable;
+                typedef std::function<void(const ClsClient*, const Model::DeleteScheduledSqlRequest&, DeleteScheduledSqlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteScheduledSqlAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteShipperResponse> DeleteShipperOutcome;
                 typedef std::future<DeleteShipperOutcome> DeleteShipperOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::DeleteShipperRequest&, DeleteShipperOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteShipperAsyncHandler;
@@ -277,6 +325,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeAlarmNoticesResponse> DescribeAlarmNoticesOutcome;
                 typedef std::future<DescribeAlarmNoticesOutcome> DescribeAlarmNoticesOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::DescribeAlarmNoticesRequest&, DescribeAlarmNoticesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAlarmNoticesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAlarmShieldsResponse> DescribeAlarmShieldsOutcome;
+                typedef std::future<DescribeAlarmShieldsOutcome> DescribeAlarmShieldsOutcomeCallable;
+                typedef std::function<void(const ClsClient*, const Model::DescribeAlarmShieldsRequest&, DescribeAlarmShieldsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAlarmShieldsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAlarmsResponse> DescribeAlarmsOutcome;
                 typedef std::future<DescribeAlarmsOutcome> DescribeAlarmsOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::DescribeAlarmsRequest&, DescribeAlarmsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAlarmsAsyncHandler;
@@ -304,6 +355,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeIndexResponse> DescribeIndexOutcome;
                 typedef std::future<DescribeIndexOutcome> DescribeIndexOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::DescribeIndexRequest&, DescribeIndexOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeIndexAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeKafkaConsumerResponse> DescribeKafkaConsumerOutcome;
+                typedef std::future<DescribeKafkaConsumerOutcome> DescribeKafkaConsumerOutcomeCallable;
+                typedef std::function<void(const ClsClient*, const Model::DescribeKafkaConsumerRequest&, DescribeKafkaConsumerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeKafkaConsumerAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeKafkaRechargesResponse> DescribeKafkaRechargesOutcome;
                 typedef std::future<DescribeKafkaRechargesOutcome> DescribeKafkaRechargesOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::DescribeKafkaRechargesRequest&, DescribeKafkaRechargesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeKafkaRechargesAsyncHandler;
@@ -328,6 +382,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribePartitionsResponse> DescribePartitionsOutcome;
                 typedef std::future<DescribePartitionsOutcome> DescribePartitionsOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::DescribePartitionsRequest&, DescribePartitionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePartitionsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeScheduledSqlInfoResponse> DescribeScheduledSqlInfoOutcome;
+                typedef std::future<DescribeScheduledSqlInfoOutcome> DescribeScheduledSqlInfoOutcomeCallable;
+                typedef std::function<void(const ClsClient*, const Model::DescribeScheduledSqlInfoRequest&, DescribeScheduledSqlInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeScheduledSqlInfoAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeShipperTasksResponse> DescribeShipperTasksOutcome;
                 typedef std::future<DescribeShipperTasksOutcome> DescribeShipperTasksOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::DescribeShipperTasksRequest&, DescribeShipperTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeShipperTasksAsyncHandler;
@@ -349,6 +406,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyAlarmNoticeResponse> ModifyAlarmNoticeOutcome;
                 typedef std::future<ModifyAlarmNoticeOutcome> ModifyAlarmNoticeOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::ModifyAlarmNoticeRequest&, ModifyAlarmNoticeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAlarmNoticeAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyAlarmShieldResponse> ModifyAlarmShieldOutcome;
+                typedef std::future<ModifyAlarmShieldOutcome> ModifyAlarmShieldOutcomeCallable;
+                typedef std::function<void(const ClsClient*, const Model::ModifyAlarmShieldRequest&, ModifyAlarmShieldOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAlarmShieldAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyConfigResponse> ModifyConfigOutcome;
                 typedef std::future<ModifyConfigOutcome> ModifyConfigOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::ModifyConfigRequest&, ModifyConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyConfigAsyncHandler;
@@ -364,6 +424,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyIndexResponse> ModifyIndexOutcome;
                 typedef std::future<ModifyIndexOutcome> ModifyIndexOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::ModifyIndexRequest&, ModifyIndexOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyIndexAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyKafkaConsumerResponse> ModifyKafkaConsumerOutcome;
+                typedef std::future<ModifyKafkaConsumerOutcome> ModifyKafkaConsumerOutcomeCallable;
+                typedef std::function<void(const ClsClient*, const Model::ModifyKafkaConsumerRequest&, ModifyKafkaConsumerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyKafkaConsumerAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyKafkaRechargeResponse> ModifyKafkaRechargeOutcome;
                 typedef std::future<ModifyKafkaRechargeOutcome> ModifyKafkaRechargeOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::ModifyKafkaRechargeRequest&, ModifyKafkaRechargeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyKafkaRechargeAsyncHandler;
@@ -373,6 +436,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyMachineGroupResponse> ModifyMachineGroupOutcome;
                 typedef std::future<ModifyMachineGroupOutcome> ModifyMachineGroupOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::ModifyMachineGroupRequest&, ModifyMachineGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyMachineGroupAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyScheduledSqlResponse> ModifyScheduledSqlOutcome;
+                typedef std::future<ModifyScheduledSqlOutcome> ModifyScheduledSqlOutcomeCallable;
+                typedef std::function<void(const ClsClient*, const Model::ModifyScheduledSqlRequest&, ModifyScheduledSqlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyScheduledSqlAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyShipperResponse> ModifyShipperOutcome;
                 typedef std::future<ModifyShipperOutcome> ModifyShipperOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::ModifyShipperRequest&, ModifyShipperOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyShipperAsyncHandler;
@@ -385,9 +451,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::PreviewKafkaRechargeResponse> PreviewKafkaRechargeOutcome;
                 typedef std::future<PreviewKafkaRechargeOutcome> PreviewKafkaRechargeOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::PreviewKafkaRechargeRequest&, PreviewKafkaRechargeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> PreviewKafkaRechargeAsyncHandler;
+                typedef Outcome<Core::Error, Model::QueryMetricResponse> QueryMetricOutcome;
+                typedef std::future<QueryMetricOutcome> QueryMetricOutcomeCallable;
+                typedef std::function<void(const ClsClient*, const Model::QueryMetricRequest&, QueryMetricOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryMetricAsyncHandler;
+                typedef Outcome<Core::Error, Model::QueryRangeMetricResponse> QueryRangeMetricOutcome;
+                typedef std::future<QueryRangeMetricOutcome> QueryRangeMetricOutcomeCallable;
+                typedef std::function<void(const ClsClient*, const Model::QueryRangeMetricRequest&, QueryRangeMetricOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryRangeMetricAsyncHandler;
                 typedef Outcome<Core::Error, Model::RetryShipperTaskResponse> RetryShipperTaskOutcome;
                 typedef std::future<RetryShipperTaskOutcome> RetryShipperTaskOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::RetryShipperTaskRequest&, RetryShipperTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RetryShipperTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::SearchCosRechargeInfoResponse> SearchCosRechargeInfoOutcome;
+                typedef std::future<SearchCosRechargeInfoOutcome> SearchCosRechargeInfoOutcomeCallable;
+                typedef std::function<void(const ClsClient*, const Model::SearchCosRechargeInfoRequest&, SearchCosRechargeInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SearchCosRechargeInfoAsyncHandler;
                 typedef Outcome<Core::Error, Model::SearchLogResponse> SearchLogOutcome;
                 typedef std::future<SearchLogOutcome> SearchLogOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::SearchLogRequest&, SearchLogOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SearchLogAsyncHandler;
@@ -417,6 +492,15 @@ namespace TencentCloud
                 ApplyConfigToMachineGroupOutcome ApplyConfigToMachineGroup(const Model::ApplyConfigToMachineGroupRequest &request);
                 void ApplyConfigToMachineGroupAsync(const Model::ApplyConfigToMachineGroupRequest& request, const ApplyConfigToMachineGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ApplyConfigToMachineGroupOutcomeCallable ApplyConfigToMachineGroupCallable(const Model::ApplyConfigToMachineGroupRequest& request);
+
+                /**
+                 *This API is used to verify the syntax of data processing DSL functions.
+                 * @param req CheckFunctionRequest
+                 * @return CheckFunctionOutcome
+                 */
+                CheckFunctionOutcome CheckFunction(const Model::CheckFunctionRequest &request);
+                void CheckFunctionAsync(const Model::CheckFunctionRequest& request, const CheckFunctionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CheckFunctionOutcomeCallable CheckFunctionCallable(const Model::CheckFunctionRequest& request);
 
                 /**
                  *This API is used to check whether the Kafka service cluster is accessible.
@@ -455,6 +539,15 @@ namespace TencentCloud
                 CreateAlarmNoticeOutcomeCallable CreateAlarmNoticeCallable(const Model::CreateAlarmNoticeRequest& request);
 
                 /**
+                 *This API is used to create an alarm blocking rule.
+                 * @param req CreateAlarmShieldRequest
+                 * @return CreateAlarmShieldOutcome
+                 */
+                CreateAlarmShieldOutcome CreateAlarmShield(const Model::CreateAlarmShieldRequest &request);
+                void CreateAlarmShieldAsync(const Model::CreateAlarmShieldRequest& request, const CreateAlarmShieldAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateAlarmShieldOutcomeCallable CreateAlarmShieldCallable(const Model::CreateAlarmShieldRequest& request);
+
+                /**
                  *This API is used to create a collection rule configuration.
                  * @param req CreateConfigRequest
                  * @return CreateConfigOutcome
@@ -464,7 +557,7 @@ namespace TencentCloud
                 CreateConfigOutcomeCallable CreateConfigCallable(const Model::CreateConfigRequest& request);
 
                 /**
-                 *This API is used to create a shipping task.
+                 *This API is used to create a CKafka delivery task.
                  * @param req CreateConsumerRequest
                  * @return CreateConsumerOutcome
                  */
@@ -489,6 +582,15 @@ namespace TencentCloud
                 CreateDataTransformOutcome CreateDataTransform(const Model::CreateDataTransformRequest &request);
                 void CreateDataTransformAsync(const Model::CreateDataTransformRequest& request, const CreateDataTransformAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateDataTransformOutcomeCallable CreateDataTransformCallable(const Model::CreateDataTransformRequest& request);
+
+                /**
+                 *This API is used to create a delivery SCF task.
+                 * @param req CreateDeliverCloudFunctionRequest
+                 * @return CreateDeliverCloudFunctionOutcome
+                 */
+                CreateDeliverCloudFunctionOutcome CreateDeliverCloudFunction(const Model::CreateDeliverCloudFunctionRequest &request);
+                void CreateDeliverCloudFunctionAsync(const Model::CreateDeliverCloudFunctionRequest& request, const CreateDeliverCloudFunctionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateDeliverCloudFunctionOutcomeCallable CreateDeliverCloudFunctionCallable(const Model::CreateDeliverCloudFunctionRequest& request);
 
                 /**
                  *This API is used to create a download task. To get the returned download address, call `DescribeExports` to view the task list. The `CosPath` parameter is also included for download address. For more information, visit https://intl.cloud.tencent.com/document/product/614/56449.?from_cn_redirect=1
@@ -536,6 +638,15 @@ namespace TencentCloud
                 CreateMachineGroupOutcomeCallable CreateMachineGroupCallable(const Model::CreateMachineGroupRequest& request);
 
                 /**
+                 *This API is used to create a scheduled SQL analysis task.
+                 * @param req CreateScheduledSqlRequest
+                 * @return CreateScheduledSqlOutcome
+                 */
+                CreateScheduledSqlOutcome CreateScheduledSql(const Model::CreateScheduledSqlRequest &request);
+                void CreateScheduledSqlAsync(const Model::CreateScheduledSqlRequest& request, const CreateScheduledSqlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateScheduledSqlOutcomeCallable CreateScheduledSqlCallable(const Model::CreateScheduledSqlRequest& request);
+
+                /**
                  *This API is used to create a task to ship to COS. Note: To use this API, you need to check whether you have configured the role and permission for shipping to COS. If not, see **Viewing and Configuring Shipping Authorization** at https://intl.cloud.tencent.com/document/product/614/71623.?from_cn_redirect=1
                  * @param req CreateShipperRequest
                  * @return CreateShipperOutcome
@@ -570,6 +681,15 @@ namespace TencentCloud
                 DeleteAlarmNoticeOutcome DeleteAlarmNotice(const Model::DeleteAlarmNoticeRequest &request);
                 void DeleteAlarmNoticeAsync(const Model::DeleteAlarmNoticeRequest& request, const DeleteAlarmNoticeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteAlarmNoticeOutcomeCallable DeleteAlarmNoticeCallable(const Model::DeleteAlarmNoticeRequest& request);
+
+                /**
+                 *This API is used to delete an alarm blocking rule.
+                 * @param req DeleteAlarmShieldRequest
+                 * @return DeleteAlarmShieldOutcome
+                 */
+                DeleteAlarmShieldOutcome DeleteAlarmShield(const Model::DeleteAlarmShieldRequest &request);
+                void DeleteAlarmShieldAsync(const Model::DeleteAlarmShieldRequest& request, const DeleteAlarmShieldAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteAlarmShieldOutcomeCallable DeleteAlarmShieldCallable(const Model::DeleteAlarmShieldRequest& request);
 
                 /**
                  *This API is used to delete a collection rule configuration.
@@ -662,6 +782,15 @@ namespace TencentCloud
                 DeleteMachineGroupInfoOutcomeCallable DeleteMachineGroupInfoCallable(const Model::DeleteMachineGroupInfoRequest& request);
 
                 /**
+                 *This API is used to delete scheduled SQL analysis tasks.
+                 * @param req DeleteScheduledSqlRequest
+                 * @return DeleteScheduledSqlOutcome
+                 */
+                DeleteScheduledSqlOutcome DeleteScheduledSql(const Model::DeleteScheduledSqlRequest &request);
+                void DeleteScheduledSqlAsync(const Model::DeleteScheduledSqlRequest& request, const DeleteScheduledSqlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteScheduledSqlOutcomeCallable DeleteScheduledSqlCallable(const Model::DeleteScheduledSqlRequest& request);
+
+                /**
                  *This API is used to delete a COS shipping task.
                  * @param req DeleteShipperRequest
                  * @return DeleteShipperOutcome
@@ -687,6 +816,15 @@ namespace TencentCloud
                 DescribeAlarmNoticesOutcome DescribeAlarmNotices(const Model::DescribeAlarmNoticesRequest &request);
                 void DescribeAlarmNoticesAsync(const Model::DescribeAlarmNoticesRequest& request, const DescribeAlarmNoticesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeAlarmNoticesOutcomeCallable DescribeAlarmNoticesCallable(const Model::DescribeAlarmNoticesRequest& request);
+
+                /**
+                 *Accesses alarm blocking configuration rules
+                 * @param req DescribeAlarmShieldsRequest
+                 * @return DescribeAlarmShieldsOutcome
+                 */
+                DescribeAlarmShieldsOutcome DescribeAlarmShields(const Model::DescribeAlarmShieldsRequest &request);
+                void DescribeAlarmShieldsAsync(const Model::DescribeAlarmShieldsRequest& request, const DescribeAlarmShieldsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAlarmShieldsOutcomeCallable DescribeAlarmShieldsCallable(const Model::DescribeAlarmShieldsRequest& request);
 
                 /**
                  *This API is used to get the alarm policy list.
@@ -770,6 +908,15 @@ namespace TencentCloud
                 DescribeIndexOutcomeCallable DescribeIndexCallable(const Model::DescribeIndexRequest& request);
 
                 /**
+                 *Accesses Kafka protocol consumption information
+                 * @param req DescribeKafkaConsumerRequest
+                 * @return DescribeKafkaConsumerOutcome
+                 */
+                DescribeKafkaConsumerOutcome DescribeKafkaConsumer(const Model::DescribeKafkaConsumerRequest &request);
+                void DescribeKafkaConsumerAsync(const Model::DescribeKafkaConsumerRequest& request, const DescribeKafkaConsumerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeKafkaConsumerOutcomeCallable DescribeKafkaConsumerCallable(const Model::DescribeKafkaConsumerRequest& request);
+
+                /**
                  *This API is used to get the list of Kafka data subscription tasks.
                  * @param req DescribeKafkaRechargesRequest
                  * @return DescribeKafkaRechargesOutcome
@@ -779,7 +926,7 @@ namespace TencentCloud
                 DescribeKafkaRechargesOutcomeCallable DescribeKafkaRechargesCallable(const Model::DescribeKafkaRechargesRequest& request);
 
                 /**
-                 *This API is used to search for content in the log context.
+                 *This API is used to search for content near the log context. For more details, see [Context Search](https://intl.cloud.tencent.com/document/product/614/53248?from_cn_redirect=1).The maximum value of API's return data packet is 49MB. It is recommended to enable gzip compression (HTTP Request Header Accept-Encoding: gzip).
                  * @param req DescribeLogContextRequest
                  * @return DescribeLogContextOutcome
                  */
@@ -824,7 +971,7 @@ namespace TencentCloud
                 DescribeMachineGroupsOutcomeCallable DescribeMachineGroupsCallable(const Model::DescribeMachineGroupsRequest& request);
 
                 /**
-                 *This API is used to get the machine status in the specified machine group.
+                 *Gets the status of a machine under the specified machine group
                  * @param req DescribeMachinesRequest
                  * @return DescribeMachinesOutcome
                  */
@@ -840,6 +987,15 @@ namespace TencentCloud
                 DescribePartitionsOutcome DescribePartitions(const Model::DescribePartitionsRequest &request);
                 void DescribePartitionsAsync(const Model::DescribePartitionsRequest& request, const DescribePartitionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribePartitionsOutcomeCallable DescribePartitionsCallable(const Model::DescribePartitionsRequest& request);
+
+                /**
+                 *This API is used to access the scheduled SQL analysis task list.
+                 * @param req DescribeScheduledSqlInfoRequest
+                 * @return DescribeScheduledSqlInfoOutcome
+                 */
+                DescribeScheduledSqlInfoOutcome DescribeScheduledSqlInfo(const Model::DescribeScheduledSqlInfoRequest &request);
+                void DescribeScheduledSqlInfoAsync(const Model::DescribeScheduledSqlInfoRequest& request, const DescribeScheduledSqlInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeScheduledSqlInfoOutcomeCallable DescribeScheduledSqlInfoCallable(const Model::DescribeScheduledSqlInfoRequest& request);
 
                 /**
                  *This API is used to get the list of shipping tasks.
@@ -869,7 +1025,7 @@ namespace TencentCloud
                 DescribeTopicsOutcomeCallable DescribeTopicsCallable(const Model::DescribeTopicsRequest& request);
 
                 /**
-                 *This API is used to get the records of alarm tasks.
+                 *This API is used to access alarm policy execution details.
                  * @param req GetAlarmLogRequest
                  * @return GetAlarmLogOutcome
                  */
@@ -905,6 +1061,15 @@ namespace TencentCloud
                 ModifyAlarmNoticeOutcomeCallable ModifyAlarmNoticeCallable(const Model::ModifyAlarmNoticeRequest& request);
 
                 /**
+                 *This API is used to modify alarm blocking rules.
+                 * @param req ModifyAlarmShieldRequest
+                 * @return ModifyAlarmShieldOutcome
+                 */
+                ModifyAlarmShieldOutcome ModifyAlarmShield(const Model::ModifyAlarmShieldRequest &request);
+                void ModifyAlarmShieldAsync(const Model::ModifyAlarmShieldRequest& request, const ModifyAlarmShieldAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyAlarmShieldOutcomeCallable ModifyAlarmShieldCallable(const Model::ModifyAlarmShieldRequest& request);
+
+                /**
                  *This API is used to modify a collection rule configuration.
                  * @param req ModifyConfigRequest
                  * @return ModifyConfigOutcome
@@ -914,7 +1079,7 @@ namespace TencentCloud
                 ModifyConfigOutcomeCallable ModifyConfigCallable(const Model::ModifyConfigRequest& request);
 
                 /**
-                 *This API is used to modify a shipping task.
+                 *This API is used to modify a CKafka delivery task
                  * @param req ModifyConsumerRequest
                  * @return ModifyConsumerOutcome
                  */
@@ -942,13 +1107,21 @@ namespace TencentCloud
 
                 /**
                  *This API is used to modify the index configuration. It is subject to the default request frequency limit, and the number of concurrent requests to the same log topic cannot exceed 1, i.e., the index configuration of only one log topic can be modified at a time.
-
                  * @param req ModifyIndexRequest
                  * @return ModifyIndexOutcome
                  */
                 ModifyIndexOutcome ModifyIndex(const Model::ModifyIndexRequest &request);
                 void ModifyIndexAsync(const Model::ModifyIndexRequest& request, const ModifyIndexAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyIndexOutcomeCallable ModifyIndexCallable(const Model::ModifyIndexRequest& request);
+
+                /**
+                 *Modifies Kafka Protocol consumption information
+                 * @param req ModifyKafkaConsumerRequest
+                 * @return ModifyKafkaConsumerOutcome
+                 */
+                ModifyKafkaConsumerOutcome ModifyKafkaConsumer(const Model::ModifyKafkaConsumerRequest &request);
+                void ModifyKafkaConsumerAsync(const Model::ModifyKafkaConsumerRequest& request, const ModifyKafkaConsumerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyKafkaConsumerOutcomeCallable ModifyKafkaConsumerCallable(const Model::ModifyKafkaConsumerRequest& request);
 
                 /**
                  *This API is used to modify a Kafka data subscription task.
@@ -976,6 +1149,15 @@ namespace TencentCloud
                 ModifyMachineGroupOutcome ModifyMachineGroup(const Model::ModifyMachineGroupRequest &request);
                 void ModifyMachineGroupAsync(const Model::ModifyMachineGroupRequest& request, const ModifyMachineGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyMachineGroupOutcomeCallable ModifyMachineGroupCallable(const Model::ModifyMachineGroupRequest& request);
+
+                /**
+                 *This API is used to modify scheduled SQL analysis tasks.
+                 * @param req ModifyScheduledSqlRequest
+                 * @return ModifyScheduledSqlOutcome
+                 */
+                ModifyScheduledSqlOutcome ModifyScheduledSql(const Model::ModifyScheduledSqlRequest &request);
+                void ModifyScheduledSqlAsync(const Model::ModifyScheduledSqlRequest& request, const ModifyScheduledSqlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyScheduledSqlOutcomeCallable ModifyScheduledSqlCallable(const Model::ModifyScheduledSqlRequest& request);
 
                 /**
                  *This API is used to modify an existing shipping rule. To use this API, you need to grant CLS the write permission of the specified bucket.
@@ -1014,6 +1196,24 @@ namespace TencentCloud
                 PreviewKafkaRechargeOutcomeCallable PreviewKafkaRechargeCallable(const Model::PreviewKafkaRechargeRequest& request);
 
                 /**
+                 *Queries the latest metric value at a specified time
+                 * @param req QueryMetricRequest
+                 * @return QueryMetricOutcome
+                 */
+                QueryMetricOutcome QueryMetric(const Model::QueryMetricRequest &request);
+                void QueryMetricAsync(const Model::QueryMetricRequest& request, const QueryMetricAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                QueryMetricOutcomeCallable QueryMetricCallable(const Model::QueryMetricRequest& request);
+
+                /**
+                 *This API is used to query the trend of metrics within a specified time range.
+                 * @param req QueryRangeMetricRequest
+                 * @return QueryRangeMetricOutcome
+                 */
+                QueryRangeMetricOutcome QueryRangeMetric(const Model::QueryRangeMetricRequest &request);
+                void QueryRangeMetricAsync(const Model::QueryRangeMetricRequest& request, const QueryRangeMetricAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                QueryRangeMetricOutcomeCallable QueryRangeMetricCallable(const Model::QueryRangeMetricRequest& request);
+
+                /**
                  *This API is used to retry a failed shipping task.
                  * @param req RetryShipperTaskRequest
                  * @return RetryShipperTaskOutcome
@@ -1023,7 +1223,17 @@ namespace TencentCloud
                 RetryShipperTaskOutcomeCallable RetryShipperTaskCallable(const Model::RetryShipperTaskRequest& request);
 
                 /**
-                 *This API is used to search logs. It is subject to the default API rate limit, and the number of concurrent queries to the same log topic cannot exceed 15.
+                 *This API is used to preview COS import information.
+                 * @param req SearchCosRechargeInfoRequest
+                 * @return SearchCosRechargeInfoOutcome
+                 */
+                SearchCosRechargeInfoOutcome SearchCosRechargeInfo(const Model::SearchCosRechargeInfoRequest &request);
+                void SearchCosRechargeInfoAsync(const Model::SearchCosRechargeInfoRequest& request, const SearchCosRechargeInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SearchCosRechargeInfoOutcomeCallable SearchCosRechargeInfoCallable(const Model::SearchCosRechargeInfoRequest& request);
+
+                /**
+                 *This API is used to search and analyze logs. When using this API, please note the following:1. Besides being subject to the default API request frequency limit by this API, for a single log topic, the concurrency number cannot exceed 15. 2. For search syntax, it's recommended to use the CQL syntax rule. Please use the SyntaxRule parameter and set its value to 1.
+3. The maximum value of API's response data packet is 49MB. It is recommended to enable gzip compression (HTTP Request Header Accept-Encoding: gzip).
                  * @param req SearchLogRequest
                  * @return SearchLogOutcome
                  */

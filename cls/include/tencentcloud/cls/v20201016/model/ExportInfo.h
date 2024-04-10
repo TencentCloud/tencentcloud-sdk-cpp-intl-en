@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool ToHasBeenSet() const;
 
                     /**
-                     * 获取Log export path
-                     * @return CosPath Log export path
+                     * 获取Log export path, valid for one hour. Please download using this path as soon as possible.
+                     * @return CosPath Log export path, valid for one hour. Please download using this path as soon as possible.
                      * 
                      */
                     std::string GetCosPath() const;
 
                     /**
-                     * 设置Log export path
-                     * @param _cosPath Log export path
+                     * 设置Log export path, valid for one hour. Please download using this path as soon as possible.
+                     * @param _cosPath Log export path, valid for one hour. Please download using this path as soon as possible.
                      * 
                      */
                     void SetCosPath(const std::string& _cosPath);
@@ -318,6 +318,27 @@ namespace TencentCloud
                      * 
                      */
                     bool CreateTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Syntax rules. The default value is 0.0: Lucene syntax, 1: CQL syntax.
+                     * @return SyntaxRule Syntax rules. The default value is 0.0: Lucene syntax, 1: CQL syntax.
+                     * 
+                     */
+                    uint64_t GetSyntaxRule() const;
+
+                    /**
+                     * 设置Syntax rules. The default value is 0.0: Lucene syntax, 1: CQL syntax.
+                     * @param _syntaxRule Syntax rules. The default value is 0.0: Lucene syntax, 1: CQL syntax.
+                     * 
+                     */
+                    void SetSyntaxRule(const uint64_t& _syntaxRule);
+
+                    /**
+                     * 判断参数 SyntaxRule 是否已赋值
+                     * @return SyntaxRule 是否已赋值
+                     * 
+                     */
+                    bool SyntaxRuleHasBeenSet() const;
 
                 private:
 
@@ -388,7 +409,7 @@ namespace TencentCloud
                     bool m_toHasBeenSet;
 
                     /**
-                     * Log export path
+                     * Log export path, valid for one hour. Please download using this path as soon as possible.
                      */
                     std::string m_cosPath;
                     bool m_cosPathHasBeenSet;
@@ -398,6 +419,12 @@ namespace TencentCloud
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
+
+                    /**
+                     * Syntax rules. The default value is 0.0: Lucene syntax, 1: CQL syntax.
+                     */
+                    uint64_t m_syntaxRule;
+                    bool m_syntaxRuleHasBeenSet;
 
                 };
             }

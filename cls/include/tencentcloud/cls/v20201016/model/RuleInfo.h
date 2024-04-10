@@ -51,18 +51,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Full-text index configuration. If the configuration is left empty, full-text indexing is not enabled.
+                     * 获取Full-text index configuration. If empty, full-text indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FullText Full-text index configuration. If the configuration is left empty, full-text indexing is not enabled.
+                     * @return FullText Full-text index configuration. If empty, full-text indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     FullTextInfo GetFullText() const;
 
                     /**
-                     * 设置Full-text index configuration. If the configuration is left empty, full-text indexing is not enabled.
+                     * 设置Full-text index configuration. If empty, full-text indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _fullText Full-text index configuration. If the configuration is left empty, full-text indexing is not enabled.
+                     * @param _fullText Full-text index configuration. If empty, full-text indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -76,18 +76,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FullTextHasBeenSet() const;
 
                     /**
-                     * 获取Key-value index configuration. If the configuration is left empty, key-value indexing is not enabled.
+                     * 获取Key-value index configuration. If empty, key-value indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return KeyValue Key-value index configuration. If the configuration is left empty, key-value indexing is not enabled.
+                     * @return KeyValue Key-value index configuration. If empty, key-value indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     RuleKeyValueInfo GetKeyValue() const;
 
                     /**
-                     * 设置Key-value index configuration. If the configuration is left empty, key-value indexing is not enabled.
+                     * 设置Key-value index configuration. If empty, key-value indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _keyValue Key-value index configuration. If the configuration is left empty, key-value indexing is not enabled.
+                     * @param _keyValue Key-value index configuration. If empty, key-value indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -101,18 +101,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool KeyValueHasBeenSet() const;
 
                     /**
-                     * 获取Metadata field index configuration. If the configuration is left empty, metadata field indexing is not enabled.
+                     * 获取Metadata field index configuration. If empty, metadata field indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Tag Metadata field index configuration. If the configuration is left empty, metadata field indexing is not enabled.
+                     * @return Tag Metadata field index configuration. If empty, metadata field indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     RuleTagInfo GetTag() const;
 
                     /**
-                     * 设置Metadata field index configuration. If the configuration is left empty, metadata field indexing is not enabled.
+                     * 设置Metadata field index configuration. If empty, metadata field indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tag Metadata field index configuration. If the configuration is left empty, metadata field indexing is not enabled.
+                     * @param _tag Metadata field index configuration. If empty, metadata field indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -126,27 +126,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TagHasBeenSet() const;
 
                     /**
-                     * 获取Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
-
-Note: This feature is currently in a beta test. To use it, please contact technical support.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return DynamicIndex Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
-
-Note: This feature is currently in a beta test. To use it, please contact technical support.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Key-value index automatic configuration. If empty, the feature is not enabled.Once enabled, fields within logs are automatically added to the key-value index, including fields added to logs subsequently.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DynamicIndex Key-value index automatic configuration. If empty, the feature is not enabled.Once enabled, fields within logs are automatically added to the key-value index, including fields added to logs subsequently.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     DynamicIndex GetDynamicIndex() const;
 
                     /**
-                     * 设置Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
-
-Note: This feature is currently in a beta test. To use it, please contact technical support.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _dynamicIndex Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
-
-Note: This feature is currently in a beta test. To use it, please contact technical support.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Key-value index automatic configuration. If empty, the feature is not enabled.Once enabled, fields within logs are automatically added to the key-value index, including fields added to logs subsequently.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _dynamicIndex Key-value index automatic configuration. If empty, the feature is not enabled.Once enabled, fields within logs are automatically added to the key-value index, including fields added to logs subsequently.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDynamicIndex(const DynamicIndex& _dynamicIndex);
@@ -161,31 +153,29 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Full-text index configuration. If the configuration is left empty, full-text indexing is not enabled.
+                     * Full-text index configuration. If empty, full-text indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     FullTextInfo m_fullText;
                     bool m_fullTextHasBeenSet;
 
                     /**
-                     * Key-value index configuration. If the configuration is left empty, key-value indexing is not enabled.
+                     * Key-value index configuration. If empty, key-value indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     RuleKeyValueInfo m_keyValue;
                     bool m_keyValueHasBeenSet;
 
                     /**
-                     * Metadata field index configuration. If the configuration is left empty, metadata field indexing is not enabled.
+                     * Metadata field index configuration. If empty, metadata field indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     RuleTagInfo m_tag;
                     bool m_tagHasBeenSet;
 
                     /**
-                     * Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
-
-Note: This feature is currently in a beta test. To use it, please contact technical support.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Key-value index automatic configuration. If empty, the feature is not enabled.Once enabled, fields within logs are automatically added to the key-value index, including fields added to logs subsequently.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     DynamicIndex m_dynamicIndex;
                     bool m_dynamicIndexHasBeenSet;

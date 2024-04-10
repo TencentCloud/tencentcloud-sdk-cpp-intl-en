@@ -189,6 +189,27 @@ namespace TencentCloud
                      */
                     bool FormatHasBeenSet() const;
 
+                    /**
+                     * 获取Syntax rules; the default value is 0.0: Lucene syntax; 1: CQL syntax.
+                     * @return SyntaxRule Syntax rules; the default value is 0.0: Lucene syntax; 1: CQL syntax.
+                     * 
+                     */
+                    uint64_t GetSyntaxRule() const;
+
+                    /**
+                     * 设置Syntax rules; the default value is 0.0: Lucene syntax; 1: CQL syntax.
+                     * @param _syntaxRule Syntax rules; the default value is 0.0: Lucene syntax; 1: CQL syntax.
+                     * 
+                     */
+                    void SetSyntaxRule(const uint64_t& _syntaxRule);
+
+                    /**
+                     * 判断参数 SyntaxRule 是否已赋值
+                     * @return SyntaxRule 是否已赋值
+                     * 
+                     */
+                    bool SyntaxRuleHasBeenSet() const;
+
                 private:
 
                     /**
@@ -232,6 +253,12 @@ namespace TencentCloud
                      */
                     std::string m_format;
                     bool m_formatHasBeenSet;
+
+                    /**
+                     * Syntax rules; the default value is 0.0: Lucene syntax; 1: CQL syntax.
+                     */
+                    uint64_t m_syntaxRule;
+                    bool m_syntaxRuleHasBeenSet;
 
                 };
             }

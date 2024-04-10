@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Format. Valid values: 0 (full-text) and 1 (JSON).
-                     * @return Format Format. Valid values: 0 (full-text) and 1 (JSON).
+                     * 获取Consumption data format. Valid values: 0 (original content) and 1 (JSON).
+                     * @return Format Consumption data format. Valid values: 0 (original content) and 1 (JSON).
                      * 
                      */
                     int64_t GetFormat() const;
 
                     /**
-                     * 设置Format. Valid values: 0 (full-text) and 1 (JSON).
-                     * @param _format Format. Valid values: 0 (full-text) and 1 (JSON).
+                     * 设置Consumption data format. Valid values: 0 (original content) and 1 (JSON).
+                     * @param _format Consumption data format. Valid values: 0 (original content) and 1 (JSON).
                      * 
                      */
                     void SetFormat(const int64_t& _format);
@@ -122,26 +122,50 @@ This parameter does not need to be set when `Format` is set to `0`.
                     bool MetaFieldsHasBeenSet() const;
 
                     /**
-                     * 获取Tag data processing mode. Valid values:
-1 (default): Do not tile data.
-2: Tile data.
+                     * 获取Tag data processing mode: 1: Do not tile (default); 2: Tile.
+
+Untiled example:
+TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+Untiled: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+
+Tiled example:
+TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TagTransaction Tag data processing mode. Valid values:
-1 (default): Do not tile data.
-2: Tile data.
+                     * @return TagTransaction Tag data processing mode: 1: Do not tile (default); 2: Tile.
+
+Untiled example:
+TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+Untiled: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+
+Tiled example:
+TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetTagTransaction() const;
 
                     /**
-                     * 设置Tag data processing mode. Valid values:
-1 (default): Do not tile data.
-2: Tile data.
+                     * 设置Tag data processing mode: 1: Do not tile (default); 2: Tile.
+
+Untiled example:
+TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+Untiled: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+
+Tiled example:
+TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tagTransaction Tag data processing mode. Valid values:
-1 (default): Do not tile data.
-2: Tile data.
+                     * @param _tagTransaction Tag data processing mode: 1: Do not tile (default); 2: Tile.
+
+Untiled example:
+TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+Untiled: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+
+Tiled example:
+TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -155,23 +179,43 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TagTransactionHasBeenSet() const;
 
                     /**
-                     * 获取JSON data format. Valid values:
-1 (default): Not escaped.
-2: Escaped.
-                     * @return JsonType JSON data format. Valid values:
-1 (default): Not escaped.
-2: Escaped.
+                     * 获取JSON data format:
+1: Not escaped (default format)
+2: Escaped
+
+Deliver in JSON format.JsonType is 1: Consistent with the original log, not escaped. Example:
+Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+Deliver to CKafka: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`JsonType is 2: escaped. Example:Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+Deliver to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
+                     * @return JsonType JSON data format:
+1: Not escaped (default format)
+2: Escaped
+
+Deliver in JSON format.JsonType is 1: Consistent with the original log, not escaped. Example:
+Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+Deliver to CKafka: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`JsonType is 2: escaped. Example:Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+Deliver to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
                      * 
                      */
                     int64_t GetJsonType() const;
 
                     /**
-                     * 设置JSON data format. Valid values:
-1 (default): Not escaped.
-2: Escaped.
-                     * @param _jsonType JSON data format. Valid values:
-1 (default): Not escaped.
-2: Escaped.
+                     * 设置JSON data format:
+1: Not escaped (default format)
+2: Escaped
+
+Deliver in JSON format.JsonType is 1: Consistent with the original log, not escaped. Example:
+Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+Deliver to CKafka: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`JsonType is 2: escaped. Example:Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+Deliver to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
+                     * @param _jsonType JSON data format:
+1: Not escaped (default format)
+2: Escaped
+
+Deliver in JSON format.JsonType is 1: Consistent with the original log, not escaped. Example:
+Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+Deliver to CKafka: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`JsonType is 2: escaped. Example:Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+Deliver to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
                      * 
                      */
                     void SetJsonType(const int64_t& _jsonType);
@@ -186,7 +230,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Format. Valid values: 0 (full-text) and 1 (JSON).
+                     * Consumption data format. Valid values: 0 (original content) and 1 (JSON).
                      */
                     int64_t m_format;
                     bool m_formatHasBeenSet;
@@ -207,18 +251,29 @@ This parameter does not need to be set when `Format` is set to `0`.
                     bool m_metaFieldsHasBeenSet;
 
                     /**
-                     * Tag data processing mode. Valid values:
-1 (default): Do not tile data.
-2: Tile data.
+                     * Tag data processing mode: 1: Do not tile (default); 2: Tile.
+
+Untiled example:
+TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+Untiled: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+
+Tiled example:
+TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_tagTransaction;
                     bool m_tagTransactionHasBeenSet;
 
                     /**
-                     * JSON data format. Valid values:
-1 (default): Not escaped.
-2: Escaped.
+                     * JSON data format:
+1: Not escaped (default format)
+2: Escaped
+
+Deliver in JSON format.JsonType is 1: Consistent with the original log, not escaped. Example:
+Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+Deliver to CKafka: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`JsonType is 2: escaped. Example:Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+Deliver to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
                      */
                     int64_t m_jsonType;
                     bool m_jsonTypeHasBeenSet;

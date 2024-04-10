@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cls/v20201016/model/KeyRegexInfo.h>
 #include <tencentcloud/cls/v20201016/model/MetaTagInfo.h>
+#include <tencentcloud/cls/v20201016/model/EventLog.h>
 
 
 namespace TencentCloud
@@ -49,19 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Time field key name. `time_key` and `time_format` must appear in pairs
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return TimeKey Time field key name. `time_key` and `time_format` must appear in pairs
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Key name for the time field. TikeKey and TimeFormat must appear in pairsNote: This field may return null, indicating that no valid values can be obtained.
+                     * @return TimeKey Key name for the time field. TikeKey and TimeFormat must appear in pairsNote: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTimeKey() const;
 
                     /**
-                     * 设置Time field key name. `time_key` and `time_format` must appear in pairs
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _timeKey Time field key name. `time_key` and `time_format` must appear in pairs
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Key name for the time field. TikeKey and TimeFormat must appear in pairsNote: This field may return null, indicating that no valid values can be obtained.
+                     * @param _timeKey Key name for the time field. TikeKey and TimeFormat must appear in pairsNote: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTimeKey(const std::string& _timeKey);
@@ -99,19 +96,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool TimeFormatHasBeenSet() const;
 
                     /**
-                     * 获取Delimiter for delimited log, which is valid only if `log_type` is `delimiter_log`
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Delimiter Delimiter for delimited log, which is valid only if `log_type` is `delimiter_log`
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Delimiter for log type. Valid only when LogType is delimiter_logNote: This field may return null, indicating that no valid values can be obtained.
+                     * @return Delimiter Delimiter for log type. Valid only when LogType is delimiter_logNote: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDelimiter() const;
 
                     /**
-                     * 设置Delimiter for delimited log, which is valid only if `log_type` is `delimiter_log`
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _delimiter Delimiter for delimited log, which is valid only if `log_type` is `delimiter_log`
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Delimiter for log type. Valid only when LogType is delimiter_logNote: This field may return null, indicating that no valid values can be obtained.
+                     * @param _delimiter Delimiter for log type. Valid only when LogType is delimiter_logNote: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDelimiter(const std::string& _delimiter);
@@ -124,19 +117,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool DelimiterHasBeenSet() const;
 
                     /**
-                     * 获取Full log matching rule, which is valid only if `log_type` is `fullregex_log`
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return LogRegex Full log matching rule, which is valid only if `log_type` is `fullregex_log`
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Full log matching rule. Valid only if LogType is fullregex_logNote: This field may return null, indicating that no valid values can be obtained.
+                     * @return LogRegex Full log matching rule. Valid only if LogType is fullregex_logNote: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetLogRegex() const;
 
                     /**
-                     * 设置Full log matching rule, which is valid only if `log_type` is `fullregex_log`
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _logRegex Full log matching rule, which is valid only if `log_type` is `fullregex_log`
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Full log matching rule. Valid only if LogType is fullregex_logNote: This field may return null, indicating that no valid values can be obtained.
+                     * @param _logRegex Full log matching rule. Valid only if LogType is fullregex_logNote: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLogRegex(const std::string& _logRegex);
@@ -149,19 +138,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool LogRegexHasBeenSet() const;
 
                     /**
-                     * 获取First-Line matching rule, which is valid only if `log_type` is `multiline_log` or `fullregex_log`
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return BeginRegex First-Line matching rule, which is valid only if `log_type` is `multiline_log` or `fullregex_log`
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Line beginning matching rule, valid only if LogType is multiline_log or fullregex_logNote: This field may return null, indicating that no valid values can be obtained.
+                     * @return BeginRegex Line beginning matching rule, valid only if LogType is multiline_log or fullregex_logNote: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetBeginRegex() const;
 
                     /**
-                     * 设置First-Line matching rule, which is valid only if `log_type` is `multiline_log` or `fullregex_log`
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _beginRegex First-Line matching rule, which is valid only if `log_type` is `multiline_log` or `fullregex_log`
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Line beginning matching rule, valid only if LogType is multiline_log or fullregex_logNote: This field may return null, indicating that no valid values can be obtained.
+                     * @param _beginRegex Line beginning matching rule, valid only if LogType is multiline_log or fullregex_logNote: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetBeginRegex(const std::string& _beginRegex);
@@ -174,19 +159,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool BeginRegexHasBeenSet() const;
 
                     /**
-                     * 获取Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself. A maximum of 100 keys are supported.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Keys Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself. A maximum of 100 keys are supported.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Key name of each extracted field. An empty key indicates discarding the field. Valid only if LogType is delimiter_log. json_log logs use the key of JSON itself. Limited to 100.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Keys Key name of each extracted field. An empty key indicates discarding the field. Valid only if LogType is delimiter_log. json_log logs use the key of JSON itself. Limited to 100.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetKeys() const;
 
                     /**
-                     * 设置Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself. A maximum of 100 keys are supported.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _keys Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself. A maximum of 100 keys are supported.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Key name of each extracted field. An empty key indicates discarding the field. Valid only if LogType is delimiter_log. json_log logs use the key of JSON itself. Limited to 100.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _keys Key name of each extracted field. An empty key indicates discarding the field. Valid only if LogType is delimiter_log. json_log logs use the key of JSON itself. Limited to 100.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetKeys(const std::vector<std::string>& _keys);
@@ -199,19 +180,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool KeysHasBeenSet() const;
 
                     /**
-                     * 获取Log keys to be filtered and the corresponding regex
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return FilterKeyRegex Log keys to be filtered and the corresponding regex
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Log filter rule list (previous version), keys to be filtered in the log and their corresponding regex.Note: For LogListener version 2.9.3 and later, it is recommended to use the AdvanceFilterRules configuration for log filtering.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return FilterKeyRegex Log filter rule list (previous version), keys to be filtered in the log and their corresponding regex.Note: For LogListener version 2.9.3 and later, it is recommended to use the AdvanceFilterRules configuration for log filtering.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<KeyRegexInfo> GetFilterKeyRegex() const;
 
                     /**
-                     * 设置Log keys to be filtered and the corresponding regex
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _filterKeyRegex Log keys to be filtered and the corresponding regex
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Log filter rule list (previous version), keys to be filtered in the log and their corresponding regex.Note: For LogListener version 2.9.3 and later, it is recommended to use the AdvanceFilterRules configuration for log filtering.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _filterKeyRegex Log filter rule list (previous version), keys to be filtered in the log and their corresponding regex.Note: For LogListener version 2.9.3 and later, it is recommended to use the AdvanceFilterRules configuration for log filtering.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetFilterKeyRegex(const std::vector<KeyRegexInfo>& _filterKeyRegex);
@@ -274,19 +251,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool UnMatchLogKeyHasBeenSet() const;
 
                     /**
-                     * 获取Size of the data to be rewound in incremental collection mode. Default value: -1 (full collection)
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Backtracking Size of the data to be rewound in incremental collection mode. Default value: -1 (full collection)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Backtracking data volume under incremental collection pattern, default -1 indicates full collection; other non-negative numbers indicate incremental collection (collect logs backward from the latest position by ${Backtracking} bytes) with a maximum support of 1073741824 (1G).Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Backtracking Backtracking data volume under incremental collection pattern, default -1 indicates full collection; other non-negative numbers indicate incremental collection (collect logs backward from the latest position by ${Backtracking} bytes) with a maximum support of 1073741824 (1G).Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetBacktracking() const;
 
                     /**
-                     * 设置Size of the data to be rewound in incremental collection mode. Default value: -1 (full collection)
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _backtracking Size of the data to be rewound in incremental collection mode. Default value: -1 (full collection)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Backtracking data volume under incremental collection pattern, default -1 indicates full collection; other non-negative numbers indicate incremental collection (collect logs backward from the latest position by ${Backtracking} bytes) with a maximum support of 1073741824 (1G).Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _backtracking Backtracking data volume under incremental collection pattern, default -1 indicates full collection; other non-negative numbers indicate incremental collection (collect logs backward from the latest position by ${Backtracking} bytes) with a maximum support of 1073741824 (1G).Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetBacktracking(const int64_t& _backtracking);
@@ -526,11 +499,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool MetaTagsHasBeenSet() const;
 
+                    /**
+                     * 获取Windows event log collection
+                     * @return EventLogRules Windows event log collection
+                     * 
+                     */
+                    std::vector<EventLog> GetEventLogRules() const;
+
+                    /**
+                     * 设置Windows event log collection
+                     * @param _eventLogRules Windows event log collection
+                     * 
+                     */
+                    void SetEventLogRules(const std::vector<EventLog>& _eventLogRules);
+
+                    /**
+                     * 判断参数 EventLogRules 是否已赋值
+                     * @return EventLogRules 是否已赋值
+                     * 
+                     */
+                    bool EventLogRulesHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Time field key name. `time_key` and `time_format` must appear in pairs
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Key name for the time field. TikeKey and TimeFormat must appear in pairsNote: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_timeKey;
                     bool m_timeKeyHasBeenSet;
@@ -543,36 +536,31 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_timeFormatHasBeenSet;
 
                     /**
-                     * Delimiter for delimited log, which is valid only if `log_type` is `delimiter_log`
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Delimiter for log type. Valid only when LogType is delimiter_logNote: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_delimiter;
                     bool m_delimiterHasBeenSet;
 
                     /**
-                     * Full log matching rule, which is valid only if `log_type` is `fullregex_log`
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Full log matching rule. Valid only if LogType is fullregex_logNote: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_logRegex;
                     bool m_logRegexHasBeenSet;
 
                     /**
-                     * First-Line matching rule, which is valid only if `log_type` is `multiline_log` or `fullregex_log`
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Line beginning matching rule, valid only if LogType is multiline_log or fullregex_logNote: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_beginRegex;
                     bool m_beginRegexHasBeenSet;
 
                     /**
-                     * Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself. A maximum of 100 keys are supported.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Key name of each extracted field. An empty key indicates discarding the field. Valid only if LogType is delimiter_log. json_log logs use the key of JSON itself. Limited to 100.Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_keys;
                     bool m_keysHasBeenSet;
 
                     /**
-                     * Log keys to be filtered and the corresponding regex
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Log filter rule list (previous version), keys to be filtered in the log and their corresponding regex.Note: For LogListener version 2.9.3 and later, it is recommended to use the AdvanceFilterRules configuration for log filtering.Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<KeyRegexInfo> m_filterKeyRegex;
                     bool m_filterKeyRegexHasBeenSet;
@@ -592,8 +580,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_unMatchLogKeyHasBeenSet;
 
                     /**
-                     * Size of the data to be rewound in incremental collection mode. Default value: -1 (full collection)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Backtracking data volume under incremental collection pattern, default -1 indicates full collection; other non-negative numbers indicate incremental collection (collect logs backward from the latest position by ${Backtracking} bytes) with a maximum support of 1073741824 (1G).Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_backtracking;
                     bool m_backtrackingHasBeenSet;
@@ -660,6 +647,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<MetaTagInfo> m_metaTags;
                     bool m_metaTagsHasBeenSet;
+
+                    /**
+                     * Windows event log collection
+                     */
+                    std::vector<EventLog> m_eventLogRules;
+                    bool m_eventLogRulesHasBeenSet;
 
                 };
             }

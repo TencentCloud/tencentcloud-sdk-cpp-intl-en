@@ -259,6 +259,31 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool ServiceLoggingHasBeenSet() const;
 
                     /**
+                     * 获取Regular cleanup time for offline machines in the machine group
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DelayCleanupTime Regular cleanup time for offline machines in the machine group
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetDelayCleanupTime() const;
+
+                    /**
+                     * 设置Regular cleanup time for offline machines in the machine group
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _delayCleanupTime Regular cleanup time for offline machines in the machine group
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetDelayCleanupTime(const int64_t& _delayCleanupTime);
+
+                    /**
+                     * 判断参数 DelayCleanupTime 是否已赋值
+                     * @return DelayCleanupTime 是否已赋值
+                     * 
+                     */
+                    bool DelayCleanupTimeHasBeenSet() const;
+
+                    /**
                      * 获取Metadata information list of a machine group
                      * @return MetaTags Metadata information list of a machine group
                      * 
@@ -278,6 +303,27 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      * 
                      */
                     bool MetaTagsHasBeenSet() const;
+
+                    /**
+                     * 获取Operating system type, 0: Linux, 1: Windows
+                     * @return OSType Operating system type, 0: Linux, 1: Windows
+                     * 
+                     */
+                    uint64_t GetOSType() const;
+
+                    /**
+                     * 设置Operating system type, 0: Linux, 1: Windows
+                     * @param _oSType Operating system type, 0: Linux, 1: Windows
+                     * 
+                     */
+                    void SetOSType(const uint64_t& _oSType);
+
+                    /**
+                     * 判断参数 OSType 是否已赋值
+                     * @return OSType 是否已赋值
+                     * 
+                     */
+                    bool OSTypeHasBeenSet() const;
 
                 private:
 
@@ -341,10 +387,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_serviceLoggingHasBeenSet;
 
                     /**
+                     * Regular cleanup time for offline machines in the machine group
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_delayCleanupTime;
+                    bool m_delayCleanupTimeHasBeenSet;
+
+                    /**
                      * Metadata information list of a machine group
                      */
                     std::vector<MetaTagInfo> m_metaTags;
                     bool m_metaTagsHasBeenSet;
+
+                    /**
+                     * Operating system type, 0: Linux, 1: Windows
+                     */
+                    uint64_t m_oSType;
+                    bool m_oSTypeHasBeenSet;
 
                 };
             }

@@ -126,6 +126,49 @@ ClsClient::ApplyConfigToMachineGroupOutcomeCallable ClsClient::ApplyConfigToMach
     return task->get_future();
 }
 
+ClsClient::CheckFunctionOutcome ClsClient::CheckFunction(const CheckFunctionRequest &request)
+{
+    auto outcome = MakeRequest(request, "CheckFunction");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CheckFunctionResponse rsp = CheckFunctionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CheckFunctionOutcome(rsp);
+        else
+            return CheckFunctionOutcome(o.GetError());
+    }
+    else
+    {
+        return CheckFunctionOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::CheckFunctionAsync(const CheckFunctionRequest& request, const CheckFunctionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CheckFunction(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+ClsClient::CheckFunctionOutcomeCallable ClsClient::CheckFunctionCallable(const CheckFunctionRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CheckFunctionOutcome()>>(
+        [this, request]()
+        {
+            return this->CheckFunction(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 ClsClient::CheckRechargeKafkaServerOutcome ClsClient::CheckRechargeKafkaServer(const CheckRechargeKafkaServerRequest &request)
 {
     auto outcome = MakeRequest(request, "CheckRechargeKafkaServer");
@@ -298,6 +341,49 @@ ClsClient::CreateAlarmNoticeOutcomeCallable ClsClient::CreateAlarmNoticeCallable
     return task->get_future();
 }
 
+ClsClient::CreateAlarmShieldOutcome ClsClient::CreateAlarmShield(const CreateAlarmShieldRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateAlarmShield");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateAlarmShieldResponse rsp = CreateAlarmShieldResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateAlarmShieldOutcome(rsp);
+        else
+            return CreateAlarmShieldOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateAlarmShieldOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::CreateAlarmShieldAsync(const CreateAlarmShieldRequest& request, const CreateAlarmShieldAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateAlarmShield(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+ClsClient::CreateAlarmShieldOutcomeCallable ClsClient::CreateAlarmShieldCallable(const CreateAlarmShieldRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateAlarmShieldOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateAlarmShield(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 ClsClient::CreateConfigOutcome ClsClient::CreateConfig(const CreateConfigRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateConfig");
@@ -463,6 +549,49 @@ ClsClient::CreateDataTransformOutcomeCallable ClsClient::CreateDataTransformCall
         [this, request]()
         {
             return this->CreateDataTransform(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+ClsClient::CreateDeliverCloudFunctionOutcome ClsClient::CreateDeliverCloudFunction(const CreateDeliverCloudFunctionRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateDeliverCloudFunction");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateDeliverCloudFunctionResponse rsp = CreateDeliverCloudFunctionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateDeliverCloudFunctionOutcome(rsp);
+        else
+            return CreateDeliverCloudFunctionOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateDeliverCloudFunctionOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::CreateDeliverCloudFunctionAsync(const CreateDeliverCloudFunctionRequest& request, const CreateDeliverCloudFunctionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateDeliverCloudFunction(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+ClsClient::CreateDeliverCloudFunctionOutcomeCallable ClsClient::CreateDeliverCloudFunctionCallable(const CreateDeliverCloudFunctionRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateDeliverCloudFunctionOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateDeliverCloudFunction(request);
         }
     );
 
@@ -685,6 +814,49 @@ ClsClient::CreateMachineGroupOutcomeCallable ClsClient::CreateMachineGroupCallab
     return task->get_future();
 }
 
+ClsClient::CreateScheduledSqlOutcome ClsClient::CreateScheduledSql(const CreateScheduledSqlRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateScheduledSql");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateScheduledSqlResponse rsp = CreateScheduledSqlResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateScheduledSqlOutcome(rsp);
+        else
+            return CreateScheduledSqlOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateScheduledSqlOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::CreateScheduledSqlAsync(const CreateScheduledSqlRequest& request, const CreateScheduledSqlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateScheduledSql(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+ClsClient::CreateScheduledSqlOutcomeCallable ClsClient::CreateScheduledSqlCallable(const CreateScheduledSqlRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateScheduledSqlOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateScheduledSql(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 ClsClient::CreateShipperOutcome ClsClient::CreateShipper(const CreateShipperRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateShipper");
@@ -850,6 +1022,49 @@ ClsClient::DeleteAlarmNoticeOutcomeCallable ClsClient::DeleteAlarmNoticeCallable
         [this, request]()
         {
             return this->DeleteAlarmNotice(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+ClsClient::DeleteAlarmShieldOutcome ClsClient::DeleteAlarmShield(const DeleteAlarmShieldRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteAlarmShield");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteAlarmShieldResponse rsp = DeleteAlarmShieldResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteAlarmShieldOutcome(rsp);
+        else
+            return DeleteAlarmShieldOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteAlarmShieldOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DeleteAlarmShieldAsync(const DeleteAlarmShieldRequest& request, const DeleteAlarmShieldAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteAlarmShield(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+ClsClient::DeleteAlarmShieldOutcomeCallable ClsClient::DeleteAlarmShieldCallable(const DeleteAlarmShieldRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteAlarmShieldOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteAlarmShield(request);
         }
     );
 
@@ -1287,6 +1502,49 @@ ClsClient::DeleteMachineGroupInfoOutcomeCallable ClsClient::DeleteMachineGroupIn
     return task->get_future();
 }
 
+ClsClient::DeleteScheduledSqlOutcome ClsClient::DeleteScheduledSql(const DeleteScheduledSqlRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteScheduledSql");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteScheduledSqlResponse rsp = DeleteScheduledSqlResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteScheduledSqlOutcome(rsp);
+        else
+            return DeleteScheduledSqlOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteScheduledSqlOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DeleteScheduledSqlAsync(const DeleteScheduledSqlRequest& request, const DeleteScheduledSqlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteScheduledSql(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+ClsClient::DeleteScheduledSqlOutcomeCallable ClsClient::DeleteScheduledSqlCallable(const DeleteScheduledSqlRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteScheduledSqlOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteScheduledSql(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 ClsClient::DeleteShipperOutcome ClsClient::DeleteShipper(const DeleteShipperRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteShipper");
@@ -1409,6 +1667,49 @@ ClsClient::DescribeAlarmNoticesOutcomeCallable ClsClient::DescribeAlarmNoticesCa
         [this, request]()
         {
             return this->DescribeAlarmNotices(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+ClsClient::DescribeAlarmShieldsOutcome ClsClient::DescribeAlarmShields(const DescribeAlarmShieldsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAlarmShields");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAlarmShieldsResponse rsp = DescribeAlarmShieldsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAlarmShieldsOutcome(rsp);
+        else
+            return DescribeAlarmShieldsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAlarmShieldsOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DescribeAlarmShieldsAsync(const DescribeAlarmShieldsRequest& request, const DescribeAlarmShieldsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeAlarmShields(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+ClsClient::DescribeAlarmShieldsOutcomeCallable ClsClient::DescribeAlarmShieldsCallable(const DescribeAlarmShieldsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeAlarmShieldsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeAlarmShields(request);
         }
     );
 
@@ -1803,6 +2104,49 @@ ClsClient::DescribeIndexOutcomeCallable ClsClient::DescribeIndexCallable(const D
     return task->get_future();
 }
 
+ClsClient::DescribeKafkaConsumerOutcome ClsClient::DescribeKafkaConsumer(const DescribeKafkaConsumerRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeKafkaConsumer");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeKafkaConsumerResponse rsp = DescribeKafkaConsumerResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeKafkaConsumerOutcome(rsp);
+        else
+            return DescribeKafkaConsumerOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeKafkaConsumerOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DescribeKafkaConsumerAsync(const DescribeKafkaConsumerRequest& request, const DescribeKafkaConsumerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeKafkaConsumer(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+ClsClient::DescribeKafkaConsumerOutcomeCallable ClsClient::DescribeKafkaConsumerCallable(const DescribeKafkaConsumerRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeKafkaConsumerOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeKafkaConsumer(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 ClsClient::DescribeKafkaRechargesOutcome ClsClient::DescribeKafkaRecharges(const DescribeKafkaRechargesRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeKafkaRecharges");
@@ -2147,6 +2491,49 @@ ClsClient::DescribePartitionsOutcomeCallable ClsClient::DescribePartitionsCallab
     return task->get_future();
 }
 
+ClsClient::DescribeScheduledSqlInfoOutcome ClsClient::DescribeScheduledSqlInfo(const DescribeScheduledSqlInfoRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeScheduledSqlInfo");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeScheduledSqlInfoResponse rsp = DescribeScheduledSqlInfoResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeScheduledSqlInfoOutcome(rsp);
+        else
+            return DescribeScheduledSqlInfoOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeScheduledSqlInfoOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DescribeScheduledSqlInfoAsync(const DescribeScheduledSqlInfoRequest& request, const DescribeScheduledSqlInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeScheduledSqlInfo(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+ClsClient::DescribeScheduledSqlInfoOutcomeCallable ClsClient::DescribeScheduledSqlInfoCallable(const DescribeScheduledSqlInfoRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeScheduledSqlInfoOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeScheduledSqlInfo(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 ClsClient::DescribeShipperTasksOutcome ClsClient::DescribeShipperTasks(const DescribeShipperTasksRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeShipperTasks");
@@ -2448,6 +2835,49 @@ ClsClient::ModifyAlarmNoticeOutcomeCallable ClsClient::ModifyAlarmNoticeCallable
     return task->get_future();
 }
 
+ClsClient::ModifyAlarmShieldOutcome ClsClient::ModifyAlarmShield(const ModifyAlarmShieldRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyAlarmShield");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyAlarmShieldResponse rsp = ModifyAlarmShieldResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyAlarmShieldOutcome(rsp);
+        else
+            return ModifyAlarmShieldOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyAlarmShieldOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::ModifyAlarmShieldAsync(const ModifyAlarmShieldRequest& request, const ModifyAlarmShieldAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyAlarmShield(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+ClsClient::ModifyAlarmShieldOutcomeCallable ClsClient::ModifyAlarmShieldCallable(const ModifyAlarmShieldRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyAlarmShieldOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyAlarmShield(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 ClsClient::ModifyConfigOutcome ClsClient::ModifyConfig(const ModifyConfigRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyConfig");
@@ -2663,6 +3093,49 @@ ClsClient::ModifyIndexOutcomeCallable ClsClient::ModifyIndexCallable(const Modif
     return task->get_future();
 }
 
+ClsClient::ModifyKafkaConsumerOutcome ClsClient::ModifyKafkaConsumer(const ModifyKafkaConsumerRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyKafkaConsumer");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyKafkaConsumerResponse rsp = ModifyKafkaConsumerResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyKafkaConsumerOutcome(rsp);
+        else
+            return ModifyKafkaConsumerOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyKafkaConsumerOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::ModifyKafkaConsumerAsync(const ModifyKafkaConsumerRequest& request, const ModifyKafkaConsumerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyKafkaConsumer(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+ClsClient::ModifyKafkaConsumerOutcomeCallable ClsClient::ModifyKafkaConsumerCallable(const ModifyKafkaConsumerRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyKafkaConsumerOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyKafkaConsumer(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 ClsClient::ModifyKafkaRechargeOutcome ClsClient::ModifyKafkaRecharge(const ModifyKafkaRechargeRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyKafkaRecharge");
@@ -2785,6 +3258,49 @@ ClsClient::ModifyMachineGroupOutcomeCallable ClsClient::ModifyMachineGroupCallab
         [this, request]()
         {
             return this->ModifyMachineGroup(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+ClsClient::ModifyScheduledSqlOutcome ClsClient::ModifyScheduledSql(const ModifyScheduledSqlRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyScheduledSql");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyScheduledSqlResponse rsp = ModifyScheduledSqlResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyScheduledSqlOutcome(rsp);
+        else
+            return ModifyScheduledSqlOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyScheduledSqlOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::ModifyScheduledSqlAsync(const ModifyScheduledSqlRequest& request, const ModifyScheduledSqlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyScheduledSql(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+ClsClient::ModifyScheduledSqlOutcomeCallable ClsClient::ModifyScheduledSqlCallable(const ModifyScheduledSqlRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyScheduledSqlOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyScheduledSql(request);
         }
     );
 
@@ -2964,6 +3480,92 @@ ClsClient::PreviewKafkaRechargeOutcomeCallable ClsClient::PreviewKafkaRechargeCa
     return task->get_future();
 }
 
+ClsClient::QueryMetricOutcome ClsClient::QueryMetric(const QueryMetricRequest &request)
+{
+    auto outcome = MakeRequest(request, "QueryMetric");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        QueryMetricResponse rsp = QueryMetricResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return QueryMetricOutcome(rsp);
+        else
+            return QueryMetricOutcome(o.GetError());
+    }
+    else
+    {
+        return QueryMetricOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::QueryMetricAsync(const QueryMetricRequest& request, const QueryMetricAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->QueryMetric(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+ClsClient::QueryMetricOutcomeCallable ClsClient::QueryMetricCallable(const QueryMetricRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<QueryMetricOutcome()>>(
+        [this, request]()
+        {
+            return this->QueryMetric(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+ClsClient::QueryRangeMetricOutcome ClsClient::QueryRangeMetric(const QueryRangeMetricRequest &request)
+{
+    auto outcome = MakeRequest(request, "QueryRangeMetric");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        QueryRangeMetricResponse rsp = QueryRangeMetricResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return QueryRangeMetricOutcome(rsp);
+        else
+            return QueryRangeMetricOutcome(o.GetError());
+    }
+    else
+    {
+        return QueryRangeMetricOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::QueryRangeMetricAsync(const QueryRangeMetricRequest& request, const QueryRangeMetricAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->QueryRangeMetric(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+ClsClient::QueryRangeMetricOutcomeCallable ClsClient::QueryRangeMetricCallable(const QueryRangeMetricRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<QueryRangeMetricOutcome()>>(
+        [this, request]()
+        {
+            return this->QueryRangeMetric(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 ClsClient::RetryShipperTaskOutcome ClsClient::RetryShipperTask(const RetryShipperTaskRequest &request)
 {
     auto outcome = MakeRequest(request, "RetryShipperTask");
@@ -3000,6 +3602,49 @@ ClsClient::RetryShipperTaskOutcomeCallable ClsClient::RetryShipperTaskCallable(c
         [this, request]()
         {
             return this->RetryShipperTask(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+ClsClient::SearchCosRechargeInfoOutcome ClsClient::SearchCosRechargeInfo(const SearchCosRechargeInfoRequest &request)
+{
+    auto outcome = MakeRequest(request, "SearchCosRechargeInfo");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        SearchCosRechargeInfoResponse rsp = SearchCosRechargeInfoResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return SearchCosRechargeInfoOutcome(rsp);
+        else
+            return SearchCosRechargeInfoOutcome(o.GetError());
+    }
+    else
+    {
+        return SearchCosRechargeInfoOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::SearchCosRechargeInfoAsync(const SearchCosRechargeInfoRequest& request, const SearchCosRechargeInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->SearchCosRechargeInfo(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+ClsClient::SearchCosRechargeInfoOutcomeCallable ClsClient::SearchCosRechargeInfoCallable(const SearchCosRechargeInfoRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<SearchCosRechargeInfoOutcome()>>(
+        [this, request]()
+        {
+            return this->SearchCosRechargeInfo(request);
         }
     );
 

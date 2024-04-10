@@ -30,7 +30,9 @@ MachineGroupInfo::MachineGroupInfo() :
     m_updateStartTimeHasBeenSet(false),
     m_updateEndTimeHasBeenSet(false),
     m_serviceLoggingHasBeenSet(false),
-    m_metaTagsHasBeenSet(false)
+    m_delayCleanupTimeHasBeenSet(false),
+    m_metaTagsHasBeenSet(false),
+    m_oSTypeHasBeenSet(false)
 {
 }
 
@@ -146,6 +148,16 @@ CoreInternalOutcome MachineGroupInfo::Deserialize(const rapidjson::Value &value)
         m_serviceLoggingHasBeenSet = true;
     }
 
+    if (value.HasMember("DelayCleanupTime") && !value["DelayCleanupTime"].IsNull())
+    {
+        if (!value["DelayCleanupTime"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `MachineGroupInfo.DelayCleanupTime` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_delayCleanupTime = value["DelayCleanupTime"].GetInt64();
+        m_delayCleanupTimeHasBeenSet = true;
+    }
+
     if (value.HasMember("MetaTags") && !value["MetaTags"].IsNull())
     {
         if (!value["MetaTags"].IsArray())
@@ -164,6 +176,16 @@ CoreInternalOutcome MachineGroupInfo::Deserialize(const rapidjson::Value &value)
             m_metaTags.push_back(item);
         }
         m_metaTagsHasBeenSet = true;
+    }
+
+    if (value.HasMember("OSType") && !value["OSType"].IsNull())
+    {
+        if (!value["OSType"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `MachineGroupInfo.OSType` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_oSType = value["OSType"].GetUint64();
+        m_oSTypeHasBeenSet = true;
     }
 
 
@@ -253,6 +275,14 @@ void MachineGroupInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document
         value.AddMember(iKey, m_serviceLogging, allocator);
     }
 
+    if (m_delayCleanupTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DelayCleanupTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_delayCleanupTime, allocator);
+    }
+
     if (m_metaTagsHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -266,6 +296,14 @@ void MachineGroupInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_oSTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OSType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_oSType, allocator);
     }
 
 }
@@ -415,6 +453,22 @@ bool MachineGroupInfo::ServiceLoggingHasBeenSet() const
     return m_serviceLoggingHasBeenSet;
 }
 
+int64_t MachineGroupInfo::GetDelayCleanupTime() const
+{
+    return m_delayCleanupTime;
+}
+
+void MachineGroupInfo::SetDelayCleanupTime(const int64_t& _delayCleanupTime)
+{
+    m_delayCleanupTime = _delayCleanupTime;
+    m_delayCleanupTimeHasBeenSet = true;
+}
+
+bool MachineGroupInfo::DelayCleanupTimeHasBeenSet() const
+{
+    return m_delayCleanupTimeHasBeenSet;
+}
+
 vector<MetaTagInfo> MachineGroupInfo::GetMetaTags() const
 {
     return m_metaTags;
@@ -429,5 +483,21 @@ void MachineGroupInfo::SetMetaTags(const vector<MetaTagInfo>& _metaTags)
 bool MachineGroupInfo::MetaTagsHasBeenSet() const
 {
     return m_metaTagsHasBeenSet;
+}
+
+uint64_t MachineGroupInfo::GetOSType() const
+{
+    return m_oSType;
+}
+
+void MachineGroupInfo::SetOSType(const uint64_t& _oSType)
+{
+    m_oSType = _oSType;
+    m_oSTypeHasBeenSet = true;
+}
+
+bool MachineGroupInfo::OSTypeHasBeenSet() const
+{
+    return m_oSTypeHasBeenSet;
 }
 

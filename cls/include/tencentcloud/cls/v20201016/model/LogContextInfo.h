@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cls/v20201016/model/HighLightItem.h>
 
 
 namespace TencentCloud
@@ -247,6 +248,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool IndexStatusHasBeenSet() const;
 
+                    /**
+                     * 获取Highlighted description of log contentNote: This field may return null, indicating that no valid values can be obtained.
+                     * @return HighLights Highlighted description of log contentNote: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<HighLightItem> GetHighLights() const;
+
+                    /**
+                     * 设置Highlighted description of log contentNote: This field may return null, indicating that no valid values can be obtained.
+                     * @param _highLights Highlighted description of log contentNote: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetHighLights(const std::vector<HighLightItem>& _highLights);
+
+                    /**
+                     * 判断参数 HighLights 是否已赋值
+                     * @return HighLights 是否已赋值
+                     * 
+                     */
+                    bool HighLightsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -305,6 +327,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_indexStatus;
                     bool m_indexStatusHasBeenSet;
+
+                    /**
+                     * Highlighted description of log contentNote: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<HighLightItem> m_highLights;
+                    bool m_highLightsHasBeenSet;
 
                 };
             }

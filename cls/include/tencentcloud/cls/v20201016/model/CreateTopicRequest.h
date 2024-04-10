@@ -191,15 +191,15 @@ namespace TencentCloud
                     bool StorageTypeHasBeenSet() const;
 
                     /**
-                     * 获取Lifecycle in days. Value range: 1–3600 (STANDARD storage); 7–3600 (IA storage). `3640` indicates permanent retention.
-                     * @return Period Lifecycle in days. Value range: 1–3600 (STANDARD storage); 7–3600 (IA storage). `3640` indicates permanent retention.
+                     * 获取lifetime. Unit: days. Standard storage value range: 1~3600. Infrequent storage value range: 7~3600 days. A value of 3640 indicates permanent retention.If this value is not input, it defaults to the Period value of the log set corresponding to the accessed log topic (defaults to 30 days in case of access failure).
+                     * @return Period lifetime. Unit: days. Standard storage value range: 1~3600. Infrequent storage value range: 7~3600 days. A value of 3640 indicates permanent retention.If this value is not input, it defaults to the Period value of the log set corresponding to the accessed log topic (defaults to 30 days in case of access failure).
                      * 
                      */
                     int64_t GetPeriod() const;
 
                     /**
-                     * 设置Lifecycle in days. Value range: 1–3600 (STANDARD storage); 7–3600 (IA storage). `3640` indicates permanent retention.
-                     * @param _period Lifecycle in days. Value range: 1–3600 (STANDARD storage); 7–3600 (IA storage). `3640` indicates permanent retention.
+                     * 设置lifetime. Unit: days. Standard storage value range: 1~3600. Infrequent storage value range: 7~3600 days. A value of 3640 indicates permanent retention.If this value is not input, it defaults to the Period value of the log set corresponding to the accessed log topic (defaults to 30 days in case of access failure).
+                     * @param _period lifetime. Unit: days. Standard storage value range: 1~3600. Infrequent storage value range: 7~3600 days. A value of 3640 indicates permanent retention.If this value is not input, it defaults to the Period value of the log set corresponding to the accessed log topic (defaults to 30 days in case of access failure).
                      * 
                      */
                     void SetPeriod(const int64_t& _period);
@@ -233,19 +233,15 @@ namespace TencentCloud
                     bool DescribesHasBeenSet() const;
 
                     /**
-                     * 获取`0`: Disable log transitioning.
-A value other than `0`: The number of STANDARD storage days after log transitioning is enabled (valid only if `StorageType` is `hot`). Note: `HotPeriod` should be greater than or equal to `7` and less than `Period`.
-                     * @return HotPeriod `0`: Disable log transitioning.
-A value other than `0`: The number of STANDARD storage days after log transitioning is enabled (valid only if `StorageType` is `hot`). Note: `HotPeriod` should be greater than or equal to `7` and less than `Period`.
+                     * 获取0: Disable log settlement.Non-zero: The number of Standard Storage days after enabling log settlement. HotPeriod needs to be greater than or equal to 7, and less than Period.Effective only when StorageType is hot.
+                     * @return HotPeriod 0: Disable log settlement.Non-zero: The number of Standard Storage days after enabling log settlement. HotPeriod needs to be greater than or equal to 7, and less than Period.Effective only when StorageType is hot.
                      * 
                      */
                     uint64_t GetHotPeriod() const;
 
                     /**
-                     * 设置`0`: Disable log transitioning.
-A value other than `0`: The number of STANDARD storage days after log transitioning is enabled (valid only if `StorageType` is `hot`). Note: `HotPeriod` should be greater than or equal to `7` and less than `Period`.
-                     * @param _hotPeriod `0`: Disable log transitioning.
-A value other than `0`: The number of STANDARD storage days after log transitioning is enabled (valid only if `StorageType` is `hot`). Note: `HotPeriod` should be greater than or equal to `7` and less than `Period`.
+                     * 设置0: Disable log settlement.Non-zero: The number of Standard Storage days after enabling log settlement. HotPeriod needs to be greater than or equal to 7, and less than Period.Effective only when StorageType is hot.
+                     * @param _hotPeriod 0: Disable log settlement.Non-zero: The number of Standard Storage days after enabling log settlement. HotPeriod needs to be greater than or equal to 7, and less than Period.Effective only when StorageType is hot.
                      * 
                      */
                     void SetHotPeriod(const uint64_t& _hotPeriod);
@@ -258,15 +254,15 @@ A value other than `0`: The number of STANDARD storage days after log transition
                     bool HotPeriodHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
-                     * @return IsWebTracking Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
+                     * 获取Authentication switch. false: off; true: on. Default is false.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).
+                     * @return IsWebTracking Authentication switch. false: off; true: on. Default is false.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).
                      * 
                      */
                     bool GetIsWebTracking() const;
 
                     /**
-                     * 设置Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
-                     * @param _isWebTracking Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
+                     * 设置Authentication switch. false: off; true: on. Default is false.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).
+                     * @param _isWebTracking Authentication switch. false: off; true: on. Default is false.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).
                      * 
                      */
                     void SetIsWebTracking(const bool& _isWebTracking);
@@ -323,7 +319,7 @@ A value other than `0`: The number of STANDARD storage days after log transition
                     bool m_storageTypeHasBeenSet;
 
                     /**
-                     * Lifecycle in days. Value range: 1–3600 (STANDARD storage); 7–3600 (IA storage). `3640` indicates permanent retention.
+                     * lifetime. Unit: days. Standard storage value range: 1~3600. Infrequent storage value range: 7~3600 days. A value of 3640 indicates permanent retention.If this value is not input, it defaults to the Period value of the log set corresponding to the accessed log topic (defaults to 30 days in case of access failure).
                      */
                     int64_t m_period;
                     bool m_periodHasBeenSet;
@@ -335,14 +331,13 @@ A value other than `0`: The number of STANDARD storage days after log transition
                     bool m_describesHasBeenSet;
 
                     /**
-                     * `0`: Disable log transitioning.
-A value other than `0`: The number of STANDARD storage days after log transitioning is enabled (valid only if `StorageType` is `hot`). Note: `HotPeriod` should be greater than or equal to `7` and less than `Period`.
+                     * 0: Disable log settlement.Non-zero: The number of Standard Storage days after enabling log settlement. HotPeriod needs to be greater than or equal to 7, and less than Period.Effective only when StorageType is hot.
                      */
                     uint64_t m_hotPeriod;
                     bool m_hotPeriodHasBeenSet;
 
                     /**
-                     * Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
+                     * Authentication switch. false: off; true: on. Default is false.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).
                      */
                     bool m_isWebTracking;
                     bool m_isWebTrackingHasBeenSet;

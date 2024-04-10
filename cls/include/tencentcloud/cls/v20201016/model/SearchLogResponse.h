@@ -24,6 +24,7 @@
 #include <tencentcloud/cls/v20201016/model/LogInfo.h>
 #include <tencentcloud/cls/v20201016/model/LogItems.h>
 #include <tencentcloud/cls/v20201016/model/Column.h>
+#include <tencentcloud/cls/v20201016/model/SearchLogTopics.h>
 
 
 namespace TencentCloud
@@ -47,8 +48,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取You can pass through the `Context` value (validity: 1 hour) returned by this API to continue to get more logs.
-                     * @return Context You can pass through the `Context` value (validity: 1 hour) returned by this API to continue to get more logs.
+                     * 获取Pass through the Context value returned by this API, which can access more logs later, with an expiration time of 1 hour.Note:* Applicable only for single log topic searches. When searching multiple log topics, please use the Context in Topics.
+                     * @return Context Pass through the Context value returned by this API, which can access more logs later, with an expiration time of 1 hour.Note:* Applicable only for single log topic searches. When searching multiple log topics, please use the Context in Topics.
                      * 
                      */
                     std::string GetContext() const;
@@ -194,10 +195,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool SamplingRateHasBeenSet() const;
 
+                    /**
+                     * 获取Refers to the basic information of each log topic when multiple log topics are used for search, such as error messages.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Topics Refers to the basic information of each log topic when multiple log topics are used for search, such as error messages.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    SearchLogTopics GetTopics() const;
+
+                    /**
+                     * 判断参数 Topics 是否已赋值
+                     * @return Topics 是否已赋值
+                     * 
+                     */
+                    bool TopicsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * You can pass through the `Context` value (validity: 1 hour) returned by this API to continue to get more logs.
+                     * Pass through the Context value returned by this API, which can access more logs later, with an expiration time of 1 hour.Note:* Applicable only for single log topic searches. When searching multiple log topics, please use the Context in Topics.
                      */
                     std::string m_context;
                     bool m_contextHasBeenSet;
@@ -260,6 +275,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     double m_samplingRate;
                     bool m_samplingRateHasBeenSet;
+
+                    /**
+                     * Refers to the basic information of each log topic when multiple log topics are used for search, such as error messages.Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    SearchLogTopics m_topics;
+                    bool m_topicsHasBeenSet;
 
                 };
             }

@@ -504,6 +504,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool HistoryStatusHasBeenSet() const;
 
+                    /**
+                     * 获取COS bucket type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return StorageType COS bucket type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetStorageType() const;
+
+                    /**
+                     * 设置COS bucket type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _storageType COS bucket type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetStorageType(const std::string& _storageType);
+
+                    /**
+                     * 判断参数 StorageType 是否已赋值
+                     * @return StorageType 是否已赋值
+                     * 
+                     */
+                    bool StorageTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -633,6 +658,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_historyStatus;
                     bool m_historyStatusHasBeenSet;
+
+                    /**
+                     * COS bucket type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_storageType;
+                    bool m_storageTypeHasBeenSet;
 
                 };
             }

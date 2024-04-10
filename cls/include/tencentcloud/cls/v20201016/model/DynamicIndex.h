@@ -35,9 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Dynamic index configuration
-
-Note: This feature is currently in a beta test. To use it, please contact technical support.
+                * Key-value index auto-configuration enables automatic addition of fields from logs into the key-value index, including subsequently added fields in the logs.
                 */
                 class DynamicIndex : public AbstractModel
                 {
@@ -49,18 +47,18 @@ Note: This feature is currently in a beta test. To use it, please contact techni
 
 
                     /**
-                     * 获取Dynamic index configuration status
+                     * 获取Key-Value Index Auto-Config Switch
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status Dynamic index configuration status
+                     * @return Status Key-Value Index Auto-Config Switch
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     bool GetStatus() const;
 
                     /**
-                     * 设置Dynamic index configuration status
+                     * 设置Key-Value Index Auto-Config Switch
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _status Dynamic index configuration status
+                     * @param _status Key-Value Index Auto-Config Switch
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -76,7 +74,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Dynamic index configuration status
+                     * Key-Value Index Auto-Config Switch
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     bool m_status;

@@ -45,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task type. Valid values: 1 (specified topic) and 2 (dynamically created).
-                     * @return FuncType Task type. Valid values: 1 (specified topic) and 2 (dynamically created).
+                     * 获取Task type. 1: Specify topic; 2: Dynamic creation. For details, please refer to Creating Processing Task Document (https://intl.cloud.tencent.com/document/product/614/63940?from_cn_redirect=1).
+                     * @return FuncType Task type. 1: Specify topic; 2: Dynamic creation. For details, please refer to Creating Processing Task Document (https://intl.cloud.tencent.com/document/product/614/63940?from_cn_redirect=1).
                      * 
                      */
                     int64_t GetFuncType() const;
 
                     /**
-                     * 设置Task type. Valid values: 1 (specified topic) and 2 (dynamically created).
-                     * @param _funcType Task type. Valid values: 1 (specified topic) and 2 (dynamically created).
+                     * 设置Task type. 1: Specify topic; 2: Dynamic creation. For details, please refer to Creating Processing Task Document (https://intl.cloud.tencent.com/document/product/614/63940?from_cn_redirect=1).
+                     * @param _funcType Task type. 1: Specify topic; 2: Dynamic creation. For details, please refer to Creating Processing Task Document (https://intl.cloud.tencent.com/document/product/614/63940?from_cn_redirect=1).
                      * 
                      */
                     void SetFuncType(const int64_t& _funcType);
@@ -129,15 +129,19 @@ namespace TencentCloud
                     bool EtlContentHasBeenSet() const;
 
                     /**
-                     * 获取Data processing type. Valid values: `1`: Use random data from the source log topic for processing preview. `2`: Use user-defined test data for processing preview. `3`: Create a real processing task.
-                     * @return TaskType Data processing type. Valid values: `1`: Use random data from the source log topic for processing preview. `2`: Use user-defined test data for processing preview. `3`: Create a real processing task.
+                     * 获取Processing type.
+1: Process preview using random data from the source log topic; 2: Process preview using user-defined test data; 3: Create real processing tasks.
+                     * @return TaskType Processing type.
+1: Process preview using random data from the source log topic; 2: Process preview using user-defined test data; 3: Create real processing tasks.
                      * 
                      */
                     int64_t GetTaskType() const;
 
                     /**
-                     * 设置Data processing type. Valid values: `1`: Use random data from the source log topic for processing preview. `2`: Use user-defined test data for processing preview. `3`: Create a real processing task.
-                     * @param _taskType Data processing type. Valid values: `1`: Use random data from the source log topic for processing preview. `2`: Use user-defined test data for processing preview. `3`: Create a real processing task.
+                     * 设置Processing type.
+1: Process preview using random data from the source log topic; 2: Process preview using user-defined test data; 3: Create real processing tasks.
+                     * @param _taskType Processing type.
+1: Process preview using random data from the source log topic; 2: Process preview using user-defined test data; 3: Create real processing tasks.
                      * 
                      */
                     void SetTaskType(const int64_t& _taskType);
@@ -148,6 +152,27 @@ namespace TencentCloud
                      * 
                      */
                     bool TaskTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Destination topic_id and alias of processing task. This parameter is required when FuncType=1, and not required when FuncType=2.
+                     * @return DstResources Destination topic_id and alias of processing task. This parameter is required when FuncType=1, and not required when FuncType=2.
+                     * 
+                     */
+                    std::vector<DataTransformResouceInfo> GetDstResources() const;
+
+                    /**
+                     * 设置Destination topic_id and alias of processing task. This parameter is required when FuncType=1, and not required when FuncType=2.
+                     * @param _dstResources Destination topic_id and alias of processing task. This parameter is required when FuncType=1, and not required when FuncType=2.
+                     * 
+                     */
+                    void SetDstResources(const std::vector<DataTransformResouceInfo>& _dstResources);
+
+                    /**
+                     * 判断参数 DstResources 是否已赋值
+                     * @return DstResources 是否已赋值
+                     * 
+                     */
+                    bool DstResourcesHasBeenSet() const;
 
                     /**
                      * 获取Task status. Valid values: 1 (enabled) and 2 (disabled).
@@ -169,27 +194,6 @@ namespace TencentCloud
                      * 
                      */
                     bool EnableFlagHasBeenSet() const;
-
-                    /**
-                     * 获取Target topic ID and alias of the data processing task
-                     * @return DstResources Target topic ID and alias of the data processing task
-                     * 
-                     */
-                    std::vector<DataTransformResouceInfo> GetDstResources() const;
-
-                    /**
-                     * 设置Target topic ID and alias of the data processing task
-                     * @param _dstResources Target topic ID and alias of the data processing task
-                     * 
-                     */
-                    void SetDstResources(const std::vector<DataTransformResouceInfo>& _dstResources);
-
-                    /**
-                     * 判断参数 DstResources 是否已赋值
-                     * @return DstResources 是否已赋值
-                     * 
-                     */
-                    bool DstResourcesHasBeenSet() const;
 
                     /**
                      * 获取Test data used for previewing the processing result
@@ -215,7 +219,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Task type. Valid values: 1 (specified topic) and 2 (dynamically created).
+                     * Task type. 1: Specify topic; 2: Dynamic creation. For details, please refer to Creating Processing Task Document (https://intl.cloud.tencent.com/document/product/614/63940?from_cn_redirect=1).
                      */
                     int64_t m_funcType;
                     bool m_funcTypeHasBeenSet;
@@ -239,22 +243,23 @@ namespace TencentCloud
                     bool m_etlContentHasBeenSet;
 
                     /**
-                     * Data processing type. Valid values: `1`: Use random data from the source log topic for processing preview. `2`: Use user-defined test data for processing preview. `3`: Create a real processing task.
+                     * Processing type.
+1: Process preview using random data from the source log topic; 2: Process preview using user-defined test data; 3: Create real processing tasks.
                      */
                     int64_t m_taskType;
                     bool m_taskTypeHasBeenSet;
+
+                    /**
+                     * Destination topic_id and alias of processing task. This parameter is required when FuncType=1, and not required when FuncType=2.
+                     */
+                    std::vector<DataTransformResouceInfo> m_dstResources;
+                    bool m_dstResourcesHasBeenSet;
 
                     /**
                      * Task status. Valid values: 1 (enabled) and 2 (disabled).
                      */
                     int64_t m_enableFlag;
                     bool m_enableFlagHasBeenSet;
-
-                    /**
-                     * Target topic ID and alias of the data processing task
-                     */
-                    std::vector<DataTransformResouceInfo> m_dstResources;
-                    bool m_dstResourcesHasBeenSet;
 
                     /**
                      * Test data used for previewing the processing result

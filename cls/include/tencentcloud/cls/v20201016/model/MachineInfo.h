@@ -68,6 +68,27 @@ namespace TencentCloud
                     bool IpHasBeenSet() const;
 
                     /**
+                     * 获取Machine instance IDNote: This field may return null, indicating that no valid values can be obtained.
+                     * @return InstanceID Machine instance IDNote: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetInstanceID() const;
+
+                    /**
+                     * 设置Machine instance IDNote: This field may return null, indicating that no valid values can be obtained.
+                     * @param _instanceID Machine instance IDNote: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetInstanceID(const std::string& _instanceID);
+
+                    /**
+                     * 判断参数 InstanceID 是否已赋值
+                     * @return InstanceID 是否已赋值
+                     * 
+                     */
+                    bool InstanceIDHasBeenSet() const;
+
+                    /**
                      * 获取Machine status. Valid values: `0`: exceptional; `1`: normal
                      * @return Status Machine status. Valid values: `0`: exceptional; `1`: normal
                      * 
@@ -152,15 +173,15 @@ namespace TencentCloud
                     bool VersionHasBeenSet() const;
 
                     /**
-                     * 获取Machine update feature status
-                     * @return UpdateStatus Machine update feature status
+                     * 获取Machine upgrade status. 0: Upgrade successful; 1: Upgrading; -1: Upgrade failed.
+                     * @return UpdateStatus Machine upgrade status. 0: Upgrade successful; 1: Upgrading; -1: Upgrade failed.
                      * 
                      */
                     int64_t GetUpdateStatus() const;
 
                     /**
-                     * 设置Machine update feature status
-                     * @param _updateStatus Machine update feature status
+                     * 设置Machine upgrade status. 0: Upgrade successful; 1: Upgrading; -1: Upgrade failed.
+                     * @param _updateStatus Machine upgrade status. 0: Upgrade successful; 1: Upgrading; -1: Upgrade failed.
                      * 
                      */
                     void SetUpdateStatus(const int64_t& _updateStatus);
@@ -173,15 +194,15 @@ namespace TencentCloud
                     bool UpdateStatusHasBeenSet() const;
 
                     /**
-                     * 获取Machine update result flag
-                     * @return ErrCode Machine update result flag
+                     * 获取Machine upgrade result identifier.0: Success; 1200: Upgrade successful; Other values indicate exceptions.
+                     * @return ErrCode Machine upgrade result identifier.0: Success; 1200: Upgrade successful; Other values indicate exceptions.
                      * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
-                     * 设置Machine update result flag
-                     * @param _errCode Machine update result flag
+                     * 设置Machine upgrade result identifier.0: Success; 1200: Upgrade successful; Other values indicate exceptions.
+                     * @param _errCode Machine upgrade result identifier.0: Success; 1200: Upgrade successful; Other values indicate exceptions.
                      * 
                      */
                     void SetErrCode(const int64_t& _errCode);
@@ -194,15 +215,15 @@ namespace TencentCloud
                     bool ErrCodeHasBeenSet() const;
 
                     /**
-                     * 获取Machine update result information
-                     * @return ErrMsg Machine update result information
+                     * 获取Machine upgrade result information."ok": Success; "update success": Upgrade successful; Other values indicate the reason for failure.
+                     * @return ErrMsg Machine upgrade result information."ok": Success; "update success": Upgrade successful; Other values indicate the reason for failure.
                      * 
                      */
                     std::string GetErrMsg() const;
 
                     /**
-                     * 设置Machine update result information
-                     * @param _errMsg Machine update result information
+                     * 设置Machine upgrade result information."ok": Success; "update success": Upgrade successful; Other values indicate the reason for failure.
+                     * @param _errMsg Machine upgrade result information."ok": Success; "update success": Upgrade successful; Other values indicate the reason for failure.
                      * 
                      */
                     void SetErrMsg(const std::string& _errMsg);
@@ -221,6 +242,12 @@ namespace TencentCloud
                      */
                     std::string m_ip;
                     bool m_ipHasBeenSet;
+
+                    /**
+                     * Machine instance IDNote: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_instanceID;
+                    bool m_instanceIDHasBeenSet;
 
                     /**
                      * Machine status. Valid values: `0`: exceptional; `1`: normal
@@ -247,19 +274,19 @@ namespace TencentCloud
                     bool m_versionHasBeenSet;
 
                     /**
-                     * Machine update feature status
+                     * Machine upgrade status. 0: Upgrade successful; 1: Upgrading; -1: Upgrade failed.
                      */
                     int64_t m_updateStatus;
                     bool m_updateStatusHasBeenSet;
 
                     /**
-                     * Machine update result flag
+                     * Machine upgrade result identifier.0: Success; 1200: Upgrade successful; Other values indicate exceptions.
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;
 
                     /**
-                     * Machine update result information
+                     * Machine upgrade result information."ok": Success; "update success": Upgrade successful; Other values indicate the reason for failure.
                      */
                     std::string m_errMsg;
                     bool m_errMsgHasBeenSet;

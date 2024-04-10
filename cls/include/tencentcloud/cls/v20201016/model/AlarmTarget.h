@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Log topic ID
-                     * @return TopicId Log topic ID
+                     * 获取Log topic IDNote: This field may return null, indicating that no valid values can be obtained.
+                     * @return TopicId Log topic IDNote: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTopicId() const;
 
                     /**
-                     * 设置Log topic ID
-                     * @param _topicId Log topic ID
+                     * 设置Log topic IDNote: This field may return null, indicating that no valid values can be obtained.
+                     * @param _topicId Log topic IDNote: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTopicId(const std::string& _topicId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TopicIdHasBeenSet() const;
 
                     /**
-                     * 获取Query statement
-                     * @return Query Query statement
+                     * 获取Query statementNote: This field may return null, indicating that no valid values can be obtained.
+                     * @return Query Query statementNote: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetQuery() const;
 
                     /**
-                     * 设置Query statement
-                     * @param _query Query statement
+                     * 设置Query statementNote: This field may return null, indicating that no valid values can be obtained.
+                     * @param _query Query statementNote: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetQuery(const std::string& _query);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool QueryHasBeenSet() const;
 
                     /**
-                     * 获取Monitoring object number, which is incremental from 1.
-                     * @return Number Monitoring object number, which is incremental from 1.
+                     * 获取Serial number of alarm object, which is incremental from 1.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Number Serial number of alarm object, which is incremental from 1.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetNumber() const;
 
                     /**
-                     * 设置Monitoring object number, which is incremental from 1.
-                     * @param _number Monitoring object number, which is incremental from 1.
+                     * 设置Serial number of alarm object, which is incremental from 1.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _number Serial number of alarm object, which is incremental from 1.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetNumber(const int64_t& _number);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool NumberHasBeenSet() const;
 
                     /**
-                     * 获取Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Value range: -1440–0.
-                     * @return StartTimeOffset Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Value range: -1440–0.
+                     * 获取Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Maximum value: 0. Minimum value: -1440.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return StartTimeOffset Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Maximum value: 0. Minimum value: -1440.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetStartTimeOffset() const;
 
                     /**
-                     * 设置Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Value range: -1440–0.
-                     * @param _startTimeOffset Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Value range: -1440–0.
+                     * 设置Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Maximum value: 0. Minimum value: -1440.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _startTimeOffset Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Maximum value: 0. Minimum value: -1440.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetStartTimeOffset(const int64_t& _startTimeOffset);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
-                     * @return EndTimeOffset Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
+                     * 获取Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than StartTimeOffset. Maximum value: 0. Minimum value: -1440.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return EndTimeOffset Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than StartTimeOffset. Maximum value: 0. Minimum value: -1440.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetEndTimeOffset() const;
 
                     /**
-                     * 设置Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
-                     * @param _endTimeOffset Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
+                     * 设置Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than StartTimeOffset. Maximum value: 0. Minimum value: -1440.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _endTimeOffset Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than StartTimeOffset. Maximum value: 0. Minimum value: -1440.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetEndTimeOffset(const int64_t& _endTimeOffset);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool EndTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取Logset ID
-                     * @return LogsetId Logset ID
+                     * 获取Logset IDNote: This field may return null, indicating that no valid values can be obtained.
+                     * @return LogsetId Logset IDNote: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetLogsetId() const;
 
                     /**
-                     * 设置Logset ID
-                     * @param _logsetId Logset ID
+                     * 设置Logset IDNote: This field may return null, indicating that no valid values can be obtained.
+                     * @param _logsetId Logset IDNote: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLogsetId(const std::string& _logsetId);
@@ -173,23 +173,19 @@ namespace TencentCloud
                     bool LogsetIdHasBeenSet() const;
 
                     /**
-                     * 获取Search syntax. Valid values:
-`0` (default): Lucene; `1`: CQL
-For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Syntax</a>.
-                     * @return SyntaxRule Search syntax. Valid values:
-`0` (default): Lucene; `1`: CQL
-For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Syntax</a>.
+                     * 获取Search syntax rules; default value: 0.0: Lucene syntax; 1: CQL syntax.For detailed instructions, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Condition Syntax Rules</a>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SyntaxRule Search syntax rules; default value: 0.0: Lucene syntax; 1: CQL syntax.For detailed instructions, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Condition Syntax Rules</a>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetSyntaxRule() const;
 
                     /**
-                     * 设置Search syntax. Valid values:
-`0` (default): Lucene; `1`: CQL
-For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Syntax</a>.
-                     * @param _syntaxRule Search syntax. Valid values:
-`0` (default): Lucene; `1`: CQL
-For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Syntax</a>.
+                     * 设置Search syntax rules; default value: 0.0: Lucene syntax; 1: CQL syntax.For detailed instructions, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Condition Syntax Rules</a>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _syntaxRule Search syntax rules; default value: 0.0: Lucene syntax; 1: CQL syntax.For detailed instructions, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Condition Syntax Rules</a>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSyntaxRule(const uint64_t& _syntaxRule);
@@ -204,45 +200,44 @@ For more information, see <a href="https://intl.cloud.tencent.com/document/produ
                 private:
 
                     /**
-                     * Log topic ID
+                     * Log topic IDNote: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;
 
                     /**
-                     * Query statement
+                     * Query statementNote: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_query;
                     bool m_queryHasBeenSet;
 
                     /**
-                     * Monitoring object number, which is incremental from 1.
+                     * Serial number of alarm object, which is incremental from 1.Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_number;
                     bool m_numberHasBeenSet;
 
                     /**
-                     * Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Value range: -1440–0.
+                     * Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Maximum value: 0. Minimum value: -1440.Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
+                     * Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than StartTimeOffset. Maximum value: 0. Minimum value: -1440.Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;
 
                     /**
-                     * Logset ID
+                     * Logset IDNote: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_logsetId;
                     bool m_logsetIdHasBeenSet;
 
                     /**
-                     * Search syntax. Valid values:
-`0` (default): Lucene; `1`: CQL
-For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Syntax</a>.
+                     * Search syntax rules; default value: 0.0: Lucene syntax; 1: CQL syntax.For detailed instructions, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Condition Syntax Rules</a>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_syntaxRule;
                     bool m_syntaxRuleHasBeenSet;

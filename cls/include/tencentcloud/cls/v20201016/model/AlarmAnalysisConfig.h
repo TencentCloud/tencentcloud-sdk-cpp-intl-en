@@ -47,15 +47,31 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Key
-                     * @return Key Key
+                     * 获取Keys. The following keys are supported:
+SyntaxRule: Syntax rule, value supports 0: Lucene syntax; 1: CQL syntax.
+QueryIndex: Serial number of execution statement. Value supports -1: Custom; 1: Execute Statement 1; 2: Execute Statement 2.CustomQuery: Search statement. Valid and required when QueryIndex is -1, example of value: "* | select count(*) as count".Fields: Fields. Value supports __SOURCE__; __FILENAME__; __HOSTNAME__; __TIMESTAMP__; __INDEX_STATUS__; __PKG_LOGID__; __TOPIC__.
+Format: Display format. Value supports 1: One log per line; 2: One field per line per log.
+Limit: Maximum number of logs. Example of value: 5.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Key Keys. The following keys are supported:
+SyntaxRule: Syntax rule, value supports 0: Lucene syntax; 1: CQL syntax.
+QueryIndex: Serial number of execution statement. Value supports -1: Custom; 1: Execute Statement 1; 2: Execute Statement 2.CustomQuery: Search statement. Valid and required when QueryIndex is -1, example of value: "* | select count(*) as count".Fields: Fields. Value supports __SOURCE__; __FILENAME__; __HOSTNAME__; __TIMESTAMP__; __INDEX_STATUS__; __PKG_LOGID__; __TOPIC__.
+Format: Display format. Value supports 1: One log per line; 2: One field per line per log.
+Limit: Maximum number of logs. Example of value: 5.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetKey() const;
 
                     /**
-                     * 设置Key
-                     * @param _key Key
+                     * 设置Keys. The following keys are supported:
+SyntaxRule: Syntax rule, value supports 0: Lucene syntax; 1: CQL syntax.
+QueryIndex: Serial number of execution statement. Value supports -1: Custom; 1: Execute Statement 1; 2: Execute Statement 2.CustomQuery: Search statement. Valid and required when QueryIndex is -1, example of value: "* | select count(*) as count".Fields: Fields. Value supports __SOURCE__; __FILENAME__; __HOSTNAME__; __TIMESTAMP__; __INDEX_STATUS__; __PKG_LOGID__; __TOPIC__.
+Format: Display format. Value supports 1: One log per line; 2: One field per line per log.
+Limit: Maximum number of logs. Example of value: 5.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _key Keys. The following keys are supported:
+SyntaxRule: Syntax rule, value supports 0: Lucene syntax; 1: CQL syntax.
+QueryIndex: Serial number of execution statement. Value supports -1: Custom; 1: Execute Statement 1; 2: Execute Statement 2.CustomQuery: Search statement. Valid and required when QueryIndex is -1, example of value: "* | select count(*) as count".Fields: Fields. Value supports __SOURCE__; __FILENAME__; __HOSTNAME__; __TIMESTAMP__; __INDEX_STATUS__; __PKG_LOGID__; __TOPIC__.
+Format: Display format. Value supports 1: One log per line; 2: One field per line per log.
+Limit: Maximum number of logs. Example of value: 5.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetKey(const std::string& _key);
@@ -68,15 +84,27 @@ namespace TencentCloud
                     bool KeyHasBeenSet() const;
 
                     /**
-                     * 获取Value
-                     * @return Value Value
+                     * 获取Value.
+Key corresponds to the following values:
+SyntaxRule: Syntax rule, value supports 0: Lucene syntax; 1: CQL syntax.
+QueryIndex: Serial number of execution statement. Value supports -1: Custom; 1: Execute Statement 1; 2: Execute Statement 2.CustomQuery: Search statement. Valid and required when QueryIndex is -1, example of value: "* | select count(*) as count".Fields: Fields. Value supports __SOURCE__; __FILENAME__; __HOSTNAME__; __TIMESTAMP__; __INDEX_STATUS__; __PKG_LOGID__; __TOPIC__.Format: Display format. Value supports 1: One log per line; 2: One field per line per log.Limit: Maximum number of logs. Example of value: 5.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Value Value.
+Key corresponds to the following values:
+SyntaxRule: Syntax rule, value supports 0: Lucene syntax; 1: CQL syntax.
+QueryIndex: Serial number of execution statement. Value supports -1: Custom; 1: Execute Statement 1; 2: Execute Statement 2.CustomQuery: Search statement. Valid and required when QueryIndex is -1, example of value: "* | select count(*) as count".Fields: Fields. Value supports __SOURCE__; __FILENAME__; __HOSTNAME__; __TIMESTAMP__; __INDEX_STATUS__; __PKG_LOGID__; __TOPIC__.Format: Display format. Value supports 1: One log per line; 2: One field per line per log.Limit: Maximum number of logs. Example of value: 5.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetValue() const;
 
                     /**
-                     * 设置Value
-                     * @param _value Value
+                     * 设置Value.
+Key corresponds to the following values:
+SyntaxRule: Syntax rule, value supports 0: Lucene syntax; 1: CQL syntax.
+QueryIndex: Serial number of execution statement. Value supports -1: Custom; 1: Execute Statement 1; 2: Execute Statement 2.CustomQuery: Search statement. Valid and required when QueryIndex is -1, example of value: "* | select count(*) as count".Fields: Fields. Value supports __SOURCE__; __FILENAME__; __HOSTNAME__; __TIMESTAMP__; __INDEX_STATUS__; __PKG_LOGID__; __TOPIC__.Format: Display format. Value supports 1: One log per line; 2: One field per line per log.Limit: Maximum number of logs. Example of value: 5.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _value Value.
+Key corresponds to the following values:
+SyntaxRule: Syntax rule, value supports 0: Lucene syntax; 1: CQL syntax.
+QueryIndex: Serial number of execution statement. Value supports -1: Custom; 1: Execute Statement 1; 2: Execute Statement 2.CustomQuery: Search statement. Valid and required when QueryIndex is -1, example of value: "* | select count(*) as count".Fields: Fields. Value supports __SOURCE__; __FILENAME__; __HOSTNAME__; __TIMESTAMP__; __INDEX_STATUS__; __PKG_LOGID__; __TOPIC__.Format: Display format. Value supports 1: One log per line; 2: One field per line per log.Limit: Maximum number of logs. Example of value: 5.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetValue(const std::string& _value);
@@ -91,13 +119,20 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Key
+                     * Keys. The following keys are supported:
+SyntaxRule: Syntax rule, value supports 0: Lucene syntax; 1: CQL syntax.
+QueryIndex: Serial number of execution statement. Value supports -1: Custom; 1: Execute Statement 1; 2: Execute Statement 2.CustomQuery: Search statement. Valid and required when QueryIndex is -1, example of value: "* | select count(*) as count".Fields: Fields. Value supports __SOURCE__; __FILENAME__; __HOSTNAME__; __TIMESTAMP__; __INDEX_STATUS__; __PKG_LOGID__; __TOPIC__.
+Format: Display format. Value supports 1: One log per line; 2: One field per line per log.
+Limit: Maximum number of logs. Example of value: 5.Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_key;
                     bool m_keyHasBeenSet;
 
                     /**
-                     * Value
+                     * Value.
+Key corresponds to the following values:
+SyntaxRule: Syntax rule, value supports 0: Lucene syntax; 1: CQL syntax.
+QueryIndex: Serial number of execution statement. Value supports -1: Custom; 1: Execute Statement 1; 2: Execute Statement 2.CustomQuery: Search statement. Valid and required when QueryIndex is -1, example of value: "* | select count(*) as count".Fields: Fields. Value supports __SOURCE__; __FILENAME__; __HOSTNAME__; __TIMESTAMP__; __INDEX_STATUS__; __PKG_LOGID__; __TOPIC__.Format: Display format. Value supports 1: One log per line; 2: One field per line per log.Limit: Maximum number of logs. Example of value: 5.Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;

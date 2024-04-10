@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool KafkaTypeHasBeenSet() const;
 
                     /**
-                     * 获取CKafka instance ID, which is required when `KafkaType` is set to `0`
-                     * @return KafkaInstance CKafka instance ID, which is required when `KafkaType` is set to `0`
+                     * 获取Tencent Cloud CKafka Instance IDWhen KafkaType is 0, KafkaInstance is required
+                     * @return KafkaInstance Tencent Cloud CKafka Instance IDWhen KafkaType is 0, KafkaInstance is required
                      * 
                      */
                     std::string GetKafkaInstance() const;
 
                     /**
-                     * 设置CKafka instance ID, which is required when `KafkaType` is set to `0`
-                     * @param _kafkaInstance CKafka instance ID, which is required when `KafkaType` is set to `0`
+                     * 设置Tencent Cloud CKafka Instance IDWhen KafkaType is 0, KafkaInstance is required
+                     * @param _kafkaInstance Tencent Cloud CKafka Instance IDWhen KafkaType is 0, KafkaInstance is required
                      * 
                      */
                     void SetKafkaInstance(const std::string& _kafkaInstance);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool KafkaInstanceHasBeenSet() const;
 
                     /**
-                     * 获取Service address
-                     * @return ServerAddr Service address
+                     * 获取Service AddressWhen KafkaType is 1, ServerAddr is required
+                     * @return ServerAddr Service AddressWhen KafkaType is 1, ServerAddr is required
                      * 
                      */
                     std::string GetServerAddr() const;
 
                     /**
-                     * 设置Service address
-                     * @param _serverAddr Service address
+                     * 设置Service AddressWhen KafkaType is 1, ServerAddr is required
+                     * @param _serverAddr Service AddressWhen KafkaType is 1, ServerAddr is required
                      * 
                      */
                     void SetServerAddr(const std::string& _serverAddr);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool IsEncryptionAddrHasBeenSet() const;
 
                     /**
-                     * 获取Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
-                     * @return Protocol Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
+                     * 获取Encryption access protocol. Required when IsEncryptionAddr parameter is set to true
+                     * @return Protocol Encryption access protocol. Required when IsEncryptionAddr parameter is set to true
                      * 
                      */
                     KafkaProtocolInfo GetProtocol() const;
 
                     /**
-                     * 设置Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
-                     * @param _protocol Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
+                     * 设置Encryption access protocol. Required when IsEncryptionAddr parameter is set to true
+                     * @param _protocol Encryption access protocol. Required when IsEncryptionAddr parameter is set to true
                      * 
                      */
                     void SetProtocol(const KafkaProtocolInfo& _protocol);
@@ -157,13 +157,13 @@ namespace TencentCloud
                     bool m_kafkaTypeHasBeenSet;
 
                     /**
-                     * CKafka instance ID, which is required when `KafkaType` is set to `0`
+                     * Tencent Cloud CKafka Instance IDWhen KafkaType is 0, KafkaInstance is required
                      */
                     std::string m_kafkaInstance;
                     bool m_kafkaInstanceHasBeenSet;
 
                     /**
-                     * Service address
+                     * Service AddressWhen KafkaType is 1, ServerAddr is required
                      */
                     std::string m_serverAddr;
                     bool m_serverAddrHasBeenSet;
@@ -175,7 +175,7 @@ namespace TencentCloud
                     bool m_isEncryptionAddrHasBeenSet;
 
                     /**
-                     * Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
+                     * Encryption access protocol. Required when IsEncryptionAddr parameter is set to true
                      */
                     KafkaProtocolInfo m_protocol;
                     bool m_protocolHasBeenSet;

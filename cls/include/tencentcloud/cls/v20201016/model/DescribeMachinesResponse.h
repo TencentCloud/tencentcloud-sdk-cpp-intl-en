@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool MachinesHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable the automatic update feature for the machine group
-                     * @return AutoUpdate Whether to enable the automatic update feature for the machine group
+                     * 获取Whether the machine group has enabled automatic upgrade function. 0: Automatic upgrade not enabled; 1: Automatic upgrade enabled.
+                     * @return AutoUpdate Whether the machine group has enabled automatic upgrade function. 0: Automatic upgrade not enabled; 1: Automatic upgrade enabled.
                      * 
                      */
                     int64_t GetAutoUpdate() const;
@@ -137,7 +137,7 @@ namespace TencentCloud
                     bool m_machinesHasBeenSet;
 
                     /**
-                     * Whether to enable the automatic update feature for the machine group
+                     * Whether the machine group has enabled automatic upgrade function. 0: Automatic upgrade not enabled; 1: Automatic upgrade enabled.
                      */
                     int64_t m_autoUpdate;
                     bool m_autoUpdateHasBeenSet;

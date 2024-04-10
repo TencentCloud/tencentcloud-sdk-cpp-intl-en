@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cls/v20201016/model/NoticeReceiver.h>
 #include <tencentcloud/cls/v20201016/model/WebCallback.h>
+#include <tencentcloud/cls/v20201016/model/NoticeRule.h>
 
 
 namespace TencentCloud
@@ -70,27 +71,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Alarm template type. Valid values:
-<br><li> `Trigger`: alarm triggered
-<br><li> `Recovery`: alarm cleared
-<br><li> `All`: alarm triggered and alarm cleared
-                     * @return Type Alarm template type. Valid values:
-<br><li> `Trigger`: alarm triggered
-<br><li> `Recovery`: alarm cleared
-<br><li> `All`: alarm triggered and alarm cleared
+                     * 获取Alarm template type. Optional values:<br><li> Trigger - Alarm Trigger </li><br><li> Recovery - Alarm Recovery </li><br><li> All - Alarm Trigger and Alarm Recovery </li>
+                     * @return Type Alarm template type. Optional values:<br><li> Trigger - Alarm Trigger </li><br><li> Recovery - Alarm Recovery </li><br><li> All - Alarm Trigger and Alarm Recovery </li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Alarm template type. Valid values:
-<br><li> `Trigger`: alarm triggered
-<br><li> `Recovery`: alarm cleared
-<br><li> `All`: alarm triggered and alarm cleared
-                     * @param _type Alarm template type. Valid values:
-<br><li> `Trigger`: alarm triggered
-<br><li> `Recovery`: alarm cleared
-<br><li> `All`: alarm triggered and alarm cleared
+                     * 设置Alarm template type. Optional values:<br><li> Trigger - Alarm Trigger </li><br><li> Recovery - Alarm Recovery </li><br><li> All - Alarm Trigger and Alarm Recovery </li>
+                     * @param _type Alarm template type. Optional values:<br><li> Trigger - Alarm Trigger </li><br><li> Recovery - Alarm Recovery </li><br><li> All - Alarm Trigger and Alarm Recovery </li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -227,6 +216,27 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool UpdateTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Notification rules.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return NoticeRules Notification rules.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<NoticeRule> GetNoticeRules() const;
+
+                    /**
+                     * 设置Notification rules.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _noticeRules Notification rules.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetNoticeRules(const std::vector<NoticeRule>& _noticeRules);
+
+                    /**
+                     * 判断参数 NoticeRules 是否已赋值
+                     * @return NoticeRules 是否已赋值
+                     * 
+                     */
+                    bool NoticeRulesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -236,10 +246,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Alarm template type. Valid values:
-<br><li> `Trigger`: alarm triggered
-<br><li> `Recovery`: alarm cleared
-<br><li> `All`: alarm triggered and alarm cleared
+                     * Alarm template type. Optional values:<br><li> Trigger - Alarm Trigger </li><br><li> Recovery - Alarm Recovery </li><br><li> All - Alarm Trigger and Alarm Recovery </li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
@@ -278,6 +285,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
+
+                    /**
+                     * Notification rules.Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<NoticeRule> m_noticeRules;
+                    bool m_noticeRulesHasBeenSet;
 
                 };
             }

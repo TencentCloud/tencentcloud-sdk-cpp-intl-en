@@ -49,19 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Primary key ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Id Primary key ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取ID of the Kafka data subscription configuration.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Id ID of the Kafka data subscription configuration.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置Primary key ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _id Primary key ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置ID of the Kafka data subscription configuration.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _id ID of the Kafka data subscription configuration.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -295,19 +291,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ConsumerGroupNameHasBeenSet() const;
 
                     /**
-                     * 获取Status. Valid values: 1 (running) and 2 (suspended).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status Status. Valid values: 1 (running) and 2 (suspended).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Status, 1: running; 2: paused.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Status Status, 1: running; 2: paused.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Status. Valid values: 1 (running) and 2 (suspended).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _status Status. Valid values: 1 (running) and 2 (suspended).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Status, 1: running; 2: paused.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _status Status, 1: running; 2: paused.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -320,19 +312,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Position for data import. Valid values: -2 (earliest, default) and -1 (latest).  
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Offset Position for data import. Valid values: -2 (earliest, default) and -1 (latest).  
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Import data position, -2: earliest (default), -1: latestNote: This field may return null, indicating that no valid values can be obtained.
+                     * @return Offset Import data position, -2: earliest (default), -1: latestNote: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Position for data import. Valid values: -2 (earliest, default) and -1 (latest).  
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _offset Position for data import. Valid values: -2 (earliest, default) and -1 (latest).  
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Import data position, -2: earliest (default), -1: latestNote: This field may return null, indicating that no valid values can be obtained.
+                     * @param _offset Import data position, -2: earliest (default), -1: latestNote: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -422,8 +410,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Primary key ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * ID of the Kafka data subscription configuration.Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
@@ -491,15 +478,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_consumerGroupNameHasBeenSet;
 
                     /**
-                     * Status. Valid values: 1 (running) and 2 (suspended).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Status, 1: running; 2: paused.Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Position for data import. Valid values: -2 (earliest, default) and -1 (latest).  
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Import data position, -2: earliest (default), -1: latestNote: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;

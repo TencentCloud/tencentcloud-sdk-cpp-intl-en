@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Whether to start collection for this log topic
-                     * @return Status Whether to start collection for this log topic
+                     * 获取Whether the topic has log collection enabled. true: collection enabled; false: collection disabled.The console currently does not support modifying this parameter.
+                     * @return Status Whether the topic has log collection enabled. true: collection enabled; false: collection disabled.The console currently does not support modifying this parameter.
                      * 
                      */
                     bool GetStatus() const;
 
                     /**
-                     * 设置Whether to start collection for this log topic
-                     * @param _status Whether to start collection for this log topic
+                     * 设置Whether the topic has log collection enabled. true: collection enabled; false: collection disabled.The console currently does not support modifying this parameter.
+                     * @param _status Whether the topic has log collection enabled. true: collection enabled; false: collection disabled.The console currently does not support modifying this parameter.
                      * 
                      */
                     void SetStatus(const bool& _status);
@@ -237,15 +237,15 @@ A value other than `0`: The number of STANDARD storage days after log transition
                     bool HotPeriodHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
-                     * @return IsWebTracking Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
+                     * 获取Free authentication switch. false: disabled; true: enabled.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).
+                     * @return IsWebTracking Free authentication switch. false: disabled; true: enabled.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).
                      * 
                      */
                     bool GetIsWebTracking() const;
 
                     /**
-                     * 设置Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
-                     * @param _isWebTracking Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
+                     * 设置Free authentication switch. false: disabled; true: enabled.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).
+                     * @param _isWebTracking Free authentication switch. false: disabled; true: enabled.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).
                      * 
                      */
                     void SetIsWebTracking(const bool& _isWebTracking);
@@ -278,7 +278,7 @@ A value other than `0`: The number of STANDARD storage days after log transition
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Whether to start collection for this log topic
+                     * Whether the topic has log collection enabled. true: collection enabled; false: collection disabled.The console currently does not support modifying this parameter.
                      */
                     bool m_status;
                     bool m_statusHasBeenSet;
@@ -315,7 +315,7 @@ A value other than `0`: The number of STANDARD storage days after log transition
                     bool m_hotPeriodHasBeenSet;
 
                     /**
-                     * Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
+                     * Free authentication switch. false: disabled; true: enabled.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).
                      */
                     bool m_isWebTracking;
                     bool m_isWebTrackingHasBeenSet;

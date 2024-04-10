@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取COS bucket.
-                     * @return Bucket COS bucket.
+                     * 获取COS bucket, see the supported [bucket naming conventions](https://intl.cloud.tencent.com/document/product/436/13312?from_cn_redirect=1).
+                     * @return Bucket COS bucket, see the supported [bucket naming conventions](https://intl.cloud.tencent.com/document/product/436/13312?from_cn_redirect=1).
                      * 
                      */
                     std::string GetBucket() const;
 
                     /**
-                     * 设置COS bucket.
-                     * @param _bucket COS bucket.
+                     * 设置COS bucket, see the supported [bucket naming conventions](https://intl.cloud.tencent.com/document/product/436/13312?from_cn_redirect=1).
+                     * @param _bucket COS bucket, see the supported [bucket naming conventions](https://intl.cloud.tencent.com/document/product/436/13312?from_cn_redirect=1).
                      * 
                      */
                     void SetBucket(const std::string& _bucket);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool BucketHasBeenSet() const;
 
                     /**
-                     * 获取Region where the COS bucket is located.
-                     * @return BucketRegion Region where the COS bucket is located.
+                     * 获取The region where the COS bucket is located, see the supported [region list](https://intl.cloud.tencent.com/document/product/436/6224?from_cn_redirect=1).
+                     * @return BucketRegion The region where the COS bucket is located, see the supported [region list](https://intl.cloud.tencent.com/document/product/436/6224?from_cn_redirect=1).
                      * 
                      */
                     std::string GetBucketRegion() const;
 
                     /**
-                     * 设置Region where the COS bucket is located.
-                     * @param _bucketRegion Region where the COS bucket is located.
+                     * 设置The region where the COS bucket is located, see the supported [region list](https://intl.cloud.tencent.com/document/product/436/6224?from_cn_redirect=1).
+                     * @param _bucketRegion The region where the COS bucket is located, see the supported [region list](https://intl.cloud.tencent.com/document/product/436/6224?from_cn_redirect=1).
                      * 
                      */
                     void SetBucketRegion(const std::string& _bucketRegion);
@@ -195,15 +195,15 @@ Default value: `minimalist_log`
                     bool LogTypeHasBeenSet() const;
 
                     /**
-                     * 获取Valid values: "" (default), "gzip", "lzop", "snappy"
-                     * @return Compress Valid values: "" (default), "gzip", "lzop", "snappy"
+                     * 获取Valid values: supported: "", "gzip", "lzop", "snappy"; Default value: "".
+                     * @return Compress Valid values: supported: "", "gzip", "lzop", "snappy"; Default value: "".
                      * 
                      */
                     std::string GetCompress() const;
 
                     /**
-                     * 设置Valid values: "" (default), "gzip", "lzop", "snappy"
-                     * @param _compress Valid values: "" (default), "gzip", "lzop", "snappy"
+                     * 设置Valid values: supported: "", "gzip", "lzop", "snappy"; Default value: "".
+                     * @param _compress Valid values: supported: "", "gzip", "lzop", "snappy"; Default value: "".
                      * 
                      */
                     void SetCompress(const std::string& _compress);
@@ -257,13 +257,13 @@ Default value: `minimalist_log`
                     bool m_nameHasBeenSet;
 
                     /**
-                     * COS bucket.
+                     * COS bucket, see the supported [bucket naming conventions](https://intl.cloud.tencent.com/document/product/436/13312?from_cn_redirect=1).
                      */
                     std::string m_bucket;
                     bool m_bucketHasBeenSet;
 
                     /**
-                     * Region where the COS bucket is located.
+                     * The region where the COS bucket is located, see the supported [region list](https://intl.cloud.tencent.com/document/product/436/6224?from_cn_redirect=1).
                      */
                     std::string m_bucketRegion;
                     bool m_bucketRegionHasBeenSet;
@@ -282,7 +282,7 @@ Default value: `minimalist_log`
                     bool m_logTypeHasBeenSet;
 
                     /**
-                     * Valid values: "" (default), "gzip", "lzop", "snappy"
+                     * Valid values: supported: "", "gzip", "lzop", "snappy"; Default value: "".
                      */
                     std::string m_compress;
                     bool m_compressHasBeenSet;

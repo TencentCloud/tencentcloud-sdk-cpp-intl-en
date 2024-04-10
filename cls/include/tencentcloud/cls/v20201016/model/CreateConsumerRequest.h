@@ -66,15 +66,15 @@ namespace TencentCloud
                     bool TopicIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether to ship log metadata. Default value: `true`
-                     * @return NeedContent Whether to ship log metadata. Default value: `true`
+                     * 获取Whether to deliver log Metadata information, default is true.When NeedContent is true: Content field is valid.When NeedContent is false: Content field is invalid.
+                     * @return NeedContent Whether to deliver log Metadata information, default is true.When NeedContent is true: Content field is valid.When NeedContent is false: Content field is invalid.
                      * 
                      */
                     bool GetNeedContent() const;
 
                     /**
-                     * 设置Whether to ship log metadata. Default value: `true`
-                     * @param _needContent Whether to ship log metadata. Default value: `true`
+                     * 设置Whether to deliver log Metadata information, default is true.When NeedContent is true: Content field is valid.When NeedContent is false: Content field is invalid.
+                     * @param _needContent Whether to deliver log Metadata information, default is true.When NeedContent is true: Content field is valid.When NeedContent is false: Content field is invalid.
                      * 
                      */
                     void SetNeedContent(const bool& _needContent);
@@ -129,15 +129,15 @@ namespace TencentCloud
                     bool CkafkaHasBeenSet() const;
 
                     /**
-                     * 获取Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
-                     * @return Compression Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
+                     * 获取Compression method during delivery. Valid values: 0, 2, and 3. [0：NONE；2：SNAPPY；3：LZ4]
+                     * @return Compression Compression method during delivery. Valid values: 0, 2, and 3. [0：NONE；2：SNAPPY；3：LZ4]
                      * 
                      */
                     int64_t GetCompression() const;
 
                     /**
-                     * 设置Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
-                     * @param _compression Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
+                     * 设置Compression method during delivery. Valid values: 0, 2, and 3. [0：NONE；2：SNAPPY；3：LZ4]
+                     * @param _compression Compression method during delivery. Valid values: 0, 2, and 3. [0：NONE；2：SNAPPY；3：LZ4]
                      * 
                      */
                     void SetCompression(const int64_t& _compression);
@@ -158,7 +158,7 @@ namespace TencentCloud
                     bool m_topicIdHasBeenSet;
 
                     /**
-                     * Whether to ship log metadata. Default value: `true`
+                     * Whether to deliver log Metadata information, default is true.When NeedContent is true: Content field is valid.When NeedContent is false: Content field is invalid.
                      */
                     bool m_needContent;
                     bool m_needContentHasBeenSet;
@@ -176,7 +176,7 @@ namespace TencentCloud
                     bool m_ckafkaHasBeenSet;
 
                     /**
-                     * Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
+                     * Compression method during delivery. Valid values: 0, 2, and 3. [0：NONE；2：SNAPPY；3：LZ4]
                      */
                     int64_t m_compression;
                     bool m_compressionHasBeenSet;

@@ -148,6 +148,27 @@ namespace TencentCloud
                      */
                     bool DstResourcesHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to enable delivery service log. 1 for disabled, 2 for enabled
+                     * @return HasServicesLog Whether to enable delivery service log. 1 for disabled, 2 for enabled
+                     * 
+                     */
+                    uint64_t GetHasServicesLog() const;
+
+                    /**
+                     * 设置Whether to enable delivery service log. 1 for disabled, 2 for enabled
+                     * @param _hasServicesLog Whether to enable delivery service log. 1 for disabled, 2 for enabled
+                     * 
+                     */
+                    void SetHasServicesLog(const uint64_t& _hasServicesLog);
+
+                    /**
+                     * 判断参数 HasServicesLog 是否已赋值
+                     * @return HasServicesLog 是否已赋值
+                     * 
+                     */
+                    bool HasServicesLogHasBeenSet() const;
+
                 private:
 
                     /**
@@ -179,6 +200,12 @@ namespace TencentCloud
                      */
                     std::vector<DataTransformResouceInfo> m_dstResources;
                     bool m_dstResourcesHasBeenSet;
+
+                    /**
+                     * Whether to enable delivery service log. 1 for disabled, 2 for enabled
+                     */
+                    uint64_t m_hasServicesLog;
+                    bool m_hasServicesLogHasBeenSet;
 
                 };
             }

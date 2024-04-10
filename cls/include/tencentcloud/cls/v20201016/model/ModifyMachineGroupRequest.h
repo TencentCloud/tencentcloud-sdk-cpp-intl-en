@@ -214,6 +214,27 @@ namespace TencentCloud
                     bool ServiceLoggingHasBeenSet() const;
 
                     /**
+                     * 获取Regular offline cleaning time for machines in machine group
+                     * @return DelayCleanupTime Regular offline cleaning time for machines in machine group
+                     * 
+                     */
+                    int64_t GetDelayCleanupTime() const;
+
+                    /**
+                     * 设置Regular offline cleaning time for machines in machine group
+                     * @param _delayCleanupTime Regular offline cleaning time for machines in machine group
+                     * 
+                     */
+                    void SetDelayCleanupTime(const int64_t& _delayCleanupTime);
+
+                    /**
+                     * 判断参数 DelayCleanupTime 是否已赋值
+                     * @return DelayCleanupTime 是否已赋值
+                     * 
+                     */
+                    bool DelayCleanupTimeHasBeenSet() const;
+
+                    /**
                      * 获取Metadata information list of a machine group
                      * @return MetaTags Metadata information list of a machine group
                      * 
@@ -283,6 +304,12 @@ namespace TencentCloud
                      */
                     bool m_serviceLogging;
                     bool m_serviceLoggingHasBeenSet;
+
+                    /**
+                     * Regular offline cleaning time for machines in machine group
+                     */
+                    int64_t m_delayCleanupTime;
+                    bool m_delayCleanupTimeHasBeenSet;
 
                     /**
                      * Metadata information list of a machine group

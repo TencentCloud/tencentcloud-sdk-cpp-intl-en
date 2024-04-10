@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool LogContextInfosHasBeenSet() const;
 
                     /**
-                     * 获取Whether the previous logs have been returned
-                     * @return PrevOver Whether the previous logs have been returned
+                     * 获取Whether the previous logs have been fully returned (PrevOver is false indicates that some previous logs are yet to be returned).
+                     * @return PrevOver Whether the previous logs have been fully returned (PrevOver is false indicates that some previous logs are yet to be returned).
                      * 
                      */
                     bool GetPrevOver() const;
@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool PrevOverHasBeenSet() const;
 
                     /**
-                     * 获取Whether the next logs have been returned
-                     * @return NextOver Whether the next logs have been returned
+                     * 获取Whether the subsequent logs have been fully returned (NextOver is false indicates that some subsequent logs are yet to be returned).
+                     * @return NextOver Whether the subsequent logs have been fully returned (NextOver is false indicates that some subsequent logs are yet to be returned).
                      * 
                      */
                     bool GetNextOver() const;
@@ -95,13 +95,13 @@ namespace TencentCloud
                     bool m_logContextInfosHasBeenSet;
 
                     /**
-                     * Whether the previous logs have been returned
+                     * Whether the previous logs have been fully returned (PrevOver is false indicates that some previous logs are yet to be returned).
                      */
                     bool m_prevOver;
                     bool m_prevOverHasBeenSet;
 
                     /**
-                     * Whether the next logs have been returned
+                     * Whether the subsequent logs have been fully returned (NextOver is false indicates that some subsequent logs are yet to be returned).
                      */
                     bool m_nextOver;
                     bool m_nextOverHasBeenSet;

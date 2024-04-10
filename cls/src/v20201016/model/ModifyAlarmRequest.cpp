@@ -27,14 +27,22 @@ ModifyAlarmRequest::ModifyAlarmRequest() :
     m_nameHasBeenSet(false),
     m_monitorTimeHasBeenSet(false),
     m_conditionHasBeenSet(false),
+    m_alarmLevelHasBeenSet(false),
+    m_multiConditionsHasBeenSet(false),
     m_triggerCountHasBeenSet(false),
     m_alarmPeriodHasBeenSet(false),
     m_alarmNoticeIdsHasBeenSet(false),
     m_alarmTargetsHasBeenSet(false),
     m_statusHasBeenSet(false),
+    m_enableHasBeenSet(false),
     m_messageTemplateHasBeenSet(false),
     m_callBackHasBeenSet(false),
-    m_analysisHasBeenSet(false)
+    m_analysisHasBeenSet(false),
+    m_groupTriggerStatusHasBeenSet(false),
+    m_groupTriggerConditionHasBeenSet(false),
+    m_tagsHasBeenSet(false),
+    m_monitorObjectTypeHasBeenSet(false),
+    m_classificationsHasBeenSet(false)
 {
 }
 
@@ -76,6 +84,29 @@ string ModifyAlarmRequest::ToJsonString() const
         string key = "Condition";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_condition.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_alarmLevelHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AlarmLevel";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_alarmLevel, allocator);
+    }
+
+    if (m_multiConditionsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MultiConditions";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_multiConditions.begin(); itr != m_multiConditions.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
     }
 
     if (m_triggerCountHasBeenSet)
@@ -130,6 +161,14 @@ string ModifyAlarmRequest::ToJsonString() const
         d.AddMember(iKey, m_status, allocator);
     }
 
+    if (m_enableHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Enable";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_enable, allocator);
+    }
+
     if (m_messageTemplateHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -156,6 +195,65 @@ string ModifyAlarmRequest::ToJsonString() const
 
         int i=0;
         for (auto itr = m_analysis.begin(); itr != m_analysis.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_groupTriggerStatusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "GroupTriggerStatus";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_groupTriggerStatus, allocator);
+    }
+
+    if (m_groupTriggerConditionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "GroupTriggerCondition";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_groupTriggerCondition.begin(); itr != m_groupTriggerCondition.end(); ++itr)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_tagsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Tags";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_monitorObjectTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MonitorObjectType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_monitorObjectType, allocator);
+    }
+
+    if (m_classificationsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Classifications";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_classifications.begin(); itr != m_classifications.end(); ++itr, ++i)
         {
             d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(d[key.c_str()][i], allocator);
@@ -232,6 +330,38 @@ void ModifyAlarmRequest::SetCondition(const string& _condition)
 bool ModifyAlarmRequest::ConditionHasBeenSet() const
 {
     return m_conditionHasBeenSet;
+}
+
+uint64_t ModifyAlarmRequest::GetAlarmLevel() const
+{
+    return m_alarmLevel;
+}
+
+void ModifyAlarmRequest::SetAlarmLevel(const uint64_t& _alarmLevel)
+{
+    m_alarmLevel = _alarmLevel;
+    m_alarmLevelHasBeenSet = true;
+}
+
+bool ModifyAlarmRequest::AlarmLevelHasBeenSet() const
+{
+    return m_alarmLevelHasBeenSet;
+}
+
+vector<MultiCondition> ModifyAlarmRequest::GetMultiConditions() const
+{
+    return m_multiConditions;
+}
+
+void ModifyAlarmRequest::SetMultiConditions(const vector<MultiCondition>& _multiConditions)
+{
+    m_multiConditions = _multiConditions;
+    m_multiConditionsHasBeenSet = true;
+}
+
+bool ModifyAlarmRequest::MultiConditionsHasBeenSet() const
+{
+    return m_multiConditionsHasBeenSet;
 }
 
 int64_t ModifyAlarmRequest::GetTriggerCount() const
@@ -314,6 +444,22 @@ bool ModifyAlarmRequest::StatusHasBeenSet() const
     return m_statusHasBeenSet;
 }
 
+bool ModifyAlarmRequest::GetEnable() const
+{
+    return m_enable;
+}
+
+void ModifyAlarmRequest::SetEnable(const bool& _enable)
+{
+    m_enable = _enable;
+    m_enableHasBeenSet = true;
+}
+
+bool ModifyAlarmRequest::EnableHasBeenSet() const
+{
+    return m_enableHasBeenSet;
+}
+
 string ModifyAlarmRequest::GetMessageTemplate() const
 {
     return m_messageTemplate;
@@ -360,6 +506,86 @@ void ModifyAlarmRequest::SetAnalysis(const vector<AnalysisDimensional>& _analysi
 bool ModifyAlarmRequest::AnalysisHasBeenSet() const
 {
     return m_analysisHasBeenSet;
+}
+
+bool ModifyAlarmRequest::GetGroupTriggerStatus() const
+{
+    return m_groupTriggerStatus;
+}
+
+void ModifyAlarmRequest::SetGroupTriggerStatus(const bool& _groupTriggerStatus)
+{
+    m_groupTriggerStatus = _groupTriggerStatus;
+    m_groupTriggerStatusHasBeenSet = true;
+}
+
+bool ModifyAlarmRequest::GroupTriggerStatusHasBeenSet() const
+{
+    return m_groupTriggerStatusHasBeenSet;
+}
+
+vector<string> ModifyAlarmRequest::GetGroupTriggerCondition() const
+{
+    return m_groupTriggerCondition;
+}
+
+void ModifyAlarmRequest::SetGroupTriggerCondition(const vector<string>& _groupTriggerCondition)
+{
+    m_groupTriggerCondition = _groupTriggerCondition;
+    m_groupTriggerConditionHasBeenSet = true;
+}
+
+bool ModifyAlarmRequest::GroupTriggerConditionHasBeenSet() const
+{
+    return m_groupTriggerConditionHasBeenSet;
+}
+
+vector<Tag> ModifyAlarmRequest::GetTags() const
+{
+    return m_tags;
+}
+
+void ModifyAlarmRequest::SetTags(const vector<Tag>& _tags)
+{
+    m_tags = _tags;
+    m_tagsHasBeenSet = true;
+}
+
+bool ModifyAlarmRequest::TagsHasBeenSet() const
+{
+    return m_tagsHasBeenSet;
+}
+
+uint64_t ModifyAlarmRequest::GetMonitorObjectType() const
+{
+    return m_monitorObjectType;
+}
+
+void ModifyAlarmRequest::SetMonitorObjectType(const uint64_t& _monitorObjectType)
+{
+    m_monitorObjectType = _monitorObjectType;
+    m_monitorObjectTypeHasBeenSet = true;
+}
+
+bool ModifyAlarmRequest::MonitorObjectTypeHasBeenSet() const
+{
+    return m_monitorObjectTypeHasBeenSet;
+}
+
+vector<AlarmClassification> ModifyAlarmRequest::GetClassifications() const
+{
+    return m_classifications;
+}
+
+void ModifyAlarmRequest::SetClassifications(const vector<AlarmClassification>& _classifications)
+{
+    m_classifications = _classifications;
+    m_classificationsHasBeenSet = true;
+}
+
+bool ModifyAlarmRequest::ClassificationsHasBeenSet() const
+{
+    return m_classificationsHasBeenSet;
 }
 
 

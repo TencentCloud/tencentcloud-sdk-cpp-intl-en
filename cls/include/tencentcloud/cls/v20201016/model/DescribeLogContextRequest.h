@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool BTimeHasBeenSet() const;
 
                     /**
-                     * 获取Log package number
-                     * @return PkgId Log package number
+                     * 获取Log package sequence number. PkgId in the Results structure of the returned information of SearchLog API.
+                     * @return PkgId Log package sequence number. PkgId in the Results structure of the returned information of SearchLog API.
                      * 
                      */
                     std::string GetPkgId() const;
 
                     /**
-                     * 设置Log package number
-                     * @param _pkgId Log package number
+                     * 设置Log package sequence number. PkgId in the Results structure of the returned information of SearchLog API.
+                     * @param _pkgId Log package sequence number. PkgId in the Results structure of the returned information of SearchLog API.
                      * 
                      */
                     void SetPkgId(const std::string& _pkgId);
@@ -106,15 +106,19 @@ namespace TencentCloud
                     bool PkgIdHasBeenSet() const;
 
                     /**
-                     * 获取Log number in log package
-                     * @return PkgLogId Log number in log package
+                     * 获取Sequence number of a log within the log package.
+The PkgLogId in the Results structure of the SearchLog API returned information.
+                     * @return PkgLogId Sequence number of a log within the log package.
+The PkgLogId in the Results structure of the SearchLog API returned information.
                      * 
                      */
                     int64_t GetPkgLogId() const;
 
                     /**
-                     * 设置Log number in log package
-                     * @param _pkgLogId Log number in log package
+                     * 设置Sequence number of a log within the log package.
+The PkgLogId in the Results structure of the SearchLog API returned information.
+                     * @param _pkgLogId Sequence number of a log within the log package.
+The PkgLogId in the Results structure of the SearchLog API returned information.
                      * 
                      */
                     void SetPkgLogId(const int64_t& _pkgLogId);
@@ -127,15 +131,15 @@ namespace TencentCloud
                     bool PkgLogIdHasBeenSet() const;
 
                     /**
-                     * 获取Number of previous logs. Default value: 10
-                     * @return PrevLogs Number of previous logs. Default value: 10
+                     * 获取The previous ${PrevLogs} logs. Default value: 10.
+                     * @return PrevLogs The previous ${PrevLogs} logs. Default value: 10.
                      * 
                      */
                     int64_t GetPrevLogs() const;
 
                     /**
-                     * 设置Number of previous logs. Default value: 10
-                     * @param _prevLogs Number of previous logs. Default value: 10
+                     * 设置The previous ${PrevLogs} logs. Default value: 10.
+                     * @param _prevLogs The previous ${PrevLogs} logs. Default value: 10.
                      * 
                      */
                     void SetPrevLogs(const int64_t& _prevLogs);
@@ -148,15 +152,15 @@ namespace TencentCloud
                     bool PrevLogsHasBeenSet() const;
 
                     /**
-                     * 获取Number of next logs. Default value: 10
-                     * @return NextLogs Number of next logs. Default value: 10
+                     * 获取The next ${NextLogs} logs. Default value: 10.
+                     * @return NextLogs The next ${NextLogs} logs. Default value: 10.
                      * 
                      */
                     int64_t GetNextLogs() const;
 
                     /**
-                     * 设置Number of next logs. Default value: 10
-                     * @param _nextLogs Number of next logs. Default value: 10
+                     * 设置The next ${NextLogs} logs. Default value: 10.
+                     * @param _nextLogs The next ${NextLogs} logs. Default value: 10.
                      * 
                      */
                     void SetNextLogs(const int64_t& _nextLogs);
@@ -183,25 +187,26 @@ namespace TencentCloud
                     bool m_bTimeHasBeenSet;
 
                     /**
-                     * Log package number
+                     * Log package sequence number. PkgId in the Results structure of the returned information of SearchLog API.
                      */
                     std::string m_pkgId;
                     bool m_pkgIdHasBeenSet;
 
                     /**
-                     * Log number in log package
+                     * Sequence number of a log within the log package.
+The PkgLogId in the Results structure of the SearchLog API returned information.
                      */
                     int64_t m_pkgLogId;
                     bool m_pkgLogIdHasBeenSet;
 
                     /**
-                     * Number of previous logs. Default value: 10
+                     * The previous ${PrevLogs} logs. Default value: 10.
                      */
                     int64_t m_prevLogs;
                     bool m_prevLogsHasBeenSet;
 
                     /**
-                     * Number of next logs. Default value: 10
+                     * The next ${NextLogs} logs. Default value: 10.
                      */
                     int64_t m_nextLogs;
                     bool m_nextLogsHasBeenSet;
