@@ -787,19 +787,15 @@ namespace TencentCloud
                     bool SlaveReadWeightHasBeenSet() const;
 
                     /**
-                     * 获取Instance tag information
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return InstanceTags Instance tag information
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return InstanceTags Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<InstanceTagInfo> GetInstanceTags() const;
 
                     /**
-                     * 设置Instance tag information
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _instanceTags Instance tag information
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _instanceTags Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetInstanceTags(const std::vector<InstanceTagInfo>& _instanceTags);
@@ -812,19 +808,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool InstanceTagsHasBeenSet() const;
 
                     /**
-                     * 获取Project name
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return ProjectName Project name
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ProjectName Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetProjectName() const;
 
                     /**
-                     * 设置Project name
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _projectName Project name
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _projectName Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetProjectName(const std::string& _projectName);
@@ -837,19 +829,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ProjectNameHasBeenSet() const;
 
                     /**
-                     * 获取Whether an instance is password-free. <ul><li>`true`: Yes. </li><li>`false`: No. </li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return NoAuth Whether an instance is password-free. <ul><li>`true`: Yes. </li><li>`false`: No. </li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return NoAuth Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     bool GetNoAuth() const;
 
                     /**
-                     * 设置Whether an instance is password-free. <ul><li>`true`: Yes. </li><li>`false`: No. </li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _noAuth Whether an instance is password-free. <ul><li>`true`: Yes. </li><li>`false`: No. </li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _noAuth Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetNoAuth(const bool& _noAuth);
@@ -862,19 +850,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool NoAuthHasBeenSet() const;
 
                     /**
-                     * 获取Number of client connections
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return ClientLimit Number of client connections
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ClientLimit Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetClientLimit() const;
 
                     /**
-                     * 设置Number of client connections
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _clientLimit Number of client connections
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _clientLimit Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetClientLimit(const int64_t& _clientLimit);
@@ -887,19 +871,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ClientLimitHasBeenSet() const;
 
                     /**
-                     * 获取DTS status (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return DtsStatus DTS status (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DtsStatus Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetDtsStatus() const;
 
                     /**
-                     * 设置DTS status (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _dtsStatus DTS status (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _dtsStatus Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDtsStatus(const int64_t& _dtsStatus);
@@ -912,19 +892,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool DtsStatusHasBeenSet() const;
 
                     /**
-                     * 获取Upper shard bandwidth limit in MB
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return NetLimit Upper shard bandwidth limit in MB
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return NetLimit Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetNetLimit() const;
 
                     /**
-                     * 设置Upper shard bandwidth limit in MB
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _netLimit Upper shard bandwidth limit in MB
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _netLimit Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetNetLimit(const int64_t& _netLimit);
@@ -937,19 +913,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool NetLimitHasBeenSet() const;
 
                     /**
-                     * 获取Password-free instance flag (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return PasswordFree Password-free instance flag (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return PasswordFree Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetPasswordFree() const;
 
                     /**
-                     * 设置Password-free instance flag (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _passwordFree Password-free instance flag (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _passwordFree Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetPasswordFree(const int64_t& _passwordFree);
@@ -962,19 +934,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool PasswordFreeHasBeenSet() const;
 
                     /**
-                     * 获取Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Vip6 Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Vip6 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetVip6() const;
 
                     /**
-                     * 设置Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _vip6 Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _vip6 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetVip6(const std::string& _vip6);
@@ -987,19 +955,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool Vip6HasBeenSet() const;
 
                     /**
-                     * 获取Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IPv6 Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IPv6 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetIPv6() const;
 
                     /**
-                     * 设置Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _iPv6 Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _iPv6 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIPv6(const std::string& _iPv6);
@@ -1012,19 +976,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IPv6HasBeenSet() const;
 
                     /**
-                     * 获取Read-only instance flag (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return ReadOnly Read-only instance flag (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ReadOnly Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetReadOnly() const;
 
                     /**
-                     * 设置Read-only instance flag (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _readOnly Read-only instance flag (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _readOnly Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetReadOnly(const int64_t& _readOnly);
@@ -1037,19 +997,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ReadOnlyHasBeenSet() const;
 
                     /**
-                     * 获取Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return RemainBandwidthDuration Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RemainBandwidthDuration Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRemainBandwidthDuration() const;
 
                     /**
-                     * 设置Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _remainBandwidthDuration Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _remainBandwidthDuration Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRemainBandwidthDuration(const std::string& _remainBandwidthDuration);
@@ -1062,19 +1018,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool RemainBandwidthDurationHasBeenSet() const;
 
                     /**
-                     * 获取This parameter can be ignored for Redis instance.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return DiskSize This parameter can be ignored for Redis instance.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DiskSize Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetDiskSize() const;
 
                     /**
-                     * 设置This parameter can be ignored for Redis instance.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _diskSize This parameter can be ignored for Redis instance.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _diskSize Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDiskSize(const int64_t& _diskSize);
@@ -1087,19 +1039,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool DiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取Monitoring granularity. <ul><li>`1m`: Monitoring at one-minute granularity. This granularity has been disused. For more information, see [1-Minute Granularity Will Be Disused](https://www.tencentcloud.com/document/product/239/50440).</li><li>`5s`: Monitoring at five-second granularity.</li></ul>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MonitorVersion Monitoring granularity. <ul><li>`1m`: Monitoring at one-minute granularity. This granularity has been disused. For more information, see [1-Minute Granularity Will Be Disused](https://www.tencentcloud.com/document/product/239/50440).</li><li>`5s`: Monitoring at five-second granularity.</li></ul>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MonitorVersion Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetMonitorVersion() const;
 
                     /**
-                     * 设置Monitoring granularity. <ul><li>`1m`: Monitoring at one-minute granularity. This granularity has been disused. For more information, see [1-Minute Granularity Will Be Disused](https://www.tencentcloud.com/document/product/239/50440).</li><li>`5s`: Monitoring at five-second granularity.</li></ul>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _monitorVersion Monitoring granularity. <ul><li>`1m`: Monitoring at one-minute granularity. This granularity has been disused. For more information, see [1-Minute Granularity Will Be Disused](https://www.tencentcloud.com/document/product/239/50440).</li><li>`5s`: Monitoring at five-second granularity.</li></ul>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _monitorVersion Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMonitorVersion(const std::string& _monitorVersion);
@@ -1112,19 +1060,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MonitorVersionHasBeenSet() const;
 
                     /**
-                     * 获取The minimum number of max client connections
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return ClientLimitMin The minimum number of max client connections
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ClientLimitMin Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetClientLimitMin() const;
 
                     /**
-                     * 设置The minimum number of max client connections
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _clientLimitMin The minimum number of max client connections
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _clientLimitMin Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetClientLimitMin(const int64_t& _clientLimitMin);
@@ -1137,19 +1081,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ClientLimitMinHasBeenSet() const;
 
                     /**
-                     * 获取The maximum number of max client connections
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return ClientLimitMax The maximum number of max client connections
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ClientLimitMax Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetClientLimitMax() const;
 
                     /**
-                     * 设置The maximum number of max client connections
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _clientLimitMax The maximum number of max client connections
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _clientLimitMax Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetClientLimitMax(const int64_t& _clientLimitMax);
@@ -1162,19 +1102,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ClientLimitMaxHasBeenSet() const;
 
                     /**
-                     * 获取Instance node details
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return NodeSet Instance node details
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return NodeSet Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<RedisNodeInfo> GetNodeSet() const;
 
                     /**
-                     * 设置Instance node details
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _nodeSet Instance node details
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _nodeSet Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetNodeSet(const std::vector<RedisNodeInfo>& _nodeSet);
@@ -1187,19 +1123,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool NodeSetHasBeenSet() const;
 
                     /**
-                     * 获取Information of the region where the instance is deployed, such as `ap-guangzhou`.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return Region Information of the region where the instance is deployed, such as `ap-guangzhou`.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Region Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Information of the region where the instance is deployed, such as `ap-guangzhou`.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _region Information of the region where the instance is deployed, such as `ap-guangzhou`.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _region Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -1212,19 +1144,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取Public IP
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return WanAddress Public IP
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return WanAddress Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetWanAddress() const;
 
                     /**
-                     * 设置Public IP
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _wanAddress Public IP
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _wanAddress Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetWanAddress(const std::string& _wanAddress);
@@ -1237,19 +1165,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool WanAddressHasBeenSet() const;
 
                     /**
-                     * 获取Polaris service address, which is for internal use.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PolarisServer Polaris service address, which is for internal use.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return PolarisServer Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetPolarisServer() const;
 
                     /**
-                     * 设置Polaris service address, which is for internal use.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _polarisServer Polaris service address, which is for internal use.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _polarisServer Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetPolarisServer(const std::string& _polarisServer);
@@ -1262,19 +1186,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PolarisServerHasBeenSet() const;
 
                     /**
-                     * 获取The current proxy version of an instance
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return CurrentProxyVersion The current proxy version of an instance
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return CurrentProxyVersion Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetCurrentProxyVersion() const;
 
                     /**
-                     * 设置The current proxy version of an instance
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _currentProxyVersion The current proxy version of an instance
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _currentProxyVersion Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetCurrentProxyVersion(const std::string& _currentProxyVersion);
@@ -1287,19 +1207,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool CurrentProxyVersionHasBeenSet() const;
 
                     /**
-                     * 获取The current cache minor version of an instance
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return CurrentRedisVersion The current cache minor version of an instance
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return CurrentRedisVersion Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetCurrentRedisVersion() const;
 
                     /**
-                     * 设置The current cache minor version of an instance
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _currentRedisVersion The current cache minor version of an instance
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _currentRedisVersion Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetCurrentRedisVersion(const std::string& _currentRedisVersion);
@@ -1312,19 +1228,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool CurrentRedisVersionHasBeenSet() const;
 
                     /**
-                     * 获取Proxy version, which can be upgraded for the instance
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return UpgradeProxyVersion Proxy version, which can be upgraded for the instance
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return UpgradeProxyVersion Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetUpgradeProxyVersion() const;
 
                     /**
-                     * 设置Proxy version, which can be upgraded for the instance
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _upgradeProxyVersion Proxy version, which can be upgraded for the instance
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _upgradeProxyVersion Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetUpgradeProxyVersion(const std::string& _upgradeProxyVersion);
@@ -1337,19 +1249,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool UpgradeProxyVersionHasBeenSet() const;
 
                     /**
-                     * 获取Cache minor version, which can be upgraded for the instance
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return UpgradeRedisVersion Cache minor version, which can be upgraded for the instance
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return UpgradeRedisVersion Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetUpgradeRedisVersion() const;
 
                     /**
-                     * 设置Cache minor version, which can be upgraded for the instance
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _upgradeRedisVersion Cache minor version, which can be upgraded for the instance
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _upgradeRedisVersion Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetUpgradeRedisVersion(const std::string& _upgradeRedisVersion);
@@ -1573,162 +1481,139 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_slaveReadWeightHasBeenSet;
 
                     /**
-                     * Instance tag information
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<InstanceTagInfo> m_instanceTags;
                     bool m_instanceTagsHasBeenSet;
 
                     /**
-                     * Project name
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_projectName;
                     bool m_projectNameHasBeenSet;
 
                     /**
-                     * Whether an instance is password-free. <ul><li>`true`: Yes. </li><li>`false`: No. </li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     bool m_noAuth;
                     bool m_noAuthHasBeenSet;
 
                     /**
-                     * Number of client connections
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_clientLimit;
                     bool m_clientLimitHasBeenSet;
 
                     /**
-                     * DTS status (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_dtsStatus;
                     bool m_dtsStatusHasBeenSet;
 
                     /**
-                     * Upper shard bandwidth limit in MB
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_netLimit;
                     bool m_netLimitHasBeenSet;
 
                     /**
-                     * Password-free instance flag (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_passwordFree;
                     bool m_passwordFreeHasBeenSet;
 
                     /**
-                     * Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_vip6;
                     bool m_vip6HasBeenSet;
 
                     /**
-                     * Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_iPv6;
                     bool m_iPv6HasBeenSet;
 
                     /**
-                     * Read-only instance flag (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_readOnly;
                     bool m_readOnlyHasBeenSet;
 
                     /**
-                     * Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_remainBandwidthDuration;
                     bool m_remainBandwidthDurationHasBeenSet;
 
                     /**
-                     * This parameter can be ignored for Redis instance.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_diskSize;
                     bool m_diskSizeHasBeenSet;
 
                     /**
-                     * Monitoring granularity. <ul><li>`1m`: Monitoring at one-minute granularity. This granularity has been disused. For more information, see [1-Minute Granularity Will Be Disused](https://www.tencentcloud.com/document/product/239/50440).</li><li>`5s`: Monitoring at five-second granularity.</li></ul>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_monitorVersion;
                     bool m_monitorVersionHasBeenSet;
 
                     /**
-                     * The minimum number of max client connections
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_clientLimitMin;
                     bool m_clientLimitMinHasBeenSet;
 
                     /**
-                     * The maximum number of max client connections
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_clientLimitMax;
                     bool m_clientLimitMaxHasBeenSet;
 
                     /**
-                     * Instance node details
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<RedisNodeInfo> m_nodeSet;
                     bool m_nodeSetHasBeenSet;
 
                     /**
-                     * Information of the region where the instance is deployed, such as `ap-guangzhou`.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * Public IP
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_wanAddress;
                     bool m_wanAddressHasBeenSet;
 
                     /**
-                     * Polaris service address, which is for internal use.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_polarisServer;
                     bool m_polarisServerHasBeenSet;
 
                     /**
-                     * The current proxy version of an instance
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_currentProxyVersion;
                     bool m_currentProxyVersionHasBeenSet;
 
                     /**
-                     * The current cache minor version of an instance
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_currentRedisVersion;
                     bool m_currentRedisVersionHasBeenSet;
 
                     /**
-                     * Proxy version, which can be upgraded for the instance
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_upgradeProxyVersion;
                     bool m_upgradeProxyVersionHasBeenSet;
 
                     /**
-                     * Cache minor version, which can be upgraded for the instance
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_upgradeRedisVersion;
                     bool m_upgradeRedisVersionHasBeenSet;
