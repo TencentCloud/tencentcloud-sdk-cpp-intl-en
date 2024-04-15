@@ -485,7 +485,7 @@ namespace TencentCloud
                 AddMachineGroupInfoOutcomeCallable AddMachineGroupInfoCallable(const Model::AddMachineGroupInfoRequest& request);
 
                 /**
-                 *This API is used to apply the collection configuration to the specified machine group.
+                 *This API is used to apply the collection configuration to a specified machine group.
                  * @param req ApplyConfigToMachineGroupRequest
                  * @return ApplyConfigToMachineGroupOutcome
                  */
@@ -548,7 +548,7 @@ namespace TencentCloud
                 CreateAlarmShieldOutcomeCallable CreateAlarmShieldCallable(const Model::CreateAlarmShieldRequest& request);
 
                 /**
-                 *This API is used to create a collection rule configuration.
+                 *This API is used to create collection rule configuration.
                  * @param req CreateConfigRequest
                  * @return CreateConfigOutcome
                  */
@@ -593,7 +593,7 @@ namespace TencentCloud
                 CreateDeliverCloudFunctionOutcomeCallable CreateDeliverCloudFunctionCallable(const Model::CreateDeliverCloudFunctionRequest& request);
 
                 /**
-                 *This API is used to create a download task. To get the returned download address, call `DescribeExports` to view the task list. The `CosPath` parameter is also included for download address. For more information, visit https://intl.cloud.tencent.com/document/product/614/56449.?from_cn_redirect=1
+                 *This API is used to create a download task. To get the returned download address, call DescribeExports to view the task list. The CosPath parameter is also included for download address. For more information, visit https://intl.cloud.tencent.com/document/product/614/56449.?from_cn_redirect=1
                  * @param req CreateExportRequest
                  * @return CreateExportOutcome
                  */
@@ -692,7 +692,7 @@ namespace TencentCloud
                 DeleteAlarmShieldOutcomeCallable DeleteAlarmShieldCallable(const Model::DeleteAlarmShieldRequest& request);
 
                 /**
-                 *This API is used to delete a collection rule configuration.
+                 *This API is used to delete collection rule configuration.
                  * @param req DeleteConfigRequest
                  * @return DeleteConfigOutcome
                  */
@@ -782,7 +782,7 @@ namespace TencentCloud
                 DeleteMachineGroupInfoOutcomeCallable DeleteMachineGroupInfoCallable(const Model::DeleteMachineGroupInfoRequest& request);
 
                 /**
-                 *This API is used to delete scheduled SQL analysis tasks.
+                 *This API is used to delete a scheduled SQL analysis task.
                  * @param req DeleteScheduledSqlRequest
                  * @return DeleteScheduledSqlOutcome
                  */
@@ -818,7 +818,7 @@ namespace TencentCloud
                 DescribeAlarmNoticesOutcomeCallable DescribeAlarmNoticesCallable(const Model::DescribeAlarmNoticesRequest& request);
 
                 /**
-                 *Accesses alarm blocking configuration rules
+                 *This API is used to access alarm blocking configuration rules.
                  * @param req DescribeAlarmShieldsRequest
                  * @return DescribeAlarmShieldsOutcome
                  */
@@ -845,7 +845,7 @@ namespace TencentCloud
                 DescribeAlertRecordHistoryOutcomeCallable DescribeAlertRecordHistoryCallable(const Model::DescribeAlertRecordHistoryRequest& request);
 
                 /**
-                 *This API is used to get the machine group bound to a collection rule configuration.
+                 *This API is used to get the machine group bound to collection rule configuration.
                  * @param req DescribeConfigMachineGroupsRequest
                  * @return DescribeConfigMachineGroupsOutcome
                  */
@@ -854,7 +854,7 @@ namespace TencentCloud
                 DescribeConfigMachineGroupsOutcomeCallable DescribeConfigMachineGroupsCallable(const Model::DescribeConfigMachineGroupsRequest& request);
 
                 /**
-                 *This API is used to get a collection rule configuration.
+                 *This API is used to get collection rule configuration.
                  * @param req DescribeConfigsRequest
                  * @return DescribeConfigsOutcome
                  */
@@ -908,7 +908,7 @@ namespace TencentCloud
                 DescribeIndexOutcomeCallable DescribeIndexCallable(const Model::DescribeIndexRequest& request);
 
                 /**
-                 *Accesses Kafka protocol consumption information
+                 *This API is used to access Kafka protocol consumption information.
                  * @param req DescribeKafkaConsumerRequest
                  * @return DescribeKafkaConsumerOutcome
                  */
@@ -935,7 +935,7 @@ namespace TencentCloud
                 DescribeLogContextOutcomeCallable DescribeLogContextCallable(const Model::DescribeLogContextRequest& request);
 
                 /**
-                 *This API is used to get a log count histogram. 
+                 *This API is used to get a log count histogram.
                  * @param req DescribeLogHistogramRequest
                  * @return DescribeLogHistogramOutcome
                  */
@@ -971,7 +971,7 @@ namespace TencentCloud
                 DescribeMachineGroupsOutcomeCallable DescribeMachineGroupsCallable(const Model::DescribeMachineGroupsRequest& request);
 
                 /**
-                 *Gets the status of a machine under the specified machine group
+                 *This API is used to get the status of a machine under the specified machine group.
                  * @param req DescribeMachinesRequest
                  * @return DescribeMachinesOutcome
                  */
@@ -1007,7 +1007,7 @@ namespace TencentCloud
                 DescribeShipperTasksOutcomeCallable DescribeShipperTasksCallable(const Model::DescribeShipperTasksRequest& request);
 
                 /**
-                 *This API is used to get the configuration of the task of shipping to COS.
+                 *This API is used to get the configuration of the task shipped to COS.
                  * @param req DescribeShippersRequest
                  * @return DescribeShippersOutcome
                  */
@@ -1070,7 +1070,7 @@ namespace TencentCloud
                 ModifyAlarmShieldOutcomeCallable ModifyAlarmShieldCallable(const Model::ModifyAlarmShieldRequest& request);
 
                 /**
-                 *This API is used to modify a collection rule configuration.
+                 *This API is used to modify collection rule configuration.
                  * @param req ModifyConfigRequest
                  * @return ModifyConfigOutcome
                  */
@@ -1079,7 +1079,7 @@ namespace TencentCloud
                 ModifyConfigOutcomeCallable ModifyConfigCallable(const Model::ModifyConfigRequest& request);
 
                 /**
-                 *This API is used to modify a CKafka delivery task
+                 *This API is used to modify a CKafka delivery task.
                  * @param req ModifyConsumerRequest
                  * @return ModifyConsumerOutcome
                  */
@@ -1115,7 +1115,7 @@ namespace TencentCloud
                 ModifyIndexOutcomeCallable ModifyIndexCallable(const Model::ModifyIndexRequest& request);
 
                 /**
-                 *Modifies Kafka Protocol consumption information
+                 *This API is used to modify Kafka protocol consumption information.
                  * @param req ModifyKafkaConsumerRequest
                  * @return ModifyKafkaConsumerOutcome
                  */
@@ -1151,7 +1151,7 @@ namespace TencentCloud
                 ModifyMachineGroupOutcomeCallable ModifyMachineGroupCallable(const Model::ModifyMachineGroupRequest& request);
 
                 /**
-                 *This API is used to modify scheduled SQL analysis tasks.
+                 *This API is used to modify a scheduled SQL analysis task.
                  * @param req ModifyScheduledSqlRequest
                  * @return ModifyScheduledSqlOutcome
                  */
@@ -1196,7 +1196,7 @@ namespace TencentCloud
                 PreviewKafkaRechargeOutcomeCallable PreviewKafkaRechargeCallable(const Model::PreviewKafkaRechargeRequest& request);
 
                 /**
-                 *Queries the latest metric value at a specified time
+                 *This API is used to query the latest metric value at a specified time.
                  * @param req QueryMetricRequest
                  * @return QueryMetricOutcome
                  */
@@ -1317,7 +1317,7 @@ This example shows you how to use the protoc compiler to compile a pb descriptio
 
 > ?Currently, protoc supports compilation in multiple programming languages such as Java, C++, and Python. For more information, see [protoc](https://github.com/protocolbuffers/protobuf).
 
-#### 1. Install Protocol Buffers
+#### 1. Install protocol buffers
 
 Download [Protocol Buffers](https://main.qcloudimg.com/raw/d7810aaf8b3073fbbc9d4049c21532aa/protobuf-2.6.1.tar.gz), decompress the package, and install the tool. The version used in the example is protobuf 2.6.1 running on CentOS 7.3. Run the following command to decompress the `protobuf-2.6.1.tar.gz` package to the `/usr/local` directory and go to the directory:
 

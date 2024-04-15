@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Failure Error Code
-                     * @return ErrorCode Failure Error Code
+                     * 获取Failure error code
+                     * @return ErrorCode Failure error code
                      * 
                      */
                     int64_t GetErrorCode() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool ErrorCodeHasBeenSet() const;
 
                     /**
-                     * 获取Failure Error Message
-                     * @return ErrorMsg Failure Error Message
+                     * 获取Failure error message
+                     * @return ErrorMsg Failure error message
                      * 
                      */
                     std::string GetErrorMsg() const;
@@ -74,13 +74,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Failure Error Code
+                     * Failure error code
                      */
                     int64_t m_errorCode;
                     bool m_errorCodeHasBeenSet;
 
                     /**
-                     * Failure Error Message
+                     * Failure error message
                      */
                     std::string m_errorMsg;
                     bool m_errorMsgHasBeenSet;

@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool TopicIDHasBeenSet() const;
 
                     /**
-                     * 获取Compression mode [0:NONE；2:SNAPPY；3:LZ4]
-                     * @return Compression Compression mode [0:NONE；2:SNAPPY；3:LZ4]
+                     * 获取Compression mode [0: NONE; 2: SNAPPY; 3: LZ4]
+                     * @return Compression Compression mode [0: NONE; 2: SNAPPY; 3: LZ4]
                      * 
                      */
                     int64_t GetCompression() const;
@@ -115,7 +115,7 @@ namespace TencentCloud
                     bool m_topicIDHasBeenSet;
 
                     /**
-                     * Compression mode [0:NONE；2:SNAPPY；3:LZ4]
+                     * Compression mode [0: NONE; 2: SNAPPY; 3: LZ4]
                      */
                     int64_t m_compression;
                     bool m_compressionHasBeenSet;

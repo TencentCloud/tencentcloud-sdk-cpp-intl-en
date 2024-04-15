@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取Source Log Topic
-                     * @return SrcTopicId Source Log Topic
+                     * 获取Source log topic
+                     * @return SrcTopicId Source log topic
                      * 
                      */
                     std::string GetSrcTopicId() const;
 
                     /**
-                     * 设置Source Log Topic
-                     * @param _srcTopicId Source Log Topic
+                     * 设置Source log topic
+                     * @param _srcTopicId Source log topic
                      * 
                      */
                     void SetSrcTopicId(const std::string& _srcTopicId);
@@ -283,7 +283,7 @@ namespace TencentCloud
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * Source Log Topic
+                     * Source log topic
                      */
                     std::string m_srcTopicId;
                     bool m_srcTopicIdHasBeenSet;

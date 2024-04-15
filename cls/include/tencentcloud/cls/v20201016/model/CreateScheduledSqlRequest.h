@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Source Log Topic
-                     * @return SrcTopicId Source Log Topic
+                     * 获取Source log topic
+                     * @return SrcTopicId Source log topic
                      * 
                      */
                     std::string GetSrcTopicId() const;
 
                     /**
-                     * 设置Source Log Topic
-                     * @param _srcTopicId Source Log Topic
+                     * 设置Source log topic
+                     * @param _srcTopicId Source log topic
                      * 
                      */
                     void SetSrcTopicId(const std::string& _srcTopicId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool SrcTopicIdHasBeenSet() const;
 
                     /**
-                     * 获取Task Name
-                     * @return Name Task Name
+                     * 获取Task name
+                     * @return Name Task name
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Task Name
-                     * @param _name Task Name
+                     * 设置Task name
+                     * @param _name Task name
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool DstResourceHasBeenSet() const;
 
                     /**
-                     * 获取Query Statement
-                     * @return ScheduledSqlContent Query Statement
+                     * 获取Query statement
+                     * @return ScheduledSqlContent Query statement
                      * 
                      */
                     std::string GetScheduledSqlContent() const;
 
                     /**
-                     * 设置Query Statement
-                     * @param _scheduledSqlContent Query Statement
+                     * 设置Query statement
+                     * @param _scheduledSqlContent Query statement
                      * 
                      */
                     void SetScheduledSqlContent(const std::string& _scheduledSqlContent);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool ScheduledSqlContentHasBeenSet() const;
 
                     /**
-                     * 获取Schedule Start Time, Unix timestamp, in milliseconds
-                     * @return ProcessStartTime Schedule Start Time, Unix timestamp, in milliseconds
+                     * 获取Schedule start time, Unix timestamp, in milliseconds
+                     * @return ProcessStartTime Schedule start time, Unix timestamp, in milliseconds
                      * 
                      */
                     uint64_t GetProcessStartTime() const;
 
                     /**
-                     * 设置Schedule Start Time, Unix timestamp, in milliseconds
-                     * @param _processStartTime Schedule Start Time, Unix timestamp, in milliseconds
+                     * 设置Schedule start time, Unix timestamp, in milliseconds
+                     * @param _processStartTime Schedule start time, Unix timestamp, in milliseconds
                      * 
                      */
                     void SetProcessStartTime(const uint64_t& _processStartTime);
@@ -170,15 +170,15 @@ namespace TencentCloud
                     bool ProcessStartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Schedule Type: 1 Continuous Running 2 Specified Time Range
-                     * @return ProcessType Schedule Type: 1 Continuous Running 2 Specified Time Range
+                     * 获取Schedule type: 1: Continuous running; 2: Specified time range
+                     * @return ProcessType Schedule type: 1: Continuous running; 2: Specified time range
                      * 
                      */
                     int64_t GetProcessType() const;
 
                     /**
-                     * 设置Schedule Type: 1 Continuous Running 2 Specified Time Range
-                     * @param _processType Schedule Type: 1 Continuous Running 2 Specified Time Range
+                     * 设置Schedule type: 1: Continuous running; 2: Specified time range
+                     * @param _processType Schedule type: 1: Continuous running; 2: Specified time range
                      * 
                      */
                     void SetProcessType(const int64_t& _processType);
@@ -191,15 +191,15 @@ namespace TencentCloud
                     bool ProcessTypeHasBeenSet() const;
 
                     /**
-                     * 获取Scheduling Interval (Minutes)
-                     * @return ProcessPeriod Scheduling Interval (Minutes)
+                     * 获取Scheduling interval (minutes)
+                     * @return ProcessPeriod Scheduling interval (minutes)
                      * 
                      */
                     int64_t GetProcessPeriod() const;
 
                     /**
-                     * 设置Scheduling Interval (Minutes)
-                     * @param _processPeriod Scheduling Interval (Minutes)
+                     * 设置Scheduling interval (minutes)
+                     * @param _processPeriod Scheduling interval (minutes)
                      * 
                      */
                     void SetProcessPeriod(const int64_t& _processPeriod);
@@ -233,15 +233,15 @@ namespace TencentCloud
                     bool ProcessTimeWindowHasBeenSet() const;
 
                     /**
-                     * 获取Execution Delay (Seconds)
-                     * @return ProcessDelay Execution Delay (Seconds)
+                     * 获取Execution delay (Seconds)
+                     * @return ProcessDelay Execution delay (Seconds)
                      * 
                      */
                     int64_t GetProcessDelay() const;
 
                     /**
-                     * 设置Execution Delay (Seconds)
-                     * @param _processDelay Execution Delay (Seconds)
+                     * 设置Execution delay (Seconds)
+                     * @param _processDelay Execution delay (Seconds)
                      * 
                      */
                     void SetProcessDelay(const int64_t& _processDelay);
@@ -254,15 +254,15 @@ namespace TencentCloud
                     bool ProcessDelayHasBeenSet() const;
 
                     /**
-                     * 获取Source Topic ID Region Information
-                     * @return SrcTopicRegion Source Topic ID Region Information
+                     * 获取Source topic ID region information
+                     * @return SrcTopicRegion Source topic ID region information
                      * 
                      */
                     std::string GetSrcTopicRegion() const;
 
                     /**
-                     * 设置Source Topic ID Region Information
-                     * @param _srcTopicRegion Source Topic ID Region Information
+                     * 设置Source topic ID region information
+                     * @param _srcTopicRegion Source topic ID region information
                      * 
                      */
                     void SetSrcTopicRegion(const std::string& _srcTopicRegion);
@@ -275,15 +275,15 @@ namespace TencentCloud
                     bool SrcTopicRegionHasBeenSet() const;
 
                     /**
-                     * 获取Schedule End Time. Required field when ProcessType=2, Unix timestamp, in milliseconds
-                     * @return ProcessEndTime Schedule End Time. Required field when ProcessType=2, Unix timestamp, in milliseconds
+                     * 获取Schedule end time. Required field when ProcessType=2, Unix timestamp, in milliseconds
+                     * @return ProcessEndTime Schedule end time. Required field when ProcessType=2, Unix timestamp, in milliseconds
                      * 
                      */
                     uint64_t GetProcessEndTime() const;
 
                     /**
-                     * 设置Schedule End Time. Required field when ProcessType=2, Unix timestamp, in milliseconds
-                     * @param _processEndTime Schedule End Time. Required field when ProcessType=2, Unix timestamp, in milliseconds
+                     * 设置Schedule end time. Required field when ProcessType=2, Unix timestamp, in milliseconds
+                     * @param _processEndTime Schedule end time. Required field when ProcessType=2, Unix timestamp, in milliseconds
                      * 
                      */
                     void SetProcessEndTime(const uint64_t& _processEndTime);
@@ -319,13 +319,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Source Log Topic
+                     * Source log topic
                      */
                     std::string m_srcTopicId;
                     bool m_srcTopicIdHasBeenSet;
 
                     /**
-                     * Task Name
+                     * Task name
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
@@ -343,25 +343,25 @@ namespace TencentCloud
                     bool m_dstResourceHasBeenSet;
 
                     /**
-                     * Query Statement
+                     * Query statement
                      */
                     std::string m_scheduledSqlContent;
                     bool m_scheduledSqlContentHasBeenSet;
 
                     /**
-                     * Schedule Start Time, Unix timestamp, in milliseconds
+                     * Schedule start time, Unix timestamp, in milliseconds
                      */
                     uint64_t m_processStartTime;
                     bool m_processStartTimeHasBeenSet;
 
                     /**
-                     * Schedule Type: 1 Continuous Running 2 Specified Time Range
+                     * Schedule type: 1: Continuous running; 2: Specified time range
                      */
                     int64_t m_processType;
                     bool m_processTypeHasBeenSet;
 
                     /**
-                     * Scheduling Interval (Minutes)
+                     * Scheduling interval (minutes)
                      */
                     int64_t m_processPeriod;
                     bool m_processPeriodHasBeenSet;
@@ -373,19 +373,19 @@ namespace TencentCloud
                     bool m_processTimeWindowHasBeenSet;
 
                     /**
-                     * Execution Delay (Seconds)
+                     * Execution delay (Seconds)
                      */
                     int64_t m_processDelay;
                     bool m_processDelayHasBeenSet;
 
                     /**
-                     * Source Topic ID Region Information
+                     * Source topic ID region information
                      */
                     std::string m_srcTopicRegion;
                     bool m_srcTopicRegionHasBeenSet;
 
                     /**
-                     * Schedule End Time. Required field when ProcessType=2, Unix timestamp, in milliseconds
+                     * Schedule end time. Required field when ProcessType=2, Unix timestamp, in milliseconds
                      */
                     uint64_t m_processEndTime;
                     bool m_processEndTimeHasBeenSet;

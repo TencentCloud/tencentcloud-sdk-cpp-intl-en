@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The processing statement entered by the user
-                     * @return EtlContent The processing statement entered by the user
+                     * 获取Processing statement entered by the user
+                     * @return EtlContent Processing statement entered by the user
                      * 
                      */
                     std::string GetEtlContent() const;
 
                     /**
-                     * 设置The processing statement entered by the user
-                     * @param _etlContent The processing statement entered by the user
+                     * 设置Processing statement entered by the user
+                     * @param _etlContent Processing statement entered by the user
                      * 
                      */
                     void SetEtlContent(const std::string& _etlContent);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool DstResourcesHasBeenSet() const;
 
                     /**
-                     * 获取The type of the target topic for data processing. Valid values: 1 (fixed Topic) and 2 (dynamic creation)
-                     * @return FuncType The type of the target topic for data processing. Valid values: 1 (fixed Topic) and 2 (dynamic creation)
+                     * 获取Type of the target topic for data processing. Valid values: 1 (fixed Topic) and 2 (dynamic creation)
+                     * @return FuncType Type of the target topic for data processing. Valid values: 1 (fixed Topic) and 2 (dynamic creation)
                      * 
                      */
                     int64_t GetFuncType() const;
 
                     /**
-                     * 设置The type of the target topic for data processing. Valid values: 1 (fixed Topic) and 2 (dynamic creation)
-                     * @param _funcType The type of the target topic for data processing. Valid values: 1 (fixed Topic) and 2 (dynamic creation)
+                     * 设置Type of the target topic for data processing. Valid values: 1 (fixed Topic) and 2 (dynamic creation)
+                     * @param _funcType Type of the target topic for data processing. Valid values: 1 (fixed Topic) and 2 (dynamic creation)
                      * 
                      */
                     void SetFuncType(const int64_t& _funcType);
@@ -109,7 +109,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The processing statement entered by the user
+                     * Processing statement entered by the user
                      */
                     std::string m_etlContent;
                     bool m_etlContentHasBeenSet;
@@ -121,7 +121,7 @@ namespace TencentCloud
                     bool m_dstResourcesHasBeenSet;
 
                     /**
-                     * The type of the target topic for data processing. Valid values: 1 (fixed Topic) and 2 (dynamic creation)
+                     * Type of the target topic for data processing. Valid values: 1 (fixed Topic) and 2 (dynamic creation)
                      */
                     int64_t m_funcType;
                     bool m_funcTypeHasBeenSet;

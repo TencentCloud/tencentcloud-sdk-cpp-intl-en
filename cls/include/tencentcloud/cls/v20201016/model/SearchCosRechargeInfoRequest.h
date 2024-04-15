@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool PrefixHasBeenSet() const;
 
                     /**
-                     * 获取Compression mode: "", "gzip", "lzop", and "snappy”. The default mode is "".
-                     * @return Compress Compression mode: "", "gzip", "lzop", and "snappy”. The default mode is "".
+                     * 获取Compression mode: "", "gzip", "lzop", and "snappy". The default mode is "".
+                     * @return Compress Compression mode: "", "gzip", "lzop", and "snappy". The default mode is "".
                      * 
                      */
                     std::string GetCompress() const;
 
                     /**
-                     * 设置Compression mode: "", "gzip", "lzop", and "snappy”. The default mode is "".
-                     * @param _compress Compression mode: "", "gzip", "lzop", and "snappy”. The default mode is "".
+                     * 设置Compression mode: "", "gzip", "lzop", and "snappy". The default mode is "".
+                     * @param _compress Compression mode: "", "gzip", "lzop", and "snappy". The default mode is "".
                      * 
                      */
                     void SetCompress(const std::string& _compress);
@@ -228,7 +228,7 @@ namespace TencentCloud
                     bool m_prefixHasBeenSet;
 
                     /**
-                     * Compression mode: "", "gzip", "lzop", and "snappy”. The default mode is "".
+                     * Compression mode: "", "gzip", "lzop", and "snappy". The default mode is "".
                      */
                     std::string m_compress;
                     bool m_compressHasBeenSet;

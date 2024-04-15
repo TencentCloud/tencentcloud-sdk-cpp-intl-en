@@ -129,15 +129,15 @@ namespace TencentCloud
                     bool CkafkaHasBeenSet() const;
 
                     /**
-                     * 获取Compression method during delivery. Valid values: 0, 2, and 3. [0：NONE；2：SNAPPY；3：LZ4]
-                     * @return Compression Compression method during delivery. Valid values: 0, 2, and 3. [0：NONE；2：SNAPPY；3：LZ4]
+                     * 获取Compression method during delivery. Valid values: 0, 2, and 3. [0: NONE; 2: SNAPPY; 3: LZ4]
+                     * @return Compression Compression method during delivery. Valid values: 0, 2, and 3. [0: NONE; 2: SNAPPY; 3: LZ4]
                      * 
                      */
                     int64_t GetCompression() const;
 
                     /**
-                     * 设置Compression method during delivery. Valid values: 0, 2, and 3. [0：NONE；2：SNAPPY；3：LZ4]
-                     * @param _compression Compression method during delivery. Valid values: 0, 2, and 3. [0：NONE；2：SNAPPY；3：LZ4]
+                     * 设置Compression method during delivery. Valid values: 0, 2, and 3. [0: NONE; 2: SNAPPY; 3: LZ4]
+                     * @param _compression Compression method during delivery. Valid values: 0, 2, and 3. [0: NONE; 2: SNAPPY; 3: LZ4]
                      * 
                      */
                     void SetCompression(const int64_t& _compression);
@@ -176,7 +176,7 @@ namespace TencentCloud
                     bool m_ckafkaHasBeenSet;
 
                     /**
-                     * Compression method during delivery. Valid values: 0, 2, and 3. [0：NONE；2：SNAPPY；3：LZ4]
+                     * Compression method during delivery. Valid values: 0, 2, and 3. [0: NONE; 2: SNAPPY; 3: LZ4]
                      */
                     int64_t m_compression;
                     bool m_compressionHasBeenSet;

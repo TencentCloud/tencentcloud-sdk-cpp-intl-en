@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Log Topic ID
-                     * @return FromTopicId Log Topic ID
+                     * 获取Log topic ID
+                     * @return FromTopicId Log topic ID
                      * 
                      */
                     std::string GetFromTopicId() const;
 
                     /**
-                     * 设置Log Topic ID
-                     * @param _fromTopicId Log Topic ID
+                     * 设置Log topic ID
+                     * @param _fromTopicId Log topic ID
                      * 
                      */
                     void SetFromTopicId(const std::string& _fromTopicId);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Log Topic ID
+                     * Log topic ID
                      */
                     std::string m_fromTopicId;
                     bool m_fromTopicIdHasBeenSet;

@@ -113,15 +113,15 @@ namespace TencentCloud
                     bool MonitorTimeHasBeenSet() const;
 
                     /**
-                     * 获取Trigger condition.Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
-                     * @return Condition Trigger condition.Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+                     * 获取Trigger condition. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+                     * @return Condition Trigger condition. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
                      * 
                      */
                     std::string GetCondition() const;
 
                     /**
-                     * 设置Trigger condition.Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
-                     * @param _condition Trigger condition.Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+                     * 设置Trigger condition. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+                     * @param _condition Trigger condition. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
                      * 
                      */
                     void SetCondition(const std::string& _condition);
@@ -136,10 +136,10 @@ namespace TencentCloud
                     /**
                      * 获取Alarm level.0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical)
 
-Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
                      * @return AlarmLevel Alarm level.0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical)
 
-Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
                      * 
                      */
                     uint64_t GetAlarmLevel() const;
@@ -147,10 +147,10 @@ Note:- Condition and AlarmLevel are one set of configurations, MultiConditions i
                     /**
                      * 设置Alarm level.0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical)
 
-Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
                      * @param _alarmLevel Alarm level.0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical)
 
-Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
                      * 
                      */
                     void SetAlarmLevel(const uint64_t& _alarmLevel);
@@ -163,15 +163,15 @@ Note:- Condition and AlarmLevel are one set of configurations, MultiConditions i
                     bool AlarmLevelHasBeenSet() const;
 
                     /**
-                     * 获取Multiple ttrigger conditions.Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
-                     * @return MultiConditions Multiple ttrigger conditions.Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+                     * 获取Multiple trigger conditions. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+                     * @return MultiConditions Multiple trigger conditions. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
                      * 
                      */
                     std::vector<MultiCondition> GetMultiConditions() const;
 
                     /**
-                     * 设置Multiple ttrigger conditions.Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
-                     * @param _multiConditions Multiple ttrigger conditions.Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+                     * 设置Multiple trigger conditions. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+                     * @param _multiConditions Multiple trigger conditions. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
                      * 
                      */
                     void SetMultiConditions(const std::vector<MultiCondition>& _multiConditions);
@@ -184,15 +184,15 @@ Note:- Condition and AlarmLevel are one set of configurations, MultiConditions i
                     bool MultiConditionsHasBeenSet() const;
 
                     /**
-                     * 获取Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1–10.
-                     * @return TriggerCount Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1–10.
+                     * 获取Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1 to 10
+                     * @return TriggerCount Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1 to 10
                      * 
                      */
                     int64_t GetTriggerCount() const;
 
                     /**
-                     * 设置Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1–10.
-                     * @param _triggerCount Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1–10.
+                     * 设置Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1 to 10
+                     * @param _triggerCount Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1 to 10
                      * 
                      */
                     void SetTriggerCount(const int64_t& _triggerCount);
@@ -205,15 +205,15 @@ Note:- Condition and AlarmLevel are one set of configurations, MultiConditions i
                     bool TriggerCountHasBeenSet() const;
 
                     /**
-                     * 获取Repeated alarm interval in minutes. Value range: 0–1440.
-                     * @return AlarmPeriod Repeated alarm interval in minutes. Value range: 0–1440.
+                     * 获取Repeated alarm interval in minutes. Value range: 0 to 1440
+                     * @return AlarmPeriod Repeated alarm interval in minutes. Value range: 0 to 1440
                      * 
                      */
                     int64_t GetAlarmPeriod() const;
 
                     /**
-                     * 设置Repeated alarm interval in minutes. Value range: 0–1440.
-                     * @param _alarmPeriod Repeated alarm interval in minutes. Value range: 0–1440.
+                     * 设置Repeated alarm interval in minutes. Value range: 0 to 1440
+                     * @param _alarmPeriod Repeated alarm interval in minutes. Value range: 0 to 1440
                      * 
                      */
                     void SetAlarmPeriod(const int64_t& _alarmPeriod);
@@ -373,15 +373,15 @@ Note:- Condition and AlarmLevel are one set of configurations, MultiConditions i
                     bool AnalysisHasBeenSet() const;
 
                     /**
-                     * 获取Group trigger status. true: enabled, false: disabled (default)
-                     * @return GroupTriggerStatus Group trigger status. true: enabled, false: disabled (default)
+                     * 获取Group trigger status. true: enabled; false: disabled (default)
+                     * @return GroupTriggerStatus Group trigger status. true: enabled; false: disabled (default)
                      * 
                      */
                     bool GetGroupTriggerStatus() const;
 
                     /**
-                     * 设置Group trigger status. true: enabled, false: disabled (default)
-                     * @param _groupTriggerStatus Group trigger status. true: enabled, false: disabled (default)
+                     * 设置Group trigger status. true: enabled; false: disabled (default)
+                     * @param _groupTriggerStatus Group trigger status. true: enabled; false: disabled (default)
                      * 
                      */
                     void SetGroupTriggerStatus(const bool& _groupTriggerStatus);
@@ -506,7 +506,7 @@ The number of Classifications elements cannot exceed 20.The Key of Classificatio
                     bool m_monitorTimeHasBeenSet;
 
                     /**
-                     * Trigger condition.Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+                     * Trigger condition. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
                      */
                     std::string m_condition;
                     bool m_conditionHasBeenSet;
@@ -514,25 +514,25 @@ The number of Classifications elements cannot exceed 20.The Key of Classificatio
                     /**
                      * Alarm level.0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical)
 
-Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
                      */
                     uint64_t m_alarmLevel;
                     bool m_alarmLevelHasBeenSet;
 
                     /**
-                     * Multiple ttrigger conditions.Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+                     * Multiple trigger conditions. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
                      */
                     std::vector<MultiCondition> m_multiConditions;
                     bool m_multiConditionsHasBeenSet;
 
                     /**
-                     * Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1–10.
+                     * Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1 to 10
                      */
                     int64_t m_triggerCount;
                     bool m_triggerCountHasBeenSet;
 
                     /**
-                     * Repeated alarm interval in minutes. Value range: 0–1440.
+                     * Repeated alarm interval in minutes. Value range: 0 to 1440
                      */
                     int64_t m_alarmPeriod;
                     bool m_alarmPeriodHasBeenSet;
@@ -580,7 +580,7 @@ Note:- Condition and AlarmLevel are one set of configurations, MultiConditions i
                     bool m_analysisHasBeenSet;
 
                     /**
-                     * Group trigger status. true: enabled, false: disabled (default)
+                     * Group trigger status. true: enabled; false: disabled (default)
                      */
                     bool m_groupTriggerStatus;
                     bool m_groupTriggerStatusHasBeenSet;

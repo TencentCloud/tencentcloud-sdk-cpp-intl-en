@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool TopicIdHasBeenSet() const;
 
                     /**
-                     * 获取Interval in milliseconds. Condition: (To – From) / Interval ≤ 200
-                     * @return Interval Interval in milliseconds. Condition: (To – From) / Interval ≤ 200
+                     * 获取Interval in milliseconds. Condition: (To-From) / Interval <= 200
+                     * @return Interval Interval in milliseconds. Condition: (To-From) / Interval <= 200
                      * 
                      */
                     int64_t GetInterval() const;
 
                     /**
-                     * 设置Interval in milliseconds. Condition: (To – From) / Interval ≤ 200
-                     * @param _interval Interval in milliseconds. Condition: (To – From) / Interval ≤ 200
+                     * 设置Interval in milliseconds. Condition: (To-From) / Interval <= 200
+                     * @param _interval Interval in milliseconds. Condition: (To-From) / Interval <= 200
                      * 
                      */
                     void SetInterval(const int64_t& _interval);
@@ -203,7 +203,7 @@ For more information, see <a href="https://intl.cloud.tencent.com/document/produ
                     bool m_topicIdHasBeenSet;
 
                     /**
-                     * Interval in milliseconds. Condition: (To – From) / Interval ≤ 200
+                     * Interval in milliseconds. Condition: (To-From) / Interval <= 200
                      */
                     int64_t m_interval;
                     bool m_intervalHasBeenSet;
