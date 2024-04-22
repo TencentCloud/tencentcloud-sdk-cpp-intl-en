@@ -681,6 +681,27 @@ Node information of an instance. Currently, information about the node type (mas
                      */
                     bool RedisClusterIdHasBeenSet() const;
 
+                    /**
+                     * 获取Alarm policy ID array.- Please log in to [Tencent Cloud Observability Platform - Alarm Management - Policy Management](https://console.cloud.tencent.com/monitor/alarm/policy) to access the alarm policy ID.- If this parameter is not configured, the default alarm policy will be bound. For the specific information about the default alarm policy, please log in to [Tencent Cloud Observability Platform - Alarm Management - Policy Management](https://console.cloud.tencent.com/monitor/alarm/policy) to view.
+                     * @return AlarmPolicyList Alarm policy ID array.- Please log in to [Tencent Cloud Observability Platform - Alarm Management - Policy Management](https://console.cloud.tencent.com/monitor/alarm/policy) to access the alarm policy ID.- If this parameter is not configured, the default alarm policy will be bound. For the specific information about the default alarm policy, please log in to [Tencent Cloud Observability Platform - Alarm Management - Policy Management](https://console.cloud.tencent.com/monitor/alarm/policy) to view.
+                     * 
+                     */
+                    std::vector<std::string> GetAlarmPolicyList() const;
+
+                    /**
+                     * 设置Alarm policy ID array.- Please log in to [Tencent Cloud Observability Platform - Alarm Management - Policy Management](https://console.cloud.tencent.com/monitor/alarm/policy) to access the alarm policy ID.- If this parameter is not configured, the default alarm policy will be bound. For the specific information about the default alarm policy, please log in to [Tencent Cloud Observability Platform - Alarm Management - Policy Management](https://console.cloud.tencent.com/monitor/alarm/policy) to view.
+                     * @param _alarmPolicyList Alarm policy ID array.- Please log in to [Tencent Cloud Observability Platform - Alarm Management - Policy Management](https://console.cloud.tencent.com/monitor/alarm/policy) to access the alarm policy ID.- If this parameter is not configured, the default alarm policy will be bound. For the specific information about the default alarm policy, please log in to [Tencent Cloud Observability Platform - Alarm Management - Policy Management](https://console.cloud.tencent.com/monitor/alarm/policy) to view.
+                     * 
+                     */
+                    void SetAlarmPolicyList(const std::vector<std::string>& _alarmPolicyList);
+
+                    /**
+                     * 判断参数 AlarmPolicyList 是否已赋值
+                     * @return AlarmPolicyList 是否已赋值
+                     * 
+                     */
+                    bool AlarmPolicyListHasBeenSet() const;
+
                 private:
 
                     /**
@@ -860,6 +881,12 @@ Node information of an instance. Currently, information about the node type (mas
                      */
                     std::string m_redisClusterId;
                     bool m_redisClusterIdHasBeenSet;
+
+                    /**
+                     * Alarm policy ID array.- Please log in to [Tencent Cloud Observability Platform - Alarm Management - Policy Management](https://console.cloud.tencent.com/monitor/alarm/policy) to access the alarm policy ID.- If this parameter is not configured, the default alarm policy will be bound. For the specific information about the default alarm policy, please log in to [Tencent Cloud Observability Platform - Alarm Management - Policy Management](https://console.cloud.tencent.com/monitor/alarm/policy) to view.
+                     */
+                    std::vector<std::string> m_alarmPolicyList;
+                    bool m_alarmPolicyListHasBeenSet;
 
                 };
             }
