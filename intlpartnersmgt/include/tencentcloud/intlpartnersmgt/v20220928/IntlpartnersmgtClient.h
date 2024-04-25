@@ -29,6 +29,10 @@
 #include <tencentcloud/intlpartnersmgt/v20220928/model/CreateAccountResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillDetailRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillDetailResponse.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillDownloadUrlRequest.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillDownloadUrlResponse.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillSummaryRequest.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillSummaryResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillSummaryByPayModeRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillSummaryByPayModeResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillSummaryByProductRequest.h>
@@ -88,6 +92,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeBillDetailResponse> DescribeBillDetailOutcome;
                 typedef std::future<DescribeBillDetailOutcome> DescribeBillDetailOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::DescribeBillDetailRequest&, DescribeBillDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBillDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBillDownloadUrlResponse> DescribeBillDownloadUrlOutcome;
+                typedef std::future<DescribeBillDownloadUrlOutcome> DescribeBillDownloadUrlOutcomeCallable;
+                typedef std::function<void(const IntlpartnersmgtClient*, const Model::DescribeBillDownloadUrlRequest&, DescribeBillDownloadUrlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBillDownloadUrlAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBillSummaryResponse> DescribeBillSummaryOutcome;
+                typedef std::future<DescribeBillSummaryOutcome> DescribeBillSummaryOutcomeCallable;
+                typedef std::function<void(const IntlpartnersmgtClient*, const Model::DescribeBillSummaryRequest&, DescribeBillSummaryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBillSummaryAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeBillSummaryByPayModeResponse> DescribeBillSummaryByPayModeOutcome;
                 typedef std::future<DescribeBillSummaryByPayModeOutcome> DescribeBillSummaryByPayModeOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::DescribeBillSummaryByPayModeRequest&, DescribeBillSummaryByPayModeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBillSummaryByPayModeAsyncHandler;
@@ -175,6 +185,24 @@ namespace TencentCloud
                 DescribeBillDetailOutcome DescribeBillDetail(const Model::DescribeBillDetailRequest &request);
                 void DescribeBillDetailAsync(const Model::DescribeBillDetailRequest& request, const DescribeBillDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeBillDetailOutcomeCallable DescribeBillDetailCallable(const Model::DescribeBillDetailRequest& request);
+
+                /**
+                 *This API is used to download billing files and return billing file URLs by customers.
+                 * @param req DescribeBillDownloadUrlRequest
+                 * @return DescribeBillDownloadUrlOutcome
+                 */
+                DescribeBillDownloadUrlOutcome DescribeBillDownloadUrl(const Model::DescribeBillDownloadUrlRequest &request);
+                void DescribeBillDownloadUrlAsync(const Model::DescribeBillDownloadUrlRequest& request, const DescribeBillDownloadUrlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBillDownloadUrlOutcomeCallable DescribeBillDownloadUrlCallable(const Model::DescribeBillDownloadUrlRequest& request);
+
+                /**
+                 *External API for the L1 billing of the customer billing center
+                 * @param req DescribeBillSummaryRequest
+                 * @return DescribeBillSummaryOutcome
+                 */
+                DescribeBillSummaryOutcome DescribeBillSummary(const Model::DescribeBillSummaryRequest &request);
+                void DescribeBillSummaryAsync(const Model::DescribeBillSummaryRequest& request, const DescribeBillSummaryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBillSummaryOutcomeCallable DescribeBillSummaryCallable(const Model::DescribeBillSummaryRequest& request);
 
                 /**
                  *This API is used to obtain the total amount of customer bills by payment mode.
