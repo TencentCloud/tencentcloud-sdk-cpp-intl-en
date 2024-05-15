@@ -49,6 +49,8 @@
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerUinResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/GetCountryCodesRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/GetCountryCodesResponse.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/ModifyClientRemarkRequest.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/ModifyClientRemarkResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryAccountVerificationStatusRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryAccountVerificationStatusResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryCreditAllocationHistoryRequest.h>
@@ -122,6 +124,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::GetCountryCodesResponse> GetCountryCodesOutcome;
                 typedef std::future<GetCountryCodesOutcome> GetCountryCodesOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::GetCountryCodesRequest&, GetCountryCodesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetCountryCodesAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyClientRemarkResponse> ModifyClientRemarkOutcome;
+                typedef std::future<ModifyClientRemarkOutcome> ModifyClientRemarkOutcomeCallable;
+                typedef std::function<void(const IntlpartnersmgtClient*, const Model::ModifyClientRemarkRequest&, ModifyClientRemarkOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyClientRemarkAsyncHandler;
                 typedef Outcome<Core::Error, Model::QueryAccountVerificationStatusResponse> QueryAccountVerificationStatusOutcome;
                 typedef std::future<QueryAccountVerificationStatusOutcome> QueryAccountVerificationStatusOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::QueryAccountVerificationStatusRequest&, QueryAccountVerificationStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryAccountVerificationStatusAsyncHandler;
@@ -275,6 +280,15 @@ namespace TencentCloud
                 GetCountryCodesOutcome GetCountryCodes(const Model::GetCountryCodesRequest &request);
                 void GetCountryCodesAsync(const Model::GetCountryCodesRequest& request, const GetCountryCodesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 GetCountryCodesOutcomeCallable GetCountryCodesCallable(const Model::GetCountryCodesRequest& request);
+
+                /**
+                 *This API is used to modify customer remarks.
+                 * @param req ModifyClientRemarkRequest
+                 * @return ModifyClientRemarkOutcome
+                 */
+                ModifyClientRemarkOutcome ModifyClientRemark(const Model::ModifyClientRemarkRequest &request);
+                void ModifyClientRemarkAsync(const Model::ModifyClientRemarkRequest& request, const ModifyClientRemarkAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyClientRemarkOutcomeCallable ModifyClientRemarkCallable(const Model::ModifyClientRemarkRequest& request);
 
                 /**
                  *This API is used to query the account verification status.

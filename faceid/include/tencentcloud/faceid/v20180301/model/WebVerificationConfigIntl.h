@@ -320,6 +320,27 @@ Example: HKIDCard
                      */
                     bool LanguageHasBeenSet() const;
 
+                    /**
+                     * 获取Automatic downgrade mode, with the following parameter values: 1: Downgrade to silent live mode; 2: Disable downgrade mode. The default value is 1.
+                     * @return AutoDowngrade Automatic downgrade mode, with the following parameter values: 1: Downgrade to silent live mode; 2: Disable downgrade mode. The default value is 1.
+                     * 
+                     */
+                    int64_t GetAutoDowngrade() const;
+
+                    /**
+                     * 设置Automatic downgrade mode, with the following parameter values: 1: Downgrade to silent live mode; 2: Disable downgrade mode. The default value is 1.
+                     * @param _autoDowngrade Automatic downgrade mode, with the following parameter values: 1: Downgrade to silent live mode; 2: Disable downgrade mode. The default value is 1.
+                     * 
+                     */
+                    void SetAutoDowngrade(const int64_t& _autoDowngrade);
+
+                    /**
+                     * 判断参数 AutoDowngrade 是否已赋值
+                     * @return AutoDowngrade 是否已赋值
+                     * 
+                     */
+                    bool AutoDowngradeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -397,6 +418,12 @@ Example: HKIDCard
                      */
                     std::string m_language;
                     bool m_languageHasBeenSet;
+
+                    /**
+                     * Automatic downgrade mode, with the following parameter values: 1: Downgrade to silent live mode; 2: Disable downgrade mode. The default value is 1.
+                     */
+                    int64_t m_autoDowngrade;
+                    bool m_autoDowngradeHasBeenSet;
 
                 };
             }

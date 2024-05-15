@@ -599,6 +599,49 @@ IntlpartnersmgtClient::GetCountryCodesOutcomeCallable IntlpartnersmgtClient::Get
     return task->get_future();
 }
 
+IntlpartnersmgtClient::ModifyClientRemarkOutcome IntlpartnersmgtClient::ModifyClientRemark(const ModifyClientRemarkRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyClientRemark");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyClientRemarkResponse rsp = ModifyClientRemarkResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyClientRemarkOutcome(rsp);
+        else
+            return ModifyClientRemarkOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyClientRemarkOutcome(outcome.GetError());
+    }
+}
+
+void IntlpartnersmgtClient::ModifyClientRemarkAsync(const ModifyClientRemarkRequest& request, const ModifyClientRemarkAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyClientRemark(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+IntlpartnersmgtClient::ModifyClientRemarkOutcomeCallable IntlpartnersmgtClient::ModifyClientRemarkCallable(const ModifyClientRemarkRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyClientRemarkOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyClientRemark(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 IntlpartnersmgtClient::QueryAccountVerificationStatusOutcome IntlpartnersmgtClient::QueryAccountVerificationStatus(const QueryAccountVerificationStatusRequest &request)
 {
     auto outcome = MakeRequest(request, "QueryAccountVerificationStatus");

@@ -30,7 +30,8 @@ WebVerificationConfigIntl::WebVerificationConfigIntl() :
     m_skipPrivacyPolicyHasBeenSet(false),
     m_idCardCutReturnHasBeenSet(false),
     m_themeColorHasBeenSet(false),
-    m_languageHasBeenSet(false)
+    m_languageHasBeenSet(false),
+    m_autoDowngradeHasBeenSet(false)
 {
 }
 
@@ -139,6 +140,16 @@ CoreInternalOutcome WebVerificationConfigIntl::Deserialize(const rapidjson::Valu
         m_languageHasBeenSet = true;
     }
 
+    if (value.HasMember("AutoDowngrade") && !value["AutoDowngrade"].IsNull())
+    {
+        if (!value["AutoDowngrade"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `WebVerificationConfigIntl.AutoDowngrade` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_autoDowngrade = value["AutoDowngrade"].GetInt64();
+        m_autoDowngradeHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -224,6 +235,14 @@ void WebVerificationConfigIntl::ToJsonObject(rapidjson::Value &value, rapidjson:
         string key = "Language";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_language.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_autoDowngradeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AutoDowngrade";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_autoDowngrade, allocator);
     }
 
 }
@@ -387,5 +406,21 @@ void WebVerificationConfigIntl::SetLanguage(const string& _language)
 bool WebVerificationConfigIntl::LanguageHasBeenSet() const
 {
     return m_languageHasBeenSet;
+}
+
+int64_t WebVerificationConfigIntl::GetAutoDowngrade() const
+{
+    return m_autoDowngrade;
+}
+
+void WebVerificationConfigIntl::SetAutoDowngrade(const int64_t& _autoDowngrade)
+{
+    m_autoDowngrade = _autoDowngrade;
+    m_autoDowngradeHasBeenSet = true;
+}
+
+bool WebVerificationConfigIntl::AutoDowngradeHasBeenSet() const
+{
+    return m_autoDowngradeHasBeenSet;
 }
 

@@ -55,6 +55,7 @@ set(intlpartnersmgt_public_header_model
   include/tencentcloud/intlpartnersmgt/v20220928/model/TagInfo.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerBillDetailRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerBillDetailResponse.h
+  include/tencentcloud/intlpartnersmgt/v20220928/model/ModifyClientRemarkResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryAccountVerificationStatusRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryCreditAllocationHistoryResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/CreateAccountRequest.h
@@ -65,6 +66,7 @@ set(intlpartnersmgt_public_header_model
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryCreditQuotaRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/AllocateCustomerCreditResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryVoucherListByUinVoucherItem.h
+  include/tencentcloud/intlpartnersmgt/v20220928/model/ModifyClientRemarkRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillSummaryByProductRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryDirectCustomersCreditData.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/GetCountryCodesRequest.h
@@ -123,6 +125,7 @@ set(intlpartnersmgt_src
   src/v20220928/model/TagInfo.cpp
   src/v20220928/model/DescribeCustomerBillDetailRequest.cpp
   src/v20220928/model/DescribeCustomerBillDetailResponse.cpp
+  src/v20220928/model/ModifyClientRemarkResponse.cpp
   src/v20220928/model/QueryAccountVerificationStatusRequest.cpp
   src/v20220928/model/QueryCreditAllocationHistoryResponse.cpp
   src/v20220928/model/CreateAccountRequest.cpp
@@ -133,6 +136,7 @@ set(intlpartnersmgt_src
   src/v20220928/model/QueryCreditQuotaRequest.cpp
   src/v20220928/model/AllocateCustomerCreditResponse.cpp
   src/v20220928/model/QueryVoucherListByUinVoucherItem.cpp
+  src/v20220928/model/ModifyClientRemarkRequest.cpp
   src/v20220928/model/DescribeBillSummaryByProductRequest.cpp
   src/v20220928/model/QueryDirectCustomersCreditData.cpp
   src/v20220928/model/GetCountryCodesRequest.cpp
