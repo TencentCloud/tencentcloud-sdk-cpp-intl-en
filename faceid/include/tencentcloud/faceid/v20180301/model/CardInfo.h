@@ -37,6 +37,7 @@
 #include <tencentcloud/faceid/v20180301/model/IndonesiaDrivingLicense.h>
 #include <tencentcloud/faceid/v20180301/model/ThailandIDCard.h>
 #include <tencentcloud/faceid/v20180301/model/SingaporeIDCard.h>
+#include <tencentcloud/faceid/v20180301/model/MacaoIDCard.h>
 
 
 namespace TencentCloud
@@ -384,6 +385,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool SingaporeIDCardHasBeenSet() const;
 
+                    /**
+                     * 获取Macao ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MacaoIDCard Macao ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    MacaoIDCard GetMacaoIDCard() const;
+
+                    /**
+                     * 设置Macao ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _macaoIDCard Macao ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetMacaoIDCard(const MacaoIDCard& _macaoIDCard);
+
+                    /**
+                     * 判断参数 MacaoIDCard 是否已赋值
+                     * @return MacaoIDCard 是否已赋值
+                     * 
+                     */
+                    bool MacaoIDCardHasBeenSet() const;
+
                 private:
 
                     /**
@@ -476,6 +502,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     SingaporeIDCard m_singaporeIDCard;
                     bool m_singaporeIDCardHasBeenSet;
+
+                    /**
+                     * Macao ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    MacaoIDCard m_macaoIDCard;
+                    bool m_macaoIDCardHasBeenSet;
 
                 };
             }

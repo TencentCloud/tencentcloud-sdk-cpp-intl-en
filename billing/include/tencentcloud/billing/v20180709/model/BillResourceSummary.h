@@ -845,6 +845,27 @@ namespace TencentCloud
                      */
                     bool OriginalCostWithSPHasBeenSet() const;
 
+                    /**
+                     * 获取Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+                     * @return BillMonth Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetBillMonth() const;
+
+                    /**
+                     * 设置Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+                     * @param _billMonth Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetBillMonth(const std::string& _billMonth);
+
+                    /**
+                     * 判断参数 BillMonth 是否已赋值
+                     * @return BillMonth 是否已赋值
+                     * 
+                     */
+                    bool BillMonthHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1074,6 +1095,12 @@ namespace TencentCloud
                      */
                     std::string m_originalCostWithSP;
                     bool m_originalCostWithSPHasBeenSet;
+
+                    /**
+                     * Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_billMonth;
+                    bool m_billMonthHasBeenSet;
 
                 };
             }

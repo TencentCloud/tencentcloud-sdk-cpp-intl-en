@@ -22,11 +22,14 @@ using namespace std;
 
 CardVerifyResult::CardVerifyResult() :
     m_isPassHasBeenSet(false),
+    m_isEditHasBeenSet(false),
     m_cardVideoHasBeenSet(false),
     m_cardImageHasBeenSet(false),
     m_cardInfoOcrJsonHasBeenSet(false),
     m_requestIdHasBeenSet(false),
-    m_cardInfoHasBeenSet(false)
+    m_cardInfoHasBeenSet(false),
+    m_normalCardInfoHasBeenSet(false),
+    m_warnCardInfosHasBeenSet(false)
 {
 }
 
@@ -43,6 +46,16 @@ CoreInternalOutcome CardVerifyResult::Deserialize(const rapidjson::Value &value)
         }
         m_isPass = value["IsPass"].GetBool();
         m_isPassHasBeenSet = true;
+    }
+
+    if (value.HasMember("IsEdit") && !value["IsEdit"].IsNull())
+    {
+        if (!value["IsEdit"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `CardVerifyResult.IsEdit` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_isEdit = value["IsEdit"].GetBool();
+        m_isEditHasBeenSet = true;
     }
 
     if (value.HasMember("CardVideo") && !value["CardVideo"].IsNull())
@@ -123,6 +136,36 @@ CoreInternalOutcome CardVerifyResult::Deserialize(const rapidjson::Value &value)
         m_cardInfoHasBeenSet = true;
     }
 
+    if (value.HasMember("NormalCardInfo") && !value["NormalCardInfo"].IsNull())
+    {
+        if (!value["NormalCardInfo"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `CardVerifyResult.NormalCardInfo` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_normalCardInfo.Deserialize(value["NormalCardInfo"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_normalCardInfoHasBeenSet = true;
+    }
+
+    if (value.HasMember("WarnCardInfos") && !value["WarnCardInfos"].IsNull())
+    {
+        if (!value["WarnCardInfos"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `CardVerifyResult.WarnCardInfos` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["WarnCardInfos"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            m_warnCardInfos.push_back((*itr).GetInt64());
+        }
+        m_warnCardInfosHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -136,6 +179,14 @@ void CardVerifyResult::ToJsonObject(rapidjson::Value &value, rapidjson::Document
         string key = "IsPass";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_isPass, allocator);
+    }
+
+    if (m_isEditHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsEdit";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_isEdit, allocator);
     }
 
     if (m_cardVideoHasBeenSet)
@@ -182,6 +233,28 @@ void CardVerifyResult::ToJsonObject(rapidjson::Value &value, rapidjson::Document
         m_cardInfo.ToJsonObject(value[key.c_str()], allocator);
     }
 
+    if (m_normalCardInfoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NormalCardInfo";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_normalCardInfo.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_warnCardInfosHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "WarnCardInfos";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_warnCardInfos.begin(); itr != m_warnCardInfos.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
+        }
+    }
+
 }
 
 
@@ -199,6 +272,22 @@ void CardVerifyResult::SetIsPass(const bool& _isPass)
 bool CardVerifyResult::IsPassHasBeenSet() const
 {
     return m_isPassHasBeenSet;
+}
+
+bool CardVerifyResult::GetIsEdit() const
+{
+    return m_isEdit;
+}
+
+void CardVerifyResult::SetIsEdit(const bool& _isEdit)
+{
+    m_isEdit = _isEdit;
+    m_isEditHasBeenSet = true;
+}
+
+bool CardVerifyResult::IsEditHasBeenSet() const
+{
+    return m_isEditHasBeenSet;
 }
 
 FileInfo CardVerifyResult::GetCardVideo() const
@@ -279,5 +368,37 @@ void CardVerifyResult::SetCardInfo(const CardInfo& _cardInfo)
 bool CardVerifyResult::CardInfoHasBeenSet() const
 {
     return m_cardInfoHasBeenSet;
+}
+
+NormalCardInfo CardVerifyResult::GetNormalCardInfo() const
+{
+    return m_normalCardInfo;
+}
+
+void CardVerifyResult::SetNormalCardInfo(const NormalCardInfo& _normalCardInfo)
+{
+    m_normalCardInfo = _normalCardInfo;
+    m_normalCardInfoHasBeenSet = true;
+}
+
+bool CardVerifyResult::NormalCardInfoHasBeenSet() const
+{
+    return m_normalCardInfoHasBeenSet;
+}
+
+vector<int64_t> CardVerifyResult::GetWarnCardInfos() const
+{
+    return m_warnCardInfos;
+}
+
+void CardVerifyResult::SetWarnCardInfos(const vector<int64_t>& _warnCardInfos)
+{
+    m_warnCardInfos = _warnCardInfos;
+    m_warnCardInfosHasBeenSet = true;
+}
+
+bool CardVerifyResult::WarnCardInfosHasBeenSet() const
+{
+    return m_warnCardInfosHasBeenSet;
 }
 

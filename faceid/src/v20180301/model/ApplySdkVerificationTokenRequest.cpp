@@ -23,11 +23,11 @@ using namespace TencentCloud::Faceid::V20180301::Model;
 using namespace std;
 
 ApplySdkVerificationTokenRequest::ApplySdkVerificationTokenRequest() :
-    m_needVerifyIdCardHasBeenSet(false),
     m_checkModeHasBeenSet(false),
     m_securityLevelHasBeenSet(false),
     m_idCardTypeHasBeenSet(false),
     m_compareImageHasBeenSet(false),
+    m_needVerifyIdCardHasBeenSet(false),
     m_disableChangeOcrResultHasBeenSet(false),
     m_disableCheckOcrWarningsHasBeenSet(false),
     m_extraHasBeenSet(false)
@@ -40,14 +40,6 @@ string ApplySdkVerificationTokenRequest::ToJsonString() const
     d.SetObject();
     rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
-
-    if (m_needVerifyIdCardHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "NeedVerifyIdCard";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, m_needVerifyIdCard, allocator);
-    }
 
     if (m_checkModeHasBeenSet)
     {
@@ -81,6 +73,14 @@ string ApplySdkVerificationTokenRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_compareImage.c_str(), allocator).Move(), allocator);
     }
 
+    if (m_needVerifyIdCardHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NeedVerifyIdCard";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_needVerifyIdCard, allocator);
+    }
+
     if (m_disableChangeOcrResultHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -112,22 +112,6 @@ string ApplySdkVerificationTokenRequest::ToJsonString() const
     return buffer.GetString();
 }
 
-
-bool ApplySdkVerificationTokenRequest::GetNeedVerifyIdCard() const
-{
-    return m_needVerifyIdCard;
-}
-
-void ApplySdkVerificationTokenRequest::SetNeedVerifyIdCard(const bool& _needVerifyIdCard)
-{
-    m_needVerifyIdCard = _needVerifyIdCard;
-    m_needVerifyIdCardHasBeenSet = true;
-}
-
-bool ApplySdkVerificationTokenRequest::NeedVerifyIdCardHasBeenSet() const
-{
-    return m_needVerifyIdCardHasBeenSet;
-}
 
 int64_t ApplySdkVerificationTokenRequest::GetCheckMode() const
 {
@@ -191,6 +175,22 @@ void ApplySdkVerificationTokenRequest::SetCompareImage(const string& _compareIma
 bool ApplySdkVerificationTokenRequest::CompareImageHasBeenSet() const
 {
     return m_compareImageHasBeenSet;
+}
+
+bool ApplySdkVerificationTokenRequest::GetNeedVerifyIdCard() const
+{
+    return m_needVerifyIdCard;
+}
+
+void ApplySdkVerificationTokenRequest::SetNeedVerifyIdCard(const bool& _needVerifyIdCard)
+{
+    m_needVerifyIdCard = _needVerifyIdCard;
+    m_needVerifyIdCardHasBeenSet = true;
+}
+
+bool ApplySdkVerificationTokenRequest::NeedVerifyIdCardHasBeenSet() const
+{
+    return m_needVerifyIdCardHasBeenSet;
 }
 
 bool ApplySdkVerificationTokenRequest::GetDisableChangeOcrResult() const

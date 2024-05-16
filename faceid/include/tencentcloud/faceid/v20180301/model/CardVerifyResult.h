@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/faceid/v20180301/model/FileInfo.h>
 #include <tencentcloud/faceid/v20180301/model/CardInfo.h>
+#include <tencentcloud/faceid/v20180301/model/NormalCardInfo.h>
 
 
 namespace TencentCloud
@@ -68,6 +69,27 @@ namespace TencentCloud
                      * 
                      */
                     bool IsPassHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the user modified the card recognition result
+                     * @return IsEdit Whether the user modified the card recognition result
+                     * 
+                     */
+                    bool GetIsEdit() const;
+
+                    /**
+                     * 设置Whether the user modified the card recognition result
+                     * @param _isEdit Whether the user modified the card recognition result
+                     * 
+                     */
+                    void SetIsEdit(const bool& _isEdit);
+
+                    /**
+                     * 判断参数 IsEdit 是否已赋值
+                     * @return IsEdit 是否已赋值
+                     * 
+                     */
+                    bool IsEditHasBeenSet() const;
 
                     /**
                      * 获取The download URL of the video used for identity document verification, which is valid for 10 minutes. This parameter is returned only if video-based identity document verification is enabled.
@@ -548,23 +570,89 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * 获取The recognition results of ID card
                      * @return CardInfo The recognition results of ID card
-                     * 
+                     * @deprecated
                      */
                     CardInfo GetCardInfo() const;
 
                     /**
                      * 设置The recognition results of ID card
                      * @param _cardInfo The recognition results of ID card
-                     * 
+                     * @deprecated
                      */
                     void SetCardInfo(const CardInfo& _cardInfo);
 
                     /**
                      * 判断参数 CardInfo 是否已赋值
                      * @return CardInfo 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool CardInfoHasBeenSet() const;
+
+                    /**
+                     * 获取License OCR result
+                     * @return NormalCardInfo License OCR result
+                     * 
+                     */
+                    NormalCardInfo GetNormalCardInfo() const;
+
+                    /**
+                     * 设置License OCR result
+                     * @param _normalCardInfo License OCR result
+                     * 
+                     */
+                    void SetNormalCardInfo(const NormalCardInfo& _normalCardInfo);
+
+                    /**
+                     * 判断参数 NormalCardInfo 是否已赋值
+                     * @return NormalCardInfo 是否已赋值
+                     * 
+                     */
+                    bool NormalCardInfoHasBeenSet() const;
+
+                    /**
+                     * 获取Card warning information
+-9101 Alarm for covered certificate,
+-9102 Alarm for photocopied certificate,
+-9103 Alarm for photographed certificate,
+-9107 Alarm for reflective certificate,
+-9108 Alarm for blurry image,
+-9109 This capability is not enabled.
+                     * @return WarnCardInfos Card warning information
+-9101 Alarm for covered certificate,
+-9102 Alarm for photocopied certificate,
+-9103 Alarm for photographed certificate,
+-9107 Alarm for reflective certificate,
+-9108 Alarm for blurry image,
+-9109 This capability is not enabled.
+                     * 
+                     */
+                    std::vector<int64_t> GetWarnCardInfos() const;
+
+                    /**
+                     * 设置Card warning information
+-9101 Alarm for covered certificate,
+-9102 Alarm for photocopied certificate,
+-9103 Alarm for photographed certificate,
+-9107 Alarm for reflective certificate,
+-9108 Alarm for blurry image,
+-9109 This capability is not enabled.
+                     * @param _warnCardInfos Card warning information
+-9101 Alarm for covered certificate,
+-9102 Alarm for photocopied certificate,
+-9103 Alarm for photographed certificate,
+-9107 Alarm for reflective certificate,
+-9108 Alarm for blurry image,
+-9109 This capability is not enabled.
+                     * 
+                     */
+                    void SetWarnCardInfos(const std::vector<int64_t>& _warnCardInfos);
+
+                    /**
+                     * 判断参数 WarnCardInfos 是否已赋值
+                     * @return WarnCardInfos 是否已赋值
+                     * 
+                     */
+                    bool WarnCardInfosHasBeenSet() const;
 
                 private:
 
@@ -573,6 +661,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool m_isPass;
                     bool m_isPassHasBeenSet;
+
+                    /**
+                     * Whether the user modified the card recognition result
+                     */
+                    bool m_isEdit;
+                    bool m_isEditHasBeenSet;
 
                     /**
                      * The download URL of the video used for identity document verification, which is valid for 10 minutes. This parameter is returned only if video-based identity document verification is enabled.
@@ -701,6 +795,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     CardInfo m_cardInfo;
                     bool m_cardInfoHasBeenSet;
+
+                    /**
+                     * License OCR result
+                     */
+                    NormalCardInfo m_normalCardInfo;
+                    bool m_normalCardInfoHasBeenSet;
+
+                    /**
+                     * Card warning information
+-9101 Alarm for covered certificate,
+-9102 Alarm for photocopied certificate,
+-9103 Alarm for photographed certificate,
+-9107 Alarm for reflective certificate,
+-9108 Alarm for blurry image,
+-9109 This capability is not enabled.
+                     */
+                    std::vector<int64_t> m_warnCardInfos;
+                    bool m_warnCardInfosHasBeenSet;
 
                 };
             }

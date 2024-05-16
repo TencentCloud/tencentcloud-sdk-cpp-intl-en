@@ -652,6 +652,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool FormulaUrlHasBeenSet() const;
 
+                    /**
+                     * 获取Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+                     * @return BillMonth Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetBillMonth() const;
+
+                    /**
+                     * 设置Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+                     * @param _billMonth Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetBillMonth(const std::string& _billMonth);
+
+                    /**
+                     * 判断参数 BillMonth 是否已赋值
+                     * @return BillMonth 是否已赋值
+                     * 
+                     */
+                    bool BillMonthHasBeenSet() const;
+
+                    /**
+                     * 获取Billing dayNote: This field may return null, indicating that no valid values can be obtained.
+                     * @return BillDay Billing dayNote: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetBillDay() const;
+
+                    /**
+                     * 设置Billing dayNote: This field may return null, indicating that no valid values can be obtained.
+                     * @param _billDay Billing dayNote: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetBillDay(const std::string& _billDay);
+
+                    /**
+                     * 判断参数 BillDay 是否已赋值
+                     * @return BillDay 是否已赋值
+                     * 
+                     */
+                    bool BillDayHasBeenSet() const;
+
                 private:
 
                     /**
@@ -824,6 +866,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_formulaUrl;
                     bool m_formulaUrlHasBeenSet;
+
+                    /**
+                     * Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_billMonth;
+                    bool m_billMonthHasBeenSet;
+
+                    /**
+                     * Billing dayNote: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_billDay;
+                    bool m_billDayHasBeenSet;
 
                 };
             }

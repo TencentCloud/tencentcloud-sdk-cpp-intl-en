@@ -43,27 +43,6 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`.
-                     * @return NeedVerifyIdCard Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`.
-                     * 
-                     */
-                    bool GetNeedVerifyIdCard() const;
-
-                    /**
-                     * 设置Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`.
-                     * @param _needVerifyIdCard Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`.
-                     * 
-                     */
-                    void SetNeedVerifyIdCard(const bool& _needVerifyIdCard);
-
-                    /**
-                     * 判断参数 NeedVerifyIdCard 是否已赋值
-                     * @return NeedVerifyIdCard 是否已赋值
-                     * 
-                     */
-                    bool NeedVerifyIdCardHasBeenSet() const;
-
-                    /**
                      * 获取The verification mode. Valid values:
 1: OCR + liveness detection + face comparison
 2: Liveness detection + face comparison
@@ -152,6 +131,9 @@ Default value: 4
 7. `PhilippinesSSSID`: Philippine SSS ID card
 8. `PhilippinesUMID`: Philippine UMID card
 9. `MLIDPassport`: Passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions
+10..MacaoIDCard: Macao ID Card
+11.ThailandIDCard: Thailand ID Card
+12.MainlandIDCard: Mainland ID Card
                      * @return IdCardType The identity document type. Valid values: 
 1. `HK` (default): Identity card of Hong Kong (China)
 2. `ML`: Malaysian identity card
@@ -162,6 +144,9 @@ Default value: 4
 7. `PhilippinesSSSID`: Philippine SSS ID card
 8. `PhilippinesUMID`: Philippine UMID card
 9. `MLIDPassport`: Passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions
+10..MacaoIDCard: Macao ID Card
+11.ThailandIDCard: Thailand ID Card
+12.MainlandIDCard: Mainland ID Card
                      * 
                      */
                     std::string GetIdCardType() const;
@@ -177,6 +162,9 @@ Default value: 4
 7. `PhilippinesSSSID`: Philippine SSS ID card
 8. `PhilippinesUMID`: Philippine UMID card
 9. `MLIDPassport`: Passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions
+10..MacaoIDCard: Macao ID Card
+11.ThailandIDCard: Thailand ID Card
+12.MainlandIDCard: Mainland ID Card
                      * @param _idCardType The identity document type. Valid values: 
 1. `HK` (default): Identity card of Hong Kong (China)
 2. `ML`: Malaysian identity card
@@ -187,6 +175,9 @@ Default value: 4
 7. `PhilippinesSSSID`: Philippine SSS ID card
 8. `PhilippinesUMID`: Philippine UMID card
 9. `MLIDPassport`: Passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions
+10..MacaoIDCard: Macao ID Card
+11.ThailandIDCard: Thailand ID Card
+12.MainlandIDCard: Mainland ID Card
                      * 
                      */
                     void SetIdCardType(const std::string& _idCardType);
@@ -218,6 +209,27 @@ Default value: 4
                      * 
                      */
                     bool CompareImageHasBeenSet() const;
+
+                    /**
+                     * 获取Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`.
+                     * @return NeedVerifyIdCard Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`.
+                     * @deprecated
+                     */
+                    bool GetNeedVerifyIdCard() const;
+
+                    /**
+                     * 设置Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`.
+                     * @param _needVerifyIdCard Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`.
+                     * @deprecated
+                     */
+                    void SetNeedVerifyIdCard(const bool& _needVerifyIdCard);
+
+                    /**
+                     * 判断参数 NeedVerifyIdCard 是否已赋值
+                     * @return NeedVerifyIdCard 是否已赋值
+                     * @deprecated
+                     */
+                    bool NeedVerifyIdCardHasBeenSet() const;
 
                     /**
                      * 获取Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). (Currently, this parameter is not applied.)
@@ -289,12 +301,6 @@ This feature applies only to Hong Kong (China) identity cards, Malaysian identit
                 private:
 
                     /**
-                     * Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`.
-                     */
-                    bool m_needVerifyIdCard;
-                    bool m_needVerifyIdCardHasBeenSet;
-
-                    /**
                      * The verification mode. Valid values:
 1: OCR + liveness detection + face comparison
 2: Liveness detection + face comparison
@@ -326,6 +332,9 @@ Default value: 4
 7. `PhilippinesSSSID`: Philippine SSS ID card
 8. `PhilippinesUMID`: Philippine UMID card
 9. `MLIDPassport`: Passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions
+10..MacaoIDCard: Macao ID Card
+11.ThailandIDCard: Thailand ID Card
+12.MainlandIDCard: Mainland ID Card
                      */
                     std::string m_idCardType;
                     bool m_idCardTypeHasBeenSet;
@@ -335,6 +344,12 @@ Default value: 4
                      */
                     std::string m_compareImage;
                     bool m_compareImageHasBeenSet;
+
+                    /**
+                     * Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`.
+                     */
+                    bool m_needVerifyIdCard;
+                    bool m_needVerifyIdCardHasBeenSet;
 
                     /**
                      * Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). (Currently, this parameter is not applied.)

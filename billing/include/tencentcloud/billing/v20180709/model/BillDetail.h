@@ -653,6 +653,132 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool FormulaUrlHasBeenSet() const;
 
+                    /**
+                     * 获取Billing dayNote: This field may return null, indicating that no valid values can be obtained.
+                     * @return BillDay Billing dayNote: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetBillDay() const;
+
+                    /**
+                     * 设置Billing dayNote: This field may return null, indicating that no valid values can be obtained.
+                     * @param _billDay Billing dayNote: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetBillDay(const std::string& _billDay);
+
+                    /**
+                     * 判断参数 BillDay 是否已赋值
+                     * @return BillDay 是否已赋值
+                     * 
+                     */
+                    bool BillDayHasBeenSet() const;
+
+                    /**
+                     * 获取Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+                     * @return BillMonth Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetBillMonth() const;
+
+                    /**
+                     * 设置Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+                     * @param _billMonth Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetBillMonth(const std::string& _billMonth);
+
+                    /**
+                     * 判断参数 BillMonth 是否已赋值
+                     * @return BillMonth 是否已赋值
+                     * 
+                     */
+                    bool BillMonthHasBeenSet() const;
+
+                    /**
+                     * 获取Billing record IDNote: This field may return null, indicating that no valid values can be obtained.
+                     * @return Id Billing record IDNote: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetId() const;
+
+                    /**
+                     * 设置Billing record IDNote: This field may return null, indicating that no valid values can be obtained.
+                     * @param _id Billing record IDNote: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetId(const std::string& _id);
+
+                    /**
+                     * 判断参数 Id 是否已赋值
+                     * @return Id 是否已赋值
+                     * 
+                     */
+                    bool IdHasBeenSet() const;
+
+                    /**
+                     * 获取Domestic and international codesNote: This field may return null, indicating that no valid values can be obtained.
+                     * @return RegionType Domestic and international codesNote: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetRegionType() const;
+
+                    /**
+                     * 设置Domestic and international codesNote: This field may return null, indicating that no valid values can be obtained.
+                     * @param _regionType Domestic and international codesNote: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetRegionType(const std::string& _regionType);
+
+                    /**
+                     * 判断参数 RegionType 是否已赋值
+                     * @return RegionType 是否已赋值
+                     * 
+                     */
+                    bool RegionTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Domestic and International: The region type to which the resource belongs (domestic, international)Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RegionTypeName Domestic and International: The region type to which the resource belongs (domestic, international)Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetRegionTypeName() const;
+
+                    /**
+                     * 设置Domestic and International: The region type to which the resource belongs (domestic, international)Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _regionTypeName Domestic and International: The region type to which the resource belongs (domestic, international)Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetRegionTypeName(const std::string& _regionTypeName);
+
+                    /**
+                     * 判断参数 RegionTypeName 是否已赋值
+                     * @return RegionTypeName 是否已赋值
+                     * 
+                     */
+                    bool RegionTypeNameHasBeenSet() const;
+
+                    /**
+                     * 获取Note attributes (instance configuration): Other note information, such as the reserved instance, the reserved instance type, the transaction type, and the region information on both ends of the CCN product.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ReserveDetail Note attributes (instance configuration): Other note information, such as the reserved instance, the reserved instance type, the transaction type, and the region information on both ends of the CCN product.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetReserveDetail() const;
+
+                    /**
+                     * 设置Note attributes (instance configuration): Other note information, such as the reserved instance, the reserved instance type, the transaction type, and the region information on both ends of the CCN product.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _reserveDetail Note attributes (instance configuration): Other note information, such as the reserved instance, the reserved instance type, the transaction type, and the region information on both ends of the CCN product.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetReserveDetail(const std::string& _reserveDetail);
+
+                    /**
+                     * 判断参数 ReserveDetail 是否已赋值
+                     * @return ReserveDetail 是否已赋值
+                     * 
+                     */
+                    bool ReserveDetailHasBeenSet() const;
+
                 private:
 
                     /**
@@ -826,6 +952,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_formulaUrl;
                     bool m_formulaUrlHasBeenSet;
+
+                    /**
+                     * Billing dayNote: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_billDay;
+                    bool m_billDayHasBeenSet;
+
+                    /**
+                     * Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_billMonth;
+                    bool m_billMonthHasBeenSet;
+
+                    /**
+                     * Billing record IDNote: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_id;
+                    bool m_idHasBeenSet;
+
+                    /**
+                     * Domestic and international codesNote: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_regionType;
+                    bool m_regionTypeHasBeenSet;
+
+                    /**
+                     * Domestic and International: The region type to which the resource belongs (domestic, international)Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_regionTypeName;
+                    bool m_regionTypeNameHasBeenSet;
+
+                    /**
+                     * Note attributes (instance configuration): Other note information, such as the reserved instance, the reserved instance type, the transaction type, and the region information on both ends of the CCN product.Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_reserveDetail;
+                    bool m_reserveDetailHasBeenSet;
 
                 };
             }

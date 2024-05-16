@@ -33,7 +33,8 @@ CardInfo::CardInfo() :
     m_generalCardHasBeenSet(false),
     m_indonesiaDrivingLicenseHasBeenSet(false),
     m_thailandIDCardHasBeenSet(false),
-    m_singaporeIDCardHasBeenSet(false)
+    m_singaporeIDCardHasBeenSet(false),
+    m_macaoIDCardHasBeenSet(false)
 {
 }
 
@@ -263,6 +264,23 @@ CoreInternalOutcome CardInfo::Deserialize(const rapidjson::Value &value)
         m_singaporeIDCardHasBeenSet = true;
     }
 
+    if (value.HasMember("MacaoIDCard") && !value["MacaoIDCard"].IsNull())
+    {
+        if (!value["MacaoIDCard"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `CardInfo.MacaoIDCard` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_macaoIDCard.Deserialize(value["MacaoIDCard"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_macaoIDCardHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -385,6 +403,15 @@ void CardInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Alloca
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_singaporeIDCard.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_macaoIDCardHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MacaoIDCard";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_macaoIDCard.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -596,5 +623,21 @@ void CardInfo::SetSingaporeIDCard(const SingaporeIDCard& _singaporeIDCard)
 bool CardInfo::SingaporeIDCardHasBeenSet() const
 {
     return m_singaporeIDCardHasBeenSet;
+}
+
+MacaoIDCard CardInfo::GetMacaoIDCard() const
+{
+    return m_macaoIDCard;
+}
+
+void CardInfo::SetMacaoIDCard(const MacaoIDCard& _macaoIDCard)
+{
+    m_macaoIDCard = _macaoIDCard;
+    m_macaoIDCardHasBeenSet = true;
+}
+
+bool CardInfo::MacaoIDCardHasBeenSet() const
+{
+    return m_macaoIDCardHasBeenSet;
 }
 

@@ -357,6 +357,48 @@ namespace TencentCloud
                      */
                     bool OperatorHasBeenSet() const;
 
+                    /**
+                     * 获取The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively.
+                     * @return VoucherMainType The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively.
+                     * 
+                     */
+                    std::string GetVoucherMainType() const;
+
+                    /**
+                     * 设置The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively.
+                     * @param _voucherMainType The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively.
+                     * 
+                     */
+                    void SetVoucherMainType(const std::string& _voucherMainType);
+
+                    /**
+                     * 判断参数 VoucherMainType 是否已赋值
+                     * @return VoucherMainType 是否已赋值
+                     * 
+                     */
+                    bool VoucherMainTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher.
+                     * @return VoucherSubType Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher.
+                     * 
+                     */
+                    std::string GetVoucherSubType() const;
+
+                    /**
+                     * 设置Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher.
+                     * @param _voucherSubType Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher.
+                     * 
+                     */
+                    void SetVoucherSubType(const std::string& _voucherSubType);
+
+                    /**
+                     * 判断参数 VoucherSubType 是否已赋值
+                     * @return VoucherSubType 是否已赋值
+                     * 
+                     */
+                    bool VoucherSubTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -448,6 +490,18 @@ namespace TencentCloud
                      */
                     std::string m_operator;
                     bool m_operatorHasBeenSet;
+
+                    /**
+                     * The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively.
+                     */
+                    std::string m_voucherMainType;
+                    bool m_voucherMainTypeHasBeenSet;
+
+                    /**
+                     * Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher.
+                     */
+                    std::string m_voucherSubType;
+                    bool m_voucherSubTypeHasBeenSet;
 
                 };
             }
