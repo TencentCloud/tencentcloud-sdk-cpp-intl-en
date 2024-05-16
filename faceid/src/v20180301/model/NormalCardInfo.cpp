@@ -34,7 +34,8 @@ NormalCardInfo::NormalCardInfo() :
     m_indonesiaDrivingLicenseHasBeenSet(false),
     m_thailandIDCardHasBeenSet(false),
     m_singaporeIDCardHasBeenSet(false),
-    m_macaoIDCardHasBeenSet(false)
+    m_macaoIDCardHasBeenSet(false),
+    m_mainlandIDCardHasBeenSet(false)
 {
 }
 
@@ -281,6 +282,23 @@ CoreInternalOutcome NormalCardInfo::Deserialize(const rapidjson::Value &value)
         m_macaoIDCardHasBeenSet = true;
     }
 
+    if (value.HasMember("MainlandIDCard") && !value["MainlandIDCard"].IsNull())
+    {
+        if (!value["MainlandIDCard"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `NormalCardInfo.MainlandIDCard` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_mainlandIDCard.Deserialize(value["MainlandIDCard"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_mainlandIDCardHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -412,6 +430,15 @@ void NormalCardInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_macaoIDCard.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_mainlandIDCardHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MainlandIDCard";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_mainlandIDCard.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -639,5 +666,21 @@ void NormalCardInfo::SetMacaoIDCard(const MacaoIDCard& _macaoIDCard)
 bool NormalCardInfo::MacaoIDCardHasBeenSet() const
 {
     return m_macaoIDCardHasBeenSet;
+}
+
+MainlandIDCard NormalCardInfo::GetMainlandIDCard() const
+{
+    return m_mainlandIDCard;
+}
+
+void NormalCardInfo::SetMainlandIDCard(const MainlandIDCard& _mainlandIDCard)
+{
+    m_mainlandIDCard = _mainlandIDCard;
+    m_mainlandIDCardHasBeenSet = true;
+}
+
+bool NormalCardInfo::MainlandIDCardHasBeenSet() const
+{
+    return m_mainlandIDCardHasBeenSet;
 }
 

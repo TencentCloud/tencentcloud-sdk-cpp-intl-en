@@ -685,6 +685,49 @@ OcrClient::RecognizeKoreanIDCardOCROutcomeCallable OcrClient::RecognizeKoreanIDC
     return task->get_future();
 }
 
+OcrClient::RecognizeMainlandIDCardOCROutcome OcrClient::RecognizeMainlandIDCardOCR(const RecognizeMainlandIDCardOCRRequest &request)
+{
+    auto outcome = MakeRequest(request, "RecognizeMainlandIDCardOCR");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RecognizeMainlandIDCardOCRResponse rsp = RecognizeMainlandIDCardOCRResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RecognizeMainlandIDCardOCROutcome(rsp);
+        else
+            return RecognizeMainlandIDCardOCROutcome(o.GetError());
+    }
+    else
+    {
+        return RecognizeMainlandIDCardOCROutcome(outcome.GetError());
+    }
+}
+
+void OcrClient::RecognizeMainlandIDCardOCRAsync(const RecognizeMainlandIDCardOCRRequest& request, const RecognizeMainlandIDCardOCRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->RecognizeMainlandIDCardOCR(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OcrClient::RecognizeMainlandIDCardOCROutcomeCallable OcrClient::RecognizeMainlandIDCardOCRCallable(const RecognizeMainlandIDCardOCRRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<RecognizeMainlandIDCardOCROutcome()>>(
+        [this, request]()
+        {
+            return this->RecognizeMainlandIDCardOCR(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 OcrClient::RecognizePhilippinesDrivingLicenseOCROutcome OcrClient::RecognizePhilippinesDrivingLicenseOCR(const RecognizePhilippinesDrivingLicenseOCRRequest &request)
 {
     auto outcome = MakeRequest(request, "RecognizePhilippinesDrivingLicenseOCR");

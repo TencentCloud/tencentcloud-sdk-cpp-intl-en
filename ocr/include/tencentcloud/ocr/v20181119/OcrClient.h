@@ -53,6 +53,8 @@
 #include <tencentcloud/ocr/v20181119/model/RecognizeKoreanDrivingLicenseOCRResponse.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizeKoreanIDCardOCRRequest.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizeKoreanIDCardOCRResponse.h>
+#include <tencentcloud/ocr/v20181119/model/RecognizeMainlandIDCardOCRRequest.h>
+#include <tencentcloud/ocr/v20181119/model/RecognizeMainlandIDCardOCRResponse.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizePhilippinesDrivingLicenseOCRRequest.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizePhilippinesDrivingLicenseOCRResponse.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizePhilippinesSssIDOCRRequest.h>
@@ -134,6 +136,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::RecognizeKoreanIDCardOCRResponse> RecognizeKoreanIDCardOCROutcome;
                 typedef std::future<RecognizeKoreanIDCardOCROutcome> RecognizeKoreanIDCardOCROutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::RecognizeKoreanIDCardOCRRequest&, RecognizeKoreanIDCardOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> RecognizeKoreanIDCardOCRAsyncHandler;
+                typedef Outcome<Core::Error, Model::RecognizeMainlandIDCardOCRResponse> RecognizeMainlandIDCardOCROutcome;
+                typedef std::future<RecognizeMainlandIDCardOCROutcome> RecognizeMainlandIDCardOCROutcomeCallable;
+                typedef std::function<void(const OcrClient*, const Model::RecognizeMainlandIDCardOCRRequest&, RecognizeMainlandIDCardOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> RecognizeMainlandIDCardOCRAsyncHandler;
                 typedef Outcome<Core::Error, Model::RecognizePhilippinesDrivingLicenseOCRResponse> RecognizePhilippinesDrivingLicenseOCROutcome;
                 typedef std::future<RecognizePhilippinesDrivingLicenseOCROutcome> RecognizePhilippinesDrivingLicenseOCROutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::RecognizePhilippinesDrivingLicenseOCRRequest&, RecognizePhilippinesDrivingLicenseOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> RecognizePhilippinesDrivingLicenseOCRAsyncHandler;
@@ -505,6 +510,16 @@ The API request rate is limited to 20 requests/sec by default.
                 RecognizeKoreanIDCardOCROutcome RecognizeKoreanIDCardOCR(const Model::RecognizeKoreanIDCardOCRRequest &request);
                 void RecognizeKoreanIDCardOCRAsync(const Model::RecognizeKoreanIDCardOCRRequest& request, const RecognizeKoreanIDCardOCRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 RecognizeKoreanIDCardOCROutcomeCallable RecognizeKoreanIDCardOCRCallable(const Model::RecognizeKoreanIDCardOCRRequest& request);
+
+                /**
+                 *This interface supports the identification of all fields on the front and back of the second-generation ID card for mainland Chinese residents.Including name, gender, ethnicity, date of birth, address, citizen ID number, issuing authority, and validity period, the identification accuracy reaches more than 99%.In addition, this interface also supports a variety of value-added capabilities to meet the needs of different scenarios. Such as the cropping function of ID card photos and portrait photos, and also has 5 alarm functions.
+As shown in the table below. <table style="width:650px"> <thead> <tr> <th width="150">Value-added ability</th> <th width="500">Ability items</th> </tr> </thead> <tbody> <tr> <td rowspan="9">Alarm function</td> </tr> <tr> <td>ID card copy warning</td> </tr> <tr> <td>ID card copy warning</td> </tr> <tr> <td>Alarm for occlusion in the ID card frame</td> </tr> <tr> <td>ID card reflective warning</td> </tr> <tr> <td>Blurry picture warning</td> </tr> </tbody> </table> Default interface request frequency limit: 20 times/second
+                 * @param req RecognizeMainlandIDCardOCRRequest
+                 * @return RecognizeMainlandIDCardOCROutcome
+                 */
+                RecognizeMainlandIDCardOCROutcome RecognizeMainlandIDCardOCR(const Model::RecognizeMainlandIDCardOCRRequest &request);
+                void RecognizeMainlandIDCardOCRAsync(const Model::RecognizeMainlandIDCardOCRRequest& request, const RecognizeMainlandIDCardOCRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RecognizeMainlandIDCardOCROutcomeCallable RecognizeMainlandIDCardOCRCallable(const Model::RecognizeMainlandIDCardOCRRequest& request);
 
                 /**
                  *This API is used to recognize a Philippine driver's license.

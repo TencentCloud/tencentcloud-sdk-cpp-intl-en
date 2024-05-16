@@ -96,6 +96,7 @@ set(ocr_public_header_model
   include/tencentcloud/ocr/v20181119/model/VatElectronicItemInfo.h
   include/tencentcloud/ocr/v20181119/model/RecognizePhilippinesVoteIDOCRResponse.h
   include/tencentcloud/ocr/v20181119/model/ItemCoord.h
+  include/tencentcloud/ocr/v20181119/model/RecognizeMainlandIDCardOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/VatInvoiceRoll.h
   include/tencentcloud/ocr/v20181119/model/Polygon.h
   include/tencentcloud/ocr/v20181119/model/TextDetectionResult.h
@@ -105,6 +106,7 @@ set(ocr_public_header_model
   include/tencentcloud/ocr/v20181119/model/TextTable.h
   include/tencentcloud/ocr/v20181119/model/RecognizeTableAccurateOCRResponse.h
   include/tencentcloud/ocr/v20181119/model/SmartStructuralOCRV2Response.h
+  include/tencentcloud/ocr/v20181119/model/RecognizeMainlandIDCardOCRResponse.h
   include/tencentcloud/ocr/v20181119/model/MainlandPermitOCRResponse.h
   include/tencentcloud/ocr/v20181119/model/NonTaxItem.h
   include/tencentcloud/ocr/v20181119/model/TollInvoice.h
@@ -198,6 +200,7 @@ set(ocr_src
   src/v20181119/model/VatElectronicItemInfo.cpp
   src/v20181119/model/RecognizePhilippinesVoteIDOCRResponse.cpp
   src/v20181119/model/ItemCoord.cpp
+  src/v20181119/model/RecognizeMainlandIDCardOCRRequest.cpp
   src/v20181119/model/VatInvoiceRoll.cpp
   src/v20181119/model/Polygon.cpp
   src/v20181119/model/TextDetectionResult.cpp
@@ -207,6 +210,7 @@ set(ocr_src
   src/v20181119/model/TextTable.cpp
   src/v20181119/model/RecognizeTableAccurateOCRResponse.cpp
   src/v20181119/model/SmartStructuralOCRV2Response.cpp
+  src/v20181119/model/RecognizeMainlandIDCardOCRResponse.cpp
   src/v20181119/model/MainlandPermitOCRResponse.cpp
   src/v20181119/model/NonTaxItem.cpp
   src/v20181119/model/TollInvoice.cpp
