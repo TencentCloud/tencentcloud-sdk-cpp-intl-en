@@ -85,15 +85,19 @@ namespace TencentCloud
                     bool TemplateContentHasBeenSet() const;
 
                     /**
-                     * 获取SMS type. 0: regular SMS, 1: marketing SMS.
-                     * @return SmsType SMS type. 0: regular SMS, 1: marketing SMS.
+                     * 获取SMS type. 1: Marketing SMS, 2: Notification SMS, 3: OTP SMS.
+Note: The "Regular SMS" type template currently still supports submission. However, in order to further improve the quality of SMS service and increase the approval rate of SMS templates, it is recommended to apply for a new template according to the "Notification SMS" type or the "OTP SMS" type. You can Refer to [Optimization of Tencent Cloud SMS Template Types](https://www.tencentcloud.com/document/product/382/60410).
+                     * @return SmsType SMS type. 1: Marketing SMS, 2: Notification SMS, 3: OTP SMS.
+Note: The "Regular SMS" type template currently still supports submission. However, in order to further improve the quality of SMS service and increase the approval rate of SMS templates, it is recommended to apply for a new template according to the "Notification SMS" type or the "OTP SMS" type. You can Refer to [Optimization of Tencent Cloud SMS Template Types](https://www.tencentcloud.com/document/product/382/60410).
                      * 
                      */
                     uint64_t GetSmsType() const;
 
                     /**
-                     * 设置SMS type. 0: regular SMS, 1: marketing SMS.
-                     * @param _smsType SMS type. 0: regular SMS, 1: marketing SMS.
+                     * 设置SMS type. 1: Marketing SMS, 2: Notification SMS, 3: OTP SMS.
+Note: The "Regular SMS" type template currently still supports submission. However, in order to further improve the quality of SMS service and increase the approval rate of SMS templates, it is recommended to apply for a new template according to the "Notification SMS" type or the "OTP SMS" type. You can Refer to [Optimization of Tencent Cloud SMS Template Types](https://www.tencentcloud.com/document/product/382/60410).
+                     * @param _smsType SMS type. 1: Marketing SMS, 2: Notification SMS, 3: OTP SMS.
+Note: The "Regular SMS" type template currently still supports submission. However, in order to further improve the quality of SMS service and increase the approval rate of SMS templates, it is recommended to apply for a new template according to the "Notification SMS" type or the "OTP SMS" type. You can Refer to [Optimization of Tencent Cloud SMS Template Types](https://www.tencentcloud.com/document/product/382/60410).
                      * 
                      */
                     void SetSmsType(const uint64_t& _smsType);
@@ -170,7 +174,8 @@ namespace TencentCloud
                     bool m_templateContentHasBeenSet;
 
                     /**
-                     * SMS type. 0: regular SMS, 1: marketing SMS.
+                     * SMS type. 1: Marketing SMS, 2: Notification SMS, 3: OTP SMS.
+Note: The "Regular SMS" type template currently still supports submission. However, in order to further improve the quality of SMS service and increase the approval rate of SMS templates, it is recommended to apply for a new template according to the "Notification SMS" type or the "OTP SMS" type. You can Refer to [Optimization of Tencent Cloud SMS Template Types](https://www.tencentcloud.com/document/product/382/60410).
                      */
                     uint64_t m_smsType;
                     bool m_smsTypeHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Macao ID Card
                 */
                 class MacaoIDCard : public AbstractModel
                 {
@@ -47,15 +47,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return FirstName 
+                     * 获取First name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return FirstName First name
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetFirstName() const;
 
                     /**
-                     * 设置
-                     * @param _firstName 
+                     * 设置First name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _firstName First name
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetFirstName(const std::string& _firstName);
@@ -68,15 +72,19 @@ namespace TencentCloud
                     bool FirstNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LastName 
+                     * 获取Last name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return LastName Last name
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetLastName() const;
 
                     /**
-                     * 设置
-                     * @param _lastName 
+                     * 设置Last name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _lastName Last name
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLastName(const std::string& _lastName);
@@ -89,15 +97,19 @@ namespace TencentCloud
                     bool LastNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Birthday 
+                     * 获取Birthday
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Birthday Birthday
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetBirthday() const;
 
                     /**
-                     * 设置
-                     * @param _birthday 
+                     * 设置Birthday
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _birthday Birthday
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetBirthday(const std::string& _birthday);
@@ -110,15 +122,19 @@ namespace TencentCloud
                     bool BirthdayHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExpirationDate 
+                     * 获取Expiration date
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ExpirationDate Expiration date
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetExpirationDate() const;
 
                     /**
-                     * 设置
-                     * @param _expirationDate 
+                     * 设置Expiration date
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _expirationDate Expiration date
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetExpirationDate(const std::string& _expirationDate);
@@ -131,15 +147,19 @@ namespace TencentCloud
                     bool ExpirationDateHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LicenseNumber 
+                     * 获取License number
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return LicenseNumber License number
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetLicenseNumber() const;
 
                     /**
-                     * 设置
-                     * @param _licenseNumber 
+                     * 设置License number
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _licenseNumber License number
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLicenseNumber(const std::string& _licenseNumber);
@@ -152,15 +172,19 @@ namespace TencentCloud
                     bool LicenseNumberHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Sex 
+                     * 获取Sex
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Sex Sex
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSex() const;
 
                     /**
-                     * 设置
-                     * @param _sex 
+                     * 设置Sex
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _sex Sex
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSex(const std::string& _sex);
@@ -173,15 +197,19 @@ namespace TencentCloud
                     bool SexHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Age 
+                     * 获取Age
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Age Age
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetAge() const;
 
                     /**
-                     * 设置
-                     * @param _age 
+                     * 设置Age
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _age Age
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAge(const std::string& _age);
@@ -194,15 +222,19 @@ namespace TencentCloud
                     bool AgeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IssuedCountry 
+                     * 获取Issued country
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IssuedCountry Issued country
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetIssuedCountry() const;
 
                     /**
-                     * 设置
-                     * @param _issuedCountry 
+                     * 设置Issued country
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _issuedCountry Issued country
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIssuedCountry(const std::string& _issuedCountry);
@@ -215,15 +247,19 @@ namespace TencentCloud
                     bool IssuedCountryHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Field1 
+                     * 获取MRZ1 on card
+Note: This field may return null, indicating that no valid values can be obtained. 
+                     * @return Field1 MRZ1 on card
+Note: This field may return null, indicating that no valid values can be obtained. 
                      * 
                      */
                     std::string GetField1() const;
 
                     /**
-                     * 设置
-                     * @param _field1 
+                     * 设置MRZ1 on card
+Note: This field may return null, indicating that no valid values can be obtained. 
+                     * @param _field1 MRZ1 on card
+Note: This field may return null, indicating that no valid values can be obtained. 
                      * 
                      */
                     void SetField1(const std::string& _field1);
@@ -236,15 +272,19 @@ namespace TencentCloud
                     bool Field1HasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Field2 
+                     * 获取MRZ2 on card
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Field2 MRZ2 on card
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetField2() const;
 
                     /**
-                     * 设置
-                     * @param _field2 
+                     * 设置MRZ2 on card
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _field2 MRZ2 on card
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetField2(const std::string& _field2);
@@ -259,61 +299,71 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * First name
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_firstName;
                     bool m_firstNameHasBeenSet;
 
                     /**
-                     * 
+                     * Last name
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_lastName;
                     bool m_lastNameHasBeenSet;
 
                     /**
-                     * 
+                     * Birthday
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_birthday;
                     bool m_birthdayHasBeenSet;
 
                     /**
-                     * 
+                     * Expiration date
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_expirationDate;
                     bool m_expirationDateHasBeenSet;
 
                     /**
-                     * 
+                     * License number
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_licenseNumber;
                     bool m_licenseNumberHasBeenSet;
 
                     /**
-                     * 
+                     * Sex
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_sex;
                     bool m_sexHasBeenSet;
 
                     /**
-                     * 
+                     * Age
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_age;
                     bool m_ageHasBeenSet;
 
                     /**
-                     * 
+                     * Issued country
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_issuedCountry;
                     bool m_issuedCountryHasBeenSet;
 
                     /**
-                     * 
+                     * MRZ1 on card
+Note: This field may return null, indicating that no valid values can be obtained. 
                      */
                     std::string m_field1;
                     bool m_field1HasBeenSet;
 
                     /**
-                     * 
+                     * MRZ2 on card
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_field2;
                     bool m_field2HasBeenSet;
