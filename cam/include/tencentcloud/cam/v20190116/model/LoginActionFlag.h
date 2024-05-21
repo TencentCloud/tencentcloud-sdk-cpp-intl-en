@@ -151,6 +151,48 @@ namespace TencentCloud
                      */
                     bool CustomHasBeenSet() const;
 
+                    /**
+                     * 获取Mail
+                     * @return Mail Mail
+                     * 
+                     */
+                    uint64_t GetMail() const;
+
+                    /**
+                     * 设置Mail
+                     * @param _mail Mail
+                     * 
+                     */
+                    void SetMail(const uint64_t& _mail);
+
+                    /**
+                     * 判断参数 Mail 是否已赋值
+                     * @return Mail 是否已赋值
+                     * 
+                     */
+                    bool MailHasBeenSet() const;
+
+                    /**
+                     * 获取U2F token
+                     * @return U2FToken U2F token
+                     * 
+                     */
+                    uint64_t GetU2FToken() const;
+
+                    /**
+                     * 设置U2F token
+                     * @param _u2FToken U2F token
+                     * 
+                     */
+                    void SetU2FToken(const uint64_t& _u2FToken);
+
+                    /**
+                     * 判断参数 U2FToken 是否已赋值
+                     * @return U2FToken 是否已赋值
+                     * 
+                     */
+                    bool U2FTokenHasBeenSet() const;
+
                 private:
 
                     /**
@@ -182,6 +224,18 @@ namespace TencentCloud
                      */
                     uint64_t m_custom;
                     bool m_customHasBeenSet;
+
+                    /**
+                     * Mail
+                     */
+                    uint64_t m_mail;
+                    bool m_mailHasBeenSet;
+
+                    /**
+                     * U2F token
+                     */
+                    uint64_t m_u2FToken;
+                    bool m_u2FTokenHasBeenSet;
 
                 };
             }
