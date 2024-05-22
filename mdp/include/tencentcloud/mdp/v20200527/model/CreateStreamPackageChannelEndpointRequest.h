@@ -106,6 +106,90 @@ namespace TencentCloud
                      */
                     bool AuthInfoHasBeenSet() const;
 
+                    /**
+                     * 获取Endpoint protocol type, supports HLS, DASH, CMAF (only HLS type input can create CMAF Endpoint).
+                     * @return Protocol Endpoint protocol type, supports HLS, DASH, CMAF (only HLS type input can create CMAF Endpoint).
+                     * 
+                     */
+                    std::string GetProtocol() const;
+
+                    /**
+                     * 设置Endpoint protocol type, supports HLS, DASH, CMAF (only HLS type input can create CMAF Endpoint).
+                     * @param _protocol Endpoint protocol type, supports HLS, DASH, CMAF (only HLS type input can create CMAF Endpoint).
+                     * 
+                     */
+                    void SetProtocol(const std::string& _protocol);
+
+                    /**
+                     * 判断参数 Protocol 是否已赋值
+                     * @return Protocol 是否已赋值
+                     * 
+                     */
+                    bool ProtocolHasBeenSet() const;
+
+                    /**
+                     * 获取Mainifest name, default is main.
+                     * @return Manifest Mainifest name, default is main.
+                     * 
+                     */
+                    std::string GetManifest() const;
+
+                    /**
+                     * 设置Mainifest name, default is main.
+                     * @param _manifest Mainifest name, default is main.
+                     * 
+                     */
+                    void SetManifest(const std::string& _manifest);
+
+                    /**
+                     * 判断参数 Manifest 是否已赋值
+                     * @return Manifest 是否已赋值
+                     * 
+                     */
+                    bool ManifestHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to turn on the TimeShift function, true: on, false: off, the default is off.
+                     * @return TimeShiftEnable Whether to turn on the TimeShift function, true: on, false: off, the default is off.
+                     * 
+                     */
+                    bool GetTimeShiftEnable() const;
+
+                    /**
+                     * 设置Whether to turn on the TimeShift function, true: on, false: off, the default is off.
+                     * @param _timeShiftEnable Whether to turn on the TimeShift function, true: on, false: off, the default is off.
+                     * 
+                     */
+                    void SetTimeShiftEnable(const bool& _timeShiftEnable);
+
+                    /**
+                     * 判断参数 TimeShiftEnable 是否已赋值
+                     * @return TimeShiftEnable 是否已赋值
+                     * 
+                     */
+                    bool TimeShiftEnableHasBeenSet() const;
+
+                    /**
+                     * 获取The number of days to look back in TimeShift, up to 30 days is supported.
+                     * @return TimeShiftDuration The number of days to look back in TimeShift, up to 30 days is supported.
+                     * 
+                     */
+                    uint64_t GetTimeShiftDuration() const;
+
+                    /**
+                     * 设置The number of days to look back in TimeShift, up to 30 days is supported.
+                     * @param _timeShiftDuration The number of days to look back in TimeShift, up to 30 days is supported.
+                     * 
+                     */
+                    void SetTimeShiftDuration(const uint64_t& _timeShiftDuration);
+
+                    /**
+                     * 判断参数 TimeShiftDuration 是否已赋值
+                     * @return TimeShiftDuration 是否已赋值
+                     * 
+                     */
+                    bool TimeShiftDurationHasBeenSet() const;
+
                 private:
 
                     /**
@@ -125,6 +209,30 @@ namespace TencentCloud
                      */
                     EndpointAuthInfo m_authInfo;
                     bool m_authInfoHasBeenSet;
+
+                    /**
+                     * Endpoint protocol type, supports HLS, DASH, CMAF (only HLS type input can create CMAF Endpoint).
+                     */
+                    std::string m_protocol;
+                    bool m_protocolHasBeenSet;
+
+                    /**
+                     * Mainifest name, default is main.
+                     */
+                    std::string m_manifest;
+                    bool m_manifestHasBeenSet;
+
+                    /**
+                     * Whether to turn on the TimeShift function, true: on, false: off, the default is off.
+                     */
+                    bool m_timeShiftEnable;
+                    bool m_timeShiftEnableHasBeenSet;
+
+                    /**
+                     * The number of days to look back in TimeShift, up to 30 days is supported.
+                     */
+                    uint64_t m_timeShiftDuration;
+                    bool m_timeShiftDurationHasBeenSet;
 
                 };
             }

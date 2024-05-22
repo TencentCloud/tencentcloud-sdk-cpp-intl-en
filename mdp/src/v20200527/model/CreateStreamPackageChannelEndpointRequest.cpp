@@ -25,7 +25,11 @@ using namespace std;
 CreateStreamPackageChannelEndpointRequest::CreateStreamPackageChannelEndpointRequest() :
     m_idHasBeenSet(false),
     m_nameHasBeenSet(false),
-    m_authInfoHasBeenSet(false)
+    m_authInfoHasBeenSet(false),
+    m_protocolHasBeenSet(false),
+    m_manifestHasBeenSet(false),
+    m_timeShiftEnableHasBeenSet(false),
+    m_timeShiftDurationHasBeenSet(false)
 {
 }
 
@@ -59,6 +63,38 @@ string CreateStreamPackageChannelEndpointRequest::ToJsonString() const
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_authInfo.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_protocolHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Protocol";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_protocol.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_manifestHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Manifest";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_manifest.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_timeShiftEnableHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TimeShiftEnable";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_timeShiftEnable, allocator);
+    }
+
+    if (m_timeShiftDurationHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TimeShiftDuration";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_timeShiftDuration, allocator);
     }
 
 
@@ -115,6 +151,70 @@ void CreateStreamPackageChannelEndpointRequest::SetAuthInfo(const EndpointAuthIn
 bool CreateStreamPackageChannelEndpointRequest::AuthInfoHasBeenSet() const
 {
     return m_authInfoHasBeenSet;
+}
+
+string CreateStreamPackageChannelEndpointRequest::GetProtocol() const
+{
+    return m_protocol;
+}
+
+void CreateStreamPackageChannelEndpointRequest::SetProtocol(const string& _protocol)
+{
+    m_protocol = _protocol;
+    m_protocolHasBeenSet = true;
+}
+
+bool CreateStreamPackageChannelEndpointRequest::ProtocolHasBeenSet() const
+{
+    return m_protocolHasBeenSet;
+}
+
+string CreateStreamPackageChannelEndpointRequest::GetManifest() const
+{
+    return m_manifest;
+}
+
+void CreateStreamPackageChannelEndpointRequest::SetManifest(const string& _manifest)
+{
+    m_manifest = _manifest;
+    m_manifestHasBeenSet = true;
+}
+
+bool CreateStreamPackageChannelEndpointRequest::ManifestHasBeenSet() const
+{
+    return m_manifestHasBeenSet;
+}
+
+bool CreateStreamPackageChannelEndpointRequest::GetTimeShiftEnable() const
+{
+    return m_timeShiftEnable;
+}
+
+void CreateStreamPackageChannelEndpointRequest::SetTimeShiftEnable(const bool& _timeShiftEnable)
+{
+    m_timeShiftEnable = _timeShiftEnable;
+    m_timeShiftEnableHasBeenSet = true;
+}
+
+bool CreateStreamPackageChannelEndpointRequest::TimeShiftEnableHasBeenSet() const
+{
+    return m_timeShiftEnableHasBeenSet;
+}
+
+uint64_t CreateStreamPackageChannelEndpointRequest::GetTimeShiftDuration() const
+{
+    return m_timeShiftDuration;
+}
+
+void CreateStreamPackageChannelEndpointRequest::SetTimeShiftDuration(const uint64_t& _timeShiftDuration)
+{
+    m_timeShiftDuration = _timeShiftDuration;
+    m_timeShiftDurationHasBeenSet = true;
+}
+
+bool CreateStreamPackageChannelEndpointRequest::TimeShiftDurationHasBeenSet() const
+{
+    return m_timeShiftDurationHasBeenSet;
 }
 
 
