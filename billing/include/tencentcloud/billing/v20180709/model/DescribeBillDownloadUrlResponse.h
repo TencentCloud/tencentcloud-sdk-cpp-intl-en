@@ -58,10 +58,8 @@ namespace TencentCloud
                     bool ReadyHasBeenSet() const;
 
                     /**
-                     * 获取Bill download URL, valid for one hour.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DownloadUrl Bill download URL, valid for one hour.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Billing file download link, valid for 1 day. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DownloadUrl Billing file download link, valid for 1 day. Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDownloadUrl() const;
@@ -82,8 +80,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_readyHasBeenSet;
 
                     /**
-                     * Bill download URL, valid for one hour.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Billing file download link, valid for 1 day. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_downloadUrl;
                     bool m_downloadUrlHasBeenSet;

@@ -53,8 +53,18 @@
 #include <tencentcloud/billing/v20180709/model/DescribeBillSummaryByTagResponse.h>
 #include <tencentcloud/billing/v20180709/model/DescribeBillSummaryForOrganizationRequest.h>
 #include <tencentcloud/billing/v20180709/model/DescribeBillSummaryForOrganizationResponse.h>
+#include <tencentcloud/billing/v20180709/model/DescribeCostDetailRequest.h>
+#include <tencentcloud/billing/v20180709/model/DescribeCostDetailResponse.h>
 #include <tencentcloud/billing/v20180709/model/DescribeCostExplorerSummaryRequest.h>
 #include <tencentcloud/billing/v20180709/model/DescribeCostExplorerSummaryResponse.h>
+#include <tencentcloud/billing/v20180709/model/DescribeCostSummaryByProductRequest.h>
+#include <tencentcloud/billing/v20180709/model/DescribeCostSummaryByProductResponse.h>
+#include <tencentcloud/billing/v20180709/model/DescribeCostSummaryByProjectRequest.h>
+#include <tencentcloud/billing/v20180709/model/DescribeCostSummaryByProjectResponse.h>
+#include <tencentcloud/billing/v20180709/model/DescribeCostSummaryByRegionRequest.h>
+#include <tencentcloud/billing/v20180709/model/DescribeCostSummaryByRegionResponse.h>
+#include <tencentcloud/billing/v20180709/model/DescribeCostSummaryByResourceRequest.h>
+#include <tencentcloud/billing/v20180709/model/DescribeCostSummaryByResourceResponse.h>
 #include <tencentcloud/billing/v20180709/model/DescribeDosageCosDetailByDateRequest.h>
 #include <tencentcloud/billing/v20180709/model/DescribeDosageCosDetailByDateResponse.h>
 #include <tencentcloud/billing/v20180709/model/DescribeTagListRequest.h>
@@ -122,9 +132,24 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeBillSummaryForOrganizationResponse> DescribeBillSummaryForOrganizationOutcome;
                 typedef std::future<DescribeBillSummaryForOrganizationOutcome> DescribeBillSummaryForOrganizationOutcomeCallable;
                 typedef std::function<void(const BillingClient*, const Model::DescribeBillSummaryForOrganizationRequest&, DescribeBillSummaryForOrganizationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBillSummaryForOrganizationAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCostDetailResponse> DescribeCostDetailOutcome;
+                typedef std::future<DescribeCostDetailOutcome> DescribeCostDetailOutcomeCallable;
+                typedef std::function<void(const BillingClient*, const Model::DescribeCostDetailRequest&, DescribeCostDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCostDetailAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeCostExplorerSummaryResponse> DescribeCostExplorerSummaryOutcome;
                 typedef std::future<DescribeCostExplorerSummaryOutcome> DescribeCostExplorerSummaryOutcomeCallable;
                 typedef std::function<void(const BillingClient*, const Model::DescribeCostExplorerSummaryRequest&, DescribeCostExplorerSummaryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCostExplorerSummaryAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCostSummaryByProductResponse> DescribeCostSummaryByProductOutcome;
+                typedef std::future<DescribeCostSummaryByProductOutcome> DescribeCostSummaryByProductOutcomeCallable;
+                typedef std::function<void(const BillingClient*, const Model::DescribeCostSummaryByProductRequest&, DescribeCostSummaryByProductOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCostSummaryByProductAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCostSummaryByProjectResponse> DescribeCostSummaryByProjectOutcome;
+                typedef std::future<DescribeCostSummaryByProjectOutcome> DescribeCostSummaryByProjectOutcomeCallable;
+                typedef std::function<void(const BillingClient*, const Model::DescribeCostSummaryByProjectRequest&, DescribeCostSummaryByProjectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCostSummaryByProjectAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCostSummaryByRegionResponse> DescribeCostSummaryByRegionOutcome;
+                typedef std::future<DescribeCostSummaryByRegionOutcome> DescribeCostSummaryByRegionOutcomeCallable;
+                typedef std::function<void(const BillingClient*, const Model::DescribeCostSummaryByRegionRequest&, DescribeCostSummaryByRegionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCostSummaryByRegionAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCostSummaryByResourceResponse> DescribeCostSummaryByResourceOutcome;
+                typedef std::future<DescribeCostSummaryByResourceOutcome> DescribeCostSummaryByResourceOutcomeCallable;
+                typedef std::function<void(const BillingClient*, const Model::DescribeCostSummaryByResourceRequest&, DescribeCostSummaryByResourceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCostSummaryByResourceAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDosageCosDetailByDateResponse> DescribeDosageCosDetailByDateOutcome;
                 typedef std::future<DescribeDosageCosDetailByDateOutcome> DescribeDosageCosDetailByDateOutcomeCallable;
                 typedef std::function<void(const BillingClient*, const Model::DescribeDosageCosDetailByDateRequest&, DescribeDosageCosDetailByDateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDosageCosDetailByDateAsyncHandler;
@@ -280,6 +305,15 @@ Note: The API request may fail due to network instability or other exceptions. I
                 DescribeBillSummaryForOrganizationOutcomeCallable DescribeBillSummaryForOrganizationCallable(const Model::DescribeBillSummaryForOrganizationRequest& request);
 
                 /**
+                 *This API is used to query consumption details.
+                 * @param req DescribeCostDetailRequest
+                 * @return DescribeCostDetailOutcome
+                 */
+                DescribeCostDetailOutcome DescribeCostDetail(const Model::DescribeCostDetailRequest &request);
+                void DescribeCostDetailAsync(const Model::DescribeCostDetailRequest& request, const DescribeCostDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCostDetailOutcomeCallable DescribeCostDetailCallable(const Model::DescribeCostDetailRequest& request);
+
+                /**
                  *This API is used to view cost analysis details.
                  * @param req DescribeCostExplorerSummaryRequest
                  * @return DescribeCostExplorerSummaryOutcome
@@ -287,6 +321,42 @@ Note: The API request may fail due to network instability or other exceptions. I
                 DescribeCostExplorerSummaryOutcome DescribeCostExplorerSummary(const Model::DescribeCostExplorerSummaryRequest &request);
                 void DescribeCostExplorerSummaryAsync(const Model::DescribeCostExplorerSummaryRequest& request, const DescribeCostExplorerSummaryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeCostExplorerSummaryOutcomeCallable DescribeCostExplorerSummaryCallable(const Model::DescribeCostExplorerSummaryRequest& request);
+
+                /**
+                 *This API is used to obtain consumption details summarized by product.
+                 * @param req DescribeCostSummaryByProductRequest
+                 * @return DescribeCostSummaryByProductOutcome
+                 */
+                DescribeCostSummaryByProductOutcome DescribeCostSummaryByProduct(const Model::DescribeCostSummaryByProductRequest &request);
+                void DescribeCostSummaryByProductAsync(const Model::DescribeCostSummaryByProductRequest& request, const DescribeCostSummaryByProductAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCostSummaryByProductOutcomeCallable DescribeCostSummaryByProductCallable(const Model::DescribeCostSummaryByProductRequest& request);
+
+                /**
+                 *This API is used to obtain consumption details summarized by project.
+                 * @param req DescribeCostSummaryByProjectRequest
+                 * @return DescribeCostSummaryByProjectOutcome
+                 */
+                DescribeCostSummaryByProjectOutcome DescribeCostSummaryByProject(const Model::DescribeCostSummaryByProjectRequest &request);
+                void DescribeCostSummaryByProjectAsync(const Model::DescribeCostSummaryByProjectRequest& request, const DescribeCostSummaryByProjectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCostSummaryByProjectOutcomeCallable DescribeCostSummaryByProjectCallable(const Model::DescribeCostSummaryByProjectRequest& request);
+
+                /**
+                 *This API is used to obtain consumption details summarized by region.
+                 * @param req DescribeCostSummaryByRegionRequest
+                 * @return DescribeCostSummaryByRegionOutcome
+                 */
+                DescribeCostSummaryByRegionOutcome DescribeCostSummaryByRegion(const Model::DescribeCostSummaryByRegionRequest &request);
+                void DescribeCostSummaryByRegionAsync(const Model::DescribeCostSummaryByRegionRequest& request, const DescribeCostSummaryByRegionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCostSummaryByRegionOutcomeCallable DescribeCostSummaryByRegionCallable(const Model::DescribeCostSummaryByRegionRequest& request);
+
+                /**
+                 *This API is used to obtain consumption details summarized by resource.
+                 * @param req DescribeCostSummaryByResourceRequest
+                 * @return DescribeCostSummaryByResourceOutcome
+                 */
+                DescribeCostSummaryByResourceOutcome DescribeCostSummaryByResource(const Model::DescribeCostSummaryByResourceRequest &request);
+                void DescribeCostSummaryByResourceAsync(const Model::DescribeCostSummaryByResourceRequest& request, const DescribeCostSummaryByResourceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCostSummaryByResourceOutcomeCallable DescribeCostSummaryByResourceCallable(const Model::DescribeCostSummaryByResourceRequest& request);
 
                 /**
                  *This API is used to query COS usage details.

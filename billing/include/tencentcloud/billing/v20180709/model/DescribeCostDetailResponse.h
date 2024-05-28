@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_BILLING_V20180709_MODEL_DESCRIBEBILLDETAILRESPONSE_H_
-#define TENCENTCLOUD_BILLING_V20180709_MODEL_DESCRIBEBILLDETAILRESPONSE_H_
+#ifndef TENCENTCLOUD_BILLING_V20180709_MODEL_DESCRIBECOSTDETAILRESPONSE_H_
+#define TENCENTCLOUD_BILLING_V20180709_MODEL_DESCRIBECOSTDETAILRESPONSE_H_
 
 #include <string>
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/billing/v20180709/model/BillDetail.h>
+#include <tencentcloud/billing/v20180709/model/CostDetail.h>
 
 
 namespace TencentCloud
@@ -33,23 +33,25 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * DescribeBillDetail response structure.
+                * DescribeCostDetail response structure.
                 */
-                class DescribeBillDetailResponse : public AbstractModel
+                class DescribeCostDetailResponse : public AbstractModel
                 {
                 public:
-                    DescribeBillDetailResponse();
-                    ~DescribeBillDetailResponse() = default;
+                    DescribeCostDetailResponse();
+                    ~DescribeCostDetailResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Details list
-                     * @return DetailSet Details list
+                     * 获取Consumption details
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DetailSet Consumption details
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    std::vector<BillDetail> GetDetailSet() const;
+                    std::vector<CostDetail> GetDetailSet() const;
 
                     /**
                      * 判断参数 DetailSet 是否已赋值
@@ -59,10 +61,8 @@ namespace TencentCloud
                     bool DetailSetHasBeenSet() const;
 
                     /**
-                     * 获取
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Total 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Record countNote: This field may return null, indicating that no valid values can be obtained.
+                     * @return Total Record countNote: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetTotal() const;
@@ -74,40 +74,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool TotalHasBeenSet() const;
 
-                    /**
-                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Context Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
-                     */
-                    std::string GetContext() const;
-
-                    /**
-                     * 判断参数 Context 是否已赋值
-                     * @return Context 是否已赋值
-                     * 
-                     */
-                    bool ContextHasBeenSet() const;
-
                 private:
 
                     /**
-                     * Details list
+                     * Consumption details
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    std::vector<BillDetail> m_detailSet;
+                    std::vector<CostDetail> m_detailSet;
                     bool m_detailSetHasBeenSet;
 
                     /**
-                     * 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Record countNote: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_total;
                     bool m_totalHasBeenSet;
-
-                    /**
-                     * Note: This field may return null, indicating that no valid values can be obtained.
-                     */
-                    std::string m_context;
-                    bool m_contextHasBeenSet;
 
                 };
             }
@@ -115,4 +95,4 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 }
 
-#endif // !TENCENTCLOUD_BILLING_V20180709_MODEL_DESCRIBEBILLDETAILRESPONSE_H_
+#endif // !TENCENTCLOUD_BILLING_V20180709_MODEL_DESCRIBECOSTDETAILRESPONSE_H_
