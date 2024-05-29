@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/teo/v20220901/model/CustomField.h>
 #include <tencentcloud/teo/v20220901/model/DeliveryCondition.h>
+#include <tencentcloud/teo/v20220901/model/LogFormat.h>
 #include <tencentcloud/teo/v20220901/model/CLSTopic.h>
 #include <tencentcloud/teo/v20220901/model/CustomEndpoint.h>
 #include <tencentcloud/teo/v20220901/model/S3.h>
@@ -283,6 +284,39 @@ namespace TencentCloud
                     bool SampleHasBeenSet() const;
 
                     /**
+                     * 获取Output format for log delivery. When the output parameter is null, the default format is used, which works as follows:
+<li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
+<li>When TaskType is 's3', the default format is JSON Lines. </li>
+Note: This field may return 'null', which indicates a failure to obtain a valid value.
+                     * @return LogFormat Output format for log delivery. When the output parameter is null, the default format is used, which works as follows:
+<li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
+<li>When TaskType is 's3', the default format is JSON Lines. </li>
+Note: This field may return 'null', which indicates a failure to obtain a valid value.
+                     * 
+                     */
+                    LogFormat GetLogFormat() const;
+
+                    /**
+                     * 设置Output format for log delivery. When the output parameter is null, the default format is used, which works as follows:
+<li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
+<li>When TaskType is 's3', the default format is JSON Lines. </li>
+Note: This field may return 'null', which indicates a failure to obtain a valid value.
+                     * @param _logFormat Output format for log delivery. When the output parameter is null, the default format is used, which works as follows:
+<li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
+<li>When TaskType is 's3', the default format is JSON Lines. </li>
+Note: This field may return 'null', which indicates a failure to obtain a valid value.
+                     * 
+                     */
+                    void SetLogFormat(const LogFormat& _logFormat);
+
+                    /**
+                     * 判断参数 LogFormat 是否已赋值
+                     * @return LogFormat 是否已赋值
+                     * 
+                     */
+                    bool LogFormatHasBeenSet() const;
+
+                    /**
                      * 获取Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CLS Note: This field may return null, indicating that no valid values can be obtained.
                      * 
@@ -454,6 +488,15 @@ namespace TencentCloud
                      */
                     uint64_t m_sample;
                     bool m_sampleHasBeenSet;
+
+                    /**
+                     * Output format for log delivery. When the output parameter is null, the default format is used, which works as follows:
+<li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
+<li>When TaskType is 's3', the default format is JSON Lines. </li>
+Note: This field may return 'null', which indicates a failure to obtain a valid value.
+                     */
+                    LogFormat m_logFormat;
+                    bool m_logFormatHasBeenSet;
 
                     /**
                      * Note: This field may return null, indicating that no valid values can be obtained.

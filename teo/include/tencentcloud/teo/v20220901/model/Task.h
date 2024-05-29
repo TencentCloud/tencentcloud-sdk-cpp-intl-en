@@ -68,27 +68,6 @@ namespace TencentCloud
                     bool JobIdHasBeenSet() const;
 
                     /**
-                     * 获取Status of the task.
-                     * @return Status Status of the task.
-                     * 
-                     */
-                    std::string GetStatus() const;
-
-                    /**
-                     * 设置Status of the task.
-                     * @param _status Status of the task.
-                     * 
-                     */
-                    void SetStatus(const std::string& _status);
-
-                    /**
-                     * 判断参数 Status 是否已赋值
-                     * @return Status 是否已赋值
-                     * 
-                     */
-                    bool StatusHasBeenSet() const;
-
-                    /**
                      * 获取Resource.
                      * @return Target Resource.
                      * 
@@ -129,6 +108,64 @@ namespace TencentCloud
                      * 
                      */
                     bool TypeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return Method 
+                     * 
+                     */
+                    std::string GetMethod() const;
+
+                    /**
+                     * 设置
+                     * @param _method 
+                     * 
+                     */
+                    void SetMethod(const std::string& _method);
+
+                    /**
+                     * 判断参数 Method 是否已赋值
+                     * @return Method 是否已赋值
+                     * 
+                     */
+                    bool MethodHasBeenSet() const;
+
+                    /**
+                     * 获取Status. Valid values:
+<li>processing: Processing;</li>
+<li>success: Succeeded;</li>
+<li>failed: Failed;</li>
+<li>timeout: Timed out. </li>
+                     * @return Status Status. Valid values:
+<li>processing: Processing;</li>
+<li>success: Succeeded;</li>
+<li>failed: Failed;</li>
+<li>timeout: Timed out. </li>
+                     * 
+                     */
+                    std::string GetStatus() const;
+
+                    /**
+                     * 设置Status. Valid values:
+<li>processing: Processing;</li>
+<li>success: Succeeded;</li>
+<li>failed: Failed;</li>
+<li>timeout: Timed out. </li>
+                     * @param _status Status. Valid values:
+<li>processing: Processing;</li>
+<li>success: Succeeded;</li>
+<li>failed: Failed;</li>
+<li>timeout: Timed out. </li>
+                     * 
+                     */
+                    void SetStatus(const std::string& _status);
+
+                    /**
+                     * 判断参数 Status 是否已赋值
+                     * @return Status 是否已赋值
+                     * 
+                     */
+                    bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Creation time of the task.
@@ -181,12 +218,6 @@ namespace TencentCloud
                     bool m_jobIdHasBeenSet;
 
                     /**
-                     * Status of the task.
-                     */
-                    std::string m_status;
-                    bool m_statusHasBeenSet;
-
-                    /**
                      * Resource.
                      */
                     std::string m_target;
@@ -197,6 +228,22 @@ namespace TencentCloud
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_method;
+                    bool m_methodHasBeenSet;
+
+                    /**
+                     * Status. Valid values:
+<li>processing: Processing;</li>
+<li>success: Succeeded;</li>
+<li>failed: Failed;</li>
+<li>timeout: Timed out. </li>
+                     */
+                    std::string m_status;
+                    bool m_statusHasBeenSet;
 
                     /**
                      * Creation time of the task.

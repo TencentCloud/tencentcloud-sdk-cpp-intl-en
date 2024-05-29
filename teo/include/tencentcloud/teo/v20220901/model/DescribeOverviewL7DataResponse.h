@@ -59,10 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取The list of L7 traffic summary statistics recorded over time.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Data The list of L7 traffic summary statistics recorded over time.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return 'null', which indicates a failure to obtain a valid value.
+                     * @return Data Note: This field may return 'null', which indicates a failure to obtain a valid value.
                      * 
                      */
                     std::vector<TimingDataRecord> GetData() const;
@@ -83,8 +81,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * The list of L7 traffic summary statistics recorded over time.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return 'null', which indicates a failure to obtain a valid value.
                      */
                     std::vector<TimingDataRecord> m_data;
                     bool m_dataHasBeenSet;

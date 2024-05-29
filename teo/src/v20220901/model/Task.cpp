@@ -22,9 +22,10 @@ using namespace std;
 
 Task::Task() :
     m_jobIdHasBeenSet(false),
-    m_statusHasBeenSet(false),
     m_targetHasBeenSet(false),
     m_typeHasBeenSet(false),
+    m_methodHasBeenSet(false),
+    m_statusHasBeenSet(false),
     m_createTimeHasBeenSet(false),
     m_updateTimeHasBeenSet(false)
 {
@@ -45,16 +46,6 @@ CoreInternalOutcome Task::Deserialize(const rapidjson::Value &value)
         m_jobIdHasBeenSet = true;
     }
 
-    if (value.HasMember("Status") && !value["Status"].IsNull())
-    {
-        if (!value["Status"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `Task.Status` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_status = string(value["Status"].GetString());
-        m_statusHasBeenSet = true;
-    }
-
     if (value.HasMember("Target") && !value["Target"].IsNull())
     {
         if (!value["Target"].IsString())
@@ -73,6 +64,26 @@ CoreInternalOutcome Task::Deserialize(const rapidjson::Value &value)
         }
         m_type = string(value["Type"].GetString());
         m_typeHasBeenSet = true;
+    }
+
+    if (value.HasMember("Method") && !value["Method"].IsNull())
+    {
+        if (!value["Method"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Task.Method` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_method = string(value["Method"].GetString());
+        m_methodHasBeenSet = true;
+    }
+
+    if (value.HasMember("Status") && !value["Status"].IsNull())
+    {
+        if (!value["Status"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Task.Status` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_status = string(value["Status"].GetString());
+        m_statusHasBeenSet = true;
     }
 
     if (value.HasMember("CreateTime") && !value["CreateTime"].IsNull())
@@ -110,14 +121,6 @@ void Task::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorT
         value.AddMember(iKey, rapidjson::Value(m_jobId.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_statusHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Status";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_status.c_str(), allocator).Move(), allocator);
-    }
-
     if (m_targetHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -132,6 +135,22 @@ void Task::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorT
         string key = "Type";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_type.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_methodHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Method";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_method.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_statusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Status";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_status.c_str(), allocator).Move(), allocator);
     }
 
     if (m_createTimeHasBeenSet)
@@ -169,22 +188,6 @@ bool Task::JobIdHasBeenSet() const
     return m_jobIdHasBeenSet;
 }
 
-string Task::GetStatus() const
-{
-    return m_status;
-}
-
-void Task::SetStatus(const string& _status)
-{
-    m_status = _status;
-    m_statusHasBeenSet = true;
-}
-
-bool Task::StatusHasBeenSet() const
-{
-    return m_statusHasBeenSet;
-}
-
 string Task::GetTarget() const
 {
     return m_target;
@@ -215,6 +218,38 @@ void Task::SetType(const string& _type)
 bool Task::TypeHasBeenSet() const
 {
     return m_typeHasBeenSet;
+}
+
+string Task::GetMethod() const
+{
+    return m_method;
+}
+
+void Task::SetMethod(const string& _method)
+{
+    m_method = _method;
+    m_methodHasBeenSet = true;
+}
+
+bool Task::MethodHasBeenSet() const
+{
+    return m_methodHasBeenSet;
+}
+
+string Task::GetStatus() const
+{
+    return m_status;
+}
+
+void Task::SetStatus(const string& _status)
+{
+    m_status = _status;
+    m_statusHasBeenSet = true;
+}
+
+bool Task::StatusHasBeenSet() const
+{
+    return m_statusHasBeenSet;
 }
 
 string Task::GetCreateTime() const

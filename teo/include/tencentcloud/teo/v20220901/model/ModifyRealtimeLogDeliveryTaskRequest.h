@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/teo/v20220901/model/CustomField.h>
 #include <tencentcloud/teo/v20220901/model/DeliveryCondition.h>
+#include <tencentcloud/teo/v20220901/model/LogFormat.h>
 #include <tencentcloud/teo/v20220901/model/CustomEndpoint.h>
 #include <tencentcloud/teo/v20220901/model/S3.h>
 
@@ -252,6 +253,27 @@ namespace TencentCloud
                     bool SampleHasBeenSet() const;
 
                     /**
+                     * 获取Output format for log delivery. If this field is not specified, the original configuration will be retained.
+                     * @return LogFormat Output format for log delivery. If this field is not specified, the original configuration will be retained.
+                     * 
+                     */
+                    LogFormat GetLogFormat() const;
+
+                    /**
+                     * 设置Output format for log delivery. If this field is not specified, the original configuration will be retained.
+                     * @param _logFormat Output format for log delivery. If this field is not specified, the original configuration will be retained.
+                     * 
+                     */
+                    void SetLogFormat(const LogFormat& _logFormat);
+
+                    /**
+                     * 判断参数 LogFormat 是否已赋值
+                     * @return LogFormat 是否已赋值
+                     * 
+                     */
+                    bool LogFormatHasBeenSet() const;
+
+                    /**
                      * 获取The configuration information of the custom HTTP service. If this field is not filled in, the original configuration will be retained.
                      * @return CustomEndpoint The configuration information of the custom HTTP service. If this field is not filled in, the original configuration will be retained.
                      * 
@@ -352,6 +374,12 @@ namespace TencentCloud
                      */
                     uint64_t m_sample;
                     bool m_sampleHasBeenSet;
+
+                    /**
+                     * Output format for log delivery. If this field is not specified, the original configuration will be retained.
+                     */
+                    LogFormat m_logFormat;
+                    bool m_logFormatHasBeenSet;
 
                     /**
                      * The configuration information of the custom HTTP service. If this field is not filled in, the original configuration will be retained.

@@ -49,6 +49,8 @@
 #include <tencentcloud/teo/v20220901/model/CreateL4ProxyRulesResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateOriginGroupRequest.h>
 #include <tencentcloud/teo/v20220901/model/CreateOriginGroupResponse.h>
+#include <tencentcloud/teo/v20220901/model/CreatePlanRequest.h>
+#include <tencentcloud/teo/v20220901/model/CreatePlanResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreatePlanForZoneRequest.h>
 #include <tencentcloud/teo/v20220901/model/CreatePlanForZoneResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreatePrefetchTaskRequest.h>
@@ -163,12 +165,16 @@
 #include <tencentcloud/teo/v20220901/model/DescribeZoneSettingResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeZonesRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeZonesResponse.h>
+#include <tencentcloud/teo/v20220901/model/DestroyPlanRequest.h>
+#include <tencentcloud/teo/v20220901/model/DestroyPlanResponse.h>
 #include <tencentcloud/teo/v20220901/model/DownloadL4LogsRequest.h>
 #include <tencentcloud/teo/v20220901/model/DownloadL4LogsResponse.h>
 #include <tencentcloud/teo/v20220901/model/DownloadL7LogsRequest.h>
 #include <tencentcloud/teo/v20220901/model/DownloadL7LogsResponse.h>
 #include <tencentcloud/teo/v20220901/model/IdentifyZoneRequest.h>
 #include <tencentcloud/teo/v20220901/model/IdentifyZoneResponse.h>
+#include <tencentcloud/teo/v20220901/model/IncreasePlanQuotaRequest.h>
+#include <tencentcloud/teo/v20220901/model/IncreasePlanQuotaResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyAccelerationDomainRequest.h>
 #include <tencentcloud/teo/v20220901/model/ModifyAccelerationDomainResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyAccelerationDomainStatusesRequest.h>
@@ -197,6 +203,8 @@
 #include <tencentcloud/teo/v20220901/model/ModifyL4ProxyStatusResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyOriginGroupRequest.h>
 #include <tencentcloud/teo/v20220901/model/ModifyOriginGroupResponse.h>
+#include <tencentcloud/teo/v20220901/model/ModifyPlanRequest.h>
+#include <tencentcloud/teo/v20220901/model/ModifyPlanResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyRealtimeLogDeliveryTaskRequest.h>
 #include <tencentcloud/teo/v20220901/model/ModifyRealtimeLogDeliveryTaskResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyRuleRequest.h>
@@ -211,6 +219,10 @@
 #include <tencentcloud/teo/v20220901/model/ModifyZoneSettingResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyZoneStatusRequest.h>
 #include <tencentcloud/teo/v20220901/model/ModifyZoneStatusResponse.h>
+#include <tencentcloud/teo/v20220901/model/RenewPlanRequest.h>
+#include <tencentcloud/teo/v20220901/model/RenewPlanResponse.h>
+#include <tencentcloud/teo/v20220901/model/UpgradePlanRequest.h>
+#include <tencentcloud/teo/v20220901/model/UpgradePlanResponse.h>
 #include <tencentcloud/teo/v20220901/model/VerifyOwnershipRequest.h>
 #include <tencentcloud/teo/v20220901/model/VerifyOwnershipResponse.h>
 
@@ -266,6 +278,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateOriginGroupResponse> CreateOriginGroupOutcome;
                 typedef std::future<CreateOriginGroupOutcome> CreateOriginGroupOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CreateOriginGroupRequest&, CreateOriginGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateOriginGroupAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreatePlanResponse> CreatePlanOutcome;
+                typedef std::future<CreatePlanOutcome> CreatePlanOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::CreatePlanRequest&, CreatePlanOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreatePlanAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreatePlanForZoneResponse> CreatePlanForZoneOutcome;
                 typedef std::future<CreatePlanForZoneOutcome> CreatePlanForZoneOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CreatePlanForZoneRequest&, CreatePlanForZoneOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreatePlanForZoneAsyncHandler;
@@ -437,6 +452,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeZonesResponse> DescribeZonesOutcome;
                 typedef std::future<DescribeZonesOutcome> DescribeZonesOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeZonesRequest&, DescribeZonesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeZonesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DestroyPlanResponse> DestroyPlanOutcome;
+                typedef std::future<DestroyPlanOutcome> DestroyPlanOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DestroyPlanRequest&, DestroyPlanOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DestroyPlanAsyncHandler;
                 typedef Outcome<Core::Error, Model::DownloadL4LogsResponse> DownloadL4LogsOutcome;
                 typedef std::future<DownloadL4LogsOutcome> DownloadL4LogsOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DownloadL4LogsRequest&, DownloadL4LogsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DownloadL4LogsAsyncHandler;
@@ -446,6 +464,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::IdentifyZoneResponse> IdentifyZoneOutcome;
                 typedef std::future<IdentifyZoneOutcome> IdentifyZoneOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::IdentifyZoneRequest&, IdentifyZoneOutcome, const std::shared_ptr<const AsyncCallerContext>&)> IdentifyZoneAsyncHandler;
+                typedef Outcome<Core::Error, Model::IncreasePlanQuotaResponse> IncreasePlanQuotaOutcome;
+                typedef std::future<IncreasePlanQuotaOutcome> IncreasePlanQuotaOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::IncreasePlanQuotaRequest&, IncreasePlanQuotaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> IncreasePlanQuotaAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyAccelerationDomainResponse> ModifyAccelerationDomainOutcome;
                 typedef std::future<ModifyAccelerationDomainOutcome> ModifyAccelerationDomainOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ModifyAccelerationDomainRequest&, ModifyAccelerationDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAccelerationDomainAsyncHandler;
@@ -488,6 +509,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyOriginGroupResponse> ModifyOriginGroupOutcome;
                 typedef std::future<ModifyOriginGroupOutcome> ModifyOriginGroupOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ModifyOriginGroupRequest&, ModifyOriginGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyOriginGroupAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyPlanResponse> ModifyPlanOutcome;
+                typedef std::future<ModifyPlanOutcome> ModifyPlanOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::ModifyPlanRequest&, ModifyPlanOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyPlanAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyRealtimeLogDeliveryTaskResponse> ModifyRealtimeLogDeliveryTaskOutcome;
                 typedef std::future<ModifyRealtimeLogDeliveryTaskOutcome> ModifyRealtimeLogDeliveryTaskOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ModifyRealtimeLogDeliveryTaskRequest&, ModifyRealtimeLogDeliveryTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyRealtimeLogDeliveryTaskAsyncHandler;
@@ -509,6 +533,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyZoneStatusResponse> ModifyZoneStatusOutcome;
                 typedef std::future<ModifyZoneStatusOutcome> ModifyZoneStatusOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ModifyZoneStatusRequest&, ModifyZoneStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyZoneStatusAsyncHandler;
+                typedef Outcome<Core::Error, Model::RenewPlanResponse> RenewPlanOutcome;
+                typedef std::future<RenewPlanOutcome> RenewPlanOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::RenewPlanRequest&, RenewPlanOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RenewPlanAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpgradePlanResponse> UpgradePlanOutcome;
+                typedef std::future<UpgradePlanOutcome> UpgradePlanOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::UpgradePlanRequest&, UpgradePlanOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpgradePlanAsyncHandler;
                 typedef Outcome<Core::Error, Model::VerifyOwnershipResponse> VerifyOwnershipOutcome;
                 typedef std::future<VerifyOwnershipOutcome> VerifyOwnershipOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::VerifyOwnershipRequest&, VerifyOwnershipOutcome, const std::shared_ptr<const AsyncCallerContext>&)> VerifyOwnershipAsyncHandler;
@@ -633,6 +663,16 @@ For sites connected via the CNAME, if you have not verified the ownership of the
                 CreateOriginGroupOutcome CreateOriginGroup(const Model::CreateOriginGroupRequest &request);
                 void CreateOriginGroupAsync(const Model::CreateOriginGroupRequest& request, const CreateOriginGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateOriginGroupOutcomeCallable CreateOriginGroupCallable(const Model::CreateOriginGroupRequest& request);
+
+                /**
+                 *If you need to use the EdgeOne product, you must create a billing plan through this interface.
+> After creating a plan, you need to complete the process of creating a site and binding the plan through [CreateZone](https://intl.cloud.tencent.com/document/product/1552/80719?from_cn_redirect=1), so that the EdgeOne can provide services properly.
+                 * @param req CreatePlanRequest
+                 * @return CreatePlanOutcome
+                 */
+                CreatePlanOutcome CreatePlan(const Model::CreatePlanRequest &request);
+                void CreatePlanAsync(const Model::CreatePlanRequest& request, const CreatePlanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreatePlanOutcomeCallable CreatePlanCallable(const Model::CreatePlanRequest& request);
 
                 /**
                  *This API is used to purchase a plan for a new site.
@@ -1153,6 +1193,22 @@ If there are already EdgeOne plans under the current account, it is recommended 
                 DescribeZonesOutcomeCallable DescribeZonesCallable(const Model::DescribeZonesRequest& request);
 
                 /**
+                 *To stop billing for your EdgeOne plan, you can use this interface to terminate the billing plan.
+> Terminating a billing plan requires the following conditions:
+    1. The plan has expired (except for the Enterprise Edition Plan);
+    2. All sites under the plan have been either shut down or deleted.
+
+> The site status can be queried through the [Query Site List](https://intl.cloud.tencent.com/document/product/1552/80713?from_cn_redirect=1) interface.
+A site can be deactivated by switching the site to a closed status through the [Switch Site Status](https://intl.cloud.tencent.com/document/product/1552/80707?from_cn_redirect=1) interface.
+A site can be deleted by using the [Delete Site](https://intl.cloud.tencent.com/document/product/1552/80717?from_cn_redirect=1) interface.
+                 * @param req DestroyPlanRequest
+                 * @return DestroyPlanOutcome
+                 */
+                DestroyPlanOutcome DestroyPlan(const Model::DestroyPlanRequest &request);
+                void DestroyPlanAsync(const Model::DestroyPlanRequest& request, const DestroyPlanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DestroyPlanOutcomeCallable DestroyPlanCallable(const Model::DestroyPlanRequest& request);
+
+                /**
                  *This API is used to download L4 logs.
                  * @param req DownloadL4LogsRequest
                  * @return DownloadL4LogsOutcome
@@ -1178,6 +1234,16 @@ If there are already EdgeOne plans under the current account, it is recommended 
                 IdentifyZoneOutcome IdentifyZone(const Model::IdentifyZoneRequest &request);
                 void IdentifyZoneAsync(const Model::IdentifyZoneRequest& request, const IdentifyZoneAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 IdentifyZoneOutcomeCallable IdentifyZoneCallable(const Model::IdentifyZoneRequest& request);
+
+                /**
+                 *When the number of sites bound to your plan, the number of rules under "Web Protection - Custom Rules - Precision Matching Policy", or the number of rules under "Web Protection - Rate Limiting - Precision Rate Limiting Module" reaches the plan's quota, you can use this interface to purchase additional quotas.
+> This interface only supports the Enterprise Edition Plan.
+                 * @param req IncreasePlanQuotaRequest
+                 * @return IncreasePlanQuotaOutcome
+                 */
+                IncreasePlanQuotaOutcome IncreasePlanQuota(const Model::IncreasePlanQuotaRequest &request);
+                void IncreasePlanQuotaAsync(const Model::IncreasePlanQuotaRequest& request, const IncreasePlanQuotaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                IncreasePlanQuotaOutcomeCallable IncreasePlanQuotaCallable(const Model::IncreasePlanQuotaRequest& request);
 
                 /**
                  *This API is used to modify an accelerated domain name.
@@ -1310,6 +1376,15 @@ To use an external certificate, upload the certificate to [SSL Certificates Cons
                 ModifyOriginGroupOutcomeCallable ModifyOriginGroupCallable(const Model::ModifyOriginGroupRequest& request);
 
                 /**
+                 *Modify the plan settings. Currently, only the auto-renewal switch of prepaid plans can be modified.
+                 * @param req ModifyPlanRequest
+                 * @return ModifyPlanOutcome
+                 */
+                ModifyPlanOutcome ModifyPlan(const Model::ModifyPlanRequest &request);
+                void ModifyPlanAsync(const Model::ModifyPlanRequest& request, const ModifyPlanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyPlanOutcomeCallable ModifyPlanCallable(const Model::ModifyPlanRequest& request);
+
+                /**
                  *This API is used to modify the real-time log delivery task configuration. This API has the following restrictions:<li>Does not support modifying the destination type of the real-time log delivery task (TaskType);</li><li>Does not support modifying the data delivery type (LogType)</li><li>Does not support modifying the data delivery area (Area)</li><li>Does not support modifying the detailed destination configuration, such as log set and log topic, when the destination of the original real-time log delivery task is Tencent Cloud CLS.</li>
                  * @param req ModifyRealtimeLogDeliveryTaskRequest
                  * @return ModifyRealtimeLogDeliveryTaskOutcome
@@ -1371,6 +1446,28 @@ To use an external certificate, upload the certificate to [SSL Certificates Cons
                 ModifyZoneStatusOutcome ModifyZoneStatus(const Model::ModifyZoneStatusRequest &request);
                 void ModifyZoneStatusAsync(const Model::ModifyZoneStatusRequest& request, const ModifyZoneStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyZoneStatusOutcomeCallable ModifyZoneStatusCallable(const Model::ModifyZoneStatusRequest& request);
+
+                /**
+                 *When your plan needs to be extended, you can use this interface to renew it. Plan renewal is only supported for the Personal, Basic, and Standard Editions.
+> For cost details, refer to [Plan Fees](https://intl.cloud.tencent.com/document/product/1552/94158?from_cn_redirect=1).
+                 * @param req RenewPlanRequest
+                 * @return RenewPlanOutcome
+                 */
+                RenewPlanOutcome RenewPlan(const Model::RenewPlanRequest &request);
+                void RenewPlanAsync(const Model::RenewPlanRequest& request, const RenewPlanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RenewPlanOutcomeCallable RenewPlanCallable(const Model::RenewPlanRequest& request);
+
+                /**
+                 *When you need features available only in higher-tier plans, you can upgrade your plan through this interface. Upgrades are only supported for Personal and Basic Edition Plans.
+> For differences between EdgeOne billing plans, refer to [Comparison of EdgeOne Plans](https://intl.cloud.tencent.com/document/product/1552/94165?from_cn_redirect=1).
+For EdgeOne plan upgrade rules and pricing details, refer to [EdgeOne Plan Upgrade Guide](https://intl.cloud.tencent.com/document/product/1552/95291?from_cn_redirect=1).
+If your plan needs to upgrade to the Enterprise Edition, [Contact Us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service).
+                 * @param req UpgradePlanRequest
+                 * @return UpgradePlanOutcome
+                 */
+                UpgradePlanOutcome UpgradePlan(const Model::UpgradePlanRequest &request);
+                void UpgradePlanAsync(const Model::UpgradePlanRequest& request, const UpgradePlanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpgradePlanOutcomeCallable UpgradePlanCallable(const Model::UpgradePlanRequest& request);
 
                 /**
                  *This API is used to verify your ownership of a site or domain name. It's required in the CNAME access mode. After a site is verified, you don't need to verify the ownership again for domain names added to it in the future. For details, see [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1).

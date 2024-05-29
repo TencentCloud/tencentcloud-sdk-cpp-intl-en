@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/teo/v20220901/model/CustomField.h>
 #include <tencentcloud/teo/v20220901/model/DeliveryCondition.h>
+#include <tencentcloud/teo/v20220901/model/LogFormat.h>
 #include <tencentcloud/teo/v20220901/model/CLSTopic.h>
 #include <tencentcloud/teo/v20220901/model/CustomEndpoint.h>
 #include <tencentcloud/teo/v20220901/model/S3.h>
@@ -310,6 +311,35 @@ namespace TencentCloud
                     bool SampleHasBeenSet() const;
 
                     /**
+                     * 获取Output format for log delivery. If this field is not specified, the default format is used, which works as follows:
+<li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
+<li>When TaskType is 's3', the default format is JSON Lines;</li>Specifically, when TaskType is 'cls', the only allowed value for LogFormat.FormatType is 'json', and other parameters in LogFormat will be ignored. It is recommended not to transfer LogFormat.
+                     * @return LogFormat Output format for log delivery. If this field is not specified, the default format is used, which works as follows:
+<li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
+<li>When TaskType is 's3', the default format is JSON Lines;</li>Specifically, when TaskType is 'cls', the only allowed value for LogFormat.FormatType is 'json', and other parameters in LogFormat will be ignored. It is recommended not to transfer LogFormat.
+                     * 
+                     */
+                    LogFormat GetLogFormat() const;
+
+                    /**
+                     * 设置Output format for log delivery. If this field is not specified, the default format is used, which works as follows:
+<li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
+<li>When TaskType is 's3', the default format is JSON Lines;</li>Specifically, when TaskType is 'cls', the only allowed value for LogFormat.FormatType is 'json', and other parameters in LogFormat will be ignored. It is recommended not to transfer LogFormat.
+                     * @param _logFormat Output format for log delivery. If this field is not specified, the default format is used, which works as follows:
+<li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
+<li>When TaskType is 's3', the default format is JSON Lines;</li>Specifically, when TaskType is 'cls', the only allowed value for LogFormat.FormatType is 'json', and other parameters in LogFormat will be ignored. It is recommended not to transfer LogFormat.
+                     * 
+                     */
+                    void SetLogFormat(const LogFormat& _logFormat);
+
+                    /**
+                     * 判断参数 LogFormat 是否已赋值
+                     * @return LogFormat 是否已赋值
+                     * 
+                     */
+                    bool LogFormatHasBeenSet() const;
+
+                    /**
                      * 获取The configuration information of CLS. This parameter is required when TaskType is cls.
                      * @return CLS The configuration information of CLS. This parameter is required when TaskType is cls.
                      * 
@@ -446,6 +476,14 @@ namespace TencentCloud
                      */
                     uint64_t m_sample;
                     bool m_sampleHasBeenSet;
+
+                    /**
+                     * Output format for log delivery. If this field is not specified, the default format is used, which works as follows:
+<li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
+<li>When TaskType is 's3', the default format is JSON Lines;</li>Specifically, when TaskType is 'cls', the only allowed value for LogFormat.FormatType is 'json', and other parameters in LogFormat will be ignored. It is recommended not to transfer LogFormat.
+                     */
+                    LogFormat m_logFormat;
+                    bool m_logFormatHasBeenSet;
 
                     /**
                      * The configuration information of CLS. This parameter is required when TaskType is cls.
