@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/teo/v20220901/model/CacheTag.h>
 
 
 namespace TencentCloud
@@ -171,6 +172,27 @@ Note that if it’s enabled, the purging is based on the converted URLs.
                      */
                     bool EncodeUrlHasBeenSet() const;
 
+                    /**
+                     * 获取The information attached when the node cache purge type is set to purge_cache_tag.
+                     * @return CacheTag The information attached when the node cache purge type is set to purge_cache_tag.
+                     * 
+                     */
+                    CacheTag GetCacheTag() const;
+
+                    /**
+                     * 设置The information attached when the node cache purge type is set to purge_cache_tag.
+                     * @param _cacheTag The information attached when the node cache purge type is set to purge_cache_tag.
+                     * 
+                     */
+                    void SetCacheTag(const CacheTag& _cacheTag);
+
+                    /**
+                     * 判断参数 CacheTag 是否已赋值
+                     * @return CacheTag 是否已赋值
+                     * 
+                     */
+                    bool CacheTagHasBeenSet() const;
+
                 private:
 
                     /**
@@ -208,6 +230,12 @@ Note that if it’s enabled, the purging is based on the converted URLs.
                      */
                     bool m_encodeUrl;
                     bool m_encodeUrlHasBeenSet;
+
+                    /**
+                     * The information attached when the node cache purge type is set to purge_cache_tag.
+                     */
+                    CacheTag m_cacheTag;
+                    bool m_cacheTagHasBeenSet;
 
                 };
             }

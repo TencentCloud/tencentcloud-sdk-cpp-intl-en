@@ -643,6 +643,7 @@ set(teo_public_header_model
   include/tencentcloud/teo/v20220901/model/BindZoneToPlanRequest.h
   include/tencentcloud/teo/v20220901/model/SecurityType.h
   include/tencentcloud/teo/v20220901/model/IPWhitelist.h
+  include/tencentcloud/teo/v20220901/model/DescribeSecurityIPGroupRequest.h
   include/tencentcloud/teo/v20220901/model/ModifyApplicationProxyStatusResponse.h
   include/tencentcloud/teo/v20220901/model/Identification.h
   include/tencentcloud/teo/v20220901/model/TopEntry.h
@@ -660,6 +661,7 @@ set(teo_public_header_model
   include/tencentcloud/teo/v20220901/model/ModifySecurityPolicyResponse.h
   include/tencentcloud/teo/v20220901/model/ModifyOriginGroupRequest.h
   include/tencentcloud/teo/v20220901/model/SecurityTemplateBinding.h
+  include/tencentcloud/teo/v20220901/model/CacheTag.h
   include/tencentcloud/teo/v20220901/model/DescribeDefaultCertificatesResponse.h
   include/tencentcloud/teo/v20220901/model/OwnershipVerification.h
   include/tencentcloud/teo/v20220901/model/DescribeConfigGroupVersionsRequest.h
@@ -668,6 +670,7 @@ set(teo_public_header_model
   include/tencentcloud/teo/v20220901/model/Quota.h
   include/tencentcloud/teo/v20220901/model/CheckCnameStatusRequest.h
   include/tencentcloud/teo/v20220901/model/ModifyZoneStatusResponse.h
+  include/tencentcloud/teo/v20220901/model/DescribeSecurityIPGroupResponse.h
   include/tencentcloud/teo/v20220901/model/UpgradePlanRequest.h
   include/tencentcloud/teo/v20220901/model/CreatePurgeTaskRequest.h
   include/tencentcloud/teo/v20220901/model/DescribePurgeTasksResponse.h
@@ -1306,6 +1309,7 @@ set(teo_src
   src/v20220901/model/BindZoneToPlanRequest.cpp
   src/v20220901/model/SecurityType.cpp
   src/v20220901/model/IPWhitelist.cpp
+  src/v20220901/model/DescribeSecurityIPGroupRequest.cpp
   src/v20220901/model/ModifyApplicationProxyStatusResponse.cpp
   src/v20220901/model/Identification.cpp
   src/v20220901/model/TopEntry.cpp
@@ -1323,6 +1327,7 @@ set(teo_src
   src/v20220901/model/ModifySecurityPolicyResponse.cpp
   src/v20220901/model/ModifyOriginGroupRequest.cpp
   src/v20220901/model/SecurityTemplateBinding.cpp
+  src/v20220901/model/CacheTag.cpp
   src/v20220901/model/DescribeDefaultCertificatesResponse.cpp
   src/v20220901/model/OwnershipVerification.cpp
   src/v20220901/model/DescribeConfigGroupVersionsRequest.cpp
@@ -1331,6 +1336,7 @@ set(teo_src
   src/v20220901/model/Quota.cpp
   src/v20220901/model/CheckCnameStatusRequest.cpp
   src/v20220901/model/ModifyZoneStatusResponse.cpp
+  src/v20220901/model/DescribeSecurityIPGroupResponse.cpp
   src/v20220901/model/UpgradePlanRequest.cpp
   src/v20220901/model/CreatePurgeTaskRequest.cpp
   src/v20220901/model/DescribePurgeTasksResponse.cpp

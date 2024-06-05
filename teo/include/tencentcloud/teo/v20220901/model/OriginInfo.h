@@ -48,43 +48,43 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Origin server type. Valid values:
-<li>IP_DOMAIN: IPV4, IPV6, or domain type origin server;</li>
-<li>COS: Tencent Cloud Object Storage origin server;</li>
-<li>AWS_S3: AWS S3 Cloud Object Storage origin server;</li>
-<li>ORIGIN_GROUP: Origin group type origin server;</li>
-<li>VODEO: Video on Demand (hybrid cloud edition);</li>
-<li>SPACE: Origin shield, currently only available to the whitelist;</li>
-<li>LB: Cloud Load Balancer, currently only available to the whitelist.</li>
-                     * @return OriginType Origin server type. Valid values:
-<li>IP_DOMAIN: IPV4, IPV6, or domain type origin server;</li>
-<li>COS: Tencent Cloud Object Storage origin server;</li>
-<li>AWS_S3: AWS S3 Cloud Object Storage origin server;</li>
-<li>ORIGIN_GROUP: Origin group type origin server;</li>
-<li>VODEO: Video on Demand (hybrid cloud edition);</li>
-<li>SPACE: Origin shield, currently only available to the whitelist;</li>
-<li>LB: Cloud Load Balancer, currently only available to the whitelist.</li>
+                     * 获取The origin server type, with values:
+<li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
+<li>COS: Tencent Cloud COS origin server;</li>
+<li>AWS_S3: AWS S3 origin server;</li>
+<li>ORIGIN_GROUP: origin server group type origin server;</li>
+<li>VODEO: VOD on EO;</li>
+<li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
+<li>LB: load balancing. Currently only available to the allowlist. </li>
+                     * @return OriginType The origin server type, with values:
+<li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
+<li>COS: Tencent Cloud COS origin server;</li>
+<li>AWS_S3: AWS S3 origin server;</li>
+<li>ORIGIN_GROUP: origin server group type origin server;</li>
+<li>VODEO: VOD on EO;</li>
+<li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
+<li>LB: load balancing. Currently only available to the allowlist. </li>
                      * 
                      */
                     std::string GetOriginType() const;
 
                     /**
-                     * 设置Origin server type. Valid values:
-<li>IP_DOMAIN: IPV4, IPV6, or domain type origin server;</li>
-<li>COS: Tencent Cloud Object Storage origin server;</li>
-<li>AWS_S3: AWS S3 Cloud Object Storage origin server;</li>
-<li>ORIGIN_GROUP: Origin group type origin server;</li>
-<li>VODEO: Video on Demand (hybrid cloud edition);</li>
-<li>SPACE: Origin shield, currently only available to the whitelist;</li>
-<li>LB: Cloud Load Balancer, currently only available to the whitelist.</li>
-                     * @param _originType Origin server type. Valid values:
-<li>IP_DOMAIN: IPV4, IPV6, or domain type origin server;</li>
-<li>COS: Tencent Cloud Object Storage origin server;</li>
-<li>AWS_S3: AWS S3 Cloud Object Storage origin server;</li>
-<li>ORIGIN_GROUP: Origin group type origin server;</li>
-<li>VODEO: Video on Demand (hybrid cloud edition);</li>
-<li>SPACE: Origin shield, currently only available to the whitelist;</li>
-<li>LB: Cloud Load Balancer, currently only available to the whitelist.</li>
+                     * 设置The origin server type, with values:
+<li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
+<li>COS: Tencent Cloud COS origin server;</li>
+<li>AWS_S3: AWS S3 origin server;</li>
+<li>ORIGIN_GROUP: origin server group type origin server;</li>
+<li>VODEO: VOD on EO;</li>
+<li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
+<li>LB: load balancing. Currently only available to the allowlist. </li>
+                     * @param _originType The origin server type, with values:
+<li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
+<li>COS: Tencent Cloud COS origin server;</li>
+<li>AWS_S3: AWS S3 origin server;</li>
+<li>ORIGIN_GROUP: origin server group type origin server;</li>
+<li>VODEO: VOD on EO;</li>
+<li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
+<li>LB: load balancing. Currently only available to the allowlist. </li>
                      * 
                      */
                     void SetOriginType(const std::string& _originType);
@@ -294,14 +294,14 @@ If it is not specified, the default value is off.
                 private:
 
                     /**
-                     * Origin server type. Valid values:
-<li>IP_DOMAIN: IPV4, IPV6, or domain type origin server;</li>
-<li>COS: Tencent Cloud Object Storage origin server;</li>
-<li>AWS_S3: AWS S3 Cloud Object Storage origin server;</li>
-<li>ORIGIN_GROUP: Origin group type origin server;</li>
-<li>VODEO: Video on Demand (hybrid cloud edition);</li>
-<li>SPACE: Origin shield, currently only available to the whitelist;</li>
-<li>LB: Cloud Load Balancer, currently only available to the whitelist.</li>
+                     * The origin server type, with values:
+<li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
+<li>COS: Tencent Cloud COS origin server;</li>
+<li>AWS_S3: AWS S3 origin server;</li>
+<li>ORIGIN_GROUP: origin server group type origin server;</li>
+<li>VODEO: VOD on EO;</li>
+<li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
+<li>LB: load balancing. Currently only available to the allowlist. </li>
                      */
                     std::string m_originType;
                     bool m_originTypeHasBeenSet;

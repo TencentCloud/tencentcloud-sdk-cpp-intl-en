@@ -253,15 +253,15 @@ namespace TencentCloud
                     bool SampleHasBeenSet() const;
 
                     /**
-                     * 获取Output format for log delivery. If this field is not specified, the original configuration will be retained.
-                     * @return LogFormat Output format for log delivery. If this field is not specified, the original configuration will be retained.
+                     * 获取Output format for log delivery. If this field is not specified, the original configuration will be retained.Specifically, when TaskType is set to cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
+                     * @return LogFormat Output format for log delivery. If this field is not specified, the original configuration will be retained.Specifically, when TaskType is set to cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
                      * 
                      */
                     LogFormat GetLogFormat() const;
 
                     /**
-                     * 设置Output format for log delivery. If this field is not specified, the original configuration will be retained.
-                     * @param _logFormat Output format for log delivery. If this field is not specified, the original configuration will be retained.
+                     * 设置Output format for log delivery. If this field is not specified, the original configuration will be retained.Specifically, when TaskType is set to cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
+                     * @param _logFormat Output format for log delivery. If this field is not specified, the original configuration will be retained.Specifically, when TaskType is set to cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
                      * 
                      */
                     void SetLogFormat(const LogFormat& _logFormat);
@@ -376,7 +376,7 @@ namespace TencentCloud
                     bool m_sampleHasBeenSet;
 
                     /**
-                     * Output format for log delivery. If this field is not specified, the original configuration will be retained.
+                     * Output format for log delivery. If this field is not specified, the original configuration will be retained.Specifically, when TaskType is set to cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
                      */
                     LogFormat m_logFormat;
                     bool m_logFormatHasBeenSet;

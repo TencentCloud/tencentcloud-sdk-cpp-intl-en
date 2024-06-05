@@ -147,6 +147,8 @@
 #include <tencentcloud/teo/v20220901/model/DescribeRulesResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeRulesSettingRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeRulesSettingResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeSecurityIPGroupRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeSecurityIPGroupResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeSecurityIPGroupInfoRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeSecurityIPGroupInfoResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeSecurityTemplateBindingsRequest.h>
@@ -425,6 +427,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeRulesSettingResponse> DescribeRulesSettingOutcome;
                 typedef std::future<DescribeRulesSettingOutcome> DescribeRulesSettingOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeRulesSettingRequest&, DescribeRulesSettingOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRulesSettingAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeSecurityIPGroupResponse> DescribeSecurityIPGroupOutcome;
+                typedef std::future<DescribeSecurityIPGroupOutcome> DescribeSecurityIPGroupOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeSecurityIPGroupRequest&, DescribeSecurityIPGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSecurityIPGroupAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeSecurityIPGroupInfoResponse> DescribeSecurityIPGroupInfoOutcome;
                 typedef std::future<DescribeSecurityIPGroupInfoOutcome> DescribeSecurityIPGroupInfoOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeSecurityIPGroupInfoRequest&, DescribeSecurityIPGroupInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSecurityIPGroupInfoAsyncHandler;
@@ -1112,7 +1117,19 @@ If there are already EdgeOne plans under the current account, it is recommended 
                 DescribeRulesSettingOutcomeCallable DescribeRulesSettingCallable(const Model::DescribeRulesSettingRequest& request);
 
                 /**
-                 *This API is used to query the configuration information of an IP group, including the IP group name, IP group content, and the site the IP group belongs to.
+                 *This API is used to query the configuration information of a security IP group, including the ID, name, and content of the security IP group.
+                 * @param req DescribeSecurityIPGroupRequest
+                 * @return DescribeSecurityIPGroupOutcome
+                 */
+                DescribeSecurityIPGroupOutcome DescribeSecurityIPGroup(const Model::DescribeSecurityIPGroupRequest &request);
+                void DescribeSecurityIPGroupAsync(const Model::DescribeSecurityIPGroupRequest& request, const DescribeSecurityIPGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeSecurityIPGroupOutcomeCallable DescribeSecurityIPGroupCallable(const Model::DescribeSecurityIPGroupRequest& request);
+
+                /**
+                 *The API is deprecated and will be discontinued on June 30, 2024. Please use the API [DescribeSecurityIPGroup
+](https://intl.cloud.tencent.com/document/product/1552/105866?from_cn_redirect=1).
+
+This API is used to query the configuration information of an IP group, including the IP group name, IP group content, and the site the IP group belongs to.
                  * @param req DescribeSecurityIPGroupInfoRequest
                  * @return DescribeSecurityIPGroupInfoOutcome
                  */
