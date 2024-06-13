@@ -86,62 +86,6 @@ namespace TencentCloud
                     bool EnFirstNameHasBeenSet() const;
 
                     /**
-                     * 获取Address
-                     * @return Address Address
-                     * 
-                     */
-                    std::string GetAddress() const;
-
-                    /**
-                     * 判断参数 Address 是否已赋值
-                     * @return Address 是否已赋值
-                     * 
-                     */
-                    bool AddressHasBeenSet() const;
-
-                    /**
-                     * 获取Date of birth
-                     * @return Birthday Date of birth
-                     * 
-                     */
-                    std::string GetBirthday() const;
-
-                    /**
-                     * 判断参数 Birthday 是否已赋值
-                     * @return Birthday 是否已赋值
-                     * 
-                     */
-                    bool BirthdayHasBeenSet() const;
-
-                    /**
-                     * 获取Date of issue
-                     * @return IssueDate Date of issue
-                     * 
-                     */
-                    std::string GetIssueDate() const;
-
-                    /**
-                     * 判断参数 IssueDate 是否已赋值
-                     * @return IssueDate 是否已赋值
-                     * 
-                     */
-                    bool IssueDateHasBeenSet() const;
-
-                    /**
-                     * 获取Expiration date
-                     * @return ExpirationDate Expiration date
-                     * 
-                     */
-                    std::string GetExpirationDate() const;
-
-                    /**
-                     * 判断参数 ExpirationDate 是否已赋值
-                     * @return ExpirationDate 是否已赋值
-                     * 
-                     */
-                    bool ExpirationDateHasBeenSet() const;
-
-                    /**
                      * 获取Name in English
                      * @return EnLastName Name in English
                      * 
@@ -156,6 +100,132 @@ namespace TencentCloud
                     bool EnLastNameHasBeenSet() const;
 
                     /**
+                     * 获取Date of issue in Thai
+                     * @return IssueDate Date of issue in Thai
+                     * 
+                     */
+                    std::string GetIssueDate() const;
+
+                    /**
+                     * 判断参数 IssueDate 是否已赋值
+                     * @return IssueDate 是否已赋值
+                     * 
+                     */
+                    bool IssueDateHasBeenSet() const;
+
+                    /**
+                     * 获取Expiration date in Thai
+                     * @return ExpirationDate Expiration date in Thai
+                     * 
+                     */
+                    std::string GetExpirationDate() const;
+
+                    /**
+                     * 判断参数 ExpirationDate 是否已赋值
+                     * @return ExpirationDate 是否已赋值
+                     * 
+                     */
+                    bool ExpirationDateHasBeenSet() const;
+
+                    /**
+                     * 获取Date of issue in English
+                     * @return EnIssueDate Date of issue in English
+                     * 
+                     */
+                    std::string GetEnIssueDate() const;
+
+                    /**
+                     * 判断参数 EnIssueDate 是否已赋值
+                     * @return EnIssueDate 是否已赋值
+                     * 
+                     */
+                    bool EnIssueDateHasBeenSet() const;
+
+                    /**
+                     * 获取Expiration date in English
+                     * @return EnExpirationDate Expiration date in English
+                     * 
+                     */
+                    std::string GetEnExpirationDate() const;
+
+                    /**
+                     * 判断参数 EnExpirationDate 是否已赋值
+                     * @return EnExpirationDate 是否已赋值
+                     * 
+                     */
+                    bool EnExpirationDateHasBeenSet() const;
+
+                    /**
+                     * 获取Date of birth in Thai
+                     * @return Birthday Date of birth in Thai
+                     * 
+                     */
+                    std::string GetBirthday() const;
+
+                    /**
+                     * 判断参数 Birthday 是否已赋值
+                     * @return Birthday 是否已赋值
+                     * 
+                     */
+                    bool BirthdayHasBeenSet() const;
+
+                    /**
+                     * 获取Date of birth in English
+                     * @return EnBirthday Date of birth in English
+                     * 
+                     */
+                    std::string GetEnBirthday() const;
+
+                    /**
+                     * 判断参数 EnBirthday 是否已赋值
+                     * @return EnBirthday 是否已赋值
+                     * 
+                     */
+                    bool EnBirthdayHasBeenSet() const;
+
+                    /**
+                     * 获取Religion
+                     * @return Religion Religion
+                     * 
+                     */
+                    std::string GetReligion() const;
+
+                    /**
+                     * 判断参数 Religion 是否已赋值
+                     * @return Religion 是否已赋值
+                     * 
+                     */
+                    bool ReligionHasBeenSet() const;
+
+                    /**
+                     * 获取Serial number
+                     * @return SerialNumber Serial number
+                     * 
+                     */
+                    std::string GetSerialNumber() const;
+
+                    /**
+                     * 判断参数 SerialNumber 是否已赋值
+                     * @return SerialNumber 是否已赋值
+                     * 
+                     */
+                    bool SerialNumberHasBeenSet() const;
+
+                    /**
+                     * 获取Address
+                     * @return Address Address
+                     * 
+                     */
+                    std::string GetAddress() const;
+
+                    /**
+                     * 判断参数 Address 是否已赋值
+                     * @return Address 是否已赋值
+                     * 
+                     */
+                    bool AddressHasBeenSet() const;
+
+                    /**
                      * 获取Identity photo
                      * @return PortraitImage Identity photo
                      * 
@@ -168,6 +238,34 @@ namespace TencentCloud
                      * 
                      */
                     bool PortraitImageHasBeenSet() const;
+
+                    /**
+                     * 获取Card Warning Information
+
+-9101 Alarm for covered certificate,
+-9102 Alarm for photocopied certificate,
+-9103 Alarm for photographed certificate,
+-9107 Alarm for reflective certificate,
+-9108 Alarm for blurry image,
+-9109 This capability is not enabled.
+                     * @return WarnCardInfos Card Warning Information
+
+-9101 Alarm for covered certificate,
+-9102 Alarm for photocopied certificate,
+-9103 Alarm for photographed certificate,
+-9107 Alarm for reflective certificate,
+-9108 Alarm for blurry image,
+-9109 This capability is not enabled.
+                     * 
+                     */
+                    std::vector<int64_t> GetWarnCardInfos() const;
+
+                    /**
+                     * 判断参数 WarnCardInfos 是否已赋值
+                     * @return WarnCardInfos 是否已赋值
+                     * 
+                     */
+                    bool WarnCardInfosHasBeenSet() const;
 
                 private:
 
@@ -190,40 +288,83 @@ namespace TencentCloud
                     bool m_enFirstNameHasBeenSet;
 
                     /**
-                     * Address
-                     */
-                    std::string m_address;
-                    bool m_addressHasBeenSet;
-
-                    /**
-                     * Date of birth
-                     */
-                    std::string m_birthday;
-                    bool m_birthdayHasBeenSet;
-
-                    /**
-                     * Date of issue
-                     */
-                    std::string m_issueDate;
-                    bool m_issueDateHasBeenSet;
-
-                    /**
-                     * Expiration date
-                     */
-                    std::string m_expirationDate;
-                    bool m_expirationDateHasBeenSet;
-
-                    /**
                      * Name in English
                      */
                     std::string m_enLastName;
                     bool m_enLastNameHasBeenSet;
 
                     /**
+                     * Date of issue in Thai
+                     */
+                    std::string m_issueDate;
+                    bool m_issueDateHasBeenSet;
+
+                    /**
+                     * Expiration date in Thai
+                     */
+                    std::string m_expirationDate;
+                    bool m_expirationDateHasBeenSet;
+
+                    /**
+                     * Date of issue in English
+                     */
+                    std::string m_enIssueDate;
+                    bool m_enIssueDateHasBeenSet;
+
+                    /**
+                     * Expiration date in English
+                     */
+                    std::string m_enExpirationDate;
+                    bool m_enExpirationDateHasBeenSet;
+
+                    /**
+                     * Date of birth in Thai
+                     */
+                    std::string m_birthday;
+                    bool m_birthdayHasBeenSet;
+
+                    /**
+                     * Date of birth in English
+                     */
+                    std::string m_enBirthday;
+                    bool m_enBirthdayHasBeenSet;
+
+                    /**
+                     * Religion
+                     */
+                    std::string m_religion;
+                    bool m_religionHasBeenSet;
+
+                    /**
+                     * Serial number
+                     */
+                    std::string m_serialNumber;
+                    bool m_serialNumberHasBeenSet;
+
+                    /**
+                     * Address
+                     */
+                    std::string m_address;
+                    bool m_addressHasBeenSet;
+
+                    /**
                      * Identity photo
                      */
                     std::string m_portraitImage;
                     bool m_portraitImageHasBeenSet;
+
+                    /**
+                     * Card Warning Information
+
+-9101 Alarm for covered certificate,
+-9102 Alarm for photocopied certificate,
+-9103 Alarm for photographed certificate,
+-9107 Alarm for reflective certificate,
+-9108 Alarm for blurry image,
+-9109 This capability is not enabled.
+                     */
+                    std::vector<int64_t> m_warnCardInfos;
+                    bool m_warnCardInfosHasBeenSet;
 
                 };
             }

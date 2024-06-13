@@ -43,27 +43,6 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to check for authenticity.
-                     * @return DetectFake Whether to check for authenticity.
-                     * 
-                     */
-                    bool GetDetectFake() const;
-
-                    /**
-                     * 设置Whether to check for authenticity.
-                     * @param _detectFake Whether to check for authenticity.
-                     * 
-                     */
-                    void SetDetectFake(const bool& _detectFake);
-
-                    /**
-                     * 判断参数 DetectFake 是否已赋值
-                     * @return DetectFake 是否已赋值
-                     * 
-                     */
-                    bool DetectFakeHasBeenSet() const;
-
-                    /**
                      * 获取Whether to return identity photo.
                      * @return ReturnHeadImage Whether to return identity photo.
                      * 
@@ -83,6 +62,27 @@ namespace TencentCloud
                      * 
                      */
                     bool ReturnHeadImageHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to check for authenticity.
+                     * @return DetectFake Whether to check for authenticity.
+                     * @deprecated
+                     */
+                    bool GetDetectFake() const;
+
+                    /**
+                     * 设置Whether to check for authenticity.
+                     * @param _detectFake Whether to check for authenticity.
+                     * @deprecated
+                     */
+                    void SetDetectFake(const bool& _detectFake);
+
+                    /**
+                     * 判断参数 DetectFake 是否已赋值
+                     * @return DetectFake 是否已赋值
+                     * @deprecated
+                     */
+                    bool DetectFakeHasBeenSet() const;
 
                     /**
                      * 获取Base64 string of the image
@@ -153,16 +153,16 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
                 private:
 
                     /**
-                     * Whether to check for authenticity.
-                     */
-                    bool m_detectFake;
-                    bool m_detectFakeHasBeenSet;
-
-                    /**
                      * Whether to return identity photo.
                      */
                     bool m_returnHeadImage;
                     bool m_returnHeadImageHasBeenSet;
+
+                    /**
+                     * Whether to check for authenticity.
+                     */
+                    bool m_detectFake;
+                    bool m_detectFakeHasBeenSet;
 
                     /**
                      * Base64 string of the image

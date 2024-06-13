@@ -51,7 +51,7 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ChName Chinese name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
+                     * @deprecated
                      */
                     std::string GetChName() const;
 
@@ -60,23 +60,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _chName Chinese name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
+                     * @deprecated
                      */
                     void SetChName(const std::string& _chName);
 
                     /**
                      * 判断参数 ChName 是否已赋值
                      * @return ChName 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool ChNameHasBeenSet() const;
+
+                    /**
+                     * 获取Chinese name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ChineseName Chinese name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetChineseName() const;
+
+                    /**
+                     * 设置Chinese name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _chineseName Chinese name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetChineseName(const std::string& _chineseName);
+
+                    /**
+                     * 判断参数 ChineseName 是否已赋值
+                     * @return ChineseName 是否已赋值
+                     * 
+                     */
+                    bool ChineseNameHasBeenSet() const;
 
                     /**
                      * 获取English name
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EnName English name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
+                     * @deprecated
                      */
                     std::string GetEnName() const;
 
@@ -85,23 +110,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _enName English name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
+                     * @deprecated
                      */
                     void SetEnName(const std::string& _enName);
 
                     /**
                      * 判断参数 EnName 是否已赋值
                      * @return EnName 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool EnNameHasBeenSet() const;
+
+                    /**
+                     * 获取English name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return FullName English name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetFullName() const;
+
+                    /**
+                     * 设置English name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _fullName English name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetFullName(const std::string& _fullName);
+
+                    /**
+                     * 判断参数 FullName 是否已赋值
+                     * @return FullName 是否已赋值
+                     * 
+                     */
+                    bool FullNameHasBeenSet() const;
 
                     /**
                      * 获取License number
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ID License number
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
+                     * @deprecated
                      */
                     std::string GetID() const;
 
@@ -110,16 +160,41 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _iD License number
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
+                     * @deprecated
                      */
                     void SetID(const std::string& _iD);
 
                     /**
                      * 判断参数 ID 是否已赋值
                      * @return ID 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool IDHasBeenSet() const;
+
+                    /**
+                     * 获取License number
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return LicenseNumber License number
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetLicenseNumber() const;
+
+                    /**
+                     * 设置License number
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _licenseNumber License number
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetLicenseNumber(const std::string& _licenseNumber);
+
+                    /**
+                     * 判断参数 LicenseNumber 是否已赋值
+                     * @return LicenseNumber 是否已赋值
+                     * 
+                     */
+                    bool LicenseNumberHasBeenSet() const;
 
                     /**
                      * 获取Gender
@@ -151,7 +226,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CountryOfBirth Country of birth
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
+                     * @deprecated
                      */
                     std::string GetCountryOfBirth() const;
 
@@ -160,16 +235,41 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _countryOfBirth Country of birth
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
+                     * @deprecated
                      */
                     void SetCountryOfBirth(const std::string& _countryOfBirth);
 
                     /**
                      * 判断参数 CountryOfBirth 是否已赋值
                      * @return CountryOfBirth 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool CountryOfBirthHasBeenSet() const;
+
+                    /**
+                     * 获取Nationality
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Nationality Nationality
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetNationality() const;
+
+                    /**
+                     * 设置Nationality
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _nationality Nationality
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetNationality(const std::string& _nationality);
+
+                    /**
+                     * 判断参数 Nationality 是否已赋值
+                     * @return Nationality 是否已赋值
+                     * 
+                     */
+                    bool NationalityHasBeenSet() const;
 
                     /**
                      * 获取Birthday
@@ -222,18 +322,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AddressHasBeenSet() const;
 
                     /**
-                     * 获取Nationality (on the back)
+                     * 获取Race (on the back)
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Race Nationality (on the back)
+                     * @return Race Race (on the back)
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRace() const;
 
                     /**
-                     * 设置Nationality (on the back)
+                     * 设置Race (on the back)
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _race Nationality (on the back)
+                     * @param _race Race (on the back)
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -356,6 +456,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_chNameHasBeenSet;
 
                     /**
+                     * Chinese name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_chineseName;
+                    bool m_chineseNameHasBeenSet;
+
+                    /**
                      * English name
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
@@ -363,11 +470,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_enNameHasBeenSet;
 
                     /**
+                     * English name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_fullName;
+                    bool m_fullNameHasBeenSet;
+
+                    /**
                      * License number
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_iD;
                     bool m_iDHasBeenSet;
+
+                    /**
+                     * License number
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_licenseNumber;
+                    bool m_licenseNumberHasBeenSet;
 
                     /**
                      * Gender
@@ -384,6 +505,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_countryOfBirthHasBeenSet;
 
                     /**
+                     * Nationality
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_nationality;
+                    bool m_nationalityHasBeenSet;
+
+                    /**
                      * Birthday
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
@@ -398,7 +526,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_addressHasBeenSet;
 
                     /**
-                     * Nationality (on the back)
+                     * Race (on the back)
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_race;

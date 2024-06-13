@@ -65,6 +65,8 @@
 #include <tencentcloud/ocr/v20181119/model/RecognizePhilippinesUMIDOCRResponse.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizePhilippinesVoteIDOCRRequest.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizePhilippinesVoteIDOCRResponse.h>
+#include <tencentcloud/ocr/v20181119/model/RecognizeSingaporeIDCardOCRRequest.h>
+#include <tencentcloud/ocr/v20181119/model/RecognizeSingaporeIDCardOCRResponse.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizeTableAccurateOCRRequest.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizeTableAccurateOCRResponse.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizeThaiIDCardOCRRequest.h>
@@ -154,6 +156,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::RecognizePhilippinesVoteIDOCRResponse> RecognizePhilippinesVoteIDOCROutcome;
                 typedef std::future<RecognizePhilippinesVoteIDOCROutcome> RecognizePhilippinesVoteIDOCROutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::RecognizePhilippinesVoteIDOCRRequest&, RecognizePhilippinesVoteIDOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> RecognizePhilippinesVoteIDOCRAsyncHandler;
+                typedef Outcome<Core::Error, Model::RecognizeSingaporeIDCardOCRResponse> RecognizeSingaporeIDCardOCROutcome;
+                typedef std::future<RecognizeSingaporeIDCardOCROutcome> RecognizeSingaporeIDCardOCROutcomeCallable;
+                typedef std::function<void(const OcrClient*, const Model::RecognizeSingaporeIDCardOCRRequest&, RecognizeSingaporeIDCardOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> RecognizeSingaporeIDCardOCRAsyncHandler;
                 typedef Outcome<Core::Error, Model::RecognizeTableAccurateOCRResponse> RecognizeTableAccurateOCROutcome;
                 typedef std::future<RecognizeTableAccurateOCROutcome> RecognizeTableAccurateOCROutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::RecognizeTableAccurateOCRRequest&, RecognizeTableAccurateOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> RecognizeTableAccurateOCRAsyncHandler;
@@ -567,6 +572,16 @@ The API request rate is limited to 20 requests/sec by default.
                 RecognizePhilippinesVoteIDOCROutcome RecognizePhilippinesVoteIDOCR(const Model::RecognizePhilippinesVoteIDOCRRequest &request);
                 void RecognizePhilippinesVoteIDOCRAsync(const Model::RecognizePhilippinesVoteIDOCRRequest& request, const RecognizePhilippinesVoteIDOCRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 RecognizePhilippinesVoteIDOCROutcomeCallable RecognizePhilippinesVoteIDOCRCallable(const Model::RecognizePhilippinesVoteIDOCRRequest& request);
+
+                /**
+                 *This interface supports the identification of all fields on the front side of ID card for Singapore residents.The identification accuracy reaches more than 99%.In addition, this interface also supports a variety of value-added capabilities to meet the needs of different scenarios. Such as the cropping function of ID card photos and portrait photos, and also has 5 alarm functions.
+As shown in the table below. <table style="width:650px"> <thead> <tr> <th width="150">Value-added ability</th> <th width="500">Ability items</th> </tr> </thead> <tbody> <tr> <td rowspan="9">Alarm function</td> </tr> <tr> <td>ID card copy warning</td> </tr> <tr> <td>ID card copy warning</td> </tr> <tr> <td>Alarm for occlusion in the ID card frame</td> </tr> <tr> <td>ID card reflective warning</td> </tr> <tr> <td>Blurry picture warning</td> </tr> </tbody> </table> Default interface request frequency limit: 20 times/second
+                 * @param req RecognizeSingaporeIDCardOCRRequest
+                 * @return RecognizeSingaporeIDCardOCROutcome
+                 */
+                RecognizeSingaporeIDCardOCROutcome RecognizeSingaporeIDCardOCR(const Model::RecognizeSingaporeIDCardOCRRequest &request);
+                void RecognizeSingaporeIDCardOCRAsync(const Model::RecognizeSingaporeIDCardOCRRequest& request, const RecognizeSingaporeIDCardOCRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RecognizeSingaporeIDCardOCROutcomeCallable RecognizeSingaporeIDCardOCRCallable(const Model::RecognizeSingaporeIDCardOCRRequest& request);
 
                 /**
                  *This API is used to recognize regular tables, borderless tables, or multi-tables in images or PDF files containing Chinese and English texts. It returns the text content of each cell, supports recognition of rotated table images, and can save the recognition results into an Excel document. It delivers higher recognition accuracy than that of table OCR v2 and applies to more scenarios. The recognition accuracy in difficult table scenarios, such as irregular tables and nested tables (borderless tables contained in bordered tables), is better than that of table OCR v2. To try it, click [here](https://intl.cloud.tencent.com/product/smart?from_cn_redirect=1-ocr).

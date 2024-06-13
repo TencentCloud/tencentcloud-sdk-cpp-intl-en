@@ -38,7 +38,6 @@
 #include <tencentcloud/faceid/v20180301/model/NormalThailandIDCard.h>
 #include <tencentcloud/faceid/v20180301/model/SingaporeIDCard.h>
 #include <tencentcloud/faceid/v20180301/model/MacaoIDCard.h>
-#include <tencentcloud/faceid/v20180301/model/MainlandIDCard.h>
 
 
 namespace TencentCloud
@@ -411,31 +410,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool MacaoIDCardHasBeenSet() const;
 
-                    /**
-                     * 获取Mainland ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MainlandIDCard Mainland ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
-                     */
-                    MainlandIDCard GetMainlandIDCard() const;
-
-                    /**
-                     * 设置Mainland ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _mainlandIDCard Mainland ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
-                     */
-                    void SetMainlandIDCard(const MainlandIDCard& _mainlandIDCard);
-
-                    /**
-                     * 判断参数 MainlandIDCard 是否已赋值
-                     * @return MainlandIDCard 是否已赋值
-                     * 
-                     */
-                    bool MainlandIDCardHasBeenSet() const;
-
                 private:
 
                     /**
@@ -535,13 +509,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     MacaoIDCard m_macaoIDCard;
                     bool m_macaoIDCardHasBeenSet;
-
-                    /**
-                     * Mainland ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
-                     */
-                    MainlandIDCard m_mainlandIDCard;
-                    bool m_mainlandIDCardHasBeenSet;
 
                 };
             }

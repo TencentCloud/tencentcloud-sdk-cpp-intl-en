@@ -110,14 +110,14 @@ namespace TencentCloud
 -9102 Alarm for photocopied certificate
 -9106 Alarm for covered certificate
 -9107 Alarm for blurry image
-                     * 
+                     * @deprecated
                      */
                     std::vector<int64_t> GetWarn() const;
 
                     /**
                      * 判断参数 Warn 是否已赋值
                      * @return Warn 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool WarnHasBeenSet() const;
 
@@ -203,6 +203,36 @@ MyKid   Kid card
                      */
                     bool BirthdayHasBeenSet() const;
 
+                    /**
+                     * 获取Card Warning Information
+
+-9101 Alarm for covered certificate,
+-9102 Alarm for photocopied certificate,
+-9103 Alarm for photographed certificate,
+-9104 Alarm for PS certificate,
+-9107 Alarm for reflective certificate,
+-9108 Alarm for blurry image,
+-9109 This capability is not enabled.
+                     * @return WarnCardInfos Card Warning Information
+
+-9101 Alarm for covered certificate,
+-9102 Alarm for photocopied certificate,
+-9103 Alarm for photographed certificate,
+-9104 Alarm for PS certificate,
+-9107 Alarm for reflective certificate,
+-9108 Alarm for blurry image,
+-9109 This capability is not enabled.
+                     * 
+                     */
+                    std::vector<int64_t> GetWarnCardInfos() const;
+
+                    /**
+                     * 判断参数 WarnCardInfos 是否已赋值
+                     * @return WarnCardInfos 是否已赋值
+                     * 
+                     */
+                    bool WarnCardInfosHasBeenSet() const;
+
                 private:
 
                     /**
@@ -275,6 +305,20 @@ MyKid   Kid card
                      */
                     std::string m_birthday;
                     bool m_birthdayHasBeenSet;
+
+                    /**
+                     * Card Warning Information
+
+-9101 Alarm for covered certificate,
+-9102 Alarm for photocopied certificate,
+-9103 Alarm for photographed certificate,
+-9104 Alarm for PS certificate,
+-9107 Alarm for reflective certificate,
+-9108 Alarm for blurry image,
+-9109 This capability is not enabled.
+                     */
+                    std::vector<int64_t> m_warnCardInfos;
+                    bool m_warnCardInfosHasBeenSet;
 
                 };
             }

@@ -76,6 +76,7 @@ set(ocr_public_header_model
   include/tencentcloud/ocr/v20181119/model/MotorVehicleSaleInvoice.h
   include/tencentcloud/ocr/v20181119/model/TableOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/PassportRecognizeInfos.h
+  include/tencentcloud/ocr/v20181119/model/RecognizeSingaporeIDCardOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/TaxiTicket.h
   include/tencentcloud/ocr/v20181119/model/LicensePlateOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/GeneralBasicOCRRequest.h
@@ -101,6 +102,7 @@ set(ocr_public_header_model
   include/tencentcloud/ocr/v20181119/model/Polygon.h
   include/tencentcloud/ocr/v20181119/model/TextDetectionResult.h
   include/tencentcloud/ocr/v20181119/model/RecognizeGeneralInvoiceResponse.h
+  include/tencentcloud/ocr/v20181119/model/RecognizeSingaporeIDCardOCRResponse.h
   include/tencentcloud/ocr/v20181119/model/SealOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/MedicalInvoice.h
   include/tencentcloud/ocr/v20181119/model/TextTable.h
@@ -180,6 +182,7 @@ set(ocr_src
   src/v20181119/model/MotorVehicleSaleInvoice.cpp
   src/v20181119/model/TableOCRRequest.cpp
   src/v20181119/model/PassportRecognizeInfos.cpp
+  src/v20181119/model/RecognizeSingaporeIDCardOCRRequest.cpp
   src/v20181119/model/TaxiTicket.cpp
   src/v20181119/model/LicensePlateOCRRequest.cpp
   src/v20181119/model/GeneralBasicOCRRequest.cpp
@@ -205,6 +208,7 @@ set(ocr_src
   src/v20181119/model/Polygon.cpp
   src/v20181119/model/TextDetectionResult.cpp
   src/v20181119/model/RecognizeGeneralInvoiceResponse.cpp
+  src/v20181119/model/RecognizeSingaporeIDCardOCRResponse.cpp
   src/v20181119/model/SealOCRRequest.cpp
   src/v20181119/model/MedicalInvoice.cpp
   src/v20181119/model/TextTable.cpp

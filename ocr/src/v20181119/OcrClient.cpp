@@ -943,6 +943,49 @@ OcrClient::RecognizePhilippinesVoteIDOCROutcomeCallable OcrClient::RecognizePhil
     return task->get_future();
 }
 
+OcrClient::RecognizeSingaporeIDCardOCROutcome OcrClient::RecognizeSingaporeIDCardOCR(const RecognizeSingaporeIDCardOCRRequest &request)
+{
+    auto outcome = MakeRequest(request, "RecognizeSingaporeIDCardOCR");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RecognizeSingaporeIDCardOCRResponse rsp = RecognizeSingaporeIDCardOCRResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RecognizeSingaporeIDCardOCROutcome(rsp);
+        else
+            return RecognizeSingaporeIDCardOCROutcome(o.GetError());
+    }
+    else
+    {
+        return RecognizeSingaporeIDCardOCROutcome(outcome.GetError());
+    }
+}
+
+void OcrClient::RecognizeSingaporeIDCardOCRAsync(const RecognizeSingaporeIDCardOCRRequest& request, const RecognizeSingaporeIDCardOCRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->RecognizeSingaporeIDCardOCR(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OcrClient::RecognizeSingaporeIDCardOCROutcomeCallable OcrClient::RecognizeSingaporeIDCardOCRCallable(const RecognizeSingaporeIDCardOCRRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<RecognizeSingaporeIDCardOCROutcome()>>(
+        [this, request]()
+        {
+            return this->RecognizeSingaporeIDCardOCR(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 OcrClient::RecognizeTableAccurateOCROutcome OcrClient::RecognizeTableAccurateOCR(const RecognizeTableAccurateOCRRequest &request)
 {
     auto outcome = MakeRequest(request, "RecognizeTableAccurateOCR");

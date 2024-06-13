@@ -200,14 +200,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 1: forged;
 2: authentic.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * 
+                     * @deprecated
                      */
                     int64_t GetFakeDetectResult() const;
 
                     /**
                      * 判断参数 FakeDetectResult 是否已赋值
                      * @return FakeDetectResult 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool FakeDetectResultHasBeenSet() const;
 
@@ -234,16 +234,46 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return WarningCode Multiple alarm codes. If the ID card is spoofed, photocopied, or photoshopped, the corresponding alarm code will be returned.
 -9102: Alarm for photocopied document
 -9103: Alarm for spoofed document
-                     * 
+                     * @deprecated
                      */
                     std::vector<int64_t> GetWarningCode() const;
 
                     /**
                      * 判断参数 WarningCode 是否已赋值
                      * @return WarningCode 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool WarningCodeHasBeenSet() const;
+
+                    /**
+                     * 获取Card Warning Information
+
+-9101 Alarm for covered certificate,
+-9102 Alarm for photocopied certificate,
+-9103 Alarm for photographed certificate,
+-9104 Alarm for PS certificate,
+-9107 Alarm for reflective certificate,
+-9108 Alarm for blurry image,
+-9109 This capability is not enabled.
+                     * @return WarnCardInfos Card Warning Information
+
+-9101 Alarm for covered certificate,
+-9102 Alarm for photocopied certificate,
+-9103 Alarm for photographed certificate,
+-9104 Alarm for PS certificate,
+-9107 Alarm for reflective certificate,
+-9108 Alarm for blurry image,
+-9109 This capability is not enabled.
+                     * 
+                     */
+                    std::vector<int64_t> GetWarnCardInfos() const;
+
+                    /**
+                     * 判断参数 WarnCardInfos 是否已赋值
+                     * @return WarnCardInfos 是否已赋值
+                     * 
+                     */
+                    bool WarnCardInfosHasBeenSet() const;
 
                 private:
 
@@ -334,6 +364,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<int64_t> m_warningCode;
                     bool m_warningCodeHasBeenSet;
+
+                    /**
+                     * Card Warning Information
+
+-9101 Alarm for covered certificate,
+-9102 Alarm for photocopied certificate,
+-9103 Alarm for photographed certificate,
+-9104 Alarm for PS certificate,
+-9107 Alarm for reflective certificate,
+-9108 Alarm for blurry image,
+-9109 This capability is not enabled.
+                     */
+                    std::vector<int64_t> m_warnCardInfos;
+                    bool m_warnCardInfosHasBeenSet;
 
                 };
             }

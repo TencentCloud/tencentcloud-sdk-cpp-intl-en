@@ -22,10 +22,14 @@ using namespace std;
 
 SingaporeIDCard::SingaporeIDCard() :
     m_chNameHasBeenSet(false),
+    m_chineseNameHasBeenSet(false),
     m_enNameHasBeenSet(false),
+    m_fullNameHasBeenSet(false),
     m_iDHasBeenSet(false),
+    m_licenseNumberHasBeenSet(false),
     m_sexHasBeenSet(false),
     m_countryOfBirthHasBeenSet(false),
+    m_nationalityHasBeenSet(false),
     m_birthdayHasBeenSet(false),
     m_addressHasBeenSet(false),
     m_raceHasBeenSet(false),
@@ -51,6 +55,16 @@ CoreInternalOutcome SingaporeIDCard::Deserialize(const rapidjson::Value &value)
         m_chNameHasBeenSet = true;
     }
 
+    if (value.HasMember("ChineseName") && !value["ChineseName"].IsNull())
+    {
+        if (!value["ChineseName"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `SingaporeIDCard.ChineseName` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_chineseName = string(value["ChineseName"].GetString());
+        m_chineseNameHasBeenSet = true;
+    }
+
     if (value.HasMember("EnName") && !value["EnName"].IsNull())
     {
         if (!value["EnName"].IsString())
@@ -61,6 +75,16 @@ CoreInternalOutcome SingaporeIDCard::Deserialize(const rapidjson::Value &value)
         m_enNameHasBeenSet = true;
     }
 
+    if (value.HasMember("FullName") && !value["FullName"].IsNull())
+    {
+        if (!value["FullName"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `SingaporeIDCard.FullName` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_fullName = string(value["FullName"].GetString());
+        m_fullNameHasBeenSet = true;
+    }
+
     if (value.HasMember("ID") && !value["ID"].IsNull())
     {
         if (!value["ID"].IsString())
@@ -69,6 +93,16 @@ CoreInternalOutcome SingaporeIDCard::Deserialize(const rapidjson::Value &value)
         }
         m_iD = string(value["ID"].GetString());
         m_iDHasBeenSet = true;
+    }
+
+    if (value.HasMember("LicenseNumber") && !value["LicenseNumber"].IsNull())
+    {
+        if (!value["LicenseNumber"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `SingaporeIDCard.LicenseNumber` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_licenseNumber = string(value["LicenseNumber"].GetString());
+        m_licenseNumberHasBeenSet = true;
     }
 
     if (value.HasMember("Sex") && !value["Sex"].IsNull())
@@ -89,6 +123,16 @@ CoreInternalOutcome SingaporeIDCard::Deserialize(const rapidjson::Value &value)
         }
         m_countryOfBirth = string(value["CountryOfBirth"].GetString());
         m_countryOfBirthHasBeenSet = true;
+    }
+
+    if (value.HasMember("Nationality") && !value["Nationality"].IsNull())
+    {
+        if (!value["Nationality"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `SingaporeIDCard.Nationality` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_nationality = string(value["Nationality"].GetString());
+        m_nationalityHasBeenSet = true;
     }
 
     if (value.HasMember("Birthday") && !value["Birthday"].IsNull())
@@ -176,6 +220,14 @@ void SingaporeIDCard::ToJsonObject(rapidjson::Value &value, rapidjson::Document:
         value.AddMember(iKey, rapidjson::Value(m_chName.c_str(), allocator).Move(), allocator);
     }
 
+    if (m_chineseNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ChineseName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_chineseName.c_str(), allocator).Move(), allocator);
+    }
+
     if (m_enNameHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -184,12 +236,28 @@ void SingaporeIDCard::ToJsonObject(rapidjson::Value &value, rapidjson::Document:
         value.AddMember(iKey, rapidjson::Value(m_enName.c_str(), allocator).Move(), allocator);
     }
 
+    if (m_fullNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FullName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fullName.c_str(), allocator).Move(), allocator);
+    }
+
     if (m_iDHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ID";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_iD.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_licenseNumberHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "LicenseNumber";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_licenseNumber.c_str(), allocator).Move(), allocator);
     }
 
     if (m_sexHasBeenSet)
@@ -206,6 +274,14 @@ void SingaporeIDCard::ToJsonObject(rapidjson::Value &value, rapidjson::Document:
         string key = "CountryOfBirth";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_countryOfBirth.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_nationalityHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Nationality";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_nationality.c_str(), allocator).Move(), allocator);
     }
 
     if (m_birthdayHasBeenSet)
@@ -283,6 +359,22 @@ bool SingaporeIDCard::ChNameHasBeenSet() const
     return m_chNameHasBeenSet;
 }
 
+string SingaporeIDCard::GetChineseName() const
+{
+    return m_chineseName;
+}
+
+void SingaporeIDCard::SetChineseName(const string& _chineseName)
+{
+    m_chineseName = _chineseName;
+    m_chineseNameHasBeenSet = true;
+}
+
+bool SingaporeIDCard::ChineseNameHasBeenSet() const
+{
+    return m_chineseNameHasBeenSet;
+}
+
 string SingaporeIDCard::GetEnName() const
 {
     return m_enName;
@@ -299,6 +391,22 @@ bool SingaporeIDCard::EnNameHasBeenSet() const
     return m_enNameHasBeenSet;
 }
 
+string SingaporeIDCard::GetFullName() const
+{
+    return m_fullName;
+}
+
+void SingaporeIDCard::SetFullName(const string& _fullName)
+{
+    m_fullName = _fullName;
+    m_fullNameHasBeenSet = true;
+}
+
+bool SingaporeIDCard::FullNameHasBeenSet() const
+{
+    return m_fullNameHasBeenSet;
+}
+
 string SingaporeIDCard::GetID() const
 {
     return m_iD;
@@ -313,6 +421,22 @@ void SingaporeIDCard::SetID(const string& _iD)
 bool SingaporeIDCard::IDHasBeenSet() const
 {
     return m_iDHasBeenSet;
+}
+
+string SingaporeIDCard::GetLicenseNumber() const
+{
+    return m_licenseNumber;
+}
+
+void SingaporeIDCard::SetLicenseNumber(const string& _licenseNumber)
+{
+    m_licenseNumber = _licenseNumber;
+    m_licenseNumberHasBeenSet = true;
+}
+
+bool SingaporeIDCard::LicenseNumberHasBeenSet() const
+{
+    return m_licenseNumberHasBeenSet;
 }
 
 string SingaporeIDCard::GetSex() const
@@ -345,6 +469,22 @@ void SingaporeIDCard::SetCountryOfBirth(const string& _countryOfBirth)
 bool SingaporeIDCard::CountryOfBirthHasBeenSet() const
 {
     return m_countryOfBirthHasBeenSet;
+}
+
+string SingaporeIDCard::GetNationality() const
+{
+    return m_nationality;
+}
+
+void SingaporeIDCard::SetNationality(const string& _nationality)
+{
+    m_nationality = _nationality;
+    m_nationalityHasBeenSet = true;
+}
+
+bool SingaporeIDCard::NationalityHasBeenSet() const
+{
+    return m_nationalityHasBeenSet;
 }
 
 string SingaporeIDCard::GetBirthday() const

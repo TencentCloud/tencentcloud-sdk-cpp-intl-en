@@ -48,20 +48,22 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The origin server type, with values:
+                     * 获取Origin server type, with values:
 <li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
 <li>COS: Tencent Cloud COS origin server;</li>
 <li>AWS_S3: AWS S3 origin server;</li>
 <li>ORIGIN_GROUP: origin server group type origin server;</li>
 <li>VODEO: VOD on EO;</li>
+<li>VOD: Video on Demand;</li>
 <li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
 <li>LB: load balancing. Currently only available to the allowlist. </li>
-                     * @return OriginType The origin server type, with values:
+                     * @return OriginType Origin server type, with values:
 <li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
 <li>COS: Tencent Cloud COS origin server;</li>
 <li>AWS_S3: AWS S3 origin server;</li>
 <li>ORIGIN_GROUP: origin server group type origin server;</li>
 <li>VODEO: VOD on EO;</li>
+<li>VOD: Video on Demand;</li>
 <li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
 <li>LB: load balancing. Currently only available to the allowlist. </li>
                      * 
@@ -69,20 +71,22 @@ namespace TencentCloud
                     std::string GetOriginType() const;
 
                     /**
-                     * 设置The origin server type, with values:
+                     * 设置Origin server type, with values:
 <li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
 <li>COS: Tencent Cloud COS origin server;</li>
 <li>AWS_S3: AWS S3 origin server;</li>
 <li>ORIGIN_GROUP: origin server group type origin server;</li>
 <li>VODEO: VOD on EO;</li>
+<li>VOD: Video on Demand;</li>
 <li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
 <li>LB: load balancing. Currently only available to the allowlist. </li>
-                     * @param _originType The origin server type, with values:
+                     * @param _originType Origin server type, with values:
 <li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
 <li>COS: Tencent Cloud COS origin server;</li>
 <li>AWS_S3: AWS S3 origin server;</li>
 <li>ORIGIN_GROUP: origin server group type origin server;</li>
 <li>VODEO: VOD on EO;</li>
+<li>VOD: Video on Demand;</li>
 <li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
 <li>LB: load balancing. Currently only available to the allowlist. </li>
                      * 
@@ -98,16 +102,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Origin server address, which varies according to the value of OriginType:
-<li>For OriginType = IP_DOMAIN, this parameter is an IPv4, IPv6 address or domain name;</li>
-<li>For OriginType = COS, this parameter is the access domain name of the COS bucket;</li>
-<li>For OriginType = AWS_S3, this parameter is the access domain name of the S3 bucket;</li>
-<li>For OriginType = ORIGIN_GROUP, this parameter is the origin server group ID;</li>
+<li>When OriginType = IP_DOMAIN, this parameter should be an IPv4 address, an IPv6 address, or a domain name;</li>
+<li>When OriginType = COS, this parameter should be the access domain name of the COS bucket;</li>
+<li>When OriginType = AWS_S3, this parameter should be the access domain name of the S3 bucket;</li>
+<li>When OriginType = ORIGIN_GROUP, this parameter should be the origin server group ID;</li>
+<li>When OriginType = VOD, this parameter should be the VOD application ID;</li>
 <li>When OriginType = VODEO, if VodeoDistributionRange = ALL, then this parameter is "all-buckets-in-vodeo-application"; if VodeoDistributionRange = Bucket, then this parameter is the domain name of the corresponding bucket. </li>
                      * @return Origin Origin server address, which varies according to the value of OriginType:
-<li>For OriginType = IP_DOMAIN, this parameter is an IPv4, IPv6 address or domain name;</li>
-<li>For OriginType = COS, this parameter is the access domain name of the COS bucket;</li>
-<li>For OriginType = AWS_S3, this parameter is the access domain name of the S3 bucket;</li>
-<li>For OriginType = ORIGIN_GROUP, this parameter is the origin server group ID;</li>
+<li>When OriginType = IP_DOMAIN, this parameter should be an IPv4 address, an IPv6 address, or a domain name;</li>
+<li>When OriginType = COS, this parameter should be the access domain name of the COS bucket;</li>
+<li>When OriginType = AWS_S3, this parameter should be the access domain name of the S3 bucket;</li>
+<li>When OriginType = ORIGIN_GROUP, this parameter should be the origin server group ID;</li>
+<li>When OriginType = VOD, this parameter should be the VOD application ID;</li>
 <li>When OriginType = VODEO, if VodeoDistributionRange = ALL, then this parameter is "all-buckets-in-vodeo-application"; if VodeoDistributionRange = Bucket, then this parameter is the domain name of the corresponding bucket. </li>
                      * 
                      */
@@ -115,16 +121,18 @@ namespace TencentCloud
 
                     /**
                      * 设置Origin server address, which varies according to the value of OriginType:
-<li>For OriginType = IP_DOMAIN, this parameter is an IPv4, IPv6 address or domain name;</li>
-<li>For OriginType = COS, this parameter is the access domain name of the COS bucket;</li>
-<li>For OriginType = AWS_S3, this parameter is the access domain name of the S3 bucket;</li>
-<li>For OriginType = ORIGIN_GROUP, this parameter is the origin server group ID;</li>
+<li>When OriginType = IP_DOMAIN, this parameter should be an IPv4 address, an IPv6 address, or a domain name;</li>
+<li>When OriginType = COS, this parameter should be the access domain name of the COS bucket;</li>
+<li>When OriginType = AWS_S3, this parameter should be the access domain name of the S3 bucket;</li>
+<li>When OriginType = ORIGIN_GROUP, this parameter should be the origin server group ID;</li>
+<li>When OriginType = VOD, this parameter should be the VOD application ID;</li>
 <li>When OriginType = VODEO, if VodeoDistributionRange = ALL, then this parameter is "all-buckets-in-vodeo-application"; if VodeoDistributionRange = Bucket, then this parameter is the domain name of the corresponding bucket. </li>
                      * @param _origin Origin server address, which varies according to the value of OriginType:
-<li>For OriginType = IP_DOMAIN, this parameter is an IPv4, IPv6 address or domain name;</li>
-<li>For OriginType = COS, this parameter is the access domain name of the COS bucket;</li>
-<li>For OriginType = AWS_S3, this parameter is the access domain name of the S3 bucket;</li>
-<li>For OriginType = ORIGIN_GROUP, this parameter is the origin server group ID;</li>
+<li>When OriginType = IP_DOMAIN, this parameter should be an IPv4 address, an IPv6 address, or a domain name;</li>
+<li>When OriginType = COS, this parameter should be the access domain name of the COS bucket;</li>
+<li>When OriginType = AWS_S3, this parameter should be the access domain name of the S3 bucket;</li>
+<li>When OriginType = ORIGIN_GROUP, this parameter should be the origin server group ID;</li>
+<li>When OriginType = VOD, this parameter should be the VOD application ID;</li>
 <li>When OriginType = VODEO, if VodeoDistributionRange = ALL, then this parameter is "all-buckets-in-vodeo-application"; if VodeoDistributionRange = Bucket, then this parameter is the domain name of the corresponding bucket. </li>
                      * 
                      */
@@ -324,12 +332,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The origin server type, with values:
+                     * Origin server type, with values:
 <li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
 <li>COS: Tencent Cloud COS origin server;</li>
 <li>AWS_S3: AWS S3 origin server;</li>
 <li>ORIGIN_GROUP: origin server group type origin server;</li>
 <li>VODEO: VOD on EO;</li>
+<li>VOD: Video on Demand;</li>
 <li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
 <li>LB: load balancing. Currently only available to the allowlist. </li>
                      */
@@ -338,10 +347,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Origin server address, which varies according to the value of OriginType:
-<li>For OriginType = IP_DOMAIN, this parameter is an IPv4, IPv6 address or domain name;</li>
-<li>For OriginType = COS, this parameter is the access domain name of the COS bucket;</li>
-<li>For OriginType = AWS_S3, this parameter is the access domain name of the S3 bucket;</li>
-<li>For OriginType = ORIGIN_GROUP, this parameter is the origin server group ID;</li>
+<li>When OriginType = IP_DOMAIN, this parameter should be an IPv4 address, an IPv6 address, or a domain name;</li>
+<li>When OriginType = COS, this parameter should be the access domain name of the COS bucket;</li>
+<li>When OriginType = AWS_S3, this parameter should be the access domain name of the S3 bucket;</li>
+<li>When OriginType = ORIGIN_GROUP, this parameter should be the origin server group ID;</li>
+<li>When OriginType = VOD, this parameter should be the VOD application ID;</li>
 <li>When OriginType = VODEO, if VodeoDistributionRange = ALL, then this parameter is "all-buckets-in-vodeo-application"; if VodeoDistributionRange = Bucket, then this parameter is the domain name of the corresponding bucket. </li>
                      */
                     std::string m_origin;
