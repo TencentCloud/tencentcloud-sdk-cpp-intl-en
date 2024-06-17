@@ -147,6 +147,27 @@ namespace TencentCloud
                      */
                     bool BackupPeriodHasBeenSet() const;
 
+                    /**
+                     * 获取Instance log backup retention duration, with a value range of 7-1830 and a unit of day
+                     * @return LogBackupRetentionPeriod Instance log backup retention duration, with a value range of 7-1830 and a unit of day
+                     * 
+                     */
+                    uint64_t GetLogBackupRetentionPeriod() const;
+
+                    /**
+                     * 设置Instance log backup retention duration, with a value range of 7-1830 and a unit of day
+                     * @param _logBackupRetentionPeriod Instance log backup retention duration, with a value range of 7-1830 and a unit of day
+                     * 
+                     */
+                    void SetLogBackupRetentionPeriod(const uint64_t& _logBackupRetentionPeriod);
+
+                    /**
+                     * 判断参数 LogBackupRetentionPeriod 是否已赋值
+                     * @return LogBackupRetentionPeriod 是否已赋值
+                     * 
+                     */
+                    bool LogBackupRetentionPeriodHasBeenSet() const;
+
                 private:
 
                     /**
@@ -178,6 +199,12 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_backupPeriod;
                     bool m_backupPeriodHasBeenSet;
+
+                    /**
+                     * Instance log backup retention duration, with a value range of 7-1830 and a unit of day
+                     */
+                    uint64_t m_logBackupRetentionPeriod;
+                    bool m_logBackupRetentionPeriodHasBeenSet;
 
                 };
             }

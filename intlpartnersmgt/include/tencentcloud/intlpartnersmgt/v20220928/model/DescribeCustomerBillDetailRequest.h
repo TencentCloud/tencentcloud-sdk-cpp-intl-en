@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool CustomerUinHasBeenSet() const;
 
                     /**
-                     * 获取The queried month in “YYYY-MM” format, such as 2023-01.
-                     * @return Month The queried month in “YYYY-MM” format, such as 2023-01.
+                     * 获取The queried month in "YYYY-MM" format, such as 2023-01.
+                     * @return Month The queried month in "YYYY-MM" format, such as 2023-01.
                      * 
                      */
                     std::string GetMonth() const;
 
                     /**
-                     * 设置The queried month in “YYYY-MM” format, such as 2023-01.
-                     * @param _month The queried month in “YYYY-MM” format, such as 2023-01.
+                     * 设置The queried month in "YYYY-MM" format, such as 2023-01.
+                     * @param _month The queried month in "YYYY-MM" format, such as 2023-01.
                      * 
                      */
                     void SetMonth(const std::string& _month);
@@ -318,7 +318,7 @@ namespace TencentCloud
                     bool m_customerUinHasBeenSet;
 
                     /**
-                     * The queried month in “YYYY-MM” format, such as 2023-01.
+                     * The queried month in "YYYY-MM" format, such as 2023-01.
                      */
                     std::string m_month;
                     bool m_monthHasBeenSet;

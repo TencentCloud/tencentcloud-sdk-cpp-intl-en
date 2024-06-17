@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Parameter information of each version
+                * Parameter information for each version
                 */
                 class ParamVersionRelation : public AbstractModel
                 {

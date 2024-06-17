@@ -183,7 +183,7 @@ namespace TencentCloud
                 CreateAccountOutcomeCallable CreateAccountCallable(const Model::CreateAccountRequest& request);
 
                 /**
-                 *This API is used to query the customer bill details.
+                 *This API is used to query bill details by customers.
                  * @param req DescribeBillDetailRequest
                  * @return DescribeBillDetailOutcome
                  */
@@ -237,7 +237,7 @@ namespace TencentCloud
                 DescribeBillSummaryByRegionOutcomeCallable DescribeBillSummaryByRegionCallable(const Model::DescribeBillSummaryByRegionRequest& request);
 
                 /**
-                 *This API is used to query the customer bill details.
+                 *This API is used to query the customer bill details by resellers.
                  * @param req DescribeCustomerBillDetailRequest
                  * @return DescribeCustomerBillDetailOutcome
                  */

@@ -193,6 +193,8 @@
 #include <tencentcloud/postgres/v20170312/model/ResetAccountPasswordResponse.h>
 #include <tencentcloud/postgres/v20170312/model/RestartDBInstanceRequest.h>
 #include <tencentcloud/postgres/v20170312/model/RestartDBInstanceResponse.h>
+#include <tencentcloud/postgres/v20170312/model/RestoreDBInstanceObjectsRequest.h>
+#include <tencentcloud/postgres/v20170312/model/RestoreDBInstanceObjectsResponse.h>
 #include <tencentcloud/postgres/v20170312/model/SetAutoRenewFlagRequest.h>
 #include <tencentcloud/postgres/v20170312/model/SetAutoRenewFlagResponse.h>
 #include <tencentcloud/postgres/v20170312/model/SwitchDBInstancePrimaryRequest.h>
@@ -201,6 +203,8 @@
 #include <tencentcloud/postgres/v20170312/model/UpgradeDBInstanceResponse.h>
 #include <tencentcloud/postgres/v20170312/model/UpgradeDBInstanceKernelVersionRequest.h>
 #include <tencentcloud/postgres/v20170312/model/UpgradeDBInstanceKernelVersionResponse.h>
+#include <tencentcloud/postgres/v20170312/model/UpgradeDBInstanceMajorVersionRequest.h>
+#include <tencentcloud/postgres/v20170312/model/UpgradeDBInstanceMajorVersionResponse.h>
 
 
 namespace TencentCloud
@@ -470,6 +474,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::RestartDBInstanceResponse> RestartDBInstanceOutcome;
                 typedef std::future<RestartDBInstanceOutcome> RestartDBInstanceOutcomeCallable;
                 typedef std::function<void(const PostgresClient*, const Model::RestartDBInstanceRequest&, RestartDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RestartDBInstanceAsyncHandler;
+                typedef Outcome<Core::Error, Model::RestoreDBInstanceObjectsResponse> RestoreDBInstanceObjectsOutcome;
+                typedef std::future<RestoreDBInstanceObjectsOutcome> RestoreDBInstanceObjectsOutcomeCallable;
+                typedef std::function<void(const PostgresClient*, const Model::RestoreDBInstanceObjectsRequest&, RestoreDBInstanceObjectsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RestoreDBInstanceObjectsAsyncHandler;
                 typedef Outcome<Core::Error, Model::SetAutoRenewFlagResponse> SetAutoRenewFlagOutcome;
                 typedef std::future<SetAutoRenewFlagOutcome> SetAutoRenewFlagOutcomeCallable;
                 typedef std::function<void(const PostgresClient*, const Model::SetAutoRenewFlagRequest&, SetAutoRenewFlagOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SetAutoRenewFlagAsyncHandler;
@@ -482,6 +489,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::UpgradeDBInstanceKernelVersionResponse> UpgradeDBInstanceKernelVersionOutcome;
                 typedef std::future<UpgradeDBInstanceKernelVersionOutcome> UpgradeDBInstanceKernelVersionOutcomeCallable;
                 typedef std::function<void(const PostgresClient*, const Model::UpgradeDBInstanceKernelVersionRequest&, UpgradeDBInstanceKernelVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpgradeDBInstanceKernelVersionAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpgradeDBInstanceMajorVersionResponse> UpgradeDBInstanceMajorVersionOutcome;
+                typedef std::future<UpgradeDBInstanceMajorVersionOutcome> UpgradeDBInstanceMajorVersionOutcomeCallable;
+                typedef std::function<void(const PostgresClient*, const Model::UpgradeDBInstanceMajorVersionRequest&, UpgradeDBInstanceMajorVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpgradeDBInstanceMajorVersionAsyncHandler;
 
 
 
@@ -522,7 +532,7 @@ namespace TencentCloud
                 CloseServerlessDBExtranetAccessOutcomeCallable CloseServerlessDBExtranetAccessCallable(const Model::CloseServerlessDBExtranetAccessRequest& request);
 
                 /**
-                 *This API is used to create a full backup of an instance.
+                 *This API is used to create a data backup of an instance.
                  * @param req CreateBaseBackupRequest
                  * @return CreateBaseBackupOutcome
                  */
@@ -549,9 +559,9 @@ namespace TencentCloud
                 CreateDBInstancesOutcomeCallable CreateDBInstancesCallable(const Model::CreateDBInstancesRequest& request);
 
                 /**
-                 *This API is used to create and initialize one or more TencentDB for PostgreSQL instances.
-<li>After an instance is created successfully, it will start up automatically and enter the "Running" status.
-<li>If you create a monthly subscribed instance, you will be billed for the instance before the creation; if you create a pay-as-you-go instance billed on an hourly basis, the amount equivalent to the hourly rate will be frozen before the creation. Make sure your account balance is sufficient before calling this API.
+                 *This API is used to create one or more PostgreSQL instances. Instances created through this interface do not need to be initialized and can be used directly.
+<li>After an instance is successfully created, it will automatically start up, and its status changes to "Running".</li>
+<li>For prepaid instances, the required amount for the instance purchase will be deducted in advance. For post-paid hourly instances, the amount required for the purchase within the first hour will be temporarily frozen. Please ensure that your account balance is sufficient before calling this interface.</li>
                  * @param req CreateInstancesRequest
                  * @return CreateInstancesOutcome
                  */
@@ -605,7 +615,7 @@ namespace TencentCloud
                 CreateServerlessDBInstanceOutcomeCallable CreateServerlessDBInstanceCallable(const Model::CreateServerlessDBInstanceRequest& request);
 
                 /**
-                 *This API is used to delete the specified full backup of an instance.
+                 *This API is used to delete a specified data backup for an instance.
                  * @param req DeleteBaseBackupRequest
                  * @return DeleteBaseBackupOutcome
                  */
@@ -731,7 +741,7 @@ namespace TencentCloud
                 DescribeBackupSummariesOutcomeCallable DescribeBackupSummariesCallable(const Model::DescribeBackupSummariesRequest& request);
 
                 /**
-                 *This API is used to query the list of full backups.
+                 *This API is used to query the list of data backups.
                  * @param req DescribeBaseBackupsRequest
                  * @return DescribeBaseBackupsOutcome
                  */
@@ -841,7 +851,7 @@ namespace TencentCloud
                 DescribeDBVersionsOutcomeCallable DescribeDBVersionsCallable(const Model::DescribeDBVersionsRequest& request);
 
                 /**
-                 *This API is used to get the instance Xlog list. This API is disused and replaced by the [DescribeBaseBackups](https://intl.cloud.tencent.com/document/api/409/89022?from_cn_redirect=1) API.
+                 *This API is used to get the instance Xlog list. This API is disused and replaced by the [DescribeBaseBackups](https://www.tencentcloud.com/zh/document/product/409/54343) API.
                  * @param req DescribeDBXlogsRequest
                  * @return DescribeDBXlogsOutcome
                  */
@@ -1075,7 +1085,7 @@ namespace TencentCloud
                 ModifyBackupPlanOutcomeCallable ModifyBackupPlanCallable(const Model::ModifyBackupPlanRequest& request);
 
                 /**
-                 *This API is used to modify the specified expiration time of a full backup for an instance.
+                 *This API is used to modify the expiration time of a specified data backup for an instance.
                  * @param req ModifyBaseBackupExpireTimeRequest
                  * @return ModifyBaseBackupExpireTimeOutcome
                  */
@@ -1257,6 +1267,15 @@ namespace TencentCloud
                 RestartDBInstanceOutcomeCallable RestartDBInstanceCallable(const Model::RestartDBInstanceRequest& request);
 
                 /**
+                 *This API is used to recover database-related objects such as databases and tables on the original instance based on the backup set or recovery target time.
+                 * @param req RestoreDBInstanceObjectsRequest
+                 * @return RestoreDBInstanceObjectsOutcome
+                 */
+                RestoreDBInstanceObjectsOutcome RestoreDBInstanceObjects(const Model::RestoreDBInstanceObjectsRequest &request);
+                void RestoreDBInstanceObjectsAsync(const Model::RestoreDBInstanceObjectsRequest& request, const RestoreDBInstanceObjectsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RestoreDBInstanceObjectsOutcomeCallable RestoreDBInstanceObjectsCallable(const Model::RestoreDBInstanceObjectsRequest& request);
+
+                /**
                  *This API is used to set auto-renewal.
                  * @param req SetAutoRenewFlagRequest
                  * @return SetAutoRenewFlagOutcome
@@ -1294,6 +1313,15 @@ namespace TencentCloud
                 UpgradeDBInstanceKernelVersionOutcome UpgradeDBInstanceKernelVersion(const Model::UpgradeDBInstanceKernelVersionRequest &request);
                 void UpgradeDBInstanceKernelVersionAsync(const Model::UpgradeDBInstanceKernelVersionRequest& request, const UpgradeDBInstanceKernelVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 UpgradeDBInstanceKernelVersionOutcomeCallable UpgradeDBInstanceKernelVersionCallable(const Model::UpgradeDBInstanceKernelVersionRequest& request);
+
+                /**
+                 *This API is used to upgrade the major kernel version of an instance, for example, from PostgreSQL 12 to PostgreSQL 15.
+                 * @param req UpgradeDBInstanceMajorVersionRequest
+                 * @return UpgradeDBInstanceMajorVersionOutcome
+                 */
+                UpgradeDBInstanceMajorVersionOutcome UpgradeDBInstanceMajorVersion(const Model::UpgradeDBInstanceMajorVersionRequest &request);
+                void UpgradeDBInstanceMajorVersionAsync(const Model::UpgradeDBInstanceMajorVersionRequest& request, const UpgradeDBInstanceMajorVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpgradeDBInstanceMajorVersionOutcomeCallable UpgradeDBInstanceMajorVersionCallable(const Model::UpgradeDBInstanceMajorVersionRequest& request);
 
             };
         }

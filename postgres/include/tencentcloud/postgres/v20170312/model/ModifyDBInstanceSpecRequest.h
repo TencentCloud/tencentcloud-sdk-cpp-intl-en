@@ -106,27 +106,27 @@ namespace TencentCloud
                     bool StorageHasBeenSet() const;
 
                     /**
-                     * 获取Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
-                     * @return AutoVoucher Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
+                     * 获取Whether to automatically use coupons:
+<li>`0`: no</li>
+<li>`1`: yes</li>
+Default value: 0
+                     * @return AutoVoucher Whether to automatically use coupons:
+<li>`0`: no</li>
+<li>`1`: yes</li>
+Default value: 0
                      * 
                      */
                     uint64_t GetAutoVoucher() const;
 
                     /**
-                     * 设置Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
-                     * @param _autoVoucher Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
+                     * 设置Whether to automatically use coupons:
+<li>`0`: no</li>
+<li>`1`: yes</li>
+Default value: 0
+                     * @param _autoVoucher Whether to automatically use coupons:
+<li>`0`: no</li>
+<li>`1`: yes</li>
+Default value: 0
                      * 
                      */
                     void SetAutoVoucher(const uint64_t& _autoVoucher);
@@ -181,31 +181,31 @@ Default value: `0`.
                     bool ActivityIdHasBeenSet() const;
 
                     /**
-                     * 获取Switch time for the specified instance after configuration modification.
-<li>`0`: Switch now. 
-<li>`1`: Switch at the specified time.
-<li>`2`: Switch in the maintenance time.
-Default value: `0`. 
-                     * @return SwitchTag Switch time for the specified instance after configuration modification.
-<li>`0`: Switch now. 
-<li>`1`: Switch at the specified time.
-<li>`2`: Switch in the maintenance time.
-Default value: `0`. 
+                     * 获取Switch time after instance configurations are modified.
+<li>0: Switch immediately</li>
+<li>1: Switch at specified time</li>
+<li>2: Switch during maintenance time window</li>
+Default value: 0
+                     * @return SwitchTag Switch time after instance configurations are modified.
+<li>0: Switch immediately</li>
+<li>1: Switch at specified time</li>
+<li>2: Switch during maintenance time window</li>
+Default value: 0
                      * 
                      */
                     uint64_t GetSwitchTag() const;
 
                     /**
-                     * 设置Switch time for the specified instance after configuration modification.
-<li>`0`: Switch now. 
-<li>`1`: Switch at the specified time.
-<li>`2`: Switch in the maintenance time.
-Default value: `0`. 
-                     * @param _switchTag Switch time for the specified instance after configuration modification.
-<li>`0`: Switch now. 
-<li>`1`: Switch at the specified time.
-<li>`2`: Switch in the maintenance time.
-Default value: `0`. 
+                     * 设置Switch time after instance configurations are modified.
+<li>0: Switch immediately</li>
+<li>1: Switch at specified time</li>
+<li>2: Switch during maintenance time window</li>
+Default value: 0
+                     * @param _switchTag Switch time after instance configurations are modified.
+<li>0: Switch immediately</li>
+<li>1: Switch at specified time</li>
+<li>2: Switch during maintenance time window</li>
+Default value: 0
                      * 
                      */
                     void SetSwitchTag(const uint64_t& _switchTag);
@@ -259,6 +259,27 @@ Default value: `0`.
                      */
                     bool SwitchEndTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Instance CPU size in Cores after modification.
+                     * @return Cpu Instance CPU size in Cores after modification.
+                     * 
+                     */
+                    uint64_t GetCpu() const;
+
+                    /**
+                     * 设置Instance CPU size in Cores after modification.
+                     * @param _cpu Instance CPU size in Cores after modification.
+                     * 
+                     */
+                    void SetCpu(const uint64_t& _cpu);
+
+                    /**
+                     * 判断参数 Cpu 是否已赋值
+                     * @return Cpu 是否已赋值
+                     * 
+                     */
+                    bool CpuHasBeenSet() const;
+
                 private:
 
                     /**
@@ -280,10 +301,10 @@ Default value: `0`.
                     bool m_storageHasBeenSet;
 
                     /**
-                     * Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
+                     * Whether to automatically use coupons:
+<li>`0`: no</li>
+<li>`1`: yes</li>
+Default value: 0
                      */
                     uint64_t m_autoVoucher;
                     bool m_autoVoucherHasBeenSet;
@@ -301,11 +322,11 @@ Default value: `0`.
                     bool m_activityIdHasBeenSet;
 
                     /**
-                     * Switch time for the specified instance after configuration modification.
-<li>`0`: Switch now. 
-<li>`1`: Switch at the specified time.
-<li>`2`: Switch in the maintenance time.
-Default value: `0`. 
+                     * Switch time after instance configurations are modified.
+<li>0: Switch immediately</li>
+<li>1: Switch at specified time</li>
+<li>2: Switch during maintenance time window</li>
+Default value: 0
                      */
                     uint64_t m_switchTag;
                     bool m_switchTagHasBeenSet;
@@ -321,6 +342,12 @@ Default value: `0`.
                      */
                     std::string m_switchEndTime;
                     bool m_switchEndTimeHasBeenSet;
+
+                    /**
+                     * Instance CPU size in Cores after modification.
+                     */
+                    uint64_t m_cpu;
+                    bool m_cpuHasBeenSet;
 
                 };
             }

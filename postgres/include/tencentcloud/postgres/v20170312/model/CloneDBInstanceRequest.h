@@ -108,23 +108,31 @@ namespace TencentCloud
                     bool StorageHasBeenSet() const;
 
                     /**
-                     * 获取Validity period in months. Valid values:
-<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-<li>Pay-as-you-go: `1`.
-                     * @return Period Validity period in months. Valid values:
-<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-<li>Pay-as-you-go: `1`.
+                     * 获取Purchase duration, in months.
+
+- Prepaid: Supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.
+- Pay-as-you-go: Only supports `1`.
+
+                     * @return Period Purchase duration, in months.
+
+- Prepaid: Supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.
+- Pay-as-you-go: Only supports `1`.
+
                      * 
                      */
                     int64_t GetPeriod() const;
 
                     /**
-                     * 设置Validity period in months. Valid values:
-<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-<li>Pay-as-you-go: `1`.
-                     * @param _period Validity period in months. Valid values:
-<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-<li>Pay-as-you-go: `1`.
+                     * 设置Purchase duration, in months.
+
+- Prepaid: Supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.
+- Pay-as-you-go: Only supports `1`.
+
+                     * @param _period Purchase duration, in months.
+
+- Prepaid: Supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.
+- Pay-as-you-go: Only supports `1`.
+
                      * 
                      */
                     void SetPeriod(const int64_t& _period);
@@ -137,27 +145,35 @@ namespace TencentCloud
                     bool PeriodHasBeenSet() const;
 
                     /**
-                     * 获取Auto-renewal flag. Valid values:
-<li>`0`: Manual renewal.
-<li>`1`: Automatic renewal.
-Default value: `0`.
-                     * @return AutoRenewFlag Auto-renewal flag. Valid values:
-<li>`0`: Manual renewal.
-<li>`1`: Automatic renewal.
-Default value: `0`.
+                     * 获取Renewal Flag:
+
+- `0`: manual renewal
+`1`: auto-renewal
+
+Default value: 0
+                     * @return AutoRenewFlag Renewal Flag:
+
+- `0`: manual renewal
+`1`: auto-renewal
+
+Default value: 0
                      * 
                      */
                     int64_t GetAutoRenewFlag() const;
 
                     /**
-                     * 设置Auto-renewal flag. Valid values:
-<li>`0`: Manual renewal.
-<li>`1`: Automatic renewal.
-Default value: `0`.
-                     * @param _autoRenewFlag Auto-renewal flag. Valid values:
-<li>`0`: Manual renewal.
-<li>`1`: Automatic renewal.
-Default value: `0`.
+                     * 设置Renewal Flag:
+
+- `0`: manual renewal
+`1`: auto-renewal
+
+Default value: 0
+                     * @param _autoRenewFlag Renewal Flag:
+
+- `0`: manual renewal
+`1`: auto-renewal
+
+Default value: 0
                      * 
                      */
                     void SetAutoRenewFlag(const int64_t& _autoRenewFlag);
@@ -233,27 +249,35 @@ Default value: `0`.
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Instance billing mode. Valid values:
-<li>`PREPAID`: Monthly subscription.
-<li>`POSTPAID_BY_HOUR`: Pay-as-you-go.
-Default value: `PREPAID`.
-                     * @return InstanceChargeType Instance billing mode. Valid values:
-<li>`PREPAID`: Monthly subscription.
-<li>`POSTPAID_BY_HOUR`: Pay-as-you-go.
-Default value: `PREPAID`.
+                     * 获取Instance billing type, which currently supports:
+
+- PREPAID: Prepaid, i.e., monthly subscription
+- POSTPAID_BY_HOUR: Pay-as-you-go, i.e., pay by consumption
+
+Default value: PREPAID
+                     * @return InstanceChargeType Instance billing type, which currently supports:
+
+- PREPAID: Prepaid, i.e., monthly subscription
+- POSTPAID_BY_HOUR: Pay-as-you-go, i.e., pay by consumption
+
+Default value: PREPAID
                      * 
                      */
                     std::string GetInstanceChargeType() const;
 
                     /**
-                     * 设置Instance billing mode. Valid values:
-<li>`PREPAID`: Monthly subscription.
-<li>`POSTPAID_BY_HOUR`: Pay-as-you-go.
-Default value: `PREPAID`.
-                     * @param _instanceChargeType Instance billing mode. Valid values:
-<li>`PREPAID`: Monthly subscription.
-<li>`POSTPAID_BY_HOUR`: Pay-as-you-go.
-Default value: `PREPAID`.
+                     * 设置Instance billing type, which currently supports:
+
+- PREPAID: Prepaid, i.e., monthly subscription
+- POSTPAID_BY_HOUR: Pay-as-you-go, i.e., pay by consumption
+
+Default value: PREPAID
+                     * @param _instanceChargeType Instance billing type, which currently supports:
+
+- PREPAID: Prepaid, i.e., monthly subscription
+- POSTPAID_BY_HOUR: Pay-as-you-go, i.e., pay by consumption
+
+Default value: PREPAID
                      * 
                      */
                     void SetInstanceChargeType(const std::string& _instanceChargeType);
@@ -358,27 +382,35 @@ The information of AZ can be obtained from the `Zone` field in the return value 
                     bool DBNodeSetHasBeenSet() const;
 
                     /**
-                     * 获取Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
-                     * @return AutoVoucher Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
+                     * 获取Whether to automatically use coupons:
+
+- 0: No
+- 1: Yes
+
+Default value: 0
+                     * @return AutoVoucher Whether to automatically use coupons:
+
+- 0: No
+- 1: Yes
+
+Default value: 0
                      * 
                      */
                     int64_t GetAutoVoucher() const;
 
                     /**
-                     * 设置Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
-                     * @param _autoVoucher Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
+                     * 设置Whether to automatically use coupons:
+
+- 0: No
+- 1: Yes
+
+Default value: 0
+                     * @param _autoVoucher Whether to automatically use coupons:
+
+- 0: No
+- 1: Yes
+
+Default value: 0
                      * 
                      */
                     void SetAutoVoucher(const int64_t& _autoVoucher);
@@ -475,31 +507,31 @@ Default value: `0`.
                     bool RecoveryTargetTimeHasBeenSet() const;
 
                     /**
-                     * 获取Primary-standby sync mode. Valid values:  
-<li>`Semi-sync`
-<li>`Async`
-Default value for the primary instance: `Semi-sync`.
-Default value for the standby instance: `Async`.
-                     * @return SyncMode Primary-standby sync mode. Valid values:  
-<li>`Semi-sync`
-<li>`Async`
-Default value for the primary instance: `Semi-sync`.
-Default value for the standby instance: `Async`.
+                     * 获取Primary-standby sync mode, which supports:
+<li>Semi-sync: Semi-sync</li>
+<li>Async: Asynchronous</li>
+Default value for the primary instance: Semi-sync
+Default value for the read-only instance: Async
+                     * @return SyncMode Primary-standby sync mode, which supports:
+<li>Semi-sync: Semi-sync</li>
+<li>Async: Asynchronous</li>
+Default value for the primary instance: Semi-sync
+Default value for the read-only instance: Async
                      * 
                      */
                     std::string GetSyncMode() const;
 
                     /**
-                     * 设置Primary-standby sync mode. Valid values:  
-<li>`Semi-sync`
-<li>`Async`
-Default value for the primary instance: `Semi-sync`.
-Default value for the standby instance: `Async`.
-                     * @param _syncMode Primary-standby sync mode. Valid values:  
-<li>`Semi-sync`
-<li>`Async`
-Default value for the primary instance: `Semi-sync`.
-Default value for the standby instance: `Async`.
+                     * 设置Primary-standby sync mode, which supports:
+<li>Semi-sync: Semi-sync</li>
+<li>Async: Asynchronous</li>
+Default value for the primary instance: Semi-sync
+Default value for the read-only instance: Async
+                     * @param _syncMode Primary-standby sync mode, which supports:
+<li>Semi-sync: Semi-sync</li>
+<li>Async: Asynchronous</li>
+Default value for the primary instance: Semi-sync
+Default value for the read-only instance: Async
                      * 
                      */
                     void SetSyncMode(const std::string& _syncMode);
@@ -532,18 +564,22 @@ Default value for the standby instance: `Async`.
                     bool m_storageHasBeenSet;
 
                     /**
-                     * Validity period in months. Valid values:
-<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-<li>Pay-as-you-go: `1`.
+                     * Purchase duration, in months.
+
+- Prepaid: Supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.
+- Pay-as-you-go: Only supports `1`.
+
                      */
                     int64_t m_period;
                     bool m_periodHasBeenSet;
 
                     /**
-                     * Auto-renewal flag. Valid values:
-<li>`0`: Manual renewal.
-<li>`1`: Automatic renewal.
-Default value: `0`.
+                     * Renewal Flag:
+
+- `0`: manual renewal
+`1`: auto-renewal
+
+Default value: 0
                      */
                     int64_t m_autoRenewFlag;
                     bool m_autoRenewFlagHasBeenSet;
@@ -567,10 +603,12 @@ Default value: `0`.
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Instance billing mode. Valid values:
-<li>`PREPAID`: Monthly subscription.
-<li>`POSTPAID_BY_HOUR`: Pay-as-you-go.
-Default value: `PREPAID`.
+                     * Instance billing type, which currently supports:
+
+- PREPAID: Prepaid, i.e., monthly subscription
+- POSTPAID_BY_HOUR: Pay-as-you-go, i.e., pay by consumption
+
+Default value: PREPAID
                      */
                     std::string m_instanceChargeType;
                     bool m_instanceChargeTypeHasBeenSet;
@@ -602,10 +640,12 @@ The information of AZ can be obtained from the `Zone` field in the return value 
                     bool m_dBNodeSetHasBeenSet;
 
                     /**
-                     * Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
+                     * Whether to automatically use coupons:
+
+- 0: No
+- 1: Yes
+
+Default value: 0
                      */
                     int64_t m_autoVoucher;
                     bool m_autoVoucherHasBeenSet;
@@ -635,11 +675,11 @@ Default value: `0`.
                     bool m_recoveryTargetTimeHasBeenSet;
 
                     /**
-                     * Primary-standby sync mode. Valid values:  
-<li>`Semi-sync`
-<li>`Async`
-Default value for the primary instance: `Semi-sync`.
-Default value for the standby instance: `Async`.
+                     * Primary-standby sync mode, which supports:
+<li>Semi-sync: Semi-sync</li>
+<li>Async: Asynchronous</li>
+Default value for the primary instance: Semi-sync
+Default value for the read-only instance: Async
                      */
                     std::string m_syncMode;
                     bool m_syncModeHasBeenSet;

@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return DBInstanceId Instance ID
+                     * 获取Instance ID.
+                     * @return DBInstanceId Instance ID.
                      * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _dBInstanceId Instance ID
+                     * 设置Instance ID.
+                     * @param _dBInstanceId Instance ID.
                      * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Parameters to be modified and their new values
-                     * @return ParamList Parameters to be modified and their new values
+                     * 获取Parameters to be modified and expected values.
+                     * @return ParamList Parameters to be modified and expected values.
                      * 
                      */
                     std::vector<ParamEntry> GetParamList() const;
 
                     /**
-                     * 设置Parameters to be modified and their new values
-                     * @param _paramList Parameters to be modified and their new values
+                     * 设置Parameters to be modified and expected values.
+                     * @param _paramList Parameters to be modified and expected values.
                      * 
                      */
                     void SetParamList(const std::vector<ParamEntry>& _paramList);
@@ -88,13 +88,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * Instance ID.
                      */
                     std::string m_dBInstanceId;
                     bool m_dBInstanceIdHasBeenSet;
 
                     /**
-                     * Parameters to be modified and their new values
+                     * Parameters to be modified and expected values.
                      */
                     std::vector<ParamEntry> m_paramList;
                     bool m_paramListHasBeenSet;

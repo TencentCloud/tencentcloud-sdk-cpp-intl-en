@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Start timestamp of the query range in the format of "YYYY-MM-DD HH:mm:ss". The log is retained for seven days by default, so the start timestamp must fall within the retention period.
-                     * @return StartTime Start timestamp of the query range in the format of "YYYY-MM-DD HH:mm:ss". The log is retained for seven days by default, so the start timestamp must fall within the retention period.
+                     * 获取Query start time, in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.
+                     * @return StartTime Query start time, in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Start timestamp of the query range in the format of "YYYY-MM-DD HH:mm:ss". The log is retained for seven days by default, so the start timestamp must fall within the retention period.
-                     * @param _startTime Start timestamp of the query range in the format of "YYYY-MM-DD HH:mm:ss". The log is retained for seven days by default, so the start timestamp must fall within the retention period.
+                     * 设置Query start time, in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.
+                     * @param _startTime Query start time, in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End timestamp of the query range in the format of "YYYY-MM-DD HH:mm:ss".
-                     * @return EndTime End timestamp of the query range in the format of "YYYY-MM-DD HH:mm:ss".
+                     * 获取Query end time, in the format of 2018-01-01 00:00:00.
+                     * @return EndTime Query end time, in the format of 2018-01-01 00:00:00.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End timestamp of the query range in the format of "YYYY-MM-DD HH:mm:ss".
-                     * @param _endTime End timestamp of the query range in the format of "YYYY-MM-DD HH:mm:ss".
+                     * 设置Query end time, in the format of 2018-01-01 00:00:00.
+                     * @param _endTime Query end time, in the format of 2018-01-01 00:00:00.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Filter by database name. This parameter is optional.
-                     * @return DatabaseName Filter by database name. This parameter is optional.
+                     * 获取Database name.
+                     * @return DatabaseName Database name.
                      * 
                      */
                     std::string GetDatabaseName() const;
 
                     /**
-                     * 设置Filter by database name. This parameter is optional.
-                     * @param _databaseName Filter by database name. This parameter is optional.
+                     * 设置Database name.
+                     * @param _databaseName Database name.
                      * 
                      */
                     void SetDatabaseName(const std::string& _databaseName);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool DatabaseNameHasBeenSet() const;
 
                     /**
-                     * 获取Sorting order. Valid values: `asc` (ascending), `desc` (descending). Default value: `desc`.
-                     * @return OrderByType Sorting order. Valid values: `asc` (ascending), `desc` (descending). Default value: `desc`.
+                     * 获取Sorting method, including ascending: `asc` and descending: `desc`. The default value is `desc`.	
+                     * @return OrderByType Sorting method, including ascending: `asc` and descending: `desc`. The default value is `desc`.	
                      * 
                      */
                     std::string GetOrderByType() const;
 
                     /**
-                     * 设置Sorting order. Valid values: `asc` (ascending), `desc` (descending). Default value: `desc`.
-                     * @param _orderByType Sorting order. Valid values: `asc` (ascending), `desc` (descending). Default value: `desc`.
+                     * 设置Sorting method, including ascending: `asc` and descending: `desc`. The default value is `desc`.	
+                     * @param _orderByType Sorting method, including ascending: `asc` and descending: `desc`. The default value is `desc`.	
                      * 
                      */
                     void SetOrderByType(const std::string& _orderByType);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool OrderByTypeHasBeenSet() const;
 
                     /**
-                     * 获取Sort by field. Valid values: `SessionStartTime` (default), `Duration`.
-                     * @return OrderBy Sort by field. Valid values: `SessionStartTime` (default), `Duration`.
+                     * 获取Sorting field, with a value range of `[SessionStartTime, Duration]`. The default value is `SessionStartTime`.
+                     * @return OrderBy Sorting field, with a value range of `[SessionStartTime, Duration]`. The default value is `SessionStartTime`.
                      * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
-                     * 设置Sort by field. Valid values: `SessionStartTime` (default), `Duration`.
-                     * @param _orderBy Sort by field. Valid values: `SessionStartTime` (default), `Duration`.
+                     * 设置Sorting field, with a value range of `[SessionStartTime, Duration]`. The default value is `SessionStartTime`.
+                     * @param _orderBy Sorting field, with a value range of `[SessionStartTime, Duration]`. The default value is `SessionStartTime`.
                      * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool OrderByHasBeenSet() const;
 
                     /**
-                     * 获取Number of entries per page. Value range: [1,100]. Default value: `20`.
-                     * @return Limit Number of entries per page. Value range: [1,100]. Default value: `20`.
+                     * 获取Number of results returned per page, with a value range of 1-100. The default value is `50`.
+                     * @return Limit Number of results returned per page, with a value range of 1-100. The default value is `50`.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of entries per page. Value range: [1,100]. Default value: `20`.
-                     * @param _limit Number of entries per page. Value range: [1,100]. Default value: `20`.
+                     * 设置Number of results returned per page, with a value range of 1-100. The default value is `50`.
+                     * @param _limit Number of results returned per page, with a value range of 1-100. The default value is `50`.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -190,15 +190,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Pagination offset. Value range: [0,INF). Default value: `0`.
-                     * @return Offset Pagination offset. Value range: [0,INF). Default value: `0`.
+                     * 获取Data offset, which starts from 0. The default value is `0`.
+                     * @return Offset Data offset, which starts from 0. The default value is `0`.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Pagination offset. Value range: [0,INF). Default value: `0`.
-                     * @param _offset Pagination offset. Value range: [0,INF). Default value: `0`.
+                     * 设置Data offset, which starts from 0. The default value is `0`.
+                     * @param _offset Data offset, which starts from 0. The default value is `0`.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -219,43 +219,43 @@ namespace TencentCloud
                     bool m_dBInstanceIdHasBeenSet;
 
                     /**
-                     * Start timestamp of the query range in the format of "YYYY-MM-DD HH:mm:ss". The log is retained for seven days by default, so the start timestamp must fall within the retention period.
+                     * Query start time, in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End timestamp of the query range in the format of "YYYY-MM-DD HH:mm:ss".
+                     * Query end time, in the format of 2018-01-01 00:00:00.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Filter by database name. This parameter is optional.
+                     * Database name.
                      */
                     std::string m_databaseName;
                     bool m_databaseNameHasBeenSet;
 
                     /**
-                     * Sorting order. Valid values: `asc` (ascending), `desc` (descending). Default value: `desc`.
+                     * Sorting method, including ascending: `asc` and descending: `desc`. The default value is `desc`.	
                      */
                     std::string m_orderByType;
                     bool m_orderByTypeHasBeenSet;
 
                     /**
-                     * Sort by field. Valid values: `SessionStartTime` (default), `Duration`.
+                     * Sorting field, with a value range of `[SessionStartTime, Duration]`. The default value is `SessionStartTime`.
                      */
                     std::string m_orderBy;
                     bool m_orderByHasBeenSet;
 
                     /**
-                     * Number of entries per page. Value range: [1,100]. Default value: `20`.
+                     * Number of results returned per page, with a value range of 1-100. The default value is `50`.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Pagination offset. Value range: [0,INF). Default value: `0`.
+                     * Data offset, which starts from 0. The default value is `0`.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;

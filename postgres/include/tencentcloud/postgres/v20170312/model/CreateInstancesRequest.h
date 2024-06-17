@@ -133,23 +133,23 @@ The information of AZ can be obtained from the `Zone` field in the return value 
                     bool InstanceCountHasBeenSet() const;
 
                     /**
-                     * 获取Validity period in months.
-<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-<li>Pay-as-you-go: `1`.
-                     * @return Period Validity period in months.
-<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-<li>Pay-as-you-go: `1`.
+                     * 获取Purchase duration, in months.
+<li>Prepaid: Supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>
+<li>Pay-as-you-go: Only supports `1`.</li>
+                     * @return Period Purchase duration, in months.
+<li>Prepaid: Supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>
+<li>Pay-as-you-go: Only supports `1`.</li>
                      * 
                      */
                     uint64_t GetPeriod() const;
 
                     /**
-                     * 设置Validity period in months.
-<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-<li>Pay-as-you-go: `1`.
-                     * @param _period Validity period in months.
-<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-<li>Pay-as-you-go: `1`.
+                     * 设置Purchase duration, in months.
+<li>Prepaid: Supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>
+<li>Pay-as-you-go: Only supports `1`.</li>
+                     * @param _period Purchase duration, in months.
+<li>Prepaid: Supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>
+<li>Pay-as-you-go: Only supports `1`.</li>
                      * 
                      */
                     void SetPeriod(const uint64_t& _period);
@@ -162,23 +162,23 @@ The information of AZ can be obtained from the `Zone` field in the return value 
                     bool PeriodHasBeenSet() const;
 
                     /**
-                     * 获取Instance character set. Valid values: 
-<li> `UTF8`
-<li> `LATIN1`
-                     * @return Charset Instance character set. Valid values: 
-<li> `UTF8`
-<li> `LATIN1`
+                     * 获取Instance character set, which currently supports only:
+<li>UTF8</li>
+<li>LATIN1</li>
+                     * @return Charset Instance character set, which currently supports only:
+<li>UTF8</li>
+<li>LATIN1</li>
                      * 
                      */
                     std::string GetCharset() const;
 
                     /**
-                     * 设置Instance character set. Valid values: 
-<li> `UTF8`
-<li> `LATIN1`
-                     * @param _charset Instance character set. Valid values: 
-<li> `UTF8`
-<li> `LATIN1`
+                     * 设置Instance character set, which currently supports only:
+<li>UTF8</li>
+<li>LATIN1</li>
+                     * @param _charset Instance character set, which currently supports only:
+<li>UTF8</li>
+<li>LATIN1</li>
                      * 
                      */
                     void SetCharset(const std::string& _charset);
@@ -191,31 +191,31 @@ The information of AZ can be obtained from the `Zone` field in the return value 
                     bool CharsetHasBeenSet() const;
 
                     /**
-                     * 获取Username of the instance root account, which has the following rules:
-<li>It must contain 1–16 letters , digits, or underscores
-<li>It can't be `postgres`.
-<li>It can't start with a digit or `pg_`.
-<li>All rules are case-insensitive.
-                     * @return AdminName Username of the instance root account, which has the following rules:
-<li>It must contain 1–16 letters , digits, or underscores
-<li>It can't be `postgres`.
-<li>It can't start with a digit or `pg_`.
-<li>All rules are case-insensitive.
+                     * 获取Username of the instance root account, with the following specifications:
+<li>The username must consist of 1-16 characters, which can be letters, digits, or underscores.</li>
+<li>It cannot be postgres.</li>
+<li>It cannot start with digits or 'pg_'.</li>
+<li>All rules are case-insensitive.</li>
+                     * @return AdminName Username of the instance root account, with the following specifications:
+<li>The username must consist of 1-16 characters, which can be letters, digits, or underscores.</li>
+<li>It cannot be postgres.</li>
+<li>It cannot start with digits or 'pg_'.</li>
+<li>All rules are case-insensitive.</li>
                      * 
                      */
                     std::string GetAdminName() const;
 
                     /**
-                     * 设置Username of the instance root account, which has the following rules:
-<li>It must contain 1–16 letters , digits, or underscores
-<li>It can't be `postgres`.
-<li>It can't start with a digit or `pg_`.
-<li>All rules are case-insensitive.
-                     * @param _adminName Username of the instance root account, which has the following rules:
-<li>It must contain 1–16 letters , digits, or underscores
-<li>It can't be `postgres`.
-<li>It can't start with a digit or `pg_`.
-<li>All rules are case-insensitive.
+                     * 设置Username of the instance root account, with the following specifications:
+<li>The username must consist of 1-16 characters, which can be letters, digits, or underscores.</li>
+<li>It cannot be postgres.</li>
+<li>It cannot start with digits or 'pg_'.</li>
+<li>All rules are case-insensitive.</li>
+                     * @param _adminName Username of the instance root account, with the following specifications:
+<li>The username must consist of 1-16 characters, which can be letters, digits, or underscores.</li>
+<li>It cannot be postgres.</li>
+<li>It cannot start with digits or 'pg_'.</li>
+<li>All rules are case-insensitive.</li>
                      * 
                      */
                     void SetAdminName(const std::string& _adminName);
@@ -228,35 +228,35 @@ The information of AZ can be obtained from the `Zone` field in the return value 
                     bool AdminNameHasBeenSet() const;
 
                     /**
-                     * 获取Password of the instance root account, which must contain 8-32 characters (above 12 characters preferably). It cannot begin with "/",
-and must contain the following 4 types of characters.
-<li>Lowercase letters: [a–z]
-<li>Uppercase letters: [A–Z]
-<li>Digits: 0-9
-<li>Symbols: ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/
-                     * @return AdminPassword Password of the instance root account, which must contain 8-32 characters (above 12 characters preferably). It cannot begin with "/",
-and must contain the following 4 types of characters.
-<li>Lowercase letters: [a–z]
-<li>Uppercase letters: [A–Z]
-<li>Digits: 0-9
-<li>Symbols: ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/
+                     * 获取Password for the instance root account username, with a length of 8-32 characters. It is recommended to use a password of more than 12 characters and it cannot start with "/".
+It must include the following four types of characters:
+<li>Lowercase letters: [a ~ z]</li>
+<li>Uppercase letters: [A ~ Z]</li>
+<li>Digits: 0-9</li>
+<li>Special symbols: ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/</li>
+                     * @return AdminPassword Password for the instance root account username, with a length of 8-32 characters. It is recommended to use a password of more than 12 characters and it cannot start with "/".
+It must include the following four types of characters:
+<li>Lowercase letters: [a ~ z]</li>
+<li>Uppercase letters: [A ~ Z]</li>
+<li>Digits: 0-9</li>
+<li>Special symbols: ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/</li>
                      * 
                      */
                     std::string GetAdminPassword() const;
 
                     /**
-                     * 设置Password of the instance root account, which must contain 8-32 characters (above 12 characters preferably). It cannot begin with "/",
-and must contain the following 4 types of characters.
-<li>Lowercase letters: [a–z]
-<li>Uppercase letters: [A–Z]
-<li>Digits: 0-9
-<li>Symbols: ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/
-                     * @param _adminPassword Password of the instance root account, which must contain 8-32 characters (above 12 characters preferably). It cannot begin with "/",
-and must contain the following 4 types of characters.
-<li>Lowercase letters: [a–z]
-<li>Uppercase letters: [A–Z]
-<li>Digits: 0-9
-<li>Symbols: ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/
+                     * 设置Password for the instance root account username, with a length of 8-32 characters. It is recommended to use a password of more than 12 characters and it cannot start with "/".
+It must include the following four types of characters:
+<li>Lowercase letters: [a ~ z]</li>
+<li>Uppercase letters: [A ~ Z]</li>
+<li>Digits: 0-9</li>
+<li>Special symbols: ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/</li>
+                     * @param _adminPassword Password for the instance root account username, with a length of 8-32 characters. It is recommended to use a password of more than 12 characters and it cannot start with "/".
+It must include the following four types of characters:
+<li>Lowercase letters: [a ~ z]</li>
+<li>Uppercase letters: [A ~ Z]</li>
+<li>Digits: 0-9</li>
+<li>Special symbols: ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/</li>
                      * 
                      */
                     void SetAdminPassword(const std::string& _adminPassword);
@@ -269,27 +269,19 @@ and must contain the following 4 types of characters.
                     bool AdminPasswordHasBeenSet() const;
 
                     /**
-                     * 获取The major PostgreSQL version number, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API. Valid values: `10`, `11`, `12`, `13`, `14`, `15`.
-When only this parameter is specified, an instance running the latest kernel version of the latest minor version will be created based on this major version.
-You must pass in at least one of the following parameters: `DBMajorVersion`, `DBVersion`, DBKernelVersion`. If you don't need a minor version, just pass in `DBMajorVersion`.
-
-                     * @return DBMajorVersion The major PostgreSQL version number, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API. Valid values: `10`, `11`, `12`, `13`, `14`, `15`.
-When only this parameter is specified, an instance running the latest kernel version of the latest minor version will be created based on this major version.
-You must pass in at least one of the following parameters: `DBMajorVersion`, `DBVersion`, DBKernelVersion`. If you don't need a minor version, just pass in `DBMajorVersion`.
-
+                     * 获取The major version number of PostgreSQL (this parameter is currently required), and the version information can be obtained from [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1). Currently major versions `10`, `11`, `12`, `13`, `14`, and `15` are supported. For details, see [Kernel Version Overview](https://intl.cloud.tencent.com/document/product/409/67018).
+When this parameter is entered, an instance running the latest kernel version of the latest minor version will be created based on this major version number.
+                     * @return DBMajorVersion The major version number of PostgreSQL (this parameter is currently required), and the version information can be obtained from [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1). Currently major versions `10`, `11`, `12`, `13`, `14`, and `15` are supported. For details, see [Kernel Version Overview](https://intl.cloud.tencent.com/document/product/409/67018).
+When this parameter is entered, an instance running the latest kernel version of the latest minor version will be created based on this major version number.
                      * 
                      */
                     std::string GetDBMajorVersion() const;
 
                     /**
-                     * 设置The major PostgreSQL version number, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API. Valid values: `10`, `11`, `12`, `13`, `14`, `15`.
-When only this parameter is specified, an instance running the latest kernel version of the latest minor version will be created based on this major version.
-You must pass in at least one of the following parameters: `DBMajorVersion`, `DBVersion`, DBKernelVersion`. If you don't need a minor version, just pass in `DBMajorVersion`.
-
-                     * @param _dBMajorVersion The major PostgreSQL version number, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API. Valid values: `10`, `11`, `12`, `13`, `14`, `15`.
-When only this parameter is specified, an instance running the latest kernel version of the latest minor version will be created based on this major version.
-You must pass in at least one of the following parameters: `DBMajorVersion`, `DBVersion`, DBKernelVersion`. If you don't need a minor version, just pass in `DBMajorVersion`.
-
+                     * 设置The major version number of PostgreSQL (this parameter is currently required), and the version information can be obtained from [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1). Currently major versions `10`, `11`, `12`, `13`, `14`, and `15` are supported. For details, see [Kernel Version Overview](https://intl.cloud.tencent.com/document/product/409/67018).
+When this parameter is entered, an instance running the latest kernel version of the latest minor version will be created based on this major version number.
+                     * @param _dBMajorVersion The major version number of PostgreSQL (this parameter is currently required), and the version information can be obtained from [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1). Currently major versions `10`, `11`, `12`, `13`, `14`, and `15` are supported. For details, see [Kernel Version Overview](https://intl.cloud.tencent.com/document/product/409/67018).
+When this parameter is entered, an instance running the latest kernel version of the latest minor version will be created based on this major version number.
                      * 
                      */
                     void SetDBMajorVersion(const std::string& _dBMajorVersion);
@@ -302,23 +294,19 @@ You must pass in at least one of the following parameters: `DBMajorVersion`, `DB
                     bool DBMajorVersionHasBeenSet() const;
 
                     /**
-                     * 获取Number of the major PostgreSQL community version and minor version, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
-If it is specified, an instance running the latest kernel version will be created based on the community minor version.
-You must pass in at least one of the following parameters: `DBMajorVersion`, `DBVersion`, DBKernelVersion`.
-                     * @return DBVersion Number of the major PostgreSQL community version and minor version, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
-If it is specified, an instance running the latest kernel version will be created based on the community minor version.
-You must pass in at least one of the following parameters: `DBMajorVersion`, `DBVersion`, DBKernelVersion`.
+                     * 获取PostgreSQL community major version + minor version number.
+It's generally not recommended to pass in this parameter. If needed, only the latest minor version number under the current major version can be passed.
+                     * @return DBVersion PostgreSQL community major version + minor version number.
+It's generally not recommended to pass in this parameter. If needed, only the latest minor version number under the current major version can be passed.
                      * 
                      */
                     std::string GetDBVersion() const;
 
                     /**
-                     * 设置Number of the major PostgreSQL community version and minor version, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
-If it is specified, an instance running the latest kernel version will be created based on the community minor version.
-You must pass in at least one of the following parameters: `DBMajorVersion`, `DBVersion`, DBKernelVersion`.
-                     * @param _dBVersion Number of the major PostgreSQL community version and minor version, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
-If it is specified, an instance running the latest kernel version will be created based on the community minor version.
-You must pass in at least one of the following parameters: `DBMajorVersion`, `DBVersion`, DBKernelVersion`.
+                     * 设置PostgreSQL community major version + minor version number.
+It's generally not recommended to pass in this parameter. If needed, only the latest minor version number under the current major version can be passed.
+                     * @param _dBVersion PostgreSQL community major version + minor version number.
+It's generally not recommended to pass in this parameter. If needed, only the latest minor version number under the current major version can be passed.
                      * 
                      */
                     void SetDBVersion(const std::string& _dBVersion);
@@ -331,23 +319,19 @@ You must pass in at least one of the following parameters: `DBMajorVersion`, `DB
                     bool DBVersionHasBeenSet() const;
 
                     /**
-                     * 获取PostgreSQL kernel version number, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
-PostgreSQL kernel version number. If it is specified, an instance running the specified kernel version will be created. Passing in this parameter in other scenarios is not supported.This parameter is only used to specify a kernel version, which serves no other purposes.
-
-                     * @return DBKernelVersion PostgreSQL kernel version number, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
-PostgreSQL kernel version number. If it is specified, an instance running the specified kernel version will be created. Passing in this parameter in other scenarios is not supported.This parameter is only used to specify a kernel version, which serves no other purposes.
-
+                     * 获取PostgreSQL kernel version number.
+It's generally not recommended to pass in this parameter. If needed, only the latest kernel version number under the current major version can be passed.
+                     * @return DBKernelVersion PostgreSQL kernel version number.
+It's generally not recommended to pass in this parameter. If needed, only the latest kernel version number under the current major version can be passed.
                      * 
                      */
                     std::string GetDBKernelVersion() const;
 
                     /**
-                     * 设置PostgreSQL kernel version number, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
-PostgreSQL kernel version number. If it is specified, an instance running the specified kernel version will be created. Passing in this parameter in other scenarios is not supported.This parameter is only used to specify a kernel version, which serves no other purposes.
-
-                     * @param _dBKernelVersion PostgreSQL kernel version number, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
-PostgreSQL kernel version number. If it is specified, an instance running the specified kernel version will be created. Passing in this parameter in other scenarios is not supported.This parameter is only used to specify a kernel version, which serves no other purposes.
-
+                     * 设置PostgreSQL kernel version number.
+It's generally not recommended to pass in this parameter. If needed, only the latest kernel version number under the current major version can be passed.
+                     * @param _dBKernelVersion PostgreSQL kernel version number.
+It's generally not recommended to pass in this parameter. If needed, only the latest kernel version number under the current major version can be passed.
                      * 
                      */
                     void SetDBKernelVersion(const std::string& _dBKernelVersion);
@@ -360,27 +344,27 @@ PostgreSQL kernel version number. If it is specified, an instance running the sp
                     bool DBKernelVersionHasBeenSet() const;
 
                     /**
-                     * 获取Instance billing mode. Valid values:
-<li>`PREPAID`: Monthly subscription
-<li>`POSTPAID_BY_HOUR`: Pay-as-you-go
-Default value: `PREPAID`.
-                     * @return InstanceChargeType Instance billing mode. Valid values:
-<li>`PREPAID`: Monthly subscription
-<li>`POSTPAID_BY_HOUR`: Pay-as-you-go
-Default value: `PREPAID`.
+                     * 获取Instance billing type, which currently supports:
+<li>PREPAID: Prepaid, i.e., monthly subscription</li>
+<li>POSTPAID_BY_HOUR: Pay-as-you-go, i.e., pay by consumption</li>
+Default value: PREPAID
+                     * @return InstanceChargeType Instance billing type, which currently supports:
+<li>PREPAID: Prepaid, i.e., monthly subscription</li>
+<li>POSTPAID_BY_HOUR: Pay-as-you-go, i.e., pay by consumption</li>
+Default value: PREPAID
                      * 
                      */
                     std::string GetInstanceChargeType() const;
 
                     /**
-                     * 设置Instance billing mode. Valid values:
-<li>`PREPAID`: Monthly subscription
-<li>`POSTPAID_BY_HOUR`: Pay-as-you-go
-Default value: `PREPAID`.
-                     * @param _instanceChargeType Instance billing mode. Valid values:
-<li>`PREPAID`: Monthly subscription
-<li>`POSTPAID_BY_HOUR`: Pay-as-you-go
-Default value: `PREPAID`.
+                     * 设置Instance billing type, which currently supports:
+<li>PREPAID: Prepaid, i.e., monthly subscription</li>
+<li>POSTPAID_BY_HOUR: Pay-as-you-go, i.e., pay by consumption</li>
+Default value: PREPAID
+                     * @param _instanceChargeType Instance billing type, which currently supports:
+<li>PREPAID: Prepaid, i.e., monthly subscription</li>
+<li>POSTPAID_BY_HOUR: Pay-as-you-go, i.e., pay by consumption</li>
+Default value: PREPAID
                      * 
                      */
                     void SetInstanceChargeType(const std::string& _instanceChargeType);
@@ -393,15 +377,15 @@ Default value: `PREPAID`.
                     bool InstanceChargeTypeHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID in the format of `vpc-xxxxxxx`. To obtain valid VPC IDs, you can log in to the console or call [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) and look for the `unVpcId` fields in the response.
-                     * @return VpcId VPC ID in the format of `vpc-xxxxxxx`. To obtain valid VPC IDs, you can log in to the console or call [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) and look for the `unVpcId` fields in the response.
+                     * 获取VPC ID, in the format of vpc-xxxxxxxx (this parameter is currently required). A valid VpcId can be obtained by logging into the console; it can also be obtained from the unVpcId field in the return value of calling of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
+                     * @return VpcId VPC ID, in the format of vpc-xxxxxxxx (this parameter is currently required). A valid VpcId can be obtained by logging into the console; it can also be obtained from the unVpcId field in the return value of calling of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置VPC ID in the format of `vpc-xxxxxxx`. To obtain valid VPC IDs, you can log in to the console or call [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) and look for the `unVpcId` fields in the response.
-                     * @param _vpcId VPC ID in the format of `vpc-xxxxxxx`. To obtain valid VPC IDs, you can log in to the console or call [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) and look for the `unVpcId` fields in the response.
+                     * 设置VPC ID, in the format of vpc-xxxxxxxx (this parameter is currently required). A valid VpcId can be obtained by logging into the console; it can also be obtained from the unVpcId field in the return value of calling of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
+                     * @param _vpcId VPC ID, in the format of vpc-xxxxxxxx (this parameter is currently required). A valid VpcId can be obtained by logging into the console; it can also be obtained from the unVpcId field in the return value of calling of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -414,15 +398,15 @@ Default value: `PREPAID`.
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取VPC subnet ID in the format of `subnet-xxxxxxxx`, u200cwhich can be obtained in the console or from the `unSubnetId` field in the return value of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
-                     * @return SubnetId VPC subnet ID in the format of `subnet-xxxxxxxx`, u200cwhich can be obtained in the console or from the `unSubnetId` field in the return value of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
+                     * 获取VPC subnet ID, in the format of subnet-xxxxxxxx (this parameter is currently required). A valid VPC subnet ID can be obtained by logging into the console; it can also be obtained from the unSubnetId field in the return value of calling of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
+                     * @return SubnetId VPC subnet ID, in the format of subnet-xxxxxxxx (this parameter is currently required). A valid VPC subnet ID can be obtained by logging into the console; it can also be obtained from the unSubnetId field in the return value of calling of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
                      * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置VPC subnet ID in the format of `subnet-xxxxxxxx`, u200cwhich can be obtained in the console or from the `unSubnetId` field in the return value of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
-                     * @param _subnetId VPC subnet ID in the format of `subnet-xxxxxxxx`, u200cwhich can be obtained in the console or from the `unSubnetId` field in the return value of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
+                     * 设置VPC subnet ID, in the format of subnet-xxxxxxxx (this parameter is currently required). A valid VPC subnet ID can be obtained by logging into the console; it can also be obtained from the unSubnetId field in the return value of calling of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
+                     * @param _subnetId VPC subnet ID, in the format of subnet-xxxxxxxx (this parameter is currently required). A valid VPC subnet ID can be obtained by logging into the console; it can also be obtained from the unSubnetId field in the return value of calling of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
                      * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
@@ -460,27 +444,27 @@ The information of AZ can be obtained from the `Zone` field in the return value 
                     bool DBNodeSetHasBeenSet() const;
 
                     /**
-                     * 获取Auto-renewal flag. Valid values:
-<li>`0`: Manual renewal.
-<li> `1`: Automatic renewal.
-Default value: `0`.
-                     * @return AutoRenewFlag Auto-renewal flag. Valid values:
-<li>`0`: Manual renewal.
-<li> `1`: Automatic renewal.
-Default value: `0`.
+                     * 获取Renewal Flag:
+<li>`0`: manual renewal</li>
+<li>`1`: auto-renewal</li>
+Default value: 0
+                     * @return AutoRenewFlag Renewal Flag:
+<li>`0`: manual renewal</li>
+<li>`1`: auto-renewal</li>
+Default value: 0
                      * 
                      */
                     int64_t GetAutoRenewFlag() const;
 
                     /**
-                     * 设置Auto-renewal flag. Valid values:
-<li>`0`: Manual renewal.
-<li> `1`: Automatic renewal.
-Default value: `0`.
-                     * @param _autoRenewFlag Auto-renewal flag. Valid values:
-<li>`0`: Manual renewal.
-<li> `1`: Automatic renewal.
-Default value: `0`.
+                     * 设置Renewal Flag:
+<li>`0`: manual renewal</li>
+<li>`1`: auto-renewal</li>
+Default value: 0
+                     * @param _autoRenewFlag Renewal Flag:
+<li>`0`: manual renewal</li>
+<li>`1`: auto-renewal</li>
+Default value: 0
                      * 
                      */
                     void SetAutoRenewFlag(const int64_t& _autoRenewFlag);
@@ -493,27 +477,27 @@ Default value: `0`.
                     bool AutoRenewFlagHasBeenSet() const;
 
                     /**
-                     * 获取Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
-                     * @return AutoVoucher Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
+                     * 获取Whether to automatically use coupons:
+<li>`0`: no</li>
+<li>`1`: yes</li>
+Default value: 0
+                     * @return AutoVoucher Whether to automatically use coupons:
+<li>`0`: no</li>
+<li>`1`: yes</li>
+Default value: 0
                      * 
                      */
                     uint64_t GetAutoVoucher() const;
 
                     /**
-                     * 设置Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
-                     * @param _autoVoucher Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
+                     * 设置Whether to automatically use coupons:
+<li>`0`: no</li>
+<li>`1`: yes</li>
+Default value: 0
+                     * @param _autoVoucher Whether to automatically use coupons:
+<li>`0`: no</li>
+<li>`1`: yes</li>
+Default value: 0
                      * 
                      */
                     void SetAutoVoucher(const uint64_t& _autoVoucher);
@@ -660,31 +644,27 @@ Default value: `0`.
                     bool SecurityGroupIdsHasBeenSet() const;
 
                     /**
-                     * 获取Whether to support TDE. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
-For more information, see [TDE]u200d(https://www.tencentcloud.com/document/product/409/47765).
-                     * @return NeedSupportTDE Whether to support TDE. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
-For more information, see [TDE]u200d(https://www.tencentcloud.com/document/product/409/47765).
+                     * 获取Whether data transparent encryption is required:
+<li>`0`: no</li>
+<li>`1`: yes</li>
+Default value: 0See [Overview of Data Transparent Encryption](https://intl.cloud.tencent.com/document/product/409/71748?from_cn_redirect=1).
+                     * @return NeedSupportTDE Whether data transparent encryption is required:
+<li>`0`: no</li>
+<li>`1`: yes</li>
+Default value: 0See [Overview of Data Transparent Encryption](https://intl.cloud.tencent.com/document/product/409/71748?from_cn_redirect=1).
                      * 
                      */
                     uint64_t GetNeedSupportTDE() const;
 
                     /**
-                     * 设置Whether to support TDE. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
-For more information, see [TDE]u200d(https://www.tencentcloud.com/document/product/409/47765).
-                     * @param _needSupportTDE Whether to support TDE. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
-For more information, see [TDE]u200d(https://www.tencentcloud.com/document/product/409/47765).
+                     * 设置Whether data transparent encryption is required:
+<li>`0`: no</li>
+<li>`1`: yes</li>
+Default value: 0See [Overview of Data Transparent Encryption](https://intl.cloud.tencent.com/document/product/409/71748?from_cn_redirect=1).
+                     * @param _needSupportTDE Whether data transparent encryption is required:
+<li>`0`: no</li>
+<li>`1`: yes</li>
+Default value: 0See [Overview of Data Transparent Encryption](https://intl.cloud.tencent.com/document/product/409/71748?from_cn_redirect=1).
                      * 
                      */
                     void SetNeedSupportTDE(const uint64_t& _needSupportTDE);
@@ -747,27 +727,27 @@ For more information on `KMSRegion`, see [Enabling TDE](https://intl.cloud.tence
                     bool KMSRegionHasBeenSet() const;
 
                     /**
-                     * 获取Database engines. Valid values:
-<li>`postgresql`: TencentDB for PostgreSQL
-<li>`mssql_compatible`: MSSQL compatible-TencentDB for PostgreSQL
-Default value: `postgresql`.
-                     * @return DBEngine Database engines. Valid values:
-<li>`postgresql`: TencentDB for PostgreSQL
-<li>`mssql_compatible`: MSSQL compatible-TencentDB for PostgreSQL
-Default value: `postgresql`.
+                     * 获取Database engine, which supports:
+<li>`postgresql`: TencentDB for PostgreSQL</li>
+<li>`mssql_compatible`: MSSQL compatible - TencentDB for PostgreSQL</li>
+Default value: `postgresql`
+                     * @return DBEngine Database engine, which supports:
+<li>`postgresql`: TencentDB for PostgreSQL</li>
+<li>`mssql_compatible`: MSSQL compatible - TencentDB for PostgreSQL</li>
+Default value: `postgresql`
                      * 
                      */
                     std::string GetDBEngine() const;
 
                     /**
-                     * 设置Database engines. Valid values:
-<li>`postgresql`: TencentDB for PostgreSQL
-<li>`mssql_compatible`: MSSQL compatible-TencentDB for PostgreSQL
-Default value: `postgresql`.
-                     * @param _dBEngine Database engines. Valid values:
-<li>`postgresql`: TencentDB for PostgreSQL
-<li>`mssql_compatible`: MSSQL compatible-TencentDB for PostgreSQL
-Default value: `postgresql`.
+                     * 设置Database engine, which supports:
+<li>`postgresql`: TencentDB for PostgreSQL</li>
+<li>`mssql_compatible`: MSSQL compatible - TencentDB for PostgreSQL</li>
+Default value: `postgresql`
+                     * @param _dBEngine Database engine, which supports:
+<li>`postgresql`: TencentDB for PostgreSQL</li>
+<li>`mssql_compatible`: MSSQL compatible - TencentDB for PostgreSQL</li>
+Default value: `postgresql`
                      * 
                      */
                     void SetDBEngine(const std::string& _dBEngine);
@@ -780,43 +760,43 @@ Default value: `postgresql`.
                     bool DBEngineHasBeenSet() const;
 
                     /**
-                     * 获取Configuration information of database engine in the following format:
+                     * 获取Configuration information for the database engine, and the configuration format is as follows:
 {"$key1":"$value1", "$key2":"$value2"}
-Valid values:
+Supported engines include:
 mssql_compatible engine:
-<li>`migrationMode`: Database mode. Valid values: `single-db` (single-database mode), `multi-db` (multi-database mode). Default value: `single-db`.
-<li>`defaultLocale`: Default locale, which can’t be modified after the initialization. Default value: `en_US`. Valid values:
-"af_ZA", "sq_AL", "ar_DZ", "ar_BH", "ar_EG", "ar_IQ", "ar_JO", "ar_KW", "ar_LB", "ar_LY", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "ar_SY", "ar_TN", "ar_AE", "ar_YE", "hy_AM", "az_Cyrl_AZ", "az_Latn_AZ", "eu_ES", "be_BY", "bg_BG", "ca_ES", "zh_HK", "zh_MO", "zh_CN", "zh_SG", "zh_TW", "hr_HR", "cs_CZ", "da_DK", "nl_BE", "nl_NL", "en_AU", "en_BZ", "en_CA", "en_IE", "en_JM", "en_NZ", "en_PH", "en_ZA", "en_TT", "en_GB", "en_US", "en_ZW", "et_EE", "fo_FO", "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_FR", "fr_LU", "fr_MC", "fr_CH", "mk_MK", "ka_GE", "de_AT", "de_DE", "de_LI", "de_LU", "de_CH", "el_GR", "gu_IN", "he_IL", "hi_IN", "hu_HU", "is_IS", "id_ID", "it_IT", "it_CH", "ja_JP", "kn_IN", "kok_IN", "ko_KR", "ky_KG", "lv_LV", "lt_LT", "ms_BN", "ms_MY", "mr_IN", "mn_MN", "nb_NO", "nn_NO", "pl_PL", "pt_BR", "pt_PT", "pa_IN", "ro_RO", "ru_RU", "sa_IN", "sr_Cyrl_RS", "sr_Latn_RS", "sk_SK", "sl_SI", "es_AR", "es_BO", "es_CL", "es_CO", "es_CR", "es_DO", "es_EC", "es_SV", "es_GT", "es_HN", "es_MX", "es_NI", "es_PA", "es_PY","es_PE", "es_PR", "es_ES", "es_TRADITIONAL", "es_UY", "es_VE", "sw_KE", "sv_FI", "sv_SE", "tt_RU", "te_IN", "th_TH", "tr_TR", "uk_UA", "ur_IN", "ur_PK", "uz_Cyrl_UZ", "uz_Latn_UZ", "vi_VN".
-<li>`serverCollationName`: Default collation name, which can’t be modified after the initialization. Default value: "bbf_unicode_general_ci_as". Valid values: "bbf_unicode_cp1_ci_as", "bbf_unicode_CP1250_ci_as", "bbf_unicode_CP1251_ci_as", "bbf_unicode_cp1253_ci_as", "bbf_unicode_cp1254_ci_as", "bbf_unicode_cp1255_ci_as", "bbf_unicode_cp1256_ci_as", "bbf_unicode_cp1257_ci_as", "bbf_unicode_cp1258_ci_as", "bbf_unicode_cp874_ci_as", "sql_latin1_general_cp1250_ci_as", "sql_latin1_general_cp1251_ci_as", "sql_latin1_general_cp1_ci_as", "sql_latin1_general_cp1253_ci_as", "sql_latin1_general_cp1254_ci_as", "sql_latin1_general_cp1255_ci_as","sql_latin1_general_cp1256_ci_as", "sql_latin1_general_cp1257_ci_as", "sql_latin1_general_cp1258_ci_as", "chinese_prc_ci_as", "cyrillic_general_ci_as", "finnish_swedish_ci_as", "french_ci_as", "japanese_ci_as", "korean_wansung_ci_as", "latin1_general_ci_as", "modern_spanish_ci_as", "polish_ci_as", "thai_ci_as", "traditional_spanish_ci_as", "turkish_ci_as", "ukrainian_ci_as", "vietnamese_ci_as"。
-                     * @return DBEngineConfig Configuration information of database engine in the following format:
+<li>migrationMode: Database mode, an optional parameter, and its valid values are: single-db (single database schema) and multi-db (multiple database schema). The default value is single-db.</li>
+<li>defaultLocale: Sorting area rule, an optional parameter, which cannot be modified after initialization, its default value is en_US, and its valid values include:
+"af_ZA", "sq_AL", "ar_DZ", "ar_BH", "ar_EG", "ar_IQ", "ar_JO", "ar_KW", "ar_LB", "ar_LY", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "ar_SY", "ar_TN", "ar_AE", "ar_YE", "hy_AM", "az_Cyrl_AZ", "az_Latn_AZ", "eu_ES", "be_BY", "bg_BG", "ca_ES", "zh_HK", "zh_MO", "zh_CN", "zh_SG", "zh_TW", "hr_HR", "cs_CZ", "da_DK", "nl_BE", "nl_NL", "en_AU", "en_BZ", "en_CA", "en_IE", "en_JM", "en_NZ", "en_PH", "en_ZA", "en_TT", "en_GB", "en_US", "en_ZW", "et_EE", "fo_FO", "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_FR", "fr_LU", "fr_MC", "fr_CH", "mk_MK", "ka_GE", "de_AT", "de_DE", "de_LI", "de_LU", "de_CH", "el_GR", "gu_IN", "he_IL", "hi_IN", "hu_HU", "is_IS", "id_ID", "it_IT", "it_CH", "ja_JP", "kn_IN", "kok_IN", "ko_KR", "ky_KG", "lv_LV", "lt_LT", "ms_BN", "ms_MY", "mr_IN", "mn_MN", "nb_NO", "nn_NO", "pl_PL", "pt_BR", "pt_PT", "pa_IN", "ro_RO", "ru_RU", "sa_IN", "sr_Cyrl_RS", "sr_Latn_RS", "sk_SK", "sl_SI", "es_AR", "es_BO", "es_CL", "es_CO", "es_CR", "es_DO", "es_EC", "es_SV", "es_GT", "es_HN", "es_MX", "es_NI", "es_PA", "es_PY","es_PE", "es_PR", "es_ES", "es_TRADITIONAL", "es_UY", "es_VE", "sw_KE", "sv_FI", "sv_SE", "tt_RU", "te_IN", "th_TH", "tr_TR", "uk_UA", "ur_IN", "ur_PK", "uz_Cyrl_UZ", "uz_Latn_UZ", and "vi_VN".</li>
+<li>serverCollationName: Sorting rule name, an optional parameter, which cannot be modified after initialization, its default value is sql_latin1_general_cp1_ci_as, and its valid values include: "bbf_unicode_general_ci_as", "bbf_unicode_cp1_ci_as", "bbf_unicode_CP1250_ci_as", "bbf_unicode_CP1251_ci_as", "bbf_unicode_cp1253_ci_as", "bbf_unicode_cp1254_ci_as", "bbf_unicode_cp1255_ci_as", "bbf_unicode_cp1256_ci_as", "bbf_unicode_cp1257_ci_as", "bbf_unicode_cp1258_ci_as", "bbf_unicode_cp874_ci_as", "sql_latin1_general_cp1250_ci_as", "sql_latin1_general_cp1251_ci_as", "sql_latin1_general_cp1_ci_as", "sql_latin1_general_cp1253_ci_as", "sql_latin1_general_cp1254_ci_as", "sql_latin1_general_cp1255_ci_as", "sql_latin1_general_cp1256_ci_as", "sql_latin1_general_cp1257_ci_as", "sql_latin1_general_cp1258_ci_as", "chinese_prc_ci_as", "cyrillic_general_ci_as", "finnish_swedish_ci_as", "french_ci_as", "japanese_ci_as", "korean_wansung_ci_as", "latin1_general_ci_as", "modern_spanish_ci_as", "polish_ci_as", "thai_ci_as", "traditional_spanish_ci_as", "turkish_ci_as", "ukrainian_ci_as", and "vietnamese_ci_as".</li>
+                     * @return DBEngineConfig Configuration information for the database engine, and the configuration format is as follows:
 {"$key1":"$value1", "$key2":"$value2"}
-Valid values:
+Supported engines include:
 mssql_compatible engine:
-<li>`migrationMode`: Database mode. Valid values: `single-db` (single-database mode), `multi-db` (multi-database mode). Default value: `single-db`.
-<li>`defaultLocale`: Default locale, which can’t be modified after the initialization. Default value: `en_US`. Valid values:
-"af_ZA", "sq_AL", "ar_DZ", "ar_BH", "ar_EG", "ar_IQ", "ar_JO", "ar_KW", "ar_LB", "ar_LY", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "ar_SY", "ar_TN", "ar_AE", "ar_YE", "hy_AM", "az_Cyrl_AZ", "az_Latn_AZ", "eu_ES", "be_BY", "bg_BG", "ca_ES", "zh_HK", "zh_MO", "zh_CN", "zh_SG", "zh_TW", "hr_HR", "cs_CZ", "da_DK", "nl_BE", "nl_NL", "en_AU", "en_BZ", "en_CA", "en_IE", "en_JM", "en_NZ", "en_PH", "en_ZA", "en_TT", "en_GB", "en_US", "en_ZW", "et_EE", "fo_FO", "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_FR", "fr_LU", "fr_MC", "fr_CH", "mk_MK", "ka_GE", "de_AT", "de_DE", "de_LI", "de_LU", "de_CH", "el_GR", "gu_IN", "he_IL", "hi_IN", "hu_HU", "is_IS", "id_ID", "it_IT", "it_CH", "ja_JP", "kn_IN", "kok_IN", "ko_KR", "ky_KG", "lv_LV", "lt_LT", "ms_BN", "ms_MY", "mr_IN", "mn_MN", "nb_NO", "nn_NO", "pl_PL", "pt_BR", "pt_PT", "pa_IN", "ro_RO", "ru_RU", "sa_IN", "sr_Cyrl_RS", "sr_Latn_RS", "sk_SK", "sl_SI", "es_AR", "es_BO", "es_CL", "es_CO", "es_CR", "es_DO", "es_EC", "es_SV", "es_GT", "es_HN", "es_MX", "es_NI", "es_PA", "es_PY","es_PE", "es_PR", "es_ES", "es_TRADITIONAL", "es_UY", "es_VE", "sw_KE", "sv_FI", "sv_SE", "tt_RU", "te_IN", "th_TH", "tr_TR", "uk_UA", "ur_IN", "ur_PK", "uz_Cyrl_UZ", "uz_Latn_UZ", "vi_VN".
-<li>`serverCollationName`: Default collation name, which can’t be modified after the initialization. Default value: "bbf_unicode_general_ci_as". Valid values: "bbf_unicode_cp1_ci_as", "bbf_unicode_CP1250_ci_as", "bbf_unicode_CP1251_ci_as", "bbf_unicode_cp1253_ci_as", "bbf_unicode_cp1254_ci_as", "bbf_unicode_cp1255_ci_as", "bbf_unicode_cp1256_ci_as", "bbf_unicode_cp1257_ci_as", "bbf_unicode_cp1258_ci_as", "bbf_unicode_cp874_ci_as", "sql_latin1_general_cp1250_ci_as", "sql_latin1_general_cp1251_ci_as", "sql_latin1_general_cp1_ci_as", "sql_latin1_general_cp1253_ci_as", "sql_latin1_general_cp1254_ci_as", "sql_latin1_general_cp1255_ci_as","sql_latin1_general_cp1256_ci_as", "sql_latin1_general_cp1257_ci_as", "sql_latin1_general_cp1258_ci_as", "chinese_prc_ci_as", "cyrillic_general_ci_as", "finnish_swedish_ci_as", "french_ci_as", "japanese_ci_as", "korean_wansung_ci_as", "latin1_general_ci_as", "modern_spanish_ci_as", "polish_ci_as", "thai_ci_as", "traditional_spanish_ci_as", "turkish_ci_as", "ukrainian_ci_as", "vietnamese_ci_as"。
+<li>migrationMode: Database mode, an optional parameter, and its valid values are: single-db (single database schema) and multi-db (multiple database schema). The default value is single-db.</li>
+<li>defaultLocale: Sorting area rule, an optional parameter, which cannot be modified after initialization, its default value is en_US, and its valid values include:
+"af_ZA", "sq_AL", "ar_DZ", "ar_BH", "ar_EG", "ar_IQ", "ar_JO", "ar_KW", "ar_LB", "ar_LY", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "ar_SY", "ar_TN", "ar_AE", "ar_YE", "hy_AM", "az_Cyrl_AZ", "az_Latn_AZ", "eu_ES", "be_BY", "bg_BG", "ca_ES", "zh_HK", "zh_MO", "zh_CN", "zh_SG", "zh_TW", "hr_HR", "cs_CZ", "da_DK", "nl_BE", "nl_NL", "en_AU", "en_BZ", "en_CA", "en_IE", "en_JM", "en_NZ", "en_PH", "en_ZA", "en_TT", "en_GB", "en_US", "en_ZW", "et_EE", "fo_FO", "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_FR", "fr_LU", "fr_MC", "fr_CH", "mk_MK", "ka_GE", "de_AT", "de_DE", "de_LI", "de_LU", "de_CH", "el_GR", "gu_IN", "he_IL", "hi_IN", "hu_HU", "is_IS", "id_ID", "it_IT", "it_CH", "ja_JP", "kn_IN", "kok_IN", "ko_KR", "ky_KG", "lv_LV", "lt_LT", "ms_BN", "ms_MY", "mr_IN", "mn_MN", "nb_NO", "nn_NO", "pl_PL", "pt_BR", "pt_PT", "pa_IN", "ro_RO", "ru_RU", "sa_IN", "sr_Cyrl_RS", "sr_Latn_RS", "sk_SK", "sl_SI", "es_AR", "es_BO", "es_CL", "es_CO", "es_CR", "es_DO", "es_EC", "es_SV", "es_GT", "es_HN", "es_MX", "es_NI", "es_PA", "es_PY","es_PE", "es_PR", "es_ES", "es_TRADITIONAL", "es_UY", "es_VE", "sw_KE", "sv_FI", "sv_SE", "tt_RU", "te_IN", "th_TH", "tr_TR", "uk_UA", "ur_IN", "ur_PK", "uz_Cyrl_UZ", "uz_Latn_UZ", and "vi_VN".</li>
+<li>serverCollationName: Sorting rule name, an optional parameter, which cannot be modified after initialization, its default value is sql_latin1_general_cp1_ci_as, and its valid values include: "bbf_unicode_general_ci_as", "bbf_unicode_cp1_ci_as", "bbf_unicode_CP1250_ci_as", "bbf_unicode_CP1251_ci_as", "bbf_unicode_cp1253_ci_as", "bbf_unicode_cp1254_ci_as", "bbf_unicode_cp1255_ci_as", "bbf_unicode_cp1256_ci_as", "bbf_unicode_cp1257_ci_as", "bbf_unicode_cp1258_ci_as", "bbf_unicode_cp874_ci_as", "sql_latin1_general_cp1250_ci_as", "sql_latin1_general_cp1251_ci_as", "sql_latin1_general_cp1_ci_as", "sql_latin1_general_cp1253_ci_as", "sql_latin1_general_cp1254_ci_as", "sql_latin1_general_cp1255_ci_as", "sql_latin1_general_cp1256_ci_as", "sql_latin1_general_cp1257_ci_as", "sql_latin1_general_cp1258_ci_as", "chinese_prc_ci_as", "cyrillic_general_ci_as", "finnish_swedish_ci_as", "french_ci_as", "japanese_ci_as", "korean_wansung_ci_as", "latin1_general_ci_as", "modern_spanish_ci_as", "polish_ci_as", "thai_ci_as", "traditional_spanish_ci_as", "turkish_ci_as", "ukrainian_ci_as", and "vietnamese_ci_as".</li>
                      * 
                      */
                     std::string GetDBEngineConfig() const;
 
                     /**
-                     * 设置Configuration information of database engine in the following format:
+                     * 设置Configuration information for the database engine, and the configuration format is as follows:
 {"$key1":"$value1", "$key2":"$value2"}
-Valid values:
+Supported engines include:
 mssql_compatible engine:
-<li>`migrationMode`: Database mode. Valid values: `single-db` (single-database mode), `multi-db` (multi-database mode). Default value: `single-db`.
-<li>`defaultLocale`: Default locale, which can’t be modified after the initialization. Default value: `en_US`. Valid values:
-"af_ZA", "sq_AL", "ar_DZ", "ar_BH", "ar_EG", "ar_IQ", "ar_JO", "ar_KW", "ar_LB", "ar_LY", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "ar_SY", "ar_TN", "ar_AE", "ar_YE", "hy_AM", "az_Cyrl_AZ", "az_Latn_AZ", "eu_ES", "be_BY", "bg_BG", "ca_ES", "zh_HK", "zh_MO", "zh_CN", "zh_SG", "zh_TW", "hr_HR", "cs_CZ", "da_DK", "nl_BE", "nl_NL", "en_AU", "en_BZ", "en_CA", "en_IE", "en_JM", "en_NZ", "en_PH", "en_ZA", "en_TT", "en_GB", "en_US", "en_ZW", "et_EE", "fo_FO", "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_FR", "fr_LU", "fr_MC", "fr_CH", "mk_MK", "ka_GE", "de_AT", "de_DE", "de_LI", "de_LU", "de_CH", "el_GR", "gu_IN", "he_IL", "hi_IN", "hu_HU", "is_IS", "id_ID", "it_IT", "it_CH", "ja_JP", "kn_IN", "kok_IN", "ko_KR", "ky_KG", "lv_LV", "lt_LT", "ms_BN", "ms_MY", "mr_IN", "mn_MN", "nb_NO", "nn_NO", "pl_PL", "pt_BR", "pt_PT", "pa_IN", "ro_RO", "ru_RU", "sa_IN", "sr_Cyrl_RS", "sr_Latn_RS", "sk_SK", "sl_SI", "es_AR", "es_BO", "es_CL", "es_CO", "es_CR", "es_DO", "es_EC", "es_SV", "es_GT", "es_HN", "es_MX", "es_NI", "es_PA", "es_PY","es_PE", "es_PR", "es_ES", "es_TRADITIONAL", "es_UY", "es_VE", "sw_KE", "sv_FI", "sv_SE", "tt_RU", "te_IN", "th_TH", "tr_TR", "uk_UA", "ur_IN", "ur_PK", "uz_Cyrl_UZ", "uz_Latn_UZ", "vi_VN".
-<li>`serverCollationName`: Default collation name, which can’t be modified after the initialization. Default value: "bbf_unicode_general_ci_as". Valid values: "bbf_unicode_cp1_ci_as", "bbf_unicode_CP1250_ci_as", "bbf_unicode_CP1251_ci_as", "bbf_unicode_cp1253_ci_as", "bbf_unicode_cp1254_ci_as", "bbf_unicode_cp1255_ci_as", "bbf_unicode_cp1256_ci_as", "bbf_unicode_cp1257_ci_as", "bbf_unicode_cp1258_ci_as", "bbf_unicode_cp874_ci_as", "sql_latin1_general_cp1250_ci_as", "sql_latin1_general_cp1251_ci_as", "sql_latin1_general_cp1_ci_as", "sql_latin1_general_cp1253_ci_as", "sql_latin1_general_cp1254_ci_as", "sql_latin1_general_cp1255_ci_as","sql_latin1_general_cp1256_ci_as", "sql_latin1_general_cp1257_ci_as", "sql_latin1_general_cp1258_ci_as", "chinese_prc_ci_as", "cyrillic_general_ci_as", "finnish_swedish_ci_as", "french_ci_as", "japanese_ci_as", "korean_wansung_ci_as", "latin1_general_ci_as", "modern_spanish_ci_as", "polish_ci_as", "thai_ci_as", "traditional_spanish_ci_as", "turkish_ci_as", "ukrainian_ci_as", "vietnamese_ci_as"。
-                     * @param _dBEngineConfig Configuration information of database engine in the following format:
+<li>migrationMode: Database mode, an optional parameter, and its valid values are: single-db (single database schema) and multi-db (multiple database schema). The default value is single-db.</li>
+<li>defaultLocale: Sorting area rule, an optional parameter, which cannot be modified after initialization, its default value is en_US, and its valid values include:
+"af_ZA", "sq_AL", "ar_DZ", "ar_BH", "ar_EG", "ar_IQ", "ar_JO", "ar_KW", "ar_LB", "ar_LY", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "ar_SY", "ar_TN", "ar_AE", "ar_YE", "hy_AM", "az_Cyrl_AZ", "az_Latn_AZ", "eu_ES", "be_BY", "bg_BG", "ca_ES", "zh_HK", "zh_MO", "zh_CN", "zh_SG", "zh_TW", "hr_HR", "cs_CZ", "da_DK", "nl_BE", "nl_NL", "en_AU", "en_BZ", "en_CA", "en_IE", "en_JM", "en_NZ", "en_PH", "en_ZA", "en_TT", "en_GB", "en_US", "en_ZW", "et_EE", "fo_FO", "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_FR", "fr_LU", "fr_MC", "fr_CH", "mk_MK", "ka_GE", "de_AT", "de_DE", "de_LI", "de_LU", "de_CH", "el_GR", "gu_IN", "he_IL", "hi_IN", "hu_HU", "is_IS", "id_ID", "it_IT", "it_CH", "ja_JP", "kn_IN", "kok_IN", "ko_KR", "ky_KG", "lv_LV", "lt_LT", "ms_BN", "ms_MY", "mr_IN", "mn_MN", "nb_NO", "nn_NO", "pl_PL", "pt_BR", "pt_PT", "pa_IN", "ro_RO", "ru_RU", "sa_IN", "sr_Cyrl_RS", "sr_Latn_RS", "sk_SK", "sl_SI", "es_AR", "es_BO", "es_CL", "es_CO", "es_CR", "es_DO", "es_EC", "es_SV", "es_GT", "es_HN", "es_MX", "es_NI", "es_PA", "es_PY","es_PE", "es_PR", "es_ES", "es_TRADITIONAL", "es_UY", "es_VE", "sw_KE", "sv_FI", "sv_SE", "tt_RU", "te_IN", "th_TH", "tr_TR", "uk_UA", "ur_IN", "ur_PK", "uz_Cyrl_UZ", "uz_Latn_UZ", and "vi_VN".</li>
+<li>serverCollationName: Sorting rule name, an optional parameter, which cannot be modified after initialization, its default value is sql_latin1_general_cp1_ci_as, and its valid values include: "bbf_unicode_general_ci_as", "bbf_unicode_cp1_ci_as", "bbf_unicode_CP1250_ci_as", "bbf_unicode_CP1251_ci_as", "bbf_unicode_cp1253_ci_as", "bbf_unicode_cp1254_ci_as", "bbf_unicode_cp1255_ci_as", "bbf_unicode_cp1256_ci_as", "bbf_unicode_cp1257_ci_as", "bbf_unicode_cp1258_ci_as", "bbf_unicode_cp874_ci_as", "sql_latin1_general_cp1250_ci_as", "sql_latin1_general_cp1251_ci_as", "sql_latin1_general_cp1_ci_as", "sql_latin1_general_cp1253_ci_as", "sql_latin1_general_cp1254_ci_as", "sql_latin1_general_cp1255_ci_as", "sql_latin1_general_cp1256_ci_as", "sql_latin1_general_cp1257_ci_as", "sql_latin1_general_cp1258_ci_as", "chinese_prc_ci_as", "cyrillic_general_ci_as", "finnish_swedish_ci_as", "french_ci_as", "japanese_ci_as", "korean_wansung_ci_as", "latin1_general_ci_as", "modern_spanish_ci_as", "polish_ci_as", "thai_ci_as", "traditional_spanish_ci_as", "turkish_ci_as", "ukrainian_ci_as", and "vietnamese_ci_as".</li>
+                     * @param _dBEngineConfig Configuration information for the database engine, and the configuration format is as follows:
 {"$key1":"$value1", "$key2":"$value2"}
-Valid values:
+Supported engines include:
 mssql_compatible engine:
-<li>`migrationMode`: Database mode. Valid values: `single-db` (single-database mode), `multi-db` (multi-database mode). Default value: `single-db`.
-<li>`defaultLocale`: Default locale, which can’t be modified after the initialization. Default value: `en_US`. Valid values:
-"af_ZA", "sq_AL", "ar_DZ", "ar_BH", "ar_EG", "ar_IQ", "ar_JO", "ar_KW", "ar_LB", "ar_LY", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "ar_SY", "ar_TN", "ar_AE", "ar_YE", "hy_AM", "az_Cyrl_AZ", "az_Latn_AZ", "eu_ES", "be_BY", "bg_BG", "ca_ES", "zh_HK", "zh_MO", "zh_CN", "zh_SG", "zh_TW", "hr_HR", "cs_CZ", "da_DK", "nl_BE", "nl_NL", "en_AU", "en_BZ", "en_CA", "en_IE", "en_JM", "en_NZ", "en_PH", "en_ZA", "en_TT", "en_GB", "en_US", "en_ZW", "et_EE", "fo_FO", "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_FR", "fr_LU", "fr_MC", "fr_CH", "mk_MK", "ka_GE", "de_AT", "de_DE", "de_LI", "de_LU", "de_CH", "el_GR", "gu_IN", "he_IL", "hi_IN", "hu_HU", "is_IS", "id_ID", "it_IT", "it_CH", "ja_JP", "kn_IN", "kok_IN", "ko_KR", "ky_KG", "lv_LV", "lt_LT", "ms_BN", "ms_MY", "mr_IN", "mn_MN", "nb_NO", "nn_NO", "pl_PL", "pt_BR", "pt_PT", "pa_IN", "ro_RO", "ru_RU", "sa_IN", "sr_Cyrl_RS", "sr_Latn_RS", "sk_SK", "sl_SI", "es_AR", "es_BO", "es_CL", "es_CO", "es_CR", "es_DO", "es_EC", "es_SV", "es_GT", "es_HN", "es_MX", "es_NI", "es_PA", "es_PY","es_PE", "es_PR", "es_ES", "es_TRADITIONAL", "es_UY", "es_VE", "sw_KE", "sv_FI", "sv_SE", "tt_RU", "te_IN", "th_TH", "tr_TR", "uk_UA", "ur_IN", "ur_PK", "uz_Cyrl_UZ", "uz_Latn_UZ", "vi_VN".
-<li>`serverCollationName`: Default collation name, which can’t be modified after the initialization. Default value: "bbf_unicode_general_ci_as". Valid values: "bbf_unicode_cp1_ci_as", "bbf_unicode_CP1250_ci_as", "bbf_unicode_CP1251_ci_as", "bbf_unicode_cp1253_ci_as", "bbf_unicode_cp1254_ci_as", "bbf_unicode_cp1255_ci_as", "bbf_unicode_cp1256_ci_as", "bbf_unicode_cp1257_ci_as", "bbf_unicode_cp1258_ci_as", "bbf_unicode_cp874_ci_as", "sql_latin1_general_cp1250_ci_as", "sql_latin1_general_cp1251_ci_as", "sql_latin1_general_cp1_ci_as", "sql_latin1_general_cp1253_ci_as", "sql_latin1_general_cp1254_ci_as", "sql_latin1_general_cp1255_ci_as","sql_latin1_general_cp1256_ci_as", "sql_latin1_general_cp1257_ci_as", "sql_latin1_general_cp1258_ci_as", "chinese_prc_ci_as", "cyrillic_general_ci_as", "finnish_swedish_ci_as", "french_ci_as", "japanese_ci_as", "korean_wansung_ci_as", "latin1_general_ci_as", "modern_spanish_ci_as", "polish_ci_as", "thai_ci_as", "traditional_spanish_ci_as", "turkish_ci_as", "ukrainian_ci_as", "vietnamese_ci_as"。
+<li>migrationMode: Database mode, an optional parameter, and its valid values are: single-db (single database schema) and multi-db (multiple database schema). The default value is single-db.</li>
+<li>defaultLocale: Sorting area rule, an optional parameter, which cannot be modified after initialization, its default value is en_US, and its valid values include:
+"af_ZA", "sq_AL", "ar_DZ", "ar_BH", "ar_EG", "ar_IQ", "ar_JO", "ar_KW", "ar_LB", "ar_LY", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "ar_SY", "ar_TN", "ar_AE", "ar_YE", "hy_AM", "az_Cyrl_AZ", "az_Latn_AZ", "eu_ES", "be_BY", "bg_BG", "ca_ES", "zh_HK", "zh_MO", "zh_CN", "zh_SG", "zh_TW", "hr_HR", "cs_CZ", "da_DK", "nl_BE", "nl_NL", "en_AU", "en_BZ", "en_CA", "en_IE", "en_JM", "en_NZ", "en_PH", "en_ZA", "en_TT", "en_GB", "en_US", "en_ZW", "et_EE", "fo_FO", "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_FR", "fr_LU", "fr_MC", "fr_CH", "mk_MK", "ka_GE", "de_AT", "de_DE", "de_LI", "de_LU", "de_CH", "el_GR", "gu_IN", "he_IL", "hi_IN", "hu_HU", "is_IS", "id_ID", "it_IT", "it_CH", "ja_JP", "kn_IN", "kok_IN", "ko_KR", "ky_KG", "lv_LV", "lt_LT", "ms_BN", "ms_MY", "mr_IN", "mn_MN", "nb_NO", "nn_NO", "pl_PL", "pt_BR", "pt_PT", "pa_IN", "ro_RO", "ru_RU", "sa_IN", "sr_Cyrl_RS", "sr_Latn_RS", "sk_SK", "sl_SI", "es_AR", "es_BO", "es_CL", "es_CO", "es_CR", "es_DO", "es_EC", "es_SV", "es_GT", "es_HN", "es_MX", "es_NI", "es_PA", "es_PY","es_PE", "es_PR", "es_ES", "es_TRADITIONAL", "es_UY", "es_VE", "sw_KE", "sv_FI", "sv_SE", "tt_RU", "te_IN", "th_TH", "tr_TR", "uk_UA", "ur_IN", "ur_PK", "uz_Cyrl_UZ", "uz_Latn_UZ", and "vi_VN".</li>
+<li>serverCollationName: Sorting rule name, an optional parameter, which cannot be modified after initialization, its default value is sql_latin1_general_cp1_ci_as, and its valid values include: "bbf_unicode_general_ci_as", "bbf_unicode_cp1_ci_as", "bbf_unicode_CP1250_ci_as", "bbf_unicode_CP1251_ci_as", "bbf_unicode_cp1253_ci_as", "bbf_unicode_cp1254_ci_as", "bbf_unicode_cp1255_ci_as", "bbf_unicode_cp1256_ci_as", "bbf_unicode_cp1257_ci_as", "bbf_unicode_cp1258_ci_as", "bbf_unicode_cp874_ci_as", "sql_latin1_general_cp1250_ci_as", "sql_latin1_general_cp1251_ci_as", "sql_latin1_general_cp1_ci_as", "sql_latin1_general_cp1253_ci_as", "sql_latin1_general_cp1254_ci_as", "sql_latin1_general_cp1255_ci_as", "sql_latin1_general_cp1256_ci_as", "sql_latin1_general_cp1257_ci_as", "sql_latin1_general_cp1258_ci_as", "chinese_prc_ci_as", "cyrillic_general_ci_as", "finnish_swedish_ci_as", "french_ci_as", "japanese_ci_as", "korean_wansung_ci_as", "latin1_general_ci_as", "modern_spanish_ci_as", "polish_ci_as", "thai_ci_as", "traditional_spanish_ci_as", "turkish_ci_as", "ukrainian_ci_as", and "vietnamese_ci_as".</li>
                      * 
                      */
                     void SetDBEngineConfig(const std::string& _dBEngineConfig);
@@ -829,31 +809,31 @@ mssql_compatible engine:
                     bool DBEngineConfigHasBeenSet() const;
 
                     /**
-                     * 获取Primary-standby sync mode. Valid values:  
-<li>`Semi-sync`
-<li>`Async`
-Default value for the primary instance: `Semi-sync`.
-Default value for the standby instance: `Async`.
-                     * @return SyncMode Primary-standby sync mode. Valid values:  
-<li>`Semi-sync`
-<li>`Async`
-Default value for the primary instance: `Semi-sync`.
-Default value for the standby instance: `Async`.
+                     * 获取Primary-standby sync mode, which supports:
+<li>Semi-sync: Semi-sync</li>
+<li>Async: Asynchronous</li>
+Default value for the primary instance: Semi-sync
+Default value for the read-only instance: Async
+                     * @return SyncMode Primary-standby sync mode, which supports:
+<li>Semi-sync: Semi-sync</li>
+<li>Async: Asynchronous</li>
+Default value for the primary instance: Semi-sync
+Default value for the read-only instance: Async
                      * 
                      */
                     std::string GetSyncMode() const;
 
                     /**
-                     * 设置Primary-standby sync mode. Valid values:  
-<li>`Semi-sync`
-<li>`Async`
-Default value for the primary instance: `Semi-sync`.
-Default value for the standby instance: `Async`.
-                     * @param _syncMode Primary-standby sync mode. Valid values:  
-<li>`Semi-sync`
-<li>`Async`
-Default value for the primary instance: `Semi-sync`.
-Default value for the standby instance: `Async`.
+                     * 设置Primary-standby sync mode, which supports:
+<li>Semi-sync: Semi-sync</li>
+<li>Async: Asynchronous</li>
+Default value for the primary instance: Semi-sync
+Default value for the read-only instance: Async
+                     * @param _syncMode Primary-standby sync mode, which supports:
+<li>Semi-sync: Semi-sync</li>
+<li>Async: Asynchronous</li>
+Default value for the primary instance: Semi-sync
+Default value for the read-only instance: Async
                      * 
                      */
                     void SetSyncMode(const std::string& _syncMode);
@@ -866,27 +846,27 @@ Default value for the standby instance: `Async`.
                     bool SyncModeHasBeenSet() const;
 
                     /**
-                     * 获取Whether IPv6 is supported.
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
-                     * @return NeedSupportIpv6 Whether IPv6 is supported.
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
+                     * 获取Whether support to IPv6 is required:
+<li>`0`: no</li>
+<li>`1`: yes</li>
+Default value: 0
+                     * @return NeedSupportIpv6 Whether support to IPv6 is required:
+<li>`0`: no</li>
+<li>`1`: yes</li>
+Default value: 0
                      * 
                      */
                     uint64_t GetNeedSupportIpv6() const;
 
                     /**
-                     * 设置Whether IPv6 is supported.
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
-                     * @param _needSupportIpv6 Whether IPv6 is supported.
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
+                     * 设置Whether support to IPv6 is required:
+<li>`0`: no</li>
+<li>`1`: yes</li>
+Default value: 0
+                     * @param _needSupportIpv6 Whether support to IPv6 is required:
+<li>`0`: no</li>
+<li>`1`: yes</li>
+Default value: 0
                      * 
                      */
                     void SetNeedSupportIpv6(const uint64_t& _needSupportIpv6);
@@ -926,84 +906,80 @@ The information of AZ can be obtained from the `Zone` field in the return value 
                     bool m_instanceCountHasBeenSet;
 
                     /**
-                     * Validity period in months.
-<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-<li>Pay-as-you-go: `1`.
+                     * Purchase duration, in months.
+<li>Prepaid: Supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>
+<li>Pay-as-you-go: Only supports `1`.</li>
                      */
                     uint64_t m_period;
                     bool m_periodHasBeenSet;
 
                     /**
-                     * Instance character set. Valid values: 
-<li> `UTF8`
-<li> `LATIN1`
+                     * Instance character set, which currently supports only:
+<li>UTF8</li>
+<li>LATIN1</li>
                      */
                     std::string m_charset;
                     bool m_charsetHasBeenSet;
 
                     /**
-                     * Username of the instance root account, which has the following rules:
-<li>It must contain 1–16 letters , digits, or underscores
-<li>It can't be `postgres`.
-<li>It can't start with a digit or `pg_`.
-<li>All rules are case-insensitive.
+                     * Username of the instance root account, with the following specifications:
+<li>The username must consist of 1-16 characters, which can be letters, digits, or underscores.</li>
+<li>It cannot be postgres.</li>
+<li>It cannot start with digits or 'pg_'.</li>
+<li>All rules are case-insensitive.</li>
                      */
                     std::string m_adminName;
                     bool m_adminNameHasBeenSet;
 
                     /**
-                     * Password of the instance root account, which must contain 8-32 characters (above 12 characters preferably). It cannot begin with "/",
-and must contain the following 4 types of characters.
-<li>Lowercase letters: [a–z]
-<li>Uppercase letters: [A–Z]
-<li>Digits: 0-9
-<li>Symbols: ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/
+                     * Password for the instance root account username, with a length of 8-32 characters. It is recommended to use a password of more than 12 characters and it cannot start with "/".
+It must include the following four types of characters:
+<li>Lowercase letters: [a ~ z]</li>
+<li>Uppercase letters: [A ~ Z]</li>
+<li>Digits: 0-9</li>
+<li>Special symbols: ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/</li>
                      */
                     std::string m_adminPassword;
                     bool m_adminPasswordHasBeenSet;
 
                     /**
-                     * The major PostgreSQL version number, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API. Valid values: `10`, `11`, `12`, `13`, `14`, `15`.
-When only this parameter is specified, an instance running the latest kernel version of the latest minor version will be created based on this major version.
-You must pass in at least one of the following parameters: `DBMajorVersion`, `DBVersion`, DBKernelVersion`. If you don't need a minor version, just pass in `DBMajorVersion`.
-
+                     * The major version number of PostgreSQL (this parameter is currently required), and the version information can be obtained from [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1). Currently major versions `10`, `11`, `12`, `13`, `14`, and `15` are supported. For details, see [Kernel Version Overview](https://intl.cloud.tencent.com/document/product/409/67018).
+When this parameter is entered, an instance running the latest kernel version of the latest minor version will be created based on this major version number.
                      */
                     std::string m_dBMajorVersion;
                     bool m_dBMajorVersionHasBeenSet;
 
                     /**
-                     * Number of the major PostgreSQL community version and minor version, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
-If it is specified, an instance running the latest kernel version will be created based on the community minor version.
-You must pass in at least one of the following parameters: `DBMajorVersion`, `DBVersion`, DBKernelVersion`.
+                     * PostgreSQL community major version + minor version number.
+It's generally not recommended to pass in this parameter. If needed, only the latest minor version number under the current major version can be passed.
                      */
                     std::string m_dBVersion;
                     bool m_dBVersionHasBeenSet;
 
                     /**
-                     * PostgreSQL kernel version number, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
-PostgreSQL kernel version number. If it is specified, an instance running the specified kernel version will be created. Passing in this parameter in other scenarios is not supported.This parameter is only used to specify a kernel version, which serves no other purposes.
-
+                     * PostgreSQL kernel version number.
+It's generally not recommended to pass in this parameter. If needed, only the latest kernel version number under the current major version can be passed.
                      */
                     std::string m_dBKernelVersion;
                     bool m_dBKernelVersionHasBeenSet;
 
                     /**
-                     * Instance billing mode. Valid values:
-<li>`PREPAID`: Monthly subscription
-<li>`POSTPAID_BY_HOUR`: Pay-as-you-go
-Default value: `PREPAID`.
+                     * Instance billing type, which currently supports:
+<li>PREPAID: Prepaid, i.e., monthly subscription</li>
+<li>POSTPAID_BY_HOUR: Pay-as-you-go, i.e., pay by consumption</li>
+Default value: PREPAID
                      */
                     std::string m_instanceChargeType;
                     bool m_instanceChargeTypeHasBeenSet;
 
                     /**
-                     * VPC ID in the format of `vpc-xxxxxxx`. To obtain valid VPC IDs, you can log in to the console or call [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) and look for the `unVpcId` fields in the response.
+                     * VPC ID, in the format of vpc-xxxxxxxx (this parameter is currently required). A valid VpcId can be obtained by logging into the console; it can also be obtained from the unVpcId field in the return value of calling of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * VPC subnet ID in the format of `subnet-xxxxxxxx`, u200cwhich can be obtained in the console or from the `unSubnetId` field in the return value of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
+                     * VPC subnet ID, in the format of subnet-xxxxxxxx (this parameter is currently required). A valid VPC subnet ID can be obtained by logging into the console; it can also be obtained from the unSubnetId field in the return value of calling of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
@@ -1016,19 +992,19 @@ The information of AZ can be obtained from the `Zone` field in the return value 
                     bool m_dBNodeSetHasBeenSet;
 
                     /**
-                     * Auto-renewal flag. Valid values:
-<li>`0`: Manual renewal.
-<li> `1`: Automatic renewal.
-Default value: `0`.
+                     * Renewal Flag:
+<li>`0`: manual renewal</li>
+<li>`1`: auto-renewal</li>
+Default value: 0
                      */
                     int64_t m_autoRenewFlag;
                     bool m_autoRenewFlagHasBeenSet;
 
                     /**
-                     * Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
+                     * Whether to automatically use coupons:
+<li>`0`: no</li>
+<li>`1`: yes</li>
+Default value: 0
                      */
                     uint64_t m_autoVoucher;
                     bool m_autoVoucherHasBeenSet;
@@ -1072,11 +1048,10 @@ Default value: `0`.
                     bool m_securityGroupIdsHasBeenSet;
 
                     /**
-                     * Whether to support TDE. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
-For more information, see [TDE]u200d(https://www.tencentcloud.com/document/product/409/47765).
+                     * Whether data transparent encryption is required:
+<li>`0`: no</li>
+<li>`1`: yes</li>
+Default value: 0See [Overview of Data Transparent Encryption](https://intl.cloud.tencent.com/document/product/409/71748?from_cn_redirect=1).
                      */
                     uint64_t m_needSupportTDE;
                     bool m_needSupportTDEHasBeenSet;
@@ -1096,42 +1071,42 @@ For more information on `KMSRegion`, see [Enabling TDE](https://intl.cloud.tence
                     bool m_kMSRegionHasBeenSet;
 
                     /**
-                     * Database engines. Valid values:
-<li>`postgresql`: TencentDB for PostgreSQL
-<li>`mssql_compatible`: MSSQL compatible-TencentDB for PostgreSQL
-Default value: `postgresql`.
+                     * Database engine, which supports:
+<li>`postgresql`: TencentDB for PostgreSQL</li>
+<li>`mssql_compatible`: MSSQL compatible - TencentDB for PostgreSQL</li>
+Default value: `postgresql`
                      */
                     std::string m_dBEngine;
                     bool m_dBEngineHasBeenSet;
 
                     /**
-                     * Configuration information of database engine in the following format:
+                     * Configuration information for the database engine, and the configuration format is as follows:
 {"$key1":"$value1", "$key2":"$value2"}
-Valid values:
+Supported engines include:
 mssql_compatible engine:
-<li>`migrationMode`: Database mode. Valid values: `single-db` (single-database mode), `multi-db` (multi-database mode). Default value: `single-db`.
-<li>`defaultLocale`: Default locale, which can’t be modified after the initialization. Default value: `en_US`. Valid values:
-"af_ZA", "sq_AL", "ar_DZ", "ar_BH", "ar_EG", "ar_IQ", "ar_JO", "ar_KW", "ar_LB", "ar_LY", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "ar_SY", "ar_TN", "ar_AE", "ar_YE", "hy_AM", "az_Cyrl_AZ", "az_Latn_AZ", "eu_ES", "be_BY", "bg_BG", "ca_ES", "zh_HK", "zh_MO", "zh_CN", "zh_SG", "zh_TW", "hr_HR", "cs_CZ", "da_DK", "nl_BE", "nl_NL", "en_AU", "en_BZ", "en_CA", "en_IE", "en_JM", "en_NZ", "en_PH", "en_ZA", "en_TT", "en_GB", "en_US", "en_ZW", "et_EE", "fo_FO", "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_FR", "fr_LU", "fr_MC", "fr_CH", "mk_MK", "ka_GE", "de_AT", "de_DE", "de_LI", "de_LU", "de_CH", "el_GR", "gu_IN", "he_IL", "hi_IN", "hu_HU", "is_IS", "id_ID", "it_IT", "it_CH", "ja_JP", "kn_IN", "kok_IN", "ko_KR", "ky_KG", "lv_LV", "lt_LT", "ms_BN", "ms_MY", "mr_IN", "mn_MN", "nb_NO", "nn_NO", "pl_PL", "pt_BR", "pt_PT", "pa_IN", "ro_RO", "ru_RU", "sa_IN", "sr_Cyrl_RS", "sr_Latn_RS", "sk_SK", "sl_SI", "es_AR", "es_BO", "es_CL", "es_CO", "es_CR", "es_DO", "es_EC", "es_SV", "es_GT", "es_HN", "es_MX", "es_NI", "es_PA", "es_PY","es_PE", "es_PR", "es_ES", "es_TRADITIONAL", "es_UY", "es_VE", "sw_KE", "sv_FI", "sv_SE", "tt_RU", "te_IN", "th_TH", "tr_TR", "uk_UA", "ur_IN", "ur_PK", "uz_Cyrl_UZ", "uz_Latn_UZ", "vi_VN".
-<li>`serverCollationName`: Default collation name, which can’t be modified after the initialization. Default value: "bbf_unicode_general_ci_as". Valid values: "bbf_unicode_cp1_ci_as", "bbf_unicode_CP1250_ci_as", "bbf_unicode_CP1251_ci_as", "bbf_unicode_cp1253_ci_as", "bbf_unicode_cp1254_ci_as", "bbf_unicode_cp1255_ci_as", "bbf_unicode_cp1256_ci_as", "bbf_unicode_cp1257_ci_as", "bbf_unicode_cp1258_ci_as", "bbf_unicode_cp874_ci_as", "sql_latin1_general_cp1250_ci_as", "sql_latin1_general_cp1251_ci_as", "sql_latin1_general_cp1_ci_as", "sql_latin1_general_cp1253_ci_as", "sql_latin1_general_cp1254_ci_as", "sql_latin1_general_cp1255_ci_as","sql_latin1_general_cp1256_ci_as", "sql_latin1_general_cp1257_ci_as", "sql_latin1_general_cp1258_ci_as", "chinese_prc_ci_as", "cyrillic_general_ci_as", "finnish_swedish_ci_as", "french_ci_as", "japanese_ci_as", "korean_wansung_ci_as", "latin1_general_ci_as", "modern_spanish_ci_as", "polish_ci_as", "thai_ci_as", "traditional_spanish_ci_as", "turkish_ci_as", "ukrainian_ci_as", "vietnamese_ci_as"。
+<li>migrationMode: Database mode, an optional parameter, and its valid values are: single-db (single database schema) and multi-db (multiple database schema). The default value is single-db.</li>
+<li>defaultLocale: Sorting area rule, an optional parameter, which cannot be modified after initialization, its default value is en_US, and its valid values include:
+"af_ZA", "sq_AL", "ar_DZ", "ar_BH", "ar_EG", "ar_IQ", "ar_JO", "ar_KW", "ar_LB", "ar_LY", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "ar_SY", "ar_TN", "ar_AE", "ar_YE", "hy_AM", "az_Cyrl_AZ", "az_Latn_AZ", "eu_ES", "be_BY", "bg_BG", "ca_ES", "zh_HK", "zh_MO", "zh_CN", "zh_SG", "zh_TW", "hr_HR", "cs_CZ", "da_DK", "nl_BE", "nl_NL", "en_AU", "en_BZ", "en_CA", "en_IE", "en_JM", "en_NZ", "en_PH", "en_ZA", "en_TT", "en_GB", "en_US", "en_ZW", "et_EE", "fo_FO", "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_FR", "fr_LU", "fr_MC", "fr_CH", "mk_MK", "ka_GE", "de_AT", "de_DE", "de_LI", "de_LU", "de_CH", "el_GR", "gu_IN", "he_IL", "hi_IN", "hu_HU", "is_IS", "id_ID", "it_IT", "it_CH", "ja_JP", "kn_IN", "kok_IN", "ko_KR", "ky_KG", "lv_LV", "lt_LT", "ms_BN", "ms_MY", "mr_IN", "mn_MN", "nb_NO", "nn_NO", "pl_PL", "pt_BR", "pt_PT", "pa_IN", "ro_RO", "ru_RU", "sa_IN", "sr_Cyrl_RS", "sr_Latn_RS", "sk_SK", "sl_SI", "es_AR", "es_BO", "es_CL", "es_CO", "es_CR", "es_DO", "es_EC", "es_SV", "es_GT", "es_HN", "es_MX", "es_NI", "es_PA", "es_PY","es_PE", "es_PR", "es_ES", "es_TRADITIONAL", "es_UY", "es_VE", "sw_KE", "sv_FI", "sv_SE", "tt_RU", "te_IN", "th_TH", "tr_TR", "uk_UA", "ur_IN", "ur_PK", "uz_Cyrl_UZ", "uz_Latn_UZ", and "vi_VN".</li>
+<li>serverCollationName: Sorting rule name, an optional parameter, which cannot be modified after initialization, its default value is sql_latin1_general_cp1_ci_as, and its valid values include: "bbf_unicode_general_ci_as", "bbf_unicode_cp1_ci_as", "bbf_unicode_CP1250_ci_as", "bbf_unicode_CP1251_ci_as", "bbf_unicode_cp1253_ci_as", "bbf_unicode_cp1254_ci_as", "bbf_unicode_cp1255_ci_as", "bbf_unicode_cp1256_ci_as", "bbf_unicode_cp1257_ci_as", "bbf_unicode_cp1258_ci_as", "bbf_unicode_cp874_ci_as", "sql_latin1_general_cp1250_ci_as", "sql_latin1_general_cp1251_ci_as", "sql_latin1_general_cp1_ci_as", "sql_latin1_general_cp1253_ci_as", "sql_latin1_general_cp1254_ci_as", "sql_latin1_general_cp1255_ci_as", "sql_latin1_general_cp1256_ci_as", "sql_latin1_general_cp1257_ci_as", "sql_latin1_general_cp1258_ci_as", "chinese_prc_ci_as", "cyrillic_general_ci_as", "finnish_swedish_ci_as", "french_ci_as", "japanese_ci_as", "korean_wansung_ci_as", "latin1_general_ci_as", "modern_spanish_ci_as", "polish_ci_as", "thai_ci_as", "traditional_spanish_ci_as", "turkish_ci_as", "ukrainian_ci_as", and "vietnamese_ci_as".</li>
                      */
                     std::string m_dBEngineConfig;
                     bool m_dBEngineConfigHasBeenSet;
 
                     /**
-                     * Primary-standby sync mode. Valid values:  
-<li>`Semi-sync`
-<li>`Async`
-Default value for the primary instance: `Semi-sync`.
-Default value for the standby instance: `Async`.
+                     * Primary-standby sync mode, which supports:
+<li>Semi-sync: Semi-sync</li>
+<li>Async: Asynchronous</li>
+Default value for the primary instance: Semi-sync
+Default value for the read-only instance: Async
                      */
                     std::string m_syncMode;
                     bool m_syncModeHasBeenSet;
 
                     /**
-                     * Whether IPv6 is supported.
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
+                     * Whether support to IPv6 is required:
+<li>`0`: no</li>
+<li>`1`: yes</li>
+Default value: 0
                      */
                     uint64_t m_needSupportIpv6;
                     bool m_needSupportIpv6HasBeenSet;

@@ -38,6 +38,7 @@ set(postgres_public_header_model
   include/tencentcloud/postgres/v20170312/model/DescribeCloneDBInstanceSpecRequest.h
   include/tencentcloud/postgres/v20170312/model/DescribeDBInstanceSecurityGroupsResponse.h
   include/tencentcloud/postgres/v20170312/model/BackupPlan.h
+  include/tencentcloud/postgres/v20170312/model/RestoreDBInstanceObjectsResponse.h
   include/tencentcloud/postgres/v20170312/model/SwitchDBInstancePrimaryRequest.h
   include/tencentcloud/postgres/v20170312/model/OpenServerlessDBExtranetAccessRequest.h
   include/tencentcloud/postgres/v20170312/model/RenewInstanceResponse.h
@@ -54,6 +55,7 @@ set(postgres_public_header_model
   include/tencentcloud/postgres/v20170312/model/DescribeBackupOverviewRequest.h
   include/tencentcloud/postgres/v20170312/model/DescribeRegionsResponse.h
   include/tencentcloud/postgres/v20170312/model/ModifyBaseBackupExpireTimeResponse.h
+  include/tencentcloud/postgres/v20170312/model/UpgradeDBInstanceMajorVersionResponse.h
   include/tencentcloud/postgres/v20170312/model/ModifyBackupDownloadRestrictionRequest.h
   include/tencentcloud/postgres/v20170312/model/DBInstanceNetInfo.h
   include/tencentcloud/postgres/v20170312/model/BackupDownloadRestriction.h
@@ -169,6 +171,7 @@ set(postgres_public_header_model
   include/tencentcloud/postgres/v20170312/model/ModifyDBInstanceSecurityGroupsResponse.h
   include/tencentcloud/postgres/v20170312/model/DBNode.h
   include/tencentcloud/postgres/v20170312/model/ModifyDBInstanceNameResponse.h
+  include/tencentcloud/postgres/v20170312/model/UpgradeDBInstanceMajorVersionRequest.h
   include/tencentcloud/postgres/v20170312/model/CloseDBExtranetAccessResponse.h
   include/tencentcloud/postgres/v20170312/model/DescribeBackupDownloadRestrictionResponse.h
   include/tencentcloud/postgres/v20170312/model/CreateReadOnlyDBInstanceRequest.h
@@ -218,6 +221,7 @@ set(postgres_public_header_model
   include/tencentcloud/postgres/v20170312/model/ModifyDBInstanceParametersRequest.h
   include/tencentcloud/postgres/v20170312/model/RawSlowQuery.h
   include/tencentcloud/postgres/v20170312/model/DescribeDBSlowlogsResponse.h
+  include/tencentcloud/postgres/v20170312/model/RestoreDBInstanceObjectsRequest.h
   include/tencentcloud/postgres/v20170312/model/DescribeAccountsResponse.h
   include/tencentcloud/postgres/v20170312/model/ModifyDBInstanceChargeTypeRequest.h
   include/tencentcloud/postgres/v20170312/model/DescribeParameterTemplateAttributesResponse.h
@@ -262,6 +266,7 @@ set(postgres_src
   src/v20170312/model/DescribeCloneDBInstanceSpecRequest.cpp
   src/v20170312/model/DescribeDBInstanceSecurityGroupsResponse.cpp
   src/v20170312/model/BackupPlan.cpp
+  src/v20170312/model/RestoreDBInstanceObjectsResponse.cpp
   src/v20170312/model/SwitchDBInstancePrimaryRequest.cpp
   src/v20170312/model/OpenServerlessDBExtranetAccessRequest.cpp
   src/v20170312/model/RenewInstanceResponse.cpp
@@ -278,6 +283,7 @@ set(postgres_src
   src/v20170312/model/DescribeBackupOverviewRequest.cpp
   src/v20170312/model/DescribeRegionsResponse.cpp
   src/v20170312/model/ModifyBaseBackupExpireTimeResponse.cpp
+  src/v20170312/model/UpgradeDBInstanceMajorVersionResponse.cpp
   src/v20170312/model/ModifyBackupDownloadRestrictionRequest.cpp
   src/v20170312/model/DBInstanceNetInfo.cpp
   src/v20170312/model/BackupDownloadRestriction.cpp
@@ -393,6 +399,7 @@ set(postgres_src
   src/v20170312/model/ModifyDBInstanceSecurityGroupsResponse.cpp
   src/v20170312/model/DBNode.cpp
   src/v20170312/model/ModifyDBInstanceNameResponse.cpp
+  src/v20170312/model/UpgradeDBInstanceMajorVersionRequest.cpp
   src/v20170312/model/CloseDBExtranetAccessResponse.cpp
   src/v20170312/model/DescribeBackupDownloadRestrictionResponse.cpp
   src/v20170312/model/CreateReadOnlyDBInstanceRequest.cpp
@@ -442,6 +449,7 @@ set(postgres_src
   src/v20170312/model/ModifyDBInstanceParametersRequest.cpp
   src/v20170312/model/RawSlowQuery.cpp
   src/v20170312/model/DescribeDBSlowlogsResponse.cpp
+  src/v20170312/model/RestoreDBInstanceObjectsRequest.cpp
   src/v20170312/model/DescribeAccountsResponse.cpp
   src/v20170312/model/ModifyDBInstanceChargeTypeRequest.cpp
   src/v20170312/model/DescribeParameterTemplateAttributesResponse.cpp

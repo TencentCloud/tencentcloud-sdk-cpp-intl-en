@@ -170,15 +170,19 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取PostgreSQL version. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created. You must pass in at least one of the following parameters: DBVersion, DBMajorVersion, DBKernelVersion.
-                     * @return DBVersion PostgreSQL version. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created. You must pass in at least one of the following parameters: DBVersion, DBMajorVersion, DBKernelVersion.
+                     * 获取PostgreSQL community major version + minor version number.
+It's generally not recommended to pass in this parameter. If needed, only the latest minor version number under the current major version can be passed.
+                     * @return DBVersion PostgreSQL community major version + minor version number.
+It's generally not recommended to pass in this parameter. If needed, only the latest minor version number under the current major version can be passed.
                      * 
                      */
                     std::string GetDBVersion() const;
 
                     /**
-                     * 设置PostgreSQL version. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created. You must pass in at least one of the following parameters: DBVersion, DBMajorVersion, DBKernelVersion.
-                     * @param _dBVersion PostgreSQL version. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created. You must pass in at least one of the following parameters: DBVersion, DBMajorVersion, DBKernelVersion.
+                     * 设置PostgreSQL community major version + minor version number.
+It's generally not recommended to pass in this parameter. If needed, only the latest minor version number under the current major version can be passed.
+                     * @param _dBVersion PostgreSQL community major version + minor version number.
+It's generally not recommended to pass in this parameter. If needed, only the latest minor version number under the current major version can be passed.
                      * 
                      */
                     void SetDBVersion(const std::string& _dBVersion);
@@ -422,15 +426,19 @@ namespace TencentCloud
                     bool SecurityGroupIdsHasBeenSet() const;
 
                     /**
-                     * 获取PostgreSQL major version. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created. You must pass in at least one of the following parameters: DBMajorVersion, DBVersion, DBKernelVersion.
-                     * @return DBMajorVersion PostgreSQL major version. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created. You must pass in at least one of the following parameters: DBMajorVersion, DBVersion, DBKernelVersion.
+                     * 获取The major version number of PostgreSQL (this parameter is currently required), and the version information can be obtained from [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1). Currently major versions `10`, `11`, `12`, `13`, `14`, and `15` are supported. For details, see [Kernel Version Overview](https://intl.cloud.tencent.com/document/product/409/67018).
+When this parameter is entered, an instance running the latest kernel version of the latest minor version will be created based on this major version number.
+                     * @return DBMajorVersion The major version number of PostgreSQL (this parameter is currently required), and the version information can be obtained from [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1). Currently major versions `10`, `11`, `12`, `13`, `14`, and `15` are supported. For details, see [Kernel Version Overview](https://intl.cloud.tencent.com/document/product/409/67018).
+When this parameter is entered, an instance running the latest kernel version of the latest minor version will be created based on this major version number.
                      * 
                      */
                     std::string GetDBMajorVersion() const;
 
                     /**
-                     * 设置PostgreSQL major version. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created. You must pass in at least one of the following parameters: DBMajorVersion, DBVersion, DBKernelVersion.
-                     * @param _dBMajorVersion PostgreSQL major version. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created. You must pass in at least one of the following parameters: DBMajorVersion, DBVersion, DBKernelVersion.
+                     * 设置The major version number of PostgreSQL (this parameter is currently required), and the version information can be obtained from [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1). Currently major versions `10`, `11`, `12`, `13`, `14`, and `15` are supported. For details, see [Kernel Version Overview](https://intl.cloud.tencent.com/document/product/409/67018).
+When this parameter is entered, an instance running the latest kernel version of the latest minor version will be created based on this major version number.
+                     * @param _dBMajorVersion The major version number of PostgreSQL (this parameter is currently required), and the version information can be obtained from [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1). Currently major versions `10`, `11`, `12`, `13`, `14`, and `15` are supported. For details, see [Kernel Version Overview](https://intl.cloud.tencent.com/document/product/409/67018).
+When this parameter is entered, an instance running the latest kernel version of the latest minor version will be created based on this major version number.
                      * 
                      */
                     void SetDBMajorVersion(const std::string& _dBMajorVersion);
@@ -443,15 +451,19 @@ namespace TencentCloud
                     bool DBMajorVersionHasBeenSet() const;
 
                     /**
-                     * 获取PostgreSQL kernel version. If it is specified, an instance running the latest kernel of PostgreSQL `DBKernelVersion` will be created. You must pass in one of the following parameters: DBKernelVersion, DBVersion, DBMajorVersion.
-                     * @return DBKernelVersion PostgreSQL kernel version. If it is specified, an instance running the latest kernel of PostgreSQL `DBKernelVersion` will be created. You must pass in one of the following parameters: DBKernelVersion, DBVersion, DBMajorVersion.
+                     * 获取PostgreSQL kernel version number.
+It's generally not recommended to pass in this parameter. If needed, only the latest kernel version number under the current major version can be passed.
+                     * @return DBKernelVersion PostgreSQL kernel version number.
+It's generally not recommended to pass in this parameter. If needed, only the latest kernel version number under the current major version can be passed.
                      * 
                      */
                     std::string GetDBKernelVersion() const;
 
                     /**
-                     * 设置PostgreSQL kernel version. If it is specified, an instance running the latest kernel of PostgreSQL `DBKernelVersion` will be created. You must pass in one of the following parameters: DBKernelVersion, DBVersion, DBMajorVersion.
-                     * @param _dBKernelVersion PostgreSQL kernel version. If it is specified, an instance running the latest kernel of PostgreSQL `DBKernelVersion` will be created. You must pass in one of the following parameters: DBKernelVersion, DBVersion, DBMajorVersion.
+                     * 设置PostgreSQL kernel version number.
+It's generally not recommended to pass in this parameter. If needed, only the latest kernel version number under the current major version can be passed.
+                     * @param _dBKernelVersion PostgreSQL kernel version number.
+It's generally not recommended to pass in this parameter. If needed, only the latest kernel version number under the current major version can be passed.
                      * 
                      */
                     void SetDBKernelVersion(const std::string& _dBKernelVersion);
@@ -502,7 +514,8 @@ namespace TencentCloud
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * PostgreSQL version. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created. You must pass in at least one of the following parameters: DBVersion, DBMajorVersion, DBKernelVersion.
+                     * PostgreSQL community major version + minor version number.
+It's generally not recommended to pass in this parameter. If needed, only the latest minor version number under the current major version can be passed.
                      */
                     std::string m_dBVersion;
                     bool m_dBVersionHasBeenSet;
@@ -574,13 +587,15 @@ namespace TencentCloud
                     bool m_securityGroupIdsHasBeenSet;
 
                     /**
-                     * PostgreSQL major version. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created. You must pass in at least one of the following parameters: DBMajorVersion, DBVersion, DBKernelVersion.
+                     * The major version number of PostgreSQL (this parameter is currently required), and the version information can be obtained from [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1). Currently major versions `10`, `11`, `12`, `13`, `14`, and `15` are supported. For details, see [Kernel Version Overview](https://intl.cloud.tencent.com/document/product/409/67018).
+When this parameter is entered, an instance running the latest kernel version of the latest minor version will be created based on this major version number.
                      */
                     std::string m_dBMajorVersion;
                     bool m_dBMajorVersionHasBeenSet;
 
                     /**
-                     * PostgreSQL kernel version. If it is specified, an instance running the latest kernel of PostgreSQL `DBKernelVersion` will be created. You must pass in one of the following parameters: DBKernelVersion, DBVersion, DBMajorVersion.
+                     * PostgreSQL kernel version number.
+It's generally not recommended to pass in this parameter. If needed, only the latest kernel version number under the current major version can be passed.
                      */
                     std::string m_dBKernelVersion;
                     bool m_dBKernelVersionHasBeenSet;

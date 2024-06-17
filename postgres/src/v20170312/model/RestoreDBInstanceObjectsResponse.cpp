@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/postgres/v20170312/model/DescribeDatabasesResponse.h>
+#include <tencentcloud/postgres/v20170312/model/RestoreDBInstanceObjectsResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -23,13 +23,11 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Postgres::V20170312::Model;
 using namespace std;
 
-DescribeDatabasesResponse::DescribeDatabasesResponse() :
-    m_itemsHasBeenSet(false),
-    m_totalCountHasBeenSet(false)
+RestoreDBInstanceObjectsResponse::RestoreDBInstanceObjectsResponse()
 {
 }
 
-CoreInternalOutcome DescribeDatabasesResponse::Deserialize(const string &payload)
+CoreInternalOutcome RestoreDBInstanceObjectsResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -63,59 +61,15 @@ CoreInternalOutcome DescribeDatabasesResponse::Deserialize(const string &payload
     }
 
 
-    if (rsp.HasMember("Items") && !rsp["Items"].IsNull())
-    {
-        if (!rsp["Items"].IsArray())
-            return CoreInternalOutcome(Core::Error("response `Items` is not array type"));
-
-        const rapidjson::Value &tmpValue = rsp["Items"];
-        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
-        {
-            m_items.push_back((*itr).GetString());
-        }
-        m_itemsHasBeenSet = true;
-    }
-
-    if (rsp.HasMember("TotalCount") && !rsp["TotalCount"].IsNull())
-    {
-        if (!rsp["TotalCount"].IsUint64())
-        {
-            return CoreInternalOutcome(Core::Error("response `TotalCount` IsUint64=false incorrectly").SetRequestId(requestId));
-        }
-        m_totalCount = rsp["TotalCount"].GetUint64();
-        m_totalCountHasBeenSet = true;
-    }
-
 
     return CoreInternalOutcome(true);
 }
 
-string DescribeDatabasesResponse::ToJsonString() const
+string RestoreDBInstanceObjectsResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
-
-    if (m_itemsHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Items";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
-
-        for (auto itr = m_items.begin(); itr != m_items.end(); ++itr)
-        {
-            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
-        }
-    }
-
-    if (m_totalCountHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "TotalCount";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_totalCount, allocator);
-    }
 
     rapidjson::Value iKey(rapidjson::kStringType);
     string key = "RequestId";
@@ -128,25 +82,5 @@ string DescribeDatabasesResponse::ToJsonString() const
     return buffer.GetString();
 }
 
-
-vector<string> DescribeDatabasesResponse::GetItems() const
-{
-    return m_items;
-}
-
-bool DescribeDatabasesResponse::ItemsHasBeenSet() const
-{
-    return m_itemsHasBeenSet;
-}
-
-uint64_t DescribeDatabasesResponse::GetTotalCount() const
-{
-    return m_totalCount;
-}
-
-bool DescribeDatabasesResponse::TotalCountHasBeenSet() const
-{
-    return m_totalCountHasBeenSet;
-}
 
 

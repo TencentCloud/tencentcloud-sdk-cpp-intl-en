@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_POSTGRES_V20170312_MODEL_CREATEBASEBACKUPRESPONSE_H_
-#define TENCENTCLOUD_POSTGRES_V20170312_MODEL_CREATEBASEBACKUPRESPONSE_H_
+#ifndef TENCENTCLOUD_POSTGRES_V20170312_MODEL_RESTOREDBINSTANCEOBJECTSRESPONSE_H_
+#define TENCENTCLOUD_POSTGRES_V20170312_MODEL_RESTOREDBINSTANCEOBJECTSRESPONSE_H_
 
 #include <string>
 #include <vector>
@@ -32,38 +32,18 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * CreateBaseBackup response structure.
+                * RestoreDBInstanceObjects response structure.
                 */
-                class CreateBaseBackupResponse : public AbstractModel
+                class RestoreDBInstanceObjectsResponse : public AbstractModel
                 {
                 public:
-                    CreateBaseBackupResponse();
-                    ~CreateBaseBackupResponse() = default;
+                    RestoreDBInstanceObjectsResponse();
+                    ~RestoreDBInstanceObjectsResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
-                    /**
-                     * 获取Data backup set ID
-                     * @return BaseBackupId Data backup set ID
-                     * 
-                     */
-                    std::string GetBaseBackupId() const;
-
-                    /**
-                     * 判断参数 BaseBackupId 是否已赋值
-                     * @return BaseBackupId 是否已赋值
-                     * 
-                     */
-                    bool BaseBackupIdHasBeenSet() const;
-
                 private:
-
-                    /**
-                     * Data backup set ID
-                     */
-                    std::string m_baseBackupId;
-                    bool m_baseBackupIdHasBeenSet;
 
                 };
             }
@@ -71,4 +51,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_POSTGRES_V20170312_MODEL_CREATEBASEBACKUPRESPONSE_H_
+#endif // !TENCENTCLOUD_POSTGRES_V20170312_MODEL_RESTOREDBINSTANCEOBJECTSRESPONSE_H_

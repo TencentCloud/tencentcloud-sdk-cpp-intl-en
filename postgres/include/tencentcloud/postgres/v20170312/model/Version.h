@@ -193,15 +193,15 @@ TDE: Supports data encryption.
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取List of versions to which this database version (`DBKernelVersion`) can be upgraded.
-                     * @return AvailableUpgradeTarget List of versions to which this database version (`DBKernelVersion`) can be upgraded.
+                     * 获取List of versions to which this database version (`DBKernelVersion`) can be upgraded, including minor and major version numbers available for upgrade (complete kernel version format example: v15.1_v1.6).
+                     * @return AvailableUpgradeTarget List of versions to which this database version (`DBKernelVersion`) can be upgraded, including minor and major version numbers available for upgrade (complete kernel version format example: v15.1_v1.6).
                      * 
                      */
                     std::vector<std::string> GetAvailableUpgradeTarget() const;
 
                     /**
-                     * 设置List of versions to which this database version (`DBKernelVersion`) can be upgraded.
-                     * @param _availableUpgradeTarget List of versions to which this database version (`DBKernelVersion`) can be upgraded.
+                     * 设置List of versions to which this database version (`DBKernelVersion`) can be upgraded, including minor and major version numbers available for upgrade (complete kernel version format example: v15.1_v1.6).
+                     * @param _availableUpgradeTarget List of versions to which this database version (`DBKernelVersion`) can be upgraded, including minor and major version numbers available for upgrade (complete kernel version format example: v15.1_v1.6).
                      * 
                      */
                     void SetAvailableUpgradeTarget(const std::vector<std::string>& _availableUpgradeTarget);
@@ -257,7 +257,7 @@ TDE: Supports data encryption.
                     bool m_statusHasBeenSet;
 
                     /**
-                     * List of versions to which this database version (`DBKernelVersion`) can be upgraded.
+                     * List of versions to which this database version (`DBKernelVersion`) can be upgraded, including minor and major version numbers available for upgrade (complete kernel version format example: v15.1_v1.6).
                      */
                     std::vector<std::string> m_availableUpgradeTarget;
                     bool m_availableUpgradeTargetHasBeenSet;

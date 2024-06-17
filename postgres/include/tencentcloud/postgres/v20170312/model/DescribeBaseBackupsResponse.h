@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of queried full backups
-                     * @return TotalCount Number of queried full backups
+                     * 获取Number of queried data backups.
+                     * @return TotalCount Number of queried data backups.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of full backup details
-                     * @return BaseBackupSet List of full backup details
+                     * 获取Detailed data backup information list.
+                     * @return BaseBackupSet Detailed data backup information list.
                      * 
                      */
                     std::vector<BaseBackup> GetBaseBackupSet() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of queried full backups
+                     * Number of queried data backups.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of full backup details
+                     * Detailed data backup information list.
                      */
                     std::vector<BaseBackup> m_baseBackupSet;
                     bool m_baseBackupSetHasBeenSet;

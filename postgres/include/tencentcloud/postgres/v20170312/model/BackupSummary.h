@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool LogBackupSizeHasBeenSet() const;
 
                     /**
-                     * 获取Number of manually created full backups of an instance
-                     * @return ManualBaseBackupCount Number of manually created full backups of an instance
+                     * 获取Number of manually created instance data backups.
+                     * @return ManualBaseBackupCount Number of manually created instance data backups.
                      * 
                      */
                     uint64_t GetManualBaseBackupCount() const;
 
                     /**
-                     * 设置Number of manually created full backups of an instance
-                     * @param _manualBaseBackupCount Number of manually created full backups of an instance
+                     * 设置Number of manually created instance data backups.
+                     * @param _manualBaseBackupCount Number of manually created instance data backups.
                      * 
                      */
                     void SetManualBaseBackupCount(const uint64_t& _manualBaseBackupCount);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool ManualBaseBackupCountHasBeenSet() const;
 
                     /**
-                     * 获取Size of manually created full backups of an instance
-                     * @return ManualBaseBackupSize Size of manually created full backups of an instance
+                     * 获取Size of manually created instance data backups.
+                     * @return ManualBaseBackupSize Size of manually created instance data backups.
                      * 
                      */
                     uint64_t GetManualBaseBackupSize() const;
 
                     /**
-                     * 设置Size of manually created full backups of an instance
-                     * @param _manualBaseBackupSize Size of manually created full backups of an instance
+                     * 设置Size of manually created instance data backups.
+                     * @param _manualBaseBackupSize Size of manually created instance data backups.
                      * 
                      */
                     void SetManualBaseBackupSize(const uint64_t& _manualBaseBackupSize);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool ManualBaseBackupSizeHasBeenSet() const;
 
                     /**
-                     * 获取Number of automatically created full backups of an instance
-                     * @return AutoBaseBackupCount Number of automatically created full backups of an instance
+                     * 获取Number of automatically created instance data backups.
+                     * @return AutoBaseBackupCount Number of automatically created instance data backups.
                      * 
                      */
                     uint64_t GetAutoBaseBackupCount() const;
 
                     /**
-                     * 设置Number of automatically created full backups of an instance
-                     * @param _autoBaseBackupCount Number of automatically created full backups of an instance
+                     * 设置Number of automatically created instance data backups.
+                     * @param _autoBaseBackupCount Number of automatically created instance data backups.
                      * 
                      */
                     void SetAutoBaseBackupCount(const uint64_t& _autoBaseBackupCount);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool AutoBaseBackupCountHasBeenSet() const;
 
                     /**
-                     * 获取Size of automatically created full backups of an instance
-                     * @return AutoBaseBackupSize Size of automatically created full backups of an instance
+                     * 获取Size of automatically created instance data backups.
+                     * @return AutoBaseBackupSize Size of automatically created instance data backups.
                      * 
                      */
                     uint64_t GetAutoBaseBackupSize() const;
 
                     /**
-                     * 设置Size of automatically created full backups of an instance
-                     * @param _autoBaseBackupSize Size of automatically created full backups of an instance
+                     * 设置Size of automatically created instance data backups.
+                     * @param _autoBaseBackupSize Size of automatically created instance data backups.
                      * 
                      */
                     void SetAutoBaseBackupSize(const uint64_t& _autoBaseBackupSize);
@@ -256,25 +256,25 @@ namespace TencentCloud
                     bool m_logBackupSizeHasBeenSet;
 
                     /**
-                     * Number of manually created full backups of an instance
+                     * Number of manually created instance data backups.
                      */
                     uint64_t m_manualBaseBackupCount;
                     bool m_manualBaseBackupCountHasBeenSet;
 
                     /**
-                     * Size of manually created full backups of an instance
+                     * Size of manually created instance data backups.
                      */
                     uint64_t m_manualBaseBackupSize;
                     bool m_manualBaseBackupSizeHasBeenSet;
 
                     /**
-                     * Number of automatically created full backups of an instance
+                     * Number of automatically created instance data backups.
                      */
                     uint64_t m_autoBaseBackupCount;
                     bool m_autoBaseBackupCountHasBeenSet;
 
                     /**
-                     * Size of automatically created full backups of an instance
+                     * Size of automatically created instance data backups.
                      */
                     uint64_t m_autoBaseBackupSize;
                     bool m_autoBaseBackupSizeHasBeenSet;

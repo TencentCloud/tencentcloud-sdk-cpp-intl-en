@@ -44,35 +44,43 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Filter instances using one or more criteria. Valid filter names:
+                     * 获取Query using one or more filter criteria. Filter criteria currently supported include:
 db-instance-id: filter by instance ID (in string format)
 db-instance-name: filter by instance name (in string format)
-db-project-id: filter by project ID (in integer format)
-db-pay-mode: filter by billing mode (in string format)
+db-project-id: filter by project ID (in string format)
+db-pay-mode: filter by instance billing mode (in string format)
 db-tag-key: filter by tag key (in string format)
-                     * @return Filters Filter instances using one or more criteria. Valid filter names:
+db-private-ip: filter by instance VPC IP (in string format)
+db-public-address: filter by instance public network address (in string format)
+                     * @return Filters Query using one or more filter criteria. Filter criteria currently supported include:
 db-instance-id: filter by instance ID (in string format)
 db-instance-name: filter by instance name (in string format)
-db-project-id: filter by project ID (in integer format)
-db-pay-mode: filter by billing mode (in string format)
+db-project-id: filter by project ID (in string format)
+db-pay-mode: filter by instance billing mode (in string format)
 db-tag-key: filter by tag key (in string format)
+db-private-ip: filter by instance VPC IP (in string format)
+db-public-address: filter by instance public network address (in string format)
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter instances using one or more criteria. Valid filter names:
+                     * 设置Query using one or more filter criteria. Filter criteria currently supported include:
 db-instance-id: filter by instance ID (in string format)
 db-instance-name: filter by instance name (in string format)
-db-project-id: filter by project ID (in integer format)
-db-pay-mode: filter by billing mode (in string format)
+db-project-id: filter by project ID (in string format)
+db-pay-mode: filter by instance billing mode (in string format)
 db-tag-key: filter by tag key (in string format)
-                     * @param _filters Filter instances using one or more criteria. Valid filter names:
+db-private-ip: filter by instance VPC IP (in string format)
+db-public-address: filter by instance public network address (in string format)
+                     * @param _filters Query using one or more filter criteria. Filter criteria currently supported include:
 db-instance-id: filter by instance ID (in string format)
 db-instance-name: filter by instance name (in string format)
-db-project-id: filter by project ID (in integer format)
-db-pay-mode: filter by billing mode (in string format)
+db-project-id: filter by project ID (in string format)
+db-pay-mode: filter by instance billing mode (in string format)
 db-tag-key: filter by tag key (in string format)
+db-private-ip: filter by instance VPC IP (in string format)
+db-public-address: filter by instance public network address (in string format)
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -171,12 +179,14 @@ db-tag-key: filter by tag key (in string format)
                 private:
 
                     /**
-                     * Filter instances using one or more criteria. Valid filter names:
+                     * Query using one or more filter criteria. Filter criteria currently supported include:
 db-instance-id: filter by instance ID (in string format)
 db-instance-name: filter by instance name (in string format)
-db-project-id: filter by project ID (in integer format)
-db-pay-mode: filter by billing mode (in string format)
+db-project-id: filter by project ID (in string format)
+db-pay-mode: filter by instance billing mode (in string format)
 db-tag-key: filter by tag key (in string format)
+db-private-ip: filter by instance VPC IP (in string format)
+db-public-address: filter by instance public network address (in string format)
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

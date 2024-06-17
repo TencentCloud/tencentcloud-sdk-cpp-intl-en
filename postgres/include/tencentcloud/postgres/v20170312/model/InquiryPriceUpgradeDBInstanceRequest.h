@@ -126,6 +126,27 @@ namespace TencentCloud
                      */
                     bool InstanceChargeTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Instance CPU size, unit: Core
+                     * @return Cpu Instance CPU size, unit: Core
+                     * 
+                     */
+                    int64_t GetCpu() const;
+
+                    /**
+                     * 设置Instance CPU size, unit: Core
+                     * @param _cpu Instance CPU size, unit: Core
+                     * 
+                     */
+                    void SetCpu(const int64_t& _cpu);
+
+                    /**
+                     * 判断参数 Cpu 是否已赋值
+                     * @return Cpu 是否已赋值
+                     * 
+                     */
+                    bool CpuHasBeenSet() const;
+
                 private:
 
                     /**
@@ -151,6 +172,12 @@ namespace TencentCloud
                      */
                     std::string m_instanceChargeType;
                     bool m_instanceChargeTypeHasBeenSet;
+
+                    /**
+                     * Instance CPU size, unit: Core
+                     */
+                    int64_t m_cpu;
+                    bool m_cpuHasBeenSet;
 
                 };
             }

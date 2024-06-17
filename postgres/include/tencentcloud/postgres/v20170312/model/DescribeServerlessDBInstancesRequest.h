@@ -44,15 +44,39 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Query conditions
-                     * @return Filter Query conditions
+                     * 获取Query criteria. Query using one or more filter criteria. Filter criteria type (specified by the name field) currently supported include: 
+
+- db-instance-id: filter by instance ID (in string format)
+- db-instance-name: filter by instance name (in string format)
+- db-tag-key: filter by instance tag (in string format)
+
+The value field specifies the specific instance ID/instance name/instance tag-key to filter under this type of filter criteria.
+                     * @return Filter Query criteria. Query using one or more filter criteria. Filter criteria type (specified by the name field) currently supported include: 
+
+- db-instance-id: filter by instance ID (in string format)
+- db-instance-name: filter by instance name (in string format)
+- db-tag-key: filter by instance tag (in string format)
+
+The value field specifies the specific instance ID/instance name/instance tag-key to filter under this type of filter criteria.
                      * 
                      */
                     std::vector<Filter> GetFilter() const;
 
                     /**
-                     * 设置Query conditions
-                     * @param _filter Query conditions
+                     * 设置Query criteria. Query using one or more filter criteria. Filter criteria type (specified by the name field) currently supported include: 
+
+- db-instance-id: filter by instance ID (in string format)
+- db-instance-name: filter by instance name (in string format)
+- db-tag-key: filter by instance tag (in string format)
+
+The value field specifies the specific instance ID/instance name/instance tag-key to filter under this type of filter criteria.
+                     * @param _filter Query criteria. Query using one or more filter criteria. Filter criteria type (specified by the name field) currently supported include: 
+
+- db-instance-id: filter by instance ID (in string format)
+- db-instance-name: filter by instance name (in string format)
+- db-tag-key: filter by instance tag (in string format)
+
+The value field specifies the specific instance ID/instance name/instance tag-key to filter under this type of filter criteria.
                      * 
                      */
                     void SetFilter(const std::vector<Filter>& _filter);
@@ -151,7 +175,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Query conditions
+                     * Query criteria. Query using one or more filter criteria. Filter criteria type (specified by the name field) currently supported include: 
+
+- db-instance-id: filter by instance ID (in string format)
+- db-instance-name: filter by instance name (in string format)
+- db-tag-key: filter by instance tag (in string format)
+
+The value field specifies the specific instance ID/instance name/instance tag-key to filter under this type of filter criteria.
                      */
                     std::vector<Filter> m_filter;
                     bool m_filterHasBeenSet;

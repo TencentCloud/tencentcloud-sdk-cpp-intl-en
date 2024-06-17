@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The total number of query results.
-                     * @return TotalCount The total number of query results.
+                     * 获取Total number found, with a maximum of 10,000 entries.
+                     * @return TotalCount Total number found, with a maximum of 10,000 entries.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Detailed analysis.
-                     * @return Detail Detailed analysis.
+                     * 获取Collection of detailed information on slow SQL statistical analysis found.
+                     * @return Detail Collection of detailed information on slow SQL statistical analysis found.
                      * 
                      */
                     Detail GetDetail() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The total number of query results.
+                     * Total number found, with a maximum of 10,000 entries.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Detailed analysis.
+                     * Collection of detailed information on slow SQL statistical analysis found.
                      */
                     Detail m_detail;
                     bool m_detailHasBeenSet;

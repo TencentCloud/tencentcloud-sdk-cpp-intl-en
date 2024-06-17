@@ -46,8 +46,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The total number of slow query statements during the specified period of time.
-                     * @return TotalCount The total number of slow query statements during the specified period of time.
+                     * 获取Number of slow logs found, with a maximum of 10,000 entries.	
+                     * @return TotalCount Number of slow logs found, with a maximum of 10,000 entries.	
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -60,10 +60,10 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Analysis of the execution time of slow query statements by classifying them to different time ranges. These slow query statements fall within the query range you specified in the request parameters.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return DurationAnalysis Analysis of the execution time of slow query statements by classifying them to different time ranges. These slow query statements fall within the query range you specified in the request parameters.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Segmented analysis results of the time consumption of the slow logs found.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DurationAnalysis Segmented analysis results of the time consumption of the slow logs found.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<DurationAnalysis> GetDurationAnalysis() const;
@@ -76,10 +76,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool DurationAnalysisHasBeenSet() const;
 
                     /**
-                     * 获取The list of slow query details during the specified period of time.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return RawSlowQueryList The list of slow query details during the specified period of time.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Collection of detailed information on slow logs found.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RawSlowQueryList Collection of detailed information on slow logs found.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<RawSlowQuery> GetRawSlowQueryList() const;
@@ -94,21 +94,21 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * The total number of slow query statements during the specified period of time.
+                     * Number of slow logs found, with a maximum of 10,000 entries.	
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Analysis of the execution time of slow query statements by classifying them to different time ranges. These slow query statements fall within the query range you specified in the request parameters.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Segmented analysis results of the time consumption of the slow logs found.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<DurationAnalysis> m_durationAnalysis;
                     bool m_durationAnalysisHasBeenSet;
 
                     /**
-                     * The list of slow query details during the specified period of time.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Collection of detailed information on slow logs found.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<RawSlowQuery> m_rawSlowQueryList;
                     bool m_rawSlowQueryListHasBeenSet;

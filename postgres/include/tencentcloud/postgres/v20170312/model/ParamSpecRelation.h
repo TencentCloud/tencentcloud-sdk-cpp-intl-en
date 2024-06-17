@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Parameter information of each specification
+                * Parameter information for each specification
                 */
                 class ParamSpecRelation : public AbstractModel
                 {

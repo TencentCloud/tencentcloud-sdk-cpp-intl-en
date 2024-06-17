@@ -486,18 +486,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool LastModifyTimeHasBeenSet() const;
 
                     /**
-                     * 获取Primary-standby constraint. Valid values: `0` (no constraint), `1` (The parameter value of the standby server must be greater than that of the primary server), `2` (The parameter value of the primary server must be greater than that of the standby server.)
+                     * 获取Parameter primary-secondary constraints, `0`: No constraint, `1`: Standby parameter value must be greater than that of the primary machine, `2`: Primary parameter value must be greater than that of the standby machine.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return StandbyRelated Primary-standby constraint. Valid values: `0` (no constraint), `1` (The parameter value of the standby server must be greater than that of the primary server), `2` (The parameter value of the primary server must be greater than that of the standby server.)
+                     * @return StandbyRelated Parameter primary-secondary constraints, `0`: No constraint, `1`: Standby parameter value must be greater than that of the primary machine, `2`: Primary parameter value must be greater than that of the standby machine.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetStandbyRelated() const;
 
                     /**
-                     * 设置Primary-standby constraint. Valid values: `0` (no constraint), `1` (The parameter value of the standby server must be greater than that of the primary server), `2` (The parameter value of the primary server must be greater than that of the standby server.)
+                     * 设置Parameter primary-secondary constraints, `0`: No constraint, `1`: Standby parameter value must be greater than that of the primary machine, `2`: Primary parameter value must be greater than that of the standby machine.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _standbyRelated Primary-standby constraint. Valid values: `0` (no constraint), `1` (The parameter value of the standby server must be greater than that of the primary server), `2` (The parameter value of the primary server must be greater than that of the standby server.)
+                     * @param _standbyRelated Parameter primary-secondary constraints, `0`: No constraint, `1`: Standby parameter value must be greater than that of the primary machine, `2`: Primary parameter value must be greater than that of the standby machine.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -511,18 +511,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StandbyRelatedHasBeenSet() const;
 
                     /**
-                     * 获取Associated parameter version information, which refers to the detailed parameter information of the kernel version.
+                     * 获取Parameter version association information, containing detailed parameter information for the respective kernel version
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VersionRelationSet Associated parameter version information, which refers to the detailed parameter information of the kernel version.
+                     * @return VersionRelationSet Parameter version association information, containing detailed parameter information for the respective kernel version
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<ParamVersionRelation> GetVersionRelationSet() const;
 
                     /**
-                     * 设置Associated parameter version information, which refers to the detailed parameter information of the kernel version.
+                     * 设置Parameter version association information, containing detailed parameter information for the respective kernel version
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _versionRelationSet Associated parameter version information, which refers to the detailed parameter information of the kernel version.
+                     * @param _versionRelationSet Parameter version association information, containing detailed parameter information for the respective kernel version
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -536,18 +536,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VersionRelationSetHasBeenSet() const;
 
                     /**
-                     * 获取Associated parameter specification information, which refers to the detailed parameter information of the specifications.
+                     * 获取Parameter specification association information, containing detailed parameter information for the respective specification
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SpecRelationSet Associated parameter specification information, which refers to the detailed parameter information of the specifications.
+                     * @return SpecRelationSet Parameter specification association information, containing detailed parameter information for the respective specification
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<ParamSpecRelation> GetSpecRelationSet() const;
 
                     /**
-                     * 设置Associated parameter specification information, which refers to the detailed parameter information of the specifications.
+                     * 设置Parameter specification association information, containing detailed parameter information for the respective specification
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _specRelationSet Associated parameter specification information, which refers to the detailed parameter information of the specifications.
+                     * @param _specRelationSet Parameter specification association information, containing detailed parameter information for the respective specification
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -685,21 +685,21 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_lastModifyTimeHasBeenSet;
 
                     /**
-                     * Primary-standby constraint. Valid values: `0` (no constraint), `1` (The parameter value of the standby server must be greater than that of the primary server), `2` (The parameter value of the primary server must be greater than that of the standby server.)
+                     * Parameter primary-secondary constraints, `0`: No constraint, `1`: Standby parameter value must be greater than that of the primary machine, `2`: Primary parameter value must be greater than that of the standby machine.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_standbyRelated;
                     bool m_standbyRelatedHasBeenSet;
 
                     /**
-                     * Associated parameter version information, which refers to the detailed parameter information of the kernel version.
+                     * Parameter version association information, containing detailed parameter information for the respective kernel version
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<ParamVersionRelation> m_versionRelationSet;
                     bool m_versionRelationSetHasBeenSet;
 
                     /**
-                     * Associated parameter specification information, which refers to the detailed parameter information of the specifications.
+                     * Parameter specification association information, containing detailed parameter information for the respective specification
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<ParamSpecRelation> m_specRelationSet;

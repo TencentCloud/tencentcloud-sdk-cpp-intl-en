@@ -90,31 +90,31 @@ The information of AZ can be obtained from the `Zone` field in the returned valu
                     bool DBNodeSetHasBeenSet() const;
 
                     /**
-                     * 获取Switch time for the specified instance after configuration modification.
-<li>`0`: Switch now. 
-<li>`1`: Switch at the specified time.
-<li>`2`: Switch in the maintenance time.
-Default value: `0`. 
-                     * @return SwitchTag Switch time for the specified instance after configuration modification.
-<li>`0`: Switch now. 
-<li>`1`: Switch at the specified time.
-<li>`2`: Switch in the maintenance time.
-Default value: `0`. 
+                     * 获取Switch time after instance configurations are modified.
+<li>0: Switch immediately</li>
+<li>1: Switch at specified time</li>
+<li>2: Switch during maintenance time window</li>
+Default value: 0
+                     * @return SwitchTag Switch time after instance configurations are modified.
+<li>0: Switch immediately</li>
+<li>1: Switch at specified time</li>
+<li>2: Switch during maintenance time window</li>
+Default value: 0
                      * 
                      */
                     int64_t GetSwitchTag() const;
 
                     /**
-                     * 设置Switch time for the specified instance after configuration modification.
-<li>`0`: Switch now. 
-<li>`1`: Switch at the specified time.
-<li>`2`: Switch in the maintenance time.
-Default value: `0`. 
-                     * @param _switchTag Switch time for the specified instance after configuration modification.
-<li>`0`: Switch now. 
-<li>`1`: Switch at the specified time.
-<li>`2`: Switch in the maintenance time.
-Default value: `0`. 
+                     * 设置Switch time after instance configurations are modified.
+<li>0: Switch immediately</li>
+<li>1: Switch at specified time</li>
+<li>2: Switch during maintenance time window</li>
+Default value: 0
+                     * @param _switchTag Switch time after instance configurations are modified.
+<li>0: Switch immediately</li>
+<li>1: Switch at specified time</li>
+<li>2: Switch during maintenance time window</li>
+Default value: 0
                      * 
                      */
                     void SetSwitchTag(const int64_t& _switchTag);
@@ -184,11 +184,11 @@ The information of AZ can be obtained from the `Zone` field in the returned valu
                     bool m_dBNodeSetHasBeenSet;
 
                     /**
-                     * Switch time for the specified instance after configuration modification.
-<li>`0`: Switch now. 
-<li>`1`: Switch at the specified time.
-<li>`2`: Switch in the maintenance time.
-Default value: `0`. 
+                     * Switch time after instance configurations are modified.
+<li>0: Switch immediately</li>
+<li>1: Switch at specified time</li>
+<li>2: Switch during maintenance time window</li>
+Default value: 0
                      */
                     int64_t m_switchTag;
                     bool m_switchTagHasBeenSet;

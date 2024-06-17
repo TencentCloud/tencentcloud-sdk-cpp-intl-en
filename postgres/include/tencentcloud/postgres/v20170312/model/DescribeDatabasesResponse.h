@@ -57,6 +57,20 @@ namespace TencentCloud
                      */
                     bool ItemsHasBeenSet() const;
 
+                    /**
+                     * 获取Total number of databases
+                     * @return TotalCount Total number of databases
+                     * 
+                     */
+                    uint64_t GetTotalCount() const;
+
+                    /**
+                     * 判断参数 TotalCount 是否已赋值
+                     * @return TotalCount 是否已赋值
+                     * 
+                     */
+                    bool TotalCountHasBeenSet() const;
+
                 private:
 
                     /**
@@ -64,6 +78,12 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_items;
                     bool m_itemsHasBeenSet;
+
+                    /**
+                     * Total number of databases
+                     */
+                    uint64_t m_totalCount;
+                    bool m_totalCountHasBeenSet;
 
                 };
             }
