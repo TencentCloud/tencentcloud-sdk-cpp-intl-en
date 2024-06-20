@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mdl/v20200326/model/AudioPidSelectionInfo.h>
+#include <tencentcloud/mdl/v20200326/model/InputTracks.h>
 
 
 namespace TencentCloud
@@ -89,6 +90,48 @@ namespace TencentCloud
                      */
                     bool AudioPidSelectionHasBeenSet() const;
 
+                    /**
+                     * 获取Audio input type, optional values: 'PID_SELECTOR' 'TRACK_SELECTOR', default value PID_SELECTOR.
+                     * @return AudioSelectorType Audio input type, optional values: 'PID_SELECTOR' 'TRACK_SELECTOR', default value PID_SELECTOR.
+                     * 
+                     */
+                    std::string GetAudioSelectorType() const;
+
+                    /**
+                     * 设置Audio input type, optional values: 'PID_SELECTOR' 'TRACK_SELECTOR', default value PID_SELECTOR.
+                     * @param _audioSelectorType Audio input type, optional values: 'PID_SELECTOR' 'TRACK_SELECTOR', default value PID_SELECTOR.
+                     * 
+                     */
+                    void SetAudioSelectorType(const std::string& _audioSelectorType);
+
+                    /**
+                     * 判断参数 AudioSelectorType 是否已赋值
+                     * @return AudioSelectorType 是否已赋值
+                     * 
+                     */
+                    bool AudioSelectorTypeHasBeenSet() const;
+
+                    /**
+                     * 获取AudioTrack configuration.
+                     * @return AudioTrackSelection AudioTrack configuration.
+                     * 
+                     */
+                    InputTracks GetAudioTrackSelection() const;
+
+                    /**
+                     * 设置AudioTrack configuration.
+                     * @param _audioTrackSelection AudioTrack configuration.
+                     * 
+                     */
+                    void SetAudioTrackSelection(const InputTracks& _audioTrackSelection);
+
+                    /**
+                     * 判断参数 AudioTrackSelection 是否已赋值
+                     * @return AudioTrackSelection 是否已赋值
+                     * 
+                     */
+                    bool AudioTrackSelectionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -102,6 +145,18 @@ namespace TencentCloud
                      */
                     AudioPidSelectionInfo m_audioPidSelection;
                     bool m_audioPidSelectionHasBeenSet;
+
+                    /**
+                     * Audio input type, optional values: 'PID_SELECTOR' 'TRACK_SELECTOR', default value PID_SELECTOR.
+                     */
+                    std::string m_audioSelectorType;
+                    bool m_audioSelectorTypeHasBeenSet;
+
+                    /**
+                     * AudioTrack configuration.
+                     */
+                    InputTracks m_audioTrackSelection;
+                    bool m_audioTrackSelectionHasBeenSet;
 
                 };
             }

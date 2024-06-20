@@ -19,14 +19,16 @@ set(mdl_public_header
   )
 
 set(mdl_public_header_model
-  include/tencentcloud/mdl/v20200326/model/DeleteStreamLiveChannelResponse.h
-  include/tencentcloud/mdl/v20200326/model/VideoPipelineInputStatistics.h
-  include/tencentcloud/mdl/v20200326/model/CreateStreamLiveInputSecurityGroupResponse.h
   include/tencentcloud/mdl/v20200326/model/InputLossBehaviorInfo.h
+  include/tencentcloud/mdl/v20200326/model/VideoPipelineInputStatistics.h
+  include/tencentcloud/mdl/v20200326/model/AudioTrackInfo.h
+  include/tencentcloud/mdl/v20200326/model/CreateStreamLiveInputSecurityGroupResponse.h
+  include/tencentcloud/mdl/v20200326/model/DeleteStreamLiveChannelResponse.h
   include/tencentcloud/mdl/v20200326/model/StreamVideoInfo.h
   include/tencentcloud/mdl/v20200326/model/CreateStreamLivePlanRequest.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveWatermarksResponse.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveInputRequest.h
+  include/tencentcloud/mdl/v20200326/model/AudioCodecDetail.h
   include/tencentcloud/mdl/v20200326/model/QueryDispatchInputInfo.h
   include/tencentcloud/mdl/v20200326/model/CreateStreamLiveInputRequest.h
   include/tencentcloud/mdl/v20200326/model/AudioPidSelectionInfo.h
@@ -80,23 +82,25 @@ set(mdl_public_header_model
   include/tencentcloud/mdl/v20200326/model/EventSettingsResp.h
   include/tencentcloud/mdl/v20200326/model/TimedMetadataSettingInfo.h
   include/tencentcloud/mdl/v20200326/model/AudioTemplateInfo.h
+  include/tencentcloud/mdl/v20200326/model/InputTracks.h
   include/tencentcloud/mdl/v20200326/model/StreamPackageSettingsInfo.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveChannelsResponse.h
   include/tencentcloud/mdl/v20200326/model/QueryInputStreamStateRequest.h
   include/tencentcloud/mdl/v20200326/model/PlanReq.h
   include/tencentcloud/mdl/v20200326/model/DeleteStreamLiveWatermarkRequest.h
-  include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveRegionsResponse.h
+  include/tencentcloud/mdl/v20200326/model/CreateStreamLiveChannelRequest.h
   include/tencentcloud/mdl/v20200326/model/TimedRecordSettings.h
   include/tencentcloud/mdl/v20200326/model/StreamLiveRegionInfo.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveChannelRequest.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLivePlansRequest.h
-  include/tencentcloud/mdl/v20200326/model/CreateStreamLiveChannelRequest.h
+  include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveRegionsResponse.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveTranscodeDetailResponse.h
   include/tencentcloud/mdl/v20200326/model/CreateStreamLiveWatermarkResponse.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveInputsResponse.h
   include/tencentcloud/mdl/v20200326/model/ModifyStreamLiveInputResponse.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveChannelAlertsResponse.h
   include/tencentcloud/mdl/v20200326/model/PlanResp.h
+  include/tencentcloud/mdl/v20200326/model/AudioNormalizationSettings.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLivePlansResponse.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveChannelLogsRequest.h
   include/tencentcloud/mdl/v20200326/model/CreateStreamLiveInputSecurityGroupRequest.h
@@ -108,14 +112,17 @@ set(mdl_public_header_model
   include/tencentcloud/mdl/v20200326/model/EventSettingsDestinationResp.h
   include/tencentcloud/mdl/v20200326/model/OutputInfo.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveInputSecurityGroupRequest.h
+  include/tencentcloud/mdl/v20200326/model/VideoCodecDetail.h
   include/tencentcloud/mdl/v20200326/model/CreateStreamLiveChannelResponse.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveChannelInputStatisticsResponse.h
   include/tencentcloud/mdl/v20200326/model/StopStreamLiveChannelResponse.h
   include/tencentcloud/mdl/v20200326/model/PushEventSetting.h
+  include/tencentcloud/mdl/v20200326/model/InputTrack.h
   include/tencentcloud/mdl/v20200326/model/CreateImageSettings.h
   include/tencentcloud/mdl/v20200326/model/StartStreamLiveChannelResponse.h
   include/tencentcloud/mdl/v20200326/model/StreamLiveOutputGroupsInfo.h
   include/tencentcloud/mdl/v20200326/model/ChannelOutputsStatistics.h
+  include/tencentcloud/mdl/v20200326/model/AdditionalRateSetting.h
   include/tencentcloud/mdl/v20200326/model/PlanSettings.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveInputSecurityGroupsResponse.h
   include/tencentcloud/mdl/v20200326/model/EventNotifySetting.h
@@ -155,14 +162,16 @@ set(mdl_public_header_model
 
 set(mdl_src
   src/v20200326/MdlClient.cpp
-  src/v20200326/model/DeleteStreamLiveChannelResponse.cpp
-  src/v20200326/model/VideoPipelineInputStatistics.cpp
-  src/v20200326/model/CreateStreamLiveInputSecurityGroupResponse.cpp
   src/v20200326/model/InputLossBehaviorInfo.cpp
+  src/v20200326/model/VideoPipelineInputStatistics.cpp
+  src/v20200326/model/AudioTrackInfo.cpp
+  src/v20200326/model/CreateStreamLiveInputSecurityGroupResponse.cpp
+  src/v20200326/model/DeleteStreamLiveChannelResponse.cpp
   src/v20200326/model/StreamVideoInfo.cpp
   src/v20200326/model/CreateStreamLivePlanRequest.cpp
   src/v20200326/model/DescribeStreamLiveWatermarksResponse.cpp
   src/v20200326/model/DescribeStreamLiveInputRequest.cpp
+  src/v20200326/model/AudioCodecDetail.cpp
   src/v20200326/model/QueryDispatchInputInfo.cpp
   src/v20200326/model/CreateStreamLiveInputRequest.cpp
   src/v20200326/model/AudioPidSelectionInfo.cpp
@@ -216,23 +225,25 @@ set(mdl_src
   src/v20200326/model/EventSettingsResp.cpp
   src/v20200326/model/TimedMetadataSettingInfo.cpp
   src/v20200326/model/AudioTemplateInfo.cpp
+  src/v20200326/model/InputTracks.cpp
   src/v20200326/model/StreamPackageSettingsInfo.cpp
   src/v20200326/model/DescribeStreamLiveChannelsResponse.cpp
   src/v20200326/model/QueryInputStreamStateRequest.cpp
   src/v20200326/model/PlanReq.cpp
   src/v20200326/model/DeleteStreamLiveWatermarkRequest.cpp
-  src/v20200326/model/DescribeStreamLiveRegionsResponse.cpp
+  src/v20200326/model/CreateStreamLiveChannelRequest.cpp
   src/v20200326/model/TimedRecordSettings.cpp
   src/v20200326/model/StreamLiveRegionInfo.cpp
   src/v20200326/model/DescribeStreamLiveChannelRequest.cpp
   src/v20200326/model/DescribeStreamLivePlansRequest.cpp
-  src/v20200326/model/CreateStreamLiveChannelRequest.cpp
+  src/v20200326/model/DescribeStreamLiveRegionsResponse.cpp
   src/v20200326/model/DescribeStreamLiveTranscodeDetailResponse.cpp
   src/v20200326/model/CreateStreamLiveWatermarkResponse.cpp
   src/v20200326/model/DescribeStreamLiveInputsResponse.cpp
   src/v20200326/model/ModifyStreamLiveInputResponse.cpp
   src/v20200326/model/DescribeStreamLiveChannelAlertsResponse.cpp
   src/v20200326/model/PlanResp.cpp
+  src/v20200326/model/AudioNormalizationSettings.cpp
   src/v20200326/model/DescribeStreamLivePlansResponse.cpp
   src/v20200326/model/DescribeStreamLiveChannelLogsRequest.cpp
   src/v20200326/model/CreateStreamLiveInputSecurityGroupRequest.cpp
@@ -244,14 +255,17 @@ set(mdl_src
   src/v20200326/model/EventSettingsDestinationResp.cpp
   src/v20200326/model/OutputInfo.cpp
   src/v20200326/model/DescribeStreamLiveInputSecurityGroupRequest.cpp
+  src/v20200326/model/VideoCodecDetail.cpp
   src/v20200326/model/CreateStreamLiveChannelResponse.cpp
   src/v20200326/model/DescribeStreamLiveChannelInputStatisticsResponse.cpp
   src/v20200326/model/StopStreamLiveChannelResponse.cpp
   src/v20200326/model/PushEventSetting.cpp
+  src/v20200326/model/InputTrack.cpp
   src/v20200326/model/CreateImageSettings.cpp
   src/v20200326/model/StartStreamLiveChannelResponse.cpp
   src/v20200326/model/StreamLiveOutputGroupsInfo.cpp
   src/v20200326/model/ChannelOutputsStatistics.cpp
+  src/v20200326/model/AdditionalRateSetting.cpp
   src/v20200326/model/PlanSettings.cpp
   src/v20200326/model/DescribeStreamLiveInputSecurityGroupsResponse.cpp
   src/v20200326/model/EventNotifySetting.cpp

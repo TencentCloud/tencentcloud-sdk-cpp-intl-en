@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The token used to identify an SDK-based verification process.
-                     * @return SdkToken The token used to identify an SDK-based verification process.
+                     * 获取The token used to identify an SDK-based verification process. 
+                     * @return SdkToken The token used to identify an SDK-based verification process. 
                      * 
                      */
                     std::string GetSdkToken() const;
 
                     /**
-                     * 设置The token used to identify an SDK-based verification process.
-                     * @param _sdkToken The token used to identify an SDK-based verification process.
+                     * 设置The token used to identify an SDK-based verification process. 
+                     * @param _sdkToken The token used to identify an SDK-based verification process. 
                      * 
                      */
                     void SetSdkToken(const std::string& _sdkToken);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The token used to identify an SDK-based verification process.
+                     * The token used to identify an SDK-based verification process. 
                      */
                     std::string m_sdkToken;
                     bool m_sdkTokenHasBeenSet;

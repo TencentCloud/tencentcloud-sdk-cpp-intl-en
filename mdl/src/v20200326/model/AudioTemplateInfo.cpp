@@ -25,7 +25,10 @@ AudioTemplateInfo::AudioTemplateInfo() :
     m_nameHasBeenSet(false),
     m_acodecHasBeenSet(false),
     m_audioBitrateHasBeenSet(false),
-    m_languageCodeHasBeenSet(false)
+    m_languageCodeHasBeenSet(false),
+    m_audioNormalizationHasBeenSet(false),
+    m_audioSampleRateHasBeenSet(false),
+    m_audioCodecDetailsHasBeenSet(false)
 {
 }
 
@@ -84,6 +87,50 @@ CoreInternalOutcome AudioTemplateInfo::Deserialize(const rapidjson::Value &value
         m_languageCodeHasBeenSet = true;
     }
 
+    if (value.HasMember("AudioNormalization") && !value["AudioNormalization"].IsNull())
+    {
+        if (!value["AudioNormalization"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `AudioTemplateInfo.AudioNormalization` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_audioNormalization.Deserialize(value["AudioNormalization"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_audioNormalizationHasBeenSet = true;
+    }
+
+    if (value.HasMember("AudioSampleRate") && !value["AudioSampleRate"].IsNull())
+    {
+        if (!value["AudioSampleRate"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `AudioTemplateInfo.AudioSampleRate` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_audioSampleRate = value["AudioSampleRate"].GetUint64();
+        m_audioSampleRateHasBeenSet = true;
+    }
+
+    if (value.HasMember("AudioCodecDetails") && !value["AudioCodecDetails"].IsNull())
+    {
+        if (!value["AudioCodecDetails"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `AudioTemplateInfo.AudioCodecDetails` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_audioCodecDetails.Deserialize(value["AudioCodecDetails"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_audioCodecDetailsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -129,6 +176,32 @@ void AudioTemplateInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Documen
         string key = "LanguageCode";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_languageCode.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_audioNormalizationHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AudioNormalization";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_audioNormalization.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_audioSampleRateHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AudioSampleRate";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_audioSampleRate, allocator);
+    }
+
+    if (m_audioCodecDetailsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AudioCodecDetails";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_audioCodecDetails.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -212,5 +285,53 @@ void AudioTemplateInfo::SetLanguageCode(const string& _languageCode)
 bool AudioTemplateInfo::LanguageCodeHasBeenSet() const
 {
     return m_languageCodeHasBeenSet;
+}
+
+AudioNormalizationSettings AudioTemplateInfo::GetAudioNormalization() const
+{
+    return m_audioNormalization;
+}
+
+void AudioTemplateInfo::SetAudioNormalization(const AudioNormalizationSettings& _audioNormalization)
+{
+    m_audioNormalization = _audioNormalization;
+    m_audioNormalizationHasBeenSet = true;
+}
+
+bool AudioTemplateInfo::AudioNormalizationHasBeenSet() const
+{
+    return m_audioNormalizationHasBeenSet;
+}
+
+uint64_t AudioTemplateInfo::GetAudioSampleRate() const
+{
+    return m_audioSampleRate;
+}
+
+void AudioTemplateInfo::SetAudioSampleRate(const uint64_t& _audioSampleRate)
+{
+    m_audioSampleRate = _audioSampleRate;
+    m_audioSampleRateHasBeenSet = true;
+}
+
+bool AudioTemplateInfo::AudioSampleRateHasBeenSet() const
+{
+    return m_audioSampleRateHasBeenSet;
+}
+
+AudioCodecDetail AudioTemplateInfo::GetAudioCodecDetails() const
+{
+    return m_audioCodecDetails;
+}
+
+void AudioTemplateInfo::SetAudioCodecDetails(const AudioCodecDetail& _audioCodecDetails)
+{
+    m_audioCodecDetails = _audioCodecDetails;
+    m_audioCodecDetailsHasBeenSet = true;
+}
+
+bool AudioTemplateInfo::AudioCodecDetailsHasBeenSet() const
+{
+    return m_audioCodecDetailsHasBeenSet;
 }
 

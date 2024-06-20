@@ -36,7 +36,21 @@ AVTemplate::AVTemplate() :
     m_rateControlModeHasBeenSet(false),
     m_watermarkIdHasBeenSet(false),
     m_smartSubtitlesHasBeenSet(false),
-    m_subtitleConfigurationHasBeenSet(false)
+    m_subtitleConfigurationHasBeenSet(false),
+    m_faceBlurringEnabledHasBeenSet(false),
+    m_audioSelectorNameHasBeenSet(false),
+    m_audioNormalizationHasBeenSet(false),
+    m_audioSampleRateHasBeenSet(false),
+    m_frameRateTypeHasBeenSet(false),
+    m_frameRateNumeratorHasBeenSet(false),
+    m_frameRateDenominatorHasBeenSet(false),
+    m_bFramesNumHasBeenSet(false),
+    m_refFramesNumHasBeenSet(false),
+    m_additionalRateSettingsHasBeenSet(false),
+    m_videoCodecDetailsHasBeenSet(false),
+    m_audioCodecDetailsHasBeenSet(false),
+    m_multiAudioTrackEnabledHasBeenSet(false),
+    m_audioTracksHasBeenSet(false)
 {
 }
 
@@ -205,6 +219,184 @@ CoreInternalOutcome AVTemplate::Deserialize(const rapidjson::Value &value)
         m_subtitleConfigurationHasBeenSet = true;
     }
 
+    if (value.HasMember("FaceBlurringEnabled") && !value["FaceBlurringEnabled"].IsNull())
+    {
+        if (!value["FaceBlurringEnabled"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `AVTemplate.FaceBlurringEnabled` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_faceBlurringEnabled = value["FaceBlurringEnabled"].GetUint64();
+        m_faceBlurringEnabledHasBeenSet = true;
+    }
+
+    if (value.HasMember("AudioSelectorName") && !value["AudioSelectorName"].IsNull())
+    {
+        if (!value["AudioSelectorName"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AVTemplate.AudioSelectorName` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_audioSelectorName = string(value["AudioSelectorName"].GetString());
+        m_audioSelectorNameHasBeenSet = true;
+    }
+
+    if (value.HasMember("AudioNormalization") && !value["AudioNormalization"].IsNull())
+    {
+        if (!value["AudioNormalization"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `AVTemplate.AudioNormalization` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_audioNormalization.Deserialize(value["AudioNormalization"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_audioNormalizationHasBeenSet = true;
+    }
+
+    if (value.HasMember("AudioSampleRate") && !value["AudioSampleRate"].IsNull())
+    {
+        if (!value["AudioSampleRate"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `AVTemplate.AudioSampleRate` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_audioSampleRate = value["AudioSampleRate"].GetUint64();
+        m_audioSampleRateHasBeenSet = true;
+    }
+
+    if (value.HasMember("FrameRateType") && !value["FrameRateType"].IsNull())
+    {
+        if (!value["FrameRateType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AVTemplate.FrameRateType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_frameRateType = string(value["FrameRateType"].GetString());
+        m_frameRateTypeHasBeenSet = true;
+    }
+
+    if (value.HasMember("FrameRateNumerator") && !value["FrameRateNumerator"].IsNull())
+    {
+        if (!value["FrameRateNumerator"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `AVTemplate.FrameRateNumerator` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_frameRateNumerator = value["FrameRateNumerator"].GetUint64();
+        m_frameRateNumeratorHasBeenSet = true;
+    }
+
+    if (value.HasMember("FrameRateDenominator") && !value["FrameRateDenominator"].IsNull())
+    {
+        if (!value["FrameRateDenominator"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `AVTemplate.FrameRateDenominator` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_frameRateDenominator = value["FrameRateDenominator"].GetUint64();
+        m_frameRateDenominatorHasBeenSet = true;
+    }
+
+    if (value.HasMember("BFramesNum") && !value["BFramesNum"].IsNull())
+    {
+        if (!value["BFramesNum"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `AVTemplate.BFramesNum` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_bFramesNum = value["BFramesNum"].GetUint64();
+        m_bFramesNumHasBeenSet = true;
+    }
+
+    if (value.HasMember("RefFramesNum") && !value["RefFramesNum"].IsNull())
+    {
+        if (!value["RefFramesNum"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `AVTemplate.RefFramesNum` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_refFramesNum = value["RefFramesNum"].GetUint64();
+        m_refFramesNumHasBeenSet = true;
+    }
+
+    if (value.HasMember("AdditionalRateSettings") && !value["AdditionalRateSettings"].IsNull())
+    {
+        if (!value["AdditionalRateSettings"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `AVTemplate.AdditionalRateSettings` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_additionalRateSettings.Deserialize(value["AdditionalRateSettings"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_additionalRateSettingsHasBeenSet = true;
+    }
+
+    if (value.HasMember("VideoCodecDetails") && !value["VideoCodecDetails"].IsNull())
+    {
+        if (!value["VideoCodecDetails"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `AVTemplate.VideoCodecDetails` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_videoCodecDetails.Deserialize(value["VideoCodecDetails"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_videoCodecDetailsHasBeenSet = true;
+    }
+
+    if (value.HasMember("AudioCodecDetails") && !value["AudioCodecDetails"].IsNull())
+    {
+        if (!value["AudioCodecDetails"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `AVTemplate.AudioCodecDetails` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_audioCodecDetails.Deserialize(value["AudioCodecDetails"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_audioCodecDetailsHasBeenSet = true;
+    }
+
+    if (value.HasMember("MultiAudioTrackEnabled") && !value["MultiAudioTrackEnabled"].IsNull())
+    {
+        if (!value["MultiAudioTrackEnabled"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `AVTemplate.MultiAudioTrackEnabled` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_multiAudioTrackEnabled = value["MultiAudioTrackEnabled"].GetUint64();
+        m_multiAudioTrackEnabledHasBeenSet = true;
+    }
+
+    if (value.HasMember("AudioTracks") && !value["AudioTracks"].IsNull())
+    {
+        if (!value["AudioTracks"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `AVTemplate.AudioTracks` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["AudioTracks"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            AudioTrackInfo item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_audioTracks.push_back(item);
+        }
+        m_audioTracksHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -338,6 +530,129 @@ void AVTemplate::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Allo
         string key = "SubtitleConfiguration";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_subtitleConfiguration.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_faceBlurringEnabledHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FaceBlurringEnabled";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_faceBlurringEnabled, allocator);
+    }
+
+    if (m_audioSelectorNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AudioSelectorName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_audioSelectorName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_audioNormalizationHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AudioNormalization";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_audioNormalization.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_audioSampleRateHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AudioSampleRate";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_audioSampleRate, allocator);
+    }
+
+    if (m_frameRateTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FrameRateType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_frameRateType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_frameRateNumeratorHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FrameRateNumerator";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_frameRateNumerator, allocator);
+    }
+
+    if (m_frameRateDenominatorHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FrameRateDenominator";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_frameRateDenominator, allocator);
+    }
+
+    if (m_bFramesNumHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BFramesNum";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_bFramesNum, allocator);
+    }
+
+    if (m_refFramesNumHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RefFramesNum";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_refFramesNum, allocator);
+    }
+
+    if (m_additionalRateSettingsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AdditionalRateSettings";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_additionalRateSettings.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_videoCodecDetailsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "VideoCodecDetails";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_videoCodecDetails.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_audioCodecDetailsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AudioCodecDetails";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_audioCodecDetails.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_multiAudioTrackEnabledHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MultiAudioTrackEnabled";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_multiAudioTrackEnabled, allocator);
+    }
+
+    if (m_audioTracksHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AudioTracks";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_audioTracks.begin(); itr != m_audioTracks.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
     }
 
 }
@@ -597,5 +912,229 @@ void AVTemplate::SetSubtitleConfiguration(const string& _subtitleConfiguration)
 bool AVTemplate::SubtitleConfigurationHasBeenSet() const
 {
     return m_subtitleConfigurationHasBeenSet;
+}
+
+uint64_t AVTemplate::GetFaceBlurringEnabled() const
+{
+    return m_faceBlurringEnabled;
+}
+
+void AVTemplate::SetFaceBlurringEnabled(const uint64_t& _faceBlurringEnabled)
+{
+    m_faceBlurringEnabled = _faceBlurringEnabled;
+    m_faceBlurringEnabledHasBeenSet = true;
+}
+
+bool AVTemplate::FaceBlurringEnabledHasBeenSet() const
+{
+    return m_faceBlurringEnabledHasBeenSet;
+}
+
+string AVTemplate::GetAudioSelectorName() const
+{
+    return m_audioSelectorName;
+}
+
+void AVTemplate::SetAudioSelectorName(const string& _audioSelectorName)
+{
+    m_audioSelectorName = _audioSelectorName;
+    m_audioSelectorNameHasBeenSet = true;
+}
+
+bool AVTemplate::AudioSelectorNameHasBeenSet() const
+{
+    return m_audioSelectorNameHasBeenSet;
+}
+
+AudioNormalizationSettings AVTemplate::GetAudioNormalization() const
+{
+    return m_audioNormalization;
+}
+
+void AVTemplate::SetAudioNormalization(const AudioNormalizationSettings& _audioNormalization)
+{
+    m_audioNormalization = _audioNormalization;
+    m_audioNormalizationHasBeenSet = true;
+}
+
+bool AVTemplate::AudioNormalizationHasBeenSet() const
+{
+    return m_audioNormalizationHasBeenSet;
+}
+
+uint64_t AVTemplate::GetAudioSampleRate() const
+{
+    return m_audioSampleRate;
+}
+
+void AVTemplate::SetAudioSampleRate(const uint64_t& _audioSampleRate)
+{
+    m_audioSampleRate = _audioSampleRate;
+    m_audioSampleRateHasBeenSet = true;
+}
+
+bool AVTemplate::AudioSampleRateHasBeenSet() const
+{
+    return m_audioSampleRateHasBeenSet;
+}
+
+string AVTemplate::GetFrameRateType() const
+{
+    return m_frameRateType;
+}
+
+void AVTemplate::SetFrameRateType(const string& _frameRateType)
+{
+    m_frameRateType = _frameRateType;
+    m_frameRateTypeHasBeenSet = true;
+}
+
+bool AVTemplate::FrameRateTypeHasBeenSet() const
+{
+    return m_frameRateTypeHasBeenSet;
+}
+
+uint64_t AVTemplate::GetFrameRateNumerator() const
+{
+    return m_frameRateNumerator;
+}
+
+void AVTemplate::SetFrameRateNumerator(const uint64_t& _frameRateNumerator)
+{
+    m_frameRateNumerator = _frameRateNumerator;
+    m_frameRateNumeratorHasBeenSet = true;
+}
+
+bool AVTemplate::FrameRateNumeratorHasBeenSet() const
+{
+    return m_frameRateNumeratorHasBeenSet;
+}
+
+uint64_t AVTemplate::GetFrameRateDenominator() const
+{
+    return m_frameRateDenominator;
+}
+
+void AVTemplate::SetFrameRateDenominator(const uint64_t& _frameRateDenominator)
+{
+    m_frameRateDenominator = _frameRateDenominator;
+    m_frameRateDenominatorHasBeenSet = true;
+}
+
+bool AVTemplate::FrameRateDenominatorHasBeenSet() const
+{
+    return m_frameRateDenominatorHasBeenSet;
+}
+
+uint64_t AVTemplate::GetBFramesNum() const
+{
+    return m_bFramesNum;
+}
+
+void AVTemplate::SetBFramesNum(const uint64_t& _bFramesNum)
+{
+    m_bFramesNum = _bFramesNum;
+    m_bFramesNumHasBeenSet = true;
+}
+
+bool AVTemplate::BFramesNumHasBeenSet() const
+{
+    return m_bFramesNumHasBeenSet;
+}
+
+uint64_t AVTemplate::GetRefFramesNum() const
+{
+    return m_refFramesNum;
+}
+
+void AVTemplate::SetRefFramesNum(const uint64_t& _refFramesNum)
+{
+    m_refFramesNum = _refFramesNum;
+    m_refFramesNumHasBeenSet = true;
+}
+
+bool AVTemplate::RefFramesNumHasBeenSet() const
+{
+    return m_refFramesNumHasBeenSet;
+}
+
+AdditionalRateSetting AVTemplate::GetAdditionalRateSettings() const
+{
+    return m_additionalRateSettings;
+}
+
+void AVTemplate::SetAdditionalRateSettings(const AdditionalRateSetting& _additionalRateSettings)
+{
+    m_additionalRateSettings = _additionalRateSettings;
+    m_additionalRateSettingsHasBeenSet = true;
+}
+
+bool AVTemplate::AdditionalRateSettingsHasBeenSet() const
+{
+    return m_additionalRateSettingsHasBeenSet;
+}
+
+VideoCodecDetail AVTemplate::GetVideoCodecDetails() const
+{
+    return m_videoCodecDetails;
+}
+
+void AVTemplate::SetVideoCodecDetails(const VideoCodecDetail& _videoCodecDetails)
+{
+    m_videoCodecDetails = _videoCodecDetails;
+    m_videoCodecDetailsHasBeenSet = true;
+}
+
+bool AVTemplate::VideoCodecDetailsHasBeenSet() const
+{
+    return m_videoCodecDetailsHasBeenSet;
+}
+
+AudioCodecDetail AVTemplate::GetAudioCodecDetails() const
+{
+    return m_audioCodecDetails;
+}
+
+void AVTemplate::SetAudioCodecDetails(const AudioCodecDetail& _audioCodecDetails)
+{
+    m_audioCodecDetails = _audioCodecDetails;
+    m_audioCodecDetailsHasBeenSet = true;
+}
+
+bool AVTemplate::AudioCodecDetailsHasBeenSet() const
+{
+    return m_audioCodecDetailsHasBeenSet;
+}
+
+uint64_t AVTemplate::GetMultiAudioTrackEnabled() const
+{
+    return m_multiAudioTrackEnabled;
+}
+
+void AVTemplate::SetMultiAudioTrackEnabled(const uint64_t& _multiAudioTrackEnabled)
+{
+    m_multiAudioTrackEnabled = _multiAudioTrackEnabled;
+    m_multiAudioTrackEnabledHasBeenSet = true;
+}
+
+bool AVTemplate::MultiAudioTrackEnabledHasBeenSet() const
+{
+    return m_multiAudioTrackEnabledHasBeenSet;
+}
+
+vector<AudioTrackInfo> AVTemplate::GetAudioTracks() const
+{
+    return m_audioTracks;
+}
+
+void AVTemplate::SetAudioTracks(const vector<AudioTrackInfo>& _audioTracks)
+{
+    m_audioTracks = _audioTracks;
+    m_audioTracksHasBeenSet = true;
+}
+
+bool AVTemplate::AudioTracksHasBeenSet() const
+{
+    return m_audioTracksHasBeenSet;
 }
 

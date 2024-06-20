@@ -216,15 +216,15 @@ Example: HKIDCard
                     bool DisableCheckOcrWarningsHasBeenSet() const;
 
                     /**
-                     * 获取Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;default value is 3
-                     * @return SecurityLevel Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;default value is 3
+                     * 获取Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;5:Action+Lighting(High security) mode; default value is 3
+                     * @return SecurityLevel Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;5:Action+Lighting(High security) mode; default value is 3
                      * 
                      */
                     int64_t GetSecurityLevel() const;
 
                     /**
-                     * 设置Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;default value is 3
-                     * @param _securityLevel Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;default value is 3
+                     * 设置Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;5:Action+Lighting(High security) mode; default value is 3
+                     * @param _securityLevel Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;5:Action+Lighting(High security) mode; default value is 3
                      * 
                      */
                     void SetSecurityLevel(const int64_t& _securityLevel);
@@ -390,7 +390,7 @@ Example: HKIDCard
                     bool m_disableCheckOcrWarningsHasBeenSet;
 
                     /**
-                     * Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;default value is 3
+                     * Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;5:Action+Lighting(High security) mode; default value is 3
                      */
                     int64_t m_securityLevel;
                     bool m_securityLevelHasBeenSet;

@@ -22,7 +22,9 @@ using namespace std;
 
 AudioSelectorInfo::AudioSelectorInfo() :
     m_nameHasBeenSet(false),
-    m_audioPidSelectionHasBeenSet(false)
+    m_audioPidSelectionHasBeenSet(false),
+    m_audioSelectorTypeHasBeenSet(false),
+    m_audioTrackSelectionHasBeenSet(false)
 {
 }
 
@@ -58,6 +60,33 @@ CoreInternalOutcome AudioSelectorInfo::Deserialize(const rapidjson::Value &value
         m_audioPidSelectionHasBeenSet = true;
     }
 
+    if (value.HasMember("AudioSelectorType") && !value["AudioSelectorType"].IsNull())
+    {
+        if (!value["AudioSelectorType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AudioSelectorInfo.AudioSelectorType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_audioSelectorType = string(value["AudioSelectorType"].GetString());
+        m_audioSelectorTypeHasBeenSet = true;
+    }
+
+    if (value.HasMember("AudioTrackSelection") && !value["AudioTrackSelection"].IsNull())
+    {
+        if (!value["AudioTrackSelection"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `AudioSelectorInfo.AudioTrackSelection` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_audioTrackSelection.Deserialize(value["AudioTrackSelection"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_audioTrackSelectionHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -80,6 +109,23 @@ void AudioSelectorInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Documen
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_audioPidSelection.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_audioSelectorTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AudioSelectorType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_audioSelectorType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_audioTrackSelectionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AudioTrackSelection";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_audioTrackSelection.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -115,5 +161,37 @@ void AudioSelectorInfo::SetAudioPidSelection(const AudioPidSelectionInfo& _audio
 bool AudioSelectorInfo::AudioPidSelectionHasBeenSet() const
 {
     return m_audioPidSelectionHasBeenSet;
+}
+
+string AudioSelectorInfo::GetAudioSelectorType() const
+{
+    return m_audioSelectorType;
+}
+
+void AudioSelectorInfo::SetAudioSelectorType(const string& _audioSelectorType)
+{
+    m_audioSelectorType = _audioSelectorType;
+    m_audioSelectorTypeHasBeenSet = true;
+}
+
+bool AudioSelectorInfo::AudioSelectorTypeHasBeenSet() const
+{
+    return m_audioSelectorTypeHasBeenSet;
+}
+
+InputTracks AudioSelectorInfo::GetAudioTrackSelection() const
+{
+    return m_audioTrackSelection;
+}
+
+void AudioSelectorInfo::SetAudioTrackSelection(const InputTracks& _audioTrackSelection)
+{
+    m_audioTrackSelection = _audioTrackSelection;
+    m_audioTrackSelectionHasBeenSet = true;
+}
+
+bool AudioSelectorInfo::AudioTrackSelectionHasBeenSet() const
+{
+    return m_audioTrackSelectionHasBeenSet;
 }
 

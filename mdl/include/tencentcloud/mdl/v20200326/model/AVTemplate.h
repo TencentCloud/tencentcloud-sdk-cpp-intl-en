@@ -24,6 +24,11 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/mdl/v20200326/model/AudioNormalizationSettings.h>
+#include <tencentcloud/mdl/v20200326/model/AdditionalRateSetting.h>
+#include <tencentcloud/mdl/v20200326/model/VideoCodecDetail.h>
+#include <tencentcloud/mdl/v20200326/model/AudioCodecDetail.h>
+#include <tencentcloud/mdl/v20200326/model/AudioTrackInfo.h>
 
 
 namespace TencentCloud
@@ -410,6 +415,300 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
                      */
                     bool SubtitleConfigurationHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to enable the face blur function, 1 is on, 0 is off, and the default is 0.
+                     * @return FaceBlurringEnabled Whether to enable the face blur function, 1 is on, 0 is off, and the default is 0.
+                     * 
+                     */
+                    uint64_t GetFaceBlurringEnabled() const;
+
+                    /**
+                     * 设置Whether to enable the face blur function, 1 is on, 0 is off, and the default is 0.
+                     * @param _faceBlurringEnabled Whether to enable the face blur function, 1 is on, 0 is off, and the default is 0.
+                     * 
+                     */
+                    void SetFaceBlurringEnabled(const uint64_t& _faceBlurringEnabled);
+
+                    /**
+                     * 判断参数 FaceBlurringEnabled 是否已赋值
+                     * @return FaceBlurringEnabled 是否已赋值
+                     * 
+                     */
+                    bool FaceBlurringEnabledHasBeenSet() const;
+
+                    /**
+                     * 获取Only AttachedInputs.AudioSelectors.Name can be selected. The following types need to be filled in: 'RTP_PUSH', 'SRT_PUSH', 'UDP_PUSH', 'RTP-FEC_PUSH'.
+                     * @return AudioSelectorName Only AttachedInputs.AudioSelectors.Name can be selected. The following types need to be filled in: 'RTP_PUSH', 'SRT_PUSH', 'UDP_PUSH', 'RTP-FEC_PUSH'.
+                     * 
+                     */
+                    std::string GetAudioSelectorName() const;
+
+                    /**
+                     * 设置Only AttachedInputs.AudioSelectors.Name can be selected. The following types need to be filled in: 'RTP_PUSH', 'SRT_PUSH', 'UDP_PUSH', 'RTP-FEC_PUSH'.
+                     * @param _audioSelectorName Only AttachedInputs.AudioSelectors.Name can be selected. The following types need to be filled in: 'RTP_PUSH', 'SRT_PUSH', 'UDP_PUSH', 'RTP-FEC_PUSH'.
+                     * 
+                     */
+                    void SetAudioSelectorName(const std::string& _audioSelectorName);
+
+                    /**
+                     * 判断参数 AudioSelectorName 是否已赋值
+                     * @return AudioSelectorName 是否已赋值
+                     * 
+                     */
+                    bool AudioSelectorNameHasBeenSet() const;
+
+                    /**
+                     * 获取Audio transcoding special configuration information.
+                     * @return AudioNormalization Audio transcoding special configuration information.
+                     * 
+                     */
+                    AudioNormalizationSettings GetAudioNormalization() const;
+
+                    /**
+                     * 设置Audio transcoding special configuration information.
+                     * @param _audioNormalization Audio transcoding special configuration information.
+                     * 
+                     */
+                    void SetAudioNormalization(const AudioNormalizationSettings& _audioNormalization);
+
+                    /**
+                     * 判断参数 AudioNormalization 是否已赋值
+                     * @return AudioNormalization 是否已赋值
+                     * 
+                     */
+                    bool AudioNormalizationHasBeenSet() const;
+
+                    /**
+                     * 获取Audio sampling rate, unit HZ.
+                     * @return AudioSampleRate Audio sampling rate, unit HZ.
+                     * 
+                     */
+                    uint64_t GetAudioSampleRate() const;
+
+                    /**
+                     * 设置Audio sampling rate, unit HZ.
+                     * @param _audioSampleRate Audio sampling rate, unit HZ.
+                     * 
+                     */
+                    void SetAudioSampleRate(const uint64_t& _audioSampleRate);
+
+                    /**
+                     * 判断参数 AudioSampleRate 是否已赋值
+                     * @return AudioSampleRate 是否已赋值
+                     * 
+                     */
+                    bool AudioSampleRateHasBeenSet() const;
+
+                    /**
+                     * 获取This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate will be set equal to the input video frame rate of the first input. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is determined by the HZ you enter.
+                     * @return FrameRateType This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate will be set equal to the input video frame rate of the first input. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is determined by the HZ you enter.
+                     * 
+                     */
+                    std::string GetFrameRateType() const;
+
+                    /**
+                     * 设置This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate will be set equal to the input video frame rate of the first input. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is determined by the HZ you enter.
+                     * @param _frameRateType This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate will be set equal to the input video frame rate of the first input. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is determined by the HZ you enter.
+                     * 
+                     */
+                    void SetFrameRateType(const std::string& _frameRateType);
+
+                    /**
+                     * 判断参数 FrameRateType 是否已赋值
+                     * @return FrameRateType 是否已赋值
+                     * 
+                     */
+                    bool FrameRateTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate numerator setting.
+                     * @return FrameRateNumerator Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate numerator setting.
+                     * 
+                     */
+                    uint64_t GetFrameRateNumerator() const;
+
+                    /**
+                     * 设置Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate numerator setting.
+                     * @param _frameRateNumerator Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate numerator setting.
+                     * 
+                     */
+                    void SetFrameRateNumerator(const uint64_t& _frameRateNumerator);
+
+                    /**
+                     * 判断参数 FrameRateNumerator 是否已赋值
+                     * @return FrameRateNumerator 是否已赋值
+                     * 
+                     */
+                    bool FrameRateNumeratorHasBeenSet() const;
+
+                    /**
+                     * 获取Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate denominator setting.
+                     * @return FrameRateDenominator Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate denominator setting.
+                     * 
+                     */
+                    uint64_t GetFrameRateDenominator() const;
+
+                    /**
+                     * 设置Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate denominator setting.
+                     * @param _frameRateDenominator Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate denominator setting.
+                     * 
+                     */
+                    void SetFrameRateDenominator(const uint64_t& _frameRateDenominator);
+
+                    /**
+                     * 判断参数 FrameRateDenominator 是否已赋值
+                     * @return FrameRateDenominator 是否已赋值
+                     * 
+                     */
+                    bool FrameRateDenominatorHasBeenSet() const;
+
+                    /**
+                     * 获取The number of B frames can be selected from 1 to 3.
+                     * @return BFramesNum The number of B frames can be selected from 1 to 3.
+                     * 
+                     */
+                    uint64_t GetBFramesNum() const;
+
+                    /**
+                     * 设置The number of B frames can be selected from 1 to 3.
+                     * @param _bFramesNum The number of B frames can be selected from 1 to 3.
+                     * 
+                     */
+                    void SetBFramesNum(const uint64_t& _bFramesNum);
+
+                    /**
+                     * 判断参数 BFramesNum 是否已赋值
+                     * @return BFramesNum 是否已赋值
+                     * 
+                     */
+                    bool BFramesNumHasBeenSet() const;
+
+                    /**
+                     * 获取The number of reference frames can be selected from 1 to 16.
+                     * @return RefFramesNum The number of reference frames can be selected from 1 to 16.
+                     * 
+                     */
+                    uint64_t GetRefFramesNum() const;
+
+                    /**
+                     * 设置The number of reference frames can be selected from 1 to 16.
+                     * @param _refFramesNum The number of reference frames can be selected from 1 to 16.
+                     * 
+                     */
+                    void SetRefFramesNum(const uint64_t& _refFramesNum);
+
+                    /**
+                     * 判断参数 RefFramesNum 是否已赋值
+                     * @return RefFramesNum 是否已赋值
+                     * 
+                     */
+                    bool RefFramesNumHasBeenSet() const;
+
+                    /**
+                     * 获取Additional video bitrate configuration.
+                     * @return AdditionalRateSettings Additional video bitrate configuration.
+                     * 
+                     */
+                    AdditionalRateSetting GetAdditionalRateSettings() const;
+
+                    /**
+                     * 设置Additional video bitrate configuration.
+                     * @param _additionalRateSettings Additional video bitrate configuration.
+                     * 
+                     */
+                    void SetAdditionalRateSettings(const AdditionalRateSetting& _additionalRateSettings);
+
+                    /**
+                     * 判断参数 AdditionalRateSettings 是否已赋值
+                     * @return AdditionalRateSettings 是否已赋值
+                     * 
+                     */
+                    bool AdditionalRateSettingsHasBeenSet() const;
+
+                    /**
+                     * 获取Video encoding configuration.
+                     * @return VideoCodecDetails Video encoding configuration.
+                     * 
+                     */
+                    VideoCodecDetail GetVideoCodecDetails() const;
+
+                    /**
+                     * 设置Video encoding configuration.
+                     * @param _videoCodecDetails Video encoding configuration.
+                     * 
+                     */
+                    void SetVideoCodecDetails(const VideoCodecDetail& _videoCodecDetails);
+
+                    /**
+                     * 判断参数 VideoCodecDetails 是否已赋值
+                     * @return VideoCodecDetails 是否已赋值
+                     * 
+                     */
+                    bool VideoCodecDetailsHasBeenSet() const;
+
+                    /**
+                     * 获取Audio encoding configuration.
+                     * @return AudioCodecDetails Audio encoding configuration.
+                     * 
+                     */
+                    AudioCodecDetail GetAudioCodecDetails() const;
+
+                    /**
+                     * 设置Audio encoding configuration.
+                     * @param _audioCodecDetails Audio encoding configuration.
+                     * 
+                     */
+                    void SetAudioCodecDetails(const AudioCodecDetail& _audioCodecDetails);
+
+                    /**
+                     * 判断参数 AudioCodecDetails 是否已赋值
+                     * @return AudioCodecDetails 是否已赋值
+                     * 
+                     */
+                    bool AudioCodecDetailsHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable multiple audio tracks 0: Not required 1: Required Default value 0.
+                     * @return MultiAudioTrackEnabled Whether to enable multiple audio tracks 0: Not required 1: Required Default value 0.
+                     * 
+                     */
+                    uint64_t GetMultiAudioTrackEnabled() const;
+
+                    /**
+                     * 设置Whether to enable multiple audio tracks 0: Not required 1: Required Default value 0.
+                     * @param _multiAudioTrackEnabled Whether to enable multiple audio tracks 0: Not required 1: Required Default value 0.
+                     * 
+                     */
+                    void SetMultiAudioTrackEnabled(const uint64_t& _multiAudioTrackEnabled);
+
+                    /**
+                     * 判断参数 MultiAudioTrackEnabled 是否已赋值
+                     * @return MultiAudioTrackEnabled 是否已赋值
+                     * 
+                     */
+                    bool MultiAudioTrackEnabledHasBeenSet() const;
+
+                    /**
+                     * 获取Quantity limit 0-20 Valid when MultiAudioTrackEnabled is turned on.
+                     * @return AudioTracks Quantity limit 0-20 Valid when MultiAudioTrackEnabled is turned on.
+                     * 
+                     */
+                    std::vector<AudioTrackInfo> GetAudioTracks() const;
+
+                    /**
+                     * 设置Quantity limit 0-20 Valid when MultiAudioTrackEnabled is turned on.
+                     * @param _audioTracks Quantity limit 0-20 Valid when MultiAudioTrackEnabled is turned on.
+                     * 
+                     */
+                    void SetAudioTracks(const std::vector<AudioTrackInfo>& _audioTracks);
+
+                    /**
+                     * 判断参数 AudioTracks 是否已赋值
+                     * @return AudioTracks 是否已赋值
+                     * 
+                     */
+                    bool AudioTracksHasBeenSet() const;
+
                 private:
 
                     /**
@@ -514,6 +813,90 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
                      */
                     std::string m_subtitleConfiguration;
                     bool m_subtitleConfigurationHasBeenSet;
+
+                    /**
+                     * Whether to enable the face blur function, 1 is on, 0 is off, and the default is 0.
+                     */
+                    uint64_t m_faceBlurringEnabled;
+                    bool m_faceBlurringEnabledHasBeenSet;
+
+                    /**
+                     * Only AttachedInputs.AudioSelectors.Name can be selected. The following types need to be filled in: 'RTP_PUSH', 'SRT_PUSH', 'UDP_PUSH', 'RTP-FEC_PUSH'.
+                     */
+                    std::string m_audioSelectorName;
+                    bool m_audioSelectorNameHasBeenSet;
+
+                    /**
+                     * Audio transcoding special configuration information.
+                     */
+                    AudioNormalizationSettings m_audioNormalization;
+                    bool m_audioNormalizationHasBeenSet;
+
+                    /**
+                     * Audio sampling rate, unit HZ.
+                     */
+                    uint64_t m_audioSampleRate;
+                    bool m_audioSampleRateHasBeenSet;
+
+                    /**
+                     * This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate will be set equal to the input video frame rate of the first input. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is determined by the HZ you enter.
+                     */
+                    std::string m_frameRateType;
+                    bool m_frameRateTypeHasBeenSet;
+
+                    /**
+                     * Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate numerator setting.
+                     */
+                    uint64_t m_frameRateNumerator;
+                    bool m_frameRateNumeratorHasBeenSet;
+
+                    /**
+                     * Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate denominator setting.
+                     */
+                    uint64_t m_frameRateDenominator;
+                    bool m_frameRateDenominatorHasBeenSet;
+
+                    /**
+                     * The number of B frames can be selected from 1 to 3.
+                     */
+                    uint64_t m_bFramesNum;
+                    bool m_bFramesNumHasBeenSet;
+
+                    /**
+                     * The number of reference frames can be selected from 1 to 16.
+                     */
+                    uint64_t m_refFramesNum;
+                    bool m_refFramesNumHasBeenSet;
+
+                    /**
+                     * Additional video bitrate configuration.
+                     */
+                    AdditionalRateSetting m_additionalRateSettings;
+                    bool m_additionalRateSettingsHasBeenSet;
+
+                    /**
+                     * Video encoding configuration.
+                     */
+                    VideoCodecDetail m_videoCodecDetails;
+                    bool m_videoCodecDetailsHasBeenSet;
+
+                    /**
+                     * Audio encoding configuration.
+                     */
+                    AudioCodecDetail m_audioCodecDetails;
+                    bool m_audioCodecDetailsHasBeenSet;
+
+                    /**
+                     * Whether to enable multiple audio tracks 0: Not required 1: Required Default value 0.
+                     */
+                    uint64_t m_multiAudioTrackEnabled;
+                    bool m_multiAudioTrackEnabledHasBeenSet;
+
+                    /**
+                     * Quantity limit 0-20 Valid when MultiAudioTrackEnabled is turned on.
+                     */
+                    std::vector<AudioTrackInfo> m_audioTracks;
+                    bool m_audioTracksHasBeenSet;
 
                 };
             }

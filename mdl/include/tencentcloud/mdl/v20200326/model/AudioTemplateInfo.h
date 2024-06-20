@@ -24,6 +24,8 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/mdl/v20200326/model/AudioNormalizationSettings.h>
+#include <tencentcloud/mdl/v20200326/model/AudioCodecDetail.h>
 
 
 namespace TencentCloud
@@ -155,6 +157,69 @@ Valid values: 6000, 7000, 8000, 10000, 12000, 14000, 16000, 20000, 24000, 28000,
                      */
                     bool LanguageCodeHasBeenSet() const;
 
+                    /**
+                     * 获取Audio transcoding special configuration information.
+                     * @return AudioNormalization Audio transcoding special configuration information.
+                     * 
+                     */
+                    AudioNormalizationSettings GetAudioNormalization() const;
+
+                    /**
+                     * 设置Audio transcoding special configuration information.
+                     * @param _audioNormalization Audio transcoding special configuration information.
+                     * 
+                     */
+                    void SetAudioNormalization(const AudioNormalizationSettings& _audioNormalization);
+
+                    /**
+                     * 判断参数 AudioNormalization 是否已赋值
+                     * @return AudioNormalization 是否已赋值
+                     * 
+                     */
+                    bool AudioNormalizationHasBeenSet() const;
+
+                    /**
+                     * 获取Audio sampling rate, unit HZ.
+                     * @return AudioSampleRate Audio sampling rate, unit HZ.
+                     * 
+                     */
+                    uint64_t GetAudioSampleRate() const;
+
+                    /**
+                     * 设置Audio sampling rate, unit HZ.
+                     * @param _audioSampleRate Audio sampling rate, unit HZ.
+                     * 
+                     */
+                    void SetAudioSampleRate(const uint64_t& _audioSampleRate);
+
+                    /**
+                     * 判断参数 AudioSampleRate 是否已赋值
+                     * @return AudioSampleRate 是否已赋值
+                     * 
+                     */
+                    bool AudioSampleRateHasBeenSet() const;
+
+                    /**
+                     * 获取Audio encoding parameters.
+                     * @return AudioCodecDetails Audio encoding parameters.
+                     * 
+                     */
+                    AudioCodecDetail GetAudioCodecDetails() const;
+
+                    /**
+                     * 设置Audio encoding parameters.
+                     * @param _audioCodecDetails Audio encoding parameters.
+                     * 
+                     */
+                    void SetAudioCodecDetails(const AudioCodecDetail& _audioCodecDetails);
+
+                    /**
+                     * 判断参数 AudioCodecDetails 是否已赋值
+                     * @return AudioCodecDetails 是否已赋值
+                     * 
+                     */
+                    bool AudioCodecDetailsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -187,6 +252,24 @@ Valid values: 6000, 7000, 8000, 10000, 12000, 14000, 16000, 20000, 24000, 28000,
                      */
                     std::string m_languageCode;
                     bool m_languageCodeHasBeenSet;
+
+                    /**
+                     * Audio transcoding special configuration information.
+                     */
+                    AudioNormalizationSettings m_audioNormalization;
+                    bool m_audioNormalizationHasBeenSet;
+
+                    /**
+                     * Audio sampling rate, unit HZ.
+                     */
+                    uint64_t m_audioSampleRate;
+                    bool m_audioSampleRateHasBeenSet;
+
+                    /**
+                     * Audio encoding parameters.
+                     */
+                    AudioCodecDetail m_audioCodecDetails;
+                    bool m_audioCodecDetailsHasBeenSet;
 
                 };
             }

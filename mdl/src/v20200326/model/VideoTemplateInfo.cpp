@@ -30,7 +30,15 @@ VideoTemplateInfo::VideoTemplateInfo() :
     m_topSpeedHasBeenSet(false),
     m_bitrateCompressionRatioHasBeenSet(false),
     m_rateControlModeHasBeenSet(false),
-    m_watermarkIdHasBeenSet(false)
+    m_watermarkIdHasBeenSet(false),
+    m_faceBlurringEnabledHasBeenSet(false),
+    m_frameRateTypeHasBeenSet(false),
+    m_frameRateNumeratorHasBeenSet(false),
+    m_frameRateDenominatorHasBeenSet(false),
+    m_bFramesNumHasBeenSet(false),
+    m_refFramesNumHasBeenSet(false),
+    m_additionalRateSettingsHasBeenSet(false),
+    m_videoCodecDetailsHasBeenSet(false)
 {
 }
 
@@ -139,6 +147,100 @@ CoreInternalOutcome VideoTemplateInfo::Deserialize(const rapidjson::Value &value
         m_watermarkIdHasBeenSet = true;
     }
 
+    if (value.HasMember("FaceBlurringEnabled") && !value["FaceBlurringEnabled"].IsNull())
+    {
+        if (!value["FaceBlurringEnabled"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `VideoTemplateInfo.FaceBlurringEnabled` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_faceBlurringEnabled = value["FaceBlurringEnabled"].GetUint64();
+        m_faceBlurringEnabledHasBeenSet = true;
+    }
+
+    if (value.HasMember("FrameRateType") && !value["FrameRateType"].IsNull())
+    {
+        if (!value["FrameRateType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `VideoTemplateInfo.FrameRateType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_frameRateType = string(value["FrameRateType"].GetString());
+        m_frameRateTypeHasBeenSet = true;
+    }
+
+    if (value.HasMember("FrameRateNumerator") && !value["FrameRateNumerator"].IsNull())
+    {
+        if (!value["FrameRateNumerator"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `VideoTemplateInfo.FrameRateNumerator` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_frameRateNumerator = value["FrameRateNumerator"].GetUint64();
+        m_frameRateNumeratorHasBeenSet = true;
+    }
+
+    if (value.HasMember("FrameRateDenominator") && !value["FrameRateDenominator"].IsNull())
+    {
+        if (!value["FrameRateDenominator"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `VideoTemplateInfo.FrameRateDenominator` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_frameRateDenominator = value["FrameRateDenominator"].GetUint64();
+        m_frameRateDenominatorHasBeenSet = true;
+    }
+
+    if (value.HasMember("BFramesNum") && !value["BFramesNum"].IsNull())
+    {
+        if (!value["BFramesNum"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `VideoTemplateInfo.BFramesNum` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_bFramesNum = value["BFramesNum"].GetUint64();
+        m_bFramesNumHasBeenSet = true;
+    }
+
+    if (value.HasMember("RefFramesNum") && !value["RefFramesNum"].IsNull())
+    {
+        if (!value["RefFramesNum"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `VideoTemplateInfo.RefFramesNum` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_refFramesNum = value["RefFramesNum"].GetUint64();
+        m_refFramesNumHasBeenSet = true;
+    }
+
+    if (value.HasMember("AdditionalRateSettings") && !value["AdditionalRateSettings"].IsNull())
+    {
+        if (!value["AdditionalRateSettings"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `VideoTemplateInfo.AdditionalRateSettings` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_additionalRateSettings.Deserialize(value["AdditionalRateSettings"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_additionalRateSettingsHasBeenSet = true;
+    }
+
+    if (value.HasMember("VideoCodecDetails") && !value["VideoCodecDetails"].IsNull())
+    {
+        if (!value["VideoCodecDetails"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `VideoTemplateInfo.VideoCodecDetails` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_videoCodecDetails.Deserialize(value["VideoCodecDetails"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_videoCodecDetailsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -224,6 +326,72 @@ void VideoTemplateInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Documen
         string key = "WatermarkId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_watermarkId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_faceBlurringEnabledHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FaceBlurringEnabled";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_faceBlurringEnabled, allocator);
+    }
+
+    if (m_frameRateTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FrameRateType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_frameRateType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_frameRateNumeratorHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FrameRateNumerator";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_frameRateNumerator, allocator);
+    }
+
+    if (m_frameRateDenominatorHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FrameRateDenominator";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_frameRateDenominator, allocator);
+    }
+
+    if (m_bFramesNumHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BFramesNum";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_bFramesNum, allocator);
+    }
+
+    if (m_refFramesNumHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RefFramesNum";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_refFramesNum, allocator);
+    }
+
+    if (m_additionalRateSettingsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AdditionalRateSettings";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_additionalRateSettings.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_videoCodecDetailsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "VideoCodecDetails";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_videoCodecDetails.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -387,5 +555,133 @@ void VideoTemplateInfo::SetWatermarkId(const string& _watermarkId)
 bool VideoTemplateInfo::WatermarkIdHasBeenSet() const
 {
     return m_watermarkIdHasBeenSet;
+}
+
+uint64_t VideoTemplateInfo::GetFaceBlurringEnabled() const
+{
+    return m_faceBlurringEnabled;
+}
+
+void VideoTemplateInfo::SetFaceBlurringEnabled(const uint64_t& _faceBlurringEnabled)
+{
+    m_faceBlurringEnabled = _faceBlurringEnabled;
+    m_faceBlurringEnabledHasBeenSet = true;
+}
+
+bool VideoTemplateInfo::FaceBlurringEnabledHasBeenSet() const
+{
+    return m_faceBlurringEnabledHasBeenSet;
+}
+
+string VideoTemplateInfo::GetFrameRateType() const
+{
+    return m_frameRateType;
+}
+
+void VideoTemplateInfo::SetFrameRateType(const string& _frameRateType)
+{
+    m_frameRateType = _frameRateType;
+    m_frameRateTypeHasBeenSet = true;
+}
+
+bool VideoTemplateInfo::FrameRateTypeHasBeenSet() const
+{
+    return m_frameRateTypeHasBeenSet;
+}
+
+uint64_t VideoTemplateInfo::GetFrameRateNumerator() const
+{
+    return m_frameRateNumerator;
+}
+
+void VideoTemplateInfo::SetFrameRateNumerator(const uint64_t& _frameRateNumerator)
+{
+    m_frameRateNumerator = _frameRateNumerator;
+    m_frameRateNumeratorHasBeenSet = true;
+}
+
+bool VideoTemplateInfo::FrameRateNumeratorHasBeenSet() const
+{
+    return m_frameRateNumeratorHasBeenSet;
+}
+
+uint64_t VideoTemplateInfo::GetFrameRateDenominator() const
+{
+    return m_frameRateDenominator;
+}
+
+void VideoTemplateInfo::SetFrameRateDenominator(const uint64_t& _frameRateDenominator)
+{
+    m_frameRateDenominator = _frameRateDenominator;
+    m_frameRateDenominatorHasBeenSet = true;
+}
+
+bool VideoTemplateInfo::FrameRateDenominatorHasBeenSet() const
+{
+    return m_frameRateDenominatorHasBeenSet;
+}
+
+uint64_t VideoTemplateInfo::GetBFramesNum() const
+{
+    return m_bFramesNum;
+}
+
+void VideoTemplateInfo::SetBFramesNum(const uint64_t& _bFramesNum)
+{
+    m_bFramesNum = _bFramesNum;
+    m_bFramesNumHasBeenSet = true;
+}
+
+bool VideoTemplateInfo::BFramesNumHasBeenSet() const
+{
+    return m_bFramesNumHasBeenSet;
+}
+
+uint64_t VideoTemplateInfo::GetRefFramesNum() const
+{
+    return m_refFramesNum;
+}
+
+void VideoTemplateInfo::SetRefFramesNum(const uint64_t& _refFramesNum)
+{
+    m_refFramesNum = _refFramesNum;
+    m_refFramesNumHasBeenSet = true;
+}
+
+bool VideoTemplateInfo::RefFramesNumHasBeenSet() const
+{
+    return m_refFramesNumHasBeenSet;
+}
+
+AdditionalRateSetting VideoTemplateInfo::GetAdditionalRateSettings() const
+{
+    return m_additionalRateSettings;
+}
+
+void VideoTemplateInfo::SetAdditionalRateSettings(const AdditionalRateSetting& _additionalRateSettings)
+{
+    m_additionalRateSettings = _additionalRateSettings;
+    m_additionalRateSettingsHasBeenSet = true;
+}
+
+bool VideoTemplateInfo::AdditionalRateSettingsHasBeenSet() const
+{
+    return m_additionalRateSettingsHasBeenSet;
+}
+
+VideoCodecDetail VideoTemplateInfo::GetVideoCodecDetails() const
+{
+    return m_videoCodecDetails;
+}
+
+void VideoTemplateInfo::SetVideoCodecDetails(const VideoCodecDetail& _videoCodecDetails)
+{
+    m_videoCodecDetails = _videoCodecDetails;
+    m_videoCodecDetailsHasBeenSet = true;
+}
+
+bool VideoTemplateInfo::VideoCodecDetailsHasBeenSet() const
+{
+    return m_videoCodecDetailsHasBeenSet;
 }
 
