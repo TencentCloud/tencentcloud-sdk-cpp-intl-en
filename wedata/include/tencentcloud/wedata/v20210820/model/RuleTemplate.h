@@ -524,15 +524,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool DatasourceTypesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return UserIdStr 
+                     * 获取Created by User ID Str
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return UserIdStr Created by User ID Str
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetUserIdStr() const;
 
                     /**
-                     * 设置
-                     * @param _userIdStr 
+                     * 设置Created by User ID Str
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _userIdStr Created by User ID Str
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetUserIdStr(const std::string& _userIdStr);
@@ -681,7 +685,8 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_datasourceTypesHasBeenSet;
 
                     /**
-                     * 
+                     * Created by User ID Str
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_userIdStr;
                     bool m_userIdStrHasBeenSet;

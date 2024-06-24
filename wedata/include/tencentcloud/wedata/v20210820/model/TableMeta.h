@@ -27,6 +27,7 @@
 #include <tencentcloud/wedata/v20210820/model/TablePropertyScore.h>
 #include <tencentcloud/wedata/v20210820/model/TableHeat.h>
 #include <tencentcloud/wedata/v20210820/model/SearchColumnDocVO.h>
+#include <tencentcloud/wedata/v20210820/model/TableMetaProperty.h>
 
 
 namespace TencentCloud
@@ -1350,6 +1351,31 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool PartitionExpireDaysHasBeenSet() const;
 
+                    /**
+                     * 获取Table Ancillary Information
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return TableProperties Table Ancillary Information
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    std::vector<TableMetaProperty> GetTableProperties() const;
+
+                    /**
+                     * 设置Table Ancillary Information
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _tableProperties Table Ancillary Information
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetTableProperties(const std::vector<TableMetaProperty>& _tableProperties);
+
+                    /**
+                     * 判断参数 TableProperties 是否已赋值
+                     * @return TableProperties 是否已赋值
+                     * 
+                     */
+                    bool TablePropertiesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1716,6 +1742,13 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     int64_t m_partitionExpireDays;
                     bool m_partitionExpireDaysHasBeenSet;
+
+                    /**
+                     * Table Ancillary Information
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::vector<TableMetaProperty> m_tableProperties;
+                    bool m_tablePropertiesHasBeenSet;
 
                 };
             }

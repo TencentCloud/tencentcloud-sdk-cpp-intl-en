@@ -44,10 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of Successful Operations
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return SuccessCount Number of Successful Operations
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return SuccessCount Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     int64_t GetSuccessCount() const;
@@ -60,10 +58,8 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool SuccessCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of Failed Operations
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return FailedCount Number of Failed Operations
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return FailedCount Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     int64_t GetFailedCount() const;
@@ -76,10 +72,8 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool FailedCountHasBeenSet() const;
 
                     /**
-                     * 获取Total number of tasks
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return TotalCount Total number of tasks
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return TotalCount Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -94,22 +88,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                 private:
 
                     /**
-                     * Number of Successful Operations
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     int64_t m_successCount;
                     bool m_successCountHasBeenSet;
 
                     /**
-                     * Number of Failed Operations
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     int64_t m_failedCount;
                     bool m_failedCountHasBeenSet;
 
                     /**
-                     * Total number of tasks
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

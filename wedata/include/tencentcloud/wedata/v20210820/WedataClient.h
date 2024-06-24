@@ -95,6 +95,8 @@
 #include <tencentcloud/wedata/v20210820/model/CreateTaskResponse.h>
 #include <tencentcloud/wedata/v20210820/model/CreateTaskAlarmRegularRequest.h>
 #include <tencentcloud/wedata/v20210820/model/CreateTaskAlarmRegularResponse.h>
+#include <tencentcloud/wedata/v20210820/model/CreateTaskFolderRequest.h>
+#include <tencentcloud/wedata/v20210820/model/CreateTaskFolderResponse.h>
 #include <tencentcloud/wedata/v20210820/model/CreateTaskVersionDsRequest.h>
 #include <tencentcloud/wedata/v20210820/model/CreateTaskVersionDsResponse.h>
 #include <tencentcloud/wedata/v20210820/model/CreateWorkflowDsRequest.h>
@@ -415,6 +417,8 @@
 #include <tencentcloud/wedata/v20210820/model/ModifyWorkflowInfoResponse.h>
 #include <tencentcloud/wedata/v20210820/model/ModifyWorkflowScheduleRequest.h>
 #include <tencentcloud/wedata/v20210820/model/ModifyWorkflowScheduleResponse.h>
+#include <tencentcloud/wedata/v20210820/model/MoveTasksToFolderRequest.h>
+#include <tencentcloud/wedata/v20210820/model/MoveTasksToFolderResponse.h>
 #include <tencentcloud/wedata/v20210820/model/RegisterEventRequest.h>
 #include <tencentcloud/wedata/v20210820/model/RegisterEventResponse.h>
 #include <tencentcloud/wedata/v20210820/model/RegisterEventListenerRequest.h>
@@ -585,6 +589,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateTaskAlarmRegularResponse> CreateTaskAlarmRegularOutcome;
                 typedef std::future<CreateTaskAlarmRegularOutcome> CreateTaskAlarmRegularOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::CreateTaskAlarmRegularRequest&, CreateTaskAlarmRegularOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateTaskAlarmRegularAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateTaskFolderResponse> CreateTaskFolderOutcome;
+                typedef std::future<CreateTaskFolderOutcome> CreateTaskFolderOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::CreateTaskFolderRequest&, CreateTaskFolderOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateTaskFolderAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateTaskVersionDsResponse> CreateTaskVersionDsOutcome;
                 typedef std::future<CreateTaskVersionDsOutcome> CreateTaskVersionDsOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::CreateTaskVersionDsRequest&, CreateTaskVersionDsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateTaskVersionDsAsyncHandler;
@@ -1065,6 +1072,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyWorkflowScheduleResponse> ModifyWorkflowScheduleOutcome;
                 typedef std::future<ModifyWorkflowScheduleOutcome> ModifyWorkflowScheduleOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::ModifyWorkflowScheduleRequest&, ModifyWorkflowScheduleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyWorkflowScheduleAsyncHandler;
+                typedef Outcome<Core::Error, Model::MoveTasksToFolderResponse> MoveTasksToFolderOutcome;
+                typedef std::future<MoveTasksToFolderOutcome> MoveTasksToFolderOutcomeCallable;
+                typedef std::function<void(const WedataClient*, const Model::MoveTasksToFolderRequest&, MoveTasksToFolderOutcome, const std::shared_ptr<const AsyncCallerContext>&)> MoveTasksToFolderAsyncHandler;
                 typedef Outcome<Core::Error, Model::RegisterEventResponse> RegisterEventOutcome;
                 typedef std::future<RegisterEventOutcome> RegisterEventOutcomeCallable;
                 typedef std::function<void(const WedataClient*, const Model::RegisterEventRequest&, RegisterEventOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RegisterEventAsyncHandler;
@@ -1463,6 +1473,15 @@ namespace TencentCloud
                 CreateTaskAlarmRegularOutcome CreateTaskAlarmRegular(const Model::CreateTaskAlarmRegularRequest &request);
                 void CreateTaskAlarmRegularAsync(const Model::CreateTaskAlarmRegularRequest& request, const CreateTaskAlarmRegularAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateTaskAlarmRegularOutcomeCallable CreateTaskAlarmRegularCallable(const Model::CreateTaskAlarmRegularRequest& request);
+
+                /**
+                 *Orchestration Space - Workflow - Create Task Folder
+                 * @param req CreateTaskFolderRequest
+                 * @return CreateTaskFolderOutcome
+                 */
+                CreateTaskFolderOutcome CreateTaskFolder(const Model::CreateTaskFolderRequest &request);
+                void CreateTaskFolderAsync(const Model::CreateTaskFolderRequest& request, const CreateTaskFolderAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateTaskFolderOutcomeCallable CreateTaskFolderCallable(const Model::CreateTaskFolderRequest& request);
 
                 /**
                  *Submit Task Version
@@ -2629,7 +2648,7 @@ namespace TencentCloud
                 DescribeWorkflowTaskCountOutcomeCallable DescribeWorkflowTaskCountCallable(const Model::DescribeWorkflowTaskCountRequest& request);
 
                 /**
-                 *Instance Diagnosis
+                 *Instance diagnosis for diagnosing instances in INITIAL, DEPENDENCE, ALLOCATED, LAUNCHED, EVENT_LISTENING, BEFORE_ASPECT, EXPIRED, FAILED states
                  * @param req DiagnoseProRequest
                  * @return DiagnoseProOutcome
                  */
@@ -2909,6 +2928,15 @@ Modify Task Script
                 ModifyWorkflowScheduleOutcome ModifyWorkflowSchedule(const Model::ModifyWorkflowScheduleRequest &request);
                 void ModifyWorkflowScheduleAsync(const Model::ModifyWorkflowScheduleRequest& request, const ModifyWorkflowScheduleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyWorkflowScheduleOutcomeCallable ModifyWorkflowScheduleCallable(const Model::ModifyWorkflowScheduleRequest& request);
+
+                /**
+                 *Orchestration Space - Workflow - Move Task to Workflow Folder
+                 * @param req MoveTasksToFolderRequest
+                 * @return MoveTasksToFolderOutcome
+                 */
+                MoveTasksToFolderOutcome MoveTasksToFolder(const Model::MoveTasksToFolderRequest &request);
+                void MoveTasksToFolderAsync(const Model::MoveTasksToFolderRequest& request, const MoveTasksToFolderAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                MoveTasksToFolderOutcomeCallable MoveTasksToFolderCallable(const Model::MoveTasksToFolderRequest& request);
 
                 /**
                  *<p style="color:red;">[Note: This version is only available to a portion of allowlist customers in the Guangzhou Region]</p>

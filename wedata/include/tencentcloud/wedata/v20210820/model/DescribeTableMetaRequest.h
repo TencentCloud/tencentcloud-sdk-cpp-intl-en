@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/wedata/v20210820/model/TableNameFilter.h>
 
 
 namespace TencentCloud
@@ -63,6 +64,48 @@ namespace TencentCloud
                      */
                     bool TableIdHasBeenSet() const;
 
+                    /**
+                     * 获取Query conditions by Name
+                     * @return TableNameFilter Query conditions by Name
+                     * 
+                     */
+                    TableNameFilter GetTableNameFilter() const;
+
+                    /**
+                     * 设置Query conditions by Name
+                     * @param _tableNameFilter Query conditions by Name
+                     * 
+                     */
+                    void SetTableNameFilter(const TableNameFilter& _tableNameFilter);
+
+                    /**
+                     * 判断参数 TableNameFilter 是否已赋值
+                     * @return TableNameFilter 是否已赋值
+                     * 
+                     */
+                    bool TableNameFilterHasBeenSet() const;
+
+                    /**
+                     * 获取Query condition type: 0 by ID, 1 by Name, default is 0
+                     * @return TableFilterType Query condition type: 0 by ID, 1 by Name, default is 0
+                     * 
+                     */
+                    uint64_t GetTableFilterType() const;
+
+                    /**
+                     * 设置Query condition type: 0 by ID, 1 by Name, default is 0
+                     * @param _tableFilterType Query condition type: 0 by ID, 1 by Name, default is 0
+                     * 
+                     */
+                    void SetTableFilterType(const uint64_t& _tableFilterType);
+
+                    /**
+                     * 判断参数 TableFilterType 是否已赋值
+                     * @return TableFilterType 是否已赋值
+                     * 
+                     */
+                    bool TableFilterTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -70,6 +113,18 @@ namespace TencentCloud
                      */
                     std::string m_tableId;
                     bool m_tableIdHasBeenSet;
+
+                    /**
+                     * Query conditions by Name
+                     */
+                    TableNameFilter m_tableNameFilter;
+                    bool m_tableNameFilterHasBeenSet;
+
+                    /**
+                     * Query condition type: 0 by ID, 1 by Name, default is 0
+                     */
+                    uint64_t m_tableFilterType;
+                    bool m_tableFilterTypeHasBeenSet;
 
                 };
             }

@@ -650,15 +650,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool TagHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OperatorUserIdsStr 
+                     * 获取Operator ID List
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return OperatorUserIdsStr Operator ID List
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::vector<std::string> GetOperatorUserIdsStr() const;
 
                     /**
-                     * 设置
-                     * @param _operatorUserIdsStr 
+                     * 设置Operator ID List
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _operatorUserIdsStr Operator ID List
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetOperatorUserIdsStr(const std::vector<std::string>& _operatorUserIdsStr);
@@ -671,15 +675,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool OperatorUserIdsStrHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OwnerUserIdsStr 
+                     * 获取Public Cloud Owner ID List
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return OwnerUserIdsStr Public Cloud Owner ID List
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::vector<std::string> GetOwnerUserIdsStr() const;
 
                     /**
-                     * 设置
-                     * @param _ownerUserIdsStr 
+                     * 设置Public Cloud Owner ID List
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _ownerUserIdsStr Public Cloud Owner ID List
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetOwnerUserIdsStr(const std::vector<std::string>& _ownerUserIdsStr);
@@ -864,13 +872,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_tagHasBeenSet;
 
                     /**
-                     * 
+                     * Operator ID List
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::vector<std::string> m_operatorUserIdsStr;
                     bool m_operatorUserIdsStrHasBeenSet;
 
                     /**
-                     * 
+                     * Public Cloud Owner ID List
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::vector<std::string> m_ownerUserIdsStr;
                     bool m_ownerUserIdsStrHasBeenSet;

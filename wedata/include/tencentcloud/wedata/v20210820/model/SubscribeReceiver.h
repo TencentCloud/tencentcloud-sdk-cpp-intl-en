@@ -97,15 +97,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ReceiverNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ReceiverUserIdStr 
+                     * 获取Recipient UIN
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return ReceiverUserIdStr Recipient UIN
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetReceiverUserIdStr() const;
 
                     /**
-                     * 设置
-                     * @param _receiverUserIdStr 
+                     * 设置Recipient UIN
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _receiverUserIdStr Recipient UIN
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetReceiverUserIdStr(const std::string& _receiverUserIdStr);
@@ -134,7 +138,8 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_receiverNameHasBeenSet;
 
                     /**
-                     * 
+                     * Recipient UIN
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_receiverUserIdStr;
                     bool m_receiverUserIdStrHasBeenSet;

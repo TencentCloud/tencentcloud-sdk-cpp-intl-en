@@ -804,6 +804,31 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool LarkWebHooksHasBeenSet() const;
 
+                    /**
+                     * 获取DingTalk Group Hook addresses, multiple hook addresses separated by commas
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return DingDingWebHooks DingTalk Group Hook addresses, multiple hook addresses separated by commas
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    std::string GetDingDingWebHooks() const;
+
+                    /**
+                     * 设置DingTalk Group Hook addresses, multiple hook addresses separated by commas
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _dingDingWebHooks DingTalk Group Hook addresses, multiple hook addresses separated by commas
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetDingDingWebHooks(const std::string& _dingDingWebHooks);
+
+                    /**
+                     * 判断参数 DingDingWebHooks 是否已赋值
+                     * @return DingDingWebHooks 是否已赋值
+                     * 
+                     */
+                    bool DingDingWebHooksHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1018,6 +1043,13 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     std::string m_larkWebHooks;
                     bool m_larkWebHooksHasBeenSet;
+
+                    /**
+                     * DingTalk Group Hook addresses, multiple hook addresses separated by commas
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string m_dingDingWebHooks;
+                    bool m_dingDingWebHooksHasBeenSet;
 
                 };
             }

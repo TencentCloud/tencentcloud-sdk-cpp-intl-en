@@ -206,15 +206,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ScoreHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return UserIdStr 
+                     * 获取Set by User ID Str
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return UserIdStr Set by User ID Str
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetUserIdStr() const;
 
                     /**
-                     * 设置
-                     * @param _userIdStr 
+                     * 设置Set by User ID Str
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _userIdStr Set by User ID Str
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetUserIdStr(const std::string& _userIdStr);
@@ -274,7 +278,8 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_scoreHasBeenSet;
 
                     /**
-                     * 
+                     * Set by User ID Str
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_userIdStr;
                     bool m_userIdStrHasBeenSet;
