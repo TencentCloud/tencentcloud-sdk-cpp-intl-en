@@ -702,7 +702,9 @@ namespace TencentCloud
                 DescribeBizTrendOutcomeCallable DescribeBizTrendCallable(const Model::DescribeBizTrendRequest& request);
 
                 /**
-                 *This API is used to get an Anti-DDoS IP blocklist/allowlist.
+                 *接口变更
+
+This API is used to get an Anti-DDoS IP blocklist/allowlist.
                  * @param req DescribeBlackWhiteIpListRequest
                  * @return DescribeBlackWhiteIpListOutcome
                  */
@@ -883,7 +885,9 @@ namespace TencentCloud
                 DescribeListPacketFilterConfigOutcomeCallable DescribeListPacketFilterConfigCallable(const Model::DescribeListPacketFilterConfigRequest& request);
 
                 /**
-                 *This API is used to get a list of protection threshold configurations for AI protection switch, protection level, and CC threshold switch.
+                 *接口变更
+
+This API is used to get a list of protection threshold configurations for AI protection switch, protection level, and CC threshold switch.
                  * @param req DescribeListProtectThresholdConfigRequest
                  * @return DescribeListProtectThresholdConfigOutcome
                  */
