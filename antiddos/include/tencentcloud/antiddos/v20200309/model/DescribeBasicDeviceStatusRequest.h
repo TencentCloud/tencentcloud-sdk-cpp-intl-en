@@ -63,6 +63,69 @@ namespace TencentCloud
                      */
                     bool IpListHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return IdList 
+                     * 
+                     */
+                    std::vector<std::string> GetIdList() const;
+
+                    /**
+                     * 设置
+                     * @param _idList 
+                     * 
+                     */
+                    void SetIdList(const std::vector<std::string>& _idList);
+
+                    /**
+                     * 判断参数 IdList 是否已赋值
+                     * @return IdList 是否已赋值
+                     * 
+                     */
+                    bool IdListHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return FilterRegion 
+                     * 
+                     */
+                    uint64_t GetFilterRegion() const;
+
+                    /**
+                     * 设置
+                     * @param _filterRegion 
+                     * 
+                     */
+                    void SetFilterRegion(const uint64_t& _filterRegion);
+
+                    /**
+                     * 判断参数 FilterRegion 是否已赋值
+                     * @return FilterRegion 是否已赋值
+                     * 
+                     */
+                    bool FilterRegionHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return CnameWafIdList 
+                     * 
+                     */
+                    std::vector<std::string> GetCnameWafIdList() const;
+
+                    /**
+                     * 设置
+                     * @param _cnameWafIdList 
+                     * 
+                     */
+                    void SetCnameWafIdList(const std::vector<std::string>& _cnameWafIdList);
+
+                    /**
+                     * 判断参数 CnameWafIdList 是否已赋值
+                     * @return CnameWafIdList 是否已赋值
+                     * 
+                     */
+                    bool CnameWafIdListHasBeenSet() const;
+
                 private:
 
                     /**
@@ -70,6 +133,24 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_ipList;
                     bool m_ipListHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<std::string> m_idList;
+                    bool m_idListHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_filterRegion;
+                    bool m_filterRegionHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<std::string> m_cnameWafIdList;
+                    bool m_cnameWafIdListHasBeenSet;
 
                 };
             }

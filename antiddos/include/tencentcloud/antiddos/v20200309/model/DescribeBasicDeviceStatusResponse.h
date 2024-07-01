@@ -64,6 +64,34 @@ namespace TencentCloud
                      */
                     bool DataHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return CLBData 
+                     * 
+                     */
+                    std::vector<KeyValue> GetCLBData() const;
+
+                    /**
+                     * 判断参数 CLBData 是否已赋值
+                     * @return CLBData 是否已赋值
+                     * 
+                     */
+                    bool CLBDataHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return CnameWafData 
+                     * 
+                     */
+                    std::vector<KeyValue> GetCnameWafData() const;
+
+                    /**
+                     * 判断参数 CnameWafData 是否已赋值
+                     * @return CnameWafData 是否已赋值
+                     * 
+                     */
+                    bool CnameWafDataHasBeenSet() const;
+
                 private:
 
                     /**
@@ -74,6 +102,18 @@ namespace TencentCloud
                      */
                     std::vector<KeyValue> m_data;
                     bool m_dataHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<KeyValue> m_cLBData;
+                    bool m_cLBDataHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<KeyValue> m_cnameWafData;
+                    bool m_cnameWafDataHasBeenSet;
 
                 };
             }
