@@ -300,15 +300,15 @@ Example: HKIDCard
                     bool ThemeColorHasBeenSet() const;
 
                     /**
-                     * 获取International language, the default value is en (English). Currently supported: th: Thai; en: English;
-                     * @return Language International language, the default value is en (English). Currently supported: th: Thai; en: English;
+                     * 获取International language, the default value is en (English). Currently supported: th: Thai; en: English; zh-cn: Simplified Chinese; zh-tc: Tradionnal Chinese; id: Bahasa Indonesia.
+                     * @return Language International language, the default value is en (English). Currently supported: th: Thai; en: English; zh-cn: Simplified Chinese; zh-tc: Tradionnal Chinese; id: Bahasa Indonesia.
                      * 
                      */
                     std::string GetLanguage() const;
 
                     /**
-                     * 设置International language, the default value is en (English). Currently supported: th: Thai; en: English;
-                     * @param _language International language, the default value is en (English). Currently supported: th: Thai; en: English;
+                     * 设置International language, the default value is en (English). Currently supported: th: Thai; en: English; zh-cn: Simplified Chinese; zh-tc: Tradionnal Chinese; id: Bahasa Indonesia.
+                     * @param _language International language, the default value is en (English). Currently supported: th: Thai; en: English; zh-cn: Simplified Chinese; zh-tc: Tradionnal Chinese; id: Bahasa Indonesia.
                      * 
                      */
                     void SetLanguage(const std::string& _language);
@@ -414,7 +414,7 @@ Example: HKIDCard
                     bool m_themeColorHasBeenSet;
 
                     /**
-                     * International language, the default value is en (English). Currently supported: th: Thai; en: English;
+                     * International language, the default value is en (English). Currently supported: th: Thai; en: English; zh-cn: Simplified Chinese; zh-tc: Tradionnal Chinese; id: Bahasa Indonesia.
                      */
                     std::string m_language;
                     bool m_languageHasBeenSet;
