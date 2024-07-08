@@ -211,15 +211,15 @@ namespace TencentCloud
                     bool CpuHasBeenSet() const;
 
                     /**
-                     * 获取The type of instance to be purchased. Valid values: `HA` (high-availability edition, including dual-server high-availability and AlwaysOn cluster u200deditionu200d), `RO` (read-only replica edition), `SI` (single-node edition), `cvmHA` (dual-server high-availability edition u200dfor CVM), `cvmRO` (read-only edition u200dfor CVM).
-                     * @return InstanceType The type of instance to be purchased. Valid values: `HA` (high-availability edition, including dual-server high-availability and AlwaysOn cluster u200deditionu200d), `RO` (read-only replica edition), `SI` (single-node edition), `cvmHA` (dual-server high-availability edition u200dfor CVM), `cvmRO` (read-only edition u200dfor CVM).
+                     * 获取The type of instance to be purchased. Valid values: `HA` (high-availability edition, including dual-server high-availability and AlwaysOn cluster edition), `RO` (read-only replica edition), `SI` (single-node edition), `cvmHA` (dual-server high-availability edition for CVM), `cvmRO` (read-only edition for CVM).
+                     * @return InstanceType The type of instance to be purchased. Valid values: `HA` (high-availability edition, including dual-server high-availability and AlwaysOn cluster edition), `RO` (read-only replica edition), `SI` (single-node edition), `cvmHA` (dual-server high-availability edition for CVM), `cvmRO` (read-only edition for CVM).
                      * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置The type of instance to be purchased. Valid values: `HA` (high-availability edition, including dual-server high-availability and AlwaysOn cluster u200deditionu200d), `RO` (read-only replica edition), `SI` (single-node edition), `cvmHA` (dual-server high-availability edition u200dfor CVM), `cvmRO` (read-only edition u200dfor CVM).
-                     * @param _instanceType The type of instance to be purchased. Valid values: `HA` (high-availability edition, including dual-server high-availability and AlwaysOn cluster u200deditionu200d), `RO` (read-only replica edition), `SI` (single-node edition), `cvmHA` (dual-server high-availability edition u200dfor CVM), `cvmRO` (read-only edition u200dfor CVM).
+                     * 设置The type of instance to be purchased. Valid values: `HA` (high-availability edition, including dual-server high-availability and AlwaysOn cluster edition), `RO` (read-only replica edition), `SI` (single-node edition), `cvmHA` (dual-server high-availability edition for CVM), `cvmRO` (read-only edition for CVM).
+                     * @param _instanceType The type of instance to be purchased. Valid values: `HA` (high-availability edition, including dual-server high-availability and AlwaysOn cluster edition), `RO` (read-only replica edition), `SI` (single-node edition), `cvmHA` (dual-server high-availability edition for CVM), `cvmRO` (read-only edition for CVM).
                      * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
@@ -307,7 +307,7 @@ namespace TencentCloud
                     bool m_cpuHasBeenSet;
 
                     /**
-                     * The type of instance to be purchased. Valid values: `HA` (high-availability edition, including dual-server high-availability and AlwaysOn cluster u200deditionu200d), `RO` (read-only replica edition), `SI` (single-node edition), `cvmHA` (dual-server high-availability edition u200dfor CVM), `cvmRO` (read-only edition u200dfor CVM).
+                     * The type of instance to be purchased. Valid values: `HA` (high-availability edition, including dual-server high-availability and AlwaysOn cluster edition), `RO` (read-only replica edition), `SI` (single-node edition), `cvmHA` (dual-server high-availability edition for CVM), `cvmRO` (read-only edition for CVM).
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;

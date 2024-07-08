@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Alarm notification template – user notification details
+                * Alarm notification template - user notification details
                 */
                 class UserNotice : public AbstractModel
                 {
@@ -72,18 +72,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ReceiverTypeHasBeenSet() const;
 
                     /**
-                     * 获取Notification start time, which is expressed by the number of seconds since 00:00:00. Value range: 0–86399
+                     * 获取Notification start time, which is expressed by the number of seconds since 00:00:00. Value range: 0-86399
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return StartTime Notification start time, which is expressed by the number of seconds since 00:00:00. Value range: 0–86399
+                     * @return StartTime Notification start time, which is expressed by the number of seconds since 00:00:00. Value range: 0-86399
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetStartTime() const;
 
                     /**
-                     * 设置Notification start time, which is expressed by the number of seconds since 00:00:00. Value range: 0–86399
+                     * 设置Notification start time, which is expressed by the number of seconds since 00:00:00. Value range: 0-86399
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _startTime Notification start time, which is expressed by the number of seconds since 00:00:00. Value range: 0–86399
+                     * @param _startTime Notification start time, which is expressed by the number of seconds since 00:00:00. Value range: 0-86399
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -97,18 +97,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Notification end time, which is expressed by the number of seconds since 00:00:00. Value range: 0–86399
+                     * 获取Notification end time, which is expressed by the number of seconds since 00:00:00. Value range: 0-86399
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return EndTime Notification end time, which is expressed by the number of seconds since 00:00:00. Value range: 0–86399
+                     * @return EndTime Notification end time, which is expressed by the number of seconds since 00:00:00. Value range: 0-86399
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetEndTime() const;
 
                     /**
-                     * 设置Notification end time, which is expressed by the number of seconds since 00:00:00. Value range: 0–86399
+                     * 设置Notification end time, which is expressed by the number of seconds since 00:00:00. Value range: 0-86399
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _endTime Notification end time, which is expressed by the number of seconds since 00:00:00. Value range: 0–86399
+                     * @param _endTime Notification end time, which is expressed by the number of seconds since 00:00:00. Value range: 0-86399
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -222,18 +222,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PhoneOrderHasBeenSet() const;
 
                     /**
-                     * 获取Number of phone pollings. Value range: 1–5
+                     * 获取Number of phone pollings. Value range: 1-5
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return PhoneCircleTimes Number of phone pollings. Value range: 1–5
+                     * @return PhoneCircleTimes Number of phone pollings. Value range: 1-5
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetPhoneCircleTimes() const;
 
                     /**
-                     * 设置Number of phone pollings. Value range: 1–5
+                     * 设置Number of phone pollings. Value range: 1-5
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _phoneCircleTimes Number of phone pollings. Value range: 1–5
+                     * @param _phoneCircleTimes Number of phone pollings. Value range: 1-5
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -247,18 +247,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PhoneCircleTimesHasBeenSet() const;
 
                     /**
-                     * 获取Call interval in seconds within one polling. Value range: 60–900
+                     * 获取Call interval in seconds within one polling. Value range: 60-900
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return PhoneInnerInterval Call interval in seconds within one polling. Value range: 60–900
+                     * @return PhoneInnerInterval Call interval in seconds within one polling. Value range: 60-900
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetPhoneInnerInterval() const;
 
                     /**
-                     * 设置Call interval in seconds within one polling. Value range: 60–900
+                     * 设置Call interval in seconds within one polling. Value range: 60-900
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _phoneInnerInterval Call interval in seconds within one polling. Value range: 60–900
+                     * @param _phoneInnerInterval Call interval in seconds within one polling. Value range: 60-900
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -272,18 +272,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PhoneInnerIntervalHasBeenSet() const;
 
                     /**
-                     * 获取Polling interval in seconds. Value range: 60–900
+                     * 获取Polling interval in seconds. Value range: 60-900
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return PhoneCircleInterval Polling interval in seconds. Value range: 60–900
+                     * @return PhoneCircleInterval Polling interval in seconds. Value range: 60-900
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetPhoneCircleInterval() const;
 
                     /**
-                     * 设置Polling interval in seconds. Value range: 60–900
+                     * 设置Polling interval in seconds. Value range: 60-900
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _phoneCircleInterval Polling interval in seconds. Value range: 60–900
+                     * @param _phoneCircleInterval Polling interval in seconds. Value range: 60-900
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -373,18 +373,18 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * 获取List of schedule IDs
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return OnCallFormIDs List of schedule IDs
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetOnCallFormIDs() const;
 
                     /**
                      * 设置List of schedule IDs
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _onCallFormIDs List of schedule IDs
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetOnCallFormIDs(const std::vector<std::string>& _onCallFormIDs);
@@ -406,14 +406,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_receiverTypeHasBeenSet;
 
                     /**
-                     * Notification start time, which is expressed by the number of seconds since 00:00:00. Value range: 0–86399
+                     * Notification start time, which is expressed by the number of seconds since 00:00:00. Value range: 0-86399
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Notification end time, which is expressed by the number of seconds since 00:00:00. Value range: 0–86399
+                     * Notification end time, which is expressed by the number of seconds since 00:00:00. Value range: 0-86399
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_endTime;
@@ -448,21 +448,21 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_phoneOrderHasBeenSet;
 
                     /**
-                     * Number of phone pollings. Value range: 1–5
+                     * Number of phone pollings. Value range: 1-5
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_phoneCircleTimes;
                     bool m_phoneCircleTimesHasBeenSet;
 
                     /**
-                     * Call interval in seconds within one polling. Value range: 60–900
+                     * Call interval in seconds within one polling. Value range: 60-900
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_phoneInnerInterval;
                     bool m_phoneInnerIntervalHasBeenSet;
 
                     /**
-                     * Polling interval in seconds. Value range: 60–900
+                     * Polling interval in seconds. Value range: 60-900
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_phoneCircleInterval;
@@ -491,7 +491,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * List of schedule IDs
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_onCallFormIDs;
                     bool m_onCallFormIDsHasBeenSet;

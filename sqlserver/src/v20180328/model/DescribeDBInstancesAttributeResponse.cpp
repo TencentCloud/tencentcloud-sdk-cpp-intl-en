@@ -32,7 +32,10 @@ DescribeDBInstancesAttributeResponse::DescribeDBInstancesAttributeResponse() :
     m_regularBackupStartTimeHasBeenSet(false),
     m_blockedThresholdHasBeenSet(false),
     m_eventSaveDaysHasBeenSet(false),
-    m_tDEConfigHasBeenSet(false)
+    m_tDEConfigHasBeenSet(false),
+    m_sSLConfigHasBeenSet(false),
+    m_drReadableInfoHasBeenSet(false),
+    m_oldVipListHasBeenSet(false)
 {
 }
 
@@ -167,6 +170,60 @@ CoreInternalOutcome DescribeDBInstancesAttributeResponse::Deserialize(const stri
         m_tDEConfigHasBeenSet = true;
     }
 
+    if (rsp.HasMember("SSLConfig") && !rsp["SSLConfig"].IsNull())
+    {
+        if (!rsp["SSLConfig"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `SSLConfig` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_sSLConfig.Deserialize(rsp["SSLConfig"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_sSLConfigHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("DrReadableInfo") && !rsp["DrReadableInfo"].IsNull())
+    {
+        if (!rsp["DrReadableInfo"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `DrReadableInfo` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_drReadableInfo.Deserialize(rsp["DrReadableInfo"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_drReadableInfoHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("OldVipList") && !rsp["OldVipList"].IsNull())
+    {
+        if (!rsp["OldVipList"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `OldVipList` is not array type"));
+
+        const rapidjson::Value &tmpValue = rsp["OldVipList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            OldVip item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_oldVipList.push_back(item);
+        }
+        m_oldVipListHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -248,6 +305,39 @@ string DescribeDBInstancesAttributeResponse::ToJsonString() const
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_tDEConfig.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_sSLConfigHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SSLConfig";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_sSLConfig.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_drReadableInfoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DrReadableInfo";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_drReadableInfo.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_oldVipListHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OldVipList";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_oldVipList.begin(); itr != m_oldVipList.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -350,6 +440,36 @@ TDEConfigAttribute DescribeDBInstancesAttributeResponse::GetTDEConfig() const
 bool DescribeDBInstancesAttributeResponse::TDEConfigHasBeenSet() const
 {
     return m_tDEConfigHasBeenSet;
+}
+
+SSLConfig DescribeDBInstancesAttributeResponse::GetSSLConfig() const
+{
+    return m_sSLConfig;
+}
+
+bool DescribeDBInstancesAttributeResponse::SSLConfigHasBeenSet() const
+{
+    return m_sSLConfigHasBeenSet;
+}
+
+DrReadableInfo DescribeDBInstancesAttributeResponse::GetDrReadableInfo() const
+{
+    return m_drReadableInfo;
+}
+
+bool DescribeDBInstancesAttributeResponse::DrReadableInfoHasBeenSet() const
+{
+    return m_drReadableInfoHasBeenSet;
+}
+
+vector<OldVip> DescribeDBInstancesAttributeResponse::GetOldVipList() const
+{
+    return m_oldVipList;
+}
+
+bool DescribeDBInstancesAttributeResponse::OldVipListHasBeenSet() const
+{
+    return m_oldVipListHasBeenSet;
 }
 
 

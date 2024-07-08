@@ -932,18 +932,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Common task metrics
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CommonMetrics Common task metrics
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     CommonMetrics GetCommonMetrics() const;
 
                     /**
                      * 设置Common task metrics
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _commonMetrics Common task metrics
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCommonMetrics(const CommonMetrics& _commonMetrics);
@@ -957,18 +957,18 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
                     /**
                      * 获取The Spark task metrics.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SparkMonitorMetrics The Spark task metrics.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     SparkMonitorMetrics GetSparkMonitorMetrics() const;
 
                     /**
                      * 设置The Spark task metrics.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _sparkMonitorMetrics The Spark task metrics.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSparkMonitorMetrics(const SparkMonitorMetrics& _sparkMonitorMetrics);
@@ -982,18 +982,18 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
                     /**
                      * 获取The Presto task metrics.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PrestoMonitorMetrics The Presto task metrics.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     PrestoMonitorMetrics GetPrestoMonitorMetrics() const;
 
                     /**
                      * 设置The Presto task metrics.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _prestoMonitorMetrics The Presto task metrics.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetPrestoMonitorMetrics(const PrestoMonitorMetrics& _prestoMonitorMetrics);
@@ -1004,6 +1004,69 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
                      * 
                      */
                     bool PrestoMonitorMetricsHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ResultFormat 
+                     * 
+                     */
+                    std::string GetResultFormat() const;
+
+                    /**
+                     * 设置
+                     * @param _resultFormat 
+                     * 
+                     */
+                    void SetResultFormat(const std::string& _resultFormat);
+
+                    /**
+                     * 判断参数 ResultFormat 是否已赋值
+                     * @return ResultFormat 是否已赋值
+                     * 
+                     */
+                    bool ResultFormatHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return EngineTypeDetail 
+                     * 
+                     */
+                    std::string GetEngineTypeDetail() const;
+
+                    /**
+                     * 设置
+                     * @param _engineTypeDetail 
+                     * 
+                     */
+                    void SetEngineTypeDetail(const std::string& _engineTypeDetail);
+
+                    /**
+                     * 判断参数 EngineTypeDetail 是否已赋值
+                     * @return EngineTypeDetail 是否已赋值
+                     * 
+                     */
+                    bool EngineTypeDetailHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ResourceGroupName 
+                     * 
+                     */
+                    std::string GetResourceGroupName() const;
+
+                    /**
+                     * 设置
+                     * @param _resourceGroupName 
+                     * 
+                     */
+                    void SetResourceGroupName(const std::string& _resourceGroupName);
+
+                    /**
+                     * 判断参数 ResourceGroupName 是否已赋值
+                     * @return ResourceGroupName 是否已赋值
+                     * 
+                     */
+                    bool ResourceGroupNameHasBeenSet() const;
 
                 private:
 
@@ -1257,24 +1320,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Common task metrics
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     CommonMetrics m_commonMetrics;
                     bool m_commonMetricsHasBeenSet;
 
                     /**
                      * The Spark task metrics.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     SparkMonitorMetrics m_sparkMonitorMetrics;
                     bool m_sparkMonitorMetricsHasBeenSet;
 
                     /**
                      * The Presto task metrics.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     PrestoMonitorMetrics m_prestoMonitorMetrics;
                     bool m_prestoMonitorMetricsHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_resultFormat;
+                    bool m_resultFormatHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_engineTypeDetail;
+                    bool m_engineTypeDetailHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_resourceGroupName;
+                    bool m_resourceGroupNameHasBeenSet;
 
                 };
             }

@@ -27,6 +27,7 @@
 #include <tencentcloud/faceid/v20180301/model/FileInfo.h>
 #include <tencentcloud/faceid/v20180301/model/CardInfo.h>
 #include <tencentcloud/faceid/v20180301/model/NormalCardInfo.h>
+#include <tencentcloud/faceid/v20180301/model/EditDetail.h>
 
 
 namespace TencentCloud
@@ -654,6 +655,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool WarnCardInfosHasBeenSet() const;
 
+                    /**
+                     * 获取Details of the OCR modifications for this EKYC card, when the user manually modifies the card recognition results (IsEdit=true), EditDetails will return the modified fields. When IsEdit=false, EditDetails is empty.
+                     * @return EditDetails Details of the OCR modifications for this EKYC card, when the user manually modifies the card recognition results (IsEdit=true), EditDetails will return the modified fields. When IsEdit=false, EditDetails is empty.
+                     * 
+                     */
+                    std::vector<EditDetail> GetEditDetails() const;
+
+                    /**
+                     * 设置Details of the OCR modifications for this EKYC card, when the user manually modifies the card recognition results (IsEdit=true), EditDetails will return the modified fields. When IsEdit=false, EditDetails is empty.
+                     * @param _editDetails Details of the OCR modifications for this EKYC card, when the user manually modifies the card recognition results (IsEdit=true), EditDetails will return the modified fields. When IsEdit=false, EditDetails is empty.
+                     * 
+                     */
+                    void SetEditDetails(const std::vector<EditDetail>& _editDetails);
+
+                    /**
+                     * 判断参数 EditDetails 是否已赋值
+                     * @return EditDetails 是否已赋值
+                     * 
+                     */
+                    bool EditDetailsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -813,6 +835,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<int64_t> m_warnCardInfos;
                     bool m_warnCardInfosHasBeenSet;
+
+                    /**
+                     * Details of the OCR modifications for this EKYC card, when the user manually modifies the card recognition results (IsEdit=true), EditDetails will return the modified fields. When IsEdit=false, EditDetails is empty.
+                     */
+                    std::vector<EditDetail> m_editDetails;
+                    bool m_editDetailsHasBeenSet;
 
                 };
             }

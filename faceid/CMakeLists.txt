@@ -43,9 +43,10 @@ set(faceid_public_header_model
   include/tencentcloud/faceid/v20180301/model/IndonesiaDrivingLicense.h
   include/tencentcloud/faceid/v20180301/model/GetFaceIdResultIntlRequest.h
   include/tencentcloud/faceid/v20180301/model/NormalCardInfo.h
+  include/tencentcloud/faceid/v20180301/model/GetFaceIdResultIntlResponse.h
   include/tencentcloud/faceid/v20180301/model/ApplySdkVerificationTokenRequest.h
   include/tencentcloud/faceid/v20180301/model/GenerateReflectSequenceRequest.h
-  include/tencentcloud/faceid/v20180301/model/DetectReflectLivenessAndCompareResponse.h
+  include/tencentcloud/faceid/v20180301/model/EditDetail.h
   include/tencentcloud/faceid/v20180301/model/VideoLivenessCompareResponse.h
   include/tencentcloud/faceid/v20180301/model/PhilippinesSSSID.h
   include/tencentcloud/faceid/v20180301/model/CardVerifyResult.h
@@ -80,7 +81,7 @@ set(faceid_public_header_model
   include/tencentcloud/faceid/v20180301/model/LivenessCompareRequest.h
   include/tencentcloud/faceid/v20180301/model/MLIDCard.h
   include/tencentcloud/faceid/v20180301/model/OCRResult.h
-  include/tencentcloud/faceid/v20180301/model/GetFaceIdResultIntlResponse.h
+  include/tencentcloud/faceid/v20180301/model/DetectReflectLivenessAndCompareResponse.h
   include/tencentcloud/faceid/v20180301/model/GetLivenessResultRequest.h
   include/tencentcloud/faceid/v20180301/model/CompareResult.h
   )
@@ -111,9 +112,10 @@ set(faceid_src
   src/v20180301/model/IndonesiaDrivingLicense.cpp
   src/v20180301/model/GetFaceIdResultIntlRequest.cpp
   src/v20180301/model/NormalCardInfo.cpp
+  src/v20180301/model/GetFaceIdResultIntlResponse.cpp
   src/v20180301/model/ApplySdkVerificationTokenRequest.cpp
   src/v20180301/model/GenerateReflectSequenceRequest.cpp
-  src/v20180301/model/DetectReflectLivenessAndCompareResponse.cpp
+  src/v20180301/model/EditDetail.cpp
   src/v20180301/model/VideoLivenessCompareResponse.cpp
   src/v20180301/model/PhilippinesSSSID.cpp
   src/v20180301/model/CardVerifyResult.cpp
@@ -148,7 +150,7 @@ set(faceid_src
   src/v20180301/model/LivenessCompareRequest.cpp
   src/v20180301/model/MLIDCard.cpp
   src/v20180301/model/OCRResult.cpp
-  src/v20180301/model/GetFaceIdResultIntlResponse.cpp
+  src/v20180301/model/DetectReflectLivenessAndCompareResponse.cpp
   src/v20180301/model/GetLivenessResultRequest.cpp
   src/v20180301/model/CompareResult.cpp
   )

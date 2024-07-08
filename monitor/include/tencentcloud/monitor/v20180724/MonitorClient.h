@@ -1262,7 +1262,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
                 DescribeBindingPolicyObjectListOutcomeCallable DescribeBindingPolicyObjectListCallable(const Model::DescribeBindingPolicyObjectListRequest& request);
 
                 /**
-                 *This API is used to u200dobtain the binding status between the TencentCloud Managed Service for Prometheus instance and the TKE cluster.
+                 *This API is used to obtain the binding status between the TencentCloud Managed Service for Prometheus instance and the TKE cluster.
                  * @param req DescribeClusterAgentCreatingProgressRequest
                  * @return DescribeClusterAgentCreatingProgressOutcome
                  */

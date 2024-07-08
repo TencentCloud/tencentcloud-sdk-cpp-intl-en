@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Certificate u200downership. Valid values: `self` (certificate of this account), `others` (certificate of the other account). Default value: `self`.
-                     * @return CertificateAttribution Certificate u200downership. Valid values: `self` (certificate of this account), `others` (certificate of the other account). Default value: `self`.
+                     * 获取Certificate ownership. Valid values: `self` (certificate of this account), `others` (certificate of the other account). Default value: `self`.
+                     * @return CertificateAttribution Certificate ownership. Valid values: `self` (certificate of this account), `others` (certificate of the other account). Default value: `self`.
                      * 
                      */
                     std::string GetCertificateAttribution() const;
 
                     /**
-                     * 设置Certificate u200downership. Valid values: `self` (certificate of this account), `others` (certificate of the other account). Default value: `self`.
-                     * @param _certificateAttribution Certificate u200downership. Valid values: `self` (certificate of this account), `others` (certificate of the other account). Default value: `self`.
+                     * 设置Certificate ownership. Valid values: `self` (certificate of this account), `others` (certificate of the other account). Default value: `self`.
+                     * @param _certificateAttribution Certificate ownership. Valid values: `self` (certificate of this account), `others` (certificate of the other account). Default value: `self`.
                      * 
                      */
                     void SetCertificateAttribution(const std::string& _certificateAttribution);
@@ -114,7 +114,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Certificate u200downership. Valid values: `self` (certificate of this account), `others` (certificate of the other account). Default value: `self`.
+                     * Certificate ownership. Valid values: `self` (certificate of this account), `others` (certificate of the other account). Default value: `self`.
                      */
                     std::string m_certificateAttribution;
                     bool m_certificateAttributionHasBeenSet;

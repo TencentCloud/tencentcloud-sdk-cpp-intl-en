@@ -48,10 +48,10 @@ namespace TencentCloud
                     /**
                      * 获取The final result of this verification. `0` indicates that the person is the same as that in the photo.
 For other error codes, see <a href="https://www.tencentcloud.com/document/product/1061/55390?lang=en&pg=#8a960e1e-39c0-42cb-b181-b3164d77f81e">Liveness Detection and Face Comparison (Mobile HTML5) Error Codes</a>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ErrorCode The final result of this verification. `0` indicates that the person is the same as that in the photo.
 For other error codes, see <a href="https://www.tencentcloud.com/document/product/1061/55390?lang=en&pg=#8a960e1e-39c0-42cb-b181-b3164d77f81e">Liveness Detection and Face Comparison (Mobile HTML5) Error Codes</a>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetErrorCode() const;
@@ -65,9 +65,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
                     /**
                      * 获取The description of the final verification result.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ErrorMsg The description of the final verification result.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetErrorMsg() const;
@@ -81,9 +81,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
                     /**
                      * 获取The detailed verification result list of this process. Retries are allowed, so a verification process may have several entries of results.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VerificationDetailList The detailed verification result list of this process. Retries are allowed, so a verification process may have several entries of results.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<VerificationDetail> GetVerificationDetailList() const;
@@ -97,9 +97,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
                     /**
                      * 获取The Base64-encoded string of the video collected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no video is collected, null is returned.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VideoBase64 The Base64-encoded string of the video collected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no video is collected, null is returned.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetVideoBase64() const;
@@ -112,10 +112,10 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                     bool VideoBase64HasBeenSet() const;
 
                     /**
-                     * 获取The Base64-encoded string of the best face screenshot u200dcollected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no best face screenshot is collected, null is returned.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-                     * @return BestFrameBase64 The Base64-encoded string of the best face screenshot u200dcollected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no best face screenshot is collected, null is returned.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 获取The Base64-encoded string of the best face screenshot collected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no best face screenshot is collected, null is returned.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return BestFrameBase64 The Base64-encoded string of the best face screenshot collected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no best face screenshot is collected, null is returned.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetBestFrameBase64() const;
@@ -162,35 +162,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * The final result of this verification. `0` indicates that the person is the same as that in the photo.
 For other error codes, see <a href="https://www.tencentcloud.com/document/product/1061/55390?lang=en&pg=#8a960e1e-39c0-42cb-b181-b3164d77f81e">Liveness Detection and Face Comparison (Mobile HTML5) Error Codes</a>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_errorCode;
                     bool m_errorCodeHasBeenSet;
 
                     /**
                      * The description of the final verification result.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_errorMsg;
                     bool m_errorMsgHasBeenSet;
 
                     /**
                      * The detailed verification result list of this process. Retries are allowed, so a verification process may have several entries of results.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<VerificationDetail> m_verificationDetailList;
                     bool m_verificationDetailListHasBeenSet;
 
                     /**
                      * The Base64-encoded string of the video collected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no video is collected, null is returned.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_videoBase64;
                     bool m_videoBase64HasBeenSet;
 
                     /**
-                     * The Base64-encoded string of the best face screenshot u200dcollected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no best face screenshot is collected, null is returned.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * The Base64-encoded string of the best face screenshot collected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no best face screenshot is collected, null is returned.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_bestFrameBase64;
                     bool m_bestFrameBase64HasBeenSet;

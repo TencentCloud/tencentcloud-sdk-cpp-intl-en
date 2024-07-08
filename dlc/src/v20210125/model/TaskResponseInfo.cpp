@@ -60,7 +60,10 @@ TaskResponseInfo::TaskResponseInfo() :
     m_executorMaxNumbersHasBeenSet(false),
     m_commonMetricsHasBeenSet(false),
     m_sparkMonitorMetricsHasBeenSet(false),
-    m_prestoMonitorMetricsHasBeenSet(false)
+    m_prestoMonitorMetricsHasBeenSet(false),
+    m_resultFormatHasBeenSet(false),
+    m_engineTypeDetailHasBeenSet(false),
+    m_resourceGroupNameHasBeenSet(false)
 {
 }
 
@@ -490,6 +493,36 @@ CoreInternalOutcome TaskResponseInfo::Deserialize(const rapidjson::Value &value)
         m_prestoMonitorMetricsHasBeenSet = true;
     }
 
+    if (value.HasMember("ResultFormat") && !value["ResultFormat"].IsNull())
+    {
+        if (!value["ResultFormat"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `TaskResponseInfo.ResultFormat` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_resultFormat = string(value["ResultFormat"].GetString());
+        m_resultFormatHasBeenSet = true;
+    }
+
+    if (value.HasMember("EngineTypeDetail") && !value["EngineTypeDetail"].IsNull())
+    {
+        if (!value["EngineTypeDetail"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `TaskResponseInfo.EngineTypeDetail` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_engineTypeDetail = string(value["EngineTypeDetail"].GetString());
+        m_engineTypeDetailHasBeenSet = true;
+    }
+
+    if (value.HasMember("ResourceGroupName") && !value["ResourceGroupName"].IsNull())
+    {
+        if (!value["ResourceGroupName"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `TaskResponseInfo.ResourceGroupName` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_resourceGroupName = string(value["ResourceGroupName"].GetString());
+        m_resourceGroupNameHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -818,6 +851,30 @@ void TaskResponseInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_prestoMonitorMetrics.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_resultFormatHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ResultFormat";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_resultFormat.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_engineTypeDetailHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EngineTypeDetail";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_engineTypeDetail.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_resourceGroupNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ResourceGroupName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_resourceGroupName.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -1461,5 +1518,53 @@ void TaskResponseInfo::SetPrestoMonitorMetrics(const PrestoMonitorMetrics& _pres
 bool TaskResponseInfo::PrestoMonitorMetricsHasBeenSet() const
 {
     return m_prestoMonitorMetricsHasBeenSet;
+}
+
+string TaskResponseInfo::GetResultFormat() const
+{
+    return m_resultFormat;
+}
+
+void TaskResponseInfo::SetResultFormat(const string& _resultFormat)
+{
+    m_resultFormat = _resultFormat;
+    m_resultFormatHasBeenSet = true;
+}
+
+bool TaskResponseInfo::ResultFormatHasBeenSet() const
+{
+    return m_resultFormatHasBeenSet;
+}
+
+string TaskResponseInfo::GetEngineTypeDetail() const
+{
+    return m_engineTypeDetail;
+}
+
+void TaskResponseInfo::SetEngineTypeDetail(const string& _engineTypeDetail)
+{
+    m_engineTypeDetail = _engineTypeDetail;
+    m_engineTypeDetailHasBeenSet = true;
+}
+
+bool TaskResponseInfo::EngineTypeDetailHasBeenSet() const
+{
+    return m_engineTypeDetailHasBeenSet;
+}
+
+string TaskResponseInfo::GetResourceGroupName() const
+{
+    return m_resourceGroupName;
+}
+
+void TaskResponseInfo::SetResourceGroupName(const string& _resourceGroupName)
+{
+    m_resourceGroupName = _resourceGroupName;
+    m_resourceGroupNameHasBeenSet = true;
+}
+
+bool TaskResponseInfo::ResourceGroupNameHasBeenSet() const
+{
+    return m_resourceGroupNameHasBeenSet;
 }
 

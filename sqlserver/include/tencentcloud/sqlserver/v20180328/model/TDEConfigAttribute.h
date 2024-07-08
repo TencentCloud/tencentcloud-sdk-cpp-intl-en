@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * TDE u200dconfiguration
+                * TDE configuration
                 */
                 class TDEConfigAttribute : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool EncryptionHasBeenSet() const;
 
                     /**
-                     * 获取Certificate u200downership. Valid values: `self` (u200dcertificate of the this account), `others` (u200dcertificate of the other account), `none` (no certificate).
-                     * @return CertificateAttribution Certificate u200downership. Valid values: `self` (u200dcertificate of the this account), `others` (u200dcertificate of the other account), `none` (no certificate).
+                     * 获取Certificate ownership. Valid values: `self` (certificate of the this account), `others` (certificate of the other account), `none` (no certificate).
+                     * @return CertificateAttribution Certificate ownership. Valid values: `self` (certificate of the this account), `others` (certificate of the other account), `none` (no certificate).
                      * 
                      */
                     std::string GetCertificateAttribution() const;
 
                     /**
-                     * 设置Certificate u200downership. Valid values: `self` (u200dcertificate of the this account), `others` (u200dcertificate of the other account), `none` (no certificate).
-                     * @param _certificateAttribution Certificate u200downership. Valid values: `self` (u200dcertificate of the this account), `others` (u200dcertificate of the other account), `none` (no certificate).
+                     * 设置Certificate ownership. Valid values: `self` (certificate of the this account), `others` (certificate of the other account), `none` (no certificate).
+                     * @param _certificateAttribution Certificate ownership. Valid values: `self` (certificate of the this account), `others` (certificate of the other account), `none` (no certificate).
                      * 
                      */
                     void SetCertificateAttribution(const std::string& _certificateAttribution);
@@ -89,19 +89,19 @@ namespace TencentCloud
                     bool CertificateAttributionHasBeenSet() const;
 
                     /**
-                     * 获取ID of the u200dother referenced root account when enabling TDE
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
-                     * @return QuoteUin ID of the u200dother referenced root account when enabling TDE
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 获取ID of the other referenced root account when enabling TDE
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return QuoteUin ID of the other referenced root account when enabling TDE
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetQuoteUin() const;
 
                     /**
-                     * 设置ID of the u200dother referenced root account when enabling TDE
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
-                     * @param _quoteUin ID of the u200dother referenced root account when enabling TDE
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 设置ID of the other referenced root account when enabling TDE
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _quoteUin ID of the other referenced root account when enabling TDE
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetQuoteUin(const std::string& _quoteUin);
@@ -122,14 +122,14 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
                     bool m_encryptionHasBeenSet;
 
                     /**
-                     * Certificate u200downership. Valid values: `self` (u200dcertificate of the this account), `others` (u200dcertificate of the other account), `none` (no certificate).
+                     * Certificate ownership. Valid values: `self` (certificate of the this account), `others` (certificate of the other account), `none` (no certificate).
                      */
                     std::string m_certificateAttribution;
                     bool m_certificateAttributionHasBeenSet;
 
                     /**
-                     * ID of the u200dother referenced root account when enabling TDE
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * ID of the other referenced root account when enabling TDE
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_quoteUin;
                     bool m_quoteUinHasBeenSet;

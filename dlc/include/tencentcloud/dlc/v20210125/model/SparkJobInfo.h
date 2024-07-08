@@ -777,18 +777,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TaskNumHasBeenSet() const;
 
                     /**
-                     * 获取Engine status. -100 (default value): unknown; -2–11: normal.
+                     * 获取Engine status. -100 (default value): unknown; -2-11: normal.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DataEngineStatus Engine status. -100 (default value): unknown; -2–11: normal.
+                     * @return DataEngineStatus Engine status. -100 (default value): unknown; -2-11: normal.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetDataEngineStatus() const;
 
                     /**
-                     * 设置Engine status. -100 (default value): unknown; -2–11: normal.
+                     * 设置Engine status. -100 (default value): unknown; -2-11: normal.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dataEngineStatus Engine status. -100 (default value): unknown; -2–11: normal.
+                     * @param _dataEngineStatus Engine status. -100 (default value): unknown; -2-11: normal.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -953,18 +953,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IsSessionStarted Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     bool GetIsSessionStarted() const;
 
                     /**
                      * 设置Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _isSessionStarted Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIsSessionStarted(const bool& _isSessionStarted);
@@ -975,6 +975,27 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
                      * 
                      */
                     bool IsSessionStartedHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return EngineTypeDetail 
+                     * 
+                     */
+                    std::string GetEngineTypeDetail() const;
+
+                    /**
+                     * 设置
+                     * @param _engineTypeDetail 
+                     * 
+                     */
+                    void SetEngineTypeDetail(const std::string& _engineTypeDetail);
+
+                    /**
+                     * 判断参数 EngineTypeDetail 是否已赋值
+                     * @return EngineTypeDetail 是否已赋值
+                     * 
+                     */
+                    bool EngineTypeDetailHasBeenSet() const;
 
                 private:
 
@@ -1186,7 +1207,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_taskNumHasBeenSet;
 
                     /**
-                     * Engine status. -100 (default value): unknown; -2–11: normal.
+                     * Engine status. -100 (default value): unknown; -2-11: normal.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_dataEngineStatus;
@@ -1236,10 +1257,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     bool m_isSessionStarted;
                     bool m_isSessionStartedHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_engineTypeDetail;
+                    bool m_engineTypeDetailHasBeenSet;
 
                 };
             }

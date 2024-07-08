@@ -909,7 +909,7 @@ namespace TencentCloud
                 ModifyBackupStrategyOutcomeCallable ModifyBackupStrategyCallable(const Model::ModifyBackupStrategyRequest& request);
 
                 /**
-                 *This API is used to u200denable or disable TDE of a database.
+                 *This API is used to enable or disable TDE of a database.
                  * @param req ModifyDBEncryptAttributesRequest
                  * @return ModifyDBEncryptAttributesOutcome
                  */

@@ -29,7 +29,8 @@ CardVerifyResult::CardVerifyResult() :
     m_requestIdHasBeenSet(false),
     m_cardInfoHasBeenSet(false),
     m_normalCardInfoHasBeenSet(false),
-    m_warnCardInfosHasBeenSet(false)
+    m_warnCardInfosHasBeenSet(false),
+    m_editDetailsHasBeenSet(false)
 {
 }
 
@@ -166,6 +167,26 @@ CoreInternalOutcome CardVerifyResult::Deserialize(const rapidjson::Value &value)
         m_warnCardInfosHasBeenSet = true;
     }
 
+    if (value.HasMember("EditDetails") && !value["EditDetails"].IsNull())
+    {
+        if (!value["EditDetails"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `CardVerifyResult.EditDetails` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["EditDetails"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            EditDetail item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_editDetails.push_back(item);
+        }
+        m_editDetailsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -252,6 +273,21 @@ void CardVerifyResult::ToJsonObject(rapidjson::Value &value, rapidjson::Document
         for (auto itr = m_warnCardInfos.begin(); itr != m_warnCardInfos.end(); ++itr)
         {
             value[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
+        }
+    }
+
+    if (m_editDetailsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EditDetails";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_editDetails.begin(); itr != m_editDetails.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
@@ -400,5 +436,21 @@ void CardVerifyResult::SetWarnCardInfos(const vector<int64_t>& _warnCardInfos)
 bool CardVerifyResult::WarnCardInfosHasBeenSet() const
 {
     return m_warnCardInfosHasBeenSet;
+}
+
+vector<EditDetail> CardVerifyResult::GetEditDetails() const
+{
+    return m_editDetails;
+}
+
+void CardVerifyResult::SetEditDetails(const vector<EditDetail>& _editDetails)
+{
+    m_editDetails = _editDetails;
+    m_editDetailsHasBeenSet = true;
+}
+
+bool CardVerifyResult::EditDetailsHasBeenSet() const
+{
+    return m_editDetailsHasBeenSet;
 }
 

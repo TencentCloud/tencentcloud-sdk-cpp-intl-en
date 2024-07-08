@@ -193,18 +193,18 @@ namespace TencentCloud
                     bool SessionExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取Listener forwarding mode. u200dValues: `WRR` (weighted round robin) and `LEAST_CONN` (least connections). 
+                     * 获取Listener forwarding mode. Values: `WRR` (weighted round robin) and `LEAST_CONN` (least connections). 
 Default value: `WRR`. This parameter is only applicable to TCP, UDP, TCP_SSL and QUIC listeners.
-                     * @return Scheduler Listener forwarding mode. u200dValues: `WRR` (weighted round robin) and `LEAST_CONN` (least connections). 
+                     * @return Scheduler Listener forwarding mode. Values: `WRR` (weighted round robin) and `LEAST_CONN` (least connections). 
 Default value: `WRR`. This parameter is only applicable to TCP, UDP, TCP_SSL and QUIC listeners.
                      * 
                      */
                     std::string GetScheduler() const;
 
                     /**
-                     * 设置Listener forwarding mode. u200dValues: `WRR` (weighted round robin) and `LEAST_CONN` (least connections). 
+                     * 设置Listener forwarding mode. Values: `WRR` (weighted round robin) and `LEAST_CONN` (least connections). 
 Default value: `WRR`. This parameter is only applicable to TCP, UDP, TCP_SSL and QUIC listeners.
-                     * @param _scheduler Listener forwarding mode. u200dValues: `WRR` (weighted round robin) and `LEAST_CONN` (least connections). 
+                     * @param _scheduler Listener forwarding mode. Values: `WRR` (weighted round robin) and `LEAST_CONN` (least connections). 
 Default value: `WRR`. This parameter is only applicable to TCP, UDP, TCP_SSL and QUIC listeners.
                      * 
                      */
@@ -365,15 +365,15 @@ Default value: `WRR`. This parameter is only applicable to TCP, UDP, TCP_SSL and
                     bool MultiCertInfoHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of concurrent listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
-                     * @return MaxConn Maximum number of concurrent listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
+                     * 获取Maximum number of concurrent listener connections. It's available for TCP/UDP/TCP_SSL/QUIC listeners. If it's set to `-1` or not specified, the listener speed is not limited. 
+                     * @return MaxConn Maximum number of concurrent listener connections. It's available for TCP/UDP/TCP_SSL/QUIC listeners. If it's set to `-1` or not specified, the listener speed is not limited. 
                      * 
                      */
                     int64_t GetMaxConn() const;
 
                     /**
-                     * 设置Maximum number of concurrent listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
-                     * @param _maxConn Maximum number of concurrent listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
+                     * 设置Maximum number of concurrent listener connections. It's available for TCP/UDP/TCP_SSL/QUIC listeners. If it's set to `-1` or not specified, the listener speed is not limited. 
+                     * @param _maxConn Maximum number of concurrent listener connections. It's available for TCP/UDP/TCP_SSL/QUIC listeners. If it's set to `-1` or not specified, the listener speed is not limited. 
                      * 
                      */
                     void SetMaxConn(const int64_t& _maxConn);
@@ -386,15 +386,15 @@ Default value: `WRR`. This parameter is only applicable to TCP, UDP, TCP_SSL and
                     bool MaxConnHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of new listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
-                     * @return MaxCps Maximum number of new listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
+                     * 获取Maximum number of new listener connections. It's available for TCP/UDP/TCP_SSL/QUIC listeners. If it's set to `-1` or not specified, the listener speed is not limited. 
+                     * @return MaxCps Maximum number of new listener connections. It's available for TCP/UDP/TCP_SSL/QUIC listeners. If it's set to `-1` or not specified, the listener speed is not limited. 
                      * 
                      */
                     int64_t GetMaxCps() const;
 
                     /**
-                     * 设置Maximum number of new listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
-                     * @param _maxCps Maximum number of new listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
+                     * 设置Maximum number of new listener connections. It's available for TCP/UDP/TCP_SSL/QUIC listeners. If it's set to `-1` or not specified, the listener speed is not limited. 
+                     * @param _maxCps Maximum number of new listener connections. It's available for TCP/UDP/TCP_SSL/QUIC listeners. If it's set to `-1` or not specified, the listener speed is not limited. 
                      * 
                      */
                     void SetMaxCps(const int64_t& _maxCps);
@@ -407,15 +407,15 @@ Default value: `WRR`. This parameter is only applicable to TCP, UDP, TCP_SSL and
                     bool MaxCpsHasBeenSet() const;
 
                     /**
-                     * 获取Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900. To set a period longer than 2000 seconds (up to 3600 seconds), please submit a [submit](https://console.cloud.tencent.com/workorder/category). 
-                     * @return IdleConnectTimeout Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900. To set a period longer than 2000 seconds (up to 3600 seconds), please submit a [submit](https://console.cloud.tencent.com/workorder/category). 
+                     * 获取Connection idle timeout period (in seconds). It's only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900. To set a period longer than 2000 seconds (up to 3600 seconds), please submit a [submit](https://console.cloud.tencent.com/workorder/category). 
+                     * @return IdleConnectTimeout Connection idle timeout period (in seconds). It's only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900. To set a period longer than 2000 seconds (up to 3600 seconds), please submit a [submit](https://console.cloud.tencent.com/workorder/category). 
                      * 
                      */
                     int64_t GetIdleConnectTimeout() const;
 
                     /**
-                     * 设置Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900. To set a period longer than 2000 seconds (up to 3600 seconds), please submit a [submit](https://console.cloud.tencent.com/workorder/category). 
-                     * @param _idleConnectTimeout Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900. To set a period longer than 2000 seconds (up to 3600 seconds), please submit a [submit](https://console.cloud.tencent.com/workorder/category). 
+                     * 设置Connection idle timeout period (in seconds). It's only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900. To set a period longer than 2000 seconds (up to 3600 seconds), please submit a [submit](https://console.cloud.tencent.com/workorder/category). 
+                     * @param _idleConnectTimeout Connection idle timeout period (in seconds). It's only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900. To set a period longer than 2000 seconds (up to 3600 seconds), please submit a [submit](https://console.cloud.tencent.com/workorder/category). 
                      * 
                      */
                     void SetIdleConnectTimeout(const int64_t& _idleConnectTimeout);
@@ -426,6 +426,27 @@ Default value: `WRR`. This parameter is only applicable to TCP, UDP, TCP_SSL and
                      * 
                      */
                     bool IdleConnectTimeoutHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return SnatEnable 
+                     * 
+                     */
+                    bool GetSnatEnable() const;
+
+                    /**
+                     * 设置
+                     * @param _snatEnable 
+                     * 
+                     */
+                    void SetSnatEnable(const bool& _snatEnable);
+
+                    /**
+                     * 判断参数 SnatEnable 是否已赋值
+                     * @return SnatEnable 是否已赋值
+                     * 
+                     */
+                    bool SnatEnableHasBeenSet() const;
 
                 private:
 
@@ -472,7 +493,7 @@ Default value: `WRR`. This parameter is only applicable to TCP, UDP, TCP_SSL and
                     bool m_sessionExpireTimeHasBeenSet;
 
                     /**
-                     * Listener forwarding mode. u200dValues: `WRR` (weighted round robin) and `LEAST_CONN` (least connections). 
+                     * Listener forwarding mode. Values: `WRR` (weighted round robin) and `LEAST_CONN` (least connections). 
 Default value: `WRR`. This parameter is only applicable to TCP, UDP, TCP_SSL and QUIC listeners.
                      */
                     std::string m_scheduler;
@@ -521,22 +542,28 @@ Default value: `WRR`. This parameter is only applicable to TCP, UDP, TCP_SSL and
                     bool m_multiCertInfoHasBeenSet;
 
                     /**
-                     * Maximum number of concurrent listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
+                     * Maximum number of concurrent listener connections. It's available for TCP/UDP/TCP_SSL/QUIC listeners. If it's set to `-1` or not specified, the listener speed is not limited. 
                      */
                     int64_t m_maxConn;
                     bool m_maxConnHasBeenSet;
 
                     /**
-                     * Maximum number of new listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
+                     * Maximum number of new listener connections. It's available for TCP/UDP/TCP_SSL/QUIC listeners. If it's set to `-1` or not specified, the listener speed is not limited. 
                      */
                     int64_t m_maxCps;
                     bool m_maxCpsHasBeenSet;
 
                     /**
-                     * Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900. To set a period longer than 2000 seconds (up to 3600 seconds), please submit a [submit](https://console.cloud.tencent.com/workorder/category). 
+                     * Connection idle timeout period (in seconds). It's only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900. To set a period longer than 2000 seconds (up to 3600 seconds), please submit a [submit](https://console.cloud.tencent.com/workorder/category). 
                      */
                     int64_t m_idleConnectTimeout;
                     bool m_idleConnectTimeoutHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_snatEnable;
+                    bool m_snatEnableHasBeenSet;
 
                 };
             }

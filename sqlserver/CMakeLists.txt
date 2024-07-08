@@ -71,6 +71,7 @@ set(sqlserver_public_header_model
   include/tencentcloud/sqlserver/v20180328/model/Migration.h
   include/tencentcloud/sqlserver/v20180328/model/ModifyDBInstanceNetworkRequest.h
   include/tencentcloud/sqlserver/v20180328/model/MigrationDetail.h
+  include/tencentcloud/sqlserver/v20180328/model/SSLConfig.h
   include/tencentcloud/sqlserver/v20180328/model/RecycleDBInstanceRequest.h
   include/tencentcloud/sqlserver/v20180328/model/ModifyInstanceEncryptAttributesRequest.h
   include/tencentcloud/sqlserver/v20180328/model/BusinessIntelligenceFile.h
@@ -187,6 +188,7 @@ set(sqlserver_public_header_model
   include/tencentcloud/sqlserver/v20180328/model/BackupFile.h
   include/tencentcloud/sqlserver/v20180328/model/ModifyAccountRemarkRequest.h
   include/tencentcloud/sqlserver/v20180328/model/ModifyIncrementalMigrationResponse.h
+  include/tencentcloud/sqlserver/v20180328/model/OldVip.h
   include/tencentcloud/sqlserver/v20180328/model/MigrationAction.h
   include/tencentcloud/sqlserver/v20180328/model/InquiryPriceUpgradeDBInstanceResponse.h
   include/tencentcloud/sqlserver/v20180328/model/CloneDBRequest.h
@@ -213,6 +215,7 @@ set(sqlserver_public_header_model
   include/tencentcloud/sqlserver/v20180328/model/DescribeAccountsResponse.h
   include/tencentcloud/sqlserver/v20180328/model/RollbackInstanceRequest.h
   include/tencentcloud/sqlserver/v20180328/model/DescribeDBInstancesAttributeRequest.h
+  include/tencentcloud/sqlserver/v20180328/model/DrReadableInfo.h
   include/tencentcloud/sqlserver/v20180328/model/RestoreInstanceResponse.h
   include/tencentcloud/sqlserver/v20180328/model/DescribeBackupCommandResponse.h
   include/tencentcloud/sqlserver/v20180328/model/ModifyDatabaseCTResponse.h
@@ -281,6 +284,7 @@ set(sqlserver_src
   src/v20180328/model/Migration.cpp
   src/v20180328/model/ModifyDBInstanceNetworkRequest.cpp
   src/v20180328/model/MigrationDetail.cpp
+  src/v20180328/model/SSLConfig.cpp
   src/v20180328/model/RecycleDBInstanceRequest.cpp
   src/v20180328/model/ModifyInstanceEncryptAttributesRequest.cpp
   src/v20180328/model/BusinessIntelligenceFile.cpp
@@ -397,6 +401,7 @@ set(sqlserver_src
   src/v20180328/model/BackupFile.cpp
   src/v20180328/model/ModifyAccountRemarkRequest.cpp
   src/v20180328/model/ModifyIncrementalMigrationResponse.cpp
+  src/v20180328/model/OldVip.cpp
   src/v20180328/model/MigrationAction.cpp
   src/v20180328/model/InquiryPriceUpgradeDBInstanceResponse.cpp
   src/v20180328/model/CloneDBRequest.cpp
@@ -423,6 +428,7 @@ set(sqlserver_src
   src/v20180328/model/DescribeAccountsResponse.cpp
   src/v20180328/model/RollbackInstanceRequest.cpp
   src/v20180328/model/DescribeDBInstancesAttributeRequest.cpp
+  src/v20180328/model/DrReadableInfo.cpp
   src/v20180328/model/RestoreInstanceResponse.cpp
   src/v20180328/model/DescribeBackupCommandResponse.cpp
   src/v20180328/model/ModifyDatabaseCTResponse.cpp

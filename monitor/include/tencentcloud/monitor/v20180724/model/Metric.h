@@ -297,18 +297,18 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * 获取Matching operator
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Operators Matching operator
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<Operator> GetOperators() const;
 
                     /**
                      * 设置Matching operator
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _operators Matching operator
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetOperators(const std::vector<Operator>& _operators);
@@ -322,18 +322,18 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
                     /**
                      * 获取Metric monitoring granularity
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Periods Metric monitoring granularity
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<int64_t> GetPeriods() const;
 
                     /**
                      * 设置Metric monitoring granularity
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _periods Metric monitoring granularity
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetPeriods(const std::vector<int64_t>& _periods);
@@ -344,6 +344,27 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                      * 
                      */
                     bool PeriodsHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return IsLatenessMetric 
+                     * 
+                     */
+                    int64_t GetIsLatenessMetric() const;
+
+                    /**
+                     * 设置
+                     * @param _isLatenessMetric 
+                     * 
+                     */
+                    void SetIsLatenessMetric(const int64_t& _isLatenessMetric);
+
+                    /**
+                     * 判断参数 IsLatenessMetric 是否已赋值
+                     * @return IsLatenessMetric 是否已赋值
+                     * 
+                     */
+                    bool IsLatenessMetricHasBeenSet() const;
 
                 private:
 
@@ -419,17 +440,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * Matching operator
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<Operator> m_operators;
                     bool m_operatorsHasBeenSet;
 
                     /**
                      * Metric monitoring granularity
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<int64_t> m_periods;
                     bool m_periodsHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_isLatenessMetric;
+                    bool m_isLatenessMetricHasBeenSet;
 
                 };
             }

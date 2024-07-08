@@ -22,6 +22,9 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/sqlserver/v20180328/model/TDEConfigAttribute.h>
+#include <tencentcloud/sqlserver/v20180328/model/SSLConfig.h>
+#include <tencentcloud/sqlserver/v20180328/model/DrReadableInfo.h>
+#include <tencentcloud/sqlserver/v20180328/model/OldVip.h>
 
 
 namespace TencentCloud
@@ -157,8 +160,8 @@ namespace TencentCloud
                     bool EventSaveDaysHasBeenSet() const;
 
                     /**
-                     * 获取TDE u200dconfiguration
-                     * @return TDEConfig TDE u200dconfiguration
+                     * 获取TDE configuration
+                     * @return TDEConfig TDE configuration
                      * 
                      */
                     TDEConfigAttribute GetTDEConfig() const;
@@ -169,6 +172,48 @@ namespace TencentCloud
                      * 
                      */
                     bool TDEConfigHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return SSLConfig 
+                     * 
+                     */
+                    SSLConfig GetSSLConfig() const;
+
+                    /**
+                     * 判断参数 SSLConfig 是否已赋值
+                     * @return SSLConfig 是否已赋值
+                     * 
+                     */
+                    bool SSLConfigHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return DrReadableInfo 
+                     * 
+                     */
+                    DrReadableInfo GetDrReadableInfo() const;
+
+                    /**
+                     * 判断参数 DrReadableInfo 是否已赋值
+                     * @return DrReadableInfo 是否已赋值
+                     * 
+                     */
+                    bool DrReadableInfoHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return OldVipList 
+                     * 
+                     */
+                    std::vector<OldVip> GetOldVipList() const;
+
+                    /**
+                     * 判断参数 OldVipList 是否已赋值
+                     * @return OldVipList 是否已赋值
+                     * 
+                     */
+                    bool OldVipListHasBeenSet() const;
 
                 private:
 
@@ -221,10 +266,28 @@ namespace TencentCloud
                     bool m_eventSaveDaysHasBeenSet;
 
                     /**
-                     * TDE u200dconfiguration
+                     * TDE configuration
                      */
                     TDEConfigAttribute m_tDEConfig;
                     bool m_tDEConfigHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    SSLConfig m_sSLConfig;
+                    bool m_sSLConfigHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    DrReadableInfo m_drReadableInfo;
+                    bool m_drReadableInfoHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<OldVip> m_oldVipList;
+                    bool m_oldVipListHasBeenSet;
 
                 };
             }

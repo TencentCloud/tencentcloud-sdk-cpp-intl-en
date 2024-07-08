@@ -50,18 +50,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Template name
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TemplateName Template name
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTemplateName() const;
 
                     /**
                      * 设置Template name
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _templateName Template name
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTemplateName(const std::string& _templateName);
@@ -127,7 +127,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Template name
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_templateName;
                     bool m_templateNameHasBeenSet;

@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool DBNameHasBeenSet() const;
 
                     /**
-                     * 获取TDE u200dstatus. Valid values: `enable` (enabled), `disable` (disabled).
-                     * @return Encryption TDE u200dstatus. Valid values: `enable` (enabled), `disable` (disabled).
+                     * 获取TDE status. Valid values: `enable` (enabled), `disable` (disabled).
+                     * @return Encryption TDE status. Valid values: `enable` (enabled), `disable` (disabled).
                      * 
                      */
                     std::string GetEncryption() const;
 
                     /**
-                     * 设置TDE u200dstatus. Valid values: `enable` (enabled), `disable` (disabled).
-                     * @param _encryption TDE u200dstatus. Valid values: `enable` (enabled), `disable` (disabled).
+                     * 设置TDE status. Valid values: `enable` (enabled), `disable` (disabled).
+                     * @param _encryption TDE status. Valid values: `enable` (enabled), `disable` (disabled).
                      * 
                      */
                     void SetEncryption(const std::string& _encryption);
@@ -97,7 +97,7 @@ namespace TencentCloud
                     bool m_dBNameHasBeenSet;
 
                     /**
-                     * TDE u200dstatus. Valid values: `enable` (enabled), `disable` (disabled).
+                     * TDE status. Valid values: `enable` (enabled), `disable` (disabled).
                      */
                     std::string m_encryption;
                     bool m_encryptionHasBeenSet;
