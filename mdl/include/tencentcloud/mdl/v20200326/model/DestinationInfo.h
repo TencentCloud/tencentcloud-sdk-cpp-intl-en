@@ -142,6 +142,27 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool PasswordHasBeenSet() const;
 
+                    /**
+                     * 获取The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard.
+                     * @return DestinationType The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard.
+                     * 
+                     */
+                    std::string GetDestinationType() const;
+
+                    /**
+                     * 设置The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard.
+                     * @param _destinationType The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard.
+                     * 
+                     */
+                    void SetDestinationType(const std::string& _destinationType);
+
+                    /**
+                     * 判断参数 DestinationType 是否已赋值
+                     * @return DestinationType 是否已赋值
+                     * 
+                     */
+                    bool DestinationTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -170,6 +191,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_password;
                     bool m_passwordHasBeenSet;
+
+                    /**
+                     * The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard.
+                     */
+                    std::string m_destinationType;
+                    bool m_destinationTypeHasBeenSet;
 
                 };
             }

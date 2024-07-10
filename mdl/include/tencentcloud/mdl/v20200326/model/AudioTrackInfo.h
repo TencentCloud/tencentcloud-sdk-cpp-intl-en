@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mdl/v20200326/model/AudioNormalizationSettings.h>
+#include <tencentcloud/mdl/v20200326/model/AudioCodecDetail.h>
 
 
 namespace TencentCloud
@@ -173,6 +174,27 @@ namespace TencentCloud
                      */
                     bool AudioNormalizationHasBeenSet() const;
 
+                    /**
+                     * 获取Audio encoding configuration.
+                     * @return AudioCodecDetails Audio encoding configuration.
+                     * 
+                     */
+                    AudioCodecDetail GetAudioCodecDetails() const;
+
+                    /**
+                     * 设置Audio encoding configuration.
+                     * @param _audioCodecDetails Audio encoding configuration.
+                     * 
+                     */
+                    void SetAudioCodecDetails(const AudioCodecDetail& _audioCodecDetails);
+
+                    /**
+                     * 判断参数 AudioCodecDetails 是否已赋值
+                     * @return AudioCodecDetails 是否已赋值
+                     * 
+                     */
+                    bool AudioCodecDetailsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -210,6 +232,12 @@ namespace TencentCloud
                      */
                     AudioNormalizationSettings m_audioNormalization;
                     bool m_audioNormalizationHasBeenSet;
+
+                    /**
+                     * Audio encoding configuration.
+                     */
+                    AudioCodecDetail m_audioCodecDetails;
+                    bool m_audioCodecDetailsHasBeenSet;
 
                 };
             }

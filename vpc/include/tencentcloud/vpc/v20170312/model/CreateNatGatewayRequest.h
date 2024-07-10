@@ -295,6 +295,27 @@ namespace TencentCloud
                      */
                     bool PublicIpFromSameZoneHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return NatProductVersion 
+                     * 
+                     */
+                    uint64_t GetNatProductVersion() const;
+
+                    /**
+                     * 设置
+                     * @param _natProductVersion 
+                     * 
+                     */
+                    void SetNatProductVersion(const uint64_t& _natProductVersion);
+
+                    /**
+                     * 判断参数 NatProductVersion 是否已赋值
+                     * @return NatProductVersion 是否已赋值
+                     * 
+                     */
+                    bool NatProductVersionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -368,6 +389,12 @@ namespace TencentCloud
                      */
                     bool m_publicIpFromSameZone;
                     bool m_publicIpFromSameZoneHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_natProductVersion;
+                    bool m_natProductVersionHasBeenSet;
 
                 };
             }

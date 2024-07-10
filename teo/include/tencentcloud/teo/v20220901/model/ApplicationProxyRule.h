@@ -288,18 +288,18 @@ Note that each rule can have up to 20 ports.
 
                     /**
                      * 获取Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SessionPersistTime Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetSessionPersistTime() const;
 
                     /**
                      * 设置Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _sessionPersistTime Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSessionPersistTime(const uint64_t& _sessionPersistTime);
@@ -342,18 +342,18 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
                     /**
                      * 获取Rule tag.
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RuleTag Rule tag.
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRuleTag() const;
 
                     /**
                      * 设置Rule tag.
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _ruleTag Rule tag.
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRuleTag(const std::string& _ruleTag);
@@ -435,7 +435,7 @@ Note that each rule can have up to 20 ports.
 
                     /**
                      * Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_sessionPersistTime;
                     bool m_sessionPersistTimeHasBeenSet;
@@ -450,7 +450,7 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
                     /**
                      * Rule tag.
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_ruleTag;
                     bool m_ruleTagHasBeenSet;

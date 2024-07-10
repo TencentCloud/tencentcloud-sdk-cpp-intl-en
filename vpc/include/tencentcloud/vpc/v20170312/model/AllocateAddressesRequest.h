@@ -381,15 +381,15 @@ Whether the Anycast EIP can be bound to CLB instances.
                     bool EgressHasBeenSet() const;
 
                     /**
-                     * 获取Anti-DDoS service package ID. This is required when you want to request an u200dAnti-DDoS IP.
-                     * @return AntiDDoSPackageId Anti-DDoS service package ID. This is required when you want to request an u200dAnti-DDoS IP.
+                     * 获取Anti-DDoS service package ID. This is required when you want to request an Anti-DDoS IP.
+                     * @return AntiDDoSPackageId Anti-DDoS service package ID. This is required when you want to request an Anti-DDoS IP.
                      * 
                      */
                     std::string GetAntiDDoSPackageId() const;
 
                     /**
-                     * 设置Anti-DDoS service package ID. This is required when you want to request an u200dAnti-DDoS IP.
-                     * @param _antiDDoSPackageId Anti-DDoS service package ID. This is required when you want to request an u200dAnti-DDoS IP.
+                     * 设置Anti-DDoS service package ID. This is required when you want to request an Anti-DDoS IP.
+                     * @param _antiDDoSPackageId Anti-DDoS service package ID. This is required when you want to request an Anti-DDoS IP.
                      * 
                      */
                     void SetAntiDDoSPackageId(const std::string& _antiDDoSPackageId);
@@ -518,7 +518,7 @@ Whether the Anycast EIP can be bound to CLB instances.
                     bool m_egressHasBeenSet;
 
                     /**
-                     * Anti-DDoS service package ID. This is required when you want to request an u200dAnti-DDoS IP.
+                     * Anti-DDoS service package ID. This is required when you want to request an Anti-DDoS IP.
                      */
                     std::string m_antiDDoSPackageId;
                     bool m_antiDDoSPackageIdHasBeenSet;

@@ -42,7 +42,10 @@ Address::Address() :
     m_tagSetHasBeenSet(false),
     m_deadlineDateHasBeenSet(false),
     m_instanceTypeHasBeenSet(false),
-    m_antiDDoSPackageIdHasBeenSet(false)
+    m_egressHasBeenSet(false),
+    m_antiDDoSPackageIdHasBeenSet(false),
+    m_renewFlagHasBeenSet(false),
+    m_bandwidthPackageIdHasBeenSet(false)
 {
 }
 
@@ -278,6 +281,16 @@ CoreInternalOutcome Address::Deserialize(const rapidjson::Value &value)
         m_instanceTypeHasBeenSet = true;
     }
 
+    if (value.HasMember("Egress") && !value["Egress"].IsNull())
+    {
+        if (!value["Egress"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Address.Egress` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_egress = string(value["Egress"].GetString());
+        m_egressHasBeenSet = true;
+    }
+
     if (value.HasMember("AntiDDoSPackageId") && !value["AntiDDoSPackageId"].IsNull())
     {
         if (!value["AntiDDoSPackageId"].IsString())
@@ -286,6 +299,26 @@ CoreInternalOutcome Address::Deserialize(const rapidjson::Value &value)
         }
         m_antiDDoSPackageId = string(value["AntiDDoSPackageId"].GetString());
         m_antiDDoSPackageIdHasBeenSet = true;
+    }
+
+    if (value.HasMember("RenewFlag") && !value["RenewFlag"].IsNull())
+    {
+        if (!value["RenewFlag"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Address.RenewFlag` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_renewFlag = string(value["RenewFlag"].GetString());
+        m_renewFlagHasBeenSet = true;
+    }
+
+    if (value.HasMember("BandwidthPackageId") && !value["BandwidthPackageId"].IsNull())
+    {
+        if (!value["BandwidthPackageId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Address.BandwidthPackageId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_bandwidthPackageId = string(value["BandwidthPackageId"].GetString());
+        m_bandwidthPackageIdHasBeenSet = true;
     }
 
 
@@ -471,12 +504,36 @@ void Address::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Allocat
         value.AddMember(iKey, rapidjson::Value(m_instanceType.c_str(), allocator).Move(), allocator);
     }
 
+    if (m_egressHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Egress";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_egress.c_str(), allocator).Move(), allocator);
+    }
+
     if (m_antiDDoSPackageIdHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AntiDDoSPackageId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_antiDDoSPackageId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_renewFlagHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RenewFlag";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_renewFlag.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_bandwidthPackageIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BandwidthPackageId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_bandwidthPackageId.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -818,6 +875,22 @@ bool Address::InstanceTypeHasBeenSet() const
     return m_instanceTypeHasBeenSet;
 }
 
+string Address::GetEgress() const
+{
+    return m_egress;
+}
+
+void Address::SetEgress(const string& _egress)
+{
+    m_egress = _egress;
+    m_egressHasBeenSet = true;
+}
+
+bool Address::EgressHasBeenSet() const
+{
+    return m_egressHasBeenSet;
+}
+
 string Address::GetAntiDDoSPackageId() const
 {
     return m_antiDDoSPackageId;
@@ -832,5 +905,37 @@ void Address::SetAntiDDoSPackageId(const string& _antiDDoSPackageId)
 bool Address::AntiDDoSPackageIdHasBeenSet() const
 {
     return m_antiDDoSPackageIdHasBeenSet;
+}
+
+string Address::GetRenewFlag() const
+{
+    return m_renewFlag;
+}
+
+void Address::SetRenewFlag(const string& _renewFlag)
+{
+    m_renewFlag = _renewFlag;
+    m_renewFlagHasBeenSet = true;
+}
+
+bool Address::RenewFlagHasBeenSet() const
+{
+    return m_renewFlagHasBeenSet;
+}
+
+string Address::GetBandwidthPackageId() const
+{
+    return m_bandwidthPackageId;
+}
+
+void Address::SetBandwidthPackageId(const string& _bandwidthPackageId)
+{
+    m_bandwidthPackageId = _bandwidthPackageId;
+    m_bandwidthPackageIdHasBeenSet = true;
+}
+
+bool Address::BandwidthPackageIdHasBeenSet() const
+{
+    return m_bandwidthPackageIdHasBeenSet;
 }
 

@@ -26,7 +26,8 @@ AudioTrackInfo::AudioTrackInfo() :
     m_audioBitrateHasBeenSet(false),
     m_audioSampleRateHasBeenSet(false),
     m_audioSelectorNameHasBeenSet(false),
-    m_audioNormalizationHasBeenSet(false)
+    m_audioNormalizationHasBeenSet(false),
+    m_audioCodecDetailsHasBeenSet(false)
 {
 }
 
@@ -102,6 +103,23 @@ CoreInternalOutcome AudioTrackInfo::Deserialize(const rapidjson::Value &value)
         m_audioNormalizationHasBeenSet = true;
     }
 
+    if (value.HasMember("AudioCodecDetails") && !value["AudioCodecDetails"].IsNull())
+    {
+        if (!value["AudioCodecDetails"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `AudioTrackInfo.AudioCodecDetails` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_audioCodecDetails.Deserialize(value["AudioCodecDetails"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_audioCodecDetailsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -156,6 +174,15 @@ void AudioTrackInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_audioNormalization.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_audioCodecDetailsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AudioCodecDetails";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_audioCodecDetails.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -255,5 +282,21 @@ void AudioTrackInfo::SetAudioNormalization(const AudioNormalizationSettings& _au
 bool AudioTrackInfo::AudioNormalizationHasBeenSet() const
 {
     return m_audioNormalizationHasBeenSet;
+}
+
+AudioCodecDetail AudioTrackInfo::GetAudioCodecDetails() const
+{
+    return m_audioCodecDetails;
+}
+
+void AudioTrackInfo::SetAudioCodecDetails(const AudioCodecDetail& _audioCodecDetails)
+{
+    m_audioCodecDetails = _audioCodecDetails;
+    m_audioCodecDetailsHasBeenSet = true;
+}
+
+bool AudioTrackInfo::AudioCodecDetailsHasBeenSet() const
+{
+    return m_audioCodecDetailsHasBeenSet;
 }
 

@@ -24,7 +24,8 @@ DestinationInfo::DestinationInfo() :
     m_outputUrlHasBeenSet(false),
     m_authKeyHasBeenSet(false),
     m_usernameHasBeenSet(false),
-    m_passwordHasBeenSet(false)
+    m_passwordHasBeenSet(false),
+    m_destinationTypeHasBeenSet(false)
 {
 }
 
@@ -73,6 +74,16 @@ CoreInternalOutcome DestinationInfo::Deserialize(const rapidjson::Value &value)
         m_passwordHasBeenSet = true;
     }
 
+    if (value.HasMember("DestinationType") && !value["DestinationType"].IsNull())
+    {
+        if (!value["DestinationType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `DestinationInfo.DestinationType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_destinationType = string(value["DestinationType"].GetString());
+        m_destinationTypeHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -110,6 +121,14 @@ void DestinationInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document:
         string key = "Password";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_password.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_destinationTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DestinationType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_destinationType.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -177,5 +196,21 @@ void DestinationInfo::SetPassword(const string& _password)
 bool DestinationInfo::PasswordHasBeenSet() const
 {
     return m_passwordHasBeenSet;
+}
+
+string DestinationInfo::GetDestinationType() const
+{
+    return m_destinationType;
+}
+
+void DestinationInfo::SetDestinationType(const string& _destinationType)
+{
+    m_destinationType = _destinationType;
+    m_destinationTypeHasBeenSet = true;
+}
+
+bool DestinationInfo::DestinationTypeHasBeenSet() const
+{
+    return m_destinationTypeHasBeenSet;
 }
 

@@ -550,15 +550,36 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取ID of the Anti-DDoS service package. It is returned if the EIP is an u200dAnti-DDoS EIP. 
-                     * @return AntiDDoSPackageId ID of the Anti-DDoS service package. It is returned if the EIP is an u200dAnti-DDoS EIP. 
+                     * 获取
+                     * @return Egress 
+                     * 
+                     */
+                    std::string GetEgress() const;
+
+                    /**
+                     * 设置
+                     * @param _egress 
+                     * 
+                     */
+                    void SetEgress(const std::string& _egress);
+
+                    /**
+                     * 判断参数 Egress 是否已赋值
+                     * @return Egress 是否已赋值
+                     * 
+                     */
+                    bool EgressHasBeenSet() const;
+
+                    /**
+                     * 获取ID of the Anti-DDoS service package. It is returned if the EIP is an Anti-DDoS EIP. 
+                     * @return AntiDDoSPackageId ID of the Anti-DDoS service package. It is returned if the EIP is an Anti-DDoS EIP. 
                      * 
                      */
                     std::string GetAntiDDoSPackageId() const;
 
                     /**
-                     * 设置ID of the Anti-DDoS service package. It is returned if the EIP is an u200dAnti-DDoS EIP. 
-                     * @param _antiDDoSPackageId ID of the Anti-DDoS service package. It is returned if the EIP is an u200dAnti-DDoS EIP. 
+                     * 设置ID of the Anti-DDoS service package. It is returned if the EIP is an Anti-DDoS EIP. 
+                     * @param _antiDDoSPackageId ID of the Anti-DDoS service package. It is returned if the EIP is an Anti-DDoS EIP. 
                      * 
                      */
                     void SetAntiDDoSPackageId(const std::string& _antiDDoSPackageId);
@@ -569,6 +590,48 @@ Note: this field may return `null`, indicating that no valid value was found.
                      * 
                      */
                     bool AntiDDoSPackageIdHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return RenewFlag 
+                     * 
+                     */
+                    std::string GetRenewFlag() const;
+
+                    /**
+                     * 设置
+                     * @param _renewFlag 
+                     * 
+                     */
+                    void SetRenewFlag(const std::string& _renewFlag);
+
+                    /**
+                     * 判断参数 RenewFlag 是否已赋值
+                     * @return RenewFlag 是否已赋值
+                     * 
+                     */
+                    bool RenewFlagHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return BandwidthPackageId 
+                     * 
+                     */
+                    std::string GetBandwidthPackageId() const;
+
+                    /**
+                     * 设置
+                     * @param _bandwidthPackageId 
+                     * 
+                     */
+                    void SetBandwidthPackageId(const std::string& _bandwidthPackageId);
+
+                    /**
+                     * 判断参数 BandwidthPackageId 是否已赋值
+                     * @return BandwidthPackageId 是否已赋值
+                     * 
+                     */
+                    bool BandwidthPackageIdHasBeenSet() const;
 
                 private:
 
@@ -714,10 +777,28 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * ID of the Anti-DDoS service package. It is returned if the EIP is an u200dAnti-DDoS EIP. 
+                     * 
+                     */
+                    std::string m_egress;
+                    bool m_egressHasBeenSet;
+
+                    /**
+                     * ID of the Anti-DDoS service package. It is returned if the EIP is an Anti-DDoS EIP. 
                      */
                     std::string m_antiDDoSPackageId;
                     bool m_antiDDoSPackageIdHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_renewFlag;
+                    bool m_renewFlagHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_bandwidthPackageId;
+                    bool m_bandwidthPackageIdHasBeenSet;
 
                 };
             }
