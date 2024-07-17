@@ -127,6 +127,27 @@ namespace TencentCloud
                     bool StoragePayModeHasBeenSet() const;
 
                     /**
+                     * 获取device type:common, exclusive
+                     * @return DeviceType device type:common, exclusive
+                     * 
+                     */
+                    std::string GetDeviceType() const;
+
+                    /**
+                     * 设置device type:common, exclusive
+                     * @param _deviceType device type:common, exclusive
+                     * 
+                     */
+                    void SetDeviceType(const std::string& _deviceType);
+
+                    /**
+                     * 判断参数 DeviceType 是否已赋值
+                     * @return DeviceType 是否已赋值
+                     * 
+                     */
+                    bool DeviceTypeHasBeenSet() const;
+
+                    /**
                      * 获取Number of CPU cores, which is required when `InstancePayMode` is `PREPAID` or `POSTPAID`.
                      * @return Cpu Number of CPU cores, which is required when `InstancePayMode` is `PREPAID` or `POSTPAID`.
                      * 
@@ -277,6 +298,12 @@ namespace TencentCloud
                      */
                     std::string m_storagePayMode;
                     bool m_storagePayModeHasBeenSet;
+
+                    /**
+                     * device type:common, exclusive
+                     */
+                    std::string m_deviceType;
+                    bool m_deviceTypeHasBeenSet;
 
                     /**
                      * Number of CPU cores, which is required when `InstancePayMode` is `PREPAID` or `POSTPAID`.
