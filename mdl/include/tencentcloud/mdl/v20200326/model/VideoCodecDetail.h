@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Video codec additional configuration.
                 */
                 class VideoCodecDetail : public AbstractModel
                 {

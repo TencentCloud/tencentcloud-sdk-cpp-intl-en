@@ -29,10 +29,13 @@ StreamLiveChannelInfo::StreamLiveChannelInfo() :
     m_audioTemplatesHasBeenSet(false),
     m_videoTemplatesHasBeenSet(false),
     m_aVTemplatesHasBeenSet(false),
+    m_captionTemplatesHasBeenSet(false),
     m_planSettingsHasBeenSet(false),
     m_eventNotifySettingsHasBeenSet(false),
     m_inputLossBehaviorHasBeenSet(false),
-    m_pipelineInputSettingsHasBeenSet(false)
+    m_pipelineInputSettingsHasBeenSet(false),
+    m_inputAnalysisSettingsHasBeenSet(false),
+    m_tagsHasBeenSet(false)
 {
 }
 
@@ -171,6 +174,26 @@ CoreInternalOutcome StreamLiveChannelInfo::Deserialize(const rapidjson::Value &v
         m_aVTemplatesHasBeenSet = true;
     }
 
+    if (value.HasMember("CaptionTemplates") && !value["CaptionTemplates"].IsNull())
+    {
+        if (!value["CaptionTemplates"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `StreamLiveChannelInfo.CaptionTemplates` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["CaptionTemplates"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            SubtitleConf item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_captionTemplates.push_back(item);
+        }
+        m_captionTemplatesHasBeenSet = true;
+    }
+
     if (value.HasMember("PlanSettings") && !value["PlanSettings"].IsNull())
     {
         if (!value["PlanSettings"].IsObject())
@@ -237,6 +260,43 @@ CoreInternalOutcome StreamLiveChannelInfo::Deserialize(const rapidjson::Value &v
         }
 
         m_pipelineInputSettingsHasBeenSet = true;
+    }
+
+    if (value.HasMember("InputAnalysisSettings") && !value["InputAnalysisSettings"].IsNull())
+    {
+        if (!value["InputAnalysisSettings"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `StreamLiveChannelInfo.InputAnalysisSettings` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_inputAnalysisSettings.Deserialize(value["InputAnalysisSettings"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_inputAnalysisSettingsHasBeenSet = true;
+    }
+
+    if (value.HasMember("Tags") && !value["Tags"].IsNull())
+    {
+        if (!value["Tags"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `StreamLiveChannelInfo.Tags` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["Tags"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            Tag item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_tags.push_back(item);
+        }
+        m_tagsHasBeenSet = true;
     }
 
 
@@ -345,6 +405,21 @@ void StreamLiveChannelInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Doc
         }
     }
 
+    if (m_captionTemplatesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CaptionTemplates";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_captionTemplates.begin(); itr != m_captionTemplates.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
     if (m_planSettingsHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -379,6 +454,30 @@ void StreamLiveChannelInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Doc
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_pipelineInputSettings.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_inputAnalysisSettingsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InputAnalysisSettings";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_inputAnalysisSettings.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_tagsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Tags";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
     }
 
 }
@@ -512,6 +611,22 @@ bool StreamLiveChannelInfo::AVTemplatesHasBeenSet() const
     return m_aVTemplatesHasBeenSet;
 }
 
+vector<SubtitleConf> StreamLiveChannelInfo::GetCaptionTemplates() const
+{
+    return m_captionTemplates;
+}
+
+void StreamLiveChannelInfo::SetCaptionTemplates(const vector<SubtitleConf>& _captionTemplates)
+{
+    m_captionTemplates = _captionTemplates;
+    m_captionTemplatesHasBeenSet = true;
+}
+
+bool StreamLiveChannelInfo::CaptionTemplatesHasBeenSet() const
+{
+    return m_captionTemplatesHasBeenSet;
+}
+
 PlanSettings StreamLiveChannelInfo::GetPlanSettings() const
 {
     return m_planSettings;
@@ -574,5 +689,37 @@ void StreamLiveChannelInfo::SetPipelineInputSettings(const PipelineInputSettings
 bool StreamLiveChannelInfo::PipelineInputSettingsHasBeenSet() const
 {
     return m_pipelineInputSettingsHasBeenSet;
+}
+
+InputAnalysisInfo StreamLiveChannelInfo::GetInputAnalysisSettings() const
+{
+    return m_inputAnalysisSettings;
+}
+
+void StreamLiveChannelInfo::SetInputAnalysisSettings(const InputAnalysisInfo& _inputAnalysisSettings)
+{
+    m_inputAnalysisSettings = _inputAnalysisSettings;
+    m_inputAnalysisSettingsHasBeenSet = true;
+}
+
+bool StreamLiveChannelInfo::InputAnalysisSettingsHasBeenSet() const
+{
+    return m_inputAnalysisSettingsHasBeenSet;
+}
+
+vector<Tag> StreamLiveChannelInfo::GetTags() const
+{
+    return m_tags;
+}
+
+void StreamLiveChannelInfo::SetTags(const vector<Tag>& _tags)
+{
+    m_tags = _tags;
+    m_tagsHasBeenSet = true;
+}
+
+bool StreamLiveChannelInfo::TagsHasBeenSet() const
+{
+    return m_tagsHasBeenSet;
 }
 

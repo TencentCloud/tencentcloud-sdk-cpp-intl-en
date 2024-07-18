@@ -43,6 +43,8 @@
 #include <tencentcloud/mdl/v20200326/model/DeleteStreamLivePlanResponse.h>
 #include <tencentcloud/mdl/v20200326/model/DeleteStreamLiveWatermarkRequest.h>
 #include <tencentcloud/mdl/v20200326/model/DeleteStreamLiveWatermarkResponse.h>
+#include <tencentcloud/mdl/v20200326/model/DescribeMediaLiveHighlightResultRequest.h>
+#include <tencentcloud/mdl/v20200326/model/DescribeMediaLiveHighlightResultResponse.h>
 #include <tencentcloud/mdl/v20200326/model/DescribeStreamLiveChannelRequest.h>
 #include <tencentcloud/mdl/v20200326/model/DescribeStreamLiveChannelResponse.h>
 #include <tencentcloud/mdl/v20200326/model/DescribeStreamLiveChannelAlertsRequest.h>
@@ -131,6 +133,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteStreamLiveWatermarkResponse> DeleteStreamLiveWatermarkOutcome;
                 typedef std::future<DeleteStreamLiveWatermarkOutcome> DeleteStreamLiveWatermarkOutcomeCallable;
                 typedef std::function<void(const MdlClient*, const Model::DeleteStreamLiveWatermarkRequest&, DeleteStreamLiveWatermarkOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteStreamLiveWatermarkAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMediaLiveHighlightResultResponse> DescribeMediaLiveHighlightResultOutcome;
+                typedef std::future<DescribeMediaLiveHighlightResultOutcome> DescribeMediaLiveHighlightResultOutcomeCallable;
+                typedef std::function<void(const MdlClient*, const Model::DescribeMediaLiveHighlightResultRequest&, DescribeMediaLiveHighlightResultOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMediaLiveHighlightResultAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeStreamLiveChannelResponse> DescribeStreamLiveChannelOutcome;
                 typedef std::future<DescribeStreamLiveChannelOutcome> DescribeStreamLiveChannelOutcomeCallable;
                 typedef std::function<void(const MdlClient*, const Model::DescribeStreamLiveChannelRequest&, DescribeStreamLiveChannelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStreamLiveChannelAsyncHandler;
@@ -289,6 +294,15 @@ namespace TencentCloud
                 DeleteStreamLiveWatermarkOutcome DeleteStreamLiveWatermark(const Model::DeleteStreamLiveWatermarkRequest &request);
                 void DeleteStreamLiveWatermarkAsync(const Model::DeleteStreamLiveWatermarkRequest& request, const DeleteStreamLiveWatermarkAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteStreamLiveWatermarkOutcomeCallable DeleteStreamLiveWatermarkCallable(const Model::DeleteStreamLiveWatermarkRequest& request);
+
+                /**
+                 *Query the highlight result information corresponding to the media live broadcast channel.
+                 * @param req DescribeMediaLiveHighlightResultRequest
+                 * @return DescribeMediaLiveHighlightResultOutcome
+                 */
+                DescribeMediaLiveHighlightResultOutcome DescribeMediaLiveHighlightResult(const Model::DescribeMediaLiveHighlightResultRequest &request);
+                void DescribeMediaLiveHighlightResultAsync(const Model::DescribeMediaLiveHighlightResultRequest& request, const DescribeMediaLiveHighlightResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMediaLiveHighlightResultOutcomeCallable DescribeMediaLiveHighlightResultCallable(const Model::DescribeMediaLiveHighlightResultRequest& request);
 
                 /**
                  *This API is used to query a StreamLive channel.

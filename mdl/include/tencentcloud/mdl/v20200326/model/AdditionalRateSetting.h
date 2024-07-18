@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * additional bit rate configuration.
                 */
                 class AdditionalRateSetting : public AbstractModel
                 {

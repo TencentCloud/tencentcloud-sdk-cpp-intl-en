@@ -26,6 +26,7 @@ OutputInfo::OutputInfo() :
     m_videoTemplateNamesHasBeenSet(false),
     m_scte35SettingsHasBeenSet(false),
     m_aVTemplateNamesHasBeenSet(false),
+    m_captionTemplateNamesHasBeenSet(false),
     m_timedMetadataSettingsHasBeenSet(false)
 {
 }
@@ -99,6 +100,19 @@ CoreInternalOutcome OutputInfo::Deserialize(const rapidjson::Value &value)
             m_aVTemplateNames.push_back((*itr).GetString());
         }
         m_aVTemplateNamesHasBeenSet = true;
+    }
+
+    if (value.HasMember("CaptionTemplateNames") && !value["CaptionTemplateNames"].IsNull())
+    {
+        if (!value["CaptionTemplateNames"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `OutputInfo.CaptionTemplateNames` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["CaptionTemplateNames"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            m_captionTemplateNames.push_back((*itr).GetString());
+        }
+        m_captionTemplateNamesHasBeenSet = true;
     }
 
     if (value.HasMember("TimedMetadataSettings") && !value["TimedMetadataSettings"].IsNull())
@@ -176,6 +190,19 @@ void OutputInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Allo
         value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_aVTemplateNames.begin(); itr != m_aVTemplateNames.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_captionTemplateNamesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CaptionTemplateNames";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_captionTemplateNames.begin(); itr != m_captionTemplateNames.end(); ++itr)
         {
             value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
@@ -271,6 +298,22 @@ void OutputInfo::SetAVTemplateNames(const vector<string>& _aVTemplateNames)
 bool OutputInfo::AVTemplateNamesHasBeenSet() const
 {
     return m_aVTemplateNamesHasBeenSet;
+}
+
+vector<string> OutputInfo::GetCaptionTemplateNames() const
+{
+    return m_captionTemplateNames;
+}
+
+void OutputInfo::SetCaptionTemplateNames(const vector<string>& _captionTemplateNames)
+{
+    m_captionTemplateNames = _captionTemplateNames;
+    m_captionTemplateNamesHasBeenSet = true;
+}
+
+bool OutputInfo::CaptionTemplateNamesHasBeenSet() const
+{
+    return m_captionTemplateNamesHasBeenSet;
 }
 
 TimedMetadataSettingInfo OutputInfo::GetTimedMetadataSettings() const

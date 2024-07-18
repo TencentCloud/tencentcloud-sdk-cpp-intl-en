@@ -29,10 +29,13 @@ CreateStreamLiveChannelRequest::CreateStreamLiveChannelRequest() :
     m_audioTemplatesHasBeenSet(false),
     m_videoTemplatesHasBeenSet(false),
     m_aVTemplatesHasBeenSet(false),
+    m_captionTemplatesHasBeenSet(false),
     m_planSettingsHasBeenSet(false),
     m_eventNotifySettingsHasBeenSet(false),
     m_inputLossBehaviorHasBeenSet(false),
-    m_pipelineInputSettingsHasBeenSet(false)
+    m_pipelineInputSettingsHasBeenSet(false),
+    m_inputAnalysisSettingsHasBeenSet(false),
+    m_tagsHasBeenSet(false)
 {
 }
 
@@ -126,6 +129,21 @@ string CreateStreamLiveChannelRequest::ToJsonString() const
         }
     }
 
+    if (m_captionTemplatesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CaptionTemplates";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_captionTemplates.begin(); itr != m_captionTemplates.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
+    }
+
     if (m_planSettingsHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -160,6 +178,30 @@ string CreateStreamLiveChannelRequest::ToJsonString() const
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_pipelineInputSettings.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_inputAnalysisSettingsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InputAnalysisSettings";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_inputAnalysisSettings.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_tagsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Tags";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
     }
 
 
@@ -266,6 +308,22 @@ bool CreateStreamLiveChannelRequest::AVTemplatesHasBeenSet() const
     return m_aVTemplatesHasBeenSet;
 }
 
+vector<SubtitleConf> CreateStreamLiveChannelRequest::GetCaptionTemplates() const
+{
+    return m_captionTemplates;
+}
+
+void CreateStreamLiveChannelRequest::SetCaptionTemplates(const vector<SubtitleConf>& _captionTemplates)
+{
+    m_captionTemplates = _captionTemplates;
+    m_captionTemplatesHasBeenSet = true;
+}
+
+bool CreateStreamLiveChannelRequest::CaptionTemplatesHasBeenSet() const
+{
+    return m_captionTemplatesHasBeenSet;
+}
+
 PlanSettings CreateStreamLiveChannelRequest::GetPlanSettings() const
 {
     return m_planSettings;
@@ -328,6 +386,38 @@ void CreateStreamLiveChannelRequest::SetPipelineInputSettings(const PipelineInpu
 bool CreateStreamLiveChannelRequest::PipelineInputSettingsHasBeenSet() const
 {
     return m_pipelineInputSettingsHasBeenSet;
+}
+
+InputAnalysisInfo CreateStreamLiveChannelRequest::GetInputAnalysisSettings() const
+{
+    return m_inputAnalysisSettings;
+}
+
+void CreateStreamLiveChannelRequest::SetInputAnalysisSettings(const InputAnalysisInfo& _inputAnalysisSettings)
+{
+    m_inputAnalysisSettings = _inputAnalysisSettings;
+    m_inputAnalysisSettingsHasBeenSet = true;
+}
+
+bool CreateStreamLiveChannelRequest::InputAnalysisSettingsHasBeenSet() const
+{
+    return m_inputAnalysisSettingsHasBeenSet;
+}
+
+vector<Tag> CreateStreamLiveChannelRequest::GetTags() const
+{
+    return m_tags;
+}
+
+void CreateStreamLiveChannelRequest::SetTags(const vector<Tag>& _tags)
+{
+    m_tags = _tags;
+    m_tagsHasBeenSet = true;
+}
+
+bool CreateStreamLiveChannelRequest::TagsHasBeenSet() const
+{
+    return m_tagsHasBeenSet;
 }
 
 

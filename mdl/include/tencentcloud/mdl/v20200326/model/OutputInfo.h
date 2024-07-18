@@ -170,6 +170,27 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool AVTemplateNamesHasBeenSet() const;
 
                     /**
+                     * 获取For the subtitle template used, only the AVTemplateNames is valid.
+                     * @return CaptionTemplateNames For the subtitle template used, only the AVTemplateNames is valid.
+                     * 
+                     */
+                    std::vector<std::string> GetCaptionTemplateNames() const;
+
+                    /**
+                     * 设置For the subtitle template used, only the AVTemplateNames is valid.
+                     * @param _captionTemplateNames For the subtitle template used, only the AVTemplateNames is valid.
+                     * 
+                     */
+                    void SetCaptionTemplateNames(const std::vector<std::string>& _captionTemplateNames);
+
+                    /**
+                     * 判断参数 CaptionTemplateNames 是否已赋值
+                     * @return CaptionTemplateNames 是否已赋值
+                     * 
+                     */
+                    bool CaptionTemplateNamesHasBeenSet() const;
+
+                    /**
                      * 获取Meta information controls configuration.
                      * @return TimedMetadataSettings Meta information controls configuration.
                      * 
@@ -225,6 +246,12 @@ Note: this field may return `null`, indicating that no valid value was found.
                      */
                     std::vector<std::string> m_aVTemplateNames;
                     bool m_aVTemplateNamesHasBeenSet;
+
+                    /**
+                     * For the subtitle template used, only the AVTemplateNames is valid.
+                     */
+                    std::vector<std::string> m_captionTemplateNames;
+                    bool m_captionTemplateNamesHasBeenSet;
 
                     /**
                      * Meta information controls configuration.

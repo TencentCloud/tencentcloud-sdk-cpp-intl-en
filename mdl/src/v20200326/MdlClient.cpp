@@ -470,6 +470,49 @@ MdlClient::DeleteStreamLiveWatermarkOutcomeCallable MdlClient::DeleteStreamLiveW
     return task->get_future();
 }
 
+MdlClient::DescribeMediaLiveHighlightResultOutcome MdlClient::DescribeMediaLiveHighlightResult(const DescribeMediaLiveHighlightResultRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMediaLiveHighlightResult");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMediaLiveHighlightResultResponse rsp = DescribeMediaLiveHighlightResultResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMediaLiveHighlightResultOutcome(rsp);
+        else
+            return DescribeMediaLiveHighlightResultOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMediaLiveHighlightResultOutcome(outcome.GetError());
+    }
+}
+
+void MdlClient::DescribeMediaLiveHighlightResultAsync(const DescribeMediaLiveHighlightResultRequest& request, const DescribeMediaLiveHighlightResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeMediaLiveHighlightResult(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdlClient::DescribeMediaLiveHighlightResultOutcomeCallable MdlClient::DescribeMediaLiveHighlightResultCallable(const DescribeMediaLiveHighlightResultRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeMediaLiveHighlightResultOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeMediaLiveHighlightResult(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 MdlClient::DescribeStreamLiveChannelOutcome MdlClient::DescribeStreamLiveChannel(const DescribeStreamLiveChannelRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeStreamLiveChannel");

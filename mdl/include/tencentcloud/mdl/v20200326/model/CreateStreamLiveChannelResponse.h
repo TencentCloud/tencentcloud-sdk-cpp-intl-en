@@ -57,6 +57,20 @@ namespace TencentCloud
                      */
                     bool IdHasBeenSet() const;
 
+                    /**
+                     * 获取Tag prompt information, this information will be attached when the tag operation fails.
+                     * @return TagMsg Tag prompt information, this information will be attached when the tag operation fails.
+                     * 
+                     */
+                    std::string GetTagMsg() const;
+
+                    /**
+                     * 判断参数 TagMsg 是否已赋值
+                     * @return TagMsg 是否已赋值
+                     * 
+                     */
+                    bool TagMsgHasBeenSet() const;
+
                 private:
 
                     /**
@@ -64,6 +78,12 @@ namespace TencentCloud
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
+
+                    /**
+                     * Tag prompt information, this information will be attached when the tag operation fails.
+                     */
+                    std::string m_tagMsg;
+                    bool m_tagMsgHasBeenSet;
 
                 };
             }

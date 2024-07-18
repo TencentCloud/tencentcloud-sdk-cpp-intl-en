@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Audio codec configuration.
                 */
                 class AudioCodecDetail : public AbstractModel
                 {
