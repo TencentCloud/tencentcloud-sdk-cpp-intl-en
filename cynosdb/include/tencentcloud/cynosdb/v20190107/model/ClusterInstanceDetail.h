@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cynosdb/v20190107/model/ObjectTask.h>
 
 
 namespace TencentCloud
@@ -237,18 +238,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Execution start time in seconds from 0:00	
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MaintainStartTime Execution start time in seconds from 0:00	
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetMaintainStartTime() const;
 
                     /**
                      * 设置Execution start time in seconds from 0:00	
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _maintainStartTime Execution start time in seconds from 0:00	
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMaintainStartTime(const int64_t& _maintainStartTime);
@@ -262,18 +263,18 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
                     /**
                      * 获取Duration in seconds	
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MaintainDuration Duration in seconds	
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetMaintainDuration() const;
 
                     /**
                      * 设置Duration in seconds	
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _maintainDuration Duration in seconds	
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMaintainDuration(const int64_t& _maintainDuration);
@@ -287,18 +288,18 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
                     /**
                      * 获取Execution time. Valid values: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, Sat`, `Sun`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MaintainWeekDays Execution time. Valid values: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, Sat`, `Sun`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetMaintainWeekDays() const;
 
                     /**
                      * 设置Execution time. Valid values: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, Sat`, `Sun`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _maintainWeekDays Execution time. Valid values: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, Sat`, `Sun`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMaintainWeekDays(const std::vector<std::string>& _maintainWeekDays);
@@ -311,19 +312,19 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                     bool MaintainWeekDaysHasBeenSet() const;
 
                     /**
-                     * 获取Serverless instance u200denablement status
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-                     * @return ServerlessStatus Serverless instance u200denablement status
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 获取Serverless instance enablement status
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ServerlessStatus Serverless instance enablement status
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetServerlessStatus() const;
 
                     /**
-                     * 设置Serverless instance u200denablement status
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-                     * @param _serverlessStatus Serverless instance u200denablement status
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 设置Serverless instance enablement status
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _serverlessStatus Serverless instance enablement status
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetServerlessStatus(const std::string& _serverlessStatus);
@@ -334,6 +335,48 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                      * 
                      */
                     bool ServerlessStatusHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return InstanceTasks 
+                     * 
+                     */
+                    std::vector<ObjectTask> GetInstanceTasks() const;
+
+                    /**
+                     * 设置
+                     * @param _instanceTasks 
+                     * 
+                     */
+                    void SetInstanceTasks(const std::vector<ObjectTask>& _instanceTasks);
+
+                    /**
+                     * 判断参数 InstanceTasks 是否已赋值
+                     * @return InstanceTasks 是否已赋值
+                     * 
+                     */
+                    bool InstanceTasksHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return InstanceDeviceType 
+                     * 
+                     */
+                    std::string GetInstanceDeviceType() const;
+
+                    /**
+                     * 设置
+                     * @param _instanceDeviceType 
+                     * 
+                     */
+                    void SetInstanceDeviceType(const std::string& _instanceDeviceType);
+
+                    /**
+                     * 判断参数 InstanceDeviceType 是否已赋值
+                     * @return InstanceDeviceType 是否已赋值
+                     * 
+                     */
+                    bool InstanceDeviceTypeHasBeenSet() const;
 
                 private:
 
@@ -393,31 +436,43 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
                     /**
                      * Execution start time in seconds from 0:00	
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_maintainStartTime;
                     bool m_maintainStartTimeHasBeenSet;
 
                     /**
                      * Duration in seconds	
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_maintainDuration;
                     bool m_maintainDurationHasBeenSet;
 
                     /**
                      * Execution time. Valid values: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, Sat`, `Sun`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_maintainWeekDays;
                     bool m_maintainWeekDaysHasBeenSet;
 
                     /**
-                     * Serverless instance u200denablement status
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * Serverless instance enablement status
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_serverlessStatus;
                     bool m_serverlessStatusHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<ObjectTask> m_instanceTasks;
+                    bool m_instanceTasksHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_instanceDeviceType;
+                    bool m_instanceDeviceTypeHasBeenSet;
 
                 };
             }

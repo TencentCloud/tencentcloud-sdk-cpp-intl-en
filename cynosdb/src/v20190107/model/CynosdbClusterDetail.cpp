@@ -68,7 +68,9 @@ CynosdbClusterDetail::CynosdbClusterDetail() :
     m_isOpenPasswordComplexityHasBeenSet(false),
     m_networkStatusHasBeenSet(false),
     m_resourcePackagesHasBeenSet(false),
-    m_renewFlagHasBeenSet(false)
+    m_renewFlagHasBeenSet(false),
+    m_networkTypeHasBeenSet(false),
+    m_slaveZoneAttrHasBeenSet(false)
 {
 }
 
@@ -617,6 +619,36 @@ CoreInternalOutcome CynosdbClusterDetail::Deserialize(const rapidjson::Value &va
         m_renewFlagHasBeenSet = true;
     }
 
+    if (value.HasMember("NetworkType") && !value["NetworkType"].IsNull())
+    {
+        if (!value["NetworkType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `CynosdbClusterDetail.NetworkType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_networkType = string(value["NetworkType"].GetString());
+        m_networkTypeHasBeenSet = true;
+    }
+
+    if (value.HasMember("SlaveZoneAttr") && !value["SlaveZoneAttr"].IsNull())
+    {
+        if (!value["SlaveZoneAttr"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `CynosdbClusterDetail.SlaveZoneAttr` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["SlaveZoneAttr"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            SlaveZoneAttrItem item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_slaveZoneAttr.push_back(item);
+        }
+        m_slaveZoneAttrHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -1047,6 +1079,29 @@ void CynosdbClusterDetail::ToJsonObject(rapidjson::Value &value, rapidjson::Docu
         string key = "RenewFlag";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_renewFlag, allocator);
+    }
+
+    if (m_networkTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NetworkType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_networkType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_slaveZoneAttrHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SlaveZoneAttr";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_slaveZoneAttr.begin(); itr != m_slaveZoneAttr.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
     }
 
 }
@@ -1818,5 +1873,37 @@ void CynosdbClusterDetail::SetRenewFlag(const int64_t& _renewFlag)
 bool CynosdbClusterDetail::RenewFlagHasBeenSet() const
 {
     return m_renewFlagHasBeenSet;
+}
+
+string CynosdbClusterDetail::GetNetworkType() const
+{
+    return m_networkType;
+}
+
+void CynosdbClusterDetail::SetNetworkType(const string& _networkType)
+{
+    m_networkType = _networkType;
+    m_networkTypeHasBeenSet = true;
+}
+
+bool CynosdbClusterDetail::NetworkTypeHasBeenSet() const
+{
+    return m_networkTypeHasBeenSet;
+}
+
+vector<SlaveZoneAttrItem> CynosdbClusterDetail::GetSlaveZoneAttr() const
+{
+    return m_slaveZoneAttr;
+}
+
+void CynosdbClusterDetail::SetSlaveZoneAttr(const vector<SlaveZoneAttrItem>& _slaveZoneAttr)
+{
+    m_slaveZoneAttr = _slaveZoneAttr;
+    m_slaveZoneAttrHasBeenSet = true;
+}
+
+bool CynosdbClusterDetail::SlaveZoneAttrHasBeenSet() const
+{
+    return m_slaveZoneAttrHasBeenSet;
 }
 

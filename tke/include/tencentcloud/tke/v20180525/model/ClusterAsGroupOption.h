@@ -198,18 +198,18 @@ Note: this field may return null, indicating that no valid value was found.
 
                     /**
                      * 获取Do not scale in a node if it contains local storage Pods. Default: `true`.
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return SkipNodesWithLocalStorage Do not scale in a node if it contains local storage Pods. Default: `true`.
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     bool GetSkipNodesWithLocalStorage() const;
 
                     /**
                      * 设置Do not scale in a node if it contains local storage Pods. Default: `true`.
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @param _skipNodesWithLocalStorage Do not scale in a node if it contains local storage Pods. Default: `true`.
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSkipNodesWithLocalStorage(const bool& _skipNodesWithLocalStorage);
@@ -223,18 +223,18 @@ Note: u200dThis field may return `null`, indicating that no valid values can be 
 
                     /**
                      * 获取Do not scale in a node if it contains Pods in the kube-system namespace that are not managed by DaemonSet. Default: `true`.
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return SkipNodesWithSystemPods Do not scale in a node if it contains Pods in the kube-system namespace that are not managed by DaemonSet. Default: `true`.
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     bool GetSkipNodesWithSystemPods() const;
 
                     /**
                      * 设置Do not scale in a node if it contains Pods in the kube-system namespace that are not managed by DaemonSet. Default: `true`.
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @param _skipNodesWithSystemPods Do not scale in a node if it contains Pods in the kube-system namespace that are not managed by DaemonSet. Default: `true`.
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSkipNodesWithSystemPods(const bool& _skipNodesWithSystemPods);
@@ -417,14 +417,14 @@ Note: this field may return null, indicating that no valid value was found.
 
                     /**
                      * Do not scale in a node if it contains local storage Pods. Default: `true`.
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     bool m_skipNodesWithLocalStorage;
                     bool m_skipNodesWithLocalStorageHasBeenSet;
 
                     /**
                      * Do not scale in a node if it contains Pods in the kube-system namespace that are not managed by DaemonSet. Default: `true`.
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     bool m_skipNodesWithSystemPods;
                     bool m_skipNodesWithSystemPodsHasBeenSet;

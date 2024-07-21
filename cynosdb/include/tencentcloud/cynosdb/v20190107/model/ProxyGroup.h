@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Database proxy u200dgroup ID
-                     * @return ProxyGroupId Database proxy u200dgroup ID
+                     * 获取Database proxy group ID
+                     * @return ProxyGroupId Database proxy group ID
                      * 
                      */
                     std::string GetProxyGroupId() const;
 
                     /**
-                     * 设置Database proxy u200dgroup ID
-                     * @param _proxyGroupId Database proxy u200dgroup ID
+                     * 设置Database proxy group ID
+                     * @param _proxyGroupId Database proxy group ID
                      * 
                      */
                     void SetProxyGroupId(const std::string& _proxyGroupId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ProxyNodeCountHasBeenSet() const;
 
                     /**
-                     * 获取Database proxy u200dgroup status
-                     * @return Status Database proxy u200dgroup status
+                     * 获取Database proxy group status
+                     * @return Status Database proxy group status
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Database proxy u200dgroup status
-                     * @param _status Database proxy u200dgroup status
+                     * 设置Database proxy group status
+                     * @param _status Database proxy group status
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -174,18 +174,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Cluster ID
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ClusterId Cluster ID
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _clusterId Cluster ID
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -199,18 +199,18 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
 
                     /**
                      * 获取User `AppId`
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AppId User `AppId`
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetAppId() const;
 
                     /**
                      * 设置User `AppId`
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _appId User `AppId`
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAppId(const int64_t& _appId);
@@ -224,18 +224,18 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
 
                     /**
                      * 获取Enabling read/write separation for database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return OpenRw Enabling read/write separation for database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetOpenRw() const;
 
                     /**
                      * 设置Enabling read/write separation for database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _openRw Enabling read/write separation for database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetOpenRw(const std::string& _openRw);
@@ -250,7 +250,7 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
                 private:
 
                     /**
-                     * Database proxy u200dgroup ID
+                     * Database proxy group ID
                      */
                     std::string m_proxyGroupId;
                     bool m_proxyGroupIdHasBeenSet;
@@ -262,7 +262,7 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
                     bool m_proxyNodeCountHasBeenSet;
 
                     /**
-                     * Database proxy u200dgroup status
+                     * Database proxy group status
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
@@ -287,21 +287,21 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
 
                     /**
                      * Cluster ID
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
                      * User `AppId`
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_appId;
                     bool m_appIdHasBeenSet;
 
                     /**
                      * Enabling read/write separation for database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_openRw;
                     bool m_openRwHasBeenSet;

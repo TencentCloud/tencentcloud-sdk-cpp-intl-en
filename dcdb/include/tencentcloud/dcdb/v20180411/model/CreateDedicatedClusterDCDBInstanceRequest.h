@@ -66,15 +66,15 @@ namespace TencentCloud
                     bool GoodsNumHasBeenSet() const;
 
                     /**
-                     * 获取Shard u200dcount
-                     * @return ShardNum Shard u200dcount
+                     * 获取Shard count
+                     * @return ShardNum Shard count
                      * 
                      */
                     int64_t GetShardNum() const;
 
                     /**
-                     * 设置Shard u200dcount
-                     * @param _shardNum Shard u200dcount
+                     * 设置Shard count
+                     * @param _shardNum Shard count
                      * 
                      */
                     void SetShardNum(const int64_t& _shardNum);
@@ -192,15 +192,15 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取(Disused) u200dNumber of CPU u200dcores
-                     * @return Cpu (Disused) u200dNumber of CPU u200dcores
+                     * 获取(Disused) Number of CPU cores
+                     * @return Cpu (Disused) Number of CPU cores
                      * 
                      */
                     int64_t GetCpu() const;
 
                     /**
-                     * 设置(Disused) u200dNumber of CPU u200dcores
-                     * @param _cpu (Disused) u200dNumber of CPU u200dcores
+                     * 设置(Disused) Number of CPU cores
+                     * @param _cpu (Disused) Number of CPU cores
                      * 
                      */
                     void SetCpu(const int64_t& _cpu);
@@ -528,15 +528,15 @@ namespace TencentCloud
                     bool Ipv6FlagHasBeenSet() const;
 
                     /**
-                     * 获取(Disused) Pid, which can be queried by the u200d`DescribeSpecInfo` API.
-                     * @return Pid (Disused) Pid, which can be queried by the u200d`DescribeSpecInfo` API.
+                     * 获取(Disused) Pid, which can be queried by the `DescribeSpecInfo` API.
+                     * @return Pid (Disused) Pid, which can be queried by the `DescribeSpecInfo` API.
                      * 
                      */
                     int64_t GetPid() const;
 
                     /**
-                     * 设置(Disused) Pid, which can be queried by the u200d`DescribeSpecInfo` API.
-                     * @param _pid (Disused) Pid, which can be queried by the u200d`DescribeSpecInfo` API.
+                     * 设置(Disused) Pid, which can be queried by the `DescribeSpecInfo` API.
+                     * @param _pid (Disused) Pid, which can be queried by the `DescribeSpecInfo` API.
                      * 
                      */
                     void SetPid(const int64_t& _pid);
@@ -549,15 +549,15 @@ namespace TencentCloud
                     bool PidHasBeenSet() const;
 
                     /**
-                     * 获取List of parameters. Valid values: `character_set_server` (character set; required), `lower_case_table_names` (table name case sensitivity; required; `0`: case-sensitive; `1`: case-insensitive), `innodb_page_size` (InnoDB data page; default size: 16 KB), `sync_mode` (sync mode; `0`: async; `1`: strong sync; `2`: downgradable strong sync. Default value: u200d`2`).
-                     * @return InitParams List of parameters. Valid values: `character_set_server` (character set; required), `lower_case_table_names` (table name case sensitivity; required; `0`: case-sensitive; `1`: case-insensitive), `innodb_page_size` (InnoDB data page; default size: 16 KB), `sync_mode` (sync mode; `0`: async; `1`: strong sync; `2`: downgradable strong sync. Default value: u200d`2`).
+                     * 获取List of parameters. Valid values: `character_set_server` (character set; required), `lower_case_table_names` (table name case sensitivity; required; `0`: case-sensitive; `1`: case-insensitive), `innodb_page_size` (InnoDB data page; default size: 16 KB), `sync_mode` (sync mode; `0`: async; `1`: strong sync; `2`: downgradable strong sync. Default value: `2`).
+                     * @return InitParams List of parameters. Valid values: `character_set_server` (character set; required), `lower_case_table_names` (table name case sensitivity; required; `0`: case-sensitive; `1`: case-insensitive), `innodb_page_size` (InnoDB data page; default size: 16 KB), `sync_mode` (sync mode; `0`: async; `1`: strong sync; `2`: downgradable strong sync. Default value: `2`).
                      * 
                      */
                     std::vector<DBParamValue> GetInitParams() const;
 
                     /**
-                     * 设置List of parameters. Valid values: `character_set_server` (character set; required), `lower_case_table_names` (table name case sensitivity; required; `0`: case-sensitive; `1`: case-insensitive), `innodb_page_size` (InnoDB data page; default size: 16 KB), `sync_mode` (sync mode; `0`: async; `1`: strong sync; `2`: downgradable strong sync. Default value: u200d`2`).
-                     * @param _initParams List of parameters. Valid values: `character_set_server` (character set; required), `lower_case_table_names` (table name case sensitivity; required; `0`: case-sensitive; `1`: case-insensitive), `innodb_page_size` (InnoDB data page; default size: 16 KB), `sync_mode` (sync mode; `0`: async; `1`: strong sync; `2`: downgradable strong sync. Default value: u200d`2`).
+                     * 设置List of parameters. Valid values: `character_set_server` (character set; required), `lower_case_table_names` (table name case sensitivity; required; `0`: case-sensitive; `1`: case-insensitive), `innodb_page_size` (InnoDB data page; default size: 16 KB), `sync_mode` (sync mode; `0`: async; `1`: strong sync; `2`: downgradable strong sync. Default value: `2`).
+                     * @param _initParams List of parameters. Valid values: `character_set_server` (character set; required), `lower_case_table_names` (table name case sensitivity; required; `0`: case-sensitive; `1`: case-insensitive), `innodb_page_size` (InnoDB data page; default size: 16 KB), `sync_mode` (sync mode; `0`: async; `1`: strong sync; `2`: downgradable strong sync. Default value: `2`).
                      * 
                      */
                     void SetInitParams(const std::vector<DBParamValue>& _initParams);
@@ -591,15 +591,15 @@ namespace TencentCloud
                     bool MasterHostIdHasBeenSet() const;
 
                     /**
-                     * 获取Specified UUID for the u200dreplica node. If left empty, it will be assigned by the system randomly.
-                     * @return SlaveHostIds Specified UUID for the u200dreplica node. If left empty, it will be assigned by the system randomly.
+                     * 获取Specified UUID for the replica node. If left empty, it will be assigned by the system randomly.
+                     * @return SlaveHostIds Specified UUID for the replica node. If left empty, it will be assigned by the system randomly.
                      * 
                      */
                     std::vector<std::string> GetSlaveHostIds() const;
 
                     /**
-                     * 设置Specified UUID for the u200dreplica node. If left empty, it will be assigned by the system randomly.
-                     * @param _slaveHostIds Specified UUID for the u200dreplica node. If left empty, it will be assigned by the system randomly.
+                     * 设置Specified UUID for the replica node. If left empty, it will be assigned by the system randomly.
+                     * @param _slaveHostIds Specified UUID for the replica node. If left empty, it will be assigned by the system randomly.
                      * 
                      */
                     void SetSlaveHostIds(const std::vector<std::string>& _slaveHostIds);
@@ -612,15 +612,15 @@ namespace TencentCloud
                     bool SlaveHostIdsHasBeenSet() const;
 
                     /**
-                     * 获取ID of the u200dsource instance to be rolled back
-                     * @return RollbackInstanceId ID of the u200dsource instance to be rolled back
+                     * 获取ID of the source instance to be rolled back
+                     * @return RollbackInstanceId ID of the source instance to be rolled back
                      * 
                      */
                     std::string GetRollbackInstanceId() const;
 
                     /**
-                     * 设置ID of the u200dsource instance to be rolled back
-                     * @param _rollbackInstanceId ID of the u200dsource instance to be rolled back
+                     * 设置ID of the source instance to be rolled back
+                     * @param _rollbackInstanceId ID of the source instance to be rolled back
                      * 
                      */
                     void SetRollbackInstanceId(const std::string& _rollbackInstanceId);
@@ -653,6 +653,27 @@ namespace TencentCloud
                      */
                     bool RollbackTimeHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return DcnSyncMode 
+                     * 
+                     */
+                    int64_t GetDcnSyncMode() const;
+
+                    /**
+                     * 设置
+                     * @param _dcnSyncMode 
+                     * 
+                     */
+                    void SetDcnSyncMode(const int64_t& _dcnSyncMode);
+
+                    /**
+                     * 判断参数 DcnSyncMode 是否已赋值
+                     * @return DcnSyncMode 是否已赋值
+                     * 
+                     */
+                    bool DcnSyncModeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -662,7 +683,7 @@ namespace TencentCloud
                     bool m_goodsNumHasBeenSet;
 
                     /**
-                     * Shard u200dcount
+                     * Shard count
                      */
                     int64_t m_shardNum;
                     bool m_shardNumHasBeenSet;
@@ -698,7 +719,7 @@ namespace TencentCloud
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * (Disused) u200dNumber of CPU u200dcores
+                     * (Disused) Number of CPU cores
                      */
                     int64_t m_cpu;
                     bool m_cpuHasBeenSet;
@@ -794,13 +815,13 @@ namespace TencentCloud
                     bool m_ipv6FlagHasBeenSet;
 
                     /**
-                     * (Disused) Pid, which can be queried by the u200d`DescribeSpecInfo` API.
+                     * (Disused) Pid, which can be queried by the `DescribeSpecInfo` API.
                      */
                     int64_t m_pid;
                     bool m_pidHasBeenSet;
 
                     /**
-                     * List of parameters. Valid values: `character_set_server` (character set; required), `lower_case_table_names` (table name case sensitivity; required; `0`: case-sensitive; `1`: case-insensitive), `innodb_page_size` (InnoDB data page; default size: 16 KB), `sync_mode` (sync mode; `0`: async; `1`: strong sync; `2`: downgradable strong sync. Default value: u200d`2`).
+                     * List of parameters. Valid values: `character_set_server` (character set; required), `lower_case_table_names` (table name case sensitivity; required; `0`: case-sensitive; `1`: case-insensitive), `innodb_page_size` (InnoDB data page; default size: 16 KB), `sync_mode` (sync mode; `0`: async; `1`: strong sync; `2`: downgradable strong sync. Default value: `2`).
                      */
                     std::vector<DBParamValue> m_initParams;
                     bool m_initParamsHasBeenSet;
@@ -812,13 +833,13 @@ namespace TencentCloud
                     bool m_masterHostIdHasBeenSet;
 
                     /**
-                     * Specified UUID for the u200dreplica node. If left empty, it will be assigned by the system randomly.
+                     * Specified UUID for the replica node. If left empty, it will be assigned by the system randomly.
                      */
                     std::vector<std::string> m_slaveHostIds;
                     bool m_slaveHostIdsHasBeenSet;
 
                     /**
-                     * ID of the u200dsource instance to be rolled back
+                     * ID of the source instance to be rolled back
                      */
                     std::string m_rollbackInstanceId;
                     bool m_rollbackInstanceIdHasBeenSet;
@@ -828,6 +849,12 @@ namespace TencentCloud
                      */
                     std::string m_rollbackTime;
                     bool m_rollbackTimeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_dcnSyncMode;
+                    bool m_dcnSyncModeHasBeenSet;
 
                 };
             }

@@ -54,18 +54,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Database proxy group
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ProxyGroup Database proxy group
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     ProxyGroup GetProxyGroup() const;
 
                     /**
                      * 设置Database proxy group
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _proxyGroup Database proxy group
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetProxyGroup(const ProxyGroup& _proxyGroup);
@@ -78,19 +78,19 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
                     bool ProxyGroupHasBeenSet() const;
 
                     /**
-                     * 获取Read/write separation information of the database proxy u200dgroup
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
-                     * @return ProxyGroupRwInfo Read/write separation information of the database proxy u200dgroup
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+                     * 获取Read/write separation information of the database proxy group
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ProxyGroupRwInfo Read/write separation information of the database proxy group
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     ProxyGroupRwInfo GetProxyGroupRwInfo() const;
 
                     /**
-                     * 设置Read/write separation information of the database proxy u200dgroup
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
-                     * @param _proxyGroupRwInfo Read/write separation information of the database proxy u200dgroup
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+                     * 设置Read/write separation information of the database proxy group
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _proxyGroupRwInfo Read/write separation information of the database proxy group
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetProxyGroupRwInfo(const ProxyGroupRwInfo& _proxyGroupRwInfo);
@@ -103,19 +103,19 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
                     bool ProxyGroupRwInfoHasBeenSet() const;
 
                     /**
-                     * 获取Node information of the u200ddatabase proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
-                     * @return ProxyNodes Node information of the u200ddatabase proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+                     * 获取Node information of the database proxy
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ProxyNodes Node information of the database proxy
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<ProxyNodeInfo> GetProxyNodes() const;
 
                     /**
-                     * 设置Node information of the u200ddatabase proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
-                     * @param _proxyNodes Node information of the u200ddatabase proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+                     * 设置Node information of the database proxy
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _proxyNodes Node information of the database proxy
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetProxyNodes(const std::vector<ProxyNodeInfo>& _proxyNodes);
@@ -129,18 +129,18 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
 
                     /**
                      * 获取Connection pool information for the database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ConnectionPool Connection pool information for the database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     ProxyConnectionPoolInfo GetConnectionPool() const;
 
                     /**
                      * 设置Connection pool information for the database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _connectionPool Connection pool information for the database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetConnectionPool(const ProxyConnectionPoolInfo& _connectionPool);
@@ -154,18 +154,18 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
 
                     /**
                      * 获取Network information for database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NetAddrInfos Network information for database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<NetAddr> GetNetAddrInfos() const;
 
                     /**
                      * 设置Network information for database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _netAddrInfos Network information for database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetNetAddrInfos(const std::vector<NetAddr>& _netAddrInfos);
@@ -179,18 +179,18 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
 
                     /**
                      * 获取Task set of the database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Tasks Task set of the database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<ObjectTask> GetTasks() const;
 
                     /**
                      * 设置Task set of the database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _tasks Task set of the database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTasks(const std::vector<ObjectTask>& _tasks);
@@ -206,42 +206,42 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
 
                     /**
                      * Database proxy group
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ProxyGroup m_proxyGroup;
                     bool m_proxyGroupHasBeenSet;
 
                     /**
-                     * Read/write separation information of the database proxy u200dgroup
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+                     * Read/write separation information of the database proxy group
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ProxyGroupRwInfo m_proxyGroupRwInfo;
                     bool m_proxyGroupRwInfoHasBeenSet;
 
                     /**
-                     * Node information of the u200ddatabase proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+                     * Node information of the database proxy
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<ProxyNodeInfo> m_proxyNodes;
                     bool m_proxyNodesHasBeenSet;
 
                     /**
                      * Connection pool information for the database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ProxyConnectionPoolInfo m_connectionPool;
                     bool m_connectionPoolHasBeenSet;
 
                     /**
                      * Network information for database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<NetAddr> m_netAddrInfos;
                     bool m_netAddrInfosHasBeenSet;
 
                     /**
                      * Task set of the database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<ObjectTask> m_tasks;
                     bool m_tasksHasBeenSet;

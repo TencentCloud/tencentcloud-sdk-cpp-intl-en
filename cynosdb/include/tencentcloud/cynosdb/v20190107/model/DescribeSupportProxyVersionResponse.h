@@ -45,9 +45,9 @@ namespace TencentCloud
 
                     /**
                      * 获取Collection of supported database proxy versions
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SupportProxyVersions Collection of supported database proxy versions
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetSupportProxyVersions() const;
@@ -61,9 +61,9 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
 
                     /**
                      * 获取The current proxy version
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CurrentProxyVersion The current proxy version
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCurrentProxyVersion() const;
@@ -79,14 +79,14 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
 
                     /**
                      * Collection of supported database proxy versions
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_supportProxyVersions;
                     bool m_supportProxyVersionsHasBeenSet;
 
                     /**
                      * The current proxy version
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_currentProxyVersion;
                     bool m_currentProxyVersionHasBeenSet;

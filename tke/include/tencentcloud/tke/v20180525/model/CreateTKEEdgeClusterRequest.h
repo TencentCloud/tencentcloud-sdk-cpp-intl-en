@@ -340,15 +340,15 @@ namespace TencentCloud
                     bool RegistryPrefixHasBeenSet() const;
 
                     /**
-                     * 获取u200dTags bound with the cluster
-                     * @return TagSpecification u200dTags bound with the cluster
+                     * 获取Tags bound with the cluster
+                     * @return TagSpecification Tags bound with the cluster
                      * 
                      */
                     TagSpecification GetTagSpecification() const;
 
                     /**
-                     * 设置u200dTags bound with the cluster
-                     * @param _tagSpecification u200dTags bound with the cluster
+                     * 设置Tags bound with the cluster
+                     * @param _tagSpecification Tags bound with the cluster
                      * 
                      */
                     void SetTagSpecification(const TagSpecification& _tagSpecification);
@@ -447,7 +447,7 @@ namespace TencentCloud
                     bool m_registryPrefixHasBeenSet;
 
                     /**
-                     * u200dTags bound with the cluster
+                     * Tags bound with the cluster
                      */
                     TagSpecification m_tagSpecification;
                     bool m_tagSpecificationHasBeenSet;

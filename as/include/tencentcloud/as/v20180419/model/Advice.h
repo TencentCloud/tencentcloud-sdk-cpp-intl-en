@@ -110,10 +110,10 @@ namespace TencentCloud
                     bool SolutionHasBeenSet() const;
 
                     /**
-                     * 获取u200dRisk level of the scaling group configuration. Valid values: <br>
+                     * 获取Risk level of the scaling group configuration. Valid values: <br>
 <li>WARNING<br>
 <li>CRITICAL<br>
-                     * @return Level u200dRisk level of the scaling group configuration. Valid values: <br>
+                     * @return Level Risk level of the scaling group configuration. Valid values: <br>
 <li>WARNING<br>
 <li>CRITICAL<br>
                      * 
@@ -121,10 +121,10 @@ namespace TencentCloud
                     std::string GetLevel() const;
 
                     /**
-                     * 设置u200dRisk level of the scaling group configuration. Valid values: <br>
+                     * 设置Risk level of the scaling group configuration. Valid values: <br>
 <li>WARNING<br>
 <li>CRITICAL<br>
-                     * @param _level u200dRisk level of the scaling group configuration. Valid values: <br>
+                     * @param _level Risk level of the scaling group configuration. Valid values: <br>
 <li>WARNING<br>
 <li>CRITICAL<br>
                      * 
@@ -159,7 +159,7 @@ namespace TencentCloud
                     bool m_solutionHasBeenSet;
 
                     /**
-                     * u200dRisk level of the scaling group configuration. Valid values: <br>
+                     * Risk level of the scaling group configuration. Valid values: <br>
 <li>WARNING<br>
 <li>CRITICAL<br>
                      */

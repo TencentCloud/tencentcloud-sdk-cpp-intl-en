@@ -528,7 +528,7 @@ Note: Accounts with the same username but different hosts are considered as diff
                 DescribeDBSyncModeOutcomeCallable DescribeDBSyncModeCallable(const Model::DescribeDBSyncModeRequest& request);
 
                 /**
-                 *This API is used to obtain u200da temp rollback instance.
+                 *This API is used to obtain a temp rollback instance.
                  * @param req DescribeDBTmpInstancesRequest
                  * @return DescribeDBTmpInstancesOutcome
                  */
@@ -883,7 +883,7 @@ Note: accounts with the same username but different hosts are different accounts
                 TerminateDedicatedDBInstanceOutcomeCallable TerminateDedicatedDBInstanceCallable(const Model::TerminateDedicatedDBInstanceRequest& request);
 
                 /**
-                 *This API is used to u200dupgrade a dedicated TDSQL cluster instance.
+                 *This API is used to upgrade a dedicated TDSQL cluster instance.
                  * @param req UpgradeDedicatedDCDBInstanceRequest
                  * @return UpgradeDedicatedDCDBInstanceOutcome
                  */

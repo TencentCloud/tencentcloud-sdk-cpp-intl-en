@@ -61,9 +61,9 @@ namespace TencentCloud
 
                     /**
                      * 获取List of database proxy groups
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ProxyGroupInfos List of database proxy groups
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<ProxyGroupInfo> GetProxyGroupInfos() const;
@@ -77,9 +77,9 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
 
                     /**
                      * 获取Database proxy node
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ProxyNodeInfos Database proxy node
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<ProxyNodeInfo> GetProxyNodeInfos() const;
@@ -101,14 +101,14 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
 
                     /**
                      * List of database proxy groups
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<ProxyGroupInfo> m_proxyGroupInfos;
                     bool m_proxyGroupInfosHasBeenSet;
 
                     /**
                      * Database proxy node
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<ProxyNodeInfo> m_proxyNodeInfos;
                     bool m_proxyNodeInfosHasBeenSet;

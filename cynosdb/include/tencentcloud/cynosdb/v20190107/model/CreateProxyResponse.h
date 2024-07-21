@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取Database proxy u200dgroup ID
-                     * @return ProxyGroupId Database proxy u200dgroup ID
+                     * 获取Database proxy group ID
+                     * @return ProxyGroupId Database proxy group ID
                      * 
                      */
                     std::string GetProxyGroupId() const;
@@ -100,7 +100,7 @@ namespace TencentCloud
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * Database proxy u200dgroup ID
+                     * Database proxy group ID
                      */
                     std::string m_proxyGroupId;
                     bool m_proxyGroupIdHasBeenSet;

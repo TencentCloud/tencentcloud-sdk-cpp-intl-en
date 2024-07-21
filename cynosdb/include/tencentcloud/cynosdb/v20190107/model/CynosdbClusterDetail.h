@@ -30,6 +30,7 @@
 #include <tencentcloud/cynosdb/v20190107/model/ClusterInstanceDetail.h>
 #include <tencentcloud/cynosdb/v20190107/model/Tag.h>
 #include <tencentcloud/cynosdb/v20190107/model/ResourcePackage.h>
+#include <tencentcloud/cynosdb/v20190107/model/SlaveZoneAttrItem.h>
 
 
 namespace TencentCloud
@@ -647,15 +648,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VportHasBeenSet() const;
 
                     /**
-                     * 获取VIP u200dand vport of the read-only instance in a cluster
-                     * @return RoAddr VIP u200dand vport of the read-only instance in a cluster
+                     * 获取VIP and vport of the read-only instance in a cluster
+                     * @return RoAddr VIP and vport of the read-only instance in a cluster
                      * 
                      */
                     std::vector<Addr> GetRoAddr() const;
 
                     /**
-                     * 设置VIP u200dand vport of the read-only instance in a cluster
-                     * @param _roAddr VIP u200dand vport of the read-only instance in a cluster
+                     * 设置VIP and vport of the read-only instance in a cluster
+                     * @param _roAddr VIP and vport of the read-only instance in a cluster
                      * 
                      */
                     void SetRoAddr(const std::vector<Addr>& _roAddr);
@@ -1164,6 +1165,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool RenewFlagHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return NetworkType 
+                     * 
+                     */
+                    std::string GetNetworkType() const;
+
+                    /**
+                     * 设置
+                     * @param _networkType 
+                     * 
+                     */
+                    void SetNetworkType(const std::string& _networkType);
+
+                    /**
+                     * 判断参数 NetworkType 是否已赋值
+                     * @return NetworkType 是否已赋值
+                     * 
+                     */
+                    bool NetworkTypeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return SlaveZoneAttr 
+                     * 
+                     */
+                    std::vector<SlaveZoneAttrItem> GetSlaveZoneAttr() const;
+
+                    /**
+                     * 设置
+                     * @param _slaveZoneAttr 
+                     * 
+                     */
+                    void SetSlaveZoneAttr(const std::vector<SlaveZoneAttrItem>& _slaveZoneAttr);
+
+                    /**
+                     * 判断参数 SlaveZoneAttr 是否已赋值
+                     * @return SlaveZoneAttr 是否已赋值
+                     * 
+                     */
+                    bool SlaveZoneAttrHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1335,7 +1378,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_vportHasBeenSet;
 
                     /**
-                     * VIP u200dand vport of the read-only instance in a cluster
+                     * VIP and vport of the read-only instance in a cluster
                      */
                     std::vector<Addr> m_roAddr;
                     bool m_roAddrHasBeenSet;
@@ -1479,6 +1522,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_renewFlag;
                     bool m_renewFlagHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_networkType;
+                    bool m_networkTypeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<SlaveZoneAttrItem> m_slaveZoneAttr;
+                    bool m_slaveZoneAttrHasBeenSet;
 
                 };
             }

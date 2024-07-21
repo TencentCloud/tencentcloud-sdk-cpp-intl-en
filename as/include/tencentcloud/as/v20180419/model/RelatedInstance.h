@@ -70,12 +70,12 @@ namespace TencentCloud
                     /**
                      * 获取Status of the instance in the scaling activity. Valid values:
 `INIT`: Initializing
-`RUNNING`: u200dProcessing u200dthe instance
+`RUNNING`: Processing the instance
 `SUCCESSFUL`: Task succeeded on the instance
 `FAILED`: Task failed on the instance
                      * @return InstanceStatus Status of the instance in the scaling activity. Valid values:
 `INIT`: Initializing
-`RUNNING`: u200dProcessing u200dthe instance
+`RUNNING`: Processing the instance
 `SUCCESSFUL`: Task succeeded on the instance
 `FAILED`: Task failed on the instance
                      * 
@@ -85,12 +85,12 @@ namespace TencentCloud
                     /**
                      * 设置Status of the instance in the scaling activity. Valid values:
 `INIT`: Initializing
-`RUNNING`: u200dProcessing u200dthe instance
+`RUNNING`: Processing the instance
 `SUCCESSFUL`: Task succeeded on the instance
 `FAILED`: Task failed on the instance
                      * @param _instanceStatus Status of the instance in the scaling activity. Valid values:
 `INIT`: Initializing
-`RUNNING`: u200dProcessing u200dthe instance
+`RUNNING`: Processing the instance
 `SUCCESSFUL`: Task succeeded on the instance
 `FAILED`: Task failed on the instance
                      * 
@@ -115,7 +115,7 @@ namespace TencentCloud
                     /**
                      * Status of the instance in the scaling activity. Valid values:
 `INIT`: Initializing
-`RUNNING`: u200dProcessing u200dthe instance
+`RUNNING`: Processing the instance
 `SUCCESSFUL`: Task succeeded on the instance
 `FAILED`: Task failed on the instance
                      */

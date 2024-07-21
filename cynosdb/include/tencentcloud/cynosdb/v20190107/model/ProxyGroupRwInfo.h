@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Read/write separation information of the database proxy u200dgroup
+                * Read/write separation information of the database proxy group
                 */
                 class ProxyGroupRwInfo : public AbstractModel
                 {
@@ -175,18 +175,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Whether to enable read-write node. Valid values: `yes`, `no`.
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return OpenRw Whether to enable read-write node. Valid values: `yes`, `no`.
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetOpenRw() const;
 
                     /**
                      * 设置Whether to enable read-write node. Valid values: `yes`, `no`.
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _openRw Whether to enable read-write node. Valid values: `yes`, `no`.
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetOpenRw(const std::string& _openRw);
@@ -301,7 +301,7 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
 
                     /**
                      * Whether to enable read-write node. Valid values: `yes`, `no`.
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_openRw;
                     bool m_openRwHasBeenSet;

@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool DstProxyVersionHasBeenSet() const;
 
                     /**
-                     * 获取Database proxy u200dgroup ID
-                     * @return ProxyGroupId Database proxy u200dgroup ID
+                     * 获取Database proxy group ID
+                     * @return ProxyGroupId Database proxy group ID
                      * 
                      */
                     std::string GetProxyGroupId() const;
 
                     /**
-                     * 设置Database proxy u200dgroup ID
-                     * @param _proxyGroupId Database proxy u200dgroup ID
+                     * 设置Database proxy group ID
+                     * @param _proxyGroupId Database proxy group ID
                      * 
                      */
                     void SetProxyGroupId(const std::string& _proxyGroupId);
@@ -168,7 +168,7 @@ namespace TencentCloud
                     bool m_dstProxyVersionHasBeenSet;
 
                     /**
-                     * Database proxy u200dgroup ID
+                     * Database proxy group ID
                      */
                     std::string m_proxyGroupId;
                     bool m_proxyGroupIdHasBeenSet;

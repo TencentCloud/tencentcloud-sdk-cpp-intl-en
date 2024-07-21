@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool MemHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID, which is the same as that of the cluster by defaultu200d.
-                     * @return UniqueVpcId VPC ID, which is the same as that of the cluster by defaultu200d.
+                     * 获取VPC ID, which is the same as that of the cluster by default.
+                     * @return UniqueVpcId VPC ID, which is the same as that of the cluster by default.
                      * 
                      */
                     std::string GetUniqueVpcId() const;
 
                     /**
-                     * 设置VPC ID, which is the same as that of the cluster by defaultu200d.
-                     * @param _uniqueVpcId VPC ID, which is the same as that of the cluster by defaultu200d.
+                     * 设置VPC ID, which is the same as that of the cluster by default.
+                     * @param _uniqueVpcId VPC ID, which is the same as that of the cluster by default.
                      * 
                      */
                     void SetUniqueVpcId(const std::string& _uniqueVpcId);
@@ -191,15 +191,15 @@ namespace TencentCloud
                     bool ConnectionPoolTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable connection pool. Valid value: `yes` (enable), `no` u200d(disable).
-                     * @return OpenConnectionPool Whether to enable connection pool. Valid value: `yes` (enable), `no` u200d(disable).
+                     * 获取Whether to enable connection pool. Valid value: `yes` (enable), `no` (disable).
+                     * @return OpenConnectionPool Whether to enable connection pool. Valid value: `yes` (enable), `no` (disable).
                      * 
                      */
                     std::string GetOpenConnectionPool() const;
 
                     /**
-                     * 设置Whether to enable connection pool. Valid value: `yes` (enable), `no` u200d(disable).
-                     * @param _openConnectionPool Whether to enable connection pool. Valid value: `yes` (enable), `no` u200d(disable).
+                     * 设置Whether to enable connection pool. Valid value: `yes` (enable), `no` (disable).
+                     * @param _openConnectionPool Whether to enable connection pool. Valid value: `yes` (enable), `no` (disable).
                      * 
                      */
                     void SetOpenConnectionPool(const std::string& _openConnectionPool);
@@ -316,7 +316,7 @@ namespace TencentCloud
                     bool m_memHasBeenSet;
 
                     /**
-                     * VPC ID, which is the same as that of the cluster by defaultu200d.
+                     * VPC ID, which is the same as that of the cluster by default.
                      */
                     std::string m_uniqueVpcId;
                     bool m_uniqueVpcIdHasBeenSet;
@@ -340,7 +340,7 @@ namespace TencentCloud
                     bool m_connectionPoolTypeHasBeenSet;
 
                     /**
-                     * Whether to enable connection pool. Valid value: `yes` (enable), `no` u200d(disable).
+                     * Whether to enable connection pool. Valid value: `yes` (enable), `no` (disable).
                      */
                     std::string m_openConnectionPool;
                     bool m_openConnectionPoolHasBeenSet;

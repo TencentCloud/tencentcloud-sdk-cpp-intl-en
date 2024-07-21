@@ -90,18 +90,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Add-on parameters, which are base64-encoded strings in JSON/
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return RawValues Add-on parameters, which are base64-encoded strings in JSON/
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRawValues() const;
 
                     /**
                      * 设置Add-on parameters, which are base64-encoded strings in JSON/
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @param _rawValues Add-on parameters, which are base64-encoded strings in JSON/
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRawValues(const std::string& _rawValues);
@@ -115,18 +115,18 @@ Note: u200dThis field may return `null`, indicating that no valid values can be 
 
                     /**
                      * 获取Add-on status
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Phase Add-on status
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetPhase() const;
 
                     /**
                      * 设置Add-on status
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @param _phase Add-on status
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetPhase(const std::string& _phase);
@@ -140,18 +140,18 @@ Note: u200dThis field may return `null`, indicating that no valid values can be 
 
                     /**
                      * 获取Reason for add-on failure
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Reason Reason for add-on failure
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetReason() const;
 
                     /**
                      * 设置Reason for add-on failure
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @param _reason Reason for add-on failure
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetReason(const std::string& _reason);
@@ -179,21 +179,21 @@ Note: u200dThis field may return `null`, indicating that no valid values can be 
 
                     /**
                      * Add-on parameters, which are base64-encoded strings in JSON/
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_rawValues;
                     bool m_rawValuesHasBeenSet;
 
                     /**
                      * Add-on status
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_phase;
                     bool m_phaseHasBeenSet;
 
                     /**
                      * Reason for add-on failure
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_reason;
                     bool m_reasonHasBeenSet;

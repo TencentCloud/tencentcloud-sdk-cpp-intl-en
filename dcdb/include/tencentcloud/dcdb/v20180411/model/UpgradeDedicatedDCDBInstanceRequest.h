@@ -151,15 +151,15 @@ namespace TencentCloud
                     bool SplitShardConfigHasBeenSet() const;
 
                     /**
-                     * 获取Whether to automatically retry u200donce when missing the switch time window. Valid values: `0` (No), `1` (Yes).
-                     * @return SwitchAutoRetry Whether to automatically retry u200donce when missing the switch time window. Valid values: `0` (No), `1` (Yes).
+                     * 获取Whether to automatically retry once when missing the switch time window. Valid values: `0` (No), `1` (Yes).
+                     * @return SwitchAutoRetry Whether to automatically retry once when missing the switch time window. Valid values: `0` (No), `1` (Yes).
                      * 
                      */
                     int64_t GetSwitchAutoRetry() const;
 
                     /**
-                     * 设置Whether to automatically retry u200donce when missing the switch time window. Valid values: `0` (No), `1` (Yes).
-                     * @param _switchAutoRetry Whether to automatically retry u200donce when missing the switch time window. Valid values: `0` (No), `1` (Yes).
+                     * 设置Whether to automatically retry once when missing the switch time window. Valid values: `0` (No), `1` (Yes).
+                     * @param _switchAutoRetry Whether to automatically retry once when missing the switch time window. Valid values: `0` (No), `1` (Yes).
                      * 
                      */
                     void SetSwitchAutoRetry(const int64_t& _switchAutoRetry);
@@ -172,15 +172,15 @@ namespace TencentCloud
                     bool SwitchAutoRetryHasBeenSet() const;
 
                     /**
-                     * 获取Switch u200dstart u200dtime
-                     * @return SwitchStartTime Switch u200dstart u200dtime
+                     * 获取Switch start time
+                     * @return SwitchStartTime Switch start time
                      * 
                      */
                     std::string GetSwitchStartTime() const;
 
                     /**
-                     * 设置Switch u200dstart u200dtime
-                     * @param _switchStartTime Switch u200dstart u200dtime
+                     * 设置Switch start time
+                     * @param _switchStartTime Switch start time
                      * 
                      */
                     void SetSwitchStartTime(const std::string& _switchStartTime);
@@ -246,13 +246,13 @@ namespace TencentCloud
                     bool m_splitShardConfigHasBeenSet;
 
                     /**
-                     * Whether to automatically retry u200donce when missing the switch time window. Valid values: `0` (No), `1` (Yes).
+                     * Whether to automatically retry once when missing the switch time window. Valid values: `0` (No), `1` (Yes).
                      */
                     int64_t m_switchAutoRetry;
                     bool m_switchAutoRetryHasBeenSet;
 
                     /**
-                     * Switch u200dstart u200dtime
+                     * Switch start time
                      */
                     std::string m_switchStartTime;
                     bool m_switchStartTimeHasBeenSet;

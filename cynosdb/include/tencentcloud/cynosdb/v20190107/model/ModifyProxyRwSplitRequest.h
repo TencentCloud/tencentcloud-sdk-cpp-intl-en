@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Database proxy u200dgroup ID
-                     * @return ProxyGroupId Database proxy u200dgroup ID
+                     * 获取Database proxy group ID
+                     * @return ProxyGroupId Database proxy group ID
                      * 
                      */
                     std::string GetProxyGroupId() const;
 
                     /**
-                     * 设置Database proxy u200dgroup ID
-                     * @param _proxyGroupId Database proxy u200dgroup ID
+                     * 设置Database proxy group ID
+                     * @param _proxyGroupId Database proxy group ID
                      * 
                      */
                     void SetProxyGroupId(const std::string& _proxyGroupId);
@@ -354,15 +354,15 @@ namespace TencentCloud
                     bool ConnectionPoolTypeHasBeenSet() const;
 
                     /**
-                     * 获取Connection u200dpersistence timeout
-                     * @return ConnectionPoolTimeOut Connection u200dpersistence timeout
+                     * 获取Connection persistence timeout
+                     * @return ConnectionPoolTimeOut Connection persistence timeout
                      * 
                      */
                     int64_t GetConnectionPoolTimeOut() const;
 
                     /**
-                     * 设置Connection u200dpersistence timeout
-                     * @param _connectionPoolTimeOut Connection u200dpersistence timeout
+                     * 设置Connection persistence timeout
+                     * @param _connectionPoolTimeOut Connection persistence timeout
                      * 
                      */
                     void SetConnectionPoolTimeOut(const int64_t& _connectionPoolTimeOut);
@@ -383,7 +383,7 @@ namespace TencentCloud
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Database proxy u200dgroup ID
+                     * Database proxy group ID
                      */
                     std::string m_proxyGroupId;
                     bool m_proxyGroupIdHasBeenSet;
@@ -465,7 +465,7 @@ namespace TencentCloud
                     bool m_connectionPoolTypeHasBeenSet;
 
                     /**
-                     * Connection u200dpersistence timeout
+                     * Connection persistence timeout
                      */
                     int64_t m_connectionPoolTimeOut;
                     bool m_connectionPoolTimeOutHasBeenSet;

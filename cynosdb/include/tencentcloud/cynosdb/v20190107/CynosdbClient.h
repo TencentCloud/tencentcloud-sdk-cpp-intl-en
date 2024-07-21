@@ -675,7 +675,7 @@ namespace TencentCloud
                 CloseClusterPasswordComplexityOutcomeCallable CloseClusterPasswordComplexityCallable(const Model::CloseClusterPasswordComplexityRequest& request);
 
                 /**
-                 *This API is used to disable u200dthe database proxy.
+                 *This API is used to disable the database proxy.
                  * @param req CloseProxyRequest
                  * @return CloseProxyOutcome
                  */

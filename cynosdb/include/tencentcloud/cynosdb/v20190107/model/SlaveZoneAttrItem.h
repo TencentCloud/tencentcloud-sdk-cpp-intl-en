@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_CYNOSDB_V20190107_MODEL_PROXYZONE_H_
-#define TENCENTCLOUD_CYNOSDB_V20190107_MODEL_PROXYZONE_H_
+#ifndef TENCENTCLOUD_CYNOSDB_V20190107_MODEL_SLAVEZONEATTRITEM_H_
+#define TENCENTCLOUD_CYNOSDB_V20190107_MODEL_SLAVEZONEATTRITEM_H_
 
 #include <string>
 #include <vector>
@@ -35,72 +35,72 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Number of proxy nodes and their AZs
+                * 
                 */
-                class ProxyZone : public AbstractModel
+                class SlaveZoneAttrItem : public AbstractModel
                 {
                 public:
-                    ProxyZone();
-                    ~ProxyZone() = default;
+                    SlaveZoneAttrItem();
+                    ~SlaveZoneAttrItem() = default;
                     void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
 
                     /**
-                     * 获取AZ of the proxy node
-                     * @return ProxyNodeZone AZ of the proxy node
+                     * 获取
+                     * @return Zone 
                      * 
                      */
-                    std::string GetProxyNodeZone() const;
+                    std::string GetZone() const;
 
                     /**
-                     * 设置AZ of the proxy node
-                     * @param _proxyNodeZone AZ of the proxy node
+                     * 设置
+                     * @param _zone 
                      * 
                      */
-                    void SetProxyNodeZone(const std::string& _proxyNodeZone);
+                    void SetZone(const std::string& _zone);
 
                     /**
-                     * 判断参数 ProxyNodeZone 是否已赋值
-                     * @return ProxyNodeZone 是否已赋值
+                     * 判断参数 Zone 是否已赋值
+                     * @return Zone 是否已赋值
                      * 
                      */
-                    bool ProxyNodeZoneHasBeenSet() const;
+                    bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取The number of proxy nodes
-                     * @return ProxyNodeCount The number of proxy nodes
+                     * 获取
+                     * @return BinlogSyncWay 
                      * 
                      */
-                    int64_t GetProxyNodeCount() const;
+                    std::string GetBinlogSyncWay() const;
 
                     /**
-                     * 设置The number of proxy nodes
-                     * @param _proxyNodeCount The number of proxy nodes
+                     * 设置
+                     * @param _binlogSyncWay 
                      * 
                      */
-                    void SetProxyNodeCount(const int64_t& _proxyNodeCount);
+                    void SetBinlogSyncWay(const std::string& _binlogSyncWay);
 
                     /**
-                     * 判断参数 ProxyNodeCount 是否已赋值
-                     * @return ProxyNodeCount 是否已赋值
+                     * 判断参数 BinlogSyncWay 是否已赋值
+                     * @return BinlogSyncWay 是否已赋值
                      * 
                      */
-                    bool ProxyNodeCountHasBeenSet() const;
+                    bool BinlogSyncWayHasBeenSet() const;
 
                 private:
 
                     /**
-                     * AZ of the proxy node
+                     * 
                      */
-                    std::string m_proxyNodeZone;
-                    bool m_proxyNodeZoneHasBeenSet;
+                    std::string m_zone;
+                    bool m_zoneHasBeenSet;
 
                     /**
-                     * The number of proxy nodes
+                     * 
                      */
-                    int64_t m_proxyNodeCount;
-                    bool m_proxyNodeCountHasBeenSet;
+                    std::string m_binlogSyncWay;
+                    bool m_binlogSyncWayHasBeenSet;
 
                 };
             }
@@ -108,4 +108,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_CYNOSDB_V20190107_MODEL_PROXYZONE_H_
+#endif // !TENCENTCLOUD_CYNOSDB_V20190107_MODEL_SLAVEZONEATTRITEM_H_
