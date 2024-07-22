@@ -49,18 +49,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Task name
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TaskName Task name
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTaskName() const;
 
                     /**
                      * 设置Task name
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _taskName Task name
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTaskName(const std::string& _taskName);
@@ -74,18 +74,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Start time of the task
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StartTime Start time of the task
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start time of the task
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _startTime Start time of the task
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -99,18 +99,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Task end time
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EndTime Task end time
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置Task end time
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _endTime Task end time
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -124,18 +124,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取CRON format
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ScanPlanContent CRON format
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetScanPlanContent() const;
 
                     /**
                      * 设置CRON format
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _scanPlanContent CRON format
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetScanPlanContent(const std::string& _scanPlanContent);
@@ -149,18 +149,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TaskType Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetTaskType() const;
 
                     /**
                      * 设置Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _taskType Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTaskType(const int64_t& _taskType);
@@ -174,18 +174,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Creation time
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return InsertTime Creation time
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetInsertTime() const;
 
                     /**
                      * 设置Creation time
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @param _insertTime Creation time
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetInsertTime(const std::string& _insertTime);
@@ -199,18 +199,18 @@ Note: u200dThis field may return `null`, indicating that no valid values can be 
 
                     /**
                      * 获取Task ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TaskId Task ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置Task ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _taskId Task ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -224,18 +224,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Custom list of assets to scan
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SelfDefiningAssets Custom list of assets to scan
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetSelfDefiningAssets() const;
 
                     /**
                      * 设置Custom list of assets to scan
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _selfDefiningAssets Custom list of assets to scan
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSelfDefiningAssets(const std::vector<std::string>& _selfDefiningAssets);
@@ -249,18 +249,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Estimated period to complete the task
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PredictTime Estimated period to complete the task
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetPredictTime() const;
 
                     /**
                      * 设置Estimated period to complete the task
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _predictTime Estimated period to complete the task
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetPredictTime(const int64_t& _predictTime);
@@ -274,18 +274,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Estimated completion time of the task
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PredictEndTime Estimated completion time of the task
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetPredictEndTime() const;
 
                     /**
                      * 设置Estimated completion time of the task
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _predictEndTime Estimated completion time of the task
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetPredictEndTime(const std::string& _predictEndTime);
@@ -299,18 +299,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Number of reports
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ReportNumber Number of reports
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetReportNumber() const;
 
                     /**
                      * 设置Number of reports
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _reportNumber Number of reports
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetReportNumber(const int64_t& _reportNumber);
@@ -324,18 +324,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Number of assets
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AssetNumber Number of assets
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetAssetNumber() const;
 
                     /**
                      * 设置Number of assets
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _assetNumber Number of assets
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAssetNumber(const int64_t& _assetNumber);
@@ -349,18 +349,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Scanning status. `0`: (default) Not scanned; `1`: Scanning; `2`: Scan completed; `3`: Error while scanning; `4`: Scanning stopped
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ScanStatus Scanning status. `0`: (default) Not scanned; `1`: Scanning; `2`: Scan completed; `3`: Error while scanning; `4`: Scanning stopped
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetScanStatus() const;
 
                     /**
                      * 设置Scanning status. `0`: (default) Not scanned; `1`: Scanning; `2`: Scan completed; `3`: Error while scanning; `4`: Scanning stopped
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _scanStatus Scanning status. `0`: (default) Not scanned; `1`: Scanning; `2`: Scan completed; `3`: Error while scanning; `4`: Scanning stopped
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetScanStatus(const int64_t& _scanStatus);
@@ -374,18 +374,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Task progress
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Percent Task progress
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     double GetPercent() const;
 
                     /**
                      * 设置Task progress
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _percent Task progress
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetPercent(const double& _percent);
@@ -399,18 +399,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取port/poc/weakpass/webcontent/configrisk
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ScanItem port/poc/weakpass/webcontent/configrisk
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetScanItem() const;
 
                     /**
                      * 设置port/poc/weakpass/webcontent/configrisk
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _scanItem port/poc/weakpass/webcontent/configrisk
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetScanItem(const std::string& _scanItem);
@@ -424,18 +424,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Values: `0` (Scan all); `1` (Scan specific assets); `2` (Scan all expect the specified assets); `3` (Custom assets).
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ScanAssetType Values: `0` (Scan all); `1` (Scan specific assets); `2` (Scan all expect the specified assets); `3` (Custom assets).
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetScanAssetType() const;
 
                     /**
                      * 设置Values: `0` (Scan all); `1` (Scan specific assets); `2` (Scan all expect the specified assets); `3` (Custom assets).
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _scanAssetType Values: `0` (Scan all); `1` (Scan specific assets); `2` (Scan all expect the specified assets); `3` (Custom assets).
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetScanAssetType(const int64_t& _scanAssetType);
@@ -449,18 +449,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取VSS subtask ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VSSTaskId VSS subtask ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetVSSTaskId() const;
 
                     /**
                      * 设置VSS subtask ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _vSSTaskId VSS subtask ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetVSSTaskId(const std::string& _vSSTaskId);
@@ -474,18 +474,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取CSPM subtask ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CSPMTaskId CSPM subtask ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCSPMTaskId() const;
 
                     /**
                      * 设置CSPM subtask ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _cSPMTaskId CSPM subtask ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCSPMTaskId(const std::string& _cSPMTaskId);
@@ -499,18 +499,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取CWPP vulnerability scan task IDHost missed scan subtask id
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CWPPOCId CWPP vulnerability scan task IDHost missed scan subtask id
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCWPPOCId() const;
 
                     /**
                      * 设置CWPP vulnerability scan task IDHost missed scan subtask id
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _cWPPOCId CWPP vulnerability scan task IDHost missed scan subtask id
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCWPPOCId(const std::string& _cWPPOCId);
@@ -524,18 +524,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取CWPP baseline check task ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CWPBlId CWPP baseline check task ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCWPBlId() const;
 
                     /**
                      * 设置CWPP baseline check task ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _cWPBlId CWPP baseline check task ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCWPBlId(const std::string& _cWPBlId);
@@ -549,18 +549,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取VSS task progess
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VSSTaskProcess VSS task progess
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetVSSTaskProcess() const;
 
                     /**
                      * 设置VSS task progess
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _vSSTaskProcess VSS task progess
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetVSSTaskProcess(const int64_t& _vSSTaskProcess);
@@ -574,18 +574,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取CSPM task progress
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CSPMTaskProcess CSPM task progress
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetCSPMTaskProcess() const;
 
                     /**
                      * 设置CSPM task progress
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _cSPMTaskProcess CSPM task progress
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCSPMTaskProcess(const uint64_t& _cSPMTaskProcess);
@@ -599,18 +599,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取CWPP vulnerability scan task progress
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CWPPOCProcess CWPP vulnerability scan task progress
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetCWPPOCProcess() const;
 
                     /**
                      * 设置CWPP vulnerability scan task progress
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _cWPPOCProcess CWPP vulnerability scan task progress
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCWPPOCProcess(const int64_t& _cWPPOCProcess);
@@ -624,18 +624,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取CWPP baseline check task progress
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CWPBlProcess CWPP baseline check task progress
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetCWPBlProcess() const;
 
                     /**
                      * 设置CWPP baseline check task progress
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _cWPBlProcess CWPP baseline check task progress
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCWPBlProcess(const uint64_t& _cWPBlProcess);
@@ -670,18 +670,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Exception information
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ErrorInfo Exception information
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetErrorInfo() const;
 
                     /**
                      * 设置Exception information
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _errorInfo Exception information
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetErrorInfo(const std::string& _errorInfo);
@@ -695,18 +695,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Day of the month to start the scheduled task
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StartDay Day of the month to start the scheduled task
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetStartDay() const;
 
                     /**
                      * 设置Day of the month to start the scheduled task
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _startDay Day of the month to start the scheduled task
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetStartDay(const int64_t& _startDay);
@@ -720,18 +720,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Scan frequency in days. `1`: Every day; `7`: Every seven days; `30`: Every 30 days; `0`: Scan once only
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Frequency Scan frequency in days. `1`: Every day; `7`: Every seven days; `30`: Every 30 days; `0`: Scan once only
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetFrequency() const;
 
                     /**
                      * 设置Scan frequency in days. `1`: Every day; `7`: Every seven days; `30`: Every 30 days; `0`: Scan once only
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _frequency Scan frequency in days. `1`: Every day; `7`: Every seven days; `30`: Every 30 days; `0`: Scan once only
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetFrequency(const int64_t& _frequency);
@@ -745,18 +745,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Number of completed tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CompleteNumber Number of completed tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetCompleteNumber() const;
 
                     /**
                      * 设置Number of completed tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _completeNumber Number of completed tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCompleteNumber(const int64_t& _completeNumber);
@@ -770,18 +770,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Number of scanned assets
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CompleteAssetNumber Number of scanned assets
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetCompleteAssetNumber() const;
 
                     /**
                      * 设置Number of scanned assets
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _completeAssetNumber Number of scanned assets
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCompleteAssetNumber(const int64_t& _completeAssetNumber);
@@ -795,18 +795,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Number of risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RiskCount Number of risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetRiskCount() const;
 
                     /**
                      * 设置Number of risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _riskCount Number of risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRiskCount(const int64_t& _riskCount);
@@ -820,18 +820,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Assets
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Assets Assets
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<TaskAssetObject> GetAssets() const;
 
                     /**
                      * 设置Assets
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _assets Assets
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAssets(const std::vector<TaskAssetObject>& _assets);
@@ -845,18 +845,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取User `Appid`
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AppId User `Appid`
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetAppId() const;
 
                     /**
                      * 设置User `Appid`
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _appId User `Appid`
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAppId(const std::string& _appId);
@@ -870,18 +870,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取User UIN
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UIN User UIN
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUIN() const;
 
                     /**
                      * 设置User UIN
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _uIN User UIN
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUIN(const std::string& _uIN);
@@ -895,18 +895,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UserName User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUserName() const;
 
                     /**
                      * 设置User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _userName User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUserName(const std::string& _userName);
@@ -920,18 +920,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Scan task mode: `0` (Standard), `1` (Quick), `2` (Advanced). 
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TaskMode Scan task mode: `0` (Standard), `1` (Quick), `2` (Advanced). 
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetTaskMode() const;
 
                     /**
                      * 设置Scan task mode: `0` (Standard), `1` (Quick), `2` (Advanced). 
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _taskMode Scan task mode: `0` (Standard), `1` (Quick), `2` (Advanced). 
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTaskMode(const int64_t& _taskMode);
@@ -945,18 +945,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Source of scanning request
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ScanFrom Source of scanning request
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetScanFrom() const;
 
                     /**
                      * 设置Source of scanning request
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _scanFrom Source of scanning request
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetScanFrom(const std::string& _scanFrom);
@@ -970,18 +970,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Whether it's a limited-time free health check. `0`: No; `1`: Yes
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IsFree Whether it's a limited-time free health check. `0`: No; `1`: Yes
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetIsFree() const;
 
                     /**
                      * 设置Whether it's a limited-time free health check. `0`: No; `1`: Yes
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _isFree Whether it's a limited-time free health check. `0`: No; `1`: Yes
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIsFree(const int64_t& _isFree);
@@ -995,18 +995,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Whether the user is authorized to delete this task. `1` :Yes; `0`: No. It's available for multi-account management.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IsDelete Whether the user is authorized to delete this task. `1` :Yes; `0`: No. It's available for multi-account management.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetIsDelete() const;
 
                     /**
                      * 设置Whether the user is authorized to delete this task. `1` :Yes; `0`: No. It's available for multi-account management.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _isDelete Whether the user is authorized to delete this task. `1` :Yes; `0`: No. It's available for multi-account management.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIsDelete(const int64_t& _isDelete);
@@ -1020,18 +1020,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Source of the task. `0`: Default, `1`: Assistant; `2`: Health check
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SourceType Source of the task. `0`: Default, `1`: Assistant; `2`: Health check
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetSourceType() const;
 
                     /**
                      * 设置Source of the task. `0`: Default, `1`: Assistant; `2`: Health check
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _sourceType Source of the task. `0`: Default, `1`: Assistant; `2`: Health check
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSourceType(const int64_t& _sourceType);
@@ -1047,168 +1047,168 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * Task name
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_taskName;
                     bool m_taskNameHasBeenSet;
 
                     /**
                      * Start time of the task
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
                      * Task end time
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
                      * CRON format
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_scanPlanContent;
                     bool m_scanPlanContentHasBeenSet;
 
                     /**
                      * Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_taskType;
                     bool m_taskTypeHasBeenSet;
 
                     /**
                      * Creation time
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_insertTime;
                     bool m_insertTimeHasBeenSet;
 
                     /**
                      * Task ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
                      * Custom list of assets to scan
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_selfDefiningAssets;
                     bool m_selfDefiningAssetsHasBeenSet;
 
                     /**
                      * Estimated period to complete the task
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_predictTime;
                     bool m_predictTimeHasBeenSet;
 
                     /**
                      * Estimated completion time of the task
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_predictEndTime;
                     bool m_predictEndTimeHasBeenSet;
 
                     /**
                      * Number of reports
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_reportNumber;
                     bool m_reportNumberHasBeenSet;
 
                     /**
                      * Number of assets
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_assetNumber;
                     bool m_assetNumberHasBeenSet;
 
                     /**
                      * Scanning status. `0`: (default) Not scanned; `1`: Scanning; `2`: Scan completed; `3`: Error while scanning; `4`: Scanning stopped
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_scanStatus;
                     bool m_scanStatusHasBeenSet;
 
                     /**
                      * Task progress
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     double m_percent;
                     bool m_percentHasBeenSet;
 
                     /**
                      * port/poc/weakpass/webcontent/configrisk
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_scanItem;
                     bool m_scanItemHasBeenSet;
 
                     /**
                      * Values: `0` (Scan all); `1` (Scan specific assets); `2` (Scan all expect the specified assets); `3` (Custom assets).
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_scanAssetType;
                     bool m_scanAssetTypeHasBeenSet;
 
                     /**
                      * VSS subtask ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_vSSTaskId;
                     bool m_vSSTaskIdHasBeenSet;
 
                     /**
                      * CSPM subtask ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_cSPMTaskId;
                     bool m_cSPMTaskIdHasBeenSet;
 
                     /**
                      * CWPP vulnerability scan task IDHost missed scan subtask id
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_cWPPOCId;
                     bool m_cWPPOCIdHasBeenSet;
 
                     /**
                      * CWPP baseline check task ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_cWPBlId;
                     bool m_cWPBlIdHasBeenSet;
 
                     /**
                      * VSS task progess
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_vSSTaskProcess;
                     bool m_vSSTaskProcessHasBeenSet;
 
                     /**
                      * CSPM task progress
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_cSPMTaskProcess;
                     bool m_cSPMTaskProcessHasBeenSet;
 
                     /**
                      * CWPP vulnerability scan task progress
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_cWPPOCProcess;
                     bool m_cWPPOCProcessHasBeenSet;
 
                     /**
                      * CWPP baseline check task progress
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_cWPBlProcess;
                     bool m_cWPBlProcessHasBeenSet;
@@ -1221,105 +1221,105 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * Exception information
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_errorInfo;
                     bool m_errorInfoHasBeenSet;
 
                     /**
                      * Day of the month to start the scheduled task
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_startDay;
                     bool m_startDayHasBeenSet;
 
                     /**
                      * Scan frequency in days. `1`: Every day; `7`: Every seven days; `30`: Every 30 days; `0`: Scan once only
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_frequency;
                     bool m_frequencyHasBeenSet;
 
                     /**
                      * Number of completed tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_completeNumber;
                     bool m_completeNumberHasBeenSet;
 
                     /**
                      * Number of scanned assets
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_completeAssetNumber;
                     bool m_completeAssetNumberHasBeenSet;
 
                     /**
                      * Number of risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_riskCount;
                     bool m_riskCountHasBeenSet;
 
                     /**
                      * Assets
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<TaskAssetObject> m_assets;
                     bool m_assetsHasBeenSet;
 
                     /**
                      * User `Appid`
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_appId;
                     bool m_appIdHasBeenSet;
 
                     /**
                      * User UIN
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_uIN;
                     bool m_uINHasBeenSet;
 
                     /**
                      * User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_userName;
                     bool m_userNameHasBeenSet;
 
                     /**
                      * Scan task mode: `0` (Standard), `1` (Quick), `2` (Advanced). 
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_taskMode;
                     bool m_taskModeHasBeenSet;
 
                     /**
                      * Source of scanning request
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_scanFrom;
                     bool m_scanFromHasBeenSet;
 
                     /**
                      * Whether it's a limited-time free health check. `0`: No; `1`: Yes
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_isFree;
                     bool m_isFreeHasBeenSet;
 
                     /**
                      * Whether the user is authorized to delete this task. `1` :Yes; `0`: No. It's available for multi-account management.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_isDelete;
                     bool m_isDeleteHasBeenSet;
 
                     /**
                      * Source of the task. `0`: Default, `1`: Assistant; `2`: Health check
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_sourceType;
                     bool m_sourceTypeHasBeenSet;

@@ -59,9 +59,9 @@ namespace TencentCloud
 
                     /**
                      * 获取If `EncryptionPublicKey` is left empty, a Base64-encoded ciphertext will be returned. To get the plaintext, you need to decode the ciphertext first.
-If `EncryptionPublicKey` is passed in, this field u200dcontains the Base64-encoded ciphertext after asymmetric encryption by using the public key in `EncryptionPublicKey` To get the plaintext, you need to first decode the Base64 format, and then decrypwith the private key corresponding with the public key. The private key is uploaded by the user. 
+If `EncryptionPublicKey` is passed in, this field contains the Base64-encoded ciphertext after asymmetric encryption by using the public key in `EncryptionPublicKey` To get the plaintext, you need to first decode the Base64 format, and then decrypwith the private key corresponding with the public key. The private key is uploaded by the user. 
                      * @return PlainText If `EncryptionPublicKey` is left empty, a Base64-encoded ciphertext will be returned. To get the plaintext, you need to decode the ciphertext first.
-If `EncryptionPublicKey` is passed in, this field u200dcontains the Base64-encoded ciphertext after asymmetric encryption by using the public key in `EncryptionPublicKey` To get the plaintext, you need to first decode the Base64 format, and then decrypwith the private key corresponding with the public key. The private key is uploaded by the user. 
+If `EncryptionPublicKey` is passed in, this field contains the Base64-encoded ciphertext after asymmetric encryption by using the public key in `EncryptionPublicKey` To get the plaintext, you need to first decode the Base64 format, and then decrypwith the private key corresponding with the public key. The private key is uploaded by the user. 
                      * 
                      */
                     std::string GetPlainText() const;
@@ -83,7 +83,7 @@ If `EncryptionPublicKey` is passed in, this field u200dcontains the Base64-encod
 
                     /**
                      * If `EncryptionPublicKey` is left empty, a Base64-encoded ciphertext will be returned. To get the plaintext, you need to decode the ciphertext first.
-If `EncryptionPublicKey` is passed in, this field u200dcontains the Base64-encoded ciphertext after asymmetric encryption by using the public key in `EncryptionPublicKey` To get the plaintext, you need to first decode the Base64 format, and then decrypwith the private key corresponding with the public key. The private key is uploaded by the user. 
+If `EncryptionPublicKey` is passed in, this field contains the Base64-encoded ciphertext after asymmetric encryption by using the public key in `EncryptionPublicKey` To get the plaintext, you need to first decode the Base64 format, and then decrypwith the private key corresponding with the public key. The private key is uploaded by the user. 
                      */
                     std::string m_plainText;
                     bool m_plainTextHasBeenSet;

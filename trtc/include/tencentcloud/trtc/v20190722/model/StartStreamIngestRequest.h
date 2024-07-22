@@ -87,15 +87,15 @@ namespace TencentCloud
                     bool RoomIdHasBeenSet() const;
 
                     /**
-                     * 获取Type of TRTC RoomId. 【*Note】Must be the same as the RoomId type corresponding to the Record room: 0: String type RoomId 1: 32-bit Integer type RoomId (default)
-                     * @return RoomIdType Type of TRTC RoomId. 【*Note】Must be the same as the RoomId type corresponding to the Record room: 0: String type RoomId 1: 32-bit Integer type RoomId (default)
+                     * 获取Type of TRTC RoomId. [*Note] Must be the same as the RoomId type corresponding to the Record room: 0: String type RoomId 1: 32-bit Integer type RoomId (default)
+                     * @return RoomIdType Type of TRTC RoomId. [*Note] Must be the same as the RoomId type corresponding to the Record room: 0: String type RoomId 1: 32-bit Integer type RoomId (default)
                      * 
                      */
                     uint64_t GetRoomIdType() const;
 
                     /**
-                     * 设置Type of TRTC RoomId. 【*Note】Must be the same as the RoomId type corresponding to the Record room: 0: String type RoomId 1: 32-bit Integer type RoomId (default)
-                     * @param _roomIdType Type of TRTC RoomId. 【*Note】Must be the same as the RoomId type corresponding to the Record room: 0: String type RoomId 1: 32-bit Integer type RoomId (default)
+                     * 设置Type of TRTC RoomId. [*Note] Must be the same as the RoomId type corresponding to the Record room: 0: String type RoomId 1: 32-bit Integer type RoomId (default)
+                     * @param _roomIdType Type of TRTC RoomId. [*Note] Must be the same as the RoomId type corresponding to the Record room: 0: String type RoomId 1: 32-bit Integer type RoomId (default)
                      * 
                      */
                     void SetRoomIdType(const uint64_t& _roomIdType);
@@ -129,15 +129,15 @@ namespace TencentCloud
                     bool UserIdHasBeenSet() const;
 
                     /**
-                     * 获取UserSig corresponding to the Pull stream Relay Robot UserId, i.e., UserId and UserSig are equivalent to the Robot's Login password for entering the room. For the specific Calculation method, please refer to the TRTC [UserSig](https://intl.cloud.tencent.com/document/product/647/45910?from_cn_redirect=1#UserSig) Scheme.
-                     * @return UserSig UserSig corresponding to the Pull stream Relay Robot UserId, i.e., UserId and UserSig are equivalent to the Robot's Login password for entering the room. For the specific Calculation method, please refer to the TRTC [UserSig](https://intl.cloud.tencent.com/document/product/647/45910?from_cn_redirect=1#UserSig) Scheme.
+                     * 获取UserSig corresponding to the Pull stream Relay Robot UserId, i.e., UserId and UserSig are equivalent to the Robot's Login password for entering the room. For the specific Calculation method, please refer to the TRTC [UserSig](https://www.tencentcloud.com/zh/document/product/647/39074) Scheme.
+                     * @return UserSig UserSig corresponding to the Pull stream Relay Robot UserId, i.e., UserId and UserSig are equivalent to the Robot's Login password for entering the room. For the specific Calculation method, please refer to the TRTC [UserSig](https://www.tencentcloud.com/zh/document/product/647/39074) Scheme.
                      * 
                      */
                     std::string GetUserSig() const;
 
                     /**
-                     * 设置UserSig corresponding to the Pull stream Relay Robot UserId, i.e., UserId and UserSig are equivalent to the Robot's Login password for entering the room. For the specific Calculation method, please refer to the TRTC [UserSig](https://intl.cloud.tencent.com/document/product/647/45910?from_cn_redirect=1#UserSig) Scheme.
-                     * @param _userSig UserSig corresponding to the Pull stream Relay Robot UserId, i.e., UserId and UserSig are equivalent to the Robot's Login password for entering the room. For the specific Calculation method, please refer to the TRTC [UserSig](https://intl.cloud.tencent.com/document/product/647/45910?from_cn_redirect=1#UserSig) Scheme.
+                     * 设置UserSig corresponding to the Pull stream Relay Robot UserId, i.e., UserId and UserSig are equivalent to the Robot's Login password for entering the room. For the specific Calculation method, please refer to the TRTC [UserSig](https://www.tencentcloud.com/zh/document/product/647/39074) Scheme.
+                     * @param _userSig UserSig corresponding to the Pull stream Relay Robot UserId, i.e., UserId and UserSig are equivalent to the Robot's Login password for entering the room. For the specific Calculation method, please refer to the TRTC [UserSig](https://www.tencentcloud.com/zh/document/product/647/39074) Scheme.
                      * 
                      */
                     void SetUserSig(const std::string& _userSig);
@@ -237,6 +237,27 @@ Source URL. Example value: https://a.b/test.mp4
                      */
                     bool AudioEncodeParamsHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return StreamUrl 
+                     * 
+                     */
+                    std::string GetStreamUrl() const;
+
+                    /**
+                     * 设置
+                     * @param _streamUrl 
+                     * 
+                     */
+                    void SetStreamUrl(const std::string& _streamUrl);
+
+                    /**
+                     * 判断参数 StreamUrl 是否已赋值
+                     * @return StreamUrl 是否已赋值
+                     * 
+                     */
+                    bool StreamUrlHasBeenSet() const;
+
                 private:
 
                     /**
@@ -252,7 +273,7 @@ Source URL. Example value: https://a.b/test.mp4
                     bool m_roomIdHasBeenSet;
 
                     /**
-                     * Type of TRTC RoomId. 【*Note】Must be the same as the RoomId type corresponding to the Record room: 0: String type RoomId 1: 32-bit Integer type RoomId (default)
+                     * Type of TRTC RoomId. [*Note] Must be the same as the RoomId type corresponding to the Record room: 0: String type RoomId 1: 32-bit Integer type RoomId (default)
                      */
                     uint64_t m_roomIdType;
                     bool m_roomIdTypeHasBeenSet;
@@ -264,7 +285,7 @@ Source URL. Example value: https://a.b/test.mp4
                     bool m_userIdHasBeenSet;
 
                     /**
-                     * UserSig corresponding to the Pull stream Relay Robot UserId, i.e., UserId and UserSig are equivalent to the Robot's Login password for entering the room. For the specific Calculation method, please refer to the TRTC [UserSig](https://intl.cloud.tencent.com/document/product/647/45910?from_cn_redirect=1#UserSig) Scheme.
+                     * UserSig corresponding to the Pull stream Relay Robot UserId, i.e., UserId and UserSig are equivalent to the Robot's Login password for entering the room. For the specific Calculation method, please refer to the TRTC [UserSig](https://www.tencentcloud.com/zh/document/product/647/39074) Scheme.
                      */
                     std::string m_userSig;
                     bool m_userSigHasBeenSet;
@@ -293,6 +314,12 @@ Source URL. Example value: https://a.b/test.mp4
                      */
                     AudioEncodeParams m_audioEncodeParams;
                     bool m_audioEncodeParamsHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_streamUrl;
+                    bool m_streamUrlHasBeenSet;
 
                 };
             }
