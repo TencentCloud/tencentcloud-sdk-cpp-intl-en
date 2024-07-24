@@ -472,19 +472,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AccountModeHasBeenSet() const;
 
                     /**
-                     * 获取ID of the temporary key
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TmpSecretId ID of the temporary key
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TmpSecretId Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTmpSecretId() const;
 
                     /**
-                     * 设置ID of the temporary key
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tmpSecretId ID of the temporary key
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _tmpSecretId Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTmpSecretId(const std::string& _tmpSecretId);
@@ -497,19 +493,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TmpSecretIdHasBeenSet() const;
 
                     /**
-                     * 获取Key of the temporary key
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TmpSecretKey Key of the temporary key
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TmpSecretKey Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTmpSecretKey() const;
 
                     /**
-                     * 设置Key of the temporary key
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tmpSecretKey Key of the temporary key
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _tmpSecretKey Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTmpSecretKey(const std::string& _tmpSecretKey);
@@ -522,19 +514,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TmpSecretKeyHasBeenSet() const;
 
                     /**
-                     * 获取Temporary token
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TmpToken Temporary token
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TmpToken Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTmpToken() const;
 
                     /**
-                     * 设置Temporary token
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tmpToken Temporary token
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _tmpToken Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTmpToken(const std::string& _tmpToken);
@@ -668,22 +656,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_accountModeHasBeenSet;
 
                     /**
-                     * ID of the temporary key
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_tmpSecretId;
                     bool m_tmpSecretIdHasBeenSet;
 
                     /**
-                     * Key of the temporary key
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_tmpSecretKey;
                     bool m_tmpSecretKeyHasBeenSet;
 
                     /**
-                     * Temporary token
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_tmpToken;
                     bool m_tmpTokenHasBeenSet;

@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Type of data that is delivered to Kafka, such as `Avro` and `Json`.
-                     * @return DataType Type of data that is delivered to Kafka, such as `Avro` and `Json`.
+                     * 获取Data type delivered to Kafka, such as Avro, Json, canal-pb, canal-json
+                     * @return DataType Data type delivered to Kafka, such as Avro, Json, canal-pb, canal-json
                      * 
                      */
                     std::string GetDataType() const;
 
                     /**
-                     * 设置Type of data that is delivered to Kafka, such as `Avro` and `Json`.
-                     * @param _dataType Type of data that is delivered to Kafka, such as `Avro` and `Json`.
+                     * 设置Data type delivered to Kafka, such as Avro, Json, canal-pb, canal-json
+                     * @param _dataType Data type delivered to Kafka, such as Avro, Json, canal-pb, canal-json
                      * 
                      */
                     void SetDataType(const std::string& _dataType);
@@ -134,7 +134,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Type of data that is delivered to Kafka, such as `Avro` and `Json`.
+                     * Data type delivered to Kafka, such as Avro, Json, canal-pb, canal-json
                      */
                     std::string m_dataType;
                     bool m_dataTypeHasBeenSet;

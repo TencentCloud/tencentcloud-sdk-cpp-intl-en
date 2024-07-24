@@ -61,9 +61,9 @@ Note: `null` may be returned for this field, indicating that no valid values can
 
                     /**
                      * 获取`ApplicationId` is in the format of `AppInstanceId-applicationId`, which is used to identify applications of different clusters.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ApplicationId `ApplicationId` is in the format of `AppInstanceId-applicationId`, which is used to identify applications of different clusters.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetApplicationId() const;
@@ -86,7 +86,7 @@ Note: `null` may be returned for this field, indicating that no valid values can
 
                     /**
                      * `ApplicationId` is in the format of `AppInstanceId-applicationId`, which is used to identify applications of different clusters.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_applicationId;
                     bool m_applicationIdHasBeenSet;

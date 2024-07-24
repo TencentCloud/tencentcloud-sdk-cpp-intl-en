@@ -251,19 +251,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool KafkaOptionHasBeenSet() const;
 
                     /**
-                     * 获取Task speed limit information. This parameter can only be used as an output parameter.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
-                     * @return RateLimitOption Task speed limit information. This parameter can only be used as an output parameter.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 获取Task speed limit information
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RateLimitOption Task speed limit information
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     RateLimitOption GetRateLimitOption() const;
 
                     /**
-                     * 设置Task speed limit information. This parameter can only be used as an output parameter.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
-                     * @param _rateLimitOption Task speed limit information. This parameter can only be used as an output parameter.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 设置Task speed limit information
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _rateLimitOption Task speed limit information
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRateLimitOption(const RateLimitOption& _rateLimitOption);
@@ -277,18 +277,18 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
                     /**
                      * 获取Settings of the automatic retry time range
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AutoRetryTimeRangeMinutes Settings of the automatic retry time range
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetAutoRetryTimeRangeMinutes() const;
 
                     /**
                      * 设置Settings of the automatic retry time range
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _autoRetryTimeRangeMinutes Settings of the automatic retry time range
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAutoRetryTimeRangeMinutes(const int64_t& _autoRetryTimeRangeMinutes);
@@ -299,6 +299,48 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
                      * 
                      */
                     bool AutoRetryTimeRangeMinutesHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return FilterBeginCommit 
+                     * 
+                     */
+                    bool GetFilterBeginCommit() const;
+
+                    /**
+                     * 设置
+                     * @param _filterBeginCommit 
+                     * 
+                     */
+                    void SetFilterBeginCommit(const bool& _filterBeginCommit);
+
+                    /**
+                     * 判断参数 FilterBeginCommit 是否已赋值
+                     * @return FilterBeginCommit 是否已赋值
+                     * 
+                     */
+                    bool FilterBeginCommitHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return FilterCheckpoint 
+                     * 
+                     */
+                    bool GetFilterCheckpoint() const;
+
+                    /**
+                     * 设置
+                     * @param _filterCheckpoint 
+                     * 
+                     */
+                    void SetFilterCheckpoint(const bool& _filterCheckpoint);
+
+                    /**
+                     * 判断参数 FilterCheckpoint 是否已赋值
+                     * @return FilterCheckpoint 是否已赋值
+                     * 
+                     */
+                    bool FilterCheckpointHasBeenSet() const;
 
                 private:
 
@@ -359,18 +401,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_kafkaOptionHasBeenSet;
 
                     /**
-                     * Task speed limit information. This parameter can only be used as an output parameter.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * Task speed limit information
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     RateLimitOption m_rateLimitOption;
                     bool m_rateLimitOptionHasBeenSet;
 
                     /**
                      * Settings of the automatic retry time range
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_autoRetryTimeRangeMinutes;
                     bool m_autoRetryTimeRangeMinutesHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_filterBeginCommit;
+                    bool m_filterBeginCommitHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_filterCheckpoint;
+                    bool m_filterCheckpointHasBeenSet;
 
                 };
             }

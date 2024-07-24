@@ -112,6 +112,7 @@ set(dts_public_header_model
   include/tencentcloud/dts/v20211206/model/ModifyCompareTaskRequest.h
   include/tencentcloud/dts/v20211206/model/RecoverSyncJobRequest.h
   include/tencentcloud/dts/v20211206/model/Database.h
+  include/tencentcloud/dts/v20211206/model/Column.h
   include/tencentcloud/dts/v20211206/model/JobItem.h
   include/tencentcloud/dts/v20211206/model/DescribeSyncJobsRequest.h
   include/tencentcloud/dts/v20211206/model/SyncDetailInfo.h
@@ -323,6 +324,7 @@ set(dts_src
   src/v20211206/model/ModifyCompareTaskRequest.cpp
   src/v20211206/model/RecoverSyncJobRequest.cpp
   src/v20211206/model/Database.cpp
+  src/v20211206/model/Column.cpp
   src/v20211206/model/JobItem.cpp
   src/v20211206/model/DescribeSyncJobsRequest.cpp
   src/v20211206/model/SyncDetailInfo.cpp

@@ -124,19 +124,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DatabaseTypeHasBeenSet() const;
 
                     /**
-                     * 获取Node type. Valid values: empty or `simple` (general node); `cluster` (cluster node).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return NodeType Node type. Valid values: empty or `simple` (general node); `cluster` (cluster node).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Node type, empty or simple indicates a general node, cluster indicates a cluster node; for mongo services, valid values: replicaset (mongodb replica set), standalone (mongodb single node), cluster (mongodb cluster); for redis instances, valid values: empty or simple (single node), cluster (cluster), cluster-cache (cache cluster), cluster-proxy (proxy cluster).Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return NodeType Node type, empty or simple indicates a general node, cluster indicates a cluster node; for mongo services, valid values: replicaset (mongodb replica set), standalone (mongodb single node), cluster (mongodb cluster); for redis instances, valid values: empty or simple (single node), cluster (cluster), cluster-cache (cache cluster), cluster-proxy (proxy cluster).Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetNodeType() const;
 
                     /**
-                     * 设置Node type. Valid values: empty or `simple` (general node); `cluster` (cluster node).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _nodeType Node type. Valid values: empty or `simple` (general node); `cluster` (cluster node).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Node type, empty or simple indicates a general node, cluster indicates a cluster node; for mongo services, valid values: replicaset (mongodb replica set), standalone (mongodb single node), cluster (mongodb cluster); for redis instances, valid values: empty or simple (single node), cluster (cluster), cluster-cache (cache cluster), cluster-proxy (proxy cluster).Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _nodeType Node type, empty or simple indicates a general node, cluster indicates a cluster node; for mongo services, valid values: replicaset (mongodb replica set), standalone (mongodb single node), cluster (mongodb cluster); for redis instances, valid values: empty or simple (single node), cluster (cluster), cluster-cache (cache cluster), cluster-proxy (proxy cluster).Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetNodeType(const std::string& _nodeType);
@@ -252,6 +248,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool DatabaseNetEnvHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return ConnectType 
+                     * 
+                     */
+                    std::string GetConnectType() const;
+
+                    /**
+                     * 设置
+                     * @param _connectType 
+                     * 
+                     */
+                    void SetConnectType(const std::string& _connectType);
+
+                    /**
+                     * 判断参数 ConnectType 是否已赋值
+                     * @return ConnectType 是否已赋值
+                     * 
+                     */
+                    bool ConnectTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -276,8 +293,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_databaseTypeHasBeenSet;
 
                     /**
-                     * Node type. Valid values: empty or `simple` (general node); `cluster` (cluster node).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Node type, empty or simple indicates a general node, cluster indicates a cluster node; for mongo services, valid values: replicaset (mongodb replica set), standalone (mongodb single node), cluster (mongodb cluster); for redis instances, valid values: empty or simple (single node), cluster (cluster), cluster-cache (cache cluster), cluster-proxy (proxy cluster).Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_nodeType;
                     bool m_nodeTypeHasBeenSet;
@@ -310,6 +326,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_databaseNetEnv;
                     bool m_databaseNetEnvHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_connectType;
+                    bool m_connectTypeHasBeenSet;
 
                 };
             }

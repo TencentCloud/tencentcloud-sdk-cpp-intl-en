@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The number of full export threads that have taken effect.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
-                     * @return CurrentDumpThread The number of full export threads that have taken effect.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 获取The number of full export threads currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 16.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CurrentDumpThread The number of full export threads currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 16.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetCurrentDumpThread() const;
 
                     /**
-                     * 设置The number of full export threads that have taken effect.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
-                     * @param _currentDumpThread The number of full export threads that have taken effect.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 设置The number of full export threads currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 16.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _currentDumpThread The number of full export threads currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 16.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCurrentDumpThread(const int64_t& _currentDumpThread);
@@ -72,19 +68,15 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
                     bool CurrentDumpThreadHasBeenSet() const;
 
                     /**
-                     * 获取The default number of full export threads.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
-                     * @return DefaultDumpThread The default number of full export threads.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 获取The default number of full export threads. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DefaultDumpThread The default number of full export threads. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetDefaultDumpThread() const;
 
                     /**
-                     * 设置The default number of full export threads.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
-                     * @param _defaultDumpThread The default number of full export threads.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 设置The default number of full export threads. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _defaultDumpThread The default number of full export threads. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDefaultDumpThread(const int64_t& _defaultDumpThread);
@@ -97,19 +89,15 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
                     bool DefaultDumpThreadHasBeenSet() const;
 
                     /**
-                     * 获取The full export RPS that has taken effect.	
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
-                     * @return CurrentDumpRps The full export RPS that has taken effect.	
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 获取The full export Rps currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 50,000,000.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CurrentDumpRps The full export Rps currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 50,000,000.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetCurrentDumpRps() const;
 
                     /**
-                     * 设置The full export RPS that has taken effect.	
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
-                     * @param _currentDumpRps The full export RPS that has taken effect.	
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 设置The full export Rps currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 50,000,000.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _currentDumpRps The full export Rps currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 50,000,000.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCurrentDumpRps(const int64_t& _currentDumpRps);
@@ -122,19 +110,15 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
                     bool CurrentDumpRpsHasBeenSet() const;
 
                     /**
-                     * 获取The default full export RPS.	
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-                     * @return DefaultDumpRps The default full export RPS.	
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 获取The default full export Rps. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DefaultDumpRps The default full export Rps. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetDefaultDumpRps() const;
 
                     /**
-                     * 设置The default full export RPS.	
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-                     * @param _defaultDumpRps The default full export RPS.	
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 设置The default full export Rps. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _defaultDumpRps The default full export Rps. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDefaultDumpRps(const int64_t& _defaultDumpRps);
@@ -147,19 +131,15 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                     bool DefaultDumpRpsHasBeenSet() const;
 
                     /**
-                     * 获取The number of full import threads that have taken effect.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
-                     * @return CurrentLoadThread The number of full import threads that have taken effect.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 获取The number of full import threads currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 16.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CurrentLoadThread The number of full import threads currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 16.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetCurrentLoadThread() const;
 
                     /**
-                     * 设置The number of full import threads that have taken effect.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
-                     * @param _currentLoadThread The number of full import threads that have taken effect.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 设置The number of full import threads currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 16.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _currentLoadThread The number of full import threads currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 16.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCurrentLoadThread(const int64_t& _currentLoadThread);
@@ -172,19 +152,15 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
                     bool CurrentLoadThreadHasBeenSet() const;
 
                     /**
-                     * 获取The default number of full import threads.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
-                     * @return DefaultLoadThread The default number of full import threads.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 获取The default number of full import threads. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DefaultLoadThread The default number of full import threads. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetDefaultLoadThread() const;
 
                     /**
-                     * 设置The default number of full import threads.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
-                     * @param _defaultLoadThread The default number of full import threads.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 设置The default number of full import threads. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _defaultLoadThread The default number of full import threads. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDefaultLoadThread(const int64_t& _defaultLoadThread);
@@ -197,19 +173,15 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
                     bool DefaultLoadThreadHasBeenSet() const;
 
                     /**
-                     * 获取The full import RPS that has taken effect.	
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
-                     * @return CurrentLoadRps The full import RPS that has taken effect.	
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 获取The full import Rps currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 50,000,000.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CurrentLoadRps The full import Rps currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 50,000,000.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetCurrentLoadRps() const;
 
                     /**
-                     * 设置The full import RPS that has taken effect.	
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
-                     * @param _currentLoadRps The full import RPS that has taken effect.	
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 设置The full import Rps currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 50,000,000.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _currentLoadRps The full import Rps currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 50,000,000.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCurrentLoadRps(const int64_t& _currentLoadRps);
@@ -222,19 +194,15 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
                     bool CurrentLoadRpsHasBeenSet() const;
 
                     /**
-                     * 获取The default full import RPS.	
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
-                     * @return DefaultLoadRps The default full import RPS.	
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 获取The default full import Rps. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DefaultLoadRps The default full import Rps. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetDefaultLoadRps() const;
 
                     /**
-                     * 设置The default full import RPS.	
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
-                     * @param _defaultLoadRps The default full import RPS.	
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 设置The default full import Rps. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _defaultLoadRps The default full import Rps. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDefaultLoadRps(const int64_t& _defaultLoadRps);
@@ -247,19 +215,15 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
                     bool DefaultLoadRpsHasBeenSet() const;
 
                     /**
-                     * 获取The number of incremental import threads that have taken effect.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
-                     * @return CurrentSinkerThread The number of incremental import threads that have taken effect.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 获取The number of incremental import threads currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 128.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CurrentSinkerThread The number of incremental import threads currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 128.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetCurrentSinkerThread() const;
 
                     /**
-                     * 设置The number of incremental import threads that have taken effect.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
-                     * @param _currentSinkerThread The number of incremental import threads that have taken effect.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 设置The number of incremental import threads currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 128.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _currentSinkerThread The number of incremental import threads currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 128.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCurrentSinkerThread(const int64_t& _currentSinkerThread);
@@ -272,19 +236,19 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
                     bool CurrentSinkerThreadHasBeenSet() const;
 
                     /**
-                     * 获取The default number of incremental import threads.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
-                     * @return DefaultSinkerThread The default number of incremental import threads.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 获取The default number of incremental import threads. This field is only meaningful in the output parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DefaultSinkerThread The default number of incremental import threads. This field is only meaningful in the output parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetDefaultSinkerThread() const;
 
                     /**
-                     * 设置The default number of incremental import threads.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
-                     * @param _defaultSinkerThread The default number of incremental import threads.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 设置The default number of incremental import threads. This field is only meaningful in the output parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _defaultSinkerThread The default number of incremental import threads. This field is only meaningful in the output parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDefaultSinkerThread(const int64_t& _defaultSinkerThread);
@@ -297,19 +261,15 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
                     bool DefaultSinkerThreadHasBeenSet() const;
 
                     /**
-                     * 获取Whether the speed limit has been set. Valid values: `no` (No), `yes` (Yes).
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
-                     * @return HasUserSetRateLimit Whether the speed limit has been set. Valid values: `no` (No), `yes` (Yes).
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 获取enum:"no"/"yes", no: the user has not set a speed limit; yes: a speed limit has been set. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return HasUserSetRateLimit enum:"no"/"yes", no: the user has not set a speed limit; yes: a speed limit has been set. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetHasUserSetRateLimit() const;
 
                     /**
-                     * 设置Whether the speed limit has been set. Valid values: `no` (No), `yes` (Yes).
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
-                     * @param _hasUserSetRateLimit Whether the speed limit has been set. Valid values: `no` (No), `yes` (Yes).
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * 设置enum:"no"/"yes", no: the user has not set a speed limit; yes: a speed limit has been set. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _hasUserSetRateLimit enum:"no"/"yes", no: the user has not set a speed limit; yes: a speed limit has been set. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHasUserSetRateLimit(const std::string& _hasUserSetRateLimit);
@@ -324,78 +284,68 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
                 private:
 
                     /**
-                     * The number of full export threads that have taken effect.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * The number of full export threads currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 16.Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_currentDumpThread;
                     bool m_currentDumpThreadHasBeenSet;
 
                     /**
-                     * The default number of full export threads.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * The default number of full export threads. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_defaultDumpThread;
                     bool m_defaultDumpThreadHasBeenSet;
 
                     /**
-                     * The full export RPS that has taken effect.	
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * The full export Rps currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 50,000,000.Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_currentDumpRps;
                     bool m_currentDumpRpsHasBeenSet;
 
                     /**
-                     * The default full export RPS.	
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * The default full export Rps. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_defaultDumpRps;
                     bool m_defaultDumpRpsHasBeenSet;
 
                     /**
-                     * The number of full import threads that have taken effect.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * The number of full import threads currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 16.Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_currentLoadThread;
                     bool m_currentLoadThreadHasBeenSet;
 
                     /**
-                     * The default number of full import threads.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * The default number of full import threads. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_defaultLoadThread;
                     bool m_defaultLoadThreadHasBeenSet;
 
                     /**
-                     * The full import RPS that has taken effect.	
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * The full import Rps currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 50,000,000.Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_currentLoadRps;
                     bool m_currentLoadRpsHasBeenSet;
 
                     /**
-                     * The default full import RPS.	
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * The default full import Rps. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_defaultLoadRps;
                     bool m_defaultLoadRpsHasBeenSet;
 
                     /**
-                     * The number of incremental import threads that have taken effect.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * The number of incremental import threads currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 128.Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_currentSinkerThread;
                     bool m_currentSinkerThreadHasBeenSet;
 
                     /**
-                     * The default number of incremental import threads.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * The default number of incremental import threads. This field is only meaningful in the output parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_defaultSinkerThread;
                     bool m_defaultSinkerThreadHasBeenSet;
 
                     /**
-                     * Whether the speed limit has been set. Valid values: `no` (No), `yes` (Yes).
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+                     * enum:"no"/"yes", no: the user has not set a speed limit; yes: a speed limit has been set. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_hasUserSetRateLimit;
                     bool m_hasUserSetRateLimitHasBeenSet;

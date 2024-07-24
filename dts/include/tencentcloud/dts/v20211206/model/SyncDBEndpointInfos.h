@@ -123,19 +123,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DatabaseTypeHasBeenSet() const;
 
                     /**
-                     * 获取Database information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Info Database information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Database information. Note: If the data type is tdsqlmysql, the order of this Endpoint array should correspond to the set order, and the first shard (shardkey range starting from 0) must be entered first.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Info Database information. Note: If the data type is tdsqlmysql, the order of this Endpoint array should correspond to the set order, and the first shard (shardkey range starting from 0) must be entered first.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<Endpoint> GetInfo() const;
 
                     /**
-                     * 设置Database information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _info Database information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Database information. Note: If the data type is tdsqlmysql, the order of this Endpoint array should correspond to the set order, and the first shard (shardkey range starting from 0) must be entered first.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _info Database information. Note: If the data type is tdsqlmysql, the order of this Endpoint array should correspond to the set order, and the first shard (shardkey range starting from 0) must be entered first.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetInfo(const std::vector<Endpoint>& _info);
@@ -171,8 +167,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_databaseTypeHasBeenSet;
 
                     /**
-                     * Database information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Database information. Note: If the data type is tdsqlmysql, the order of this Endpoint array should correspond to the set order, and the first shard (shardkey range starting from 0) must be entered first.Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<Endpoint> m_info;
                     bool m_infoHasBeenSet;

@@ -387,9 +387,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Task throttling information
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RateLimitOption Task throttling information
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     RateLimitOption GetRateLimitOption() const;
@@ -550,7 +550,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Task throttling information
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     RateLimitOption m_rateLimitOption;
                     bool m_rateLimitOptionHasBeenSet;

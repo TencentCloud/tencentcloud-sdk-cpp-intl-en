@@ -572,19 +572,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RoleExternalIdHasBeenSet() const;
 
                     /**
-                     * 获取ID of the temporary key, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TmpSecretId ID of the temporary key, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TmpSecretId Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTmpSecretId() const;
 
                     /**
-                     * 设置ID of the temporary key, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tmpSecretId ID of the temporary key, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _tmpSecretId Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTmpSecretId(const std::string& _tmpSecretId);
@@ -597,19 +593,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TmpSecretIdHasBeenSet() const;
 
                     /**
-                     * 获取Key of the temporary key, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TmpSecretKey Key of the temporary key, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TmpSecretKey Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTmpSecretKey() const;
 
                     /**
-                     * 设置Key of the temporary key, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tmpSecretKey Key of the temporary key, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _tmpSecretKey Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTmpSecretKey(const std::string& _tmpSecretKey);
@@ -622,19 +614,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TmpSecretKeyHasBeenSet() const;
 
                     /**
-                     * 获取Temporary token, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TmpToken Temporary token, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TmpToken Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance. Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTmpToken() const;
 
                     /**
-                     * 设置Temporary token, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tmpToken Temporary token, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _tmpToken Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance. Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTmpToken(const std::string& _tmpToken);
@@ -698,18 +686,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return CcnOwnerUin The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCcnOwnerUin() const;
 
                     /**
                      * 设置The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @param _ccnOwnerUin The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCcnOwnerUin(const std::string& _ccnOwnerUin);
@@ -720,6 +708,69 @@ Note: u200dThis field may return `null`, indicating that no valid values can be 
                      * 
                      */
                     bool CcnOwnerUinHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ChildInstanceId 
+                     * 
+                     */
+                    std::string GetChildInstanceId() const;
+
+                    /**
+                     * 设置
+                     * @param _childInstanceId 
+                     * 
+                     */
+                    void SetChildInstanceId(const std::string& _childInstanceId);
+
+                    /**
+                     * 判断参数 ChildInstanceId 是否已赋值
+                     * @return ChildInstanceId 是否已赋值
+                     * 
+                     */
+                    bool ChildInstanceIdHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ChildInstanceType 
+                     * 
+                     */
+                    std::string GetChildInstanceType() const;
+
+                    /**
+                     * 设置
+                     * @param _childInstanceType 
+                     * 
+                     */
+                    void SetChildInstanceType(const std::string& _childInstanceType);
+
+                    /**
+                     * 判断参数 ChildInstanceType 是否已赋值
+                     * @return ChildInstanceType 是否已赋值
+                     * 
+                     */
+                    bool ChildInstanceTypeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return SetId 
+                     * 
+                     */
+                    std::string GetSetId() const;
+
+                    /**
+                     * 设置
+                     * @param _setId 
+                     * 
+                     */
+                    void SetSetId(const std::string& _setId);
+
+                    /**
+                     * 判断参数 SetId 是否已赋值
+                     * @return SetId 是否已赋值
+                     * 
+                     */
+                    bool SetIdHasBeenSet() const;
 
                 private:
 
@@ -871,22 +922,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_roleExternalIdHasBeenSet;
 
                     /**
-                     * ID of the temporary key, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_tmpSecretId;
                     bool m_tmpSecretIdHasBeenSet;
 
                     /**
-                     * Key of the temporary key, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_tmpSecretKey;
                     bool m_tmpSecretKeyHasBeenSet;
 
                     /**
-                     * Temporary token, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_tmpToken;
                     bool m_tmpTokenHasBeenSet;
@@ -907,10 +955,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_ccnOwnerUin;
                     bool m_ccnOwnerUinHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_childInstanceId;
+                    bool m_childInstanceIdHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_childInstanceType;
+                    bool m_childInstanceTypeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_setId;
+                    bool m_setIdHasBeenSet;
 
                 };
             }
