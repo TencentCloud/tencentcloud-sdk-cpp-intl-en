@@ -46,9 +46,9 @@ namespace TencentCloud
 
                     /**
                      * 获取The number of eligible instances.
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return TotalCount The number of eligible instances.
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -78,7 +78,7 @@ Note: u200dThis field may return `null`, indicating that no valid values can be 
 
                     /**
                      * The number of eligible instances.
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

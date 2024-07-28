@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ProductHasBeenSet() const;
 
                     /**
-                     * 获取Use the value of `u200cProduct` for this parameter, such as `dcdb` and `mariadb`.
-                     * @return NodeRequestType Use the value of `u200cProduct` for this parameter, such as `dcdb` and `mariadb`.
+                     * 获取Use the value of `Product` for this parameter, such as `dcdb` and `mariadb`.
+                     * @return NodeRequestType Use the value of `Product` for this parameter, such as `dcdb` and `mariadb`.
                      * 
                      */
                     std::string GetNodeRequestType() const;
 
                     /**
-                     * 设置Use the value of `u200cProduct` for this parameter, such as `dcdb` and `mariadb`.
-                     * @param _nodeRequestType Use the value of `u200cProduct` for this parameter, such as `dcdb` and `mariadb`.
+                     * 设置Use the value of `Product` for this parameter, such as `dcdb` and `mariadb`.
+                     * @param _nodeRequestType Use the value of `Product` for this parameter, such as `dcdb` and `mariadb`.
                      * 
                      */
                     void SetNodeRequestType(const std::string& _nodeRequestType);
@@ -178,7 +178,7 @@ namespace TencentCloud
                     bool m_productHasBeenSet;
 
                     /**
-                     * Use the value of `u200cProduct` for this parameter, such as `dcdb` and `mariadb`.
+                     * Use the value of `Product` for this parameter, such as `dcdb` and `mariadb`.
                      */
                     std::string m_nodeRequestType;
                     bool m_nodeRequestTypeHasBeenSet;

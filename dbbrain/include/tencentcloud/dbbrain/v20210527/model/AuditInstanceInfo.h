@@ -174,18 +174,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Resource tags
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
                      * @return ResourceTags Resource tags
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetResourceTags() const;
 
                     /**
                      * 设置Resource tags
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
                      * @param _resourceTags Resource tags
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetResourceTags(const std::vector<std::string>& _resourceTags);
@@ -237,7 +233,6 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
                     /**
                      * Resource tags
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_resourceTags;
                     bool m_resourceTagsHasBeenSet;
