@@ -46,13 +46,15 @@ namespace TencentCloud
 
                     /**
                      * 获取Pass status. When Warning and Rejected are returned, please check the specific reasons in the WarnInfo structure return. Example values are as follows:
-Passed
-Warning
-Rejected
+PASSED
+WARNING
+REJECTED
+PROCESSING
                      * @return Status Pass status. When Warning and Rejected are returned, please check the specific reasons in the WarnInfo structure return. Example values are as follows:
-Passed
-Warning
-Rejected
+PASSED
+WARNING
+REJECTED
+PROCESSING
                      * 
                      */
                     std::string GetStatus() const;
@@ -170,9 +172,10 @@ Example value: ID_CARD
 
                     /**
                      * Pass status. When Warning and Rejected are returned, please check the specific reasons in the WarnInfo structure return. Example values are as follows:
-Passed
-Warning
-Rejected
+PASSED
+WARNING
+REJECTED
+PROCESSING
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

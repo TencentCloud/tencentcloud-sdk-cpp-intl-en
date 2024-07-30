@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取The domain for CSR filtering.
-                     * @return Domain The domain for CSR filtering.
+                     * 获取The domain for CSR filtering
+                     * @return Domain The domain for CSR filtering
                      * 
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置The domain for CSR filtering.
-                     * @param _domain The domain for CSR filtering.
+                     * 设置The domain for CSR filtering
+                     * @param _domain The domain for CSR filtering
                      * 
                      */
                     void SetDomain(const std::string& _domain);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取The encryption algorithm for CSR filtering.
-                     * @return EncryptAlgo The encryption algorithm for CSR filtering.
+                     * 获取The encryption algorithm for CSR filtering
+                     * @return EncryptAlgo The encryption algorithm for CSR filtering
                      * 
                      */
                     std::string GetEncryptAlgo() const;
 
                     /**
-                     * 设置The encryption algorithm for CSR filtering.
-                     * @param _encryptAlgo The encryption algorithm for CSR filtering.
+                     * 设置The encryption algorithm for CSR filtering
+                     * @param _encryptAlgo The encryption algorithm for CSR filtering
                      * 
                      */
                     void SetEncryptAlgo(const std::string& _encryptAlgo);
@@ -141,13 +141,13 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * The domain for CSR filtering.
+                     * The domain for CSR filtering
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
 
                     /**
-                     * The encryption algorithm for CSR filtering.
+                     * The encryption algorithm for CSR filtering
                      */
                     std::string m_encryptAlgo;
                     bool m_encryptAlgoHasBeenSet;

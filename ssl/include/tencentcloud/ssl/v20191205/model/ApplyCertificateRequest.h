@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
-                     * @return DvAuthMethod Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
+                     * 获取Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation.
+                     * @return DvAuthMethod Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation.
                      * 
                      */
                     std::string GetDvAuthMethod() const;
 
                     /**
-                     * 设置Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
-                     * @param _dvAuthMethod Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
+                     * 设置Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation.
+                     * @param _dvAuthMethod Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation.
                      * 
                      */
                     void SetDvAuthMethod(const std::string& _dvAuthMethod);
@@ -336,10 +336,31 @@ namespace TencentCloud
                      */
                     bool DeleteDnsAutoRecordHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return DnsNames 
+                     * 
+                     */
+                    std::vector<std::string> GetDnsNames() const;
+
+                    /**
+                     * 设置
+                     * @param _dnsNames 
+                     * 
+                     */
+                    void SetDnsNames(const std::vector<std::string>& _dnsNames);
+
+                    /**
+                     * 判断参数 DnsNames 是否已赋值
+                     * @return DnsNames 是否已赋值
+                     * 
+                     */
+                    bool DnsNamesHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
+                     * Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation.
                      */
                     std::string m_dvAuthMethod;
                     bool m_dvAuthMethodHasBeenSet;
@@ -421,6 +442,12 @@ namespace TencentCloud
                      */
                     bool m_deleteDnsAutoRecord;
                     bool m_deleteDnsAutoRecordHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<std::string> m_dnsNames;
+                    bool m_dnsNamesHasBeenSet;
 
                 };
             }
