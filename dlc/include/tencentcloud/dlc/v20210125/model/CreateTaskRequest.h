@@ -127,6 +127,27 @@ namespace TencentCloud
                      */
                     bool DataEngineNameHasBeenSet() const;
 
+                    /**
+                     * 获取Standard spark execution task resourceGroupName
+                     * @return ResourceGroupName Standard spark execution task resourceGroupName
+                     * 
+                     */
+                    std::string GetResourceGroupName() const;
+
+                    /**
+                     * 设置Standard spark execution task resourceGroupName
+                     * @param _resourceGroupName Standard spark execution task resourceGroupName
+                     * 
+                     */
+                    void SetResourceGroupName(const std::string& _resourceGroupName);
+
+                    /**
+                     * 判断参数 ResourceGroupName 是否已赋值
+                     * @return ResourceGroupName 是否已赋值
+                     * 
+                     */
+                    bool ResourceGroupNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -152,6 +173,12 @@ namespace TencentCloud
                      */
                     std::string m_dataEngineName;
                     bool m_dataEngineNameHasBeenSet;
+
+                    /**
+                     * Standard spark execution task resourceGroupName
+                     */
+                    std::string m_resourceGroupName;
+                    bool m_resourceGroupNameHasBeenSet;
 
                 };
             }

@@ -552,19 +552,15 @@ namespace TencentCloud
                     bool JobStatusHasBeenSet() const;
 
                     /**
-                     * 获取Spark streaming job statistics
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return StreamingStat Spark streaming job statistics
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return StreamingStat Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     StreamingStatistics GetStreamingStat() const;
 
                     /**
-                     * 设置Spark streaming job statistics
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _streamingStat Spark streaming job statistics
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _streamingStat Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetStreamingStat(const StreamingStatistics& _streamingStat);
@@ -577,19 +573,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StreamingStatHasBeenSet() const;
 
                     /**
-                     * 获取Data source name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DataSource Data source name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DataSource Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDataSource() const;
 
                     /**
-                     * 设置Data source name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dataSource Data source name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _dataSource Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDataSource(const std::string& _dataSource);
@@ -602,19 +594,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DataSourceHasBeenSet() const;
 
                     /**
-                     * 获取PySpark: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsLocalPythonFiles PySpark: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IsLocalPythonFiles Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetIsLocalPythonFiles() const;
 
                     /**
-                     * 设置PySpark: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _isLocalPythonFiles PySpark: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _isLocalPythonFiles Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIsLocalPythonFiles(const std::string& _isLocalPythonFiles);
@@ -627,19 +615,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsLocalPythonFilesHasBeenSet() const;
 
                     /**
-                     * 获取Note: This returned value has been disused.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AppPythonFiles Note: This returned value has been disused.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AppPythonFiles Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetAppPythonFiles() const;
 
                     /**
-                     * 设置Note: This returned value has been disused.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _appPythonFiles Note: This returned value has been disused.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _appPythonFiles Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAppPythonFiles(const std::string& _appPythonFiles);
@@ -652,19 +636,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AppPythonFilesHasBeenSet() const;
 
                     /**
-                     * 获取Archives: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsLocalArchives Archives: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IsLocalArchives Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetIsLocalArchives() const;
 
                     /**
-                     * 设置Archives: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _isLocalArchives Archives: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _isLocalArchives Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIsLocalArchives(const std::string& _isLocalArchives);
@@ -677,19 +657,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsLocalArchivesHasBeenSet() const;
 
                     /**
-                     * 获取Archives: Dependency resources
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return JobArchives Archives: Dependency resources
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return JobArchives Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetJobArchives() const;
 
                     /**
-                     * 设置Archives: Dependency resources
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _jobArchives Archives: Dependency resources
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _jobArchives Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetJobArchives(const std::string& _jobArchives);
@@ -702,19 +678,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool JobArchivesHasBeenSet() const;
 
                     /**
-                     * 获取The Spark image version.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SparkImage The Spark image version.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SparkImage Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSparkImage() const;
 
                     /**
-                     * 设置The Spark image version.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _sparkImage The Spark image version.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _sparkImage Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSparkImage(const std::string& _sparkImage);
@@ -727,19 +699,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SparkImageHasBeenSet() const;
 
                     /**
-                     * 获取PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return JobPythonFiles PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return JobPythonFiles Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetJobPythonFiles() const;
 
                     /**
-                     * 设置PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _jobPythonFiles PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _jobPythonFiles Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetJobPythonFiles(const std::string& _jobPythonFiles);
@@ -752,19 +720,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool JobPythonFilesHasBeenSet() const;
 
                     /**
-                     * 获取Number of tasks running or ready to run under the current job
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TaskNum Number of tasks running or ready to run under the current job
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TaskNum Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetTaskNum() const;
 
                     /**
-                     * 设置Number of tasks running or ready to run under the current job
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _taskNum Number of tasks running or ready to run under the current job
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _taskNum Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTaskNum(const int64_t& _taskNum);
@@ -777,19 +741,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TaskNumHasBeenSet() const;
 
                     /**
-                     * 获取Engine status. -100 (default value): unknown; -2-11: normal.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DataEngineStatus Engine status. -100 (default value): unknown; -2-11: normal.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DataEngineStatus Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetDataEngineStatus() const;
 
                     /**
-                     * 设置Engine status. -100 (default value): unknown; -2-11: normal.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dataEngineStatus Engine status. -100 (default value): unknown; -2-11: normal.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _dataEngineStatus Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDataEngineStatus(const int64_t& _dataEngineStatus);
@@ -802,19 +762,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DataEngineStatusHasBeenSet() const;
 
                     /**
-                     * 获取The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `JobExecutorNums`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return JobExecutorMaxNumbers The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `JobExecutorNums`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return JobExecutorMaxNumbers Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetJobExecutorMaxNumbers() const;
 
                     /**
-                     * 设置The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `JobExecutorNums`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _jobExecutorMaxNumbers The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `JobExecutorNums`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _jobExecutorMaxNumbers Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetJobExecutorMaxNumbers(const int64_t& _jobExecutorMaxNumbers);
@@ -827,19 +783,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool JobExecutorMaxNumbersHasBeenSet() const;
 
                     /**
-                     * 获取The image version.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SparkImageVersion The image version.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SparkImageVersion Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSparkImageVersion() const;
 
                     /**
-                     * 设置The image version.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _sparkImageVersion The image version.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _sparkImageVersion Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSparkImageVersion(const std::string& _sparkImageVersion);
@@ -852,19 +804,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SparkImageVersionHasBeenSet() const;
 
                     /**
-                     * 获取The ID of the associated Data Lake Compute query script.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SessionId The ID of the associated Data Lake Compute query script.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SessionId Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置The ID of the associated Data Lake Compute query script.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _sessionId The ID of the associated Data Lake Compute query script.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _sessionId Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -877,19 +825,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SessionIdHasBeenSet() const;
 
                     /**
-                     * 获取`spark_emr_livy` indicates to create an EMR cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DataEngineClusterType `spark_emr_livy` indicates to create an EMR cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DataEngineClusterType Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDataEngineClusterType() const;
 
                     /**
-                     * 设置`spark_emr_livy` indicates to create an EMR cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dataEngineClusterType `spark_emr_livy` indicates to create an EMR cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _dataEngineClusterType Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDataEngineClusterType(const std::string& _dataEngineClusterType);
@@ -902,19 +846,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DataEngineClusterTypeHasBeenSet() const;
 
                     /**
-                     * 获取`Spark 3.2-EMR` indicates to use the Spark 3.2 image.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DataEngineImageVersion `Spark 3.2-EMR` indicates to use the Spark 3.2 image.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DataEngineImageVersion Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDataEngineImageVersion() const;
 
                     /**
-                     * 设置`Spark 3.2-EMR` indicates to use the Spark 3.2 image.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dataEngineImageVersion `Spark 3.2-EMR` indicates to use the Spark 3.2 image.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _dataEngineImageVersion Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDataEngineImageVersion(const std::string& _dataEngineImageVersion);
@@ -927,19 +867,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DataEngineImageVersionHasBeenSet() const;
 
                     /**
-                     * 获取Whether the task resource configuration is inherited from the cluster template. Valid values: `0` (default): No; `1`: Yes.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsInherit Whether the task resource configuration is inherited from the cluster template. Valid values: `0` (default): No; `1`: Yes.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IsInherit Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetIsInherit() const;
 
                     /**
-                     * 设置Whether the task resource configuration is inherited from the cluster template. Valid values: `0` (default): No; `1`: Yes.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _isInherit Whether the task resource configuration is inherited from the cluster template. Valid values: `0` (default): No; `1`: Yes.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _isInherit Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIsInherit(const uint64_t& _isInherit);
@@ -952,19 +888,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsInheritHasBeenSet() const;
 
                     /**
-                     * 获取Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsSessionStarted Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IsSessionStarted Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     bool GetIsSessionStarted() const;
 
                     /**
-                     * 设置Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _isSessionStarted Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _isSessionStarted Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIsSessionStarted(const bool& _isSessionStarted);
@@ -977,15 +909,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsSessionStartedHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EngineTypeDetail 
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return EngineTypeDetail Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetEngineTypeDetail() const;
 
                     /**
-                     * 设置
-                     * @param _engineTypeDetail 
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _engineTypeDetail Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetEngineTypeDetail(const std::string& _engineTypeDetail);
@@ -1144,126 +1076,109 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_jobStatusHasBeenSet;
 
                     /**
-                     * Spark streaming job statistics
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     StreamingStatistics m_streamingStat;
                     bool m_streamingStatHasBeenSet;
 
                     /**
-                     * Data source name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_dataSource;
                     bool m_dataSourceHasBeenSet;
 
                     /**
-                     * PySpark: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_isLocalPythonFiles;
                     bool m_isLocalPythonFilesHasBeenSet;
 
                     /**
-                     * Note: This returned value has been disused.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_appPythonFiles;
                     bool m_appPythonFilesHasBeenSet;
 
                     /**
-                     * Archives: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_isLocalArchives;
                     bool m_isLocalArchivesHasBeenSet;
 
                     /**
-                     * Archives: Dependency resources
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_jobArchives;
                     bool m_jobArchivesHasBeenSet;
 
                     /**
-                     * The Spark image version.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_sparkImage;
                     bool m_sparkImageHasBeenSet;
 
                     /**
-                     * PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_jobPythonFiles;
                     bool m_jobPythonFilesHasBeenSet;
 
                     /**
-                     * Number of tasks running or ready to run under the current job
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_taskNum;
                     bool m_taskNumHasBeenSet;
 
                     /**
-                     * Engine status. -100 (default value): unknown; -2-11: normal.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_dataEngineStatus;
                     bool m_dataEngineStatusHasBeenSet;
 
                     /**
-                     * The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `JobExecutorNums`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_jobExecutorMaxNumbers;
                     bool m_jobExecutorMaxNumbersHasBeenSet;
 
                     /**
-                     * The image version.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_sparkImageVersion;
                     bool m_sparkImageVersionHasBeenSet;
 
                     /**
-                     * The ID of the associated Data Lake Compute query script.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;
 
                     /**
-                     * `spark_emr_livy` indicates to create an EMR cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_dataEngineClusterType;
                     bool m_dataEngineClusterTypeHasBeenSet;
 
                     /**
-                     * `Spark 3.2-EMR` indicates to use the Spark 3.2 image.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_dataEngineImageVersion;
                     bool m_dataEngineImageVersionHasBeenSet;
 
                     /**
-                     * Whether the task resource configuration is inherited from the cluster template. Valid values: `0` (default): No; `1`: Yes.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_isInherit;
                     bool m_isInheritHasBeenSet;
 
                     /**
-                     * Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     bool m_isSessionStarted;
                     bool m_isSessionStartedHasBeenSet;
 
                     /**
-                     * 
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_engineTypeDetail;
                     bool m_engineTypeDetailHasBeenSet;

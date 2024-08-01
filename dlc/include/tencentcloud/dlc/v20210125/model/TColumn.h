@@ -151,6 +151,52 @@ namespace TencentCloud
                      */
                     bool NotNullHasBeenSet() const;
 
+                    /**
+                     * 获取Indicate the length of the entire numeric with a value of 1-38
+                     * @return Precision Indicate the length of the entire numeric with a value of 1-38
+                     * 
+                     */
+                    int64_t GetPrecision() const;
+
+                    /**
+                     * 设置Indicate the length of the entire numeric with a value of 1-38
+                     * @param _precision Indicate the length of the entire numeric with a value of 1-38
+                     * 
+                     */
+                    void SetPrecision(const int64_t& _precision);
+
+                    /**
+                     * 判断参数 Precision 是否已赋值
+                     * @return Precision 是否已赋值
+                     * 
+                     */
+                    bool PrecisionHasBeenSet() const;
+
+                    /**
+                     * 获取Indicate the length of the decimal part.
+Scale is smaller than Precision.
+                     * @return Scale Indicate the length of the decimal part.
+Scale is smaller than Precision.
+                     * 
+                     */
+                    int64_t GetScale() const;
+
+                    /**
+                     * 设置Indicate the length of the decimal part.
+Scale is smaller than Precision.
+                     * @param _scale Indicate the length of the decimal part.
+Scale is smaller than Precision.
+                     * 
+                     */
+                    void SetScale(const int64_t& _scale);
+
+                    /**
+                     * 判断参数 Scale 是否已赋值
+                     * @return Scale 是否已赋值
+                     * 
+                     */
+                    bool ScaleHasBeenSet() const;
+
                 private:
 
                     /**
@@ -182,6 +228,19 @@ namespace TencentCloud
                      */
                     bool m_notNull;
                     bool m_notNullHasBeenSet;
+
+                    /**
+                     * Indicate the length of the entire numeric with a value of 1-38
+                     */
+                    int64_t m_precision;
+                    bool m_precisionHasBeenSet;
+
+                    /**
+                     * Indicate the length of the decimal part.
+Scale is smaller than Precision.
+                     */
+                    int64_t m_scale;
+                    bool m_scaleHasBeenSet;
 
                 };
             }

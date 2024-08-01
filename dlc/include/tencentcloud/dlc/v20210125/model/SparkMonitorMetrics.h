@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The shuffle data (in bytes) that overflows to COS.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ShuffleWriteBytesCos The shuffle data (in bytes) that overflows to COS.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ShuffleWriteBytesCos Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetShuffleWriteBytesCos() const;
 
                     /**
-                     * 设置The shuffle data (in bytes) that overflows to COS.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _shuffleWriteBytesCos The shuffle data (in bytes) that overflows to COS.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _shuffleWriteBytesCos Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetShuffleWriteBytesCos(const int64_t& _shuffleWriteBytesCos);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ShuffleWriteBytesCosHasBeenSet() const;
 
                     /**
-                     * 获取The total shuffle data (in bytes).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ShuffleWriteBytesTotal The total shuffle data (in bytes).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ShuffleWriteBytesTotal Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetShuffleWriteBytesTotal() const;
 
                     /**
-                     * 设置The total shuffle data (in bytes).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _shuffleWriteBytesTotal The total shuffle data (in bytes).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _shuffleWriteBytesTotal Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetShuffleWriteBytesTotal(const int64_t& _shuffleWriteBytesTotal);
@@ -99,15 +91,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The shuffle data (in bytes) that overflows to COS.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_shuffleWriteBytesCos;
                     bool m_shuffleWriteBytesCosHasBeenSet;
 
                     /**
-                     * The total shuffle data (in bytes).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_shuffleWriteBytesTotal;
                     bool m_shuffleWriteBytesTotalHasBeenSet;

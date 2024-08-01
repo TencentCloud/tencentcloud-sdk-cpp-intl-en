@@ -63,6 +63,27 @@ namespace TencentCloud
                      */
                     bool BatchIdHasBeenSet() const;
 
+                    /**
+                     * 获取User-defined primary key. If it is specified, the value should be used for querying.
+                     * @return CustomKey User-defined primary key. If it is specified, the value should be used for querying.
+                     * 
+                     */
+                    std::string GetCustomKey() const;
+
+                    /**
+                     * 设置User-defined primary key. If it is specified, the value should be used for querying.
+                     * @param _customKey User-defined primary key. If it is specified, the value should be used for querying.
+                     * 
+                     */
+                    void SetCustomKey(const std::string& _customKey);
+
+                    /**
+                     * 判断参数 CustomKey 是否已赋值
+                     * @return CustomKey 是否已赋值
+                     * 
+                     */
+                    bool CustomKeyHasBeenSet() const;
+
                 private:
 
                     /**
@@ -70,6 +91,12 @@ namespace TencentCloud
                      */
                     std::string m_batchId;
                     bool m_batchIdHasBeenSet;
+
+                    /**
+                     * User-defined primary key. If it is specified, the value should be used for querying.
+                     */
+                    std::string m_customKey;
+                    bool m_customKeyHasBeenSet;
 
                 };
             }

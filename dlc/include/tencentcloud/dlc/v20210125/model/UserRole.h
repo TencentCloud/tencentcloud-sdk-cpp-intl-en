@@ -174,19 +174,15 @@ namespace TencentCloud
                     bool DescHasBeenSet() const;
 
                     /**
-                     * 获取The role name.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RoleName The role name.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RoleName Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRoleName() const;
 
                     /**
-                     * 设置The role name.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _roleName The role name.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _roleName Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRoleName(const std::string& _roleName);
@@ -199,19 +195,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RoleNameHasBeenSet() const;
 
                     /**
-                     * 获取The creator UIN.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Creator The creator UIN.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Creator Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCreator() const;
 
                     /**
-                     * 设置The creator UIN.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _creator The creator UIN.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _creator Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCreator(const std::string& _creator);
@@ -224,19 +216,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CreatorHasBeenSet() const;
 
                     /**
-                     * 获取The COS permission list.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CosPermissionList The COS permission list.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CosPermissionList Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<CosPermission> GetCosPermissionList() const;
 
                     /**
-                     * 设置The COS permission list.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cosPermissionList The COS permission list.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _cosPermissionList Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCosPermissionList(const std::vector<CosPermission>& _cosPermissionList);
@@ -249,19 +237,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CosPermissionListHasBeenSet() const;
 
                     /**
-                     * 获取The CAM policy in JSON.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PermissionJson The CAM policy in JSON.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return PermissionJson Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetPermissionJson() const;
 
                     /**
-                     * 设置The CAM policy in JSON.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _permissionJson The CAM policy in JSON.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _permissionJson Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetPermissionJson(const std::string& _permissionJson);
@@ -312,29 +296,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_descHasBeenSet;
 
                     /**
-                     * The role name.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_roleName;
                     bool m_roleNameHasBeenSet;
 
                     /**
-                     * The creator UIN.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_creator;
                     bool m_creatorHasBeenSet;
 
                     /**
-                     * The COS permission list.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<CosPermission> m_cosPermissionList;
                     bool m_cosPermissionListHasBeenSet;
 
                     /**
-                     * The CAM policy in JSON.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_permissionJson;
                     bool m_permissionJsonHasBeenSet;

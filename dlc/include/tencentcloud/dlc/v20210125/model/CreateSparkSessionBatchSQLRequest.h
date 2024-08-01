@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool DataEngineNameHasBeenSet() const;
 
                     /**
-                     * 获取The SQL statement to execute.
-                     * @return ExecuteSQL The SQL statement to execute.
+                     * 获取Run SQL. The base64 encoding is needed.
+                     * @return ExecuteSQL Run SQL. The base64 encoding is needed.
                      * 
                      */
                     std::string GetExecuteSQL() const;
 
                     /**
-                     * 设置The SQL statement to execute.
-                     * @param _executeSQL The SQL statement to execute.
+                     * 设置Run SQL. The base64 encoding is needed.
+                     * @param _executeSQL Run SQL. The base64 encoding is needed.
                      * 
                      */
                     void SetExecuteSQL(const std::string& _executeSQL);
@@ -262,15 +262,15 @@ and `3.dlc.sql.set.config` for user-defined cluster configurations.
                     bool ArgumentsHasBeenSet() const;
 
                     /**
-                     * 获取Whether to inherit the resource configurations from the cluster. Valid values: `0` for no (default) and `1` for yes.
-                     * @return IsInherit Whether to inherit the resource configurations from the cluster. Valid values: `0` for no (default) and `1` for yes.
+                     * 获取Whether to inherit the resource configuration of clusters; 0: not inherit (by default); 1: inherit clusters.
+                     * @return IsInherit Whether to inherit the resource configuration of clusters; 0: not inherit (by default); 1: inherit clusters.
                      * 
                      */
                     int64_t GetIsInherit() const;
 
                     /**
-                     * 设置Whether to inherit the resource configurations from the cluster. Valid values: `0` for no (default) and `1` for yes.
-                     * @param _isInherit Whether to inherit the resource configurations from the cluster. Valid values: `0` for no (default) and `1` for yes.
+                     * 设置Whether to inherit the resource configuration of clusters; 0: not inherit (by default); 1: inherit clusters.
+                     * @param _isInherit Whether to inherit the resource configuration of clusters; 0: not inherit (by default); 1: inherit clusters.
                      * 
                      */
                     void SetIsInherit(const int64_t& _isInherit);
@@ -282,6 +282,27 @@ and `3.dlc.sql.set.config` for user-defined cluster configurations.
                      */
                     bool IsInheritHasBeenSet() const;
 
+                    /**
+                     * 获取User-defined primary key, and it should be unique.
+                     * @return CustomKey User-defined primary key, and it should be unique.
+                     * 
+                     */
+                    std::string GetCustomKey() const;
+
+                    /**
+                     * 设置User-defined primary key, and it should be unique.
+                     * @param _customKey User-defined primary key, and it should be unique.
+                     * 
+                     */
+                    void SetCustomKey(const std::string& _customKey);
+
+                    /**
+                     * 判断参数 CustomKey 是否已赋值
+                     * @return CustomKey 是否已赋值
+                     * 
+                     */
+                    bool CustomKeyHasBeenSet() const;
+
                 private:
 
                     /**
@@ -291,7 +312,7 @@ and `3.dlc.sql.set.config` for user-defined cluster configurations.
                     bool m_dataEngineNameHasBeenSet;
 
                     /**
-                     * The SQL statement to execute.
+                     * Run SQL. The base64 encoding is needed.
                      */
                     std::string m_executeSQL;
                     bool m_executeSQLHasBeenSet;
@@ -347,10 +368,16 @@ and `3.dlc.sql.set.config` for user-defined cluster configurations.
                     bool m_argumentsHasBeenSet;
 
                     /**
-                     * Whether to inherit the resource configurations from the cluster. Valid values: `0` for no (default) and `1` for yes.
+                     * Whether to inherit the resource configuration of clusters; 0: not inherit (by default); 1: inherit clusters.
                      */
                     int64_t m_isInherit;
                     bool m_isInheritHasBeenSet;
+
+                    /**
+                     * User-defined primary key, and it should be unique.
+                     */
+                    std::string m_customKey;
+                    bool m_customKeyHasBeenSet;
 
                 };
             }

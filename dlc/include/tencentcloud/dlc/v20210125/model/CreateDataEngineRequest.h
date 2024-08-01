@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取The resource period. For the postpaid mode, the value is 3600 (default); for the prepaid mode, the value must be in the range of 1–120, representing purchasing the resource for 1–120 months.
-                     * @return TimeSpan The resource period. For the postpaid mode, the value is 3600 (default); for the prepaid mode, the value must be in the range of 1–120, representing purchasing the resource for 1–120 months.
+                     * 获取The usage duration of the resource. Postpaid: Fill in 3,600 as a fixed figure; prepaid: fill in a figure equal to or bigger than 1 which means purchasing resources for one month. The maximum figure is not bigger than 120. The default value is 1.
+                     * @return TimeSpan The usage duration of the resource. Postpaid: Fill in 3,600 as a fixed figure; prepaid: fill in a figure equal to or bigger than 1 which means purchasing resources for one month. The maximum figure is not bigger than 120. The default value is 1.
                      * 
                      */
                     int64_t GetTimeSpan() const;
 
                     /**
-                     * 设置The resource period. For the postpaid mode, the value is 3600 (default); for the prepaid mode, the value must be in the range of 1–120, representing purchasing the resource for 1–120 months.
-                     * @param _timeSpan The resource period. For the postpaid mode, the value is 3600 (default); for the prepaid mode, the value must be in the range of 1–120, representing purchasing the resource for 1–120 months.
+                     * 设置The usage duration of the resource. Postpaid: Fill in 3,600 as a fixed figure; prepaid: fill in a figure equal to or bigger than 1 which means purchasing resources for one month. The maximum figure is not bigger than 120. The default value is 1.
+                     * @param _timeSpan The usage duration of the resource. Postpaid: Fill in 3,600 as a fixed figure; prepaid: fill in a figure equal to or bigger than 1 which means purchasing resources for one month. The maximum figure is not bigger than 120. The default value is 1.
                      * 
                      */
                     void SetTimeSpan(const int64_t& _timeSpan);
@@ -676,6 +676,69 @@ namespace TencentCloud
                      */
                     bool SessionResourceTemplateHasBeenSet() const;
 
+                    /**
+                     * 获取Automatically grant permissions
+                     * @return AutoAuthorization Automatically grant permissions
+                     * 
+                     */
+                    bool GetAutoAuthorization() const;
+
+                    /**
+                     * 设置Automatically grant permissions
+                     * @param _autoAuthorization Automatically grant permissions
+                     * 
+                     */
+                    void SetAutoAuthorization(const bool& _autoAuthorization);
+
+                    /**
+                     * 判断参数 AutoAuthorization 是否已赋值
+                     * @return AutoAuthorization 是否已赋值
+                     * 
+                     */
+                    bool AutoAuthorizationHasBeenSet() const;
+
+                    /**
+                     * 获取Engine network ID
+                     * @return EngineNetworkId Engine network ID
+                     * 
+                     */
+                    std::string GetEngineNetworkId() const;
+
+                    /**
+                     * 设置Engine network ID
+                     * @param _engineNetworkId Engine network ID
+                     * 
+                     */
+                    void SetEngineNetworkId(const std::string& _engineNetworkId);
+
+                    /**
+                     * 判断参数 EngineNetworkId 是否已赋值
+                     * @return EngineNetworkId 是否已赋值
+                     * 
+                     */
+                    bool EngineNetworkIdHasBeenSet() const;
+
+                    /**
+                     * 获取Generation of the engine. SuperSQL means the supersql engine while Native means the standard engine. It is SuperSQL by default.
+                     * @return EngineGeneration Generation of the engine. SuperSQL means the supersql engine while Native means the standard engine. It is SuperSQL by default.
+                     * 
+                     */
+                    std::string GetEngineGeneration() const;
+
+                    /**
+                     * 设置Generation of the engine. SuperSQL means the supersql engine while Native means the standard engine. It is SuperSQL by default.
+                     * @param _engineGeneration Generation of the engine. SuperSQL means the supersql engine while Native means the standard engine. It is SuperSQL by default.
+                     * 
+                     */
+                    void SetEngineGeneration(const std::string& _engineGeneration);
+
+                    /**
+                     * 判断参数 EngineGeneration 是否已赋值
+                     * @return EngineGeneration 是否已赋值
+                     * 
+                     */
+                    bool EngineGenerationHasBeenSet() const;
+
                 private:
 
                     /**
@@ -751,7 +814,7 @@ namespace TencentCloud
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * The resource period. For the postpaid mode, the value is 3600 (default); for the prepaid mode, the value must be in the range of 1–120, representing purchasing the resource for 1–120 months.
+                     * The usage duration of the resource. Postpaid: Fill in 3,600 as a fixed figure; prepaid: fill in a figure equal to or bigger than 1 which means purchasing resources for one month. The maximum figure is not bigger than 120. The default value is 1.
                      */
                     int64_t m_timeSpan;
                     bool m_timeSpanHasBeenSet;
@@ -857,6 +920,24 @@ namespace TencentCloud
                      */
                     SessionResourceTemplate m_sessionResourceTemplate;
                     bool m_sessionResourceTemplateHasBeenSet;
+
+                    /**
+                     * Automatically grant permissions
+                     */
+                    bool m_autoAuthorization;
+                    bool m_autoAuthorizationHasBeenSet;
+
+                    /**
+                     * Engine network ID
+                     */
+                    std::string m_engineNetworkId;
+                    bool m_engineNetworkIdHasBeenSet;
+
+                    /**
+                     * Generation of the engine. SuperSQL means the supersql engine while Native means the standard engine. It is SuperSQL by default.
+                     */
+                    std::string m_engineGeneration;
+                    bool m_engineGenerationHasBeenSet;
 
                 };
             }

@@ -231,6 +231,27 @@ task-kind - string (filter by task type)
                      */
                     bool DataEngineNameHasBeenSet() const;
 
+                    /**
+                     * 获取Resource group name of the spark engine
+                     * @return ResourceGroupName Resource group name of the spark engine
+                     * 
+                     */
+                    std::string GetResourceGroupName() const;
+
+                    /**
+                     * 设置Resource group name of the spark engine
+                     * @param _resourceGroupName Resource group name of the spark engine
+                     * 
+                     */
+                    void SetResourceGroupName(const std::string& _resourceGroupName);
+
+                    /**
+                     * 判断参数 ResourceGroupName 是否已赋值
+                     * @return ResourceGroupName 是否已赋值
+                     * 
+                     */
+                    bool ResourceGroupNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -285,6 +306,12 @@ task-kind - string (filter by task type)
                      */
                     std::string m_dataEngineName;
                     bool m_dataEngineNameHasBeenSet;
+
+                    /**
+                     * Resource group name of the spark engine
+                     */
+                    std::string m_resourceGroupName;
+                    bool m_resourceGroupNameHasBeenSet;
 
                 };
             }

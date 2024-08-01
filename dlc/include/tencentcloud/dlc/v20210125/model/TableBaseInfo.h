@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/dlc/v20210125/model/DataGovernPolicy.h>
+#include <tencentcloud/dlc/v20210125/model/SmartPolicy.h>
 
 
 namespace TencentCloud
@@ -244,7 +245,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return GovernPolicy The data governance configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
+                     * @deprecated
                      */
                     DataGovernPolicy GetGovernPolicy() const;
 
@@ -253,14 +254,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _governPolicy The data governance configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
+                     * @deprecated
                      */
                     void SetGovernPolicy(const DataGovernPolicy& _governPolicy);
 
                     /**
                      * 判断参数 GovernPolicy 是否已赋值
                      * @return GovernPolicy 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool GovernPolicyHasBeenSet() const;
 
@@ -269,7 +270,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DbGovernPolicyIsDisable Whether database data governance is disabled. Valid values: `true` (disabled) and `false` (not disabled).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
+                     * @deprecated
                      */
                     std::string GetDbGovernPolicyIsDisable() const;
 
@@ -278,16 +279,41 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _dbGovernPolicyIsDisable Whether database data governance is disabled. Valid values: `true` (disabled) and `false` (not disabled).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
+                     * @deprecated
                      */
                     void SetDbGovernPolicyIsDisable(const std::string& _dbGovernPolicyIsDisable);
 
                     /**
                      * 判断参数 DbGovernPolicyIsDisable 是否已赋值
                      * @return DbGovernPolicyIsDisable 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool DbGovernPolicyIsDisableHasBeenSet() const;
+
+                    /**
+                     * 获取Smart data governance configuration items
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SmartPolicy Smart data governance configuration items
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    SmartPolicy GetSmartPolicy() const;
+
+                    /**
+                     * 设置Smart data governance configuration items
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _smartPolicy Smart data governance configuration items
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetSmartPolicy(const SmartPolicy& _smartPolicy);
+
+                    /**
+                     * 判断参数 SmartPolicy 是否已赋值
+                     * @return SmartPolicy 是否已赋值
+                     * 
+                     */
+                    bool SmartPolicyHasBeenSet() const;
 
                 private:
 
@@ -358,6 +384,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_dbGovernPolicyIsDisable;
                     bool m_dbGovernPolicyIsDisableHasBeenSet;
+
+                    /**
+                     * Smart data governance configuration items
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    SmartPolicy m_smartPolicy;
+                    bool m_smartPolicyHasBeenSet;
 
                 };
             }

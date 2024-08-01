@@ -281,19 +281,15 @@ namespace TencentCloud
                     bool RowAffectInfoHasBeenSet() const;
 
                     /**
-                     * 获取Dataset of task results
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DataSet Dataset of task results
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DataSet Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDataSet() const;
 
                     /**
-                     * 设置Dataset of task results
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dataSet Dataset of task results
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _dataSet Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDataSet(const std::string& _dataSet);
@@ -390,19 +386,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TaskTypeHasBeenSet() const;
 
                     /**
-                     * 获取Task progress details
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProgressDetail Task progress details
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ProgressDetail Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetProgressDetail() const;
 
                     /**
-                     * 设置Task progress details
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _progressDetail Task progress details
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _progressDetail Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetProgressDetail(const std::string& _progressDetail);
@@ -415,19 +407,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProgressDetailHasBeenSet() const;
 
                     /**
-                     * 获取Task end time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UpdateTime Task end time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return UpdateTime Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Task end time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _updateTime Task end time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _updateTime Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -440,19 +428,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Compute resource ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DataEngineId Compute resource ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DataEngineId Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDataEngineId() const;
 
                     /**
-                     * 设置Compute resource ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dataEngineId Compute resource ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _dataEngineId Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDataEngineId(const std::string& _dataEngineId);
@@ -465,19 +449,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DataEngineIdHasBeenSet() const;
 
                     /**
-                     * 获取Sub-UIN that executes the SQL statement
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OperateUin Sub-UIN that executes the SQL statement
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return OperateUin Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetOperateUin() const;
 
                     /**
-                     * 设置Sub-UIN that executes the SQL statement
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _operateUin Sub-UIN that executes the SQL statement
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _operateUin Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetOperateUin(const std::string& _operateUin);
@@ -490,19 +470,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OperateUinHasBeenSet() const;
 
                     /**
-                     * 获取Compute resource name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DataEngineName Compute resource name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DataEngineName Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDataEngineName() const;
 
                     /**
-                     * 设置Compute resource name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dataEngineName Compute resource name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _dataEngineName Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDataEngineName(const std::string& _dataEngineName);
@@ -515,19 +491,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DataEngineNameHasBeenSet() const;
 
                     /**
-                     * 获取Whether the import type is local import or COS
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InputType Whether the import type is local import or COS
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return InputType Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetInputType() const;
 
                     /**
-                     * 设置Whether the import type is local import or COS
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _inputType Whether the import type is local import or COS
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _inputType Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetInputType(const std::string& _inputType);
@@ -540,19 +512,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InputTypeHasBeenSet() const;
 
                     /**
-                     * 获取Import configuration
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InputConf Import configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return InputConf Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetInputConf() const;
 
                     /**
-                     * 设置Import configuration
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _inputConf Import configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _inputConf Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetInputConf(const std::string& _inputConf);
@@ -565,19 +533,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InputConfHasBeenSet() const;
 
                     /**
-                     * 获取Number of data entries
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DataNumber Number of data entries
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DataNumber Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetDataNumber() const;
 
                     /**
-                     * 设置Number of data entries
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dataNumber Number of data entries
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _dataNumber Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDataNumber(const int64_t& _dataNumber);
@@ -590,19 +554,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DataNumberHasBeenSet() const;
 
                     /**
-                     * 获取Whether the data can be downloaded
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CanDownload Whether the data can be downloaded
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CanDownload Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     bool GetCanDownload() const;
 
                     /**
-                     * 设置Whether the data can be downloaded
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _canDownload Whether the data can be downloaded
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _canDownload Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCanDownload(const bool& _canDownload);
@@ -615,19 +575,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CanDownloadHasBeenSet() const;
 
                     /**
-                     * 获取User alias
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UserAlias User alias
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return UserAlias Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUserAlias() const;
 
                     /**
-                     * 设置User alias
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _userAlias User alias
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _userAlias Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUserAlias(const std::string& _userAlias);
@@ -640,19 +596,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UserAliasHasBeenSet() const;
 
                     /**
-                     * 获取Spark application job name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SparkJobName Spark application job name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SparkJobName Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSparkJobName() const;
 
                     /**
-                     * 设置Spark application job name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _sparkJobName Spark application job name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _sparkJobName Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSparkJobName(const std::string& _sparkJobName);
@@ -665,19 +617,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SparkJobNameHasBeenSet() const;
 
                     /**
-                     * 获取Spark application job ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SparkJobId Spark application job ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SparkJobId Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSparkJobId() const;
 
                     /**
-                     * 设置Spark application job ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _sparkJobId Spark application job ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _sparkJobId Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSparkJobId(const std::string& _sparkJobId);
@@ -690,19 +638,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SparkJobIdHasBeenSet() const;
 
                     /**
-                     * 获取JAR file of the Spark application entry
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SparkJobFile JAR file of the Spark application entry
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SparkJobFile Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSparkJobFile() const;
 
                     /**
-                     * 设置JAR file of the Spark application entry
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _sparkJobFile JAR file of the Spark application entry
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _sparkJobFile Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSparkJobFile(const std::string& _sparkJobFile);
@@ -715,19 +659,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SparkJobFileHasBeenSet() const;
 
                     /**
-                     * 获取Spark UI URL
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UiUrl Spark UI URL
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return UiUrl Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUiUrl() const;
 
                     /**
-                     * 设置Spark UI URL
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _uiUrl Spark UI URL
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _uiUrl Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUiUrl(const std::string& _uiUrl);
@@ -740,19 +680,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UiUrlHasBeenSet() const;
 
                     /**
-                     * 获取The task time in ms.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TotalTime The task time in ms.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TotalTime Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetTotalTime() const;
 
                     /**
-                     * 设置The task time in ms.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _totalTime The task time in ms.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _totalTime Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTotalTime(const int64_t& _totalTime);
@@ -765,19 +701,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TotalTimeHasBeenSet() const;
 
                     /**
-                     * 获取The program entry parameter for running a task under a Spark job.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CmdArgs The program entry parameter for running a task under a Spark job.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CmdArgs Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCmdArgs() const;
 
                     /**
-                     * 设置The program entry parameter for running a task under a Spark job.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cmdArgs The program entry parameter for running a task under a Spark job.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _cmdArgs Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCmdArgs(const std::string& _cmdArgs);
@@ -790,19 +722,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CmdArgsHasBeenSet() const;
 
                     /**
-                     * 获取The image version of the cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ImageVersion The image version of the cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ImageVersion Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetImageVersion() const;
 
                     /**
-                     * 设置The image version of the cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _imageVersion The image version of the cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _imageVersion Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetImageVersion(const std::string& _imageVersion);
@@ -815,27 +743,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ImageVersionHasBeenSet() const;
 
                     /**
-                     * 获取The driver size.
-Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
-Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DriverSize The driver size.
-Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
-Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DriverSize Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDriverSize() const;
 
                     /**
-                     * 设置The driver size.
-Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
-Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _driverSize The driver size.
-Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
-Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _driverSize Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDriverSize(const std::string& _driverSize);
@@ -848,27 +764,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DriverSizeHasBeenSet() const;
 
                     /**
-                     * 获取The executor size.
-Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
-Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ExecutorSize The executor size.
-Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
-Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ExecutorSize Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetExecutorSize() const;
 
                     /**
-                     * 设置The executor size.
-Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
-Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _executorSize The executor size.
-Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
-Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _executorSize Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetExecutorSize(const std::string& _executorSize);
@@ -881,19 +785,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ExecutorSizeHasBeenSet() const;
 
                     /**
-                     * 获取The executor count. The minimum value is 1 and the maximum value is less than the cluster specification.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ExecutorNums The executor count. The minimum value is 1 and the maximum value is less than the cluster specification.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ExecutorNums Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetExecutorNums() const;
 
                     /**
-                     * 设置The executor count. The minimum value is 1 and the maximum value is less than the cluster specification.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _executorNums The executor count. The minimum value is 1 and the maximum value is less than the cluster specification.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _executorNums Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetExecutorNums(const uint64_t& _executorNums);
@@ -906,19 +806,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ExecutorNumsHasBeenSet() const;
 
                     /**
-                     * 获取The maximum executor count (in dynamic mode). The minimum value is 1 and the maximum value is less than the cluster specification. If you set `ExecutorMaxNumbers` to a value smaller than that of `ExecutorNums`, the value of `ExecutorMaxNumbers` is automatically changed to that of `ExecutorNums`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ExecutorMaxNumbers The maximum executor count (in dynamic mode). The minimum value is 1 and the maximum value is less than the cluster specification. If you set `ExecutorMaxNumbers` to a value smaller than that of `ExecutorNums`, the value of `ExecutorMaxNumbers` is automatically changed to that of `ExecutorNums`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ExecutorMaxNumbers Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetExecutorMaxNumbers() const;
 
                     /**
-                     * 设置The maximum executor count (in dynamic mode). The minimum value is 1 and the maximum value is less than the cluster specification. If you set `ExecutorMaxNumbers` to a value smaller than that of `ExecutorNums`, the value of `ExecutorMaxNumbers` is automatically changed to that of `ExecutorNums`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _executorMaxNumbers The maximum executor count (in dynamic mode). The minimum value is 1 and the maximum value is less than the cluster specification. If you set `ExecutorMaxNumbers` to a value smaller than that of `ExecutorNums`, the value of `ExecutorMaxNumbers` is automatically changed to that of `ExecutorNums`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _executorMaxNumbers Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetExecutorMaxNumbers(const uint64_t& _executorMaxNumbers);
@@ -931,19 +827,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ExecutorMaxNumbersHasBeenSet() const;
 
                     /**
-                     * 获取Common task metrics
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CommonMetrics Common task metrics
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CommonMetrics Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     CommonMetrics GetCommonMetrics() const;
 
                     /**
-                     * 设置Common task metrics
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _commonMetrics Common task metrics
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _commonMetrics Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCommonMetrics(const CommonMetrics& _commonMetrics);
@@ -956,19 +848,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CommonMetricsHasBeenSet() const;
 
                     /**
-                     * 获取The Spark task metrics.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SparkMonitorMetrics The Spark task metrics.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SparkMonitorMetrics Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     SparkMonitorMetrics GetSparkMonitorMetrics() const;
 
                     /**
-                     * 设置The Spark task metrics.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _sparkMonitorMetrics The Spark task metrics.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _sparkMonitorMetrics Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSparkMonitorMetrics(const SparkMonitorMetrics& _sparkMonitorMetrics);
@@ -981,19 +869,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SparkMonitorMetricsHasBeenSet() const;
 
                     /**
-                     * 获取The Presto task metrics.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PrestoMonitorMetrics The Presto task metrics.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return PrestoMonitorMetrics Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     PrestoMonitorMetrics GetPrestoMonitorMetrics() const;
 
                     /**
-                     * 设置The Presto task metrics.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _prestoMonitorMetrics The Presto task metrics.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _prestoMonitorMetrics Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetPrestoMonitorMetrics(const PrestoMonitorMetrics& _prestoMonitorMetrics);
@@ -1006,15 +890,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PrestoMonitorMetricsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ResultFormat 
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ResultFormat Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetResultFormat() const;
 
                     /**
-                     * 设置
-                     * @param _resultFormat 
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _resultFormat Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetResultFormat(const std::string& _resultFormat);
@@ -1027,15 +911,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ResultFormatHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EngineTypeDetail 
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return EngineTypeDetail Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetEngineTypeDetail() const;
 
                     /**
-                     * 设置
-                     * @param _engineTypeDetail 
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _engineTypeDetail Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetEngineTypeDetail(const std::string& _engineTypeDetail);
@@ -1048,15 +932,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EngineTypeDetailHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ResourceGroupName 
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ResourceGroupName Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetResourceGroupName() const;
 
                     /**
-                     * 设置
-                     * @param _resourceGroupName 
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _resourceGroupName Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetResourceGroupName(const std::string& _resourceGroupName);
@@ -1137,8 +1021,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_rowAffectInfoHasBeenSet;
 
                     /**
-                     * Dataset of task results
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_dataSet;
                     bool m_dataSetHasBeenSet;
@@ -1168,191 +1051,163 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_taskTypeHasBeenSet;
 
                     /**
-                     * Task progress details
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_progressDetail;
                     bool m_progressDetailHasBeenSet;
 
                     /**
-                     * Task end time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * Compute resource ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_dataEngineId;
                     bool m_dataEngineIdHasBeenSet;
 
                     /**
-                     * Sub-UIN that executes the SQL statement
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_operateUin;
                     bool m_operateUinHasBeenSet;
 
                     /**
-                     * Compute resource name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_dataEngineName;
                     bool m_dataEngineNameHasBeenSet;
 
                     /**
-                     * Whether the import type is local import or COS
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_inputType;
                     bool m_inputTypeHasBeenSet;
 
                     /**
-                     * Import configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_inputConf;
                     bool m_inputConfHasBeenSet;
 
                     /**
-                     * Number of data entries
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_dataNumber;
                     bool m_dataNumberHasBeenSet;
 
                     /**
-                     * Whether the data can be downloaded
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     bool m_canDownload;
                     bool m_canDownloadHasBeenSet;
 
                     /**
-                     * User alias
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_userAlias;
                     bool m_userAliasHasBeenSet;
 
                     /**
-                     * Spark application job name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_sparkJobName;
                     bool m_sparkJobNameHasBeenSet;
 
                     /**
-                     * Spark application job ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_sparkJobId;
                     bool m_sparkJobIdHasBeenSet;
 
                     /**
-                     * JAR file of the Spark application entry
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_sparkJobFile;
                     bool m_sparkJobFileHasBeenSet;
 
                     /**
-                     * Spark UI URL
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_uiUrl;
                     bool m_uiUrlHasBeenSet;
 
                     /**
-                     * The task time in ms.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_totalTime;
                     bool m_totalTimeHasBeenSet;
 
                     /**
-                     * The program entry parameter for running a task under a Spark job.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_cmdArgs;
                     bool m_cmdArgsHasBeenSet;
 
                     /**
-                     * The image version of the cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_imageVersion;
                     bool m_imageVersionHasBeenSet;
 
                     /**
-                     * The driver size.
-Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
-Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_driverSize;
                     bool m_driverSizeHasBeenSet;
 
                     /**
-                     * The executor size.
-Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
-Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_executorSize;
                     bool m_executorSizeHasBeenSet;
 
                     /**
-                     * The executor count. The minimum value is 1 and the maximum value is less than the cluster specification.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_executorNums;
                     bool m_executorNumsHasBeenSet;
 
                     /**
-                     * The maximum executor count (in dynamic mode). The minimum value is 1 and the maximum value is less than the cluster specification. If you set `ExecutorMaxNumbers` to a value smaller than that of `ExecutorNums`, the value of `ExecutorMaxNumbers` is automatically changed to that of `ExecutorNums`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_executorMaxNumbers;
                     bool m_executorMaxNumbersHasBeenSet;
 
                     /**
-                     * Common task metrics
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     CommonMetrics m_commonMetrics;
                     bool m_commonMetricsHasBeenSet;
 
                     /**
-                     * The Spark task metrics.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     SparkMonitorMetrics m_sparkMonitorMetrics;
                     bool m_sparkMonitorMetricsHasBeenSet;
 
                     /**
-                     * The Presto task metrics.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     PrestoMonitorMetrics m_prestoMonitorMetrics;
                     bool m_prestoMonitorMetricsHasBeenSet;
 
                     /**
-                     * 
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_resultFormat;
                     bool m_resultFormatHasBeenSet;
 
                     /**
-                     * 
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_engineTypeDetail;
                     bool m_engineTypeDetailHasBeenSet;
 
                     /**
-                     * 
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_resourceGroupName;
                     bool m_resourceGroupNameHasBeenSet;

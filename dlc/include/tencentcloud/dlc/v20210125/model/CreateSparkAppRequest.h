@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool AppFileHasBeenSet() const;
 
                     /**
-                     * 获取The data access policy (CAM role arn).
-                     * @return RoleArn The data access policy (CAM role arn).
+                     * 获取Data visiting policy achieved through CAM Role arn; the console can obtain it through Data Job -> Job Configuration; SDK can obtain corresponding values through the DescribeUserRoles API.
+                     * @return RoleArn Data visiting policy achieved through CAM Role arn; the console can obtain it through Data Job -> Job Configuration; SDK can obtain corresponding values through the DescribeUserRoles API.
                      * 
                      */
                     int64_t GetRoleArn() const;
 
                     /**
-                     * 设置The data access policy (CAM role arn).
-                     * @param _roleArn The data access policy (CAM role arn).
+                     * 设置Data visiting policy achieved through CAM Role arn; the console can obtain it through Data Job -> Job Configuration; SDK can obtain corresponding values through the DescribeUserRoles API.
+                     * @param _roleArn Data visiting policy achieved through CAM Role arn; the console can obtain it through Data Job -> Job Configuration; SDK can obtain corresponding values through the DescribeUserRoles API.
                      * 
                      */
                     void SetRoleArn(const int64_t& _roleArn);
@@ -678,7 +678,7 @@ namespace TencentCloud
                     bool m_appFileHasBeenSet;
 
                     /**
-                     * The data access policy (CAM role arn).
+                     * Data visiting policy achieved through CAM Role arn; the console can obtain it through Data Job -> Job Configuration; SDK can obtain corresponding values through the DescribeUserRoles API.
                      */
                     int64_t m_roleArn;
                     bool m_roleArnHasBeenSet;

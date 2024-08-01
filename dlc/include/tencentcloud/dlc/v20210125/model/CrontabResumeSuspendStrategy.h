@@ -47,18 +47,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The scheduled start time, such as 8:00 AM every Monday.
+                     * 获取Scheduled starting time, such as 8: 00 a.m. on Monday and Wednesday
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ResumeTime The scheduled start time, such as 8:00 AM every Monday.
+                     * @return ResumeTime Scheduled starting time, such as 8: 00 a.m. on Monday and Wednesday
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetResumeTime() const;
 
                     /**
-                     * 设置The scheduled start time, such as 8:00 AM every Monday.
+                     * 设置Scheduled starting time, such as 8: 00 a.m. on Monday and Wednesday
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _resumeTime The scheduled start time, such as 8:00 AM every Monday.
+                     * @param _resumeTime Scheduled starting time, such as 8: 00 a.m. on Monday and Wednesday
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -72,18 +72,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ResumeTimeHasBeenSet() const;
 
                     /**
-                     * 获取The scheduled suspension time, such as 8:00 PM every Monday.
+                     * 获取Scheduled suspension time, such as 8: 00 p.m. on Monday and Wednesday
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SuspendTime The scheduled suspension time, such as 8:00 PM every Monday.
+                     * @return SuspendTime Scheduled suspension time, such as 8: 00 p.m. on Monday and Wednesday
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSuspendTime() const;
 
                     /**
-                     * 设置The scheduled suspension time, such as 8:00 PM every Monday.
+                     * 设置Scheduled suspension time, such as 8: 00 p.m. on Monday and Wednesday
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _suspendTime The scheduled suspension time, such as 8:00 PM every Monday.
+                     * @param _suspendTime Scheduled suspension time, such as 8: 00 p.m. on Monday and Wednesday
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -124,14 +124,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The scheduled start time, such as 8:00 AM every Monday.
+                     * Scheduled starting time, such as 8: 00 a.m. on Monday and Wednesday
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_resumeTime;
                     bool m_resumeTimeHasBeenSet;
 
                     /**
-                     * The scheduled suspension time, such as 8:00 PM every Monday.
+                     * Scheduled suspension time, such as 8: 00 p.m. on Monday and Wednesday
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_suspendTime;

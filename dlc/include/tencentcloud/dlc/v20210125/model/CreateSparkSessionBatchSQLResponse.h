@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/dlc/v20210125/model/StatementInformation.h>
 
 
 namespace TencentCloud
@@ -57,6 +58,22 @@ namespace TencentCloud
                      */
                     bool BatchIdHasBeenSet() const;
 
+                    /**
+                     * 获取Statement task list information
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Statements Statement task list information
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<StatementInformation> GetStatements() const;
+
+                    /**
+                     * 判断参数 Statements 是否已赋值
+                     * @return Statements 是否已赋值
+                     * 
+                     */
+                    bool StatementsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -64,6 +81,13 @@ namespace TencentCloud
                      */
                     std::string m_batchId;
                     bool m_batchIdHasBeenSet;
+
+                    /**
+                     * Statement task list information
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<StatementInformation> m_statements;
+                    bool m_statementsHasBeenSet;
 
                 };
             }

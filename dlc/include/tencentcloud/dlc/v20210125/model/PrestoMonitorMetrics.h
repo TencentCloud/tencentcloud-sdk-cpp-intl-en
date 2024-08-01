@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取	The Alluxio cache hit rate.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LocalCacheHitRate 	The Alluxio cache hit rate.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return LocalCacheHitRate Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     double GetLocalCacheHitRate() const;
 
                     /**
-                     * 设置	The Alluxio cache hit rate.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _localCacheHitRate 	The Alluxio cache hit rate.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _localCacheHitRate Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLocalCacheHitRate(const double& _localCacheHitRate);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LocalCacheHitRateHasBeenSet() const;
 
                     /**
-                     * 获取The Fragment cache hit rate.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FragmentCacheHitRate The Fragment cache hit rate.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return FragmentCacheHitRate Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     double GetFragmentCacheHitRate() const;
 
                     /**
-                     * 设置The Fragment cache hit rate.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _fragmentCacheHitRate The Fragment cache hit rate.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _fragmentCacheHitRate Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetFragmentCacheHitRate(const double& _fragmentCacheHitRate);
@@ -99,15 +91,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * 	The Alluxio cache hit rate.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     double m_localCacheHitRate;
                     bool m_localCacheHitRateHasBeenSet;
 
                     /**
-                     * The Fragment cache hit rate.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     double m_fragmentCacheHitRate;
                     bool m_fragmentCacheHitRateHasBeenSet;

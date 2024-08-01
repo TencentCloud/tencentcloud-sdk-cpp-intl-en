@@ -462,6 +462,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool TotalTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Time consumed to get results
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return QueryResultTime Time consumed to get results
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    double GetQueryResultTime() const;
+
+                    /**
+                     * 设置Time consumed to get results
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _queryResultTime Time consumed to get results
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetQueryResultTime(const double& _queryResultTime);
+
+                    /**
+                     * 判断参数 QueryResultTime 是否已赋值
+                     * @return QueryResultTime 是否已赋值
+                     * 
+                     */
+                    bool QueryResultTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -581,6 +606,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_totalTime;
                     bool m_totalTimeHasBeenSet;
+
+                    /**
+                     * Time consumed to get results
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    double m_queryResultTime;
+                    bool m_queryResultTimeHasBeenSet;
 
                 };
             }

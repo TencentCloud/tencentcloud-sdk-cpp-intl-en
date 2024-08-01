@@ -46,7 +46,71 @@ namespace TencentCloud
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
 
+                    /**
+                     * 获取Configuration items
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ConfigItem Configuration items
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetConfigItem() const;
+
+                    /**
+                     * 设置Configuration items
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _configItem Configuration items
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetConfigItem(const std::string& _configItem);
+
+                    /**
+                     * 判断参数 ConfigItem 是否已赋值
+                     * @return ConfigItem 是否已赋值
+                     * 
+                     */
+                    bool ConfigItemHasBeenSet() const;
+
+                    /**
+                     * 获取Configuration values
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ConfigValue Configuration values
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetConfigValue() const;
+
+                    /**
+                     * 设置Configuration values
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _configValue Configuration values
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetConfigValue(const std::string& _configValue);
+
+                    /**
+                     * 判断参数 ConfigValue 是否已赋值
+                     * @return ConfigValue 是否已赋值
+                     * 
+                     */
+                    bool ConfigValueHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * Configuration items
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_configItem;
+                    bool m_configItemHasBeenSet;
+
+                    /**
+                     * Configuration values
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_configValue;
+                    bool m_configValueHasBeenSet;
 
                 };
             }

@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The status. Valid values: `0` (initializing), `1` (successful), `2` (failed), `3` (canceled), and `4` (exception).
-                     * @return State The status. Valid values: `0` (initializing), `1` (successful), `2` (failed), `3` (canceled), and `4` (exception).
+                     * 获取Status: 0: running; 1: successful; 2: failed; 3: cancellation; 4: timeout
+                     * @return State Status: 0: running; 1: successful; 2: failed; 3: cancellation; 4: timeout
                      * 
                      */
                     uint64_t GetState() const;
@@ -77,7 +77,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The status. Valid values: `0` (initializing), `1` (successful), `2` (failed), `3` (canceled), and `4` (exception).
+                     * Status: 0: running; 1: successful; 2: failed; 3: cancellation; 4: timeout
                      */
                     uint64_t m_state;
                     bool m_stateHasBeenSet;
