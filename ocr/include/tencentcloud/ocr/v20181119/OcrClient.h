@@ -53,6 +53,8 @@
 #include <tencentcloud/ocr/v20181119/model/RecognizeKoreanDrivingLicenseOCRResponse.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizeKoreanIDCardOCRRequest.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizeKoreanIDCardOCRResponse.h>
+#include <tencentcloud/ocr/v20181119/model/RecognizeMacaoIDCardOCRRequest.h>
+#include <tencentcloud/ocr/v20181119/model/RecognizeMacaoIDCardOCRResponse.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizeMainlandIDCardOCRRequest.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizeMainlandIDCardOCRResponse.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizePhilippinesDrivingLicenseOCRRequest.h>
@@ -138,6 +140,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::RecognizeKoreanIDCardOCRResponse> RecognizeKoreanIDCardOCROutcome;
                 typedef std::future<RecognizeKoreanIDCardOCROutcome> RecognizeKoreanIDCardOCROutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::RecognizeKoreanIDCardOCRRequest&, RecognizeKoreanIDCardOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> RecognizeKoreanIDCardOCRAsyncHandler;
+                typedef Outcome<Core::Error, Model::RecognizeMacaoIDCardOCRResponse> RecognizeMacaoIDCardOCROutcome;
+                typedef std::future<RecognizeMacaoIDCardOCROutcome> RecognizeMacaoIDCardOCROutcomeCallable;
+                typedef std::function<void(const OcrClient*, const Model::RecognizeMacaoIDCardOCRRequest&, RecognizeMacaoIDCardOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> RecognizeMacaoIDCardOCRAsyncHandler;
                 typedef Outcome<Core::Error, Model::RecognizeMainlandIDCardOCRResponse> RecognizeMainlandIDCardOCROutcome;
                 typedef std::future<RecognizeMainlandIDCardOCROutcome> RecognizeMainlandIDCardOCROutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::RecognizeMainlandIDCardOCRRequest&, RecognizeMainlandIDCardOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> RecognizeMainlandIDCardOCRAsyncHandler;
@@ -515,6 +520,17 @@ The API request rate is limited to 20 requests/sec by default.
                 RecognizeKoreanIDCardOCROutcome RecognizeKoreanIDCardOCR(const Model::RecognizeKoreanIDCardOCRRequest &request);
                 void RecognizeKoreanIDCardOCRAsync(const Model::RecognizeKoreanIDCardOCRRequest& request, const RecognizeKoreanIDCardOCRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 RecognizeKoreanIDCardOCROutcomeCallable RecognizeKoreanIDCardOCRCallable(const Model::RecognizeKoreanIDCardOCRRequest& request);
+
+                /**
+                 *This API is used to recognize key fields on the photo side of a Hong Kong (China) identity card, including name in Chinese, name in English, telecode for name, date of birth, gender, document symbol, date of the first issue, date of the last receipt, identity card number, and permanent residency attribute. 
+
+This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
+                 * @param req RecognizeMacaoIDCardOCRRequest
+                 * @return RecognizeMacaoIDCardOCROutcome
+                 */
+                RecognizeMacaoIDCardOCROutcome RecognizeMacaoIDCardOCR(const Model::RecognizeMacaoIDCardOCRRequest &request);
+                void RecognizeMacaoIDCardOCRAsync(const Model::RecognizeMacaoIDCardOCRRequest& request, const RecognizeMacaoIDCardOCRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RecognizeMacaoIDCardOCROutcomeCallable RecognizeMacaoIDCardOCRCallable(const Model::RecognizeMacaoIDCardOCRRequest& request);
 
                 /**
                  *This interface supports the identification of all fields on the front and back of the second-generation ID card for mainland Chinese residents.Including name, gender, ethnicity, date of birth, address, citizen ID number, issuing authority, and validity period, the identification accuracy reaches more than 99%.In addition, this interface also supports a variety of value-added capabilities to meet the needs of different scenarios. Such as the cropping function of ID card photos and portrait photos, and also has 5 alarm functions.

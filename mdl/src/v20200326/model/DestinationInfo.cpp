@@ -25,7 +25,9 @@ DestinationInfo::DestinationInfo() :
     m_authKeyHasBeenSet(false),
     m_usernameHasBeenSet(false),
     m_passwordHasBeenSet(false),
-    m_destinationTypeHasBeenSet(false)
+    m_destinationTypeHasBeenSet(false),
+    m_amazonS3SettingsHasBeenSet(false),
+    m_cosSettingsHasBeenSet(false)
 {
 }
 
@@ -84,6 +86,40 @@ CoreInternalOutcome DestinationInfo::Deserialize(const rapidjson::Value &value)
         m_destinationTypeHasBeenSet = true;
     }
 
+    if (value.HasMember("AmazonS3Settings") && !value["AmazonS3Settings"].IsNull())
+    {
+        if (!value["AmazonS3Settings"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `DestinationInfo.AmazonS3Settings` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_amazonS3Settings.Deserialize(value["AmazonS3Settings"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_amazonS3SettingsHasBeenSet = true;
+    }
+
+    if (value.HasMember("CosSettings") && !value["CosSettings"].IsNull())
+    {
+        if (!value["CosSettings"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `DestinationInfo.CosSettings` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_cosSettings.Deserialize(value["CosSettings"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_cosSettingsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -129,6 +165,24 @@ void DestinationInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document:
         string key = "DestinationType";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_destinationType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_amazonS3SettingsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AmazonS3Settings";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_amazonS3Settings.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_cosSettingsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CosSettings";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_cosSettings.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -212,5 +266,37 @@ void DestinationInfo::SetDestinationType(const string& _destinationType)
 bool DestinationInfo::DestinationTypeHasBeenSet() const
 {
     return m_destinationTypeHasBeenSet;
+}
+
+AmazonS3Settings DestinationInfo::GetAmazonS3Settings() const
+{
+    return m_amazonS3Settings;
+}
+
+void DestinationInfo::SetAmazonS3Settings(const AmazonS3Settings& _amazonS3Settings)
+{
+    m_amazonS3Settings = _amazonS3Settings;
+    m_amazonS3SettingsHasBeenSet = true;
+}
+
+bool DestinationInfo::AmazonS3SettingsHasBeenSet() const
+{
+    return m_amazonS3SettingsHasBeenSet;
+}
+
+CosSettings DestinationInfo::GetCosSettings() const
+{
+    return m_cosSettings;
+}
+
+void DestinationInfo::SetCosSettings(const CosSettings& _cosSettings)
+{
+    m_cosSettings = _cosSettings;
+    m_cosSettingsHasBeenSet = true;
+}
+
+bool DestinationInfo::CosSettingsHasBeenSet() const
+{
+    return m_cosSettingsHasBeenSet;
 }
 

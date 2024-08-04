@@ -33,6 +33,7 @@
 #include <tencentcloud/mdl/v20200326/model/PipelineInputSettingsInfo.h>
 #include <tencentcloud/mdl/v20200326/model/InputAnalysisInfo.h>
 #include <tencentcloud/mdl/v20200326/model/Tag.h>
+#include <tencentcloud/mdl/v20200326/model/FrameCaptureTemplate.h>
 
 
 namespace TencentCloud
@@ -327,6 +328,27 @@ namespace TencentCloud
                      */
                     bool TagsHasBeenSet() const;
 
+                    /**
+                     * 获取Frame capture templates.
+                     * @return FrameCaptureTemplates Frame capture templates.
+                     * 
+                     */
+                    std::vector<FrameCaptureTemplate> GetFrameCaptureTemplates() const;
+
+                    /**
+                     * 设置Frame capture templates.
+                     * @param _frameCaptureTemplates Frame capture templates.
+                     * 
+                     */
+                    void SetFrameCaptureTemplates(const std::vector<FrameCaptureTemplate>& _frameCaptureTemplates);
+
+                    /**
+                     * 判断参数 FrameCaptureTemplates 是否已赋值
+                     * @return FrameCaptureTemplates 是否已赋值
+                     * 
+                     */
+                    bool FrameCaptureTemplatesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -406,6 +428,12 @@ namespace TencentCloud
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
+
+                    /**
+                     * Frame capture templates.
+                     */
+                    std::vector<FrameCaptureTemplate> m_frameCaptureTemplates;
+                    bool m_frameCaptureTemplatesHasBeenSet;
 
                 };
             }

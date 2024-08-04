@@ -211,6 +211,27 @@ Note: this field may return `null`, indicating that no valid value was found.
                      */
                     bool TimedMetadataSettingsHasBeenSet() const;
 
+                    /**
+                     * 获取Frame capture template name array. Quantity limit: [0,1].
+                     * @return FrameCaptureTemplateNames Frame capture template name array. Quantity limit: [0,1].
+                     * 
+                     */
+                    std::vector<std::string> GetFrameCaptureTemplateNames() const;
+
+                    /**
+                     * 设置Frame capture template name array. Quantity limit: [0,1].
+                     * @param _frameCaptureTemplateNames Frame capture template name array. Quantity limit: [0,1].
+                     * 
+                     */
+                    void SetFrameCaptureTemplateNames(const std::vector<std::string>& _frameCaptureTemplateNames);
+
+                    /**
+                     * 判断参数 FrameCaptureTemplateNames 是否已赋值
+                     * @return FrameCaptureTemplateNames 是否已赋值
+                     * 
+                     */
+                    bool FrameCaptureTemplateNamesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -258,6 +279,12 @@ Note: this field may return `null`, indicating that no valid value was found.
                      */
                     TimedMetadataSettingInfo m_timedMetadataSettings;
                     bool m_timedMetadataSettingsHasBeenSet;
+
+                    /**
+                     * Frame capture template name array. Quantity limit: [0,1].
+                     */
+                    std::vector<std::string> m_frameCaptureTemplateNames;
+                    bool m_frameCaptureTemplateNamesHasBeenSet;
 
                 };
             }

@@ -685,6 +685,49 @@ OcrClient::RecognizeKoreanIDCardOCROutcomeCallable OcrClient::RecognizeKoreanIDC
     return task->get_future();
 }
 
+OcrClient::RecognizeMacaoIDCardOCROutcome OcrClient::RecognizeMacaoIDCardOCR(const RecognizeMacaoIDCardOCRRequest &request)
+{
+    auto outcome = MakeRequest(request, "RecognizeMacaoIDCardOCR");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RecognizeMacaoIDCardOCRResponse rsp = RecognizeMacaoIDCardOCRResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RecognizeMacaoIDCardOCROutcome(rsp);
+        else
+            return RecognizeMacaoIDCardOCROutcome(o.GetError());
+    }
+    else
+    {
+        return RecognizeMacaoIDCardOCROutcome(outcome.GetError());
+    }
+}
+
+void OcrClient::RecognizeMacaoIDCardOCRAsync(const RecognizeMacaoIDCardOCRRequest& request, const RecognizeMacaoIDCardOCRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->RecognizeMacaoIDCardOCR(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OcrClient::RecognizeMacaoIDCardOCROutcomeCallable OcrClient::RecognizeMacaoIDCardOCRCallable(const RecognizeMacaoIDCardOCRRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<RecognizeMacaoIDCardOCROutcome()>>(
+        [this, request]()
+        {
+            return this->RecognizeMacaoIDCardOCR(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 OcrClient::RecognizeMainlandIDCardOCROutcome OcrClient::RecognizeMainlandIDCardOCR(const RecognizeMainlandIDCardOCRRequest &request)
 {
     auto outcome = MakeRequest(request, "RecognizeMainlandIDCardOCR");

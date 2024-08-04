@@ -27,7 +27,8 @@ OutputInfo::OutputInfo() :
     m_scte35SettingsHasBeenSet(false),
     m_aVTemplateNamesHasBeenSet(false),
     m_captionTemplateNamesHasBeenSet(false),
-    m_timedMetadataSettingsHasBeenSet(false)
+    m_timedMetadataSettingsHasBeenSet(false),
+    m_frameCaptureTemplateNamesHasBeenSet(false)
 {
 }
 
@@ -132,6 +133,19 @@ CoreInternalOutcome OutputInfo::Deserialize(const rapidjson::Value &value)
         m_timedMetadataSettingsHasBeenSet = true;
     }
 
+    if (value.HasMember("FrameCaptureTemplateNames") && !value["FrameCaptureTemplateNames"].IsNull())
+    {
+        if (!value["FrameCaptureTemplateNames"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `OutputInfo.FrameCaptureTemplateNames` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["FrameCaptureTemplateNames"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            m_frameCaptureTemplateNames.push_back((*itr).GetString());
+        }
+        m_frameCaptureTemplateNamesHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -215,6 +229,19 @@ void OutputInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Allo
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_timedMetadataSettings.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_frameCaptureTemplateNamesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FrameCaptureTemplateNames";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_frameCaptureTemplateNames.begin(); itr != m_frameCaptureTemplateNames.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
     }
 
 }
@@ -330,5 +357,21 @@ void OutputInfo::SetTimedMetadataSettings(const TimedMetadataSettingInfo& _timed
 bool OutputInfo::TimedMetadataSettingsHasBeenSet() const
 {
     return m_timedMetadataSettingsHasBeenSet;
+}
+
+vector<string> OutputInfo::GetFrameCaptureTemplateNames() const
+{
+    return m_frameCaptureTemplateNames;
+}
+
+void OutputInfo::SetFrameCaptureTemplateNames(const vector<string>& _frameCaptureTemplateNames)
+{
+    m_frameCaptureTemplateNames = _frameCaptureTemplateNames;
+    m_frameCaptureTemplateNamesHasBeenSet = true;
+}
+
+bool OutputInfo::FrameCaptureTemplateNamesHasBeenSet() const
+{
+    return m_frameCaptureTemplateNamesHasBeenSet;
 }
 

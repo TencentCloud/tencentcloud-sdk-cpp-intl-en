@@ -36,6 +36,7 @@ set(mdl_public_header_model
   include/tencentcloud/mdl/v20200326/model/AudioPipelineInputStatistics.h
   include/tencentcloud/mdl/v20200326/model/CreateStreamLivePlanResponse.h
   include/tencentcloud/mdl/v20200326/model/InputStreamInfo.h
+  include/tencentcloud/mdl/v20200326/model/FrameCaptureTemplate.h
   include/tencentcloud/mdl/v20200326/model/PipelineInputSettingsInfo.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveChannelOutputStatisticsRequest.h
   include/tencentcloud/mdl/v20200326/model/ChannelPipelineAlerts.h
@@ -45,6 +46,7 @@ set(mdl_public_header_model
   include/tencentcloud/mdl/v20200326/model/DestinationInfo.h
   include/tencentcloud/mdl/v20200326/model/DeleteStreamLiveInputRequest.h
   include/tencentcloud/mdl/v20200326/model/ModifyStreamLiveInputSecurityGroupResponse.h
+  include/tencentcloud/mdl/v20200326/model/AmazonS3Settings.h
   include/tencentcloud/mdl/v20200326/model/ModifyStreamLiveInputRequest.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveChannelResponse.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveRegionsRequest.h
@@ -94,6 +96,7 @@ set(mdl_public_header_model
   include/tencentcloud/mdl/v20200326/model/DeleteStreamLiveWatermarkRequest.h
   include/tencentcloud/mdl/v20200326/model/CreateStreamLiveChannelRequest.h
   include/tencentcloud/mdl/v20200326/model/TimedRecordSettings.h
+  include/tencentcloud/mdl/v20200326/model/CosSettings.h
   include/tencentcloud/mdl/v20200326/model/StreamLiveRegionInfo.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveChannelRequest.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLivePlansRequest.h
@@ -187,6 +190,7 @@ set(mdl_src
   src/v20200326/model/AudioPipelineInputStatistics.cpp
   src/v20200326/model/CreateStreamLivePlanResponse.cpp
   src/v20200326/model/InputStreamInfo.cpp
+  src/v20200326/model/FrameCaptureTemplate.cpp
   src/v20200326/model/PipelineInputSettingsInfo.cpp
   src/v20200326/model/DescribeStreamLiveChannelOutputStatisticsRequest.cpp
   src/v20200326/model/ChannelPipelineAlerts.cpp
@@ -196,6 +200,7 @@ set(mdl_src
   src/v20200326/model/DestinationInfo.cpp
   src/v20200326/model/DeleteStreamLiveInputRequest.cpp
   src/v20200326/model/ModifyStreamLiveInputSecurityGroupResponse.cpp
+  src/v20200326/model/AmazonS3Settings.cpp
   src/v20200326/model/ModifyStreamLiveInputRequest.cpp
   src/v20200326/model/DescribeStreamLiveChannelResponse.cpp
   src/v20200326/model/DescribeStreamLiveRegionsRequest.cpp
@@ -245,6 +250,7 @@ set(mdl_src
   src/v20200326/model/DeleteStreamLiveWatermarkRequest.cpp
   src/v20200326/model/CreateStreamLiveChannelRequest.cpp
   src/v20200326/model/TimedRecordSettings.cpp
+  src/v20200326/model/CosSettings.cpp
   src/v20200326/model/StreamLiveRegionInfo.cpp
   src/v20200326/model/DescribeStreamLiveChannelRequest.cpp
   src/v20200326/model/DescribeStreamLivePlansRequest.cpp

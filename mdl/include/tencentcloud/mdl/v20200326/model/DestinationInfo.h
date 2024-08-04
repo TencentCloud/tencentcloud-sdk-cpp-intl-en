@@ -24,6 +24,8 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/mdl/v20200326/model/AmazonS3Settings.h>
+#include <tencentcloud/mdl/v20200326/model/CosSettings.h>
 
 
 namespace TencentCloud
@@ -143,15 +145,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PasswordHasBeenSet() const;
 
                     /**
-                     * 获取The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard.
-                     * @return DestinationType The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard.
+                     * 获取The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard. When the output group type is FRAME_CAPTURE, valid values are: AWS_AmazonS3, COS.
+                     * @return DestinationType The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard. When the output group type is FRAME_CAPTURE, valid values are: AWS_AmazonS3, COS.
                      * 
                      */
                     std::string GetDestinationType() const;
 
                     /**
-                     * 设置The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard.
-                     * @param _destinationType The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard.
+                     * 设置The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard. When the output group type is FRAME_CAPTURE, valid values are: AWS_AmazonS3, COS.
+                     * @param _destinationType The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard. When the output group type is FRAME_CAPTURE, valid values are: AWS_AmazonS3, COS.
                      * 
                      */
                     void SetDestinationType(const std::string& _destinationType);
@@ -162,6 +164,48 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool DestinationTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Aws S3 destination setting.
+                     * @return AmazonS3Settings Aws S3 destination setting.
+                     * 
+                     */
+                    AmazonS3Settings GetAmazonS3Settings() const;
+
+                    /**
+                     * 设置Aws S3 destination setting.
+                     * @param _amazonS3Settings Aws S3 destination setting.
+                     * 
+                     */
+                    void SetAmazonS3Settings(const AmazonS3Settings& _amazonS3Settings);
+
+                    /**
+                     * 判断参数 AmazonS3Settings 是否已赋值
+                     * @return AmazonS3Settings 是否已赋值
+                     * 
+                     */
+                    bool AmazonS3SettingsHasBeenSet() const;
+
+                    /**
+                     * 获取Cos destination setting.
+                     * @return CosSettings Cos destination setting.
+                     * 
+                     */
+                    CosSettings GetCosSettings() const;
+
+                    /**
+                     * 设置Cos destination setting.
+                     * @param _cosSettings Cos destination setting.
+                     * 
+                     */
+                    void SetCosSettings(const CosSettings& _cosSettings);
+
+                    /**
+                     * 判断参数 CosSettings 是否已赋值
+                     * @return CosSettings 是否已赋值
+                     * 
+                     */
+                    bool CosSettingsHasBeenSet() const;
 
                 private:
 
@@ -193,10 +237,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_passwordHasBeenSet;
 
                     /**
-                     * The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard.
+                     * The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard. When the output group type is FRAME_CAPTURE, valid values are: AWS_AmazonS3, COS.
                      */
                     std::string m_destinationType;
                     bool m_destinationTypeHasBeenSet;
+
+                    /**
+                     * Aws S3 destination setting.
+                     */
+                    AmazonS3Settings m_amazonS3Settings;
+                    bool m_amazonS3SettingsHasBeenSet;
+
+                    /**
+                     * Cos destination setting.
+                     */
+                    CosSettings m_cosSettings;
+                    bool m_cosSettingsHasBeenSet;
 
                 };
             }

@@ -27,6 +27,7 @@ set(ocr_public_header_model
   include/tencentcloud/ocr/v20181119/model/ItemInfo.h
   include/tencentcloud/ocr/v20181119/model/SmartStructuralOCRV2Request.h
   include/tencentcloud/ocr/v20181119/model/OtherInvoiceList.h
+  include/tencentcloud/ocr/v20181119/model/RecognizeMacaoIDCardOCRResponse.h
   include/tencentcloud/ocr/v20181119/model/PermitOCRResponse.h
   include/tencentcloud/ocr/v20181119/model/Rect.h
   include/tencentcloud/ocr/v20181119/model/LicensePlateInfo.h
@@ -84,6 +85,7 @@ set(ocr_public_header_model
   include/tencentcloud/ocr/v20181119/model/IDCardOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/GeneralAccurateOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/UsedCarPurchaseInvoice.h
+  include/tencentcloud/ocr/v20181119/model/RecognizeMacaoIDCardOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/NonTaxIncomeBill.h
   include/tencentcloud/ocr/v20181119/model/MLIDPassportOCRResponse.h
   include/tencentcloud/ocr/v20181119/model/AirTransport.h
@@ -133,6 +135,7 @@ set(ocr_src
   src/v20181119/model/ItemInfo.cpp
   src/v20181119/model/SmartStructuralOCRV2Request.cpp
   src/v20181119/model/OtherInvoiceList.cpp
+  src/v20181119/model/RecognizeMacaoIDCardOCRResponse.cpp
   src/v20181119/model/PermitOCRResponse.cpp
   src/v20181119/model/Rect.cpp
   src/v20181119/model/LicensePlateInfo.cpp
@@ -190,6 +193,7 @@ set(ocr_src
   src/v20181119/model/IDCardOCRRequest.cpp
   src/v20181119/model/GeneralAccurateOCRRequest.cpp
   src/v20181119/model/UsedCarPurchaseInvoice.cpp
+  src/v20181119/model/RecognizeMacaoIDCardOCRRequest.cpp
   src/v20181119/model/NonTaxIncomeBill.cpp
   src/v20181119/model/MLIDPassportOCRResponse.cpp
   src/v20181119/model/AirTransport.cpp

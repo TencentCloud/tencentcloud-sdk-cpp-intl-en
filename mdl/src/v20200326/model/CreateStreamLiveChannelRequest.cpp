@@ -35,7 +35,8 @@ CreateStreamLiveChannelRequest::CreateStreamLiveChannelRequest() :
     m_inputLossBehaviorHasBeenSet(false),
     m_pipelineInputSettingsHasBeenSet(false),
     m_inputAnalysisSettingsHasBeenSet(false),
-    m_tagsHasBeenSet(false)
+    m_tagsHasBeenSet(false),
+    m_frameCaptureTemplatesHasBeenSet(false)
 {
 }
 
@@ -198,6 +199,21 @@ string CreateStreamLiveChannelRequest::ToJsonString() const
 
         int i=0;
         for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_frameCaptureTemplatesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FrameCaptureTemplates";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_frameCaptureTemplates.begin(); itr != m_frameCaptureTemplates.end(); ++itr, ++i)
         {
             d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(d[key.c_str()][i], allocator);
@@ -418,6 +434,22 @@ void CreateStreamLiveChannelRequest::SetTags(const vector<Tag>& _tags)
 bool CreateStreamLiveChannelRequest::TagsHasBeenSet() const
 {
     return m_tagsHasBeenSet;
+}
+
+vector<FrameCaptureTemplate> CreateStreamLiveChannelRequest::GetFrameCaptureTemplates() const
+{
+    return m_frameCaptureTemplates;
+}
+
+void CreateStreamLiveChannelRequest::SetFrameCaptureTemplates(const vector<FrameCaptureTemplate>& _frameCaptureTemplates)
+{
+    m_frameCaptureTemplates = _frameCaptureTemplates;
+    m_frameCaptureTemplatesHasBeenSet = true;
+}
+
+bool CreateStreamLiveChannelRequest::FrameCaptureTemplatesHasBeenSet() const
+{
+    return m_frameCaptureTemplatesHasBeenSet;
 }
 
 

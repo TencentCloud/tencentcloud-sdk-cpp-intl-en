@@ -35,7 +35,8 @@ StreamLiveChannelInfo::StreamLiveChannelInfo() :
     m_inputLossBehaviorHasBeenSet(false),
     m_pipelineInputSettingsHasBeenSet(false),
     m_inputAnalysisSettingsHasBeenSet(false),
-    m_tagsHasBeenSet(false)
+    m_tagsHasBeenSet(false),
+    m_frameCaptureTemplatesHasBeenSet(false)
 {
 }
 
@@ -299,6 +300,26 @@ CoreInternalOutcome StreamLiveChannelInfo::Deserialize(const rapidjson::Value &v
         m_tagsHasBeenSet = true;
     }
 
+    if (value.HasMember("FrameCaptureTemplates") && !value["FrameCaptureTemplates"].IsNull())
+    {
+        if (!value["FrameCaptureTemplates"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `StreamLiveChannelInfo.FrameCaptureTemplates` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["FrameCaptureTemplates"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            FrameCaptureTemplate item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_frameCaptureTemplates.push_back(item);
+        }
+        m_frameCaptureTemplatesHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -474,6 +495,21 @@ void StreamLiveChannelInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Doc
 
         int i=0;
         for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_frameCaptureTemplatesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FrameCaptureTemplates";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_frameCaptureTemplates.begin(); itr != m_frameCaptureTemplates.end(); ++itr, ++i)
         {
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
@@ -721,5 +757,21 @@ void StreamLiveChannelInfo::SetTags(const vector<Tag>& _tags)
 bool StreamLiveChannelInfo::TagsHasBeenSet() const
 {
     return m_tagsHasBeenSet;
+}
+
+vector<FrameCaptureTemplate> StreamLiveChannelInfo::GetFrameCaptureTemplates() const
+{
+    return m_frameCaptureTemplates;
+}
+
+void StreamLiveChannelInfo::SetFrameCaptureTemplates(const vector<FrameCaptureTemplate>& _frameCaptureTemplates)
+{
+    m_frameCaptureTemplates = _frameCaptureTemplates;
+    m_frameCaptureTemplatesHasBeenSet = true;
+}
+
+bool StreamLiveChannelInfo::FrameCaptureTemplatesHasBeenSet() const
+{
+    return m_frameCaptureTemplatesHasBeenSet;
 }
 
