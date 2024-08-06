@@ -25,6 +25,8 @@
 #include <tencentcloud/core/AsyncCallerContext.h>
 #include <tencentcloud/dlc/v20210125/model/AddUsersToWorkGroupRequest.h>
 #include <tencentcloud/dlc/v20210125/model/AddUsersToWorkGroupResponse.h>
+#include <tencentcloud/dlc/v20210125/model/AlterDMSDatabaseRequest.h>
+#include <tencentcloud/dlc/v20210125/model/AlterDMSDatabaseResponse.h>
 #include <tencentcloud/dlc/v20210125/model/AttachUserPolicyRequest.h>
 #include <tencentcloud/dlc/v20210125/model/AttachUserPolicyResponse.h>
 #include <tencentcloud/dlc/v20210125/model/AttachWorkGroupPolicyRequest.h>
@@ -43,6 +45,8 @@
 #include <tencentcloud/dlc/v20210125/model/CheckDataEngineImageCanBeUpgradeResponse.h>
 #include <tencentcloud/dlc/v20210125/model/CreateCHDFSBindingProductRequest.h>
 #include <tencentcloud/dlc/v20210125/model/CreateCHDFSBindingProductResponse.h>
+#include <tencentcloud/dlc/v20210125/model/CreateDMSDatabaseRequest.h>
+#include <tencentcloud/dlc/v20210125/model/CreateDMSDatabaseResponse.h>
 #include <tencentcloud/dlc/v20210125/model/CreateDataEngineRequest.h>
 #include <tencentcloud/dlc/v20210125/model/CreateDataEngineResponse.h>
 #include <tencentcloud/dlc/v20210125/model/CreateInternalTableRequest.h>
@@ -83,6 +87,8 @@
 #include <tencentcloud/dlc/v20210125/model/DescribeAdvancedStoreLocationResponse.h>
 #include <tencentcloud/dlc/v20210125/model/DescribeDLCCatalogAccessRequest.h>
 #include <tencentcloud/dlc/v20210125/model/DescribeDLCCatalogAccessResponse.h>
+#include <tencentcloud/dlc/v20210125/model/DescribeDMSDatabaseRequest.h>
+#include <tencentcloud/dlc/v20210125/model/DescribeDMSDatabaseResponse.h>
 #include <tencentcloud/dlc/v20210125/model/DescribeDataEngineRequest.h>
 #include <tencentcloud/dlc/v20210125/model/DescribeDataEngineResponse.h>
 #include <tencentcloud/dlc/v20210125/model/DescribeDataEngineImageVersionsRequest.h>
@@ -143,6 +149,8 @@
 #include <tencentcloud/dlc/v20210125/model/DetachUserPolicyResponse.h>
 #include <tencentcloud/dlc/v20210125/model/DetachWorkGroupPolicyRequest.h>
 #include <tencentcloud/dlc/v20210125/model/DetachWorkGroupPolicyResponse.h>
+#include <tencentcloud/dlc/v20210125/model/DropDMSDatabaseRequest.h>
+#include <tencentcloud/dlc/v20210125/model/DropDMSDatabaseResponse.h>
 #include <tencentcloud/dlc/v20210125/model/GenerateCreateMangedTableSqlRequest.h>
 #include <tencentcloud/dlc/v20210125/model/GenerateCreateMangedTableSqlResponse.h>
 #include <tencentcloud/dlc/v20210125/model/GetOptimizerPolicyRequest.h>
@@ -214,6 +222,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::AddUsersToWorkGroupResponse> AddUsersToWorkGroupOutcome;
                 typedef std::future<AddUsersToWorkGroupOutcome> AddUsersToWorkGroupOutcomeCallable;
                 typedef std::function<void(const DlcClient*, const Model::AddUsersToWorkGroupRequest&, AddUsersToWorkGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddUsersToWorkGroupAsyncHandler;
+                typedef Outcome<Core::Error, Model::AlterDMSDatabaseResponse> AlterDMSDatabaseOutcome;
+                typedef std::future<AlterDMSDatabaseOutcome> AlterDMSDatabaseOutcomeCallable;
+                typedef std::function<void(const DlcClient*, const Model::AlterDMSDatabaseRequest&, AlterDMSDatabaseOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AlterDMSDatabaseAsyncHandler;
                 typedef Outcome<Core::Error, Model::AttachUserPolicyResponse> AttachUserPolicyOutcome;
                 typedef std::future<AttachUserPolicyOutcome> AttachUserPolicyOutcomeCallable;
                 typedef std::function<void(const DlcClient*, const Model::AttachUserPolicyRequest&, AttachUserPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AttachUserPolicyAsyncHandler;
@@ -241,6 +252,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateCHDFSBindingProductResponse> CreateCHDFSBindingProductOutcome;
                 typedef std::future<CreateCHDFSBindingProductOutcome> CreateCHDFSBindingProductOutcomeCallable;
                 typedef std::function<void(const DlcClient*, const Model::CreateCHDFSBindingProductRequest&, CreateCHDFSBindingProductOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCHDFSBindingProductAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateDMSDatabaseResponse> CreateDMSDatabaseOutcome;
+                typedef std::future<CreateDMSDatabaseOutcome> CreateDMSDatabaseOutcomeCallable;
+                typedef std::function<void(const DlcClient*, const Model::CreateDMSDatabaseRequest&, CreateDMSDatabaseOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDMSDatabaseAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateDataEngineResponse> CreateDataEngineOutcome;
                 typedef std::future<CreateDataEngineOutcome> CreateDataEngineOutcomeCallable;
                 typedef std::function<void(const DlcClient*, const Model::CreateDataEngineRequest&, CreateDataEngineOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDataEngineAsyncHandler;
@@ -301,6 +315,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeDLCCatalogAccessResponse> DescribeDLCCatalogAccessOutcome;
                 typedef std::future<DescribeDLCCatalogAccessOutcome> DescribeDLCCatalogAccessOutcomeCallable;
                 typedef std::function<void(const DlcClient*, const Model::DescribeDLCCatalogAccessRequest&, DescribeDLCCatalogAccessOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDLCCatalogAccessAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDMSDatabaseResponse> DescribeDMSDatabaseOutcome;
+                typedef std::future<DescribeDMSDatabaseOutcome> DescribeDMSDatabaseOutcomeCallable;
+                typedef std::function<void(const DlcClient*, const Model::DescribeDMSDatabaseRequest&, DescribeDMSDatabaseOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDMSDatabaseAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDataEngineResponse> DescribeDataEngineOutcome;
                 typedef std::future<DescribeDataEngineOutcome> DescribeDataEngineOutcomeCallable;
                 typedef std::function<void(const DlcClient*, const Model::DescribeDataEngineRequest&, DescribeDataEngineOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDataEngineAsyncHandler;
@@ -391,6 +408,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DetachWorkGroupPolicyResponse> DetachWorkGroupPolicyOutcome;
                 typedef std::future<DetachWorkGroupPolicyOutcome> DetachWorkGroupPolicyOutcomeCallable;
                 typedef std::function<void(const DlcClient*, const Model::DetachWorkGroupPolicyRequest&, DetachWorkGroupPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DetachWorkGroupPolicyAsyncHandler;
+                typedef Outcome<Core::Error, Model::DropDMSDatabaseResponse> DropDMSDatabaseOutcome;
+                typedef std::future<DropDMSDatabaseOutcome> DropDMSDatabaseOutcomeCallable;
+                typedef std::function<void(const DlcClient*, const Model::DropDMSDatabaseRequest&, DropDMSDatabaseOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DropDMSDatabaseAsyncHandler;
                 typedef Outcome<Core::Error, Model::GenerateCreateMangedTableSqlResponse> GenerateCreateMangedTableSqlOutcome;
                 typedef std::future<GenerateCreateMangedTableSqlOutcome> GenerateCreateMangedTableSqlOutcomeCallable;
                 typedef std::function<void(const DlcClient*, const Model::GenerateCreateMangedTableSqlRequest&, GenerateCreateMangedTableSqlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GenerateCreateMangedTableSqlAsyncHandler;
@@ -485,6 +505,15 @@ namespace TencentCloud
                 AddUsersToWorkGroupOutcomeCallable AddUsersToWorkGroupCallable(const Model::AddUsersToWorkGroupRequest& request);
 
                 /**
+                 *This API is used to update databases in the DMS metadata module.
+                 * @param req AlterDMSDatabaseRequest
+                 * @return AlterDMSDatabaseOutcome
+                 */
+                AlterDMSDatabaseOutcome AlterDMSDatabase(const Model::AlterDMSDatabaseRequest &request);
+                void AlterDMSDatabaseAsync(const Model::AlterDMSDatabaseRequest& request, const AlterDMSDatabaseAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AlterDMSDatabaseOutcomeCallable AlterDMSDatabaseCallable(const Model::AlterDMSDatabaseRequest& request);
+
+                /**
                  *This API is used to bind the authentication policy to the user.
                  * @param req AttachUserPolicyRequest
                  * @return AttachUserPolicyOutcome
@@ -564,6 +593,15 @@ namespace TencentCloud
                 CreateCHDFSBindingProductOutcome CreateCHDFSBindingProduct(const Model::CreateCHDFSBindingProductRequest &request);
                 void CreateCHDFSBindingProductAsync(const Model::CreateCHDFSBindingProductRequest& request, const CreateCHDFSBindingProductAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateCHDFSBindingProductOutcomeCallable CreateCHDFSBindingProductCallable(const Model::CreateCHDFSBindingProductRequest& request);
+
+                /**
+                 *This API is used to create databases in the DMS metadata module.
+                 * @param req CreateDMSDatabaseRequest
+                 * @return CreateDMSDatabaseOutcome
+                 */
+                CreateDMSDatabaseOutcome CreateDMSDatabase(const Model::CreateDMSDatabaseRequest &request);
+                void CreateDMSDatabaseAsync(const Model::CreateDMSDatabaseRequest& request, const CreateDMSDatabaseAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateDMSDatabaseOutcomeCallable CreateDMSDatabaseCallable(const Model::CreateDMSDatabaseRequest& request);
 
                 /**
                  *This API is used to create a data engine.
@@ -744,6 +782,15 @@ namespace TencentCloud
                 DescribeDLCCatalogAccessOutcome DescribeDLCCatalogAccess(const Model::DescribeDLCCatalogAccessRequest &request);
                 void DescribeDLCCatalogAccessAsync(const Model::DescribeDLCCatalogAccessRequest& request, const DescribeDLCCatalogAccessAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeDLCCatalogAccessOutcomeCallable DescribeDLCCatalogAccessCallable(const Model::DescribeDLCCatalogAccessRequest& request);
+
+                /**
+                 *This API is used to obtain databases in the DMS metadata module.
+                 * @param req DescribeDMSDatabaseRequest
+                 * @return DescribeDMSDatabaseOutcome
+                 */
+                DescribeDMSDatabaseOutcome DescribeDMSDatabase(const Model::DescribeDMSDatabaseRequest &request);
+                void DescribeDMSDatabaseAsync(const Model::DescribeDMSDatabaseRequest& request, const DescribeDMSDatabaseAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDMSDatabaseOutcomeCallable DescribeDMSDatabaseCallable(const Model::DescribeDMSDatabaseRequest& request);
 
                 /**
                  *This API is used to obtain detailed data engine information based on names.
@@ -1014,6 +1061,15 @@ namespace TencentCloud
                 DetachWorkGroupPolicyOutcome DetachWorkGroupPolicy(const Model::DetachWorkGroupPolicyRequest &request);
                 void DetachWorkGroupPolicyAsync(const Model::DetachWorkGroupPolicyRequest& request, const DetachWorkGroupPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DetachWorkGroupPolicyOutcomeCallable DetachWorkGroupPolicyCallable(const Model::DetachWorkGroupPolicyRequest& request);
+
+                /**
+                 *This API is used to delete databases in the DMS metadata module.
+                 * @param req DropDMSDatabaseRequest
+                 * @return DropDMSDatabaseOutcome
+                 */
+                DropDMSDatabaseOutcome DropDMSDatabase(const Model::DropDMSDatabaseRequest &request);
+                void DropDMSDatabaseAsync(const Model::DropDMSDatabaseRequest& request, const DropDMSDatabaseAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DropDMSDatabaseOutcomeCallable DropDMSDatabaseCallable(const Model::DropDMSDatabaseRequest& request);
 
                 /**
                  *This API is used to generate SQL statements for creating a managed table.

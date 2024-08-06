@@ -83,6 +83,49 @@ DlcClient::AddUsersToWorkGroupOutcomeCallable DlcClient::AddUsersToWorkGroupCall
     return task->get_future();
 }
 
+DlcClient::AlterDMSDatabaseOutcome DlcClient::AlterDMSDatabase(const AlterDMSDatabaseRequest &request)
+{
+    auto outcome = MakeRequest(request, "AlterDMSDatabase");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        AlterDMSDatabaseResponse rsp = AlterDMSDatabaseResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return AlterDMSDatabaseOutcome(rsp);
+        else
+            return AlterDMSDatabaseOutcome(o.GetError());
+    }
+    else
+    {
+        return AlterDMSDatabaseOutcome(outcome.GetError());
+    }
+}
+
+void DlcClient::AlterDMSDatabaseAsync(const AlterDMSDatabaseRequest& request, const AlterDMSDatabaseAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->AlterDMSDatabase(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DlcClient::AlterDMSDatabaseOutcomeCallable DlcClient::AlterDMSDatabaseCallable(const AlterDMSDatabaseRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<AlterDMSDatabaseOutcome()>>(
+        [this, request]()
+        {
+            return this->AlterDMSDatabase(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 DlcClient::AttachUserPolicyOutcome DlcClient::AttachUserPolicy(const AttachUserPolicyRequest &request)
 {
     auto outcome = MakeRequest(request, "AttachUserPolicy");
@@ -463,6 +506,49 @@ DlcClient::CreateCHDFSBindingProductOutcomeCallable DlcClient::CreateCHDFSBindin
         [this, request]()
         {
             return this->CreateCHDFSBindingProduct(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DlcClient::CreateDMSDatabaseOutcome DlcClient::CreateDMSDatabase(const CreateDMSDatabaseRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateDMSDatabase");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateDMSDatabaseResponse rsp = CreateDMSDatabaseResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateDMSDatabaseOutcome(rsp);
+        else
+            return CreateDMSDatabaseOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateDMSDatabaseOutcome(outcome.GetError());
+    }
+}
+
+void DlcClient::CreateDMSDatabaseAsync(const CreateDMSDatabaseRequest& request, const CreateDMSDatabaseAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateDMSDatabase(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DlcClient::CreateDMSDatabaseOutcomeCallable DlcClient::CreateDMSDatabaseCallable(const CreateDMSDatabaseRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateDMSDatabaseOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateDMSDatabase(request);
         }
     );
 
@@ -1323,6 +1409,49 @@ DlcClient::DescribeDLCCatalogAccessOutcomeCallable DlcClient::DescribeDLCCatalog
         [this, request]()
         {
             return this->DescribeDLCCatalogAccess(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DlcClient::DescribeDMSDatabaseOutcome DlcClient::DescribeDMSDatabase(const DescribeDMSDatabaseRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDMSDatabase");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDMSDatabaseResponse rsp = DescribeDMSDatabaseResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDMSDatabaseOutcome(rsp);
+        else
+            return DescribeDMSDatabaseOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDMSDatabaseOutcome(outcome.GetError());
+    }
+}
+
+void DlcClient::DescribeDMSDatabaseAsync(const DescribeDMSDatabaseRequest& request, const DescribeDMSDatabaseAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeDMSDatabase(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DlcClient::DescribeDMSDatabaseOutcomeCallable DlcClient::DescribeDMSDatabaseCallable(const DescribeDMSDatabaseRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeDMSDatabaseOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeDMSDatabase(request);
         }
     );
 
@@ -2613,6 +2742,49 @@ DlcClient::DetachWorkGroupPolicyOutcomeCallable DlcClient::DetachWorkGroupPolicy
         [this, request]()
         {
             return this->DetachWorkGroupPolicy(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DlcClient::DropDMSDatabaseOutcome DlcClient::DropDMSDatabase(const DropDMSDatabaseRequest &request)
+{
+    auto outcome = MakeRequest(request, "DropDMSDatabase");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DropDMSDatabaseResponse rsp = DropDMSDatabaseResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DropDMSDatabaseOutcome(rsp);
+        else
+            return DropDMSDatabaseOutcome(o.GetError());
+    }
+    else
+    {
+        return DropDMSDatabaseOutcome(outcome.GetError());
+    }
+}
+
+void DlcClient::DropDMSDatabaseAsync(const DropDMSDatabaseRequest& request, const DropDMSDatabaseAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DropDMSDatabase(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DlcClient::DropDMSDatabaseOutcomeCallable DlcClient::DropDMSDatabaseCallable(const DropDMSDatabaseRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DropDMSDatabaseOutcome()>>(
+        [this, request]()
+        {
+            return this->DropDMSDatabase(request);
         }
     );
 
