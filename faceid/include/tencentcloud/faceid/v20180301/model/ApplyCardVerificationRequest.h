@@ -129,18 +129,18 @@ AUTO
                     bool CardTypeHasBeenSet() const;
 
                     /**
-                     * 获取Base64 value for the front of the document. Supported image formats: PNG, JPEG, GIF format is not supported yet. Supported image size: The downloaded image cannot exceed 5M after Base64 encoding. 
+                     * 获取Base64 value for the front of the document. Supported image formats: PNG, JPEG. GIF format is not supported yet. Supported image size: The downloaded image cannot exceed 5M after Base64 encoding.
 The image download takes no more than 3 seconds. Supported image resolution: 8000*8000. One of ImageUrlFront and ImageBase64 Front of the image must be provided. If both are provided, only ImageUrlFront will be used.
-                     * @return ImageBase64Front Base64 value for the front of the document. Supported image formats: PNG, JPEG, GIF format is not supported yet. Supported image size: The downloaded image cannot exceed 5M after Base64 encoding. 
+                     * @return ImageBase64Front Base64 value for the front of the document. Supported image formats: PNG, JPEG. GIF format is not supported yet. Supported image size: The downloaded image cannot exceed 5M after Base64 encoding.
 The image download takes no more than 3 seconds. Supported image resolution: 8000*8000. One of ImageUrlFront and ImageBase64 Front of the image must be provided. If both are provided, only ImageUrlFront will be used.
                      * 
                      */
                     std::string GetImageBase64Front() const;
 
                     /**
-                     * 设置Base64 value for the front of the document. Supported image formats: PNG, JPEG, GIF format is not supported yet. Supported image size: The downloaded image cannot exceed 5M after Base64 encoding. 
+                     * 设置Base64 value for the front of the document. Supported image formats: PNG, JPEG. GIF format is not supported yet. Supported image size: The downloaded image cannot exceed 5M after Base64 encoding.
 The image download takes no more than 3 seconds. Supported image resolution: 8000*8000. One of ImageUrlFront and ImageBase64 Front of the image must be provided. If both are provided, only ImageUrlFront will be used.
-                     * @param _imageBase64Front Base64 value for the front of the document. Supported image formats: PNG, JPEG, GIF format is not supported yet. Supported image size: The downloaded image cannot exceed 5M after Base64 encoding. 
+                     * @param _imageBase64Front Base64 value for the front of the document. Supported image formats: PNG, JPEG. GIF format is not supported yet. Supported image size: The downloaded image cannot exceed 5M after Base64 encoding.
 The image download takes no more than 3 seconds. Supported image resolution: 8000*8000. One of ImageUrlFront and ImageBase64 Front of the image must be provided. If both are provided, only ImageUrlFront will be used.
                      * 
                      */
@@ -154,15 +154,15 @@ The image download takes no more than 3 seconds. Supported image resolution: 800
                     bool ImageBase64FrontHasBeenSet() const;
 
                     /**
-                     * 获取Base64 value of the reverse side of the document. Supported image formats: PNG, JPEG, GIF format is not supported yet. Supported image size: The downloaded image cannot exceed 5M after Base64 encoding. The image download takes no more than 3 seconds. Maximum supported image resolution: 8000*8000. For some certificates, one of ImageUrlBack and ImageBase64Back must be provided. If both are provided, only ImageUrlBack will be used.
-                     * @return ImageBase64Back Base64 value of the reverse side of the document. Supported image formats: PNG, JPEG, GIF format is not supported yet. Supported image size: The downloaded image cannot exceed 5M after Base64 encoding. The image download takes no more than 3 seconds. Maximum supported image resolution: 8000*8000. For some certificates, one of ImageUrlBack and ImageBase64Back must be provided. If both are provided, only ImageUrlBack will be used.
+                     * 获取Base64 value of the reverse side of the document. Supported image formats: PNG, JPEG. GIF format is not supported yet. Supported image size: The downloaded image cannot exceed 5M after Base64 encoding. The image download takes no more than 3 seconds. Maximum supported image resolution: 8000*8000. For some certificates, one of ImageUrlBack and ImageBase64Back must be provided. If both are provided, only ImageUrlBack will be used.
+                     * @return ImageBase64Back Base64 value of the reverse side of the document. Supported image formats: PNG, JPEG. GIF format is not supported yet. Supported image size: The downloaded image cannot exceed 5M after Base64 encoding. The image download takes no more than 3 seconds. Maximum supported image resolution: 8000*8000. For some certificates, one of ImageUrlBack and ImageBase64Back must be provided. If both are provided, only ImageUrlBack will be used.
                      * 
                      */
                     std::string GetImageBase64Back() const;
 
                     /**
-                     * 设置Base64 value of the reverse side of the document. Supported image formats: PNG, JPEG, GIF format is not supported yet. Supported image size: The downloaded image cannot exceed 5M after Base64 encoding. The image download takes no more than 3 seconds. Maximum supported image resolution: 8000*8000. For some certificates, one of ImageUrlBack and ImageBase64Back must be provided. If both are provided, only ImageUrlBack will be used.
-                     * @param _imageBase64Back Base64 value of the reverse side of the document. Supported image formats: PNG, JPEG, GIF format is not supported yet. Supported image size: The downloaded image cannot exceed 5M after Base64 encoding. The image download takes no more than 3 seconds. Maximum supported image resolution: 8000*8000. For some certificates, one of ImageUrlBack and ImageBase64Back must be provided. If both are provided, only ImageUrlBack will be used.
+                     * 设置Base64 value of the reverse side of the document. Supported image formats: PNG, JPEG. GIF format is not supported yet. Supported image size: The downloaded image cannot exceed 5M after Base64 encoding. The image download takes no more than 3 seconds. Maximum supported image resolution: 8000*8000. For some certificates, one of ImageUrlBack and ImageBase64Back must be provided. If both are provided, only ImageUrlBack will be used.
+                     * @param _imageBase64Back Base64 value of the reverse side of the document. Supported image formats: PNG, JPEG. GIF format is not supported yet. Supported image size: The downloaded image cannot exceed 5M after Base64 encoding. The image download takes no more than 3 seconds. Maximum supported image resolution: 8000*8000. For some certificates, one of ImageUrlBack and ImageBase64Back must be provided. If both are provided, only ImageUrlBack will be used.
                      * 
                      */
                     void SetImageBase64Back(const std::string& _imageBase64Back);
@@ -175,15 +175,15 @@ The image download takes no more than 3 seconds. Supported image resolution: 800
                     bool ImageBase64BackHasBeenSet() const;
 
                     /**
-                     * 获取The URL value on the back of the certificate. Supported image formats: PNG, JPEG, GIF format is not supported yet. Supported image size: The downloaded image cannot exceed 5M after Base64 encoding. The image download takes no more than 3 seconds. Maximum supported image resolution: 8000*8000. One of ImageUrlFront and ImageBase64Front of the image must be provided. If both are provided, only ImageUrlFront will be used.
-                     * @return ImageUrlFront The URL value on the back of the certificate. Supported image formats: PNG, JPEG, GIF format is not supported yet. Supported image size: The downloaded image cannot exceed 5M after Base64 encoding. The image download takes no more than 3 seconds. Maximum supported image resolution: 8000*8000. One of ImageUrlFront and ImageBase64Front of the image must be provided. If both are provided, only ImageUrlFront will be used.
+                     * 获取The URL value on the back of the certificate. Supported image formats: PNG, JPEG. GIF format is not supported yet. Supported image size: The downloaded image cannot exceed 5M after Base64 encoding. The image download takes no more than 3 seconds. Maximum supported image resolution: 8000*8000. One of ImageUrlFront and ImageBase64Front of the image must be provided. If both are provided, only ImageUrlFront will be used.
+                     * @return ImageUrlFront The URL value on the back of the certificate. Supported image formats: PNG, JPEG. GIF format is not supported yet. Supported image size: The downloaded image cannot exceed 5M after Base64 encoding. The image download takes no more than 3 seconds. Maximum supported image resolution: 8000*8000. One of ImageUrlFront and ImageBase64Front of the image must be provided. If both are provided, only ImageUrlFront will be used.
                      * 
                      */
                     std::string GetImageUrlFront() const;
 
                     /**
-                     * 设置The URL value on the back of the certificate. Supported image formats: PNG, JPEG, GIF format is not supported yet. Supported image size: The downloaded image cannot exceed 5M after Base64 encoding. The image download takes no more than 3 seconds. Maximum supported image resolution: 8000*8000. One of ImageUrlFront and ImageBase64Front of the image must be provided. If both are provided, only ImageUrlFront will be used.
-                     * @param _imageUrlFront The URL value on the back of the certificate. Supported image formats: PNG, JPEG, GIF format is not supported yet. Supported image size: The downloaded image cannot exceed 5M after Base64 encoding. The image download takes no more than 3 seconds. Maximum supported image resolution: 8000*8000. One of ImageUrlFront and ImageBase64Front of the image must be provided. If both are provided, only ImageUrlFront will be used.
+                     * 设置The URL value on the back of the certificate. Supported image formats: PNG, JPEG. GIF format is not supported yet. Supported image size: The downloaded image cannot exceed 5M after Base64 encoding. The image download takes no more than 3 seconds. Maximum supported image resolution: 8000*8000. One of ImageUrlFront and ImageBase64Front of the image must be provided. If both are provided, only ImageUrlFront will be used.
+                     * @param _imageUrlFront The URL value on the back of the certificate. Supported image formats: PNG, JPEG. GIF format is not supported yet. Supported image size: The downloaded image cannot exceed 5M after Base64 encoding. The image download takes no more than 3 seconds. Maximum supported image resolution: 8000*8000. One of ImageUrlFront and ImageBase64Front of the image must be provided. If both are provided, only ImageUrlFront will be used.
                      * 
                      */
                     void SetImageUrlFront(const std::string& _imageUrlFront);
@@ -196,15 +196,15 @@ The image download takes no more than 3 seconds. Supported image resolution: 800
                     bool ImageUrlFrontHasBeenSet() const;
 
                     /**
-                     * 获取The URL value on the back of the certificate. Supported image formats: PNG, JPEG, GIF format is not supported yet. Supported image size: The downloaded image cannot exceed 5M after Base64 encoding. The image download takes no more than 3 seconds. Maximum supported image resolution: 8000*8000. For some certificates, one of ImageUrlBack and ImageBase64Back must be provided. If both are provided, only ImageUrlBack will be used.
-                     * @return ImageUrlBack The URL value on the back of the certificate. Supported image formats: PNG, JPEG, GIF format is not supported yet. Supported image size: The downloaded image cannot exceed 5M after Base64 encoding. The image download takes no more than 3 seconds. Maximum supported image resolution: 8000*8000. For some certificates, one of ImageUrlBack and ImageBase64Back must be provided. If both are provided, only ImageUrlBack will be used.
+                     * 获取The URL value on the back of the certificate. Supported image formats: PNG, JPEG. GIF format is not supported yet. Supported image size: The downloaded image cannot exceed 5M after Base64 encoding. The image download takes no more than 3 seconds. Maximum supported image resolution: 8000*8000. For some certificates, one of ImageUrlBack and ImageBase64Back must be provided. If both are provided, only ImageUrlBack will be used.
+                     * @return ImageUrlBack The URL value on the back of the certificate. Supported image formats: PNG, JPEG. GIF format is not supported yet. Supported image size: The downloaded image cannot exceed 5M after Base64 encoding. The image download takes no more than 3 seconds. Maximum supported image resolution: 8000*8000. For some certificates, one of ImageUrlBack and ImageBase64Back must be provided. If both are provided, only ImageUrlBack will be used.
                      * 
                      */
                     std::string GetImageUrlBack() const;
 
                     /**
-                     * 设置The URL value on the back of the certificate. Supported image formats: PNG, JPEG, GIF format is not supported yet. Supported image size: The downloaded image cannot exceed 5M after Base64 encoding. The image download takes no more than 3 seconds. Maximum supported image resolution: 8000*8000. For some certificates, one of ImageUrlBack and ImageBase64Back must be provided. If both are provided, only ImageUrlBack will be used.
-                     * @param _imageUrlBack The URL value on the back of the certificate. Supported image formats: PNG, JPEG, GIF format is not supported yet. Supported image size: The downloaded image cannot exceed 5M after Base64 encoding. The image download takes no more than 3 seconds. Maximum supported image resolution: 8000*8000. For some certificates, one of ImageUrlBack and ImageBase64Back must be provided. If both are provided, only ImageUrlBack will be used.
+                     * 设置The URL value on the back of the certificate. Supported image formats: PNG, JPEG. GIF format is not supported yet. Supported image size: The downloaded image cannot exceed 5M after Base64 encoding. The image download takes no more than 3 seconds. Maximum supported image resolution: 8000*8000. For some certificates, one of ImageUrlBack and ImageBase64Back must be provided. If both are provided, only ImageUrlBack will be used.
+                     * @param _imageUrlBack The URL value on the back of the certificate. Supported image formats: PNG, JPEG. GIF format is not supported yet. Supported image size: The downloaded image cannot exceed 5M after Base64 encoding. The image download takes no more than 3 seconds. Maximum supported image resolution: 8000*8000. For some certificates, one of ImageUrlBack and ImageBase64Back must be provided. If both are provided, only ImageUrlBack will be used.
                      * 
                      */
                     void SetImageUrlBack(const std::string& _imageUrlBack);
@@ -242,26 +242,26 @@ AUTO
                     bool m_cardTypeHasBeenSet;
 
                     /**
-                     * Base64 value for the front of the document. Supported image formats: PNG, JPEG, GIF format is not supported yet. Supported image size: The downloaded image cannot exceed 5M after Base64 encoding. 
+                     * Base64 value for the front of the document. Supported image formats: PNG, JPEG. GIF format is not supported yet. Supported image size: The downloaded image cannot exceed 5M after Base64 encoding.
 The image download takes no more than 3 seconds. Supported image resolution: 8000*8000. One of ImageUrlFront and ImageBase64 Front of the image must be provided. If both are provided, only ImageUrlFront will be used.
                      */
                     std::string m_imageBase64Front;
                     bool m_imageBase64FrontHasBeenSet;
 
                     /**
-                     * Base64 value of the reverse side of the document. Supported image formats: PNG, JPEG, GIF format is not supported yet. Supported image size: The downloaded image cannot exceed 5M after Base64 encoding. The image download takes no more than 3 seconds. Maximum supported image resolution: 8000*8000. For some certificates, one of ImageUrlBack and ImageBase64Back must be provided. If both are provided, only ImageUrlBack will be used.
+                     * Base64 value of the reverse side of the document. Supported image formats: PNG, JPEG. GIF format is not supported yet. Supported image size: The downloaded image cannot exceed 5M after Base64 encoding. The image download takes no more than 3 seconds. Maximum supported image resolution: 8000*8000. For some certificates, one of ImageUrlBack and ImageBase64Back must be provided. If both are provided, only ImageUrlBack will be used.
                      */
                     std::string m_imageBase64Back;
                     bool m_imageBase64BackHasBeenSet;
 
                     /**
-                     * The URL value on the back of the certificate. Supported image formats: PNG, JPEG, GIF format is not supported yet. Supported image size: The downloaded image cannot exceed 5M after Base64 encoding. The image download takes no more than 3 seconds. Maximum supported image resolution: 8000*8000. One of ImageUrlFront and ImageBase64Front of the image must be provided. If both are provided, only ImageUrlFront will be used.
+                     * The URL value on the back of the certificate. Supported image formats: PNG, JPEG. GIF format is not supported yet. Supported image size: The downloaded image cannot exceed 5M after Base64 encoding. The image download takes no more than 3 seconds. Maximum supported image resolution: 8000*8000. One of ImageUrlFront and ImageBase64Front of the image must be provided. If both are provided, only ImageUrlFront will be used.
                      */
                     std::string m_imageUrlFront;
                     bool m_imageUrlFrontHasBeenSet;
 
                     /**
-                     * The URL value on the back of the certificate. Supported image formats: PNG, JPEG, GIF format is not supported yet. Supported image size: The downloaded image cannot exceed 5M after Base64 encoding. The image download takes no more than 3 seconds. Maximum supported image resolution: 8000*8000. For some certificates, one of ImageUrlBack and ImageBase64Back must be provided. If both are provided, only ImageUrlBack will be used.
+                     * The URL value on the back of the certificate. Supported image formats: PNG, JPEG. GIF format is not supported yet. Supported image size: The downloaded image cannot exceed 5M after Base64 encoding. The image download takes no more than 3 seconds. Maximum supported image resolution: 8000*8000. For some certificates, one of ImageUrlBack and ImageBase64Back must be provided. If both are provided, only ImageUrlBack will be used.
                      */
                     std::string m_imageUrlBack;
                     bool m_imageUrlBackHasBeenSet;
