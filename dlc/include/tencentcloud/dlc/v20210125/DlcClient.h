@@ -151,6 +151,8 @@
 #include <tencentcloud/dlc/v20210125/model/DetachWorkGroupPolicyResponse.h>
 #include <tencentcloud/dlc/v20210125/model/DropDMSDatabaseRequest.h>
 #include <tencentcloud/dlc/v20210125/model/DropDMSDatabaseResponse.h>
+#include <tencentcloud/dlc/v20210125/model/DropDMSTableRequest.h>
+#include <tencentcloud/dlc/v20210125/model/DropDMSTableResponse.h>
 #include <tencentcloud/dlc/v20210125/model/GenerateCreateMangedTableSqlRequest.h>
 #include <tencentcloud/dlc/v20210125/model/GenerateCreateMangedTableSqlResponse.h>
 #include <tencentcloud/dlc/v20210125/model/GetOptimizerPolicyRequest.h>
@@ -411,6 +413,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DropDMSDatabaseResponse> DropDMSDatabaseOutcome;
                 typedef std::future<DropDMSDatabaseOutcome> DropDMSDatabaseOutcomeCallable;
                 typedef std::function<void(const DlcClient*, const Model::DropDMSDatabaseRequest&, DropDMSDatabaseOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DropDMSDatabaseAsyncHandler;
+                typedef Outcome<Core::Error, Model::DropDMSTableResponse> DropDMSTableOutcome;
+                typedef std::future<DropDMSTableOutcome> DropDMSTableOutcomeCallable;
+                typedef std::function<void(const DlcClient*, const Model::DropDMSTableRequest&, DropDMSTableOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DropDMSTableAsyncHandler;
                 typedef Outcome<Core::Error, Model::GenerateCreateMangedTableSqlResponse> GenerateCreateMangedTableSqlOutcome;
                 typedef std::future<GenerateCreateMangedTableSqlOutcome> GenerateCreateMangedTableSqlOutcomeCallable;
                 typedef std::function<void(const DlcClient*, const Model::GenerateCreateMangedTableSqlRequest&, GenerateCreateMangedTableSqlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GenerateCreateMangedTableSqlAsyncHandler;
@@ -1070,6 +1075,15 @@ namespace TencentCloud
                 DropDMSDatabaseOutcome DropDMSDatabase(const Model::DropDMSDatabaseRequest &request);
                 void DropDMSDatabaseAsync(const Model::DropDMSDatabaseRequest& request, const DropDMSDatabaseAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DropDMSDatabaseOutcomeCallable DropDMSDatabaseCallable(const Model::DropDMSDatabaseRequest& request);
+
+                /**
+                 *This API is used to delete tables in the DMS metadata module.
+                 * @param req DropDMSTableRequest
+                 * @return DropDMSTableOutcome
+                 */
+                DropDMSTableOutcome DropDMSTable(const Model::DropDMSTableRequest &request);
+                void DropDMSTableAsync(const Model::DropDMSTableRequest& request, const DropDMSTableAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DropDMSTableOutcomeCallable DropDMSTableCallable(const Model::DropDMSTableRequest& request);
 
                 /**
                  *This API is used to generate SQL statements for creating a managed table.

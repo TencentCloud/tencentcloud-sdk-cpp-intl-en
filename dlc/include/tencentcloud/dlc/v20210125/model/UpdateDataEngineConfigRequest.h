@@ -84,6 +84,48 @@ namespace TencentCloud
                      */
                     bool DataEngineConfigCommandHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to use lakeFS as result storage
+                     * @return UseLakeFs Whether to use lakeFS as result storage
+                     * 
+                     */
+                    bool GetUseLakeFs() const;
+
+                    /**
+                     * 设置Whether to use lakeFS as result storage
+                     * @param _useLakeFs Whether to use lakeFS as result storage
+                     * 
+                     */
+                    void SetUseLakeFs(const bool& _useLakeFs);
+
+                    /**
+                     * 判断参数 UseLakeFs 是否已赋值
+                     * @return UseLakeFs 是否已赋值
+                     * 
+                     */
+                    bool UseLakeFsHasBeenSet() const;
+
+                    /**
+                     * 获取User-defined result path
+                     * @return CustomResultPath User-defined result path
+                     * 
+                     */
+                    std::string GetCustomResultPath() const;
+
+                    /**
+                     * 设置User-defined result path
+                     * @param _customResultPath User-defined result path
+                     * 
+                     */
+                    void SetCustomResultPath(const std::string& _customResultPath);
+
+                    /**
+                     * 判断参数 CustomResultPath 是否已赋值
+                     * @return CustomResultPath 是否已赋值
+                     * 
+                     */
+                    bool CustomResultPathHasBeenSet() const;
+
                 private:
 
                     /**
@@ -97,6 +139,18 @@ namespace TencentCloud
                      */
                     std::string m_dataEngineConfigCommand;
                     bool m_dataEngineConfigCommandHasBeenSet;
+
+                    /**
+                     * Whether to use lakeFS as result storage
+                     */
+                    bool m_useLakeFs;
+                    bool m_useLakeFsHasBeenSet;
+
+                    /**
+                     * User-defined result path
+                     */
+                    std::string m_customResultPath;
+                    bool m_customResultPathHasBeenSet;
 
                 };
             }

@@ -72,6 +72,9 @@ endif()
 
 add_subdirectory(core)
 
+if(BUILD_MODULES_ALL OR ";${BUILD_MODULES};" MATCHES ";advisor;")
+    add_subdirectory(advisor)
+endif()
 if(BUILD_MODULES_ALL OR ";${BUILD_MODULES};" MATCHES ";ams;")
     add_subdirectory(ams)
 endif()

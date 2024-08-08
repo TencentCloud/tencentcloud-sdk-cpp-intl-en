@@ -2792,6 +2792,49 @@ DlcClient::DropDMSDatabaseOutcomeCallable DlcClient::DropDMSDatabaseCallable(con
     return task->get_future();
 }
 
+DlcClient::DropDMSTableOutcome DlcClient::DropDMSTable(const DropDMSTableRequest &request)
+{
+    auto outcome = MakeRequest(request, "DropDMSTable");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DropDMSTableResponse rsp = DropDMSTableResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DropDMSTableOutcome(rsp);
+        else
+            return DropDMSTableOutcome(o.GetError());
+    }
+    else
+    {
+        return DropDMSTableOutcome(outcome.GetError());
+    }
+}
+
+void DlcClient::DropDMSTableAsync(const DropDMSTableRequest& request, const DropDMSTableAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DropDMSTable(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DlcClient::DropDMSTableOutcomeCallable DlcClient::DropDMSTableCallable(const DropDMSTableRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DropDMSTableOutcome()>>(
+        [this, request]()
+        {
+            return this->DropDMSTable(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 DlcClient::GenerateCreateMangedTableSqlOutcome DlcClient::GenerateCreateMangedTableSql(const GenerateCreateMangedTableSqlRequest &request)
 {
     auto outcome = MakeRequest(request, "GenerateCreateMangedTableSql");

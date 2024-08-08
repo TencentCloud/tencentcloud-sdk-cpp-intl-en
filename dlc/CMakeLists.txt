@@ -63,7 +63,7 @@ set(dlc_public_header_model
   include/tencentcloud/dlc/v20210125/model/CrontabResumeSuspendStrategy.h
   include/tencentcloud/dlc/v20210125/model/CreateCHDFSBindingProductRequest.h
   include/tencentcloud/dlc/v20210125/model/DescribeTasksResponse.h
-  include/tencentcloud/dlc/v20210125/model/VpcInfo.h
+  include/tencentcloud/dlc/v20210125/model/DropDMSTableResponse.h
   include/tencentcloud/dlc/v20210125/model/CommonMetrics.h
   include/tencentcloud/dlc/v20210125/model/UserRole.h
   include/tencentcloud/dlc/v20210125/model/DataEngineBasicInfo.h
@@ -113,6 +113,7 @@ set(dlc_public_header_model
   include/tencentcloud/dlc/v20210125/model/TPartition.h
   include/tencentcloud/dlc/v20210125/model/DescribeForbiddenTableProRequest.h
   include/tencentcloud/dlc/v20210125/model/CreateDataEngineResponse.h
+  include/tencentcloud/dlc/v20210125/model/VpcInfo.h
   include/tencentcloud/dlc/v20210125/model/DescribeSparkAppJobsRequest.h
   include/tencentcloud/dlc/v20210125/model/DescribeDataEngineRequest.h
   include/tencentcloud/dlc/v20210125/model/RollbackDataEngineImageResponse.h
@@ -150,6 +151,7 @@ set(dlc_public_header_model
   include/tencentcloud/dlc/v20210125/model/GrantDLCCatalogAccessRequest.h
   include/tencentcloud/dlc/v20210125/model/DataEngineConfigPair.h
   include/tencentcloud/dlc/v20210125/model/SessionResourceTemplate.h
+  include/tencentcloud/dlc/v20210125/model/DropDMSTableRequest.h
   include/tencentcloud/dlc/v20210125/model/AttachWorkGroupPolicyResponse.h
   include/tencentcloud/dlc/v20210125/model/ModifyAdvancedStoreLocationResponse.h
   include/tencentcloud/dlc/v20210125/model/DescribeSubUserAccessPolicyResponse.h
@@ -316,7 +318,7 @@ set(dlc_src
   src/v20210125/model/CrontabResumeSuspendStrategy.cpp
   src/v20210125/model/CreateCHDFSBindingProductRequest.cpp
   src/v20210125/model/DescribeTasksResponse.cpp
-  src/v20210125/model/VpcInfo.cpp
+  src/v20210125/model/DropDMSTableResponse.cpp
   src/v20210125/model/CommonMetrics.cpp
   src/v20210125/model/UserRole.cpp
   src/v20210125/model/DataEngineBasicInfo.cpp
@@ -366,6 +368,7 @@ set(dlc_src
   src/v20210125/model/TPartition.cpp
   src/v20210125/model/DescribeForbiddenTableProRequest.cpp
   src/v20210125/model/CreateDataEngineResponse.cpp
+  src/v20210125/model/VpcInfo.cpp
   src/v20210125/model/DescribeSparkAppJobsRequest.cpp
   src/v20210125/model/DescribeDataEngineRequest.cpp
   src/v20210125/model/RollbackDataEngineImageResponse.cpp
@@ -403,6 +406,7 @@ set(dlc_src
   src/v20210125/model/GrantDLCCatalogAccessRequest.cpp
   src/v20210125/model/DataEngineConfigPair.cpp
   src/v20210125/model/SessionResourceTemplate.cpp
+  src/v20210125/model/DropDMSTableRequest.cpp
   src/v20210125/model/AttachWorkGroupPolicyResponse.cpp
   src/v20210125/model/ModifyAdvancedStoreLocationResponse.cpp
   src/v20210125/model/DescribeSubUserAccessPolicyResponse.cpp
