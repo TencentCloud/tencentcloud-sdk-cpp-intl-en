@@ -150,29 +150,25 @@ namespace TencentCloud
                     bool UserSigHasBeenSet() const;
 
                     /**
-                     * 获取	
-Source URL. Example value: https://a.b/test.mp4
-                     * @return SourceUrl 	
-Source URL. Example value: https://a.b/test.mp4
+                     * 获取The Url of the media resource.
+                     * @return StreamUrl The Url of the media resource.
                      * 
                      */
-                    std::vector<std::string> GetSourceUrl() const;
+                    std::string GetStreamUrl() const;
 
                     /**
-                     * 设置	
-Source URL. Example value: https://a.b/test.mp4
-                     * @param _sourceUrl 	
-Source URL. Example value: https://a.b/test.mp4
+                     * 设置The Url of the media resource.
+                     * @param _streamUrl The Url of the media resource.
                      * 
                      */
-                    void SetSourceUrl(const std::vector<std::string>& _sourceUrl);
+                    void SetStreamUrl(const std::string& _streamUrl);
 
                     /**
-                     * 判断参数 SourceUrl 是否已赋值
-                     * @return SourceUrl 是否已赋值
+                     * 判断参数 StreamUrl 是否已赋值
+                     * @return StreamUrl 是否已赋值
                      * 
                      */
-                    bool SourceUrlHasBeenSet() const;
+                    bool StreamUrlHasBeenSet() const;
 
                     /**
                      * 获取TRTC room permission Encryption ticket, only needed when advanced permission control is enabled in the Console. After enabling advanced permission control in the TRTC Console, TRTC's backend service system will verify a so-called [PrivateMapKey] 'Permission ticket', which contains an encrypted RoomId and an encrypted 'Permission bit list'. Since PrivateMapKey contains RoomId, providing only UserSig without PrivateMapKey does not allow entry into the specified room.
@@ -198,65 +194,153 @@ Source URL. Example value: https://a.b/test.mp4
                     /**
                      * 获取Video Codec Parameters. Optional, if not filled, Keep original stream Parameters.
                      * @return VideoEncodeParams Video Codec Parameters. Optional, if not filled, Keep original stream Parameters.
-                     * 
+                     * @deprecated
                      */
                     VideoEncodeParams GetVideoEncodeParams() const;
 
                     /**
                      * 设置Video Codec Parameters. Optional, if not filled, Keep original stream Parameters.
                      * @param _videoEncodeParams Video Codec Parameters. Optional, if not filled, Keep original stream Parameters.
-                     * 
+                     * @deprecated
                      */
                     void SetVideoEncodeParams(const VideoEncodeParams& _videoEncodeParams);
 
                     /**
                      * 判断参数 VideoEncodeParams 是否已赋值
                      * @return VideoEncodeParams 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool VideoEncodeParamsHasBeenSet() const;
 
                     /**
                      * 获取Audio Codec Parameters. Optional, if not filled, Keep original stream Parameters.
                      * @return AudioEncodeParams Audio Codec Parameters. Optional, if not filled, Keep original stream Parameters.
-                     * 
+                     * @deprecated
                      */
                     AudioEncodeParams GetAudioEncodeParams() const;
 
                     /**
                      * 设置Audio Codec Parameters. Optional, if not filled, Keep original stream Parameters.
                      * @param _audioEncodeParams Audio Codec Parameters. Optional, if not filled, Keep original stream Parameters.
-                     * 
+                     * @deprecated
                      */
                     void SetAudioEncodeParams(const AudioEncodeParams& _audioEncodeParams);
 
                     /**
                      * 判断参数 AudioEncodeParams 是否已赋值
                      * @return AudioEncodeParams 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool AudioEncodeParamsHasBeenSet() const;
 
                     /**
+                     * 获取	
+Source URL. Example value: https://a.b/test.mp4
+                     * @return SourceUrl 	
+Source URL. Example value: https://a.b/test.mp4
+                     * @deprecated
+                     */
+                    std::vector<std::string> GetSourceUrl() const;
+
+                    /**
+                     * 设置	
+Source URL. Example value: https://a.b/test.mp4
+                     * @param _sourceUrl 	
+Source URL. Example value: https://a.b/test.mp4
+                     * @deprecated
+                     */
+                    void SetSourceUrl(const std::vector<std::string>& _sourceUrl);
+
+                    /**
+                     * 判断参数 SourceUrl 是否已赋值
+                     * @return SourceUrl 是否已赋值
+                     * @deprecated
+                     */
+                    bool SourceUrlHasBeenSet() const;
+
+                    /**
                      * 获取
-                     * @return StreamUrl 
+                     * @return SeekSecond 
                      * 
                      */
-                    std::string GetStreamUrl() const;
+                    int64_t GetSeekSecond() const;
 
                     /**
                      * 设置
-                     * @param _streamUrl 
+                     * @param _seekSecond 
                      * 
                      */
-                    void SetStreamUrl(const std::string& _streamUrl);
+                    void SetSeekSecond(const int64_t& _seekSecond);
 
                     /**
-                     * 判断参数 StreamUrl 是否已赋值
-                     * @return StreamUrl 是否已赋值
+                     * 判断参数 SeekSecond 是否已赋值
+                     * @return SeekSecond 是否已赋值
                      * 
                      */
-                    bool StreamUrlHasBeenSet() const;
+                    bool SeekSecondHasBeenSet() const;
+
+                    /**
+                     * 获取Enable auto relay to cdn, please make sure that this feature has been enabled in the console.
+                     * @return AutoPush Enable auto relay to cdn, please make sure that this feature has been enabled in the console.
+                     * 
+                     */
+                    bool GetAutoPush() const;
+
+                    /**
+                     * 设置Enable auto relay to cdn, please make sure that this feature has been enabled in the console.
+                     * @param _autoPush Enable auto relay to cdn, please make sure that this feature has been enabled in the console.
+                     * 
+                     */
+                    void SetAutoPush(const bool& _autoPush);
+
+                    /**
+                     * 判断参数 AutoPush 是否已赋值
+                     * @return AutoPush 是否已赋值
+                     * 
+                     */
+                    bool AutoPushHasBeenSet() const;
+
+                    /**
+                     * 获取Loop playback count, value range: [-1, 1000], default is 1 time. - 0 is an invalid value - -1 is for loop playback, task termination requires actively calling the stop interface or setting MaxDuration.
+                     * @return RepeatNum Loop playback count, value range: [-1, 1000], default is 1 time. - 0 is an invalid value - -1 is for loop playback, task termination requires actively calling the stop interface or setting MaxDuration.
+                     * 
+                     */
+                    int64_t GetRepeatNum() const;
+
+                    /**
+                     * 设置Loop playback count, value range: [-1, 1000], default is 1 time. - 0 is an invalid value - -1 is for loop playback, task termination requires actively calling the stop interface or setting MaxDuration.
+                     * @param _repeatNum Loop playback count, value range: [-1, 1000], default is 1 time. - 0 is an invalid value - -1 is for loop playback, task termination requires actively calling the stop interface or setting MaxDuration.
+                     * 
+                     */
+                    void SetRepeatNum(const int64_t& _repeatNum);
+
+                    /**
+                     * 判断参数 RepeatNum 是否已赋值
+                     * @return RepeatNum 是否已赋值
+                     * 
+                     */
+                    bool RepeatNumHasBeenSet() const;
+
+                    /**
+                     * 获取Loop playback maximum duration, only effective when RepeatNum is set to -1, valid value range: [1, 10080], unit: minutes
+                     * @return MaxDuration Loop playback maximum duration, only effective when RepeatNum is set to -1, valid value range: [1, 10080], unit: minutes
+                     * 
+                     */
+                    int64_t GetMaxDuration() const;
+
+                    /**
+                     * 设置Loop playback maximum duration, only effective when RepeatNum is set to -1, valid value range: [1, 10080], unit: minutes
+                     * @param _maxDuration Loop playback maximum duration, only effective when RepeatNum is set to -1, valid value range: [1, 10080], unit: minutes
+                     * 
+                     */
+                    void SetMaxDuration(const int64_t& _maxDuration);
+
+                    /**
+                     * 判断参数 MaxDuration 是否已赋值
+                     * @return MaxDuration 是否已赋值
+                     * 
+                     */
+                    bool MaxDurationHasBeenSet() const;
 
                 private:
 
@@ -291,11 +375,10 @@ Source URL. Example value: https://a.b/test.mp4
                     bool m_userSigHasBeenSet;
 
                     /**
-                     * 	
-Source URL. Example value: https://a.b/test.mp4
+                     * The Url of the media resource.
                      */
-                    std::vector<std::string> m_sourceUrl;
-                    bool m_sourceUrlHasBeenSet;
+                    std::string m_streamUrl;
+                    bool m_streamUrlHasBeenSet;
 
                     /**
                      * TRTC room permission Encryption ticket, only needed when advanced permission control is enabled in the Console. After enabling advanced permission control in the TRTC Console, TRTC's backend service system will verify a so-called [PrivateMapKey] 'Permission ticket', which contains an encrypted RoomId and an encrypted 'Permission bit list'. Since PrivateMapKey contains RoomId, providing only UserSig without PrivateMapKey does not allow entry into the specified room.
@@ -316,10 +399,35 @@ Source URL. Example value: https://a.b/test.mp4
                     bool m_audioEncodeParamsHasBeenSet;
 
                     /**
+                     * 	
+Source URL. Example value: https://a.b/test.mp4
+                     */
+                    std::vector<std::string> m_sourceUrl;
+                    bool m_sourceUrlHasBeenSet;
+
+                    /**
                      * 
                      */
-                    std::string m_streamUrl;
-                    bool m_streamUrlHasBeenSet;
+                    int64_t m_seekSecond;
+                    bool m_seekSecondHasBeenSet;
+
+                    /**
+                     * Enable auto relay to cdn, please make sure that this feature has been enabled in the console.
+                     */
+                    bool m_autoPush;
+                    bool m_autoPushHasBeenSet;
+
+                    /**
+                     * Loop playback count, value range: [-1, 1000], default is 1 time. - 0 is an invalid value - -1 is for loop playback, task termination requires actively calling the stop interface or setting MaxDuration.
+                     */
+                    int64_t m_repeatNum;
+                    bool m_repeatNumHasBeenSet;
+
+                    /**
+                     * Loop playback maximum duration, only effective when RepeatNum is set to -1, valid value range: [1, 10080], unit: minutes
+                     */
+                    int64_t m_maxDuration;
+                    bool m_maxDurationHasBeenSet;
 
                 };
             }

@@ -28,11 +28,15 @@ StartStreamIngestRequest::StartStreamIngestRequest() :
     m_roomIdTypeHasBeenSet(false),
     m_userIdHasBeenSet(false),
     m_userSigHasBeenSet(false),
-    m_sourceUrlHasBeenSet(false),
+    m_streamUrlHasBeenSet(false),
     m_privateMapKeyHasBeenSet(false),
     m_videoEncodeParamsHasBeenSet(false),
     m_audioEncodeParamsHasBeenSet(false),
-    m_streamUrlHasBeenSet(false)
+    m_sourceUrlHasBeenSet(false),
+    m_seekSecondHasBeenSet(false),
+    m_autoPushHasBeenSet(false),
+    m_repeatNumHasBeenSet(false),
+    m_maxDurationHasBeenSet(false)
 {
 }
 
@@ -83,17 +87,12 @@ string StartStreamIngestRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_userSig.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_sourceUrlHasBeenSet)
+    if (m_streamUrlHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "SourceUrl";
+        string key = "StreamUrl";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
-
-        for (auto itr = m_sourceUrl.begin(); itr != m_sourceUrl.end(); ++itr)
-        {
-            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
-        }
+        d.AddMember(iKey, rapidjson::Value(m_streamUrl.c_str(), allocator).Move(), allocator);
     }
 
     if (m_privateMapKeyHasBeenSet)
@@ -122,12 +121,49 @@ string StartStreamIngestRequest::ToJsonString() const
         m_audioEncodeParams.ToJsonObject(d[key.c_str()], allocator);
     }
 
-    if (m_streamUrlHasBeenSet)
+    if (m_sourceUrlHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "StreamUrl";
+        string key = "SourceUrl";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_streamUrl.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_sourceUrl.begin(); itr != m_sourceUrl.end(); ++itr)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_seekSecondHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SeekSecond";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_seekSecond, allocator);
+    }
+
+    if (m_autoPushHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AutoPush";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_autoPush, allocator);
+    }
+
+    if (m_repeatNumHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RepeatNum";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_repeatNum, allocator);
+    }
+
+    if (m_maxDurationHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MaxDuration";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_maxDuration, allocator);
     }
 
 
@@ -218,20 +254,20 @@ bool StartStreamIngestRequest::UserSigHasBeenSet() const
     return m_userSigHasBeenSet;
 }
 
-vector<string> StartStreamIngestRequest::GetSourceUrl() const
+string StartStreamIngestRequest::GetStreamUrl() const
 {
-    return m_sourceUrl;
+    return m_streamUrl;
 }
 
-void StartStreamIngestRequest::SetSourceUrl(const vector<string>& _sourceUrl)
+void StartStreamIngestRequest::SetStreamUrl(const string& _streamUrl)
 {
-    m_sourceUrl = _sourceUrl;
-    m_sourceUrlHasBeenSet = true;
+    m_streamUrl = _streamUrl;
+    m_streamUrlHasBeenSet = true;
 }
 
-bool StartStreamIngestRequest::SourceUrlHasBeenSet() const
+bool StartStreamIngestRequest::StreamUrlHasBeenSet() const
 {
-    return m_sourceUrlHasBeenSet;
+    return m_streamUrlHasBeenSet;
 }
 
 string StartStreamIngestRequest::GetPrivateMapKey() const
@@ -282,20 +318,84 @@ bool StartStreamIngestRequest::AudioEncodeParamsHasBeenSet() const
     return m_audioEncodeParamsHasBeenSet;
 }
 
-string StartStreamIngestRequest::GetStreamUrl() const
+vector<string> StartStreamIngestRequest::GetSourceUrl() const
 {
-    return m_streamUrl;
+    return m_sourceUrl;
 }
 
-void StartStreamIngestRequest::SetStreamUrl(const string& _streamUrl)
+void StartStreamIngestRequest::SetSourceUrl(const vector<string>& _sourceUrl)
 {
-    m_streamUrl = _streamUrl;
-    m_streamUrlHasBeenSet = true;
+    m_sourceUrl = _sourceUrl;
+    m_sourceUrlHasBeenSet = true;
 }
 
-bool StartStreamIngestRequest::StreamUrlHasBeenSet() const
+bool StartStreamIngestRequest::SourceUrlHasBeenSet() const
 {
-    return m_streamUrlHasBeenSet;
+    return m_sourceUrlHasBeenSet;
+}
+
+int64_t StartStreamIngestRequest::GetSeekSecond() const
+{
+    return m_seekSecond;
+}
+
+void StartStreamIngestRequest::SetSeekSecond(const int64_t& _seekSecond)
+{
+    m_seekSecond = _seekSecond;
+    m_seekSecondHasBeenSet = true;
+}
+
+bool StartStreamIngestRequest::SeekSecondHasBeenSet() const
+{
+    return m_seekSecondHasBeenSet;
+}
+
+bool StartStreamIngestRequest::GetAutoPush() const
+{
+    return m_autoPush;
+}
+
+void StartStreamIngestRequest::SetAutoPush(const bool& _autoPush)
+{
+    m_autoPush = _autoPush;
+    m_autoPushHasBeenSet = true;
+}
+
+bool StartStreamIngestRequest::AutoPushHasBeenSet() const
+{
+    return m_autoPushHasBeenSet;
+}
+
+int64_t StartStreamIngestRequest::GetRepeatNum() const
+{
+    return m_repeatNum;
+}
+
+void StartStreamIngestRequest::SetRepeatNum(const int64_t& _repeatNum)
+{
+    m_repeatNum = _repeatNum;
+    m_repeatNumHasBeenSet = true;
+}
+
+bool StartStreamIngestRequest::RepeatNumHasBeenSet() const
+{
+    return m_repeatNumHasBeenSet;
+}
+
+int64_t StartStreamIngestRequest::GetMaxDuration() const
+{
+    return m_maxDuration;
+}
+
+void StartStreamIngestRequest::SetMaxDuration(const int64_t& _maxDuration)
+{
+    m_maxDuration = _maxDuration;
+    m_maxDurationHasBeenSet = true;
+}
+
+bool StartStreamIngestRequest::MaxDurationHasBeenSet() const
+{
+    return m_maxDurationHasBeenSet;
 }
 
 

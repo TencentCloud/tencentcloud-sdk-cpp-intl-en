@@ -85,6 +85,8 @@
 #include <tencentcloud/trtc/v20190722/model/StopStreamIngestResponse.h>
 #include <tencentcloud/trtc/v20190722/model/UpdatePublishCdnStreamRequest.h>
 #include <tencentcloud/trtc/v20190722/model/UpdatePublishCdnStreamResponse.h>
+#include <tencentcloud/trtc/v20190722/model/UpdateStreamIngestRequest.h>
+#include <tencentcloud/trtc/v20190722/model/UpdateStreamIngestResponse.h>
 
 
 namespace TencentCloud
@@ -192,6 +194,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::UpdatePublishCdnStreamResponse> UpdatePublishCdnStreamOutcome;
                 typedef std::future<UpdatePublishCdnStreamOutcome> UpdatePublishCdnStreamOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::UpdatePublishCdnStreamRequest&, UpdatePublishCdnStreamOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdatePublishCdnStreamAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateStreamIngestResponse> UpdateStreamIngestOutcome;
+                typedef std::future<UpdateStreamIngestOutcome> UpdateStreamIngestOutcomeCallable;
+                typedef std::function<void(const TrtcClient*, const Model::UpdateStreamIngestRequest&, UpdateStreamIngestOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateStreamIngestAsyncHandler;
 
 
 
@@ -599,6 +604,15 @@ Note: For details about how to use this API, see the `StartPublishCdnStream` doc
                 UpdatePublishCdnStreamOutcome UpdatePublishCdnStream(const Model::UpdatePublishCdnStreamRequest &request);
                 void UpdatePublishCdnStreamAsync(const Model::UpdatePublishCdnStreamRequest& request, const UpdatePublishCdnStreamAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 UpdatePublishCdnStreamOutcomeCallable UpdatePublishCdnStreamCallable(const Model::UpdatePublishCdnStreamRequest& request);
+
+                /**
+                 *You can update the StreamUrl of the Relay task.
+                 * @param req UpdateStreamIngestRequest
+                 * @return UpdateStreamIngestOutcome
+                 */
+                UpdateStreamIngestOutcome UpdateStreamIngest(const Model::UpdateStreamIngestRequest &request);
+                void UpdateStreamIngestAsync(const Model::UpdateStreamIngestRequest& request, const UpdateStreamIngestAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateStreamIngestOutcomeCallable UpdateStreamIngestCallable(const Model::UpdateStreamIngestRequest& request);
 
             };
         }
