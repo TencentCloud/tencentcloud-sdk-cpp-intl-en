@@ -29,10 +29,14 @@
 #include <tencentcloud/organization/v20210331/model/BindOrganizationMemberAuthAccountResponse.h>
 #include <tencentcloud/organization/v20210331/model/CancelOrganizationMemberAuthAccountRequest.h>
 #include <tencentcloud/organization/v20210331/model/CancelOrganizationMemberAuthAccountResponse.h>
+#include <tencentcloud/organization/v20210331/model/CreateOrgServiceAssignRequest.h>
+#include <tencentcloud/organization/v20210331/model/CreateOrgServiceAssignResponse.h>
 #include <tencentcloud/organization/v20210331/model/CreateOrganizationMemberRequest.h>
 #include <tencentcloud/organization/v20210331/model/CreateOrganizationMemberResponse.h>
 #include <tencentcloud/organization/v20210331/model/CreateOrganizationMemberPolicyRequest.h>
 #include <tencentcloud/organization/v20210331/model/CreateOrganizationMemberPolicyResponse.h>
+#include <tencentcloud/organization/v20210331/model/DeleteOrgServiceAssignRequest.h>
+#include <tencentcloud/organization/v20210331/model/DeleteOrgServiceAssignResponse.h>
 #include <tencentcloud/organization/v20210331/model/DeleteOrganizationMembersRequest.h>
 #include <tencentcloud/organization/v20210331/model/DeleteOrganizationMembersResponse.h>
 #include <tencentcloud/organization/v20210331/model/DeleteOrganizationNodesRequest.h>
@@ -49,8 +53,12 @@
 #include <tencentcloud/organization/v20210331/model/DescribeOrganizationMembersResponse.h>
 #include <tencentcloud/organization/v20210331/model/DescribeOrganizationNodesRequest.h>
 #include <tencentcloud/organization/v20210331/model/DescribeOrganizationNodesResponse.h>
+#include <tencentcloud/organization/v20210331/model/ListOrgServiceAssignMemberRequest.h>
+#include <tencentcloud/organization/v20210331/model/ListOrgServiceAssignMemberResponse.h>
 #include <tencentcloud/organization/v20210331/model/ListOrganizationIdentityRequest.h>
 #include <tencentcloud/organization/v20210331/model/ListOrganizationIdentityResponse.h>
+#include <tencentcloud/organization/v20210331/model/ListOrganizationServiceRequest.h>
+#include <tencentcloud/organization/v20210331/model/ListOrganizationServiceResponse.h>
 #include <tencentcloud/organization/v20210331/model/MoveOrganizationNodeMembersRequest.h>
 #include <tencentcloud/organization/v20210331/model/MoveOrganizationNodeMembersResponse.h>
 #include <tencentcloud/organization/v20210331/model/UpdateOrganizationNodeRequest.h>
@@ -78,12 +86,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CancelOrganizationMemberAuthAccountResponse> CancelOrganizationMemberAuthAccountOutcome;
                 typedef std::future<CancelOrganizationMemberAuthAccountOutcome> CancelOrganizationMemberAuthAccountOutcomeCallable;
                 typedef std::function<void(const OrganizationClient*, const Model::CancelOrganizationMemberAuthAccountRequest&, CancelOrganizationMemberAuthAccountOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CancelOrganizationMemberAuthAccountAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateOrgServiceAssignResponse> CreateOrgServiceAssignOutcome;
+                typedef std::future<CreateOrgServiceAssignOutcome> CreateOrgServiceAssignOutcomeCallable;
+                typedef std::function<void(const OrganizationClient*, const Model::CreateOrgServiceAssignRequest&, CreateOrgServiceAssignOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateOrgServiceAssignAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateOrganizationMemberResponse> CreateOrganizationMemberOutcome;
                 typedef std::future<CreateOrganizationMemberOutcome> CreateOrganizationMemberOutcomeCallable;
                 typedef std::function<void(const OrganizationClient*, const Model::CreateOrganizationMemberRequest&, CreateOrganizationMemberOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateOrganizationMemberAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateOrganizationMemberPolicyResponse> CreateOrganizationMemberPolicyOutcome;
                 typedef std::future<CreateOrganizationMemberPolicyOutcome> CreateOrganizationMemberPolicyOutcomeCallable;
                 typedef std::function<void(const OrganizationClient*, const Model::CreateOrganizationMemberPolicyRequest&, CreateOrganizationMemberPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateOrganizationMemberPolicyAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteOrgServiceAssignResponse> DeleteOrgServiceAssignOutcome;
+                typedef std::future<DeleteOrgServiceAssignOutcome> DeleteOrgServiceAssignOutcomeCallable;
+                typedef std::function<void(const OrganizationClient*, const Model::DeleteOrgServiceAssignRequest&, DeleteOrgServiceAssignOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteOrgServiceAssignAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteOrganizationMembersResponse> DeleteOrganizationMembersOutcome;
                 typedef std::future<DeleteOrganizationMembersOutcome> DeleteOrganizationMembersOutcomeCallable;
                 typedef std::function<void(const OrganizationClient*, const Model::DeleteOrganizationMembersRequest&, DeleteOrganizationMembersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteOrganizationMembersAsyncHandler;
@@ -108,9 +122,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeOrganizationNodesResponse> DescribeOrganizationNodesOutcome;
                 typedef std::future<DescribeOrganizationNodesOutcome> DescribeOrganizationNodesOutcomeCallable;
                 typedef std::function<void(const OrganizationClient*, const Model::DescribeOrganizationNodesRequest&, DescribeOrganizationNodesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeOrganizationNodesAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListOrgServiceAssignMemberResponse> ListOrgServiceAssignMemberOutcome;
+                typedef std::future<ListOrgServiceAssignMemberOutcome> ListOrgServiceAssignMemberOutcomeCallable;
+                typedef std::function<void(const OrganizationClient*, const Model::ListOrgServiceAssignMemberRequest&, ListOrgServiceAssignMemberOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListOrgServiceAssignMemberAsyncHandler;
                 typedef Outcome<Core::Error, Model::ListOrganizationIdentityResponse> ListOrganizationIdentityOutcome;
                 typedef std::future<ListOrganizationIdentityOutcome> ListOrganizationIdentityOutcomeCallable;
                 typedef std::function<void(const OrganizationClient*, const Model::ListOrganizationIdentityRequest&, ListOrganizationIdentityOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListOrganizationIdentityAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListOrganizationServiceResponse> ListOrganizationServiceOutcome;
+                typedef std::future<ListOrganizationServiceOutcome> ListOrganizationServiceOutcomeCallable;
+                typedef std::function<void(const OrganizationClient*, const Model::ListOrganizationServiceRequest&, ListOrganizationServiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListOrganizationServiceAsyncHandler;
                 typedef Outcome<Core::Error, Model::MoveOrganizationNodeMembersResponse> MoveOrganizationNodeMembersOutcome;
                 typedef std::future<MoveOrganizationNodeMembersOutcome> MoveOrganizationNodeMembersOutcomeCallable;
                 typedef std::function<void(const OrganizationClient*, const Model::MoveOrganizationNodeMembersRequest&, MoveOrganizationNodeMembersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> MoveOrganizationNodeMembersAsyncHandler;
@@ -149,6 +169,15 @@ namespace TencentCloud
                 CancelOrganizationMemberAuthAccountOutcomeCallable CancelOrganizationMemberAuthAccountCallable(const Model::CancelOrganizationMemberAuthAccountRequest& request);
 
                 /**
+                 *This API is used to add a delegated admin of the organization service.
+                 * @param req CreateOrgServiceAssignRequest
+                 * @return CreateOrgServiceAssignOutcome
+                 */
+                CreateOrgServiceAssignOutcome CreateOrgServiceAssign(const Model::CreateOrgServiceAssignRequest &request);
+                void CreateOrgServiceAssignAsync(const Model::CreateOrgServiceAssignRequest& request, const CreateOrgServiceAssignAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateOrgServiceAssignOutcomeCallable CreateOrgServiceAssignCallable(const Model::CreateOrgServiceAssignRequest& request);
+
+                /**
                  *This API is used to create an organization member.
                  * @param req CreateOrganizationMemberRequest
                  * @return CreateOrganizationMemberOutcome
@@ -165,6 +194,15 @@ namespace TencentCloud
                 CreateOrganizationMemberPolicyOutcome CreateOrganizationMemberPolicy(const Model::CreateOrganizationMemberPolicyRequest &request);
                 void CreateOrganizationMemberPolicyAsync(const Model::CreateOrganizationMemberPolicyRequest& request, const CreateOrganizationMemberPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateOrganizationMemberPolicyOutcomeCallable CreateOrganizationMemberPolicyCallable(const Model::CreateOrganizationMemberPolicyRequest& request);
+
+                /**
+                 *This API is used to delete a delegated admin of the organization service.
+                 * @param req DeleteOrgServiceAssignRequest
+                 * @return DeleteOrgServiceAssignOutcome
+                 */
+                DeleteOrgServiceAssignOutcome DeleteOrgServiceAssign(const Model::DeleteOrgServiceAssignRequest &request);
+                void DeleteOrgServiceAssignAsync(const Model::DeleteOrgServiceAssignRequest& request, const DeleteOrgServiceAssignAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteOrgServiceAssignOutcomeCallable DeleteOrgServiceAssignCallable(const Model::DeleteOrgServiceAssignRequest& request);
 
                 /**
                  *This API is used to batch delete organization members.
@@ -239,6 +277,15 @@ namespace TencentCloud
                 DescribeOrganizationNodesOutcomeCallable DescribeOrganizationNodesCallable(const Model::DescribeOrganizationNodesRequest& request);
 
                 /**
+                 *This API is used to obtain the list of delegated admins of the organization service.
+                 * @param req ListOrgServiceAssignMemberRequest
+                 * @return ListOrgServiceAssignMemberOutcome
+                 */
+                ListOrgServiceAssignMemberOutcome ListOrgServiceAssignMember(const Model::ListOrgServiceAssignMemberRequest &request);
+                void ListOrgServiceAssignMemberAsync(const Model::ListOrgServiceAssignMemberRequest& request, const ListOrgServiceAssignMemberAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListOrgServiceAssignMemberOutcomeCallable ListOrgServiceAssignMemberCallable(const Model::ListOrgServiceAssignMemberRequest& request);
+
+                /**
                  *This API is used to get the list of access identities of an organization member.
                  * @param req ListOrganizationIdentityRequest
                  * @return ListOrganizationIdentityOutcome
@@ -246,6 +293,15 @@ namespace TencentCloud
                 ListOrganizationIdentityOutcome ListOrganizationIdentity(const Model::ListOrganizationIdentityRequest &request);
                 void ListOrganizationIdentityAsync(const Model::ListOrganizationIdentityRequest& request, const ListOrganizationIdentityAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ListOrganizationIdentityOutcomeCallable ListOrganizationIdentityCallable(const Model::ListOrganizationIdentityRequest& request);
+
+                /**
+                 *This API is used to obtain the list of organization service settings.
+                 * @param req ListOrganizationServiceRequest
+                 * @return ListOrganizationServiceOutcome
+                 */
+                ListOrganizationServiceOutcome ListOrganizationService(const Model::ListOrganizationServiceRequest &request);
+                void ListOrganizationServiceAsync(const Model::ListOrganizationServiceRequest& request, const ListOrganizationServiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListOrganizationServiceOutcomeCallable ListOrganizationServiceCallable(const Model::ListOrganizationServiceRequest& request);
 
                 /**
                  *This API is used to move a member to the specified organization node.

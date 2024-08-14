@@ -23,6 +23,8 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/AllocateCreditPoolRequest.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/AllocateCreditPoolResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/AllocateCustomerCreditRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/AllocateCustomerCreditResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/CreateAccountRequest.h>
@@ -85,6 +87,9 @@ namespace TencentCloud
                 IntlpartnersmgtClient(const Credential &credential, const std::string &region);
                 IntlpartnersmgtClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
+                typedef Outcome<Core::Error, Model::AllocateCreditPoolResponse> AllocateCreditPoolOutcome;
+                typedef std::future<AllocateCreditPoolOutcome> AllocateCreditPoolOutcomeCallable;
+                typedef std::function<void(const IntlpartnersmgtClient*, const Model::AllocateCreditPoolRequest&, AllocateCreditPoolOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AllocateCreditPoolAsyncHandler;
                 typedef Outcome<Core::Error, Model::AllocateCustomerCreditResponse> AllocateCustomerCreditOutcome;
                 typedef std::future<AllocateCustomerCreditOutcome> AllocateCustomerCreditOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::AllocateCustomerCreditRequest&, AllocateCustomerCreditOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AllocateCustomerCreditAsyncHandler;
@@ -159,6 +164,15 @@ namespace TencentCloud
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::QueryVoucherPoolRequest&, QueryVoucherPoolOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryVoucherPoolAsyncHandler;
 
 
+
+                /**
+                 *This API is used to allocate credit pools to second-level resellers by distributors.
+                 * @param req AllocateCreditPoolRequest
+                 * @return AllocateCreditPoolOutcome
+                 */
+                AllocateCreditPoolOutcome AllocateCreditPool(const Model::AllocateCreditPoolRequest &request);
+                void AllocateCreditPoolAsync(const Model::AllocateCreditPoolRequest& request, const AllocateCreditPoolAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AllocateCreditPoolOutcomeCallable AllocateCreditPoolCallable(const Model::AllocateCreditPoolRequest& request);
 
                 /**
                  *This API is used for a partner to set credit for a customer, such as increasing or lowering the credit and setting it to 0.

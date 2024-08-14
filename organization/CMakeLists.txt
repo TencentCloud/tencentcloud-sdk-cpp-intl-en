@@ -63,12 +63,17 @@ set(organization_public_header_model
   include/tencentcloud/organization/v20181225/model/ListOrganizationNodesResponse.h
   include/tencentcloud/organization/v20181225/model/MoveOrganizationMembersToNodeResponse.h
   include/tencentcloud/organization/v20181225/model/OrgNode.h
+  include/tencentcloud/organization/v20210331/model/OrgMemberAuthAccount.h
   include/tencentcloud/organization/v20210331/model/OrgPermission.h
   include/tencentcloud/organization/v20210331/model/BindOrganizationMemberAuthAccountRequest.h
-  include/tencentcloud/organization/v20210331/model/CreateOrganizationMemberRequest.h
-  include/tencentcloud/organization/v20210331/model/OrgMember.h
+  include/tencentcloud/organization/v20210331/model/OrganizationServiceAssignMember.h
+  include/tencentcloud/organization/v20210331/model/DeleteOrganizationMembersResponse.h
+  include/tencentcloud/organization/v20210331/model/ListOrgServiceAssignMemberResponse.h
+  include/tencentcloud/organization/v20210331/model/CreateOrgServiceAssignResponse.h
   include/tencentcloud/organization/v20210331/model/DescribeOrganizationMemberAuthIdentitiesRequest.h
+  include/tencentcloud/organization/v20210331/model/AddOrganizationNodeResponse.h
   include/tencentcloud/organization/v20210331/model/CreateOrganizationMemberPolicyRequest.h
+  include/tencentcloud/organization/v20210331/model/DeleteOrgServiceAssignRequest.h
   include/tencentcloud/organization/v20210331/model/DescribeOrganizationRequest.h
   include/tencentcloud/organization/v20210331/model/DescribeOrganizationNodesRequest.h
   include/tencentcloud/organization/v20210331/model/BindOrganizationMemberAuthAccountResponse.h
@@ -78,32 +83,39 @@ set(organization_public_header_model
   include/tencentcloud/organization/v20210331/model/MemberIdentity.h
   include/tencentcloud/organization/v20210331/model/MoveOrganizationNodeMembersResponse.h
   include/tencentcloud/organization/v20210331/model/DeleteOrganizationMembersRequest.h
+  include/tencentcloud/organization/v20210331/model/DescribeOrganizationMemberPoliciesResponse.h
   include/tencentcloud/organization/v20210331/model/DeleteOrganizationNodesRequest.h
-  include/tencentcloud/organization/v20210331/model/AddOrganizationNodeResponse.h
+  include/tencentcloud/organization/v20210331/model/DeleteOrgServiceAssignResponse.h
   include/tencentcloud/organization/v20210331/model/IdentityPolicy.h
   include/tencentcloud/organization/v20210331/model/ListOrganizationIdentityResponse.h
   include/tencentcloud/organization/v20210331/model/DescribeOrganizationNodesResponse.h
   include/tencentcloud/organization/v20210331/model/DescribeOrganizationMembersResponse.h
   include/tencentcloud/organization/v20210331/model/CreateOrganizationMemberPolicyResponse.h
+  include/tencentcloud/organization/v20210331/model/ListOrganizationServiceResponse.h
   include/tencentcloud/organization/v20210331/model/CancelOrganizationMemberAuthAccountResponse.h
   include/tencentcloud/organization/v20210331/model/DescribeOrganizationResponse.h
+  include/tencentcloud/organization/v20210331/model/ListOrgServiceAssignMemberRequest.h
   include/tencentcloud/organization/v20210331/model/DescribeOrganizationMemberPoliciesRequest.h
+  include/tencentcloud/organization/v20210331/model/CreateOrgServiceAssignRequest.h
   include/tencentcloud/organization/v20210331/model/AddOrganizationNodeRequest.h
   include/tencentcloud/organization/v20210331/model/DescribeOrganizationMemberAuthIdentitiesResponse.h
   include/tencentcloud/organization/v20210331/model/OrgMemberPolicy.h
   include/tencentcloud/organization/v20210331/model/UpdateOrganizationNodeResponse.h
   include/tencentcloud/organization/v20210331/model/DescribeOrganizationMemberAuthAccountsRequest.h
   include/tencentcloud/organization/v20210331/model/CancelOrganizationMemberAuthAccountRequest.h
+  include/tencentcloud/organization/v20210331/model/OrganizationServiceAssign.h
   include/tencentcloud/organization/v20210331/model/DeleteOrganizationNodesResponse.h
   include/tencentcloud/organization/v20210331/model/DescribeOrganizationMemberAuthAccountsResponse.h
-  include/tencentcloud/organization/v20210331/model/OrgMemberAuthAccount.h
+  include/tencentcloud/organization/v20210331/model/OrgMember.h
   include/tencentcloud/organization/v20210331/model/OrgMemberAuthIdentity.h
-  include/tencentcloud/organization/v20210331/model/DescribeOrganizationMemberPoliciesResponse.h
+  include/tencentcloud/organization/v20210331/model/MemberMainInfo.h
+  include/tencentcloud/organization/v20210331/model/CreateOrganizationMemberRequest.h
   include/tencentcloud/organization/v20210331/model/OrgIdentity.h
   include/tencentcloud/organization/v20210331/model/DescribeOrganizationMembersRequest.h
+  include/tencentcloud/organization/v20210331/model/ListOrganizationServiceRequest.h
   include/tencentcloud/organization/v20210331/model/UpdateOrganizationNodeRequest.h
   include/tencentcloud/organization/v20210331/model/OrgNode.h
-  include/tencentcloud/organization/v20210331/model/DeleteOrganizationMembersResponse.h
+  include/tencentcloud/organization/v20210331/model/NodeMainInfo.h
   )
 
 set(organization_src
@@ -152,12 +164,17 @@ set(organization_src
   src/v20181225/model/ListOrganizationNodesResponse.cpp
   src/v20181225/model/MoveOrganizationMembersToNodeResponse.cpp
   src/v20181225/model/OrgNode.cpp
+  src/v20210331/model/OrgMemberAuthAccount.cpp
   src/v20210331/model/OrgPermission.cpp
   src/v20210331/model/BindOrganizationMemberAuthAccountRequest.cpp
-  src/v20210331/model/CreateOrganizationMemberRequest.cpp
-  src/v20210331/model/OrgMember.cpp
+  src/v20210331/model/OrganizationServiceAssignMember.cpp
+  src/v20210331/model/DeleteOrganizationMembersResponse.cpp
+  src/v20210331/model/ListOrgServiceAssignMemberResponse.cpp
+  src/v20210331/model/CreateOrgServiceAssignResponse.cpp
   src/v20210331/model/DescribeOrganizationMemberAuthIdentitiesRequest.cpp
+  src/v20210331/model/AddOrganizationNodeResponse.cpp
   src/v20210331/model/CreateOrganizationMemberPolicyRequest.cpp
+  src/v20210331/model/DeleteOrgServiceAssignRequest.cpp
   src/v20210331/model/DescribeOrganizationRequest.cpp
   src/v20210331/model/DescribeOrganizationNodesRequest.cpp
   src/v20210331/model/BindOrganizationMemberAuthAccountResponse.cpp
@@ -167,32 +184,39 @@ set(organization_src
   src/v20210331/model/MemberIdentity.cpp
   src/v20210331/model/MoveOrganizationNodeMembersResponse.cpp
   src/v20210331/model/DeleteOrganizationMembersRequest.cpp
+  src/v20210331/model/DescribeOrganizationMemberPoliciesResponse.cpp
   src/v20210331/model/DeleteOrganizationNodesRequest.cpp
-  src/v20210331/model/AddOrganizationNodeResponse.cpp
+  src/v20210331/model/DeleteOrgServiceAssignResponse.cpp
   src/v20210331/model/IdentityPolicy.cpp
   src/v20210331/model/ListOrganizationIdentityResponse.cpp
   src/v20210331/model/DescribeOrganizationNodesResponse.cpp
   src/v20210331/model/DescribeOrganizationMembersResponse.cpp
   src/v20210331/model/CreateOrganizationMemberPolicyResponse.cpp
+  src/v20210331/model/ListOrganizationServiceResponse.cpp
   src/v20210331/model/CancelOrganizationMemberAuthAccountResponse.cpp
   src/v20210331/model/DescribeOrganizationResponse.cpp
+  src/v20210331/model/ListOrgServiceAssignMemberRequest.cpp
   src/v20210331/model/DescribeOrganizationMemberPoliciesRequest.cpp
+  src/v20210331/model/CreateOrgServiceAssignRequest.cpp
   src/v20210331/model/AddOrganizationNodeRequest.cpp
   src/v20210331/model/DescribeOrganizationMemberAuthIdentitiesResponse.cpp
   src/v20210331/model/OrgMemberPolicy.cpp
   src/v20210331/model/UpdateOrganizationNodeResponse.cpp
   src/v20210331/model/DescribeOrganizationMemberAuthAccountsRequest.cpp
   src/v20210331/model/CancelOrganizationMemberAuthAccountRequest.cpp
+  src/v20210331/model/OrganizationServiceAssign.cpp
   src/v20210331/model/DeleteOrganizationNodesResponse.cpp
   src/v20210331/model/DescribeOrganizationMemberAuthAccountsResponse.cpp
-  src/v20210331/model/OrgMemberAuthAccount.cpp
+  src/v20210331/model/OrgMember.cpp
   src/v20210331/model/OrgMemberAuthIdentity.cpp
-  src/v20210331/model/DescribeOrganizationMemberPoliciesResponse.cpp
+  src/v20210331/model/MemberMainInfo.cpp
+  src/v20210331/model/CreateOrganizationMemberRequest.cpp
   src/v20210331/model/OrgIdentity.cpp
   src/v20210331/model/DescribeOrganizationMembersRequest.cpp
+  src/v20210331/model/ListOrganizationServiceRequest.cpp
   src/v20210331/model/UpdateOrganizationNodeRequest.cpp
   src/v20210331/model/OrgNode.cpp
-  src/v20210331/model/DeleteOrganizationMembersResponse.cpp
+  src/v20210331/model/NodeMainInfo.cpp
   )
 
 set(organization_include

@@ -40,6 +40,49 @@ IntlpartnersmgtClient::IntlpartnersmgtClient(const Credential &credential, const
 }
 
 
+IntlpartnersmgtClient::AllocateCreditPoolOutcome IntlpartnersmgtClient::AllocateCreditPool(const AllocateCreditPoolRequest &request)
+{
+    auto outcome = MakeRequest(request, "AllocateCreditPool");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        AllocateCreditPoolResponse rsp = AllocateCreditPoolResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return AllocateCreditPoolOutcome(rsp);
+        else
+            return AllocateCreditPoolOutcome(o.GetError());
+    }
+    else
+    {
+        return AllocateCreditPoolOutcome(outcome.GetError());
+    }
+}
+
+void IntlpartnersmgtClient::AllocateCreditPoolAsync(const AllocateCreditPoolRequest& request, const AllocateCreditPoolAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->AllocateCreditPool(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+IntlpartnersmgtClient::AllocateCreditPoolOutcomeCallable IntlpartnersmgtClient::AllocateCreditPoolCallable(const AllocateCreditPoolRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<AllocateCreditPoolOutcome()>>(
+        [this, request]()
+        {
+            return this->AllocateCreditPool(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 IntlpartnersmgtClient::AllocateCustomerCreditOutcome IntlpartnersmgtClient::AllocateCustomerCredit(const AllocateCustomerCreditRequest &request)
 {
     auto outcome = MakeRequest(request, "AllocateCustomerCredit");
