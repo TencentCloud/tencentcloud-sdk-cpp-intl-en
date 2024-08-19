@@ -54,6 +54,7 @@ set(mdl_public_header_model
   include/tencentcloud/mdl/v20200326/model/AudioSelectorInfo.h
   include/tencentcloud/mdl/v20200326/model/LogInfo.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveWatermarkRequest.h
+  include/tencentcloud/mdl/v20200326/model/CaptionSelector.h
   include/tencentcloud/mdl/v20200326/model/DrmSettingsInfo.h
   include/tencentcloud/mdl/v20200326/model/PipelineOutputStatistics.h
   include/tencentcloud/mdl/v20200326/model/DeleteStreamLivePlanResponse.h
@@ -160,14 +161,14 @@ set(mdl_public_header_model
   include/tencentcloud/mdl/v20200326/model/ModifyStreamLiveWatermarkResponse.h
   include/tencentcloud/mdl/v20200326/model/DescribeMediaLiveHighlightResultRequest.h
   include/tencentcloud/mdl/v20200326/model/DescribeTextSettings.h
-  include/tencentcloud/mdl/v20200326/model/DescribeImageSettings.h
+  include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveInputSecurityGroupsRequest.h
   include/tencentcloud/mdl/v20200326/model/DeleteStreamLiveWatermarkResponse.h
   include/tencentcloud/mdl/v20200326/model/CreateStreamLiveInputResponse.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveInputSecurityGroupResponse.h
   include/tencentcloud/mdl/v20200326/model/StreamLiveChannelInfo.h
   include/tencentcloud/mdl/v20200326/model/SegmentationDescriptorInfo.h
   include/tencentcloud/mdl/v20200326/model/InputSettingInfo.h
-  include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveInputSecurityGroupsRequest.h
+  include/tencentcloud/mdl/v20200326/model/DescribeImageSettings.h
   include/tencentcloud/mdl/v20200326/model/DeleteStreamLiveChannelRequest.h
   )
 
@@ -208,6 +209,7 @@ set(mdl_src
   src/v20200326/model/AudioSelectorInfo.cpp
   src/v20200326/model/LogInfo.cpp
   src/v20200326/model/DescribeStreamLiveWatermarkRequest.cpp
+  src/v20200326/model/CaptionSelector.cpp
   src/v20200326/model/DrmSettingsInfo.cpp
   src/v20200326/model/PipelineOutputStatistics.cpp
   src/v20200326/model/DeleteStreamLivePlanResponse.cpp
@@ -314,14 +316,14 @@ set(mdl_src
   src/v20200326/model/ModifyStreamLiveWatermarkResponse.cpp
   src/v20200326/model/DescribeMediaLiveHighlightResultRequest.cpp
   src/v20200326/model/DescribeTextSettings.cpp
-  src/v20200326/model/DescribeImageSettings.cpp
+  src/v20200326/model/DescribeStreamLiveInputSecurityGroupsRequest.cpp
   src/v20200326/model/DeleteStreamLiveWatermarkResponse.cpp
   src/v20200326/model/CreateStreamLiveInputResponse.cpp
   src/v20200326/model/DescribeStreamLiveInputSecurityGroupResponse.cpp
   src/v20200326/model/StreamLiveChannelInfo.cpp
   src/v20200326/model/SegmentationDescriptorInfo.cpp
   src/v20200326/model/InputSettingInfo.cpp
-  src/v20200326/model/DescribeStreamLiveInputSecurityGroupsRequest.cpp
+  src/v20200326/model/DescribeImageSettings.cpp
   src/v20200326/model/DeleteStreamLiveChannelRequest.cpp
   )
 

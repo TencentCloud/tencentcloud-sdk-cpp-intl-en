@@ -22,6 +22,7 @@ using namespace std;
 
 SubtitleConf::SubtitleConf() :
     m_nameHasBeenSet(false),
+    m_captionSelectorNameHasBeenSet(false),
     m_captionSourceHasBeenSet(false),
     m_contentTypeHasBeenSet(false),
     m_targetTypeHasBeenSet(false),
@@ -46,6 +47,16 @@ CoreInternalOutcome SubtitleConf::Deserialize(const rapidjson::Value &value)
         }
         m_name = string(value["Name"].GetString());
         m_nameHasBeenSet = true;
+    }
+
+    if (value.HasMember("CaptionSelectorName") && !value["CaptionSelectorName"].IsNull())
+    {
+        if (!value["CaptionSelectorName"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `SubtitleConf.CaptionSelectorName` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_captionSelectorName = string(value["CaptionSelectorName"].GetString());
+        m_captionSelectorNameHasBeenSet = true;
     }
 
     if (value.HasMember("CaptionSource") && !value["CaptionSource"].IsNull())
@@ -150,6 +161,14 @@ void SubtitleConf::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Al
         value.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
     }
 
+    if (m_captionSelectorNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CaptionSelectorName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_captionSelectorName.c_str(), allocator).Move(), allocator);
+    }
+
     if (m_captionSourceHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -232,6 +251,22 @@ void SubtitleConf::SetName(const string& _name)
 bool SubtitleConf::NameHasBeenSet() const
 {
     return m_nameHasBeenSet;
+}
+
+string SubtitleConf::GetCaptionSelectorName() const
+{
+    return m_captionSelectorName;
+}
+
+void SubtitleConf::SetCaptionSelectorName(const string& _captionSelectorName)
+{
+    m_captionSelectorName = _captionSelectorName;
+    m_captionSelectorNameHasBeenSet = true;
+}
+
+bool SubtitleConf::CaptionSelectorNameHasBeenSet() const
+{
+    return m_captionSelectorNameHasBeenSet;
 }
 
 string SubtitleConf::GetCaptionSource() const

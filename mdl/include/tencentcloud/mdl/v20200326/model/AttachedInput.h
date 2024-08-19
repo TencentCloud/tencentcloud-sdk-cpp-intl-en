@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mdl/v20200326/model/AudioSelectorInfo.h>
 #include <tencentcloud/mdl/v20200326/model/FailOverSettings.h>
+#include <tencentcloud/mdl/v20200326/model/CaptionSelector.h>
 
 
 namespace TencentCloud
@@ -144,6 +145,27 @@ Note: this field may return `null`, indicating that no valid value was found.
                      */
                     bool FailOverSettingsHasBeenSet() const;
 
+                    /**
+                     * 获取Caption selector for the input. There can be 0 to 1 audio selectors.
+                     * @return CaptionSelectors Caption selector for the input. There can be 0 to 1 audio selectors.
+                     * 
+                     */
+                    std::vector<CaptionSelector> GetCaptionSelectors() const;
+
+                    /**
+                     * 设置Caption selector for the input. There can be 0 to 1 audio selectors.
+                     * @param _captionSelectors Caption selector for the input. There can be 0 to 1 audio selectors.
+                     * 
+                     */
+                    void SetCaptionSelectors(const std::vector<CaptionSelector>& _captionSelectors);
+
+                    /**
+                     * 判断参数 CaptionSelectors 是否已赋值
+                     * @return CaptionSelectors 是否已赋值
+                     * 
+                     */
+                    bool CaptionSelectorsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -172,6 +194,12 @@ Note: this field may return `null`, indicating that no valid value was found.
                      */
                     FailOverSettings m_failOverSettings;
                     bool m_failOverSettingsHasBeenSet;
+
+                    /**
+                     * Caption selector for the input. There can be 0 to 1 audio selectors.
+                     */
+                    std::vector<CaptionSelector> m_captionSelectors;
+                    bool m_captionSelectorsHasBeenSet;
 
                 };
             }

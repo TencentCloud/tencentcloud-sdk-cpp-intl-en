@@ -69,15 +69,36 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Optional values: INPUT (source subtitle information), ANALYSIS (intelligent speech recognition to subtitles, currently only supports this option).
-                     * @return CaptionSource Optional values: INPUT (source subtitle information), ANALYSIS (intelligent speech recognition to subtitles, currently only supports this option).
+                     * 获取Name of caption selector. Required when CaptionSource selects `INPUT`.
+                     * @return CaptionSelectorName Name of caption selector. Required when CaptionSource selects `INPUT`.
+                     * 
+                     */
+                    std::string GetCaptionSelectorName() const;
+
+                    /**
+                     * 设置Name of caption selector. Required when CaptionSource selects `INPUT`.
+                     * @param _captionSelectorName Name of caption selector. Required when CaptionSource selects `INPUT`.
+                     * 
+                     */
+                    void SetCaptionSelectorName(const std::string& _captionSelectorName);
+
+                    /**
+                     * 判断参数 CaptionSelectorName 是否已赋值
+                     * @return CaptionSelectorName 是否已赋值
+                     * 
+                     */
+                    bool CaptionSelectorNameHasBeenSet() const;
+
+                    /**
+                     * 获取Optional values: INPUT (source subtitle information), ANALYSIS (intelligent speech recognition to subtitles).
+                     * @return CaptionSource Optional values: INPUT (source subtitle information), ANALYSIS (intelligent speech recognition to subtitles).
                      * 
                      */
                     std::string GetCaptionSource() const;
 
                     /**
-                     * 设置Optional values: INPUT (source subtitle information), ANALYSIS (intelligent speech recognition to subtitles, currently only supports this option).
-                     * @param _captionSource Optional values: INPUT (source subtitle information), ANALYSIS (intelligent speech recognition to subtitles, currently only supports this option).
+                     * 设置Optional values: INPUT (source subtitle information), ANALYSIS (intelligent speech recognition to subtitles).
+                     * @param _captionSource Optional values: INPUT (source subtitle information), ANALYSIS (intelligent speech recognition to subtitles).
                      * 
                      */
                     void SetCaptionSource(const std::string& _captionSource);
@@ -90,15 +111,15 @@ namespace TencentCloud
                     bool CaptionSourceHasBeenSet() const;
 
                     /**
-                     * 获取Optional values: 1 Source, 2 Source+Target, 3 Target (original language only, original language + translation language, translation language).
-                     * @return ContentType Optional values: 1 Source, 2 Source+Target, 3 Target (original language only, original language + translation language, translation language).
+                     * 获取Optional values: 1 Source, 2 Source+Target, 3 Target (original language only, original language + translation language, translation language). Required when CaptionSource selects `ANALYSIS `.
+                     * @return ContentType Optional values: 1 Source, 2 Source+Target, 3 Target (original language only, original language + translation language, translation language). Required when CaptionSource selects `ANALYSIS `.
                      * 
                      */
                     uint64_t GetContentType() const;
 
                     /**
-                     * 设置Optional values: 1 Source, 2 Source+Target, 3 Target (original language only, original language + translation language, translation language).
-                     * @param _contentType Optional values: 1 Source, 2 Source+Target, 3 Target (original language only, original language + translation language, translation language).
+                     * 设置Optional values: 1 Source, 2 Source+Target, 3 Target (original language only, original language + translation language, translation language). Required when CaptionSource selects `ANALYSIS `.
+                     * @param _contentType Optional values: 1 Source, 2 Source+Target, 3 Target (original language only, original language + translation language, translation language). Required when CaptionSource selects `ANALYSIS `.
                      * 
                      */
                     void SetContentType(const uint64_t& _contentType);
@@ -111,15 +132,15 @@ namespace TencentCloud
                     bool ContentTypeHasBeenSet() const;
 
                     /**
-                     * 获取Output mode: 1 Burn in (currently only this option is supported).
-                     * @return TargetType Output mode: 1 Burn in (currently only this option is supported).
+                     * 获取Output mode: 1 Burn in, 2 Embedded. Support `2` when CaptionSource selects `INPUT`. Support `1` when CaptionSource selects `ANALYSIS `.
+                     * @return TargetType Output mode: 1 Burn in, 2 Embedded. Support `2` when CaptionSource selects `INPUT`. Support `1` when CaptionSource selects `ANALYSIS `.
                      * 
                      */
                     uint64_t GetTargetType() const;
 
                     /**
-                     * 设置Output mode: 1 Burn in (currently only this option is supported).
-                     * @param _targetType Output mode: 1 Burn in (currently only this option is supported).
+                     * 设置Output mode: 1 Burn in, 2 Embedded. Support `2` when CaptionSource selects `INPUT`. Support `1` when CaptionSource selects `ANALYSIS `.
+                     * @param _targetType Output mode: 1 Burn in, 2 Embedded. Support `2` when CaptionSource selects `INPUT`. Support `1` when CaptionSource selects `ANALYSIS `.
                      * 
                      */
                     void SetTargetType(const uint64_t& _targetType);
@@ -133,18 +154,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Original phonetic language.
-Optional values: Chinese, English, Japanese, Korean.
+Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource selects `ANALYSIS `.
                      * @return SourceLanguage Original phonetic language.
-Optional values: Chinese, English, Japanese, Korean.
+Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource selects `ANALYSIS `.
                      * 
                      */
                     std::string GetSourceLanguage() const;
 
                     /**
                      * 设置Original phonetic language.
-Optional values: Chinese, English, Japanese, Korean.
+Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource selects `ANALYSIS `.
                      * @param _sourceLanguage Original phonetic language.
-Optional values: Chinese, English, Japanese, Korean.
+Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource selects `ANALYSIS `.
                      * 
                      */
                     void SetSourceLanguage(const std::string& _sourceLanguage);
@@ -158,18 +179,18 @@ Optional values: Chinese, English, Japanese, Korean.
 
                     /**
                      * 获取Target language.
-Optional values: Chinese, English, Japanese, Korean.
+Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource selects `ANALYSIS `.
                      * @return TargetLanguage Target language.
-Optional values: Chinese, English, Japanese, Korean.
+Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource selects `ANALYSIS `.
                      * 
                      */
                     std::string GetTargetLanguage() const;
 
                     /**
                      * 设置Target language.
-Optional values: Chinese, English, Japanese, Korean.
+Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource selects `ANALYSIS `.
                      * @param _targetLanguage Target language.
-Optional values: Chinese, English, Japanese, Korean.
+Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource selects `ANALYSIS `.
                      * 
                      */
                     void SetTargetLanguage(const std::string& _targetLanguage);
@@ -182,15 +203,15 @@ Optional values: Chinese, English, Japanese, Korean.
                     bool TargetLanguageHasBeenSet() const;
 
                     /**
-                     * 获取Font style configuration.
-                     * @return FontStyle Font style configuration.
+                     * 获取Font style configuration. Required when CaptionSource selects `ANALYSIS `.
+                     * @return FontStyle Font style configuration. Required when CaptionSource selects `ANALYSIS `.
                      * 
                      */
                     SubtitleFontConf GetFontStyle() const;
 
                     /**
-                     * 设置Font style configuration.
-                     * @param _fontStyle Font style configuration.
+                     * 设置Font style configuration. Required when CaptionSource selects `ANALYSIS `.
+                     * @param _fontStyle Font style configuration. Required when CaptionSource selects `ANALYSIS `.
                      * 
                      */
                     void SetFontStyle(const SubtitleFontConf& _fontStyle);
@@ -203,15 +224,15 @@ Optional values: Chinese, English, Japanese, Korean.
                     bool FontStyleHasBeenSet() const;
 
                     /**
-                     * 获取There are two modes: STEADY and DYNAMIC, corresponding to steady state and unstable state respectively; the default is STEADY.
-                     * @return StateEffectMode There are two modes: STEADY and DYNAMIC, corresponding to steady state and unstable state respectively; the default is STEADY.
+                     * 获取There are two modes: STEADY and DYNAMIC, corresponding to steady state and unstable state respectively; the default is STEADY. Required when CaptionSource selects `ANALYSIS `.
+                     * @return StateEffectMode There are two modes: STEADY and DYNAMIC, corresponding to steady state and unstable state respectively; the default is STEADY. Required when CaptionSource selects `ANALYSIS `.
                      * 
                      */
                     std::string GetStateEffectMode() const;
 
                     /**
-                     * 设置There are two modes: STEADY and DYNAMIC, corresponding to steady state and unstable state respectively; the default is STEADY.
-                     * @param _stateEffectMode There are two modes: STEADY and DYNAMIC, corresponding to steady state and unstable state respectively; the default is STEADY.
+                     * 设置There are two modes: STEADY and DYNAMIC, corresponding to steady state and unstable state respectively; the default is STEADY. Required when CaptionSource selects `ANALYSIS `.
+                     * @param _stateEffectMode There are two modes: STEADY and DYNAMIC, corresponding to steady state and unstable state respectively; the default is STEADY. Required when CaptionSource selects `ANALYSIS `.
                      * 
                      */
                     void SetStateEffectMode(const std::string& _stateEffectMode);
@@ -224,15 +245,15 @@ Optional values: Chinese, English, Japanese, Korean.
                     bool StateEffectModeHasBeenSet() const;
 
                     /**
-                     * 获取Steady-state delay time, unit seconds; optional values: 10, 20, default 10.
-                     * @return SteadyStateDelayedTime Steady-state delay time, unit seconds; optional values: 10, 20, default 10.
+                     * 获取Steady-state delay time, unit seconds; optional values: 10, 20, default 10. Required when CaptionSource selects `ANALYSIS `.
+                     * @return SteadyStateDelayedTime Steady-state delay time, unit seconds; optional values: 10, 20, default 10. Required when CaptionSource selects `ANALYSIS `.
                      * 
                      */
                     uint64_t GetSteadyStateDelayedTime() const;
 
                     /**
-                     * 设置Steady-state delay time, unit seconds; optional values: 10, 20, default 10.
-                     * @param _steadyStateDelayedTime Steady-state delay time, unit seconds; optional values: 10, 20, default 10.
+                     * 设置Steady-state delay time, unit seconds; optional values: 10, 20, default 10. Required when CaptionSource selects `ANALYSIS `.
+                     * @param _steadyStateDelayedTime Steady-state delay time, unit seconds; optional values: 10, 20, default 10. Required when CaptionSource selects `ANALYSIS `.
                      * 
                      */
                     void SetSteadyStateDelayedTime(const uint64_t& _steadyStateDelayedTime);
@@ -253,51 +274,57 @@ Optional values: Chinese, English, Japanese, Korean.
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Optional values: INPUT (source subtitle information), ANALYSIS (intelligent speech recognition to subtitles, currently only supports this option).
+                     * Name of caption selector. Required when CaptionSource selects `INPUT`.
+                     */
+                    std::string m_captionSelectorName;
+                    bool m_captionSelectorNameHasBeenSet;
+
+                    /**
+                     * Optional values: INPUT (source subtitle information), ANALYSIS (intelligent speech recognition to subtitles).
                      */
                     std::string m_captionSource;
                     bool m_captionSourceHasBeenSet;
 
                     /**
-                     * Optional values: 1 Source, 2 Source+Target, 3 Target (original language only, original language + translation language, translation language).
+                     * Optional values: 1 Source, 2 Source+Target, 3 Target (original language only, original language + translation language, translation language). Required when CaptionSource selects `ANALYSIS `.
                      */
                     uint64_t m_contentType;
                     bool m_contentTypeHasBeenSet;
 
                     /**
-                     * Output mode: 1 Burn in (currently only this option is supported).
+                     * Output mode: 1 Burn in, 2 Embedded. Support `2` when CaptionSource selects `INPUT`. Support `1` when CaptionSource selects `ANALYSIS `.
                      */
                     uint64_t m_targetType;
                     bool m_targetTypeHasBeenSet;
 
                     /**
                      * Original phonetic language.
-Optional values: Chinese, English, Japanese, Korean.
+Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource selects `ANALYSIS `.
                      */
                     std::string m_sourceLanguage;
                     bool m_sourceLanguageHasBeenSet;
 
                     /**
                      * Target language.
-Optional values: Chinese, English, Japanese, Korean.
+Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource selects `ANALYSIS `.
                      */
                     std::string m_targetLanguage;
                     bool m_targetLanguageHasBeenSet;
 
                     /**
-                     * Font style configuration.
+                     * Font style configuration. Required when CaptionSource selects `ANALYSIS `.
                      */
                     SubtitleFontConf m_fontStyle;
                     bool m_fontStyleHasBeenSet;
 
                     /**
-                     * There are two modes: STEADY and DYNAMIC, corresponding to steady state and unstable state respectively; the default is STEADY.
+                     * There are two modes: STEADY and DYNAMIC, corresponding to steady state and unstable state respectively; the default is STEADY. Required when CaptionSource selects `ANALYSIS `.
                      */
                     std::string m_stateEffectMode;
                     bool m_stateEffectModeHasBeenSet;
 
                     /**
-                     * Steady-state delay time, unit seconds; optional values: 10, 20, default 10.
+                     * Steady-state delay time, unit seconds; optional values: 10, 20, default 10. Required when CaptionSource selects `ANALYSIS `.
                      */
                     uint64_t m_steadyStateDelayedTime;
                     bool m_steadyStateDelayedTimeHasBeenSet;

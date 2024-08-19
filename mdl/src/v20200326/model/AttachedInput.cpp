@@ -24,7 +24,8 @@ AttachedInput::AttachedInput() :
     m_idHasBeenSet(false),
     m_audioSelectorsHasBeenSet(false),
     m_pullBehaviorHasBeenSet(false),
-    m_failOverSettingsHasBeenSet(false)
+    m_failOverSettingsHasBeenSet(false),
+    m_captionSelectorsHasBeenSet(false)
 {
 }
 
@@ -90,6 +91,26 @@ CoreInternalOutcome AttachedInput::Deserialize(const rapidjson::Value &value)
         m_failOverSettingsHasBeenSet = true;
     }
 
+    if (value.HasMember("CaptionSelectors") && !value["CaptionSelectors"].IsNull())
+    {
+        if (!value["CaptionSelectors"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `AttachedInput.CaptionSelectors` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["CaptionSelectors"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            CaptionSelector item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_captionSelectors.push_back(item);
+        }
+        m_captionSelectorsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -135,6 +156,21 @@ void AttachedInput::ToJsonObject(rapidjson::Value &value, rapidjson::Document::A
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_failOverSettings.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_captionSelectorsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CaptionSelectors";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_captionSelectors.begin(); itr != m_captionSelectors.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
     }
 
 }
@@ -202,5 +238,21 @@ void AttachedInput::SetFailOverSettings(const FailOverSettings& _failOverSetting
 bool AttachedInput::FailOverSettingsHasBeenSet() const
 {
     return m_failOverSettingsHasBeenSet;
+}
+
+vector<CaptionSelector> AttachedInput::GetCaptionSelectors() const
+{
+    return m_captionSelectors;
+}
+
+void AttachedInput::SetCaptionSelectors(const vector<CaptionSelector>& _captionSelectors)
+{
+    m_captionSelectors = _captionSelectors;
+    m_captionSelectorsHasBeenSet = true;
+}
+
+bool AttachedInput::CaptionSelectorsHasBeenSet() const
+{
+    return m_captionSelectorsHasBeenSet;
 }
 
