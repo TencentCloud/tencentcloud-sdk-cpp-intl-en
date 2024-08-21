@@ -121,6 +121,56 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool DropTableHasBeenSet() const;
 
+                    /**
+                     * 获取Expired fields
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ExpiredField Expired fields
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetExpiredField() const;
+
+                    /**
+                     * 设置Expired fields
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _expiredField Expired fields
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetExpiredField(const std::string& _expiredField);
+
+                    /**
+                     * 判断参数 ExpiredField 是否已赋值
+                     * @return ExpiredField 是否已赋值
+                     * 
+                     */
+                    bool ExpiredFieldHasBeenSet() const;
+
+                    /**
+                     * 获取Expired field format
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ExpiredFieldFormat Expired field format
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetExpiredFieldFormat() const;
+
+                    /**
+                     * 设置Expired field format
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _expiredFieldFormat Expired field format
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetExpiredFieldFormat(const std::string& _expiredFieldFormat);
+
+                    /**
+                     * 判断参数 ExpiredFieldFormat 是否已赋值
+                     * @return ExpiredFieldFormat 是否已赋值
+                     * 
+                     */
+                    bool ExpiredFieldFormatHasBeenSet() const;
+
                 private:
 
                     /**
@@ -143,6 +193,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool m_dropTable;
                     bool m_dropTableHasBeenSet;
+
+                    /**
+                     * Expired fields
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_expiredField;
+                    bool m_expiredFieldHasBeenSet;
+
+                    /**
+                     * Expired field format
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_expiredFieldFormat;
+                    bool m_expiredFieldFormatHasBeenSet;
 
                 };
             }

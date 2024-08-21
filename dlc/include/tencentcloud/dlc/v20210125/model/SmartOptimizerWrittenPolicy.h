@@ -46,7 +46,39 @@ namespace TencentCloud
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
 
+                    /**
+                     * 获取none/enable/disable/default
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return WrittenEnable none/enable/disable/default
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetWrittenEnable() const;
+
+                    /**
+                     * 设置none/enable/disable/default
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _writtenEnable none/enable/disable/default
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetWrittenEnable(const std::string& _writtenEnable);
+
+                    /**
+                     * 判断参数 WrittenEnable 是否已赋值
+                     * @return WrittenEnable 是否已赋值
+                     * 
+                     */
+                    bool WrittenEnableHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * none/enable/disable/default
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_writtenEnable;
+                    bool m_writtenEnableHasBeenSet;
 
                 };
             }

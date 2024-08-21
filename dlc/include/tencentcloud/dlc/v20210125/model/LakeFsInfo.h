@@ -130,6 +130,106 @@ namespace TencentCloud
                      */
                     bool CreateTimeStampHasBeenSet() const;
 
+                    /**
+                     * 获取Whether it is the user's default bucket: 0: default bucket, 1: non-default bucket
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DefaultBucket Whether it is the user's default bucket: 0: default bucket, 1: non-default bucket
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetDefaultBucket() const;
+
+                    /**
+                     * 设置Whether it is the user's default bucket: 0: default bucket, 1: non-default bucket
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _defaultBucket Whether it is the user's default bucket: 0: default bucket, 1: non-default bucket
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetDefaultBucket(const int64_t& _defaultBucket);
+
+                    /**
+                     * 判断参数 DefaultBucket 是否已赋值
+                     * @return DefaultBucket 是否已赋值
+                     * 
+                     */
+                    bool DefaultBucketHasBeenSet() const;
+
+                    /**
+                     * 获取Managed storage short name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ShortName Managed storage short name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetShortName() const;
+
+                    /**
+                     * 设置Managed storage short name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _shortName Managed storage short name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetShortName(const std::string& _shortName);
+
+                    /**
+                     * 判断参数 ShortName 是否已赋值
+                     * @return ShortName 是否已赋值
+                     * 
+                     */
+                    bool ShortNameHasBeenSet() const;
+
+                    /**
+                     * 获取Description information of the bucket
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Description Description information of the bucket
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetDescription() const;
+
+                    /**
+                     * 设置Description information of the bucket
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _description Description information of the bucket
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetDescription(const std::string& _description);
+
+                    /**
+                     * 判断参数 Description 是否已赋值
+                     * @return Description 是否已赋值
+                     * 
+                     */
+                    bool DescriptionHasBeenSet() const;
+
+                    /**
+                     * 获取The status of the managed bucket. Current values: creating, bind, readOnly, and isolate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Status The status of the managed bucket. Current values: creating, bind, readOnly, and isolate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetStatus() const;
+
+                    /**
+                     * 设置The status of the managed bucket. Current values: creating, bind, readOnly, and isolate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _status The status of the managed bucket. Current values: creating, bind, readOnly, and isolate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetStatus(const std::string& _status);
+
+                    /**
+                     * 判断参数 Status 是否已赋值
+                     * @return Status 是否已赋值
+                     * 
+                     */
+                    bool StatusHasBeenSet() const;
+
                 private:
 
                     /**
@@ -155,6 +255,34 @@ namespace TencentCloud
                      */
                     int64_t m_createTimeStamp;
                     bool m_createTimeStampHasBeenSet;
+
+                    /**
+                     * Whether it is the user's default bucket: 0: default bucket, 1: non-default bucket
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_defaultBucket;
+                    bool m_defaultBucketHasBeenSet;
+
+                    /**
+                     * Managed storage short name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_shortName;
+                    bool m_shortNameHasBeenSet;
+
+                    /**
+                     * Description information of the bucket
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_description;
+                    bool m_descriptionHasBeenSet;
+
+                    /**
+                     * The status of the managed bucket. Current values: creating, bind, readOnly, and isolate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_status;
+                    bool m_statusHasBeenSet;
 
                 };
             }

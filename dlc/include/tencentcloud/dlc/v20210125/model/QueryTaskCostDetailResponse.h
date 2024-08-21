@@ -43,53 +43,7 @@ namespace TencentCloud
                     std::string ToJsonString() const;
 
 
-                    /**
-                     * 获取Identifier on the next page
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SearchAfter Identifier on the next page
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
-                     */
-                    std::string GetSearchAfter() const;
-
-                    /**
-                     * 判断参数 SearchAfter 是否已赋值
-                     * @return SearchAfter 是否已赋值
-                     * 
-                     */
-                    bool SearchAfterHasBeenSet() const;
-
-                    /**
-                     * 获取Returned data
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Data Returned data
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
-                     */
-                    std::string GetData() const;
-
-                    /**
-                     * 判断参数 Data 是否已赋值
-                     * @return Data 是否已赋值
-                     * 
-                     */
-                    bool DataHasBeenSet() const;
-
                 private:
-
-                    /**
-                     * Identifier on the next page
-Note: This field may return null, indicating that no valid values can be obtained.
-                     */
-                    std::string m_searchAfter;
-                    bool m_searchAfterHasBeenSet;
-
-                    /**
-                     * Returned data
-Note: This field may return null, indicating that no valid values can be obtained.
-                     */
-                    std::string m_data;
-                    bool m_dataHasBeenSet;
 
                 };
             }

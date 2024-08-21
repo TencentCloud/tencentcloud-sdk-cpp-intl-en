@@ -47,15 +47,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The field name.
-                     * @return Name The field name.
+                     * 获取Field name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Name Field name
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置The field name.
-                     * @param _name The field name.
+                     * 设置Field name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _name Field name
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -68,15 +72,19 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取The field type.
-                     * @return Type The field type.
+                     * 获取Field type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Type Field type
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置The field type.
-                     * @param _type The field type.
+                     * 设置Field type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _type Field type
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -89,15 +97,19 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取The field description.
-                     * @return Comment The field description.
+                     * 获取Field description
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Comment Field description
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置The field description.
-                     * @param _comment The field description.
+                     * 设置Field description
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _comment Field description
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -110,15 +122,19 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取The default field value.
-                     * @return Default The default field value.
+                     * 获取Field default values
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Default Field default values
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDefault() const;
 
                     /**
-                     * 设置The default field value.
-                     * @param _default The default field value.
+                     * 设置Field default values
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _default Field default values
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDefault(const std::string& _default);
@@ -131,15 +147,19 @@ namespace TencentCloud
                     bool DefaultHasBeenSet() const;
 
                     /**
-                     * 获取Whether the field is not null.
-                     * @return NotNull Whether the field is not null.
+                     * 获取Is the field non-empty?
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return NotNull Is the field non-empty?
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     bool GetNotNull() const;
 
                     /**
-                     * 设置Whether the field is not null.
-                     * @param _notNull Whether the field is not null.
+                     * 设置Is the field non-empty?
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _notNull Is the field non-empty?
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetNotNull(const bool& _notNull);
@@ -153,14 +173,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Indicate the length of the entire numeric with a value of 1-38
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Precision Indicate the length of the entire numeric with a value of 1-38
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetPrecision() const;
 
                     /**
                      * 设置Indicate the length of the entire numeric with a value of 1-38
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _precision Indicate the length of the entire numeric with a value of 1-38
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetPrecision(const int64_t& _precision);
@@ -173,19 +197,23 @@ namespace TencentCloud
                     bool PrecisionHasBeenSet() const;
 
                     /**
-                     * 获取Indicate the length of the decimal part.
+                     * 获取Indicates the length of the decimal part.
 Scale is smaller than Precision.
-                     * @return Scale Indicate the length of the decimal part.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Scale Indicates the length of the decimal part.
 Scale is smaller than Precision.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetScale() const;
 
                     /**
-                     * 设置Indicate the length of the decimal part.
+                     * 设置Indicates the length of the decimal part.
 Scale is smaller than Precision.
-                     * @param _scale Indicate the length of the decimal part.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _scale Indicates the length of the decimal part.
 Scale is smaller than Precision.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetScale(const int64_t& _scale);
@@ -197,50 +225,121 @@ Scale is smaller than Precision.
                      */
                     bool ScaleHasBeenSet() const;
 
+                    /**
+                     * 获取Field position: Fields with smaller values need to be placed first.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Position Field position: Fields with smaller values need to be placed first.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetPosition() const;
+
+                    /**
+                     * 设置Field position: Fields with smaller values need to be placed first.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _position Field position: Fields with smaller values need to be placed first.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetPosition(const int64_t& _position);
+
+                    /**
+                     * 判断参数 Position 是否已赋值
+                     * @return Position 是否已赋值
+                     * 
+                     */
+                    bool PositionHasBeenSet() const;
+
+                    /**
+                     * 获取Whether it is a partition field
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IsPartition Whether it is a partition field
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    bool GetIsPartition() const;
+
+                    /**
+                     * 设置Whether it is a partition field
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _isPartition Whether it is a partition field
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetIsPartition(const bool& _isPartition);
+
+                    /**
+                     * 判断参数 IsPartition 是否已赋值
+                     * @return IsPartition 是否已赋值
+                     * 
+                     */
+                    bool IsPartitionHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The field name.
+                     * Field name
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * The field type.
+                     * Field type
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * The field description.
+                     * Field description
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * The default field value.
+                     * Field default values
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_default;
                     bool m_defaultHasBeenSet;
 
                     /**
-                     * Whether the field is not null.
+                     * Is the field non-empty?
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     bool m_notNull;
                     bool m_notNullHasBeenSet;
 
                     /**
                      * Indicate the length of the entire numeric with a value of 1-38
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_precision;
                     bool m_precisionHasBeenSet;
 
                     /**
-                     * Indicate the length of the decimal part.
+                     * Indicates the length of the decimal part.
 Scale is smaller than Precision.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_scale;
                     bool m_scaleHasBeenSet;
+
+                    /**
+                     * Field position: Fields with smaller values need to be placed first.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_position;
+                    bool m_positionHasBeenSet;
+
+                    /**
+                     * Whether it is a partition field
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    bool m_isPartition;
+                    bool m_isPartitionHasBeenSet;
 
                 };
             }
