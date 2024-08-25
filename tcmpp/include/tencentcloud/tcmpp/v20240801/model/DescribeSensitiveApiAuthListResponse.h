@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Response parameters
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Data Response parameters
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Data Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     DescribeSensitiveApiAuthPageParam GetData() const;
@@ -63,8 +61,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Response parameters
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     DescribeSensitiveApiAuthPageParam m_data;
                     bool m_dataHasBeenSet;

@@ -126,6 +126,49 @@ TcmppClient::CheckGlobalDomainOutcomeCallable TcmppClient::CheckGlobalDomainCall
     return task->get_future();
 }
 
+TcmppClient::ConfigureMNPPreviewOutcome TcmppClient::ConfigureMNPPreview(const ConfigureMNPPreviewRequest &request)
+{
+    auto outcome = MakeRequest(request, "ConfigureMNPPreview");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ConfigureMNPPreviewResponse rsp = ConfigureMNPPreviewResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ConfigureMNPPreviewOutcome(rsp);
+        else
+            return ConfigureMNPPreviewOutcome(o.GetError());
+    }
+    else
+    {
+        return ConfigureMNPPreviewOutcome(outcome.GetError());
+    }
+}
+
+void TcmppClient::ConfigureMNPPreviewAsync(const ConfigureMNPPreviewRequest& request, const ConfigureMNPPreviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ConfigureMNPPreview(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcmppClient::ConfigureMNPPreviewOutcomeCallable TcmppClient::ConfigureMNPPreviewCallable(const ConfigureMNPPreviewRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ConfigureMNPPreviewOutcome()>>(
+        [this, request]()
+        {
+            return this->ConfigureMNPPreview(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TcmppClient::CreateApplicationOutcome TcmppClient::CreateApplication(const CreateApplicationRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateApplication");
@@ -162,6 +205,49 @@ TcmppClient::CreateApplicationOutcomeCallable TcmppClient::CreateApplicationCall
         [this, request]()
         {
             return this->CreateApplication(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TcmppClient::CreateApplicationSensitiveAPIOutcome TcmppClient::CreateApplicationSensitiveAPI(const CreateApplicationSensitiveAPIRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateApplicationSensitiveAPI");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateApplicationSensitiveAPIResponse rsp = CreateApplicationSensitiveAPIResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateApplicationSensitiveAPIOutcome(rsp);
+        else
+            return CreateApplicationSensitiveAPIOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateApplicationSensitiveAPIOutcome(outcome.GetError());
+    }
+}
+
+void TcmppClient::CreateApplicationSensitiveAPIAsync(const CreateApplicationSensitiveAPIRequest& request, const CreateApplicationSensitiveAPIAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateApplicationSensitiveAPI(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcmppClient::CreateApplicationSensitiveAPIOutcomeCallable TcmppClient::CreateApplicationSensitiveAPICallable(const CreateApplicationSensitiveAPIRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateApplicationSensitiveAPIOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateApplicationSensitiveAPI(request);
         }
     );
 
@@ -298,6 +384,49 @@ TcmppClient::CreateGlobalDomainOutcomeCallable TcmppClient::CreateGlobalDomainCa
     return task->get_future();
 }
 
+TcmppClient::CreateGlobalDomainACLOutcome TcmppClient::CreateGlobalDomainACL(const CreateGlobalDomainACLRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateGlobalDomainACL");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateGlobalDomainACLResponse rsp = CreateGlobalDomainACLResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateGlobalDomainACLOutcome(rsp);
+        else
+            return CreateGlobalDomainACLOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateGlobalDomainACLOutcome(outcome.GetError());
+    }
+}
+
+void TcmppClient::CreateGlobalDomainACLAsync(const CreateGlobalDomainACLRequest& request, const CreateGlobalDomainACLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateGlobalDomainACL(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcmppClient::CreateGlobalDomainACLOutcomeCallable TcmppClient::CreateGlobalDomainACLCallable(const CreateGlobalDomainACLRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateGlobalDomainACLOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateGlobalDomainACL(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TcmppClient::CreateMNPOutcome TcmppClient::CreateMNP(const CreateMNPRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateMNP");
@@ -334,6 +463,178 @@ TcmppClient::CreateMNPOutcomeCallable TcmppClient::CreateMNPCallable(const Creat
         [this, request]()
         {
             return this->CreateMNP(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TcmppClient::CreateMNPApprovalOutcome TcmppClient::CreateMNPApproval(const CreateMNPApprovalRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateMNPApproval");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateMNPApprovalResponse rsp = CreateMNPApprovalResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateMNPApprovalOutcome(rsp);
+        else
+            return CreateMNPApprovalOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateMNPApprovalOutcome(outcome.GetError());
+    }
+}
+
+void TcmppClient::CreateMNPApprovalAsync(const CreateMNPApprovalRequest& request, const CreateMNPApprovalAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateMNPApproval(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcmppClient::CreateMNPApprovalOutcomeCallable TcmppClient::CreateMNPApprovalCallable(const CreateMNPApprovalRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateMNPApprovalOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateMNPApproval(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TcmppClient::CreateMNPDomainACLOutcome TcmppClient::CreateMNPDomainACL(const CreateMNPDomainACLRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateMNPDomainACL");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateMNPDomainACLResponse rsp = CreateMNPDomainACLResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateMNPDomainACLOutcome(rsp);
+        else
+            return CreateMNPDomainACLOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateMNPDomainACLOutcome(outcome.GetError());
+    }
+}
+
+void TcmppClient::CreateMNPDomainACLAsync(const CreateMNPDomainACLRequest& request, const CreateMNPDomainACLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateMNPDomainACL(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcmppClient::CreateMNPDomainACLOutcomeCallable TcmppClient::CreateMNPDomainACLCallable(const CreateMNPDomainACLRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateMNPDomainACLOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateMNPDomainACL(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TcmppClient::CreateMNPSensitiveAPIPermissionApprovalOutcome TcmppClient::CreateMNPSensitiveAPIPermissionApproval(const CreateMNPSensitiveAPIPermissionApprovalRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateMNPSensitiveAPIPermissionApproval");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateMNPSensitiveAPIPermissionApprovalResponse rsp = CreateMNPSensitiveAPIPermissionApprovalResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateMNPSensitiveAPIPermissionApprovalOutcome(rsp);
+        else
+            return CreateMNPSensitiveAPIPermissionApprovalOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateMNPSensitiveAPIPermissionApprovalOutcome(outcome.GetError());
+    }
+}
+
+void TcmppClient::CreateMNPSensitiveAPIPermissionApprovalAsync(const CreateMNPSensitiveAPIPermissionApprovalRequest& request, const CreateMNPSensitiveAPIPermissionApprovalAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateMNPSensitiveAPIPermissionApproval(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcmppClient::CreateMNPSensitiveAPIPermissionApprovalOutcomeCallable TcmppClient::CreateMNPSensitiveAPIPermissionApprovalCallable(const CreateMNPSensitiveAPIPermissionApprovalRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateMNPSensitiveAPIPermissionApprovalOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateMNPSensitiveAPIPermissionApproval(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TcmppClient::CreateMNPVersionOutcome TcmppClient::CreateMNPVersion(const CreateMNPVersionRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateMNPVersion");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateMNPVersionResponse rsp = CreateMNPVersionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateMNPVersionOutcome(rsp);
+        else
+            return CreateMNPVersionOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateMNPVersionOutcome(outcome.GetError());
+    }
+}
+
+void TcmppClient::CreateMNPVersionAsync(const CreateMNPVersionRequest& request, const CreateMNPVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateMNPVersion(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcmppClient::CreateMNPVersionOutcomeCallable TcmppClient::CreateMNPVersionCallable(const CreateMNPVersionRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateMNPVersionOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateMNPVersion(request);
         }
     );
 
@@ -728,6 +1029,49 @@ TcmppClient::DeleteApplicationOutcomeCallable TcmppClient::DeleteApplicationCall
     return task->get_future();
 }
 
+TcmppClient::DeleteApplicationSensitiveAPIOutcome TcmppClient::DeleteApplicationSensitiveAPI(const DeleteApplicationSensitiveAPIRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteApplicationSensitiveAPI");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteApplicationSensitiveAPIResponse rsp = DeleteApplicationSensitiveAPIResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteApplicationSensitiveAPIOutcome(rsp);
+        else
+            return DeleteApplicationSensitiveAPIOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteApplicationSensitiveAPIOutcome(outcome.GetError());
+    }
+}
+
+void TcmppClient::DeleteApplicationSensitiveAPIAsync(const DeleteApplicationSensitiveAPIRequest& request, const DeleteApplicationSensitiveAPIAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteApplicationSensitiveAPI(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcmppClient::DeleteApplicationSensitiveAPIOutcomeCallable TcmppClient::DeleteApplicationSensitiveAPICallable(const DeleteApplicationSensitiveAPIRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteApplicationSensitiveAPIOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteApplicationSensitiveAPI(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TcmppClient::DeleteGlobalDomainOutcome TcmppClient::DeleteGlobalDomain(const DeleteGlobalDomainRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteGlobalDomain");
@@ -1072,6 +1416,49 @@ TcmppClient::DescribeApplicationConfigOutcomeCallable TcmppClient::DescribeAppli
     return task->get_future();
 }
 
+TcmppClient::DescribeApplicationConfigFileOutcome TcmppClient::DescribeApplicationConfigFile(const DescribeApplicationConfigFileRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeApplicationConfigFile");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeApplicationConfigFileResponse rsp = DescribeApplicationConfigFileResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeApplicationConfigFileOutcome(rsp);
+        else
+            return DescribeApplicationConfigFileOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeApplicationConfigFileOutcome(outcome.GetError());
+    }
+}
+
+void TcmppClient::DescribeApplicationConfigFileAsync(const DescribeApplicationConfigFileRequest& request, const DescribeApplicationConfigFileAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeApplicationConfigFile(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcmppClient::DescribeApplicationConfigFileOutcomeCallable TcmppClient::DescribeApplicationConfigFileCallable(const DescribeApplicationConfigFileRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeApplicationConfigFileOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeApplicationConfigFile(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TcmppClient::DescribeApplicationListOutcome TcmppClient::DescribeApplicationList(const DescribeApplicationListRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeApplicationList");
@@ -1151,6 +1538,49 @@ TcmppClient::DescribeApplicationMNPVersionAuditListOutcomeCallable TcmppClient::
         [this, request]()
         {
             return this->DescribeApplicationMNPVersionAuditList(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TcmppClient::DescribeApplicationSensitiveAPIListOutcome TcmppClient::DescribeApplicationSensitiveAPIList(const DescribeApplicationSensitiveAPIListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeApplicationSensitiveAPIList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeApplicationSensitiveAPIListResponse rsp = DescribeApplicationSensitiveAPIListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeApplicationSensitiveAPIListOutcome(rsp);
+        else
+            return DescribeApplicationSensitiveAPIListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeApplicationSensitiveAPIListOutcome(outcome.GetError());
+    }
+}
+
+void TcmppClient::DescribeApplicationSensitiveAPIListAsync(const DescribeApplicationSensitiveAPIListRequest& request, const DescribeApplicationSensitiveAPIListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeApplicationSensitiveAPIList(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcmppClient::DescribeApplicationSensitiveAPIListOutcomeCallable TcmppClient::DescribeApplicationSensitiveAPIListCallable(const DescribeApplicationSensitiveAPIListRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeApplicationSensitiveAPIListOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeApplicationSensitiveAPIList(request);
         }
     );
 
@@ -1287,6 +1717,49 @@ TcmppClient::DescribeDomainTeamListOutcomeCallable TcmppClient::DescribeDomainTe
     return task->get_future();
 }
 
+TcmppClient::DescribeGlobalDomainACLOutcome TcmppClient::DescribeGlobalDomainACL(const DescribeGlobalDomainACLRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeGlobalDomainACL");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeGlobalDomainACLResponse rsp = DescribeGlobalDomainACLResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeGlobalDomainACLOutcome(rsp);
+        else
+            return DescribeGlobalDomainACLOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeGlobalDomainACLOutcome(outcome.GetError());
+    }
+}
+
+void TcmppClient::DescribeGlobalDomainACLAsync(const DescribeGlobalDomainACLRequest& request, const DescribeGlobalDomainACLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeGlobalDomainACL(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcmppClient::DescribeGlobalDomainACLOutcomeCallable TcmppClient::DescribeGlobalDomainACLCallable(const DescribeGlobalDomainACLRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeGlobalDomainACLOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeGlobalDomainACL(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TcmppClient::DescribeGlobalDomainListOutcome TcmppClient::DescribeGlobalDomainList(const DescribeGlobalDomainListRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeGlobalDomainList");
@@ -1323,6 +1796,135 @@ TcmppClient::DescribeGlobalDomainListOutcomeCallable TcmppClient::DescribeGlobal
         [this, request]()
         {
             return this->DescribeGlobalDomainList(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TcmppClient::DescribeMNPOutcome TcmppClient::DescribeMNP(const DescribeMNPRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNP");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNPResponse rsp = DescribeMNPResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNPOutcome(rsp);
+        else
+            return DescribeMNPOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNPOutcome(outcome.GetError());
+    }
+}
+
+void TcmppClient::DescribeMNPAsync(const DescribeMNPRequest& request, const DescribeMNPAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeMNP(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcmppClient::DescribeMNPOutcomeCallable TcmppClient::DescribeMNPCallable(const DescribeMNPRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeMNPOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeMNP(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TcmppClient::DescribeMNPAllStageVersionsOutcome TcmppClient::DescribeMNPAllStageVersions(const DescribeMNPAllStageVersionsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNPAllStageVersions");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNPAllStageVersionsResponse rsp = DescribeMNPAllStageVersionsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNPAllStageVersionsOutcome(rsp);
+        else
+            return DescribeMNPAllStageVersionsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNPAllStageVersionsOutcome(outcome.GetError());
+    }
+}
+
+void TcmppClient::DescribeMNPAllStageVersionsAsync(const DescribeMNPAllStageVersionsRequest& request, const DescribeMNPAllStageVersionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeMNPAllStageVersions(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcmppClient::DescribeMNPAllStageVersionsOutcomeCallable TcmppClient::DescribeMNPAllStageVersionsCallable(const DescribeMNPAllStageVersionsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeMNPAllStageVersionsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeMNPAllStageVersions(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TcmppClient::DescribeMNPApprovalListOutcome TcmppClient::DescribeMNPApprovalList(const DescribeMNPApprovalListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNPApprovalList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNPApprovalListResponse rsp = DescribeMNPApprovalListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNPApprovalListOutcome(rsp);
+        else
+            return DescribeMNPApprovalListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNPApprovalListOutcome(outcome.GetError());
+    }
+}
+
+void TcmppClient::DescribeMNPApprovalListAsync(const DescribeMNPApprovalListRequest& request, const DescribeMNPApprovalListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeMNPApprovalList(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcmppClient::DescribeMNPApprovalListOutcomeCallable TcmppClient::DescribeMNPApprovalListCallable(const DescribeMNPApprovalListRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeMNPApprovalListOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeMNPApprovalList(request);
         }
     );
 
@@ -1373,6 +1975,49 @@ TcmppClient::DescribeMNPBoardOutcomeCallable TcmppClient::DescribeMNPBoardCallab
     return task->get_future();
 }
 
+TcmppClient::DescribeMNPCategoryOutcome TcmppClient::DescribeMNPCategory(const DescribeMNPCategoryRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNPCategory");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNPCategoryResponse rsp = DescribeMNPCategoryResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNPCategoryOutcome(rsp);
+        else
+            return DescribeMNPCategoryOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNPCategoryOutcome(outcome.GetError());
+    }
+}
+
+void TcmppClient::DescribeMNPCategoryAsync(const DescribeMNPCategoryRequest& request, const DescribeMNPCategoryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeMNPCategory(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcmppClient::DescribeMNPCategoryOutcomeCallable TcmppClient::DescribeMNPCategoryCallable(const DescribeMNPCategoryRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeMNPCategoryOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeMNPCategory(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TcmppClient::DescribeMNPDetailOutcome TcmppClient::DescribeMNPDetail(const DescribeMNPDetailRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeMNPDetail");
@@ -1409,6 +2054,92 @@ TcmppClient::DescribeMNPDetailOutcomeCallable TcmppClient::DescribeMNPDetailCall
         [this, request]()
         {
             return this->DescribeMNPDetail(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TcmppClient::DescribeMNPDomainACLOutcome TcmppClient::DescribeMNPDomainACL(const DescribeMNPDomainACLRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNPDomainACL");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNPDomainACLResponse rsp = DescribeMNPDomainACLResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNPDomainACLOutcome(rsp);
+        else
+            return DescribeMNPDomainACLOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNPDomainACLOutcome(outcome.GetError());
+    }
+}
+
+void TcmppClient::DescribeMNPDomainACLAsync(const DescribeMNPDomainACLRequest& request, const DescribeMNPDomainACLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeMNPDomainACL(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcmppClient::DescribeMNPDomainACLOutcomeCallable TcmppClient::DescribeMNPDomainACLCallable(const DescribeMNPDomainACLRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeMNPDomainACLOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeMNPDomainACL(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TcmppClient::DescribeMNPListOutcome TcmppClient::DescribeMNPList(const DescribeMNPListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNPList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNPListResponse rsp = DescribeMNPListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNPListOutcome(rsp);
+        else
+            return DescribeMNPListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNPListOutcome(outcome.GetError());
+    }
+}
+
+void TcmppClient::DescribeMNPListAsync(const DescribeMNPListRequest& request, const DescribeMNPListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeMNPList(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcmppClient::DescribeMNPListOutcomeCallable TcmppClient::DescribeMNPListCallable(const DescribeMNPListRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeMNPListOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeMNPList(request);
         }
     );
 
@@ -1502,6 +2233,92 @@ TcmppClient::DescribeMNPManagerListOutcomeCallable TcmppClient::DescribeMNPManag
     return task->get_future();
 }
 
+TcmppClient::DescribeMNPOfflinePackageURLOutcome TcmppClient::DescribeMNPOfflinePackageURL(const DescribeMNPOfflinePackageURLRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNPOfflinePackageURL");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNPOfflinePackageURLResponse rsp = DescribeMNPOfflinePackageURLResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNPOfflinePackageURLOutcome(rsp);
+        else
+            return DescribeMNPOfflinePackageURLOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNPOfflinePackageURLOutcome(outcome.GetError());
+    }
+}
+
+void TcmppClient::DescribeMNPOfflinePackageURLAsync(const DescribeMNPOfflinePackageURLRequest& request, const DescribeMNPOfflinePackageURLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeMNPOfflinePackageURL(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcmppClient::DescribeMNPOfflinePackageURLOutcomeCallable TcmppClient::DescribeMNPOfflinePackageURLCallable(const DescribeMNPOfflinePackageURLRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeMNPOfflinePackageURLOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeMNPOfflinePackageURL(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TcmppClient::DescribeMNPPreviewOutcome TcmppClient::DescribeMNPPreview(const DescribeMNPPreviewRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNPPreview");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNPPreviewResponse rsp = DescribeMNPPreviewResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNPPreviewOutcome(rsp);
+        else
+            return DescribeMNPPreviewOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNPPreviewOutcome(outcome.GetError());
+    }
+}
+
+void TcmppClient::DescribeMNPPreviewAsync(const DescribeMNPPreviewRequest& request, const DescribeMNPPreviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeMNPPreview(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcmppClient::DescribeMNPPreviewOutcomeCallable TcmppClient::DescribeMNPPreviewCallable(const DescribeMNPPreviewRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeMNPPreviewOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeMNPPreview(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TcmppClient::DescribeMNPPrivacyOutcome TcmppClient::DescribeMNPPrivacy(const DescribeMNPPrivacyRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeMNPPrivacy");
@@ -1545,6 +2362,178 @@ TcmppClient::DescribeMNPPrivacyOutcomeCallable TcmppClient::DescribeMNPPrivacyCa
     return task->get_future();
 }
 
+TcmppClient::DescribeMNPReleasedVersionHistoryOutcome TcmppClient::DescribeMNPReleasedVersionHistory(const DescribeMNPReleasedVersionHistoryRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNPReleasedVersionHistory");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNPReleasedVersionHistoryResponse rsp = DescribeMNPReleasedVersionHistoryResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNPReleasedVersionHistoryOutcome(rsp);
+        else
+            return DescribeMNPReleasedVersionHistoryOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNPReleasedVersionHistoryOutcome(outcome.GetError());
+    }
+}
+
+void TcmppClient::DescribeMNPReleasedVersionHistoryAsync(const DescribeMNPReleasedVersionHistoryRequest& request, const DescribeMNPReleasedVersionHistoryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeMNPReleasedVersionHistory(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcmppClient::DescribeMNPReleasedVersionHistoryOutcomeCallable TcmppClient::DescribeMNPReleasedVersionHistoryCallable(const DescribeMNPReleasedVersionHistoryRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeMNPReleasedVersionHistoryOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeMNPReleasedVersionHistory(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TcmppClient::DescribeMNPSensitiveAPIPermissionApprovalOutcome TcmppClient::DescribeMNPSensitiveAPIPermissionApproval(const DescribeMNPSensitiveAPIPermissionApprovalRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNPSensitiveAPIPermissionApproval");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNPSensitiveAPIPermissionApprovalResponse rsp = DescribeMNPSensitiveAPIPermissionApprovalResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNPSensitiveAPIPermissionApprovalOutcome(rsp);
+        else
+            return DescribeMNPSensitiveAPIPermissionApprovalOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNPSensitiveAPIPermissionApprovalOutcome(outcome.GetError());
+    }
+}
+
+void TcmppClient::DescribeMNPSensitiveAPIPermissionApprovalAsync(const DescribeMNPSensitiveAPIPermissionApprovalRequest& request, const DescribeMNPSensitiveAPIPermissionApprovalAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeMNPSensitiveAPIPermissionApproval(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcmppClient::DescribeMNPSensitiveAPIPermissionApprovalOutcomeCallable TcmppClient::DescribeMNPSensitiveAPIPermissionApprovalCallable(const DescribeMNPSensitiveAPIPermissionApprovalRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeMNPSensitiveAPIPermissionApprovalOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeMNPSensitiveAPIPermissionApproval(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TcmppClient::DescribeMNPSensitiveAPIPermissionApprovalListOutcome TcmppClient::DescribeMNPSensitiveAPIPermissionApprovalList(const DescribeMNPSensitiveAPIPermissionApprovalListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNPSensitiveAPIPermissionApprovalList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNPSensitiveAPIPermissionApprovalListResponse rsp = DescribeMNPSensitiveAPIPermissionApprovalListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNPSensitiveAPIPermissionApprovalListOutcome(rsp);
+        else
+            return DescribeMNPSensitiveAPIPermissionApprovalListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNPSensitiveAPIPermissionApprovalListOutcome(outcome.GetError());
+    }
+}
+
+void TcmppClient::DescribeMNPSensitiveAPIPermissionApprovalListAsync(const DescribeMNPSensitiveAPIPermissionApprovalListRequest& request, const DescribeMNPSensitiveAPIPermissionApprovalListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeMNPSensitiveAPIPermissionApprovalList(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcmppClient::DescribeMNPSensitiveAPIPermissionApprovalListOutcomeCallable TcmppClient::DescribeMNPSensitiveAPIPermissionApprovalListCallable(const DescribeMNPSensitiveAPIPermissionApprovalListRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeMNPSensitiveAPIPermissionApprovalListOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeMNPSensitiveAPIPermissionApprovalList(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TcmppClient::DescribeMNPSensitiveAPIPermissionListOutcome TcmppClient::DescribeMNPSensitiveAPIPermissionList(const DescribeMNPSensitiveAPIPermissionListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNPSensitiveAPIPermissionList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNPSensitiveAPIPermissionListResponse rsp = DescribeMNPSensitiveAPIPermissionListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNPSensitiveAPIPermissionListOutcome(rsp);
+        else
+            return DescribeMNPSensitiveAPIPermissionListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNPSensitiveAPIPermissionListOutcome(outcome.GetError());
+    }
+}
+
+void TcmppClient::DescribeMNPSensitiveAPIPermissionListAsync(const DescribeMNPSensitiveAPIPermissionListRequest& request, const DescribeMNPSensitiveAPIPermissionListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeMNPSensitiveAPIPermissionList(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcmppClient::DescribeMNPSensitiveAPIPermissionListOutcomeCallable TcmppClient::DescribeMNPSensitiveAPIPermissionListCallable(const DescribeMNPSensitiveAPIPermissionListRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeMNPSensitiveAPIPermissionListOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeMNPSensitiveAPIPermissionList(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TcmppClient::DescribeMNPTypeOutcome TcmppClient::DescribeMNPType(const DescribeMNPTypeRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeMNPType");
@@ -1581,6 +2570,49 @@ TcmppClient::DescribeMNPTypeOutcomeCallable TcmppClient::DescribeMNPTypeCallable
         [this, request]()
         {
             return this->DescribeMNPType(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TcmppClient::DescribeMNPVersionOutcome TcmppClient::DescribeMNPVersion(const DescribeMNPVersionRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNPVersion");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNPVersionResponse rsp = DescribeMNPVersionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNPVersionOutcome(rsp);
+        else
+            return DescribeMNPVersionOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNPVersionOutcome(outcome.GetError());
+    }
+}
+
+void TcmppClient::DescribeMNPVersionAsync(const DescribeMNPVersionRequest& request, const DescribeMNPVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeMNPVersion(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcmppClient::DescribeMNPVersionOutcomeCallable TcmppClient::DescribeMNPVersionCallable(const DescribeMNPVersionRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeMNPVersionOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeMNPVersion(request);
         }
     );
 
@@ -2319,6 +3351,49 @@ TcmppClient::DescribeTempSecret4UploadFile2CosOutcomeCallable TcmppClient::Descr
     return task->get_future();
 }
 
+TcmppClient::DescribeUserOutcome TcmppClient::DescribeUser(const DescribeUserRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeUser");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeUserResponse rsp = DescribeUserResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeUserOutcome(rsp);
+        else
+            return DescribeUserOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeUserOutcome(outcome.GetError());
+    }
+}
+
+void TcmppClient::DescribeUserAsync(const DescribeUserRequest& request, const DescribeUserAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeUser(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcmppClient::DescribeUserOutcomeCallable TcmppClient::DescribeUserCallable(const DescribeUserRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeUserOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeUser(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TcmppClient::DescribeUserDetailOutcome TcmppClient::DescribeUserDetail(const DescribeUserDetailRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeUserDetail");
@@ -2405,6 +3480,49 @@ TcmppClient::DescribeUserListOutcomeCallable TcmppClient::DescribeUserListCallab
     return task->get_future();
 }
 
+TcmppClient::DisableApplicationSensitiveAPIOutcome TcmppClient::DisableApplicationSensitiveAPI(const DisableApplicationSensitiveAPIRequest &request)
+{
+    auto outcome = MakeRequest(request, "DisableApplicationSensitiveAPI");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DisableApplicationSensitiveAPIResponse rsp = DisableApplicationSensitiveAPIResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DisableApplicationSensitiveAPIOutcome(rsp);
+        else
+            return DisableApplicationSensitiveAPIOutcome(o.GetError());
+    }
+    else
+    {
+        return DisableApplicationSensitiveAPIOutcome(outcome.GetError());
+    }
+}
+
+void TcmppClient::DisableApplicationSensitiveAPIAsync(const DisableApplicationSensitiveAPIRequest& request, const DisableApplicationSensitiveAPIAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DisableApplicationSensitiveAPI(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcmppClient::DisableApplicationSensitiveAPIOutcomeCallable TcmppClient::DisableApplicationSensitiveAPICallable(const DisableApplicationSensitiveAPIRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DisableApplicationSensitiveAPIOutcome()>>(
+        [this, request]()
+        {
+            return this->DisableApplicationSensitiveAPI(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TcmppClient::DisableTeamDomainOutcome TcmppClient::DisableTeamDomain(const DisableTeamDomainRequest &request)
 {
     auto outcome = MakeRequest(request, "DisableTeamDomain");
@@ -2441,6 +3559,49 @@ TcmppClient::DisableTeamDomainOutcomeCallable TcmppClient::DisableTeamDomainCall
         [this, request]()
         {
             return this->DisableTeamDomain(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TcmppClient::EnableApplicationSensitiveAPIOutcome TcmppClient::EnableApplicationSensitiveAPI(const EnableApplicationSensitiveAPIRequest &request)
+{
+    auto outcome = MakeRequest(request, "EnableApplicationSensitiveAPI");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        EnableApplicationSensitiveAPIResponse rsp = EnableApplicationSensitiveAPIResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return EnableApplicationSensitiveAPIOutcome(rsp);
+        else
+            return EnableApplicationSensitiveAPIOutcome(o.GetError());
+    }
+    else
+    {
+        return EnableApplicationSensitiveAPIOutcome(outcome.GetError());
+    }
+}
+
+void TcmppClient::EnableApplicationSensitiveAPIAsync(const EnableApplicationSensitiveAPIRequest& request, const EnableApplicationSensitiveAPIAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->EnableApplicationSensitiveAPI(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcmppClient::EnableApplicationSensitiveAPIOutcomeCallable TcmppClient::EnableApplicationSensitiveAPICallable(const EnableApplicationSensitiveAPIRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<EnableApplicationSensitiveAPIOutcome()>>(
+        [this, request]()
+        {
+            return this->EnableApplicationSensitiveAPI(request);
         }
     );
 
@@ -2699,6 +3860,49 @@ TcmppClient::ModifyMNPOutcomeCallable TcmppClient::ModifyMNPCallable(const Modif
         [this, request]()
         {
             return this->ModifyMNP(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TcmppClient::ModifyMNPDomainOutcome TcmppClient::ModifyMNPDomain(const ModifyMNPDomainRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyMNPDomain");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyMNPDomainResponse rsp = ModifyMNPDomainResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyMNPDomainOutcome(rsp);
+        else
+            return ModifyMNPDomainOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyMNPDomainOutcome(outcome.GetError());
+    }
+}
+
+void TcmppClient::ModifyMNPDomainAsync(const ModifyMNPDomainRequest& request, const ModifyMNPDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyMNPDomain(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcmppClient::ModifyMNPDomainOutcomeCallable TcmppClient::ModifyMNPDomainCallable(const ModifyMNPDomainRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyMNPDomainOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyMNPDomain(request);
         }
     );
 
@@ -3086,6 +4290,221 @@ TcmppClient::ModifyUserPasswordOutcomeCallable TcmppClient::ModifyUserPasswordCa
         [this, request]()
         {
             return this->ModifyUserPassword(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TcmppClient::ProcessMNPApprovalOutcome TcmppClient::ProcessMNPApproval(const ProcessMNPApprovalRequest &request)
+{
+    auto outcome = MakeRequest(request, "ProcessMNPApproval");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ProcessMNPApprovalResponse rsp = ProcessMNPApprovalResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ProcessMNPApprovalOutcome(rsp);
+        else
+            return ProcessMNPApprovalOutcome(o.GetError());
+    }
+    else
+    {
+        return ProcessMNPApprovalOutcome(outcome.GetError());
+    }
+}
+
+void TcmppClient::ProcessMNPApprovalAsync(const ProcessMNPApprovalRequest& request, const ProcessMNPApprovalAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ProcessMNPApproval(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcmppClient::ProcessMNPApprovalOutcomeCallable TcmppClient::ProcessMNPApprovalCallable(const ProcessMNPApprovalRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ProcessMNPApprovalOutcome()>>(
+        [this, request]()
+        {
+            return this->ProcessMNPApproval(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TcmppClient::ProcessMNPSensitiveAPIPermissionApprovalOutcome TcmppClient::ProcessMNPSensitiveAPIPermissionApproval(const ProcessMNPSensitiveAPIPermissionApprovalRequest &request)
+{
+    auto outcome = MakeRequest(request, "ProcessMNPSensitiveAPIPermissionApproval");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ProcessMNPSensitiveAPIPermissionApprovalResponse rsp = ProcessMNPSensitiveAPIPermissionApprovalResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ProcessMNPSensitiveAPIPermissionApprovalOutcome(rsp);
+        else
+            return ProcessMNPSensitiveAPIPermissionApprovalOutcome(o.GetError());
+    }
+    else
+    {
+        return ProcessMNPSensitiveAPIPermissionApprovalOutcome(outcome.GetError());
+    }
+}
+
+void TcmppClient::ProcessMNPSensitiveAPIPermissionApprovalAsync(const ProcessMNPSensitiveAPIPermissionApprovalRequest& request, const ProcessMNPSensitiveAPIPermissionApprovalAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ProcessMNPSensitiveAPIPermissionApproval(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcmppClient::ProcessMNPSensitiveAPIPermissionApprovalOutcomeCallable TcmppClient::ProcessMNPSensitiveAPIPermissionApprovalCallable(const ProcessMNPSensitiveAPIPermissionApprovalRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ProcessMNPSensitiveAPIPermissionApprovalOutcome()>>(
+        [this, request]()
+        {
+            return this->ProcessMNPSensitiveAPIPermissionApproval(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TcmppClient::ReleaseMNPVersionOutcome TcmppClient::ReleaseMNPVersion(const ReleaseMNPVersionRequest &request)
+{
+    auto outcome = MakeRequest(request, "ReleaseMNPVersion");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ReleaseMNPVersionResponse rsp = ReleaseMNPVersionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ReleaseMNPVersionOutcome(rsp);
+        else
+            return ReleaseMNPVersionOutcome(o.GetError());
+    }
+    else
+    {
+        return ReleaseMNPVersionOutcome(outcome.GetError());
+    }
+}
+
+void TcmppClient::ReleaseMNPVersionAsync(const ReleaseMNPVersionRequest& request, const ReleaseMNPVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ReleaseMNPVersion(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcmppClient::ReleaseMNPVersionOutcomeCallable TcmppClient::ReleaseMNPVersionCallable(const ReleaseMNPVersionRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ReleaseMNPVersionOutcome()>>(
+        [this, request]()
+        {
+            return this->ReleaseMNPVersion(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TcmppClient::RemoveMNPOutcome TcmppClient::RemoveMNP(const RemoveMNPRequest &request)
+{
+    auto outcome = MakeRequest(request, "RemoveMNP");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RemoveMNPResponse rsp = RemoveMNPResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RemoveMNPOutcome(rsp);
+        else
+            return RemoveMNPOutcome(o.GetError());
+    }
+    else
+    {
+        return RemoveMNPOutcome(outcome.GetError());
+    }
+}
+
+void TcmppClient::RemoveMNPAsync(const RemoveMNPRequest& request, const RemoveMNPAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->RemoveMNP(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcmppClient::RemoveMNPOutcomeCallable TcmppClient::RemoveMNPCallable(const RemoveMNPRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<RemoveMNPOutcome()>>(
+        [this, request]()
+        {
+            return this->RemoveMNP(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TcmppClient::RollbackMNPVersionOutcome TcmppClient::RollbackMNPVersion(const RollbackMNPVersionRequest &request)
+{
+    auto outcome = MakeRequest(request, "RollbackMNPVersion");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RollbackMNPVersionResponse rsp = RollbackMNPVersionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RollbackMNPVersionOutcome(rsp);
+        else
+            return RollbackMNPVersionOutcome(o.GetError());
+    }
+    else
+    {
+        return RollbackMNPVersionOutcome(outcome.GetError());
+    }
+}
+
+void TcmppClient::RollbackMNPVersionAsync(const RollbackMNPVersionRequest& request, const RollbackMNPVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->RollbackMNPVersion(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcmppClient::RollbackMNPVersionOutcomeCallable TcmppClient::RollbackMNPVersionCallable(const RollbackMNPVersionRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<RollbackMNPVersionOutcome()>>(
+        [this, request]()
+        {
+            return this->RollbackMNPVersion(request);
         }
     );
 

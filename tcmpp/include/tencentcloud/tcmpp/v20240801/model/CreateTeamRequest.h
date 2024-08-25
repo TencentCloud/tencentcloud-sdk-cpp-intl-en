@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool AdminUserIdHasBeenSet() const;
 
                     /**
-                     * 获取Team permission type 1 Mini program 2 App (Multiple selection)
-                     * @return TeamRoleTypeList Team permission type 1 Mini program 2 App (Multiple selection)
+                     * 获取Permission assigned to the team. 1: Mini program; 2: Application (only one of these types is supported)
+                     * @return TeamRoleTypeList Permission assigned to the team. 1: Mini program; 2: Application (only one of these types is supported)
                      * 
                      */
                     std::vector<int64_t> GetTeamRoleTypeList() const;
 
                     /**
-                     * 设置Team permission type 1 Mini program 2 App (Multiple selection)
-                     * @param _teamRoleTypeList Team permission type 1 Mini program 2 App (Multiple selection)
+                     * 设置Permission assigned to the team. 1: Mini program; 2: Application (only one of these types is supported)
+                     * @param _teamRoleTypeList Permission assigned to the team. 1: Mini program; 2: Application (only one of these types is supported)
                      * 
                      */
                     void SetTeamRoleTypeList(const std::vector<int64_t>& _teamRoleTypeList);
@@ -183,7 +183,7 @@ namespace TencentCloud
                     bool m_adminUserIdHasBeenSet;
 
                     /**
-                     * Team permission type 1 Mini program 2 App (Multiple selection)
+                     * Permission assigned to the team. 1: Mini program; 2: Application (only one of these types is supported)
                      */
                     std::vector<int64_t> m_teamRoleTypeList;
                     bool m_teamRoleTypeListHasBeenSet;

@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Response data
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Data Response data
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Data Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     MNPDetail GetData() const;
@@ -63,8 +61,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Response data
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     MNPDetail m_data;
                     bool m_dataHasBeenSet;

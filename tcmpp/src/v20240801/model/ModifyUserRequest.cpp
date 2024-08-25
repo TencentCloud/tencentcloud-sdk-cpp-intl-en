@@ -26,7 +26,8 @@ ModifyUserRequest::ModifyUserRequest() :
     m_userIdHasBeenSet(false),
     m_userNameHasBeenSet(false),
     m_accountTypeHasBeenSet(false),
-    m_platformIdHasBeenSet(false)
+    m_platformIdHasBeenSet(false),
+    m_userAccountHasBeenSet(false)
 {
 }
 
@@ -67,6 +68,14 @@ string ModifyUserRequest::ToJsonString() const
         string key = "PlatformId";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_platformId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_userAccountHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "UserAccount";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_userAccount.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -139,6 +148,22 @@ void ModifyUserRequest::SetPlatformId(const string& _platformId)
 bool ModifyUserRequest::PlatformIdHasBeenSet() const
 {
     return m_platformIdHasBeenSet;
+}
+
+string ModifyUserRequest::GetUserAccount() const
+{
+    return m_userAccount;
+}
+
+void ModifyUserRequest::SetUserAccount(const string& _userAccount)
+{
+    m_userAccount = _userAccount;
+    m_userAccountHasBeenSet = true;
+}
+
+bool ModifyUserRequest::UserAccountHasBeenSet() const
+{
+    return m_userAccountHasBeenSet;
 }
 
 

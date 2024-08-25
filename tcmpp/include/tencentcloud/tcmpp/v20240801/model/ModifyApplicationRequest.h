@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool PlatformIdHasBeenSet() const;
 
                     /**
-                     * 获取Android package name
-                     * @return AndroidAppKey Android package name
+                     * 获取Android app package name
+                     * @return AndroidAppKey Android app package name
                      * 
                      */
                     std::string GetAndroidAppKey() const;
 
                     /**
-                     * 设置Android package name
-                     * @param _androidAppKey Android package name
+                     * 设置Android app package name
+                     * @param _androidAppKey Android app package name
                      * 
                      */
                     void SetAndroidAppKey(const std::string& _androidAppKey);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool AndroidAppKeyHasBeenSet() const;
 
                     /**
-                     * 获取iOS bundleId
-                     * @return IosAppKey iOS bundleId
+                     * 获取iOS App bundleId
+                     * @return IosAppKey iOS App bundleId
                      * 
                      */
                     std::string GetIosAppKey() const;
 
                     /**
-                     * 设置iOS bundleId
-                     * @param _iosAppKey iOS bundleId
+                     * 设置iOS App bundleId
+                     * @param _iosAppKey iOS App bundleId
                      * 
                      */
                     void SetIosAppKey(const std::string& _iosAppKey);
@@ -209,48 +209,6 @@ namespace TencentCloud
                      * 
                      */
                     bool RemarkHasBeenSet() const;
-
-                    /**
-                     * 获取Android App download address
-                     * @return AndroidAppURL Android App download address
-                     * 
-                     */
-                    std::string GetAndroidAppURL() const;
-
-                    /**
-                     * 设置Android App download address
-                     * @param _androidAppURL Android App download address
-                     * 
-                     */
-                    void SetAndroidAppURL(const std::string& _androidAppURL);
-
-                    /**
-                     * 判断参数 AndroidAppURL 是否已赋值
-                     * @return AndroidAppURL 是否已赋值
-                     * 
-                     */
-                    bool AndroidAppURLHasBeenSet() const;
-
-                    /**
-                     * 获取iOS App download address
-                     * @return IosAppURL iOS App download address
-                     * 
-                     */
-                    std::string GetIosAppURL() const;
-
-                    /**
-                     * 设置iOS App download address
-                     * @param _iosAppURL iOS App download address
-                     * 
-                     */
-                    void SetIosAppURL(const std::string& _iosAppURL);
-
-                    /**
-                     * 判断参数 IosAppURL 是否已赋值
-                     * @return IosAppURL 是否已赋值
-                     * 
-                     */
-                    bool IosAppURLHasBeenSet() const;
 
                 private:
 
@@ -285,13 +243,13 @@ namespace TencentCloud
                     bool m_platformIdHasBeenSet;
 
                     /**
-                     * Android package name
+                     * Android app package name
                      */
                     std::string m_androidAppKey;
                     bool m_androidAppKeyHasBeenSet;
 
                     /**
-                     * iOS bundleId
+                     * iOS App bundleId
                      */
                     std::string m_iosAppKey;
                     bool m_iosAppKeyHasBeenSet;
@@ -301,18 +259,6 @@ namespace TencentCloud
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
-
-                    /**
-                     * Android App download address
-                     */
-                    std::string m_androidAppURL;
-                    bool m_androidAppURLHasBeenSet;
-
-                    /**
-                     * iOS App download address
-                     */
-                    std::string m_iosAppURL;
-                    bool m_iosAppURLHasBeenSet;
 
                 };
             }

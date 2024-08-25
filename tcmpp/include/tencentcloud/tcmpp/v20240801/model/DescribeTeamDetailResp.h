@@ -263,6 +263,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool RegisterLinkHasBeenSet() const;
 
+                    /**
+                     * 获取Application name. It’s required when querying details of a mini program team.
+                     * @return ApplicationName Application name. It’s required when querying details of a mini program team.
+                     * 
+                     */
+                    std::string GetApplicationName() const;
+
+                    /**
+                     * 设置Application name. It’s required when querying details of a mini program team.
+                     * @param _applicationName Application name. It’s required when querying details of a mini program team.
+                     * 
+                     */
+                    void SetApplicationName(const std::string& _applicationName);
+
+                    /**
+                     * 判断参数 ApplicationName 是否已赋值
+                     * @return ApplicationName 是否已赋值
+                     * 
+                     */
+                    bool ApplicationNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -325,6 +346,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_registerLink;
                     bool m_registerLinkHasBeenSet;
+
+                    /**
+                     * Application name. It’s required when querying details of a mini program team.
+                     */
+                    std::string m_applicationName;
+                    bool m_applicationNameHasBeenSet;
 
                 };
             }

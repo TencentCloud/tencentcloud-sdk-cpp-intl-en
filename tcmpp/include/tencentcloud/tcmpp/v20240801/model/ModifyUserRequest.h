@@ -126,6 +126,27 @@ namespace TencentCloud
                      */
                     bool PlatformIdHasBeenSet() const;
 
+                    /**
+                     * 获取Account
+                     * @return UserAccount Account
+                     * @deprecated
+                     */
+                    std::string GetUserAccount() const;
+
+                    /**
+                     * 设置Account
+                     * @param _userAccount Account
+                     * @deprecated
+                     */
+                    void SetUserAccount(const std::string& _userAccount);
+
+                    /**
+                     * 判断参数 UserAccount 是否已赋值
+                     * @return UserAccount 是否已赋值
+                     * @deprecated
+                     */
+                    bool UserAccountHasBeenSet() const;
+
                 private:
 
                     /**
@@ -151,6 +172,12 @@ namespace TencentCloud
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;
+
+                    /**
+                     * Account
+                     */
+                    std::string m_userAccount;
+                    bool m_userAccountHasBeenSet;
 
                 };
             }

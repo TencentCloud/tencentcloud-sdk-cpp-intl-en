@@ -101,7 +101,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Teams Associated team
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
+                     * @deprecated
                      */
                     std::string GetTeams() const;
 
@@ -110,14 +110,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _teams Associated team
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
+                     * @deprecated
                      */
                     void SetTeams(const std::string& _teams);
 
                     /**
                      * 判断参数 Teams 是否已赋值
                      * @return Teams 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool TeamsHasBeenSet() const;
 
@@ -221,6 +221,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool StatusHasBeenSet() const;
 
+                    /**
+                     * 获取Team name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TeamName Team name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetTeamName() const;
+
+                    /**
+                     * 设置Team name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _teamName Team name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetTeamName(const std::string& _teamName);
+
+                    /**
+                     * 判断参数 TeamName 是否已赋值
+                     * @return TeamName 是否已赋值
+                     * 
+                     */
+                    bool TeamNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -271,6 +296,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
+
+                    /**
+                     * Team name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_teamName;
+                    bool m_teamNameHasBeenSet;
 
                 };
             }

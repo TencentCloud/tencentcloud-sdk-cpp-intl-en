@@ -24,41 +24,59 @@ set(tcmpp_public_header_model
   include/tencentcloud/tcmpp/v20240801/model/DescribeMNPVersionCompileTaskExtInfo.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeOfflineMNPPackageRequest.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeRoleDetailRequest.h
-  include/tencentcloud/tcmpp/v20240801/model/DescribeSensitiveApiAuthListRequest.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeMNPAllStageVersionsRequest.h
+  include/tencentcloud/tcmpp/v20240801/model/ModifyApplicationRequest.h
   include/tencentcloud/tcmpp/v20240801/model/ModifyUserPasswordRequest.h
-  include/tencentcloud/tcmpp/v20240801/model/ModifyMNPStatusOfflineResponse.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeTeamMembersInfoPageResp.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeDomainTeamListPageResp.h
   include/tencentcloud/tcmpp/v20240801/model/DeleteUserRequest.h
   include/tencentcloud/tcmpp/v20240801/model/ModifyPlatformAuditStatusResponse.h
-  include/tencentcloud/tcmpp/v20240801/model/DescribeRoleListResponse.h
-  include/tencentcloud/tcmpp/v20240801/model/ModifyOnlineVersionResponse.h
-  include/tencentcloud/tcmpp/v20240801/model/DescribeTeamMemberListRequest.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeMNPCategoryResponse.h
+  include/tencentcloud/tcmpp/v20240801/model/CreateApplicationSensitiveAPIReq.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeSensitiveAPIListRequest.h
+  include/tencentcloud/tcmpp/v20240801/model/CreateMNPApprovalRequest.h
+  include/tencentcloud/tcmpp/v20240801/model/RemoveMNPRequest.h
   include/tencentcloud/tcmpp/v20240801/model/DeleteTeamMemberResponse.h
+  include/tencentcloud/tcmpp/v20240801/model/RemoveMNPResponse.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeMNPListResp.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeMNPPreviewResp.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeMNPVersionResponse.h
   include/tencentcloud/tcmpp/v20240801/model/ModifyApplicationResponse.h
+  include/tencentcloud/tcmpp/v20240801/model/EnableApplicationSensitiveAPIResponse.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeTeamDomainListRequest.h
-  include/tencentcloud/tcmpp/v20240801/model/DescribeSensitiveAPIAuditListResponse.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeSensitiveApiAuthListRequest.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeMNPListResponse.h
   include/tencentcloud/tcmpp/v20240801/model/ModifyMNPStatusOfflineRequest.h
-  include/tencentcloud/tcmpp/v20240801/model/DescribeSensitiveAPIAuditListRequest.h
+  include/tencentcloud/tcmpp/v20240801/model/ProcessMNPApprovalResponse.h
+  include/tencentcloud/tcmpp/v20240801/model/ResourceIdStringInfo.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeGlobalDomainACLRequest.h
   include/tencentcloud/tcmpp/v20240801/model/DeleteTeamResponse.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeRevertOnlineVersionPageResp.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeMNPSensitiveAPIPermissionApprovalRequest.h
   include/tencentcloud/tcmpp/v20240801/model/CreateOnlineApplyRequest.h
   include/tencentcloud/tcmpp/v20240801/model/CheckGlobalDomainRequest.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeTeamMemberInfoResp.h
+  include/tencentcloud/tcmpp/v20240801/model/ConfigureMNPPreviewResponse.h
   include/tencentcloud/tcmpp/v20240801/model/ModifyMNPVersionPreviewRequest.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeMNPManagerListResp.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeSensitiveApiApplyDetailResponse.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeSimpleApplicationInfoListResponse.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeMNPSensitiveAPIPermissionApprovalListData.h
   include/tencentcloud/tcmpp/v20240801/model/DeleteMNPResponse.h
+  include/tencentcloud/tcmpp/v20240801/model/ModifySensitiveAPIAuditStatusRequest.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeMPAllStageVersionsResp.h
   include/tencentcloud/tcmpp/v20240801/model/GlobalDomainDescribeListPageResp.h
-  include/tencentcloud/tcmpp/v20240801/model/DescribeShowCaseResp.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeMNPSensitiveAPIPermissionListRequest.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeApplicationListRequest.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeTeamResponse.h
   include/tencentcloud/tcmpp/v20240801/model/DeleteTeamRequest.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeRoleListRequest.h
-  include/tencentcloud/tcmpp/v20240801/model/StringData.h
+  include/tencentcloud/tcmpp/v20240801/model/ReleaseMNPVersionResponse.h
   include/tencentcloud/tcmpp/v20240801/model/CreateTeamMemberResponse.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeMNPDetailResponse.h
   include/tencentcloud/tcmpp/v20240801/model/DeleteSensitiveAPIResponse.h
-  include/tencentcloud/tcmpp/v20240801/model/ShowCaseRelAppInfo.h
+  include/tencentcloud/tcmpp/v20240801/model/ModifyMNPStatusOfflineResponse.h
+  include/tencentcloud/tcmpp/v20240801/model/ModifyTeamRequest.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeMNPTypeRequest.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeDomainInfoRequest.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeMNPTypeResponse.h
@@ -68,33 +86,48 @@ set(tcmpp_public_header_model
   include/tencentcloud/tcmpp/v20240801/model/CreateSensitiveAPIRequest.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeUserDetailResp.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeSensitiveApiAuthPageParam.h
+  include/tencentcloud/tcmpp/v20240801/model/ProcessMNPSensitiveAPIPermissionApprovalResponse.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeApplicationListResponse.h
-  include/tencentcloud/tcmpp/v20240801/model/DisableTeamDomainResponse.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeSensitiveApiApplyDetail.h
   include/tencentcloud/tcmpp/v20240801/model/ModifyGlobalDomainResponse.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeRoleListResp.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeTeamListInfoResp.h
+  include/tencentcloud/tcmpp/v20240801/model/CreateMNPSensitiveAPIPermissionApprovalRequest.h
   include/tencentcloud/tcmpp/v20240801/model/DeleteMNPRequest.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeRoleDetailResp.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeSimpleTeamListResp.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeMNPManagerListRequest.h
   include/tencentcloud/tcmpp/v20240801/model/ApplicationSimpleInfo.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeMNPAllStageVersionsResponse.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeTeamListResponse.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeUserListResp.h
+  include/tencentcloud/tcmpp/v20240801/model/ApprovalItem.h
+  include/tencentcloud/tcmpp/v20240801/model/ShowCaseRelAppInfo.h
   include/tencentcloud/tcmpp/v20240801/model/CreateTeamMemberRequest.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeTeamMembersInfoResp.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeRoleListResponse.h
+  include/tencentcloud/tcmpp/v20240801/model/CreateMNPVersionRequest.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeMNPListData.h
+  include/tencentcloud/tcmpp/v20240801/model/ModifyOnlineVersionResponse.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeMNPDetailRequest.h
   include/tencentcloud/tcmpp/v20240801/model/DeleteSensitiveAPIRequest.h
-  include/tencentcloud/tcmpp/v20240801/model/CreateTeamMemberInfoResp.h
+  include/tencentcloud/tcmpp/v20240801/model/CreateSensitiveApiApplyRequest.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeMNPApprovalListRequest.h
+  include/tencentcloud/tcmpp/v20240801/model/ModifyMNPDomainRequest.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeApplicationMNPVersionAuditListRequest.h
   include/tencentcloud/tcmpp/v20240801/model/ModifyApplicationAppKeyResponse.h
   include/tencentcloud/tcmpp/v20240801/model/SimpleStringKeyValue.h
-  include/tencentcloud/tcmpp/v20240801/model/ModifyTeamRequest.h
+  include/tencentcloud/tcmpp/v20240801/model/MNPDetail.h
   include/tencentcloud/tcmpp/v20240801/model/CreateTeamMemberInfoReq.h
+  include/tencentcloud/tcmpp/v20240801/model/DisableEnterpriseDomainResp.h
   include/tencentcloud/tcmpp/v20240801/model/ModifyApplicationAppUrlResponse.h
-  include/tencentcloud/tcmpp/v20240801/model/DownloadApplicationConfigResp.h
+  include/tencentcloud/tcmpp/v20240801/model/DisableTeamDomainResponse.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeTempSecret4UploadFile2CosRequest.h
   include/tencentcloud/tcmpp/v20240801/model/CreateUserResponse.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeDomainTeamListResponse.h
+  include/tencentcloud/tcmpp/v20240801/model/SensitiveApiAuditInfoPageResp.h
+  include/tencentcloud/tcmpp/v20240801/model/ModifyMNPDomainResponse.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeApplicationConfigFileRequest.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeSimpleTeamListRequest.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeUserListRequest.h
   include/tencentcloud/tcmpp/v20240801/model/DeleteUserResponse.h
@@ -102,99 +135,140 @@ set(tcmpp_public_header_model
   include/tencentcloud/tcmpp/v20240801/model/DescribeOnlineVersionResponse.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeApplicationResponse.h
   include/tencentcloud/tcmpp/v20240801/model/CheckGlobalDomainResponse.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeDomainInfoResponse.h
+  include/tencentcloud/tcmpp/v20240801/model/CreateMNPVersionResp.h
   include/tencentcloud/tcmpp/v20240801/model/CreateGlobalDomainResponse.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeDomainInfoParam.h
-  include/tencentcloud/tcmpp/v20240801/model/DisableEnterpriseDomainResp.h
+  include/tencentcloud/tcmpp/v20240801/model/CreateMNPApprovalResponse.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeMNPApprovalListData.h
   include/tencentcloud/tcmpp/v20240801/model/ResourceIdInfo.h
-  include/tencentcloud/tcmpp/v20240801/model/ModifyTeamMemberRequest.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeMNPPreviewResponse.h
   include/tencentcloud/tcmpp/v20240801/model/CreateGlobalDomainRequest.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeMNPBoardResponse.h
   include/tencentcloud/tcmpp/v20240801/model/ModifyUserRequest.h
   include/tencentcloud/tcmpp/v20240801/model/CreateMNPResponse.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeTeamMembersResponse.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeMNPSensitiveAPIPermissionApprovalListResp.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeMNPDomainACLRequest.h
+  include/tencentcloud/tcmpp/v20240801/model/ProcessMNPApprovalRequest.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeUserListResponse.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeApplicationSensitiveAPIListData.h
   include/tencentcloud/tcmpp/v20240801/model/ApplicationInfo.h
+  include/tencentcloud/tcmpp/v20240801/model/CreateGlobalDomainACLResponse.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeTeamDomainListPageResp.h
+  include/tencentcloud/tcmpp/v20240801/model/ProcessMNPSensitiveAPIPermissionApprovalRequest.h
   include/tencentcloud/tcmpp/v20240801/model/ModifyUserPasswordResponse.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeMNPManagerListData.h
   include/tencentcloud/tcmpp/v20240801/model/CreateDomainResponse.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeMNPSensitiveAPIPermissionListData.h
   include/tencentcloud/tcmpp/v20240801/model/SensitiveApiInfoResp.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeSensitiveApiAuthListResponse.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeMNPOfflinePackageURLResponse.h
   include/tencentcloud/tcmpp/v20240801/model/ModifyDomainRequest.h
   include/tencentcloud/tcmpp/v20240801/model/AuditInfoReq.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeConsoleMNPVersionCompileTaskResponse.h
   include/tencentcloud/tcmpp/v20240801/model/CreateMNPVersionCompileTaskResp.h
-  include/tencentcloud/tcmpp/v20240801/model/ModifySensitiveAPIAuditStatusRequest.h
-  include/tencentcloud/tcmpp/v20240801/model/DescribeSensitiveApiAuthListParam.h
+  include/tencentcloud/tcmpp/v20240801/model/GlobalDomainModifyRespResp.h
+  include/tencentcloud/tcmpp/v20240801/model/DisableApplicationSensitiveAPIRequest.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeApplicationSensitiveAPIListResponse.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeSensitiveAPIListResponse.h
   include/tencentcloud/tcmpp/v20240801/model/DeleteApplicationRequest.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeGlobalDomainListResponse.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeSensitiveAPIAuditListResponse.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeUserRequest.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeMNPManagerDetailRequest.h
   include/tencentcloud/tcmpp/v20240801/model/ModifyGlobalDomainRequest.h
   include/tencentcloud/tcmpp/v20240801/model/CreateSensitiveAPIReq.h
-  include/tencentcloud/tcmpp/v20240801/model/ModifyTeamMemberResponse.h
-  include/tencentcloud/tcmpp/v20240801/model/DescribeTeamMembersResponse.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeMNPReleasedVersionHistoryRequest.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeMNPSensitiveAPIPermissionListResponse.h
   include/tencentcloud/tcmpp/v20240801/model/AddTeamMemberResponse.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeMNPResponse.h
   include/tencentcloud/tcmpp/v20240801/model/CreateTeamResponse.h
-  include/tencentcloud/tcmpp/v20240801/model/MNPDetail.h
-  include/tencentcloud/tcmpp/v20240801/model/SensitiveApiAuditInfoPageResp.h
+  include/tencentcloud/tcmpp/v20240801/model/CreateMNPSensitiveAPIPermissionApprovalResponse.h
+  include/tencentcloud/tcmpp/v20240801/model/RollbackMNPVersionRequest.h
   include/tencentcloud/tcmpp/v20240801/model/ModifyPlatformAuditStatusRequest.h
   include/tencentcloud/tcmpp/v20240801/model/ModifyMNPRequest.h
-  include/tencentcloud/tcmpp/v20240801/model/DescribeSensitiveAPIListRequest.h
+  include/tencentcloud/tcmpp/v20240801/model/CreateMNPDomainACLRequest.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeTeamDetailResp.h
+  include/tencentcloud/tcmpp/v20240801/model/RollbackMNPVersionResponse.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeMNPVersionPreviewRequest.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeUserDetailResponse.h
   include/tencentcloud/tcmpp/v20240801/model/CreateTeamRequest.h
   include/tencentcloud/tcmpp/v20240801/model/CreateDomainRequest.h
+  include/tencentcloud/tcmpp/v20240801/model/CreateApplicationSensitiveAPIRequest.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeMNPSensitiveAPIPermissionListResp.h
+  include/tencentcloud/tcmpp/v20240801/model/ReleaseMNPVersionRequest.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeRoleListData.h
+  include/tencentcloud/tcmpp/v20240801/model/StringData.h
   include/tencentcloud/tcmpp/v20240801/model/CreateConsoleMNPVersionCompileTaskRequest.h
+  include/tencentcloud/tcmpp/v20240801/model/ModifyTeamMemberResponse.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeGlobalDomainsResp.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeTeamDomainListResponse.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeMNPPrivacyRequest.h
-  include/tencentcloud/tcmpp/v20240801/model/CreateSensitiveApiApplyRequest.h
+  include/tencentcloud/tcmpp/v20240801/model/GlobalDomainDescribeListInfoResp.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeMNPApprovalListResp.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeMNPSensitiveAPIPermissionApprovalData.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeMNPSensitiveAPIPermissionApprovalListResponse.h
   include/tencentcloud/tcmpp/v20240801/model/QueryOnlineVersionResp.h
   include/tencentcloud/tcmpp/v20240801/model/ModifyApplicationAppUrlRequest.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeMNPSensitiveAPIPermissionApprovalListRequest.h
+  include/tencentcloud/tcmpp/v20240801/model/ConfigureMNPPreviewRequest.h
   include/tencentcloud/tcmpp/v20240801/model/CreatePlatformAuditRequest.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeMNPOfflinePackageURLRequest.h
   include/tencentcloud/tcmpp/v20240801/model/CreateMNPRequest.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeApplicationMNPVersionAuditListInfoResp.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeTeamRequest.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeApplicationConfigResponse.h
   include/tencentcloud/tcmpp/v20240801/model/ModifyDomainResponse.h
   include/tencentcloud/tcmpp/v20240801/model/ApplicationDetail.h
-  include/tencentcloud/tcmpp/v20240801/model/ModifyApplicationRequest.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeMNPRequest.h
   include/tencentcloud/tcmpp/v20240801/model/CreateUserRequest.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeGlobalDomainListRequest.h
-  include/tencentcloud/tcmpp/v20240801/model/ModifyTeamResponse.h
+  include/tencentcloud/tcmpp/v20240801/model/CreateTeamMemberInfoResp.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeShowCaseResp.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeTeamMemberListRequest.h
+  include/tencentcloud/tcmpp/v20240801/model/PresetResp.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeTeamDomainListInfoResp.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeMNPSensitiveAPIPermissionApprovalResponse.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeApplicationConfigRequest.h
+  include/tencentcloud/tcmpp/v20240801/model/ModifyTeamMemberRequest.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeGlobalDomainsListData.h
   include/tencentcloud/tcmpp/v20240801/model/ModifyUserResponse.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeConsoleMNPVersionCompileTaskRequest.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeMNPManagerDetailData.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeApplicationMNPVersionAuditListPageResp.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeUserListData.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeSensitiveApiApplyDetailRequest.h
   include/tencentcloud/tcmpp/v20240801/model/CreateOnlineApplyResponse.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeApplicationRequest.h
   include/tencentcloud/tcmpp/v20240801/model/SensitiveApiPageInfo.h
-  include/tencentcloud/tcmpp/v20240801/model/GlobalDomainDescribeListInfoResp.h
+  include/tencentcloud/tcmpp/v20240801/model/CreateMNPVersionResponse.h
   include/tencentcloud/tcmpp/v20240801/model/ModifyMNPResponse.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeSimpleApplicationInfoListRequest.h
   include/tencentcloud/tcmpp/v20240801/model/DisableTeamDomainRequest.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeMNPDomainACLResponse.h
   include/tencentcloud/tcmpp/v20240801/model/ApplicationPageInfo.h
   include/tencentcloud/tcmpp/v20240801/model/CreateConsoleMNPVersionCompileTaskResponse.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeMNPVersionCompileTaskResp.h
   include/tencentcloud/tcmpp/v20240801/model/CreateDomainParam.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeTeamPageResp.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeApplicationMNPVersionAuditListResponse.h
   include/tencentcloud/tcmpp/v20240801/model/ApplicationSimpleInfoResp.h
+  include/tencentcloud/tcmpp/v20240801/model/ModifyTeamResponse.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeSimpleTeamListResponse.h
-  include/tencentcloud/tcmpp/v20240801/model/DescribeTeamPageResp.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeMNPVersionResp.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeApplicationConfigFileResponse.h
   include/tencentcloud/tcmpp/v20240801/model/BooleanInfo.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeUserDetailRequest.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeMNPBoardRequest.h
-  include/tencentcloud/tcmpp/v20240801/model/UploadFileTempSecret.h
-  include/tencentcloud/tcmpp/v20240801/model/DescribeTeamMembersRequest.h
+  include/tencentcloud/tcmpp/v20240801/model/DownloadApplicationConfigResp.h
+  include/tencentcloud/tcmpp/v20240801/model/CreateMNPDomainACLResponse.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeOfflineMNPPackageResponse.h
   include/tencentcloud/tcmpp/v20240801/model/SensitiveApiAuditInfoResp.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeTeamListRequest.h
-  include/tencentcloud/tcmpp/v20240801/model/DescribeTeamMembersInfoPageResp.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeMNPApprovalListResponse.h
   include/tencentcloud/tcmpp/v20240801/model/ModifyApplicationAppKeyRequest.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeMNPVersionRequest.h
   include/tencentcloud/tcmpp/v20240801/model/CreateSensitiveApiApplyResponse.h
   include/tencentcloud/tcmpp/v20240801/model/ApplicationSimpleListInfoResp.h
   include/tencentcloud/tcmpp/v20240801/model/CreateApplicationRequest.h
@@ -202,32 +276,43 @@ set(tcmpp_public_header_model
   include/tencentcloud/tcmpp/v20240801/model/ApplicationMNPRelInfoResp.h
   include/tencentcloud/tcmpp/v20240801/model/CreateSensitiveAPIResponse.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeTempSecret4UploadFile2CosResponse.h
-  include/tencentcloud/tcmpp/v20240801/model/DescribeSensitiveApiApplyDetail.h
-  include/tencentcloud/tcmpp/v20240801/model/DescribeSensitiveApiApplyDetailRequest.h
-  include/tencentcloud/tcmpp/v20240801/model/DescribeDomainInfoResponse.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeSensitiveAPIAuditListRequest.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeMNPReleasedVersionHistoryResponse.h
+  include/tencentcloud/tcmpp/v20240801/model/DeleteApplicationSensitiveAPIRequest.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeDomainTeamListRequest.h
   include/tencentcloud/tcmpp/v20240801/model/AddTeamMemberRequest.h
   include/tencentcloud/tcmpp/v20240801/model/GlobalDomainCheckResp.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeMNPVersionPreviewResponse.h
+  include/tencentcloud/tcmpp/v20240801/model/DisableApplicationSensitiveAPIResponse.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeUserResponse.h
   include/tencentcloud/tcmpp/v20240801/model/DeleteTeamMemberRequest.h
   include/tencentcloud/tcmpp/v20240801/model/ModifyOnlineVersionRequest.h
-  include/tencentcloud/tcmpp/v20240801/model/GlobalDomainModifyRespResp.h
+  include/tencentcloud/tcmpp/v20240801/model/UploadFileTempSecret.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeApplicationSensitiveAPIListResp.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeSensitiveApiAuthListParam.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeDomainTeamListInfoResp.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeRoleDetailResponse.h
+  include/tencentcloud/tcmpp/v20240801/model/CreateApplicationSensitiveAPIResponse.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeGlobalDomainACLResponse.h
   include/tencentcloud/tcmpp/v20240801/model/VersionBoardResp.h
   include/tencentcloud/tcmpp/v20240801/model/CreatePresetKeyRequest.h
-  include/tencentcloud/tcmpp/v20240801/model/PresetResp.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeTeamMembersRequest.h
   include/tencentcloud/tcmpp/v20240801/model/CreateApplicationResponse.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeMNPCategoryRequest.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeMNPVersionCompileTaskSubSimpleInfo.h
-  include/tencentcloud/tcmpp/v20240801/model/DescribeTeamResponse.h
+  include/tencentcloud/tcmpp/v20240801/model/DeleteApplicationSensitiveAPIResponse.h
   include/tencentcloud/tcmpp/v20240801/model/ModifyMNPVersionPreviewResponse.h
-  include/tencentcloud/tcmpp/v20240801/model/ResourceIdStringInfo.h
+  include/tencentcloud/tcmpp/v20240801/model/EnableApplicationSensitiveAPIRequest.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeMNPManagerDetailResponse.h
   include/tencentcloud/tcmpp/v20240801/model/DeleteGlobalDomainRequest.h
   include/tencentcloud/tcmpp/v20240801/model/GlobalDomainDeleteResp.h
   include/tencentcloud/tcmpp/v20240801/model/DeleteGlobalDomainResponse.h
   include/tencentcloud/tcmpp/v20240801/model/ModifySensitiveAPIAuditStatusResponse.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeMNPListRequest.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeMNPPreviewRequest.h
   include/tencentcloud/tcmpp/v20240801/model/CreateGlobalDomainResp.h
+  include/tencentcloud/tcmpp/v20240801/model/CreateGlobalDomainACLRequest.h
+  include/tencentcloud/tcmpp/v20240801/model/DescribeApplicationSensitiveAPIListRequest.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeTeamMemberListResponse.h
   include/tencentcloud/tcmpp/v20240801/model/DescribeTeamMemberListPageResp.h
   )
@@ -239,41 +324,59 @@ set(tcmpp_src
   src/v20240801/model/DescribeMNPVersionCompileTaskExtInfo.cpp
   src/v20240801/model/DescribeOfflineMNPPackageRequest.cpp
   src/v20240801/model/DescribeRoleDetailRequest.cpp
-  src/v20240801/model/DescribeSensitiveApiAuthListRequest.cpp
+  src/v20240801/model/DescribeMNPAllStageVersionsRequest.cpp
+  src/v20240801/model/ModifyApplicationRequest.cpp
   src/v20240801/model/ModifyUserPasswordRequest.cpp
-  src/v20240801/model/ModifyMNPStatusOfflineResponse.cpp
+  src/v20240801/model/DescribeTeamMembersInfoPageResp.cpp
   src/v20240801/model/DescribeDomainTeamListPageResp.cpp
   src/v20240801/model/DeleteUserRequest.cpp
   src/v20240801/model/ModifyPlatformAuditStatusResponse.cpp
-  src/v20240801/model/DescribeRoleListResponse.cpp
-  src/v20240801/model/ModifyOnlineVersionResponse.cpp
-  src/v20240801/model/DescribeTeamMemberListRequest.cpp
+  src/v20240801/model/DescribeMNPCategoryResponse.cpp
+  src/v20240801/model/CreateApplicationSensitiveAPIReq.cpp
+  src/v20240801/model/DescribeSensitiveAPIListRequest.cpp
+  src/v20240801/model/CreateMNPApprovalRequest.cpp
+  src/v20240801/model/RemoveMNPRequest.cpp
   src/v20240801/model/DeleteTeamMemberResponse.cpp
+  src/v20240801/model/RemoveMNPResponse.cpp
+  src/v20240801/model/DescribeMNPListResp.cpp
+  src/v20240801/model/DescribeMNPPreviewResp.cpp
+  src/v20240801/model/DescribeMNPVersionResponse.cpp
   src/v20240801/model/ModifyApplicationResponse.cpp
+  src/v20240801/model/EnableApplicationSensitiveAPIResponse.cpp
   src/v20240801/model/DescribeTeamDomainListRequest.cpp
-  src/v20240801/model/DescribeSensitiveAPIAuditListResponse.cpp
+  src/v20240801/model/DescribeSensitiveApiAuthListRequest.cpp
+  src/v20240801/model/DescribeMNPListResponse.cpp
   src/v20240801/model/ModifyMNPStatusOfflineRequest.cpp
-  src/v20240801/model/DescribeSensitiveAPIAuditListRequest.cpp
+  src/v20240801/model/ProcessMNPApprovalResponse.cpp
+  src/v20240801/model/ResourceIdStringInfo.cpp
+  src/v20240801/model/DescribeGlobalDomainACLRequest.cpp
   src/v20240801/model/DeleteTeamResponse.cpp
   src/v20240801/model/DescribeRevertOnlineVersionPageResp.cpp
+  src/v20240801/model/DescribeMNPSensitiveAPIPermissionApprovalRequest.cpp
   src/v20240801/model/CreateOnlineApplyRequest.cpp
   src/v20240801/model/CheckGlobalDomainRequest.cpp
   src/v20240801/model/DescribeTeamMemberInfoResp.cpp
+  src/v20240801/model/ConfigureMNPPreviewResponse.cpp
   src/v20240801/model/ModifyMNPVersionPreviewRequest.cpp
   src/v20240801/model/DescribeMNPManagerListResp.cpp
   src/v20240801/model/DescribeSensitiveApiApplyDetailResponse.cpp
   src/v20240801/model/DescribeSimpleApplicationInfoListResponse.cpp
+  src/v20240801/model/DescribeMNPSensitiveAPIPermissionApprovalListData.cpp
   src/v20240801/model/DeleteMNPResponse.cpp
+  src/v20240801/model/ModifySensitiveAPIAuditStatusRequest.cpp
+  src/v20240801/model/DescribeMPAllStageVersionsResp.cpp
   src/v20240801/model/GlobalDomainDescribeListPageResp.cpp
-  src/v20240801/model/DescribeShowCaseResp.cpp
+  src/v20240801/model/DescribeMNPSensitiveAPIPermissionListRequest.cpp
   src/v20240801/model/DescribeApplicationListRequest.cpp
+  src/v20240801/model/DescribeTeamResponse.cpp
   src/v20240801/model/DeleteTeamRequest.cpp
   src/v20240801/model/DescribeRoleListRequest.cpp
-  src/v20240801/model/StringData.cpp
+  src/v20240801/model/ReleaseMNPVersionResponse.cpp
   src/v20240801/model/CreateTeamMemberResponse.cpp
   src/v20240801/model/DescribeMNPDetailResponse.cpp
   src/v20240801/model/DeleteSensitiveAPIResponse.cpp
-  src/v20240801/model/ShowCaseRelAppInfo.cpp
+  src/v20240801/model/ModifyMNPStatusOfflineResponse.cpp
+  src/v20240801/model/ModifyTeamRequest.cpp
   src/v20240801/model/DescribeMNPTypeRequest.cpp
   src/v20240801/model/DescribeDomainInfoRequest.cpp
   src/v20240801/model/DescribeMNPTypeResponse.cpp
@@ -283,33 +386,48 @@ set(tcmpp_src
   src/v20240801/model/CreateSensitiveAPIRequest.cpp
   src/v20240801/model/DescribeUserDetailResp.cpp
   src/v20240801/model/DescribeSensitiveApiAuthPageParam.cpp
+  src/v20240801/model/ProcessMNPSensitiveAPIPermissionApprovalResponse.cpp
   src/v20240801/model/DescribeApplicationListResponse.cpp
-  src/v20240801/model/DisableTeamDomainResponse.cpp
+  src/v20240801/model/DescribeSensitiveApiApplyDetail.cpp
   src/v20240801/model/ModifyGlobalDomainResponse.cpp
   src/v20240801/model/DescribeRoleListResp.cpp
   src/v20240801/model/DescribeTeamListInfoResp.cpp
+  src/v20240801/model/CreateMNPSensitiveAPIPermissionApprovalRequest.cpp
   src/v20240801/model/DeleteMNPRequest.cpp
   src/v20240801/model/DescribeRoleDetailResp.cpp
   src/v20240801/model/DescribeSimpleTeamListResp.cpp
   src/v20240801/model/DescribeMNPManagerListRequest.cpp
   src/v20240801/model/ApplicationSimpleInfo.cpp
+  src/v20240801/model/DescribeMNPAllStageVersionsResponse.cpp
   src/v20240801/model/DescribeTeamListResponse.cpp
   src/v20240801/model/DescribeUserListResp.cpp
+  src/v20240801/model/ApprovalItem.cpp
+  src/v20240801/model/ShowCaseRelAppInfo.cpp
   src/v20240801/model/CreateTeamMemberRequest.cpp
   src/v20240801/model/DescribeTeamMembersInfoResp.cpp
+  src/v20240801/model/DescribeRoleListResponse.cpp
+  src/v20240801/model/CreateMNPVersionRequest.cpp
+  src/v20240801/model/DescribeMNPListData.cpp
+  src/v20240801/model/ModifyOnlineVersionResponse.cpp
   src/v20240801/model/DescribeMNPDetailRequest.cpp
   src/v20240801/model/DeleteSensitiveAPIRequest.cpp
-  src/v20240801/model/CreateTeamMemberInfoResp.cpp
+  src/v20240801/model/CreateSensitiveApiApplyRequest.cpp
+  src/v20240801/model/DescribeMNPApprovalListRequest.cpp
+  src/v20240801/model/ModifyMNPDomainRequest.cpp
   src/v20240801/model/DescribeApplicationMNPVersionAuditListRequest.cpp
   src/v20240801/model/ModifyApplicationAppKeyResponse.cpp
   src/v20240801/model/SimpleStringKeyValue.cpp
-  src/v20240801/model/ModifyTeamRequest.cpp
+  src/v20240801/model/MNPDetail.cpp
   src/v20240801/model/CreateTeamMemberInfoReq.cpp
+  src/v20240801/model/DisableEnterpriseDomainResp.cpp
   src/v20240801/model/ModifyApplicationAppUrlResponse.cpp
-  src/v20240801/model/DownloadApplicationConfigResp.cpp
+  src/v20240801/model/DisableTeamDomainResponse.cpp
   src/v20240801/model/DescribeTempSecret4UploadFile2CosRequest.cpp
   src/v20240801/model/CreateUserResponse.cpp
   src/v20240801/model/DescribeDomainTeamListResponse.cpp
+  src/v20240801/model/SensitiveApiAuditInfoPageResp.cpp
+  src/v20240801/model/ModifyMNPDomainResponse.cpp
+  src/v20240801/model/DescribeApplicationConfigFileRequest.cpp
   src/v20240801/model/DescribeSimpleTeamListRequest.cpp
   src/v20240801/model/DescribeUserListRequest.cpp
   src/v20240801/model/DeleteUserResponse.cpp
@@ -317,99 +435,140 @@ set(tcmpp_src
   src/v20240801/model/DescribeOnlineVersionResponse.cpp
   src/v20240801/model/DescribeApplicationResponse.cpp
   src/v20240801/model/CheckGlobalDomainResponse.cpp
+  src/v20240801/model/DescribeDomainInfoResponse.cpp
+  src/v20240801/model/CreateMNPVersionResp.cpp
   src/v20240801/model/CreateGlobalDomainResponse.cpp
   src/v20240801/model/DescribeDomainInfoParam.cpp
-  src/v20240801/model/DisableEnterpriseDomainResp.cpp
+  src/v20240801/model/CreateMNPApprovalResponse.cpp
+  src/v20240801/model/DescribeMNPApprovalListData.cpp
   src/v20240801/model/ResourceIdInfo.cpp
-  src/v20240801/model/ModifyTeamMemberRequest.cpp
+  src/v20240801/model/DescribeMNPPreviewResponse.cpp
   src/v20240801/model/CreateGlobalDomainRequest.cpp
   src/v20240801/model/DescribeMNPBoardResponse.cpp
   src/v20240801/model/ModifyUserRequest.cpp
   src/v20240801/model/CreateMNPResponse.cpp
+  src/v20240801/model/DescribeTeamMembersResponse.cpp
+  src/v20240801/model/DescribeMNPSensitiveAPIPermissionApprovalListResp.cpp
+  src/v20240801/model/DescribeMNPDomainACLRequest.cpp
+  src/v20240801/model/ProcessMNPApprovalRequest.cpp
   src/v20240801/model/DescribeUserListResponse.cpp
+  src/v20240801/model/DescribeApplicationSensitiveAPIListData.cpp
   src/v20240801/model/ApplicationInfo.cpp
+  src/v20240801/model/CreateGlobalDomainACLResponse.cpp
   src/v20240801/model/DescribeTeamDomainListPageResp.cpp
+  src/v20240801/model/ProcessMNPSensitiveAPIPermissionApprovalRequest.cpp
   src/v20240801/model/ModifyUserPasswordResponse.cpp
   src/v20240801/model/DescribeMNPManagerListData.cpp
   src/v20240801/model/CreateDomainResponse.cpp
+  src/v20240801/model/DescribeMNPSensitiveAPIPermissionListData.cpp
   src/v20240801/model/SensitiveApiInfoResp.cpp
   src/v20240801/model/DescribeSensitiveApiAuthListResponse.cpp
+  src/v20240801/model/DescribeMNPOfflinePackageURLResponse.cpp
   src/v20240801/model/ModifyDomainRequest.cpp
   src/v20240801/model/AuditInfoReq.cpp
   src/v20240801/model/DescribeConsoleMNPVersionCompileTaskResponse.cpp
   src/v20240801/model/CreateMNPVersionCompileTaskResp.cpp
-  src/v20240801/model/ModifySensitiveAPIAuditStatusRequest.cpp
-  src/v20240801/model/DescribeSensitiveApiAuthListParam.cpp
+  src/v20240801/model/GlobalDomainModifyRespResp.cpp
+  src/v20240801/model/DisableApplicationSensitiveAPIRequest.cpp
+  src/v20240801/model/DescribeApplicationSensitiveAPIListResponse.cpp
   src/v20240801/model/DescribeSensitiveAPIListResponse.cpp
   src/v20240801/model/DeleteApplicationRequest.cpp
   src/v20240801/model/DescribeGlobalDomainListResponse.cpp
+  src/v20240801/model/DescribeSensitiveAPIAuditListResponse.cpp
+  src/v20240801/model/DescribeUserRequest.cpp
   src/v20240801/model/DescribeMNPManagerDetailRequest.cpp
   src/v20240801/model/ModifyGlobalDomainRequest.cpp
   src/v20240801/model/CreateSensitiveAPIReq.cpp
-  src/v20240801/model/ModifyTeamMemberResponse.cpp
-  src/v20240801/model/DescribeTeamMembersResponse.cpp
+  src/v20240801/model/DescribeMNPReleasedVersionHistoryRequest.cpp
+  src/v20240801/model/DescribeMNPSensitiveAPIPermissionListResponse.cpp
   src/v20240801/model/AddTeamMemberResponse.cpp
+  src/v20240801/model/DescribeMNPResponse.cpp
   src/v20240801/model/CreateTeamResponse.cpp
-  src/v20240801/model/MNPDetail.cpp
-  src/v20240801/model/SensitiveApiAuditInfoPageResp.cpp
+  src/v20240801/model/CreateMNPSensitiveAPIPermissionApprovalResponse.cpp
+  src/v20240801/model/RollbackMNPVersionRequest.cpp
   src/v20240801/model/ModifyPlatformAuditStatusRequest.cpp
   src/v20240801/model/ModifyMNPRequest.cpp
-  src/v20240801/model/DescribeSensitiveAPIListRequest.cpp
+  src/v20240801/model/CreateMNPDomainACLRequest.cpp
   src/v20240801/model/DescribeTeamDetailResp.cpp
+  src/v20240801/model/RollbackMNPVersionResponse.cpp
   src/v20240801/model/DescribeMNPVersionPreviewRequest.cpp
   src/v20240801/model/DescribeUserDetailResponse.cpp
   src/v20240801/model/CreateTeamRequest.cpp
   src/v20240801/model/CreateDomainRequest.cpp
+  src/v20240801/model/CreateApplicationSensitiveAPIRequest.cpp
+  src/v20240801/model/DescribeMNPSensitiveAPIPermissionListResp.cpp
+  src/v20240801/model/ReleaseMNPVersionRequest.cpp
   src/v20240801/model/DescribeRoleListData.cpp
+  src/v20240801/model/StringData.cpp
   src/v20240801/model/CreateConsoleMNPVersionCompileTaskRequest.cpp
+  src/v20240801/model/ModifyTeamMemberResponse.cpp
+  src/v20240801/model/DescribeGlobalDomainsResp.cpp
   src/v20240801/model/DescribeTeamDomainListResponse.cpp
   src/v20240801/model/DescribeMNPPrivacyRequest.cpp
-  src/v20240801/model/CreateSensitiveApiApplyRequest.cpp
+  src/v20240801/model/GlobalDomainDescribeListInfoResp.cpp
+  src/v20240801/model/DescribeMNPApprovalListResp.cpp
+  src/v20240801/model/DescribeMNPSensitiveAPIPermissionApprovalData.cpp
+  src/v20240801/model/DescribeMNPSensitiveAPIPermissionApprovalListResponse.cpp
   src/v20240801/model/QueryOnlineVersionResp.cpp
   src/v20240801/model/ModifyApplicationAppUrlRequest.cpp
+  src/v20240801/model/DescribeMNPSensitiveAPIPermissionApprovalListRequest.cpp
+  src/v20240801/model/ConfigureMNPPreviewRequest.cpp
   src/v20240801/model/CreatePlatformAuditRequest.cpp
+  src/v20240801/model/DescribeMNPOfflinePackageURLRequest.cpp
   src/v20240801/model/CreateMNPRequest.cpp
   src/v20240801/model/DescribeApplicationMNPVersionAuditListInfoResp.cpp
   src/v20240801/model/DescribeTeamRequest.cpp
   src/v20240801/model/DescribeApplicationConfigResponse.cpp
   src/v20240801/model/ModifyDomainResponse.cpp
   src/v20240801/model/ApplicationDetail.cpp
-  src/v20240801/model/ModifyApplicationRequest.cpp
+  src/v20240801/model/DescribeMNPRequest.cpp
   src/v20240801/model/CreateUserRequest.cpp
   src/v20240801/model/DescribeGlobalDomainListRequest.cpp
-  src/v20240801/model/ModifyTeamResponse.cpp
+  src/v20240801/model/CreateTeamMemberInfoResp.cpp
+  src/v20240801/model/DescribeShowCaseResp.cpp
+  src/v20240801/model/DescribeTeamMemberListRequest.cpp
+  src/v20240801/model/PresetResp.cpp
   src/v20240801/model/DescribeTeamDomainListInfoResp.cpp
+  src/v20240801/model/DescribeMNPSensitiveAPIPermissionApprovalResponse.cpp
   src/v20240801/model/DescribeApplicationConfigRequest.cpp
+  src/v20240801/model/ModifyTeamMemberRequest.cpp
+  src/v20240801/model/DescribeGlobalDomainsListData.cpp
   src/v20240801/model/ModifyUserResponse.cpp
   src/v20240801/model/DescribeConsoleMNPVersionCompileTaskRequest.cpp
   src/v20240801/model/DescribeMNPManagerDetailData.cpp
   src/v20240801/model/DescribeApplicationMNPVersionAuditListPageResp.cpp
   src/v20240801/model/DescribeUserListData.cpp
+  src/v20240801/model/DescribeSensitiveApiApplyDetailRequest.cpp
   src/v20240801/model/CreateOnlineApplyResponse.cpp
   src/v20240801/model/DescribeApplicationRequest.cpp
   src/v20240801/model/SensitiveApiPageInfo.cpp
-  src/v20240801/model/GlobalDomainDescribeListInfoResp.cpp
+  src/v20240801/model/CreateMNPVersionResponse.cpp
   src/v20240801/model/ModifyMNPResponse.cpp
   src/v20240801/model/DescribeSimpleApplicationInfoListRequest.cpp
   src/v20240801/model/DisableTeamDomainRequest.cpp
+  src/v20240801/model/DescribeMNPDomainACLResponse.cpp
   src/v20240801/model/ApplicationPageInfo.cpp
   src/v20240801/model/CreateConsoleMNPVersionCompileTaskResponse.cpp
   src/v20240801/model/DescribeMNPVersionCompileTaskResp.cpp
   src/v20240801/model/CreateDomainParam.cpp
+  src/v20240801/model/DescribeTeamPageResp.cpp
   src/v20240801/model/DescribeApplicationMNPVersionAuditListResponse.cpp
   src/v20240801/model/ApplicationSimpleInfoResp.cpp
+  src/v20240801/model/ModifyTeamResponse.cpp
   src/v20240801/model/DescribeSimpleTeamListResponse.cpp
-  src/v20240801/model/DescribeTeamPageResp.cpp
+  src/v20240801/model/DescribeMNPVersionResp.cpp
+  src/v20240801/model/DescribeApplicationConfigFileResponse.cpp
   src/v20240801/model/BooleanInfo.cpp
   src/v20240801/model/DescribeUserDetailRequest.cpp
   src/v20240801/model/DescribeMNPBoardRequest.cpp
-  src/v20240801/model/UploadFileTempSecret.cpp
-  src/v20240801/model/DescribeTeamMembersRequest.cpp
+  src/v20240801/model/DownloadApplicationConfigResp.cpp
+  src/v20240801/model/CreateMNPDomainACLResponse.cpp
   src/v20240801/model/DescribeOfflineMNPPackageResponse.cpp
   src/v20240801/model/SensitiveApiAuditInfoResp.cpp
   src/v20240801/model/DescribeTeamListRequest.cpp
-  src/v20240801/model/DescribeTeamMembersInfoPageResp.cpp
+  src/v20240801/model/DescribeMNPApprovalListResponse.cpp
   src/v20240801/model/ModifyApplicationAppKeyRequest.cpp
+  src/v20240801/model/DescribeMNPVersionRequest.cpp
   src/v20240801/model/CreateSensitiveApiApplyResponse.cpp
   src/v20240801/model/ApplicationSimpleListInfoResp.cpp
   src/v20240801/model/CreateApplicationRequest.cpp
@@ -417,32 +576,43 @@ set(tcmpp_src
   src/v20240801/model/ApplicationMNPRelInfoResp.cpp
   src/v20240801/model/CreateSensitiveAPIResponse.cpp
   src/v20240801/model/DescribeTempSecret4UploadFile2CosResponse.cpp
-  src/v20240801/model/DescribeSensitiveApiApplyDetail.cpp
-  src/v20240801/model/DescribeSensitiveApiApplyDetailRequest.cpp
-  src/v20240801/model/DescribeDomainInfoResponse.cpp
+  src/v20240801/model/DescribeSensitiveAPIAuditListRequest.cpp
+  src/v20240801/model/DescribeMNPReleasedVersionHistoryResponse.cpp
+  src/v20240801/model/DeleteApplicationSensitiveAPIRequest.cpp
   src/v20240801/model/DescribeDomainTeamListRequest.cpp
   src/v20240801/model/AddTeamMemberRequest.cpp
   src/v20240801/model/GlobalDomainCheckResp.cpp
   src/v20240801/model/DescribeMNPVersionPreviewResponse.cpp
+  src/v20240801/model/DisableApplicationSensitiveAPIResponse.cpp
+  src/v20240801/model/DescribeUserResponse.cpp
   src/v20240801/model/DeleteTeamMemberRequest.cpp
   src/v20240801/model/ModifyOnlineVersionRequest.cpp
-  src/v20240801/model/GlobalDomainModifyRespResp.cpp
+  src/v20240801/model/UploadFileTempSecret.cpp
+  src/v20240801/model/DescribeApplicationSensitiveAPIListResp.cpp
+  src/v20240801/model/DescribeSensitiveApiAuthListParam.cpp
   src/v20240801/model/DescribeDomainTeamListInfoResp.cpp
   src/v20240801/model/DescribeRoleDetailResponse.cpp
+  src/v20240801/model/CreateApplicationSensitiveAPIResponse.cpp
+  src/v20240801/model/DescribeGlobalDomainACLResponse.cpp
   src/v20240801/model/VersionBoardResp.cpp
   src/v20240801/model/CreatePresetKeyRequest.cpp
-  src/v20240801/model/PresetResp.cpp
+  src/v20240801/model/DescribeTeamMembersRequest.cpp
   src/v20240801/model/CreateApplicationResponse.cpp
+  src/v20240801/model/DescribeMNPCategoryRequest.cpp
   src/v20240801/model/DescribeMNPVersionCompileTaskSubSimpleInfo.cpp
-  src/v20240801/model/DescribeTeamResponse.cpp
+  src/v20240801/model/DeleteApplicationSensitiveAPIResponse.cpp
   src/v20240801/model/ModifyMNPVersionPreviewResponse.cpp
-  src/v20240801/model/ResourceIdStringInfo.cpp
+  src/v20240801/model/EnableApplicationSensitiveAPIRequest.cpp
   src/v20240801/model/DescribeMNPManagerDetailResponse.cpp
   src/v20240801/model/DeleteGlobalDomainRequest.cpp
   src/v20240801/model/GlobalDomainDeleteResp.cpp
   src/v20240801/model/DeleteGlobalDomainResponse.cpp
   src/v20240801/model/ModifySensitiveAPIAuditStatusResponse.cpp
+  src/v20240801/model/DescribeMNPListRequest.cpp
+  src/v20240801/model/DescribeMNPPreviewRequest.cpp
   src/v20240801/model/CreateGlobalDomainResp.cpp
+  src/v20240801/model/CreateGlobalDomainACLRequest.cpp
+  src/v20240801/model/DescribeApplicationSensitiveAPIListRequest.cpp
   src/v20240801/model/DescribeTeamMemberListResponse.cpp
   src/v20240801/model/DescribeTeamMemberListPageResp.cpp
   )

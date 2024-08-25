@@ -27,16 +27,30 @@
 #include <tencentcloud/tcmpp/v20240801/model/AddTeamMemberResponse.h>
 #include <tencentcloud/tcmpp/v20240801/model/CheckGlobalDomainRequest.h>
 #include <tencentcloud/tcmpp/v20240801/model/CheckGlobalDomainResponse.h>
+#include <tencentcloud/tcmpp/v20240801/model/ConfigureMNPPreviewRequest.h>
+#include <tencentcloud/tcmpp/v20240801/model/ConfigureMNPPreviewResponse.h>
 #include <tencentcloud/tcmpp/v20240801/model/CreateApplicationRequest.h>
 #include <tencentcloud/tcmpp/v20240801/model/CreateApplicationResponse.h>
+#include <tencentcloud/tcmpp/v20240801/model/CreateApplicationSensitiveAPIRequest.h>
+#include <tencentcloud/tcmpp/v20240801/model/CreateApplicationSensitiveAPIResponse.h>
 #include <tencentcloud/tcmpp/v20240801/model/CreateConsoleMNPVersionCompileTaskRequest.h>
 #include <tencentcloud/tcmpp/v20240801/model/CreateConsoleMNPVersionCompileTaskResponse.h>
 #include <tencentcloud/tcmpp/v20240801/model/CreateDomainRequest.h>
 #include <tencentcloud/tcmpp/v20240801/model/CreateDomainResponse.h>
 #include <tencentcloud/tcmpp/v20240801/model/CreateGlobalDomainRequest.h>
 #include <tencentcloud/tcmpp/v20240801/model/CreateGlobalDomainResponse.h>
+#include <tencentcloud/tcmpp/v20240801/model/CreateGlobalDomainACLRequest.h>
+#include <tencentcloud/tcmpp/v20240801/model/CreateGlobalDomainACLResponse.h>
 #include <tencentcloud/tcmpp/v20240801/model/CreateMNPRequest.h>
 #include <tencentcloud/tcmpp/v20240801/model/CreateMNPResponse.h>
+#include <tencentcloud/tcmpp/v20240801/model/CreateMNPApprovalRequest.h>
+#include <tencentcloud/tcmpp/v20240801/model/CreateMNPApprovalResponse.h>
+#include <tencentcloud/tcmpp/v20240801/model/CreateMNPDomainACLRequest.h>
+#include <tencentcloud/tcmpp/v20240801/model/CreateMNPDomainACLResponse.h>
+#include <tencentcloud/tcmpp/v20240801/model/CreateMNPSensitiveAPIPermissionApprovalRequest.h>
+#include <tencentcloud/tcmpp/v20240801/model/CreateMNPSensitiveAPIPermissionApprovalResponse.h>
+#include <tencentcloud/tcmpp/v20240801/model/CreateMNPVersionRequest.h>
+#include <tencentcloud/tcmpp/v20240801/model/CreateMNPVersionResponse.h>
 #include <tencentcloud/tcmpp/v20240801/model/CreateOnlineApplyRequest.h>
 #include <tencentcloud/tcmpp/v20240801/model/CreateOnlineApplyResponse.h>
 #include <tencentcloud/tcmpp/v20240801/model/CreatePlatformAuditRequest.h>
@@ -55,6 +69,8 @@
 #include <tencentcloud/tcmpp/v20240801/model/CreateUserResponse.h>
 #include <tencentcloud/tcmpp/v20240801/model/DeleteApplicationRequest.h>
 #include <tencentcloud/tcmpp/v20240801/model/DeleteApplicationResponse.h>
+#include <tencentcloud/tcmpp/v20240801/model/DeleteApplicationSensitiveAPIRequest.h>
+#include <tencentcloud/tcmpp/v20240801/model/DeleteApplicationSensitiveAPIResponse.h>
 #include <tencentcloud/tcmpp/v20240801/model/DeleteGlobalDomainRequest.h>
 #include <tencentcloud/tcmpp/v20240801/model/DeleteGlobalDomainResponse.h>
 #include <tencentcloud/tcmpp/v20240801/model/DeleteMNPRequest.h>
@@ -71,30 +87,62 @@
 #include <tencentcloud/tcmpp/v20240801/model/DescribeApplicationResponse.h>
 #include <tencentcloud/tcmpp/v20240801/model/DescribeApplicationConfigRequest.h>
 #include <tencentcloud/tcmpp/v20240801/model/DescribeApplicationConfigResponse.h>
+#include <tencentcloud/tcmpp/v20240801/model/DescribeApplicationConfigFileRequest.h>
+#include <tencentcloud/tcmpp/v20240801/model/DescribeApplicationConfigFileResponse.h>
 #include <tencentcloud/tcmpp/v20240801/model/DescribeApplicationListRequest.h>
 #include <tencentcloud/tcmpp/v20240801/model/DescribeApplicationListResponse.h>
 #include <tencentcloud/tcmpp/v20240801/model/DescribeApplicationMNPVersionAuditListRequest.h>
 #include <tencentcloud/tcmpp/v20240801/model/DescribeApplicationMNPVersionAuditListResponse.h>
+#include <tencentcloud/tcmpp/v20240801/model/DescribeApplicationSensitiveAPIListRequest.h>
+#include <tencentcloud/tcmpp/v20240801/model/DescribeApplicationSensitiveAPIListResponse.h>
 #include <tencentcloud/tcmpp/v20240801/model/DescribeConsoleMNPVersionCompileTaskRequest.h>
 #include <tencentcloud/tcmpp/v20240801/model/DescribeConsoleMNPVersionCompileTaskResponse.h>
 #include <tencentcloud/tcmpp/v20240801/model/DescribeDomainInfoRequest.h>
 #include <tencentcloud/tcmpp/v20240801/model/DescribeDomainInfoResponse.h>
 #include <tencentcloud/tcmpp/v20240801/model/DescribeDomainTeamListRequest.h>
 #include <tencentcloud/tcmpp/v20240801/model/DescribeDomainTeamListResponse.h>
+#include <tencentcloud/tcmpp/v20240801/model/DescribeGlobalDomainACLRequest.h>
+#include <tencentcloud/tcmpp/v20240801/model/DescribeGlobalDomainACLResponse.h>
 #include <tencentcloud/tcmpp/v20240801/model/DescribeGlobalDomainListRequest.h>
 #include <tencentcloud/tcmpp/v20240801/model/DescribeGlobalDomainListResponse.h>
+#include <tencentcloud/tcmpp/v20240801/model/DescribeMNPRequest.h>
+#include <tencentcloud/tcmpp/v20240801/model/DescribeMNPResponse.h>
+#include <tencentcloud/tcmpp/v20240801/model/DescribeMNPAllStageVersionsRequest.h>
+#include <tencentcloud/tcmpp/v20240801/model/DescribeMNPAllStageVersionsResponse.h>
+#include <tencentcloud/tcmpp/v20240801/model/DescribeMNPApprovalListRequest.h>
+#include <tencentcloud/tcmpp/v20240801/model/DescribeMNPApprovalListResponse.h>
 #include <tencentcloud/tcmpp/v20240801/model/DescribeMNPBoardRequest.h>
 #include <tencentcloud/tcmpp/v20240801/model/DescribeMNPBoardResponse.h>
+#include <tencentcloud/tcmpp/v20240801/model/DescribeMNPCategoryRequest.h>
+#include <tencentcloud/tcmpp/v20240801/model/DescribeMNPCategoryResponse.h>
 #include <tencentcloud/tcmpp/v20240801/model/DescribeMNPDetailRequest.h>
 #include <tencentcloud/tcmpp/v20240801/model/DescribeMNPDetailResponse.h>
+#include <tencentcloud/tcmpp/v20240801/model/DescribeMNPDomainACLRequest.h>
+#include <tencentcloud/tcmpp/v20240801/model/DescribeMNPDomainACLResponse.h>
+#include <tencentcloud/tcmpp/v20240801/model/DescribeMNPListRequest.h>
+#include <tencentcloud/tcmpp/v20240801/model/DescribeMNPListResponse.h>
 #include <tencentcloud/tcmpp/v20240801/model/DescribeMNPManagerDetailRequest.h>
 #include <tencentcloud/tcmpp/v20240801/model/DescribeMNPManagerDetailResponse.h>
 #include <tencentcloud/tcmpp/v20240801/model/DescribeMNPManagerListRequest.h>
 #include <tencentcloud/tcmpp/v20240801/model/DescribeMNPManagerListResponse.h>
+#include <tencentcloud/tcmpp/v20240801/model/DescribeMNPOfflinePackageURLRequest.h>
+#include <tencentcloud/tcmpp/v20240801/model/DescribeMNPOfflinePackageURLResponse.h>
+#include <tencentcloud/tcmpp/v20240801/model/DescribeMNPPreviewRequest.h>
+#include <tencentcloud/tcmpp/v20240801/model/DescribeMNPPreviewResponse.h>
 #include <tencentcloud/tcmpp/v20240801/model/DescribeMNPPrivacyRequest.h>
 #include <tencentcloud/tcmpp/v20240801/model/DescribeMNPPrivacyResponse.h>
+#include <tencentcloud/tcmpp/v20240801/model/DescribeMNPReleasedVersionHistoryRequest.h>
+#include <tencentcloud/tcmpp/v20240801/model/DescribeMNPReleasedVersionHistoryResponse.h>
+#include <tencentcloud/tcmpp/v20240801/model/DescribeMNPSensitiveAPIPermissionApprovalRequest.h>
+#include <tencentcloud/tcmpp/v20240801/model/DescribeMNPSensitiveAPIPermissionApprovalResponse.h>
+#include <tencentcloud/tcmpp/v20240801/model/DescribeMNPSensitiveAPIPermissionApprovalListRequest.h>
+#include <tencentcloud/tcmpp/v20240801/model/DescribeMNPSensitiveAPIPermissionApprovalListResponse.h>
+#include <tencentcloud/tcmpp/v20240801/model/DescribeMNPSensitiveAPIPermissionListRequest.h>
+#include <tencentcloud/tcmpp/v20240801/model/DescribeMNPSensitiveAPIPermissionListResponse.h>
 #include <tencentcloud/tcmpp/v20240801/model/DescribeMNPTypeRequest.h>
 #include <tencentcloud/tcmpp/v20240801/model/DescribeMNPTypeResponse.h>
+#include <tencentcloud/tcmpp/v20240801/model/DescribeMNPVersionRequest.h>
+#include <tencentcloud/tcmpp/v20240801/model/DescribeMNPVersionResponse.h>
 #include <tencentcloud/tcmpp/v20240801/model/DescribeMNPVersionPreviewRequest.h>
 #include <tencentcloud/tcmpp/v20240801/model/DescribeMNPVersionPreviewResponse.h>
 #include <tencentcloud/tcmpp/v20240801/model/DescribeOfflineMNPPackageRequest.h>
@@ -129,12 +177,18 @@
 #include <tencentcloud/tcmpp/v20240801/model/DescribeTeamMembersResponse.h>
 #include <tencentcloud/tcmpp/v20240801/model/DescribeTempSecret4UploadFile2CosRequest.h>
 #include <tencentcloud/tcmpp/v20240801/model/DescribeTempSecret4UploadFile2CosResponse.h>
+#include <tencentcloud/tcmpp/v20240801/model/DescribeUserRequest.h>
+#include <tencentcloud/tcmpp/v20240801/model/DescribeUserResponse.h>
 #include <tencentcloud/tcmpp/v20240801/model/DescribeUserDetailRequest.h>
 #include <tencentcloud/tcmpp/v20240801/model/DescribeUserDetailResponse.h>
 #include <tencentcloud/tcmpp/v20240801/model/DescribeUserListRequest.h>
 #include <tencentcloud/tcmpp/v20240801/model/DescribeUserListResponse.h>
+#include <tencentcloud/tcmpp/v20240801/model/DisableApplicationSensitiveAPIRequest.h>
+#include <tencentcloud/tcmpp/v20240801/model/DisableApplicationSensitiveAPIResponse.h>
 #include <tencentcloud/tcmpp/v20240801/model/DisableTeamDomainRequest.h>
 #include <tencentcloud/tcmpp/v20240801/model/DisableTeamDomainResponse.h>
+#include <tencentcloud/tcmpp/v20240801/model/EnableApplicationSensitiveAPIRequest.h>
+#include <tencentcloud/tcmpp/v20240801/model/EnableApplicationSensitiveAPIResponse.h>
 #include <tencentcloud/tcmpp/v20240801/model/ModifyApplicationRequest.h>
 #include <tencentcloud/tcmpp/v20240801/model/ModifyApplicationResponse.h>
 #include <tencentcloud/tcmpp/v20240801/model/ModifyApplicationAppKeyRequest.h>
@@ -147,6 +201,8 @@
 #include <tencentcloud/tcmpp/v20240801/model/ModifyGlobalDomainResponse.h>
 #include <tencentcloud/tcmpp/v20240801/model/ModifyMNPRequest.h>
 #include <tencentcloud/tcmpp/v20240801/model/ModifyMNPResponse.h>
+#include <tencentcloud/tcmpp/v20240801/model/ModifyMNPDomainRequest.h>
+#include <tencentcloud/tcmpp/v20240801/model/ModifyMNPDomainResponse.h>
 #include <tencentcloud/tcmpp/v20240801/model/ModifyMNPStatusOfflineRequest.h>
 #include <tencentcloud/tcmpp/v20240801/model/ModifyMNPStatusOfflineResponse.h>
 #include <tencentcloud/tcmpp/v20240801/model/ModifyMNPVersionPreviewRequest.h>
@@ -165,6 +221,16 @@
 #include <tencentcloud/tcmpp/v20240801/model/ModifyUserResponse.h>
 #include <tencentcloud/tcmpp/v20240801/model/ModifyUserPasswordRequest.h>
 #include <tencentcloud/tcmpp/v20240801/model/ModifyUserPasswordResponse.h>
+#include <tencentcloud/tcmpp/v20240801/model/ProcessMNPApprovalRequest.h>
+#include <tencentcloud/tcmpp/v20240801/model/ProcessMNPApprovalResponse.h>
+#include <tencentcloud/tcmpp/v20240801/model/ProcessMNPSensitiveAPIPermissionApprovalRequest.h>
+#include <tencentcloud/tcmpp/v20240801/model/ProcessMNPSensitiveAPIPermissionApprovalResponse.h>
+#include <tencentcloud/tcmpp/v20240801/model/ReleaseMNPVersionRequest.h>
+#include <tencentcloud/tcmpp/v20240801/model/ReleaseMNPVersionResponse.h>
+#include <tencentcloud/tcmpp/v20240801/model/RemoveMNPRequest.h>
+#include <tencentcloud/tcmpp/v20240801/model/RemoveMNPResponse.h>
+#include <tencentcloud/tcmpp/v20240801/model/RollbackMNPVersionRequest.h>
+#include <tencentcloud/tcmpp/v20240801/model/RollbackMNPVersionResponse.h>
 
 
 namespace TencentCloud
@@ -185,9 +251,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CheckGlobalDomainResponse> CheckGlobalDomainOutcome;
                 typedef std::future<CheckGlobalDomainOutcome> CheckGlobalDomainOutcomeCallable;
                 typedef std::function<void(const TcmppClient*, const Model::CheckGlobalDomainRequest&, CheckGlobalDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CheckGlobalDomainAsyncHandler;
+                typedef Outcome<Core::Error, Model::ConfigureMNPPreviewResponse> ConfigureMNPPreviewOutcome;
+                typedef std::future<ConfigureMNPPreviewOutcome> ConfigureMNPPreviewOutcomeCallable;
+                typedef std::function<void(const TcmppClient*, const Model::ConfigureMNPPreviewRequest&, ConfigureMNPPreviewOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ConfigureMNPPreviewAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateApplicationResponse> CreateApplicationOutcome;
                 typedef std::future<CreateApplicationOutcome> CreateApplicationOutcomeCallable;
                 typedef std::function<void(const TcmppClient*, const Model::CreateApplicationRequest&, CreateApplicationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateApplicationAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateApplicationSensitiveAPIResponse> CreateApplicationSensitiveAPIOutcome;
+                typedef std::future<CreateApplicationSensitiveAPIOutcome> CreateApplicationSensitiveAPIOutcomeCallable;
+                typedef std::function<void(const TcmppClient*, const Model::CreateApplicationSensitiveAPIRequest&, CreateApplicationSensitiveAPIOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateApplicationSensitiveAPIAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateConsoleMNPVersionCompileTaskResponse> CreateConsoleMNPVersionCompileTaskOutcome;
                 typedef std::future<CreateConsoleMNPVersionCompileTaskOutcome> CreateConsoleMNPVersionCompileTaskOutcomeCallable;
                 typedef std::function<void(const TcmppClient*, const Model::CreateConsoleMNPVersionCompileTaskRequest&, CreateConsoleMNPVersionCompileTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateConsoleMNPVersionCompileTaskAsyncHandler;
@@ -197,9 +269,24 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateGlobalDomainResponse> CreateGlobalDomainOutcome;
                 typedef std::future<CreateGlobalDomainOutcome> CreateGlobalDomainOutcomeCallable;
                 typedef std::function<void(const TcmppClient*, const Model::CreateGlobalDomainRequest&, CreateGlobalDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateGlobalDomainAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateGlobalDomainACLResponse> CreateGlobalDomainACLOutcome;
+                typedef std::future<CreateGlobalDomainACLOutcome> CreateGlobalDomainACLOutcomeCallable;
+                typedef std::function<void(const TcmppClient*, const Model::CreateGlobalDomainACLRequest&, CreateGlobalDomainACLOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateGlobalDomainACLAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateMNPResponse> CreateMNPOutcome;
                 typedef std::future<CreateMNPOutcome> CreateMNPOutcomeCallable;
                 typedef std::function<void(const TcmppClient*, const Model::CreateMNPRequest&, CreateMNPOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateMNPAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateMNPApprovalResponse> CreateMNPApprovalOutcome;
+                typedef std::future<CreateMNPApprovalOutcome> CreateMNPApprovalOutcomeCallable;
+                typedef std::function<void(const TcmppClient*, const Model::CreateMNPApprovalRequest&, CreateMNPApprovalOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateMNPApprovalAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateMNPDomainACLResponse> CreateMNPDomainACLOutcome;
+                typedef std::future<CreateMNPDomainACLOutcome> CreateMNPDomainACLOutcomeCallable;
+                typedef std::function<void(const TcmppClient*, const Model::CreateMNPDomainACLRequest&, CreateMNPDomainACLOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateMNPDomainACLAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateMNPSensitiveAPIPermissionApprovalResponse> CreateMNPSensitiveAPIPermissionApprovalOutcome;
+                typedef std::future<CreateMNPSensitiveAPIPermissionApprovalOutcome> CreateMNPSensitiveAPIPermissionApprovalOutcomeCallable;
+                typedef std::function<void(const TcmppClient*, const Model::CreateMNPSensitiveAPIPermissionApprovalRequest&, CreateMNPSensitiveAPIPermissionApprovalOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateMNPSensitiveAPIPermissionApprovalAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateMNPVersionResponse> CreateMNPVersionOutcome;
+                typedef std::future<CreateMNPVersionOutcome> CreateMNPVersionOutcomeCallable;
+                typedef std::function<void(const TcmppClient*, const Model::CreateMNPVersionRequest&, CreateMNPVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateMNPVersionAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateOnlineApplyResponse> CreateOnlineApplyOutcome;
                 typedef std::future<CreateOnlineApplyOutcome> CreateOnlineApplyOutcomeCallable;
                 typedef std::function<void(const TcmppClient*, const Model::CreateOnlineApplyRequest&, CreateOnlineApplyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateOnlineApplyAsyncHandler;
@@ -227,6 +314,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteApplicationResponse> DeleteApplicationOutcome;
                 typedef std::future<DeleteApplicationOutcome> DeleteApplicationOutcomeCallable;
                 typedef std::function<void(const TcmppClient*, const Model::DeleteApplicationRequest&, DeleteApplicationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteApplicationAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteApplicationSensitiveAPIResponse> DeleteApplicationSensitiveAPIOutcome;
+                typedef std::future<DeleteApplicationSensitiveAPIOutcome> DeleteApplicationSensitiveAPIOutcomeCallable;
+                typedef std::function<void(const TcmppClient*, const Model::DeleteApplicationSensitiveAPIRequest&, DeleteApplicationSensitiveAPIOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteApplicationSensitiveAPIAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteGlobalDomainResponse> DeleteGlobalDomainOutcome;
                 typedef std::future<DeleteGlobalDomainOutcome> DeleteGlobalDomainOutcomeCallable;
                 typedef std::function<void(const TcmppClient*, const Model::DeleteGlobalDomainRequest&, DeleteGlobalDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteGlobalDomainAsyncHandler;
@@ -251,12 +341,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeApplicationConfigResponse> DescribeApplicationConfigOutcome;
                 typedef std::future<DescribeApplicationConfigOutcome> DescribeApplicationConfigOutcomeCallable;
                 typedef std::function<void(const TcmppClient*, const Model::DescribeApplicationConfigRequest&, DescribeApplicationConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeApplicationConfigAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeApplicationConfigFileResponse> DescribeApplicationConfigFileOutcome;
+                typedef std::future<DescribeApplicationConfigFileOutcome> DescribeApplicationConfigFileOutcomeCallable;
+                typedef std::function<void(const TcmppClient*, const Model::DescribeApplicationConfigFileRequest&, DescribeApplicationConfigFileOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeApplicationConfigFileAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeApplicationListResponse> DescribeApplicationListOutcome;
                 typedef std::future<DescribeApplicationListOutcome> DescribeApplicationListOutcomeCallable;
                 typedef std::function<void(const TcmppClient*, const Model::DescribeApplicationListRequest&, DescribeApplicationListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeApplicationListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeApplicationMNPVersionAuditListResponse> DescribeApplicationMNPVersionAuditListOutcome;
                 typedef std::future<DescribeApplicationMNPVersionAuditListOutcome> DescribeApplicationMNPVersionAuditListOutcomeCallable;
                 typedef std::function<void(const TcmppClient*, const Model::DescribeApplicationMNPVersionAuditListRequest&, DescribeApplicationMNPVersionAuditListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeApplicationMNPVersionAuditListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeApplicationSensitiveAPIListResponse> DescribeApplicationSensitiveAPIListOutcome;
+                typedef std::future<DescribeApplicationSensitiveAPIListOutcome> DescribeApplicationSensitiveAPIListOutcomeCallable;
+                typedef std::function<void(const TcmppClient*, const Model::DescribeApplicationSensitiveAPIListRequest&, DescribeApplicationSensitiveAPIListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeApplicationSensitiveAPIListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeConsoleMNPVersionCompileTaskResponse> DescribeConsoleMNPVersionCompileTaskOutcome;
                 typedef std::future<DescribeConsoleMNPVersionCompileTaskOutcome> DescribeConsoleMNPVersionCompileTaskOutcomeCallable;
                 typedef std::function<void(const TcmppClient*, const Model::DescribeConsoleMNPVersionCompileTaskRequest&, DescribeConsoleMNPVersionCompileTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeConsoleMNPVersionCompileTaskAsyncHandler;
@@ -266,27 +362,69 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeDomainTeamListResponse> DescribeDomainTeamListOutcome;
                 typedef std::future<DescribeDomainTeamListOutcome> DescribeDomainTeamListOutcomeCallable;
                 typedef std::function<void(const TcmppClient*, const Model::DescribeDomainTeamListRequest&, DescribeDomainTeamListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDomainTeamListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeGlobalDomainACLResponse> DescribeGlobalDomainACLOutcome;
+                typedef std::future<DescribeGlobalDomainACLOutcome> DescribeGlobalDomainACLOutcomeCallable;
+                typedef std::function<void(const TcmppClient*, const Model::DescribeGlobalDomainACLRequest&, DescribeGlobalDomainACLOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeGlobalDomainACLAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeGlobalDomainListResponse> DescribeGlobalDomainListOutcome;
                 typedef std::future<DescribeGlobalDomainListOutcome> DescribeGlobalDomainListOutcomeCallable;
                 typedef std::function<void(const TcmppClient*, const Model::DescribeGlobalDomainListRequest&, DescribeGlobalDomainListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeGlobalDomainListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNPResponse> DescribeMNPOutcome;
+                typedef std::future<DescribeMNPOutcome> DescribeMNPOutcomeCallable;
+                typedef std::function<void(const TcmppClient*, const Model::DescribeMNPRequest&, DescribeMNPOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNPAllStageVersionsResponse> DescribeMNPAllStageVersionsOutcome;
+                typedef std::future<DescribeMNPAllStageVersionsOutcome> DescribeMNPAllStageVersionsOutcomeCallable;
+                typedef std::function<void(const TcmppClient*, const Model::DescribeMNPAllStageVersionsRequest&, DescribeMNPAllStageVersionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPAllStageVersionsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNPApprovalListResponse> DescribeMNPApprovalListOutcome;
+                typedef std::future<DescribeMNPApprovalListOutcome> DescribeMNPApprovalListOutcomeCallable;
+                typedef std::function<void(const TcmppClient*, const Model::DescribeMNPApprovalListRequest&, DescribeMNPApprovalListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPApprovalListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeMNPBoardResponse> DescribeMNPBoardOutcome;
                 typedef std::future<DescribeMNPBoardOutcome> DescribeMNPBoardOutcomeCallable;
                 typedef std::function<void(const TcmppClient*, const Model::DescribeMNPBoardRequest&, DescribeMNPBoardOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPBoardAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNPCategoryResponse> DescribeMNPCategoryOutcome;
+                typedef std::future<DescribeMNPCategoryOutcome> DescribeMNPCategoryOutcomeCallable;
+                typedef std::function<void(const TcmppClient*, const Model::DescribeMNPCategoryRequest&, DescribeMNPCategoryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPCategoryAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeMNPDetailResponse> DescribeMNPDetailOutcome;
                 typedef std::future<DescribeMNPDetailOutcome> DescribeMNPDetailOutcomeCallable;
                 typedef std::function<void(const TcmppClient*, const Model::DescribeMNPDetailRequest&, DescribeMNPDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNPDomainACLResponse> DescribeMNPDomainACLOutcome;
+                typedef std::future<DescribeMNPDomainACLOutcome> DescribeMNPDomainACLOutcomeCallable;
+                typedef std::function<void(const TcmppClient*, const Model::DescribeMNPDomainACLRequest&, DescribeMNPDomainACLOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPDomainACLAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNPListResponse> DescribeMNPListOutcome;
+                typedef std::future<DescribeMNPListOutcome> DescribeMNPListOutcomeCallable;
+                typedef std::function<void(const TcmppClient*, const Model::DescribeMNPListRequest&, DescribeMNPListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeMNPManagerDetailResponse> DescribeMNPManagerDetailOutcome;
                 typedef std::future<DescribeMNPManagerDetailOutcome> DescribeMNPManagerDetailOutcomeCallable;
                 typedef std::function<void(const TcmppClient*, const Model::DescribeMNPManagerDetailRequest&, DescribeMNPManagerDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPManagerDetailAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeMNPManagerListResponse> DescribeMNPManagerListOutcome;
                 typedef std::future<DescribeMNPManagerListOutcome> DescribeMNPManagerListOutcomeCallable;
                 typedef std::function<void(const TcmppClient*, const Model::DescribeMNPManagerListRequest&, DescribeMNPManagerListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPManagerListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNPOfflinePackageURLResponse> DescribeMNPOfflinePackageURLOutcome;
+                typedef std::future<DescribeMNPOfflinePackageURLOutcome> DescribeMNPOfflinePackageURLOutcomeCallable;
+                typedef std::function<void(const TcmppClient*, const Model::DescribeMNPOfflinePackageURLRequest&, DescribeMNPOfflinePackageURLOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPOfflinePackageURLAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNPPreviewResponse> DescribeMNPPreviewOutcome;
+                typedef std::future<DescribeMNPPreviewOutcome> DescribeMNPPreviewOutcomeCallable;
+                typedef std::function<void(const TcmppClient*, const Model::DescribeMNPPreviewRequest&, DescribeMNPPreviewOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPPreviewAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeMNPPrivacyResponse> DescribeMNPPrivacyOutcome;
                 typedef std::future<DescribeMNPPrivacyOutcome> DescribeMNPPrivacyOutcomeCallable;
                 typedef std::function<void(const TcmppClient*, const Model::DescribeMNPPrivacyRequest&, DescribeMNPPrivacyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPPrivacyAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNPReleasedVersionHistoryResponse> DescribeMNPReleasedVersionHistoryOutcome;
+                typedef std::future<DescribeMNPReleasedVersionHistoryOutcome> DescribeMNPReleasedVersionHistoryOutcomeCallable;
+                typedef std::function<void(const TcmppClient*, const Model::DescribeMNPReleasedVersionHistoryRequest&, DescribeMNPReleasedVersionHistoryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPReleasedVersionHistoryAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNPSensitiveAPIPermissionApprovalResponse> DescribeMNPSensitiveAPIPermissionApprovalOutcome;
+                typedef std::future<DescribeMNPSensitiveAPIPermissionApprovalOutcome> DescribeMNPSensitiveAPIPermissionApprovalOutcomeCallable;
+                typedef std::function<void(const TcmppClient*, const Model::DescribeMNPSensitiveAPIPermissionApprovalRequest&, DescribeMNPSensitiveAPIPermissionApprovalOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPSensitiveAPIPermissionApprovalAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNPSensitiveAPIPermissionApprovalListResponse> DescribeMNPSensitiveAPIPermissionApprovalListOutcome;
+                typedef std::future<DescribeMNPSensitiveAPIPermissionApprovalListOutcome> DescribeMNPSensitiveAPIPermissionApprovalListOutcomeCallable;
+                typedef std::function<void(const TcmppClient*, const Model::DescribeMNPSensitiveAPIPermissionApprovalListRequest&, DescribeMNPSensitiveAPIPermissionApprovalListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPSensitiveAPIPermissionApprovalListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNPSensitiveAPIPermissionListResponse> DescribeMNPSensitiveAPIPermissionListOutcome;
+                typedef std::future<DescribeMNPSensitiveAPIPermissionListOutcome> DescribeMNPSensitiveAPIPermissionListOutcomeCallable;
+                typedef std::function<void(const TcmppClient*, const Model::DescribeMNPSensitiveAPIPermissionListRequest&, DescribeMNPSensitiveAPIPermissionListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPSensitiveAPIPermissionListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeMNPTypeResponse> DescribeMNPTypeOutcome;
                 typedef std::future<DescribeMNPTypeOutcome> DescribeMNPTypeOutcomeCallable;
                 typedef std::function<void(const TcmppClient*, const Model::DescribeMNPTypeRequest&, DescribeMNPTypeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPTypeAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNPVersionResponse> DescribeMNPVersionOutcome;
+                typedef std::future<DescribeMNPVersionOutcome> DescribeMNPVersionOutcomeCallable;
+                typedef std::function<void(const TcmppClient*, const Model::DescribeMNPVersionRequest&, DescribeMNPVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPVersionAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeMNPVersionPreviewResponse> DescribeMNPVersionPreviewOutcome;
                 typedef std::future<DescribeMNPVersionPreviewOutcome> DescribeMNPVersionPreviewOutcomeCallable;
                 typedef std::function<void(const TcmppClient*, const Model::DescribeMNPVersionPreviewRequest&, DescribeMNPVersionPreviewOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPVersionPreviewAsyncHandler;
@@ -338,15 +476,24 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeTempSecret4UploadFile2CosResponse> DescribeTempSecret4UploadFile2CosOutcome;
                 typedef std::future<DescribeTempSecret4UploadFile2CosOutcome> DescribeTempSecret4UploadFile2CosOutcomeCallable;
                 typedef std::function<void(const TcmppClient*, const Model::DescribeTempSecret4UploadFile2CosRequest&, DescribeTempSecret4UploadFile2CosOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTempSecret4UploadFile2CosAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeUserResponse> DescribeUserOutcome;
+                typedef std::future<DescribeUserOutcome> DescribeUserOutcomeCallable;
+                typedef std::function<void(const TcmppClient*, const Model::DescribeUserRequest&, DescribeUserOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUserAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeUserDetailResponse> DescribeUserDetailOutcome;
                 typedef std::future<DescribeUserDetailOutcome> DescribeUserDetailOutcomeCallable;
                 typedef std::function<void(const TcmppClient*, const Model::DescribeUserDetailRequest&, DescribeUserDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUserDetailAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeUserListResponse> DescribeUserListOutcome;
                 typedef std::future<DescribeUserListOutcome> DescribeUserListOutcomeCallable;
                 typedef std::function<void(const TcmppClient*, const Model::DescribeUserListRequest&, DescribeUserListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUserListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DisableApplicationSensitiveAPIResponse> DisableApplicationSensitiveAPIOutcome;
+                typedef std::future<DisableApplicationSensitiveAPIOutcome> DisableApplicationSensitiveAPIOutcomeCallable;
+                typedef std::function<void(const TcmppClient*, const Model::DisableApplicationSensitiveAPIRequest&, DisableApplicationSensitiveAPIOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisableApplicationSensitiveAPIAsyncHandler;
                 typedef Outcome<Core::Error, Model::DisableTeamDomainResponse> DisableTeamDomainOutcome;
                 typedef std::future<DisableTeamDomainOutcome> DisableTeamDomainOutcomeCallable;
                 typedef std::function<void(const TcmppClient*, const Model::DisableTeamDomainRequest&, DisableTeamDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisableTeamDomainAsyncHandler;
+                typedef Outcome<Core::Error, Model::EnableApplicationSensitiveAPIResponse> EnableApplicationSensitiveAPIOutcome;
+                typedef std::future<EnableApplicationSensitiveAPIOutcome> EnableApplicationSensitiveAPIOutcomeCallable;
+                typedef std::function<void(const TcmppClient*, const Model::EnableApplicationSensitiveAPIRequest&, EnableApplicationSensitiveAPIOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EnableApplicationSensitiveAPIAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyApplicationResponse> ModifyApplicationOutcome;
                 typedef std::future<ModifyApplicationOutcome> ModifyApplicationOutcomeCallable;
                 typedef std::function<void(const TcmppClient*, const Model::ModifyApplicationRequest&, ModifyApplicationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyApplicationAsyncHandler;
@@ -365,6 +512,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyMNPResponse> ModifyMNPOutcome;
                 typedef std::future<ModifyMNPOutcome> ModifyMNPOutcomeCallable;
                 typedef std::function<void(const TcmppClient*, const Model::ModifyMNPRequest&, ModifyMNPOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyMNPAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyMNPDomainResponse> ModifyMNPDomainOutcome;
+                typedef std::future<ModifyMNPDomainOutcome> ModifyMNPDomainOutcomeCallable;
+                typedef std::function<void(const TcmppClient*, const Model::ModifyMNPDomainRequest&, ModifyMNPDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyMNPDomainAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyMNPStatusOfflineResponse> ModifyMNPStatusOfflineOutcome;
                 typedef std::future<ModifyMNPStatusOfflineOutcome> ModifyMNPStatusOfflineOutcomeCallable;
                 typedef std::function<void(const TcmppClient*, const Model::ModifyMNPStatusOfflineRequest&, ModifyMNPStatusOfflineOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyMNPStatusOfflineAsyncHandler;
@@ -392,11 +542,26 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyUserPasswordResponse> ModifyUserPasswordOutcome;
                 typedef std::future<ModifyUserPasswordOutcome> ModifyUserPasswordOutcomeCallable;
                 typedef std::function<void(const TcmppClient*, const Model::ModifyUserPasswordRequest&, ModifyUserPasswordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyUserPasswordAsyncHandler;
+                typedef Outcome<Core::Error, Model::ProcessMNPApprovalResponse> ProcessMNPApprovalOutcome;
+                typedef std::future<ProcessMNPApprovalOutcome> ProcessMNPApprovalOutcomeCallable;
+                typedef std::function<void(const TcmppClient*, const Model::ProcessMNPApprovalRequest&, ProcessMNPApprovalOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ProcessMNPApprovalAsyncHandler;
+                typedef Outcome<Core::Error, Model::ProcessMNPSensitiveAPIPermissionApprovalResponse> ProcessMNPSensitiveAPIPermissionApprovalOutcome;
+                typedef std::future<ProcessMNPSensitiveAPIPermissionApprovalOutcome> ProcessMNPSensitiveAPIPermissionApprovalOutcomeCallable;
+                typedef std::function<void(const TcmppClient*, const Model::ProcessMNPSensitiveAPIPermissionApprovalRequest&, ProcessMNPSensitiveAPIPermissionApprovalOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ProcessMNPSensitiveAPIPermissionApprovalAsyncHandler;
+                typedef Outcome<Core::Error, Model::ReleaseMNPVersionResponse> ReleaseMNPVersionOutcome;
+                typedef std::future<ReleaseMNPVersionOutcome> ReleaseMNPVersionOutcomeCallable;
+                typedef std::function<void(const TcmppClient*, const Model::ReleaseMNPVersionRequest&, ReleaseMNPVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ReleaseMNPVersionAsyncHandler;
+                typedef Outcome<Core::Error, Model::RemoveMNPResponse> RemoveMNPOutcome;
+                typedef std::future<RemoveMNPOutcome> RemoveMNPOutcomeCallable;
+                typedef std::function<void(const TcmppClient*, const Model::RemoveMNPRequest&, RemoveMNPOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RemoveMNPAsyncHandler;
+                typedef Outcome<Core::Error, Model::RollbackMNPVersionResponse> RollbackMNPVersionOutcome;
+                typedef std::future<RollbackMNPVersionOutcome> RollbackMNPVersionOutcomeCallable;
+                typedef std::function<void(const TcmppClient*, const Model::RollbackMNPVersionRequest&, RollbackMNPVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RollbackMNPVersionAsyncHandler;
 
 
 
                 /**
-                 *This API is used to add users to a team
+                 *This API is used to add a team member.
                  * @param req AddTeamMemberRequest
                  * @return AddTeamMemberOutcome
                  */
@@ -414,7 +579,16 @@ namespace TencentCloud
                 CheckGlobalDomainOutcomeCallable CheckGlobalDomainCallable(const Model::CheckGlobalDomainRequest& request);
 
                 /**
-                 *This API is used to add an application
+                 *This API is used to configure the preview version of a mini program.
+                 * @param req ConfigureMNPPreviewRequest
+                 * @return ConfigureMNPPreviewOutcome
+                 */
+                ConfigureMNPPreviewOutcome ConfigureMNPPreview(const Model::ConfigureMNPPreviewRequest &request);
+                void ConfigureMNPPreviewAsync(const Model::ConfigureMNPPreviewRequest& request, const ConfigureMNPPreviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ConfigureMNPPreviewOutcomeCallable ConfigureMNPPreviewCallable(const Model::ConfigureMNPPreviewRequest& request);
+
+                /**
+                 *This API is used to create an application.
                  * @param req CreateApplicationRequest
                  * @return CreateApplicationOutcome
                  */
@@ -423,7 +597,16 @@ namespace TencentCloud
                 CreateApplicationOutcomeCallable CreateApplicationCallable(const Model::CreateApplicationRequest& request);
 
                 /**
-                 *This API is used to add new mini program version to the console
+                 *This API is used to create a sensitive API of an application.
+                 * @param req CreateApplicationSensitiveAPIRequest
+                 * @return CreateApplicationSensitiveAPIOutcome
+                 */
+                CreateApplicationSensitiveAPIOutcome CreateApplicationSensitiveAPI(const Model::CreateApplicationSensitiveAPIRequest &request);
+                void CreateApplicationSensitiveAPIAsync(const Model::CreateApplicationSensitiveAPIRequest& request, const CreateApplicationSensitiveAPIAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateApplicationSensitiveAPIOutcomeCallable CreateApplicationSensitiveAPICallable(const Model::CreateApplicationSensitiveAPIRequest& request);
+
+                /**
+                 *This API is used to add a new mini program version
                  * @param req CreateConsoleMNPVersionCompileTaskRequest
                  * @return CreateConsoleMNPVersionCompileTaskOutcome
                  */
@@ -450,6 +633,15 @@ namespace TencentCloud
                 CreateGlobalDomainOutcomeCallable CreateGlobalDomainCallable(const Model::CreateGlobalDomainRequest& request);
 
                 /**
+                 *This API is used to create a global domain allowlist or blocklist.
+                 * @param req CreateGlobalDomainACLRequest
+                 * @return CreateGlobalDomainACLOutcome
+                 */
+                CreateGlobalDomainACLOutcome CreateGlobalDomainACL(const Model::CreateGlobalDomainACLRequest &request);
+                void CreateGlobalDomainACLAsync(const Model::CreateGlobalDomainACLRequest& request, const CreateGlobalDomainACLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateGlobalDomainACLOutcomeCallable CreateGlobalDomainACLCallable(const Model::CreateGlobalDomainACLRequest& request);
+
+                /**
                  *This API is used to create a mini program
                  * @param req CreateMNPRequest
                  * @return CreateMNPOutcome
@@ -457,6 +649,42 @@ namespace TencentCloud
                 CreateMNPOutcome CreateMNP(const Model::CreateMNPRequest &request);
                 void CreateMNPAsync(const Model::CreateMNPRequest& request, const CreateMNPAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateMNPOutcomeCallable CreateMNPCallable(const Model::CreateMNPRequest& request);
+
+                /**
+                 *This API is used to create a mini program approval request.
+                 * @param req CreateMNPApprovalRequest
+                 * @return CreateMNPApprovalOutcome
+                 */
+                CreateMNPApprovalOutcome CreateMNPApproval(const Model::CreateMNPApprovalRequest &request);
+                void CreateMNPApprovalAsync(const Model::CreateMNPApprovalRequest& request, const CreateMNPApprovalAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateMNPApprovalOutcomeCallable CreateMNPApprovalCallable(const Model::CreateMNPApprovalRequest& request);
+
+                /**
+                 *This API is used to add a domain name to the allowlist/blocklist of a mini program.
+                 * @param req CreateMNPDomainACLRequest
+                 * @return CreateMNPDomainACLOutcome
+                 */
+                CreateMNPDomainACLOutcome CreateMNPDomainACL(const Model::CreateMNPDomainACLRequest &request);
+                void CreateMNPDomainACLAsync(const Model::CreateMNPDomainACLRequest& request, const CreateMNPDomainACLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateMNPDomainACLOutcomeCallable CreateMNPDomainACLCallable(const Model::CreateMNPDomainACLRequest& request);
+
+                /**
+                 *This API is used to create a permission request to allow a mini program calling sensitive APIs.
+                 * @param req CreateMNPSensitiveAPIPermissionApprovalRequest
+                 * @return CreateMNPSensitiveAPIPermissionApprovalOutcome
+                 */
+                CreateMNPSensitiveAPIPermissionApprovalOutcome CreateMNPSensitiveAPIPermissionApproval(const Model::CreateMNPSensitiveAPIPermissionApprovalRequest &request);
+                void CreateMNPSensitiveAPIPermissionApprovalAsync(const Model::CreateMNPSensitiveAPIPermissionApprovalRequest& request, const CreateMNPSensitiveAPIPermissionApprovalAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateMNPSensitiveAPIPermissionApprovalOutcomeCallable CreateMNPSensitiveAPIPermissionApprovalCallable(const Model::CreateMNPSensitiveAPIPermissionApprovalRequest& request);
+
+                /**
+                 *This API is used to create a mini program version.
+                 * @param req CreateMNPVersionRequest
+                 * @return CreateMNPVersionOutcome
+                 */
+                CreateMNPVersionOutcome CreateMNPVersion(const Model::CreateMNPVersionRequest &request);
+                void CreateMNPVersionAsync(const Model::CreateMNPVersionRequest& request, const CreateMNPVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateMNPVersionOutcomeCallable CreateMNPVersionCallable(const Model::CreateMNPVersionRequest& request);
 
                 /**
                  *This API is used to release the mini program
@@ -495,7 +723,7 @@ namespace TencentCloud
                 CreateSensitiveAPIOutcomeCallable CreateSensitiveAPICallable(const Model::CreateSensitiveAPIRequest& request);
 
                 /**
-                 *This API is used to apply for sensitive API call permissions
+                 *This API is used to apply for sensitive API permissions
                  * @param req CreateSensitiveApiApplyRequest
                  * @return CreateSensitiveApiApplyOutcome
                  */
@@ -504,7 +732,7 @@ namespace TencentCloud
                 CreateSensitiveApiApplyOutcomeCallable CreateSensitiveApiApplyCallable(const Model::CreateSensitiveApiApplyRequest& request);
 
                 /**
-                 *This API is used to create a team
+                 *This API is used to create a team.
                  * @param req CreateTeamRequest
                  * @return CreateTeamOutcome
                  */
@@ -540,6 +768,15 @@ namespace TencentCloud
                 DeleteApplicationOutcomeCallable DeleteApplicationCallable(const Model::DeleteApplicationRequest& request);
 
                 /**
+                 *This API is used to delete a sensitive API.
+                 * @param req DeleteApplicationSensitiveAPIRequest
+                 * @return DeleteApplicationSensitiveAPIOutcome
+                 */
+                DeleteApplicationSensitiveAPIOutcome DeleteApplicationSensitiveAPI(const Model::DeleteApplicationSensitiveAPIRequest &request);
+                void DeleteApplicationSensitiveAPIAsync(const Model::DeleteApplicationSensitiveAPIRequest& request, const DeleteApplicationSensitiveAPIAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteApplicationSensitiveAPIOutcomeCallable DeleteApplicationSensitiveAPICallable(const Model::DeleteApplicationSensitiveAPIRequest& request);
+
+                /**
                  *This API is used to delete domains from allowlist or blocklist
                  * @param req DeleteGlobalDomainRequest
                  * @return DeleteGlobalDomainOutcome
@@ -558,7 +795,7 @@ namespace TencentCloud
                 DeleteMNPOutcomeCallable DeleteMNPCallable(const Model::DeleteMNPRequest& request);
 
                 /**
-                 *This API is used to delete a sensitive API
+                 *This API is used to delete sensitive API
                  * @param req DeleteSensitiveAPIRequest
                  * @return DeleteSensitiveAPIOutcome
                  */
@@ -594,7 +831,7 @@ namespace TencentCloud
                 DeleteUserOutcomeCallable DeleteUserCallable(const Model::DeleteUserRequest& request);
 
                 /**
-                 *This API is used to query application details
+                 *This API is used to query details of an application. 
                  * @param req DescribeApplicationRequest
                  * @return DescribeApplicationOutcome
                  */
@@ -612,7 +849,16 @@ namespace TencentCloud
                 DescribeApplicationConfigOutcomeCallable DescribeApplicationConfigCallable(const Model::DescribeApplicationConfigRequest& request);
 
                 /**
-                 *This API is used to query application list data
+                 *This API is used to query the configuration files of an application.
+                 * @param req DescribeApplicationConfigFileRequest
+                 * @return DescribeApplicationConfigFileOutcome
+                 */
+                DescribeApplicationConfigFileOutcome DescribeApplicationConfigFile(const Model::DescribeApplicationConfigFileRequest &request);
+                void DescribeApplicationConfigFileAsync(const Model::DescribeApplicationConfigFileRequest& request, const DescribeApplicationConfigFileAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeApplicationConfigFileOutcomeCallable DescribeApplicationConfigFileCallable(const Model::DescribeApplicationConfigFileRequest& request);
+
+                /**
+                 *This API is used to query the list of application. 
                  * @param req DescribeApplicationListRequest
                  * @return DescribeApplicationListOutcome
                  */
@@ -630,7 +876,16 @@ namespace TencentCloud
                 DescribeApplicationMNPVersionAuditListOutcomeCallable DescribeApplicationMNPVersionAuditListCallable(const Model::DescribeApplicationMNPVersionAuditListRequest& request);
 
                 /**
-                 *This API is used to query if the mini program version is uploaded successfully
+                 *This API is used to list sensitive APIs of an application. 
+                 * @param req DescribeApplicationSensitiveAPIListRequest
+                 * @return DescribeApplicationSensitiveAPIListOutcome
+                 */
+                DescribeApplicationSensitiveAPIListOutcome DescribeApplicationSensitiveAPIList(const Model::DescribeApplicationSensitiveAPIListRequest &request);
+                void DescribeApplicationSensitiveAPIListAsync(const Model::DescribeApplicationSensitiveAPIListRequest& request, const DescribeApplicationSensitiveAPIListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeApplicationSensitiveAPIListOutcomeCallable DescribeApplicationSensitiveAPIListCallable(const Model::DescribeApplicationSensitiveAPIListRequest& request);
+
+                /**
+                 *This API is used to query if the mini program version is created successfully
                  * @param req DescribeConsoleMNPVersionCompileTaskRequest
                  * @return DescribeConsoleMNPVersionCompileTaskOutcome
                  */
@@ -657,6 +912,15 @@ namespace TencentCloud
                 DescribeDomainTeamListOutcomeCallable DescribeDomainTeamListCallable(const Model::DescribeDomainTeamListRequest& request);
 
                 /**
+                 *This API is used to query the global domain allowlist and blocklist.
+                 * @param req DescribeGlobalDomainACLRequest
+                 * @return DescribeGlobalDomainACLOutcome
+                 */
+                DescribeGlobalDomainACLOutcome DescribeGlobalDomainACL(const Model::DescribeGlobalDomainACLRequest &request);
+                void DescribeGlobalDomainACLAsync(const Model::DescribeGlobalDomainACLRequest& request, const DescribeGlobalDomainACLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeGlobalDomainACLOutcomeCallable DescribeGlobalDomainACLCallable(const Model::DescribeGlobalDomainACLRequest& request);
+
+                /**
                  *This API is used to query domain allowlist and blocklist
                  * @param req DescribeGlobalDomainListRequest
                  * @return DescribeGlobalDomainListOutcome
@@ -664,6 +928,33 @@ namespace TencentCloud
                 DescribeGlobalDomainListOutcome DescribeGlobalDomainList(const Model::DescribeGlobalDomainListRequest &request);
                 void DescribeGlobalDomainListAsync(const Model::DescribeGlobalDomainListRequest& request, const DescribeGlobalDomainListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeGlobalDomainListOutcomeCallable DescribeGlobalDomainListCallable(const Model::DescribeGlobalDomainListRequest& request);
+
+                /**
+                 *This API is used to query details of a mini program. 
+                 * @param req DescribeMNPRequest
+                 * @return DescribeMNPOutcome
+                 */
+                DescribeMNPOutcome DescribeMNP(const Model::DescribeMNPRequest &request);
+                void DescribeMNPAsync(const Model::DescribeMNPRequest& request, const DescribeMNPAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNPOutcomeCallable DescribeMNPCallable(const Model::DescribeMNPRequest& request);
+
+                /**
+                 *This API is used to query the mini program version management information
+                 * @param req DescribeMNPAllStageVersionsRequest
+                 * @return DescribeMNPAllStageVersionsOutcome
+                 */
+                DescribeMNPAllStageVersionsOutcome DescribeMNPAllStageVersions(const Model::DescribeMNPAllStageVersionsRequest &request);
+                void DescribeMNPAllStageVersionsAsync(const Model::DescribeMNPAllStageVersionsRequest& request, const DescribeMNPAllStageVersionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNPAllStageVersionsOutcomeCallable DescribeMNPAllStageVersionsCallable(const Model::DescribeMNPAllStageVersionsRequest& request);
+
+                /**
+                 *This API is used to list the approval requests related with a mini program version.
+                 * @param req DescribeMNPApprovalListRequest
+                 * @return DescribeMNPApprovalListOutcome
+                 */
+                DescribeMNPApprovalListOutcome DescribeMNPApprovalList(const Model::DescribeMNPApprovalListRequest &request);
+                void DescribeMNPApprovalListAsync(const Model::DescribeMNPApprovalListRequest& request, const DescribeMNPApprovalListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNPApprovalListOutcomeCallable DescribeMNPApprovalListCallable(const Model::DescribeMNPApprovalListRequest& request);
 
                 /**
                  *This API is used to query the mini program version management information
@@ -675,6 +966,15 @@ namespace TencentCloud
                 DescribeMNPBoardOutcomeCallable DescribeMNPBoardCallable(const Model::DescribeMNPBoardRequest& request);
 
                 /**
+                 *This API is used to query the list of mini program types.
+                 * @param req DescribeMNPCategoryRequest
+                 * @return DescribeMNPCategoryOutcome
+                 */
+                DescribeMNPCategoryOutcome DescribeMNPCategory(const Model::DescribeMNPCategoryRequest &request);
+                void DescribeMNPCategoryAsync(const Model::DescribeMNPCategoryRequest& request, const DescribeMNPCategoryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNPCategoryOutcomeCallable DescribeMNPCategoryCallable(const Model::DescribeMNPCategoryRequest& request);
+
+                /**
                  *This API is used to query mini program details
                  * @param req DescribeMNPDetailRequest
                  * @return DescribeMNPDetailOutcome
@@ -682,6 +982,24 @@ namespace TencentCloud
                 DescribeMNPDetailOutcome DescribeMNPDetail(const Model::DescribeMNPDetailRequest &request);
                 void DescribeMNPDetailAsync(const Model::DescribeMNPDetailRequest& request, const DescribeMNPDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeMNPDetailOutcomeCallable DescribeMNPDetailCallable(const Model::DescribeMNPDetailRequest& request);
+
+                /**
+                 *This API is used to query the domain name allowlist / blocklist of a mini program. 
+                 * @param req DescribeMNPDomainACLRequest
+                 * @return DescribeMNPDomainACLOutcome
+                 */
+                DescribeMNPDomainACLOutcome DescribeMNPDomainACL(const Model::DescribeMNPDomainACLRequest &request);
+                void DescribeMNPDomainACLAsync(const Model::DescribeMNPDomainACLRequest& request, const DescribeMNPDomainACLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNPDomainACLOutcomeCallable DescribeMNPDomainACLCallable(const Model::DescribeMNPDomainACLRequest& request);
+
+                /**
+                 *This API is used to query the list of mini programs.
+                 * @param req DescribeMNPListRequest
+                 * @return DescribeMNPListOutcome
+                 */
+                DescribeMNPListOutcome DescribeMNPList(const Model::DescribeMNPListRequest &request);
+                void DescribeMNPListAsync(const Model::DescribeMNPListRequest& request, const DescribeMNPListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNPListOutcomeCallable DescribeMNPListCallable(const Model::DescribeMNPListRequest& request);
 
                 /**
                  *This API is used to query mini program details in the mini program list
@@ -702,6 +1020,24 @@ namespace TencentCloud
                 DescribeMNPManagerListOutcomeCallable DescribeMNPManagerListCallable(const Model::DescribeMNPManagerListRequest& request);
 
                 /**
+                 *DescribeMNPOfflinePackageURL
+                 * @param req DescribeMNPOfflinePackageURLRequest
+                 * @return DescribeMNPOfflinePackageURLOutcome
+                 */
+                DescribeMNPOfflinePackageURLOutcome DescribeMNPOfflinePackageURL(const Model::DescribeMNPOfflinePackageURLRequest &request);
+                void DescribeMNPOfflinePackageURLAsync(const Model::DescribeMNPOfflinePackageURLRequest& request, const DescribeMNPOfflinePackageURLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNPOfflinePackageURLOutcomeCallable DescribeMNPOfflinePackageURLCallable(const Model::DescribeMNPOfflinePackageURLRequest& request);
+
+                /**
+                 *This API is used to query the details of a mini program preview version.
+                 * @param req DescribeMNPPreviewRequest
+                 * @return DescribeMNPPreviewOutcome
+                 */
+                DescribeMNPPreviewOutcome DescribeMNPPreview(const Model::DescribeMNPPreviewRequest &request);
+                void DescribeMNPPreviewAsync(const Model::DescribeMNPPreviewRequest& request, const DescribeMNPPreviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNPPreviewOutcomeCallable DescribeMNPPreviewCallable(const Model::DescribeMNPPreviewRequest& request);
+
+                /**
                  *This API is used to query the details filled in the service description
                  * @param req DescribeMNPPrivacyRequest
                  * @return DescribeMNPPrivacyOutcome
@@ -709,6 +1045,42 @@ namespace TencentCloud
                 DescribeMNPPrivacyOutcome DescribeMNPPrivacy(const Model::DescribeMNPPrivacyRequest &request);
                 void DescribeMNPPrivacyAsync(const Model::DescribeMNPPrivacyRequest& request, const DescribeMNPPrivacyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeMNPPrivacyOutcomeCallable DescribeMNPPrivacyCallable(const Model::DescribeMNPPrivacyRequest& request);
+
+                /**
+                 *This API is used to list all released versions of a mini program.
+                 * @param req DescribeMNPReleasedVersionHistoryRequest
+                 * @return DescribeMNPReleasedVersionHistoryOutcome
+                 */
+                DescribeMNPReleasedVersionHistoryOutcome DescribeMNPReleasedVersionHistory(const Model::DescribeMNPReleasedVersionHistoryRequest &request);
+                void DescribeMNPReleasedVersionHistoryAsync(const Model::DescribeMNPReleasedVersionHistoryRequest& request, const DescribeMNPReleasedVersionHistoryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNPReleasedVersionHistoryOutcomeCallable DescribeMNPReleasedVersionHistoryCallable(const Model::DescribeMNPReleasedVersionHistoryRequest& request);
+
+                /**
+                 *This API is used to query details of a specific permission request to call sensitive APIs.
+                 * @param req DescribeMNPSensitiveAPIPermissionApprovalRequest
+                 * @return DescribeMNPSensitiveAPIPermissionApprovalOutcome
+                 */
+                DescribeMNPSensitiveAPIPermissionApprovalOutcome DescribeMNPSensitiveAPIPermissionApproval(const Model::DescribeMNPSensitiveAPIPermissionApprovalRequest &request);
+                void DescribeMNPSensitiveAPIPermissionApprovalAsync(const Model::DescribeMNPSensitiveAPIPermissionApprovalRequest& request, const DescribeMNPSensitiveAPIPermissionApprovalAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNPSensitiveAPIPermissionApprovalOutcomeCallable DescribeMNPSensitiveAPIPermissionApprovalCallable(const Model::DescribeMNPSensitiveAPIPermissionApprovalRequest& request);
+
+                /**
+                 *This API is used to query permission requests to allow a mini program calling sensitive APIs.
+                 * @param req DescribeMNPSensitiveAPIPermissionApprovalListRequest
+                 * @return DescribeMNPSensitiveAPIPermissionApprovalListOutcome
+                 */
+                DescribeMNPSensitiveAPIPermissionApprovalListOutcome DescribeMNPSensitiveAPIPermissionApprovalList(const Model::DescribeMNPSensitiveAPIPermissionApprovalListRequest &request);
+                void DescribeMNPSensitiveAPIPermissionApprovalListAsync(const Model::DescribeMNPSensitiveAPIPermissionApprovalListRequest& request, const DescribeMNPSensitiveAPIPermissionApprovalListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNPSensitiveAPIPermissionApprovalListOutcomeCallable DescribeMNPSensitiveAPIPermissionApprovalListCallable(const Model::DescribeMNPSensitiveAPIPermissionApprovalListRequest& request);
+
+                /**
+                 *This API is used to query the list of sensitive APIs that available to a mini program.
+                 * @param req DescribeMNPSensitiveAPIPermissionListRequest
+                 * @return DescribeMNPSensitiveAPIPermissionListOutcome
+                 */
+                DescribeMNPSensitiveAPIPermissionListOutcome DescribeMNPSensitiveAPIPermissionList(const Model::DescribeMNPSensitiveAPIPermissionListRequest &request);
+                void DescribeMNPSensitiveAPIPermissionListAsync(const Model::DescribeMNPSensitiveAPIPermissionListRequest& request, const DescribeMNPSensitiveAPIPermissionListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNPSensitiveAPIPermissionListOutcomeCallable DescribeMNPSensitiveAPIPermissionListCallable(const Model::DescribeMNPSensitiveAPIPermissionListRequest& request);
 
                 /**
                  *This API is used to query the mini program type list
@@ -720,7 +1092,16 @@ namespace TencentCloud
                 DescribeMNPTypeOutcomeCallable DescribeMNPTypeCallable(const Model::DescribeMNPTypeRequest& request);
 
                 /**
-                 *This API is used to query the details of the mini program trial version
+                 *This API is used to query the result of the task to create a mini program version.
+                 * @param req DescribeMNPVersionRequest
+                 * @return DescribeMNPVersionOutcome
+                 */
+                DescribeMNPVersionOutcome DescribeMNPVersion(const Model::DescribeMNPVersionRequest &request);
+                void DescribeMNPVersionAsync(const Model::DescribeMNPVersionRequest& request, const DescribeMNPVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNPVersionOutcomeCallable DescribeMNPVersionCallable(const Model::DescribeMNPVersionRequest& request);
+
+                /**
+                 *This API is used to query the details of the mini program preview version
                  * @param req DescribeMNPVersionPreviewRequest
                  * @return DescribeMNPVersionPreviewOutcome
                  */
@@ -738,7 +1119,7 @@ namespace TencentCloud
                 DescribeOfflineMNPPackageOutcomeCallable DescribeOfflineMNPPackageCallable(const Model::DescribeOfflineMNPPackageRequest& request);
 
                 /**
-                 *This API is used to query the current release version of the mini program
+                 *This API is used to query the release version history
                  * @param req DescribeOnlineVersionRequest
                  * @return DescribeOnlineVersionOutcome
                  */
@@ -756,7 +1137,7 @@ namespace TencentCloud
                 DescribeRoleDetailOutcomeCallable DescribeRoleDetailCallable(const Model::DescribeRoleDetailRequest& request);
 
                 /**
-                 *This API is used to query role list data
+                 *This API is used to query the list of roles. 
                  * @param req DescribeRoleListRequest
                  * @return DescribeRoleListOutcome
                  */
@@ -783,7 +1164,7 @@ namespace TencentCloud
                 DescribeSensitiveAPIListOutcomeCallable DescribeSensitiveAPIListCallable(const Model::DescribeSensitiveAPIListRequest& request);
 
                 /**
-                 *This API is used to query sensitive API call details
+                 *This API is used to query sensitive API permission approval details
                  * @param req DescribeSensitiveApiApplyDetailRequest
                  * @return DescribeSensitiveApiApplyDetailOutcome
                  */
@@ -792,7 +1173,7 @@ namespace TencentCloud
                 DescribeSensitiveApiApplyDetailOutcomeCallable DescribeSensitiveApiApplyDetailCallable(const Model::DescribeSensitiveApiApplyDetailRequest& request);
 
                 /**
-                 *This API is used to query the sensitive APIs that require permission
+                 *This API is used to query the sensitive API permission list
                  * @param req DescribeSensitiveApiAuthListRequest
                  * @return DescribeSensitiveApiAuthListOutcome
                  */
@@ -819,7 +1200,7 @@ namespace TencentCloud
                 DescribeSimpleTeamListOutcomeCallable DescribeSimpleTeamListCallable(const Model::DescribeSimpleTeamListRequest& request);
 
                 /**
-                 *This API is used to query team details
+                 *This API is used to query details of a team. 
                  * @param req DescribeTeamRequest
                  * @return DescribeTeamOutcome
                  */
@@ -837,7 +1218,7 @@ namespace TencentCloud
                 DescribeTeamDomainListOutcomeCallable DescribeTeamDomainListCallable(const Model::DescribeTeamDomainListRequest& request);
 
                 /**
-                 *This API is used to query the team list that can be viewed by the current role permissions
+                 *This API is used to query the list of teams. 
                  * @param req DescribeTeamListRequest
                  * @return DescribeTeamListOutcome
                  */
@@ -873,6 +1254,15 @@ namespace TencentCloud
                 DescribeTempSecret4UploadFile2CosOutcomeCallable DescribeTempSecret4UploadFile2CosCallable(const Model::DescribeTempSecret4UploadFile2CosRequest& request);
 
                 /**
+                 *This API is used to query details of a user. 
+                 * @param req DescribeUserRequest
+                 * @return DescribeUserOutcome
+                 */
+                DescribeUserOutcome DescribeUser(const Model::DescribeUserRequest &request);
+                void DescribeUserAsync(const Model::DescribeUserRequest& request, const DescribeUserAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeUserOutcomeCallable DescribeUserCallable(const Model::DescribeUserRequest& request);
+
+                /**
                  *This API is used to query user details
                  * @param req DescribeUserDetailRequest
                  * @return DescribeUserDetailOutcome
@@ -891,6 +1281,15 @@ namespace TencentCloud
                 DescribeUserListOutcomeCallable DescribeUserListCallable(const Model::DescribeUserListRequest& request);
 
                 /**
+                 *This API is used to set a sensitive API to Restricted.
+                 * @param req DisableApplicationSensitiveAPIRequest
+                 * @return DisableApplicationSensitiveAPIOutcome
+                 */
+                DisableApplicationSensitiveAPIOutcome DisableApplicationSensitiveAPI(const Model::DisableApplicationSensitiveAPIRequest &request);
+                void DisableApplicationSensitiveAPIAsync(const Model::DisableApplicationSensitiveAPIRequest& request, const DisableApplicationSensitiveAPIAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DisableApplicationSensitiveAPIOutcomeCallable DisableApplicationSensitiveAPICallable(const Model::DisableApplicationSensitiveAPIRequest& request);
+
+                /**
                  *This API is used to disable the company’s domain name that obtained the ICP filing
                  * @param req DisableTeamDomainRequest
                  * @return DisableTeamDomainOutcome
@@ -898,6 +1297,15 @@ namespace TencentCloud
                 DisableTeamDomainOutcome DisableTeamDomain(const Model::DisableTeamDomainRequest &request);
                 void DisableTeamDomainAsync(const Model::DisableTeamDomainRequest& request, const DisableTeamDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DisableTeamDomainOutcomeCallable DisableTeamDomainCallable(const Model::DisableTeamDomainRequest& request);
+
+                /**
+                 *This API is used to set an application sensitive API to public.
+                 * @param req EnableApplicationSensitiveAPIRequest
+                 * @return EnableApplicationSensitiveAPIOutcome
+                 */
+                EnableApplicationSensitiveAPIOutcome EnableApplicationSensitiveAPI(const Model::EnableApplicationSensitiveAPIRequest &request);
+                void EnableApplicationSensitiveAPIAsync(const Model::EnableApplicationSensitiveAPIRequest& request, const EnableApplicationSensitiveAPIAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                EnableApplicationSensitiveAPIOutcomeCallable EnableApplicationSensitiveAPICallable(const Model::EnableApplicationSensitiveAPIRequest& request);
 
                 /**
                  *This API is used to change application information
@@ -954,6 +1362,15 @@ namespace TencentCloud
                 ModifyMNPOutcomeCallable ModifyMNPCallable(const Model::ModifyMNPRequest& request);
 
                 /**
+                 *This API is used to edit the mini program domain information.
+                 * @param req ModifyMNPDomainRequest
+                 * @return ModifyMNPDomainOutcome
+                 */
+                ModifyMNPDomainOutcome ModifyMNPDomain(const Model::ModifyMNPDomainRequest &request);
+                void ModifyMNPDomainAsync(const Model::ModifyMNPDomainRequest& request, const ModifyMNPDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyMNPDomainOutcomeCallable ModifyMNPDomainCallable(const Model::ModifyMNPDomainRequest& request);
+
+                /**
                  *This API is used to remove the mini program
                  * @param req ModifyMNPStatusOfflineRequest
                  * @return ModifyMNPStatusOfflineOutcome
@@ -963,7 +1380,7 @@ namespace TencentCloud
                 ModifyMNPStatusOfflineOutcomeCallable ModifyMNPStatusOfflineCallable(const Model::ModifyMNPStatusOfflineRequest& request);
 
                 /**
-                 *This API is used to configure the mini program trial version
+                 *This API is used to configure the mini program preview version
                  * @param req ModifyMNPVersionPreviewRequest
                  * @return ModifyMNPVersionPreviewOutcome
                  */
@@ -981,7 +1398,7 @@ namespace TencentCloud
                 ModifyOnlineVersionOutcomeCallable ModifyOnlineVersionCallable(const Model::ModifyOnlineVersionRequest& request);
 
                 /**
-                 *This API is used to approve the release of the mini program version
+                 *This API is used to approve or reject the release of the mini program version
                  * @param req ModifyPlatformAuditStatusRequest
                  * @return ModifyPlatformAuditStatusOutcome
                  */
@@ -990,7 +1407,7 @@ namespace TencentCloud
                 ModifyPlatformAuditStatusOutcomeCallable ModifyPlatformAuditStatusCallable(const Model::ModifyPlatformAuditStatusRequest& request);
 
                 /**
-                 *This API is used to approve sensitive API call permission
+                 *This API is used to approve or reject the sensitive API permission application
                  * @param req ModifySensitiveAPIAuditStatusRequest
                  * @return ModifySensitiveAPIAuditStatusOutcome
                  */
@@ -1008,7 +1425,7 @@ namespace TencentCloud
                 ModifyTeamOutcomeCallable ModifyTeamCallable(const Model::ModifyTeamRequest& request);
 
                 /**
-                 *This API is used to change team member roles
+                 *This API is used to modify team member information.
                  * @param req ModifyTeamMemberRequest
                  * @return ModifyTeamMemberOutcome
                  */
@@ -1017,7 +1434,7 @@ namespace TencentCloud
                 ModifyTeamMemberOutcomeCallable ModifyTeamMemberCallable(const Model::ModifyTeamMemberRequest& request);
 
                 /**
-                 *This API is used to edit user information
+                 *This API is used to modify user information.
                  * @param req ModifyUserRequest
                  * @return ModifyUserOutcome
                  */
@@ -1033,6 +1450,51 @@ namespace TencentCloud
                 ModifyUserPasswordOutcome ModifyUserPassword(const Model::ModifyUserPasswordRequest &request);
                 void ModifyUserPasswordAsync(const Model::ModifyUserPasswordRequest& request, const ModifyUserPasswordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyUserPasswordOutcomeCallable ModifyUserPasswordCallable(const Model::ModifyUserPasswordRequest& request);
+
+                /**
+                 *This API is used to approve or reject the release of a mini program version.
+                 * @param req ProcessMNPApprovalRequest
+                 * @return ProcessMNPApprovalOutcome
+                 */
+                ProcessMNPApprovalOutcome ProcessMNPApproval(const Model::ProcessMNPApprovalRequest &request);
+                void ProcessMNPApprovalAsync(const Model::ProcessMNPApprovalRequest& request, const ProcessMNPApprovalAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ProcessMNPApprovalOutcomeCallable ProcessMNPApprovalCallable(const Model::ProcessMNPApprovalRequest& request);
+
+                /**
+                 *This API is used to approve or reject the sensitive API permission application. 
+                 * @param req ProcessMNPSensitiveAPIPermissionApprovalRequest
+                 * @return ProcessMNPSensitiveAPIPermissionApprovalOutcome
+                 */
+                ProcessMNPSensitiveAPIPermissionApprovalOutcome ProcessMNPSensitiveAPIPermissionApproval(const Model::ProcessMNPSensitiveAPIPermissionApprovalRequest &request);
+                void ProcessMNPSensitiveAPIPermissionApprovalAsync(const Model::ProcessMNPSensitiveAPIPermissionApprovalRequest& request, const ProcessMNPSensitiveAPIPermissionApprovalAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ProcessMNPSensitiveAPIPermissionApprovalOutcomeCallable ProcessMNPSensitiveAPIPermissionApprovalCallable(const Model::ProcessMNPSensitiveAPIPermissionApprovalRequest& request);
+
+                /**
+                 *This API is used to release a mini program version.
+                 * @param req ReleaseMNPVersionRequest
+                 * @return ReleaseMNPVersionOutcome
+                 */
+                ReleaseMNPVersionOutcome ReleaseMNPVersion(const Model::ReleaseMNPVersionRequest &request);
+                void ReleaseMNPVersionAsync(const Model::ReleaseMNPVersionRequest& request, const ReleaseMNPVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ReleaseMNPVersionOutcomeCallable ReleaseMNPVersionCallable(const Model::ReleaseMNPVersionRequest& request);
+
+                /**
+                 *This API is used to remove a mini program.
+                 * @param req RemoveMNPRequest
+                 * @return RemoveMNPOutcome
+                 */
+                RemoveMNPOutcome RemoveMNP(const Model::RemoveMNPRequest &request);
+                void RemoveMNPAsync(const Model::RemoveMNPRequest& request, const RemoveMNPAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RemoveMNPOutcomeCallable RemoveMNPCallable(const Model::RemoveMNPRequest& request);
+
+                /**
+                 *This API is used to rollback a mini program online version.
+                 * @param req RollbackMNPVersionRequest
+                 * @return RollbackMNPVersionOutcome
+                 */
+                RollbackMNPVersionOutcome RollbackMNPVersion(const Model::RollbackMNPVersionRequest &request);
+                void RollbackMNPVersionAsync(const Model::RollbackMNPVersionRequest& request, const RollbackMNPVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RollbackMNPVersionOutcomeCallable RollbackMNPVersionCallable(const Model::RollbackMNPVersionRequest& request);
 
             };
         }

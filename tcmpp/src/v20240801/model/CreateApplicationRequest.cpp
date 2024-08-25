@@ -26,14 +26,12 @@ CreateApplicationRequest::CreateApplicationRequest() :
     m_applicationNameHasBeenSet(false),
     m_logoHasBeenSet(false),
     m_platformIdHasBeenSet(false),
+    m_teamIdHasBeenSet(false),
+    m_applicationTypeHasBeenSet(false),
+    m_introHasBeenSet(false),
     m_androidAppKeyHasBeenSet(false),
     m_iosAppKeyHasBeenSet(false),
-    m_introHasBeenSet(false),
-    m_remarkHasBeenSet(false),
-    m_androidAppURLHasBeenSet(false),
-    m_iosAppURLHasBeenSet(false),
-    m_teamIdHasBeenSet(false),
-    m_applicationTypeHasBeenSet(false)
+    m_remarkHasBeenSet(false)
 {
 }
 
@@ -68,6 +66,30 @@ string CreateApplicationRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_platformId.c_str(), allocator).Move(), allocator);
     }
 
+    if (m_teamIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TeamId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_teamId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_applicationTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ApplicationType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_applicationType, allocator);
+    }
+
+    if (m_introHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Intro";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_intro.c_str(), allocator).Move(), allocator);
+    }
+
     if (m_androidAppKeyHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -84,52 +106,12 @@ string CreateApplicationRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_iosAppKey.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_introHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Intro";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_intro.c_str(), allocator).Move(), allocator);
-    }
-
     if (m_remarkHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Remark";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_remark.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_androidAppURLHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "AndroidAppURL";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_androidAppURL.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_iosAppURLHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "IosAppURL";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_iosAppURL.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_teamIdHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "TeamId";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_teamId.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_applicationTypeHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "ApplicationType";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, m_applicationType, allocator);
     }
 
 
@@ -188,6 +170,54 @@ bool CreateApplicationRequest::PlatformIdHasBeenSet() const
     return m_platformIdHasBeenSet;
 }
 
+string CreateApplicationRequest::GetTeamId() const
+{
+    return m_teamId;
+}
+
+void CreateApplicationRequest::SetTeamId(const string& _teamId)
+{
+    m_teamId = _teamId;
+    m_teamIdHasBeenSet = true;
+}
+
+bool CreateApplicationRequest::TeamIdHasBeenSet() const
+{
+    return m_teamIdHasBeenSet;
+}
+
+int64_t CreateApplicationRequest::GetApplicationType() const
+{
+    return m_applicationType;
+}
+
+void CreateApplicationRequest::SetApplicationType(const int64_t& _applicationType)
+{
+    m_applicationType = _applicationType;
+    m_applicationTypeHasBeenSet = true;
+}
+
+bool CreateApplicationRequest::ApplicationTypeHasBeenSet() const
+{
+    return m_applicationTypeHasBeenSet;
+}
+
+string CreateApplicationRequest::GetIntro() const
+{
+    return m_intro;
+}
+
+void CreateApplicationRequest::SetIntro(const string& _intro)
+{
+    m_intro = _intro;
+    m_introHasBeenSet = true;
+}
+
+bool CreateApplicationRequest::IntroHasBeenSet() const
+{
+    return m_introHasBeenSet;
+}
+
 string CreateApplicationRequest::GetAndroidAppKey() const
 {
     return m_androidAppKey;
@@ -220,22 +250,6 @@ bool CreateApplicationRequest::IosAppKeyHasBeenSet() const
     return m_iosAppKeyHasBeenSet;
 }
 
-string CreateApplicationRequest::GetIntro() const
-{
-    return m_intro;
-}
-
-void CreateApplicationRequest::SetIntro(const string& _intro)
-{
-    m_intro = _intro;
-    m_introHasBeenSet = true;
-}
-
-bool CreateApplicationRequest::IntroHasBeenSet() const
-{
-    return m_introHasBeenSet;
-}
-
 string CreateApplicationRequest::GetRemark() const
 {
     return m_remark;
@@ -250,70 +264,6 @@ void CreateApplicationRequest::SetRemark(const string& _remark)
 bool CreateApplicationRequest::RemarkHasBeenSet() const
 {
     return m_remarkHasBeenSet;
-}
-
-string CreateApplicationRequest::GetAndroidAppURL() const
-{
-    return m_androidAppURL;
-}
-
-void CreateApplicationRequest::SetAndroidAppURL(const string& _androidAppURL)
-{
-    m_androidAppURL = _androidAppURL;
-    m_androidAppURLHasBeenSet = true;
-}
-
-bool CreateApplicationRequest::AndroidAppURLHasBeenSet() const
-{
-    return m_androidAppURLHasBeenSet;
-}
-
-string CreateApplicationRequest::GetIosAppURL() const
-{
-    return m_iosAppURL;
-}
-
-void CreateApplicationRequest::SetIosAppURL(const string& _iosAppURL)
-{
-    m_iosAppURL = _iosAppURL;
-    m_iosAppURLHasBeenSet = true;
-}
-
-bool CreateApplicationRequest::IosAppURLHasBeenSet() const
-{
-    return m_iosAppURLHasBeenSet;
-}
-
-string CreateApplicationRequest::GetTeamId() const
-{
-    return m_teamId;
-}
-
-void CreateApplicationRequest::SetTeamId(const string& _teamId)
-{
-    m_teamId = _teamId;
-    m_teamIdHasBeenSet = true;
-}
-
-bool CreateApplicationRequest::TeamIdHasBeenSet() const
-{
-    return m_teamIdHasBeenSet;
-}
-
-int64_t CreateApplicationRequest::GetApplicationType() const
-{
-    return m_applicationType;
-}
-
-void CreateApplicationRequest::SetApplicationType(const int64_t& _applicationType)
-{
-    m_applicationType = _applicationType;
-    m_applicationTypeHasBeenSet = true;
-}
-
-bool CreateApplicationRequest::ApplicationTypeHasBeenSet() const
-{
-    return m_applicationTypeHasBeenSet;
 }
 
 

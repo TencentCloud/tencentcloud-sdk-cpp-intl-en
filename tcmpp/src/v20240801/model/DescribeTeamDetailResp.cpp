@@ -29,7 +29,8 @@ DescribeTeamDetailResp::DescribeTeamDetailResp() :
     m_memberCountHasBeenSet(false),
     m_bindMiniTeamCountHasBeenSet(false),
     m_bindTeamNameHasBeenSet(false),
-    m_registerLinkHasBeenSet(false)
+    m_registerLinkHasBeenSet(false),
+    m_applicationNameHasBeenSet(false)
 {
 }
 
@@ -128,6 +129,16 @@ CoreInternalOutcome DescribeTeamDetailResp::Deserialize(const rapidjson::Value &
         m_registerLinkHasBeenSet = true;
     }
 
+    if (value.HasMember("ApplicationName") && !value["ApplicationName"].IsNull())
+    {
+        if (!value["ApplicationName"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `DescribeTeamDetailResp.ApplicationName` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_applicationName = string(value["ApplicationName"].GetString());
+        m_applicationNameHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -205,6 +216,14 @@ void DescribeTeamDetailResp::ToJsonObject(rapidjson::Value &value, rapidjson::Do
         string key = "RegisterLink";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_registerLink.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_applicationNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ApplicationName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_applicationName.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -352,5 +371,21 @@ void DescribeTeamDetailResp::SetRegisterLink(const string& _registerLink)
 bool DescribeTeamDetailResp::RegisterLinkHasBeenSet() const
 {
     return m_registerLinkHasBeenSet;
+}
+
+string DescribeTeamDetailResp::GetApplicationName() const
+{
+    return m_applicationName;
+}
+
+void DescribeTeamDetailResp::SetApplicationName(const string& _applicationName)
+{
+    m_applicationName = _applicationName;
+    m_applicationNameHasBeenSet = true;
+}
+
+bool DescribeTeamDetailResp::ApplicationNameHasBeenSet() const
+{
+    return m_applicationNameHasBeenSet;
 }
 

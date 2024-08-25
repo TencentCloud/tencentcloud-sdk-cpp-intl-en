@@ -30,9 +30,7 @@ ModifyApplicationRequest::ModifyApplicationRequest() :
     m_platformIdHasBeenSet(false),
     m_androidAppKeyHasBeenSet(false),
     m_iosAppKeyHasBeenSet(false),
-    m_remarkHasBeenSet(false),
-    m_androidAppURLHasBeenSet(false),
-    m_iosAppURLHasBeenSet(false)
+    m_remarkHasBeenSet(false)
 {
 }
 
@@ -105,22 +103,6 @@ string ModifyApplicationRequest::ToJsonString() const
         string key = "Remark";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_remark.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_androidAppURLHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "AndroidAppURL";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_androidAppURL.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_iosAppURLHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "IosAppURL";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_iosAppURL.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -257,38 +239,6 @@ void ModifyApplicationRequest::SetRemark(const string& _remark)
 bool ModifyApplicationRequest::RemarkHasBeenSet() const
 {
     return m_remarkHasBeenSet;
-}
-
-string ModifyApplicationRequest::GetAndroidAppURL() const
-{
-    return m_androidAppURL;
-}
-
-void ModifyApplicationRequest::SetAndroidAppURL(const string& _androidAppURL)
-{
-    m_androidAppURL = _androidAppURL;
-    m_androidAppURLHasBeenSet = true;
-}
-
-bool ModifyApplicationRequest::AndroidAppURLHasBeenSet() const
-{
-    return m_androidAppURLHasBeenSet;
-}
-
-string ModifyApplicationRequest::GetIosAppURL() const
-{
-    return m_iosAppURL;
-}
-
-void ModifyApplicationRequest::SetIosAppURL(const string& _iosAppURL)
-{
-    m_iosAppURL = _iosAppURL;
-    m_iosAppURLHasBeenSet = true;
-}
-
-bool ModifyApplicationRequest::IosAppURLHasBeenSet() const
-{
-    return m_iosAppURLHasBeenSet;
 }
 
 
