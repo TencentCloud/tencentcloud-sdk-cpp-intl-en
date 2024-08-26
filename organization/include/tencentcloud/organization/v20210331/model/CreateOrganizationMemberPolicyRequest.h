@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool PolicyNameHasBeenSet() const;
 
                     /**
-                     * 获取Member access identity ID, which can be obtained through the `DescribeOrganizationMemberAuthIdentities` API.
-                     * @return IdentityId Member access identity ID, which can be obtained through the `DescribeOrganizationMemberAuthIdentities` API.
+                     * 获取Member access identity ID, which can be obtained through [DescribeOrganizationMemberAuthIdentities](https://intl.cloud.tencent.com/document/product/850/82936?from_cn_redirect=1).
+                     * @return IdentityId Member access identity ID, which can be obtained through [DescribeOrganizationMemberAuthIdentities](https://intl.cloud.tencent.com/document/product/850/82936?from_cn_redirect=1).
                      * 
                      */
                     int64_t GetIdentityId() const;
 
                     /**
-                     * 设置Member access identity ID, which can be obtained through the `DescribeOrganizationMemberAuthIdentities` API.
-                     * @param _identityId Member access identity ID, which can be obtained through the `DescribeOrganizationMemberAuthIdentities` API.
+                     * 设置Member access identity ID, which can be obtained through [DescribeOrganizationMemberAuthIdentities](https://intl.cloud.tencent.com/document/product/850/82936?from_cn_redirect=1).
+                     * @param _identityId Member access identity ID, which can be obtained through [DescribeOrganizationMemberAuthIdentities](https://intl.cloud.tencent.com/document/product/850/82936?from_cn_redirect=1).
                      * 
                      */
                     void SetIdentityId(const int64_t& _identityId);
@@ -141,7 +141,7 @@ namespace TencentCloud
                     bool m_policyNameHasBeenSet;
 
                     /**
-                     * Member access identity ID, which can be obtained through the `DescribeOrganizationMemberAuthIdentities` API.
+                     * Member access identity ID, which can be obtained through [DescribeOrganizationMemberAuthIdentities](https://intl.cloud.tencent.com/document/product/850/82936?from_cn_redirect=1).
                      */
                     int64_t m_identityId;
                     bool m_identityIdHasBeenSet;

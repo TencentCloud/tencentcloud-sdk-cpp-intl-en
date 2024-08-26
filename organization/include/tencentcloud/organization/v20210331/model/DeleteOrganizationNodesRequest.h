@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of node IDs.
-                     * @return NodeId List of node IDs.
+                     * 获取Node ID list, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
+                     * @return NodeId Node ID list, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
                      * 
                      */
                     std::vector<int64_t> GetNodeId() const;
 
                     /**
-                     * 设置List of node IDs.
-                     * @param _nodeId List of node IDs.
+                     * 设置Node ID list, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
+                     * @param _nodeId Node ID list, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
                      * 
                      */
                     void SetNodeId(const std::vector<int64_t>& _nodeId);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of node IDs.
+                     * Node ID list, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
                      */
                     std::vector<int64_t> m_nodeId;
                     bool m_nodeIdHasBeenSet;

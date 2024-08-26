@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool MemberUinHasBeenSet() const;
 
                     /**
-                     * 获取Policy ID.
-                     * @return PolicyId Policy ID.
+                     * 获取Policy ID, which can be obtained through [DescribeOrganizationMemberPolicies](https://intl.cloud.tencent.com/document/product/850/82935?from_cn_redirect=1).
+                     * @return PolicyId Policy ID, which can be obtained through [DescribeOrganizationMemberPolicies](https://intl.cloud.tencent.com/document/product/850/82935?from_cn_redirect=1).
                      * 
                      */
                     int64_t GetPolicyId() const;
 
                     /**
-                     * 设置Policy ID.
-                     * @param _policyId Policy ID.
+                     * 设置Policy ID, which can be obtained through [DescribeOrganizationMemberPolicies](https://intl.cloud.tencent.com/document/product/850/82935?from_cn_redirect=1).
+                     * @param _policyId Policy ID, which can be obtained through [DescribeOrganizationMemberPolicies](https://intl.cloud.tencent.com/document/product/850/82935?from_cn_redirect=1).
                      * 
                      */
                     void SetPolicyId(const int64_t& _policyId);
@@ -114,7 +114,7 @@ namespace TencentCloud
                     bool m_memberUinHasBeenSet;
 
                     /**
-                     * Policy ID.
+                     * Policy ID, which can be obtained through [DescribeOrganizationMemberPolicies](https://intl.cloud.tencent.com/document/product/850/82935?from_cn_redirect=1).
                      */
                     int64_t m_policyId;
                     bool m_policyIdHasBeenSet;

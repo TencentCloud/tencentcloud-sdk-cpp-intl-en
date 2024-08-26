@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool MemberUinHasBeenSet() const;
 
                     /**
-                     * 获取Policy ID, which can be obtained through the `DescribeOrganizationMemberPolicies` API.
-                     * @return PolicyId Policy ID, which can be obtained through the `DescribeOrganizationMemberPolicies` API.
+                     * 获取Policy ID, which can be obtained by calling [DescribeOrganizationMemberPolicies](https://intl.cloud.tencent.com/document/product/850/82935?from_cn_redirect=1).
+                     * @return PolicyId Policy ID, which can be obtained by calling [DescribeOrganizationMemberPolicies](https://intl.cloud.tencent.com/document/product/850/82935?from_cn_redirect=1).
                      * 
                      */
                     int64_t GetPolicyId() const;
 
                     /**
-                     * 设置Policy ID, which can be obtained through the `DescribeOrganizationMemberPolicies` API.
-                     * @param _policyId Policy ID, which can be obtained through the `DescribeOrganizationMemberPolicies` API.
+                     * 设置Policy ID, which can be obtained by calling [DescribeOrganizationMemberPolicies](https://intl.cloud.tencent.com/document/product/850/82935?from_cn_redirect=1).
+                     * @param _policyId Policy ID, which can be obtained by calling [DescribeOrganizationMemberPolicies](https://intl.cloud.tencent.com/document/product/850/82935?from_cn_redirect=1).
                      * 
                      */
                     void SetPolicyId(const int64_t& _policyId);
@@ -114,7 +114,7 @@ namespace TencentCloud
                     bool m_memberUinHasBeenSet;
 
                     /**
-                     * Policy ID, which can be obtained through the `DescribeOrganizationMemberPolicies` API.
+                     * Policy ID, which can be obtained by calling [DescribeOrganizationMemberPolicies](https://intl.cloud.tencent.com/document/product/850/82935?from_cn_redirect=1).
                      */
                     int64_t m_policyId;
                     bool m_policyIdHasBeenSet;

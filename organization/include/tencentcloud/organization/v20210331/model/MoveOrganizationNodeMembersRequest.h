@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Organization node ID.
-                     * @return NodeId Organization node ID.
+                     * 获取Organization node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
+                     * @return NodeId Organization node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
                      * 
                      */
                     int64_t GetNodeId() const;
 
                     /**
-                     * 设置Organization node ID.
-                     * @param _nodeId Organization node ID.
+                     * 设置Organization node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
+                     * @param _nodeId Organization node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
                      * 
                      */
                     void SetNodeId(const int64_t& _nodeId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool NodeIdHasBeenSet() const;
 
                     /**
-                     * 获取Member UIN list.
-                     * @return MemberUin Member UIN list.
+                     * 获取Uin list of the members.
+                     * @return MemberUin Uin list of the members.
                      * 
                      */
                     std::vector<int64_t> GetMemberUin() const;
 
                     /**
-                     * 设置Member UIN list.
-                     * @param _memberUin Member UIN list.
+                     * 设置Uin list of the members.
+                     * @param _memberUin Uin list of the members.
                      * 
                      */
                     void SetMemberUin(const std::vector<int64_t>& _memberUin);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Organization node ID.
+                     * Organization node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
                      */
                     int64_t m_nodeId;
                     bool m_nodeIdHasBeenSet;
 
                     /**
-                     * Member UIN list.
+                     * Uin list of the members.
                      */
                     std::vector<int64_t> m_memberUin;
                     bool m_memberUinHasBeenSet;

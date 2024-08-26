@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Organization member UIN.
-                     * @return MemberUin Organization member UIN.
+                     * 获取Uin of the organization member. At least one of the input parameters MemberUin and IdentityId must be entered.
+                     * @return MemberUin Uin of the organization member. At least one of the input parameters MemberUin and IdentityId must be entered.
                      * 
                      */
                     int64_t GetMemberUin() const;
 
                     /**
-                     * 设置Organization member UIN.
-                     * @param _memberUin Organization member UIN.
+                     * 设置Uin of the organization member. At least one of the input parameters MemberUin and IdentityId must be entered.
+                     * @param _memberUin Uin of the organization member. At least one of the input parameters MemberUin and IdentityId must be entered.
                      * 
                      */
                     void SetMemberUin(const int64_t& _memberUin);
@@ -104,6 +104,27 @@ namespace TencentCloud
                      * 
                      */
                     bool MemberUinHasBeenSet() const;
+
+                    /**
+                     * 获取Identity ID. At least one of the input parameters MemberUin and IdentityId must be provided. It can be obtained through [ListOrganizationIdentity](https://intl.cloud.tencent.com/document/product/850/82934?from_cn_redirect=1).
+                     * @return IdentityId Identity ID. At least one of the input parameters MemberUin and IdentityId must be provided. It can be obtained through [ListOrganizationIdentity](https://intl.cloud.tencent.com/document/product/850/82934?from_cn_redirect=1).
+                     * 
+                     */
+                    uint64_t GetIdentityId() const;
+
+                    /**
+                     * 设置Identity ID. At least one of the input parameters MemberUin and IdentityId must be provided. It can be obtained through [ListOrganizationIdentity](https://intl.cloud.tencent.com/document/product/850/82934?from_cn_redirect=1).
+                     * @param _identityId Identity ID. At least one of the input parameters MemberUin and IdentityId must be provided. It can be obtained through [ListOrganizationIdentity](https://intl.cloud.tencent.com/document/product/850/82934?from_cn_redirect=1).
+                     * 
+                     */
+                    void SetIdentityId(const uint64_t& _identityId);
+
+                    /**
+                     * 判断参数 IdentityId 是否已赋值
+                     * @return IdentityId 是否已赋值
+                     * 
+                     */
+                    bool IdentityIdHasBeenSet() const;
 
                 private:
 
@@ -120,10 +141,16 @@ namespace TencentCloud
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Organization member UIN.
+                     * Uin of the organization member. At least one of the input parameters MemberUin and IdentityId must be entered.
                      */
                     int64_t m_memberUin;
                     bool m_memberUinHasBeenSet;
+
+                    /**
+                     * Identity ID. At least one of the input parameters MemberUin and IdentityId must be provided. It can be obtained through [ListOrganizationIdentity](https://intl.cloud.tencent.com/document/product/850/82934?from_cn_redirect=1).
+                     */
+                    uint64_t m_identityId;
+                    bool m_identityIdHasBeenSet;
 
                 };
             }

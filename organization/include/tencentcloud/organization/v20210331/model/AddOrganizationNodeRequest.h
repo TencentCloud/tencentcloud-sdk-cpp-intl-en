@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Parent node ID, which can be obtained through the `DescribeOrganizationNodes` API.
-                     * @return ParentNodeId Parent node ID, which can be obtained through the `DescribeOrganizationNodes` API.
+                     * 获取Parent node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
+                     * @return ParentNodeId Parent node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
                      * 
                      */
                     uint64_t GetParentNodeId() const;
 
                     /**
-                     * 设置Parent node ID, which can be obtained through the `DescribeOrganizationNodes` API.
-                     * @param _parentNodeId Parent node ID, which can be obtained through the `DescribeOrganizationNodes` API.
+                     * 设置Parent node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
+                     * @param _parentNodeId Parent node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
                      * 
                      */
                     void SetParentNodeId(const uint64_t& _parentNodeId);
@@ -108,7 +108,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Parent node ID, which can be obtained through the `DescribeOrganizationNodes` API.
+                     * Parent node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
                      */
                     uint64_t m_parentNodeId;
                     bool m_parentNodeIdHasBeenSet;

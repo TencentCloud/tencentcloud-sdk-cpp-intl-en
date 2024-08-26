@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Offset.
-                     * @return Offset Offset.
+                     * 获取Offset. Its value must be an integer multiple of the limit. Default value: 0.
+                     * @return Offset Offset. Its value must be an integer multiple of the limit. Default value: 0.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset.
-                     * @param _offset Offset.
+                     * 设置Offset. Its value must be an integer multiple of the limit. Default value: 0.
+                     * @param _offset Offset. Its value must be an integer multiple of the limit. Default value: 0.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of returned results.
-                     * @return Limit Maximum number of returned results.
+                     * 获取Limit. Value range: 1-50. Default value: 10.
+                     * @return Limit Limit. Value range: 1-50. Default value: 10.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Maximum number of returned results.
-                     * @param _limit Maximum number of returned results.
+                     * 设置Limit. Value range: 1-50. Default value: 10.
+                     * @param _limit Limit. Value range: 1-50. Default value: 10.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool MemberUinHasBeenSet() const;
 
                     /**
-                     * 获取Policy ID.
-                     * @return PolicyId Policy ID.
+                     * 获取Policy ID, which can be obtained through [DescribeOrganizationMemberPolicies](https://intl.cloud.tencent.com/document/product/850/82935?from_cn_redirect=1).
+                     * @return PolicyId Policy ID, which can be obtained through [DescribeOrganizationMemberPolicies](https://intl.cloud.tencent.com/document/product/850/82935?from_cn_redirect=1).
                      * 
                      */
                     int64_t GetPolicyId() const;
 
                     /**
-                     * 设置Policy ID.
-                     * @param _policyId Policy ID.
+                     * 设置Policy ID, which can be obtained through [DescribeOrganizationMemberPolicies](https://intl.cloud.tencent.com/document/product/850/82935?from_cn_redirect=1).
+                     * @param _policyId Policy ID, which can be obtained through [DescribeOrganizationMemberPolicies](https://intl.cloud.tencent.com/document/product/850/82935?from_cn_redirect=1).
                      * 
                      */
                     void SetPolicyId(const int64_t& _policyId);
@@ -129,13 +129,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Offset.
+                     * Offset. Its value must be an integer multiple of the limit. Default value: 0.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Maximum number of returned results.
+                     * Limit. Value range: 1-50. Default value: 10.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
@@ -147,7 +147,7 @@ namespace TencentCloud
                     bool m_memberUinHasBeenSet;
 
                     /**
-                     * Policy ID.
+                     * Policy ID, which can be obtained through [DescribeOrganizationMemberPolicies](https://intl.cloud.tencent.com/document/product/850/82935?from_cn_redirect=1).
                      */
                     int64_t m_policyId;
                     bool m_policyIdHasBeenSet;

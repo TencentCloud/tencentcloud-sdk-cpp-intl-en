@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset.
-                     * @return Offset Offset.
+                     * 获取Offset. Its value must be an integer multiple of the limit. Default value: 0.
+                     * @return Offset Offset. Its value must be an integer multiple of the limit. Default value: 0.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset.
-                     * @param _offset Offset.
+                     * 设置Offset. Its value must be an integer multiple of the limit. Default value: 0.
+                     * @param _offset Offset. Its value must be an integer multiple of the limit. Default value: 0.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -93,7 +93,7 @@ namespace TencentCloud
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset.
+                     * Offset. Its value must be an integer multiple of the limit. Default value: 0.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;

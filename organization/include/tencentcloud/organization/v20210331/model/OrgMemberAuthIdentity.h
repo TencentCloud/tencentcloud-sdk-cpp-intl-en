@@ -122,18 +122,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IdentityRoleAliasNameHasBeenSet() const;
 
                     /**
-                     * 获取Description
+                     * 获取Identity description.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Description Description
+                     * @return Description Identity description.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Description
+                     * 设置Identity description.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _description Description
+                     * @param _description Identity description.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -147,18 +147,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Creation time.
+                     * 获取Time of initial configuration success.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CreateTime Creation time.
+                     * @return CreateTime Time of initial configuration success.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time.
+                     * 设置Time of initial configuration success.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _createTime Creation time.
+                     * @param _createTime Time of initial configuration success.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -172,18 +172,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Update time.
+                     * 获取Time of last configuration success.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UpdateTime Update time.
+                     * @return UpdateTime Time of last configuration success.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Update time.
+                     * 设置Time of last configuration success.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _updateTime Update time.
+                     * @param _updateTime Time of last configuration success.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -197,18 +197,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Identity type (`1`: Preset; `2`: Custom)
+                     * 获取Identity type. Valid values: 1 (preset identity), 2 (custom identity).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IdentityType Identity type (`1`: Preset; `2`: Custom)
+                     * @return IdentityType Identity type. Valid values: 1 (preset identity), 2 (custom identity).
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetIdentityType() const;
 
                     /**
-                     * 设置Identity type (`1`: Preset; `2`: Custom)
+                     * 设置Identity type. Valid values: 1 (preset identity), 2 (custom identity).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _identityType Identity type (`1`: Preset; `2`: Custom)
+                     * @param _identityType Identity type. Valid values: 1 (preset identity), 2 (custom identity).
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -220,6 +220,81 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool IdentityTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Configuration status. Valid values: 1 (configuration completed), 2 (reconfiguration required).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Status Configuration status. Valid values: 1 (configuration completed), 2 (reconfiguration required).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    uint64_t GetStatus() const;
+
+                    /**
+                     * 设置Configuration status. Valid values: 1 (configuration completed), 2 (reconfiguration required).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _status Configuration status. Valid values: 1 (configuration completed), 2 (reconfiguration required).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetStatus(const uint64_t& _status);
+
+                    /**
+                     * 判断参数 Status 是否已赋值
+                     * @return Status 是否已赋值
+                     * 
+                     */
+                    bool StatusHasBeenSet() const;
+
+                    /**
+                     * 获取Member Uin.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MemberUin Member Uin.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetMemberUin() const;
+
+                    /**
+                     * 设置Member Uin.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _memberUin Member Uin.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetMemberUin(const int64_t& _memberUin);
+
+                    /**
+                     * 判断参数 MemberUin 是否已赋值
+                     * @return MemberUin 是否已赋值
+                     * 
+                     */
+                    bool MemberUinHasBeenSet() const;
+
+                    /**
+                     * 获取Member name.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MemberName Member name.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetMemberName() const;
+
+                    /**
+                     * 设置Member name.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _memberName Member name.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetMemberName(const std::string& _memberName);
+
+                    /**
+                     * 判断参数 MemberName 是否已赋值
+                     * @return MemberName 是否已赋值
+                     * 
+                     */
+                    bool MemberNameHasBeenSet() const;
 
                 private:
 
@@ -245,32 +320,53 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_identityRoleAliasNameHasBeenSet;
 
                     /**
-                     * Description
+                     * Identity description.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Creation time.
+                     * Time of initial configuration success.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Update time.
+                     * Time of last configuration success.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * Identity type (`1`: Preset; `2`: Custom)
+                     * Identity type. Valid values: 1 (preset identity), 2 (custom identity).
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_identityType;
                     bool m_identityTypeHasBeenSet;
+
+                    /**
+                     * Configuration status. Valid values: 1 (configuration completed), 2 (reconfiguration required).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_status;
+                    bool m_statusHasBeenSet;
+
+                    /**
+                     * Member Uin.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_memberUin;
+                    bool m_memberUinHasBeenSet;
+
+                    /**
+                     * Member name.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_memberName;
+                    bool m_memberNameHasBeenSet;
 
                 };
             }

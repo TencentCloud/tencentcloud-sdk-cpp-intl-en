@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Node ID.
-                     * @return NodeId Node ID.
+                     * 获取Node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
+                     * @return NodeId Node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
                      * 
                      */
                     uint64_t GetNodeId() const;
 
                     /**
-                     * 设置Node ID.
-                     * @param _nodeId Node ID.
+                     * 设置Node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
+                     * @param _nodeId Node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
                      * 
                      */
                     void SetNodeId(const uint64_t& _nodeId);
@@ -108,7 +108,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Node ID.
+                     * Node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
                      */
                     uint64_t m_nodeId;
                     bool m_nodeIdHasBeenSet;

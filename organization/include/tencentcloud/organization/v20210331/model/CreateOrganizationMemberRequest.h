@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool PermissionIdsHasBeenSet() const;
 
                     /**
-                     * 获取ID of the node of the member's department, which can be obtained through the `DescribeOrganizationNodes` API.
-                     * @return NodeId ID of the node of the member's department, which can be obtained through the `DescribeOrganizationNodes` API.
+                     * 获取Node ID of the member's department, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
+                     * @return NodeId Node ID of the member's department, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
                      * 
                      */
                     int64_t GetNodeId() const;
 
                     /**
-                     * 设置ID of the node of the member's department, which can be obtained through the `DescribeOrganizationNodes` API.
-                     * @param _nodeId ID of the node of the member's department, which can be obtained through the `DescribeOrganizationNodes` API.
+                     * 设置Node ID of the member's department, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
+                     * @param _nodeId Node ID of the member's department, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
                      * 
                      */
                     void SetNodeId(const int64_t& _nodeId);
@@ -273,7 +273,7 @@ namespace TencentCloud
                     bool m_permissionIdsHasBeenSet;
 
                     /**
-                     * ID of the node of the member's department, which can be obtained through the `DescribeOrganizationNodes` API.
+                     * Node ID of the member's department, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
                      */
                     int64_t m_nodeId;
                     bool m_nodeIdHasBeenSet;
