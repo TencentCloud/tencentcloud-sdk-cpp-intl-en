@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The server-side session data, which is returned to the SDK.
-                     * @return ServerSession The server-side session data, which is returned to the SDK.
+                     * 获取Server-side session information, which is returned to the SDK.
+                     * @return ServerSession Server-side session information, which is returned to the SDK.
                      * 
                      */
                     std::string GetServerSession() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The server-side session data, which is returned to the SDK.
+                     * Server-side session information, which is returned to the SDK.
                      */
                     std::string m_serverSession;
                     bool m_serverSessionHasBeenSet;

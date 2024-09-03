@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIDHasBeenSet() const;
 
                     /**
-                     * 获取"" or a cluster ID
-                     * @return Input "" or a cluster ID
+                     * 获取If this parameter is left blank, all clusters corresponding to the current appId are involved. Otherwise, a specific cluster is involved.
+                     * @return Input If this parameter is left blank, all clusters corresponding to the current appId are involved. Otherwise, a specific cluster is involved.
                      * 
                      */
                     std::string GetInput() const;
 
                     /**
-                     * 设置"" or a cluster ID
-                     * @param _input "" or a cluster ID
+                     * 设置If this parameter is left blank, all clusters corresponding to the current appId are involved. Otherwise, a specific cluster is involved.
+                     * @param _input If this parameter is left blank, all clusters corresponding to the current appId are involved. Otherwise, a specific cluster is involved.
                      * 
                      */
                     void SetInput(const std::string& _input);
@@ -93,7 +93,7 @@ namespace TencentCloud
                     bool m_instanceIDHasBeenSet;
 
                     /**
-                     * "" or a cluster ID
+                     * If this parameter is left blank, all clusters corresponding to the current appId are involved. Otherwise, a specific cluster is involved.
                      */
                     std::string m_input;
                     bool m_inputHasBeenSet;

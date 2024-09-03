@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
-                     * @return UserId The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
+                     * 获取Unique user ID, which is customized by you and is not parsed by CAR. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
+                     * @return UserId Unique user ID, which is customized by you and is not parsed by CAR. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
                      * 
                      */
                     std::string GetUserId() const;
 
                     /**
-                     * 设置The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
-                     * @param _userId The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
+                     * 设置Unique user ID, which is customized by you and is not parsed by CAR. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
+                     * @param _userId Unique user ID, which is customized by you and is not parsed by CAR. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
                      * 
                      */
                     void SetUserId(const std::string& _userId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool UserIdHasBeenSet() const;
 
                     /**
-                     * 获取Public IP of user’s application client, which is used for nearby scheduling.
-                     * @return UserIp Public IP of user’s application client, which is used for nearby scheduling.
+                     * 获取Public IP address of the user's client, which is used for nearby scheduling.
+                     * @return UserIp Public IP address of the user's client, which is used for nearby scheduling.
                      * 
                      */
                     std::string GetUserIp() const;
 
                     /**
-                     * 设置Public IP of user’s application client, which is used for nearby scheduling.
-                     * @param _userIp Public IP of user’s application client, which is used for nearby scheduling.
+                     * 设置Public IP address of the user's client, which is used for nearby scheduling.
+                     * @param _userIp Public IP address of the user's client, which is used for nearby scheduling.
                      * 
                      */
                     void SetUserIp(const std::string& _userIp);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool UserIpHasBeenSet() const;
 
                     /**
-                     * 获取The client-side session data, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be null.
-                     * @return ClientSession The client-side session data, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be null.
+                     * 获取Client-side session information, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be empty.
+                     * @return ClientSession Client-side session information, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be empty.
                      * 
                      */
                     std::string GetClientSession() const;
 
                     /**
-                     * 设置The client-side session data, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be null.
-                     * @param _clientSession The client-side session data, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be null.
+                     * 设置Client-side session information, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be empty.
+                     * @param _clientSession Client-side session information, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be empty.
                      * 
                      */
                     void SetClientSession(const std::string& _clientSession);
@@ -106,23 +106,15 @@ namespace TencentCloud
                     bool ClientSessionHasBeenSet() const;
 
                     /**
-                     * 获取The on-cloud running mode.
-`RunWithoutClient`: Keep the application running on the cloud even when there are no client connections.
-Empty string (default): Keep the application running on the cloud only when there are client connections.
-                     * @return RunMode The on-cloud running mode.
-`RunWithoutClient`: Keep the application running on the cloud even when there are no client connections.
-Empty string (default): Keep the application running on the cloud only when there are client connections.
+                     * 获取On-cloud running mode.RunWithoutClient: Keeps the application running on the cloud even when there are no client connections.Empty string (default): Keeps the application running on the cloud only when there are client connections.
+                     * @return RunMode On-cloud running mode.RunWithoutClient: Keeps the application running on the cloud even when there are no client connections.Empty string (default): Keeps the application running on the cloud only when there are client connections.
                      * 
                      */
                     std::string GetRunMode() const;
 
                     /**
-                     * 设置The on-cloud running mode.
-`RunWithoutClient`: Keep the application running on the cloud even when there are no client connections.
-Empty string (default): Keep the application running on the cloud only when there are client connections.
-                     * @param _runMode The on-cloud running mode.
-`RunWithoutClient`: Keep the application running on the cloud even when there are no client connections.
-Empty string (default): Keep the application running on the cloud only when there are client connections.
+                     * 设置On-cloud running mode.RunWithoutClient: Keeps the application running on the cloud even when there are no client connections.Empty string (default): Keeps the application running on the cloud only when there are client connections.
+                     * @param _runMode On-cloud running mode.RunWithoutClient: Keeps the application running on the cloud even when there are no client connections.Empty string (default): Keeps the application running on the cloud only when there are client connections.
                      * 
                      */
                     void SetRunMode(const std::string& _runMode);
@@ -135,39 +127,27 @@ Empty string (default): Keep the application running on the cloud only when ther
                     bool RunModeHasBeenSet() const;
 
                     /**
-                     * 获取Application startup parameter.
-If the user requests a multi-application project or a prelaunch-disabled single-application project, this parameter takes effect.
- 
-If the user requests a prelaunch-enabled single-application project, this parameter is invalid.
-
-Note: When this parameter takes effect, the `ApplicationParameters` parameter will be appended to the end of the application startup parameter. The application startup parameter is set in the application or project configuration in the console.
-For example, for a prelaunch-disabled single-application project, if its application startup parameter `bar` is `0` and the `ApplicationParameters` parameter `foo` is `1`, the actual application startup parameters will be `bar=0 foo=1`.
-                     * @return ApplicationParameters Application startup parameter.
-If the user requests a multi-application project or a prelaunch-disabled single-application project, this parameter takes effect.
- 
-If the user requests a prelaunch-enabled single-application project, this parameter is invalid.
-
-Note: When this parameter takes effect, the `ApplicationParameters` parameter will be appended to the end of the application startup parameter. The application startup parameter is set in the application or project configuration in the console.
-For example, for a prelaunch-disabled single-application project, if its application startup parameter `bar` is `0` and the `ApplicationParameters` parameter `foo` is `1`, the actual application startup parameters will be `bar=0 foo=1`.
+                     * 获取Application startup parameters.This parameter is effective for multi-application projects.
+This parameter is effective for single-application projects with prelaunch disabled.This parameter is ineffective for single-application projects with prelaunch enabled.
+Note: When this parameter is effective, it will be appended to the startup parameters of application or project configuration in the console.
+For example, for a single-application project with prelaunch disabled, if its startup parameter `bar` is `0` for project configuration in the console and the `ApplicationParameters` parameter `foo` is `1`, the actual application startup parameters will be `bar=0 and foo=1`.
+                     * @return ApplicationParameters Application startup parameters.This parameter is effective for multi-application projects.
+This parameter is effective for single-application projects with prelaunch disabled.This parameter is ineffective for single-application projects with prelaunch enabled.
+Note: When this parameter is effective, it will be appended to the startup parameters of application or project configuration in the console.
+For example, for a single-application project with prelaunch disabled, if its startup parameter `bar` is `0` for project configuration in the console and the `ApplicationParameters` parameter `foo` is `1`, the actual application startup parameters will be `bar=0 and foo=1`.
                      * 
                      */
                     std::string GetApplicationParameters() const;
 
                     /**
-                     * 设置Application startup parameter.
-If the user requests a multi-application project or a prelaunch-disabled single-application project, this parameter takes effect.
- 
-If the user requests a prelaunch-enabled single-application project, this parameter is invalid.
-
-Note: When this parameter takes effect, the `ApplicationParameters` parameter will be appended to the end of the application startup parameter. The application startup parameter is set in the application or project configuration in the console.
-For example, for a prelaunch-disabled single-application project, if its application startup parameter `bar` is `0` and the `ApplicationParameters` parameter `foo` is `1`, the actual application startup parameters will be `bar=0 foo=1`.
-                     * @param _applicationParameters Application startup parameter.
-If the user requests a multi-application project or a prelaunch-disabled single-application project, this parameter takes effect.
- 
-If the user requests a prelaunch-enabled single-application project, this parameter is invalid.
-
-Note: When this parameter takes effect, the `ApplicationParameters` parameter will be appended to the end of the application startup parameter. The application startup parameter is set in the application or project configuration in the console.
-For example, for a prelaunch-disabled single-application project, if its application startup parameter `bar` is `0` and the `ApplicationParameters` parameter `foo` is `1`, the actual application startup parameters will be `bar=0 foo=1`.
+                     * 设置Application startup parameters.This parameter is effective for multi-application projects.
+This parameter is effective for single-application projects with prelaunch disabled.This parameter is ineffective for single-application projects with prelaunch enabled.
+Note: When this parameter is effective, it will be appended to the startup parameters of application or project configuration in the console.
+For example, for a single-application project with prelaunch disabled, if its startup parameter `bar` is `0` for project configuration in the console and the `ApplicationParameters` parameter `foo` is `1`, the actual application startup parameters will be `bar=0 and foo=1`.
+                     * @param _applicationParameters Application startup parameters.This parameter is effective for multi-application projects.
+This parameter is effective for single-application projects with prelaunch disabled.This parameter is ineffective for single-application projects with prelaunch enabled.
+Note: When this parameter is effective, it will be appended to the startup parameters of application or project configuration in the console.
+For example, for a single-application project with prelaunch disabled, if its startup parameter `bar` is `0` for project configuration in the console and the `ApplicationParameters` parameter `foo` is `1`, the actual application startup parameters will be `bar=0 and foo=1`.
                      * 
                      */
                     void SetApplicationParameters(const std::string& _applicationParameters);
@@ -180,19 +160,23 @@ For example, for a prelaunch-disabled single-application project, if its applica
                     bool ApplicationParametersHasBeenSet() const;
 
                     /**
-                     * 获取The user ID of the host in **multi-person interaction** scenarios, which is required.
-If the current user is the host, `HostUserId` must be the same as their `UserId`; otherwise, `HostUserId` should be the host's `UserId`.
-                     * @return HostUserId The user ID of the host in **multi-person interaction** scenarios, which is required.
-If the current user is the host, `HostUserId` must be the same as their `UserId`; otherwise, `HostUserId` should be the host's `UserId`.
+                     * 获取[Multi-person Interaction] Homeowner's user ID, which is required in multi-person interaction mode.
+If the user is the homeowner, HostUserID must be the same as UserID.
+If the user is not the homeowner, HostUserID must be the homeowner's HostUserID.
+                     * @return HostUserId [Multi-person Interaction] Homeowner's user ID, which is required in multi-person interaction mode.
+If the user is the homeowner, HostUserID must be the same as UserID.
+If the user is not the homeowner, HostUserID must be the homeowner's HostUserID.
                      * 
                      */
                     std::string GetHostUserId() const;
 
                     /**
-                     * 设置The user ID of the host in **multi-person interaction** scenarios, which is required.
-If the current user is the host, `HostUserId` must be the same as their `UserId`; otherwise, `HostUserId` should be the host's `UserId`.
-                     * @param _hostUserId The user ID of the host in **multi-person interaction** scenarios, which is required.
-If the current user is the host, `HostUserId` must be the same as their `UserId`; otherwise, `HostUserId` should be the host's `UserId`.
+                     * 设置[Multi-person Interaction] Homeowner's user ID, which is required in multi-person interaction mode.
+If the user is the homeowner, HostUserID must be the same as UserID.
+If the user is not the homeowner, HostUserID must be the homeowner's HostUserID.
+                     * @param _hostUserId [Multi-person Interaction] Homeowner's user ID, which is required in multi-person interaction mode.
+If the user is the homeowner, HostUserID must be the same as UserID.
+If the user is not the homeowner, HostUserID must be the homeowner's HostUserID.
                      * 
                      */
                     void SetHostUserId(const std::string& _hostUserId);
@@ -205,23 +189,23 @@ If the current user is the host, `HostUserId` must be the same as their `UserId`
                     bool HostUserIdHasBeenSet() const;
 
                     /**
-                     * 获取The role in **multi-person interaction** scenarios. Valid values:
-`Player`: A user who can operate an application by using a keyboard and mouse
-`Viewer`: A user who can only watch the video in the room but cannot operate the application
-                     * @return Role The role in **multi-person interaction** scenarios. Valid values:
-`Player`: A user who can operate an application by using a keyboard and mouse
-`Viewer`: A user who can only watch the video in the room but cannot operate the application
+                     * 获取[Multi-person Interaction] Role.
+Player: a user who can operate the application via keyboard, mouse, etc.
+Viewer: a user who can only watch the video in the room but cannot operate the application.
+                     * @return Role [Multi-person Interaction] Role.
+Player: a user who can operate the application via keyboard, mouse, etc.
+Viewer: a user who can only watch the video in the room but cannot operate the application.
                      * 
                      */
                     std::string GetRole() const;
 
                     /**
-                     * 设置The role in **multi-person interaction** scenarios. Valid values:
-`Player`: A user who can operate an application by using a keyboard and mouse
-`Viewer`: A user who can only watch the video in the room but cannot operate the application
-                     * @param _role The role in **multi-person interaction** scenarios. Valid values:
-`Player`: A user who can operate an application by using a keyboard and mouse
-`Viewer`: A user who can only watch the video in the room but cannot operate the application
+                     * 设置[Multi-person Interaction] Role.
+Player: a user who can operate the application via keyboard, mouse, etc.
+Viewer: a user who can only watch the video in the room but cannot operate the application.
+                     * @param _role [Multi-person Interaction] Role.
+Player: a user who can operate the application via keyboard, mouse, etc.
+Viewer: a user who can only watch the video in the room but cannot operate the application.
                      * 
                      */
                     void SetRole(const std::string& _role);
@@ -236,54 +220,50 @@ If the current user is the host, `HostUserId` must be the same as their `UserId`
                 private:
 
                     /**
-                     * The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
+                     * Unique user ID, which is customized by you and is not parsed by CAR. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
                      */
                     std::string m_userId;
                     bool m_userIdHasBeenSet;
 
                     /**
-                     * Public IP of user’s application client, which is used for nearby scheduling.
+                     * Public IP address of the user's client, which is used for nearby scheduling.
                      */
                     std::string m_userIp;
                     bool m_userIpHasBeenSet;
 
                     /**
-                     * The client-side session data, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be null.
+                     * Client-side session information, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be empty.
                      */
                     std::string m_clientSession;
                     bool m_clientSessionHasBeenSet;
 
                     /**
-                     * The on-cloud running mode.
-`RunWithoutClient`: Keep the application running on the cloud even when there are no client connections.
-Empty string (default): Keep the application running on the cloud only when there are client connections.
+                     * On-cloud running mode.RunWithoutClient: Keeps the application running on the cloud even when there are no client connections.Empty string (default): Keeps the application running on the cloud only when there are client connections.
                      */
                     std::string m_runMode;
                     bool m_runModeHasBeenSet;
 
                     /**
-                     * Application startup parameter.
-If the user requests a multi-application project or a prelaunch-disabled single-application project, this parameter takes effect.
- 
-If the user requests a prelaunch-enabled single-application project, this parameter is invalid.
-
-Note: When this parameter takes effect, the `ApplicationParameters` parameter will be appended to the end of the application startup parameter. The application startup parameter is set in the application or project configuration in the console.
-For example, for a prelaunch-disabled single-application project, if its application startup parameter `bar` is `0` and the `ApplicationParameters` parameter `foo` is `1`, the actual application startup parameters will be `bar=0 foo=1`.
+                     * Application startup parameters.This parameter is effective for multi-application projects.
+This parameter is effective for single-application projects with prelaunch disabled.This parameter is ineffective for single-application projects with prelaunch enabled.
+Note: When this parameter is effective, it will be appended to the startup parameters of application or project configuration in the console.
+For example, for a single-application project with prelaunch disabled, if its startup parameter `bar` is `0` for project configuration in the console and the `ApplicationParameters` parameter `foo` is `1`, the actual application startup parameters will be `bar=0 and foo=1`.
                      */
                     std::string m_applicationParameters;
                     bool m_applicationParametersHasBeenSet;
 
                     /**
-                     * The user ID of the host in **multi-person interaction** scenarios, which is required.
-If the current user is the host, `HostUserId` must be the same as their `UserId`; otherwise, `HostUserId` should be the host's `UserId`.
+                     * [Multi-person Interaction] Homeowner's user ID, which is required in multi-person interaction mode.
+If the user is the homeowner, HostUserID must be the same as UserID.
+If the user is not the homeowner, HostUserID must be the homeowner's HostUserID.
                      */
                     std::string m_hostUserId;
                     bool m_hostUserIdHasBeenSet;
 
                     /**
-                     * The role in **multi-person interaction** scenarios. Valid values:
-`Player`: A user who can operate an application by using a keyboard and mouse
-`Viewer`: A user who can only watch the video in the room but cannot operate the application
+                     * [Multi-person Interaction] Role.
+Player: a user who can operate the application via keyboard, mouse, etc.
+Viewer: a user who can only watch the video in the room but cannot operate the application.
                      */
                     std::string m_role;
                     bool m_roleHasBeenSet;

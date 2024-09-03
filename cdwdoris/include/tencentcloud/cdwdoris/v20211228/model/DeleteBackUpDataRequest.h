@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool BackUpJobIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether to delete all data
-                     * @return IsDeleteAll Whether to delete all data
+                     * 获取Whether to delete all instances
+                     * @return IsDeleteAll Whether to delete all instances
                      * 
                      */
                     bool GetIsDeleteAll() const;
 
                     /**
-                     * 设置Whether to delete all data
-                     * @param _isDeleteAll Whether to delete all data
+                     * 设置Whether to delete all instances
+                     * @param _isDeleteAll Whether to delete all instances
                      * 
                      */
                     void SetIsDeleteAll(const bool& _isDeleteAll);
@@ -120,7 +120,7 @@ namespace TencentCloud
                     bool m_backUpJobIdHasBeenSet;
 
                     /**
-                     * Whether to delete all data
+                     * Whether to delete all instances
                      */
                     bool m_isDeleteAll;
                     bool m_isDeleteAllHasBeenSet;

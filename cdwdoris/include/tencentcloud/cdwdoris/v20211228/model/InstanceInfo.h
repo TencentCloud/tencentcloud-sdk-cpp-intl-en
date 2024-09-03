@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cdwdoris/v20211228/model/NodesSummary.h>
 #include <tencentcloud/cdwdoris/v20211228/model/Tag.h>
+#include <tencentcloud/cdwdoris/v20211228/model/InstanceDetail.h>
 
 
 namespace TencentCloud
@@ -1251,6 +1252,81 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool CoolDownBucketHasBeenSet() const;
 
+                    /**
+                     * 获取Instance extension information
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Details Instance extension information
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    InstanceDetail GetDetails() const;
+
+                    /**
+                     * 设置Instance extension information
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _details Instance extension information
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetDetails(const InstanceDetail& _details);
+
+                    /**
+                     * 判断参数 Details 是否已赋值
+                     * @return Details 是否已赋值
+                     * 
+                     */
+                    bool DetailsHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable DLC. 0: disable; 1: enable.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return EnableDlc Whether to enable DLC. 0: disable; 1: enable.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetEnableDlc() const;
+
+                    /**
+                     * 设置Whether to enable DLC. 0: disable; 1: enable.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _enableDlc Whether to enable DLC. 0: disable; 1: enable.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetEnableDlc(const int64_t& _enableDlc);
+
+                    /**
+                     * 判断参数 EnableDlc 是否已赋值
+                     * @return EnableDlc 是否已赋值
+                     * 
+                     */
+                    bool EnableDlcHasBeenSet() const;
+
+                    /**
+                     * 获取Account type. 0: ordinary user; 1: CAM user.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AccountType Account type. 0: ordinary user; 1: CAM user.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetAccountType() const;
+
+                    /**
+                     * 设置Account type. 0: ordinary user; 1: CAM user.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _accountType Account type. 0: ordinary user; 1: CAM user.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetAccountType(const int64_t& _accountType);
+
+                    /**
+                     * 判断参数 AccountType 是否已赋值
+                     * @return AccountType 是否已赋值
+                     * 
+                     */
+                    bool AccountTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1588,6 +1664,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_coolDownBucket;
                     bool m_coolDownBucketHasBeenSet;
+
+                    /**
+                     * Instance extension information
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    InstanceDetail m_details;
+                    bool m_detailsHasBeenSet;
+
+                    /**
+                     * Whether to enable DLC. 0: disable; 1: enable.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_enableDlc;
+                    bool m_enableDlcHasBeenSet;
+
+                    /**
+                     * Account type. 0: ordinary user; 1: CAM user.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_accountType;
+                    bool m_accountTypeHasBeenSet;
 
                 };
             }

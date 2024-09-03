@@ -49,14 +49,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Table data model: 
-AGG_KEY: aggregation model; 
-UNI_KEY: primary key model; 
-DUP_KEY: detail model
-                     * @return KeysType Table data model: 
-AGG_KEY: aggregation model; 
-UNI_KEY: primary key model; 
-DUP_KEY: detail model
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return KeysType Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetKeysType() const;
@@ -69,10 +63,8 @@ DUP_KEY: detail model
                     bool KeysTypeHasBeenSet() const;
 
                     /**
-                     * 获取Table column information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Columns Table column information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Columns Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<Column> GetColumns() const;
@@ -85,10 +77,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ColumnsHasBeenSet() const;
 
                     /**
-                     * 获取Index information. The inverted index and N-Gram index can be viewed through this parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IndexInfos Index information. The inverted index and N-Gram index can be viewed through this parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IndexInfos Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<IndexInfo> GetIndexInfos() const;
@@ -101,10 +91,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IndexInfosHasBeenSet() const;
 
                     /**
-                     * 获取Partition information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Partition Partition information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Partition Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     Partition GetPartition() const;
@@ -117,10 +105,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PartitionHasBeenSet() const;
 
                     /**
-                     * 获取Bucket information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Distribution Bucket information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Distribution Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     Distribution GetDistribution() const;
@@ -133,10 +119,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DistributionHasBeenSet() const;
 
                     /**
-                     * 获取Table description
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TableComment Table description
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TableComment Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTableComment() const;
@@ -149,10 +133,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TableCommentHasBeenSet() const;
 
                     /**
-                     * 获取Table attributes
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Properties Table attributes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Properties Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<Property> GetProperties() const;
@@ -165,10 +147,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PropertiesHasBeenSet() const;
 
                     /**
-                     * 获取Error message
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Message Error message
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Message Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetMessage() const;
@@ -183,59 +163,49 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Table data model: 
-AGG_KEY: aggregation model; 
-UNI_KEY: primary key model; 
-DUP_KEY: detail model
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_keysType;
                     bool m_keysTypeHasBeenSet;
 
                     /**
-                     * Table column information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<Column> m_columns;
                     bool m_columnsHasBeenSet;
 
                     /**
-                     * Index information. The inverted index and N-Gram index can be viewed through this parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<IndexInfo> m_indexInfos;
                     bool m_indexInfosHasBeenSet;
 
                     /**
-                     * Partition information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     Partition m_partition;
                     bool m_partitionHasBeenSet;
 
                     /**
-                     * Bucket information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     Distribution m_distribution;
                     bool m_distributionHasBeenSet;
 
                     /**
-                     * Table description
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_tableComment;
                     bool m_tableCommentHasBeenSet;
 
                     /**
-                     * Table attributes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<Property> m_properties;
                     bool m_propertiesHasBeenSet;
 
                     /**
-                     * Error message
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;

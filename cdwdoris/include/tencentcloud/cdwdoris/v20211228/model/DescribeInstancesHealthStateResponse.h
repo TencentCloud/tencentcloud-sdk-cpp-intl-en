@@ -44,9 +44,9 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Output parameter
+                     * 获取Base64-encoded data, which contains the cluster health information
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Data Output parameter
+                     * @return Data Base64-encoded data, which contains the cluster health information
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -62,7 +62,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Output parameter
+                     * Base64-encoded data, which contains the cluster health information
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_data;

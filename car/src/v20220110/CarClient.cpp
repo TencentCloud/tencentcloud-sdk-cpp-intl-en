@@ -83,6 +83,135 @@ CarClient::ApplyConcurrentOutcomeCallable CarClient::ApplyConcurrentCallable(con
     return task->get_future();
 }
 
+CarClient::CreateApplicationOutcome CarClient::CreateApplication(const CreateApplicationRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateApplication");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateApplicationResponse rsp = CreateApplicationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateApplicationOutcome(rsp);
+        else
+            return CreateApplicationOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateApplicationOutcome(outcome.GetError());
+    }
+}
+
+void CarClient::CreateApplicationAsync(const CreateApplicationRequest& request, const CreateApplicationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateApplication(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CarClient::CreateApplicationOutcomeCallable CarClient::CreateApplicationCallable(const CreateApplicationRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateApplicationOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateApplication(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CarClient::CreateApplicationSnapshotOutcome CarClient::CreateApplicationSnapshot(const CreateApplicationSnapshotRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateApplicationSnapshot");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateApplicationSnapshotResponse rsp = CreateApplicationSnapshotResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateApplicationSnapshotOutcome(rsp);
+        else
+            return CreateApplicationSnapshotOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateApplicationSnapshotOutcome(outcome.GetError());
+    }
+}
+
+void CarClient::CreateApplicationSnapshotAsync(const CreateApplicationSnapshotRequest& request, const CreateApplicationSnapshotAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateApplicationSnapshot(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CarClient::CreateApplicationSnapshotOutcomeCallable CarClient::CreateApplicationSnapshotCallable(const CreateApplicationSnapshotRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateApplicationSnapshotOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateApplicationSnapshot(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CarClient::CreateApplicationVersionOutcome CarClient::CreateApplicationVersion(const CreateApplicationVersionRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateApplicationVersion");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateApplicationVersionResponse rsp = CreateApplicationVersionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateApplicationVersionOutcome(rsp);
+        else
+            return CreateApplicationVersionOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateApplicationVersionOutcome(outcome.GetError());
+    }
+}
+
+void CarClient::CreateApplicationVersionAsync(const CreateApplicationVersionRequest& request, const CreateApplicationVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateApplicationVersion(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CarClient::CreateApplicationVersionOutcomeCallable CarClient::CreateApplicationVersionCallable(const CreateApplicationVersionRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateApplicationVersionOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateApplicationVersion(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CarClient::CreateSessionOutcome CarClient::CreateSession(const CreateSessionRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateSession");
@@ -119,6 +248,307 @@ CarClient::CreateSessionOutcomeCallable CarClient::CreateSessionCallable(const C
         [this, request]()
         {
             return this->CreateSession(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CarClient::DeleteApplicationOutcome CarClient::DeleteApplication(const DeleteApplicationRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteApplication");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteApplicationResponse rsp = DeleteApplicationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteApplicationOutcome(rsp);
+        else
+            return DeleteApplicationOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteApplicationOutcome(outcome.GetError());
+    }
+}
+
+void CarClient::DeleteApplicationAsync(const DeleteApplicationRequest& request, const DeleteApplicationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteApplication(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CarClient::DeleteApplicationOutcomeCallable CarClient::DeleteApplicationCallable(const DeleteApplicationRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteApplicationOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteApplication(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CarClient::DeleteApplicationVersionOutcome CarClient::DeleteApplicationVersion(const DeleteApplicationVersionRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteApplicationVersion");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteApplicationVersionResponse rsp = DeleteApplicationVersionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteApplicationVersionOutcome(rsp);
+        else
+            return DeleteApplicationVersionOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteApplicationVersionOutcome(outcome.GetError());
+    }
+}
+
+void CarClient::DeleteApplicationVersionAsync(const DeleteApplicationVersionRequest& request, const DeleteApplicationVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteApplicationVersion(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CarClient::DeleteApplicationVersionOutcomeCallable CarClient::DeleteApplicationVersionCallable(const DeleteApplicationVersionRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteApplicationVersionOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteApplicationVersion(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CarClient::DescribeApplicationFileInfoOutcome CarClient::DescribeApplicationFileInfo(const DescribeApplicationFileInfoRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeApplicationFileInfo");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeApplicationFileInfoResponse rsp = DescribeApplicationFileInfoResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeApplicationFileInfoOutcome(rsp);
+        else
+            return DescribeApplicationFileInfoOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeApplicationFileInfoOutcome(outcome.GetError());
+    }
+}
+
+void CarClient::DescribeApplicationFileInfoAsync(const DescribeApplicationFileInfoRequest& request, const DescribeApplicationFileInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeApplicationFileInfo(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CarClient::DescribeApplicationFileInfoOutcomeCallable CarClient::DescribeApplicationFileInfoCallable(const DescribeApplicationFileInfoRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeApplicationFileInfoOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeApplicationFileInfo(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CarClient::DescribeApplicationListOutcome CarClient::DescribeApplicationList(const DescribeApplicationListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeApplicationList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeApplicationListResponse rsp = DescribeApplicationListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeApplicationListOutcome(rsp);
+        else
+            return DescribeApplicationListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeApplicationListOutcome(outcome.GetError());
+    }
+}
+
+void CarClient::DescribeApplicationListAsync(const DescribeApplicationListRequest& request, const DescribeApplicationListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeApplicationList(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CarClient::DescribeApplicationListOutcomeCallable CarClient::DescribeApplicationListCallable(const DescribeApplicationListRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeApplicationListOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeApplicationList(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CarClient::DescribeApplicationPathListOutcome CarClient::DescribeApplicationPathList(const DescribeApplicationPathListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeApplicationPathList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeApplicationPathListResponse rsp = DescribeApplicationPathListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeApplicationPathListOutcome(rsp);
+        else
+            return DescribeApplicationPathListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeApplicationPathListOutcome(outcome.GetError());
+    }
+}
+
+void CarClient::DescribeApplicationPathListAsync(const DescribeApplicationPathListRequest& request, const DescribeApplicationPathListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeApplicationPathList(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CarClient::DescribeApplicationPathListOutcomeCallable CarClient::DescribeApplicationPathListCallable(const DescribeApplicationPathListRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeApplicationPathListOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeApplicationPathList(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CarClient::DescribeApplicationStatusOutcome CarClient::DescribeApplicationStatus(const DescribeApplicationStatusRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeApplicationStatus");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeApplicationStatusResponse rsp = DescribeApplicationStatusResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeApplicationStatusOutcome(rsp);
+        else
+            return DescribeApplicationStatusOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeApplicationStatusOutcome(outcome.GetError());
+    }
+}
+
+void CarClient::DescribeApplicationStatusAsync(const DescribeApplicationStatusRequest& request, const DescribeApplicationStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeApplicationStatus(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CarClient::DescribeApplicationStatusOutcomeCallable CarClient::DescribeApplicationStatusCallable(const DescribeApplicationStatusRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeApplicationStatusOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeApplicationStatus(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CarClient::DescribeApplicationVersionOutcome CarClient::DescribeApplicationVersion(const DescribeApplicationVersionRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeApplicationVersion");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeApplicationVersionResponse rsp = DescribeApplicationVersionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeApplicationVersionOutcome(rsp);
+        else
+            return DescribeApplicationVersionOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeApplicationVersionOutcome(outcome.GetError());
+    }
+}
+
+void CarClient::DescribeApplicationVersionAsync(const DescribeApplicationVersionRequest& request, const DescribeApplicationVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeApplicationVersion(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CarClient::DescribeApplicationVersionOutcomeCallable CarClient::DescribeApplicationVersionCallable(const DescribeApplicationVersionRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeApplicationVersionOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeApplicationVersion(request);
         }
     );
 
@@ -169,6 +599,49 @@ CarClient::DescribeConcurrentCountOutcomeCallable CarClient::DescribeConcurrentC
     return task->get_future();
 }
 
+CarClient::DescribeCosCredentialOutcome CarClient::DescribeCosCredential(const DescribeCosCredentialRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCosCredential");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCosCredentialResponse rsp = DescribeCosCredentialResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCosCredentialOutcome(rsp);
+        else
+            return DescribeCosCredentialOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCosCredentialOutcome(outcome.GetError());
+    }
+}
+
+void CarClient::DescribeCosCredentialAsync(const DescribeCosCredentialRequest& request, const DescribeCosCredentialAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeCosCredential(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CarClient::DescribeCosCredentialOutcomeCallable CarClient::DescribeCosCredentialCallable(const DescribeCosCredentialRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeCosCredentialOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeCosCredential(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CarClient::DestroySessionOutcome CarClient::DestroySession(const DestroySessionRequest &request)
 {
     auto outcome = MakeRequest(request, "DestroySession");
@@ -205,6 +678,178 @@ CarClient::DestroySessionOutcomeCallable CarClient::DestroySessionCallable(const
         [this, request]()
         {
             return this->DestroySession(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CarClient::ModifyApplicationBaseInfoOutcome CarClient::ModifyApplicationBaseInfo(const ModifyApplicationBaseInfoRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyApplicationBaseInfo");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyApplicationBaseInfoResponse rsp = ModifyApplicationBaseInfoResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyApplicationBaseInfoOutcome(rsp);
+        else
+            return ModifyApplicationBaseInfoOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyApplicationBaseInfoOutcome(outcome.GetError());
+    }
+}
+
+void CarClient::ModifyApplicationBaseInfoAsync(const ModifyApplicationBaseInfoRequest& request, const ModifyApplicationBaseInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyApplicationBaseInfo(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CarClient::ModifyApplicationBaseInfoOutcomeCallable CarClient::ModifyApplicationBaseInfoCallable(const ModifyApplicationBaseInfoRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyApplicationBaseInfoOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyApplicationBaseInfo(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CarClient::ModifyApplicationVersionOutcome CarClient::ModifyApplicationVersion(const ModifyApplicationVersionRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyApplicationVersion");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyApplicationVersionResponse rsp = ModifyApplicationVersionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyApplicationVersionOutcome(rsp);
+        else
+            return ModifyApplicationVersionOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyApplicationVersionOutcome(outcome.GetError());
+    }
+}
+
+void CarClient::ModifyApplicationVersionAsync(const ModifyApplicationVersionRequest& request, const ModifyApplicationVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyApplicationVersion(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CarClient::ModifyApplicationVersionOutcomeCallable CarClient::ModifyApplicationVersionCallable(const ModifyApplicationVersionRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyApplicationVersionOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyApplicationVersion(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CarClient::ModifyMobileApplicationInfoOutcome CarClient::ModifyMobileApplicationInfo(const ModifyMobileApplicationInfoRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyMobileApplicationInfo");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyMobileApplicationInfoResponse rsp = ModifyMobileApplicationInfoResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyMobileApplicationInfoOutcome(rsp);
+        else
+            return ModifyMobileApplicationInfoOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyMobileApplicationInfoOutcome(outcome.GetError());
+    }
+}
+
+void CarClient::ModifyMobileApplicationInfoAsync(const ModifyMobileApplicationInfoRequest& request, const ModifyMobileApplicationInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyMobileApplicationInfo(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CarClient::ModifyMobileApplicationInfoOutcomeCallable CarClient::ModifyMobileApplicationInfoCallable(const ModifyMobileApplicationInfoRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyMobileApplicationInfoOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyMobileApplicationInfo(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CarClient::SetApplicationVersionOnlineOutcome CarClient::SetApplicationVersionOnline(const SetApplicationVersionOnlineRequest &request)
+{
+    auto outcome = MakeRequest(request, "SetApplicationVersionOnline");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        SetApplicationVersionOnlineResponse rsp = SetApplicationVersionOnlineResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return SetApplicationVersionOnlineOutcome(rsp);
+        else
+            return SetApplicationVersionOnlineOutcome(o.GetError());
+    }
+    else
+    {
+        return SetApplicationVersionOnlineOutcome(outcome.GetError());
+    }
+}
+
+void CarClient::SetApplicationVersionOnlineAsync(const SetApplicationVersionOnlineRequest& request, const SetApplicationVersionOnlineAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->SetApplicationVersionOnline(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CarClient::SetApplicationVersionOnlineOutcomeCallable CarClient::SetApplicationVersionOnlineCallable(const SetApplicationVersionOnlineRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<SetApplicationVersionOnlineOutcome()>>(
+        [this, request]()
+        {
+            return this->SetApplicationVersionOnline(request);
         }
     );
 

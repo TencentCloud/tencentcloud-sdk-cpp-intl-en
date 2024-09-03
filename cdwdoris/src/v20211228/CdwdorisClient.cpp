@@ -40,6 +40,49 @@ CdwdorisClient::CdwdorisClient(const Credential &credential, const string &regio
 }
 
 
+CdwdorisClient::ActionAlterUserOutcome CdwdorisClient::ActionAlterUser(const ActionAlterUserRequest &request)
+{
+    auto outcome = MakeRequest(request, "ActionAlterUser");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ActionAlterUserResponse rsp = ActionAlterUserResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ActionAlterUserOutcome(rsp);
+        else
+            return ActionAlterUserOutcome(o.GetError());
+    }
+    else
+    {
+        return ActionAlterUserOutcome(outcome.GetError());
+    }
+}
+
+void CdwdorisClient::ActionAlterUserAsync(const ActionAlterUserRequest& request, const ActionAlterUserAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ActionAlterUser(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CdwdorisClient::ActionAlterUserOutcomeCallable CdwdorisClient::ActionAlterUserCallable(const ActionAlterUserRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ActionAlterUserOutcome()>>(
+        [this, request]()
+        {
+            return this->ActionAlterUser(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CdwdorisClient::CancelBackupJobOutcome CdwdorisClient::CancelBackupJob(const CancelBackupJobRequest &request)
 {
     auto outcome = MakeRequest(request, "CancelBackupJob");
@@ -76,6 +119,49 @@ CdwdorisClient::CancelBackupJobOutcomeCallable CdwdorisClient::CancelBackupJobCa
         [this, request]()
         {
             return this->CancelBackupJob(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CdwdorisClient::CheckCoolDownWorkingVariableConfigCorrectOutcome CdwdorisClient::CheckCoolDownWorkingVariableConfigCorrect(const CheckCoolDownWorkingVariableConfigCorrectRequest &request)
+{
+    auto outcome = MakeRequest(request, "CheckCoolDownWorkingVariableConfigCorrect");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CheckCoolDownWorkingVariableConfigCorrectResponse rsp = CheckCoolDownWorkingVariableConfigCorrectResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CheckCoolDownWorkingVariableConfigCorrectOutcome(rsp);
+        else
+            return CheckCoolDownWorkingVariableConfigCorrectOutcome(o.GetError());
+    }
+    else
+    {
+        return CheckCoolDownWorkingVariableConfigCorrectOutcome(outcome.GetError());
+    }
+}
+
+void CdwdorisClient::CheckCoolDownWorkingVariableConfigCorrectAsync(const CheckCoolDownWorkingVariableConfigCorrectRequest& request, const CheckCoolDownWorkingVariableConfigCorrectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CheckCoolDownWorkingVariableConfigCorrect(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CdwdorisClient::CheckCoolDownWorkingVariableConfigCorrectOutcomeCallable CdwdorisClient::CheckCoolDownWorkingVariableConfigCorrectCallable(const CheckCoolDownWorkingVariableConfigCorrectRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CheckCoolDownWorkingVariableConfigCorrectOutcome()>>(
+        [this, request]()
+        {
+            return this->CheckCoolDownWorkingVariableConfigCorrect(request);
         }
     );
 
@@ -162,6 +248,49 @@ CdwdorisClient::CreateBackUpScheduleOutcomeCallable CdwdorisClient::CreateBackUp
         [this, request]()
         {
             return this->CreateBackUpSchedule(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CdwdorisClient::CreateCoolDownPolicyOutcome CdwdorisClient::CreateCoolDownPolicy(const CreateCoolDownPolicyRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateCoolDownPolicy");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateCoolDownPolicyResponse rsp = CreateCoolDownPolicyResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateCoolDownPolicyOutcome(rsp);
+        else
+            return CreateCoolDownPolicyOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateCoolDownPolicyOutcome(outcome.GetError());
+    }
+}
+
+void CdwdorisClient::CreateCoolDownPolicyAsync(const CreateCoolDownPolicyRequest& request, const CreateCoolDownPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateCoolDownPolicy(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CdwdorisClient::CreateCoolDownPolicyOutcomeCallable CdwdorisClient::CreateCoolDownPolicyCallable(const CreateCoolDownPolicyRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateCoolDownPolicyOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateCoolDownPolicy(request);
         }
     );
 
@@ -807,6 +936,178 @@ CdwdorisClient::DescribeClusterConfigsHistoryOutcomeCallable CdwdorisClient::Des
         [this, request]()
         {
             return this->DescribeClusterConfigsHistory(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CdwdorisClient::DescribeCoolDownBackendsOutcome CdwdorisClient::DescribeCoolDownBackends(const DescribeCoolDownBackendsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCoolDownBackends");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCoolDownBackendsResponse rsp = DescribeCoolDownBackendsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCoolDownBackendsOutcome(rsp);
+        else
+            return DescribeCoolDownBackendsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCoolDownBackendsOutcome(outcome.GetError());
+    }
+}
+
+void CdwdorisClient::DescribeCoolDownBackendsAsync(const DescribeCoolDownBackendsRequest& request, const DescribeCoolDownBackendsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeCoolDownBackends(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CdwdorisClient::DescribeCoolDownBackendsOutcomeCallable CdwdorisClient::DescribeCoolDownBackendsCallable(const DescribeCoolDownBackendsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeCoolDownBackendsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeCoolDownBackends(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CdwdorisClient::DescribeCoolDownPoliciesOutcome CdwdorisClient::DescribeCoolDownPolicies(const DescribeCoolDownPoliciesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCoolDownPolicies");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCoolDownPoliciesResponse rsp = DescribeCoolDownPoliciesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCoolDownPoliciesOutcome(rsp);
+        else
+            return DescribeCoolDownPoliciesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCoolDownPoliciesOutcome(outcome.GetError());
+    }
+}
+
+void CdwdorisClient::DescribeCoolDownPoliciesAsync(const DescribeCoolDownPoliciesRequest& request, const DescribeCoolDownPoliciesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeCoolDownPolicies(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CdwdorisClient::DescribeCoolDownPoliciesOutcomeCallable CdwdorisClient::DescribeCoolDownPoliciesCallable(const DescribeCoolDownPoliciesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeCoolDownPoliciesOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeCoolDownPolicies(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CdwdorisClient::DescribeCoolDownTableDataOutcome CdwdorisClient::DescribeCoolDownTableData(const DescribeCoolDownTableDataRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCoolDownTableData");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCoolDownTableDataResponse rsp = DescribeCoolDownTableDataResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCoolDownTableDataOutcome(rsp);
+        else
+            return DescribeCoolDownTableDataOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCoolDownTableDataOutcome(outcome.GetError());
+    }
+}
+
+void CdwdorisClient::DescribeCoolDownTableDataAsync(const DescribeCoolDownTableDataRequest& request, const DescribeCoolDownTableDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeCoolDownTableData(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CdwdorisClient::DescribeCoolDownTableDataOutcomeCallable CdwdorisClient::DescribeCoolDownTableDataCallable(const DescribeCoolDownTableDataRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeCoolDownTableDataOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeCoolDownTableData(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CdwdorisClient::DescribeCreateTablesDDLOutcome CdwdorisClient::DescribeCreateTablesDDL(const DescribeCreateTablesDDLRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCreateTablesDDL");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCreateTablesDDLResponse rsp = DescribeCreateTablesDDLResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCreateTablesDDLOutcome(rsp);
+        else
+            return DescribeCreateTablesDDLOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCreateTablesDDLOutcome(outcome.GetError());
+    }
+}
+
+void CdwdorisClient::DescribeCreateTablesDDLAsync(const DescribeCreateTablesDDLRequest& request, const DescribeCreateTablesDDLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeCreateTablesDDL(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CdwdorisClient::DescribeCreateTablesDDLOutcomeCallable CdwdorisClient::DescribeCreateTablesDDLCallable(const DescribeCreateTablesDDLRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeCreateTablesDDLOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeCreateTablesDDL(request);
         }
     );
 
@@ -2018,6 +2319,92 @@ CdwdorisClient::InsertDatasToTableOutcomeCallable CdwdorisClient::InsertDatasToT
     return task->get_future();
 }
 
+CdwdorisClient::ModifyClusterConfigsOutcome CdwdorisClient::ModifyClusterConfigs(const ModifyClusterConfigsRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyClusterConfigs");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyClusterConfigsResponse rsp = ModifyClusterConfigsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyClusterConfigsOutcome(rsp);
+        else
+            return ModifyClusterConfigsOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyClusterConfigsOutcome(outcome.GetError());
+    }
+}
+
+void CdwdorisClient::ModifyClusterConfigsAsync(const ModifyClusterConfigsRequest& request, const ModifyClusterConfigsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyClusterConfigs(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CdwdorisClient::ModifyClusterConfigsOutcomeCallable CdwdorisClient::ModifyClusterConfigsCallable(const ModifyClusterConfigsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyClusterConfigsOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyClusterConfigs(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CdwdorisClient::ModifyCoolDownPolicyOutcome CdwdorisClient::ModifyCoolDownPolicy(const ModifyCoolDownPolicyRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyCoolDownPolicy");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyCoolDownPolicyResponse rsp = ModifyCoolDownPolicyResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyCoolDownPolicyOutcome(rsp);
+        else
+            return ModifyCoolDownPolicyOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyCoolDownPolicyOutcome(outcome.GetError());
+    }
+}
+
+void CdwdorisClient::ModifyCoolDownPolicyAsync(const ModifyCoolDownPolicyRequest& request, const ModifyCoolDownPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyCoolDownPolicy(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CdwdorisClient::ModifyCoolDownPolicyOutcomeCallable CdwdorisClient::ModifyCoolDownPolicyCallable(const ModifyCoolDownPolicyRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyCoolDownPolicyOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyCoolDownPolicy(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CdwdorisClient::ModifyDatabaseTableAccessOutcome CdwdorisClient::ModifyDatabaseTableAccess(const ModifyDatabaseTableAccessRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyDatabaseTableAccess");
@@ -2405,6 +2792,92 @@ CdwdorisClient::ModifyWorkloadGroupStatusOutcomeCallable CdwdorisClient::ModifyW
     return task->get_future();
 }
 
+CdwdorisClient::OpenCoolDownOutcome CdwdorisClient::OpenCoolDown(const OpenCoolDownRequest &request)
+{
+    auto outcome = MakeRequest(request, "OpenCoolDown");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        OpenCoolDownResponse rsp = OpenCoolDownResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return OpenCoolDownOutcome(rsp);
+        else
+            return OpenCoolDownOutcome(o.GetError());
+    }
+    else
+    {
+        return OpenCoolDownOutcome(outcome.GetError());
+    }
+}
+
+void CdwdorisClient::OpenCoolDownAsync(const OpenCoolDownRequest& request, const OpenCoolDownAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->OpenCoolDown(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CdwdorisClient::OpenCoolDownOutcomeCallable CdwdorisClient::OpenCoolDownCallable(const OpenCoolDownRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<OpenCoolDownOutcome()>>(
+        [this, request]()
+        {
+            return this->OpenCoolDown(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CdwdorisClient::OpenCoolDownPolicyOutcome CdwdorisClient::OpenCoolDownPolicy(const OpenCoolDownPolicyRequest &request)
+{
+    auto outcome = MakeRequest(request, "OpenCoolDownPolicy");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        OpenCoolDownPolicyResponse rsp = OpenCoolDownPolicyResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return OpenCoolDownPolicyOutcome(rsp);
+        else
+            return OpenCoolDownPolicyOutcome(o.GetError());
+    }
+    else
+    {
+        return OpenCoolDownPolicyOutcome(outcome.GetError());
+    }
+}
+
+void CdwdorisClient::OpenCoolDownPolicyAsync(const OpenCoolDownPolicyRequest& request, const OpenCoolDownPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->OpenCoolDownPolicy(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CdwdorisClient::OpenCoolDownPolicyOutcomeCallable CdwdorisClient::OpenCoolDownPolicyCallable(const OpenCoolDownPolicyRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<OpenCoolDownPolicyOutcome()>>(
+        [this, request]()
+        {
+            return this->OpenCoolDownPolicy(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CdwdorisClient::QueryTableDataOutcome CdwdorisClient::QueryTableData(const QueryTableDataRequest &request)
 {
     auto outcome = MakeRequest(request, "QueryTableData");
@@ -2742,6 +3215,49 @@ CdwdorisClient::ScaleUpInstanceOutcomeCallable CdwdorisClient::ScaleUpInstanceCa
         [this, request]()
         {
             return this->ScaleUpInstance(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CdwdorisClient::UpdateCoolDownOutcome CdwdorisClient::UpdateCoolDown(const UpdateCoolDownRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdateCoolDown");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdateCoolDownResponse rsp = UpdateCoolDownResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdateCoolDownOutcome(rsp);
+        else
+            return UpdateCoolDownOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdateCoolDownOutcome(outcome.GetError());
+    }
+}
+
+void CdwdorisClient::UpdateCoolDownAsync(const UpdateCoolDownRequest& request, const UpdateCoolDownAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->UpdateCoolDown(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CdwdorisClient::UpdateCoolDownOutcomeCallable CdwdorisClient::UpdateCoolDownCallable(const UpdateCoolDownRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<UpdateCoolDownOutcome()>>(
+        [this, request]()
+        {
+            return this->UpdateCoolDown(request);
         }
     );
 

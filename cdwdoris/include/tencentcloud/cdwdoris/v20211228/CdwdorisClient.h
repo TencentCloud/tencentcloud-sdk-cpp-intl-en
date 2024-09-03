@@ -23,12 +23,18 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
+#include <tencentcloud/cdwdoris/v20211228/model/ActionAlterUserRequest.h>
+#include <tencentcloud/cdwdoris/v20211228/model/ActionAlterUserResponse.h>
 #include <tencentcloud/cdwdoris/v20211228/model/CancelBackupJobRequest.h>
 #include <tencentcloud/cdwdoris/v20211228/model/CancelBackupJobResponse.h>
+#include <tencentcloud/cdwdoris/v20211228/model/CheckCoolDownWorkingVariableConfigCorrectRequest.h>
+#include <tencentcloud/cdwdoris/v20211228/model/CheckCoolDownWorkingVariableConfigCorrectResponse.h>
 #include <tencentcloud/cdwdoris/v20211228/model/CopyTableDatasRequest.h>
 #include <tencentcloud/cdwdoris/v20211228/model/CopyTableDatasResponse.h>
 #include <tencentcloud/cdwdoris/v20211228/model/CreateBackUpScheduleRequest.h>
 #include <tencentcloud/cdwdoris/v20211228/model/CreateBackUpScheduleResponse.h>
+#include <tencentcloud/cdwdoris/v20211228/model/CreateCoolDownPolicyRequest.h>
+#include <tencentcloud/cdwdoris/v20211228/model/CreateCoolDownPolicyResponse.h>
 #include <tencentcloud/cdwdoris/v20211228/model/CreateDatabaseRequest.h>
 #include <tencentcloud/cdwdoris/v20211228/model/CreateDatabaseResponse.h>
 #include <tencentcloud/cdwdoris/v20211228/model/CreateInstanceNewRequest.h>
@@ -59,6 +65,14 @@
 #include <tencentcloud/cdwdoris/v20211228/model/DescribeClusterConfigsResponse.h>
 #include <tencentcloud/cdwdoris/v20211228/model/DescribeClusterConfigsHistoryRequest.h>
 #include <tencentcloud/cdwdoris/v20211228/model/DescribeClusterConfigsHistoryResponse.h>
+#include <tencentcloud/cdwdoris/v20211228/model/DescribeCoolDownBackendsRequest.h>
+#include <tencentcloud/cdwdoris/v20211228/model/DescribeCoolDownBackendsResponse.h>
+#include <tencentcloud/cdwdoris/v20211228/model/DescribeCoolDownPoliciesRequest.h>
+#include <tencentcloud/cdwdoris/v20211228/model/DescribeCoolDownPoliciesResponse.h>
+#include <tencentcloud/cdwdoris/v20211228/model/DescribeCoolDownTableDataRequest.h>
+#include <tencentcloud/cdwdoris/v20211228/model/DescribeCoolDownTableDataResponse.h>
+#include <tencentcloud/cdwdoris/v20211228/model/DescribeCreateTablesDDLRequest.h>
+#include <tencentcloud/cdwdoris/v20211228/model/DescribeCreateTablesDDLResponse.h>
 #include <tencentcloud/cdwdoris/v20211228/model/DescribeDatabaseRequest.h>
 #include <tencentcloud/cdwdoris/v20211228/model/DescribeDatabaseResponse.h>
 #include <tencentcloud/cdwdoris/v20211228/model/DescribeDatabaseAuditDownloadRequest.h>
@@ -115,6 +129,10 @@
 #include <tencentcloud/cdwdoris/v20211228/model/ExecuteSelectQueryResponse.h>
 #include <tencentcloud/cdwdoris/v20211228/model/InsertDatasToTableRequest.h>
 #include <tencentcloud/cdwdoris/v20211228/model/InsertDatasToTableResponse.h>
+#include <tencentcloud/cdwdoris/v20211228/model/ModifyClusterConfigsRequest.h>
+#include <tencentcloud/cdwdoris/v20211228/model/ModifyClusterConfigsResponse.h>
+#include <tencentcloud/cdwdoris/v20211228/model/ModifyCoolDownPolicyRequest.h>
+#include <tencentcloud/cdwdoris/v20211228/model/ModifyCoolDownPolicyResponse.h>
 #include <tencentcloud/cdwdoris/v20211228/model/ModifyDatabaseTableAccessRequest.h>
 #include <tencentcloud/cdwdoris/v20211228/model/ModifyDatabaseTableAccessResponse.h>
 #include <tencentcloud/cdwdoris/v20211228/model/ModifyInstanceRequest.h>
@@ -133,6 +151,10 @@
 #include <tencentcloud/cdwdoris/v20211228/model/ModifyWorkloadGroupResponse.h>
 #include <tencentcloud/cdwdoris/v20211228/model/ModifyWorkloadGroupStatusRequest.h>
 #include <tencentcloud/cdwdoris/v20211228/model/ModifyWorkloadGroupStatusResponse.h>
+#include <tencentcloud/cdwdoris/v20211228/model/OpenCoolDownRequest.h>
+#include <tencentcloud/cdwdoris/v20211228/model/OpenCoolDownResponse.h>
+#include <tencentcloud/cdwdoris/v20211228/model/OpenCoolDownPolicyRequest.h>
+#include <tencentcloud/cdwdoris/v20211228/model/OpenCoolDownPolicyResponse.h>
 #include <tencentcloud/cdwdoris/v20211228/model/QueryTableDataRequest.h>
 #include <tencentcloud/cdwdoris/v20211228/model/QueryTableDataResponse.h>
 #include <tencentcloud/cdwdoris/v20211228/model/RecoverBackUpJobRequest.h>
@@ -149,6 +171,8 @@
 #include <tencentcloud/cdwdoris/v20211228/model/ScaleOutInstanceResponse.h>
 #include <tencentcloud/cdwdoris/v20211228/model/ScaleUpInstanceRequest.h>
 #include <tencentcloud/cdwdoris/v20211228/model/ScaleUpInstanceResponse.h>
+#include <tencentcloud/cdwdoris/v20211228/model/UpdateCoolDownRequest.h>
+#include <tencentcloud/cdwdoris/v20211228/model/UpdateCoolDownResponse.h>
 #include <tencentcloud/cdwdoris/v20211228/model/UpdateDatabaseRequest.h>
 #include <tencentcloud/cdwdoris/v20211228/model/UpdateDatabaseResponse.h>
 #include <tencentcloud/cdwdoris/v20211228/model/UpdateTableSchemaRequest.h>
@@ -167,15 +191,24 @@ namespace TencentCloud
                 CdwdorisClient(const Credential &credential, const std::string &region);
                 CdwdorisClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
+                typedef Outcome<Core::Error, Model::ActionAlterUserResponse> ActionAlterUserOutcome;
+                typedef std::future<ActionAlterUserOutcome> ActionAlterUserOutcomeCallable;
+                typedef std::function<void(const CdwdorisClient*, const Model::ActionAlterUserRequest&, ActionAlterUserOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ActionAlterUserAsyncHandler;
                 typedef Outcome<Core::Error, Model::CancelBackupJobResponse> CancelBackupJobOutcome;
                 typedef std::future<CancelBackupJobOutcome> CancelBackupJobOutcomeCallable;
                 typedef std::function<void(const CdwdorisClient*, const Model::CancelBackupJobRequest&, CancelBackupJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CancelBackupJobAsyncHandler;
+                typedef Outcome<Core::Error, Model::CheckCoolDownWorkingVariableConfigCorrectResponse> CheckCoolDownWorkingVariableConfigCorrectOutcome;
+                typedef std::future<CheckCoolDownWorkingVariableConfigCorrectOutcome> CheckCoolDownWorkingVariableConfigCorrectOutcomeCallable;
+                typedef std::function<void(const CdwdorisClient*, const Model::CheckCoolDownWorkingVariableConfigCorrectRequest&, CheckCoolDownWorkingVariableConfigCorrectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CheckCoolDownWorkingVariableConfigCorrectAsyncHandler;
                 typedef Outcome<Core::Error, Model::CopyTableDatasResponse> CopyTableDatasOutcome;
                 typedef std::future<CopyTableDatasOutcome> CopyTableDatasOutcomeCallable;
                 typedef std::function<void(const CdwdorisClient*, const Model::CopyTableDatasRequest&, CopyTableDatasOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CopyTableDatasAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateBackUpScheduleResponse> CreateBackUpScheduleOutcome;
                 typedef std::future<CreateBackUpScheduleOutcome> CreateBackUpScheduleOutcomeCallable;
                 typedef std::function<void(const CdwdorisClient*, const Model::CreateBackUpScheduleRequest&, CreateBackUpScheduleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateBackUpScheduleAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateCoolDownPolicyResponse> CreateCoolDownPolicyOutcome;
+                typedef std::future<CreateCoolDownPolicyOutcome> CreateCoolDownPolicyOutcomeCallable;
+                typedef std::function<void(const CdwdorisClient*, const Model::CreateCoolDownPolicyRequest&, CreateCoolDownPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCoolDownPolicyAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateDatabaseResponse> CreateDatabaseOutcome;
                 typedef std::future<CreateDatabaseOutcome> CreateDatabaseOutcomeCallable;
                 typedef std::function<void(const CdwdorisClient*, const Model::CreateDatabaseRequest&, CreateDatabaseOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDatabaseAsyncHandler;
@@ -221,6 +254,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeClusterConfigsHistoryResponse> DescribeClusterConfigsHistoryOutcome;
                 typedef std::future<DescribeClusterConfigsHistoryOutcome> DescribeClusterConfigsHistoryOutcomeCallable;
                 typedef std::function<void(const CdwdorisClient*, const Model::DescribeClusterConfigsHistoryRequest&, DescribeClusterConfigsHistoryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeClusterConfigsHistoryAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCoolDownBackendsResponse> DescribeCoolDownBackendsOutcome;
+                typedef std::future<DescribeCoolDownBackendsOutcome> DescribeCoolDownBackendsOutcomeCallable;
+                typedef std::function<void(const CdwdorisClient*, const Model::DescribeCoolDownBackendsRequest&, DescribeCoolDownBackendsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCoolDownBackendsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCoolDownPoliciesResponse> DescribeCoolDownPoliciesOutcome;
+                typedef std::future<DescribeCoolDownPoliciesOutcome> DescribeCoolDownPoliciesOutcomeCallable;
+                typedef std::function<void(const CdwdorisClient*, const Model::DescribeCoolDownPoliciesRequest&, DescribeCoolDownPoliciesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCoolDownPoliciesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCoolDownTableDataResponse> DescribeCoolDownTableDataOutcome;
+                typedef std::future<DescribeCoolDownTableDataOutcome> DescribeCoolDownTableDataOutcomeCallable;
+                typedef std::function<void(const CdwdorisClient*, const Model::DescribeCoolDownTableDataRequest&, DescribeCoolDownTableDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCoolDownTableDataAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCreateTablesDDLResponse> DescribeCreateTablesDDLOutcome;
+                typedef std::future<DescribeCreateTablesDDLOutcome> DescribeCreateTablesDDLOutcomeCallable;
+                typedef std::function<void(const CdwdorisClient*, const Model::DescribeCreateTablesDDLRequest&, DescribeCreateTablesDDLOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCreateTablesDDLAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDatabaseResponse> DescribeDatabaseOutcome;
                 typedef std::future<DescribeDatabaseOutcome> DescribeDatabaseOutcomeCallable;
                 typedef std::function<void(const CdwdorisClient*, const Model::DescribeDatabaseRequest&, DescribeDatabaseOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDatabaseAsyncHandler;
@@ -305,6 +350,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::InsertDatasToTableResponse> InsertDatasToTableOutcome;
                 typedef std::future<InsertDatasToTableOutcome> InsertDatasToTableOutcomeCallable;
                 typedef std::function<void(const CdwdorisClient*, const Model::InsertDatasToTableRequest&, InsertDatasToTableOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InsertDatasToTableAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyClusterConfigsResponse> ModifyClusterConfigsOutcome;
+                typedef std::future<ModifyClusterConfigsOutcome> ModifyClusterConfigsOutcomeCallable;
+                typedef std::function<void(const CdwdorisClient*, const Model::ModifyClusterConfigsRequest&, ModifyClusterConfigsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyClusterConfigsAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyCoolDownPolicyResponse> ModifyCoolDownPolicyOutcome;
+                typedef std::future<ModifyCoolDownPolicyOutcome> ModifyCoolDownPolicyOutcomeCallable;
+                typedef std::function<void(const CdwdorisClient*, const Model::ModifyCoolDownPolicyRequest&, ModifyCoolDownPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyCoolDownPolicyAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyDatabaseTableAccessResponse> ModifyDatabaseTableAccessOutcome;
                 typedef std::future<ModifyDatabaseTableAccessOutcome> ModifyDatabaseTableAccessOutcomeCallable;
                 typedef std::function<void(const CdwdorisClient*, const Model::ModifyDatabaseTableAccessRequest&, ModifyDatabaseTableAccessOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDatabaseTableAccessAsyncHandler;
@@ -332,6 +383,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyWorkloadGroupStatusResponse> ModifyWorkloadGroupStatusOutcome;
                 typedef std::future<ModifyWorkloadGroupStatusOutcome> ModifyWorkloadGroupStatusOutcomeCallable;
                 typedef std::function<void(const CdwdorisClient*, const Model::ModifyWorkloadGroupStatusRequest&, ModifyWorkloadGroupStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyWorkloadGroupStatusAsyncHandler;
+                typedef Outcome<Core::Error, Model::OpenCoolDownResponse> OpenCoolDownOutcome;
+                typedef std::future<OpenCoolDownOutcome> OpenCoolDownOutcomeCallable;
+                typedef std::function<void(const CdwdorisClient*, const Model::OpenCoolDownRequest&, OpenCoolDownOutcome, const std::shared_ptr<const AsyncCallerContext>&)> OpenCoolDownAsyncHandler;
+                typedef Outcome<Core::Error, Model::OpenCoolDownPolicyResponse> OpenCoolDownPolicyOutcome;
+                typedef std::future<OpenCoolDownPolicyOutcome> OpenCoolDownPolicyOutcomeCallable;
+                typedef std::function<void(const CdwdorisClient*, const Model::OpenCoolDownPolicyRequest&, OpenCoolDownPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> OpenCoolDownPolicyAsyncHandler;
                 typedef Outcome<Core::Error, Model::QueryTableDataResponse> QueryTableDataOutcome;
                 typedef std::future<QueryTableDataOutcome> QueryTableDataOutcomeCallable;
                 typedef std::function<void(const CdwdorisClient*, const Model::QueryTableDataRequest&, QueryTableDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryTableDataAsyncHandler;
@@ -356,6 +413,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ScaleUpInstanceResponse> ScaleUpInstanceOutcome;
                 typedef std::future<ScaleUpInstanceOutcome> ScaleUpInstanceOutcomeCallable;
                 typedef std::function<void(const CdwdorisClient*, const Model::ScaleUpInstanceRequest&, ScaleUpInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ScaleUpInstanceAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateCoolDownResponse> UpdateCoolDownOutcome;
+                typedef std::future<UpdateCoolDownOutcome> UpdateCoolDownOutcomeCallable;
+                typedef std::function<void(const CdwdorisClient*, const Model::UpdateCoolDownRequest&, UpdateCoolDownOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateCoolDownAsyncHandler;
                 typedef Outcome<Core::Error, Model::UpdateDatabaseResponse> UpdateDatabaseOutcome;
                 typedef std::future<UpdateDatabaseOutcome> UpdateDatabaseOutcomeCallable;
                 typedef std::function<void(const CdwdorisClient*, const Model::UpdateDatabaseRequest&, UpdateDatabaseOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateDatabaseAsyncHandler;
@@ -366,6 +426,15 @@ namespace TencentCloud
 
 
                 /**
+                 *This API is used to add and modify a user.
+                 * @param req ActionAlterUserRequest
+                 * @return ActionAlterUserOutcome
+                 */
+                ActionAlterUserOutcome ActionAlterUser(const Model::ActionAlterUserRequest &request);
+                void ActionAlterUserAsync(const Model::ActionAlterUserRequest& request, const ActionAlterUserAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ActionAlterUserOutcomeCallable ActionAlterUserCallable(const Model::ActionAlterUserRequest& request);
+
+                /**
                  *This API is used to cancel the corresponding backup instance task.
                  * @param req CancelBackupJobRequest
                  * @return CancelBackupJobOutcome
@@ -373,6 +442,15 @@ namespace TencentCloud
                 CancelBackupJobOutcome CancelBackupJob(const Model::CancelBackupJobRequest &request);
                 void CancelBackupJobAsync(const Model::CancelBackupJobRequest& request, const CancelBackupJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CancelBackupJobOutcomeCallable CancelBackupJobCallable(const Model::CancelBackupJobRequest& request);
+
+                /**
+                 *This API is used to check whether variables and configurations for hot/cold data layering are correct.
+                 * @param req CheckCoolDownWorkingVariableConfigCorrectRequest
+                 * @return CheckCoolDownWorkingVariableConfigCorrectOutcome
+                 */
+                CheckCoolDownWorkingVariableConfigCorrectOutcome CheckCoolDownWorkingVariableConfigCorrect(const Model::CheckCoolDownWorkingVariableConfigCorrectRequest &request);
+                void CheckCoolDownWorkingVariableConfigCorrectAsync(const Model::CheckCoolDownWorkingVariableConfigCorrectRequest& request, const CheckCoolDownWorkingVariableConfigCorrectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CheckCoolDownWorkingVariableConfigCorrectOutcomeCallable CheckCoolDownWorkingVariableConfigCorrectCallable(const Model::CheckCoolDownWorkingVariableConfigCorrectRequest& request);
 
                 /**
                  *This API is used to copy the source table to the target table.
@@ -391,6 +469,15 @@ namespace TencentCloud
                 CreateBackUpScheduleOutcome CreateBackUpSchedule(const Model::CreateBackUpScheduleRequest &request);
                 void CreateBackUpScheduleAsync(const Model::CreateBackUpScheduleRequest& request, const CreateBackUpScheduleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateBackUpScheduleOutcomeCallable CreateBackUpScheduleCallable(const Model::CreateBackUpScheduleRequest& request);
+
+                /**
+                 *This API is used to create a hot/cold data layering policy.
+                 * @param req CreateCoolDownPolicyRequest
+                 * @return CreateCoolDownPolicyOutcome
+                 */
+                CreateCoolDownPolicyOutcome CreateCoolDownPolicy(const Model::CreateCoolDownPolicyRequest &request);
+                void CreateCoolDownPolicyAsync(const Model::CreateCoolDownPolicyRequest& request, const CreateCoolDownPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateCoolDownPolicyOutcomeCallable CreateCoolDownPolicyCallable(const Model::CreateCoolDownPolicyRequest& request);
 
                 /**
                  *This API is used to create a TCHouse-D database.
@@ -526,6 +613,42 @@ namespace TencentCloud
                 DescribeClusterConfigsHistoryOutcome DescribeClusterConfigsHistory(const Model::DescribeClusterConfigsHistoryRequest &request);
                 void DescribeClusterConfigsHistoryAsync(const Model::DescribeClusterConfigsHistoryRequest& request, const DescribeClusterConfigsHistoryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeClusterConfigsHistoryOutcomeCallable DescribeClusterConfigsHistoryCallable(const Model::DescribeClusterConfigsHistoryRequest& request);
+
+                /**
+                 *This API is used to query the list of backend nodes supporting hot/cold data layering.
+                 * @param req DescribeCoolDownBackendsRequest
+                 * @return DescribeCoolDownBackendsOutcome
+                 */
+                DescribeCoolDownBackendsOutcome DescribeCoolDownBackends(const Model::DescribeCoolDownBackendsRequest &request);
+                void DescribeCoolDownBackendsAsync(const Model::DescribeCoolDownBackendsRequest& request, const DescribeCoolDownBackendsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCoolDownBackendsOutcomeCallable DescribeCoolDownBackendsCallable(const Model::DescribeCoolDownBackendsRequest& request);
+
+                /**
+                 *This API is used to query the list of hot/cold data layering policies.
+                 * @param req DescribeCoolDownPoliciesRequest
+                 * @return DescribeCoolDownPoliciesOutcome
+                 */
+                DescribeCoolDownPoliciesOutcome DescribeCoolDownPolicies(const Model::DescribeCoolDownPoliciesRequest &request);
+                void DescribeCoolDownPoliciesAsync(const Model::DescribeCoolDownPoliciesRequest& request, const DescribeCoolDownPoliciesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCoolDownPoliciesOutcomeCallable DescribeCoolDownPoliciesCallable(const Model::DescribeCoolDownPoliciesRequest& request);
+
+                /**
+                 *This API is used to query the layered hot and cold data in a table.
+                 * @param req DescribeCoolDownTableDataRequest
+                 * @return DescribeCoolDownTableDataOutcome
+                 */
+                DescribeCoolDownTableDataOutcome DescribeCoolDownTableData(const Model::DescribeCoolDownTableDataRequest &request);
+                void DescribeCoolDownTableDataAsync(const Model::DescribeCoolDownTableDataRequest& request, const DescribeCoolDownTableDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCoolDownTableDataOutcomeCallable DescribeCoolDownTableDataCallable(const Model::DescribeCoolDownTableDataRequest& request);
+
+                /**
+                 *This API is used to batch obtain the table creation DDL.
+                 * @param req DescribeCreateTablesDDLRequest
+                 * @return DescribeCreateTablesDDLOutcome
+                 */
+                DescribeCreateTablesDDLOutcome DescribeCreateTablesDDL(const Model::DescribeCreateTablesDDLRequest &request);
+                void DescribeCreateTablesDDLAsync(const Model::DescribeCreateTablesDDLRequest& request, const DescribeCreateTablesDDLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCreateTablesDDLOutcomeCallable DescribeCreateTablesDDLCallable(const Model::DescribeCreateTablesDDLRequest& request);
 
                 /**
                  *This API is used to obtain the database information under a specific data source.
@@ -690,7 +813,7 @@ namespace TencentCloud
                 DescribeSpecOutcomeCallable DescribeSpecCallable(const Model::DescribeSpecRequest& request);
 
                 /**
-                 *This API is used to query the CK cluster API for the driver SQL command.
+                 *This API is used to query the cluster information by executing SQL commands.
                  * @param req DescribeSqlApisRequest
                  * @return DescribeSqlApisOutcome
                  */
@@ -780,6 +903,24 @@ namespace TencentCloud
                 InsertDatasToTableOutcomeCallable InsertDatasToTableCallable(const Model::InsertDatasToTableRequest& request);
 
                 /**
+                 *This API is used to modify the XML cluster configuration file on the cluster configuration page.
+                 * @param req ModifyClusterConfigsRequest
+                 * @return ModifyClusterConfigsOutcome
+                 */
+                ModifyClusterConfigsOutcome ModifyClusterConfigs(const Model::ModifyClusterConfigsRequest &request);
+                void ModifyClusterConfigsAsync(const Model::ModifyClusterConfigsRequest& request, const ModifyClusterConfigsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyClusterConfigsOutcomeCallable ModifyClusterConfigsCallable(const Model::ModifyClusterConfigsRequest& request);
+
+                /**
+                 *This API is used to modify the hot/cold data layering policy.
+                 * @param req ModifyCoolDownPolicyRequest
+                 * @return ModifyCoolDownPolicyOutcome
+                 */
+                ModifyCoolDownPolicyOutcome ModifyCoolDownPolicy(const Model::ModifyCoolDownPolicyRequest &request);
+                void ModifyCoolDownPolicyAsync(const Model::ModifyCoolDownPolicyRequest& request, const ModifyCoolDownPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyCoolDownPolicyOutcomeCallable ModifyCoolDownPolicyCallable(const Model::ModifyCoolDownPolicyRequest& request);
+
+                /**
                  *This API is used to GRANT and REVOKE the database and table in the Doris database.
                  * @param req ModifyDatabaseTableAccessRequest
                  * @return ModifyDatabaseTableAccessOutcome
@@ -861,6 +1002,24 @@ namespace TencentCloud
                 ModifyWorkloadGroupStatusOutcomeCallable ModifyWorkloadGroupStatusCallable(const Model::ModifyWorkloadGroupStatusRequest& request);
 
                 /**
+                 *This API is used to enable hot/cold data layering.
+                 * @param req OpenCoolDownRequest
+                 * @return OpenCoolDownOutcome
+                 */
+                OpenCoolDownOutcome OpenCoolDown(const Model::OpenCoolDownRequest &request);
+                void OpenCoolDownAsync(const Model::OpenCoolDownRequest& request, const OpenCoolDownAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                OpenCoolDownOutcomeCallable OpenCoolDownCallable(const Model::OpenCoolDownRequest& request);
+
+                /**
+                 *This API is used to enable and describe the cold storage policy.
+                 * @param req OpenCoolDownPolicyRequest
+                 * @return OpenCoolDownPolicyOutcome
+                 */
+                OpenCoolDownPolicyOutcome OpenCoolDownPolicy(const Model::OpenCoolDownPolicyRequest &request);
+                void OpenCoolDownPolicyAsync(const Model::OpenCoolDownPolicyRequest& request, const OpenCoolDownPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                OpenCoolDownPolicyOutcomeCallable OpenCoolDownPolicyCallable(const Model::OpenCoolDownPolicyRequest& request);
+
+                /**
                  *This API is used to query data according to the specified database and table names, and support field selection and pagination.
                  * @param req QueryTableDataRequest
                  * @return QueryTableDataOutcome
@@ -931,6 +1090,15 @@ namespace TencentCloud
                 ScaleUpInstanceOutcome ScaleUpInstance(const Model::ScaleUpInstanceRequest &request);
                 void ScaleUpInstanceAsync(const Model::ScaleUpInstanceRequest& request, const ScaleUpInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ScaleUpInstanceOutcomeCallable ScaleUpInstanceCallable(const Model::ScaleUpInstanceRequest& request);
+
+                /**
+                 *This API is used to update the hot/cold data layering information on a cluster.
+                 * @param req UpdateCoolDownRequest
+                 * @return UpdateCoolDownOutcome
+                 */
+                UpdateCoolDownOutcome UpdateCoolDown(const Model::UpdateCoolDownRequest &request);
+                void UpdateCoolDownAsync(const Model::UpdateCoolDownRequest& request, const UpdateCoolDownAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateCoolDownOutcomeCallable UpdateCoolDownCallable(const Model::UpdateCoolDownRequest& request);
 
                 /**
                  *This API is used to modify the attributes of a specified database, including setting the data volume quota, renaming the database, setting the replica quantity quota, and modifying other attributes of the database.

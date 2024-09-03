@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique user ID, which is customized by you and is not understood by CAR.
-                     * @return UserId Unique user ID, which is customized by you and is not understood by CAR.
+                     * 获取Unique user ID, which is customized by you and is not parsed by CAR.
+                     * @return UserId Unique user ID, which is customized by you and is not parsed by CAR.
                      * 
                      */
                     std::string GetUserId() const;
 
                     /**
-                     * 设置Unique user ID, which is customized by you and is not understood by CAR.
-                     * @param _userId Unique user ID, which is customized by you and is not understood by CAR.
+                     * 设置Unique user ID, which is customized by you and is not parsed by CAR.
+                     * @param _userId Unique user ID, which is customized by you and is not parsed by CAR.
                      * 
                      */
                     void SetUserId(const std::string& _userId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool UserIdHasBeenSet() const;
 
                     /**
-                     * 获取Push address. Only RTMP is supported for push currently.
-                     * @return PublishStreamURL Push address. Only RTMP is supported for push currently.
+                     * 获取Streaming address. Only RTMP is supported for streaming currently.
+                     * @return PublishStreamURL Streaming address. Only RTMP is supported for streaming currently.
                      * 
                      */
                     std::string GetPublishStreamURL() const;
 
                     /**
-                     * 设置Push address. Only RTMP is supported for push currently.
-                     * @param _publishStreamURL Push address. Only RTMP is supported for push currently.
+                     * 设置Streaming address. Only RTMP is supported for streaming currently.
+                     * @param _publishStreamURL Streaming address. Only RTMP is supported for streaming currently.
                      * 
                      */
                     void SetPublishStreamURL(const std::string& _publishStreamURL);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Unique user ID, which is customized by you and is not understood by CAR.
+                     * Unique user ID, which is customized by you and is not parsed by CAR.
                      */
                     std::string m_userId;
                     bool m_userIdHasBeenSet;
 
                     /**
-                     * Push address. Only RTMP is supported for push currently.
+                     * Streaming address. Only RTMP is supported for streaming currently.
                      */
                     std::string m_publishStreamURL;
                     bool m_publishStreamURLHasBeenSet;

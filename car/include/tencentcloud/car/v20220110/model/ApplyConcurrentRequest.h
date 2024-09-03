@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
-                     * @return UserId The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
+                     * 获取Unique user ID, which is customized by you and is not parsed by CAR. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
+                     * @return UserId Unique user ID, which is customized by you and is not parsed by CAR. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
                      * 
                      */
                     std::string GetUserId() const;
 
                     /**
-                     * 设置The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
-                     * @param _userId The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
+                     * 设置Unique user ID, which is customized by you and is not parsed by CAR. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
+                     * @param _userId Unique user ID, which is customized by you and is not parsed by CAR. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
                      * 
                      */
                     void SetUserId(const std::string& _userId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool UserIdHasBeenSet() const;
 
                     /**
-                     * 获取Public IP of user’s application client, which is used for nearby scheduling.
-                     * @return UserIp Public IP of user’s application client, which is used for nearby scheduling.
+                     * 获取Public IP address of the user's client, which is used for nearby scheduling.
+                     * @return UserIp Public IP address of the user's client, which is used for nearby scheduling.
                      * 
                      */
                     std::string GetUserIp() const;
 
                     /**
-                     * 设置Public IP of user’s application client, which is used for nearby scheduling.
-                     * @param _userIp Public IP of user’s application client, which is used for nearby scheduling.
+                     * 设置Public IP address of the user's client, which is used for nearby scheduling.
+                     * @param _userIp Public IP address of the user's client, which is used for nearby scheduling.
                      * 
                      */
                     void SetUserIp(const std::string& _userIp);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool UserIpHasBeenSet() const;
 
                     /**
-                     * 获取The project ID.
-                     * @return ProjectId The project ID.
+                     * 获取Project ID.
+                     * @return ProjectId Project ID.
                      * 
                      */
                     std::string GetProjectId() const;
 
                     /**
-                     * 设置The project ID.
-                     * @param _projectId The project ID.
+                     * 设置Project ID.
+                     * @param _projectId Project ID.
                      * 
                      */
                     void SetProjectId(const std::string& _projectId);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of other versions is requested, you need to specify the version through this field.
-                     * @return ApplicationVersionId Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of other versions is requested, you need to specify the version through this field.
+                     * 获取Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of the other versions is requested, you need to specify the version through this field.
+                     * @return ApplicationVersionId Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of the other versions is requested, you need to specify the version through this field.
                      * 
                      */
                     std::string GetApplicationVersionId() const;
 
                     /**
-                     * 设置Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of other versions is requested, you need to specify the version through this field.
-                     * @param _applicationVersionId Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of other versions is requested, you need to specify the version through this field.
+                     * 设置Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of the other versions is requested, you need to specify the version through this field.
+                     * @param _applicationVersionId Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of the other versions is requested, you need to specify the version through this field.
                      * 
                      */
                     void SetApplicationVersionId(const std::string& _applicationVersionId);
@@ -150,25 +150,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
+                     * Unique user ID, which is customized by you and is not parsed by CAR. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
                      */
                     std::string m_userId;
                     bool m_userIdHasBeenSet;
 
                     /**
-                     * Public IP of user’s application client, which is used for nearby scheduling.
+                     * Public IP address of the user's client, which is used for nearby scheduling.
                      */
                     std::string m_userIp;
                     bool m_userIpHasBeenSet;
 
                     /**
-                     * The project ID.
+                     * Project ID.
                      */
                     std::string m_projectId;
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of other versions is requested, you need to specify the version through this field.
+                     * Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of the other versions is requested, you need to specify the version through this field.
                      */
                     std::string m_applicationVersionId;
                     bool m_applicationVersionIdHasBeenSet;
