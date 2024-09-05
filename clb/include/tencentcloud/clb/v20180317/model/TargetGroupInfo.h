@@ -178,19 +178,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool UpdatedTimeHasBeenSet() const;
 
                     /**
-                     * 获取Array of associated rules
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return AssociatedRule Array of associated rules
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Associated rule array. This parameter cannot be obtained when the DescribeTargetGroupList API is called.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AssociatedRule Associated rule array. This parameter cannot be obtained when the DescribeTargetGroupList API is called.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<AssociationItem> GetAssociatedRule() const;
 
                     /**
-                     * 设置Array of associated rules
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _associatedRule Array of associated rules
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Associated rule array. This parameter cannot be obtained when the DescribeTargetGroupList API is called.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _associatedRule Associated rule array. This parameter cannot be obtained when the DescribeTargetGroupList API is called.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAssociatedRule(const std::vector<AssociationItem>& _associatedRule);
@@ -242,8 +238,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_updatedTimeHasBeenSet;
 
                     /**
-                     * Array of associated rules
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Associated rule array. This parameter cannot be obtained when the DescribeTargetGroupList API is called.Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<AssociationItem> m_associatedRule;
                     bool m_associatedRuleHasBeenSet;

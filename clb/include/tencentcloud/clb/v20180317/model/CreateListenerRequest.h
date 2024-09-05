@@ -448,6 +448,27 @@ Default value: `WRR`. This parameter is only applicable to TCP, UDP, TCP_SSL and
                      */
                     bool SnatEnableHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return FullEndPorts 
+                     * 
+                     */
+                    std::vector<int64_t> GetFullEndPorts() const;
+
+                    /**
+                     * 设置
+                     * @param _fullEndPorts 
+                     * 
+                     */
+                    void SetFullEndPorts(const std::vector<int64_t>& _fullEndPorts);
+
+                    /**
+                     * 判断参数 FullEndPorts 是否已赋值
+                     * @return FullEndPorts 是否已赋值
+                     * 
+                     */
+                    bool FullEndPortsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -564,6 +585,12 @@ Default value: `WRR`. This parameter is only applicable to TCP, UDP, TCP_SSL and
                      */
                     bool m_snatEnable;
                     bool m_snatEnableHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<int64_t> m_fullEndPorts;
+                    bool m_fullEndPortsHasBeenSet;
 
                 };
             }

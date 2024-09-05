@@ -44,10 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取IDs of the listeners failed to bind. If this is blank, all listeners are bound successfully.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FailListenerIdSet IDs of the listeners failed to bind. If this is blank, all listeners are bound successfully.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取ID of the listener failed to bind. Empty indicates all listeners are bound successfully.
+                     * @return FailListenerIdSet ID of the listener failed to bind. Empty indicates all listeners are bound successfully.
                      * 
                      */
                     std::vector<std::string> GetFailListenerIdSet() const;
@@ -59,14 +57,33 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool FailListenerIdSetHasBeenSet() const;
 
+                    /**
+                     * 获取Information of the binding failure cause.
+                     * @return Message Information of the binding failure cause.
+                     * 
+                     */
+                    std::string GetMessage() const;
+
+                    /**
+                     * 判断参数 Message 是否已赋值
+                     * @return Message 是否已赋值
+                     * 
+                     */
+                    bool MessageHasBeenSet() const;
+
                 private:
 
                     /**
-                     * IDs of the listeners failed to bind. If this is blank, all listeners are bound successfully.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * ID of the listener failed to bind. Empty indicates all listeners are bound successfully.
                      */
                     std::vector<std::string> m_failListenerIdSet;
                     bool m_failListenerIdSetHasBeenSet;
+
+                    /**
+                     * Information of the binding failure cause.
+                     */
+                    std::string m_message;
+                    bool m_messageHasBeenSet;
 
                 };
             }

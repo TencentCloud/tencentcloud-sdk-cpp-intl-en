@@ -64,6 +64,27 @@ namespace TencentCloud
                      */
                     bool LoadBalancerSlaHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to force upgrade. The default is no.
+                     * @return Force Whether to force upgrade. The default is no.
+                     * 
+                     */
+                    bool GetForce() const;
+
+                    /**
+                     * 设置Whether to force upgrade. The default is no.
+                     * @param _force Whether to force upgrade. The default is no.
+                     * 
+                     */
+                    void SetForce(const bool& _force);
+
+                    /**
+                     * 判断参数 Force 是否已赋值
+                     * @return Force 是否已赋值
+                     * 
+                     */
+                    bool ForceHasBeenSet() const;
+
                 private:
 
                     /**
@@ -71,6 +92,12 @@ namespace TencentCloud
                      */
                     std::vector<SlaUpdateParam> m_loadBalancerSla;
                     bool m_loadBalancerSlaHasBeenSet;
+
+                    /**
+                     * Whether to force upgrade. The default is no.
+                     */
+                    bool m_force;
+                    bool m_forceHasBeenSet;
 
                 };
             }

@@ -276,19 +276,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取ISP to which the CLB IP address belongs.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return AddressIsp ISP to which the CLB IP address belongs.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取ISP for the IP address of the CLB instance. Valid values: BGP (multi-line), CMCC (China Mobile), CUCC (China Unicom), CTCC (China Telecom), INTERNAL (private network).Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AddressIsp ISP for the IP address of the CLB instance. Valid values: BGP (multi-line), CMCC (China Mobile), CUCC (China Unicom), CTCC (China Telecom), INTERNAL (private network).Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetAddressIsp() const;
 
                     /**
-                     * 设置ISP to which the CLB IP address belongs.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _addressIsp ISP to which the CLB IP address belongs.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置ISP for the IP address of the CLB instance. Valid values: BGP (multi-line), CMCC (China Mobile), CUCC (China Unicom), CTCC (China Telecom), INTERNAL (private network).Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _addressIsp ISP for the IP address of the CLB instance. Valid values: BGP (multi-line), CMCC (China Mobile), CUCC (China Unicom), CTCC (China Telecom), INTERNAL (private network).Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAddressIsp(const std::string& _addressIsp);
@@ -376,19 +372,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取CLB instance billing mode.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ChargeType CLB instance billing mode.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Billing type of a CLB instance. Valid values: PREPAID (prepaid), POSTPAID_BY_HOUR (pay-as-you-go).Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ChargeType Billing type of a CLB instance. Valid values: PREPAID (prepaid), POSTPAID_BY_HOUR (pay-as-you-go).Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetChargeType() const;
 
                     /**
-                     * 设置CLB instance billing mode.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _chargeType CLB instance billing mode.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Billing type of a CLB instance. Valid values: PREPAID (prepaid), POSTPAID_BY_HOUR (pay-as-you-go).Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _chargeType Billing type of a CLB instance. Valid values: PREPAID (prepaid), POSTPAID_BY_HOUR (pay-as-you-go).Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetChargeType(const std::string& _chargeType);
@@ -826,19 +818,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool SecurityGroupHasBeenSet() const;
 
                     /**
-                     * 获取Whether the CLB instance is billed by IP.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return LoadBalancerPassToTarget Whether the CLB instance is billed by IP.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Whether to enable moving up CLB security groups. Valid values: 1 (enabled), 0 (not enabled).Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return LoadBalancerPassToTarget Whether to enable moving up CLB security groups. Valid values: 1 (enabled), 0 (not enabled).Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetLoadBalancerPassToTarget() const;
 
                     /**
-                     * 设置Whether the CLB instance is billed by IP.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _loadBalancerPassToTarget Whether the CLB instance is billed by IP.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Whether to enable moving up CLB security groups. Valid values: 1 (enabled), 0 (not enabled).Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _loadBalancerPassToTarget Whether to enable moving up CLB security groups. Valid values: 1 (enabled), 0 (not enabled).Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLoadBalancerPassToTarget(const uint64_t& _loadBalancerPassToTarget);
@@ -1025,6 +1013,69 @@ Note: This field may return·null, indicating that no valid values can be obtain
                      */
                     bool EgressHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return AttributeFlags 
+                     * 
+                     */
+                    std::vector<std::string> GetAttributeFlags() const;
+
+                    /**
+                     * 设置
+                     * @param _attributeFlags 
+                     * 
+                     */
+                    void SetAttributeFlags(const std::vector<std::string>& _attributeFlags);
+
+                    /**
+                     * 判断参数 AttributeFlags 是否已赋值
+                     * @return AttributeFlags 是否已赋值
+                     * 
+                     */
+                    bool AttributeFlagsHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return SlaType 
+                     * 
+                     */
+                    std::string GetSlaType() const;
+
+                    /**
+                     * 设置
+                     * @param _slaType 
+                     * 
+                     */
+                    void SetSlaType(const std::string& _slaType);
+
+                    /**
+                     * 判断参数 SlaType 是否已赋值
+                     * @return SlaType 是否已赋值
+                     * 
+                     */
+                    bool SlaTypeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return Exclusive 
+                     * 
+                     */
+                    uint64_t GetExclusive() const;
+
+                    /**
+                     * 设置
+                     * @param _exclusive 
+                     * 
+                     */
+                    void SetExclusive(const uint64_t& _exclusive);
+
+                    /**
+                     * 判断参数 Exclusive 是否已赋值
+                     * @return Exclusive 是否已赋值
+                     * 
+                     */
+                    bool ExclusiveHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1091,8 +1142,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * ISP to which the CLB IP address belongs.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * ISP for the IP address of the CLB instance. Valid values: BGP (multi-line), CMCC (China Mobile), CUCC (China Unicom), CTCC (China Telecom), INTERNAL (private network).Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_addressIsp;
                     bool m_addressIspHasBeenSet;
@@ -1119,8 +1169,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * CLB instance billing mode.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Billing type of a CLB instance. Valid values: PREPAID (prepaid), POSTPAID_BY_HOUR (pay-as-you-go).Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_chargeType;
                     bool m_chargeTypeHasBeenSet;
@@ -1245,8 +1294,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_securityGroupHasBeenSet;
 
                     /**
-                     * Whether the CLB instance is billed by IP.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Whether to enable moving up CLB security groups. Valid values: 1 (enabled), 0 (not enabled).Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_loadBalancerPassToTarget;
                     bool m_loadBalancerPassToTargetHasBeenSet;
@@ -1299,6 +1347,24 @@ Note: This field may return·null, indicating that no valid values can be obtain
                      */
                     std::string m_egress;
                     bool m_egressHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<std::string> m_attributeFlags;
+                    bool m_attributeFlagsHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_slaType;
+                    bool m_slaTypeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_exclusive;
+                    bool m_exclusiveHasBeenSet;
 
                 };
             }

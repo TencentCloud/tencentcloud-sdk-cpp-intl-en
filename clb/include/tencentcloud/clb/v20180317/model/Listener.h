@@ -164,19 +164,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HealthCheckHasBeenSet() const;
 
                     /**
-                     * 获取Request scheduling method
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Scheduler Request scheduling method
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Request scheduling method. WRR, LEAST_CONN, and IP_HASH respectively indicate weighted round robin, least connections, and IP hash.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Scheduler Request scheduling method. WRR, LEAST_CONN, and IP_HASH respectively indicate weighted round robin, least connections, and IP hash.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetScheduler() const;
 
                     /**
-                     * 设置Request scheduling method
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _scheduler Request scheduling method
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Request scheduling method. WRR, LEAST_CONN, and IP_HASH respectively indicate weighted round robin, least connections, and IP hash.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _scheduler Request scheduling method. WRR, LEAST_CONN, and IP_HASH respectively indicate weighted round robin, least connections, and IP hash.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetScheduler(const std::string& _scheduler);
@@ -613,6 +609,27 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool IdleConnectTimeoutHasBeenSet() const;
 
+                    /**
+                     * 获取Scheduling time. After forced rescheduling is triggered, long connections will be disconnected and reassigned within the set scheduling time.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RescheduleInterval Scheduling time. After forced rescheduling is triggered, long connections will be disconnected and reassigned within the set scheduling time.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    uint64_t GetRescheduleInterval() const;
+
+                    /**
+                     * 设置Scheduling time. After forced rescheduling is triggered, long connections will be disconnected and reassigned within the set scheduling time.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _rescheduleInterval Scheduling time. After forced rescheduling is triggered, long connections will be disconnected and reassigned within the set scheduling time.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetRescheduleInterval(const uint64_t& _rescheduleInterval);
+
+                    /**
+                     * 判断参数 RescheduleInterval 是否已赋值
+                     * @return RescheduleInterval 是否已赋值
+                     * 
+                     */
+                    bool RescheduleIntervalHasBeenSet() const;
+
                 private:
 
                     /**
@@ -648,8 +665,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_healthCheckHasBeenSet;
 
                     /**
-                     * Request scheduling method
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Request scheduling method. WRR, LEAST_CONN, and IP_HASH respectively indicate weighted round robin, least connections, and IP hash.Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_scheduler;
                     bool m_schedulerHasBeenSet;
@@ -772,6 +788,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     int64_t m_idleConnectTimeout;
                     bool m_idleConnectTimeoutHasBeenSet;
+
+                    /**
+                     * Scheduling time. After forced rescheduling is triggered, long connections will be disconnected and reassigned within the set scheduling time.Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_rescheduleInterval;
+                    bool m_rescheduleIntervalHasBeenSet;
 
                 };
             }

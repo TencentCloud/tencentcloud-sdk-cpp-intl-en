@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/clb/v20180317/model/ModifyLoadBalancerSlaRequest.h>
+#include <tencentcloud/clb/v20180317/model/BatchModifyTargetTagRequest.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -22,40 +22,40 @@
 using namespace TencentCloud::Clb::V20180317::Model;
 using namespace std;
 
-ModifyLoadBalancerSlaRequest::ModifyLoadBalancerSlaRequest() :
-    m_loadBalancerSlaHasBeenSet(false),
-    m_forceHasBeenSet(false)
+BatchModifyTargetTagRequest::BatchModifyTargetTagRequest() :
+    m_loadBalancerIdHasBeenSet(false),
+    m_modifyListHasBeenSet(false)
 {
 }
 
-string ModifyLoadBalancerSlaRequest::ToJsonString() const
+string BatchModifyTargetTagRequest::ToJsonString() const
 {
     rapidjson::Document d;
     d.SetObject();
     rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
-    if (m_loadBalancerSlaHasBeenSet)
+    if (m_loadBalancerIdHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "LoadBalancerSla";
+        string key = "LoadBalancerId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_loadBalancerId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_modifyListHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ModifyList";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
-        for (auto itr = m_loadBalancerSla.begin(); itr != m_loadBalancerSla.end(); ++itr, ++i)
+        for (auto itr = m_modifyList.begin(); itr != m_modifyList.end(); ++itr, ++i)
         {
             d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(d[key.c_str()][i], allocator);
         }
-    }
-
-    if (m_forceHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Force";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, m_force, allocator);
     }
 
 
@@ -66,36 +66,36 @@ string ModifyLoadBalancerSlaRequest::ToJsonString() const
 }
 
 
-vector<SlaUpdateParam> ModifyLoadBalancerSlaRequest::GetLoadBalancerSla() const
+string BatchModifyTargetTagRequest::GetLoadBalancerId() const
 {
-    return m_loadBalancerSla;
+    return m_loadBalancerId;
 }
 
-void ModifyLoadBalancerSlaRequest::SetLoadBalancerSla(const vector<SlaUpdateParam>& _loadBalancerSla)
+void BatchModifyTargetTagRequest::SetLoadBalancerId(const string& _loadBalancerId)
 {
-    m_loadBalancerSla = _loadBalancerSla;
-    m_loadBalancerSlaHasBeenSet = true;
+    m_loadBalancerId = _loadBalancerId;
+    m_loadBalancerIdHasBeenSet = true;
 }
 
-bool ModifyLoadBalancerSlaRequest::LoadBalancerSlaHasBeenSet() const
+bool BatchModifyTargetTagRequest::LoadBalancerIdHasBeenSet() const
 {
-    return m_loadBalancerSlaHasBeenSet;
+    return m_loadBalancerIdHasBeenSet;
 }
 
-bool ModifyLoadBalancerSlaRequest::GetForce() const
+vector<RsTagRule> BatchModifyTargetTagRequest::GetModifyList() const
 {
-    return m_force;
+    return m_modifyList;
 }
 
-void ModifyLoadBalancerSlaRequest::SetForce(const bool& _force)
+void BatchModifyTargetTagRequest::SetModifyList(const vector<RsTagRule>& _modifyList)
 {
-    m_force = _force;
-    m_forceHasBeenSet = true;
+    m_modifyList = _modifyList;
+    m_modifyListHasBeenSet = true;
 }
 
-bool ModifyLoadBalancerSlaRequest::ForceHasBeenSet() const
+bool BatchModifyTargetTagRequest::ModifyListHasBeenSet() const
 {
-    return m_forceHasBeenSet;
+    return m_modifyListHasBeenSet;
 }
 
 

@@ -25,6 +25,7 @@
 #include <tencentcloud/clb/v20180317/model/TagInfo.h>
 #include <tencentcloud/clb/v20180317/model/ExclusiveCluster.h>
 #include <tencentcloud/clb/v20180317/model/SnatIp.h>
+#include <tencentcloud/clb/v20180317/model/LBChargePrepaid.h>
 
 
 namespace TencentCloud
@@ -223,19 +224,15 @@ Note: if the name of the new CLB instance already exists, a default name will be
                     bool NumberHasBeenSet() const;
 
                     /**
-                     * 获取ID of the primary AZ for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`. It's only available to public CLB instances. 
-Note: The traffic only goes to the primary AZ in normal cases. The secondary AZ is used only when the primary AZ is unavailable. To query the list of primary AZs in a region, use [DescribeResources](https://intl.cloud.tencent.com/document/api/214/70213?from_cn_redirect=1).
-                     * @return MasterZoneId ID of the primary AZ for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`. It's only available to public CLB instances. 
-Note: The traffic only goes to the primary AZ in normal cases. The secondary AZ is used only when the primary AZ is unavailable. To query the list of primary AZs in a region, use [DescribeResources](https://intl.cloud.tencent.com/document/api/214/70213?from_cn_redirect=1).
+                     * 获取ID of the primary availability zone configured for cross-availability zone disaster recovery, such as 100001 or ap-guangzhou-1. It applies only to public network CLB.Note: The primary availability zone is the one that carries traffic. The replica availability zone does not carry traffic by default and is only used when the primary availability zone is unavailable. Currently, primary and replica availability zones are supported only for the IPv4 CLB instances in the regions of Guangzhou, Shanghai, Nanjing, Beijing, Chengdu, Shenzhen Finance Zone, Hong Kong (China), Seoul, Frankfurt, and Singapore. You can query the list of primary availability zones in a region through the [DescribeResources](https://intl.cloud.tencent.com/document/api/214/70213?from_cn_redirect=1) API.
+                     * @return MasterZoneId ID of the primary availability zone configured for cross-availability zone disaster recovery, such as 100001 or ap-guangzhou-1. It applies only to public network CLB.Note: The primary availability zone is the one that carries traffic. The replica availability zone does not carry traffic by default and is only used when the primary availability zone is unavailable. Currently, primary and replica availability zones are supported only for the IPv4 CLB instances in the regions of Guangzhou, Shanghai, Nanjing, Beijing, Chengdu, Shenzhen Finance Zone, Hong Kong (China), Seoul, Frankfurt, and Singapore. You can query the list of primary availability zones in a region through the [DescribeResources](https://intl.cloud.tencent.com/document/api/214/70213?from_cn_redirect=1) API.
                      * 
                      */
                     std::string GetMasterZoneId() const;
 
                     /**
-                     * 设置ID of the primary AZ for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`. It's only available to public CLB instances. 
-Note: The traffic only goes to the primary AZ in normal cases. The secondary AZ is used only when the primary AZ is unavailable. To query the list of primary AZs in a region, use [DescribeResources](https://intl.cloud.tencent.com/document/api/214/70213?from_cn_redirect=1).
-                     * @param _masterZoneId ID of the primary AZ for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`. It's only available to public CLB instances. 
-Note: The traffic only goes to the primary AZ in normal cases. The secondary AZ is used only when the primary AZ is unavailable. To query the list of primary AZs in a region, use [DescribeResources](https://intl.cloud.tencent.com/document/api/214/70213?from_cn_redirect=1).
+                     * 设置ID of the primary availability zone configured for cross-availability zone disaster recovery, such as 100001 or ap-guangzhou-1. It applies only to public network CLB.Note: The primary availability zone is the one that carries traffic. The replica availability zone does not carry traffic by default and is only used when the primary availability zone is unavailable. Currently, primary and replica availability zones are supported only for the IPv4 CLB instances in the regions of Guangzhou, Shanghai, Nanjing, Beijing, Chengdu, Shenzhen Finance Zone, Hong Kong (China), Seoul, Frankfurt, and Singapore. You can query the list of primary availability zones in a region through the [DescribeResources](https://intl.cloud.tencent.com/document/api/214/70213?from_cn_redirect=1) API.
+                     * @param _masterZoneId ID of the primary availability zone configured for cross-availability zone disaster recovery, such as 100001 or ap-guangzhou-1. It applies only to public network CLB.Note: The primary availability zone is the one that carries traffic. The replica availability zone does not carry traffic by default and is only used when the primary availability zone is unavailable. Currently, primary and replica availability zones are supported only for the IPv4 CLB instances in the regions of Guangzhou, Shanghai, Nanjing, Beijing, Chengdu, Shenzhen Finance Zone, Hong Kong (China), Seoul, Frankfurt, and Singapore. You can query the list of primary availability zones in a region through the [DescribeResources](https://intl.cloud.tencent.com/document/api/214/70213?from_cn_redirect=1) API.
                      * 
                      */
                     void SetMasterZoneId(const std::string& _masterZoneId);
@@ -269,15 +266,15 @@ Note: The traffic only goes to the primary AZ in normal cases. The secondary AZ 
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取It only works on LCU-supported instances on private networks and all instances on public networks.
-                     * @return InternetAccessible It only works on LCU-supported instances on private networks and all instances on public networks.
+                     * 获取Maximum outbound bandwidth under the network billing mode. It applies only to LCU-supported instances of the private network type and all instances of the public network type.
+                     * @return InternetAccessible Maximum outbound bandwidth under the network billing mode. It applies only to LCU-supported instances of the private network type and all instances of the public network type.
                      * 
                      */
                     InternetAccessible GetInternetAccessible() const;
 
                     /**
-                     * 设置It only works on LCU-supported instances on private networks and all instances on public networks.
-                     * @param _internetAccessible It only works on LCU-supported instances on private networks and all instances on public networks.
+                     * 设置Maximum outbound bandwidth under the network billing mode. It applies only to LCU-supported instances of the private network type and all instances of the public network type.
+                     * @param _internetAccessible Maximum outbound bandwidth under the network billing mode. It applies only to LCU-supported instances of the private network type and all instances of the public network type.
                      * 
                      */
                     void SetInternetAccessible(const InternetAccessible& _internetAccessible);
@@ -357,15 +354,15 @@ Note: If the specified VIP is occupied or is not within the IP range of the spec
                     bool VipHasBeenSet() const;
 
                     /**
-                     * 获取Bandwidth package ID. If this parameter is specified, the network billing mode (`InternetAccessible.InternetChargeType`) will only support bill-by-bandwidth package (`BANDWIDTH_PACKAGE`).
-                     * @return BandwidthPackageId Bandwidth package ID. If this parameter is specified, the network billing mode (`InternetAccessible.InternetChargeType`) will only support bill-by-bandwidth package (`BANDWIDTH_PACKAGE`).
+                     * 获取Bandwidth package ID. If this parameter is specified, the network billing mode (InternetAccessible.InternetChargeType) will only support billing by bandwidth package (BANDWIDTH_PACKAGE). The attributes of the bandwidth package determine the settlement method. For IPv6 CLB instances purchased by bill-by-CVM users, if the ISP type is not BGP, the bandwidth package ID cannot be specified.
+                     * @return BandwidthPackageId Bandwidth package ID. If this parameter is specified, the network billing mode (InternetAccessible.InternetChargeType) will only support billing by bandwidth package (BANDWIDTH_PACKAGE). The attributes of the bandwidth package determine the settlement method. For IPv6 CLB instances purchased by bill-by-CVM users, if the ISP type is not BGP, the bandwidth package ID cannot be specified.
                      * 
                      */
                     std::string GetBandwidthPackageId() const;
 
                     /**
-                     * 设置Bandwidth package ID. If this parameter is specified, the network billing mode (`InternetAccessible.InternetChargeType`) will only support bill-by-bandwidth package (`BANDWIDTH_PACKAGE`).
-                     * @param _bandwidthPackageId Bandwidth package ID. If this parameter is specified, the network billing mode (`InternetAccessible.InternetChargeType`) will only support bill-by-bandwidth package (`BANDWIDTH_PACKAGE`).
+                     * 设置Bandwidth package ID. If this parameter is specified, the network billing mode (InternetAccessible.InternetChargeType) will only support billing by bandwidth package (BANDWIDTH_PACKAGE). The attributes of the bandwidth package determine the settlement method. For IPv6 CLB instances purchased by bill-by-CVM users, if the ISP type is not BGP, the bandwidth package ID cannot be specified.
+                     * @param _bandwidthPackageId Bandwidth package ID. If this parameter is specified, the network billing mode (InternetAccessible.InternetChargeType) will only support billing by bandwidth package (BANDWIDTH_PACKAGE). The attributes of the bandwidth package determine the settlement method. For IPv6 CLB instances purchased by bill-by-CVM users, if the ISP type is not BGP, the bandwidth package ID cannot be specified.
                      * 
                      */
                     void SetBandwidthPackageId(const std::string& _bandwidthPackageId);
@@ -399,19 +396,15 @@ Note: If the specified VIP is occupied or is not within the IP range of the spec
                     bool ExclusiveClusterHasBeenSet() const;
 
                     /**
-                     * 获取Specification of LCU-supported instance.
-<ul><li>This parameter is required to create LCU-supported instances. Values: <ul><li>`SLA`: Super Large 4. When you have activated Super Large models, `SLA` refers to Super Large 4.</li><li>`clb.c2.medium`: Standard</li><li>`clb.c3.small`: Advanced 1</li><li>`clb.c3.medium`: Advanced 1</li><li>`clb.c4.small`: Super Large 1</li><li>`clb.c4.medium`: Super Large 2</li><li>`clb.c4.large`: Super Large 3</li><li>`clb.c4.xlarge`: Super Large 4</li> For Super Large 2 and above models, please [submit a ticket](https://console.cloud.tencent.com/workorder/category).</ul></li><li> This parameter is not required for creating shared instances.</li></ul>For more details, see [Instance Specifications](https://intl.cloud.tencent.com/document/product/214/84689?from_cn_redirect=1).
-                     * @return SlaType Specification of LCU-supported instance.
-<ul><li>This parameter is required to create LCU-supported instances. Values: <ul><li>`SLA`: Super Large 4. When you have activated Super Large models, `SLA` refers to Super Large 4.</li><li>`clb.c2.medium`: Standard</li><li>`clb.c3.small`: Advanced 1</li><li>`clb.c3.medium`: Advanced 1</li><li>`clb.c4.small`: Super Large 1</li><li>`clb.c4.medium`: Super Large 2</li><li>`clb.c4.large`: Super Large 3</li><li>`clb.c4.xlarge`: Super Large 4</li> For Super Large 2 and above models, please [submit a ticket](https://console.cloud.tencent.com/workorder/category).</ul></li><li> This parameter is not required for creating shared instances.</li></ul>For more details, see [Instance Specifications](https://intl.cloud.tencent.com/document/product/214/84689?from_cn_redirect=1).
+                     * 获取Specification of the LCU-supported instance.<ul><li>If you need to create an LCU-supported instance, this parameter is required. Valid values:<ul><li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li></ul></li><li>If you need to create a shared instance, this parameter is not required.</li></ul> For specification details, see [Instance Specifications Comparison](https://intl.cloud.tencent.com/document/product/214/84689?from_cn_redirect=1).
+                     * @return SlaType Specification of the LCU-supported instance.<ul><li>If you need to create an LCU-supported instance, this parameter is required. Valid values:<ul><li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li></ul></li><li>If you need to create a shared instance, this parameter is not required.</li></ul> For specification details, see [Instance Specifications Comparison](https://intl.cloud.tencent.com/document/product/214/84689?from_cn_redirect=1).
                      * 
                      */
                     std::string GetSlaType() const;
 
                     /**
-                     * 设置Specification of LCU-supported instance.
-<ul><li>This parameter is required to create LCU-supported instances. Values: <ul><li>`SLA`: Super Large 4. When you have activated Super Large models, `SLA` refers to Super Large 4.</li><li>`clb.c2.medium`: Standard</li><li>`clb.c3.small`: Advanced 1</li><li>`clb.c3.medium`: Advanced 1</li><li>`clb.c4.small`: Super Large 1</li><li>`clb.c4.medium`: Super Large 2</li><li>`clb.c4.large`: Super Large 3</li><li>`clb.c4.xlarge`: Super Large 4</li> For Super Large 2 and above models, please [submit a ticket](https://console.cloud.tencent.com/workorder/category).</ul></li><li> This parameter is not required for creating shared instances.</li></ul>For more details, see [Instance Specifications](https://intl.cloud.tencent.com/document/product/214/84689?from_cn_redirect=1).
-                     * @param _slaType Specification of LCU-supported instance.
-<ul><li>This parameter is required to create LCU-supported instances. Values: <ul><li>`SLA`: Super Large 4. When you have activated Super Large models, `SLA` refers to Super Large 4.</li><li>`clb.c2.medium`: Standard</li><li>`clb.c3.small`: Advanced 1</li><li>`clb.c3.medium`: Advanced 1</li><li>`clb.c4.small`: Super Large 1</li><li>`clb.c4.medium`: Super Large 2</li><li>`clb.c4.large`: Super Large 3</li><li>`clb.c4.xlarge`: Super Large 4</li> For Super Large 2 and above models, please [submit a ticket](https://console.cloud.tencent.com/workorder/category).</ul></li><li> This parameter is not required for creating shared instances.</li></ul>For more details, see [Instance Specifications](https://intl.cloud.tencent.com/document/product/214/84689?from_cn_redirect=1).
+                     * 设置Specification of the LCU-supported instance.<ul><li>If you need to create an LCU-supported instance, this parameter is required. Valid values:<ul><li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li></ul></li><li>If you need to create a shared instance, this parameter is not required.</li></ul> For specification details, see [Instance Specifications Comparison](https://intl.cloud.tencent.com/document/product/214/84689?from_cn_redirect=1).
+                     * @param _slaType Specification of the LCU-supported instance.<ul><li>If you need to create an LCU-supported instance, this parameter is required. Valid values:<ul><li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li></ul></li><li>If you need to create a shared instance, this parameter is not required.</li></ul> For specification details, see [Instance Specifications Comparison](https://intl.cloud.tencent.com/document/product/214/84689?from_cn_redirect=1).
                      * 
                      */
                     void SetSlaType(const std::string& _slaType);
@@ -422,6 +415,27 @@ Note: If the specified VIP is occupied or is not within the IP range of the spec
                      * 
                      */
                     bool SlaTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Cluster ID. This cluster identifier is used for configuring a public cloud exclusive cluster or a cloud dedicated cluster. To apply for a public cloud exclusive cluster, [submit a ticket](https://console.cloud.tencent.com/workorder/category). For cloud dedicated clusters, see the descriptions in [Cloud Dedicated Cluster](https://intl.cloud.tencent.com/document/product/1346?from_cn_redirect=1).
+                     * @return ClusterIds Cluster ID. This cluster identifier is used for configuring a public cloud exclusive cluster or a cloud dedicated cluster. To apply for a public cloud exclusive cluster, [submit a ticket](https://console.cloud.tencent.com/workorder/category). For cloud dedicated clusters, see the descriptions in [Cloud Dedicated Cluster](https://intl.cloud.tencent.com/document/product/1346?from_cn_redirect=1).
+                     * 
+                     */
+                    std::vector<std::string> GetClusterIds() const;
+
+                    /**
+                     * 设置Cluster ID. This cluster identifier is used for configuring a public cloud exclusive cluster or a cloud dedicated cluster. To apply for a public cloud exclusive cluster, [submit a ticket](https://console.cloud.tencent.com/workorder/category). For cloud dedicated clusters, see the descriptions in [Cloud Dedicated Cluster](https://intl.cloud.tencent.com/document/product/1346?from_cn_redirect=1).
+                     * @param _clusterIds Cluster ID. This cluster identifier is used for configuring a public cloud exclusive cluster or a cloud dedicated cluster. To apply for a public cloud exclusive cluster, [submit a ticket](https://console.cloud.tencent.com/workorder/category). For cloud dedicated clusters, see the descriptions in [Cloud Dedicated Cluster](https://intl.cloud.tencent.com/document/product/1346?from_cn_redirect=1).
+                     * 
+                     */
+                    void SetClusterIds(const std::vector<std::string>& _clusterIds);
+
+                    /**
+                     * 判断参数 ClusterIds 是否已赋值
+                     * @return ClusterIds 是否已赋值
+                     * 
+                     */
+                    bool ClusterIdsHasBeenSet() const;
 
                     /**
                      * 获取A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.
@@ -616,6 +630,27 @@ Note: The traffic only goes to the secondary AZ when the primary AZ is unavailab
                      */
                     bool EgressHasBeenSet() const;
 
+                    /**
+                     * 获取Prepaid billing attributes of a CLB instance
+                     * @return LBChargePrepaid Prepaid billing attributes of a CLB instance
+                     * 
+                     */
+                    LBChargePrepaid GetLBChargePrepaid() const;
+
+                    /**
+                     * 设置Prepaid billing attributes of a CLB instance
+                     * @param _lBChargePrepaid Prepaid billing attributes of a CLB instance
+                     * 
+                     */
+                    void SetLBChargePrepaid(const LBChargePrepaid& _lBChargePrepaid);
+
+                    /**
+                     * 判断参数 LBChargePrepaid 是否已赋值
+                     * @return LBChargePrepaid 是否已赋值
+                     * 
+                     */
+                    bool LBChargePrepaidHasBeenSet() const;
+
                 private:
 
                     /**
@@ -669,8 +704,7 @@ Note: if the name of the new CLB instance already exists, a default name will be
                     bool m_numberHasBeenSet;
 
                     /**
-                     * ID of the primary AZ for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`. It's only available to public CLB instances. 
-Note: The traffic only goes to the primary AZ in normal cases. The secondary AZ is used only when the primary AZ is unavailable. To query the list of primary AZs in a region, use [DescribeResources](https://intl.cloud.tencent.com/document/api/214/70213?from_cn_redirect=1).
+                     * ID of the primary availability zone configured for cross-availability zone disaster recovery, such as 100001 or ap-guangzhou-1. It applies only to public network CLB.Note: The primary availability zone is the one that carries traffic. The replica availability zone does not carry traffic by default and is only used when the primary availability zone is unavailable. Currently, primary and replica availability zones are supported only for the IPv4 CLB instances in the regions of Guangzhou, Shanghai, Nanjing, Beijing, Chengdu, Shenzhen Finance Zone, Hong Kong (China), Seoul, Frankfurt, and Singapore. You can query the list of primary availability zones in a region through the [DescribeResources](https://intl.cloud.tencent.com/document/api/214/70213?from_cn_redirect=1) API.
                      */
                     std::string m_masterZoneId;
                     bool m_masterZoneIdHasBeenSet;
@@ -682,7 +716,7 @@ Note: The traffic only goes to the primary AZ in normal cases. The secondary AZ 
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * It only works on LCU-supported instances on private networks and all instances on public networks.
+                     * Maximum outbound bandwidth under the network billing mode. It applies only to LCU-supported instances of the private network type and all instances of the public network type.
                      */
                     InternetAccessible m_internetAccessible;
                     bool m_internetAccessibleHasBeenSet;
@@ -707,7 +741,7 @@ Note: If the specified VIP is occupied or is not within the IP range of the spec
                     bool m_vipHasBeenSet;
 
                     /**
-                     * Bandwidth package ID. If this parameter is specified, the network billing mode (`InternetAccessible.InternetChargeType`) will only support bill-by-bandwidth package (`BANDWIDTH_PACKAGE`).
+                     * Bandwidth package ID. If this parameter is specified, the network billing mode (InternetAccessible.InternetChargeType) will only support billing by bandwidth package (BANDWIDTH_PACKAGE). The attributes of the bandwidth package determine the settlement method. For IPv6 CLB instances purchased by bill-by-CVM users, if the ISP type is not BGP, the bandwidth package ID cannot be specified.
                      */
                     std::string m_bandwidthPackageId;
                     bool m_bandwidthPackageIdHasBeenSet;
@@ -719,11 +753,16 @@ Note: If the specified VIP is occupied or is not within the IP range of the spec
                     bool m_exclusiveClusterHasBeenSet;
 
                     /**
-                     * Specification of LCU-supported instance.
-<ul><li>This parameter is required to create LCU-supported instances. Values: <ul><li>`SLA`: Super Large 4. When you have activated Super Large models, `SLA` refers to Super Large 4.</li><li>`clb.c2.medium`: Standard</li><li>`clb.c3.small`: Advanced 1</li><li>`clb.c3.medium`: Advanced 1</li><li>`clb.c4.small`: Super Large 1</li><li>`clb.c4.medium`: Super Large 2</li><li>`clb.c4.large`: Super Large 3</li><li>`clb.c4.xlarge`: Super Large 4</li> For Super Large 2 and above models, please [submit a ticket](https://console.cloud.tencent.com/workorder/category).</ul></li><li> This parameter is not required for creating shared instances.</li></ul>For more details, see [Instance Specifications](https://intl.cloud.tencent.com/document/product/214/84689?from_cn_redirect=1).
+                     * Specification of the LCU-supported instance.<ul><li>If you need to create an LCU-supported instance, this parameter is required. Valid values:<ul><li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li></ul></li><li>If you need to create a shared instance, this parameter is not required.</li></ul> For specification details, see [Instance Specifications Comparison](https://intl.cloud.tencent.com/document/product/214/84689?from_cn_redirect=1).
                      */
                     std::string m_slaType;
                     bool m_slaTypeHasBeenSet;
+
+                    /**
+                     * Cluster ID. This cluster identifier is used for configuring a public cloud exclusive cluster or a cloud dedicated cluster. To apply for a public cloud exclusive cluster, [submit a ticket](https://console.cloud.tencent.com/workorder/category). For cloud dedicated clusters, see the descriptions in [Cloud Dedicated Cluster](https://intl.cloud.tencent.com/document/product/1346?from_cn_redirect=1).
+                     */
+                    std::vector<std::string> m_clusterIds;
+                    bool m_clusterIdsHasBeenSet;
 
                     /**
                      * A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.
@@ -779,6 +818,12 @@ Note: The traffic only goes to the secondary AZ when the primary AZ is unavailab
                      */
                     std::string m_egress;
                     bool m_egressHasBeenSet;
+
+                    /**
+                     * Prepaid billing attributes of a CLB instance
+                     */
+                    LBChargePrepaid m_lBChargePrepaid;
+                    bool m_lBChargePrepaidHasBeenSet;
 
                 };
             }

@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取Session persistence time in seconds. Value range: 30-3,600. Setting it to 0 indicates that session persistence is disabled.
-                     * @return SessionExpireTime Session persistence time in seconds. Value range: 30-3,600. Setting it to 0 indicates that session persistence is disabled.
+                     * 获取Session persistence duration, in seconds. 0 indicates that session persistence is disabled, and a value ranging from 30 to 86400 indicates that session persistence is enabled.
+                     * @return SessionExpireTime Session persistence duration, in seconds. 0 indicates that session persistence is disabled, and a value ranging from 30 to 86400 indicates that session persistence is enabled.
                      * 
                      */
                     int64_t GetSessionExpireTime() const;
 
                     /**
-                     * 设置Session persistence time in seconds. Value range: 30-3,600. Setting it to 0 indicates that session persistence is disabled.
-                     * @param _sessionExpireTime Session persistence time in seconds. Value range: 30-3,600. Setting it to 0 indicates that session persistence is disabled.
+                     * 设置Session persistence duration, in seconds. 0 indicates that session persistence is disabled, and a value ranging from 30 to 86400 indicates that session persistence is enabled.
+                     * @param _sessionExpireTime Session persistence duration, in seconds. 0 indicates that session persistence is disabled, and a value ranging from 30 to 86400 indicates that session persistence is enabled.
                      * 
                      */
                     void SetSessionExpireTime(const int64_t& _sessionExpireTime);
@@ -383,7 +383,7 @@ They represent weighted round robin, least connections, and IP hash, respectivel
                     bool m_domainHasBeenSet;
 
                     /**
-                     * Session persistence time in seconds. Value range: 30-3,600. Setting it to 0 indicates that session persistence is disabled.
+                     * Session persistence duration, in seconds. 0 indicates that session persistence is disabled, and a value ranging from 30 to 86400 indicates that session persistence is enabled.
                      */
                     int64_t m_sessionExpireTime;
                     bool m_sessionExpireTimeHasBeenSet;

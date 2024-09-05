@@ -156,15 +156,15 @@ Note: either `InstanceId` or `EniIp` must be passed in, which is required for bi
                     bool WeightHasBeenSet() const;
 
                     /**
-                     * 获取Layer-7 rule ID.
-                     * @return LocationId Layer-7 rule ID.
+                     * 获取Layer-7 rule ID. This parameter is required for Layer-7 CLB.
+                     * @return LocationId Layer-7 rule ID. This parameter is required for Layer-7 CLB.
                      * 
                      */
                     std::string GetLocationId() const;
 
                     /**
-                     * 设置Layer-7 rule ID.
-                     * @param _locationId Layer-7 rule ID.
+                     * 设置Layer-7 rule ID. This parameter is required for Layer-7 CLB.
+                     * @param _locationId Layer-7 rule ID. This parameter is required for Layer-7 CLB.
                      * 
                      */
                     void SetLocationId(const std::string& _locationId);
@@ -175,6 +175,27 @@ Note: either `InstanceId` or `EniIp` must be passed in, which is required for bi
                      * 
                      */
                     bool LocationIdHasBeenSet() const;
+
+                    /**
+                     * 获取Tag.
+                     * @return Tag Tag.
+                     * 
+                     */
+                    std::string GetTag() const;
+
+                    /**
+                     * 设置Tag.
+                     * @param _tag Tag.
+                     * 
+                     */
+                    void SetTag(const std::string& _tag);
+
+                    /**
+                     * 判断参数 Tag 是否已赋值
+                     * @return Tag 是否已赋值
+                     * 
+                     */
+                    bool TagHasBeenSet() const;
 
                 private:
 
@@ -210,10 +231,16 @@ Note: either `InstanceId` or `EniIp` must be passed in, which is required for bi
                     bool m_weightHasBeenSet;
 
                     /**
-                     * Layer-7 rule ID.
+                     * Layer-7 rule ID. This parameter is required for Layer-7 CLB.
                      */
                     std::string m_locationId;
                     bool m_locationIdHasBeenSet;
+
+                    /**
+                     * Tag.
+                     */
+                    std::string m_tag;
+                    bool m_tagHasBeenSet;
 
                 };
             }

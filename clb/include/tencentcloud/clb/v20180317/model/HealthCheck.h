@@ -69,19 +69,15 @@ Note: Custom check parameters are currently supported only in certain beta test 
                     bool HealthSwitchHasBeenSet() const;
 
                     /**
-                     * 获取Health check response timeout period in seconds (applicable only to layer-4 listeners). Value range: 2-60. Default value: 2. This parameter should be less than the check interval.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TimeOut Health check response timeout period in seconds (applicable only to layer-4 listeners). Value range: 2-60. Default value: 2. This parameter should be less than the check interval.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TimeOut Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetTimeOut() const;
 
                     /**
-                     * 设置Health check response timeout period in seconds (applicable only to layer-4 listeners). Value range: 2-60. Default value: 2. This parameter should be less than the check interval.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _timeOut Health check response timeout period in seconds (applicable only to layer-4 listeners). Value range: 2-60. Default value: 2. This parameter should be less than the check interval.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _timeOut Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTimeOut(const int64_t& _timeOut);
@@ -94,23 +90,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TimeOutHasBeenSet() const;
 
                     /**
-                     * 获取Health check probing interval period. It defaults to `5`. For IPv4 CLB instances, the range is 2-300. For IPv6 CLB instances, the range is 5-300. Unit: second
-Note: For some IPv4 CLB instances created long ago, the range is 5-300.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IntervalTime Health check probing interval period. It defaults to `5`. For IPv4 CLB instances, the range is 2-300. For IPv6 CLB instances, the range is 5-300. Unit: second
-Note: For some IPv4 CLB instances created long ago, the range is 5-300.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IntervalTime Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetIntervalTime() const;
 
                     /**
-                     * 设置Health check probing interval period. It defaults to `5`. For IPv4 CLB instances, the range is 2-300. For IPv6 CLB instances, the range is 5-300. Unit: second
-Note: For some IPv4 CLB instances created long ago, the range is 5-300.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _intervalTime Health check probing interval period. It defaults to `5`. For IPv4 CLB instances, the range is 2-300. For IPv6 CLB instances, the range is 5-300. Unit: second
-Note: For some IPv4 CLB instances created long ago, the range is 5-300.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _intervalTime Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIntervalTime(const int64_t& _intervalTime);
@@ -123,19 +111,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IntervalTimeHasBeenSet() const;
 
                     /**
-                     * 获取Health threshold. Default value: 3, indicating that if a forward is found healthy three consecutive times, it is considered to be normal. Value range: 2-10
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HealthNum Health threshold. Default value: 3, indicating that if a forward is found healthy three consecutive times, it is considered to be normal. Value range: 2-10
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return HealthNum Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetHealthNum() const;
 
                     /**
-                     * 设置Health threshold. Default value: 3, indicating that if a forward is found healthy three consecutive times, it is considered to be normal. Value range: 2-10
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _healthNum Health threshold. Default value: 3, indicating that if a forward is found healthy three consecutive times, it is considered to be normal. Value range: 2-10
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _healthNum Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHealthNum(const int64_t& _healthNum);
@@ -148,19 +132,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HealthNumHasBeenSet() const;
 
                     /**
-                     * 获取Unhealthy threshold. Default value: 3, indicating that if a forward is found unhealthy three consecutive times, it is considered to be exceptional. Value range: 2-10
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UnHealthNum Unhealthy threshold. Default value: 3, indicating that if a forward is found unhealthy three consecutive times, it is considered to be exceptional. Value range: 2-10
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return UnHealthNum Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetUnHealthNum() const;
 
                     /**
-                     * 设置Unhealthy threshold. Default value: 3, indicating that if a forward is found unhealthy three consecutive times, it is considered to be exceptional. Value range: 2-10
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _unHealthNum Unhealthy threshold. Default value: 3, indicating that if a forward is found unhealthy three consecutive times, it is considered to be exceptional. Value range: 2-10
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _unHealthNum Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUnHealthNum(const int64_t& _unHealthNum);
@@ -173,23 +153,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UnHealthNumHasBeenSet() const;
 
                     /**
-                     * 获取Health check status code (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Value range: 1-31. Default value: 31.
-`1`: Returns code 1xx for healthy status. `2`: Returns code 2xx for healthy status. `4`: Returns code 3xx for healthy status. `8`: Returns code 4xx for healthy status. `16`: Returns code 5xx for healthy status. If you want multiple return codes to represent healthy, sum up the corresponding values. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return HttpCode Health check status code (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Value range: 1-31. Default value: 31.
-`1`: Returns code 1xx for healthy status. `2`: Returns code 2xx for healthy status. `4`: Returns code 3xx for healthy status. `8`: Returns code 4xx for healthy status. `16`: Returns code 5xx for healthy status. If you want multiple return codes to represent healthy, sum up the corresponding values. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return HttpCode Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetHttpCode() const;
 
                     /**
-                     * 设置Health check status code (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Value range: 1-31. Default value: 31.
-`1`: Returns code 1xx for healthy status. `2`: Returns code 2xx for healthy status. `4`: Returns code 3xx for healthy status. `8`: Returns code 4xx for healthy status. `16`: Returns code 5xx for healthy status. If you want multiple return codes to represent healthy, sum up the corresponding values. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _httpCode Health check status code (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Value range: 1-31. Default value: 31.
-`1`: Returns code 1xx for healthy status. `2`: Returns code 2xx for healthy status. `4`: Returns code 3xx for healthy status. `8`: Returns code 4xx for healthy status. `16`: Returns code 5xx for healthy status. If you want multiple return codes to represent healthy, sum up the corresponding values. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _httpCode Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHttpCode(const int64_t& _httpCode);
@@ -202,19 +174,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool HttpCodeHasBeenSet() const;
 
                     /**
-                     * 获取Health check path (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HttpCheckPath Health check path (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return HttpCheckPath Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetHttpCheckPath() const;
 
                     /**
-                     * 设置Health check path (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _httpCheckPath Health check path (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _httpCheckPath Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHttpCheckPath(const std::string& _httpCheckPath);
@@ -227,19 +195,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HttpCheckPathHasBeenSet() const;
 
                     /**
-                     * 获取Health check domain name. It's applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It's required for HTTP health check of TCP listeners.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HttpCheckDomain Health check domain name. It's applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It's required for HTTP health check of TCP listeners.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return HttpCheckDomain Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetHttpCheckDomain() const;
 
                     /**
-                     * 设置Health check domain name. It's applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It's required for HTTP health check of TCP listeners.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _httpCheckDomain Health check domain name. It's applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It's required for HTTP health check of TCP listeners.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _httpCheckDomain Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHttpCheckDomain(const std::string& _httpCheckDomain);
@@ -252,19 +216,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HttpCheckDomainHasBeenSet() const;
 
                     /**
-                     * 获取Health check method (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Value range: HEAD, GET. Default value: HEAD.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HttpCheckMethod Health check method (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Value range: HEAD, GET. Default value: HEAD.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return HttpCheckMethod Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetHttpCheckMethod() const;
 
                     /**
-                     * 设置Health check method (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Value range: HEAD, GET. Default value: HEAD.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _httpCheckMethod Health check method (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Value range: HEAD, GET. Default value: HEAD.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _httpCheckMethod Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHttpCheckMethod(const std::string& _httpCheckMethod);
@@ -277,19 +237,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HttpCheckMethodHasBeenSet() const;
 
                     /**
-                     * 获取Health check port (a custom check parameter), which is the port of the real server by default. Unless you want to specify a port, it is recommended to leave it empty. (Applicable only to TCP/UDP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CheckPort Health check port (a custom check parameter), which is the port of the real server by default. Unless you want to specify a port, it is recommended to leave it empty. (Applicable only to TCP/UDP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CheckPort Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetCheckPort() const;
 
                     /**
-                     * 设置Health check port (a custom check parameter), which is the port of the real server by default. Unless you want to specify a port, it is recommended to leave it empty. (Applicable only to TCP/UDP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _checkPort Health check port (a custom check parameter), which is the port of the real server by default. Unless you want to specify a port, it is recommended to leave it empty. (Applicable only to TCP/UDP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _checkPort Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCheckPort(const int64_t& _checkPort);
@@ -302,19 +258,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CheckPortHasBeenSet() const;
 
                     /**
-                     * 获取Health check protocol (a custom check parameter), which is required if the value of CheckType is CUSTOM. This parameter represents the input format of the health check. Value range: HEX, TEXT. If the value is HEX, the characters of SendContext and RecvContext can only be selected from 0123456789ABCDEF and the length must be an even number. (Applicable only to TCP/UDP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ContextType Health check protocol (a custom check parameter), which is required if the value of CheckType is CUSTOM. This parameter represents the input format of the health check. Value range: HEX, TEXT. If the value is HEX, the characters of SendContext and RecvContext can only be selected from 0123456789ABCDEF and the length must be an even number. (Applicable only to TCP/UDP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ContextType Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetContextType() const;
 
                     /**
-                     * 设置Health check protocol (a custom check parameter), which is required if the value of CheckType is CUSTOM. This parameter represents the input format of the health check. Value range: HEX, TEXT. If the value is HEX, the characters of SendContext and RecvContext can only be selected from 0123456789ABCDEF and the length must be an even number. (Applicable only to TCP/UDP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _contextType Health check protocol (a custom check parameter), which is required if the value of CheckType is CUSTOM. This parameter represents the input format of the health check. Value range: HEX, TEXT. If the value is HEX, the characters of SendContext and RecvContext can only be selected from 0123456789ABCDEF and the length must be an even number. (Applicable only to TCP/UDP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _contextType Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetContextType(const std::string& _contextType);
@@ -327,19 +279,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ContextTypeHasBeenSet() const;
 
                     /**
-                     * 获取Health check protocol (a custom check parameter), which is required if the value of CheckType is CUSTOM. This parameter represents the content of the request sent by the health check. Only ASCII visible characters are allowed, and the maximum length is 500. (Applicable only to TCP/UDP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SendContext Health check protocol (a custom check parameter), which is required if the value of CheckType is CUSTOM. This parameter represents the content of the request sent by the health check. Only ASCII visible characters are allowed, and the maximum length is 500. (Applicable only to TCP/UDP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SendContext Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSendContext() const;
 
                     /**
-                     * 设置Health check protocol (a custom check parameter), which is required if the value of CheckType is CUSTOM. This parameter represents the content of the request sent by the health check. Only ASCII visible characters are allowed, and the maximum length is 500. (Applicable only to TCP/UDP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _sendContext Health check protocol (a custom check parameter), which is required if the value of CheckType is CUSTOM. This parameter represents the content of the request sent by the health check. Only ASCII visible characters are allowed, and the maximum length is 500. (Applicable only to TCP/UDP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _sendContext Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSendContext(const std::string& _sendContext);
@@ -352,19 +300,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SendContextHasBeenSet() const;
 
                     /**
-                     * 获取Health check protocol (a custom check parameter), which is required if the value of CheckType is CUSTOM. This parameter represents the result returned by the health check. Only ASCII visible characters are allowed, and the maximum length is 500. (Applicable only to TCP/UDP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RecvContext Health check protocol (a custom check parameter), which is required if the value of CheckType is CUSTOM. This parameter represents the result returned by the health check. Only ASCII visible characters are allowed, and the maximum length is 500. (Applicable only to TCP/UDP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RecvContext Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRecvContext() const;
 
                     /**
-                     * 设置Health check protocol (a custom check parameter), which is required if the value of CheckType is CUSTOM. This parameter represents the result returned by the health check. Only ASCII visible characters are allowed, and the maximum length is 500. (Applicable only to TCP/UDP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _recvContext Health check protocol (a custom check parameter), which is required if the value of CheckType is CUSTOM. This parameter represents the result returned by the health check. Only ASCII visible characters are allowed, and the maximum length is 500. (Applicable only to TCP/UDP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _recvContext Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRecvContext(const std::string& _recvContext);
@@ -377,19 +321,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RecvContextHasBeenSet() const;
 
                     /**
-                     * 获取Health check protocol. Values: `TCP`, `HTTP`, `HTTPS`, `GRPC`, `PING`, and `CUSTOM`. UDP listeners support `PING`/`CUSTOM`. TCP listener support `TCP`/`HTTP`/`CUSTOM`. TCP_SSL and QUIC listeners support `TCP`/`HTTP`. HTTP rules support `HTTP`/`GRPC. HTTPS rules support `HTTP`/`HTTPS`/`GRPC`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CheckType Health check protocol. Values: `TCP`, `HTTP`, `HTTPS`, `GRPC`, `PING`, and `CUSTOM`. UDP listeners support `PING`/`CUSTOM`. TCP listener support `TCP`/`HTTP`/`CUSTOM`. TCP_SSL and QUIC listeners support `TCP`/`HTTP`. HTTP rules support `HTTP`/`GRPC. HTTPS rules support `HTTP`/`HTTPS`/`GRPC`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CheckType Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCheckType() const;
 
                     /**
-                     * 设置Health check protocol. Values: `TCP`, `HTTP`, `HTTPS`, `GRPC`, `PING`, and `CUSTOM`. UDP listeners support `PING`/`CUSTOM`. TCP listener support `TCP`/`HTTP`/`CUSTOM`. TCP_SSL and QUIC listeners support `TCP`/`HTTP`. HTTP rules support `HTTP`/`GRPC. HTTPS rules support `HTTP`/`HTTPS`/`GRPC`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _checkType Health check protocol. Values: `TCP`, `HTTP`, `HTTPS`, `GRPC`, `PING`, and `CUSTOM`. UDP listeners support `PING`/`CUSTOM`. TCP listener support `TCP`/`HTTP`/`CUSTOM`. TCP_SSL and QUIC listeners support `TCP`/`HTTP`. HTTP rules support `HTTP`/`GRPC. HTTPS rules support `HTTP`/`HTTPS`/`GRPC`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _checkType Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCheckType(const std::string& _checkType);
@@ -402,19 +342,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CheckTypeHasBeenSet() const;
 
                     /**
-                     * 获取HTTP version. HTTP version of the backend service. Values: `HTTP/1.0`, HTTP/1.1`. It is only applicable to TCP listeners, and is required when `CheckType`=`HTTP`. 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HttpVersion HTTP version. HTTP version of the backend service. Values: `HTTP/1.0`, HTTP/1.1`. It is only applicable to TCP listeners, and is required when `CheckType`=`HTTP`. 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return HttpVersion Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetHttpVersion() const;
 
                     /**
-                     * 设置HTTP version. HTTP version of the backend service. Values: `HTTP/1.0`, HTTP/1.1`. It is only applicable to TCP listeners, and is required when `CheckType`=`HTTP`. 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _httpVersion HTTP version. HTTP version of the backend service. Values: `HTTP/1.0`, HTTP/1.1`. It is only applicable to TCP listeners, and is required when `CheckType`=`HTTP`. 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _httpVersion Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHttpVersion(const std::string& _httpVersion);
@@ -427,19 +363,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HttpVersionHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the type of health check source IP. `0` (default): CLB VIP. `1`: 100.64 IP range.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SourceIpType Specifies the type of health check source IP. `0` (default): CLB VIP. `1`: 100.64 IP range.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SourceIpType Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetSourceIpType() const;
 
                     /**
-                     * 设置Specifies the type of health check source IP. `0` (default): CLB VIP. `1`: 100.64 IP range.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _sourceIpType Specifies the type of health check source IP. `0` (default): CLB VIP. `1`: 100.64 IP range.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _sourceIpType Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSourceIpType(const int64_t& _sourceIpType);
@@ -452,19 +384,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SourceIpTypeHasBeenSet() const;
 
                     /**
-                     * 获取GRPC health check status code, which is only applicable to rules with GRPC as the backend forwarding protocol. It can be a single number (such as `20`), multiple numbers (such as `20,25`) or a range (such as `0-99`). The default value is `12`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return ExtendedCode GRPC health check status code, which is only applicable to rules with GRPC as the backend forwarding protocol. It can be a single number (such as `20`), multiple numbers (such as `20,25`) or a range (such as `0-99`). The default value is `12`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ExtendedCode Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetExtendedCode() const;
 
                     /**
-                     * 设置GRPC health check status code, which is only applicable to rules with GRPC as the backend forwarding protocol. It can be a single number (such as `20`), multiple numbers (such as `20,25`) or a range (such as `0-99`). The default value is `12`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _extendedCode GRPC health check status code, which is only applicable to rules with GRPC as the backend forwarding protocol. It can be a single number (such as `20`), multiple numbers (such as `20,25`) or a range (such as `0-99`). The default value is `12`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _extendedCode Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetExtendedCode(const std::string& _extendedCode);
@@ -485,115 +413,97 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_healthSwitchHasBeenSet;
 
                     /**
-                     * Health check response timeout period in seconds (applicable only to layer-4 listeners). Value range: 2-60. Default value: 2. This parameter should be less than the check interval.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_timeOut;
                     bool m_timeOutHasBeenSet;
 
                     /**
-                     * Health check probing interval period. It defaults to `5`. For IPv4 CLB instances, the range is 2-300. For IPv6 CLB instances, the range is 5-300. Unit: second
-Note: For some IPv4 CLB instances created long ago, the range is 5-300.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_intervalTime;
                     bool m_intervalTimeHasBeenSet;
 
                     /**
-                     * Health threshold. Default value: 3, indicating that if a forward is found healthy three consecutive times, it is considered to be normal. Value range: 2-10
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_healthNum;
                     bool m_healthNumHasBeenSet;
 
                     /**
-                     * Unhealthy threshold. Default value: 3, indicating that if a forward is found unhealthy three consecutive times, it is considered to be exceptional. Value range: 2-10
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_unHealthNum;
                     bool m_unHealthNumHasBeenSet;
 
                     /**
-                     * Health check status code (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Value range: 1-31. Default value: 31.
-`1`: Returns code 1xx for healthy status. `2`: Returns code 2xx for healthy status. `4`: Returns code 3xx for healthy status. `8`: Returns code 4xx for healthy status. `16`: Returns code 5xx for healthy status. If you want multiple return codes to represent healthy, sum up the corresponding values. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_httpCode;
                     bool m_httpCodeHasBeenSet;
 
                     /**
-                     * Health check path (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_httpCheckPath;
                     bool m_httpCheckPathHasBeenSet;
 
                     /**
-                     * Health check domain name. It's applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It's required for HTTP health check of TCP listeners.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_httpCheckDomain;
                     bool m_httpCheckDomainHasBeenSet;
 
                     /**
-                     * Health check method (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Value range: HEAD, GET. Default value: HEAD.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_httpCheckMethod;
                     bool m_httpCheckMethodHasBeenSet;
 
                     /**
-                     * Health check port (a custom check parameter), which is the port of the real server by default. Unless you want to specify a port, it is recommended to leave it empty. (Applicable only to TCP/UDP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_checkPort;
                     bool m_checkPortHasBeenSet;
 
                     /**
-                     * Health check protocol (a custom check parameter), which is required if the value of CheckType is CUSTOM. This parameter represents the input format of the health check. Value range: HEX, TEXT. If the value is HEX, the characters of SendContext and RecvContext can only be selected from 0123456789ABCDEF and the length must be an even number. (Applicable only to TCP/UDP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_contextType;
                     bool m_contextTypeHasBeenSet;
 
                     /**
-                     * Health check protocol (a custom check parameter), which is required if the value of CheckType is CUSTOM. This parameter represents the content of the request sent by the health check. Only ASCII visible characters are allowed, and the maximum length is 500. (Applicable only to TCP/UDP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_sendContext;
                     bool m_sendContextHasBeenSet;
 
                     /**
-                     * Health check protocol (a custom check parameter), which is required if the value of CheckType is CUSTOM. This parameter represents the result returned by the health check. Only ASCII visible characters are allowed, and the maximum length is 500. (Applicable only to TCP/UDP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_recvContext;
                     bool m_recvContextHasBeenSet;
 
                     /**
-                     * Health check protocol. Values: `TCP`, `HTTP`, `HTTPS`, `GRPC`, `PING`, and `CUSTOM`. UDP listeners support `PING`/`CUSTOM`. TCP listener support `TCP`/`HTTP`/`CUSTOM`. TCP_SSL and QUIC listeners support `TCP`/`HTTP`. HTTP rules support `HTTP`/`GRPC. HTTPS rules support `HTTP`/`HTTPS`/`GRPC`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_checkType;
                     bool m_checkTypeHasBeenSet;
 
                     /**
-                     * HTTP version. HTTP version of the backend service. Values: `HTTP/1.0`, HTTP/1.1`. It is only applicable to TCP listeners, and is required when `CheckType`=`HTTP`. 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_httpVersion;
                     bool m_httpVersionHasBeenSet;
 
                     /**
-                     * Specifies the type of health check source IP. `0` (default): CLB VIP. `1`: 100.64 IP range.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_sourceIpType;
                     bool m_sourceIpTypeHasBeenSet;
 
                     /**
-                     * GRPC health check status code, which is only applicable to rules with GRPC as the backend forwarding protocol. It can be a single number (such as `20`), multiple numbers (such as `20,25`) or a range (such as `0-99`). The default value is `12`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_extendedCode;
                     bool m_extendedCodeHasBeenSet;

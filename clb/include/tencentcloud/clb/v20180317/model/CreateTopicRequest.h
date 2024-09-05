@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool TopicTypeHasBeenSet() const;
 
                     /**
-                     * 获取Logset retention period (in days). Default: 30 days.
-                     * @return Period Logset retention period (in days). Default: 30 days.
+                     * 获取Logset retention period, in days. Default value: 30 days. Value range: [1, 3600].
+                     * @return Period Logset retention period, in days. Default value: 30 days. Value range: [1, 3600].
                      * 
                      */
                     uint64_t GetPeriod() const;
 
                     /**
-                     * 设置Logset retention period (in days). Default: 30 days.
-                     * @param _period Logset retention period (in days). Default: 30 days.
+                     * 设置Logset retention period, in days. Default value: 30 days. Value range: [1, 3600].
+                     * @param _period Logset retention period, in days. Default value: 30 days. Value range: [1, 3600].
                      * 
                      */
                     void SetPeriod(const uint64_t& _period);
@@ -168,7 +168,7 @@ namespace TencentCloud
                     bool m_topicTypeHasBeenSet;
 
                     /**
-                     * Logset retention period (in days). Default: 30 days.
+                     * Logset retention period, in days. Default value: 30 days. Value range: [1, 3600].
                      */
                     uint64_t m_period;
                     bool m_periodHasBeenSet;

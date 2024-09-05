@@ -28,6 +28,7 @@
 #include <tencentcloud/clb/v20180317/model/CertificateOutput.h>
 #include <tencentcloud/clb/v20180317/model/RewriteTarget.h>
 #include <tencentcloud/clb/v20180317/model/BasicTargetGroupInfo.h>
+#include <tencentcloud/clb/v20180317/model/OAuth.h>
 
 
 namespace TencentCloud
@@ -193,15 +194,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CertificateHasBeenSet() const;
 
                     /**
-                     * 获取Request forwarding method of the rule
-                     * @return Scheduler Request forwarding method of the rule
+                     * 获取Request forwarding method in the rules.WRR, LEAST_CONN, and IP_HASH respectively indicate weighted round robin, least connections, and IP hash.
+                     * @return Scheduler Request forwarding method in the rules.WRR, LEAST_CONN, and IP_HASH respectively indicate weighted round robin, least connections, and IP hash.
                      * 
                      */
                     std::string GetScheduler() const;
 
                     /**
-                     * 设置Request forwarding method of the rule
-                     * @param _scheduler Request forwarding method of the rule
+                     * 设置Request forwarding method in the rules.WRR, LEAST_CONN, and IP_HASH respectively indicate weighted round robin, least connections, and IP hash.
+                     * @param _scheduler Request forwarding method in the rules.WRR, LEAST_CONN, and IP_HASH respectively indicate weighted round robin, least connections, and IP hash.
                      * 
                      */
                     void SetScheduler(const std::string& _scheduler);
@@ -386,15 +387,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Real server type
-                     * @return TargetType Real server type
+                     * 获取Real server type. NODE indicates binding to a general node, and TARGETGROUP indicates binding to a target group.
+                     * @return TargetType Real server type. NODE indicates binding to a general node, and TARGETGROUP indicates binding to a target group.
                      * 
                      */
                     std::string GetTargetType() const;
 
                     /**
-                     * 设置Real server type
-                     * @param _targetType Real server type
+                     * 设置Real server type. NODE indicates binding to a general node, and TARGETGROUP indicates binding to a target group.
+                     * @param _targetType Real server type. NODE indicates binding to a general node, and TARGETGROUP indicates binding to a target group.
                      * 
                      */
                     void SetTargetType(const std::string& _targetType);
@@ -507,19 +508,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TrpcFuncHasBeenSet() const;
 
                     /**
-                     * 获取QUIC status
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return QuicStatus QUIC status
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取QUIC status. QUIC_ACTIVE indicates enabled, and QUIC_INACTIVE indicates disabled. Note: QUIC can be enabled only for HTTPS domain names.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return QuicStatus QUIC status. QUIC_ACTIVE indicates enabled, and QUIC_INACTIVE indicates disabled. Note: QUIC can be enabled only for HTTPS domain names.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetQuicStatus() const;
 
                     /**
-                     * 设置QUIC status
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _quicStatus QUIC status
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置QUIC status. QUIC_ACTIVE indicates enabled, and QUIC_INACTIVE indicates disabled. Note: QUIC can be enabled only for HTTPS domain names.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _quicStatus QUIC status. QUIC_ACTIVE indicates enabled, and QUIC_INACTIVE indicates disabled. Note: QUIC can be enabled only for HTTPS domain names.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetQuicStatus(const std::string& _quicStatus);
@@ -581,6 +578,27 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool TargetGroupListHasBeenSet() const;
 
+                    /**
+                     * 获取OAuth configuration status information.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return OAuth OAuth configuration status information.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    OAuth GetOAuth() const;
+
+                    /**
+                     * 设置OAuth configuration status information.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _oAuth OAuth configuration status information.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetOAuth(const OAuth& _oAuth);
+
+                    /**
+                     * 判断参数 OAuth 是否已赋值
+                     * @return OAuth 是否已赋值
+                     * 
+                     */
+                    bool OAuthHasBeenSet() const;
+
                 private:
 
                     /**
@@ -624,7 +642,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_certificateHasBeenSet;
 
                     /**
-                     * Request forwarding method of the rule
+                     * Request forwarding method in the rules.WRR, LEAST_CONN, and IP_HASH respectively indicate weighted round robin, least connections, and IP hash.
                      */
                     std::string m_scheduler;
                     bool m_schedulerHasBeenSet;
@@ -679,7 +697,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Real server type
+                     * Real server type. NODE indicates binding to a general node, and TARGETGROUP indicates binding to a target group.
                      */
                     std::string m_targetType;
                     bool m_targetTypeHasBeenSet;
@@ -713,8 +731,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_trpcFuncHasBeenSet;
 
                     /**
-                     * QUIC status
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * QUIC status. QUIC_ACTIVE indicates enabled, and QUIC_INACTIVE indicates disabled. Note: QUIC can be enabled only for HTTPS domain names.Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_quicStatus;
                     bool m_quicStatusHasBeenSet;
@@ -732,6 +749,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     std::vector<BasicTargetGroupInfo> m_targetGroupList;
                     bool m_targetGroupListHasBeenSet;
+
+                    /**
+                     * OAuth configuration status information.Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    OAuth m_oAuth;
+                    bool m_oAuthHasBeenSet;
 
                 };
             }

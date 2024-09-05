@@ -409,15 +409,15 @@ Basic network does not support queries by VpcId.
                     bool SecurityGroupHasBeenSet() const;
 
                     /**
-                     * 获取Primary AZ ID, e.g., `100001` (Guangzhou Zone 1).
-                     * @return MasterZone Primary AZ ID, e.g., `100001` (Guangzhou Zone 1).
+                     * 获取Primary availability zone ID, such as 100001 (corresponding to Guangzhou Zone 1). You can obtain the list of availability zones through [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1).
+                     * @return MasterZone Primary availability zone ID, such as 100001 (corresponding to Guangzhou Zone 1). You can obtain the list of availability zones through [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1).
                      * 
                      */
                     std::string GetMasterZone() const;
 
                     /**
-                     * 设置Primary AZ ID, e.g., `100001` (Guangzhou Zone 1).
-                     * @param _masterZone Primary AZ ID, e.g., `100001` (Guangzhou Zone 1).
+                     * 设置Primary availability zone ID, such as 100001 (corresponding to Guangzhou Zone 1). You can obtain the list of availability zones through [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1).
+                     * @param _masterZone Primary availability zone ID, such as 100001 (corresponding to Guangzhou Zone 1). You can obtain the list of availability zones through [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1).
                      * 
                      */
                     void SetMasterZone(const std::string& _masterZone);
@@ -561,7 +561,7 @@ Basic network does not support queries by VpcId.
                     bool m_securityGroupHasBeenSet;
 
                     /**
-                     * Primary AZ ID, e.g., `100001` (Guangzhou Zone 1).
+                     * Primary availability zone ID, such as 100001 (corresponding to Guangzhou Zone 1). You can obtain the list of availability zones through [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1).
                      */
                     std::string m_masterZone;
                     bool m_masterZoneHasBeenSet;

@@ -143,19 +143,15 @@ OPEN: public network; INTERNAL: private network.
                     bool ForwardHasBeenSet() const;
 
                     /**
-                     * 获取Domain name of the CLB instance. It is only available for public classic CLBs. This parameter will be discontinued soon. Please use `LoadBalancerDomain` instead.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Domain Domain name of the CLB instance. It is only available for public classic CLBs. This parameter will be discontinued soon. Please use `LoadBalancerDomain` instead.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Domain name of the CLB instance. This field is provided only for classic public network CLB instances and domain name-based CLB instances. It is being gradually phased out, so use LoadBalancerDomain instead.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Domain Domain name of the CLB instance. This field is provided only for classic public network CLB instances and domain name-based CLB instances. It is being gradually phased out, so use LoadBalancerDomain instead.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置Domain name of the CLB instance. It is only available for public classic CLBs. This parameter will be discontinued soon. Please use `LoadBalancerDomain` instead.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _domain Domain name of the CLB instance. It is only available for public classic CLBs. This parameter will be discontinued soon. Please use `LoadBalancerDomain` instead.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Domain name of the CLB instance. This field is provided only for classic public network CLB instances and domain name-based CLB instances. It is being gradually phased out, so use LoadBalancerDomain instead.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _domain Domain name of the CLB instance. This field is provided only for classic public network CLB instances and domain name-based CLB instances. It is being gradually phased out, so use LoadBalancerDomain instead.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDomain(const std::string& _domain);
@@ -397,7 +393,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Log Log information. Only the public network CLB that have HTTP or HTTPS listeners can generate logs.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
+                     * @deprecated
                      */
                     std::string GetLog() const;
 
@@ -406,14 +402,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _log Log information. Only the public network CLB that have HTTP or HTTPS listeners can generate logs.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
+                     * @deprecated
                      */
                     void SetLog(const std::string& _log);
 
                     /**
                      * 判断参数 Log 是否已赋值
                      * @return Log 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool LogHasBeenSet() const;
 
@@ -593,19 +589,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NumericalVpcIdHasBeenSet() const;
 
                     /**
-                     * 获取ISP to which a CLB IP address belongs
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VipIsp ISP to which a CLB IP address belongs
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取ISP for the IP address of the CLB instance. Valid values: BGP, CMCC, CTCC, CUCC.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return VipIsp ISP for the IP address of the CLB instance. Valid values: BGP, CMCC, CTCC, CUCC.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetVipIsp() const;
 
                     /**
-                     * 设置ISP to which a CLB IP address belongs
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _vipIsp ISP to which a CLB IP address belongs
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置ISP for the IP address of the CLB instance. Valid values: BGP, CMCC, CTCC, CUCC.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _vipIsp ISP for the IP address of the CLB instance. Valid values: BGP, CMCC, CTCC, CUCC.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetVipIsp(const std::string& _vipIsp);
@@ -1068,19 +1060,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SnatIpsHasBeenSet() const;
 
                     /**
-                     * 获取Specification of the LCU-supported instance.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SlaType Specification of the LCU-supported instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specification of the LCU-supported instance. <ul><li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li><li>null: Shared instance</li></ul>Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SlaType Specification of the LCU-supported instance. <ul><li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li><li>null: Shared instance</li></ul>Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSlaType() const;
 
                     /**
-                     * 设置Specification of the LCU-supported instance.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _slaType Specification of the LCU-supported instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specification of the LCU-supported instance. <ul><li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li><li>null: Shared instance</li></ul>Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _slaType Specification of the LCU-supported instance. <ul><li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li><li>null: Shared instance</li></ul>Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSlaType(const std::string& _slaType);
@@ -1413,6 +1401,27 @@ Note: This field may return·null, indicating that no valid values can be obtain
                      */
                     bool EgressHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return Exclusive 
+                     * 
+                     */
+                    uint64_t GetExclusive() const;
+
+                    /**
+                     * 设置
+                     * @param _exclusive 
+                     * 
+                     */
+                    void SetExclusive(const uint64_t& _exclusive);
+
+                    /**
+                     * 判断参数 Exclusive 是否已赋值
+                     * @return Exclusive 是否已赋值
+                     * 
+                     */
+                    bool ExclusiveHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1441,8 +1450,7 @@ OPEN: public network; INTERNAL: private network.
                     bool m_forwardHasBeenSet;
 
                     /**
-                     * Domain name of the CLB instance. It is only available for public classic CLBs. This parameter will be discontinued soon. Please use `LoadBalancerDomain` instead.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Domain name of the CLB instance. This field is provided only for classic public network CLB instances and domain name-based CLB instances. It is being gradually phased out, so use LoadBalancerDomain instead.Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
@@ -1567,8 +1575,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_numericalVpcIdHasBeenSet;
 
                     /**
-                     * ISP to which a CLB IP address belongs
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * ISP for the IP address of the CLB instance. Valid values: BGP, CMCC, CTCC, CUCC.Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_vipIsp;
                     bool m_vipIspHasBeenSet;
@@ -1700,8 +1707,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_snatIpsHasBeenSet;
 
                     /**
-                     * Specification of the LCU-supported instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specification of the LCU-supported instance. <ul><li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li><li>null: Shared instance</li></ul>Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_slaType;
                     bool m_slaTypeHasBeenSet;
@@ -1795,6 +1801,12 @@ Note: This field may return·null, indicating that no valid values can be obtain
                      */
                     std::string m_egress;
                     bool m_egressHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_exclusive;
+                    bool m_exclusiveHasBeenSet;
 
                 };
             }

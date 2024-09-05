@@ -255,15 +255,15 @@ namespace TencentCloud
                     bool NewDomainsHasBeenSet() const;
 
                     /**
-                     * 获取Certificate information of the domain name. It is only applicable to listeners with SNI enabled. You can specify multiple server-side certificates with different algorithm types. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
-                     * @return MultiCertInfo Certificate information of the domain name. It is only applicable to listeners with SNI enabled. You can specify multiple server-side certificates with different algorithm types. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+                     * 获取Certificate information related to the domain name. Note: This applies only to listeners with SNI enabled. Multiple server certificates with different algorithm types can be input simultaneously, but this parameter cannot be input together with the Certificate.
+                     * @return MultiCertInfo Certificate information related to the domain name. Note: This applies only to listeners with SNI enabled. Multiple server certificates with different algorithm types can be input simultaneously, but this parameter cannot be input together with the Certificate.
                      * 
                      */
                     MultiCertInfo GetMultiCertInfo() const;
 
                     /**
-                     * 设置Certificate information of the domain name. It is only applicable to listeners with SNI enabled. You can specify multiple server-side certificates with different algorithm types. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
-                     * @param _multiCertInfo Certificate information of the domain name. It is only applicable to listeners with SNI enabled. You can specify multiple server-side certificates with different algorithm types. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+                     * 设置Certificate information related to the domain name. Note: This applies only to listeners with SNI enabled. Multiple server certificates with different algorithm types can be input simultaneously, but this parameter cannot be input together with the Certificate.
+                     * @param _multiCertInfo Certificate information related to the domain name. Note: This applies only to listeners with SNI enabled. Multiple server certificates with different algorithm types can be input simultaneously, but this parameter cannot be input together with the Certificate.
                      * 
                      */
                     void SetMultiCertInfo(const MultiCertInfo& _multiCertInfo);
@@ -338,7 +338,7 @@ namespace TencentCloud
                     bool m_newDomainsHasBeenSet;
 
                     /**
-                     * Certificate information of the domain name. It is only applicable to listeners with SNI enabled. You can specify multiple server-side certificates with different algorithm types. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+                     * Certificate information related to the domain name. Note: This applies only to listeners with SNI enabled. Multiple server certificates with different algorithm types can be input simultaneously, but this parameter cannot be input together with the Certificate.
                      */
                     MultiCertInfo m_multiCertInfo;
                     bool m_multiCertInfoHasBeenSet;

@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool LoadBalancerIdsHasBeenSet() const;
 
                     /**
-                     * 获取Project ID
-                     * @return ProjectId Project ID
+                     * 获取Project ID. You can obtain it through the [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) API.
+                     * @return ProjectId Project ID. You can obtain it through the [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) API.
                      * 
                      */
                     uint64_t GetProjectId() const;
 
                     /**
-                     * 设置Project ID
-                     * @param _projectId Project ID
+                     * 设置Project ID. You can obtain it through the [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) API.
+                     * @param _projectId Project ID. You can obtain it through the [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) API.
                      * 
                      */
                     void SetProjectId(const uint64_t& _projectId);
@@ -93,7 +93,7 @@ namespace TencentCloud
                     bool m_loadBalancerIdsHasBeenSet;
 
                     /**
-                     * Project ID
+                     * Project ID. You can obtain it through the [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) API.
                      */
                     uint64_t m_projectId;
                     bool m_projectIdHasBeenSet;

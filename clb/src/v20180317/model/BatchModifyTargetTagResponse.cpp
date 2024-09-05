@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/clb/v20180317/model/BatchRegisterTargetsResponse.h>
+#include <tencentcloud/clb/v20180317/model/BatchModifyTargetTagResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -23,13 +23,11 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Clb::V20180317::Model;
 using namespace std;
 
-BatchRegisterTargetsResponse::BatchRegisterTargetsResponse() :
-    m_failListenerIdSetHasBeenSet(false),
-    m_messageHasBeenSet(false)
+BatchModifyTargetTagResponse::BatchModifyTargetTagResponse()
 {
 }
 
-CoreInternalOutcome BatchRegisterTargetsResponse::Deserialize(const string &payload)
+CoreInternalOutcome BatchModifyTargetTagResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -63,59 +61,15 @@ CoreInternalOutcome BatchRegisterTargetsResponse::Deserialize(const string &payl
     }
 
 
-    if (rsp.HasMember("FailListenerIdSet") && !rsp["FailListenerIdSet"].IsNull())
-    {
-        if (!rsp["FailListenerIdSet"].IsArray())
-            return CoreInternalOutcome(Core::Error("response `FailListenerIdSet` is not array type"));
-
-        const rapidjson::Value &tmpValue = rsp["FailListenerIdSet"];
-        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
-        {
-            m_failListenerIdSet.push_back((*itr).GetString());
-        }
-        m_failListenerIdSetHasBeenSet = true;
-    }
-
-    if (rsp.HasMember("Message") && !rsp["Message"].IsNull())
-    {
-        if (!rsp["Message"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `Message` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_message = string(rsp["Message"].GetString());
-        m_messageHasBeenSet = true;
-    }
-
 
     return CoreInternalOutcome(true);
 }
 
-string BatchRegisterTargetsResponse::ToJsonString() const
+string BatchModifyTargetTagResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
-
-    if (m_failListenerIdSetHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "FailListenerIdSet";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
-
-        for (auto itr = m_failListenerIdSet.begin(); itr != m_failListenerIdSet.end(); ++itr)
-        {
-            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
-        }
-    }
-
-    if (m_messageHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Message";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_message.c_str(), allocator).Move(), allocator);
-    }
 
     rapidjson::Value iKey(rapidjson::kStringType);
     string key = "RequestId";
@@ -128,25 +82,5 @@ string BatchRegisterTargetsResponse::ToJsonString() const
     return buffer.GetString();
 }
 
-
-vector<string> BatchRegisterTargetsResponse::GetFailListenerIdSet() const
-{
-    return m_failListenerIdSet;
-}
-
-bool BatchRegisterTargetsResponse::FailListenerIdSetHasBeenSet() const
-{
-    return m_failListenerIdSetHasBeenSet;
-}
-
-string BatchRegisterTargetsResponse::GetMessage() const
-{
-    return m_message;
-}
-
-bool BatchRegisterTargetsResponse::MessageHasBeenSet() const
-{
-    return m_messageHasBeenSet;
-}
 
 

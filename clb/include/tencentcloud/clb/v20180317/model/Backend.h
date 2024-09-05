@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Real server type. Valid values: CVM, ENI.
-                     * @return Type Real server type. Valid values: CVM, ENI.
+                     * 获取Real server type. Valid values: CVM, ENI, CCN.
+                     * @return Type Real server type. Valid values: CVM, ENI, CCN.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Real server type. Valid values: CVM, ENI.
-                     * @param _type Real server type. Valid values: CVM, ENI.
+                     * 设置Real server type. Valid values: CVM, ENI, CCN.
+                     * @param _type Real server type. Valid values: CVM, ENI, CCN.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -255,10 +255,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool EniIdHasBeenSet() const;
 
+                    /**
+                     * 获取Tag.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Tag Tag.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetTag() const;
+
+                    /**
+                     * 设置Tag.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _tag Tag.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetTag(const std::string& _tag);
+
+                    /**
+                     * 判断参数 Tag 是否已赋值
+                     * @return Tag 是否已赋值
+                     * 
+                     */
+                    bool TagHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Real server type. Valid values: CVM, ENI.
+                     * Real server type. Valid values: CVM, ENI, CCN.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
@@ -315,6 +336,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_eniId;
                     bool m_eniIdHasBeenSet;
+
+                    /**
+                     * Tag.Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_tag;
+                    bool m_tagHasBeenSet;
 
                 };
             }

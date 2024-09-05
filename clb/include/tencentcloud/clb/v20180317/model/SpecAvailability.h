@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specification type
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SpecType Specification type
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specification type.<li>clb.c2.medium: Standard</li><li>clb.c3.small: Advanced 1</li><li>clb.c3.medium: Advanced 2</li><li>clb.c4.small: Super Large 1</li><li>clb.c4.medium: Super Large 2</li><li>clb.c4.large: Super Large 3</li><li>clb.c4.xlarge: Super Large 4</li><li>shared: Shared</li>Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SpecType Specification type.<li>clb.c2.medium: Standard</li><li>clb.c3.small: Advanced 1</li><li>clb.c3.medium: Advanced 2</li><li>clb.c4.small: Super Large 1</li><li>clb.c4.medium: Super Large 2</li><li>clb.c4.large: Super Large 3</li><li>clb.c4.xlarge: Super Large 4</li><li>shared: Shared</li>Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSpecType() const;
 
                     /**
-                     * 设置Specification type
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _specType Specification type
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specification type.<li>clb.c2.medium: Standard</li><li>clb.c3.small: Advanced 1</li><li>clb.c3.medium: Advanced 2</li><li>clb.c4.small: Super Large 1</li><li>clb.c4.medium: Super Large 2</li><li>clb.c4.large: Super Large 3</li><li>clb.c4.xlarge: Super Large 4</li><li>shared: Shared</li>Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _specType Specification type.<li>clb.c2.medium: Standard</li><li>clb.c3.small: Advanced 1</li><li>clb.c3.medium: Advanced 2</li><li>clb.c4.small: Super Large 1</li><li>clb.c4.medium: Super Large 2</li><li>clb.c4.large: Super Large 3</li><li>clb.c4.xlarge: Super Large 4</li><li>shared: Shared</li>Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSpecType(const std::string& _specType);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SpecTypeHasBeenSet() const;
 
                     /**
-                     * 获取Specification availability
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Availability Specification availability
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specification availability. It indicates the resource availability. Valid values: Available, Unavailable.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Availability Specification availability. It indicates the resource availability. Valid values: Available, Unavailable.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetAvailability() const;
 
                     /**
-                     * 设置Specification availability
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _availability Specification availability
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Specification availability. It indicates the resource availability. Valid values: Available, Unavailable.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _availability Specification availability. It indicates the resource availability. Valid values: Available, Unavailable.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAvailability(const std::string& _availability);
@@ -99,15 +91,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Specification type
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specification type.<li>clb.c2.medium: Standard</li><li>clb.c3.small: Advanced 1</li><li>clb.c3.medium: Advanced 2</li><li>clb.c4.small: Super Large 1</li><li>clb.c4.medium: Super Large 2</li><li>clb.c4.large: Super Large 3</li><li>clb.c4.xlarge: Super Large 4</li><li>shared: Shared</li>Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_specType;
                     bool m_specTypeHasBeenSet;
 
                     /**
-                     * Specification availability
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specification availability. It indicates the resource availability. Valid values: Available, Unavailable.Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_availability;
                     bool m_availabilityHasBeenSet;

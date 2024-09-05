@@ -64,23 +64,15 @@ namespace TencentCloud
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
-                     * 获取CLS logset ID
-<li>Enter the ID of logset you need to add or update. You can acquire the ID by invoking [DescribeLogsets](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
-<li>To delete the log set, set this parameter to `null`.</li>
-                     * @return LogSetId CLS logset ID
-<li>Enter the ID of logset you need to add or update. You can acquire the ID by invoking [DescribeLogsets](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
-<li>To delete the log set, set this parameter to `null`.</li>
+                     * 获取Logset ID of the Cloud Log Service (CLS).<li>When adding or updating a log topic, call the [DescribeLogsets](https://intl.cloud.tencent.com/document/product/614/58624?from_cn_redirect=1) API to obtain the logset ID.</li><li>When deleting a log topic, set this parameter to null.</li>
+                     * @return LogSetId Logset ID of the Cloud Log Service (CLS).<li>When adding or updating a log topic, call the [DescribeLogsets](https://intl.cloud.tencent.com/document/product/614/58624?from_cn_redirect=1) API to obtain the logset ID.</li><li>When deleting a log topic, set this parameter to null.</li>
                      * 
                      */
                     std::string GetLogSetId() const;
 
                     /**
-                     * 设置CLS logset ID
-<li>Enter the ID of logset you need to add or update. You can acquire the ID by invoking [DescribeLogsets](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
-<li>To delete the log set, set this parameter to `null`.</li>
-                     * @param _logSetId CLS logset ID
-<li>Enter the ID of logset you need to add or update. You can acquire the ID by invoking [DescribeLogsets](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
-<li>To delete the log set, set this parameter to `null`.</li>
+                     * 设置Logset ID of the Cloud Log Service (CLS).<li>When adding or updating a log topic, call the [DescribeLogsets](https://intl.cloud.tencent.com/document/product/614/58624?from_cn_redirect=1) API to obtain the logset ID.</li><li>When deleting a log topic, set this parameter to null.</li>
+                     * @param _logSetId Logset ID of the Cloud Log Service (CLS).<li>When adding or updating a log topic, call the [DescribeLogsets](https://intl.cloud.tencent.com/document/product/614/58624?from_cn_redirect=1) API to obtain the logset ID.</li><li>When deleting a log topic, set this parameter to null.</li>
                      * 
                      */
                     void SetLogSetId(const std::string& _logSetId);
@@ -93,23 +85,15 @@ namespace TencentCloud
                     bool LogSetIdHasBeenSet() const;
 
                     /**
-                     * 获取CLS log topic ID
-<li>Enter the ID of log topic you need to add or update. You can acquire the ID by invoking [DescribeTopics](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
-<li>To delete the log set, set this parameter to `null`.</li>
-                     * @return LogTopicId CLS log topic ID
-<li>Enter the ID of log topic you need to add or update. You can acquire the ID by invoking [DescribeTopics](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
-<li>To delete the log set, set this parameter to `null`.</li>
+                     * 获取Log topic ID of the CLS.<li>When adding or updating a log topic, call the [DescribeTopics](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1) API to obtain the log topic ID.</li><li>When deleting a log topic, set this parameter to null.</li>
+                     * @return LogTopicId Log topic ID of the CLS.<li>When adding or updating a log topic, call the [DescribeTopics](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1) API to obtain the log topic ID.</li><li>When deleting a log topic, set this parameter to null.</li>
                      * 
                      */
                     std::string GetLogTopicId() const;
 
                     /**
-                     * 设置CLS log topic ID
-<li>Enter the ID of log topic you need to add or update. You can acquire the ID by invoking [DescribeTopics](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
-<li>To delete the log set, set this parameter to `null`.</li>
-                     * @param _logTopicId CLS log topic ID
-<li>Enter the ID of log topic you need to add or update. You can acquire the ID by invoking [DescribeTopics](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
-<li>To delete the log set, set this parameter to `null`.</li>
+                     * 设置Log topic ID of the CLS.<li>When adding or updating a log topic, call the [DescribeTopics](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1) API to obtain the log topic ID.</li><li>When deleting a log topic, set this parameter to null.</li>
+                     * @param _logTopicId Log topic ID of the CLS.<li>When adding or updating a log topic, call the [DescribeTopics](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1) API to obtain the log topic ID.</li><li>When deleting a log topic, set this parameter to null.</li>
                      * 
                      */
                     void SetLogTopicId(const std::string& _logTopicId);
@@ -163,17 +147,13 @@ Default: `ACCESS`
                     bool m_loadBalancerIdHasBeenSet;
 
                     /**
-                     * CLS logset ID
-<li>Enter the ID of logset you need to add or update. You can acquire the ID by invoking [DescribeLogsets](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
-<li>To delete the log set, set this parameter to `null`.</li>
+                     * Logset ID of the Cloud Log Service (CLS).<li>When adding or updating a log topic, call the [DescribeLogsets](https://intl.cloud.tencent.com/document/product/614/58624?from_cn_redirect=1) API to obtain the logset ID.</li><li>When deleting a log topic, set this parameter to null.</li>
                      */
                     std::string m_logSetId;
                     bool m_logSetIdHasBeenSet;
 
                     /**
-                     * CLS log topic ID
-<li>Enter the ID of log topic you need to add or update. You can acquire the ID by invoking [DescribeTopics](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
-<li>To delete the log set, set this parameter to `null`.</li>
+                     * Log topic ID of the CLS.<li>When adding or updating a log topic, call the [DescribeTopics](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1) API to obtain the log topic ID.</li><li>When deleting a log topic, set this parameter to null.</li>
                      */
                     std::string m_logTopicId;
                     bool m_logTopicIdHasBeenSet;

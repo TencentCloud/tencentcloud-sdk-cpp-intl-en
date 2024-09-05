@@ -172,19 +172,15 @@ namespace TencentCloud
                     bool CertificateHasBeenSet() const;
 
                     /**
-                     * 获取Forwarding method of a listener. Value range: WRR, LEAST_CONN.
-They represent weighted round robin and least connections, respectively. Default value: WRR.
-                     * @return Scheduler Forwarding method of a listener. Value range: WRR, LEAST_CONN.
-They represent weighted round robin and least connections, respectively. Default value: WRR.
+                     * 获取Listener forwarding method. Valid values: WRR, LEAST_CONN.These values respectively indicate weighted round robin and least connections. The default value is WRR.Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners. The balancing method for Layer-7 listeners should be modified in the forwarding rules.
+                     * @return Scheduler Listener forwarding method. Valid values: WRR, LEAST_CONN.These values respectively indicate weighted round robin and least connections. The default value is WRR.Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners. The balancing method for Layer-7 listeners should be modified in the forwarding rules.
                      * 
                      */
                     std::string GetScheduler() const;
 
                     /**
-                     * 设置Forwarding method of a listener. Value range: WRR, LEAST_CONN.
-They represent weighted round robin and least connections, respectively. Default value: WRR.
-                     * @param _scheduler Forwarding method of a listener. Value range: WRR, LEAST_CONN.
-They represent weighted round robin and least connections, respectively. Default value: WRR.
+                     * 设置Listener forwarding method. Valid values: WRR, LEAST_CONN.These values respectively indicate weighted round robin and least connections. The default value is WRR.Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners. The balancing method for Layer-7 listeners should be modified in the forwarding rules.
+                     * @param _scheduler Listener forwarding method. Valid values: WRR, LEAST_CONN.These values respectively indicate weighted round robin and least connections. The default value is WRR.Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners. The balancing method for Layer-7 listeners should be modified in the forwarding rules.
                      * 
                      */
                     void SetScheduler(const std::string& _scheduler);
@@ -197,15 +193,15 @@ They represent weighted round robin and least connections, respectively. Default
                     bool SchedulerHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable the SNI feature. This parameter is applicable only to HTTPS listeners. Note: The SNI feature can be enabled but cannot be disabled once enabled.
-                     * @return SniSwitch Whether to enable the SNI feature. This parameter is applicable only to HTTPS listeners. Note: The SNI feature can be enabled but cannot be disabled once enabled.
+                     * 获取Whether to enable the SNI feature. This parameter applies only to HTTPS listeners. The default value is 0, indicating disabled, and 1 indicates enabled. Note: The SNI feature can be enabled for listeners that have not enabled SNI, but cannot be disabled for listeners that have enabled SNI.
+                     * @return SniSwitch Whether to enable the SNI feature. This parameter applies only to HTTPS listeners. The default value is 0, indicating disabled, and 1 indicates enabled. Note: The SNI feature can be enabled for listeners that have not enabled SNI, but cannot be disabled for listeners that have enabled SNI.
                      * 
                      */
                     int64_t GetSniSwitch() const;
 
                     /**
-                     * 设置Whether to enable the SNI feature. This parameter is applicable only to HTTPS listeners. Note: The SNI feature can be enabled but cannot be disabled once enabled.
-                     * @param _sniSwitch Whether to enable the SNI feature. This parameter is applicable only to HTTPS listeners. Note: The SNI feature can be enabled but cannot be disabled once enabled.
+                     * 设置Whether to enable the SNI feature. This parameter applies only to HTTPS listeners. The default value is 0, indicating disabled, and 1 indicates enabled. Note: The SNI feature can be enabled for listeners that have not enabled SNI, but cannot be disabled for listeners that have enabled SNI.
+                     * @param _sniSwitch Whether to enable the SNI feature. This parameter applies only to HTTPS listeners. The default value is 0, indicating disabled, and 1 indicates enabled. Note: The SNI feature can be enabled for listeners that have not enabled SNI, but cannot be disabled for listeners that have enabled SNI.
                      * 
                      */
                     void SetSniSwitch(const int64_t& _sniSwitch);
@@ -239,15 +235,15 @@ They represent weighted round robin and least connections, respectively. Default
                     bool TargetTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners.
-                     * @return KeepaliveEnable Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners.
+                     * 获取Whether to enable long connections. This parameter applies only to HTTP and HTTPS listeners.The default value is 0, indicating disabled, and 1 indicates enabled.
+                     * @return KeepaliveEnable Whether to enable long connections. This parameter applies only to HTTP and HTTPS listeners.The default value is 0, indicating disabled, and 1 indicates enabled.
                      * 
                      */
                     int64_t GetKeepaliveEnable() const;
 
                     /**
-                     * 设置Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners.
-                     * @param _keepaliveEnable Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners.
+                     * 设置Whether to enable long connections. This parameter applies only to HTTP and HTTPS listeners.The default value is 0, indicating disabled, and 1 indicates enabled.
+                     * @param _keepaliveEnable Whether to enable long connections. This parameter applies only to HTTP and HTTPS listeners.The default value is 0, indicating disabled, and 1 indicates enabled.
                      * 
                      */
                     void SetKeepaliveEnable(const int64_t& _keepaliveEnable);
@@ -281,15 +277,15 @@ They represent weighted round robin and least connections, respectively. Default
                     bool DeregisterTargetRstHasBeenSet() const;
 
                     /**
-                     * 获取Session persistence type. `NORMAL`: default session persistence type (L4/L7 session persistence); `QUIC_CID`: session persistence by QUIC connection ID. The `QUIC_CID` value can only be configured in UDP listeners.
-                     * @return SessionType Session persistence type. `NORMAL`: default session persistence type (L4/L7 session persistence); `QUIC_CID`: session persistence by QUIC connection ID. The `QUIC_CID` value can only be configured in UDP listeners.
+                     * 获取Session persistence type. NORMAL indicates the default session persistence type, and QUIC_CID indicates session persistence by QUIC connection ID. QUIC_CID only supports UDP protocols.Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners.
+                     * @return SessionType Session persistence type. NORMAL indicates the default session persistence type, and QUIC_CID indicates session persistence by QUIC connection ID. QUIC_CID only supports UDP protocols.Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners.
                      * 
                      */
                     std::string GetSessionType() const;
 
                     /**
-                     * 设置Session persistence type. `NORMAL`: default session persistence type (L4/L7 session persistence); `QUIC_CID`: session persistence by QUIC connection ID. The `QUIC_CID` value can only be configured in UDP listeners.
-                     * @param _sessionType Session persistence type. `NORMAL`: default session persistence type (L4/L7 session persistence); `QUIC_CID`: session persistence by QUIC connection ID. The `QUIC_CID` value can only be configured in UDP listeners.
+                     * 设置Session persistence type. NORMAL indicates the default session persistence type, and QUIC_CID indicates session persistence by QUIC connection ID. QUIC_CID only supports UDP protocols.Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners.
+                     * @param _sessionType Session persistence type. NORMAL indicates the default session persistence type, and QUIC_CID indicates session persistence by QUIC connection ID. QUIC_CID only supports UDP protocols.Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners.
                      * 
                      */
                     void SetSessionType(const std::string& _sessionType);
@@ -323,15 +319,15 @@ They represent weighted round robin and least connections, respectively. Default
                     bool MultiCertInfoHasBeenSet() const;
 
                     /**
-                     * 获取The maximum number of concurrent connections at the listener level. This parameter takes effect only on LCU-supported instances and TCP/UDP/TCP_SSL/QUIC listeners. Value range: 1 to the maximum concurrency of the instance. -1 indicates that no limit is set on concurrent connections.
-                     * @return MaxConn The maximum number of concurrent connections at the listener level. This parameter takes effect only on LCU-supported instances and TCP/UDP/TCP_SSL/QUIC listeners. Value range: 1 to the maximum concurrency of the instance. -1 indicates that no limit is set on concurrent connections.
+                     * 获取Maximum number of concurrent connections at the listener level. This parameter is supported only for LCU-supported instances with TCP/UDP/TCP_SSL/QUIC listeners currently. Value range: 1 to the maximum number of concurrent connections for the instance specification. -1 indicates that no limit is set on the concurrent connections at the listener level. Classic network instances do not support this parameter.
+                     * @return MaxConn Maximum number of concurrent connections at the listener level. This parameter is supported only for LCU-supported instances with TCP/UDP/TCP_SSL/QUIC listeners currently. Value range: 1 to the maximum number of concurrent connections for the instance specification. -1 indicates that no limit is set on the concurrent connections at the listener level. Classic network instances do not support this parameter.
                      * 
                      */
                     int64_t GetMaxConn() const;
 
                     /**
-                     * 设置The maximum number of concurrent connections at the listener level. This parameter takes effect only on LCU-supported instances and TCP/UDP/TCP_SSL/QUIC listeners. Value range: 1 to the maximum concurrency of the instance. -1 indicates that no limit is set on concurrent connections.
-                     * @param _maxConn The maximum number of concurrent connections at the listener level. This parameter takes effect only on LCU-supported instances and TCP/UDP/TCP_SSL/QUIC listeners. Value range: 1 to the maximum concurrency of the instance. -1 indicates that no limit is set on concurrent connections.
+                     * 设置Maximum number of concurrent connections at the listener level. This parameter is supported only for LCU-supported instances with TCP/UDP/TCP_SSL/QUIC listeners currently. Value range: 1 to the maximum number of concurrent connections for the instance specification. -1 indicates that no limit is set on the concurrent connections at the listener level. Classic network instances do not support this parameter.
+                     * @param _maxConn Maximum number of concurrent connections at the listener level. This parameter is supported only for LCU-supported instances with TCP/UDP/TCP_SSL/QUIC listeners currently. Value range: 1 to the maximum number of concurrent connections for the instance specification. -1 indicates that no limit is set on the concurrent connections at the listener level. Classic network instances do not support this parameter.
                      * 
                      */
                     void SetMaxConn(const int64_t& _maxConn);
@@ -344,15 +340,15 @@ They represent weighted round robin and least connections, respectively. Default
                     bool MaxConnHasBeenSet() const;
 
                     /**
-                     * 获取The maximum number of new connections at the listener level. This parameter takes effect only on LCU-supported instances and TCP/UDP/TCP_SSL/QUIC listeners. Value range: 1 to the maximum number of new connections of the instance. -1 indicates that no limit is set on concurrent connections.
-                     * @return MaxCps The maximum number of new connections at the listener level. This parameter takes effect only on LCU-supported instances and TCP/UDP/TCP_SSL/QUIC listeners. Value range: 1 to the maximum number of new connections of the instance. -1 indicates that no limit is set on concurrent connections.
+                     * 获取Maximum number of new connections at the listener level. This parameter is supported only for LCU-supported instances with TCP/UDP/TCP_SSL/QUIC listeners currently. Value range: 1 to the maximum number of new connections for the instance specification. -1 indicates that no limit is set on the new connections at the listener level. Classic network instances do not support this parameter.
+                     * @return MaxCps Maximum number of new connections at the listener level. This parameter is supported only for LCU-supported instances with TCP/UDP/TCP_SSL/QUIC listeners currently. Value range: 1 to the maximum number of new connections for the instance specification. -1 indicates that no limit is set on the new connections at the listener level. Classic network instances do not support this parameter.
                      * 
                      */
                     int64_t GetMaxCps() const;
 
                     /**
-                     * 设置The maximum number of new connections at the listener level. This parameter takes effect only on LCU-supported instances and TCP/UDP/TCP_SSL/QUIC listeners. Value range: 1 to the maximum number of new connections of the instance. -1 indicates that no limit is set on concurrent connections.
-                     * @param _maxCps The maximum number of new connections at the listener level. This parameter takes effect only on LCU-supported instances and TCP/UDP/TCP_SSL/QUIC listeners. Value range: 1 to the maximum number of new connections of the instance. -1 indicates that no limit is set on concurrent connections.
+                     * 设置Maximum number of new connections at the listener level. This parameter is supported only for LCU-supported instances with TCP/UDP/TCP_SSL/QUIC listeners currently. Value range: 1 to the maximum number of new connections for the instance specification. -1 indicates that no limit is set on the new connections at the listener level. Classic network instances do not support this parameter.
+                     * @param _maxCps Maximum number of new connections at the listener level. This parameter is supported only for LCU-supported instances with TCP/UDP/TCP_SSL/QUIC listeners currently. Value range: 1 to the maximum number of new connections for the instance specification. -1 indicates that no limit is set on the new connections at the listener level. Classic network instances do not support this parameter.
                      * 
                      */
                     void SetMaxCps(const int64_t& _maxCps);
@@ -384,6 +380,27 @@ They represent weighted round robin and least connections, respectively. Default
                      * 
                      */
                     bool IdleConnectTimeoutHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable SNAT.
+                     * @return SnatEnable Whether to enable SNAT.
+                     * 
+                     */
+                    bool GetSnatEnable() const;
+
+                    /**
+                     * 设置Whether to enable SNAT.
+                     * @param _snatEnable Whether to enable SNAT.
+                     * 
+                     */
+                    void SetSnatEnable(const bool& _snatEnable);
+
+                    /**
+                     * 判断参数 SnatEnable 是否已赋值
+                     * @return SnatEnable 是否已赋值
+                     * 
+                     */
+                    bool SnatEnableHasBeenSet() const;
 
                 private:
 
@@ -424,14 +441,13 @@ They represent weighted round robin and least connections, respectively. Default
                     bool m_certificateHasBeenSet;
 
                     /**
-                     * Forwarding method of a listener. Value range: WRR, LEAST_CONN.
-They represent weighted round robin and least connections, respectively. Default value: WRR.
+                     * Listener forwarding method. Valid values: WRR, LEAST_CONN.These values respectively indicate weighted round robin and least connections. The default value is WRR.Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners. The balancing method for Layer-7 listeners should be modified in the forwarding rules.
                      */
                     std::string m_scheduler;
                     bool m_schedulerHasBeenSet;
 
                     /**
-                     * Whether to enable the SNI feature. This parameter is applicable only to HTTPS listeners. Note: The SNI feature can be enabled but cannot be disabled once enabled.
+                     * Whether to enable the SNI feature. This parameter applies only to HTTPS listeners. The default value is 0, indicating disabled, and 1 indicates enabled. Note: The SNI feature can be enabled for listeners that have not enabled SNI, but cannot be disabled for listeners that have enabled SNI.
                      */
                     int64_t m_sniSwitch;
                     bool m_sniSwitchHasBeenSet;
@@ -443,7 +459,7 @@ They represent weighted round robin and least connections, respectively. Default
                     bool m_targetTypeHasBeenSet;
 
                     /**
-                     * Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners.
+                     * Whether to enable long connections. This parameter applies only to HTTP and HTTPS listeners.The default value is 0, indicating disabled, and 1 indicates enabled.
                      */
                     int64_t m_keepaliveEnable;
                     bool m_keepaliveEnableHasBeenSet;
@@ -455,7 +471,7 @@ They represent weighted round robin and least connections, respectively. Default
                     bool m_deregisterTargetRstHasBeenSet;
 
                     /**
-                     * Session persistence type. `NORMAL`: default session persistence type (L4/L7 session persistence); `QUIC_CID`: session persistence by QUIC connection ID. The `QUIC_CID` value can only be configured in UDP listeners.
+                     * Session persistence type. NORMAL indicates the default session persistence type, and QUIC_CID indicates session persistence by QUIC connection ID. QUIC_CID only supports UDP protocols.Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners.
                      */
                     std::string m_sessionType;
                     bool m_sessionTypeHasBeenSet;
@@ -467,13 +483,13 @@ They represent weighted round robin and least connections, respectively. Default
                     bool m_multiCertInfoHasBeenSet;
 
                     /**
-                     * The maximum number of concurrent connections at the listener level. This parameter takes effect only on LCU-supported instances and TCP/UDP/TCP_SSL/QUIC listeners. Value range: 1 to the maximum concurrency of the instance. -1 indicates that no limit is set on concurrent connections.
+                     * Maximum number of concurrent connections at the listener level. This parameter is supported only for LCU-supported instances with TCP/UDP/TCP_SSL/QUIC listeners currently. Value range: 1 to the maximum number of concurrent connections for the instance specification. -1 indicates that no limit is set on the concurrent connections at the listener level. Classic network instances do not support this parameter.
                      */
                     int64_t m_maxConn;
                     bool m_maxConnHasBeenSet;
 
                     /**
-                     * The maximum number of new connections at the listener level. This parameter takes effect only on LCU-supported instances and TCP/UDP/TCP_SSL/QUIC listeners. Value range: 1 to the maximum number of new connections of the instance. -1 indicates that no limit is set on concurrent connections.
+                     * Maximum number of new connections at the listener level. This parameter is supported only for LCU-supported instances with TCP/UDP/TCP_SSL/QUIC listeners currently. Value range: 1 to the maximum number of new connections for the instance specification. -1 indicates that no limit is set on the new connections at the listener level. Classic network instances do not support this parameter.
                      */
                     int64_t m_maxCps;
                     bool m_maxCpsHasBeenSet;
@@ -483,6 +499,12 @@ They represent weighted round robin and least connections, respectively. Default
                      */
                     int64_t m_idleConnectTimeout;
                     bool m_idleConnectTimeoutHasBeenSet;
+
+                    /**
+                     * Whether to enable SNAT.
+                     */
+                    bool m_snatEnable;
+                    bool m_snatEnableHasBeenSet;
 
                 };
             }

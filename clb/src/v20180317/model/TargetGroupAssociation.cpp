@@ -22,9 +22,10 @@ using namespace std;
 
 TargetGroupAssociation::TargetGroupAssociation() :
     m_loadBalancerIdHasBeenSet(false),
-    m_listenerIdHasBeenSet(false),
     m_targetGroupIdHasBeenSet(false),
-    m_locationIdHasBeenSet(false)
+    m_listenerIdHasBeenSet(false),
+    m_locationIdHasBeenSet(false),
+    m_weightHasBeenSet(false)
 {
 }
 
@@ -43,16 +44,6 @@ CoreInternalOutcome TargetGroupAssociation::Deserialize(const rapidjson::Value &
         m_loadBalancerIdHasBeenSet = true;
     }
 
-    if (value.HasMember("ListenerId") && !value["ListenerId"].IsNull())
-    {
-        if (!value["ListenerId"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `TargetGroupAssociation.ListenerId` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_listenerId = string(value["ListenerId"].GetString());
-        m_listenerIdHasBeenSet = true;
-    }
-
     if (value.HasMember("TargetGroupId") && !value["TargetGroupId"].IsNull())
     {
         if (!value["TargetGroupId"].IsString())
@@ -63,6 +54,16 @@ CoreInternalOutcome TargetGroupAssociation::Deserialize(const rapidjson::Value &
         m_targetGroupIdHasBeenSet = true;
     }
 
+    if (value.HasMember("ListenerId") && !value["ListenerId"].IsNull())
+    {
+        if (!value["ListenerId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `TargetGroupAssociation.ListenerId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_listenerId = string(value["ListenerId"].GetString());
+        m_listenerIdHasBeenSet = true;
+    }
+
     if (value.HasMember("LocationId") && !value["LocationId"].IsNull())
     {
         if (!value["LocationId"].IsString())
@@ -71,6 +72,16 @@ CoreInternalOutcome TargetGroupAssociation::Deserialize(const rapidjson::Value &
         }
         m_locationId = string(value["LocationId"].GetString());
         m_locationIdHasBeenSet = true;
+    }
+
+    if (value.HasMember("Weight") && !value["Weight"].IsNull())
+    {
+        if (!value["Weight"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `TargetGroupAssociation.Weight` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_weight = value["Weight"].GetInt64();
+        m_weightHasBeenSet = true;
     }
 
 
@@ -88,14 +99,6 @@ void TargetGroupAssociation::ToJsonObject(rapidjson::Value &value, rapidjson::Do
         value.AddMember(iKey, rapidjson::Value(m_loadBalancerId.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_listenerIdHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "ListenerId";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_listenerId.c_str(), allocator).Move(), allocator);
-    }
-
     if (m_targetGroupIdHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -104,12 +107,28 @@ void TargetGroupAssociation::ToJsonObject(rapidjson::Value &value, rapidjson::Do
         value.AddMember(iKey, rapidjson::Value(m_targetGroupId.c_str(), allocator).Move(), allocator);
     }
 
+    if (m_listenerIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ListenerId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_listenerId.c_str(), allocator).Move(), allocator);
+    }
+
     if (m_locationIdHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LocationId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_locationId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_weightHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Weight";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_weight, allocator);
     }
 
 }
@@ -131,22 +150,6 @@ bool TargetGroupAssociation::LoadBalancerIdHasBeenSet() const
     return m_loadBalancerIdHasBeenSet;
 }
 
-string TargetGroupAssociation::GetListenerId() const
-{
-    return m_listenerId;
-}
-
-void TargetGroupAssociation::SetListenerId(const string& _listenerId)
-{
-    m_listenerId = _listenerId;
-    m_listenerIdHasBeenSet = true;
-}
-
-bool TargetGroupAssociation::ListenerIdHasBeenSet() const
-{
-    return m_listenerIdHasBeenSet;
-}
-
 string TargetGroupAssociation::GetTargetGroupId() const
 {
     return m_targetGroupId;
@@ -163,6 +166,22 @@ bool TargetGroupAssociation::TargetGroupIdHasBeenSet() const
     return m_targetGroupIdHasBeenSet;
 }
 
+string TargetGroupAssociation::GetListenerId() const
+{
+    return m_listenerId;
+}
+
+void TargetGroupAssociation::SetListenerId(const string& _listenerId)
+{
+    m_listenerId = _listenerId;
+    m_listenerIdHasBeenSet = true;
+}
+
+bool TargetGroupAssociation::ListenerIdHasBeenSet() const
+{
+    return m_listenerIdHasBeenSet;
+}
+
 string TargetGroupAssociation::GetLocationId() const
 {
     return m_locationId;
@@ -177,5 +196,21 @@ void TargetGroupAssociation::SetLocationId(const string& _locationId)
 bool TargetGroupAssociation::LocationIdHasBeenSet() const
 {
     return m_locationIdHasBeenSet;
+}
+
+int64_t TargetGroupAssociation::GetWeight() const
+{
+    return m_weight;
+}
+
+void TargetGroupAssociation::SetWeight(const int64_t& _weight)
+{
+    m_weight = _weight;
+    m_weightHasBeenSet = true;
+}
+
+bool TargetGroupAssociation::WeightHasBeenSet() const
+{
+    return m_weightHasBeenSet;
 }
 

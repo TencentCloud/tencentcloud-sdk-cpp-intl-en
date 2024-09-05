@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Default port of a target group, which can be used for subsequently added servers.
-                     * @return Port Default port of a target group, which can be used for subsequently added servers.
+                     * 获取Default port of the target group, which can be used for adding servers subsequently. Either the Port or the port in TargetGroupInstances.N should be input.
+                     * @return Port Default port of the target group, which can be used for adding servers subsequently. Either the Port or the port in TargetGroupInstances.N should be input.
                      * 
                      */
                     uint64_t GetPort() const;
 
                     /**
-                     * 设置Default port of a target group, which can be used for subsequently added servers.
-                     * @param _port Default port of a target group, which can be used for subsequently added servers.
+                     * 设置Default port of the target group, which can be used for adding servers subsequently. Either the Port or the port in TargetGroupInstances.N should be input.
+                     * @param _port Default port of the target group, which can be used for adding servers subsequently. Either the Port or the port in TargetGroupInstances.N should be input.
                      * 
                      */
                     void SetPort(const uint64_t& _port);
@@ -142,7 +142,7 @@ namespace TencentCloud
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Default port of a target group, which can be used for subsequently added servers.
+                     * Default port of the target group, which can be used for adding servers subsequently. Either the Port or the port in TargetGroupInstances.N should be input.
                      */
                     uint64_t m_port;
                     bool m_portHasBeenSet;

@@ -68,27 +68,6 @@ namespace TencentCloud
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
-                     * 获取Listener ID
-                     * @return ListenerId Listener ID
-                     * 
-                     */
-                    std::string GetListenerId() const;
-
-                    /**
-                     * 设置Listener ID
-                     * @param _listenerId Listener ID
-                     * 
-                     */
-                    void SetListenerId(const std::string& _listenerId);
-
-                    /**
-                     * 判断参数 ListenerId 是否已赋值
-                     * @return ListenerId 是否已赋值
-                     * 
-                     */
-                    bool ListenerIdHasBeenSet() const;
-
-                    /**
                      * 获取Target group ID
                      * @return TargetGroupId Target group ID
                      * 
@@ -108,6 +87,27 @@ namespace TencentCloud
                      * 
                      */
                     bool TargetGroupIdHasBeenSet() const;
+
+                    /**
+                     * 获取Listener ID. This parameter is required when the AssociateTargetGroups and DisassociateTargetGroups APIs are called.
+                     * @return ListenerId Listener ID. This parameter is required when the AssociateTargetGroups and DisassociateTargetGroups APIs are called.
+                     * 
+                     */
+                    std::string GetListenerId() const;
+
+                    /**
+                     * 设置Listener ID. This parameter is required when the AssociateTargetGroups and DisassociateTargetGroups APIs are called.
+                     * @param _listenerId Listener ID. This parameter is required when the AssociateTargetGroups and DisassociateTargetGroups APIs are called.
+                     * 
+                     */
+                    void SetListenerId(const std::string& _listenerId);
+
+                    /**
+                     * 判断参数 ListenerId 是否已赋值
+                     * @return ListenerId 是否已赋值
+                     * 
+                     */
+                    bool ListenerIdHasBeenSet() const;
 
                     /**
                      * 获取Forwarding rule ID
@@ -130,6 +130,27 @@ namespace TencentCloud
                      */
                     bool LocationIdHasBeenSet() const;
 
+                    /**
+                     * 获取Weight of the target group. Value range: [0, 100]. It takes effect only for binding v2 target groups. If not specified, it defaults to 10.
+                     * @return Weight Weight of the target group. Value range: [0, 100]. It takes effect only for binding v2 target groups. If not specified, it defaults to 10.
+                     * 
+                     */
+                    int64_t GetWeight() const;
+
+                    /**
+                     * 设置Weight of the target group. Value range: [0, 100]. It takes effect only for binding v2 target groups. If not specified, it defaults to 10.
+                     * @param _weight Weight of the target group. Value range: [0, 100]. It takes effect only for binding v2 target groups. If not specified, it defaults to 10.
+                     * 
+                     */
+                    void SetWeight(const int64_t& _weight);
+
+                    /**
+                     * 判断参数 Weight 是否已赋值
+                     * @return Weight 是否已赋值
+                     * 
+                     */
+                    bool WeightHasBeenSet() const;
+
                 private:
 
                     /**
@@ -139,22 +160,28 @@ namespace TencentCloud
                     bool m_loadBalancerIdHasBeenSet;
 
                     /**
-                     * Listener ID
-                     */
-                    std::string m_listenerId;
-                    bool m_listenerIdHasBeenSet;
-
-                    /**
                      * Target group ID
                      */
                     std::string m_targetGroupId;
                     bool m_targetGroupIdHasBeenSet;
 
                     /**
+                     * Listener ID. This parameter is required when the AssociateTargetGroups and DisassociateTargetGroups APIs are called.
+                     */
+                    std::string m_listenerId;
+                    bool m_listenerIdHasBeenSet;
+
+                    /**
                      * Forwarding rule ID
                      */
                     std::string m_locationId;
                     bool m_locationIdHasBeenSet;
+
+                    /**
+                     * Weight of the target group. Value range: [0, 100]. It takes effect only for binding v2 target groups. If not specified, it defaults to 10.
+                     */
+                    int64_t m_weight;
+                    bool m_weightHasBeenSet;
 
                 };
             }

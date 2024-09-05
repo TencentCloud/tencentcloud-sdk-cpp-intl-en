@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Association array
-                     * @return Associations Association array
+                     * 获取Binding relationship array. A single request supports up to 20 items.
+                     * @return Associations Binding relationship array. A single request supports up to 20 items.
                      * 
                      */
                     std::vector<TargetGroupAssociation> GetAssociations() const;
 
                     /**
-                     * 设置Association array
-                     * @param _associations Association array
+                     * 设置Binding relationship array. A single request supports up to 20 items.
+                     * @param _associations Binding relationship array. A single request supports up to 20 items.
                      * 
                      */
                     void SetAssociations(const std::vector<TargetGroupAssociation>& _associations);
@@ -67,7 +67,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Association array
+                     * Binding relationship array. A single request supports up to 20 items.
                      */
                     std::vector<TargetGroupAssociation> m_associations;
                     bool m_associationsHasBeenSet;

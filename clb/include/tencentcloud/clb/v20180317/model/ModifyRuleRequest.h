@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/clb/v20180317/model/HealthCheck.h>
+#include <tencentcloud/clb/v20180317/model/OAuth.h>
 
 
 namespace TencentCloud
@@ -174,15 +175,15 @@ They represent weighted round robin, least connections, and IP hash, respectivel
                     bool SchedulerHasBeenSet() const;
 
                     /**
-                     * 获取Session persistence time
-                     * @return SessionExpireTime Session persistence time
+                     * 获取Session persistence duration, in seconds. Value range: 0 or 30-86400.
+                     * @return SessionExpireTime Session persistence duration, in seconds. Value range: 0 or 30-86400.
                      * 
                      */
                     int64_t GetSessionExpireTime() const;
 
                     /**
-                     * 设置Session persistence time
-                     * @param _sessionExpireTime Session persistence time
+                     * 设置Session persistence duration, in seconds. Value range: 0 or 30-86400.
+                     * @param _sessionExpireTime Session persistence duration, in seconds. Value range: 0 or 30-86400.
                      * 
                      */
                     void SetSessionExpireTime(const int64_t& _sessionExpireTime);
@@ -195,15 +196,15 @@ They represent weighted round robin, least connections, and IP hash, respectivel
                     bool SessionExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, and TRPC.
-                     * @return ForwardType Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, and TRPC.
+                     * 获取Forwarding protocol between a CLB instance and the real server. Default value: HTTP. Valid values: HTTP, HTTPS, GRPC. This parameter is valid only for HTTPS listeners.
+                     * @return ForwardType Forwarding protocol between a CLB instance and the real server. Default value: HTTP. Valid values: HTTP, HTTPS, GRPC. This parameter is valid only for HTTPS listeners.
                      * 
                      */
                     std::string GetForwardType() const;
 
                     /**
-                     * 设置Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, and TRPC.
-                     * @param _forwardType Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, and TRPC.
+                     * 设置Forwarding protocol between a CLB instance and the real server. Default value: HTTP. Valid values: HTTP, HTTPS, GRPC. This parameter is valid only for HTTPS listeners.
+                     * @param _forwardType Forwarding protocol between a CLB instance and the real server. Default value: HTTP. Valid values: HTTP, HTTPS, GRPC. This parameter is valid only for HTTPS listeners.
                      * 
                      */
                     void SetForwardType(const std::string& _forwardType);
@@ -257,6 +258,27 @@ They represent weighted round robin, least connections, and IP hash, respectivel
                      */
                     bool TrpcFuncHasBeenSet() const;
 
+                    /**
+                     * 获取OAuth configuration information.
+                     * @return OAuth OAuth configuration information.
+                     * 
+                     */
+                    OAuth GetOAuth() const;
+
+                    /**
+                     * 设置OAuth configuration information.
+                     * @param _oAuth OAuth configuration information.
+                     * 
+                     */
+                    void SetOAuth(const OAuth& _oAuth);
+
+                    /**
+                     * 判断参数 OAuth 是否已赋值
+                     * @return OAuth 是否已赋值
+                     * 
+                     */
+                    bool OAuthHasBeenSet() const;
+
                 private:
 
                     /**
@@ -297,13 +319,13 @@ They represent weighted round robin, least connections, and IP hash, respectivel
                     bool m_schedulerHasBeenSet;
 
                     /**
-                     * Session persistence time
+                     * Session persistence duration, in seconds. Value range: 0 or 30-86400.
                      */
                     int64_t m_sessionExpireTime;
                     bool m_sessionExpireTimeHasBeenSet;
 
                     /**
-                     * Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, and TRPC.
+                     * Forwarding protocol between a CLB instance and the real server. Default value: HTTP. Valid values: HTTP, HTTPS, GRPC. This parameter is valid only for HTTPS listeners.
                      */
                     std::string m_forwardType;
                     bool m_forwardTypeHasBeenSet;
@@ -319,6 +341,12 @@ They represent weighted round robin, least connections, and IP hash, respectivel
                      */
                     std::string m_trpcFunc;
                     bool m_trpcFuncHasBeenSet;
+
+                    /**
+                     * OAuth configuration information.
+                     */
+                    OAuth m_oAuth;
+                    bool m_oAuthHasBeenSet;
 
                 };
             }

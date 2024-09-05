@@ -128,23 +128,15 @@ namespace TencentCloud
                     bool PortHasBeenSet() const;
 
                     /**
-                     * 获取Query the list of backend services associated with a load balancer
-<li> `location-id` - String - Optional - Rule ID, such as "loc-12345678".</li>
-<li> `private-ip-address` - String - Optional - Backend service private IP, such as `172.16.1.1`</li>
-                     * @return Filters Query the list of backend services associated with a load balancer
-<li> `location-id` - String - Optional - Rule ID, such as "loc-12345678".</li>
-<li> `private-ip-address` - String - Optional - Backend service private IP, such as `172.16.1.1`</li>
+                     * 获取Conditions for querying the list of real servers bound to the CLB. The filter criteria are as follows:<li> location-id - String - Required: No - (Filter criterion) Filter by rule ID, such as loc-12345678.</li><li> private-ip-address - String - Required: No - (Filter criterion) Filter by private IP address of the real server, such as 172.16.1.1.</li><li> tag - String - Required: No - (Filter criterion) Filter by tag, such as tag-test.</li>
+                     * @return Filters Conditions for querying the list of real servers bound to the CLB. The filter criteria are as follows:<li> location-id - String - Required: No - (Filter criterion) Filter by rule ID, such as loc-12345678.</li><li> private-ip-address - String - Required: No - (Filter criterion) Filter by private IP address of the real server, such as 172.16.1.1.</li><li> tag - String - Required: No - (Filter criterion) Filter by tag, such as tag-test.</li>
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Query the list of backend services associated with a load balancer
-<li> `location-id` - String - Optional - Rule ID, such as "loc-12345678".</li>
-<li> `private-ip-address` - String - Optional - Backend service private IP, such as `172.16.1.1`</li>
-                     * @param _filters Query the list of backend services associated with a load balancer
-<li> `location-id` - String - Optional - Rule ID, such as "loc-12345678".</li>
-<li> `private-ip-address` - String - Optional - Backend service private IP, such as `172.16.1.1`</li>
+                     * 设置Conditions for querying the list of real servers bound to the CLB. The filter criteria are as follows:<li> location-id - String - Required: No - (Filter criterion) Filter by rule ID, such as loc-12345678.</li><li> private-ip-address - String - Required: No - (Filter criterion) Filter by private IP address of the real server, such as 172.16.1.1.</li><li> tag - String - Required: No - (Filter criterion) Filter by tag, such as tag-test.</li>
+                     * @param _filters Conditions for querying the list of real servers bound to the CLB. The filter criteria are as follows:<li> location-id - String - Required: No - (Filter criterion) Filter by rule ID, such as loc-12345678.</li><li> private-ip-address - String - Required: No - (Filter criterion) Filter by private IP address of the real server, such as 172.16.1.1.</li><li> tag - String - Required: No - (Filter criterion) Filter by tag, such as tag-test.</li>
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -183,9 +175,7 @@ namespace TencentCloud
                     bool m_portHasBeenSet;
 
                     /**
-                     * Query the list of backend services associated with a load balancer
-<li> `location-id` - String - Optional - Rule ID, such as "loc-12345678".</li>
-<li> `private-ip-address` - String - Optional - Backend service private IP, such as `172.16.1.1`</li>
+                     * Conditions for querying the list of real servers bound to the CLB. The filter criteria are as follows:<li> location-id - String - Required: No - (Filter criterion) Filter by rule ID, such as loc-12345678.</li><li> private-ip-address - String - Required: No - (Filter criterion) Filter by private IP address of the real server, such as 172.16.1.1.</li><li> tag - String - Required: No - (Filter criterion) Filter by tag, such as tag-test.</li>
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

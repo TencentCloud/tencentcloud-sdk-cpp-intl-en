@@ -72,35 +72,15 @@ BANDWIDTH_PACKAGE: billed by bandwidth package (currently, this method is suppor
                     bool InternetChargeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Maximum outgoing bandwidth in Mbps. It works on LCU-supported instances on private networks and all instances on public networks.
-- For shared and dedicated CLB instances on public networks, the range is 1Mbps-2048Mbps.
-- For all LCU-supported CLB instances:
-  - It defaults to General LCU-supported instance. SLA corresponds to Super Large 1, and the range of maximum outgoing bandwidth is 1 Mbps - 10240 Mbps.
-  - If you have enabled Super Large specification, the range of maximum outgoing bandwidth is 1 Mbps - 61440 Mbps Super Large LCU-supported specification is in beta now. To join the beta, [submit a ticket](https://console.cloud.tencent.com/workorder/category).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InternetMaxBandwidthOut Maximum outgoing bandwidth in Mbps. It works on LCU-supported instances on private networks and all instances on public networks.
-- For shared and dedicated CLB instances on public networks, the range is 1Mbps-2048Mbps.
-- For all LCU-supported CLB instances:
-  - It defaults to General LCU-supported instance. SLA corresponds to Super Large 1, and the range of maximum outgoing bandwidth is 1 Mbps - 10240 Mbps.
-  - If you have enabled Super Large specification, the range of maximum outgoing bandwidth is 1 Mbps - 61440 Mbps Super Large LCU-supported specification is in beta now. To join the beta, [submit a ticket](https://console.cloud.tencent.com/workorder/category).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Maximum outbound bandwidth, in Mbps. This applies only to shared, LCU-supported, and exclusive CLB instances of the public network type, as well as the LCU-supported CLB instances of the private network type.- For shared and exclusive CLB instances of the public network type, the maximum outbound bandwidth ranges from 1 Mbps to 2048 Mbps.- For LCU-supported CLB instances of the public network type and the private network type, the maximum outbound bandwidth ranges from 1 Mbps to 61440 Mbps.(If this parameter is not specified when CreateLoadBalancer is called to create a CLB instance, it defaults to 10 Mbps. This upper limit can be adjusted.)Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return InternetMaxBandwidthOut Maximum outbound bandwidth, in Mbps. This applies only to shared, LCU-supported, and exclusive CLB instances of the public network type, as well as the LCU-supported CLB instances of the private network type.- For shared and exclusive CLB instances of the public network type, the maximum outbound bandwidth ranges from 1 Mbps to 2048 Mbps.- For LCU-supported CLB instances of the public network type and the private network type, the maximum outbound bandwidth ranges from 1 Mbps to 61440 Mbps.(If this parameter is not specified when CreateLoadBalancer is called to create a CLB instance, it defaults to 10 Mbps. This upper limit can be adjusted.)Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetInternetMaxBandwidthOut() const;
 
                     /**
-                     * 设置Maximum outgoing bandwidth in Mbps. It works on LCU-supported instances on private networks and all instances on public networks.
-- For shared and dedicated CLB instances on public networks, the range is 1Mbps-2048Mbps.
-- For all LCU-supported CLB instances:
-  - It defaults to General LCU-supported instance. SLA corresponds to Super Large 1, and the range of maximum outgoing bandwidth is 1 Mbps - 10240 Mbps.
-  - If you have enabled Super Large specification, the range of maximum outgoing bandwidth is 1 Mbps - 61440 Mbps Super Large LCU-supported specification is in beta now. To join the beta, [submit a ticket](https://console.cloud.tencent.com/workorder/category).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _internetMaxBandwidthOut Maximum outgoing bandwidth in Mbps. It works on LCU-supported instances on private networks and all instances on public networks.
-- For shared and dedicated CLB instances on public networks, the range is 1Mbps-2048Mbps.
-- For all LCU-supported CLB instances:
-  - It defaults to General LCU-supported instance. SLA corresponds to Super Large 1, and the range of maximum outgoing bandwidth is 1 Mbps - 10240 Mbps.
-  - If you have enabled Super Large specification, the range of maximum outgoing bandwidth is 1 Mbps - 61440 Mbps Super Large LCU-supported specification is in beta now. To join the beta, [submit a ticket](https://console.cloud.tencent.com/workorder/category).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Maximum outbound bandwidth, in Mbps. This applies only to shared, LCU-supported, and exclusive CLB instances of the public network type, as well as the LCU-supported CLB instances of the private network type.- For shared and exclusive CLB instances of the public network type, the maximum outbound bandwidth ranges from 1 Mbps to 2048 Mbps.- For LCU-supported CLB instances of the public network type and the private network type, the maximum outbound bandwidth ranges from 1 Mbps to 61440 Mbps.(If this parameter is not specified when CreateLoadBalancer is called to create a CLB instance, it defaults to 10 Mbps. This upper limit can be adjusted.)Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _internetMaxBandwidthOut Maximum outbound bandwidth, in Mbps. This applies only to shared, LCU-supported, and exclusive CLB instances of the public network type, as well as the LCU-supported CLB instances of the private network type.- For shared and exclusive CLB instances of the public network type, the maximum outbound bandwidth ranges from 1 Mbps to 2048 Mbps.- For LCU-supported CLB instances of the public network type and the private network type, the maximum outbound bandwidth ranges from 1 Mbps to 61440 Mbps.(If this parameter is not specified when CreateLoadBalancer is called to create a CLB instance, it defaults to 10 Mbps. This upper limit can be adjusted.)Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetInternetMaxBandwidthOut(const int64_t& _internetMaxBandwidthOut);
@@ -113,19 +93,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InternetMaxBandwidthOutHasBeenSet() const;
 
                     /**
-                     * 获取Bandwidth package type, such as SINGLEISP
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BandwidthpkgSubType Bandwidth package type, such as SINGLEISP
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Bandwidth package type, such as SINGLEISP (single-line) and BGP (multi-line).Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return BandwidthpkgSubType Bandwidth package type, such as SINGLEISP (single-line) and BGP (multi-line).Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetBandwidthpkgSubType() const;
 
                     /**
-                     * 设置Bandwidth package type, such as SINGLEISP
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _bandwidthpkgSubType Bandwidth package type, such as SINGLEISP
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Bandwidth package type, such as SINGLEISP (single-line) and BGP (multi-line).Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _bandwidthpkgSubType Bandwidth package type, such as SINGLEISP (single-line) and BGP (multi-line).Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetBandwidthpkgSubType(const std::string& _bandwidthpkgSubType);
@@ -147,19 +123,13 @@ BANDWIDTH_PACKAGE: billed by bandwidth package (currently, this method is suppor
                     bool m_internetChargeTypeHasBeenSet;
 
                     /**
-                     * Maximum outgoing bandwidth in Mbps. It works on LCU-supported instances on private networks and all instances on public networks.
-- For shared and dedicated CLB instances on public networks, the range is 1Mbps-2048Mbps.
-- For all LCU-supported CLB instances:
-  - It defaults to General LCU-supported instance. SLA corresponds to Super Large 1, and the range of maximum outgoing bandwidth is 1 Mbps - 10240 Mbps.
-  - If you have enabled Super Large specification, the range of maximum outgoing bandwidth is 1 Mbps - 61440 Mbps Super Large LCU-supported specification is in beta now. To join the beta, [submit a ticket](https://console.cloud.tencent.com/workorder/category).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Maximum outbound bandwidth, in Mbps. This applies only to shared, LCU-supported, and exclusive CLB instances of the public network type, as well as the LCU-supported CLB instances of the private network type.- For shared and exclusive CLB instances of the public network type, the maximum outbound bandwidth ranges from 1 Mbps to 2048 Mbps.- For LCU-supported CLB instances of the public network type and the private network type, the maximum outbound bandwidth ranges from 1 Mbps to 61440 Mbps.(If this parameter is not specified when CreateLoadBalancer is called to create a CLB instance, it defaults to 10 Mbps. This upper limit can be adjusted.)Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_internetMaxBandwidthOut;
                     bool m_internetMaxBandwidthOutHasBeenSet;
 
                     /**
-                     * Bandwidth package type, such as SINGLEISP
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Bandwidth package type, such as SINGLEISP (single-line) and BGP (multi-line).Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_bandwidthpkgSubType;
                     bool m_bandwidthpkgSubTypeHasBeenSet;

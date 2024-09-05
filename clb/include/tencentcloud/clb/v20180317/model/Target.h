@@ -179,6 +179,27 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool EniIpHasBeenSet() const;
 
+                    /**
+                     * 获取Tag.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Tag Tag.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetTag() const;
+
+                    /**
+                     * 设置Tag.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _tag Tag.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetTag(const std::string& _tag);
+
+                    /**
+                     * 判断参数 Tag 是否已赋值
+                     * @return Tag 是否已赋值
+                     * 
+                     */
+                    bool TagHasBeenSet() const;
+
                 private:
 
                     /**
@@ -217,6 +238,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     std::string m_eniIp;
                     bool m_eniIpHasBeenSet;
+
+                    /**
+                     * Tag.Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_tag;
+                    bool m_tagHasBeenSet;
 
                 };
             }

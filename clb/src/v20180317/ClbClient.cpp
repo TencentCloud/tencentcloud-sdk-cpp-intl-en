@@ -169,6 +169,49 @@ ClbClient::BatchDeregisterTargetsOutcomeCallable ClbClient::BatchDeregisterTarge
     return task->get_future();
 }
 
+ClbClient::BatchModifyTargetTagOutcome ClbClient::BatchModifyTargetTag(const BatchModifyTargetTagRequest &request)
+{
+    auto outcome = MakeRequest(request, "BatchModifyTargetTag");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        BatchModifyTargetTagResponse rsp = BatchModifyTargetTagResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return BatchModifyTargetTagOutcome(rsp);
+        else
+            return BatchModifyTargetTagOutcome(o.GetError());
+    }
+    else
+    {
+        return BatchModifyTargetTagOutcome(outcome.GetError());
+    }
+}
+
+void ClbClient::BatchModifyTargetTagAsync(const BatchModifyTargetTagRequest& request, const BatchModifyTargetTagAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->BatchModifyTargetTag(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+ClbClient::BatchModifyTargetTagOutcomeCallable ClbClient::BatchModifyTargetTagCallable(const BatchModifyTargetTagRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<BatchModifyTargetTagOutcome()>>(
+        [this, request]()
+        {
+            return this->BatchModifyTargetTag(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 ClbClient::BatchModifyTargetWeightOutcome ClbClient::BatchModifyTargetWeight(const BatchModifyTargetWeightRequest &request)
 {
     auto outcome = MakeRequest(request, "BatchModifyTargetWeight");
@@ -3473,6 +3516,49 @@ ClbClient::SetLoadBalancerSecurityGroupsOutcomeCallable ClbClient::SetLoadBalanc
         [this, request]()
         {
             return this->SetLoadBalancerSecurityGroups(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+ClbClient::SetLoadBalancerStartStatusOutcome ClbClient::SetLoadBalancerStartStatus(const SetLoadBalancerStartStatusRequest &request)
+{
+    auto outcome = MakeRequest(request, "SetLoadBalancerStartStatus");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        SetLoadBalancerStartStatusResponse rsp = SetLoadBalancerStartStatusResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return SetLoadBalancerStartStatusOutcome(rsp);
+        else
+            return SetLoadBalancerStartStatusOutcome(o.GetError());
+    }
+    else
+    {
+        return SetLoadBalancerStartStatusOutcome(outcome.GetError());
+    }
+}
+
+void ClbClient::SetLoadBalancerStartStatusAsync(const SetLoadBalancerStartStatusRequest& request, const SetLoadBalancerStartStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->SetLoadBalancerStartStatus(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+ClbClient::SetLoadBalancerStartStatusOutcomeCallable ClbClient::SetLoadBalancerStartStatusCallable(const SetLoadBalancerStartStatusRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<SetLoadBalancerStartStatusOutcome()>>(
+        [this, request]()
+        {
+            return this->SetLoadBalancerStartStatus(request);
         }
     );
 
