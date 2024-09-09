@@ -148,6 +148,27 @@ namespace TencentCloud
                     bool NickHasBeenSet() const;
 
                     /**
+                     * 获取Agent ID
+                     * @return StaffNo Agent ID
+                     * 
+                     */
+                    std::string GetStaffNo() const;
+
+                    /**
+                     * 设置Agent ID
+                     * @param _staffNo Agent ID
+                     * 
+                     */
+                    void SetStaffNo(const std::string& _staffNo);
+
+                    /**
+                     * 判断参数 StaffNo 是否已赋值
+                     * @return StaffNo 是否已赋值
+                     * 
+                     */
+                    bool StaffNoHasBeenSet() const;
+
+                    /**
                      * 获取Bind skill group ID list.
                      * @return SkillGroupIds Bind skill group ID list.
                      * 
@@ -241,6 +262,12 @@ namespace TencentCloud
                      */
                     std::string m_nick;
                     bool m_nickHasBeenSet;
+
+                    /**
+                     * Agent ID
+                     */
+                    std::string m_staffNo;
+                    bool m_staffNoHasBeenSet;
 
                     /**
                      * Bind skill group ID list.

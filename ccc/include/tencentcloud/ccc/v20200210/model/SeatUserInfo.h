@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Agent user information.
+                * Agent User Information
                 */
                 class SeatUserInfo : public AbstractModel
                 {
@@ -114,15 +114,15 @@ Note: This field may return null, indicating that no valid value could be obtain
                     bool StaffNumberHasBeenSet() const;
 
                     /**
-                     * 获取Agent phone number (preceded by 0086).
-                     * @return Phone Agent phone number (preceded by 0086).
+                     * 获取Agent's Telephone Number (With 0086 Prefix)
+                     * @return Phone Agent's Telephone Number (With 0086 Prefix)
                      * 
                      */
                     std::string GetPhone() const;
 
                     /**
-                     * 设置Agent phone number (preceded by 0086).
-                     * @param _phone Agent phone number (preceded by 0086).
+                     * 设置Agent's Telephone Number (With 0086 Prefix)
+                     * @param _phone Agent's Telephone Number (With 0086 Prefix)
                      * 
                      */
                     void SetPhone(const std::string& _phone);
@@ -177,19 +177,19 @@ Note: This field may return null, indicating that no valid value could be obtain
                     bool UserIdHasBeenSet() const;
 
                     /**
-                     * 获取List of skill groups associated with the agent.
-Note: This field may return null, indicating that no valid value could be obtained.
-                     * @return SkillGroupNameList List of skill groups associated with the agent.
-Note: This field may return null, indicating that no valid value could be obtained.
+                     * 获取List of skill groups associated with the seat
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SkillGroupNameList List of skill groups associated with the seat
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetSkillGroupNameList() const;
 
                     /**
-                     * 设置List of skill groups associated with the agent.
-Note: This field may return null, indicating that no valid value could be obtained.
-                     * @param _skillGroupNameList List of skill groups associated with the agent.
-Note: This field may return null, indicating that no valid value could be obtained.
+                     * 设置List of skill groups associated with the seat
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _skillGroupNameList List of skill groups associated with the seat
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSkillGroupNameList(const std::vector<std::string>& _skillGroupNameList);
@@ -260,7 +260,7 @@ Note: This field may return null, indicating that no valid value could be obtain
                     bool m_staffNumberHasBeenSet;
 
                     /**
-                     * Agent phone number (preceded by 0086).
+                     * Agent's Telephone Number (With 0086 Prefix)
                      */
                     std::string m_phone;
                     bool m_phoneHasBeenSet;
@@ -278,8 +278,8 @@ Note: This field may return null, indicating that no valid value could be obtain
                     bool m_userIdHasBeenSet;
 
                     /**
-                     * List of skill groups associated with the agent.
-Note: This field may return null, indicating that no valid value could be obtained.
+                     * List of skill groups associated with the seat
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_skillGroupNameList;
                     bool m_skillGroupNameListHasBeenSet;

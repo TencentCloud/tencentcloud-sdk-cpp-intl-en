@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
-                     * 获取List of customer service emails to be deleted.
-                     * @return StaffList List of customer service emails to be deleted.
+                     * 获取Customer service emails, supports up to 200 at a time.
+                     * @return StaffList Customer service emails, supports up to 200 at a time.
                      * 
                      */
                     std::vector<std::string> GetStaffList() const;
 
                     /**
-                     * 设置List of customer service emails to be deleted.
-                     * @param _staffList List of customer service emails to be deleted.
+                     * 设置Customer service emails, supports up to 200 at a time.
+                     * @param _staffList Customer service emails, supports up to 200 at a time.
                      * 
                      */
                     void SetStaffList(const std::vector<std::string>& _staffList);
@@ -93,7 +93,7 @@ namespace TencentCloud
                     bool m_sdkAppIdHasBeenSet;
 
                     /**
-                     * List of customer service emails to be deleted.
+                     * Customer service emails, supports up to 200 at a time.
                      */
                     std::vector<std::string> m_staffList;
                     bool m_staffListHasBeenSet;

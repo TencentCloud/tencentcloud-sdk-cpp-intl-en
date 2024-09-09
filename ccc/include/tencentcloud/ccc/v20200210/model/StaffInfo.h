@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Agent information with skill group priority.
+                * Agent Information with Skill Group Priority
                 */
                 class StaffInfo : public AbstractModel
                 {
@@ -49,18 +49,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Agent name.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Name Agent name.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Agent name.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _name Agent name.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -94,19 +94,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MailHasBeenSet() const;
 
                     /**
-                     * 获取Agent telephone number.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Phone Agent telephone number.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Agent's Telephone Number
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Phone Agent's Telephone Number
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetPhone() const;
 
                     /**
-                     * 设置Agent telephone number.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _phone Agent telephone number.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Agent's Telephone Number
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _phone Agent's Telephone Number
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetPhone(const std::string& _phone);
@@ -120,18 +120,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Agent nickname.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Nick Agent nickname.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetNick() const;
 
                     /**
                      * 设置Agent nickname.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _nick Agent nickname.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetNick(const std::string& _nick);
@@ -144,19 +144,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool NickHasBeenSet() const;
 
                     /**
-                     * 获取Agent number.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return StaffNumber Agent number.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Agent ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return StaffNumber Agent ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetStaffNumber() const;
 
                     /**
-                     * 设置Agent number.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _staffNumber Agent number.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Agent ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _staffNumber Agent ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetStaffNumber(const std::string& _staffNumber);
@@ -169,15 +169,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool StaffNumberHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RoleId 
+                     * 获取User Role ID
+                     * @return RoleId User Role ID
                      * 
                      */
                     uint64_t GetRoleId() const;
 
                     /**
-                     * 设置
-                     * @param _roleId 
+                     * 设置User Role ID
+                     * @param _roleId User Role ID
                      * 
                      */
                     void SetRoleId(const uint64_t& _roleId);
@@ -243,7 +243,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Agent name.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
@@ -255,28 +255,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_mailHasBeenSet;
 
                     /**
-                     * Agent telephone number.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Agent's Telephone Number
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_phone;
                     bool m_phoneHasBeenSet;
 
                     /**
                      * Agent nickname.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_nick;
                     bool m_nickHasBeenSet;
 
                     /**
-                     * Agent number.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Agent ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_staffNumber;
                     bool m_staffNumberHasBeenSet;
 
                     /**
-                     * 
+                     * User Role ID
                      */
                     uint64_t m_roleId;
                     bool m_roleIdHasBeenSet;

@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool GroupIdListHasBeenSet() const;
 
                     /**
-                     * 获取Filter agent status list.
-                     * @return StatusList Filter agent status list.
+                     * 获取Filter agent status list Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
+                     * @return StatusList Filter agent status list Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
                      * 
                      */
                     std::vector<std::string> GetStatusList() const;
 
                     /**
-                     * 设置Filter agent status list.
-                     * @param _statusList Filter agent status list.
+                     * 设置Filter agent status list Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
+                     * @param _statusList Filter agent status list Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
                      * 
                      */
                     void SetStatusList(const std::vector<std::string>& _statusList);
@@ -147,7 +147,7 @@ namespace TencentCloud
                     bool m_groupIdListHasBeenSet;
 
                     /**
-                     * Filter agent status list.
+                     * Filter agent status list Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
                      */
                     std::vector<std::string> m_statusList;
                     bool m_statusListHasBeenSet;

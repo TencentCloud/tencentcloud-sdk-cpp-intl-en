@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Agent status information.
+                * Agent status-related information
                 */
                 class StaffStatusMetrics : public AbstractModel
                 {
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool EmailHasBeenSet() const;
 
                     /**
-                     * 获取Agent status: Free for Available | busy for Busy | rest for Break | notReady for Not Ready | afterCallWork for After Call Work | offline for Offline.
-                     * @return Status Agent status: Free for Available | busy for Busy | rest for Break | notReady for Not Ready | afterCallWork for After Call Work | offline for Offline.
+                     * 获取Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
+                     * @return Status Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Agent status: Free for Available | busy for Busy | rest for Break | notReady for Not Ready | afterCallWork for After Call Work | offline for Offline.
-                     * @param _status Agent status: Free for Available | busy for Busy | rest for Break | notReady for Not Ready | afterCallWork for After Call Work | offline for Offline.
+                     * 设置Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
+                     * @param _status Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Supplementary agent status information.
-                     * @return StatusExtra Supplementary agent status information.
+                     * 获取Supplementary Information on Agent Status
+                     * @return StatusExtra Supplementary Information on Agent Status
                      * 
                      */
                     StaffStatusExtra GetStatusExtra() const;
 
                     /**
-                     * 设置Supplementary agent status information.
-                     * @param _statusExtra Supplementary agent status information.
+                     * 设置Supplementary Information on Agent Status
+                     * @param _statusExtra Supplementary Information on Agent Status
                      * 
                      */
                     void SetStatusExtra(const StaffStatusExtra& _statusExtra);
@@ -400,13 +400,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_emailHasBeenSet;
 
                     /**
-                     * Agent status: Free for Available | busy for Busy | rest for Break | notReady for Not Ready | afterCallWork for After Call Work | offline for Offline.
+                     * Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Supplementary agent status information.
+                     * Supplementary Information on Agent Status
                      */
                     StaffStatusExtra m_statusExtra;
                     bool m_statusExtraHasBeenSet;

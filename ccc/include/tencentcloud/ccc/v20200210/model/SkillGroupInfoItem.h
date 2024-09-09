@@ -135,19 +135,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool RoutePolicyHasBeenSet() const;
 
                     /**
-                     * 获取Whether the session is allocated to the last serviced agent first.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return UsingLastSeat Whether the session is allocated to the last serviced agent first.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Should the conversation allocation prioritize the last service seat?
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return UsingLastSeat Should the conversation allocation prioritize the last service seat?
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetUsingLastSeat() const;
 
                     /**
-                     * 设置Whether the session is allocated to the last serviced agent first.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _usingLastSeat Whether the session is allocated to the last serviced agent first.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Should the conversation allocation prioritize the last service seat?
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _usingLastSeat Should the conversation allocation prioritize the last service seat?
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUsingLastSeat(const int64_t& _usingLastSeat);
@@ -234,6 +234,31 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool SkillGroupTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Extension number within the skill group
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Alias Extension number within the skill group
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetAlias() const;
+
+                    /**
+                     * 设置Extension number within the skill group
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _alias Extension number within the skill group
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetAlias(const std::string& _alias);
+
+                    /**
+                     * 判断参数 Alias 是否已赋值
+                     * @return Alias 是否已赋值
+                     * 
+                     */
+                    bool AliasHasBeenSet() const;
+
                 private:
 
                     /**
@@ -262,8 +287,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_routePolicyHasBeenSet;
 
                     /**
-                     * Whether the session is allocated to the last serviced agent first.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Should the conversation allocation prioritize the last service seat?
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_usingLastSeat;
                     bool m_usingLastSeatHasBeenSet;
@@ -288,6 +313,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_skillGroupType;
                     bool m_skillGroupTypeHasBeenSet;
+
+                    /**
+                     * Extension number within the skill group
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_alias;
+                    bool m_aliasHasBeenSet;
 
                 };
             }

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Agent Purchase Information.
+                * Agent purchase information
                 */
                 class StaffBuyInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of agents purchased.
-                     * @return Num Number of agents purchased.
+                     * 获取Number of agents purchased
+                     * @return Num Number of agents purchased
                      * 
                      */
                     int64_t GetNum() const;
 
                     /**
-                     * 设置Number of agents purchased.
-                     * @param _num Number of agents purchased.
+                     * 设置Number of agents purchased
+                     * @param _num Number of agents purchased
                      * 
                      */
                     void SetNum(const int64_t& _num);
@@ -137,7 +137,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Number of agents purchased.
+                     * Number of agents purchased
                      */
                     int64_t m_num;
                     bool m_numHasBeenSet;

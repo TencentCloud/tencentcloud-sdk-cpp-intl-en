@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start timestamp. Unix second-level timestamp.
-                     * @return StartTimeStamp Start timestamp. Unix second-level timestamp.
+                     * 获取Start timestamp, Unix Timestamp in Seconds. Supports up to the past 180 days.
+                     * @return StartTimeStamp Start timestamp, Unix Timestamp in Seconds. Supports up to the past 180 days.
                      * 
                      */
                     int64_t GetStartTimeStamp() const;
 
                     /**
-                     * 设置Start timestamp. Unix second-level timestamp.
-                     * @param _startTimeStamp Start timestamp. Unix second-level timestamp.
+                     * 设置Start timestamp, Unix Timestamp in Seconds. Supports up to the past 180 days.
+                     * @param _startTimeStamp Start timestamp, Unix Timestamp in Seconds. Supports up to the past 180 days.
                      * 
                      */
                     void SetStartTimeStamp(const int64_t& _startTimeStamp);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool StartTimeStampHasBeenSet() const;
 
                     /**
-                     * 获取End timestamp. Unix second-level timestamp.
-                     * @return EndTimeStamp End timestamp. Unix second-level timestamp.
+                     * 获取End timestamp, Unix Timestamp in Seconds. The range between the end time and start time is less than 90 days.
+                     * @return EndTimeStamp End timestamp, Unix Timestamp in Seconds. The range between the end time and start time is less than 90 days.
                      * 
                      */
                     int64_t GetEndTimeStamp() const;
 
                     /**
-                     * 设置End timestamp. Unix second-level timestamp.
-                     * @param _endTimeStamp End timestamp. Unix second-level timestamp.
+                     * 设置End timestamp, Unix Timestamp in Seconds. The range between the end time and start time is less than 90 days.
+                     * @param _endTimeStamp End timestamp, Unix Timestamp in Seconds. The range between the end time and start time is less than 90 days.
                      * 
                      */
                     void SetEndTimeStamp(const int64_t& _endTimeStamp);
@@ -255,13 +255,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Start timestamp. Unix second-level timestamp.
+                     * Start timestamp, Unix Timestamp in Seconds. Supports up to the past 180 days.
                      */
                     int64_t m_startTimeStamp;
                     bool m_startTimeStampHasBeenSet;
 
                     /**
-                     * End timestamp. Unix second-level timestamp.
+                     * End timestamp, Unix Timestamp in Seconds. The range between the end time and start time is less than 90 days.
                      */
                     int64_t m_endTimeStamp;
                     bool m_endTimeStampHasBeenSet;

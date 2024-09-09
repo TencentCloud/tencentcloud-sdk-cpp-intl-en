@@ -72,18 +72,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MailHasBeenSet() const;
 
                     /**
-                     * 获取Agent phone number.
+                     * 获取Agent Telephone
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Phone Agent phone number.
+                     * @return Phone Agent Telephone
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetPhone() const;
 
                     /**
-                     * 设置Agent phone number.
+                     * 设置Agent Telephone
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _phone Agent phone number.
+                     * @param _phone Agent Telephone
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -172,18 +172,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EndedTimestampHasBeenSet() const;
 
                     /**
-                     * 获取Recording ID can be indexed to the agent side recording.
+                     * 获取Recording ID, which can be used to index the recording on the agent side
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RecordId Recording ID can be indexed to the agent side recording.
+                     * @return RecordId Recording ID, which can be used to index the recording on the agent side
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRecordId() const;
 
                     /**
-                     * 设置Recording ID can be indexed to the agent side recording.
+                     * 设置Recording ID, which can be used to index the recording on the agent side
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _recordId Recording ID can be indexed to the agent side recording.
+                     * @param _recordId Recording ID, which can be used to index the recording on the agent side
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -222,18 +222,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Transfer source agent information.
+                     * 获取Transfer Source Agent Information
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TransferFrom Transfer source agent information.
+                     * @return TransferFrom Transfer Source Agent Information
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTransferFrom() const;
 
                     /**
-                     * 设置Transfer source agent information.
+                     * 设置Transfer Source Agent Information
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _transferFrom Transfer source agent information.
+                     * @param _transferFrom Transfer Source Agent Information
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -272,18 +272,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TransferFromTypeHasBeenSet() const;
 
                     /**
-                     * 获取Transfer destination agent information.
+                     * 获取Transfer Destination Agent Information
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TransferTo Transfer destination agent information.
+                     * @return TransferTo Transfer Destination Agent Information
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTransferTo() const;
 
                     /**
-                     * 设置Transfer destination agent information.
+                     * 设置Transfer Destination Agent Information
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _transferTo Transfer destination agent information.
+                     * @param _transferTo Transfer Destination Agent Information
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -506,7 +506,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_mailHasBeenSet;
 
                     /**
-                     * Agent phone number.
+                     * Agent Telephone
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_phone;
@@ -534,7 +534,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_endedTimestampHasBeenSet;
 
                     /**
-                     * Recording ID can be indexed to the agent side recording.
+                     * Recording ID, which can be used to index the recording on the agent side
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_recordId;
@@ -548,7 +548,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Transfer source agent information.
+                     * Transfer Source Agent Information
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_transferFrom;
@@ -562,7 +562,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_transferFromTypeHasBeenSet;
 
                     /**
-                     * Transfer destination agent information.
+                     * Transfer Destination Agent Information
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_transferTo;

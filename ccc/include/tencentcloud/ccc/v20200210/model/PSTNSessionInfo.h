@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool StaffEmailHasBeenSet() const;
 
                     /**
-                     * 获取Agent work number.
-                     * @return StaffNumber Agent work number.
+                     * 获取Agent ID
+                     * @return StaffNumber Agent ID
                      * 
                      */
                     std::string GetStaffNumber() const;
 
                     /**
-                     * 设置Agent work number.
-                     * @param _staffNumber Agent work number.
+                     * 设置Agent ID
+                     * @param _staffNumber Agent ID
                      * 
                      */
                     void SetStaffNumber(const std::string& _staffNumber);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool StaffNumberHasBeenSet() const;
 
                     /**
-                     * 获取Agent status: inProgress for in progress.
-                     * @return SessionStatus Agent status: inProgress for in progress.
+                     * 获取Agent Status inProgress Ongoing
+                     * @return SessionStatus Agent Status inProgress Ongoing
                      * 
                      */
                     std::string GetSessionStatus() const;
 
                     /**
-                     * 设置Agent status: inProgress for in progress.
-                     * @param _sessionStatus Agent status: inProgress for in progress.
+                     * 设置Agent Status inProgress Ongoing
+                     * @param _sessionStatus Agent Status inProgress Ongoing
                      * 
                      */
                     void SetSessionStatus(const std::string& _sessionStatus);
@@ -364,13 +364,13 @@ namespace TencentCloud
                     bool m_staffEmailHasBeenSet;
 
                     /**
-                     * Agent work number.
+                     * Agent ID
                      */
                     std::string m_staffNumber;
                     bool m_staffNumberHasBeenSet;
 
                     /**
-                     * Agent status: inProgress for in progress.
+                     * Agent Status inProgress Ongoing
                      */
                     std::string m_sessionStatus;
                     bool m_sessionStatusHasBeenSet;

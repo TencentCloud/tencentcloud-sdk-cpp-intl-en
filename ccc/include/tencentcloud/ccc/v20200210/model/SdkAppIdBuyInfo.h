@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Number of agents purchased (still within the validity period).
-                     * @return StaffBuyNum Number of agents purchased (still within the validity period).
+                     * 获取Agent Purchase Count (still within the validity period)
+                     * @return StaffBuyNum Agent Purchase Count (still within the validity period)
                      * 
                      */
                     int64_t GetStaffBuyNum() const;
 
                     /**
-                     * 设置Number of agents purchased (still within the validity period).
-                     * @param _staffBuyNum Number of agents purchased (still within the validity period).
+                     * 设置Agent Purchase Count (still within the validity period)
+                     * @param _staffBuyNum Agent Purchase Count (still within the validity period)
                      * 
                      */
                     void SetStaffBuyNum(const int64_t& _staffBuyNum);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool StaffBuyNumHasBeenSet() const;
 
                     /**
-                     * 获取List of agents purchased (still within the validity period).
-                     * @return StaffBuyList List of agents purchased (still within the validity period).
+                     * 获取Agent Purchase List (still within the validity period)
+                     * @return StaffBuyList Agent Purchase List (still within the validity period)
                      * 
                      */
                     std::vector<StaffBuyInfo> GetStaffBuyList() const;
 
                     /**
-                     * 设置List of agents purchased (still within the validity period).
-                     * @param _staffBuyList List of agents purchased (still within the validity period).
+                     * 设置Agent Purchase List (still within the validity period)
+                     * @param _staffBuyList Agent Purchase List (still within the validity period)
                      * 
                      */
                     void SetStaffBuyList(const std::vector<StaffBuyInfo>& _staffBuyList);
@@ -193,13 +193,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Number of agents purchased (still within the validity period).
+                     * Agent Purchase Count (still within the validity period)
                      */
                     int64_t m_staffBuyNum;
                     bool m_staffBuyNumHasBeenSet;
 
                     /**
-                     * List of agents purchased (still within the validity period).
+                     * Agent Purchase List (still within the validity period)
                      */
                     std::vector<StaffBuyInfo> m_staffBuyList;
                     bool m_staffBuyListHasBeenSet;

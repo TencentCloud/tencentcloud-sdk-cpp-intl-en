@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool RegisterHasBeenSet() const;
 
                     /**
-                     * 获取Bind agent email.
-                     * @return Relation Bind agent email.
+                     * 获取Bind Agent Email
+                     * @return Relation Bind Agent Email
                      * 
                      */
                     std::string GetRelation() const;
 
                     /**
-                     * 设置Bind agent email.
-                     * @param _relation Bind agent email.
+                     * 设置Bind Agent Email
+                     * @param _relation Bind Agent Email
                      * 
                      */
                     void SetRelation(const std::string& _relation);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool RelationHasBeenSet() const;
 
                     /**
-                     * 获取Bind agent name
-                     * @return RelationName Bind agent name
+                     * 获取Bind Agent Name
+                     * @return RelationName Bind Agent Name
                      * 
                      */
                     std::string GetRelationName() const;
 
                     /**
-                     * 设置Bind agent name
-                     * @param _relationName Bind agent name
+                     * 设置Bind Agent Name
+                     * @param _relationName Bind Agent Name
                      * 
                      */
                     void SetRelationName(const std::string& _relationName);
@@ -334,13 +334,13 @@ namespace TencentCloud
                     bool m_registerHasBeenSet;
 
                     /**
-                     * Bind agent email.
+                     * Bind Agent Email
                      */
                     std::string m_relation;
                     bool m_relationHasBeenSet;
 
                     /**
-                     * Bind agent name
+                     * Bind Agent Name
                      */
                     std::string m_relationName;
                     bool m_relationNameHasBeenSet;

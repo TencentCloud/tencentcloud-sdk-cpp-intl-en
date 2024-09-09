@@ -25,6 +25,8 @@
 #include <tencentcloud/core/AsyncCallerContext.h>
 #include <tencentcloud/mdc/v20200828/model/CreateStreamLinkFlowRequest.h>
 #include <tencentcloud/mdc/v20200828/model/CreateStreamLinkFlowResponse.h>
+#include <tencentcloud/mdc/v20200828/model/CreateStreamLinkInputRequest.h>
+#include <tencentcloud/mdc/v20200828/model/CreateStreamLinkInputResponse.h>
 #include <tencentcloud/mdc/v20200828/model/CreateStreamLinkOutputInfoRequest.h>
 #include <tencentcloud/mdc/v20200828/model/CreateStreamLinkOutputInfoResponse.h>
 #include <tencentcloud/mdc/v20200828/model/DeleteStreamLinkFlowRequest.h>
@@ -74,6 +76,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateStreamLinkFlowResponse> CreateStreamLinkFlowOutcome;
                 typedef std::future<CreateStreamLinkFlowOutcome> CreateStreamLinkFlowOutcomeCallable;
                 typedef std::function<void(const MdcClient*, const Model::CreateStreamLinkFlowRequest&, CreateStreamLinkFlowOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateStreamLinkFlowAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateStreamLinkInputResponse> CreateStreamLinkInputOutcome;
+                typedef std::future<CreateStreamLinkInputOutcome> CreateStreamLinkInputOutcomeCallable;
+                typedef std::function<void(const MdcClient*, const Model::CreateStreamLinkInputRequest&, CreateStreamLinkInputOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateStreamLinkInputAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateStreamLinkOutputInfoResponse> CreateStreamLinkOutputInfoOutcome;
                 typedef std::future<CreateStreamLinkOutputInfoOutcome> CreateStreamLinkOutputInfoOutcomeCallable;
                 typedef std::function<void(const MdcClient*, const Model::CreateStreamLinkOutputInfoRequest&, CreateStreamLinkOutputInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateStreamLinkOutputInfoAsyncHandler;
@@ -133,6 +138,15 @@ namespace TencentCloud
                 CreateStreamLinkFlowOutcome CreateStreamLinkFlow(const Model::CreateStreamLinkFlowRequest &request);
                 void CreateStreamLinkFlowAsync(const Model::CreateStreamLinkFlowRequest& request, const CreateStreamLinkFlowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateStreamLinkFlowOutcomeCallable CreateStreamLinkFlowCallable(const Model::CreateStreamLinkFlowRequest& request);
+
+                /**
+                 *Create an input configuration for the StreamLink.
+                 * @param req CreateStreamLinkInputRequest
+                 * @return CreateStreamLinkInputOutcome
+                 */
+                CreateStreamLinkInputOutcome CreateStreamLinkInput(const Model::CreateStreamLinkInputRequest &request);
+                void CreateStreamLinkInputAsync(const Model::CreateStreamLinkInputRequest& request, const CreateStreamLinkInputAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateStreamLinkInputOutcomeCallable CreateStreamLinkInputCallable(const Model::CreateStreamLinkInputRequest& request);
 
                 /**
                  *This API is used to create a StreamLink output.

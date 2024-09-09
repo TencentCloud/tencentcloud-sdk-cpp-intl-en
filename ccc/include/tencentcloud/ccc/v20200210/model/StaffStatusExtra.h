@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Supplementary agent status information.
+                * Supplementary Information on Agent Status
                 */
                 class StaffStatusExtra : public AbstractModel
                 {

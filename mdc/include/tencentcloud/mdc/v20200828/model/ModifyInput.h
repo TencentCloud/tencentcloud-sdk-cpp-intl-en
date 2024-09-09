@@ -233,15 +233,15 @@ If there is an SRT input, the output must be SRT.
                     bool FailOverHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RTMPPullSettings 
+                     * 获取Configuration information for RTMP_PULL.
+                     * @return RTMPPullSettings Configuration information for RTMP_PULL.
                      * 
                      */
                     CreateInputRTMPPullSettings GetRTMPPullSettings() const;
 
                     /**
-                     * 设置
-                     * @param _rTMPPullSettings 
+                     * 设置Configuration information for RTMP_PULL.
+                     * @param _rTMPPullSettings Configuration information for RTMP_PULL.
                      * 
                      */
                     void SetRTMPPullSettings(const CreateInputRTMPPullSettings& _rTMPPullSettings);
@@ -254,15 +254,15 @@ If there is an SRT input, the output must be SRT.
                     bool RTMPPullSettingsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RTSPPullSettings 
+                     * 获取Configuration information of RTSP_PULL.
+                     * @return RTSPPullSettings Configuration information of RTSP_PULL.
                      * 
                      */
                     CreateInputRTSPPullSettings GetRTSPPullSettings() const;
 
                     /**
-                     * 设置
-                     * @param _rTSPPullSettings 
+                     * 设置Configuration information of RTSP_PULL.
+                     * @param _rTSPPullSettings Configuration information of RTSP_PULL.
                      * 
                      */
                     void SetRTSPPullSettings(const CreateInputRTSPPullSettings& _rTSPPullSettings);
@@ -275,15 +275,15 @@ If there is an SRT input, the output must be SRT.
                     bool RTSPPullSettingsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HLSPullSettings 
+                     * 获取HLS_PULL configuration information.
+                     * @return HLSPullSettings HLS_PULL configuration information.
                      * 
                      */
                     CreateInputHLSPullSettings GetHLSPullSettings() const;
 
                     /**
-                     * 设置
-                     * @param _hLSPullSettings 
+                     * 设置HLS_PULL configuration information.
+                     * @param _hLSPullSettings HLS_PULL configuration information.
                      * 
                      */
                     void SetHLSPullSettings(const CreateInputHLSPullSettings& _hLSPullSettings);
@@ -296,15 +296,15 @@ If there is an SRT input, the output must be SRT.
                     bool HLSPullSettingsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ResilientStream 
+                     * 获取Delayed broadcast smooth streaming configuration information.
+                     * @return ResilientStream Delayed broadcast smooth streaming configuration information.
                      * 
                      */
                     ResilientStreamConf GetResilientStream() const;
 
                     /**
-                     * 设置
-                     * @param _resilientStream 
+                     * 设置Delayed broadcast smooth streaming configuration information.
+                     * @param _resilientStream Delayed broadcast smooth streaming configuration information.
                      * 
                      */
                     void SetResilientStream(const ResilientStreamConf& _resilientStream);
@@ -317,15 +317,15 @@ If there is an SRT input, the output must be SRT.
                     bool ResilientStreamHasBeenSet() const;
 
                     /**
-                     * 获取The bound security group IDs. 
-                     * @return SecurityGroupIds The bound security group IDs. 
+                     * 获取The ID of the input security group to bind. Only one security group can be associated.
+                     * @return SecurityGroupIds The ID of the input security group to bind. Only one security group can be associated.
                      * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
-                     * 设置The bound security group IDs. 
-                     * @param _securityGroupIds The bound security group IDs. 
+                     * 设置The ID of the input security group to bind. Only one security group can be associated.
+                     * @param _securityGroupIds The ID of the input security group to bind. Only one security group can be associated.
                      * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
@@ -336,6 +336,27 @@ If there is an SRT input, the output must be SRT.
                      * 
                      */
                     bool SecurityGroupIdsHasBeenSet() const;
+
+                    /**
+                     * 获取Availability zone, optional, supports up to two availability zones. For interfaces that need to be changed, the second availability zone will participate in resource allocation. This is effective if disaster recovery is enabled for input or RTSP_PULL protocol switching is involved (addresses will be reallocated).
+                     * @return Zones Availability zone, optional, supports up to two availability zones. For interfaces that need to be changed, the second availability zone will participate in resource allocation. This is effective if disaster recovery is enabled for input or RTSP_PULL protocol switching is involved (addresses will be reallocated).
+                     * 
+                     */
+                    std::vector<std::string> GetZones() const;
+
+                    /**
+                     * 设置Availability zone, optional, supports up to two availability zones. For interfaces that need to be changed, the second availability zone will participate in resource allocation. This is effective if disaster recovery is enabled for input or RTSP_PULL protocol switching is involved (addresses will be reallocated).
+                     * @param _zones Availability zone, optional, supports up to two availability zones. For interfaces that need to be changed, the second availability zone will participate in resource allocation. This is effective if disaster recovery is enabled for input or RTSP_PULL protocol switching is involved (addresses will be reallocated).
+                     * 
+                     */
+                    void SetZones(const std::vector<std::string>& _zones);
+
+                    /**
+                     * 判断参数 Zones 是否已赋值
+                     * @return Zones 是否已赋值
+                     * 
+                     */
+                    bool ZonesHasBeenSet() const;
 
                 private:
 
@@ -391,34 +412,40 @@ If there is an SRT input, the output must be SRT.
                     bool m_failOverHasBeenSet;
 
                     /**
-                     * 
+                     * Configuration information for RTMP_PULL.
                      */
                     CreateInputRTMPPullSettings m_rTMPPullSettings;
                     bool m_rTMPPullSettingsHasBeenSet;
 
                     /**
-                     * 
+                     * Configuration information of RTSP_PULL.
                      */
                     CreateInputRTSPPullSettings m_rTSPPullSettings;
                     bool m_rTSPPullSettingsHasBeenSet;
 
                     /**
-                     * 
+                     * HLS_PULL configuration information.
                      */
                     CreateInputHLSPullSettings m_hLSPullSettings;
                     bool m_hLSPullSettingsHasBeenSet;
 
                     /**
-                     * 
+                     * Delayed broadcast smooth streaming configuration information.
                      */
                     ResilientStreamConf m_resilientStream;
                     bool m_resilientStreamHasBeenSet;
 
                     /**
-                     * The bound security group IDs. 
+                     * The ID of the input security group to bind. Only one security group can be associated.
                      */
                     std::vector<std::string> m_securityGroupIds;
                     bool m_securityGroupIdsHasBeenSet;
+
+                    /**
+                     * Availability zone, optional, supports up to two availability zones. For interfaces that need to be changed, the second availability zone will participate in resource allocation. This is effective if disaster recovery is enabled for input or RTSP_PULL protocol switching is involved (addresses will be reallocated).
+                     */
+                    std::vector<std::string> m_zones;
+                    bool m_zonesHasBeenSet;
 
                 };
             }

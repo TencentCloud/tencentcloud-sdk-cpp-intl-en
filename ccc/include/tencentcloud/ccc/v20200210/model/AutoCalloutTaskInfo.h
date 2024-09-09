@@ -177,15 +177,35 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool IvrIdHasBeenSet() const;
 
                     /**
-                     * 获取Task status: 0 - initial, 1 - running, 2 - completed, 3 - ending, 4 - closed.
-                     * @return State Task status: 0 - initial, 1 - running, 2 - completed, 3 - ending, 4 - closed.
+                     * 获取Task status:
+0 Initial: Task created, calling not started
+1 Running
+2  Completed: All calls in the task are completed
+3 Ending: The task is due, but some calls are still not finished
+4 Ended: Task terminated due to expiration
+                     * @return State Task status:
+0 Initial: Task created, calling not started
+1 Running
+2  Completed: All calls in the task are completed
+3 Ending: The task is due, but some calls are still not finished
+4 Ended: Task terminated due to expiration
                      * 
                      */
                     uint64_t GetState() const;
 
                     /**
-                     * 设置Task status: 0 - initial, 1 - running, 2 - completed, 3 - ending, 4 - closed.
-                     * @param _state Task status: 0 - initial, 1 - running, 2 - completed, 3 - ending, 4 - closed.
+                     * 设置Task status:
+0 Initial: Task created, calling not started
+1 Running
+2  Completed: All calls in the task are completed
+3 Ending: The task is due, but some calls are still not finished
+4 Ended: Task terminated due to expiration
+                     * @param _state Task status:
+0 Initial: Task created, calling not started
+1 Running
+2  Completed: All calls in the task are completed
+3 Ending: The task is due, but some calls are still not finished
+4 Ended: Task terminated due to expiration
                      * 
                      */
                     void SetState(const uint64_t& _state);
@@ -258,7 +278,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_ivrIdHasBeenSet;
 
                     /**
-                     * Task status: 0 - initial, 1 - running, 2 - completed, 3 - ending, 4 - closed.
+                     * Task status:
+0 Initial: Task created, calling not started
+1 Running
+2  Completed: All calls in the task are completed
+3 Ending: The task is due, but some calls are still not finished
+4 Ended: Task terminated due to expiration
                      */
                     uint64_t m_state;
                     bool m_stateHasBeenSet;

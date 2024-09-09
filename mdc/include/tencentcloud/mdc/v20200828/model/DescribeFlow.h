@@ -178,6 +178,27 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool OutputGroupHasBeenSet() const;
 
+                    /**
+                     * 获取EventId of the StreamLink event associated with this Flow.
+                     * @return EventId EventId of the StreamLink event associated with this Flow.
+                     * 
+                     */
+                    std::string GetEventId() const;
+
+                    /**
+                     * 设置EventId of the StreamLink event associated with this Flow.
+                     * @param _eventId EventId of the StreamLink event associated with this Flow.
+                     * 
+                     */
+                    void SetEventId(const std::string& _eventId);
+
+                    /**
+                     * 判断参数 EventId 是否已赋值
+                     * @return EventId 是否已赋值
+                     * 
+                     */
+                    bool EventIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -216,6 +237,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<DescribeOutput> m_outputGroup;
                     bool m_outputGroupHasBeenSet;
+
+                    /**
+                     * EventId of the StreamLink event associated with this Flow.
+                     */
+                    std::string m_eventId;
+                    bool m_eventIdHasBeenSet;
 
                 };
             }

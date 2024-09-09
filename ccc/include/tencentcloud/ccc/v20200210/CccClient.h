@@ -23,6 +23,8 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
+#include <tencentcloud/ccc/v20200210/model/AbortAgentCruiseDialingCampaignRequest.h>
+#include <tencentcloud/ccc/v20200210/model/AbortAgentCruiseDialingCampaignResponse.h>
 #include <tencentcloud/ccc/v20200210/model/AbortPredictiveDialingCampaignRequest.h>
 #include <tencentcloud/ccc/v20200210/model/AbortPredictiveDialingCampaignResponse.h>
 #include <tencentcloud/ccc/v20200210/model/BindNumberCallOutSkillGroupRequest.h>
@@ -31,6 +33,8 @@
 #include <tencentcloud/ccc/v20200210/model/BindStaffSkillGroupListResponse.h>
 #include <tencentcloud/ccc/v20200210/model/CreateAdminURLRequest.h>
 #include <tencentcloud/ccc/v20200210/model/CreateAdminURLResponse.h>
+#include <tencentcloud/ccc/v20200210/model/CreateAgentCruiseDialingCampaignRequest.h>
+#include <tencentcloud/ccc/v20200210/model/CreateAgentCruiseDialingCampaignResponse.h>
 #include <tencentcloud/ccc/v20200210/model/CreateAutoCalloutTaskRequest.h>
 #include <tencentcloud/ccc/v20200210/model/CreateAutoCalloutTaskResponse.h>
 #include <tencentcloud/ccc/v20200210/model/CreateCCCSkillGroupRequest.h>
@@ -39,6 +43,8 @@
 #include <tencentcloud/ccc/v20200210/model/CreateCallOutSessionResponse.h>
 #include <tencentcloud/ccc/v20200210/model/CreateExtensionRequest.h>
 #include <tencentcloud/ccc/v20200210/model/CreateExtensionResponse.h>
+#include <tencentcloud/ccc/v20200210/model/CreateIVRSessionRequest.h>
+#include <tencentcloud/ccc/v20200210/model/CreateIVRSessionResponse.h>
 #include <tencentcloud/ccc/v20200210/model/CreatePredictiveDialingCampaignRequest.h>
 #include <tencentcloud/ccc/v20200210/model/CreatePredictiveDialingCampaignResponse.h>
 #include <tencentcloud/ccc/v20200210/model/CreateSDKLoginTokenRequest.h>
@@ -51,6 +57,8 @@
 #include <tencentcloud/ccc/v20200210/model/DeletePredictiveDialingCampaignResponse.h>
 #include <tencentcloud/ccc/v20200210/model/DeleteStaffRequest.h>
 #include <tencentcloud/ccc/v20200210/model/DeleteStaffResponse.h>
+#include <tencentcloud/ccc/v20200210/model/DescribeAgentCruiseDialingCampaignRequest.h>
+#include <tencentcloud/ccc/v20200210/model/DescribeAgentCruiseDialingCampaignResponse.h>
 #include <tencentcloud/ccc/v20200210/model/DescribeAutoCalloutTaskRequest.h>
 #include <tencentcloud/ccc/v20200210/model/DescribeAutoCalloutTaskResponse.h>
 #include <tencentcloud/ccc/v20200210/model/DescribeAutoCalloutTasksRequest.h>
@@ -63,6 +71,8 @@
 #include <tencentcloud/ccc/v20200210/model/DescribeExtensionResponse.h>
 #include <tencentcloud/ccc/v20200210/model/DescribeExtensionsRequest.h>
 #include <tencentcloud/ccc/v20200210/model/DescribeExtensionsResponse.h>
+#include <tencentcloud/ccc/v20200210/model/DescribeIvrAudioListRequest.h>
+#include <tencentcloud/ccc/v20200210/model/DescribeIvrAudioListResponse.h>
 #include <tencentcloud/ccc/v20200210/model/DescribeNumbersRequest.h>
 #include <tencentcloud/ccc/v20200210/model/DescribeNumbersResponse.h>
 #include <tencentcloud/ccc/v20200210/model/DescribePSTNActiveSessionListRequest.h>
@@ -95,6 +105,8 @@
 #include <tencentcloud/ccc/v20200210/model/ModifyExtensionResponse.h>
 #include <tencentcloud/ccc/v20200210/model/ModifyStaffRequest.h>
 #include <tencentcloud/ccc/v20200210/model/ModifyStaffResponse.h>
+#include <tencentcloud/ccc/v20200210/model/ModifyStaffPasswordRequest.h>
+#include <tencentcloud/ccc/v20200210/model/ModifyStaffPasswordResponse.h>
 #include <tencentcloud/ccc/v20200210/model/PausePredictiveDialingCampaignRequest.h>
 #include <tencentcloud/ccc/v20200210/model/PausePredictiveDialingCampaignResponse.h>
 #include <tencentcloud/ccc/v20200210/model/ResetExtensionPasswordRequest.h>
@@ -111,6 +123,8 @@
 #include <tencentcloud/ccc/v20200210/model/UpdateCCCSkillGroupResponse.h>
 #include <tencentcloud/ccc/v20200210/model/UpdatePredictiveDialingCampaignRequest.h>
 #include <tencentcloud/ccc/v20200210/model/UpdatePredictiveDialingCampaignResponse.h>
+#include <tencentcloud/ccc/v20200210/model/UploadIvrAudioRequest.h>
+#include <tencentcloud/ccc/v20200210/model/UploadIvrAudioResponse.h>
 
 
 namespace TencentCloud
@@ -125,6 +139,9 @@ namespace TencentCloud
                 CccClient(const Credential &credential, const std::string &region);
                 CccClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
+                typedef Outcome<Core::Error, Model::AbortAgentCruiseDialingCampaignResponse> AbortAgentCruiseDialingCampaignOutcome;
+                typedef std::future<AbortAgentCruiseDialingCampaignOutcome> AbortAgentCruiseDialingCampaignOutcomeCallable;
+                typedef std::function<void(const CccClient*, const Model::AbortAgentCruiseDialingCampaignRequest&, AbortAgentCruiseDialingCampaignOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AbortAgentCruiseDialingCampaignAsyncHandler;
                 typedef Outcome<Core::Error, Model::AbortPredictiveDialingCampaignResponse> AbortPredictiveDialingCampaignOutcome;
                 typedef std::future<AbortPredictiveDialingCampaignOutcome> AbortPredictiveDialingCampaignOutcomeCallable;
                 typedef std::function<void(const CccClient*, const Model::AbortPredictiveDialingCampaignRequest&, AbortPredictiveDialingCampaignOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AbortPredictiveDialingCampaignAsyncHandler;
@@ -137,6 +154,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateAdminURLResponse> CreateAdminURLOutcome;
                 typedef std::future<CreateAdminURLOutcome> CreateAdminURLOutcomeCallable;
                 typedef std::function<void(const CccClient*, const Model::CreateAdminURLRequest&, CreateAdminURLOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAdminURLAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateAgentCruiseDialingCampaignResponse> CreateAgentCruiseDialingCampaignOutcome;
+                typedef std::future<CreateAgentCruiseDialingCampaignOutcome> CreateAgentCruiseDialingCampaignOutcomeCallable;
+                typedef std::function<void(const CccClient*, const Model::CreateAgentCruiseDialingCampaignRequest&, CreateAgentCruiseDialingCampaignOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAgentCruiseDialingCampaignAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateAutoCalloutTaskResponse> CreateAutoCalloutTaskOutcome;
                 typedef std::future<CreateAutoCalloutTaskOutcome> CreateAutoCalloutTaskOutcomeCallable;
                 typedef std::function<void(const CccClient*, const Model::CreateAutoCalloutTaskRequest&, CreateAutoCalloutTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAutoCalloutTaskAsyncHandler;
@@ -149,6 +169,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateExtensionResponse> CreateExtensionOutcome;
                 typedef std::future<CreateExtensionOutcome> CreateExtensionOutcomeCallable;
                 typedef std::function<void(const CccClient*, const Model::CreateExtensionRequest&, CreateExtensionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateExtensionAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateIVRSessionResponse> CreateIVRSessionOutcome;
+                typedef std::future<CreateIVRSessionOutcome> CreateIVRSessionOutcomeCallable;
+                typedef std::function<void(const CccClient*, const Model::CreateIVRSessionRequest&, CreateIVRSessionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateIVRSessionAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreatePredictiveDialingCampaignResponse> CreatePredictiveDialingCampaignOutcome;
                 typedef std::future<CreatePredictiveDialingCampaignOutcome> CreatePredictiveDialingCampaignOutcomeCallable;
                 typedef std::function<void(const CccClient*, const Model::CreatePredictiveDialingCampaignRequest&, CreatePredictiveDialingCampaignOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreatePredictiveDialingCampaignAsyncHandler;
@@ -167,6 +190,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteStaffResponse> DeleteStaffOutcome;
                 typedef std::future<DeleteStaffOutcome> DeleteStaffOutcomeCallable;
                 typedef std::function<void(const CccClient*, const Model::DeleteStaffRequest&, DeleteStaffOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteStaffAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAgentCruiseDialingCampaignResponse> DescribeAgentCruiseDialingCampaignOutcome;
+                typedef std::future<DescribeAgentCruiseDialingCampaignOutcome> DescribeAgentCruiseDialingCampaignOutcomeCallable;
+                typedef std::function<void(const CccClient*, const Model::DescribeAgentCruiseDialingCampaignRequest&, DescribeAgentCruiseDialingCampaignOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAgentCruiseDialingCampaignAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAutoCalloutTaskResponse> DescribeAutoCalloutTaskOutcome;
                 typedef std::future<DescribeAutoCalloutTaskOutcome> DescribeAutoCalloutTaskOutcomeCallable;
                 typedef std::function<void(const CccClient*, const Model::DescribeAutoCalloutTaskRequest&, DescribeAutoCalloutTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAutoCalloutTaskAsyncHandler;
@@ -185,6 +211,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeExtensionsResponse> DescribeExtensionsOutcome;
                 typedef std::future<DescribeExtensionsOutcome> DescribeExtensionsOutcomeCallable;
                 typedef std::function<void(const CccClient*, const Model::DescribeExtensionsRequest&, DescribeExtensionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeExtensionsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeIvrAudioListResponse> DescribeIvrAudioListOutcome;
+                typedef std::future<DescribeIvrAudioListOutcome> DescribeIvrAudioListOutcomeCallable;
+                typedef std::function<void(const CccClient*, const Model::DescribeIvrAudioListRequest&, DescribeIvrAudioListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeIvrAudioListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeNumbersResponse> DescribeNumbersOutcome;
                 typedef std::future<DescribeNumbersOutcome> DescribeNumbersOutcomeCallable;
                 typedef std::function<void(const CccClient*, const Model::DescribeNumbersRequest&, DescribeNumbersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeNumbersAsyncHandler;
@@ -233,6 +262,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyStaffResponse> ModifyStaffOutcome;
                 typedef std::future<ModifyStaffOutcome> ModifyStaffOutcomeCallable;
                 typedef std::function<void(const CccClient*, const Model::ModifyStaffRequest&, ModifyStaffOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyStaffAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyStaffPasswordResponse> ModifyStaffPasswordOutcome;
+                typedef std::future<ModifyStaffPasswordOutcome> ModifyStaffPasswordOutcomeCallable;
+                typedef std::function<void(const CccClient*, const Model::ModifyStaffPasswordRequest&, ModifyStaffPasswordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyStaffPasswordAsyncHandler;
                 typedef Outcome<Core::Error, Model::PausePredictiveDialingCampaignResponse> PausePredictiveDialingCampaignOutcome;
                 typedef std::future<PausePredictiveDialingCampaignOutcome> PausePredictiveDialingCampaignOutcomeCallable;
                 typedef std::function<void(const CccClient*, const Model::PausePredictiveDialingCampaignRequest&, PausePredictiveDialingCampaignOutcome, const std::shared_ptr<const AsyncCallerContext>&)> PausePredictiveDialingCampaignAsyncHandler;
@@ -257,11 +289,23 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::UpdatePredictiveDialingCampaignResponse> UpdatePredictiveDialingCampaignOutcome;
                 typedef std::future<UpdatePredictiveDialingCampaignOutcome> UpdatePredictiveDialingCampaignOutcomeCallable;
                 typedef std::function<void(const CccClient*, const Model::UpdatePredictiveDialingCampaignRequest&, UpdatePredictiveDialingCampaignOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdatePredictiveDialingCampaignAsyncHandler;
+                typedef Outcome<Core::Error, Model::UploadIvrAudioResponse> UploadIvrAudioOutcome;
+                typedef std::future<UploadIvrAudioOutcome> UploadIvrAudioOutcomeCallable;
+                typedef std::function<void(const CccClient*, const Model::UploadIvrAudioRequest&, UploadIvrAudioOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UploadIvrAudioAsyncHandler;
 
 
 
                 /**
-                 *This API is used to pause the predictive outbound call task.
+                 *If you want to stop running agent's individual auto task, then call AbortAgentCruiseDialingCampaign to terminate.
+                 * @param req AbortAgentCruiseDialingCampaignRequest
+                 * @return AbortAgentCruiseDialingCampaignOutcome
+                 */
+                AbortAgentCruiseDialingCampaignOutcome AbortAgentCruiseDialingCampaign(const Model::AbortAgentCruiseDialingCampaignRequest &request);
+                void AbortAgentCruiseDialingCampaignAsync(const Model::AbortAgentCruiseDialingCampaignRequest& request, const AbortAgentCruiseDialingCampaignAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AbortAgentCruiseDialingCampaignOutcomeCallable AbortAgentCruiseDialingCampaignCallable(const Model::AbortAgentCruiseDialingCampaignRequest& request);
+
+                /**
+                 *This API is used to pause predictive dialing campaign
                  * @param req AbortPredictiveDialingCampaignRequest
                  * @return AbortPredictiveDialingCampaignOutcome
                  */
@@ -270,7 +314,7 @@ namespace TencentCloud
                 AbortPredictiveDialingCampaignOutcomeCallable AbortPredictiveDialingCampaignCallable(const Model::AbortPredictiveDialingCampaignRequest& request);
 
                 /**
-                 *This API is used to bind outbound skill group of number.
+                 *This API is used to assign outbound skill group(s) to your number
                  * @param req BindNumberCallOutSkillGroupRequest
                  * @return BindNumberCallOutSkillGroupOutcome
                  */
@@ -279,7 +323,7 @@ namespace TencentCloud
                 BindNumberCallOutSkillGroupOutcomeCallable BindNumberCallOutSkillGroupCallable(const Model::BindNumberCallOutSkillGroupRequest& request);
 
                 /**
-                 *This API is used to bind the agent's skill group.
+                 *This API is used to assign an agent to skill group
                  * @param req BindStaffSkillGroupListRequest
                  * @return BindStaffSkillGroupListOutcome
                  */
@@ -295,6 +339,15 @@ namespace TencentCloud
                 CreateAdminURLOutcome CreateAdminURL(const Model::CreateAdminURLRequest &request);
                 void CreateAdminURLAsync(const Model::CreateAdminURLRequest& request, const CreateAdminURLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateAdminURLOutcomeCallable CreateAdminURLCallable(const Model::CreateAdminURLRequest& request);
+
+                /**
+                 *This document shows how to call API to create an individual auto dialing campaign for agent
+                 * @param req CreateAgentCruiseDialingCampaignRequest
+                 * @return CreateAgentCruiseDialingCampaignOutcome
+                 */
+                CreateAgentCruiseDialingCampaignOutcome CreateAgentCruiseDialingCampaign(const Model::CreateAgentCruiseDialingCampaignRequest &request);
+                void CreateAgentCruiseDialingCampaignAsync(const Model::CreateAgentCruiseDialingCampaignRequest& request, const CreateAgentCruiseDialingCampaignAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateAgentCruiseDialingCampaignOutcomeCallable CreateAgentCruiseDialingCampaignCallable(const Model::CreateAgentCruiseDialingCampaignRequest& request);
 
                 /**
                  *This API is used to create the automatic outbound call task.
@@ -331,6 +384,15 @@ namespace TencentCloud
                 CreateExtensionOutcome CreateExtension(const Model::CreateExtensionRequest &request);
                 void CreateExtensionAsync(const Model::CreateExtensionRequest& request, const CreateExtensionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateExtensionOutcomeCallable CreateExtensionCallable(const Model::CreateExtensionRequest& request);
+
+                /**
+                 *Create a session associated with IVR. This feature is supported only in the Advanced Version. Currently, it supports inbound and automatic outbound IVR types. Upon receiving the request, TCCC will first attempt to call the callee, then enter the IVR flow.
+                 * @param req CreateIVRSessionRequest
+                 * @return CreateIVRSessionOutcome
+                 */
+                CreateIVRSessionOutcome CreateIVRSession(const Model::CreateIVRSessionRequest &request);
+                void CreateIVRSessionAsync(const Model::CreateIVRSessionRequest& request, const CreateIVRSessionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateIVRSessionOutcomeCallable CreateIVRSessionCallable(const Model::CreateIVRSessionRequest& request);
 
                 /**
                  *This API is used to create the predictive outbound call task.
@@ -387,6 +449,15 @@ namespace TencentCloud
                 DeleteStaffOutcomeCallable DeleteStaffCallable(const Model::DeleteStaffRequest& request);
 
                 /**
+                 *Query Agent Cruise-style Outbound Call Task
+                 * @param req DescribeAgentCruiseDialingCampaignRequest
+                 * @return DescribeAgentCruiseDialingCampaignOutcome
+                 */
+                DescribeAgentCruiseDialingCampaignOutcome DescribeAgentCruiseDialingCampaign(const Model::DescribeAgentCruiseDialingCampaignRequest &request);
+                void DescribeAgentCruiseDialingCampaignAsync(const Model::DescribeAgentCruiseDialingCampaignRequest& request, const DescribeAgentCruiseDialingCampaignAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAgentCruiseDialingCampaignOutcomeCallable DescribeAgentCruiseDialingCampaignCallable(const Model::DescribeAgentCruiseDialingCampaignRequest& request);
+
+                /**
                  *This API is used to query automatic outbound call task details.
                  * @param req DescribeAutoCalloutTaskRequest
                  * @return DescribeAutoCalloutTaskOutcome
@@ -396,7 +467,7 @@ namespace TencentCloud
                 DescribeAutoCalloutTaskOutcomeCallable DescribeAutoCalloutTaskCallable(const Model::DescribeAutoCalloutTaskRequest& request);
 
                 /**
-                 *This API is used to query auto-task outbound calls in batch.
+                 *Batch Query Automatic Outbound Call Tasks
                  * @param req DescribeAutoCalloutTasksRequest
                  * @return DescribeAutoCalloutTasksOutcome
                  */
@@ -439,6 +510,15 @@ namespace TencentCloud
                 DescribeExtensionsOutcome DescribeExtensions(const Model::DescribeExtensionsRequest &request);
                 void DescribeExtensionsAsync(const Model::DescribeExtensionsRequest& request, const DescribeExtensionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeExtensionsOutcomeCallable DescribeExtensionsCallable(const Model::DescribeExtensionsRequest& request);
+
+                /**
+                 *Query IVR Audio File List Information
+                 * @param req DescribeIvrAudioListRequest
+                 * @return DescribeIvrAudioListOutcome
+                 */
+                DescribeIvrAudioListOutcome DescribeIvrAudioList(const Model::DescribeIvrAudioListRequest &request);
+                void DescribeIvrAudioListAsync(const Model::DescribeIvrAudioListRequest& request, const DescribeIvrAudioListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeIvrAudioListOutcomeCallable DescribeIvrAudioListCallable(const Model::DescribeIvrAudioListRequest& request);
 
                 /**
                  *This API is used to query the number list.
@@ -522,7 +602,7 @@ namespace TencentCloud
                 DescribeStaffStatusMetricsOutcomeCallable DescribeStaffStatusMetricsCallable(const Model::DescribeStaffStatusMetricsRequest& request);
 
                 /**
-                 *This API is used to access telephone consumption statistics by instance.
+                 *This API is used to access call detail records by application
                  * @param req DescribeTelCallInfoRequest
                  * @return DescribeTelCallInfoOutcome
                  */
@@ -576,13 +656,22 @@ namespace TencentCloud
                 ModifyExtensionOutcomeCallable ModifyExtensionCallable(const Model::ModifyExtensionRequest& request);
 
                 /**
-                 *This API is used to modify the customer service account.
+                 *This API is used to modify  customer service / agent account.
                  * @param req ModifyStaffRequest
                  * @return ModifyStaffOutcome
                  */
                 ModifyStaffOutcome ModifyStaff(const Model::ModifyStaffRequest &request);
                 void ModifyStaffAsync(const Model::ModifyStaffRequest& request, const ModifyStaffAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyStaffOutcomeCallable ModifyStaffCallable(const Model::ModifyStaffRequest& request);
+
+                /**
+                 *Modify Agent's Password
+                 * @param req ModifyStaffPasswordRequest
+                 * @return ModifyStaffPasswordOutcome
+                 */
+                ModifyStaffPasswordOutcome ModifyStaffPassword(const Model::ModifyStaffPasswordRequest &request);
+                void ModifyStaffPasswordAsync(const Model::ModifyStaffPasswordRequest& request, const ModifyStaffPasswordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyStaffPasswordOutcomeCallable ModifyStaffPasswordCallable(const Model::ModifyStaffPasswordRequest& request);
 
                 /**
                  *This API is used to pause the predictive outbound call task.
@@ -655,6 +744,15 @@ namespace TencentCloud
                 UpdatePredictiveDialingCampaignOutcome UpdatePredictiveDialingCampaign(const Model::UpdatePredictiveDialingCampaignRequest &request);
                 void UpdatePredictiveDialingCampaignAsync(const Model::UpdatePredictiveDialingCampaignRequest& request, const UpdatePredictiveDialingCampaignAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 UpdatePredictiveDialingCampaignOutcomeCallable UpdatePredictiveDialingCampaignCallable(const Model::UpdatePredictiveDialingCampaignRequest& request);
+
+                /**
+                 *Upload audio files used in IVR, with a daily upload limit of 50 files. (It is recommended to use temporary links stored in Tencent Cloud Cos for the audio file URL in the parameters)
+                 * @param req UploadIvrAudioRequest
+                 * @return UploadIvrAudioOutcome
+                 */
+                UploadIvrAudioOutcome UploadIvrAudio(const Model::UploadIvrAudioRequest &request);
+                void UploadIvrAudioAsync(const Model::UploadIvrAudioRequest& request, const UploadIvrAudioAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UploadIvrAudioOutcomeCallable UploadIvrAudioCallable(const Model::UploadIvrAudioRequest& request);
 
             };
         }

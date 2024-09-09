@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取The name of the database where the table belongs needs to be deleted
-                     * @return DbName The name of the database where the table belongs needs to be deleted
+                     * 获取The name of the database where the table belongs needs to be deleted.
+                     * @return DbName The name of the database where the table belongs needs to be deleted.
                      * 
                      */
                     std::string GetDbName() const;
 
                     /**
-                     * 设置The name of the database where the table belongs needs to be deleted
-                     * @param _dbName The name of the database where the table belongs needs to be deleted
+                     * 设置The name of the database where the table belongs needs to be deleted.
+                     * @param _dbName The name of the database where the table belongs needs to be deleted.
                      * 
                      */
                     void SetDbName(const std::string& _dbName);
@@ -177,7 +177,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * The name of the database where the table belongs needs to be deleted
+                     * The name of the database where the table belongs needs to be deleted.
                      */
                     std::string m_dbName;
                     bool m_dbNameHasBeenSet;

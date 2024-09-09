@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool StaffEmailHasBeenSet() const;
 
                     /**
-                     * 获取Agent work number.
-                     * @return StaffNumber Agent work number.
+                     * 获取Agent ID
+                     * @return StaffNumber Agent ID
                      * 
                      */
                     std::string GetStaffNumber() const;
 
                     /**
-                     * 设置Agent work number.
-                     * @param _staffNumber Agent work number.
+                     * 设置Agent ID
+                     * @param _staffNumber Agent ID
                      * 
                      */
                     void SetStaffNumber(const std::string& _staffNumber);
@@ -236,30 +236,30 @@ namespace TencentCloud
                     bool StaffNumberHasBeenSet() const;
 
                     /**
-                     * 获取Session state.
-ringing - In progress.
-seatJoining - Waiting for agent to receive call.
-InProgress - Ongoing.
+                     * 获取Session Status
+ringing Ringing
+seatJoining  waiting for the agent to answer
+inProgress  Ongoing
 finished - Completed.
-                     * @return SessionStatus Session state.
-ringing - In progress.
-seatJoining - Waiting for agent to receive call.
-InProgress - Ongoing.
+                     * @return SessionStatus Session Status
+ringing Ringing
+seatJoining  waiting for the agent to answer
+inProgress  Ongoing
 finished - Completed.
                      * 
                      */
                     std::string GetSessionStatus() const;
 
                     /**
-                     * 设置Session state.
-ringing - In progress.
-seatJoining - Waiting for agent to receive call.
-InProgress - Ongoing.
+                     * 设置Session Status
+ringing Ringing
+seatJoining  waiting for the agent to answer
+inProgress  Ongoing
 finished - Completed.
-                     * @param _sessionStatus Session state.
-ringing - In progress.
-seatJoining - Waiting for agent to receive call.
-InProgress - Ongoing.
+                     * @param _sessionStatus Session Status
+ringing Ringing
+seatJoining  waiting for the agent to answer
+inProgress  Ongoing
 finished - Completed.
                      * 
                      */
@@ -428,16 +428,16 @@ finished - Completed.
                     bool m_staffEmailHasBeenSet;
 
                     /**
-                     * Agent work number.
+                     * Agent ID
                      */
                     std::string m_staffNumber;
                     bool m_staffNumberHasBeenSet;
 
                     /**
-                     * Session state.
-ringing - In progress.
-seatJoining - Waiting for agent to receive call.
-InProgress - Ongoing.
+                     * Session Status
+ringing Ringing
+seatJoining  waiting for the agent to answer
+inProgress  Ongoing
 finished - Completed.
                      */
                     std::string m_sessionStatus;

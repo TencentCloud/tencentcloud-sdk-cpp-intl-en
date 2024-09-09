@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Agent email address.
-                     * @return StaffEmail Agent email address.
+                     * 获取Agent Email Address
+                     * @return StaffEmail Agent Email Address
                      * 
                      */
                     std::string GetStaffEmail() const;
 
                     /**
-                     * 设置Agent email address.
-                     * @param _staffEmail Agent email address.
+                     * 设置Agent Email Address
+                     * @param _staffEmail Agent Email Address
                      * 
                      */
                     void SetStaffEmail(const std::string& _staffEmail);
@@ -112,7 +112,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Agent email address.
+                     * Agent Email Address
                      */
                     std::string m_staffEmail;
                     bool m_staffEmailHasBeenSet;

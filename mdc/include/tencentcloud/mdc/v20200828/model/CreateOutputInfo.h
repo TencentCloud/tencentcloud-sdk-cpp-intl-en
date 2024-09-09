@@ -197,19 +197,15 @@ namespace TencentCloud
                     bool RTPSettingsHasBeenSet() const;
 
                     /**
-                     * 获取The IP allowlist. The address must be in CIDR format, such as `0.0.0.0/0`.
-This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty, there is no restriction on clients’ IP addresses.
-                     * @return AllowIpList The IP allowlist. The address must be in CIDR format, such as `0.0.0.0/0`.
-This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty, there is no restriction on clients’ IP addresses.
+                     * 获取IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP.
+                     * @return AllowIpList IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP.
                      * 
                      */
                     std::vector<std::string> GetAllowIpList() const;
 
                     /**
-                     * 设置The IP allowlist. The address must be in CIDR format, such as `0.0.0.0/0`.
-This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty, there is no restriction on clients’ IP addresses.
-                     * @param _allowIpList The IP allowlist. The address must be in CIDR format, such as `0.0.0.0/0`.
-This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty, there is no restriction on clients’ IP addresses.
+                     * 设置IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP.
+                     * @param _allowIpList IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP.
                      * 
                      */
                     void SetAllowIpList(const std::vector<std::string>& _allowIpList);
@@ -222,15 +218,15 @@ This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty
                     bool AllowIpListHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MaxConcurrent 
+                     * 获取The maximum number of concurrent stream pulls is 4, and the default value is 4.
+                     * @return MaxConcurrent The maximum number of concurrent stream pulls is 4, and the default value is 4.
                      * 
                      */
                     uint64_t GetMaxConcurrent() const;
 
                     /**
-                     * 设置
-                     * @param _maxConcurrent 
+                     * 设置The maximum number of concurrent stream pulls is 4, and the default value is 4.
+                     * @param _maxConcurrent The maximum number of concurrent stream pulls is 4, and the default value is 4.
                      * 
                      */
                     void SetMaxConcurrent(const uint64_t& _maxConcurrent);
@@ -262,6 +258,27 @@ This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty
                      * 
                      */
                     bool SecurityGroupIdsHasBeenSet() const;
+
+                    /**
+                     * 获取Availability zone: output supports at most one availability zone as input.
+                     * @return Zones Availability zone: output supports at most one availability zone as input.
+                     * 
+                     */
+                    std::vector<std::string> GetZones() const;
+
+                    /**
+                     * 设置Availability zone: output supports at most one availability zone as input.
+                     * @param _zones Availability zone: output supports at most one availability zone as input.
+                     * 
+                     */
+                    void SetZones(const std::vector<std::string>& _zones);
+
+                    /**
+                     * 判断参数 Zones 是否已赋值
+                     * @return Zones 是否已赋值
+                     * 
+                     */
+                    bool ZonesHasBeenSet() const;
 
                 private:
 
@@ -308,14 +325,13 @@ This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty
                     bool m_rTPSettingsHasBeenSet;
 
                     /**
-                     * The IP allowlist. The address must be in CIDR format, such as `0.0.0.0/0`.
-This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty, there is no restriction on clients’ IP addresses.
+                     * IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP.
                      */
                     std::vector<std::string> m_allowIpList;
                     bool m_allowIpListHasBeenSet;
 
                     /**
-                     * 
+                     * The maximum number of concurrent stream pulls is 4, and the default value is 4.
                      */
                     uint64_t m_maxConcurrent;
                     bool m_maxConcurrentHasBeenSet;
@@ -325,6 +341,12 @@ This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty
                      */
                     std::vector<std::string> m_securityGroupIds;
                     bool m_securityGroupIdsHasBeenSet;
+
+                    /**
+                     * Availability zone: output supports at most one availability zone as input.
+                     */
+                    std::vector<std::string> m_zones;
+                    bool m_zonesHasBeenSet;
 
                 };
             }

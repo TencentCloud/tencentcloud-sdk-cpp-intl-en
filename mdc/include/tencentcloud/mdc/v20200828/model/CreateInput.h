@@ -74,15 +74,15 @@ namespace TencentCloud
                     bool InputNameHasBeenSet() const;
 
                     /**
-                     * 获取Input protocol. Valid values: `SRT`, `RTP`, `RTMP`
-                     * @return Protocol Input protocol. Valid values: `SRT`, `RTP`, `RTMP`
+                     * 获取Input protocol. Valid values: `SRT`, `RTP`, `RTMP`, `RTMP_PULL`, `RTSP_PULL `, `HLS_PULL`.
+                     * @return Protocol Input protocol. Valid values: `SRT`, `RTP`, `RTMP`, `RTMP_PULL`, `RTSP_PULL `, `HLS_PULL`.
                      * 
                      */
                     std::string GetProtocol() const;
 
                     /**
-                     * 设置Input protocol. Valid values: `SRT`, `RTP`, `RTMP`
-                     * @param _protocol Input protocol. Valid values: `SRT`, `RTP`, `RTMP`
+                     * 设置Input protocol. Valid values: `SRT`, `RTP`, `RTMP`, `RTMP_PULL`, `RTSP_PULL `, `HLS_PULL`.
+                     * @param _protocol Input protocol. Valid values: `SRT`, `RTP`, `RTMP`, `RTMP_PULL`, `RTSP_PULL `, `HLS_PULL`.
                      * 
                      */
                     void SetProtocol(const std::string& _protocol);
@@ -200,15 +200,15 @@ namespace TencentCloud
                     bool FailOverHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RTMPPullSettings 
+                     * 获取Input RTMP_PULL configuration information.
+                     * @return RTMPPullSettings Input RTMP_PULL configuration information.
                      * 
                      */
                     CreateInputRTMPPullSettings GetRTMPPullSettings() const;
 
                     /**
-                     * 设置
-                     * @param _rTMPPullSettings 
+                     * 设置Input RTMP_PULL configuration information.
+                     * @param _rTMPPullSettings Input RTMP_PULL configuration information.
                      * 
                      */
                     void SetRTMPPullSettings(const CreateInputRTMPPullSettings& _rTMPPullSettings);
@@ -221,15 +221,15 @@ namespace TencentCloud
                     bool RTMPPullSettingsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RTSPPullSettings 
+                     * 获取Input RTSP_PULL configuration information.
+                     * @return RTSPPullSettings Input RTSP_PULL configuration information.
                      * 
                      */
                     CreateInputRTSPPullSettings GetRTSPPullSettings() const;
 
                     /**
-                     * 设置
-                     * @param _rTSPPullSettings 
+                     * 设置Input RTSP_PULL configuration information.
+                     * @param _rTSPPullSettings Input RTSP_PULL configuration information.
                      * 
                      */
                     void SetRTSPPullSettings(const CreateInputRTSPPullSettings& _rTSPPullSettings);
@@ -242,15 +242,15 @@ namespace TencentCloud
                     bool RTSPPullSettingsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HLSPullSettings 
+                     * 获取Input HLS_PULL configuration information.
+                     * @return HLSPullSettings Input HLS_PULL configuration information.
                      * 
                      */
                     CreateInputHLSPullSettings GetHLSPullSettings() const;
 
                     /**
-                     * 设置
-                     * @param _hLSPullSettings 
+                     * 设置Input HLS_PULL configuration information.
+                     * @param _hLSPullSettings Input HLS_PULL configuration information.
                      * 
                      */
                     void SetHLSPullSettings(const CreateInputHLSPullSettings& _hLSPullSettings);
@@ -263,15 +263,15 @@ namespace TencentCloud
                     bool HLSPullSettingsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ResilientStream 
+                     * 获取Delayed broadcast smooth streaming configuration information.
+                     * @return ResilientStream Delayed broadcast smooth streaming configuration information.
                      * 
                      */
                     ResilientStreamConf GetResilientStream() const;
 
                     /**
-                     * 设置
-                     * @param _resilientStream 
+                     * 设置Delayed broadcast smooth streaming configuration information.
+                     * @param _resilientStream Delayed broadcast smooth streaming configuration information.
                      * 
                      */
                     void SetResilientStream(const ResilientStreamConf& _resilientStream);
@@ -304,6 +304,27 @@ namespace TencentCloud
                      */
                     bool SecurityGroupIdsHasBeenSet() const;
 
+                    /**
+                     * 获取Availability zone, optional. If disaster recovery is enabled, you must enter two different availability zones. Otherwise, you can only enter one availability zone at most.
+                     * @return Zones Availability zone, optional. If disaster recovery is enabled, you must enter two different availability zones. Otherwise, you can only enter one availability zone at most.
+                     * 
+                     */
+                    std::vector<std::string> GetZones() const;
+
+                    /**
+                     * 设置Availability zone, optional. If disaster recovery is enabled, you must enter two different availability zones. Otherwise, you can only enter one availability zone at most.
+                     * @param _zones Availability zone, optional. If disaster recovery is enabled, you must enter two different availability zones. Otherwise, you can only enter one availability zone at most.
+                     * 
+                     */
+                    void SetZones(const std::vector<std::string>& _zones);
+
+                    /**
+                     * 判断参数 Zones 是否已赋值
+                     * @return Zones 是否已赋值
+                     * 
+                     */
+                    bool ZonesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -313,7 +334,7 @@ namespace TencentCloud
                     bool m_inputNameHasBeenSet;
 
                     /**
-                     * Input protocol. Valid values: `SRT`, `RTP`, `RTMP`
+                     * Input protocol. Valid values: `SRT`, `RTP`, `RTMP`, `RTMP_PULL`, `RTSP_PULL `, `HLS_PULL`.
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;
@@ -349,25 +370,25 @@ namespace TencentCloud
                     bool m_failOverHasBeenSet;
 
                     /**
-                     * 
+                     * Input RTMP_PULL configuration information.
                      */
                     CreateInputRTMPPullSettings m_rTMPPullSettings;
                     bool m_rTMPPullSettingsHasBeenSet;
 
                     /**
-                     * 
+                     * Input RTSP_PULL configuration information.
                      */
                     CreateInputRTSPPullSettings m_rTSPPullSettings;
                     bool m_rTSPPullSettingsHasBeenSet;
 
                     /**
-                     * 
+                     * Input HLS_PULL configuration information.
                      */
                     CreateInputHLSPullSettings m_hLSPullSettings;
                     bool m_hLSPullSettingsHasBeenSet;
 
                     /**
-                     * 
+                     * Delayed broadcast smooth streaming configuration information.
                      */
                     ResilientStreamConf m_resilientStream;
                     bool m_resilientStreamHasBeenSet;
@@ -377,6 +398,12 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_securityGroupIds;
                     bool m_securityGroupIdsHasBeenSet;
+
+                    /**
+                     * Availability zone, optional. If disaster recovery is enabled, you must enter two different availability zones. Otherwise, you can only enter one availability zone at most.
+                     */
+                    std::vector<std::string> m_zones;
+                    bool m_zonesHasBeenSet;
 
                 };
             }
