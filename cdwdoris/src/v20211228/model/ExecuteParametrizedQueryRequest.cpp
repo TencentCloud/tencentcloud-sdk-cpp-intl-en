@@ -29,7 +29,9 @@ ExecuteParametrizedQueryRequest::ExecuteParametrizedQueryRequest() :
     m_pageNumHasBeenSet(false),
     m_pageSizeHasBeenSet(false),
     m_userNameHasBeenSet(false),
-    m_passWordHasBeenSet(false)
+    m_passWordHasBeenSet(false),
+    m_catalogNameHasBeenSet(false),
+    m_instanceIdHasBeenSet(false)
 {
 }
 
@@ -101,6 +103,22 @@ string ExecuteParametrizedQueryRequest::ToJsonString() const
         string key = "PassWord";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_passWord.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_catalogNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CatalogName";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_catalogName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_instanceIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -221,6 +239,38 @@ void ExecuteParametrizedQueryRequest::SetPassWord(const string& _passWord)
 bool ExecuteParametrizedQueryRequest::PassWordHasBeenSet() const
 {
     return m_passWordHasBeenSet;
+}
+
+string ExecuteParametrizedQueryRequest::GetCatalogName() const
+{
+    return m_catalogName;
+}
+
+void ExecuteParametrizedQueryRequest::SetCatalogName(const string& _catalogName)
+{
+    m_catalogName = _catalogName;
+    m_catalogNameHasBeenSet = true;
+}
+
+bool ExecuteParametrizedQueryRequest::CatalogNameHasBeenSet() const
+{
+    return m_catalogNameHasBeenSet;
+}
+
+string ExecuteParametrizedQueryRequest::GetInstanceId() const
+{
+    return m_instanceId;
+}
+
+void ExecuteParametrizedQueryRequest::SetInstanceId(const string& _instanceId)
+{
+    m_instanceId = _instanceId;
+    m_instanceIdHasBeenSet = true;
+}
+
+bool ExecuteParametrizedQueryRequest::InstanceIdHasBeenSet() const
+{
+    return m_instanceIdHasBeenSet;
 }
 
 

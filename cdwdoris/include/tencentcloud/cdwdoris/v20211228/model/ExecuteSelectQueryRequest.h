@@ -168,6 +168,52 @@ namespace TencentCloud
                      */
                     bool PassWordHasBeenSet() const;
 
+                    /**
+                     * 获取Catalog name, defaults to 'internal' if not specified.
+
+                     * @return CatalogName Catalog name, defaults to 'internal' if not specified.
+
+                     * 
+                     */
+                    std::string GetCatalogName() const;
+
+                    /**
+                     * 设置Catalog name, defaults to 'internal' if not specified.
+
+                     * @param _catalogName Catalog name, defaults to 'internal' if not specified.
+
+                     * 
+                     */
+                    void SetCatalogName(const std::string& _catalogName);
+
+                    /**
+                     * 判断参数 CatalogName 是否已赋值
+                     * @return CatalogName 是否已赋值
+                     * 
+                     */
+                    bool CatalogNameHasBeenSet() const;
+
+                    /**
+                     * 获取InstanceId
+                     * @return InstanceId InstanceId
+                     * 
+                     */
+                    std::string GetInstanceId() const;
+
+                    /**
+                     * 设置InstanceId
+                     * @param _instanceId InstanceId
+                     * 
+                     */
+                    void SetInstanceId(const std::string& _instanceId);
+
+                    /**
+                     * 判断参数 InstanceId 是否已赋值
+                     * @return InstanceId 是否已赋值
+                     * 
+                     */
+                    bool InstanceIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -205,6 +251,19 @@ namespace TencentCloud
                      */
                     std::string m_passWord;
                     bool m_passWordHasBeenSet;
+
+                    /**
+                     * Catalog name, defaults to 'internal' if not specified.
+
+                     */
+                    std::string m_catalogName;
+                    bool m_catalogNameHasBeenSet;
+
+                    /**
+                     * InstanceId
+                     */
+                    std::string m_instanceId;
+                    bool m_instanceIdHasBeenSet;
 
                 };
             }

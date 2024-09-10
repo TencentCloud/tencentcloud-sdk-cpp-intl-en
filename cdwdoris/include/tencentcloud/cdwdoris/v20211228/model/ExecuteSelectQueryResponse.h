@@ -100,6 +100,20 @@ namespace TencentCloud
                      */
                     bool RowsHasBeenSet() const;
 
+                    /**
+                     * 获取Error message
+                     * @return Message Error message
+                     * 
+                     */
+                    std::string GetMessage() const;
+
+                    /**
+                     * 判断参数 Message 是否已赋值
+                     * @return Message 是否已赋值
+                     * 
+                     */
+                    bool MessageHasBeenSet() const;
+
                 private:
 
                     /**
@@ -125,6 +139,12 @@ namespace TencentCloud
                      */
                     std::vector<Rows> m_rows;
                     bool m_rowsHasBeenSet;
+
+                    /**
+                     * Error message
+                     */
+                    std::string m_message;
+                    bool m_messageHasBeenSet;
 
                 };
             }

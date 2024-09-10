@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool SuccessHasBeenSet() const;
 
                     /**
-                     * 获取Message description of the operation result
-                     * @return Message Message description of the operation result
+                     * 获取Error message
+                     * @return Message Error message
                      * 
                      */
                     std::string GetMessage() const;
@@ -80,7 +80,7 @@ namespace TencentCloud
                     bool m_successHasBeenSet;
 
                     /**
-                     * Message description of the operation result
+                     * Error message
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;

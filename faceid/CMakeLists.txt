@@ -30,6 +30,7 @@ set(faceid_public_header_model
   include/tencentcloud/faceid/v20180301/model/ApplyCardVerificationResponse.h
   include/tencentcloud/faceid/v20180301/model/DetectReflectLivenessAndCompareRequest.h
   include/tencentcloud/faceid/v20180301/model/GetFaceIdTokenIntlRequest.h
+  include/tencentcloud/faceid/v20180301/model/JapanIDCard.h
   include/tencentcloud/faceid/v20180301/model/VideoLivenessCompareRequest.h
   include/tencentcloud/faceid/v20180301/model/ApplyWebVerificationTokenResponse.h
   include/tencentcloud/faceid/v20180301/model/NormalHKIDCard.h
@@ -58,6 +59,7 @@ set(faceid_public_header_model
   include/tencentcloud/faceid/v20180301/model/PhilippinesVoteID.h
   include/tencentcloud/faceid/v20180301/model/WebVerificationConfigIntl.h
   include/tencentcloud/faceid/v20180301/model/MainlandIDCard.h
+  include/tencentcloud/faceid/v20180301/model/TaiWanIDCard.h
   include/tencentcloud/faceid/v20180301/model/NormalMLIDCard.h
   include/tencentcloud/faceid/v20180301/model/NormalIndonesiaIDCard.h
   include/tencentcloud/faceid/v20180301/model/CompareFaceLivenessResponse.h
@@ -99,6 +101,7 @@ set(faceid_src
   src/v20180301/model/ApplyCardVerificationResponse.cpp
   src/v20180301/model/DetectReflectLivenessAndCompareRequest.cpp
   src/v20180301/model/GetFaceIdTokenIntlRequest.cpp
+  src/v20180301/model/JapanIDCard.cpp
   src/v20180301/model/VideoLivenessCompareRequest.cpp
   src/v20180301/model/ApplyWebVerificationTokenResponse.cpp
   src/v20180301/model/NormalHKIDCard.cpp
@@ -127,6 +130,7 @@ set(faceid_src
   src/v20180301/model/PhilippinesVoteID.cpp
   src/v20180301/model/WebVerificationConfigIntl.cpp
   src/v20180301/model/MainlandIDCard.cpp
+  src/v20180301/model/TaiWanIDCard.cpp
   src/v20180301/model/NormalMLIDCard.cpp
   src/v20180301/model/NormalIndonesiaIDCard.cpp
   src/v20180301/model/CompareFaceLivenessResponse.cpp

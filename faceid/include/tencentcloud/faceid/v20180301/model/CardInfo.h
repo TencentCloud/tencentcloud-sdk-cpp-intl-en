@@ -38,6 +38,8 @@
 #include <tencentcloud/faceid/v20180301/model/ThailandIDCard.h>
 #include <tencentcloud/faceid/v20180301/model/SingaporeIDCard.h>
 #include <tencentcloud/faceid/v20180301/model/MacaoIDCard.h>
+#include <tencentcloud/faceid/v20180301/model/TaiWanIDCard.h>
+#include <tencentcloud/faceid/v20180301/model/JapanIDCard.h>
 
 
 namespace TencentCloud
@@ -410,6 +412,56 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool MacaoIDCardHasBeenSet() const;
 
+                    /**
+                     * 获取TaiWan ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TaiWanIDCard TaiWan ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    TaiWanIDCard GetTaiWanIDCard() const;
+
+                    /**
+                     * 设置TaiWan ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _taiWanIDCard TaiWan ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetTaiWanIDCard(const TaiWanIDCard& _taiWanIDCard);
+
+                    /**
+                     * 判断参数 TaiWanIDCard 是否已赋值
+                     * @return TaiWanIDCard 是否已赋值
+                     * 
+                     */
+                    bool TaiWanIDCardHasBeenSet() const;
+
+                    /**
+                     * 获取Japan ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return JapanIDCard Japan ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    JapanIDCard GetJapanIDCard() const;
+
+                    /**
+                     * 设置Japan ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _japanIDCard Japan ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetJapanIDCard(const JapanIDCard& _japanIDCard);
+
+                    /**
+                     * 判断参数 JapanIDCard 是否已赋值
+                     * @return JapanIDCard 是否已赋值
+                     * 
+                     */
+                    bool JapanIDCardHasBeenSet() const;
+
                 private:
 
                     /**
@@ -509,6 +561,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     MacaoIDCard m_macaoIDCard;
                     bool m_macaoIDCardHasBeenSet;
+
+                    /**
+                     * TaiWan ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    TaiWanIDCard m_taiWanIDCard;
+                    bool m_taiWanIDCardHasBeenSet;
+
+                    /**
+                     * Japan ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    JapanIDCard m_japanIDCard;
+                    bool m_japanIDCardHasBeenSet;
 
                 };
             }

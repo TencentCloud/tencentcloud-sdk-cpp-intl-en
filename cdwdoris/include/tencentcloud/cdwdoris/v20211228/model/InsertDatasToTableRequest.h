@@ -233,25 +233,92 @@ namespace TencentCloud
                     bool PassWordHasBeenSet() const;
 
                     /**
-                     * 获取Column type
-                     * @return ColumnTypes Column type
-                     * 
+                     * 获取Column type, this field has been deprecated, please use Types
+                     * @return ColumnTypes Column type, this field has been deprecated, please use Types
+                     * @deprecated
                      */
                     std::string GetColumnTypes() const;
 
                     /**
-                     * 设置Column type
-                     * @param _columnTypes Column type
-                     * 
+                     * 设置Column type, this field has been deprecated, please use Types
+                     * @param _columnTypes Column type, this field has been deprecated, please use Types
+                     * @deprecated
                      */
                     void SetColumnTypes(const std::string& _columnTypes);
 
                     /**
                      * 判断参数 ColumnTypes 是否已赋值
                      * @return ColumnTypes 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool ColumnTypesHasBeenSet() const;
+
+                    /**
+                     * 获取Array of column types
+
+                     * @return Types Array of column types
+
+                     * 
+                     */
+                    std::vector<std::string> GetTypes() const;
+
+                    /**
+                     * 设置Array of column types
+
+                     * @param _types Array of column types
+
+                     * 
+                     */
+                    void SetTypes(const std::vector<std::string>& _types);
+
+                    /**
+                     * 判断参数 Types 是否已赋值
+                     * @return Types 是否已赋值
+                     * 
+                     */
+                    bool TypesHasBeenSet() const;
+
+                    /**
+                     * 获取Catalog name, defaults to 'internal' if not specified.
+                     * @return CatalogName Catalog name, defaults to 'internal' if not specified.
+                     * 
+                     */
+                    std::string GetCatalogName() const;
+
+                    /**
+                     * 设置Catalog name, defaults to 'internal' if not specified.
+                     * @param _catalogName Catalog name, defaults to 'internal' if not specified.
+                     * 
+                     */
+                    void SetCatalogName(const std::string& _catalogName);
+
+                    /**
+                     * 判断参数 CatalogName 是否已赋值
+                     * @return CatalogName 是否已赋值
+                     * 
+                     */
+                    bool CatalogNameHasBeenSet() const;
+
+                    /**
+                     * 获取InstanceId
+                     * @return InstanceId InstanceId
+                     * 
+                     */
+                    std::string GetInstanceId() const;
+
+                    /**
+                     * 设置InstanceId
+                     * @param _instanceId InstanceId
+                     * 
+                     */
+                    void SetInstanceId(const std::string& _instanceId);
+
+                    /**
+                     * 判断参数 InstanceId 是否已赋值
+                     * @return InstanceId 是否已赋值
+                     * 
+                     */
+                    bool InstanceIdHasBeenSet() const;
 
                 private:
 
@@ -310,10 +377,29 @@ namespace TencentCloud
                     bool m_passWordHasBeenSet;
 
                     /**
-                     * Column type
+                     * Column type, this field has been deprecated, please use Types
                      */
                     std::string m_columnTypes;
                     bool m_columnTypesHasBeenSet;
+
+                    /**
+                     * Array of column types
+
+                     */
+                    std::vector<std::string> m_types;
+                    bool m_typesHasBeenSet;
+
+                    /**
+                     * Catalog name, defaults to 'internal' if not specified.
+                     */
+                    std::string m_catalogName;
+                    bool m_catalogNameHasBeenSet;
+
+                    /**
+                     * InstanceId
+                     */
+                    std::string m_instanceId;
+                    bool m_instanceIdHasBeenSet;
 
                 };
             }

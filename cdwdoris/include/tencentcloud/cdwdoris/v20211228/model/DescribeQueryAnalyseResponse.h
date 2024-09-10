@@ -114,6 +114,20 @@ namespace TencentCloud
                      */
                     bool TotalPagesHasBeenSet() const;
 
+                    /**
+                     * 获取Error message
+                     * @return Message Error message
+                     * 
+                     */
+                    std::string GetMessage() const;
+
+                    /**
+                     * 判断参数 Message 是否已赋值
+                     * @return Message 是否已赋值
+                     * 
+                     */
+                    bool MessageHasBeenSet() const;
+
                 private:
 
                     /**
@@ -145,6 +159,12 @@ namespace TencentCloud
                      */
                     uint64_t m_totalPages;
                     bool m_totalPagesHasBeenSet;
+
+                    /**
+                     * Error message
+                     */
+                    std::string m_message;
+                    bool m_messageHasBeenSet;
 
                 };
             }

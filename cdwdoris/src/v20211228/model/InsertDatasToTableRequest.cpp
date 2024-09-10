@@ -32,7 +32,10 @@ InsertDatasToTableRequest::InsertDatasToTableRequest() :
     m_labelHasBeenSet(false),
     m_userNameHasBeenSet(false),
     m_passWordHasBeenSet(false),
-    m_columnTypesHasBeenSet(false)
+    m_columnTypesHasBeenSet(false),
+    m_typesHasBeenSet(false),
+    m_catalogNameHasBeenSet(false),
+    m_instanceIdHasBeenSet(false)
 {
 }
 
@@ -133,6 +136,35 @@ string InsertDatasToTableRequest::ToJsonString() const
         string key = "ColumnTypes";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_columnTypes.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_typesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Types";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_types.begin(); itr != m_types.end(); ++itr)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_catalogNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CatalogName";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_catalogName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_instanceIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -301,6 +333,54 @@ void InsertDatasToTableRequest::SetColumnTypes(const string& _columnTypes)
 bool InsertDatasToTableRequest::ColumnTypesHasBeenSet() const
 {
     return m_columnTypesHasBeenSet;
+}
+
+vector<string> InsertDatasToTableRequest::GetTypes() const
+{
+    return m_types;
+}
+
+void InsertDatasToTableRequest::SetTypes(const vector<string>& _types)
+{
+    m_types = _types;
+    m_typesHasBeenSet = true;
+}
+
+bool InsertDatasToTableRequest::TypesHasBeenSet() const
+{
+    return m_typesHasBeenSet;
+}
+
+string InsertDatasToTableRequest::GetCatalogName() const
+{
+    return m_catalogName;
+}
+
+void InsertDatasToTableRequest::SetCatalogName(const string& _catalogName)
+{
+    m_catalogName = _catalogName;
+    m_catalogNameHasBeenSet = true;
+}
+
+bool InsertDatasToTableRequest::CatalogNameHasBeenSet() const
+{
+    return m_catalogNameHasBeenSet;
+}
+
+string InsertDatasToTableRequest::GetInstanceId() const
+{
+    return m_instanceId;
+}
+
+void InsertDatasToTableRequest::SetInstanceId(const string& _instanceId)
+{
+    m_instanceId = _instanceId;
+    m_instanceIdHasBeenSet = true;
+}
+
+bool InsertDatasToTableRequest::InstanceIdHasBeenSet() const
+{
+    return m_instanceIdHasBeenSet;
 }
 
 

@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cdwdoris/v20211228/model/DatabasePermissions.h>
 #include <tencentcloud/cdwdoris/v20211228/model/TablePermissions.h>
+#include <tencentcloud/cdwdoris/v20211228/model/CatalogPermission.h>
 
 
 namespace TencentCloud
@@ -131,6 +132,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool TablePermissionsHasBeenSet() const;
 
+                    /**
+                     * 获取The key is the full name of the catalog, and the value is the permission list of the user on the catalog.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CatalogPermissions The key is the full name of the catalog, and the value is the permission list of the user on the catalog.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<CatalogPermission> GetCatalogPermissions() const;
+
+                    /**
+                     * 设置The key is the full name of the catalog, and the value is the permission list of the user on the catalog.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _catalogPermissions The key is the full name of the catalog, and the value is the permission list of the user on the catalog.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetCatalogPermissions(const std::vector<CatalogPermission>& _catalogPermissions);
+
+                    /**
+                     * 判断参数 CatalogPermissions 是否已赋值
+                     * @return CatalogPermissions 是否已赋值
+                     * 
+                     */
+                    bool CatalogPermissionsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -155,6 +185,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<TablePermissions> m_tablePermissions;
                     bool m_tablePermissionsHasBeenSet;
+
+                    /**
+                     * The key is the full name of the catalog, and the value is the permission list of the user on the catalog.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<CatalogPermission> m_catalogPermissions;
+                    bool m_catalogPermissionsHasBeenSet;
 
                 };
             }

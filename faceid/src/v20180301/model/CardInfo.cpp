@@ -34,7 +34,9 @@ CardInfo::CardInfo() :
     m_indonesiaDrivingLicenseHasBeenSet(false),
     m_thailandIDCardHasBeenSet(false),
     m_singaporeIDCardHasBeenSet(false),
-    m_macaoIDCardHasBeenSet(false)
+    m_macaoIDCardHasBeenSet(false),
+    m_taiWanIDCardHasBeenSet(false),
+    m_japanIDCardHasBeenSet(false)
 {
 }
 
@@ -281,6 +283,40 @@ CoreInternalOutcome CardInfo::Deserialize(const rapidjson::Value &value)
         m_macaoIDCardHasBeenSet = true;
     }
 
+    if (value.HasMember("TaiWanIDCard") && !value["TaiWanIDCard"].IsNull())
+    {
+        if (!value["TaiWanIDCard"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `CardInfo.TaiWanIDCard` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_taiWanIDCard.Deserialize(value["TaiWanIDCard"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_taiWanIDCardHasBeenSet = true;
+    }
+
+    if (value.HasMember("JapanIDCard") && !value["JapanIDCard"].IsNull())
+    {
+        if (!value["JapanIDCard"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `CardInfo.JapanIDCard` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_japanIDCard.Deserialize(value["JapanIDCard"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_japanIDCardHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -412,6 +448,24 @@ void CardInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Alloca
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_macaoIDCard.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_taiWanIDCardHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TaiWanIDCard";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_taiWanIDCard.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_japanIDCardHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "JapanIDCard";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_japanIDCard.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -639,5 +693,37 @@ void CardInfo::SetMacaoIDCard(const MacaoIDCard& _macaoIDCard)
 bool CardInfo::MacaoIDCardHasBeenSet() const
 {
     return m_macaoIDCardHasBeenSet;
+}
+
+TaiWanIDCard CardInfo::GetTaiWanIDCard() const
+{
+    return m_taiWanIDCard;
+}
+
+void CardInfo::SetTaiWanIDCard(const TaiWanIDCard& _taiWanIDCard)
+{
+    m_taiWanIDCard = _taiWanIDCard;
+    m_taiWanIDCardHasBeenSet = true;
+}
+
+bool CardInfo::TaiWanIDCardHasBeenSet() const
+{
+    return m_taiWanIDCardHasBeenSet;
+}
+
+JapanIDCard CardInfo::GetJapanIDCard() const
+{
+    return m_japanIDCard;
+}
+
+void CardInfo::SetJapanIDCard(const JapanIDCard& _japanIDCard)
+{
+    m_japanIDCard = _japanIDCard;
+    m_japanIDCardHasBeenSet = true;
+}
+
+bool CardInfo::JapanIDCardHasBeenSet() const
+{
+    return m_japanIDCardHasBeenSet;
 }
 

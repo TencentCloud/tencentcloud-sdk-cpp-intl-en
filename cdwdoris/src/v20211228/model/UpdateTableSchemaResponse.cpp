@@ -24,7 +24,8 @@ using namespace TencentCloud::Cdwdoris::V20211228::Model;
 using namespace std;
 
 UpdateTableSchemaResponse::UpdateTableSchemaResponse() :
-    m_messageHasBeenSet(false)
+    m_messageHasBeenSet(false),
+    m_successHasBeenSet(false)
 {
 }
 
@@ -72,6 +73,16 @@ CoreInternalOutcome UpdateTableSchemaResponse::Deserialize(const string &payload
         m_messageHasBeenSet = true;
     }
 
+    if (rsp.HasMember("Success") && !rsp["Success"].IsNull())
+    {
+        if (!rsp["Success"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Success` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_success = string(rsp["Success"].GetString());
+        m_successHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -88,6 +99,14 @@ string UpdateTableSchemaResponse::ToJsonString() const
         string key = "Message";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_message.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_successHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Success";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_success.c_str(), allocator).Move(), allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -110,6 +129,16 @@ string UpdateTableSchemaResponse::GetMessage() const
 bool UpdateTableSchemaResponse::MessageHasBeenSet() const
 {
     return m_messageHasBeenSet;
+}
+
+string UpdateTableSchemaResponse::GetSuccess() const
+{
+    return m_success;
+}
+
+bool UpdateTableSchemaResponse::SuccessHasBeenSet() const
+{
+    return m_successHasBeenSet;
 }
 
 

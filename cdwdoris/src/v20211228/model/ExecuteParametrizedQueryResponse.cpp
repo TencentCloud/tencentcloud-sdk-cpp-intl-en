@@ -27,7 +27,8 @@ ExecuteParametrizedQueryResponse::ExecuteParametrizedQueryResponse() :
     m_totalCountHasBeenSet(false),
     m_fieldsHasBeenSet(false),
     m_fieldTypesHasBeenSet(false),
-    m_rowsHasBeenSet(false)
+    m_rowsHasBeenSet(false),
+    m_messageHasBeenSet(false)
 {
 }
 
@@ -121,6 +122,16 @@ CoreInternalOutcome ExecuteParametrizedQueryResponse::Deserialize(const string &
         m_rowsHasBeenSet = true;
     }
 
+    if (rsp.HasMember("Message") && !rsp["Message"].IsNull())
+    {
+        if (!rsp["Message"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Message` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_message = string(rsp["Message"].GetString());
+        m_messageHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -180,6 +191,14 @@ string ExecuteParametrizedQueryResponse::ToJsonString() const
         }
     }
 
+    if (m_messageHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Message";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_message.c_str(), allocator).Move(), allocator);
+    }
+
     rapidjson::Value iKey(rapidjson::kStringType);
     string key = "RequestId";
     iKey.SetString(key.c_str(), allocator);
@@ -230,6 +249,16 @@ vector<Rows> ExecuteParametrizedQueryResponse::GetRows() const
 bool ExecuteParametrizedQueryResponse::RowsHasBeenSet() const
 {
     return m_rowsHasBeenSet;
+}
+
+string ExecuteParametrizedQueryResponse::GetMessage() const
+{
+    return m_message;
+}
+
+bool ExecuteParametrizedQueryResponse::MessageHasBeenSet() const
+{
+    return m_messageHasBeenSet;
 }
 
 

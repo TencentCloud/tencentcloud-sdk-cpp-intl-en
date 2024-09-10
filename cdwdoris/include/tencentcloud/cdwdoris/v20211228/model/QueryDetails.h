@@ -176,18 +176,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DatabaseHasBeenSet() const;
 
                     /**
-                     * 获取SQL type
+                     * 获取SQL Type: 0 is non-query, 1 is query, -1 is unrestricted.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SQLType SQL type
+                     * @return SQLType SQL Type: 0 is non-query, 1 is query, -1 is unrestricted.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSQLType() const;
 
                     /**
-                     * 设置SQL type
+                     * 设置SQL Type: 0 is non-query, 1 is query, -1 is unrestricted.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _sQLType SQL type
+                     * @param _sQLType SQL Type: 0 is non-query, 1 is query, -1 is unrestricted.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -389,7 +389,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_databaseHasBeenSet;
 
                     /**
-                     * SQL type
+                     * SQL Type: 0 is non-query, 1 is query, -1 is unrestricted.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_sQLType;

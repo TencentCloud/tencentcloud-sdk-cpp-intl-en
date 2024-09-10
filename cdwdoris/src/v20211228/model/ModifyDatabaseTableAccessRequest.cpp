@@ -29,7 +29,10 @@ ModifyDatabaseTableAccessRequest::ModifyDatabaseTableAccessRequest() :
     m_roleHasBeenSet(false),
     m_grantOrRevokeHasBeenSet(false),
     m_userNameHasBeenSet(false),
-    m_passWordHasBeenSet(false)
+    m_passWordHasBeenSet(false),
+    m_catalogNameHasBeenSet(false),
+    m_instanceIdHasBeenSet(false),
+    m_whiteHostHasBeenSet(false)
 {
 }
 
@@ -99,6 +102,30 @@ string ModifyDatabaseTableAccessRequest::ToJsonString() const
         string key = "PassWord";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_passWord.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_catalogNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CatalogName";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_catalogName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_instanceIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_whiteHostHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "WhiteHost";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_whiteHost.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -219,6 +246,54 @@ void ModifyDatabaseTableAccessRequest::SetPassWord(const string& _passWord)
 bool ModifyDatabaseTableAccessRequest::PassWordHasBeenSet() const
 {
     return m_passWordHasBeenSet;
+}
+
+string ModifyDatabaseTableAccessRequest::GetCatalogName() const
+{
+    return m_catalogName;
+}
+
+void ModifyDatabaseTableAccessRequest::SetCatalogName(const string& _catalogName)
+{
+    m_catalogName = _catalogName;
+    m_catalogNameHasBeenSet = true;
+}
+
+bool ModifyDatabaseTableAccessRequest::CatalogNameHasBeenSet() const
+{
+    return m_catalogNameHasBeenSet;
+}
+
+string ModifyDatabaseTableAccessRequest::GetInstanceId() const
+{
+    return m_instanceId;
+}
+
+void ModifyDatabaseTableAccessRequest::SetInstanceId(const string& _instanceId)
+{
+    m_instanceId = _instanceId;
+    m_instanceIdHasBeenSet = true;
+}
+
+bool ModifyDatabaseTableAccessRequest::InstanceIdHasBeenSet() const
+{
+    return m_instanceIdHasBeenSet;
+}
+
+string ModifyDatabaseTableAccessRequest::GetWhiteHost() const
+{
+    return m_whiteHost;
+}
+
+void ModifyDatabaseTableAccessRequest::SetWhiteHost(const string& _whiteHost)
+{
+    m_whiteHost = _whiteHost;
+    m_whiteHostHasBeenSet = true;
+}
+
+bool ModifyDatabaseTableAccessRequest::WhiteHostHasBeenSet() const
+{
+    return m_whiteHostHasBeenSet;
 }
 
 

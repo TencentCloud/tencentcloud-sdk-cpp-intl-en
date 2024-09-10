@@ -29,7 +29,9 @@ QueryTableDataRequest::QueryTableDataRequest() :
     m_pageNumHasBeenSet(false),
     m_pageSizeHasBeenSet(false),
     m_userNameHasBeenSet(false),
-    m_passWordHasBeenSet(false)
+    m_passWordHasBeenSet(false),
+    m_catalogNameHasBeenSet(false),
+    m_instanceIdHasBeenSet(false)
 {
 }
 
@@ -99,6 +101,22 @@ string QueryTableDataRequest::ToJsonString() const
         string key = "PassWord";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_passWord.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_catalogNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CatalogName";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_catalogName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_instanceIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -219,6 +237,38 @@ void QueryTableDataRequest::SetPassWord(const string& _passWord)
 bool QueryTableDataRequest::PassWordHasBeenSet() const
 {
     return m_passWordHasBeenSet;
+}
+
+string QueryTableDataRequest::GetCatalogName() const
+{
+    return m_catalogName;
+}
+
+void QueryTableDataRequest::SetCatalogName(const string& _catalogName)
+{
+    m_catalogName = _catalogName;
+    m_catalogNameHasBeenSet = true;
+}
+
+bool QueryTableDataRequest::CatalogNameHasBeenSet() const
+{
+    return m_catalogNameHasBeenSet;
+}
+
+string QueryTableDataRequest::GetInstanceId() const
+{
+    return m_instanceId;
+}
+
+void QueryTableDataRequest::SetInstanceId(const string& _instanceId)
+{
+    m_instanceId = _instanceId;
+    m_instanceIdHasBeenSet = true;
+}
+
+bool QueryTableDataRequest::InstanceIdHasBeenSet() const
+{
+    return m_instanceIdHasBeenSet;
 }
 
 

@@ -28,7 +28,8 @@ DescribeQueryAnalyseResponse::DescribeQueryAnalyseResponse() :
     m_totalCountHasBeenSet(false),
     m_currentPageHasBeenSet(false),
     m_pageSizeHasBeenSet(false),
-    m_totalPagesHasBeenSet(false)
+    m_totalPagesHasBeenSet(false),
+    m_messageHasBeenSet(false)
 {
 }
 
@@ -126,6 +127,16 @@ CoreInternalOutcome DescribeQueryAnalyseResponse::Deserialize(const string &payl
         m_totalPagesHasBeenSet = true;
     }
 
+    if (rsp.HasMember("Message") && !rsp["Message"].IsNull())
+    {
+        if (!rsp["Message"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Message` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_message = string(rsp["Message"].GetString());
+        m_messageHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -181,6 +192,14 @@ string DescribeQueryAnalyseResponse::ToJsonString() const
         string key = "TotalPages";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_totalPages, allocator);
+    }
+
+    if (m_messageHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Message";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_message.c_str(), allocator).Move(), allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -243,6 +262,16 @@ uint64_t DescribeQueryAnalyseResponse::GetTotalPages() const
 bool DescribeQueryAnalyseResponse::TotalPagesHasBeenSet() const
 {
     return m_totalPagesHasBeenSet;
+}
+
+string DescribeQueryAnalyseResponse::GetMessage() const
+{
+    return m_message;
+}
+
+bool DescribeQueryAnalyseResponse::MessageHasBeenSet() const
+{
+    return m_messageHasBeenSet;
 }
 
 

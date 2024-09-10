@@ -57,6 +57,20 @@ namespace TencentCloud
                      */
                     bool MessageHasBeenSet() const;
 
+                    /**
+                     * 获取Is it successful
+                     * @return Success Is it successful
+                     * 
+                     */
+                    std::string GetSuccess() const;
+
+                    /**
+                     * 判断参数 Success 是否已赋值
+                     * @return Success 是否已赋值
+                     * 
+                     */
+                    bool SuccessHasBeenSet() const;
+
                 private:
 
                     /**
@@ -64,6 +78,12 @@ namespace TencentCloud
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;
+
+                    /**
+                     * Is it successful
+                     */
+                    std::string m_success;
+                    bool m_successHasBeenSet;
 
                 };
             }

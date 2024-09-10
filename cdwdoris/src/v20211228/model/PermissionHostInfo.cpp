@@ -23,7 +23,8 @@ using namespace std;
 PermissionHostInfo::PermissionHostInfo() :
     m_globalPermissionsHasBeenSet(false),
     m_databasePermissionsHasBeenSet(false),
-    m_tablePermissionsHasBeenSet(false)
+    m_tablePermissionsHasBeenSet(false),
+    m_catalogPermissionsHasBeenSet(false)
 {
 }
 
@@ -85,6 +86,26 @@ CoreInternalOutcome PermissionHostInfo::Deserialize(const rapidjson::Value &valu
         m_tablePermissionsHasBeenSet = true;
     }
 
+    if (value.HasMember("CatalogPermissions") && !value["CatalogPermissions"].IsNull())
+    {
+        if (!value["CatalogPermissions"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `PermissionHostInfo.CatalogPermissions` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["CatalogPermissions"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            CatalogPermission item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_catalogPermissions.push_back(item);
+        }
+        m_catalogPermissionsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -129,6 +150,21 @@ void PermissionHostInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Docume
 
         int i=0;
         for (auto itr = m_tablePermissions.begin(); itr != m_tablePermissions.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_catalogPermissionsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CatalogPermissions";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_catalogPermissions.begin(); itr != m_catalogPermissions.end(); ++itr, ++i)
         {
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
@@ -184,5 +220,21 @@ void PermissionHostInfo::SetTablePermissions(const vector<TablePermissions>& _ta
 bool PermissionHostInfo::TablePermissionsHasBeenSet() const
 {
     return m_tablePermissionsHasBeenSet;
+}
+
+vector<CatalogPermission> PermissionHostInfo::GetCatalogPermissions() const
+{
+    return m_catalogPermissions;
+}
+
+void PermissionHostInfo::SetCatalogPermissions(const vector<CatalogPermission>& _catalogPermissions)
+{
+    m_catalogPermissions = _catalogPermissions;
+    m_catalogPermissionsHasBeenSet = true;
+}
+
+bool PermissionHostInfo::CatalogPermissionsHasBeenSet() const
+{
+    return m_catalogPermissionsHasBeenSet;
 }
 

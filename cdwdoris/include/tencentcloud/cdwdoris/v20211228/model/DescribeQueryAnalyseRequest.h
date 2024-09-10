@@ -273,6 +273,27 @@ namespace TencentCloud
                      */
                     bool SortOrderHasBeenSet() const;
 
+                    /**
+                     * 获取Minimum query execution time, in milliseconds.
+                     * @return QueryTime Minimum query execution time, in milliseconds.
+                     * 
+                     */
+                    uint64_t GetQueryTime() const;
+
+                    /**
+                     * 设置Minimum query execution time, in milliseconds.
+                     * @param _queryTime Minimum query execution time, in milliseconds.
+                     * 
+                     */
+                    void SetQueryTime(const uint64_t& _queryTime);
+
+                    /**
+                     * 判断参数 QueryTime 是否已赋值
+                     * @return QueryTime 是否已赋值
+                     * 
+                     */
+                    bool QueryTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -340,6 +361,12 @@ namespace TencentCloud
                      */
                     std::string m_sortOrder;
                     bool m_sortOrderHasBeenSet;
+
+                    /**
+                     * Minimum query execution time, in milliseconds.
+                     */
+                    uint64_t m_queryTime;
+                    bool m_queryTimeHasBeenSet;
 
                 };
             }

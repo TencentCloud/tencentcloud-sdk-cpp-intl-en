@@ -189,6 +189,31 @@ namespace TencentCloud
                      */
                     bool PassWordHasBeenSet() const;
 
+                    /**
+                     * 获取Information, deprecated.
+
+                     * @return Message Information, deprecated.
+
+                     * @deprecated
+                     */
+                    std::string GetMessage() const;
+
+                    /**
+                     * 设置Information, deprecated.
+
+                     * @param _message Information, deprecated.
+
+                     * @deprecated
+                     */
+                    void SetMessage(const std::string& _message);
+
+                    /**
+                     * 判断参数 Message 是否已赋值
+                     * @return Message 是否已赋值
+                     * @deprecated
+                     */
+                    bool MessageHasBeenSet() const;
+
                 private:
 
                     /**
@@ -232,6 +257,13 @@ namespace TencentCloud
                      */
                     std::string m_passWord;
                     bool m_passWordHasBeenSet;
+
+                    /**
+                     * Information, deprecated.
+
+                     */
+                    std::string m_message;
+                    bool m_messageHasBeenSet;
 
                 };
             }

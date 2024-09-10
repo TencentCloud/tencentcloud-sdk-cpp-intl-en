@@ -77,6 +77,7 @@ set(cdwdoris_public_header_model
   include/tencentcloud/cdwdoris/v20211228/model/DescribeCreateTablesDDLRequest.h
   include/tencentcloud/cdwdoris/v20211228/model/RestartClusterForNodeResponse.h
   include/tencentcloud/cdwdoris/v20211228/model/UpdateTableSchemaRequest.h
+  include/tencentcloud/cdwdoris/v20211228/model/CatalogPermission.h
   include/tencentcloud/cdwdoris/v20211228/model/CancelBackupJobResponse.h
   include/tencentcloud/cdwdoris/v20211228/model/DescribeAreaRegionRequest.h
   include/tencentcloud/cdwdoris/v20211228/model/SlowQueryRecord.h
@@ -294,6 +295,7 @@ set(cdwdoris_src
   src/v20211228/model/DescribeCreateTablesDDLRequest.cpp
   src/v20211228/model/RestartClusterForNodeResponse.cpp
   src/v20211228/model/UpdateTableSchemaRequest.cpp
+  src/v20211228/model/CatalogPermission.cpp
   src/v20211228/model/CancelBackupJobResponse.cpp
   src/v20211228/model/DescribeAreaRegionRequest.cpp
   src/v20211228/model/SlowQueryRecord.cpp

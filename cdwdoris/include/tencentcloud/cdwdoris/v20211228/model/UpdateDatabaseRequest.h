@@ -190,6 +190,27 @@ namespace TencentCloud
                      */
                     bool PassWordHasBeenSet() const;
 
+                    /**
+                     * 获取InstanceId
+                     * @return InstanceId InstanceId
+                     * 
+                     */
+                    std::string GetInstanceId() const;
+
+                    /**
+                     * 设置InstanceId
+                     * @param _instanceId InstanceId
+                     * 
+                     */
+                    void SetInstanceId(const std::string& _instanceId);
+
+                    /**
+                     * 判断参数 InstanceId 是否已赋值
+                     * @return InstanceId 是否已赋值
+                     * 
+                     */
+                    bool InstanceIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -233,6 +254,12 @@ namespace TencentCloud
                      */
                     std::string m_passWord;
                     bool m_passWordHasBeenSet;
+
+                    /**
+                     * InstanceId
+                     */
+                    std::string m_instanceId;
+                    bool m_instanceIdHasBeenSet;
 
                 };
             }

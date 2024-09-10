@@ -29,7 +29,8 @@ UpdateDatabaseRequest::UpdateDatabaseRequest() :
     m_newDbNameHasBeenSet(false),
     m_propertiesHasBeenSet(false),
     m_userNameHasBeenSet(false),
-    m_passWordHasBeenSet(false)
+    m_passWordHasBeenSet(false),
+    m_instanceIdHasBeenSet(false)
 {
 }
 
@@ -101,6 +102,14 @@ string UpdateDatabaseRequest::ToJsonString() const
         string key = "PassWord";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_passWord.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_instanceIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -221,6 +230,22 @@ void UpdateDatabaseRequest::SetPassWord(const string& _passWord)
 bool UpdateDatabaseRequest::PassWordHasBeenSet() const
 {
     return m_passWordHasBeenSet;
+}
+
+string UpdateDatabaseRequest::GetInstanceId() const
+{
+    return m_instanceId;
+}
+
+void UpdateDatabaseRequest::SetInstanceId(const string& _instanceId)
+{
+    m_instanceId = _instanceId;
+    m_instanceIdHasBeenSet = true;
+}
+
+bool UpdateDatabaseRequest::InstanceIdHasBeenSet() const
+{
+    return m_instanceIdHasBeenSet;
 }
 
 

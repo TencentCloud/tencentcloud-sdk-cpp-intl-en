@@ -33,7 +33,8 @@ DescribeQueryAnalyseRequest::DescribeQueryAnalyseRequest() :
     m_databaseFilterHasBeenSet(false),
     m_sQLTypeFilterHasBeenSet(false),
     m_sortFieldHasBeenSet(false),
-    m_sortOrderHasBeenSet(false)
+    m_sortOrderHasBeenSet(false),
+    m_queryTimeHasBeenSet(false)
 {
 }
 
@@ -130,6 +131,14 @@ string DescribeQueryAnalyseRequest::ToJsonString() const
         string key = "SortOrder";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_sortOrder.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_queryTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "QueryTime";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_queryTime, allocator);
     }
 
 
@@ -314,6 +323,22 @@ void DescribeQueryAnalyseRequest::SetSortOrder(const string& _sortOrder)
 bool DescribeQueryAnalyseRequest::SortOrderHasBeenSet() const
 {
     return m_sortOrderHasBeenSet;
+}
+
+uint64_t DescribeQueryAnalyseRequest::GetQueryTime() const
+{
+    return m_queryTime;
+}
+
+void DescribeQueryAnalyseRequest::SetQueryTime(const uint64_t& _queryTime)
+{
+    m_queryTime = _queryTime;
+    m_queryTimeHasBeenSet = true;
+}
+
+bool DescribeQueryAnalyseRequest::QueryTimeHasBeenSet() const
+{
+    return m_queryTimeHasBeenSet;
 }
 
 
