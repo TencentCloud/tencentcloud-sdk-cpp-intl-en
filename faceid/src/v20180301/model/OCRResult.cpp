@@ -24,6 +24,7 @@ OCRResult::OCRResult() :
     m_isPassHasBeenSet(false),
     m_cardImageBase64HasBeenSet(false),
     m_cardInfoHasBeenSet(false),
+    m_normalCardInfoHasBeenSet(false),
     m_requestIdHasBeenSet(false),
     m_cardCutImageBase64HasBeenSet(false),
     m_cardBackCutImageBase64HasBeenSet(false)
@@ -70,6 +71,23 @@ CoreInternalOutcome OCRResult::Deserialize(const rapidjson::Value &value)
         }
 
         m_cardInfoHasBeenSet = true;
+    }
+
+    if (value.HasMember("NormalCardInfo") && !value["NormalCardInfo"].IsNull())
+    {
+        if (!value["NormalCardInfo"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `OCRResult.NormalCardInfo` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_normalCardInfo.Deserialize(value["NormalCardInfo"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_normalCardInfoHasBeenSet = true;
     }
 
     if (value.HasMember("RequestId") && !value["RequestId"].IsNull())
@@ -132,6 +150,15 @@ void OCRResult::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Alloc
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_cardInfo.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_normalCardInfoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NormalCardInfo";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_normalCardInfo.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_requestIdHasBeenSet)
@@ -207,6 +234,22 @@ void OCRResult::SetCardInfo(const CardInfo& _cardInfo)
 bool OCRResult::CardInfoHasBeenSet() const
 {
     return m_cardInfoHasBeenSet;
+}
+
+NormalCardInfo OCRResult::GetNormalCardInfo() const
+{
+    return m_normalCardInfo;
+}
+
+void OCRResult::SetNormalCardInfo(const NormalCardInfo& _normalCardInfo)
+{
+    m_normalCardInfo = _normalCardInfo;
+    m_normalCardInfoHasBeenSet = true;
+}
+
+bool OCRResult::NormalCardInfoHasBeenSet() const
+{
+    return m_normalCardInfoHasBeenSet;
 }
 
 string OCRResult::GetRequestId() const

@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/faceid/v20180301/model/CardInfo.h>
+#include <tencentcloud/faceid/v20180301/model/NormalCardInfo.h>
 
 
 namespace TencentCloud
@@ -96,23 +97,44 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * 获取OCR result of the ID card.
                      * @return CardInfo OCR result of the ID card.
-                     * 
+                     * @deprecated
                      */
                     CardInfo GetCardInfo() const;
 
                     /**
                      * 设置OCR result of the ID card.
                      * @param _cardInfo OCR result of the ID card.
-                     * 
+                     * @deprecated
                      */
                     void SetCardInfo(const CardInfo& _cardInfo);
 
                     /**
                      * 判断参数 CardInfo 是否已赋值
                      * @return CardInfo 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool CardInfoHasBeenSet() const;
+
+                    /**
+                     * 获取OCR result of the ID card.
+                     * @return NormalCardInfo OCR result of the ID card.
+                     * 
+                     */
+                    NormalCardInfo GetNormalCardInfo() const;
+
+                    /**
+                     * 设置OCR result of the ID card.
+                     * @param _normalCardInfo OCR result of the ID card.
+                     * 
+                     */
+                    void SetNormalCardInfo(const NormalCardInfo& _normalCardInfo);
+
+                    /**
+                     * 判断参数 NormalCardInfo 是否已赋值
+                     * @return NormalCardInfo 是否已赋值
+                     * 
+                     */
+                    bool NormalCardInfoHasBeenSet() const;
 
                     /**
                      * 获取The request id
@@ -197,6 +219,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     CardInfo m_cardInfo;
                     bool m_cardInfoHasBeenSet;
+
+                    /**
+                     * OCR result of the ID card.
+                     */
+                    NormalCardInfo m_normalCardInfo;
+                    bool m_normalCardInfoHasBeenSet;
 
                     /**
                      * The request id
