@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Name of the database where the source table is located
-                     * @return CopiedFromDb Name of the database where the source table is located
+                     * 获取Name of the database where the source table is located.
+                     * @return CopiedFromDb Name of the database where the source table is located.
                      * 
                      */
                     std::string GetCopiedFromDb() const;
 
                     /**
-                     * 设置Name of the database where the source table is located
-                     * @param _copiedFromDb Name of the database where the source table is located
+                     * 设置Name of the database where the source table is located.
+                     * @param _copiedFromDb Name of the database where the source table is located.
                      * 
                      */
                     void SetCopiedFromDb(const std::string& _copiedFromDb);
@@ -219,7 +219,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Name of the database where the source table is located
+                     * Name of the database where the source table is located.
                      */
                     std::string m_copiedFromDb;
                     bool m_copiedFromDbHasBeenSet;

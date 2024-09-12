@@ -45,9 +45,9 @@ namespace TencentCloud
 
                     /**
                      * 获取Error message
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained
                      * @return ErrorMsg Error message
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained
                      * 
                      */
                     std::string GetErrorMsg() const;
@@ -63,7 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Error message
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained
                      */
                     std::string m_errorMsg;
                     bool m_errorMsgHasBeenSet;

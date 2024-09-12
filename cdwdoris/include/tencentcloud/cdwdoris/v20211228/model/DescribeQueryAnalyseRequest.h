@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time of operation period
-                     * @return EndTime End time of operation period
+                     * 获取End time of operation period.
+                     * @return EndTime End time of operation period.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End time of operation period
-                     * @param _endTime End time of operation period
+                     * 设置End time of operation period.
+                     * @param _endTime End time of operation period.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -321,7 +321,7 @@ namespace TencentCloud
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End time of operation period
+                     * End time of operation period.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
