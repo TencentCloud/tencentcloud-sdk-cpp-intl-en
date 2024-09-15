@@ -83,6 +83,49 @@ CarClient::ApplyConcurrentOutcomeCallable CarClient::ApplyConcurrentCallable(con
     return task->get_future();
 }
 
+CarClient::BindConcurrentPackagesToProjectOutcome CarClient::BindConcurrentPackagesToProject(const BindConcurrentPackagesToProjectRequest &request)
+{
+    auto outcome = MakeRequest(request, "BindConcurrentPackagesToProject");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        BindConcurrentPackagesToProjectResponse rsp = BindConcurrentPackagesToProjectResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return BindConcurrentPackagesToProjectOutcome(rsp);
+        else
+            return BindConcurrentPackagesToProjectOutcome(o.GetError());
+    }
+    else
+    {
+        return BindConcurrentPackagesToProjectOutcome(outcome.GetError());
+    }
+}
+
+void CarClient::BindConcurrentPackagesToProjectAsync(const BindConcurrentPackagesToProjectRequest& request, const BindConcurrentPackagesToProjectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->BindConcurrentPackagesToProject(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CarClient::BindConcurrentPackagesToProjectOutcomeCallable CarClient::BindConcurrentPackagesToProjectCallable(const BindConcurrentPackagesToProjectRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<BindConcurrentPackagesToProjectOutcome()>>(
+        [this, request]()
+        {
+            return this->BindConcurrentPackagesToProject(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CarClient::CreateApplicationOutcome CarClient::CreateApplication(const CreateApplicationRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateApplication");
@@ -119,6 +162,49 @@ CarClient::CreateApplicationOutcomeCallable CarClient::CreateApplicationCallable
         [this, request]()
         {
             return this->CreateApplication(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CarClient::CreateApplicationProjectOutcome CarClient::CreateApplicationProject(const CreateApplicationProjectRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateApplicationProject");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateApplicationProjectResponse rsp = CreateApplicationProjectResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateApplicationProjectOutcome(rsp);
+        else
+            return CreateApplicationProjectOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateApplicationProjectOutcome(outcome.GetError());
+    }
+}
+
+void CarClient::CreateApplicationProjectAsync(const CreateApplicationProjectRequest& request, const CreateApplicationProjectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateApplicationProject(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CarClient::CreateApplicationProjectOutcomeCallable CarClient::CreateApplicationProjectCallable(const CreateApplicationProjectRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateApplicationProjectOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateApplicationProject(request);
         }
     );
 
@@ -298,6 +384,49 @@ CarClient::DeleteApplicationOutcomeCallable CarClient::DeleteApplicationCallable
     return task->get_future();
 }
 
+CarClient::DeleteApplicationProjectsOutcome CarClient::DeleteApplicationProjects(const DeleteApplicationProjectsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteApplicationProjects");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteApplicationProjectsResponse rsp = DeleteApplicationProjectsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteApplicationProjectsOutcome(rsp);
+        else
+            return DeleteApplicationProjectsOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteApplicationProjectsOutcome(outcome.GetError());
+    }
+}
+
+void CarClient::DeleteApplicationProjectsAsync(const DeleteApplicationProjectsRequest& request, const DeleteApplicationProjectsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteApplicationProjects(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CarClient::DeleteApplicationProjectsOutcomeCallable CarClient::DeleteApplicationProjectsCallable(const DeleteApplicationProjectsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteApplicationProjectsOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteApplicationProjects(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CarClient::DeleteApplicationVersionOutcome CarClient::DeleteApplicationVersion(const DeleteApplicationVersionRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteApplicationVersion");
@@ -470,6 +599,92 @@ CarClient::DescribeApplicationPathListOutcomeCallable CarClient::DescribeApplica
     return task->get_future();
 }
 
+CarClient::DescribeApplicationProjectAdvancedConfigOutcome CarClient::DescribeApplicationProjectAdvancedConfig(const DescribeApplicationProjectAdvancedConfigRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeApplicationProjectAdvancedConfig");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeApplicationProjectAdvancedConfigResponse rsp = DescribeApplicationProjectAdvancedConfigResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeApplicationProjectAdvancedConfigOutcome(rsp);
+        else
+            return DescribeApplicationProjectAdvancedConfigOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeApplicationProjectAdvancedConfigOutcome(outcome.GetError());
+    }
+}
+
+void CarClient::DescribeApplicationProjectAdvancedConfigAsync(const DescribeApplicationProjectAdvancedConfigRequest& request, const DescribeApplicationProjectAdvancedConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeApplicationProjectAdvancedConfig(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CarClient::DescribeApplicationProjectAdvancedConfigOutcomeCallable CarClient::DescribeApplicationProjectAdvancedConfigCallable(const DescribeApplicationProjectAdvancedConfigRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeApplicationProjectAdvancedConfigOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeApplicationProjectAdvancedConfig(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CarClient::DescribeApplicationProjectsOutcome CarClient::DescribeApplicationProjects(const DescribeApplicationProjectsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeApplicationProjects");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeApplicationProjectsResponse rsp = DescribeApplicationProjectsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeApplicationProjectsOutcome(rsp);
+        else
+            return DescribeApplicationProjectsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeApplicationProjectsOutcome(outcome.GetError());
+    }
+}
+
+void CarClient::DescribeApplicationProjectsAsync(const DescribeApplicationProjectsRequest& request, const DescribeApplicationProjectsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeApplicationProjects(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CarClient::DescribeApplicationProjectsOutcomeCallable CarClient::DescribeApplicationProjectsCallable(const DescribeApplicationProjectsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeApplicationProjectsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeApplicationProjects(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CarClient::DescribeApplicationStatusOutcome CarClient::DescribeApplicationStatus(const DescribeApplicationStatusRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeApplicationStatus");
@@ -592,6 +807,92 @@ CarClient::DescribeConcurrentCountOutcomeCallable CarClient::DescribeConcurrentC
         [this, request]()
         {
             return this->DescribeConcurrentCount(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CarClient::DescribeConcurrentPackagesOutcome CarClient::DescribeConcurrentPackages(const DescribeConcurrentPackagesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeConcurrentPackages");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeConcurrentPackagesResponse rsp = DescribeConcurrentPackagesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeConcurrentPackagesOutcome(rsp);
+        else
+            return DescribeConcurrentPackagesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeConcurrentPackagesOutcome(outcome.GetError());
+    }
+}
+
+void CarClient::DescribeConcurrentPackagesAsync(const DescribeConcurrentPackagesRequest& request, const DescribeConcurrentPackagesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeConcurrentPackages(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CarClient::DescribeConcurrentPackagesOutcomeCallable CarClient::DescribeConcurrentPackagesCallable(const DescribeConcurrentPackagesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeConcurrentPackagesOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeConcurrentPackages(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CarClient::DescribeConcurrentSummaryOutcome CarClient::DescribeConcurrentSummary(const DescribeConcurrentSummaryRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeConcurrentSummary");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeConcurrentSummaryResponse rsp = DescribeConcurrentSummaryResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeConcurrentSummaryOutcome(rsp);
+        else
+            return DescribeConcurrentSummaryOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeConcurrentSummaryOutcome(outcome.GetError());
+    }
+}
+
+void CarClient::DescribeConcurrentSummaryAsync(const DescribeConcurrentSummaryRequest& request, const DescribeConcurrentSummaryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeConcurrentSummary(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CarClient::DescribeConcurrentSummaryOutcomeCallable CarClient::DescribeConcurrentSummaryCallable(const DescribeConcurrentSummaryRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeConcurrentSummaryOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeConcurrentSummary(request);
         }
     );
 
@@ -728,6 +1029,49 @@ CarClient::ModifyApplicationBaseInfoOutcomeCallable CarClient::ModifyApplication
     return task->get_future();
 }
 
+CarClient::ModifyApplicationProjectOutcome CarClient::ModifyApplicationProject(const ModifyApplicationProjectRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyApplicationProject");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyApplicationProjectResponse rsp = ModifyApplicationProjectResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyApplicationProjectOutcome(rsp);
+        else
+            return ModifyApplicationProjectOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyApplicationProjectOutcome(outcome.GetError());
+    }
+}
+
+void CarClient::ModifyApplicationProjectAsync(const ModifyApplicationProjectRequest& request, const ModifyApplicationProjectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyApplicationProject(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CarClient::ModifyApplicationProjectOutcomeCallable CarClient::ModifyApplicationProjectCallable(const ModifyApplicationProjectRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyApplicationProjectOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyApplicationProject(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CarClient::ModifyApplicationVersionOutcome CarClient::ModifyApplicationVersion(const ModifyApplicationVersionRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyApplicationVersion");
@@ -771,6 +1115,49 @@ CarClient::ModifyApplicationVersionOutcomeCallable CarClient::ModifyApplicationV
     return task->get_future();
 }
 
+CarClient::ModifyConcurrentPackageOutcome CarClient::ModifyConcurrentPackage(const ModifyConcurrentPackageRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyConcurrentPackage");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyConcurrentPackageResponse rsp = ModifyConcurrentPackageResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyConcurrentPackageOutcome(rsp);
+        else
+            return ModifyConcurrentPackageOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyConcurrentPackageOutcome(outcome.GetError());
+    }
+}
+
+void CarClient::ModifyConcurrentPackageAsync(const ModifyConcurrentPackageRequest& request, const ModifyConcurrentPackageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyConcurrentPackage(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CarClient::ModifyConcurrentPackageOutcomeCallable CarClient::ModifyConcurrentPackageCallable(const ModifyConcurrentPackageRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyConcurrentPackageOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyConcurrentPackage(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CarClient::ModifyMobileApplicationInfoOutcome CarClient::ModifyMobileApplicationInfo(const ModifyMobileApplicationInfoRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyMobileApplicationInfo");
@@ -807,6 +1194,49 @@ CarClient::ModifyMobileApplicationInfoOutcomeCallable CarClient::ModifyMobileApp
         [this, request]()
         {
             return this->ModifyMobileApplicationInfo(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CarClient::ResetConcurrentPackagesOutcome CarClient::ResetConcurrentPackages(const ResetConcurrentPackagesRequest &request)
+{
+    auto outcome = MakeRequest(request, "ResetConcurrentPackages");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ResetConcurrentPackagesResponse rsp = ResetConcurrentPackagesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ResetConcurrentPackagesOutcome(rsp);
+        else
+            return ResetConcurrentPackagesOutcome(o.GetError());
+    }
+    else
+    {
+        return ResetConcurrentPackagesOutcome(outcome.GetError());
+    }
+}
+
+void CarClient::ResetConcurrentPackagesAsync(const ResetConcurrentPackagesRequest& request, const ResetConcurrentPackagesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ResetConcurrentPackages(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CarClient::ResetConcurrentPackagesOutcomeCallable CarClient::ResetConcurrentPackagesCallable(const ResetConcurrentPackagesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ResetConcurrentPackagesOutcome()>>(
+        [this, request]()
+        {
+            return this->ResetConcurrentPackages(request);
         }
     );
 
@@ -979,6 +1409,49 @@ CarClient::StopPublishStreamOutcomeCallable CarClient::StopPublishStreamCallable
         [this, request]()
         {
             return this->StopPublishStream(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CarClient::UnbindConcurrentPackagesFromProjectOutcome CarClient::UnbindConcurrentPackagesFromProject(const UnbindConcurrentPackagesFromProjectRequest &request)
+{
+    auto outcome = MakeRequest(request, "UnbindConcurrentPackagesFromProject");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UnbindConcurrentPackagesFromProjectResponse rsp = UnbindConcurrentPackagesFromProjectResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UnbindConcurrentPackagesFromProjectOutcome(rsp);
+        else
+            return UnbindConcurrentPackagesFromProjectOutcome(o.GetError());
+    }
+    else
+    {
+        return UnbindConcurrentPackagesFromProjectOutcome(outcome.GetError());
+    }
+}
+
+void CarClient::UnbindConcurrentPackagesFromProjectAsync(const UnbindConcurrentPackagesFromProjectRequest& request, const UnbindConcurrentPackagesFromProjectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->UnbindConcurrentPackagesFromProject(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CarClient::UnbindConcurrentPackagesFromProjectOutcomeCallable CarClient::UnbindConcurrentPackagesFromProjectCallable(const UnbindConcurrentPackagesFromProjectRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<UnbindConcurrentPackagesFromProjectOutcome()>>(
+        [this, request]()
+        {
+            return this->UnbindConcurrentPackagesFromProject(request);
         }
     );
 

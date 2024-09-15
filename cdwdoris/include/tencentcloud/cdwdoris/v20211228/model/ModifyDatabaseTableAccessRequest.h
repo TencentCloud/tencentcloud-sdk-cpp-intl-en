@@ -64,27 +64,6 @@ namespace TencentCloud
                     bool DatabaseHasBeenSet() const;
 
                     /**
-                     * 获取Table name. If it is null, it indicates that the entire database is authorized.
-                     * @return Table Table name. If it is null, it indicates that the entire database is authorized.
-                     * 
-                     */
-                    std::string GetTable() const;
-
-                    /**
-                     * 设置Table name. If it is null, it indicates that the entire database is authorized.
-                     * @param _table Table name. If it is null, it indicates that the entire database is authorized.
-                     * 
-                     */
-                    void SetTable(const std::string& _table);
-
-                    /**
-                     * 判断参数 Table 是否已赋值
-                     * @return Table 是否已赋值
-                     * 
-                     */
-                    bool TableHasBeenSet() const;
-
-                    /**
                      * 获取Permission list
                      * @return Privileges Permission list
                      * 
@@ -106,27 +85,6 @@ namespace TencentCloud
                     bool PrivilegesHasBeenSet() const;
 
                     /**
-                     * 获取Role name, if authorized to the role
-                     * @return Role Role name, if authorized to the role
-                     * 
-                     */
-                    std::string GetRole() const;
-
-                    /**
-                     * 设置Role name, if authorized to the role
-                     * @param _role Role name, if authorized to the role
-                     * 
-                     */
-                    void SetRole(const std::string& _role);
-
-                    /**
-                     * 判断参数 Role 是否已赋值
-                     * @return Role 是否已赋值
-                     * 
-                     */
-                    bool RoleHasBeenSet() const;
-
-                    /**
                      * 获取Operation type: GRANT or REVOKE
                      * @return GrantOrRevoke Operation type: GRANT or REVOKE
                      * 
@@ -146,6 +104,69 @@ namespace TencentCloud
                      * 
                      */
                     bool GrantOrRevokeHasBeenSet() const;
+
+                    /**
+                     * 获取InstanceId
+                     * @return InstanceId InstanceId
+                     * 
+                     */
+                    std::string GetInstanceId() const;
+
+                    /**
+                     * 设置InstanceId
+                     * @param _instanceId InstanceId
+                     * 
+                     */
+                    void SetInstanceId(const std::string& _instanceId);
+
+                    /**
+                     * 判断参数 InstanceId 是否已赋值
+                     * @return InstanceId 是否已赋值
+                     * 
+                     */
+                    bool InstanceIdHasBeenSet() const;
+
+                    /**
+                     * 获取Table name. If it is null, it indicates that the entire database is authorized.
+                     * @return Table Table name. If it is null, it indicates that the entire database is authorized.
+                     * 
+                     */
+                    std::string GetTable() const;
+
+                    /**
+                     * 设置Table name. If it is null, it indicates that the entire database is authorized.
+                     * @param _table Table name. If it is null, it indicates that the entire database is authorized.
+                     * 
+                     */
+                    void SetTable(const std::string& _table);
+
+                    /**
+                     * 判断参数 Table 是否已赋值
+                     * @return Table 是否已赋值
+                     * 
+                     */
+                    bool TableHasBeenSet() const;
+
+                    /**
+                     * 获取Role name, if authorized to the role
+                     * @return Role Role name, if authorized to the role
+                     * 
+                     */
+                    std::string GetRole() const;
+
+                    /**
+                     * 设置Role name, if authorized to the role
+                     * @param _role Role name, if authorized to the role
+                     * 
+                     */
+                    void SetRole(const std::string& _role);
+
+                    /**
+                     * 判断参数 Role 是否已赋值
+                     * @return Role 是否已赋值
+                     * 
+                     */
+                    bool RoleHasBeenSet() const;
 
                     /**
                      * 获取Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
@@ -211,27 +232,6 @@ namespace TencentCloud
                     bool CatalogNameHasBeenSet() const;
 
                     /**
-                     * 获取InstanceId
-                     * @return InstanceId InstanceId
-                     * 
-                     */
-                    std::string GetInstanceId() const;
-
-                    /**
-                     * 设置InstanceId
-                     * @param _instanceId InstanceId
-                     * 
-                     */
-                    void SetInstanceId(const std::string& _instanceId);
-
-                    /**
-                     * 判断参数 InstanceId 是否已赋值
-                     * @return InstanceId 是否已赋值
-                     * 
-                     */
-                    bool InstanceIdHasBeenSet() const;
-
-                    /**
                      * 获取Machine Group, defaults to % if not specified.
                      * @return WhiteHost Machine Group, defaults to % if not specified.
                      * 
@@ -261,28 +261,34 @@ namespace TencentCloud
                     bool m_databaseHasBeenSet;
 
                     /**
-                     * Table name. If it is null, it indicates that the entire database is authorized.
-                     */
-                    std::string m_table;
-                    bool m_tableHasBeenSet;
-
-                    /**
                      * Permission list
                      */
                     std::vector<std::string> m_privileges;
                     bool m_privilegesHasBeenSet;
 
                     /**
-                     * Role name, if authorized to the role
-                     */
-                    std::string m_role;
-                    bool m_roleHasBeenSet;
-
-                    /**
                      * Operation type: GRANT or REVOKE
                      */
                     std::string m_grantOrRevoke;
                     bool m_grantOrRevokeHasBeenSet;
+
+                    /**
+                     * InstanceId
+                     */
+                    std::string m_instanceId;
+                    bool m_instanceIdHasBeenSet;
+
+                    /**
+                     * Table name. If it is null, it indicates that the entire database is authorized.
+                     */
+                    std::string m_table;
+                    bool m_tableHasBeenSet;
+
+                    /**
+                     * Role name, if authorized to the role
+                     */
+                    std::string m_role;
+                    bool m_roleHasBeenSet;
 
                     /**
                      * Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
@@ -301,12 +307,6 @@ namespace TencentCloud
                      */
                     std::string m_catalogName;
                     bool m_catalogNameHasBeenSet;
-
-                    /**
-                     * InstanceId
-                     */
-                    std::string m_instanceId;
-                    bool m_instanceIdHasBeenSet;
 
                     /**
                      * Machine Group, defaults to % if not specified.

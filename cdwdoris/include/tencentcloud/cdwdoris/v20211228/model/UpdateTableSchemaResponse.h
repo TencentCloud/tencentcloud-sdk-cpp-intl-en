@@ -62,7 +62,7 @@ namespace TencentCloud
                      * @return Success Is it successful
                      * 
                      */
-                    std::string GetSuccess() const;
+                    bool GetSuccess() const;
 
                     /**
                      * 判断参数 Success 是否已赋值
@@ -82,7 +82,7 @@ namespace TencentCloud
                     /**
                      * Is it successful
                      */
-                    std::string m_success;
+                    bool m_success;
                     bool m_successHasBeenSet;
 
                 };

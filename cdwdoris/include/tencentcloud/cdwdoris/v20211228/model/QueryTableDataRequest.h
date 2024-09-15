@@ -85,6 +85,27 @@ namespace TencentCloud
                     bool TableHasBeenSet() const;
 
                     /**
+                     * 获取InstanceId
+                     * @return InstanceId InstanceId
+                     * 
+                     */
+                    std::string GetInstanceId() const;
+
+                    /**
+                     * 设置InstanceId
+                     * @param _instanceId InstanceId
+                     * 
+                     */
+                    void SetInstanceId(const std::string& _instanceId);
+
+                    /**
+                     * 判断参数 InstanceId 是否已赋值
+                     * @return InstanceId 是否已赋值
+                     * 
+                     */
+                    bool InstanceIdHasBeenSet() const;
+
+                    /**
                      * 获取Array of fields to be queried
                      * @return SelectedFields Array of fields to be queried
                      * 
@@ -214,27 +235,6 @@ namespace TencentCloud
                      */
                     bool CatalogNameHasBeenSet() const;
 
-                    /**
-                     * 获取InstanceId
-                     * @return InstanceId InstanceId
-                     * 
-                     */
-                    std::string GetInstanceId() const;
-
-                    /**
-                     * 设置InstanceId
-                     * @param _instanceId InstanceId
-                     * 
-                     */
-                    void SetInstanceId(const std::string& _instanceId);
-
-                    /**
-                     * 判断参数 InstanceId 是否已赋值
-                     * @return InstanceId 是否已赋值
-                     * 
-                     */
-                    bool InstanceIdHasBeenSet() const;
-
                 private:
 
                     /**
@@ -248,6 +248,12 @@ namespace TencentCloud
                      */
                     std::string m_table;
                     bool m_tableHasBeenSet;
+
+                    /**
+                     * InstanceId
+                     */
+                    std::string m_instanceId;
+                    bool m_instanceIdHasBeenSet;
 
                     /**
                      * Array of fields to be queried
@@ -285,12 +291,6 @@ namespace TencentCloud
                      */
                     std::string m_catalogName;
                     bool m_catalogNameHasBeenSet;
-
-                    /**
-                     * InstanceId
-                     */
-                    std::string m_instanceId;
-                    bool m_instanceIdHasBeenSet;
 
                 };
             }

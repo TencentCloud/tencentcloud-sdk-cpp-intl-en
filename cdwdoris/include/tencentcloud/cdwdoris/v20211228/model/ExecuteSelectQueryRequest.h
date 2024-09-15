@@ -85,6 +85,27 @@ namespace TencentCloud
                     bool QueryHasBeenSet() const;
 
                     /**
+                     * 获取InstanceId
+                     * @return InstanceId InstanceId
+                     * 
+                     */
+                    std::string GetInstanceId() const;
+
+                    /**
+                     * 设置InstanceId
+                     * @param _instanceId InstanceId
+                     * 
+                     */
+                    void SetInstanceId(const std::string& _instanceId);
+
+                    /**
+                     * 判断参数 InstanceId 是否已赋值
+                     * @return InstanceId 是否已赋值
+                     * 
+                     */
+                    bool InstanceIdHasBeenSet() const;
+
+                    /**
                      * 获取Page number, which is 1 by default.
                      * @return PageNum Page number, which is 1 by default.
                      * 
@@ -193,27 +214,6 @@ namespace TencentCloud
                      */
                     bool CatalogNameHasBeenSet() const;
 
-                    /**
-                     * 获取InstanceId
-                     * @return InstanceId InstanceId
-                     * 
-                     */
-                    std::string GetInstanceId() const;
-
-                    /**
-                     * 设置InstanceId
-                     * @param _instanceId InstanceId
-                     * 
-                     */
-                    void SetInstanceId(const std::string& _instanceId);
-
-                    /**
-                     * 判断参数 InstanceId 是否已赋值
-                     * @return InstanceId 是否已赋值
-                     * 
-                     */
-                    bool InstanceIdHasBeenSet() const;
-
                 private:
 
                     /**
@@ -227,6 +227,12 @@ namespace TencentCloud
                      */
                     std::string m_query;
                     bool m_queryHasBeenSet;
+
+                    /**
+                     * InstanceId
+                     */
+                    std::string m_instanceId;
+                    bool m_instanceIdHasBeenSet;
 
                     /**
                      * Page number, which is 1 by default.
@@ -258,12 +264,6 @@ namespace TencentCloud
                      */
                     std::string m_catalogName;
                     bool m_catalogNameHasBeenSet;
-
-                    /**
-                     * InstanceId
-                     */
-                    std::string m_instanceId;
-                    bool m_instanceIdHasBeenSet;
 
                 };
             }

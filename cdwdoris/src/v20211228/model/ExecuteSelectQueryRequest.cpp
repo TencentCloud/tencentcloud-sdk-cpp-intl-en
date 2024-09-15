@@ -25,12 +25,12 @@ using namespace std;
 ExecuteSelectQueryRequest::ExecuteSelectQueryRequest() :
     m_databaseHasBeenSet(false),
     m_queryHasBeenSet(false),
+    m_instanceIdHasBeenSet(false),
     m_pageNumHasBeenSet(false),
     m_pageSizeHasBeenSet(false),
     m_userNameHasBeenSet(false),
     m_passWordHasBeenSet(false),
-    m_catalogNameHasBeenSet(false),
-    m_instanceIdHasBeenSet(false)
+    m_catalogNameHasBeenSet(false)
 {
 }
 
@@ -55,6 +55,14 @@ string ExecuteSelectQueryRequest::ToJsonString() const
         string key = "Query";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_query.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_instanceIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_pageNumHasBeenSet)
@@ -97,14 +105,6 @@ string ExecuteSelectQueryRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_catalogName.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_instanceIdHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "InstanceId";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
-    }
-
 
     rapidjson::StringBuffer buffer;
     rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
@@ -143,6 +143,22 @@ void ExecuteSelectQueryRequest::SetQuery(const string& _query)
 bool ExecuteSelectQueryRequest::QueryHasBeenSet() const
 {
     return m_queryHasBeenSet;
+}
+
+string ExecuteSelectQueryRequest::GetInstanceId() const
+{
+    return m_instanceId;
+}
+
+void ExecuteSelectQueryRequest::SetInstanceId(const string& _instanceId)
+{
+    m_instanceId = _instanceId;
+    m_instanceIdHasBeenSet = true;
+}
+
+bool ExecuteSelectQueryRequest::InstanceIdHasBeenSet() const
+{
+    return m_instanceIdHasBeenSet;
 }
 
 uint64_t ExecuteSelectQueryRequest::GetPageNum() const
@@ -223,22 +239,6 @@ void ExecuteSelectQueryRequest::SetCatalogName(const string& _catalogName)
 bool ExecuteSelectQueryRequest::CatalogNameHasBeenSet() const
 {
     return m_catalogNameHasBeenSet;
-}
-
-string ExecuteSelectQueryRequest::GetInstanceId() const
-{
-    return m_instanceId;
-}
-
-void ExecuteSelectQueryRequest::SetInstanceId(const string& _instanceId)
-{
-    m_instanceId = _instanceId;
-    m_instanceIdHasBeenSet = true;
-}
-
-bool ExecuteSelectQueryRequest::InstanceIdHasBeenSet() const
-{
-    return m_instanceIdHasBeenSet;
 }
 
 

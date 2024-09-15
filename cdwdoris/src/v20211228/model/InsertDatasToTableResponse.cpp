@@ -86,11 +86,11 @@ CoreInternalOutcome InsertDatasToTableResponse::Deserialize(const string &payloa
 
     if (rsp.HasMember("InsertCount") && !rsp["InsertCount"].IsNull())
     {
-        if (!rsp["InsertCount"].IsString())
+        if (!rsp["InsertCount"].IsUint64())
         {
-            return CoreInternalOutcome(Core::Error("response `InsertCount` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InsertCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
-        m_insertCount = string(rsp["InsertCount"].GetString());
+        m_insertCount = rsp["InsertCount"].GetUint64();
         m_insertCountHasBeenSet = true;
     }
 
@@ -125,7 +125,7 @@ string InsertDatasToTableResponse::ToJsonString() const
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InsertCount";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_insertCount.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, m_insertCount, allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -160,7 +160,7 @@ bool InsertDatasToTableResponse::MessageHasBeenSet() const
     return m_messageHasBeenSet;
 }
 
-string InsertDatasToTableResponse::GetInsertCount() const
+uint64_t InsertDatasToTableResponse::GetInsertCount() const
 {
     return m_insertCount;
 }

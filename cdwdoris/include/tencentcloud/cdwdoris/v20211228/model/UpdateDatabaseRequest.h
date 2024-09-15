@@ -86,6 +86,27 @@ namespace TencentCloud
                     bool OperationHasBeenSet() const;
 
                     /**
+                     * 获取InstanceId
+                     * @return InstanceId InstanceId
+                     * 
+                     */
+                    std::string GetInstanceId() const;
+
+                    /**
+                     * 设置InstanceId
+                     * @param _instanceId InstanceId
+                     * 
+                     */
+                    void SetInstanceId(const std::string& _instanceId);
+
+                    /**
+                     * 判断参数 InstanceId 是否已赋值
+                     * @return InstanceId 是否已赋值
+                     * 
+                     */
+                    bool InstanceIdHasBeenSet() const;
+
+                    /**
                      * 获取Quota value, which is used to set the quota of data volume or replicas.
                      * @return Quota Quota value, which is used to set the quota of data volume or replicas.
                      * 
@@ -191,25 +212,25 @@ namespace TencentCloud
                     bool PassWordHasBeenSet() const;
 
                     /**
-                     * 获取InstanceId
-                     * @return InstanceId InstanceId
+                     * 获取The name of the catalog, if left unspecified, defaults to "internal".
+                     * @return CatalogName The name of the catalog, if left unspecified, defaults to "internal".
                      * 
                      */
-                    std::string GetInstanceId() const;
+                    std::string GetCatalogName() const;
 
                     /**
-                     * 设置InstanceId
-                     * @param _instanceId InstanceId
+                     * 设置The name of the catalog, if left unspecified, defaults to "internal".
+                     * @param _catalogName The name of the catalog, if left unspecified, defaults to "internal".
                      * 
                      */
-                    void SetInstanceId(const std::string& _instanceId);
+                    void SetCatalogName(const std::string& _catalogName);
 
                     /**
-                     * 判断参数 InstanceId 是否已赋值
-                     * @return InstanceId 是否已赋值
+                     * 判断参数 CatalogName 是否已赋值
+                     * @return CatalogName 是否已赋值
                      * 
                      */
-                    bool InstanceIdHasBeenSet() const;
+                    bool CatalogNameHasBeenSet() const;
 
                 private:
 
@@ -224,6 +245,12 @@ namespace TencentCloud
                      */
                     std::string m_operation;
                     bool m_operationHasBeenSet;
+
+                    /**
+                     * InstanceId
+                     */
+                    std::string m_instanceId;
+                    bool m_instanceIdHasBeenSet;
 
                     /**
                      * Quota value, which is used to set the quota of data volume or replicas.
@@ -256,10 +283,10 @@ namespace TencentCloud
                     bool m_passWordHasBeenSet;
 
                     /**
-                     * InstanceId
+                     * The name of the catalog, if left unspecified, defaults to "internal".
                      */
-                    std::string m_instanceId;
-                    bool m_instanceIdHasBeenSet;
+                    std::string m_catalogName;
+                    bool m_catalogNameHasBeenSet;
 
                 };
             }

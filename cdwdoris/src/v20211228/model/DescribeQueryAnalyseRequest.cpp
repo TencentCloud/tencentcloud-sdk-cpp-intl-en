@@ -34,7 +34,9 @@ DescribeQueryAnalyseRequest::DescribeQueryAnalyseRequest() :
     m_sQLTypeFilterHasBeenSet(false),
     m_sortFieldHasBeenSet(false),
     m_sortOrderHasBeenSet(false),
-    m_queryTimeHasBeenSet(false)
+    m_queryTimeHasBeenSet(false),
+    m_pageNumHasBeenSet(false),
+    m_pageSizeHasBeenSet(false)
 {
 }
 
@@ -139,6 +141,22 @@ string DescribeQueryAnalyseRequest::ToJsonString() const
         string key = "QueryTime";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_queryTime, allocator);
+    }
+
+    if (m_pageNumHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PageNum";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_pageNum, allocator);
+    }
+
+    if (m_pageSizeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PageSize";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_pageSize, allocator);
     }
 
 
@@ -339,6 +357,38 @@ void DescribeQueryAnalyseRequest::SetQueryTime(const uint64_t& _queryTime)
 bool DescribeQueryAnalyseRequest::QueryTimeHasBeenSet() const
 {
     return m_queryTimeHasBeenSet;
+}
+
+uint64_t DescribeQueryAnalyseRequest::GetPageNum() const
+{
+    return m_pageNum;
+}
+
+void DescribeQueryAnalyseRequest::SetPageNum(const uint64_t& _pageNum)
+{
+    m_pageNum = _pageNum;
+    m_pageNumHasBeenSet = true;
+}
+
+bool DescribeQueryAnalyseRequest::PageNumHasBeenSet() const
+{
+    return m_pageNumHasBeenSet;
+}
+
+uint64_t DescribeQueryAnalyseRequest::GetPageSize() const
+{
+    return m_pageSize;
+}
+
+void DescribeQueryAnalyseRequest::SetPageSize(const uint64_t& _pageSize)
+{
+    m_pageSize = _pageSize;
+    m_pageSizeHasBeenSet = true;
+}
+
+bool DescribeQueryAnalyseRequest::PageSizeHasBeenSet() const
+{
+    return m_pageSizeHasBeenSet;
 }
 
 

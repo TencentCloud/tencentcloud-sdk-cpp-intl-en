@@ -1020,7 +1020,7 @@ Notes:
                 DescribeAllStreamPlayInfoListOutcomeCallable DescribeAllStreamPlayInfoListCallable(const Model::DescribeAllStreamPlayInfoListRequest& request);
 
                 /**
-                 *This API is used to query the data of billable LVB bandwidth and traffic.
+                 *This API is used to query the data of billable bandwidth and traffic.
                  * @param req DescribeBillBandwidthAndFluxListRequest
                  * @return DescribeBillBandwidthAndFluxListOutcome
                  */

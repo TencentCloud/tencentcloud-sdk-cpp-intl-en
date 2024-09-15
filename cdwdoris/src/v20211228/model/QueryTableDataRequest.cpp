@@ -25,13 +25,13 @@ using namespace std;
 QueryTableDataRequest::QueryTableDataRequest() :
     m_databaseHasBeenSet(false),
     m_tableHasBeenSet(false),
+    m_instanceIdHasBeenSet(false),
     m_selectedFieldsHasBeenSet(false),
     m_pageNumHasBeenSet(false),
     m_pageSizeHasBeenSet(false),
     m_userNameHasBeenSet(false),
     m_passWordHasBeenSet(false),
-    m_catalogNameHasBeenSet(false),
-    m_instanceIdHasBeenSet(false)
+    m_catalogNameHasBeenSet(false)
 {
 }
 
@@ -56,6 +56,14 @@ string QueryTableDataRequest::ToJsonString() const
         string key = "Table";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_table.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_instanceIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_selectedFieldsHasBeenSet)
@@ -111,14 +119,6 @@ string QueryTableDataRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_catalogName.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_instanceIdHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "InstanceId";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
-    }
-
 
     rapidjson::StringBuffer buffer;
     rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
@@ -157,6 +157,22 @@ void QueryTableDataRequest::SetTable(const string& _table)
 bool QueryTableDataRequest::TableHasBeenSet() const
 {
     return m_tableHasBeenSet;
+}
+
+string QueryTableDataRequest::GetInstanceId() const
+{
+    return m_instanceId;
+}
+
+void QueryTableDataRequest::SetInstanceId(const string& _instanceId)
+{
+    m_instanceId = _instanceId;
+    m_instanceIdHasBeenSet = true;
+}
+
+bool QueryTableDataRequest::InstanceIdHasBeenSet() const
+{
+    return m_instanceIdHasBeenSet;
 }
 
 vector<string> QueryTableDataRequest::GetSelectedFields() const
@@ -253,22 +269,6 @@ void QueryTableDataRequest::SetCatalogName(const string& _catalogName)
 bool QueryTableDataRequest::CatalogNameHasBeenSet() const
 {
     return m_catalogNameHasBeenSet;
-}
-
-string QueryTableDataRequest::GetInstanceId() const
-{
-    return m_instanceId;
-}
-
-void QueryTableDataRequest::SetInstanceId(const string& _instanceId)
-{
-    m_instanceId = _instanceId;
-    m_instanceIdHasBeenSet = true;
-}
-
-bool QueryTableDataRequest::InstanceIdHasBeenSet() const
-{
-    return m_instanceIdHasBeenSet;
 }
 
 

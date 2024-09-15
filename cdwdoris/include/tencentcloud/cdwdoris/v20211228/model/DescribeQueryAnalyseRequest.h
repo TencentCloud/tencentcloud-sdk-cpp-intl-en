@@ -294,6 +294,48 @@ namespace TencentCloud
                      */
                     bool QueryTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Page number, defaults to 1.
+                     * @return PageNum Page number, defaults to 1.
+                     * 
+                     */
+                    uint64_t GetPageNum() const;
+
+                    /**
+                     * 设置Page number, defaults to 1.
+                     * @param _pageNum Page number, defaults to 1.
+                     * 
+                     */
+                    void SetPageNum(const uint64_t& _pageNum);
+
+                    /**
+                     * 判断参数 PageNum 是否已赋值
+                     * @return PageNum 是否已赋值
+                     * 
+                     */
+                    bool PageNumHasBeenSet() const;
+
+                    /**
+                     * 获取Number of records per page, defaults to 10.
+                     * @return PageSize Number of records per page, defaults to 10.
+                     * 
+                     */
+                    uint64_t GetPageSize() const;
+
+                    /**
+                     * 设置Number of records per page, defaults to 10.
+                     * @param _pageSize Number of records per page, defaults to 10.
+                     * 
+                     */
+                    void SetPageSize(const uint64_t& _pageSize);
+
+                    /**
+                     * 判断参数 PageSize 是否已赋值
+                     * @return PageSize 是否已赋值
+                     * 
+                     */
+                    bool PageSizeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -367,6 +409,18 @@ namespace TencentCloud
                      */
                     uint64_t m_queryTime;
                     bool m_queryTimeHasBeenSet;
+
+                    /**
+                     * Page number, defaults to 1.
+                     */
+                    uint64_t m_pageNum;
+                    bool m_pageNumHasBeenSet;
+
+                    /**
+                     * Number of records per page, defaults to 10.
+                     */
+                    uint64_t m_pageSize;
+                    bool m_pageSizeHasBeenSet;
 
                 };
             }

@@ -24,13 +24,13 @@ using namespace std;
 
 UpdateTableSchemaRequest::UpdateTableSchemaRequest() :
     m_instanceIdHasBeenSet(false),
-    m_userNameHasBeenSet(false),
-    m_passWordHasBeenSet(false),
     m_dbNameHasBeenSet(false),
     m_tableNameHasBeenSet(false),
     m_columnsHasBeenSet(false),
-    m_indexInfosHasBeenSet(false),
     m_distributionHasBeenSet(false),
+    m_userNameHasBeenSet(false),
+    m_passWordHasBeenSet(false),
+    m_indexInfosHasBeenSet(false),
     m_tableCommentHasBeenSet(false),
     m_propertiesHasBeenSet(false)
 {
@@ -49,22 +49,6 @@ string UpdateTableSchemaRequest::ToJsonString() const
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_userNameHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "UserName";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_userName.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_passWordHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "PassWord";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_passWord.c_str(), allocator).Move(), allocator);
     }
 
     if (m_dbNameHasBeenSet)
@@ -98,6 +82,31 @@ string UpdateTableSchemaRequest::ToJsonString() const
         }
     }
 
+    if (m_distributionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Distribution";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_distribution.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_userNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "UserName";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_userName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_passWordHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PassWord";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_passWord.c_str(), allocator).Move(), allocator);
+    }
+
     if (m_indexInfosHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -111,15 +120,6 @@ string UpdateTableSchemaRequest::ToJsonString() const
             d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(d[key.c_str()][i], allocator);
         }
-    }
-
-    if (m_distributionHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Distribution";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
-        m_distribution.ToJsonObject(d[key.c_str()], allocator);
     }
 
     if (m_tableCommentHasBeenSet)
@@ -167,38 +167,6 @@ void UpdateTableSchemaRequest::SetInstanceId(const string& _instanceId)
 bool UpdateTableSchemaRequest::InstanceIdHasBeenSet() const
 {
     return m_instanceIdHasBeenSet;
-}
-
-string UpdateTableSchemaRequest::GetUserName() const
-{
-    return m_userName;
-}
-
-void UpdateTableSchemaRequest::SetUserName(const string& _userName)
-{
-    m_userName = _userName;
-    m_userNameHasBeenSet = true;
-}
-
-bool UpdateTableSchemaRequest::UserNameHasBeenSet() const
-{
-    return m_userNameHasBeenSet;
-}
-
-string UpdateTableSchemaRequest::GetPassWord() const
-{
-    return m_passWord;
-}
-
-void UpdateTableSchemaRequest::SetPassWord(const string& _passWord)
-{
-    m_passWord = _passWord;
-    m_passWordHasBeenSet = true;
-}
-
-bool UpdateTableSchemaRequest::PassWordHasBeenSet() const
-{
-    return m_passWordHasBeenSet;
 }
 
 string UpdateTableSchemaRequest::GetDbName() const
@@ -249,22 +217,6 @@ bool UpdateTableSchemaRequest::ColumnsHasBeenSet() const
     return m_columnsHasBeenSet;
 }
 
-vector<IndexInfo> UpdateTableSchemaRequest::GetIndexInfos() const
-{
-    return m_indexInfos;
-}
-
-void UpdateTableSchemaRequest::SetIndexInfos(const vector<IndexInfo>& _indexInfos)
-{
-    m_indexInfos = _indexInfos;
-    m_indexInfosHasBeenSet = true;
-}
-
-bool UpdateTableSchemaRequest::IndexInfosHasBeenSet() const
-{
-    return m_indexInfosHasBeenSet;
-}
-
 Distribution UpdateTableSchemaRequest::GetDistribution() const
 {
     return m_distribution;
@@ -279,6 +231,54 @@ void UpdateTableSchemaRequest::SetDistribution(const Distribution& _distribution
 bool UpdateTableSchemaRequest::DistributionHasBeenSet() const
 {
     return m_distributionHasBeenSet;
+}
+
+string UpdateTableSchemaRequest::GetUserName() const
+{
+    return m_userName;
+}
+
+void UpdateTableSchemaRequest::SetUserName(const string& _userName)
+{
+    m_userName = _userName;
+    m_userNameHasBeenSet = true;
+}
+
+bool UpdateTableSchemaRequest::UserNameHasBeenSet() const
+{
+    return m_userNameHasBeenSet;
+}
+
+string UpdateTableSchemaRequest::GetPassWord() const
+{
+    return m_passWord;
+}
+
+void UpdateTableSchemaRequest::SetPassWord(const string& _passWord)
+{
+    m_passWord = _passWord;
+    m_passWordHasBeenSet = true;
+}
+
+bool UpdateTableSchemaRequest::PassWordHasBeenSet() const
+{
+    return m_passWordHasBeenSet;
+}
+
+vector<IndexInfo> UpdateTableSchemaRequest::GetIndexInfos() const
+{
+    return m_indexInfos;
+}
+
+void UpdateTableSchemaRequest::SetIndexInfos(const vector<IndexInfo>& _indexInfos)
+{
+    m_indexInfos = _indexInfos;
+    m_indexInfosHasBeenSet = true;
+}
+
+bool UpdateTableSchemaRequest::IndexInfosHasBeenSet() const
+{
+    return m_indexInfosHasBeenSet;
 }
 
 string UpdateTableSchemaRequest::GetTableComment() const

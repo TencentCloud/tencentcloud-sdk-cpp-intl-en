@@ -75,11 +75,11 @@ CoreInternalOutcome UpdateTableSchemaResponse::Deserialize(const string &payload
 
     if (rsp.HasMember("Success") && !rsp["Success"].IsNull())
     {
-        if (!rsp["Success"].IsString())
+        if (!rsp["Success"].IsBool())
         {
-            return CoreInternalOutcome(Core::Error("response `Success` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Success` IsBool=false incorrectly").SetRequestId(requestId));
         }
-        m_success = string(rsp["Success"].GetString());
+        m_success = rsp["Success"].GetBool();
         m_successHasBeenSet = true;
     }
 
@@ -106,7 +106,7 @@ string UpdateTableSchemaResponse::ToJsonString() const
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Success";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_success.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, m_success, allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -131,7 +131,7 @@ bool UpdateTableSchemaResponse::MessageHasBeenSet() const
     return m_messageHasBeenSet;
 }
 
-string UpdateTableSchemaResponse::GetSuccess() const
+bool UpdateTableSchemaResponse::GetSuccess() const
 {
     return m_success;
 }

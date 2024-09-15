@@ -87,10 +87,10 @@ namespace TencentCloud
                     /**
                      * 获取Query date (UTC+8)
 Format: yyyymmdd
-Note: you can query the statistics for a day in the past three months, with yesterday as the latest date allowed.
+Note: you can query the statistics for a day in the past one month, with yesterday as the latest date allowed.
                      * @return DayTime Query date (UTC+8)
 Format: yyyymmdd
-Note: you can query the statistics for a day in the past three months, with yesterday as the latest date allowed.
+Note: you can query the statistics for a day in the past one month, with yesterday as the latest date allowed.
                      * 
                      */
                     std::string GetDayTime() const;
@@ -98,10 +98,10 @@ Note: you can query the statistics for a day in the past three months, with yest
                     /**
                      * 设置Query date (UTC+8)
 Format: yyyymmdd
-Note: you can query the statistics for a day in the past three months, with yesterday as the latest date allowed.
+Note: you can query the statistics for a day in the past one month, with yesterday as the latest date allowed.
                      * @param _dayTime Query date (UTC+8)
 Format: yyyymmdd
-Note: you can query the statistics for a day in the past three months, with yesterday as the latest date allowed.
+Note: you can query the statistics for a day in the past one month, with yesterday as the latest date allowed.
                      * 
                      */
                     void SetDayTime(const std::string& _dayTime);
@@ -166,10 +166,10 @@ Value range: [10,1000].
                     /**
                      * 获取Start date (UTC+8)
 Format: yyyymmdd
-Note: details for the last three months can be queried.
+Note: details for the last one month can be queried.
                      * @return StartDayTime Start date (UTC+8)
 Format: yyyymmdd
-Note: details for the last three months can be queried.
+Note: details for the last one month can be queried.
                      * 
                      */
                     std::string GetStartDayTime() const;
@@ -177,10 +177,10 @@ Note: details for the last three months can be queried.
                     /**
                      * 设置Start date (UTC+8)
 Format: yyyymmdd
-Note: details for the last three months can be queried.
+Note: details for the last one month can be queried.
                      * @param _startDayTime Start date (UTC+8)
 Format: yyyymmdd
-Note: details for the last three months can be queried.
+Note: details for the last one month can be queried.
                      * 
                      */
                     void SetStartDayTime(const std::string& _startDayTime);
@@ -195,10 +195,10 @@ Note: details for the last three months can be queried.
                     /**
                      * 获取End date (UTC+8)
 Format: yyyymmdd
-Note: you can query the statistics for a period in the past three months, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied.
+Note: you can query the statistics for a period in the past one month, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied.
                      * @return EndDayTime End date (UTC+8)
 Format: yyyymmdd
-Note: you can query the statistics for a period in the past three months, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied.
+Note: you can query the statistics for a period in the past one month, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied.
                      * 
                      */
                     std::string GetEndDayTime() const;
@@ -206,10 +206,10 @@ Note: you can query the statistics for a period in the past three months, with y
                     /**
                      * 设置End date (UTC+8)
 Format: yyyymmdd
-Note: you can query the statistics for a period in the past three months, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied.
+Note: you can query the statistics for a period in the past one month, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied.
                      * @param _endDayTime End date (UTC+8)
 Format: yyyymmdd
-Note: you can query the statistics for a period in the past three months, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied.
+Note: you can query the statistics for a period in the past one month, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied.
                      * 
                      */
                     void SetEndDayTime(const std::string& _endDayTime);
@@ -238,7 +238,7 @@ Note: you can query the statistics for a period in the past three months, with y
                     /**
                      * Query date (UTC+8)
 Format: yyyymmdd
-Note: you can query the statistics for a day in the past three months, with yesterday as the latest date allowed.
+Note: you can query the statistics for a day in the past one month, with yesterday as the latest date allowed.
                      */
                     std::string m_dayTime;
                     bool m_dayTimeHasBeenSet;
@@ -260,7 +260,7 @@ Value range: [10,1000].
                     /**
                      * Start date (UTC+8)
 Format: yyyymmdd
-Note: details for the last three months can be queried.
+Note: details for the last one month can be queried.
                      */
                     std::string m_startDayTime;
                     bool m_startDayTimeHasBeenSet;
@@ -268,7 +268,7 @@ Note: details for the last three months can be queried.
                     /**
                      * End date (UTC+8)
 Format: yyyymmdd
-Note: you can query the statistics for a period in the past three months, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied.
+Note: you can query the statistics for a period in the past one month, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied.
                      */
                     std::string m_endDayTime;
                     bool m_endDayTimeHasBeenSet;

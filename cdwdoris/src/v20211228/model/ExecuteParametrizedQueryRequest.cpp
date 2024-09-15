@@ -25,13 +25,13 @@ using namespace std;
 ExecuteParametrizedQueryRequest::ExecuteParametrizedQueryRequest() :
     m_databaseHasBeenSet(false),
     m_sqlHasBeenSet(false),
+    m_instanceIdHasBeenSet(false),
     m_queryParameterHasBeenSet(false),
     m_pageNumHasBeenSet(false),
     m_pageSizeHasBeenSet(false),
     m_userNameHasBeenSet(false),
     m_passWordHasBeenSet(false),
-    m_catalogNameHasBeenSet(false),
-    m_instanceIdHasBeenSet(false)
+    m_catalogNameHasBeenSet(false)
 {
 }
 
@@ -56,6 +56,14 @@ string ExecuteParametrizedQueryRequest::ToJsonString() const
         string key = "Sql";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_sql.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_instanceIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_queryParameterHasBeenSet)
@@ -113,14 +121,6 @@ string ExecuteParametrizedQueryRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_catalogName.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_instanceIdHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "InstanceId";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
-    }
-
 
     rapidjson::StringBuffer buffer;
     rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
@@ -159,6 +159,22 @@ void ExecuteParametrizedQueryRequest::SetSql(const string& _sql)
 bool ExecuteParametrizedQueryRequest::SqlHasBeenSet() const
 {
     return m_sqlHasBeenSet;
+}
+
+string ExecuteParametrizedQueryRequest::GetInstanceId() const
+{
+    return m_instanceId;
+}
+
+void ExecuteParametrizedQueryRequest::SetInstanceId(const string& _instanceId)
+{
+    m_instanceId = _instanceId;
+    m_instanceIdHasBeenSet = true;
+}
+
+bool ExecuteParametrizedQueryRequest::InstanceIdHasBeenSet() const
+{
+    return m_instanceIdHasBeenSet;
 }
 
 vector<PropertiesMap> ExecuteParametrizedQueryRequest::GetQueryParameter() const
@@ -255,22 +271,6 @@ void ExecuteParametrizedQueryRequest::SetCatalogName(const string& _catalogName)
 bool ExecuteParametrizedQueryRequest::CatalogNameHasBeenSet() const
 {
     return m_catalogNameHasBeenSet;
-}
-
-string ExecuteParametrizedQueryRequest::GetInstanceId() const
-{
-    return m_instanceId;
-}
-
-void ExecuteParametrizedQueryRequest::SetInstanceId(const string& _instanceId)
-{
-    m_instanceId = _instanceId;
-    m_instanceIdHasBeenSet = true;
-}
-
-bool ExecuteParametrizedQueryRequest::InstanceIdHasBeenSet() const
-{
-    return m_instanceIdHasBeenSet;
 }
 
 

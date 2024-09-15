@@ -29,8 +29,7 @@ DescribeInstanceOperationHistoryRequest::DescribeInstanceOperationHistoryRequest
     m_startTimeHasBeenSet(false),
     m_endTimeHasBeenSet(false),
     m_userNameHasBeenSet(false),
-    m_passWordHasBeenSet(false),
-    m_messageHasBeenSet(false)
+    m_passWordHasBeenSet(false)
 {
 }
 
@@ -95,14 +94,6 @@ string DescribeInstanceOperationHistoryRequest::ToJsonString() const
         string key = "PassWord";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_passWord.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_messageHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Message";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_message.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -223,22 +214,6 @@ void DescribeInstanceOperationHistoryRequest::SetPassWord(const string& _passWor
 bool DescribeInstanceOperationHistoryRequest::PassWordHasBeenSet() const
 {
     return m_passWordHasBeenSet;
-}
-
-string DescribeInstanceOperationHistoryRequest::GetMessage() const
-{
-    return m_message;
-}
-
-void DescribeInstanceOperationHistoryRequest::SetMessage(const string& _message)
-{
-    m_message = _message;
-    m_messageHasBeenSet = true;
-}
-
-bool DescribeInstanceOperationHistoryRequest::MessageHasBeenSet() const
-{
-    return m_messageHasBeenSet;
 }
 
 

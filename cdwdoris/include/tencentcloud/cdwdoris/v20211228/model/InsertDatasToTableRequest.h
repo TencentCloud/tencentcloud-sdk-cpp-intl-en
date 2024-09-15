@@ -86,48 +86,6 @@ namespace TencentCloud
                     bool TableHasBeenSet() const;
 
                     /**
-                     * 获取Whether to use the strict mode
-                     * @return Strict Whether to use the strict mode
-                     * 
-                     */
-                    bool GetStrict() const;
-
-                    /**
-                     * 设置Whether to use the strict mode
-                     * @param _strict Whether to use the strict mode
-                     * 
-                     */
-                    void SetStrict(const bool& _strict);
-
-                    /**
-                     * 判断参数 Strict 是否已赋值
-                     * @return Strict 是否已赋值
-                     * 
-                     */
-                    bool StrictHasBeenSet() const;
-
-                    /**
-                     * 获取Maximum filtration ratio, ranging from 0 to 1.0
-                     * @return MaxFilterRatio Maximum filtration ratio, ranging from 0 to 1.0
-                     * 
-                     */
-                    double GetMaxFilterRatio() const;
-
-                    /**
-                     * 设置Maximum filtration ratio, ranging from 0 to 1.0
-                     * @param _maxFilterRatio Maximum filtration ratio, ranging from 0 to 1.0
-                     * 
-                     */
-                    void SetMaxFilterRatio(const double& _maxFilterRatio);
-
-                    /**
-                     * 判断参数 MaxFilterRatio 是否已赋值
-                     * @return MaxFilterRatio 是否已赋值
-                     * 
-                     */
-                    bool MaxFilterRatioHasBeenSet() const;
-
-                    /**
                      * 获取Array of column names
                      * @return Columns Array of column names
                      * 
@@ -168,6 +126,94 @@ namespace TencentCloud
                      * 
                      */
                     bool RowsHasBeenSet() const;
+
+                    /**
+                     * 获取Array of column types
+
+                     * @return Types Array of column types
+
+                     * 
+                     */
+                    std::vector<std::string> GetTypes() const;
+
+                    /**
+                     * 设置Array of column types
+
+                     * @param _types Array of column types
+
+                     * 
+                     */
+                    void SetTypes(const std::vector<std::string>& _types);
+
+                    /**
+                     * 判断参数 Types 是否已赋值
+                     * @return Types 是否已赋值
+                     * 
+                     */
+                    bool TypesHasBeenSet() const;
+
+                    /**
+                     * 获取InstanceId
+                     * @return InstanceId InstanceId
+                     * 
+                     */
+                    std::string GetInstanceId() const;
+
+                    /**
+                     * 设置InstanceId
+                     * @param _instanceId InstanceId
+                     * 
+                     */
+                    void SetInstanceId(const std::string& _instanceId);
+
+                    /**
+                     * 判断参数 InstanceId 是否已赋值
+                     * @return InstanceId 是否已赋值
+                     * 
+                     */
+                    bool InstanceIdHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to use the strict mode
+                     * @return Strict Whether to use the strict mode
+                     * 
+                     */
+                    bool GetStrict() const;
+
+                    /**
+                     * 设置Whether to use the strict mode
+                     * @param _strict Whether to use the strict mode
+                     * 
+                     */
+                    void SetStrict(const bool& _strict);
+
+                    /**
+                     * 判断参数 Strict 是否已赋值
+                     * @return Strict 是否已赋值
+                     * 
+                     */
+                    bool StrictHasBeenSet() const;
+
+                    /**
+                     * 获取Maximum filtration ratio, ranging from 0 to 1.0
+                     * @return MaxFilterRatio Maximum filtration ratio, ranging from 0 to 1.0
+                     * 
+                     */
+                    double GetMaxFilterRatio() const;
+
+                    /**
+                     * 设置Maximum filtration ratio, ranging from 0 to 1.0
+                     * @param _maxFilterRatio Maximum filtration ratio, ranging from 0 to 1.0
+                     * 
+                     */
+                    void SetMaxFilterRatio(const double& _maxFilterRatio);
+
+                    /**
+                     * 判断参数 MaxFilterRatio 是否已赋值
+                     * @return MaxFilterRatio 是否已赋值
+                     * 
+                     */
+                    bool MaxFilterRatioHasBeenSet() const;
 
                     /**
                      * 获取Tags for inserting data
@@ -233,52 +279,6 @@ namespace TencentCloud
                     bool PassWordHasBeenSet() const;
 
                     /**
-                     * 获取Column type, this field has been deprecated, please use Types
-                     * @return ColumnTypes Column type, this field has been deprecated, please use Types
-                     * @deprecated
-                     */
-                    std::string GetColumnTypes() const;
-
-                    /**
-                     * 设置Column type, this field has been deprecated, please use Types
-                     * @param _columnTypes Column type, this field has been deprecated, please use Types
-                     * @deprecated
-                     */
-                    void SetColumnTypes(const std::string& _columnTypes);
-
-                    /**
-                     * 判断参数 ColumnTypes 是否已赋值
-                     * @return ColumnTypes 是否已赋值
-                     * @deprecated
-                     */
-                    bool ColumnTypesHasBeenSet() const;
-
-                    /**
-                     * 获取Array of column types
-
-                     * @return Types Array of column types
-
-                     * 
-                     */
-                    std::vector<std::string> GetTypes() const;
-
-                    /**
-                     * 设置Array of column types
-
-                     * @param _types Array of column types
-
-                     * 
-                     */
-                    void SetTypes(const std::vector<std::string>& _types);
-
-                    /**
-                     * 判断参数 Types 是否已赋值
-                     * @return Types 是否已赋值
-                     * 
-                     */
-                    bool TypesHasBeenSet() const;
-
-                    /**
                      * 获取Catalog name, defaults to 'internal' if not specified.
                      * @return CatalogName Catalog name, defaults to 'internal' if not specified.
                      * 
@@ -299,27 +299,6 @@ namespace TencentCloud
                      */
                     bool CatalogNameHasBeenSet() const;
 
-                    /**
-                     * 获取InstanceId
-                     * @return InstanceId InstanceId
-                     * 
-                     */
-                    std::string GetInstanceId() const;
-
-                    /**
-                     * 设置InstanceId
-                     * @param _instanceId InstanceId
-                     * 
-                     */
-                    void SetInstanceId(const std::string& _instanceId);
-
-                    /**
-                     * 判断参数 InstanceId 是否已赋值
-                     * @return InstanceId 是否已赋值
-                     * 
-                     */
-                    bool InstanceIdHasBeenSet() const;
-
                 private:
 
                     /**
@@ -335,18 +314,6 @@ namespace TencentCloud
                     bool m_tableHasBeenSet;
 
                     /**
-                     * Whether to use the strict mode
-                     */
-                    bool m_strict;
-                    bool m_strictHasBeenSet;
-
-                    /**
-                     * Maximum filtration ratio, ranging from 0 to 1.0
-                     */
-                    double m_maxFilterRatio;
-                    bool m_maxFilterRatioHasBeenSet;
-
-                    /**
                      * Array of column names
                      */
                     std::vector<std::string> m_columns;
@@ -357,6 +324,31 @@ namespace TencentCloud
                      */
                     std::vector<Rows> m_rows;
                     bool m_rowsHasBeenSet;
+
+                    /**
+                     * Array of column types
+
+                     */
+                    std::vector<std::string> m_types;
+                    bool m_typesHasBeenSet;
+
+                    /**
+                     * InstanceId
+                     */
+                    std::string m_instanceId;
+                    bool m_instanceIdHasBeenSet;
+
+                    /**
+                     * Whether to use the strict mode
+                     */
+                    bool m_strict;
+                    bool m_strictHasBeenSet;
+
+                    /**
+                     * Maximum filtration ratio, ranging from 0 to 1.0
+                     */
+                    double m_maxFilterRatio;
+                    bool m_maxFilterRatioHasBeenSet;
 
                     /**
                      * Tags for inserting data
@@ -377,29 +369,10 @@ namespace TencentCloud
                     bool m_passWordHasBeenSet;
 
                     /**
-                     * Column type, this field has been deprecated, please use Types
-                     */
-                    std::string m_columnTypes;
-                    bool m_columnTypesHasBeenSet;
-
-                    /**
-                     * Array of column types
-
-                     */
-                    std::vector<std::string> m_types;
-                    bool m_typesHasBeenSet;
-
-                    /**
                      * Catalog name, defaults to 'internal' if not specified.
                      */
                     std::string m_catalogName;
                     bool m_catalogNameHasBeenSet;
-
-                    /**
-                     * InstanceId
-                     */
-                    std::string m_instanceId;
-                    bool m_instanceIdHasBeenSet;
 
                 };
             }

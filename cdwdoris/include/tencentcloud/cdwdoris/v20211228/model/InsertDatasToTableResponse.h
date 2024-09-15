@@ -76,7 +76,7 @@ namespace TencentCloud
                      * @return InsertCount Number of inserted data rows
                      * 
                      */
-                    std::string GetInsertCount() const;
+                    uint64_t GetInsertCount() const;
 
                     /**
                      * 判断参数 InsertCount 是否已赋值
@@ -102,7 +102,7 @@ namespace TencentCloud
                     /**
                      * Number of inserted data rows
                      */
-                    std::string m_insertCount;
+                    uint64_t m_insertCount;
                     bool m_insertCountHasBeenSet;
 
                 };

@@ -22,8 +22,8 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cdwdoris/v20211228/model/Column.h>
-#include <tencentcloud/cdwdoris/v20211228/model/IndexInfo.h>
 #include <tencentcloud/cdwdoris/v20211228/model/Distribution.h>
+#include <tencentcloud/cdwdoris/v20211228/model/IndexInfo.h>
 #include <tencentcloud/cdwdoris/v20211228/model/Property.h>
 
 
@@ -66,48 +66,6 @@ namespace TencentCloud
                      * 
                      */
                     bool InstanceIdHasBeenSet() const;
-
-                    /**
-                     * 获取Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
-                     * @return UserName Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
-                     * 
-                     */
-                    std::string GetUserName() const;
-
-                    /**
-                     * 设置Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
-                     * @param _userName Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
-                     * 
-                     */
-                    void SetUserName(const std::string& _userName);
-
-                    /**
-                     * 判断参数 UserName 是否已赋值
-                     * @return UserName 是否已赋值
-                     * 
-                     */
-                    bool UserNameHasBeenSet() const;
-
-                    /**
-                     * 获取Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
-                     * @return PassWord Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
-                     * 
-                     */
-                    std::string GetPassWord() const;
-
-                    /**
-                     * 设置Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
-                     * @param _passWord Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
-                     * 
-                     */
-                    void SetPassWord(const std::string& _passWord);
-
-                    /**
-                     * 判断参数 PassWord 是否已赋值
-                     * @return PassWord 是否已赋值
-                     * 
-                     */
-                    bool PassWordHasBeenSet() const;
 
                     /**
                      * 获取Database name
@@ -173,27 +131,6 @@ namespace TencentCloud
                     bool ColumnsHasBeenSet() const;
 
                     /**
-                     * 获取Index information. The inverted index and N-Gram index can be configured through this parameter. The Prefix index is related to the sort key and key column, and do not require additional configuration. Configure bloom_filter_columns in the table attribute when BloomFilter index is required.
-                     * @return IndexInfos Index information. The inverted index and N-Gram index can be configured through this parameter. The Prefix index is related to the sort key and key column, and do not require additional configuration. Configure bloom_filter_columns in the table attribute when BloomFilter index is required.
-                     * 
-                     */
-                    std::vector<IndexInfo> GetIndexInfos() const;
-
-                    /**
-                     * 设置Index information. The inverted index and N-Gram index can be configured through this parameter. The Prefix index is related to the sort key and key column, and do not require additional configuration. Configure bloom_filter_columns in the table attribute when BloomFilter index is required.
-                     * @param _indexInfos Index information. The inverted index and N-Gram index can be configured through this parameter. The Prefix index is related to the sort key and key column, and do not require additional configuration. Configure bloom_filter_columns in the table attribute when BloomFilter index is required.
-                     * 
-                     */
-                    void SetIndexInfos(const std::vector<IndexInfo>& _indexInfos);
-
-                    /**
-                     * 判断参数 IndexInfos 是否已赋值
-                     * @return IndexInfos 是否已赋值
-                     * 
-                     */
-                    bool IndexInfosHasBeenSet() const;
-
-                    /**
                      * 获取Bucket information
                      * @return Distribution Bucket information
                      * 
@@ -213,6 +150,69 @@ namespace TencentCloud
                      * 
                      */
                     bool DistributionHasBeenSet() const;
+
+                    /**
+                     * 获取Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
+                     * @return UserName Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
+                     * 
+                     */
+                    std::string GetUserName() const;
+
+                    /**
+                     * 设置Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
+                     * @param _userName Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
+                     * 
+                     */
+                    void SetUserName(const std::string& _userName);
+
+                    /**
+                     * 判断参数 UserName 是否已赋值
+                     * @return UserName 是否已赋值
+                     * 
+                     */
+                    bool UserNameHasBeenSet() const;
+
+                    /**
+                     * 获取Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
+                     * @return PassWord Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
+                     * 
+                     */
+                    std::string GetPassWord() const;
+
+                    /**
+                     * 设置Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
+                     * @param _passWord Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
+                     * 
+                     */
+                    void SetPassWord(const std::string& _passWord);
+
+                    /**
+                     * 判断参数 PassWord 是否已赋值
+                     * @return PassWord 是否已赋值
+                     * 
+                     */
+                    bool PassWordHasBeenSet() const;
+
+                    /**
+                     * 获取Index information. The inverted index and N-Gram index can be configured through this parameter. The Prefix index is related to the sort key and key column, and do not require additional configuration. Configure bloom_filter_columns in the table attribute when BloomFilter index is required.
+                     * @return IndexInfos Index information. The inverted index and N-Gram index can be configured through this parameter. The Prefix index is related to the sort key and key column, and do not require additional configuration. Configure bloom_filter_columns in the table attribute when BloomFilter index is required.
+                     * 
+                     */
+                    std::vector<IndexInfo> GetIndexInfos() const;
+
+                    /**
+                     * 设置Index information. The inverted index and N-Gram index can be configured through this parameter. The Prefix index is related to the sort key and key column, and do not require additional configuration. Configure bloom_filter_columns in the table attribute when BloomFilter index is required.
+                     * @param _indexInfos Index information. The inverted index and N-Gram index can be configured through this parameter. The Prefix index is related to the sort key and key column, and do not require additional configuration. Configure bloom_filter_columns in the table attribute when BloomFilter index is required.
+                     * 
+                     */
+                    void SetIndexInfos(const std::vector<IndexInfo>& _indexInfos);
+
+                    /**
+                     * 判断参数 IndexInfos 是否已赋值
+                     * @return IndexInfos 是否已赋值
+                     * 
+                     */
+                    bool IndexInfosHasBeenSet() const;
 
                     /**
                      * 获取Table description
@@ -265,18 +265,6 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
-                     */
-                    std::string m_userName;
-                    bool m_userNameHasBeenSet;
-
-                    /**
-                     * Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
-                     */
-                    std::string m_passWord;
-                    bool m_passWordHasBeenSet;
-
-                    /**
                      * Database name
                      */
                     std::string m_dbName;
@@ -295,16 +283,28 @@ namespace TencentCloud
                     bool m_columnsHasBeenSet;
 
                     /**
-                     * Index information. The inverted index and N-Gram index can be configured through this parameter. The Prefix index is related to the sort key and key column, and do not require additional configuration. Configure bloom_filter_columns in the table attribute when BloomFilter index is required.
-                     */
-                    std::vector<IndexInfo> m_indexInfos;
-                    bool m_indexInfosHasBeenSet;
-
-                    /**
                      * Bucket information
                      */
                     Distribution m_distribution;
                     bool m_distributionHasBeenSet;
+
+                    /**
+                     * Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
+                     */
+                    std::string m_userName;
+                    bool m_userNameHasBeenSet;
+
+                    /**
+                     * Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
+                     */
+                    std::string m_passWord;
+                    bool m_passWordHasBeenSet;
+
+                    /**
+                     * Index information. The inverted index and N-Gram index can be configured through this parameter. The Prefix index is related to the sort key and key column, and do not require additional configuration. Configure bloom_filter_columns in the table attribute when BloomFilter index is required.
+                     */
+                    std::vector<IndexInfo> m_indexInfos;
+                    bool m_indexInfosHasBeenSet;
 
                     /**
                      * Table description
