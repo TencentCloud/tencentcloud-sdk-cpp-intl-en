@@ -38,7 +38,9 @@ VideoTemplateInfo::VideoTemplateInfo() :
     m_bFramesNumHasBeenSet(false),
     m_refFramesNumHasBeenSet(false),
     m_additionalRateSettingsHasBeenSet(false),
-    m_videoCodecDetailsHasBeenSet(false)
+    m_videoCodecDetailsHasBeenSet(false),
+    m_videoEnhanceEnabledHasBeenSet(false),
+    m_videoEnhanceSettingsHasBeenSet(false)
 {
 }
 
@@ -241,6 +243,36 @@ CoreInternalOutcome VideoTemplateInfo::Deserialize(const rapidjson::Value &value
         m_videoCodecDetailsHasBeenSet = true;
     }
 
+    if (value.HasMember("VideoEnhanceEnabled") && !value["VideoEnhanceEnabled"].IsNull())
+    {
+        if (!value["VideoEnhanceEnabled"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `VideoTemplateInfo.VideoEnhanceEnabled` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_videoEnhanceEnabled = value["VideoEnhanceEnabled"].GetUint64();
+        m_videoEnhanceEnabledHasBeenSet = true;
+    }
+
+    if (value.HasMember("VideoEnhanceSettings") && !value["VideoEnhanceSettings"].IsNull())
+    {
+        if (!value["VideoEnhanceSettings"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `VideoTemplateInfo.VideoEnhanceSettings` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["VideoEnhanceSettings"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            VideoEnhanceSetting item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_videoEnhanceSettings.push_back(item);
+        }
+        m_videoEnhanceSettingsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -392,6 +424,29 @@ void VideoTemplateInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Documen
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_videoCodecDetails.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_videoEnhanceEnabledHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "VideoEnhanceEnabled";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_videoEnhanceEnabled, allocator);
+    }
+
+    if (m_videoEnhanceSettingsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "VideoEnhanceSettings";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_videoEnhanceSettings.begin(); itr != m_videoEnhanceSettings.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
     }
 
 }
@@ -683,5 +738,37 @@ void VideoTemplateInfo::SetVideoCodecDetails(const VideoCodecDetail& _videoCodec
 bool VideoTemplateInfo::VideoCodecDetailsHasBeenSet() const
 {
     return m_videoCodecDetailsHasBeenSet;
+}
+
+uint64_t VideoTemplateInfo::GetVideoEnhanceEnabled() const
+{
+    return m_videoEnhanceEnabled;
+}
+
+void VideoTemplateInfo::SetVideoEnhanceEnabled(const uint64_t& _videoEnhanceEnabled)
+{
+    m_videoEnhanceEnabled = _videoEnhanceEnabled;
+    m_videoEnhanceEnabledHasBeenSet = true;
+}
+
+bool VideoTemplateInfo::VideoEnhanceEnabledHasBeenSet() const
+{
+    return m_videoEnhanceEnabledHasBeenSet;
+}
+
+vector<VideoEnhanceSetting> VideoTemplateInfo::GetVideoEnhanceSettings() const
+{
+    return m_videoEnhanceSettings;
+}
+
+void VideoTemplateInfo::SetVideoEnhanceSettings(const vector<VideoEnhanceSetting>& _videoEnhanceSettings)
+{
+    m_videoEnhanceSettings = _videoEnhanceSettings;
+    m_videoEnhanceSettingsHasBeenSet = true;
+}
+
+bool VideoTemplateInfo::VideoEnhanceSettingsHasBeenSet() const
+{
+    return m_videoEnhanceSettingsHasBeenSet;
 }
 

@@ -29,6 +29,7 @@
 #include <tencentcloud/mdl/v20200326/model/VideoCodecDetail.h>
 #include <tencentcloud/mdl/v20200326/model/AudioCodecDetail.h>
 #include <tencentcloud/mdl/v20200326/model/AudioTrackInfo.h>
+#include <tencentcloud/mdl/v20200326/model/VideoEnhanceSetting.h>
 
 
 namespace TencentCloud
@@ -308,15 +309,15 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
                     bool VideoBitrateHasBeenSet() const;
 
                     /**
-                     * 获取Bitrate control mode. Valid values: `CBR`, `ABR` (default)
-                     * @return RateControlMode Bitrate control mode. Valid values: `CBR`, `ABR` (default)
+                     * 获取Bitrate control mode. Valid values: `CBR`, `ABR` (default), `VBR`.
+                     * @return RateControlMode Bitrate control mode. Valid values: `CBR`, `ABR` (default), `VBR`.
                      * 
                      */
                     std::string GetRateControlMode() const;
 
                     /**
-                     * 设置Bitrate control mode. Valid values: `CBR`, `ABR` (default)
-                     * @param _rateControlMode Bitrate control mode. Valid values: `CBR`, `ABR` (default)
+                     * 设置Bitrate control mode. Valid values: `CBR`, `ABR` (default), `VBR`.
+                     * @param _rateControlMode Bitrate control mode. Valid values: `CBR`, `ABR` (default), `VBR`.
                      * 
                      */
                     void SetRateControlMode(const std::string& _rateControlMode);
@@ -709,6 +710,48 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
                      */
                     bool AudioTracksHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return VideoEnhanceEnabled 
+                     * 
+                     */
+                    uint64_t GetVideoEnhanceEnabled() const;
+
+                    /**
+                     * 设置
+                     * @param _videoEnhanceEnabled 
+                     * 
+                     */
+                    void SetVideoEnhanceEnabled(const uint64_t& _videoEnhanceEnabled);
+
+                    /**
+                     * 判断参数 VideoEnhanceEnabled 是否已赋值
+                     * @return VideoEnhanceEnabled 是否已赋值
+                     * 
+                     */
+                    bool VideoEnhanceEnabledHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return VideoEnhanceSettings 
+                     * 
+                     */
+                    std::vector<VideoEnhanceSetting> GetVideoEnhanceSettings() const;
+
+                    /**
+                     * 设置
+                     * @param _videoEnhanceSettings 
+                     * 
+                     */
+                    void SetVideoEnhanceSettings(const std::vector<VideoEnhanceSetting>& _videoEnhanceSettings);
+
+                    /**
+                     * 判断参数 VideoEnhanceSettings 是否已赋值
+                     * @return VideoEnhanceSettings 是否已赋值
+                     * 
+                     */
+                    bool VideoEnhanceSettingsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -785,7 +828,7 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
                     bool m_videoBitrateHasBeenSet;
 
                     /**
-                     * Bitrate control mode. Valid values: `CBR`, `ABR` (default)
+                     * Bitrate control mode. Valid values: `CBR`, `ABR` (default), `VBR`.
                      */
                     std::string m_rateControlMode;
                     bool m_rateControlModeHasBeenSet;
@@ -897,6 +940,18 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
                      */
                     std::vector<AudioTrackInfo> m_audioTracks;
                     bool m_audioTracksHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_videoEnhanceEnabled;
+                    bool m_videoEnhanceEnabledHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<VideoEnhanceSetting> m_videoEnhanceSettings;
+                    bool m_videoEnhanceSettingsHasBeenSet;
 
                 };
             }

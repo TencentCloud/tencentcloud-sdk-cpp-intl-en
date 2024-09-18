@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Special configuration information for audio transcoding.
                 */
                 class AudioNormalizationSettings : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return AudioNormalizationEnabled 
+                     * 获取Whether to enable special configuration for audio transcoding: 1: Enable 0: Disable, the default value is 0.
+                     * @return AudioNormalizationEnabled Whether to enable special configuration for audio transcoding: 1: Enable 0: Disable, the default value is 0.
                      * 
                      */
                     uint64_t GetAudioNormalizationEnabled() const;
 
                     /**
-                     * 设置
-                     * @param _audioNormalizationEnabled 
+                     * 设置Whether to enable special configuration for audio transcoding: 1: Enable 0: Disable, the default value is 0.
+                     * @param _audioNormalizationEnabled Whether to enable special configuration for audio transcoding: 1: Enable 0: Disable, the default value is 0.
                      * 
                      */
                     void SetAudioNormalizationEnabled(const uint64_t& _audioNormalizationEnabled);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool AudioNormalizationEnabledHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TargetLUFS 
+                     * 获取Loudness value, floating-point number, rounded to one decimal place, range -5 to -70.
+                     * @return TargetLUFS Loudness value, floating-point number, rounded to one decimal place, range -5 to -70.
                      * 
                      */
                     double GetTargetLUFS() const;
 
                     /**
-                     * 设置
-                     * @param _targetLUFS 
+                     * 设置Loudness value, floating-point number, rounded to one decimal place, range -5 to -70.
+                     * @param _targetLUFS Loudness value, floating-point number, rounded to one decimal place, range -5 to -70.
                      * 
                      */
                     void SetTargetLUFS(const double& _targetLUFS);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Whether to enable special configuration for audio transcoding: 1: Enable 0: Disable, the default value is 0.
                      */
                     uint64_t m_audioNormalizationEnabled;
                     bool m_audioNormalizationEnabledHasBeenSet;
 
                     /**
-                     * 
+                     * Loudness value, floating-point number, rounded to one decimal place, range -5 to -70.
                      */
                     double m_targetLUFS;
                     bool m_targetLUFSHasBeenSet;

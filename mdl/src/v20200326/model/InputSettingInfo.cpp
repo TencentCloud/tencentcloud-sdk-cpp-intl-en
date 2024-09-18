@@ -29,7 +29,8 @@ InputSettingInfo::InputSettingInfo() :
     m_delayTimeHasBeenSet(false),
     m_inputDomainHasBeenSet(false),
     m_userNameHasBeenSet(false),
-    m_passwordHasBeenSet(false)
+    m_passwordHasBeenSet(false),
+    m_contentTypeHasBeenSet(false)
 {
 }
 
@@ -128,6 +129,16 @@ CoreInternalOutcome InputSettingInfo::Deserialize(const rapidjson::Value &value)
         m_passwordHasBeenSet = true;
     }
 
+    if (value.HasMember("ContentType") && !value["ContentType"].IsNull())
+    {
+        if (!value["ContentType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `InputSettingInfo.ContentType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_contentType = string(value["ContentType"].GetString());
+        m_contentTypeHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -205,6 +216,14 @@ void InputSettingInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document
         string key = "Password";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_password.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_contentTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ContentType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_contentType.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -352,5 +371,21 @@ void InputSettingInfo::SetPassword(const string& _password)
 bool InputSettingInfo::PasswordHasBeenSet() const
 {
     return m_passwordHasBeenSet;
+}
+
+string InputSettingInfo::GetContentType() const
+{
+    return m_contentType;
+}
+
+void InputSettingInfo::SetContentType(const string& _contentType)
+{
+    m_contentType = _contentType;
+    m_contentTypeHasBeenSet = true;
+}
+
+bool InputSettingInfo::ContentTypeHasBeenSet() const
+{
+    return m_contentTypeHasBeenSet;
 }
 

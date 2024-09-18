@@ -20,7 +20,7 @@ set(mdl_public_header
 
 set(mdl_public_header_model
   include/tencentcloud/mdl/v20200326/model/DeleteStreamLiveChannelResponse.h
-  include/tencentcloud/mdl/v20200326/model/VideoPipelineInputStatistics.h
+  include/tencentcloud/mdl/v20200326/model/VideoEnhanceSetting.h
   include/tencentcloud/mdl/v20200326/model/AudioTrackInfo.h
   include/tencentcloud/mdl/v20200326/model/CreateStreamLiveInputSecurityGroupResponse.h
   include/tencentcloud/mdl/v20200326/model/InputLossBehaviorInfo.h
@@ -118,6 +118,7 @@ set(mdl_public_header_model
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveChannelOutputStatisticsResponse.h
   include/tencentcloud/mdl/v20200326/model/DescribeWatermarkInfo.h
   include/tencentcloud/mdl/v20200326/model/EventSettingsDestinationReq.h
+  include/tencentcloud/mdl/v20200326/model/VideoPipelineInputStatistics.h
   include/tencentcloud/mdl/v20200326/model/EventSettingsReq.h
   include/tencentcloud/mdl/v20200326/model/DrmKey.h
   include/tencentcloud/mdl/v20200326/model/EventSettingsDestinationResp.h
@@ -175,7 +176,7 @@ set(mdl_public_header_model
 set(mdl_src
   src/v20200326/MdlClient.cpp
   src/v20200326/model/DeleteStreamLiveChannelResponse.cpp
-  src/v20200326/model/VideoPipelineInputStatistics.cpp
+  src/v20200326/model/VideoEnhanceSetting.cpp
   src/v20200326/model/AudioTrackInfo.cpp
   src/v20200326/model/CreateStreamLiveInputSecurityGroupResponse.cpp
   src/v20200326/model/InputLossBehaviorInfo.cpp
@@ -273,6 +274,7 @@ set(mdl_src
   src/v20200326/model/DescribeStreamLiveChannelOutputStatisticsResponse.cpp
   src/v20200326/model/DescribeWatermarkInfo.cpp
   src/v20200326/model/EventSettingsDestinationReq.cpp
+  src/v20200326/model/VideoPipelineInputStatistics.cpp
   src/v20200326/model/EventSettingsReq.cpp
   src/v20200326/model/DrmKey.cpp
   src/v20200326/model/EventSettingsDestinationResp.cpp

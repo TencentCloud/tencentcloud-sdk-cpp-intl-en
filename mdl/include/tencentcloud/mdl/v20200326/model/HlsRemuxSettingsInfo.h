@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SegmentDurationHasBeenSet() const;
 
                     /**
-                     * 获取Number of segments. Value range: [1,30]. Default value: 5.
-                     * @return SegmentNumber Number of segments. Value range: [1,30]. Default value: 5.
+                     * 获取Number of segments. Value range: [3,30]. Default value: 5.
+                     * @return SegmentNumber Number of segments. Value range: [3,30]. Default value: 5.
                      * 
                      */
                     uint64_t GetSegmentNumber() const;
 
                     /**
-                     * 设置Number of segments. Value range: [1,30]. Default value: 5.
-                     * @param _segmentNumber Number of segments. Value range: [1,30]. Default value: 5.
+                     * 设置Number of segments. Value range: [3,30]. Default value: 5.
+                     * @param _segmentNumber Number of segments. Value range: [3,30]. Default value: 5.
                      * 
                      */
                     void SetSegmentNumber(const uint64_t& _segmentNumber);
@@ -311,7 +311,7 @@ Currently, fMP4 segments do not support DRM or time shifting.
                     bool m_segmentDurationHasBeenSet;
 
                     /**
-                     * Number of segments. Value range: [1,30]. Default value: 5.
+                     * Number of segments. Value range: [3,30]. Default value: 5.
                      */
                     uint64_t m_segmentNumber;
                     bool m_segmentNumberHasBeenSet;

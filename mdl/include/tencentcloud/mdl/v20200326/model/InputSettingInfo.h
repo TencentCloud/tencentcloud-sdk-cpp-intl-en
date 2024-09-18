@@ -207,19 +207,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool DelayTimeHasBeenSet() const;
 
                     /**
-                     * 获取The domain of an SRT_PUSH address. If this is a request parameter, you don’t need to specify it.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return InputDomain The domain of an SRT_PUSH address. If this is a request parameter, you don’t need to specify it.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取The domain name of the SRT_PUSH push address. No need to fill in the input parameter.
+                     * @return InputDomain The domain name of the SRT_PUSH push address. No need to fill in the input parameter.
                      * 
                      */
                     std::string GetInputDomain() const;
 
                     /**
-                     * 设置The domain of an SRT_PUSH address. If this is a request parameter, you don’t need to specify it.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _inputDomain The domain of an SRT_PUSH address. If this is a request parameter, you don’t need to specify it.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置The domain name of the SRT_PUSH push address. No need to fill in the input parameter.
+                     * @param _inputDomain The domain name of the SRT_PUSH push address. No need to fill in the input parameter.
                      * 
                      */
                     void SetInputDomain(const std::string& _inputDomain);
@@ -281,6 +277,27 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     bool PasswordHasBeenSet() const;
 
+                    /**
+                     * 获取This parameter is valid when the input source is HLS_PULL and MP4_PULL. It indicates the type of file the source is. The optional values are: LIVE, VOD. Please note that if you do not enter this parameter, the system will take the default input value VOD.
+                     * @return ContentType This parameter is valid when the input source is HLS_PULL and MP4_PULL. It indicates the type of file the source is. The optional values are: LIVE, VOD. Please note that if you do not enter this parameter, the system will take the default input value VOD.
+                     * 
+                     */
+                    std::string GetContentType() const;
+
+                    /**
+                     * 设置This parameter is valid when the input source is HLS_PULL and MP4_PULL. It indicates the type of file the source is. The optional values are: LIVE, VOD. Please note that if you do not enter this parameter, the system will take the default input value VOD.
+                     * @param _contentType This parameter is valid when the input source is HLS_PULL and MP4_PULL. It indicates the type of file the source is. The optional values are: LIVE, VOD. Please note that if you do not enter this parameter, the system will take the default input value VOD.
+                     * 
+                     */
+                    void SetContentType(const std::string& _contentType);
+
+                    /**
+                     * 判断参数 ContentType 是否已赋值
+                     * @return ContentType 是否已赋值
+                     * 
+                     */
+                    bool ContentTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -328,8 +345,7 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool m_delayTimeHasBeenSet;
 
                     /**
-                     * The domain of an SRT_PUSH address. If this is a request parameter, you don’t need to specify it.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * The domain name of the SRT_PUSH push address. No need to fill in the input parameter.
                      */
                     std::string m_inputDomain;
                     bool m_inputDomainHasBeenSet;
@@ -347,6 +363,12 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::string m_password;
                     bool m_passwordHasBeenSet;
+
+                    /**
+                     * This parameter is valid when the input source is HLS_PULL and MP4_PULL. It indicates the type of file the source is. The optional values are: LIVE, VOD. Please note that if you do not enter this parameter, the system will take the default input value VOD.
+                     */
+                    std::string m_contentType;
+                    bool m_contentTypeHasBeenSet;
 
                 };
             }

@@ -64,7 +64,7 @@ namespace TencentCloud
                      * @return Permissions Permission configuration information associated with different hosts
                      * 
                      */
-                    std::vector<PermissionHostInfo> GetPermissions() const;
+                    PermissionHostInfo GetPermissions() const;
 
                     /**
                      * 判断参数 Permissions 是否已赋值
@@ -84,7 +84,7 @@ namespace TencentCloud
                     /**
                      * Permission configuration information associated with different hosts
                      */
-                    std::vector<PermissionHostInfo> m_permissions;
+                    PermissionHostInfo m_permissions;
                     bool m_permissionsHasBeenSet;
 
                 };

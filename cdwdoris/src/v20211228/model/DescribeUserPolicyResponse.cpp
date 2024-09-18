@@ -82,21 +82,18 @@ CoreInternalOutcome DescribeUserPolicyResponse::Deserialize(const string &payloa
 
     if (rsp.HasMember("Permissions") && !rsp["Permissions"].IsNull())
     {
-        if (!rsp["Permissions"].IsArray())
-            return CoreInternalOutcome(Core::Error("response `Permissions` is not array type"));
-
-        const rapidjson::Value &tmpValue = rsp["Permissions"];
-        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        if (!rsp["Permissions"].IsObject())
         {
-            PermissionHostInfo item;
-            CoreInternalOutcome outcome = item.Deserialize(*itr);
-            if (!outcome.IsSuccess())
-            {
-                outcome.GetError().SetRequestId(requestId);
-                return outcome;
-            }
-            m_permissions.push_back(item);
+            return CoreInternalOutcome(Core::Error("response `Permissions` is not object type").SetRequestId(requestId));
         }
+
+        CoreInternalOutcome outcome = m_permissions.Deserialize(rsp["Permissions"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
         m_permissionsHasBeenSet = true;
     }
 
@@ -124,14 +121,8 @@ string DescribeUserPolicyResponse::ToJsonString() const
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Permissions";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
-
-        int i=0;
-        for (auto itr = m_permissions.begin(); itr != m_permissions.end(); ++itr, ++i)
-        {
-            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
-            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
-        }
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_permissions.ToJsonObject(value[key.c_str()], allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -156,7 +147,7 @@ bool DescribeUserPolicyResponse::AccountInfoHasBeenSet() const
     return m_accountInfoHasBeenSet;
 }
 
-vector<PermissionHostInfo> DescribeUserPolicyResponse::GetPermissions() const
+PermissionHostInfo DescribeUserPolicyResponse::GetPermissions() const
 {
     return m_permissions;
 }
