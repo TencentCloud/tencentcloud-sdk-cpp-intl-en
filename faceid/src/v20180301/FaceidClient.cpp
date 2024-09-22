@@ -341,6 +341,49 @@ FaceidClient::CreateUploadUrlOutcomeCallable FaceidClient::CreateUploadUrlCallab
     return task->get_future();
 }
 
+FaceidClient::DetectAIFakeFacesOutcome FaceidClient::DetectAIFakeFaces(const DetectAIFakeFacesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DetectAIFakeFaces");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DetectAIFakeFacesResponse rsp = DetectAIFakeFacesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DetectAIFakeFacesOutcome(rsp);
+        else
+            return DetectAIFakeFacesOutcome(o.GetError());
+    }
+    else
+    {
+        return DetectAIFakeFacesOutcome(outcome.GetError());
+    }
+}
+
+void FaceidClient::DetectAIFakeFacesAsync(const DetectAIFakeFacesRequest& request, const DetectAIFakeFacesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DetectAIFakeFaces(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+FaceidClient::DetectAIFakeFacesOutcomeCallable FaceidClient::DetectAIFakeFacesCallable(const DetectAIFakeFacesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DetectAIFakeFacesOutcome()>>(
+        [this, request]()
+        {
+            return this->DetectAIFakeFaces(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 FaceidClient::DetectReflectLivenessAndCompareOutcome FaceidClient::DetectReflectLivenessAndCompare(const DetectReflectLivenessAndCompareRequest &request)
 {
     auto outcome = MakeRequest(request, "DetectReflectLivenessAndCompare");
