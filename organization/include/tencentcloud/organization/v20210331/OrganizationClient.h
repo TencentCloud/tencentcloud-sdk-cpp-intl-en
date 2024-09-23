@@ -103,6 +103,8 @@
 #include <tencentcloud/organization/v20210331/model/GetZoneSAMLServiceProviderInfoResponse.h>
 #include <tencentcloud/organization/v20210331/model/GetZoneStatisticsRequest.h>
 #include <tencentcloud/organization/v20210331/model/GetZoneStatisticsResponse.h>
+#include <tencentcloud/organization/v20210331/model/InviteOrganizationMemberRequest.h>
+#include <tencentcloud/organization/v20210331/model/InviteOrganizationMemberResponse.h>
 #include <tencentcloud/organization/v20210331/model/ListExternalSAMLIdPCertificatesRequest.h>
 #include <tencentcloud/organization/v20210331/model/ListExternalSAMLIdPCertificatesResponse.h>
 #include <tencentcloud/organization/v20210331/model/ListGroupMembersRequest.h>
@@ -293,6 +295,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::GetZoneStatisticsResponse> GetZoneStatisticsOutcome;
                 typedef std::future<GetZoneStatisticsOutcome> GetZoneStatisticsOutcomeCallable;
                 typedef std::function<void(const OrganizationClient*, const Model::GetZoneStatisticsRequest&, GetZoneStatisticsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetZoneStatisticsAsyncHandler;
+                typedef Outcome<Core::Error, Model::InviteOrganizationMemberResponse> InviteOrganizationMemberOutcome;
+                typedef std::future<InviteOrganizationMemberOutcome> InviteOrganizationMemberOutcomeCallable;
+                typedef std::function<void(const OrganizationClient*, const Model::InviteOrganizationMemberRequest&, InviteOrganizationMemberOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InviteOrganizationMemberAsyncHandler;
                 typedef Outcome<Core::Error, Model::ListExternalSAMLIdPCertificatesResponse> ListExternalSAMLIdPCertificatesOutcome;
                 typedef std::future<ListExternalSAMLIdPCertificatesOutcome> ListExternalSAMLIdPCertificatesOutcomeCallable;
                 typedef std::function<void(const OrganizationClient*, const Model::ListExternalSAMLIdPCertificatesRequest&, ListExternalSAMLIdPCertificatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListExternalSAMLIdPCertificatesAsyncHandler;
@@ -739,6 +744,15 @@ namespace TencentCloud
                 GetZoneStatisticsOutcome GetZoneStatistics(const Model::GetZoneStatisticsRequest &request);
                 void GetZoneStatisticsAsync(const Model::GetZoneStatisticsRequest& request, const GetZoneStatisticsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 GetZoneStatisticsOutcomeCallable GetZoneStatisticsCallable(const Model::GetZoneStatisticsRequest& request);
+
+                /**
+                 *This API is used to invite a member.
+                 * @param req InviteOrganizationMemberRequest
+                 * @return InviteOrganizationMemberOutcome
+                 */
+                InviteOrganizationMemberOutcome InviteOrganizationMember(const Model::InviteOrganizationMemberRequest &request);
+                void InviteOrganizationMemberAsync(const Model::InviteOrganizationMemberRequest& request, const InviteOrganizationMemberAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                InviteOrganizationMemberOutcomeCallable InviteOrganizationMemberCallable(const Model::InviteOrganizationMemberRequest& request);
 
                 /**
                  *This API is used to query the SAML signing certificate list.

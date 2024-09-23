@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/organization/v20210331/model/Tag.h>
 
 
 namespace TencentCloud
@@ -196,6 +197,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool UpdateTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Member tag list.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Tags Member tag list.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 设置Member tag list.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _tags Member tag list.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetTags(const std::vector<Tag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     * 
+                     */
+                    bool TagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -239,6 +265,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
+
+                    /**
+                     * Member tag list.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
 
                 };
             }

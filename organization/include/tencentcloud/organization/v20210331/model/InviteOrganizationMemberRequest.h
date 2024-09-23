@@ -14,13 +14,14 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_ORGANIZATION_V20210331_MODEL_CREATEORGANIZATIONMEMBERREQUEST_H_
-#define TENCENTCLOUD_ORGANIZATION_V20210331_MODEL_CREATEORGANIZATIONMEMBERREQUEST_H_
+#ifndef TENCENTCLOUD_ORGANIZATION_V20210331_MODEL_INVITEORGANIZATIONMEMBERREQUEST_H_
+#define TENCENTCLOUD_ORGANIZATION_V20210331_MODEL_INVITEORGANIZATIONMEMBERREQUEST_H_
 
 #include <string>
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/organization/v20210331/model/AuthRelationFile.h>
 #include <tencentcloud/organization/v20210331/model/Tag.h>
 
 
@@ -33,26 +34,47 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * CreateOrganizationMember request structure.
+                * InviteOrganizationMember request structure.
                 */
-                class CreateOrganizationMemberRequest : public AbstractModel
+                class InviteOrganizationMemberRequest : public AbstractModel
                 {
                 public:
-                    CreateOrganizationMemberRequest();
-                    ~CreateOrganizationMemberRequest() = default;
+                    InviteOrganizationMemberRequest();
+                    ~InviteOrganizationMemberRequest() = default;
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Member name, which can contain up to 25 letters, digits, and symbols `+@&._[]-:,`.
-                     * @return Name Member name, which can contain up to 25 letters, digits, and symbols `+@&._[]-:,`.
+                     * 获取UIN of an invited account.
+                     * @return MemberUin UIN of an invited account.
+                     * 
+                     */
+                    int64_t GetMemberUin() const;
+
+                    /**
+                     * 设置UIN of an invited account.
+                     * @param _memberUin UIN of an invited account.
+                     * 
+                     */
+                    void SetMemberUin(const int64_t& _memberUin);
+
+                    /**
+                     * 判断参数 MemberUin 是否已赋值
+                     * @return MemberUin 是否已赋值
+                     * 
+                     */
+                    bool MemberUinHasBeenSet() const;
+
+                    /**
+                     * 获取Member name, which contains up to 25 characters, including English letters, digits, and symbols `+@&._[]-:,`.
+                     * @return Name Member name, which contains up to 25 characters, including English letters, digits, and symbols `+@&._[]-:,`.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Member name, which can contain up to 25 letters, digits, and symbols `+@&._[]-:,`.
-                     * @param _name Member name, which can contain up to 25 letters, digits, and symbols `+@&._[]-:,`.
+                     * 设置Member name, which contains up to 25 characters, including English letters, digits, and symbols `+@&._[]-:,`.
+                     * @param _name Member name, which contains up to 25 characters, including English letters, digits, and symbols `+@&._[]-:,`.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -86,15 +108,15 @@ namespace TencentCloud
                     bool PolicyTypeHasBeenSet() const;
 
                     /**
-                     * 获取List of member financial permission IDs. `7` indicates paying, which is the default value.
-                     * @return PermissionIds List of member financial permission IDs. `7` indicates paying, which is the default value.
+                     * 获取List of member financial permission IDs. Valid values: 1: View bills. 2: View balance. 3: Transfer funds. 4: Consolidate bills. 5: Issue invoice. 6: Inherit discounts. 7: Pay on behalf. 1 and 2 are required by default.
+                     * @return PermissionIds List of member financial permission IDs. Valid values: 1: View bills. 2: View balance. 3: Transfer funds. 4: Consolidate bills. 5: Issue invoice. 6: Inherit discounts. 7: Pay on behalf. 1 and 2 are required by default.
                      * 
                      */
                     std::vector<uint64_t> GetPermissionIds() const;
 
                     /**
-                     * 设置List of member financial permission IDs. `7` indicates paying, which is the default value.
-                     * @param _permissionIds List of member financial permission IDs. `7` indicates paying, which is the default value.
+                     * 设置List of member financial permission IDs. Valid values: 1: View bills. 2: View balance. 3: Transfer funds. 4: Consolidate bills. 5: Issue invoice. 6: Inherit discounts. 7: Pay on behalf. 1 and 2 are required by default.
+                     * @param _permissionIds List of member financial permission IDs. Valid values: 1: View bills. 2: View balance. 3: Transfer funds. 4: Consolidate bills. 5: Issue invoice. 6: Inherit discounts. 7: Pay on behalf. 1 and 2 are required by default.
                      * 
                      */
                     void SetPermissionIds(const std::vector<uint64_t>& _permissionIds);
@@ -128,27 +150,6 @@ namespace TencentCloud
                     bool NodeIdHasBeenSet() const;
 
                     /**
-                     * 获取Account name, which can contain up to 25 letters, digits, and symbols `+@&._[]-:,`.
-                     * @return AccountName Account name, which can contain up to 25 letters, digits, and symbols `+@&._[]-:,`.
-                     * 
-                     */
-                    std::string GetAccountName() const;
-
-                    /**
-                     * 设置Account name, which can contain up to 25 letters, digits, and symbols `+@&._[]-:,`.
-                     * @param _accountName Account name, which can contain up to 25 letters, digits, and symbols `+@&._[]-:,`.
-                     * 
-                     */
-                    void SetAccountName(const std::string& _accountName);
-
-                    /**
-                     * 判断参数 AccountName 是否已赋值
-                     * @return AccountName 是否已赋值
-                     * 
-                     */
-                    bool AccountNameHasBeenSet() const;
-
-                    /**
                      * 获取Remarks.
                      * @return Remark Remarks.
                      * 
@@ -170,36 +171,36 @@ namespace TencentCloud
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取Member creation record ID, which is required during retry upon creation exception.
-                     * @return RecordId Member creation record ID, which is required during retry upon creation exception.
+                     * 获取Whether to allow a member to exit. Valid values: Allow, Denied.
+                     * @return IsAllowQuit Whether to allow a member to exit. Valid values: Allow, Denied.
                      * 
                      */
-                    int64_t GetRecordId() const;
+                    std::string GetIsAllowQuit() const;
 
                     /**
-                     * 设置Member creation record ID, which is required during retry upon creation exception.
-                     * @param _recordId Member creation record ID, which is required during retry upon creation exception.
+                     * 设置Whether to allow a member to exit. Valid values: Allow, Denied.
+                     * @param _isAllowQuit Whether to allow a member to exit. Valid values: Allow, Denied.
                      * 
                      */
-                    void SetRecordId(const int64_t& _recordId);
+                    void SetIsAllowQuit(const std::string& _isAllowQuit);
 
                     /**
-                     * 判断参数 RecordId 是否已赋值
-                     * @return RecordId 是否已赋值
+                     * 判断参数 IsAllowQuit 是否已赋值
+                     * @return IsAllowQuit 是否已赋值
                      * 
                      */
-                    bool RecordIdHasBeenSet() const;
+                    bool IsAllowQuitHasBeenSet() const;
 
                     /**
-                     * 获取Payer UIN, which is required during paying for a member.
-                     * @return PayUin Payer UIN, which is required during paying for a member.
+                     * 获取Payer UIN, which is required when pay-on-behalf mode is used.
+                     * @return PayUin Payer UIN, which is required when pay-on-behalf mode is used.
                      * 
                      */
                     std::string GetPayUin() const;
 
                     /**
-                     * 设置Payer UIN, which is required during paying for a member.
-                     * @param _payUin Payer UIN, which is required during paying for a member.
+                     * 设置Payer UIN, which is required when pay-on-behalf mode is used.
+                     * @param _payUin Payer UIN, which is required when pay-on-behalf mode is used.
                      * 
                      */
                     void SetPayUin(const std::string& _payUin);
@@ -212,46 +213,46 @@ namespace TencentCloud
                     bool PayUinHasBeenSet() const;
 
                     /**
-                     * 获取List of member access identity IDs, which can be obtained through the `ListOrganizationIdentity` API. `1` indicates supported, which is the default value.
-                     * @return IdentityRoleID List of member access identity IDs, which can be obtained through the `ListOrganizationIdentity` API. `1` indicates supported, which is the default value.
+                     * 获取Name of a mutual trust real-name entity.
+                     * @return RelationAuthName Name of a mutual trust real-name entity.
                      * 
                      */
-                    std::vector<uint64_t> GetIdentityRoleID() const;
+                    std::string GetRelationAuthName() const;
 
                     /**
-                     * 设置List of member access identity IDs, which can be obtained through the `ListOrganizationIdentity` API. `1` indicates supported, which is the default value.
-                     * @param _identityRoleID List of member access identity IDs, which can be obtained through the `ListOrganizationIdentity` API. `1` indicates supported, which is the default value.
+                     * 设置Name of a mutual trust real-name entity.
+                     * @param _relationAuthName Name of a mutual trust real-name entity.
                      * 
                      */
-                    void SetIdentityRoleID(const std::vector<uint64_t>& _identityRoleID);
+                    void SetRelationAuthName(const std::string& _relationAuthName);
 
                     /**
-                     * 判断参数 IdentityRoleID 是否已赋值
-                     * @return IdentityRoleID 是否已赋值
+                     * 判断参数 RelationAuthName 是否已赋值
+                     * @return RelationAuthName 是否已赋值
                      * 
                      */
-                    bool IdentityRoleIDHasBeenSet() const;
+                    bool RelationAuthNameHasBeenSet() const;
 
                     /**
-                     * 获取Verified entity relationship ID, which is required during creating members for different entities.
-                     * @return AuthRelationId Verified entity relationship ID, which is required during creating members for different entities.
+                     * 获取List of proof files of a mutual trust entity.
+                     * @return AuthFile List of proof files of a mutual trust entity.
                      * 
                      */
-                    int64_t GetAuthRelationId() const;
+                    std::vector<AuthRelationFile> GetAuthFile() const;
 
                     /**
-                     * 设置Verified entity relationship ID, which is required during creating members for different entities.
-                     * @param _authRelationId Verified entity relationship ID, which is required during creating members for different entities.
+                     * 设置List of proof files of a mutual trust entity.
+                     * @param _authFile List of proof files of a mutual trust entity.
                      * 
                      */
-                    void SetAuthRelationId(const int64_t& _authRelationId);
+                    void SetAuthFile(const std::vector<AuthRelationFile>& _authFile);
 
                     /**
-                     * 判断参数 AuthRelationId 是否已赋值
-                     * @return AuthRelationId 是否已赋值
+                     * 判断参数 AuthFile 是否已赋值
+                     * @return AuthFile 是否已赋值
                      * 
                      */
-                    bool AuthRelationIdHasBeenSet() const;
+                    bool AuthFileHasBeenSet() const;
 
                     /**
                      * 获取Member tag list, with a maximum of 10.
@@ -277,7 +278,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Member name, which can contain up to 25 letters, digits, and symbols `+@&._[]-:,`.
+                     * UIN of an invited account.
+                     */
+                    int64_t m_memberUin;
+                    bool m_memberUinHasBeenSet;
+
+                    /**
+                     * Member name, which contains up to 25 characters, including English letters, digits, and symbols `+@&._[]-:,`.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
@@ -289,7 +296,7 @@ namespace TencentCloud
                     bool m_policyTypeHasBeenSet;
 
                     /**
-                     * List of member financial permission IDs. `7` indicates paying, which is the default value.
+                     * List of member financial permission IDs. Valid values: 1: View bills. 2: View balance. 3: Transfer funds. 4: Consolidate bills. 5: Issue invoice. 6: Inherit discounts. 7: Pay on behalf. 1 and 2 are required by default.
                      */
                     std::vector<uint64_t> m_permissionIds;
                     bool m_permissionIdsHasBeenSet;
@@ -301,40 +308,34 @@ namespace TencentCloud
                     bool m_nodeIdHasBeenSet;
 
                     /**
-                     * Account name, which can contain up to 25 letters, digits, and symbols `+@&._[]-:,`.
-                     */
-                    std::string m_accountName;
-                    bool m_accountNameHasBeenSet;
-
-                    /**
                      * Remarks.
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * Member creation record ID, which is required during retry upon creation exception.
+                     * Whether to allow a member to exit. Valid values: Allow, Denied.
                      */
-                    int64_t m_recordId;
-                    bool m_recordIdHasBeenSet;
+                    std::string m_isAllowQuit;
+                    bool m_isAllowQuitHasBeenSet;
 
                     /**
-                     * Payer UIN, which is required during paying for a member.
+                     * Payer UIN, which is required when pay-on-behalf mode is used.
                      */
                     std::string m_payUin;
                     bool m_payUinHasBeenSet;
 
                     /**
-                     * List of member access identity IDs, which can be obtained through the `ListOrganizationIdentity` API. `1` indicates supported, which is the default value.
+                     * Name of a mutual trust real-name entity.
                      */
-                    std::vector<uint64_t> m_identityRoleID;
-                    bool m_identityRoleIDHasBeenSet;
+                    std::string m_relationAuthName;
+                    bool m_relationAuthNameHasBeenSet;
 
                     /**
-                     * Verified entity relationship ID, which is required during creating members for different entities.
+                     * List of proof files of a mutual trust entity.
                      */
-                    int64_t m_authRelationId;
-                    bool m_authRelationIdHasBeenSet;
+                    std::vector<AuthRelationFile> m_authFile;
+                    bool m_authFileHasBeenSet;
 
                     /**
                      * Member tag list, with a maximum of 10.
@@ -348,4 +349,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_ORGANIZATION_V20210331_MODEL_CREATEORGANIZATIONMEMBERREQUEST_H_
+#endif // !TENCENTCLOUD_ORGANIZATION_V20210331_MODEL_INVITEORGANIZATIONMEMBERREQUEST_H_

@@ -103,6 +103,7 @@ set(organization_public_header_model
   include/tencentcloud/organization/v20210331/model/MemberMainInfo.h
   include/tencentcloud/organization/v20210331/model/CreateRoleAssignmentRequest.h
   include/tencentcloud/organization/v20210331/model/GetTaskStatusResponse.h
+  include/tencentcloud/organization/v20210331/model/Tag.h
   include/tencentcloud/organization/v20210331/model/ListRoleAssignmentsResponse.h
   include/tencentcloud/organization/v20210331/model/UpdateUserResponse.h
   include/tencentcloud/organization/v20210331/model/RemoveUserFromGroupRequest.h
@@ -132,6 +133,7 @@ set(organization_public_header_model
   include/tencentcloud/organization/v20210331/model/GetZoneStatisticsRequest.h
   include/tencentcloud/organization/v20210331/model/NodeMainInfo.h
   include/tencentcloud/organization/v20210331/model/RemovePermissionPolicyFromRoleConfigurationRequest.h
+  include/tencentcloud/organization/v20210331/model/InviteOrganizationMemberRequest.h
   include/tencentcloud/organization/v20210331/model/ListTasksResponse.h
   include/tencentcloud/organization/v20210331/model/AddOrganizationNodeRequest.h
   include/tencentcloud/organization/v20210331/model/OrgNode.h
@@ -142,7 +144,7 @@ set(organization_public_header_model
   include/tencentcloud/organization/v20210331/model/RoleAssignmentInfo.h
   include/tencentcloud/organization/v20210331/model/ListRoleConfigurationProvisioningsRequest.h
   include/tencentcloud/organization/v20210331/model/OrgIdentity.h
-  include/tencentcloud/organization/v20210331/model/DescribeOrganizationMembersRequest.h
+  include/tencentcloud/organization/v20210331/model/DescribeIdentityCenterRequest.h
   include/tencentcloud/organization/v20210331/model/UserInfo.h
   include/tencentcloud/organization/v20210331/model/JoinedGroups.h
   include/tencentcloud/organization/v20210331/model/TaskInfo.h
@@ -187,6 +189,7 @@ set(organization_public_header_model
   include/tencentcloud/organization/v20210331/model/ListRoleConfigurationsResponse.h
   include/tencentcloud/organization/v20210331/model/UpdateUserSyncProvisioningResponse.h
   include/tencentcloud/organization/v20210331/model/CreateOrganizationMemberRequest.h
+  include/tencentcloud/organization/v20210331/model/AuthRelationFile.h
   include/tencentcloud/organization/v20210331/model/PolicyDetail.h
   include/tencentcloud/organization/v20210331/model/OrgMemberAuthIdentity.h
   include/tencentcloud/organization/v20210331/model/AddExternalSAMLIdPCertificateRequest.h
@@ -205,9 +208,10 @@ set(organization_public_header_model
   include/tencentcloud/organization/v20210331/model/GetRoleConfigurationRequest.h
   include/tencentcloud/organization/v20210331/model/AddUserToGroupRequest.h
   include/tencentcloud/organization/v20210331/model/RemoveUserFromGroupResponse.h
-  include/tencentcloud/organization/v20210331/model/DescribeIdentityCenterRequest.h
+  include/tencentcloud/organization/v20210331/model/DescribeOrganizationMembersRequest.h
   include/tencentcloud/organization/v20210331/model/ZoneStatistics.h
   include/tencentcloud/organization/v20210331/model/DescribeOrganizationNodesRequest.h
+  include/tencentcloud/organization/v20210331/model/InviteOrganizationMemberResponse.h
   include/tencentcloud/organization/v20210331/model/AddExternalSAMLIdPCertificateResponse.h
   include/tencentcloud/organization/v20210331/model/SAMLServiceProvider.h
   include/tencentcloud/organization/v20210331/model/CreateUserResponse.h
@@ -320,6 +324,7 @@ set(organization_src
   src/v20210331/model/MemberMainInfo.cpp
   src/v20210331/model/CreateRoleAssignmentRequest.cpp
   src/v20210331/model/GetTaskStatusResponse.cpp
+  src/v20210331/model/Tag.cpp
   src/v20210331/model/ListRoleAssignmentsResponse.cpp
   src/v20210331/model/UpdateUserResponse.cpp
   src/v20210331/model/RemoveUserFromGroupRequest.cpp
@@ -349,6 +354,7 @@ set(organization_src
   src/v20210331/model/GetZoneStatisticsRequest.cpp
   src/v20210331/model/NodeMainInfo.cpp
   src/v20210331/model/RemovePermissionPolicyFromRoleConfigurationRequest.cpp
+  src/v20210331/model/InviteOrganizationMemberRequest.cpp
   src/v20210331/model/ListTasksResponse.cpp
   src/v20210331/model/AddOrganizationNodeRequest.cpp
   src/v20210331/model/OrgNode.cpp
@@ -359,7 +365,7 @@ set(organization_src
   src/v20210331/model/RoleAssignmentInfo.cpp
   src/v20210331/model/ListRoleConfigurationProvisioningsRequest.cpp
   src/v20210331/model/OrgIdentity.cpp
-  src/v20210331/model/DescribeOrganizationMembersRequest.cpp
+  src/v20210331/model/DescribeIdentityCenterRequest.cpp
   src/v20210331/model/UserInfo.cpp
   src/v20210331/model/JoinedGroups.cpp
   src/v20210331/model/TaskInfo.cpp
@@ -404,6 +410,7 @@ set(organization_src
   src/v20210331/model/ListRoleConfigurationsResponse.cpp
   src/v20210331/model/UpdateUserSyncProvisioningResponse.cpp
   src/v20210331/model/CreateOrganizationMemberRequest.cpp
+  src/v20210331/model/AuthRelationFile.cpp
   src/v20210331/model/PolicyDetail.cpp
   src/v20210331/model/OrgMemberAuthIdentity.cpp
   src/v20210331/model/AddExternalSAMLIdPCertificateRequest.cpp
@@ -422,9 +429,10 @@ set(organization_src
   src/v20210331/model/GetRoleConfigurationRequest.cpp
   src/v20210331/model/AddUserToGroupRequest.cpp
   src/v20210331/model/RemoveUserFromGroupResponse.cpp
-  src/v20210331/model/DescribeIdentityCenterRequest.cpp
+  src/v20210331/model/DescribeOrganizationMembersRequest.cpp
   src/v20210331/model/ZoneStatistics.cpp
   src/v20210331/model/DescribeOrganizationNodesRequest.cpp
+  src/v20210331/model/InviteOrganizationMemberResponse.cpp
   src/v20210331/model/AddExternalSAMLIdPCertificateResponse.cpp
   src/v20210331/model/SAMLServiceProvider.cpp
   src/v20210331/model/CreateUserResponse.cpp
