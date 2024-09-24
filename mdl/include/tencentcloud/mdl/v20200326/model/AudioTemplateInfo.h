@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Audio codec. Valid value: AAC. Default value: AAC.
-                     * @return Acodec Audio codec. Valid value: AAC. Default value: AAC.
+                     * 获取Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
+                     * @return Acodec Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
                      * 
                      */
                     std::string GetAcodec() const;
 
                     /**
-                     * 设置Audio codec. Valid value: AAC. Default value: AAC.
-                     * @param _acodec Audio codec. Valid value: AAC. Default value: AAC.
+                     * 设置Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
+                     * @param _acodec Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
                      * 
                      */
                     void SetAcodec(const std::string& _acodec);
@@ -235,7 +235,7 @@ Valid values: 6000, 7000, 8000, 10000, 12000, 14000, 16000, 20000, 24000, 28000,
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Audio codec. Valid value: AAC. Default value: AAC.
+                     * Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
                      */
                     std::string m_acodec;
                     bool m_acodecHasBeenSet;

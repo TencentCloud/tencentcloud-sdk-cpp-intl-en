@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool EnvironmentNameHasBeenSet() const;
 
                     /**
-                     * 获取List of APIs bound with the plugin.
-                     * @return ApiIds List of APIs bound with the plugin.
+                     * 获取List of APIs bound with the plugin
+                     * @return ApiIds List of APIs bound with the plugin
                      * 
                      */
                     std::vector<std::string> GetApiIds() const;
 
                     /**
-                     * 设置List of APIs bound with the plugin.
-                     * @param _apiIds List of APIs bound with the plugin.
+                     * 设置List of APIs bound with the plugin
+                     * @param _apiIds List of APIs bound with the plugin
                      * 
                      */
                     void SetApiIds(const std::vector<std::string>& _apiIds);
@@ -147,7 +147,7 @@ namespace TencentCloud
                     bool m_environmentNameHasBeenSet;
 
                     /**
-                     * List of APIs bound with the plugin.
+                     * List of APIs bound with the plugin
                      */
                     std::vector<std::string> m_apiIds;
                     bool m_apiIdsHasBeenSet;

@@ -32,7 +32,10 @@ SimpleHlsClipRequest::SimpleHlsClipRequest() :
     m_procedureHasBeenSet(false),
     m_classIdHasBeenSet(false),
     m_sourceContextHasBeenSet(false),
-    m_sessionContextHasBeenSet(false)
+    m_sessionContextHasBeenSet(false),
+    m_precisionHasBeenSet(false),
+    m_outputMediaTypeHasBeenSet(false),
+    m_extInfoHasBeenSet(false)
 {
 }
 
@@ -121,6 +124,30 @@ string SimpleHlsClipRequest::ToJsonString() const
         string key = "SessionContext";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_sessionContext.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_precisionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Precision";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_precision.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_outputMediaTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OutputMediaType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_outputMediaType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_extInfoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ExtInfo";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_extInfo.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -289,6 +316,54 @@ void SimpleHlsClipRequest::SetSessionContext(const string& _sessionContext)
 bool SimpleHlsClipRequest::SessionContextHasBeenSet() const
 {
     return m_sessionContextHasBeenSet;
+}
+
+string SimpleHlsClipRequest::GetPrecision() const
+{
+    return m_precision;
+}
+
+void SimpleHlsClipRequest::SetPrecision(const string& _precision)
+{
+    m_precision = _precision;
+    m_precisionHasBeenSet = true;
+}
+
+bool SimpleHlsClipRequest::PrecisionHasBeenSet() const
+{
+    return m_precisionHasBeenSet;
+}
+
+string SimpleHlsClipRequest::GetOutputMediaType() const
+{
+    return m_outputMediaType;
+}
+
+void SimpleHlsClipRequest::SetOutputMediaType(const string& _outputMediaType)
+{
+    m_outputMediaType = _outputMediaType;
+    m_outputMediaTypeHasBeenSet = true;
+}
+
+bool SimpleHlsClipRequest::OutputMediaTypeHasBeenSet() const
+{
+    return m_outputMediaTypeHasBeenSet;
+}
+
+string SimpleHlsClipRequest::GetExtInfo() const
+{
+    return m_extInfo;
+}
+
+void SimpleHlsClipRequest::SetExtInfo(const string& _extInfo)
+{
+    m_extInfo = _extInfo;
+    m_extInfoHasBeenSet = true;
+}
+
+bool SimpleHlsClipRequest::ExtInfoHasBeenSet() const
+{
+    return m_extInfoHasBeenSet;
 }
 
 

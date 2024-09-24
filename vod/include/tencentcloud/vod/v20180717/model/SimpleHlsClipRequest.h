@@ -260,6 +260,69 @@ This parameter is valid only if `IsPersistence` is `1`.
                      */
                     bool SessionContextHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return Precision 
+                     * 
+                     */
+                    std::string GetPrecision() const;
+
+                    /**
+                     * 设置
+                     * @param _precision 
+                     * 
+                     */
+                    void SetPrecision(const std::string& _precision);
+
+                    /**
+                     * 判断参数 Precision 是否已赋值
+                     * @return Precision 是否已赋值
+                     * 
+                     */
+                    bool PrecisionHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return OutputMediaType 
+                     * 
+                     */
+                    std::string GetOutputMediaType() const;
+
+                    /**
+                     * 设置
+                     * @param _outputMediaType 
+                     * 
+                     */
+                    void SetOutputMediaType(const std::string& _outputMediaType);
+
+                    /**
+                     * 判断参数 OutputMediaType 是否已赋值
+                     * @return OutputMediaType 是否已赋值
+                     * 
+                     */
+                    bool OutputMediaTypeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ExtInfo 
+                     * 
+                     */
+                    std::string GetExtInfo() const;
+
+                    /**
+                     * 设置
+                     * @param _extInfo 
+                     * 
+                     */
+                    void SetExtInfo(const std::string& _extInfo);
+
+                    /**
+                     * 判断参数 ExtInfo 是否已赋值
+                     * @return ExtInfo 是否已赋值
+                     * 
+                     */
+                    bool ExtInfoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -323,6 +386,24 @@ This parameter is valid only if `IsPersistence` is `1`.
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_precision;
+                    bool m_precisionHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_outputMediaType;
+                    bool m_outputMediaTypeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_extInfo;
+                    bool m_extInfoHasBeenSet;
 
                 };
             }

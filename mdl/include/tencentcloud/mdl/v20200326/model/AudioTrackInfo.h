@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool TrackNameHasBeenSet() const;
 
                     /**
-                     * 获取Only AAC is supported.
-                     * @return AudioCodec Only AAC is supported.
+                     * 获取Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
+                     * @return AudioCodec Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
                      * 
                      */
                     std::string GetAudioCodec() const;
 
                     /**
-                     * 设置Only AAC is supported.
-                     * @param _audioCodec Only AAC is supported.
+                     * 设置Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
+                     * @param _audioCodec Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
                      * 
                      */
                     void SetAudioCodec(const std::string& _audioCodec);
@@ -204,7 +204,7 @@ namespace TencentCloud
                     bool m_trackNameHasBeenSet;
 
                     /**
-                     * Only AAC is supported.
+                     * Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
                      */
                     std::string m_audioCodec;
                     bool m_audioCodecHasBeenSet;
