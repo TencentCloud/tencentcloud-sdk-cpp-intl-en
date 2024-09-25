@@ -1,0 +1,161 @@
+/*
+ * Copyright (c) 2017-2019 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#ifndef TENCENTCLOUD_WAF_V20180125_MODEL_MODIFYDOMAINIPV6STATUSREQUEST_H_
+#define TENCENTCLOUD_WAF_V20180125_MODEL_MODIFYDOMAINIPV6STATUSREQUEST_H_
+
+#include <string>
+#include <vector>
+#include <map>
+#include <tencentcloud/core/AbstractModel.h>
+
+
+namespace TencentCloud
+{
+    namespace Waf
+    {
+        namespace V20180125
+        {
+            namespace Model
+            {
+                /**
+                * ModifyDomainIpv6Status request structure.
+                */
+                class ModifyDomainIpv6StatusRequest : public AbstractModel
+                {
+                public:
+                    ModifyDomainIpv6StatusRequest();
+                    ~ModifyDomainIpv6StatusRequest() = default;
+                    std::string ToJsonString() const;
+
+
+                    /**
+                     * 获取Instance ID of the domain to be modified
+                     * @return InstanceId Instance ID of the domain to be modified
+                     * 
+                     */
+                    std::string GetInstanceId() const;
+
+                    /**
+                     * 设置Instance ID of the domain to be modified
+                     * @param _instanceId Instance ID of the domain to be modified
+                     * 
+                     */
+                    void SetInstanceId(const std::string& _instanceId);
+
+                    /**
+                     * 判断参数 InstanceId 是否已赋值
+                     * @return InstanceId 是否已赋值
+                     * 
+                     */
+                    bool InstanceIdHasBeenSet() const;
+
+                    /**
+                     * 获取Domain to modify
+                     * @return Domain Domain to modify
+                     * 
+                     */
+                    std::string GetDomain() const;
+
+                    /**
+                     * 设置Domain to modify
+                     * @param _domain Domain to modify
+                     * 
+                     */
+                    void SetDomain(const std::string& _domain);
+
+                    /**
+                     * 判断参数 Domain 是否已赋值
+                     * @return Domain 是否已赋值
+                     * 
+                     */
+                    bool DomainHasBeenSet() const;
+
+                    /**
+                     * 获取Domain ID to be modified
+                     * @return DomainId Domain ID to be modified
+                     * 
+                     */
+                    std::string GetDomainId() const;
+
+                    /**
+                     * 设置Domain ID to be modified
+                     * @param _domainId Domain ID to be modified
+                     * 
+                     */
+                    void SetDomainId(const std::string& _domainId);
+
+                    /**
+                     * 判断参数 DomainId 是否已赋值
+                     * @return DomainId 是否已赋值
+                     * 
+                     */
+                    bool DomainIdHasBeenSet() const;
+
+                    /**
+                     * 获取IPv6 switch for modifying domain is Status (1: enable, 2: disable)
+                     * @return Status IPv6 switch for modifying domain is Status (1: enable, 2: disable)
+                     * 
+                     */
+                    int64_t GetStatus() const;
+
+                    /**
+                     * 设置IPv6 switch for modifying domain is Status (1: enable, 2: disable)
+                     * @param _status IPv6 switch for modifying domain is Status (1: enable, 2: disable)
+                     * 
+                     */
+                    void SetStatus(const int64_t& _status);
+
+                    /**
+                     * 判断参数 Status 是否已赋值
+                     * @return Status 是否已赋值
+                     * 
+                     */
+                    bool StatusHasBeenSet() const;
+
+                private:
+
+                    /**
+                     * Instance ID of the domain to be modified
+                     */
+                    std::string m_instanceId;
+                    bool m_instanceIdHasBeenSet;
+
+                    /**
+                     * Domain to modify
+                     */
+                    std::string m_domain;
+                    bool m_domainHasBeenSet;
+
+                    /**
+                     * Domain ID to be modified
+                     */
+                    std::string m_domainId;
+                    bool m_domainIdHasBeenSet;
+
+                    /**
+                     * IPv6 switch for modifying domain is Status (1: enable, 2: disable)
+                     */
+                    int64_t m_status;
+                    bool m_statusHasBeenSet;
+
+                };
+            }
+        }
+    }
+}
+
+#endif // !TENCENTCLOUD_WAF_V20180125_MODEL_MODIFYDOMAINIPV6STATUSREQUEST_H_

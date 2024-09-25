@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool TaskActionIdHasBeenSet() const;
 
                     /**
-                     * 获取ID of the instance participating in the experiment
-                     * @return TaskInstances ID of the instance participating in the experiment
+                     * 获取ID of the instance participating in the experiment.
+                     * @return TaskInstances ID of the instance participating in the experiment.
                      * 
                      */
                     std::vector<std::string> GetTaskInstances() const;
 
                     /**
-                     * 设置ID of the instance participating in the experiment
-                     * @param _taskInstances ID of the instance participating in the experiment
+                     * 设置ID of the instance participating in the experiment.
+                     * @param _taskInstances ID of the instance participating in the experiment.
                      * 
                      */
                     void SetTaskInstances(const std::vector<std::string>& _taskInstances);
@@ -198,7 +198,7 @@ namespace TencentCloud
                     bool m_taskActionIdHasBeenSet;
 
                     /**
-                     * ID of the instance participating in the experiment
+                     * ID of the instance participating in the experiment.
                      */
                     std::vector<std::string> m_taskInstances;
                     bool m_taskInstancesHasBeenSet;
