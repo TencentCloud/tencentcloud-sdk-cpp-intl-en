@@ -19,40 +19,26 @@ set(facefusion_public_header
   )
 
 set(facefusion_public_header_model
-  include/tencentcloud/facefusion/v20220927/model/MetaData.h
   include/tencentcloud/facefusion/v20220927/model/LogoParam.h
-  include/tencentcloud/facefusion/v20220927/model/QueryVideoFaceFusionJobResponse.h
-  include/tencentcloud/facefusion/v20220927/model/QueryVideoFaceFusionJobRequest.h
-  include/tencentcloud/facefusion/v20220927/model/SubmitVideoFaceFusionJobResponse.h
-  include/tencentcloud/facefusion/v20220927/model/FuseFaceReviewDetail.h
-  include/tencentcloud/facefusion/v20220927/model/VideoFaceFusionOutput.h
+  include/tencentcloud/facefusion/v20220927/model/FuseParam.h
   include/tencentcloud/facefusion/v20220927/model/ImageCodecParam.h
   include/tencentcloud/facefusion/v20220927/model/MergeInfo.h
-  include/tencentcloud/facefusion/v20220927/model/FuseFaceReviewResult.h
+  include/tencentcloud/facefusion/v20220927/model/FuseFaceResponse.h
   include/tencentcloud/facefusion/v20220927/model/FuseFaceRequest.h
   include/tencentcloud/facefusion/v20220927/model/FaceRect.h
-  include/tencentcloud/facefusion/v20220927/model/FuseParam.h
-  include/tencentcloud/facefusion/v20220927/model/SubmitVideoFaceFusionJobRequest.h
-  include/tencentcloud/facefusion/v20220927/model/FuseFaceResponse.h
+  include/tencentcloud/facefusion/v20220927/model/MetaData.h
   )
 
 set(facefusion_src
   src/v20220927/FacefusionClient.cpp
-  src/v20220927/model/MetaData.cpp
   src/v20220927/model/LogoParam.cpp
-  src/v20220927/model/QueryVideoFaceFusionJobResponse.cpp
-  src/v20220927/model/QueryVideoFaceFusionJobRequest.cpp
-  src/v20220927/model/SubmitVideoFaceFusionJobResponse.cpp
-  src/v20220927/model/FuseFaceReviewDetail.cpp
-  src/v20220927/model/VideoFaceFusionOutput.cpp
+  src/v20220927/model/FuseParam.cpp
   src/v20220927/model/ImageCodecParam.cpp
   src/v20220927/model/MergeInfo.cpp
-  src/v20220927/model/FuseFaceReviewResult.cpp
+  src/v20220927/model/FuseFaceResponse.cpp
   src/v20220927/model/FuseFaceRequest.cpp
   src/v20220927/model/FaceRect.cpp
-  src/v20220927/model/FuseParam.cpp
-  src/v20220927/model/SubmitVideoFaceFusionJobRequest.cpp
-  src/v20220927/model/FuseFaceResponse.cpp
+  src/v20220927/model/MetaData.cpp
   )
 
 set(facefusion_include
