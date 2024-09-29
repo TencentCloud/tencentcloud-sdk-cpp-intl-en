@@ -148,15 +148,23 @@ namespace TencentCloud
                     bool ResolutionHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of mic-on users (excluding teachers). Value range: [0, 16]
-                     * @return MaxMicNumber Maximum number of mic-on users (excluding teachers). Value range: [0, 16]
+                     * 获取Maximum number of mic-on users (excluding teachers). Value range: [0, 16]. This value affects billing, please set it according to the actual business situation. For billing rules, see "Billing Overview" under "Purchase Guide". Example:
+1: Billing based on the 1v1 rule;
+10: Billing based on the 1v7-12 rule.
+                     * @return MaxMicNumber Maximum number of mic-on users (excluding teachers). Value range: [0, 16]. This value affects billing, please set it according to the actual business situation. For billing rules, see "Billing Overview" under "Purchase Guide". Example:
+1: Billing based on the 1v1 rule;
+10: Billing based on the 1v7-12 rule.
                      * 
                      */
                     uint64_t GetMaxMicNumber() const;
 
                     /**
-                     * 设置Maximum number of mic-on users (excluding teachers). Value range: [0, 16]
-                     * @param _maxMicNumber Maximum number of mic-on users (excluding teachers). Value range: [0, 16]
+                     * 设置Maximum number of mic-on users (excluding teachers). Value range: [0, 16]. This value affects billing, please set it according to the actual business situation. For billing rules, see "Billing Overview" under "Purchase Guide". Example:
+1: Billing based on the 1v1 rule;
+10: Billing based on the 1v7-12 rule.
+                     * @param _maxMicNumber Maximum number of mic-on users (excluding teachers). Value range: [0, 16]. This value affects billing, please set it according to the actual business situation. For billing rules, see "Billing Overview" under "Purchase Guide". Example:
+1: Billing based on the 1v1 rule;
+10: Billing based on the 1v7-12 rule.
                      * 
                      */
                     void SetMaxMicNumber(const uint64_t& _maxMicNumber);
@@ -659,6 +667,27 @@ namespace TencentCloud
                      */
                     bool RecordLangHasBeenSet() const;
 
+                    /**
+                     * 获取Recording type. 0: Records only mixed streams (default); 1: Records mixed streams and single streams. In this mode, in addition to the mixed streams, the audio and video streams of the teacher and students on stage are recorded separately. Each recording incurs corresponding recording fees. Example: 0.
+                     * @return RecordStream Recording type. 0: Records only mixed streams (default); 1: Records mixed streams and single streams. In this mode, in addition to the mixed streams, the audio and video streams of the teacher and students on stage are recorded separately. Each recording incurs corresponding recording fees. Example: 0.
+                     * 
+                     */
+                    uint64_t GetRecordStream() const;
+
+                    /**
+                     * 设置Recording type. 0: Records only mixed streams (default); 1: Records mixed streams and single streams. In this mode, in addition to the mixed streams, the audio and video streams of the teacher and students on stage are recorded separately. Each recording incurs corresponding recording fees. Example: 0.
+                     * @param _recordStream Recording type. 0: Records only mixed streams (default); 1: Records mixed streams and single streams. In this mode, in addition to the mixed streams, the audio and video streams of the teacher and students on stage are recorded separately. Each recording incurs corresponding recording fees. Example: 0.
+                     * 
+                     */
+                    void SetRecordStream(const uint64_t& _recordStream);
+
+                    /**
+                     * 判断参数 RecordStream 是否已赋值
+                     * @return RecordStream 是否已赋值
+                     * 
+                     */
+                    bool RecordStreamHasBeenSet() const;
+
                 private:
 
                     /**
@@ -692,7 +721,9 @@ namespace TencentCloud
                     bool m_resolutionHasBeenSet;
 
                     /**
-                     * Maximum number of mic-on users (excluding teachers). Value range: [0, 16]
+                     * Maximum number of mic-on users (excluding teachers). Value range: [0, 16]. This value affects billing, please set it according to the actual business situation. For billing rules, see "Billing Overview" under "Purchase Guide". Example:
+1: Billing based on the 1v1 rule;
+10: Billing based on the 1v7-12 rule.
                      */
                     uint64_t m_maxMicNumber;
                     bool m_maxMicNumberHasBeenSet;
@@ -836,6 +867,12 @@ namespace TencentCloud
                      */
                     std::string m_recordLang;
                     bool m_recordLangHasBeenSet;
+
+                    /**
+                     * Recording type. 0: Records only mixed streams (default); 1: Records mixed streams and single streams. In this mode, in addition to the mixed streams, the audio and video streams of the teacher and students on stage are recorded separately. Each recording incurs corresponding recording fees. Example: 0.
+                     */
+                    uint64_t m_recordStream;
+                    bool m_recordStreamHasBeenSet;
 
                 };
             }

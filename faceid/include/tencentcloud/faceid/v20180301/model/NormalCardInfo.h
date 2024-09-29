@@ -41,6 +41,7 @@
 #include <tencentcloud/faceid/v20180301/model/MainlandIDCard.h>
 #include <tencentcloud/faceid/v20180301/model/JapanIDCard.h>
 #include <tencentcloud/faceid/v20180301/model/TaiWanIDCard.h>
+#include <tencentcloud/faceid/v20180301/model/HMTPermit.h>
 
 
 namespace TencentCloud
@@ -488,6 +489,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool TaiWanIDCardHasBeenSet() const;
 
+                    /**
+                     * 获取exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return HMTPermitCard exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    HMTPermit GetHMTPermitCard() const;
+
+                    /**
+                     * 设置exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _hMTPermitCard exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetHMTPermitCard(const HMTPermit& _hMTPermitCard);
+
+                    /**
+                     * 判断参数 HMTPermitCard 是否已赋值
+                     * @return HMTPermitCard 是否已赋值
+                     * 
+                     */
+                    bool HMTPermitCardHasBeenSet() const;
+
                 private:
 
                     /**
@@ -608,6 +634,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     TaiWanIDCard m_taiWanIDCard;
                     bool m_taiWanIDCardHasBeenSet;
+
+                    /**
+                     * exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    HMTPermit m_hMTPermitCard;
+                    bool m_hMTPermitCardHasBeenSet;
 
                 };
             }

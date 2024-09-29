@@ -141,6 +141,8 @@ Default value: 4
 17.ThailandDrivingLicense: Thailand Driving License
 18.SingaporeDrivingLicense: Singapore Driving License
 19.JapanDrivingLicense: Japan Driving License
+20.TaiWanIDCard:Taiwan ID Card
+21.HMTPermit: exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan
                      * @return IdCardType The identity document type. Valid values: 
 1. HK (default): Identity card of Hong Kong (China)
 2. ML: Malaysian identity card
@@ -161,6 +163,8 @@ Default value: 4
 17.ThailandDrivingLicense: Thailand Driving License
 18.SingaporeDrivingLicense: Singapore Driving License
 19.JapanDrivingLicense: Japan Driving License
+20.TaiWanIDCard:Taiwan ID Card
+21.HMTPermit: exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan
                      * 
                      */
                     std::string GetIdCardType() const;
@@ -186,6 +190,8 @@ Default value: 4
 17.ThailandDrivingLicense: Thailand Driving License
 18.SingaporeDrivingLicense: Singapore Driving License
 19.JapanDrivingLicense: Japan Driving License
+20.TaiWanIDCard:Taiwan ID Card
+21.HMTPermit: exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan
                      * @param _idCardType The identity document type. Valid values: 
 1. HK (default): Identity card of Hong Kong (China)
 2. ML: Malaysian identity card
@@ -206,6 +212,8 @@ Default value: 4
 17.ThailandDrivingLicense: Thailand Driving License
 18.SingaporeDrivingLicense: Singapore Driving License
 19.JapanDrivingLicense: Japan Driving License
+20.TaiWanIDCard:Taiwan ID Card
+21.HMTPermit: exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan
                      * 
                      */
                     void SetIdCardType(const std::string& _idCardType);
@@ -370,6 +378,8 @@ Default value: 4
 17.ThailandDrivingLicense: Thailand Driving License
 18.SingaporeDrivingLicense: Singapore Driving License
 19.JapanDrivingLicense: Japan Driving License
+20.TaiWanIDCard:Taiwan ID Card
+21.HMTPermit: exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan
                      */
                     std::string m_idCardType;
                     bool m_idCardTypeHasBeenSet;

@@ -74,6 +74,7 @@ set(faceid_public_header_model
   include/tencentcloud/faceid/v20180301/model/ApplyWebVerificationBizTokenIntlRequest.h
   include/tencentcloud/faceid/v20180301/model/GetWebVerificationResultResponse.h
   include/tencentcloud/faceid/v20180301/model/CompareFaceLivenessRequest.h
+  include/tencentcloud/faceid/v20180301/model/MacaoIDCard.h
   include/tencentcloud/faceid/v20180301/model/ApplyLivenessTokenRequest.h
   include/tencentcloud/faceid/v20180301/model/NormalThailandIDCard.h
   include/tencentcloud/faceid/v20180301/model/PhilippinesDrivingLicense.h
@@ -82,7 +83,7 @@ set(faceid_public_header_model
   include/tencentcloud/faceid/v20180301/model/GetWebVerificationResultIntlRequest.h
   include/tencentcloud/faceid/v20180301/model/GeneralCard.h
   include/tencentcloud/faceid/v20180301/model/LivenessCompareResponse.h
-  include/tencentcloud/faceid/v20180301/model/MacaoIDCard.h
+  include/tencentcloud/faceid/v20180301/model/HMTPermit.h
   include/tencentcloud/faceid/v20180301/model/PhilippinesUMID.h
   include/tencentcloud/faceid/v20180301/model/PhilippinesTinID.h
   include/tencentcloud/faceid/v20180301/model/ApplyCardVerificationRequest.h
@@ -151,6 +152,7 @@ set(faceid_src
   src/v20180301/model/ApplyWebVerificationBizTokenIntlRequest.cpp
   src/v20180301/model/GetWebVerificationResultResponse.cpp
   src/v20180301/model/CompareFaceLivenessRequest.cpp
+  src/v20180301/model/MacaoIDCard.cpp
   src/v20180301/model/ApplyLivenessTokenRequest.cpp
   src/v20180301/model/NormalThailandIDCard.cpp
   src/v20180301/model/PhilippinesDrivingLicense.cpp
@@ -159,7 +161,7 @@ set(faceid_src
   src/v20180301/model/GetWebVerificationResultIntlRequest.cpp
   src/v20180301/model/GeneralCard.cpp
   src/v20180301/model/LivenessCompareResponse.cpp
-  src/v20180301/model/MacaoIDCard.cpp
+  src/v20180301/model/HMTPermit.cpp
   src/v20180301/model/PhilippinesUMID.cpp
   src/v20180301/model/PhilippinesTinID.cpp
   src/v20180301/model/ApplyCardVerificationRequest.cpp

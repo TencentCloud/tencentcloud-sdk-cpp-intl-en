@@ -37,7 +37,8 @@ NormalCardInfo::NormalCardInfo() :
     m_macaoIDCardHasBeenSet(false),
     m_mainlandIDCardHasBeenSet(false),
     m_japanIDCardHasBeenSet(false),
-    m_taiWanIDCardHasBeenSet(false)
+    m_taiWanIDCardHasBeenSet(false),
+    m_hMTPermitCardHasBeenSet(false)
 {
 }
 
@@ -335,6 +336,23 @@ CoreInternalOutcome NormalCardInfo::Deserialize(const rapidjson::Value &value)
         m_taiWanIDCardHasBeenSet = true;
     }
 
+    if (value.HasMember("HMTPermitCard") && !value["HMTPermitCard"].IsNull())
+    {
+        if (!value["HMTPermitCard"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `NormalCardInfo.HMTPermitCard` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_hMTPermitCard.Deserialize(value["HMTPermitCard"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_hMTPermitCardHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -493,6 +511,15 @@ void NormalCardInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_taiWanIDCard.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_hMTPermitCardHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "HMTPermitCard";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_hMTPermitCard.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -768,5 +795,21 @@ void NormalCardInfo::SetTaiWanIDCard(const TaiWanIDCard& _taiWanIDCard)
 bool NormalCardInfo::TaiWanIDCardHasBeenSet() const
 {
     return m_taiWanIDCardHasBeenSet;
+}
+
+HMTPermit NormalCardInfo::GetHMTPermitCard() const
+{
+    return m_hMTPermitCard;
+}
+
+void NormalCardInfo::SetHMTPermitCard(const HMTPermit& _hMTPermitCard)
+{
+    m_hMTPermitCard = _hMTPermitCard;
+    m_hMTPermitCardHasBeenSet = true;
+}
+
+bool NormalCardInfo::HMTPermitCardHasBeenSet() const
+{
+    return m_hMTPermitCardHasBeenSet;
 }
 
