@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The result of a quality control task.
+                * Media quality inspection task result type.
                 */
                 class ScheduleQualityControlTaskResult : public AbstractModel
                 {
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取The input of the quality control task.
-                     * @return Input The input of the quality control task.
+                     * 获取Media quality inspection task input.
+                     * @return Input Media quality inspection task input.
                      * 
                      */
                     AiQualityControlTaskInput GetInput() const;
 
                     /**
-                     * 设置The input of the quality control task.
-                     * @param _input The input of the quality control task.
+                     * 设置Media quality inspection task input.
+                     * @param _input Media quality inspection task input.
                      * 
                      */
                     void SetInput(const AiQualityControlTaskInput& _input);
@@ -154,19 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取The output of the quality control task.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Output The output of the quality control task.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Media quality inspection task output.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Output Media quality inspection task output.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     QualityControlData GetOutput() const;
 
                     /**
-                     * 设置The output of the quality control task.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _output The output of the quality control task.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Media quality inspection task output.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _output Media quality inspection task output.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetOutput(const QualityControlData& _output);
@@ -205,14 +201,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_messageHasBeenSet;
 
                     /**
-                     * The input of the quality control task.
+                     * Media quality inspection task input.
                      */
                     AiQualityControlTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * The output of the quality control task.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Media quality inspection task output.Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     QualityControlData m_output;
                     bool m_outputHasBeenSet;

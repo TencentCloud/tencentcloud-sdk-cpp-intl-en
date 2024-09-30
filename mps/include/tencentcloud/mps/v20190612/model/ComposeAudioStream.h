@@ -141,6 +141,35 @@ u200c<li>`1`: Mono. </li>
                      */
                     bool AudioChannelHasBeenSet() const;
 
+                    /**
+                     * 获取Reference bitrate, in kbps. Value range: 26-10000.
+If set, the encoder will try to encode at this bitrate.
+If not set, the service will automatically adopt a suitable bitrate based on audio parameters.
+                     * @return Bitrate Reference bitrate, in kbps. Value range: 26-10000.
+If set, the encoder will try to encode at this bitrate.
+If not set, the service will automatically adopt a suitable bitrate based on audio parameters.
+                     * 
+                     */
+                    int64_t GetBitrate() const;
+
+                    /**
+                     * 设置Reference bitrate, in kbps. Value range: 26-10000.
+If set, the encoder will try to encode at this bitrate.
+If not set, the service will automatically adopt a suitable bitrate based on audio parameters.
+                     * @param _bitrate Reference bitrate, in kbps. Value range: 26-10000.
+If set, the encoder will try to encode at this bitrate.
+If not set, the service will automatically adopt a suitable bitrate based on audio parameters.
+                     * 
+                     */
+                    void SetBitrate(const int64_t& _bitrate);
+
+                    /**
+                     * 判断参数 Bitrate 是否已赋值
+                     * @return Bitrate 是否已赋值
+                     * 
+                     */
+                    bool BitrateHasBeenSet() const;
+
                 private:
 
                     /**
@@ -168,6 +197,14 @@ u200c<li>`1`: Mono. </li>
                      */
                     int64_t m_audioChannel;
                     bool m_audioChannelHasBeenSet;
+
+                    /**
+                     * Reference bitrate, in kbps. Value range: 26-10000.
+If set, the encoder will try to encode at this bitrate.
+If not set, the service will automatically adopt a suitable bitrate based on audio parameters.
+                     */
+                    int64_t m_bitrate;
+                    bool m_bitrateHasBeenSet;
 
                 };
             }

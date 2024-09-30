@@ -134,6 +134,48 @@ namespace TencentCloud
                      */
                     bool TypeHasBeenSet() const;
 
+                    /**
+                     * 获取Whether it is an audio-only template. 0: video template. 1: audio-only template.
+                     * @return PureAudio Whether it is an audio-only template. 0: video template. 1: audio-only template.
+                     * 
+                     */
+                    uint64_t GetPureAudio() const;
+
+                    /**
+                     * 设置Whether it is an audio-only template. 0: video template. 1: audio-only template.
+                     * @param _pureAudio Whether it is an audio-only template. 0: video template. 1: audio-only template.
+                     * 
+                     */
+                    void SetPureAudio(const uint64_t& _pureAudio);
+
+                    /**
+                     * 判断参数 PureAudio 是否已赋值
+                     * @return PureAudio 是否已赋值
+                     * 
+                     */
+                    bool PureAudioHasBeenSet() const;
+
+                    /**
+                     * 获取Filter condition for adaptive transcoding template identifiers, with a length limit of 64 characters.
+                     * @return Name Filter condition for adaptive transcoding template identifiers, with a length limit of 64 characters.
+                     * 
+                     */
+                    std::string GetName() const;
+
+                    /**
+                     * 设置Filter condition for adaptive transcoding template identifiers, with a length limit of 64 characters.
+                     * @param _name Filter condition for adaptive transcoding template identifiers, with a length limit of 64 characters.
+                     * 
+                     */
+                    void SetName(const std::string& _name);
+
+                    /**
+                     * 判断参数 Name 是否已赋值
+                     * @return Name 是否已赋值
+                     * 
+                     */
+                    bool NameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -161,6 +203,18 @@ namespace TencentCloud
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
+
+                    /**
+                     * Whether it is an audio-only template. 0: video template. 1: audio-only template.
+                     */
+                    uint64_t m_pureAudio;
+                    bool m_pureAudioHasBeenSet;
+
+                    /**
+                     * Filter condition for adaptive transcoding template identifiers, with a length limit of 64 characters.
+                     */
+                    std::string m_name;
+                    bool m_nameHasBeenSet;
 
                 };
             }

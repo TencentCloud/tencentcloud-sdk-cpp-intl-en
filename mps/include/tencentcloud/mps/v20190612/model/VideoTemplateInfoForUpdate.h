@@ -47,35 +47,79 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The video codec. Valid values:
-<li>libx264: H.264</li>
-<li>libx265: H.265</li>
-<li>av1: AOMedia Video 1</li>
-Note: You must specify a resolution (not higher than 640 x 480) if the H.265 codec is used.
-Note: You can only use the AOMedia Video 1 codec for MP4 files.
-                     * @return Codec The video codec. Valid values:
-<li>libx264: H.264</li>
-<li>libx265: H.265</li>
-<li>av1: AOMedia Video 1</li>
-Note: You must specify a resolution (not higher than 640 x 480) if the H.265 codec is used.
-Note: You can only use the AOMedia Video 1 codec for MP4 files.
+                     * 获取Video stream encoding format. Valid values:
+<li>h264: H.264 encoding.</li>
+<li>h265: H.265 encoding.</li>
+<li>h266: H.266 encoding.</li>
+<li>av1: AOMedia Video 1 encoding.</li>
+<li>vp8: VP8 encoding.</li>
+<li>vp9: VP9 encoding.</li>
+<li>mpeg2: MPEG2 encoding.</li>
+<li>dnxhd: DNxHD encoding.</li>
+<li>mv-hevc: MV-HEVC encoding.</li>
+Note: A resolution within 640x480 should be specified for H.265 encoding.
+
+Note: AV1 encoding containers only support mp4, webm, and mkv.
+Note: H.266 encoding containers only support mp4, hls, ts, and mov.
+Note: VP8 and VP9 encoding containers only support webm and mkv.
+Note: MPEG2 and DNxHD encoding containers only support mxf.
+Note: MV-HEVC encoding containers only support mp4, hls, and mov. Among them, the hls format only supports mp4 segmentation format.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Codec Video stream encoding format. Valid values:
+<li>h264: H.264 encoding.</li>
+<li>h265: H.265 encoding.</li>
+<li>h266: H.266 encoding.</li>
+<li>av1: AOMedia Video 1 encoding.</li>
+<li>vp8: VP8 encoding.</li>
+<li>vp9: VP9 encoding.</li>
+<li>mpeg2: MPEG2 encoding.</li>
+<li>dnxhd: DNxHD encoding.</li>
+<li>mv-hevc: MV-HEVC encoding.</li>
+Note: A resolution within 640x480 should be specified for H.265 encoding.
+
+Note: AV1 encoding containers only support mp4, webm, and mkv.
+Note: H.266 encoding containers only support mp4, hls, ts, and mov.
+Note: VP8 and VP9 encoding containers only support webm and mkv.
+Note: MPEG2 and DNxHD encoding containers only support mxf.
+Note: MV-HEVC encoding containers only support mp4, hls, and mov. Among them, the hls format only supports mp4 segmentation format.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCodec() const;
 
                     /**
-                     * 设置The video codec. Valid values:
-<li>libx264: H.264</li>
-<li>libx265: H.265</li>
-<li>av1: AOMedia Video 1</li>
-Note: You must specify a resolution (not higher than 640 x 480) if the H.265 codec is used.
-Note: You can only use the AOMedia Video 1 codec for MP4 files.
-                     * @param _codec The video codec. Valid values:
-<li>libx264: H.264</li>
-<li>libx265: H.265</li>
-<li>av1: AOMedia Video 1</li>
-Note: You must specify a resolution (not higher than 640 x 480) if the H.265 codec is used.
-Note: You can only use the AOMedia Video 1 codec for MP4 files.
+                     * 设置Video stream encoding format. Valid values:
+<li>h264: H.264 encoding.</li>
+<li>h265: H.265 encoding.</li>
+<li>h266: H.266 encoding.</li>
+<li>av1: AOMedia Video 1 encoding.</li>
+<li>vp8: VP8 encoding.</li>
+<li>vp9: VP9 encoding.</li>
+<li>mpeg2: MPEG2 encoding.</li>
+<li>dnxhd: DNxHD encoding.</li>
+<li>mv-hevc: MV-HEVC encoding.</li>
+Note: A resolution within 640x480 should be specified for H.265 encoding.
+
+Note: AV1 encoding containers only support mp4, webm, and mkv.
+Note: H.266 encoding containers only support mp4, hls, ts, and mov.
+Note: VP8 and VP9 encoding containers only support webm and mkv.
+Note: MPEG2 and DNxHD encoding containers only support mxf.
+Note: MV-HEVC encoding containers only support mp4, hls, and mov. Among them, the hls format only supports mp4 segmentation format.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _codec Video stream encoding format. Valid values:
+<li>h264: H.264 encoding.</li>
+<li>h265: H.265 encoding.</li>
+<li>h266: H.266 encoding.</li>
+<li>av1: AOMedia Video 1 encoding.</li>
+<li>vp8: VP8 encoding.</li>
+<li>vp9: VP9 encoding.</li>
+<li>mpeg2: MPEG2 encoding.</li>
+<li>dnxhd: DNxHD encoding.</li>
+<li>mv-hevc: MV-HEVC encoding.</li>
+Note: A resolution within 640x480 should be specified for H.265 encoding.
+
+Note: AV1 encoding containers only support mp4, webm, and mkv.
+Note: H.266 encoding containers only support mp4, hls, ts, and mov.
+Note: VP8 and VP9 encoding containers only support webm and mkv.
+Note: MPEG2 and DNxHD encoding containers only support mxf.
+Note: MV-HEVC encoding containers only support mp4, hls, and mov. Among them, the hls format only supports mp4 segmentation format.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCodec(const std::string& _codec);
@@ -88,22 +132,30 @@ Note: You can only use the AOMedia Video 1 codec for MP4 files.
                     bool CodecHasBeenSet() const;
 
                     /**
-                     * 获取Video frame rate in Hz. Value range: [0, 100].
-If the value is 0, the frame rate will be the same as that of the source video.
-                     * @return Fps Video frame rate in Hz. Value range: [0, 100].
-If the value is 0, the frame rate will be the same as that of the source video.
+                     * 获取Video frame rate. Value range:
+When FpsDenominator is empty, the range is [0, 120], in Hz.
+When FpsDenominator is not empty, the Fps/FpsDenominator range is [0, 120].
+If the value is 0, the frame rate will be the same as that of the source video.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Fps Video frame rate. Value range:
+When FpsDenominator is empty, the range is [0, 120], in Hz.
+When FpsDenominator is not empty, the Fps/FpsDenominator range is [0, 120].
+If the value is 0, the frame rate will be the same as that of the source video.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    uint64_t GetFps() const;
+                    int64_t GetFps() const;
 
                     /**
-                     * 设置Video frame rate in Hz. Value range: [0, 100].
-If the value is 0, the frame rate will be the same as that of the source video.
-                     * @param _fps Video frame rate in Hz. Value range: [0, 100].
-If the value is 0, the frame rate will be the same as that of the source video.
+                     * 设置Video frame rate. Value range:
+When FpsDenominator is empty, the range is [0, 120], in Hz.
+When FpsDenominator is not empty, the Fps/FpsDenominator range is [0, 120].
+If the value is 0, the frame rate will be the same as that of the source video.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _fps Video frame rate. Value range:
+When FpsDenominator is empty, the range is [0, 120], in Hz.
+When FpsDenominator is not empty, the Fps/FpsDenominator range is [0, 120].
+If the value is 0, the frame rate will be the same as that of the source video.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    void SetFps(const uint64_t& _fps);
+                    void SetFps(const int64_t& _fps);
 
                     /**
                      * 判断参数 Fps 是否已赋值
@@ -113,22 +165,18 @@ If the value is 0, the frame rate will be the same as that of the source video.
                     bool FpsHasBeenSet() const;
 
                     /**
-                     * 获取Bitrate of a video stream in Kbps. Value range: 0 and [128, 35,000].
-If the value is 0, the bitrate of the video will be the same as that of the source video.
-                     * @return Bitrate Bitrate of a video stream in Kbps. Value range: 0 and [128, 35,000].
-If the value is 0, the bitrate of the video will be the same as that of the source video.
+                     * 获取Bitrate of a video stream, in kbps. Value range: 0 and [128, 100000].If the value is 0, the bitrate of the video will be the same as that of the source video.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Bitrate Bitrate of a video stream, in kbps. Value range: 0 and [128, 100000].If the value is 0, the bitrate of the video will be the same as that of the source video.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    uint64_t GetBitrate() const;
+                    int64_t GetBitrate() const;
 
                     /**
-                     * 设置Bitrate of a video stream in Kbps. Value range: 0 and [128, 35,000].
-If the value is 0, the bitrate of the video will be the same as that of the source video.
-                     * @param _bitrate Bitrate of a video stream in Kbps. Value range: 0 and [128, 35,000].
-If the value is 0, the bitrate of the video will be the same as that of the source video.
+                     * 设置Bitrate of a video stream, in kbps. Value range: 0 and [128, 100000].If the value is 0, the bitrate of the video will be the same as that of the source video.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _bitrate Bitrate of a video stream, in kbps. Value range: 0 and [128, 100000].If the value is 0, the bitrate of the video will be the same as that of the source video.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    void SetBitrate(const uint64_t& _bitrate);
+                    void SetBitrate(const int64_t& _bitrate);
 
                     /**
                      * 判断参数 Bitrate 是否已赋值
@@ -344,31 +392,158 @@ Default value: 0. If this parameter is set to `1`, multiple streams with differe
                      */
                     bool ContentAdaptStreamHasBeenSet() const;
 
+                    /**
+                     * 获取HLS segment type. Valid values:
+<li>0: HLS+TS segment.</li>
+<li>2: HLS+TS byte range.</li>
+<li>7: HLS+MP4 segment.</li>
+<li>5: HLS+MP4 byte range.</li>
+Default value: 0
+
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SegmentType HLS segment type. Valid values:
+<li>0: HLS+TS segment.</li>
+<li>2: HLS+TS byte range.</li>
+<li>7: HLS+MP4 segment.</li>
+<li>5: HLS+MP4 byte range.</li>
+Default value: 0
+
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetSegmentType() const;
+
+                    /**
+                     * 设置HLS segment type. Valid values:
+<li>0: HLS+TS segment.</li>
+<li>2: HLS+TS byte range.</li>
+<li>7: HLS+MP4 segment.</li>
+<li>5: HLS+MP4 byte range.</li>
+Default value: 0
+
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _segmentType HLS segment type. Valid values:
+<li>0: HLS+TS segment.</li>
+<li>2: HLS+TS byte range.</li>
+<li>7: HLS+MP4 segment.</li>
+<li>5: HLS+MP4 byte range.</li>
+Default value: 0
+
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetSegmentType(const int64_t& _segmentType);
+
+                    /**
+                     * 判断参数 SegmentType 是否已赋值
+                     * @return SegmentType 是否已赋值
+                     * 
+                     */
+                    bool SegmentTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Denominator of the frame rate.
+Note: The value must be greater than 0.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return FpsDenominator Denominator of the frame rate.
+Note: The value must be greater than 0.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetFpsDenominator() const;
+
+                    /**
+                     * 设置Denominator of the frame rate.
+Note: The value must be greater than 0.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _fpsDenominator Denominator of the frame rate.
+Note: The value must be greater than 0.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetFpsDenominator(const int64_t& _fpsDenominator);
+
+                    /**
+                     * 判断参数 FpsDenominator 是否已赋值
+                     * @return FpsDenominator 是否已赋值
+                     * 
+                     */
+                    bool FpsDenominatorHasBeenSet() const;
+
+                    /**
+                     * 获取3D video splicing mode, which is only valid for MV-HEVC 3D videos. Valid values:
+<li>side_by_side: side-by-side view.</li>
+<li>top_bottom: top-bottom view.</li>
+Default value: side_by_side.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Stereo3dType 3D video splicing mode, which is only valid for MV-HEVC 3D videos. Valid values:
+<li>side_by_side: side-by-side view.</li>
+<li>top_bottom: top-bottom view.</li>
+Default value: side_by_side.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetStereo3dType() const;
+
+                    /**
+                     * 设置3D video splicing mode, which is only valid for MV-HEVC 3D videos. Valid values:
+<li>side_by_side: side-by-side view.</li>
+<li>top_bottom: top-bottom view.</li>
+Default value: side_by_side.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _stereo3dType 3D video splicing mode, which is only valid for MV-HEVC 3D videos. Valid values:
+<li>side_by_side: side-by-side view.</li>
+<li>top_bottom: top-bottom view.</li>
+Default value: side_by_side.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetStereo3dType(const std::string& _stereo3dType);
+
+                    /**
+                     * 判断参数 Stereo3dType 是否已赋值
+                     * @return Stereo3dType 是否已赋值
+                     * 
+                     */
+                    bool Stereo3dTypeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The video codec. Valid values:
-<li>libx264: H.264</li>
-<li>libx265: H.265</li>
-<li>av1: AOMedia Video 1</li>
-Note: You must specify a resolution (not higher than 640 x 480) if the H.265 codec is used.
-Note: You can only use the AOMedia Video 1 codec for MP4 files.
+                     * Video stream encoding format. Valid values:
+<li>h264: H.264 encoding.</li>
+<li>h265: H.265 encoding.</li>
+<li>h266: H.266 encoding.</li>
+<li>av1: AOMedia Video 1 encoding.</li>
+<li>vp8: VP8 encoding.</li>
+<li>vp9: VP9 encoding.</li>
+<li>mpeg2: MPEG2 encoding.</li>
+<li>dnxhd: DNxHD encoding.</li>
+<li>mv-hevc: MV-HEVC encoding.</li>
+Note: A resolution within 640x480 should be specified for H.265 encoding.
+
+Note: AV1 encoding containers only support mp4, webm, and mkv.
+Note: H.266 encoding containers only support mp4, hls, ts, and mov.
+Note: VP8 and VP9 encoding containers only support webm and mkv.
+Note: MPEG2 and DNxHD encoding containers only support mxf.
+Note: MV-HEVC encoding containers only support mp4, hls, and mov. Among them, the hls format only supports mp4 segmentation format.Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_codec;
                     bool m_codecHasBeenSet;
 
                     /**
-                     * Video frame rate in Hz. Value range: [0, 100].
-If the value is 0, the frame rate will be the same as that of the source video.
+                     * Video frame rate. Value range:
+When FpsDenominator is empty, the range is [0, 120], in Hz.
+When FpsDenominator is not empty, the Fps/FpsDenominator range is [0, 120].
+If the value is 0, the frame rate will be the same as that of the source video.Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    uint64_t m_fps;
+                    int64_t m_fps;
                     bool m_fpsHasBeenSet;
 
                     /**
-                     * Bitrate of a video stream in Kbps. Value range: 0 and [128, 35,000].
-If the value is 0, the bitrate of the video will be the same as that of the source video.
+                     * Bitrate of a video stream, in kbps. Value range: 0 and [128, 100000].If the value is 0, the bitrate of the video will be the same as that of the source video.Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    uint64_t m_bitrate;
+                    int64_t m_bitrate;
                     bool m_bitrateHasBeenSet;
 
                     /**
@@ -427,6 +602,37 @@ Default value: 0. If this parameter is set to `1`, multiple streams with differe
                      */
                     uint64_t m_contentAdaptStream;
                     bool m_contentAdaptStreamHasBeenSet;
+
+                    /**
+                     * HLS segment type. Valid values:
+<li>0: HLS+TS segment.</li>
+<li>2: HLS+TS byte range.</li>
+<li>7: HLS+MP4 segment.</li>
+<li>5: HLS+MP4 byte range.</li>
+Default value: 0
+
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_segmentType;
+                    bool m_segmentTypeHasBeenSet;
+
+                    /**
+                     * Denominator of the frame rate.
+Note: The value must be greater than 0.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_fpsDenominator;
+                    bool m_fpsDenominatorHasBeenSet;
+
+                    /**
+                     * 3D video splicing mode, which is only valid for MV-HEVC 3D videos. Valid values:
+<li>side_by_side: side-by-side view.</li>
+<li>top_bottom: top-bottom view.</li>
+Default value: side_by_side.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_stereo3dType;
+                    bool m_stereo3dTypeHasBeenSet;
 
                 };
             }

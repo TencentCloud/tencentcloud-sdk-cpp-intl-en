@@ -271,6 +271,77 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     bool HdrTypeHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return Codecs 
+                     * 
+                     */
+                    std::string GetCodecs() const;
+
+                    /**
+                     * 设置
+                     * @param _codecs 
+                     * 
+                     */
+                    void SetCodecs(const std::string& _codecs);
+
+                    /**
+                     * 判断参数 Codecs 是否已赋值
+                     * @return Codecs 是否已赋值
+                     * 
+                     */
+                    bool CodecsHasBeenSet() const;
+
+                    /**
+                     * 获取Numerator of the frame rate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return FpsNumerator Numerator of the frame rate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetFpsNumerator() const;
+
+                    /**
+                     * 设置Numerator of the frame rate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _fpsNumerator Numerator of the frame rate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetFpsNumerator(const int64_t& _fpsNumerator);
+
+                    /**
+                     * 判断参数 FpsNumerator 是否已赋值
+                     * @return FpsNumerator 是否已赋值
+                     * 
+                     */
+                    bool FpsNumeratorHasBeenSet() const;
+
+                    /**
+                     * 获取Denominator of the frame rate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return FpsDenominator Denominator of the frame rate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetFpsDenominator() const;
+
+                    /**
+                     * 设置Denominator of the frame rate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _fpsDenominator Denominator of the frame rate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetFpsDenominator(const int64_t& _fpsDenominator);
+
+                    /**
+                     * 判断参数 FpsDenominator 是否已赋值
+                     * @return FpsDenominator 是否已赋值
+                     * 
+                     */
+                    bool FpsDenominatorHasBeenSet() const;
+
                 private:
 
                     /**
@@ -335,6 +406,26 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::string m_hdrType;
                     bool m_hdrTypeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_codecs;
+                    bool m_codecsHasBeenSet;
+
+                    /**
+                     * Numerator of the frame rate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_fpsNumerator;
+                    bool m_fpsNumeratorHasBeenSet;
+
+                    /**
+                     * Denominator of the frame rate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_fpsDenominator;
+                    bool m_fpsDenominatorHasBeenSet;
 
                 };
             }

@@ -109,6 +109,31 @@ namespace TencentCloud
                      */
                     bool EndTimeOffsetHasBeenSet() const;
 
+                    /**
+                     * 获取Segment tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SegmentTags Segment tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<std::string> GetSegmentTags() const;
+
+                    /**
+                     * 设置Segment tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _segmentTags Segment tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetSegmentTags(const std::vector<std::string>& _segmentTags);
+
+                    /**
+                     * 判断参数 SegmentTags 是否已赋值
+                     * @return SegmentTags 是否已赋值
+                     * 
+                     */
+                    bool SegmentTagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -128,6 +153,13 @@ namespace TencentCloud
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;
+
+                    /**
+                     * Segment tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_segmentTags;
+                    bool m_segmentTagsHasBeenSet;
 
                 };
             }

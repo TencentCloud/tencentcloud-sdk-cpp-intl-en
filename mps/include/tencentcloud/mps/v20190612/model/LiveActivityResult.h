@@ -48,23 +48,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The task type.
-<li>`LiveRecord`: Live recording. </li>
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return ActivityType The task type.
-<li>`LiveRecord`: Live recording. </li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Atomic task type.
+<li>LiveRecord: live recording.</li>
+<li>AiQualityControl: media quality inspection.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ActivityType Atomic task type.
+<li>LiveRecord: live recording.</li>
+<li>AiQualityControl: media quality inspection.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetActivityType() const;
 
                     /**
-                     * 设置The task type.
-<li>`LiveRecord`: Live recording. </li>
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _activityType The task type.
-<li>`LiveRecord`: Live recording. </li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Atomic task type.
+<li>LiveRecord: live recording.</li>
+<li>AiQualityControl: media quality inspection.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _activityType Atomic task type.
+<li>LiveRecord: live recording.</li>
+<li>AiQualityControl: media quality inspection.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetActivityType(const std::string& _activityType);
@@ -104,9 +108,10 @@ Note: This field may return·null, indicating that no valid values can be obtain
                 private:
 
                     /**
-                     * The task type.
-<li>`LiveRecord`: Live recording. </li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Atomic task type.
+<li>LiveRecord: live recording.</li>
+<li>AiQualityControl: media quality inspection.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_activityType;
                     bool m_activityTypeHasBeenSet;

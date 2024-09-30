@@ -26,7 +26,12 @@ AiAnalysisResult::AiAnalysisResult() :
     m_coverTaskHasBeenSet(false),
     m_tagTaskHasBeenSet(false),
     m_frameTagTaskHasBeenSet(false),
-    m_highlightTaskHasBeenSet(false)
+    m_highlightTaskHasBeenSet(false),
+    m_deLogoTaskHasBeenSet(false),
+    m_segmentTaskHasBeenSet(false),
+    m_headTailTaskHasBeenSet(false),
+    m_descriptionTaskHasBeenSet(false),
+    m_horizontalToVerticalTaskHasBeenSet(false)
 {
 }
 
@@ -130,6 +135,91 @@ CoreInternalOutcome AiAnalysisResult::Deserialize(const rapidjson::Value &value)
         m_highlightTaskHasBeenSet = true;
     }
 
+    if (value.HasMember("DeLogoTask") && !value["DeLogoTask"].IsNull())
+    {
+        if (!value["DeLogoTask"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `AiAnalysisResult.DeLogoTask` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_deLogoTask.Deserialize(value["DeLogoTask"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_deLogoTaskHasBeenSet = true;
+    }
+
+    if (value.HasMember("SegmentTask") && !value["SegmentTask"].IsNull())
+    {
+        if (!value["SegmentTask"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `AiAnalysisResult.SegmentTask` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_segmentTask.Deserialize(value["SegmentTask"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_segmentTaskHasBeenSet = true;
+    }
+
+    if (value.HasMember("HeadTailTask") && !value["HeadTailTask"].IsNull())
+    {
+        if (!value["HeadTailTask"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `AiAnalysisResult.HeadTailTask` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_headTailTask.Deserialize(value["HeadTailTask"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_headTailTaskHasBeenSet = true;
+    }
+
+    if (value.HasMember("DescriptionTask") && !value["DescriptionTask"].IsNull())
+    {
+        if (!value["DescriptionTask"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `AiAnalysisResult.DescriptionTask` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_descriptionTask.Deserialize(value["DescriptionTask"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_descriptionTaskHasBeenSet = true;
+    }
+
+    if (value.HasMember("HorizontalToVerticalTask") && !value["HorizontalToVerticalTask"].IsNull())
+    {
+        if (!value["HorizontalToVerticalTask"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `AiAnalysisResult.HorizontalToVerticalTask` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_horizontalToVerticalTask.Deserialize(value["HorizontalToVerticalTask"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_horizontalToVerticalTaskHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -188,6 +278,51 @@ void AiAnalysisResult::ToJsonObject(rapidjson::Value &value, rapidjson::Document
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_highlightTask.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_deLogoTaskHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DeLogoTask";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_deLogoTask.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_segmentTaskHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SegmentTask";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_segmentTask.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_headTailTaskHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "HeadTailTask";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_headTailTask.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_descriptionTaskHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DescriptionTask";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_descriptionTask.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_horizontalToVerticalTaskHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "HorizontalToVerticalTask";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_horizontalToVerticalTask.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -287,5 +422,85 @@ void AiAnalysisResult::SetHighlightTask(const AiAnalysisTaskHighlightResult& _hi
 bool AiAnalysisResult::HighlightTaskHasBeenSet() const
 {
     return m_highlightTaskHasBeenSet;
+}
+
+AiAnalysisTaskDelLogoResult AiAnalysisResult::GetDeLogoTask() const
+{
+    return m_deLogoTask;
+}
+
+void AiAnalysisResult::SetDeLogoTask(const AiAnalysisTaskDelLogoResult& _deLogoTask)
+{
+    m_deLogoTask = _deLogoTask;
+    m_deLogoTaskHasBeenSet = true;
+}
+
+bool AiAnalysisResult::DeLogoTaskHasBeenSet() const
+{
+    return m_deLogoTaskHasBeenSet;
+}
+
+AiAnalysisTaskSegmentResult AiAnalysisResult::GetSegmentTask() const
+{
+    return m_segmentTask;
+}
+
+void AiAnalysisResult::SetSegmentTask(const AiAnalysisTaskSegmentResult& _segmentTask)
+{
+    m_segmentTask = _segmentTask;
+    m_segmentTaskHasBeenSet = true;
+}
+
+bool AiAnalysisResult::SegmentTaskHasBeenSet() const
+{
+    return m_segmentTaskHasBeenSet;
+}
+
+AiAnalysisTaskHeadTailResult AiAnalysisResult::GetHeadTailTask() const
+{
+    return m_headTailTask;
+}
+
+void AiAnalysisResult::SetHeadTailTask(const AiAnalysisTaskHeadTailResult& _headTailTask)
+{
+    m_headTailTask = _headTailTask;
+    m_headTailTaskHasBeenSet = true;
+}
+
+bool AiAnalysisResult::HeadTailTaskHasBeenSet() const
+{
+    return m_headTailTaskHasBeenSet;
+}
+
+AiAnalysisTaskDescriptionResult AiAnalysisResult::GetDescriptionTask() const
+{
+    return m_descriptionTask;
+}
+
+void AiAnalysisResult::SetDescriptionTask(const AiAnalysisTaskDescriptionResult& _descriptionTask)
+{
+    m_descriptionTask = _descriptionTask;
+    m_descriptionTaskHasBeenSet = true;
+}
+
+bool AiAnalysisResult::DescriptionTaskHasBeenSet() const
+{
+    return m_descriptionTaskHasBeenSet;
+}
+
+AiAnalysisTaskHorizontalToVerticalResult AiAnalysisResult::GetHorizontalToVerticalTask() const
+{
+    return m_horizontalToVerticalTask;
+}
+
+void AiAnalysisResult::SetHorizontalToVerticalTask(const AiAnalysisTaskHorizontalToVerticalResult& _horizontalToVerticalTask)
+{
+    m_horizontalToVerticalTask = _horizontalToVerticalTask;
+    m_horizontalToVerticalTaskHasBeenSet = true;
+}
+
+bool AiAnalysisResult::HorizontalToVerticalTaskHasBeenSet() const
+{
+    return m_horizontalToVerticalTaskHasBeenSet;
 }
 

@@ -29,7 +29,8 @@ ActivityResItem::ActivityResItem() :
     m_adaptiveDynamicStreamingTaskHasBeenSet(false),
     m_recognitionTaskHasBeenSet(false),
     m_reviewTaskHasBeenSet(false),
-    m_analysisTaskHasBeenSet(false)
+    m_analysisTaskHasBeenSet(false),
+    m_qualityControlTaskHasBeenSet(false)
 {
 }
 
@@ -191,6 +192,23 @@ CoreInternalOutcome ActivityResItem::Deserialize(const rapidjson::Value &value)
         m_analysisTaskHasBeenSet = true;
     }
 
+    if (value.HasMember("QualityControlTask") && !value["QualityControlTask"].IsNull())
+    {
+        if (!value["QualityControlTask"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `ActivityResItem.QualityControlTask` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_qualityControlTask.Deserialize(value["QualityControlTask"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_qualityControlTaskHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -279,6 +297,15 @@ void ActivityResItem::ToJsonObject(rapidjson::Value &value, rapidjson::Document:
         m_analysisTask.ToJsonObject(value[key.c_str()], allocator);
     }
 
+    if (m_qualityControlTaskHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "QualityControlTask";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_qualityControlTask.ToJsonObject(value[key.c_str()], allocator);
+    }
+
 }
 
 
@@ -314,12 +341,12 @@ bool ActivityResItem::AnimatedGraphicTaskHasBeenSet() const
     return m_animatedGraphicTaskHasBeenSet;
 }
 
-MediaProcessTaskSampleSnapshotResult ActivityResItem::GetSnapshotByTimeOffsetTask() const
+MediaProcessTaskSnapshotByTimeOffsetResult ActivityResItem::GetSnapshotByTimeOffsetTask() const
 {
     return m_snapshotByTimeOffsetTask;
 }
 
-void ActivityResItem::SetSnapshotByTimeOffsetTask(const MediaProcessTaskSampleSnapshotResult& _snapshotByTimeOffsetTask)
+void ActivityResItem::SetSnapshotByTimeOffsetTask(const MediaProcessTaskSnapshotByTimeOffsetResult& _snapshotByTimeOffsetTask)
 {
     m_snapshotByTimeOffsetTask = _snapshotByTimeOffsetTask;
     m_snapshotByTimeOffsetTaskHasBeenSet = true;
@@ -424,5 +451,21 @@ void ActivityResItem::SetAnalysisTask(const ScheduleAnalysisTaskResult& _analysi
 bool ActivityResItem::AnalysisTaskHasBeenSet() const
 {
     return m_analysisTaskHasBeenSet;
+}
+
+ScheduleQualityControlTaskResult ActivityResItem::GetQualityControlTask() const
+{
+    return m_qualityControlTask;
+}
+
+void ActivityResItem::SetQualityControlTask(const ScheduleQualityControlTaskResult& _qualityControlTask)
+{
+    m_qualityControlTask = _qualityControlTask;
+    m_qualityControlTaskHasBeenSet = true;
+}
+
+bool ActivityResItem::QualityControlTaskHasBeenSet() const
+{
+    return m_qualityControlTaskHasBeenSet;
 }
 

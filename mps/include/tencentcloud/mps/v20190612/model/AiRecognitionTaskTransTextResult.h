@@ -178,6 +178,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool OutputHasBeenSet() const;
 
+                    /**
+                     * 获取Task progress.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Progress Task progress.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    uint64_t GetProgress() const;
+
+                    /**
+                     * 设置Task progress.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _progress Task progress.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetProgress(const uint64_t& _progress);
+
+                    /**
+                     * 判断参数 Progress 是否已赋值
+                     * @return Progress 是否已赋值
+                     * 
+                     */
+                    bool ProgressHasBeenSet() const;
+
                 private:
 
                     /**
@@ -216,6 +241,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     AiRecognitionTaskTransTextResultOutput m_output;
                     bool m_outputHasBeenSet;
+
+                    /**
+                     * Task progress.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_progress;
+                    bool m_progressHasBeenSet;
 
                 };
             }

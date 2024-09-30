@@ -47,6 +47,35 @@ namespace TencentCloud
 
 
                     /**
+                     * 获取The notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+
+<font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
+                     * @return NotifyType The notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+
+<font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
+                     * 
+                     */
+                    std::string GetNotifyType() const;
+
+                    /**
+                     * 设置The notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+
+<font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
+                     * @param _notifyType The notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+
+<font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
+                     * 
+                     */
+                    void SetNotifyType(const std::string& _notifyType);
+
+                    /**
+                     * 判断参数 NotifyType 是否已赋值
+                     * @return NotifyType 是否已赋值
+                     * 
+                     */
+                    bool NotifyTypeHasBeenSet() const;
+
+                    /**
                      * 获取CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported.
                      * @return CmqModel CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported.
                      * 
@@ -131,35 +160,6 @@ namespace TencentCloud
                     bool TopicNameHasBeenSet() const;
 
                     /**
-                     * 获取The notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
-
-<font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
-                     * @return NotifyType The notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
-
-<font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
-                     * 
-                     */
-                    std::string GetNotifyType() const;
-
-                    /**
-                     * 设置The notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
-
-<font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
-                     * @param _notifyType The notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
-
-<font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
-                     * 
-                     */
-                    void SetNotifyType(const std::string& _notifyType);
-
-                    /**
-                     * 判断参数 NotifyType 是否已赋值
-                     * @return NotifyType 是否已赋值
-                     * 
-                     */
-                    bool NotifyTypeHasBeenSet() const;
-
-                    /**
                      * 获取HTTP callback URL, required if `NotifyType` is set to `URL`
                      * @return NotifyUrl HTTP callback URL, required if `NotifyType` is set to `URL`
                      * 
@@ -180,7 +180,40 @@ namespace TencentCloud
                      */
                     bool NotifyUrlHasBeenSet() const;
 
+                    /**
+                     * 获取Key used to generate a callback signature.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return NotifyKey Key used to generate a callback signature.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetNotifyKey() const;
+
+                    /**
+                     * 设置Key used to generate a callback signature.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _notifyKey Key used to generate a callback signature.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetNotifyKey(const std::string& _notifyKey);
+
+                    /**
+                     * 判断参数 NotifyKey 是否已赋值
+                     * @return NotifyKey 是否已赋值
+                     * 
+                     */
+                    bool NotifyKeyHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * The notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+
+<font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
+                     */
+                    std::string m_notifyType;
+                    bool m_notifyTypeHasBeenSet;
 
                     /**
                      * CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported.
@@ -207,18 +240,17 @@ namespace TencentCloud
                     bool m_topicNameHasBeenSet;
 
                     /**
-                     * The notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
-
-<font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
-                     */
-                    std::string m_notifyType;
-                    bool m_notifyTypeHasBeenSet;
-
-                    /**
                      * HTTP callback URL, required if `NotifyType` is set to `URL`
                      */
                     std::string m_notifyUrl;
                     bool m_notifyUrlHasBeenSet;
+
+                    /**
+                     * Key used to generate a callback signature.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_notifyKey;
+                    bool m_notifyKeyHasBeenSet;
 
                 };
             }

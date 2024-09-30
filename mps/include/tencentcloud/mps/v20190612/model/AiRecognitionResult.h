@@ -30,6 +30,7 @@
 #include <tencentcloud/mps/v20190612/model/AiRecognitionTaskOcrWordsResult.h>
 #include <tencentcloud/mps/v20190612/model/AiRecognitionTaskOcrFullTextResult.h>
 #include <tencentcloud/mps/v20190612/model/AiRecognitionTaskTransTextResult.h>
+#include <tencentcloud/mps/v20190612/model/AiRecognitionTaskObjectResult.h>
 
 
 namespace TencentCloud
@@ -271,6 +272,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool TransTextTaskHasBeenSet() const;
 
+                    /**
+                     * 获取Object recognition result, which is valid when Type is
+
+ObjectRecognition.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ObjectTask Object recognition result, which is valid when Type is
+
+ObjectRecognition.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    AiRecognitionTaskObjectResult GetObjectTask() const;
+
+                    /**
+                     * 设置Object recognition result, which is valid when Type is
+
+ObjectRecognition.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _objectTask Object recognition result, which is valid when Type is
+
+ObjectRecognition.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetObjectTask(const AiRecognitionTaskObjectResult& _objectTask);
+
+                    /**
+                     * 判断参数 ObjectTask 是否已赋值
+                     * @return ObjectTask 是否已赋值
+                     * 
+                     */
+                    bool ObjectTaskHasBeenSet() const;
+
                 private:
 
                     /**
@@ -332,6 +366,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     AiRecognitionTaskTransTextResult m_transTextTask;
                     bool m_transTextTaskHasBeenSet;
+
+                    /**
+                     * Object recognition result, which is valid when Type is
+
+ObjectRecognition.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    AiRecognitionTaskObjectResult m_objectTask;
+                    bool m_objectTaskHasBeenSet;
 
                 };
             }

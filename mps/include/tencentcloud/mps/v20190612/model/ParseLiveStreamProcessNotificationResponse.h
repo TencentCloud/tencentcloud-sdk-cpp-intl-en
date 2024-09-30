@@ -24,6 +24,9 @@
 #include <tencentcloud/mps/v20190612/model/LiveStreamProcessErrorInfo.h>
 #include <tencentcloud/mps/v20190612/model/LiveStreamAiReviewResultInfo.h>
 #include <tencentcloud/mps/v20190612/model/LiveStreamAiRecognitionResultInfo.h>
+#include <tencentcloud/mps/v20190612/model/LiveStreamAiAnalysisResultInfo.h>
+#include <tencentcloud/mps/v20190612/model/LiveStreamAiQualityControlResultInfo.h>
+#include <tencentcloud/mps/v20190612/model/LiveStreamRecordResultInfo.h>
 
 
 namespace TencentCloud
@@ -47,12 +50,16 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Result type of live stream processing. Valid values:
-<li>AiReviewResult: Content audit result;</li>
-<li>ProcessEof: Live stream processing has been completed.</li>
-                     * @return NotificationType Result type of live stream processing. Valid values:
-<li>AiReviewResult: Content audit result;</li>
-<li>ProcessEof: Live stream processing has been completed.</li>
+                     * 获取Live stream processing result type, including:
+<li>AiReviewResult: content moderation result;</li>
+<li>AiRecognitionResult: content recognition result;</li>
+<li>LiveRecordResult: live recording result;</li>
+<li>ProcessEof: live stream processing result.</li>
+                     * @return NotificationType Live stream processing result type, including:
+<li>AiReviewResult: content moderation result;</li>
+<li>AiRecognitionResult: content recognition result;</li>
+<li>LiveRecordResult: live recording result;</li>
+<li>ProcessEof: live stream processing result.</li>
                      * 
                      */
                     std::string GetNotificationType() const;
@@ -125,6 +132,50 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AiRecognitionResultInfoHasBeenSet() const;
 
                     /**
+                     * 获取
+                     * @return AiAnalysisResultInfo 
+                     * 
+                     */
+                    LiveStreamAiAnalysisResultInfo GetAiAnalysisResultInfo() const;
+
+                    /**
+                     * 判断参数 AiAnalysisResultInfo 是否已赋值
+                     * @return AiAnalysisResultInfo 是否已赋值
+                     * 
+                     */
+                    bool AiAnalysisResultInfoHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return AiQualityControlResultInfo 
+                     * 
+                     */
+                    LiveStreamAiQualityControlResultInfo GetAiQualityControlResultInfo() const;
+
+                    /**
+                     * 判断参数 AiQualityControlResultInfo 是否已赋值
+                     * @return AiQualityControlResultInfo 是否已赋值
+                     * 
+                     */
+                    bool AiQualityControlResultInfoHasBeenSet() const;
+
+                    /**
+                     * 获取Live recording result is valid when NotificationType is LiveRecordResult.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return LiveRecordResultInfo Live recording result is valid when NotificationType is LiveRecordResult.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    LiveStreamRecordResultInfo GetLiveRecordResultInfo() const;
+
+                    /**
+                     * 判断参数 LiveRecordResultInfo 是否已赋值
+                     * @return LiveRecordResultInfo 是否已赋值
+                     * 
+                     */
+                    bool LiveRecordResultInfoHasBeenSet() const;
+
+                    /**
                      * 获取The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
                      * @return SessionId The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
                      * 
@@ -155,9 +206,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Result type of live stream processing. Valid values:
-<li>AiReviewResult: Content audit result;</li>
-<li>ProcessEof: Live stream processing has been completed.</li>
+                     * Live stream processing result type, including:
+<li>AiReviewResult: content moderation result;</li>
+<li>AiRecognitionResult: content recognition result;</li>
+<li>LiveRecordResult: live recording result;</li>
+<li>ProcessEof: live stream processing result.</li>
                      */
                     std::string m_notificationType;
                     bool m_notificationTypeHasBeenSet;
@@ -187,6 +240,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     LiveStreamAiRecognitionResultInfo m_aiRecognitionResultInfo;
                     bool m_aiRecognitionResultInfoHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    LiveStreamAiAnalysisResultInfo m_aiAnalysisResultInfo;
+                    bool m_aiAnalysisResultInfoHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    LiveStreamAiQualityControlResultInfo m_aiQualityControlResultInfo;
+                    bool m_aiQualityControlResultInfoHasBeenSet;
+
+                    /**
+                     * Live recording result is valid when NotificationType is LiveRecordResult.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    LiveStreamRecordResultInfo m_liveRecordResultInfo;
+                    bool m_liveRecordResultInfoHasBeenSet;
 
                     /**
                      * The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.

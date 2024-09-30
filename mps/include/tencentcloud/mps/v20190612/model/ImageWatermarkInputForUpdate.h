@@ -97,27 +97,31 @@ namespace TencentCloud
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取Watermark height. % and px formats are supported:
-<li>If the string ends in %, the `Height` of the watermark will be the specified percentage of the video height. For example, `10%` means that `Height` is 10% of the video height;</li>
-<li>If the string ends in px, the `Height` of the watermark will be in pixels. For example, `100px` means that `Height` is 100 pixels. Value range: 0 or [8, 4096].</li>
-Default value: 0px, which means that `Height` will be proportionally scaled according to the aspect ratio of the original watermark image.
-                     * @return Height Watermark height. % and px formats are supported:
-<li>If the string ends in %, the `Height` of the watermark will be the specified percentage of the video height. For example, `10%` means that `Height` is 10% of the video height;</li>
-<li>If the string ends in px, the `Height` of the watermark will be in pixels. For example, `100px` means that `Height` is 100 pixels. Value range: 0 or [8, 4096].</li>
-Default value: 0px, which means that `Height` will be proportionally scaled according to the aspect ratio of the original watermark image.
+                     * 获取Height of a watermark, supporting two formats: % and px.
+<li>If a string ends with %, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
+<li>If a string ends with px, the `Height` of a watermark will be in pixels. For example, `100px` means that `Height` is 100 pixels. Value range: 0 or [8, 4096].</li>
+
+
+                     * @return Height Height of a watermark, supporting two formats: % and px.
+<li>If a string ends with %, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
+<li>If a string ends with px, the `Height` of a watermark will be in pixels. For example, `100px` means that `Height` is 100 pixels. Value range: 0 or [8, 4096].</li>
+
+
                      * 
                      */
                     std::string GetHeight() const;
 
                     /**
-                     * 设置Watermark height. % and px formats are supported:
-<li>If the string ends in %, the `Height` of the watermark will be the specified percentage of the video height. For example, `10%` means that `Height` is 10% of the video height;</li>
-<li>If the string ends in px, the `Height` of the watermark will be in pixels. For example, `100px` means that `Height` is 100 pixels. Value range: 0 or [8, 4096].</li>
-Default value: 0px, which means that `Height` will be proportionally scaled according to the aspect ratio of the original watermark image.
-                     * @param _height Watermark height. % and px formats are supported:
-<li>If the string ends in %, the `Height` of the watermark will be the specified percentage of the video height. For example, `10%` means that `Height` is 10% of the video height;</li>
-<li>If the string ends in px, the `Height` of the watermark will be in pixels. For example, `100px` means that `Height` is 100 pixels. Value range: 0 or [8, 4096].</li>
-Default value: 0px, which means that `Height` will be proportionally scaled according to the aspect ratio of the original watermark image.
+                     * 设置Height of a watermark, supporting two formats: % and px.
+<li>If a string ends with %, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
+<li>If a string ends with px, the `Height` of a watermark will be in pixels. For example, `100px` means that `Height` is 100 pixels. Value range: 0 or [8, 4096].</li>
+
+
+                     * @param _height Height of a watermark, supporting two formats: % and px.
+<li>If a string ends with %, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
+<li>If a string ends with px, the `Height` of a watermark will be in pixels. For example, `100px` means that `Height` is 100 pixels. Value range: 0 or [8, 4096].</li>
+
+
                      * 
                      */
                     void SetHeight(const std::string& _height);
@@ -179,10 +183,11 @@ Default value: 0px, which means that `Height` will be proportionally scaled acco
                     bool m_widthHasBeenSet;
 
                     /**
-                     * Watermark height. % and px formats are supported:
-<li>If the string ends in %, the `Height` of the watermark will be the specified percentage of the video height. For example, `10%` means that `Height` is 10% of the video height;</li>
-<li>If the string ends in px, the `Height` of the watermark will be in pixels. For example, `100px` means that `Height` is 100 pixels. Value range: 0 or [8, 4096].</li>
-Default value: 0px, which means that `Height` will be proportionally scaled according to the aspect ratio of the original watermark image.
+                     * Height of a watermark, supporting two formats: % and px.
+<li>If a string ends with %, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
+<li>If a string ends with px, the `Height` of a watermark will be in pixels. For example, `100px` means that `Height` is 100 pixels. Value range: 0 or [8, 4096].</li>
+
+
                      */
                     std::string m_height;
                     bool m_heightHasBeenSet;

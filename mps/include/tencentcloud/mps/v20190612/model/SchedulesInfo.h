@@ -337,6 +337,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool UpdateTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Resource ID. For those without an associated resource ID, fill in with an account's primary resource ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ResourceId Resource ID. For those without an associated resource ID, fill in with an account's primary resource ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetResourceId() const;
+
+                    /**
+                     * 设置Resource ID. For those without an associated resource ID, fill in with an account's primary resource ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _resourceId Resource ID. For those without an associated resource ID, fill in with an account's primary resource ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetResourceId(const std::string& _resourceId);
+
+                    /**
+                     * 判断参数 ResourceId 是否已赋值
+                     * @return ResourceId 是否已赋值
+                     * 
+                     */
+                    bool ResourceIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -418,6 +443,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
+
+                    /**
+                     * Resource ID. For those without an associated resource ID, fill in with an account's primary resource ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_resourceId;
+                    bool m_resourceIdHasBeenSet;
 
                 };
             }

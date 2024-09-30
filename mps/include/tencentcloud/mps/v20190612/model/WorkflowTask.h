@@ -280,18 +280,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AiRecognitionResultSetHasBeenSet() const;
 
                     /**
-                     * 获取The execution status and result of a quality control task.
+                     * 获取Execution status and results of a media quality inspection task.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AiQualityControlTaskResult The execution status and result of a quality control task.
+                     * @return AiQualityControlTaskResult Execution status and results of a media quality inspection task.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     ScheduleQualityControlTaskResult GetAiQualityControlTaskResult() const;
 
                     /**
-                     * 设置The execution status and result of a quality control task.
+                     * 设置Execution status and results of a media quality inspection task.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _aiQualityControlTaskResult The execution status and result of a quality control task.
+                     * @param _aiQualityControlTaskResult Execution status and results of a media quality inspection task.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -371,7 +371,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_aiRecognitionResultSetHasBeenSet;
 
                     /**
-                     * The execution status and result of a quality control task.
+                     * Execution status and results of a media quality inspection task.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ScheduleQualityControlTaskResult m_aiQualityControlTaskResult;

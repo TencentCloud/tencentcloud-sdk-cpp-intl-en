@@ -201,6 +201,27 @@ Note: If this parameter is left empty, the current `OutputDir` value will be inv
                      */
                     bool TaskNotifyConfigHasBeenSet() const;
 
+                    /**
+                     * 获取Resource ID. Ensure the corresponding resource is in the enabled state.
+                     * @return ResourceId Resource ID. Ensure the corresponding resource is in the enabled state.
+                     * 
+                     */
+                    std::string GetResourceId() const;
+
+                    /**
+                     * 设置Resource ID. Ensure the corresponding resource is in the enabled state.
+                     * @param _resourceId Resource ID. Ensure the corresponding resource is in the enabled state.
+                     * 
+                     */
+                    void SetResourceId(const std::string& _resourceId);
+
+                    /**
+                     * 判断参数 ResourceId 是否已赋值
+                     * @return ResourceId 是否已赋值
+                     * 
+                     */
+                    bool ResourceIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -246,6 +267,12 @@ Note: If this parameter is left empty, the current `OutputDir` value will be inv
                      */
                     TaskNotifyConfig m_taskNotifyConfig;
                     bool m_taskNotifyConfigHasBeenSet;
+
+                    /**
+                     * Resource ID. Ensure the corresponding resource is in the enabled state.
+                     */
+                    std::string m_resourceId;
+                    bool m_resourceIdHasBeenSet;
 
                 };
             }

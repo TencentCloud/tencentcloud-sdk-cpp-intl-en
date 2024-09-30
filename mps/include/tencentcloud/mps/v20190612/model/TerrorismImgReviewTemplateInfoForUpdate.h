@@ -76,51 +76,47 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取The filter labels for sensitive information detection in images, which specify the types of sensitive information to return. If this parameter is left empty, the detection results for all labels are returned. Valid values:
-<li>guns</li>
-<li>crowd</li>
-<li>bloody</li>
-<li>police</li>
-<li>banners (sensitive flags)</li>
-<li>militant</li>
-<li>explosion</li>
-<li>terrorists</li>
-<li>scenario (sensitive scenes) </li>
-                     * @return LabelSet The filter labels for sensitive information detection in images, which specify the types of sensitive information to return. If this parameter is left empty, the detection results for all labels are returned. Valid values:
-<li>guns</li>
-<li>crowd</li>
-<li>bloody</li>
-<li>police</li>
-<li>banners (sensitive flags)</li>
-<li>militant</li>
-<li>explosion</li>
-<li>terrorists</li>
-<li>scenario (sensitive scenes) </li>
+                     * 获取Sensitive content filter tags. The auditing results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. Valid values:
+<li>guns: weapons and guns;</li>
+<li>crowd: crowd gathering;</li>
+<li>bloody: bloodiness;</li>
+<li>police: police force;</li>
+<li>banners: sensitive flags;</li>
+<li>militant: militants;</li>
+<li>explosion: explosions and fires;</li>
+<li>terrorists: sensitive persons.</li>
+                     * @return LabelSet Sensitive content filter tags. The auditing results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. Valid values:
+<li>guns: weapons and guns;</li>
+<li>crowd: crowd gathering;</li>
+<li>bloody: bloodiness;</li>
+<li>police: police force;</li>
+<li>banners: sensitive flags;</li>
+<li>militant: militants;</li>
+<li>explosion: explosions and fires;</li>
+<li>terrorists: sensitive persons.</li>
                      * 
                      */
                     std::vector<std::string> GetLabelSet() const;
 
                     /**
-                     * 设置The filter labels for sensitive information detection in images, which specify the types of sensitive information to return. If this parameter is left empty, the detection results for all labels are returned. Valid values:
-<li>guns</li>
-<li>crowd</li>
-<li>bloody</li>
-<li>police</li>
-<li>banners (sensitive flags)</li>
-<li>militant</li>
-<li>explosion</li>
-<li>terrorists</li>
-<li>scenario (sensitive scenes) </li>
-                     * @param _labelSet The filter labels for sensitive information detection in images, which specify the types of sensitive information to return. If this parameter is left empty, the detection results for all labels are returned. Valid values:
-<li>guns</li>
-<li>crowd</li>
-<li>bloody</li>
-<li>police</li>
-<li>banners (sensitive flags)</li>
-<li>militant</li>
-<li>explosion</li>
-<li>terrorists</li>
-<li>scenario (sensitive scenes) </li>
+                     * 设置Sensitive content filter tags. The auditing results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. Valid values:
+<li>guns: weapons and guns;</li>
+<li>crowd: crowd gathering;</li>
+<li>bloody: bloodiness;</li>
+<li>police: police force;</li>
+<li>banners: sensitive flags;</li>
+<li>militant: militants;</li>
+<li>explosion: explosions and fires;</li>
+<li>terrorists: sensitive persons.</li>
+                     * @param _labelSet Sensitive content filter tags. The auditing results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. Valid values:
+<li>guns: weapons and guns;</li>
+<li>crowd: crowd gathering;</li>
+<li>bloody: bloodiness;</li>
+<li>police: police force;</li>
+<li>banners: sensitive flags;</li>
+<li>militant: militants;</li>
+<li>explosion: explosions and fires;</li>
+<li>terrorists: sensitive persons.</li>
                      * 
                      */
                     void SetLabelSet(const std::vector<std::string>& _labelSet);
@@ -185,16 +181,15 @@ namespace TencentCloud
                     bool m_switchHasBeenSet;
 
                     /**
-                     * The filter labels for sensitive information detection in images, which specify the types of sensitive information to return. If this parameter is left empty, the detection results for all labels are returned. Valid values:
-<li>guns</li>
-<li>crowd</li>
-<li>bloody</li>
-<li>police</li>
-<li>banners (sensitive flags)</li>
-<li>militant</li>
-<li>explosion</li>
-<li>terrorists</li>
-<li>scenario (sensitive scenes) </li>
+                     * Sensitive content filter tags. The auditing results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. Valid values:
+<li>guns: weapons and guns;</li>
+<li>crowd: crowd gathering;</li>
+<li>bloody: bloodiness;</li>
+<li>police: police force;</li>
+<li>banners: sensitive flags;</li>
+<li>militant: militants;</li>
+<li>explosion: explosions and fires;</li>
+<li>terrorists: sensitive persons.</li>
                      */
                     std::vector<std::string> m_labelSet;
                     bool m_labelSetHasBeenSet;

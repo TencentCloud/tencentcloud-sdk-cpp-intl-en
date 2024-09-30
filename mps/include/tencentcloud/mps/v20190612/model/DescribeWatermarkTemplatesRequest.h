@@ -142,6 +142,27 @@ namespace TencentCloud
                      */
                     bool LimitHasBeenSet() const;
 
+                    /**
+                     * 获取Filter condition for watermark template identifiers, with a length limit of 64 characters.
+                     * @return Name Filter condition for watermark template identifiers, with a length limit of 64 characters.
+                     * 
+                     */
+                    std::string GetName() const;
+
+                    /**
+                     * 设置Filter condition for watermark template identifiers, with a length limit of 64 characters.
+                     * @param _name Filter condition for watermark template identifiers, with a length limit of 64 characters.
+                     * 
+                     */
+                    void SetName(const std::string& _name);
+
+                    /**
+                     * 判断参数 Name 是否已赋值
+                     * @return Name 是否已赋值
+                     * 
+                     */
+                    bool NameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -171,6 +192,12 @@ namespace TencentCloud
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
+
+                    /**
+                     * Filter condition for watermark template identifiers, with a length limit of 64 characters.
+                     */
+                    std::string m_name;
+                    bool m_nameHasBeenSet;
 
                 };
             }

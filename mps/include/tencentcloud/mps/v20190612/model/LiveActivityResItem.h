@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mps/v20190612/model/LiveScheduleLiveRecordTaskResult.h>
+#include <tencentcloud/mps/v20190612/model/ScheduleQualityControlTaskResult.h>
 
 
 namespace TencentCloud
@@ -72,6 +73,31 @@ Note: This field may return·null, indicating that no valid values can be obtain
                      */
                     bool LiveRecordTaskHasBeenSet() const;
 
+                    /**
+                     * 获取Media quality inspection task output.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return LiveQualityControlTask Media quality inspection task output.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    ScheduleQualityControlTaskResult GetLiveQualityControlTask() const;
+
+                    /**
+                     * 设置Media quality inspection task output.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _liveQualityControlTask Media quality inspection task output.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetLiveQualityControlTask(const ScheduleQualityControlTaskResult& _liveQualityControlTask);
+
+                    /**
+                     * 判断参数 LiveQualityControlTask 是否已赋值
+                     * @return LiveQualityControlTask 是否已赋值
+                     * 
+                     */
+                    bool LiveQualityControlTaskHasBeenSet() const;
+
                 private:
 
                     /**
@@ -80,6 +106,13 @@ Note: This field may return·null, indicating that no valid values can be obtain
                      */
                     LiveScheduleLiveRecordTaskResult m_liveRecordTask;
                     bool m_liveRecordTaskHasBeenSet;
+
+                    /**
+                     * Media quality inspection task output.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    ScheduleQualityControlTaskResult m_liveQualityControlTask;
+                    bool m_liveQualityControlTaskHasBeenSet;
 
                 };
             }

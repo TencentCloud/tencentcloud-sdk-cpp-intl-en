@@ -30,6 +30,8 @@
 #include <tencentcloud/mps/v20190612/model/LiveStreamAsrFullTextRecognitionResult.h>
 #include <tencentcloud/mps/v20190612/model/LiveStreamOcrFullTextRecognitionResult.h>
 #include <tencentcloud/mps/v20190612/model/LiveStreamTransTextRecognitionResult.h>
+#include <tencentcloud/mps/v20190612/model/LiveStreamObjectRecognitionResult.h>
+#include <tencentcloud/mps/v20190612/model/LiveStreamTagRecognitionResult.h>
 
 
 namespace TencentCloud
@@ -53,39 +55,51 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The result type. Valid values:
-<li>FaceRecognition: Face recognition</li>
-<li>AsrWordsRecognition: Speech keyword recognition</li>
-<li>OcrWordsRecognition: Text keyword recognition</li>
-<li>AsrFullTextRecognition: Full speech recognition</li>
-<li>OcrFullTextRecognition: Full text recognition</li>
-<li>TransTextRecognition: Speech translation</li>
-                     * @return Type The result type. Valid values:
-<li>FaceRecognition: Face recognition</li>
-<li>AsrWordsRecognition: Speech keyword recognition</li>
-<li>OcrWordsRecognition: Text keyword recognition</li>
-<li>AsrFullTextRecognition: Full speech recognition</li>
-<li>OcrFullTextRecognition: Full text recognition</li>
-<li>TransTextRecognition: Speech translation</li>
+                     * 获取Result type. Valid values:
+<li>FaceRecognition: face recognition.</li>
+<li>AsrWordsRecognition: speech keyword recognition.</li>
+<li>OcrWordsRecognition: text keyword recognition.</li>
+<li>AsrFullTextRecognition: full speech recognition.</li>
+<li>OcrFullTextRecognition: full text recognition.</li>
+<li>TransTextRecognition: speech translation.</li>
+
+<li>ObjectRecognition: object recognition.</li>
+<li>TagRecognition: highlights marking.</li>
+                     * @return Type Result type. Valid values:
+<li>FaceRecognition: face recognition.</li>
+<li>AsrWordsRecognition: speech keyword recognition.</li>
+<li>OcrWordsRecognition: text keyword recognition.</li>
+<li>AsrFullTextRecognition: full speech recognition.</li>
+<li>OcrFullTextRecognition: full text recognition.</li>
+<li>TransTextRecognition: speech translation.</li>
+
+<li>ObjectRecognition: object recognition.</li>
+<li>TagRecognition: highlights marking.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置The result type. Valid values:
-<li>FaceRecognition: Face recognition</li>
-<li>AsrWordsRecognition: Speech keyword recognition</li>
-<li>OcrWordsRecognition: Text keyword recognition</li>
-<li>AsrFullTextRecognition: Full speech recognition</li>
-<li>OcrFullTextRecognition: Full text recognition</li>
-<li>TransTextRecognition: Speech translation</li>
-                     * @param _type The result type. Valid values:
-<li>FaceRecognition: Face recognition</li>
-<li>AsrWordsRecognition: Speech keyword recognition</li>
-<li>OcrWordsRecognition: Text keyword recognition</li>
-<li>AsrFullTextRecognition: Full speech recognition</li>
-<li>OcrFullTextRecognition: Full text recognition</li>
-<li>TransTextRecognition: Speech translation</li>
+                     * 设置Result type. Valid values:
+<li>FaceRecognition: face recognition.</li>
+<li>AsrWordsRecognition: speech keyword recognition.</li>
+<li>OcrWordsRecognition: text keyword recognition.</li>
+<li>AsrFullTextRecognition: full speech recognition.</li>
+<li>OcrFullTextRecognition: full text recognition.</li>
+<li>TransTextRecognition: speech translation.</li>
+
+<li>ObjectRecognition: object recognition.</li>
+<li>TagRecognition: highlights marking.</li>
+                     * @param _type Result type. Valid values:
+<li>FaceRecognition: face recognition.</li>
+<li>AsrWordsRecognition: speech keyword recognition.</li>
+<li>OcrWordsRecognition: text keyword recognition.</li>
+<li>AsrFullTextRecognition: full speech recognition.</li>
+<li>OcrFullTextRecognition: full text recognition.</li>
+<li>TransTextRecognition: speech translation.</li>
+
+<li>ObjectRecognition: object recognition.</li>
+<li>TagRecognition: highlights marking.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -243,16 +257,61 @@ namespace TencentCloud
                      */
                     bool TransTextRecognitionResultSetHasBeenSet() const;
 
+                    /**
+                     * 获取Object recognition result, which is valid when Type is ObjectRecognition.
+                     * @return ObjectRecognitionResultSet Object recognition result, which is valid when Type is ObjectRecognition.
+                     * 
+                     */
+                    std::vector<LiveStreamObjectRecognitionResult> GetObjectRecognitionResultSet() const;
+
+                    /**
+                     * 设置Object recognition result, which is valid when Type is ObjectRecognition.
+                     * @param _objectRecognitionResultSet Object recognition result, which is valid when Type is ObjectRecognition.
+                     * 
+                     */
+                    void SetObjectRecognitionResultSet(const std::vector<LiveStreamObjectRecognitionResult>& _objectRecognitionResultSet);
+
+                    /**
+                     * 判断参数 ObjectRecognitionResultSet 是否已赋值
+                     * @return ObjectRecognitionResultSet 是否已赋值
+                     * 
+                     */
+                    bool ObjectRecognitionResultSetHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return TagRecognitionResultSet 
+                     * 
+                     */
+                    std::vector<LiveStreamTagRecognitionResult> GetTagRecognitionResultSet() const;
+
+                    /**
+                     * 设置
+                     * @param _tagRecognitionResultSet 
+                     * 
+                     */
+                    void SetTagRecognitionResultSet(const std::vector<LiveStreamTagRecognitionResult>& _tagRecognitionResultSet);
+
+                    /**
+                     * 判断参数 TagRecognitionResultSet 是否已赋值
+                     * @return TagRecognitionResultSet 是否已赋值
+                     * 
+                     */
+                    bool TagRecognitionResultSetHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The result type. Valid values:
-<li>FaceRecognition: Face recognition</li>
-<li>AsrWordsRecognition: Speech keyword recognition</li>
-<li>OcrWordsRecognition: Text keyword recognition</li>
-<li>AsrFullTextRecognition: Full speech recognition</li>
-<li>OcrFullTextRecognition: Full text recognition</li>
-<li>TransTextRecognition: Speech translation</li>
+                     * Result type. Valid values:
+<li>FaceRecognition: face recognition.</li>
+<li>AsrWordsRecognition: speech keyword recognition.</li>
+<li>OcrWordsRecognition: text keyword recognition.</li>
+<li>AsrFullTextRecognition: full speech recognition.</li>
+<li>OcrFullTextRecognition: full text recognition.</li>
+<li>TransTextRecognition: speech translation.</li>
+
+<li>ObjectRecognition: object recognition.</li>
+<li>TagRecognition: highlights marking.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
@@ -297,6 +356,18 @@ namespace TencentCloud
                      */
                     std::vector<LiveStreamTransTextRecognitionResult> m_transTextRecognitionResultSet;
                     bool m_transTextRecognitionResultSetHasBeenSet;
+
+                    /**
+                     * Object recognition result, which is valid when Type is ObjectRecognition.
+                     */
+                    std::vector<LiveStreamObjectRecognitionResult> m_objectRecognitionResultSet;
+                    bool m_objectRecognitionResultSetHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<LiveStreamTagRecognitionResult> m_tagRecognitionResultSet;
+                    bool m_tagRecognitionResultSetHasBeenSet;
 
                 };
             }

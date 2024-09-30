@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The parameters for a video quality control task.
+                * Input parameter type for media quality inspection.
                 */
                 class AiQualityControlTaskInput : public AbstractModel
                 {
@@ -47,18 +47,38 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The ID of the quality control template.
+                     * 获取Media quality inspection template ID.
+You can directly use a preset template or customize a template in the console. The preset templates are as follows:
+- 10: Enable all quality inspection items.
+- 20: Only enable quality inspection items corresponding to format diagnosis.
+- 30: Only enable quality inspection items corresponding to no-reference scoring.
+- 40: Only enable quality inspection items corresponding to screen quality.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Definition The ID of the quality control template.
+                     * @return Definition Media quality inspection template ID.
+You can directly use a preset template or customize a template in the console. The preset templates are as follows:
+- 10: Enable all quality inspection items.
+- 20: Only enable quality inspection items corresponding to format diagnosis.
+- 30: Only enable quality inspection items corresponding to no-reference scoring.
+- 40: Only enable quality inspection items corresponding to screen quality.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置The ID of the quality control template.
+                     * 设置Media quality inspection template ID.
+You can directly use a preset template or customize a template in the console. The preset templates are as follows:
+- 10: Enable all quality inspection items.
+- 20: Only enable quality inspection items corresponding to format diagnosis.
+- 30: Only enable quality inspection items corresponding to no-reference scoring.
+- 40: Only enable quality inspection items corresponding to screen quality.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _definition The ID of the quality control template.
+                     * @param _definition Media quality inspection template ID.
+You can directly use a preset template or customize a template in the console. The preset templates are as follows:
+- 10: Enable all quality inspection items.
+- 20: Only enable quality inspection items corresponding to format diagnosis.
+- 30: Only enable quality inspection items corresponding to no-reference scoring.
+- 40: Only enable quality inspection items corresponding to screen quality.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -99,7 +119,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The ID of the quality control template.
+                     * Media quality inspection template ID.
+You can directly use a preset template or customize a template in the console. The preset templates are as follows:
+- 10: Enable all quality inspection items.
+- 20: Only enable quality inspection items corresponding to format diagnosis.
+- 30: Only enable quality inspection items corresponding to no-reference scoring.
+- 40: Only enable quality inspection items corresponding to screen quality.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_definition;

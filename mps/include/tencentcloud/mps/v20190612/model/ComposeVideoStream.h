@@ -96,6 +96,35 @@ The default value is `0`, which means that the frame rate will be the same as th
                      */
                     bool FpsHasBeenSet() const;
 
+                    /**
+                     * 获取Reference bitrate, in kbps. Value range: 50-35000.
+If set, the encoder will try to encode at this bitrate.
+If not set, the service will automatically adopt a suitable bitrate based on the complexity of an image.
+                     * @return Bitrate Reference bitrate, in kbps. Value range: 50-35000.
+If set, the encoder will try to encode at this bitrate.
+If not set, the service will automatically adopt a suitable bitrate based on the complexity of an image.
+                     * 
+                     */
+                    int64_t GetBitrate() const;
+
+                    /**
+                     * 设置Reference bitrate, in kbps. Value range: 50-35000.
+If set, the encoder will try to encode at this bitrate.
+If not set, the service will automatically adopt a suitable bitrate based on the complexity of an image.
+                     * @param _bitrate Reference bitrate, in kbps. Value range: 50-35000.
+If set, the encoder will try to encode at this bitrate.
+If not set, the service will automatically adopt a suitable bitrate based on the complexity of an image.
+                     * 
+                     */
+                    void SetBitrate(const int64_t& _bitrate);
+
+                    /**
+                     * 判断参数 Bitrate 是否已赋值
+                     * @return Bitrate 是否已赋值
+                     * 
+                     */
+                    bool BitrateHasBeenSet() const;
+
                 private:
 
                     /**
@@ -111,6 +140,14 @@ The default value is `0`, which means that the frame rate will be the same as th
                      */
                     int64_t m_fps;
                     bool m_fpsHasBeenSet;
+
+                    /**
+                     * Reference bitrate, in kbps. Value range: 50-35000.
+If set, the encoder will try to encode at this bitrate.
+If not set, the service will automatically adopt a suitable bitrate based on the complexity of an image.
+                     */
+                    int64_t m_bitrate;
+                    bool m_bitrateHasBeenSet;
 
                 };
             }

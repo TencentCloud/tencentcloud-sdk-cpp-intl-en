@@ -134,6 +134,27 @@ namespace TencentCloud
                      */
                     bool TypeHasBeenSet() const;
 
+                    /**
+                     * 获取Filter condition for animated image generating template identifiers, with a length limit of 64 characters.
+                     * @return Name Filter condition for animated image generating template identifiers, with a length limit of 64 characters.
+                     * 
+                     */
+                    std::string GetName() const;
+
+                    /**
+                     * 设置Filter condition for animated image generating template identifiers, with a length limit of 64 characters.
+                     * @param _name Filter condition for animated image generating template identifiers, with a length limit of 64 characters.
+                     * 
+                     */
+                    void SetName(const std::string& _name);
+
+                    /**
+                     * 判断参数 Name 是否已赋值
+                     * @return Name 是否已赋值
+                     * 
+                     */
+                    bool NameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -161,6 +182,12 @@ namespace TencentCloud
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
+
+                    /**
+                     * Filter condition for animated image generating template identifiers, with a length limit of 64 characters.
+                     */
+                    std::string m_name;
+                    bool m_nameHasBeenSet;
 
                 };
             }

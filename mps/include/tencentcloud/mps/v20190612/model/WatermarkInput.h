@@ -148,27 +148,35 @@ SVG watermark is not available for screenshot.
                     bool SvgContentHasBeenSet() const;
 
                     /**
-                     * 获取Start time offset of a watermark in seconds. If this parameter is left empty or 0 is entered, the watermark will appear upon the first video frame.
-<li>If this parameter is left empty or 0 is entered, the watermark will appear upon the first video frame;</li>
-<li>If this value is greater than 0 (e.g., n), the watermark will appear at second n after the first video frame;</li>
-<li>If this value is smaller than 0 (e.g., -n), the watermark will appear at second n before the last video frame.</li>
-                     * @return StartTimeOffset Start time offset of a watermark in seconds. If this parameter is left empty or 0 is entered, the watermark will appear upon the first video frame.
-<li>If this parameter is left empty or 0 is entered, the watermark will appear upon the first video frame;</li>
-<li>If this value is greater than 0 (e.g., n), the watermark will appear at second n after the first video frame;</li>
-<li>If this value is smaller than 0 (e.g., -n), the watermark will appear at second n before the last video frame.</li>
+                     * 获取Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.
+<li>If not set or set to 0, a watermark starts appearing when a video starts.</li>
+<li>If the value is greater than 0 (for example, n), a watermark will appear at second n of a video.</li>
+<li>If the value is less than 0 (for example, -n), a watermark will appear n seconds before the end of a video.</li>
+
+Note: It is only used for video scenarios. Screenshots are not supported.
+                     * @return StartTimeOffset Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.
+<li>If not set or set to 0, a watermark starts appearing when a video starts.</li>
+<li>If the value is greater than 0 (for example, n), a watermark will appear at second n of a video.</li>
+<li>If the value is less than 0 (for example, -n), a watermark will appear n seconds before the end of a video.</li>
+
+Note: It is only used for video scenarios. Screenshots are not supported.
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置Start time offset of a watermark in seconds. If this parameter is left empty or 0 is entered, the watermark will appear upon the first video frame.
-<li>If this parameter is left empty or 0 is entered, the watermark will appear upon the first video frame;</li>
-<li>If this value is greater than 0 (e.g., n), the watermark will appear at second n after the first video frame;</li>
-<li>If this value is smaller than 0 (e.g., -n), the watermark will appear at second n before the last video frame.</li>
-                     * @param _startTimeOffset Start time offset of a watermark in seconds. If this parameter is left empty or 0 is entered, the watermark will appear upon the first video frame.
-<li>If this parameter is left empty or 0 is entered, the watermark will appear upon the first video frame;</li>
-<li>If this value is greater than 0 (e.g., n), the watermark will appear at second n after the first video frame;</li>
-<li>If this value is smaller than 0 (e.g., -n), the watermark will appear at second n before the last video frame.</li>
+                     * 设置Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.
+<li>If not set or set to 0, a watermark starts appearing when a video starts.</li>
+<li>If the value is greater than 0 (for example, n), a watermark will appear at second n of a video.</li>
+<li>If the value is less than 0 (for example, -n), a watermark will appear n seconds before the end of a video.</li>
+
+Note: It is only used for video scenarios. Screenshots are not supported.
+                     * @param _startTimeOffset Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.
+<li>If not set or set to 0, a watermark starts appearing when a video starts.</li>
+<li>If the value is greater than 0 (for example, n), a watermark will appear at second n of a video.</li>
+<li>If the value is less than 0 (for example, -n), a watermark will appear n seconds before the end of a video.</li>
+
+Note: It is only used for video scenarios. Screenshots are not supported.
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -181,27 +189,35 @@ SVG watermark is not available for screenshot.
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取End time offset of a watermark in seconds.
-<li>If this parameter is left empty or 0 is entered, the watermark will exist till the last video frame;</li>
-<li>If this value is greater than 0 (e.g., n), the watermark will exist till second n;</li>
-<li>If this value is smaller than 0 (e.g., -n), the watermark will exist till second n before the last video frame.</li>
-                     * @return EndTimeOffset End time offset of a watermark in seconds.
-<li>If this parameter is left empty or 0 is entered, the watermark will exist till the last video frame;</li>
-<li>If this value is greater than 0 (e.g., n), the watermark will exist till second n;</li>
-<li>If this value is smaller than 0 (e.g., -n), the watermark will exist till second n before the last video frame.</li>
+                     * 获取End time offset of a watermark, in seconds.
+<li>If not set or set to 0, a watermark will last until the end of a video.</li>
+<li>If the value is greater than 0 (for example, n), a watermark will disappear at second n.</li>
+<li>If the value is less than 0 (for example, -n), a watermark will disappear n seconds before the end of a video.</li>
+
+Note: It is only used for video scenarios. Screenshots are not supported.
+                     * @return EndTimeOffset End time offset of a watermark, in seconds.
+<li>If not set or set to 0, a watermark will last until the end of a video.</li>
+<li>If the value is greater than 0 (for example, n), a watermark will disappear at second n.</li>
+<li>If the value is less than 0 (for example, -n), a watermark will disappear n seconds before the end of a video.</li>
+
+Note: It is only used for video scenarios. Screenshots are not supported.
                      * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置End time offset of a watermark in seconds.
-<li>If this parameter is left empty or 0 is entered, the watermark will exist till the last video frame;</li>
-<li>If this value is greater than 0 (e.g., n), the watermark will exist till second n;</li>
-<li>If this value is smaller than 0 (e.g., -n), the watermark will exist till second n before the last video frame.</li>
-                     * @param _endTimeOffset End time offset of a watermark in seconds.
-<li>If this parameter is left empty or 0 is entered, the watermark will exist till the last video frame;</li>
-<li>If this value is greater than 0 (e.g., n), the watermark will exist till second n;</li>
-<li>If this value is smaller than 0 (e.g., -n), the watermark will exist till second n before the last video frame.</li>
+                     * 设置End time offset of a watermark, in seconds.
+<li>If not set or set to 0, a watermark will last until the end of a video.</li>
+<li>If the value is greater than 0 (for example, n), a watermark will disappear at second n.</li>
+<li>If the value is less than 0 (for example, -n), a watermark will disappear n seconds before the end of a video.</li>
+
+Note: It is only used for video scenarios. Screenshots are not supported.
+                     * @param _endTimeOffset End time offset of a watermark, in seconds.
+<li>If not set or set to 0, a watermark will last until the end of a video.</li>
+<li>If the value is greater than 0 (for example, n), a watermark will disappear at second n.</li>
+<li>If the value is less than 0 (for example, -n), a watermark will disappear n seconds before the end of a video.</li>
+
+Note: It is only used for video scenarios. Screenshots are not supported.
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -244,19 +260,23 @@ SVG watermark is not available for screenshot.
                     bool m_svgContentHasBeenSet;
 
                     /**
-                     * Start time offset of a watermark in seconds. If this parameter is left empty or 0 is entered, the watermark will appear upon the first video frame.
-<li>If this parameter is left empty or 0 is entered, the watermark will appear upon the first video frame;</li>
-<li>If this value is greater than 0 (e.g., n), the watermark will appear at second n after the first video frame;</li>
-<li>If this value is smaller than 0 (e.g., -n), the watermark will appear at second n before the last video frame.</li>
+                     * Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.
+<li>If not set or set to 0, a watermark starts appearing when a video starts.</li>
+<li>If the value is greater than 0 (for example, n), a watermark will appear at second n of a video.</li>
+<li>If the value is less than 0 (for example, -n), a watermark will appear n seconds before the end of a video.</li>
+
+Note: It is only used for video scenarios. Screenshots are not supported.
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * End time offset of a watermark in seconds.
-<li>If this parameter is left empty or 0 is entered, the watermark will exist till the last video frame;</li>
-<li>If this value is greater than 0 (e.g., n), the watermark will exist till second n;</li>
-<li>If this value is smaller than 0 (e.g., -n), the watermark will exist till second n before the last video frame.</li>
+                     * End time offset of a watermark, in seconds.
+<li>If not set or set to 0, a watermark will last until the end of a video.</li>
+<li>If the value is greater than 0 (for example, n), a watermark will disappear at second n.</li>
+<li>If the value is less than 0 (for example, -n), a watermark will disappear n seconds before the end of a video.</li>
+
+Note: It is only used for video scenarios. Screenshots are not supported.
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;

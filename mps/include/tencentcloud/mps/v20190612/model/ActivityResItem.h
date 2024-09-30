@@ -26,12 +26,14 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mps/v20190612/model/MediaProcessTaskTranscodeResult.h>
 #include <tencentcloud/mps/v20190612/model/MediaProcessTaskAnimatedGraphicResult.h>
+#include <tencentcloud/mps/v20190612/model/MediaProcessTaskSnapshotByTimeOffsetResult.h>
 #include <tencentcloud/mps/v20190612/model/MediaProcessTaskSampleSnapshotResult.h>
 #include <tencentcloud/mps/v20190612/model/MediaProcessTaskImageSpriteResult.h>
 #include <tencentcloud/mps/v20190612/model/MediaProcessTaskAdaptiveDynamicStreamingResult.h>
 #include <tencentcloud/mps/v20190612/model/ScheduleRecognitionTaskResult.h>
 #include <tencentcloud/mps/v20190612/model/ScheduleReviewTaskResult.h>
 #include <tencentcloud/mps/v20190612/model/ScheduleAnalysisTaskResult.h>
+#include <tencentcloud/mps/v20190612/model/ScheduleQualityControlTaskResult.h>
 
 
 namespace TencentCloud
@@ -111,7 +113,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    MediaProcessTaskSampleSnapshotResult GetSnapshotByTimeOffsetTask() const;
+                    MediaProcessTaskSnapshotByTimeOffsetResult GetSnapshotByTimeOffsetTask() const;
 
                     /**
                      * 设置The result of a time point screenshot task.
@@ -120,7 +122,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    void SetSnapshotByTimeOffsetTask(const MediaProcessTaskSampleSnapshotResult& _snapshotByTimeOffsetTask);
+                    void SetSnapshotByTimeOffsetTask(const MediaProcessTaskSnapshotByTimeOffsetResult& _snapshotByTimeOffsetTask);
 
                     /**
                      * 判断参数 SnapshotByTimeOffsetTask 是否已赋值
@@ -279,6 +281,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool AnalysisTaskHasBeenSet() const;
 
+                    /**
+                     * 获取Media quality inspection task output.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return QualityControlTask Media quality inspection task output.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    ScheduleQualityControlTaskResult GetQualityControlTask() const;
+
+                    /**
+                     * 设置Media quality inspection task output.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _qualityControlTask Media quality inspection task output.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetQualityControlTask(const ScheduleQualityControlTaskResult& _qualityControlTask);
+
+                    /**
+                     * 判断参数 QualityControlTask 是否已赋值
+                     * @return QualityControlTask 是否已赋值
+                     * 
+                     */
+                    bool QualityControlTaskHasBeenSet() const;
+
                 private:
 
                     /**
@@ -299,7 +326,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * The result of a time point screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    MediaProcessTaskSampleSnapshotResult m_snapshotByTimeOffsetTask;
+                    MediaProcessTaskSnapshotByTimeOffsetResult m_snapshotByTimeOffsetTask;
                     bool m_snapshotByTimeOffsetTaskHasBeenSet;
 
                     /**
@@ -343,6 +370,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     ScheduleAnalysisTaskResult m_analysisTask;
                     bool m_analysisTaskHasBeenSet;
+
+                    /**
+                     * Media quality inspection task output.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    ScheduleQualityControlTaskResult m_qualityControlTask;
+                    bool m_qualityControlTaskHasBeenSet;
 
                 };
             }

@@ -29,7 +29,10 @@ MediaVideoStreamItem::MediaVideoStreamItem() :
     m_colorPrimariesHasBeenSet(false),
     m_colorSpaceHasBeenSet(false),
     m_colorTransferHasBeenSet(false),
-    m_hdrTypeHasBeenSet(false)
+    m_hdrTypeHasBeenSet(false),
+    m_codecsHasBeenSet(false),
+    m_fpsNumeratorHasBeenSet(false),
+    m_fpsDenominatorHasBeenSet(false)
 {
 }
 
@@ -128,6 +131,36 @@ CoreInternalOutcome MediaVideoStreamItem::Deserialize(const rapidjson::Value &va
         m_hdrTypeHasBeenSet = true;
     }
 
+    if (value.HasMember("Codecs") && !value["Codecs"].IsNull())
+    {
+        if (!value["Codecs"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `MediaVideoStreamItem.Codecs` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_codecs = string(value["Codecs"].GetString());
+        m_codecsHasBeenSet = true;
+    }
+
+    if (value.HasMember("FpsNumerator") && !value["FpsNumerator"].IsNull())
+    {
+        if (!value["FpsNumerator"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `MediaVideoStreamItem.FpsNumerator` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_fpsNumerator = value["FpsNumerator"].GetInt64();
+        m_fpsNumeratorHasBeenSet = true;
+    }
+
+    if (value.HasMember("FpsDenominator") && !value["FpsDenominator"].IsNull())
+    {
+        if (!value["FpsDenominator"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `MediaVideoStreamItem.FpsDenominator` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_fpsDenominator = value["FpsDenominator"].GetInt64();
+        m_fpsDenominatorHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -205,6 +238,30 @@ void MediaVideoStreamItem::ToJsonObject(rapidjson::Value &value, rapidjson::Docu
         string key = "HdrType";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_hdrType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_codecsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Codecs";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_codecs.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_fpsNumeratorHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FpsNumerator";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_fpsNumerator, allocator);
+    }
+
+    if (m_fpsDenominatorHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FpsDenominator";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_fpsDenominator, allocator);
     }
 
 }
@@ -352,5 +409,53 @@ void MediaVideoStreamItem::SetHdrType(const string& _hdrType)
 bool MediaVideoStreamItem::HdrTypeHasBeenSet() const
 {
     return m_hdrTypeHasBeenSet;
+}
+
+string MediaVideoStreamItem::GetCodecs() const
+{
+    return m_codecs;
+}
+
+void MediaVideoStreamItem::SetCodecs(const string& _codecs)
+{
+    m_codecs = _codecs;
+    m_codecsHasBeenSet = true;
+}
+
+bool MediaVideoStreamItem::CodecsHasBeenSet() const
+{
+    return m_codecsHasBeenSet;
+}
+
+int64_t MediaVideoStreamItem::GetFpsNumerator() const
+{
+    return m_fpsNumerator;
+}
+
+void MediaVideoStreamItem::SetFpsNumerator(const int64_t& _fpsNumerator)
+{
+    m_fpsNumerator = _fpsNumerator;
+    m_fpsNumeratorHasBeenSet = true;
+}
+
+bool MediaVideoStreamItem::FpsNumeratorHasBeenSet() const
+{
+    return m_fpsNumeratorHasBeenSet;
+}
+
+int64_t MediaVideoStreamItem::GetFpsDenominator() const
+{
+    return m_fpsDenominator;
+}
+
+void MediaVideoStreamItem::SetFpsDenominator(const int64_t& _fpsDenominator)
+{
+    m_fpsDenominator = _fpsDenominator;
+    m_fpsDenominatorHasBeenSet = true;
+}
+
+bool MediaVideoStreamItem::FpsDenominatorHasBeenSet() const
+{
+    return m_fpsDenominatorHasBeenSet;
 }
 

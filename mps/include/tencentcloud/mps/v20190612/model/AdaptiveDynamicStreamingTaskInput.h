@@ -230,6 +230,39 @@ Note: This field may return·null, indicating that no valid values can be obtain
                      */
                     bool DrmInfoHasBeenSet() const;
 
+                    /**
+                     * 获取Adaptive transcoding template type.
+Common: audio-video.
+PureAudio: audio-only.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DefinitionType Adaptive transcoding template type.
+Common: audio-video.
+PureAudio: audio-only.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetDefinitionType() const;
+
+                    /**
+                     * 设置Adaptive transcoding template type.
+Common: audio-video.
+PureAudio: audio-only.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _definitionType Adaptive transcoding template type.
+Common: audio-video.
+PureAudio: audio-only.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetDefinitionType(const std::string& _definitionType);
+
+                    /**
+                     * 判断参数 DefinitionType 是否已赋值
+                     * @return DefinitionType 是否已赋值
+                     * 
+                     */
+                    bool DefinitionTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -282,6 +315,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                      */
                     DrmInfo m_drmInfo;
                     bool m_drmInfoHasBeenSet;
+
+                    /**
+                     * Adaptive transcoding template type.
+Common: audio-video.
+PureAudio: audio-only.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_definitionType;
+                    bool m_definitionTypeHasBeenSet;
 
                 };
             }

@@ -229,6 +229,27 @@ This parameter is left empty by default, which indicates to return all types of 
                      */
                     bool TranscodeTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Filter condition for transcoding template identifiers, with a length limit of 64 characters.	
+                     * @return Name Filter condition for transcoding template identifiers, with a length limit of 64 characters.	
+                     * 
+                     */
+                    std::string GetName() const;
+
+                    /**
+                     * 设置Filter condition for transcoding template identifiers, with a length limit of 64 characters.	
+                     * @param _name Filter condition for transcoding template identifiers, with a length limit of 64 characters.	
+                     * 
+                     */
+                    void SetName(const std::string& _name);
+
+                    /**
+                     * 判断参数 Name 是否已赋值
+                     * @return Name 是否已赋值
+                     * 
+                     */
+                    bool NameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -282,6 +303,12 @@ This parameter is left empty by default, which indicates to return all types of 
                      */
                     std::string m_transcodeType;
                     bool m_transcodeTypeHasBeenSet;
+
+                    /**
+                     * Filter condition for transcoding template identifiers, with a length limit of 64 characters.	
+                     */
+                    std::string m_name;
+                    bool m_nameHasBeenSet;
 
                 };
             }

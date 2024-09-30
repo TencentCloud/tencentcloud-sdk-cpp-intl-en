@@ -176,6 +176,27 @@ If you do not specify this, the file will be saved to the trigger directory.
                      */
                     bool TaskNotifyConfigHasBeenSet() const;
 
+                    /**
+                     * 获取Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+                     * @return ResourceId Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+                     * 
+                     */
+                    std::string GetResourceId() const;
+
+                    /**
+                     * 设置Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+                     * @param _resourceId Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+                     * 
+                     */
+                    void SetResourceId(const std::string& _resourceId);
+
+                    /**
+                     * 判断参数 ResourceId 是否已赋值
+                     * @return ResourceId 是否已赋值
+                     * 
+                     */
+                    bool ResourceIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -214,6 +235,12 @@ If you do not specify this, the file will be saved to the trigger directory.
                      */
                     TaskNotifyConfig m_taskNotifyConfig;
                     bool m_taskNotifyConfigHasBeenSet;
+
+                    /**
+                     * Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+                     */
+                    std::string m_resourceId;
+                    bool m_resourceIdHasBeenSet;
 
                 };
             }

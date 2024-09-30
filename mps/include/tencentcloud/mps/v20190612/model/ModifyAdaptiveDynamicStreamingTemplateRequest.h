@@ -218,6 +218,84 @@ Note: the frame rate of each stream must be consistent; otherwise, the frame rat
                      */
                     bool CommentHasBeenSet() const;
 
+                    /**
+                     * 获取Whether it is an audio-only template. 0: video template. 1: audio-only template.When the value is 1:
+1. StreamInfos.N.RemoveVideo=1
+2. StreamInfos.N.RemoveAudio=0
+3. StreamInfos.N.Video.Codec=copy
+
+When the value is 0:
+
+1. StreamInfos.N.Video.Codec cannot be copy.
+2. StreamInfos.N.Video.Fps cannot be null.
+                     * @return PureAudio Whether it is an audio-only template. 0: video template. 1: audio-only template.When the value is 1:
+1. StreamInfos.N.RemoveVideo=1
+2. StreamInfos.N.RemoveAudio=0
+3. StreamInfos.N.Video.Codec=copy
+
+When the value is 0:
+
+1. StreamInfos.N.Video.Codec cannot be copy.
+2. StreamInfos.N.Video.Fps cannot be null.
+                     * 
+                     */
+                    uint64_t GetPureAudio() const;
+
+                    /**
+                     * 设置Whether it is an audio-only template. 0: video template. 1: audio-only template.When the value is 1:
+1. StreamInfos.N.RemoveVideo=1
+2. StreamInfos.N.RemoveAudio=0
+3. StreamInfos.N.Video.Codec=copy
+
+When the value is 0:
+
+1. StreamInfos.N.Video.Codec cannot be copy.
+2. StreamInfos.N.Video.Fps cannot be null.
+                     * @param _pureAudio Whether it is an audio-only template. 0: video template. 1: audio-only template.When the value is 1:
+1. StreamInfos.N.RemoveVideo=1
+2. StreamInfos.N.RemoveAudio=0
+3. StreamInfos.N.Video.Codec=copy
+
+When the value is 0:
+
+1. StreamInfos.N.Video.Codec cannot be copy.
+2. StreamInfos.N.Video.Fps cannot be null.
+                     * 
+                     */
+                    void SetPureAudio(const uint64_t& _pureAudio);
+
+                    /**
+                     * 判断参数 PureAudio 是否已赋值
+                     * @return PureAudio 是否已赋值
+                     * 
+                     */
+                    bool PureAudioHasBeenSet() const;
+
+                    /**
+                     * 获取HLS segment type. Valid values: <li>ts-segment: HLS+TS segment.</li> <li>ts-byterange: HLS+TS byte range.</li> <li>mp4-segment: HLS+MP4 segment.</li> <li>mp4-byterange: HLS+MP4 byte range.</li> <li>ts-packed-audio: TS+Packed audio.</li> <li>mp4-packed-audio: MP4+Packed audio.</li> Default value: ts-segment.
+Note: The HLS segment format for adaptive bitrate streaming is based on this field.
+                     * @return SegmentType HLS segment type. Valid values: <li>ts-segment: HLS+TS segment.</li> <li>ts-byterange: HLS+TS byte range.</li> <li>mp4-segment: HLS+MP4 segment.</li> <li>mp4-byterange: HLS+MP4 byte range.</li> <li>ts-packed-audio: TS+Packed audio.</li> <li>mp4-packed-audio: MP4+Packed audio.</li> Default value: ts-segment.
+Note: The HLS segment format for adaptive bitrate streaming is based on this field.
+                     * 
+                     */
+                    std::string GetSegmentType() const;
+
+                    /**
+                     * 设置HLS segment type. Valid values: <li>ts-segment: HLS+TS segment.</li> <li>ts-byterange: HLS+TS byte range.</li> <li>mp4-segment: HLS+MP4 segment.</li> <li>mp4-byterange: HLS+MP4 byte range.</li> <li>ts-packed-audio: TS+Packed audio.</li> <li>mp4-packed-audio: MP4+Packed audio.</li> Default value: ts-segment.
+Note: The HLS segment format for adaptive bitrate streaming is based on this field.
+                     * @param _segmentType HLS segment type. Valid values: <li>ts-segment: HLS+TS segment.</li> <li>ts-byterange: HLS+TS byte range.</li> <li>mp4-segment: HLS+MP4 segment.</li> <li>mp4-byterange: HLS+MP4 byte range.</li> <li>ts-packed-audio: TS+Packed audio.</li> <li>mp4-packed-audio: MP4+Packed audio.</li> Default value: ts-segment.
+Note: The HLS segment format for adaptive bitrate streaming is based on this field.
+                     * 
+                     */
+                    void SetSegmentType(const std::string& _segmentType);
+
+                    /**
+                     * 判断参数 SegmentType 是否已赋值
+                     * @return SegmentType 是否已赋值
+                     * 
+                     */
+                    bool SegmentTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -268,6 +346,27 @@ Note: the frame rate of each stream must be consistent; otherwise, the frame rat
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
+
+                    /**
+                     * Whether it is an audio-only template. 0: video template. 1: audio-only template.When the value is 1:
+1. StreamInfos.N.RemoveVideo=1
+2. StreamInfos.N.RemoveAudio=0
+3. StreamInfos.N.Video.Codec=copy
+
+When the value is 0:
+
+1. StreamInfos.N.Video.Codec cannot be copy.
+2. StreamInfos.N.Video.Fps cannot be null.
+                     */
+                    uint64_t m_pureAudio;
+                    bool m_pureAudioHasBeenSet;
+
+                    /**
+                     * HLS segment type. Valid values: <li>ts-segment: HLS+TS segment.</li> <li>ts-byterange: HLS+TS byte range.</li> <li>mp4-segment: HLS+MP4 segment.</li> <li>mp4-byterange: HLS+MP4 byte range.</li> <li>ts-packed-audio: TS+Packed audio.</li> <li>mp4-packed-audio: MP4+Packed audio.</li> Default value: ts-segment.
+Note: The HLS segment format for adaptive bitrate streaming is based on this field.
+                     */
+                    std::string m_segmentType;
+                    bool m_segmentTypeHasBeenSet;
 
                 };
             }

@@ -196,15 +196,15 @@ namespace TencentCloud
                     bool AiAnalysisTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AiQualityControlTask 
+                     * 获取Media quality inspection type task parameters.
+                     * @return AiQualityControlTask Media quality inspection type task parameters.
                      * 
                      */
                     AiQualityControlTaskInput GetAiQualityControlTask() const;
 
                     /**
-                     * 设置
-                     * @param _aiQualityControlTask 
+                     * 设置Media quality inspection type task parameters.
+                     * @param _aiQualityControlTask Media quality inspection type task parameters.
                      * 
                      */
                     void SetAiQualityControlTask(const AiQualityControlTaskInput& _aiQualityControlTask);
@@ -340,7 +340,7 @@ Note 2: If `TaskNotifyConfig` is specified when `ProcessLiveStream` is called, t
                     bool m_aiAnalysisTaskHasBeenSet;
 
                     /**
-                     * 
+                     * Media quality inspection type task parameters.
                      */
                     AiQualityControlTaskInput m_aiQualityControlTask;
                     bool m_aiQualityControlTaskHasBeenSet;

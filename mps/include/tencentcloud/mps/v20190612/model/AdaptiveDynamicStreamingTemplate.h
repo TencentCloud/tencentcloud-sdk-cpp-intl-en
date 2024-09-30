@@ -289,6 +289,84 @@ namespace TencentCloud
                      */
                     bool UpdateTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Whether it is an audio-only template. 0: video template. 1: audio-only template.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return PureAudio Whether it is an audio-only template. 0: video template. 1: audio-only template.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    uint64_t GetPureAudio() const;
+
+                    /**
+                     * 设置Whether it is an audio-only template. 0: video template. 1: audio-only template.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _pureAudio Whether it is an audio-only template. 0: video template. 1: audio-only template.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetPureAudio(const uint64_t& _pureAudio);
+
+                    /**
+                     * 判断参数 PureAudio 是否已赋值
+                     * @return PureAudio 是否已赋值
+                     * 
+                     */
+                    bool PureAudioHasBeenSet() const;
+
+                    /**
+                     * 获取HLS segment type. Valid values:
+<li>ts-segment: HLS+TS segment.</li>
+<li>ts-byterange: HLS+TS byte range.</li>
+<li>mp4-segment: HLS+MP4 segment.</li>
+<li>mp4-byterange: HLS+MP4 byte range.</li>
+<li>ts-packed-audio: TS+Packed audio.</li>
+<li>mp4-packed-audio: MP4+Packed audio.</li>
+Default value: ts-segment.
+
+Note: The HLS segment format for adaptive bitrate streaming is based on this field.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SegmentType HLS segment type. Valid values:
+<li>ts-segment: HLS+TS segment.</li>
+<li>ts-byterange: HLS+TS byte range.</li>
+<li>mp4-segment: HLS+MP4 segment.</li>
+<li>mp4-byterange: HLS+MP4 byte range.</li>
+<li>ts-packed-audio: TS+Packed audio.</li>
+<li>mp4-packed-audio: MP4+Packed audio.</li>
+Default value: ts-segment.
+
+Note: The HLS segment format for adaptive bitrate streaming is based on this field.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetSegmentType() const;
+
+                    /**
+                     * 设置HLS segment type. Valid values:
+<li>ts-segment: HLS+TS segment.</li>
+<li>ts-byterange: HLS+TS byte range.</li>
+<li>mp4-segment: HLS+MP4 segment.</li>
+<li>mp4-byterange: HLS+MP4 byte range.</li>
+<li>ts-packed-audio: TS+Packed audio.</li>
+<li>mp4-packed-audio: MP4+Packed audio.</li>
+Default value: ts-segment.
+
+Note: The HLS segment format for adaptive bitrate streaming is based on this field.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _segmentType HLS segment type. Valid values:
+<li>ts-segment: HLS+TS segment.</li>
+<li>ts-byterange: HLS+TS byte range.</li>
+<li>mp4-segment: HLS+MP4 segment.</li>
+<li>mp4-byterange: HLS+MP4 byte range.</li>
+<li>ts-packed-audio: TS+Packed audio.</li>
+<li>mp4-packed-audio: MP4+Packed audio.</li>
+Default value: ts-segment.
+
+Note: The HLS segment format for adaptive bitrate streaming is based on this field.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetSegmentType(const std::string& _segmentType);
+
+                    /**
+                     * 判断参数 SegmentType 是否已赋值
+                     * @return SegmentType 是否已赋值
+                     * 
+                     */
+                    bool SegmentTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -358,6 +436,27 @@ namespace TencentCloud
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
+
+                    /**
+                     * Whether it is an audio-only template. 0: video template. 1: audio-only template.Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_pureAudio;
+                    bool m_pureAudioHasBeenSet;
+
+                    /**
+                     * HLS segment type. Valid values:
+<li>ts-segment: HLS+TS segment.</li>
+<li>ts-byterange: HLS+TS byte range.</li>
+<li>mp4-segment: HLS+MP4 segment.</li>
+<li>mp4-byterange: HLS+MP4 byte range.</li>
+<li>ts-packed-audio: TS+Packed audio.</li>
+<li>mp4-packed-audio: MP4+Packed audio.</li>
+Default value: ts-segment.
+
+Note: The HLS segment format for adaptive bitrate streaming is based on this field.Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_segmentType;
+                    bool m_segmentTypeHasBeenSet;
 
                 };
             }

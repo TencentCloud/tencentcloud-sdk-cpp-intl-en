@@ -29,6 +29,7 @@
 #include <tencentcloud/mps/v20190612/model/OcrWordsConfigureInfo.h>
 #include <tencentcloud/mps/v20190612/model/AsrFullTextConfigureInfo.h>
 #include <tencentcloud/mps/v20190612/model/AsrWordsConfigureInfo.h>
+#include <tencentcloud/mps/v20190612/model/TranslateConfigureInfo.h>
 
 
 namespace TencentCloud
@@ -240,6 +241,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AsrWordsConfigureHasBeenSet() const;
 
                     /**
+                     * 获取Voice translation control parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TranslateConfigure Voice translation control parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    TranslateConfigureInfo GetTranslateConfigure() const;
+
+                    /**
+                     * 设置Voice translation control parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _translateConfigure Voice translation control parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetTranslateConfigure(const TranslateConfigureInfo& _translateConfigure);
+
+                    /**
+                     * 判断参数 TranslateConfigure 是否已赋值
+                     * @return TranslateConfigure 是否已赋值
+                     * 
+                     */
+                    bool TranslateConfigureHasBeenSet() const;
+
+                    /**
                      * 获取Creation time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
                      * @return CreateTime Creation time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
                      * 
@@ -368,6 +394,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     AsrWordsConfigureInfo m_asrWordsConfigure;
                     bool m_asrWordsConfigureHasBeenSet;
+
+                    /**
+                     * Voice translation control parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    TranslateConfigureInfo m_translateConfigure;
+                    bool m_translateConfigureHasBeenSet;
 
                     /**
                      * Creation time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).

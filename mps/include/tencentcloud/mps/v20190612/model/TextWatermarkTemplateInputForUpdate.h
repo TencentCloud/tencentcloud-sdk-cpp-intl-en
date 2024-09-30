@@ -76,15 +76,15 @@ namespace TencentCloud
                     bool FontTypeHasBeenSet() const;
 
                     /**
-                     * 获取Font size in Npx format where N is a numeric value.
-                     * @return FontSize Font size in Npx format where N is a numeric value.
+                     * 获取Font size, in the format of Npx. N is a numerical value with a value range of [0, 1] or [8, 4096].
+                     * @return FontSize Font size, in the format of Npx. N is a numerical value with a value range of [0, 1] or [8, 4096].
                      * 
                      */
                     std::string GetFontSize() const;
 
                     /**
-                     * 设置Font size in Npx format where N is a numeric value.
-                     * @param _fontSize Font size in Npx format where N is a numeric value.
+                     * 设置Font size, in the format of Npx. N is a numerical value with a value range of [0, 1] or [8, 4096].
+                     * @param _fontSize Font size, in the format of Npx. N is a numerical value with a value range of [0, 1] or [8, 4096].
                      * 
                      */
                     void SetFontSize(const std::string& _fontSize);
@@ -146,6 +146,27 @@ namespace TencentCloud
                      */
                     bool FontAlphaHasBeenSet() const;
 
+                    /**
+                     * 获取Text content, up to 100 characters.
+                     * @return TextContent Text content, up to 100 characters.
+                     * 
+                     */
+                    std::string GetTextContent() const;
+
+                    /**
+                     * 设置Text content, up to 100 characters.
+                     * @param _textContent Text content, up to 100 characters.
+                     * 
+                     */
+                    void SetTextContent(const std::string& _textContent);
+
+                    /**
+                     * 判断参数 TextContent 是否已赋值
+                     * @return TextContent 是否已赋值
+                     * 
+                     */
+                    bool TextContentHasBeenSet() const;
+
                 private:
 
                     /**
@@ -157,7 +178,7 @@ namespace TencentCloud
                     bool m_fontTypeHasBeenSet;
 
                     /**
-                     * Font size in Npx format where N is a numeric value.
+                     * Font size, in the format of Npx. N is a numerical value with a value range of [0, 1] or [8, 4096].
                      */
                     std::string m_fontSize;
                     bool m_fontSizeHasBeenSet;
@@ -175,6 +196,12 @@ namespace TencentCloud
                      */
                     double m_fontAlpha;
                     bool m_fontAlphaHasBeenSet;
+
+                    /**
+                     * Text content, up to 100 characters.
+                     */
+                    std::string m_textContent;
+                    bool m_textContentHasBeenSet;
 
                 };
             }

@@ -33,6 +33,7 @@
 #include <tencentcloud/mps/v20190612/model/AiContentReviewTaskInput.h>
 #include <tencentcloud/mps/v20190612/model/AiAnalysisTaskInput.h>
 #include <tencentcloud/mps/v20190612/model/AiRecognitionTaskInput.h>
+#include <tencentcloud/mps/v20190612/model/AiQualityControlTaskInput.h>
 
 
 namespace TencentCloud
@@ -244,6 +245,31 @@ namespace TencentCloud
                      */
                     bool AiRecognitionTaskHasBeenSet() const;
 
+                    /**
+                     * 获取Media quality inspection task.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return QualityControlTask Media quality inspection task.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    AiQualityControlTaskInput GetQualityControlTask() const;
+
+                    /**
+                     * 设置Media quality inspection task.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _qualityControlTask Media quality inspection task.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetQualityControlTask(const AiQualityControlTaskInput& _qualityControlTask);
+
+                    /**
+                     * 判断参数 QualityControlTask 是否已赋值
+                     * @return QualityControlTask 是否已赋值
+                     * 
+                     */
+                    bool QualityControlTaskHasBeenSet() const;
+
                 private:
 
                     /**
@@ -299,6 +325,13 @@ namespace TencentCloud
                      */
                     AiRecognitionTaskInput m_aiRecognitionTask;
                     bool m_aiRecognitionTaskHasBeenSet;
+
+                    /**
+                     * Media quality inspection task.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    AiQualityControlTaskInput m_qualityControlTask;
+                    bool m_qualityControlTaskHasBeenSet;
 
                 };
             }

@@ -118,39 +118,43 @@ If you do not specify this parameter, the file will be saved to the directory sp
                     bool OutputDirHasBeenSet() const;
 
                     /**
-                     * 获取The scheme ID.
-Note 1: About `OutputStorage` and `OutputDir`
-<li>If an output storage and directory are specified for a subtask of the scheme, those output settings will be applied.</li>
-<li>If an output storage and directory are not specified for the subtasks of a scheme, the output parameters passed in the `ProcessMedia` API will be applied.</li>
-Note 2: If `TaskNotifyConfig` is specified, the specified settings will be used instead of the default callback settings of the scheme.
+                     * 获取Orchestration ID.
+Note 1: For parameters OutputStorage and OutputDir:
+<li>When a sub-task node in service orchestration has OutputStorage and OutputDir configured, the output configured in this sub-task node is used as the output of the sub-task.</li>
+<li>When a sub-task node in service orchestration does not have OutputStorage and OutputDir configured, if the task creation API (ProcessMedia) has specified an output, it will override the default output of the original orchestration.</li>
+<li>The priority of output settings is: Orchestration sub-task node > Output specified by the task API > Corresponding configuration within an orchestration.</li>
+Note 2: For the TaskNotifyConfig parameter, if the task creation API (ProcessMedia) has set this parameter, it will override the default callback of the original orchestration.
 
-Note 3: The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
-                     * @return ScheduleId The scheme ID.
-Note 1: About `OutputStorage` and `OutputDir`
-<li>If an output storage and directory are specified for a subtask of the scheme, those output settings will be applied.</li>
-<li>If an output storage and directory are not specified for the subtasks of a scheme, the output parameters passed in the `ProcessMedia` API will be applied.</li>
-Note 2: If `TaskNotifyConfig` is specified, the specified settings will be used instead of the default callback settings of the scheme.
+Note 3: The trigger configured for an orchestration is for automatically starting the orchestration. It stops working when you manually call this API to start an orchestration.
+                     * @return ScheduleId Orchestration ID.
+Note 1: For parameters OutputStorage and OutputDir:
+<li>When a sub-task node in service orchestration has OutputStorage and OutputDir configured, the output configured in this sub-task node is used as the output of the sub-task.</li>
+<li>When a sub-task node in service orchestration does not have OutputStorage and OutputDir configured, if the task creation API (ProcessMedia) has specified an output, it will override the default output of the original orchestration.</li>
+<li>The priority of output settings is: Orchestration sub-task node > Output specified by the task API > Corresponding configuration within an orchestration.</li>
+Note 2: For the TaskNotifyConfig parameter, if the task creation API (ProcessMedia) has set this parameter, it will override the default callback of the original orchestration.
 
-Note 3: The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
+Note 3: The trigger configured for an orchestration is for automatically starting the orchestration. It stops working when you manually call this API to start an orchestration.
                      * 
                      */
                     int64_t GetScheduleId() const;
 
                     /**
-                     * 设置The scheme ID.
-Note 1: About `OutputStorage` and `OutputDir`
-<li>If an output storage and directory are specified for a subtask of the scheme, those output settings will be applied.</li>
-<li>If an output storage and directory are not specified for the subtasks of a scheme, the output parameters passed in the `ProcessMedia` API will be applied.</li>
-Note 2: If `TaskNotifyConfig` is specified, the specified settings will be used instead of the default callback settings of the scheme.
+                     * 设置Orchestration ID.
+Note 1: For parameters OutputStorage and OutputDir:
+<li>When a sub-task node in service orchestration has OutputStorage and OutputDir configured, the output configured in this sub-task node is used as the output of the sub-task.</li>
+<li>When a sub-task node in service orchestration does not have OutputStorage and OutputDir configured, if the task creation API (ProcessMedia) has specified an output, it will override the default output of the original orchestration.</li>
+<li>The priority of output settings is: Orchestration sub-task node > Output specified by the task API > Corresponding configuration within an orchestration.</li>
+Note 2: For the TaskNotifyConfig parameter, if the task creation API (ProcessMedia) has set this parameter, it will override the default callback of the original orchestration.
 
-Note 3: The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
-                     * @param _scheduleId The scheme ID.
-Note 1: About `OutputStorage` and `OutputDir`
-<li>If an output storage and directory are specified for a subtask of the scheme, those output settings will be applied.</li>
-<li>If an output storage and directory are not specified for the subtasks of a scheme, the output parameters passed in the `ProcessMedia` API will be applied.</li>
-Note 2: If `TaskNotifyConfig` is specified, the specified settings will be used instead of the default callback settings of the scheme.
+Note 3: The trigger configured for an orchestration is for automatically starting the orchestration. It stops working when you manually call this API to start an orchestration.
+                     * @param _scheduleId Orchestration ID.
+Note 1: For parameters OutputStorage and OutputDir:
+<li>When a sub-task node in service orchestration has OutputStorage and OutputDir configured, the output configured in this sub-task node is used as the output of the sub-task.</li>
+<li>When a sub-task node in service orchestration does not have OutputStorage and OutputDir configured, if the task creation API (ProcessMedia) has specified an output, it will override the default output of the original orchestration.</li>
+<li>The priority of output settings is: Orchestration sub-task node > Output specified by the task API > Corresponding configuration within an orchestration.</li>
+Note 2: For the TaskNotifyConfig parameter, if the task creation API (ProcessMedia) has set this parameter, it will override the default callback of the original orchestration.
 
-Note 3: The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
+Note 3: The trigger configured for an orchestration is for automatically starting the orchestration. It stops working when you manually call this API to start an orchestration.
                      * 
                      */
                     void SetScheduleId(const int64_t& _scheduleId);
@@ -247,15 +251,15 @@ Note 3: The trigger configured for a scheme is for automatically starting a sche
                     bool AiRecognitionTaskHasBeenSet() const;
 
                     /**
-                     * 获取The parameters of a quality control task.
-                     * @return AiQualityControlTask The parameters of a quality control task.
+                     * 获取Media quality inspection type task parameters.
+                     * @return AiQualityControlTask Media quality inspection type task parameters.
                      * 
                      */
                     AiQualityControlTaskInput GetAiQualityControlTask() const;
 
                     /**
-                     * 设置The parameters of a quality control task.
-                     * @param _aiQualityControlTask The parameters of a quality control task.
+                     * 设置Media quality inspection type task parameters.
+                     * @param _aiQualityControlTask Media quality inspection type task parameters.
                      * 
                      */
                     void SetAiQualityControlTask(const AiQualityControlTaskInput& _aiQualityControlTask);
@@ -310,15 +314,15 @@ Note 3: The trigger configured for a scheme is for automatically starting a sche
                     bool TasksPriorityHasBeenSet() const;
 
                     /**
-                     * 获取The ID used for deduplication. If there was a request with the same ID in the last three days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
-                     * @return SessionId The ID used for deduplication. If there was a request with the same ID in the last three days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
+                     * 获取Identification code for deduplication, up to 50 characters. If a request with the same identification code was made within the past 3 days, an error will be returned for the current request. If this parameter is not provided or is an empty string, deduplication will not be performed for this request.
+                     * @return SessionId Identification code for deduplication, up to 50 characters. If a request with the same identification code was made within the past 3 days, an error will be returned for the current request. If this parameter is not provided or is an empty string, deduplication will not be performed for this request.
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置The ID used for deduplication. If there was a request with the same ID in the last three days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
-                     * @param _sessionId The ID used for deduplication. If there was a request with the same ID in the last three days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
+                     * 设置Identification code for deduplication, up to 50 characters. If a request with the same identification code was made within the past 3 days, an error will be returned for the current request. If this parameter is not provided or is an empty string, deduplication will not be performed for this request.
+                     * @param _sessionId Identification code for deduplication, up to 50 characters. If a request with the same identification code was made within the past 3 days, an error will be returned for the current request. If this parameter is not provided or is an empty string, deduplication will not be performed for this request.
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -402,13 +406,14 @@ If you do not specify this parameter, the file will be saved to the directory sp
                     bool m_outputDirHasBeenSet;
 
                     /**
-                     * The scheme ID.
-Note 1: About `OutputStorage` and `OutputDir`
-<li>If an output storage and directory are specified for a subtask of the scheme, those output settings will be applied.</li>
-<li>If an output storage and directory are not specified for the subtasks of a scheme, the output parameters passed in the `ProcessMedia` API will be applied.</li>
-Note 2: If `TaskNotifyConfig` is specified, the specified settings will be used instead of the default callback settings of the scheme.
+                     * Orchestration ID.
+Note 1: For parameters OutputStorage and OutputDir:
+<li>When a sub-task node in service orchestration has OutputStorage and OutputDir configured, the output configured in this sub-task node is used as the output of the sub-task.</li>
+<li>When a sub-task node in service orchestration does not have OutputStorage and OutputDir configured, if the task creation API (ProcessMedia) has specified an output, it will override the default output of the original orchestration.</li>
+<li>The priority of output settings is: Orchestration sub-task node > Output specified by the task API > Corresponding configuration within an orchestration.</li>
+Note 2: For the TaskNotifyConfig parameter, if the task creation API (ProcessMedia) has set this parameter, it will override the default callback of the original orchestration.
 
-Note 3: The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
+Note 3: The trigger configured for an orchestration is for automatically starting the orchestration. It stops working when you manually call this API to start an orchestration.
                      */
                     int64_t m_scheduleId;
                     bool m_scheduleIdHasBeenSet;
@@ -438,7 +443,7 @@ Note 3: The trigger configured for a scheme is for automatically starting a sche
                     bool m_aiRecognitionTaskHasBeenSet;
 
                     /**
-                     * The parameters of a quality control task.
+                     * Media quality inspection type task parameters.
                      */
                     AiQualityControlTaskInput m_aiQualityControlTask;
                     bool m_aiQualityControlTaskHasBeenSet;
@@ -456,7 +461,7 @@ Note 3: The trigger configured for a scheme is for automatically starting a sche
                     bool m_tasksPriorityHasBeenSet;
 
                     /**
-                     * The ID used for deduplication. If there was a request with the same ID in the last three days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
+                     * Identification code for deduplication, up to 50 characters. If a request with the same identification code was made within the past 3 days, an error will be returned for the current request. If this parameter is not provided or is an empty string, deduplication will not be performed for this request.
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;

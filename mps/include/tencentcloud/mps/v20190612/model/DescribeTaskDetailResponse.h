@@ -50,16 +50,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The task type. Valid values:
-<li>WorkflowTask</li>
-<li>EditMediaTask</li>
-<li>LiveStreamProcessTask</li>
-<li>ScheduleTask (scheme)</li>
-                     * @return TaskType The task type. Valid values:
-<li>WorkflowTask</li>
-<li>EditMediaTask</li>
-<li>LiveStreamProcessTask</li>
-<li>ScheduleTask (scheme)</li>
+                     * 获取Task type. Valid values:<li>WorkflowTask: video workflow processing task.</li><li>EditMediaTask: video editing task.</li><li>LiveStreamProcessTask: live stream processing task.</li><li>ScheduleTask: orchestration processing task.</li><li>EvaluationTask: evaluation task.</li>
+                     * @return TaskType Task type. Valid values:<li>WorkflowTask: video workflow processing task.</li><li>EditMediaTask: video editing task.</li><li>LiveStreamProcessTask: live stream processing task.</li><li>ScheduleTask: orchestration processing task.</li><li>EvaluationTask: evaluation task.</li>
                      * 
                      */
                     std::string GetTaskType() const;
@@ -286,11 +278,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
                 private:
 
                     /**
-                     * The task type. Valid values:
-<li>WorkflowTask</li>
-<li>EditMediaTask</li>
-<li>LiveStreamProcessTask</li>
-<li>ScheduleTask (scheme)</li>
+                     * Task type. Valid values:<li>WorkflowTask: video workflow processing task.</li><li>EditMediaTask: video editing task.</li><li>LiveStreamProcessTask: live stream processing task.</li><li>ScheduleTask: orchestration processing task.</li><li>EvaluationTask: evaluation task.</li>
                      */
                     std::string m_taskType;
                     bool m_taskTypeHasBeenSet;

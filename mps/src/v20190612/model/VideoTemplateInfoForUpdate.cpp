@@ -30,7 +30,10 @@ VideoTemplateInfoForUpdate::VideoTemplateInfoForUpdate() :
     m_gopHasBeenSet(false),
     m_fillTypeHasBeenSet(false),
     m_vcrfHasBeenSet(false),
-    m_contentAdaptStreamHasBeenSet(false)
+    m_contentAdaptStreamHasBeenSet(false),
+    m_segmentTypeHasBeenSet(false),
+    m_fpsDenominatorHasBeenSet(false),
+    m_stereo3dTypeHasBeenSet(false)
 {
 }
 
@@ -51,21 +54,21 @@ CoreInternalOutcome VideoTemplateInfoForUpdate::Deserialize(const rapidjson::Val
 
     if (value.HasMember("Fps") && !value["Fps"].IsNull())
     {
-        if (!value["Fps"].IsUint64())
+        if (!value["Fps"].IsInt64())
         {
-            return CoreInternalOutcome(Core::Error("response `VideoTemplateInfoForUpdate.Fps` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VideoTemplateInfoForUpdate.Fps` IsInt64=false incorrectly").SetRequestId(requestId));
         }
-        m_fps = value["Fps"].GetUint64();
+        m_fps = value["Fps"].GetInt64();
         m_fpsHasBeenSet = true;
     }
 
     if (value.HasMember("Bitrate") && !value["Bitrate"].IsNull())
     {
-        if (!value["Bitrate"].IsUint64())
+        if (!value["Bitrate"].IsInt64())
         {
-            return CoreInternalOutcome(Core::Error("response `VideoTemplateInfoForUpdate.Bitrate` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VideoTemplateInfoForUpdate.Bitrate` IsInt64=false incorrectly").SetRequestId(requestId));
         }
-        m_bitrate = value["Bitrate"].GetUint64();
+        m_bitrate = value["Bitrate"].GetInt64();
         m_bitrateHasBeenSet = true;
     }
 
@@ -137,6 +140,36 @@ CoreInternalOutcome VideoTemplateInfoForUpdate::Deserialize(const rapidjson::Val
         }
         m_contentAdaptStream = value["ContentAdaptStream"].GetUint64();
         m_contentAdaptStreamHasBeenSet = true;
+    }
+
+    if (value.HasMember("SegmentType") && !value["SegmentType"].IsNull())
+    {
+        if (!value["SegmentType"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `VideoTemplateInfoForUpdate.SegmentType` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_segmentType = value["SegmentType"].GetInt64();
+        m_segmentTypeHasBeenSet = true;
+    }
+
+    if (value.HasMember("FpsDenominator") && !value["FpsDenominator"].IsNull())
+    {
+        if (!value["FpsDenominator"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `VideoTemplateInfoForUpdate.FpsDenominator` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_fpsDenominator = value["FpsDenominator"].GetInt64();
+        m_fpsDenominatorHasBeenSet = true;
+    }
+
+    if (value.HasMember("Stereo3dType") && !value["Stereo3dType"].IsNull())
+    {
+        if (!value["Stereo3dType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `VideoTemplateInfoForUpdate.Stereo3dType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_stereo3dType = string(value["Stereo3dType"].GetString());
+        m_stereo3dTypeHasBeenSet = true;
     }
 
 
@@ -226,6 +259,30 @@ void VideoTemplateInfoForUpdate::ToJsonObject(rapidjson::Value &value, rapidjson
         value.AddMember(iKey, m_contentAdaptStream, allocator);
     }
 
+    if (m_segmentTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SegmentType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_segmentType, allocator);
+    }
+
+    if (m_fpsDenominatorHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FpsDenominator";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_fpsDenominator, allocator);
+    }
+
+    if (m_stereo3dTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Stereo3dType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_stereo3dType.c_str(), allocator).Move(), allocator);
+    }
+
 }
 
 
@@ -245,12 +302,12 @@ bool VideoTemplateInfoForUpdate::CodecHasBeenSet() const
     return m_codecHasBeenSet;
 }
 
-uint64_t VideoTemplateInfoForUpdate::GetFps() const
+int64_t VideoTemplateInfoForUpdate::GetFps() const
 {
     return m_fps;
 }
 
-void VideoTemplateInfoForUpdate::SetFps(const uint64_t& _fps)
+void VideoTemplateInfoForUpdate::SetFps(const int64_t& _fps)
 {
     m_fps = _fps;
     m_fpsHasBeenSet = true;
@@ -261,12 +318,12 @@ bool VideoTemplateInfoForUpdate::FpsHasBeenSet() const
     return m_fpsHasBeenSet;
 }
 
-uint64_t VideoTemplateInfoForUpdate::GetBitrate() const
+int64_t VideoTemplateInfoForUpdate::GetBitrate() const
 {
     return m_bitrate;
 }
 
-void VideoTemplateInfoForUpdate::SetBitrate(const uint64_t& _bitrate)
+void VideoTemplateInfoForUpdate::SetBitrate(const int64_t& _bitrate)
 {
     m_bitrate = _bitrate;
     m_bitrateHasBeenSet = true;
@@ -387,5 +444,53 @@ void VideoTemplateInfoForUpdate::SetContentAdaptStream(const uint64_t& _contentA
 bool VideoTemplateInfoForUpdate::ContentAdaptStreamHasBeenSet() const
 {
     return m_contentAdaptStreamHasBeenSet;
+}
+
+int64_t VideoTemplateInfoForUpdate::GetSegmentType() const
+{
+    return m_segmentType;
+}
+
+void VideoTemplateInfoForUpdate::SetSegmentType(const int64_t& _segmentType)
+{
+    m_segmentType = _segmentType;
+    m_segmentTypeHasBeenSet = true;
+}
+
+bool VideoTemplateInfoForUpdate::SegmentTypeHasBeenSet() const
+{
+    return m_segmentTypeHasBeenSet;
+}
+
+int64_t VideoTemplateInfoForUpdate::GetFpsDenominator() const
+{
+    return m_fpsDenominator;
+}
+
+void VideoTemplateInfoForUpdate::SetFpsDenominator(const int64_t& _fpsDenominator)
+{
+    m_fpsDenominator = _fpsDenominator;
+    m_fpsDenominatorHasBeenSet = true;
+}
+
+bool VideoTemplateInfoForUpdate::FpsDenominatorHasBeenSet() const
+{
+    return m_fpsDenominatorHasBeenSet;
+}
+
+string VideoTemplateInfoForUpdate::GetStereo3dType() const
+{
+    return m_stereo3dType;
+}
+
+void VideoTemplateInfoForUpdate::SetStereo3dType(const string& _stereo3dType)
+{
+    m_stereo3dType = _stereo3dType;
+    m_stereo3dTypeHasBeenSet = true;
+}
+
+bool VideoTemplateInfoForUpdate::Stereo3dTypeHasBeenSet() const
+{
+    return m_stereo3dTypeHasBeenSet;
 }
 

@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mps/v20190612/model/QualityControlResult.h>
+#include <tencentcloud/mps/v20190612/model/ContainerDiagnoseResultItem.h>
 
 
 namespace TencentCloud
@@ -36,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The quality check output.
+                * Media quality inspection result output.
                 */
                 class QualityControlData : public AbstractModel
                 {
@@ -123,18 +124,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool QualityEvaluationScoreHasBeenSet() const;
 
                     /**
-                     * 获取The issues detected by quality control.
+                     * 获取Exception items detected in content quality inspection.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return QualityControlResultSet The issues detected by quality control.
+                     * @return QualityControlResultSet Exception items detected in content quality inspection.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<QualityControlResult> GetQualityControlResultSet() const;
 
                     /**
-                     * 设置The issues detected by quality control.
+                     * 设置Exception items detected in content quality inspection.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _qualityControlResultSet The issues detected by quality control.
+                     * @param _qualityControlResultSet Exception items detected in content quality inspection.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -146,6 +147,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool QualityControlResultSetHasBeenSet() const;
+
+                    /**
+                     * 获取Exception items detected in format diagnosis.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ContainerDiagnoseResultSet Exception items detected in format diagnosis.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<ContainerDiagnoseResultItem> GetContainerDiagnoseResultSet() const;
+
+                    /**
+                     * 设置Exception items detected in format diagnosis.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _containerDiagnoseResultSet Exception items detected in format diagnosis.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetContainerDiagnoseResultSet(const std::vector<ContainerDiagnoseResultItem>& _containerDiagnoseResultSet);
+
+                    /**
+                     * 判断参数 ContainerDiagnoseResultSet 是否已赋值
+                     * @return ContainerDiagnoseResultSet 是否已赋值
+                     * 
+                     */
+                    bool ContainerDiagnoseResultSetHasBeenSet() const;
 
                 private:
 
@@ -171,11 +197,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_qualityEvaluationScoreHasBeenSet;
 
                     /**
-                     * The issues detected by quality control.
+                     * Exception items detected in content quality inspection.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<QualityControlResult> m_qualityControlResultSet;
                     bool m_qualityControlResultSetHasBeenSet;
+
+                    /**
+                     * Exception items detected in format diagnosis.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<ContainerDiagnoseResultItem> m_containerDiagnoseResultSet;
+                    bool m_containerDiagnoseResultSetHasBeenSet;
 
                 };
             }

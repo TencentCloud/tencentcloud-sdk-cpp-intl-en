@@ -26,7 +26,9 @@ DescribeAdaptiveDynamicStreamingTemplatesRequest::DescribeAdaptiveDynamicStreami
     m_definitionsHasBeenSet(false),
     m_offsetHasBeenSet(false),
     m_limitHasBeenSet(false),
-    m_typeHasBeenSet(false)
+    m_typeHasBeenSet(false),
+    m_pureAudioHasBeenSet(false),
+    m_nameHasBeenSet(false)
 {
 }
 
@@ -72,6 +74,22 @@ string DescribeAdaptiveDynamicStreamingTemplatesRequest::ToJsonString() const
         string key = "Type";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_type.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_pureAudioHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PureAudio";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_pureAudio, allocator);
+    }
+
+    if (m_nameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Name";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -144,6 +162,38 @@ void DescribeAdaptiveDynamicStreamingTemplatesRequest::SetType(const string& _ty
 bool DescribeAdaptiveDynamicStreamingTemplatesRequest::TypeHasBeenSet() const
 {
     return m_typeHasBeenSet;
+}
+
+uint64_t DescribeAdaptiveDynamicStreamingTemplatesRequest::GetPureAudio() const
+{
+    return m_pureAudio;
+}
+
+void DescribeAdaptiveDynamicStreamingTemplatesRequest::SetPureAudio(const uint64_t& _pureAudio)
+{
+    m_pureAudio = _pureAudio;
+    m_pureAudioHasBeenSet = true;
+}
+
+bool DescribeAdaptiveDynamicStreamingTemplatesRequest::PureAudioHasBeenSet() const
+{
+    return m_pureAudioHasBeenSet;
+}
+
+string DescribeAdaptiveDynamicStreamingTemplatesRequest::GetName() const
+{
+    return m_name;
+}
+
+void DescribeAdaptiveDynamicStreamingTemplatesRequest::SetName(const string& _name)
+{
+    m_name = _name;
+    m_nameHasBeenSet = true;
+}
+
+bool DescribeAdaptiveDynamicStreamingTemplatesRequest::NameHasBeenSet() const
+{
+    return m_nameHasBeenSet;
 }
 
 

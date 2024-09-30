@@ -270,15 +270,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OutputStorageHasBeenSet() const;
 
                     /**
-                     * 获取Path to a primary output file, which can be a relative path or an absolute path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_transcode_{definition}.{format}`.
-                     * @return OutputObjectPath Path to a primary output file, which can be a relative path or an absolute path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_transcode_{definition}.{format}`.
+                     * 获取Output path of the main file after transcoding, which can be a relative or absolute path.
+If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).Relative path example:
+<li>Filename_{Variable name}.{format}.</li>
+<li>Filename.{format}.</li>
+Absolute path example:
+<li>/Custom path/Filename_{Variable name}.{format}.</li>
+If left empty, a relative path is used by default: `{inputName}_transcode_{definition}.{format}`.
+                     * @return OutputObjectPath Output path of the main file after transcoding, which can be a relative or absolute path.
+If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).Relative path example:
+<li>Filename_{Variable name}.{format}.</li>
+<li>Filename.{format}.</li>
+Absolute path example:
+<li>/Custom path/Filename_{Variable name}.{format}.</li>
+If left empty, a relative path is used by default: `{inputName}_transcode_{definition}.{format}`.
                      * 
                      */
                     std::string GetOutputObjectPath() const;
 
                     /**
-                     * 设置Path to a primary output file, which can be a relative path or an absolute path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_transcode_{definition}.{format}`.
-                     * @param _outputObjectPath Path to a primary output file, which can be a relative path or an absolute path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_transcode_{definition}.{format}`.
+                     * 设置Output path of the main file after transcoding, which can be a relative or absolute path.
+If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).Relative path example:
+<li>Filename_{Variable name}.{format}.</li>
+<li>Filename.{format}.</li>
+Absolute path example:
+<li>/Custom path/Filename_{Variable name}.{format}.</li>
+If left empty, a relative path is used by default: `{inputName}_transcode_{definition}.{format}`.
+                     * @param _outputObjectPath Output path of the main file after transcoding, which can be a relative or absolute path.
+If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).Relative path example:
+<li>Filename_{Variable name}.{format}.</li>
+<li>Filename.{format}.</li>
+Absolute path example:
+<li>/Custom path/Filename_{Variable name}.{format}.</li>
+If left empty, a relative path is used by default: `{inputName}_transcode_{definition}.{format}`.
                      * 
                      */
                     void SetOutputObjectPath(const std::string& _outputObjectPath);
@@ -424,7 +448,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_outputStorageHasBeenSet;
 
                     /**
-                     * Path to a primary output file, which can be a relative path or an absolute path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_transcode_{definition}.{format}`.
+                     * Output path of the main file after transcoding, which can be a relative or absolute path.
+If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).Relative path example:
+<li>Filename_{Variable name}.{format}.</li>
+<li>Filename.{format}.</li>
+Absolute path example:
+<li>/Custom path/Filename_{Variable name}.{format}.</li>
+If left empty, a relative path is used by default: `{inputName}_transcode_{definition}.{format}`.
                      */
                     std::string m_outputObjectPath;
                     bool m_outputObjectPathHasBeenSet;

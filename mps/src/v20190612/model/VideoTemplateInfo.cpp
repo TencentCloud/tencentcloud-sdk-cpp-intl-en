@@ -29,7 +29,10 @@ VideoTemplateInfo::VideoTemplateInfo() :
     m_heightHasBeenSet(false),
     m_gopHasBeenSet(false),
     m_fillTypeHasBeenSet(false),
-    m_vcrfHasBeenSet(false)
+    m_vcrfHasBeenSet(false),
+    m_segmentTypeHasBeenSet(false),
+    m_fpsDenominatorHasBeenSet(false),
+    m_stereo3dTypeHasBeenSet(false)
 {
 }
 
@@ -50,21 +53,21 @@ CoreInternalOutcome VideoTemplateInfo::Deserialize(const rapidjson::Value &value
 
     if (value.HasMember("Fps") && !value["Fps"].IsNull())
     {
-        if (!value["Fps"].IsUint64())
+        if (!value["Fps"].IsInt64())
         {
-            return CoreInternalOutcome(Core::Error("response `VideoTemplateInfo.Fps` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VideoTemplateInfo.Fps` IsInt64=false incorrectly").SetRequestId(requestId));
         }
-        m_fps = value["Fps"].GetUint64();
+        m_fps = value["Fps"].GetInt64();
         m_fpsHasBeenSet = true;
     }
 
     if (value.HasMember("Bitrate") && !value["Bitrate"].IsNull())
     {
-        if (!value["Bitrate"].IsUint64())
+        if (!value["Bitrate"].IsInt64())
         {
-            return CoreInternalOutcome(Core::Error("response `VideoTemplateInfo.Bitrate` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VideoTemplateInfo.Bitrate` IsInt64=false incorrectly").SetRequestId(requestId));
         }
-        m_bitrate = value["Bitrate"].GetUint64();
+        m_bitrate = value["Bitrate"].GetInt64();
         m_bitrateHasBeenSet = true;
     }
 
@@ -126,6 +129,36 @@ CoreInternalOutcome VideoTemplateInfo::Deserialize(const rapidjson::Value &value
         }
         m_vcrf = value["Vcrf"].GetUint64();
         m_vcrfHasBeenSet = true;
+    }
+
+    if (value.HasMember("SegmentType") && !value["SegmentType"].IsNull())
+    {
+        if (!value["SegmentType"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `VideoTemplateInfo.SegmentType` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_segmentType = value["SegmentType"].GetInt64();
+        m_segmentTypeHasBeenSet = true;
+    }
+
+    if (value.HasMember("FpsDenominator") && !value["FpsDenominator"].IsNull())
+    {
+        if (!value["FpsDenominator"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `VideoTemplateInfo.FpsDenominator` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_fpsDenominator = value["FpsDenominator"].GetInt64();
+        m_fpsDenominatorHasBeenSet = true;
+    }
+
+    if (value.HasMember("Stereo3dType") && !value["Stereo3dType"].IsNull())
+    {
+        if (!value["Stereo3dType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `VideoTemplateInfo.Stereo3dType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_stereo3dType = string(value["Stereo3dType"].GetString());
+        m_stereo3dTypeHasBeenSet = true;
     }
 
 
@@ -207,6 +240,30 @@ void VideoTemplateInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Documen
         value.AddMember(iKey, m_vcrf, allocator);
     }
 
+    if (m_segmentTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SegmentType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_segmentType, allocator);
+    }
+
+    if (m_fpsDenominatorHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FpsDenominator";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_fpsDenominator, allocator);
+    }
+
+    if (m_stereo3dTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Stereo3dType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_stereo3dType.c_str(), allocator).Move(), allocator);
+    }
+
 }
 
 
@@ -226,12 +283,12 @@ bool VideoTemplateInfo::CodecHasBeenSet() const
     return m_codecHasBeenSet;
 }
 
-uint64_t VideoTemplateInfo::GetFps() const
+int64_t VideoTemplateInfo::GetFps() const
 {
     return m_fps;
 }
 
-void VideoTemplateInfo::SetFps(const uint64_t& _fps)
+void VideoTemplateInfo::SetFps(const int64_t& _fps)
 {
     m_fps = _fps;
     m_fpsHasBeenSet = true;
@@ -242,12 +299,12 @@ bool VideoTemplateInfo::FpsHasBeenSet() const
     return m_fpsHasBeenSet;
 }
 
-uint64_t VideoTemplateInfo::GetBitrate() const
+int64_t VideoTemplateInfo::GetBitrate() const
 {
     return m_bitrate;
 }
 
-void VideoTemplateInfo::SetBitrate(const uint64_t& _bitrate)
+void VideoTemplateInfo::SetBitrate(const int64_t& _bitrate)
 {
     m_bitrate = _bitrate;
     m_bitrateHasBeenSet = true;
@@ -352,5 +409,53 @@ void VideoTemplateInfo::SetVcrf(const uint64_t& _vcrf)
 bool VideoTemplateInfo::VcrfHasBeenSet() const
 {
     return m_vcrfHasBeenSet;
+}
+
+int64_t VideoTemplateInfo::GetSegmentType() const
+{
+    return m_segmentType;
+}
+
+void VideoTemplateInfo::SetSegmentType(const int64_t& _segmentType)
+{
+    m_segmentType = _segmentType;
+    m_segmentTypeHasBeenSet = true;
+}
+
+bool VideoTemplateInfo::SegmentTypeHasBeenSet() const
+{
+    return m_segmentTypeHasBeenSet;
+}
+
+int64_t VideoTemplateInfo::GetFpsDenominator() const
+{
+    return m_fpsDenominator;
+}
+
+void VideoTemplateInfo::SetFpsDenominator(const int64_t& _fpsDenominator)
+{
+    m_fpsDenominator = _fpsDenominator;
+    m_fpsDenominatorHasBeenSet = true;
+}
+
+bool VideoTemplateInfo::FpsDenominatorHasBeenSet() const
+{
+    return m_fpsDenominatorHasBeenSet;
+}
+
+string VideoTemplateInfo::GetStereo3dType() const
+{
+    return m_stereo3dType;
+}
+
+void VideoTemplateInfo::SetStereo3dType(const string& _stereo3dType)
+{
+    m_stereo3dType = _stereo3dType;
+    m_stereo3dTypeHasBeenSet = true;
+}
+
+bool VideoTemplateInfo::Stereo3dTypeHasBeenSet() const
+{
+    return m_stereo3dTypeHasBeenSet;
 }
 
