@@ -419,7 +419,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return RelationBuniessApiIds List of business APIs associated with authorization API.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * 
+                     * @deprecated
                      */
                     std::vector<std::string> GetRelationBuniessApiIds() const;
 
@@ -428,14 +428,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _relationBuniessApiIds List of business APIs associated with authorization API.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * 
+                     * @deprecated
                      */
                     void SetRelationBuniessApiIds(const std::vector<std::string>& _relationBuniessApiIds);
 
                     /**
                      * 判断参数 RelationBuniessApiIds 是否已赋值
                      * @return RelationBuniessApiIds 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool RelationBuniessApiIdsHasBeenSet() const;
 

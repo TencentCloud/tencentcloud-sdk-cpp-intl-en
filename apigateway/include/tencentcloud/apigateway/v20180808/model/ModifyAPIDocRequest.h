@@ -43,27 +43,6 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取API document ID
-                     * @return ApiDocId API document ID
-                     * 
-                     */
-                    std::string GetApiDocId() const;
-
-                    /**
-                     * 设置API document ID
-                     * @param _apiDocId API document ID
-                     * 
-                     */
-                    void SetApiDocId(const std::string& _apiDocId);
-
-                    /**
-                     * 判断参数 ApiDocId 是否已赋值
-                     * @return ApiDocId 是否已赋值
-                     * 
-                     */
-                    bool ApiDocIdHasBeenSet() const;
-
-                    /**
                      * 获取API document name
                      * @return ApiDocName API document name
                      * 
@@ -147,13 +126,28 @@ namespace TencentCloud
                      */
                     bool ApiIdsHasBeenSet() const;
 
-                private:
+                    /**
+                     * 获取API document ID
+                     * @return ApiDocId API document ID
+                     * 
+                     */
+                    std::string GetApiDocId() const;
 
                     /**
-                     * API document ID
+                     * 设置API document ID
+                     * @param _apiDocId API document ID
+                     * 
                      */
-                    std::string m_apiDocId;
-                    bool m_apiDocIdHasBeenSet;
+                    void SetApiDocId(const std::string& _apiDocId);
+
+                    /**
+                     * 判断参数 ApiDocId 是否已赋值
+                     * @return ApiDocId 是否已赋值
+                     * 
+                     */
+                    bool ApiDocIdHasBeenSet() const;
+
+                private:
 
                     /**
                      * API document name
@@ -178,6 +172,12 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_apiIds;
                     bool m_apiIdsHasBeenSet;
+
+                    /**
+                     * API document ID
+                     */
+                    std::string m_apiDocId;
+                    bool m_apiDocIdHasBeenSet;
 
                 };
             }

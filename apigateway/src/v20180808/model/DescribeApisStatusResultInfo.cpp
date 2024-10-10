@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/apigateway/v20180808/model/IPStrategysStatus.h>
+#include <tencentcloud/apigateway/v20180808/model/DescribeApisStatusResultInfo.h>
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Apigateway::V20180808::Model;
 using namespace std;
 
-IPStrategysStatus::IPStrategysStatus() :
+DescribeApisStatusResultInfo::DescribeApisStatusResultInfo() :
     m_totalCountHasBeenSet(false),
-    m_strategySetHasBeenSet(false)
+    m_apiIdStatusSetHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome IPStrategysStatus::Deserialize(const rapidjson::Value &value)
+CoreInternalOutcome DescribeApisStatusResultInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -35,37 +35,37 @@ CoreInternalOutcome IPStrategysStatus::Deserialize(const rapidjson::Value &value
     {
         if (!value["TotalCount"].IsInt64())
         {
-            return CoreInternalOutcome(Core::Error("response `IPStrategysStatus.TotalCount` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeApisStatusResultInfo.TotalCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_totalCount = value["TotalCount"].GetInt64();
         m_totalCountHasBeenSet = true;
     }
 
-    if (value.HasMember("StrategySet") && !value["StrategySet"].IsNull())
+    if (value.HasMember("ApiIdStatusSet") && !value["ApiIdStatusSet"].IsNull())
     {
-        if (!value["StrategySet"].IsArray())
-            return CoreInternalOutcome(Core::Error("response `IPStrategysStatus.StrategySet` is not array type"));
+        if (!value["ApiIdStatusSet"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `DescribeApisStatusResultInfo.ApiIdStatusSet` is not array type"));
 
-        const rapidjson::Value &tmpValue = value["StrategySet"];
+        const rapidjson::Value &tmpValue = value["ApiIdStatusSet"];
         for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
-            IPStrategy item;
+            DescribeApisStatusResultApiIdStatusSetInfo item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
             if (!outcome.IsSuccess())
             {
                 outcome.GetError().SetRequestId(requestId);
                 return outcome;
             }
-            m_strategySet.push_back(item);
+            m_apiIdStatusSet.push_back(item);
         }
-        m_strategySetHasBeenSet = true;
+        m_apiIdStatusSetHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void IPStrategysStatus::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
+void DescribeApisStatusResultInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_totalCountHasBeenSet)
@@ -76,15 +76,15 @@ void IPStrategysStatus::ToJsonObject(rapidjson::Value &value, rapidjson::Documen
         value.AddMember(iKey, m_totalCount, allocator);
     }
 
-    if (m_strategySetHasBeenSet)
+    if (m_apiIdStatusSetHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "StrategySet";
+        string key = "ApiIdStatusSet";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
-        for (auto itr = m_strategySet.begin(); itr != m_strategySet.end(); ++itr, ++i)
+        for (auto itr = m_apiIdStatusSet.begin(); itr != m_apiIdStatusSet.end(); ++itr, ++i)
         {
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
@@ -94,35 +94,35 @@ void IPStrategysStatus::ToJsonObject(rapidjson::Value &value, rapidjson::Documen
 }
 
 
-int64_t IPStrategysStatus::GetTotalCount() const
+int64_t DescribeApisStatusResultInfo::GetTotalCount() const
 {
     return m_totalCount;
 }
 
-void IPStrategysStatus::SetTotalCount(const int64_t& _totalCount)
+void DescribeApisStatusResultInfo::SetTotalCount(const int64_t& _totalCount)
 {
     m_totalCount = _totalCount;
     m_totalCountHasBeenSet = true;
 }
 
-bool IPStrategysStatus::TotalCountHasBeenSet() const
+bool DescribeApisStatusResultInfo::TotalCountHasBeenSet() const
 {
     return m_totalCountHasBeenSet;
 }
 
-vector<IPStrategy> IPStrategysStatus::GetStrategySet() const
+vector<DescribeApisStatusResultApiIdStatusSetInfo> DescribeApisStatusResultInfo::GetApiIdStatusSet() const
 {
-    return m_strategySet;
+    return m_apiIdStatusSet;
 }
 
-void IPStrategysStatus::SetStrategySet(const vector<IPStrategy>& _strategySet)
+void DescribeApisStatusResultInfo::SetApiIdStatusSet(const vector<DescribeApisStatusResultApiIdStatusSetInfo>& _apiIdStatusSet)
 {
-    m_strategySet = _strategySet;
-    m_strategySetHasBeenSet = true;
+    m_apiIdStatusSet = _apiIdStatusSet;
+    m_apiIdStatusSetHasBeenSet = true;
 }
 
-bool IPStrategysStatus::StrategySetHasBeenSet() const
+bool DescribeApisStatusResultInfo::ApiIdStatusSetHasBeenSet() const
 {
-    return m_strategySetHasBeenSet;
+    return m_apiIdStatusSetHasBeenSet;
 }
 

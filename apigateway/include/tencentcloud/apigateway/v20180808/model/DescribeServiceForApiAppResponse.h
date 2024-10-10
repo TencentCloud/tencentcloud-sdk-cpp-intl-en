@@ -155,22 +155,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ModifiedTimeHasBeenSet() const;
 
                     /**
-                     * 获取Self-Deployed cluster name.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ExclusiveSetName Self-Deployed cluster name.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * 
-                     */
-                    std::string GetExclusiveSetName() const;
-
-                    /**
-                     * 判断参数 ExclusiveSetName 是否已赋值
-                     * @return ExclusiveSetName 是否已赋值
-                     * 
-                     */
-                    bool ExclusiveSetNameHasBeenSet() const;
-
-                    /**
                      * 获取Network type list. INNER: private network access; OUTER: public network access.
                      * @return NetTypes Network type list. INNER: private network access; OUTER: public network access.
                      * 
@@ -416,13 +400,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_modifiedTime;
                     bool m_modifiedTimeHasBeenSet;
-
-                    /**
-                     * Self-Deployed cluster name.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     */
-                    std::string m_exclusiveSetName;
-                    bool m_exclusiveSetNameHasBeenSet;
 
                     /**
                      * Network type list. INNER: private network access; OUTER: public network access.

@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_APIGATEWAY_V20180808_MODEL_APISSTATUS_H_
-#define TENCENTCLOUD_APIGATEWAY_V20180808_MODEL_APISSTATUS_H_
+#ifndef TENCENTCLOUD_APIGATEWAY_V20180808_MODEL_IPSTRATEGIESSTATUS_H_
+#define TENCENTCLOUD_APIGATEWAY_V20180808_MODEL_IPSTRATEGIESSTATUS_H_
 
 #include <string>
 #include <vector>
@@ -24,7 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/apigateway/v20180808/model/DesApisStatus.h>
+#include <tencentcloud/apigateway/v20180808/model/IPStrategy.h>
 
 
 namespace TencentCloud
@@ -36,27 +36,27 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * API list status description
+                * 
                 */
-                class ApisStatus : public AbstractModel
+                class IPStrategiesStatus : public AbstractModel
                 {
                 public:
-                    ApisStatus();
-                    ~ApisStatus() = default;
+                    IPStrategiesStatus();
+                    ~IPStrategiesStatus() = default;
                     void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
 
                     /**
-                     * 获取Number of eligible APIs.
-                     * @return TotalCount Number of eligible APIs.
+                     * 获取
+                     * @return TotalCount 
                      * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
-                     * 设置Number of eligible APIs.
-                     * @param _totalCount Number of eligible APIs.
+                     * 设置
+                     * @param _totalCount 
                      * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
@@ -69,39 +69,39 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取API list.
-                     * @return ApiIdStatusSet API list.
+                     * 获取
+                     * @return StrategySet 
                      * 
                      */
-                    std::vector<DesApisStatus> GetApiIdStatusSet() const;
+                    std::vector<IPStrategy> GetStrategySet() const;
 
                     /**
-                     * 设置API list.
-                     * @param _apiIdStatusSet API list.
+                     * 设置
+                     * @param _strategySet 
                      * 
                      */
-                    void SetApiIdStatusSet(const std::vector<DesApisStatus>& _apiIdStatusSet);
+                    void SetStrategySet(const std::vector<IPStrategy>& _strategySet);
 
                     /**
-                     * 判断参数 ApiIdStatusSet 是否已赋值
-                     * @return ApiIdStatusSet 是否已赋值
+                     * 判断参数 StrategySet 是否已赋值
+                     * @return StrategySet 是否已赋值
                      * 
                      */
-                    bool ApiIdStatusSetHasBeenSet() const;
+                    bool StrategySetHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Number of eligible APIs.
+                     * 
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * API list.
+                     * 
                      */
-                    std::vector<DesApisStatus> m_apiIdStatusSet;
-                    bool m_apiIdStatusSetHasBeenSet;
+                    std::vector<IPStrategy> m_strategySet;
+                    bool m_strategySetHasBeenSet;
 
                 };
             }
@@ -109,4 +109,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_APIGATEWAY_V20180808_MODEL_APISSTATUS_H_
+#endif // !TENCENTCLOUD_APIGATEWAY_V20180808_MODEL_IPSTRATEGIESSTATUS_H_

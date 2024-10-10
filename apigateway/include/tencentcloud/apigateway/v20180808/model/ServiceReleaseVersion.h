@@ -24,7 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/apigateway/v20180808/model/ServiceReleaseHistoryInfo.h>
+#include <tencentcloud/apigateway/v20180808/model/DescribeServiceReleaseVersionResultVersionListInfo.h>
 
 
 namespace TencentCloud
@@ -79,7 +79,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    std::vector<ServiceReleaseHistoryInfo> GetVersionList() const;
+                    std::vector<DescribeServiceReleaseVersionResultVersionListInfo> GetVersionList() const;
 
                     /**
                      * 设置Release version list.
@@ -88,7 +88,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    void SetVersionList(const std::vector<ServiceReleaseHistoryInfo>& _versionList);
+                    void SetVersionList(const std::vector<DescribeServiceReleaseVersionResultVersionListInfo>& _versionList);
 
                     /**
                      * 判断参数 VersionList 是否已赋值
@@ -110,7 +110,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * Release version list.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
-                    std::vector<ServiceReleaseHistoryInfo> m_versionList;
+                    std::vector<DescribeServiceReleaseVersionResultVersionListInfo> m_versionList;
                     bool m_versionListHasBeenSet;
 
                 };

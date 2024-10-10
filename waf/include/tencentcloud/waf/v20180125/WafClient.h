@@ -29,12 +29,16 @@
 #include <tencentcloud/waf/v20180125/model/AddAntiInfoLeakRulesResponse.h>
 #include <tencentcloud/waf/v20180125/model/AddCustomRuleRequest.h>
 #include <tencentcloud/waf/v20180125/model/AddCustomRuleResponse.h>
+#include <tencentcloud/waf/v20180125/model/AddCustomWhiteRuleRequest.h>
+#include <tencentcloud/waf/v20180125/model/AddCustomWhiteRuleResponse.h>
 #include <tencentcloud/waf/v20180125/model/AddSpartaProtectionRequest.h>
 #include <tencentcloud/waf/v20180125/model/AddSpartaProtectionResponse.h>
 #include <tencentcloud/waf/v20180125/model/CreateDealsRequest.h>
 #include <tencentcloud/waf/v20180125/model/CreateDealsResponse.h>
 #include <tencentcloud/waf/v20180125/model/CreateHostRequest.h>
 #include <tencentcloud/waf/v20180125/model/CreateHostResponse.h>
+#include <tencentcloud/waf/v20180125/model/CreateIpAccessControlRequest.h>
+#include <tencentcloud/waf/v20180125/model/CreateIpAccessControlResponse.h>
 #include <tencentcloud/waf/v20180125/model/DeleteAntiFakeUrlRequest.h>
 #include <tencentcloud/waf/v20180125/model/DeleteAntiFakeUrlResponse.h>
 #include <tencentcloud/waf/v20180125/model/DeleteAntiInfoLeakRuleRequest.h>
@@ -43,8 +47,14 @@
 #include <tencentcloud/waf/v20180125/model/DeleteCCRuleResponse.h>
 #include <tencentcloud/waf/v20180125/model/DeleteCustomRuleRequest.h>
 #include <tencentcloud/waf/v20180125/model/DeleteCustomRuleResponse.h>
+#include <tencentcloud/waf/v20180125/model/DeleteCustomWhiteRuleRequest.h>
+#include <tencentcloud/waf/v20180125/model/DeleteCustomWhiteRuleResponse.h>
 #include <tencentcloud/waf/v20180125/model/DeleteHostRequest.h>
 #include <tencentcloud/waf/v20180125/model/DeleteHostResponse.h>
+#include <tencentcloud/waf/v20180125/model/DeleteIpAccessControlV2Request.h>
+#include <tencentcloud/waf/v20180125/model/DeleteIpAccessControlV2Response.h>
+#include <tencentcloud/waf/v20180125/model/DeleteSessionRequest.h>
+#include <tencentcloud/waf/v20180125/model/DeleteSessionResponse.h>
 #include <tencentcloud/waf/v20180125/model/DeleteSpartaProtectionRequest.h>
 #include <tencentcloud/waf/v20180125/model/DeleteSpartaProtectionResponse.h>
 #include <tencentcloud/waf/v20180125/model/DescribeAntiFakeRulesRequest.h>
@@ -69,12 +79,16 @@
 #include <tencentcloud/waf/v20180125/model/DescribeCiphersDetailResponse.h>
 #include <tencentcloud/waf/v20180125/model/DescribeCustomRuleListRequest.h>
 #include <tencentcloud/waf/v20180125/model/DescribeCustomRuleListResponse.h>
+#include <tencentcloud/waf/v20180125/model/DescribeCustomWhiteRuleRequest.h>
+#include <tencentcloud/waf/v20180125/model/DescribeCustomWhiteRuleResponse.h>
 #include <tencentcloud/waf/v20180125/model/DescribeDomainCountInfoRequest.h>
 #include <tencentcloud/waf/v20180125/model/DescribeDomainCountInfoResponse.h>
 #include <tencentcloud/waf/v20180125/model/DescribeDomainDetailsClbRequest.h>
 #include <tencentcloud/waf/v20180125/model/DescribeDomainDetailsClbResponse.h>
 #include <tencentcloud/waf/v20180125/model/DescribeDomainDetailsSaasRequest.h>
 #include <tencentcloud/waf/v20180125/model/DescribeDomainDetailsSaasResponse.h>
+#include <tencentcloud/waf/v20180125/model/DescribeDomainVerifyResultRequest.h>
+#include <tencentcloud/waf/v20180125/model/DescribeDomainVerifyResultResponse.h>
 #include <tencentcloud/waf/v20180125/model/DescribeDomainsRequest.h>
 #include <tencentcloud/waf/v20180125/model/DescribeDomainsResponse.h>
 #include <tencentcloud/waf/v20180125/model/DescribeFindDomainListRequest.h>
@@ -87,6 +101,10 @@
 #include <tencentcloud/waf/v20180125/model/DescribeHostLimitResponse.h>
 #include <tencentcloud/waf/v20180125/model/DescribeHostsRequest.h>
 #include <tencentcloud/waf/v20180125/model/DescribeHostsResponse.h>
+#include <tencentcloud/waf/v20180125/model/DescribeInstancesRequest.h>
+#include <tencentcloud/waf/v20180125/model/DescribeInstancesResponse.h>
+#include <tencentcloud/waf/v20180125/model/DescribeIpAccessControlRequest.h>
+#include <tencentcloud/waf/v20180125/model/DescribeIpAccessControlResponse.h>
 #include <tencentcloud/waf/v20180125/model/DescribeModuleStatusRequest.h>
 #include <tencentcloud/waf/v20180125/model/DescribeModuleStatusResponse.h>
 #include <tencentcloud/waf/v20180125/model/DescribeObjectsRequest.h>
@@ -95,6 +113,8 @@
 #include <tencentcloud/waf/v20180125/model/DescribePeakPointsResponse.h>
 #include <tencentcloud/waf/v20180125/model/DescribePolicyStatusRequest.h>
 #include <tencentcloud/waf/v20180125/model/DescribePolicyStatusResponse.h>
+#include <tencentcloud/waf/v20180125/model/DescribePortsRequest.h>
+#include <tencentcloud/waf/v20180125/model/DescribePortsResponse.h>
 #include <tencentcloud/waf/v20180125/model/DescribeRuleLimitRequest.h>
 #include <tencentcloud/waf/v20180125/model/DescribeRuleLimitResponse.h>
 #include <tencentcloud/waf/v20180125/model/DescribeSessionRequest.h>
@@ -105,6 +125,8 @@
 #include <tencentcloud/waf/v20180125/model/DescribeTlsVersionResponse.h>
 #include <tencentcloud/waf/v20180125/model/DescribeTopAttackDomainRequest.h>
 #include <tencentcloud/waf/v20180125/model/DescribeTopAttackDomainResponse.h>
+#include <tencentcloud/waf/v20180125/model/DescribeUserClbWafRegionsRequest.h>
+#include <tencentcloud/waf/v20180125/model/DescribeUserClbWafRegionsResponse.h>
 #include <tencentcloud/waf/v20180125/model/DescribeUserDomainInfoRequest.h>
 #include <tencentcloud/waf/v20180125/model/DescribeUserDomainInfoResponse.h>
 #include <tencentcloud/waf/v20180125/model/DescribeUserLevelRequest.h>
@@ -119,6 +141,10 @@
 #include <tencentcloud/waf/v20180125/model/GenerateDealsAndPayNewResponse.h>
 #include <tencentcloud/waf/v20180125/model/GetAttackTotalCountRequest.h>
 #include <tencentcloud/waf/v20180125/model/GetAttackTotalCountResponse.h>
+#include <tencentcloud/waf/v20180125/model/GetInstanceQpsLimitRequest.h>
+#include <tencentcloud/waf/v20180125/model/GetInstanceQpsLimitResponse.h>
+#include <tencentcloud/waf/v20180125/model/ImportIpAccessControlRequest.h>
+#include <tencentcloud/waf/v20180125/model/ImportIpAccessControlResponse.h>
 #include <tencentcloud/waf/v20180125/model/ModifyAntiFakeUrlRequest.h>
 #include <tencentcloud/waf/v20180125/model/ModifyAntiFakeUrlResponse.h>
 #include <tencentcloud/waf/v20180125/model/ModifyAntiFakeUrlStatusRequest.h>
@@ -135,6 +161,8 @@
 #include <tencentcloud/waf/v20180125/model/ModifyCustomRuleResponse.h>
 #include <tencentcloud/waf/v20180125/model/ModifyCustomRuleStatusRequest.h>
 #include <tencentcloud/waf/v20180125/model/ModifyCustomRuleStatusResponse.h>
+#include <tencentcloud/waf/v20180125/model/ModifyCustomWhiteRuleRequest.h>
+#include <tencentcloud/waf/v20180125/model/ModifyCustomWhiteRuleResponse.h>
 #include <tencentcloud/waf/v20180125/model/ModifyCustomWhiteRuleStatusRequest.h>
 #include <tencentcloud/waf/v20180125/model/ModifyCustomWhiteRuleStatusResponse.h>
 #include <tencentcloud/waf/v20180125/model/ModifyDomainIpv6StatusRequest.h>
@@ -149,6 +177,16 @@
 #include <tencentcloud/waf/v20180125/model/ModifyHostModeResponse.h>
 #include <tencentcloud/waf/v20180125/model/ModifyHostStatusRequest.h>
 #include <tencentcloud/waf/v20180125/model/ModifyHostStatusResponse.h>
+#include <tencentcloud/waf/v20180125/model/ModifyInstanceElasticModeRequest.h>
+#include <tencentcloud/waf/v20180125/model/ModifyInstanceElasticModeResponse.h>
+#include <tencentcloud/waf/v20180125/model/ModifyInstanceNameRequest.h>
+#include <tencentcloud/waf/v20180125/model/ModifyInstanceNameResponse.h>
+#include <tencentcloud/waf/v20180125/model/ModifyInstanceQpsLimitRequest.h>
+#include <tencentcloud/waf/v20180125/model/ModifyInstanceQpsLimitResponse.h>
+#include <tencentcloud/waf/v20180125/model/ModifyInstanceRenewFlagRequest.h>
+#include <tencentcloud/waf/v20180125/model/ModifyInstanceRenewFlagResponse.h>
+#include <tencentcloud/waf/v20180125/model/ModifyIpAccessControlRequest.h>
+#include <tencentcloud/waf/v20180125/model/ModifyIpAccessControlResponse.h>
 #include <tencentcloud/waf/v20180125/model/ModifyModuleStatusRequest.h>
 #include <tencentcloud/waf/v20180125/model/ModifyModuleStatusResponse.h>
 #include <tencentcloud/waf/v20180125/model/ModifyObjectRequest.h>
@@ -167,6 +205,8 @@
 #include <tencentcloud/waf/v20180125/model/ModifyWebshellStatusResponse.h>
 #include <tencentcloud/waf/v20180125/model/RefreshAccessCheckResultRequest.h>
 #include <tencentcloud/waf/v20180125/model/RefreshAccessCheckResultResponse.h>
+#include <tencentcloud/waf/v20180125/model/SwitchElasticModeRequest.h>
+#include <tencentcloud/waf/v20180125/model/SwitchElasticModeResponse.h>
 #include <tencentcloud/waf/v20180125/model/UpsertCCRuleRequest.h>
 #include <tencentcloud/waf/v20180125/model/UpsertCCRuleResponse.h>
 #include <tencentcloud/waf/v20180125/model/UpsertSessionRequest.h>
@@ -194,6 +234,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::AddCustomRuleResponse> AddCustomRuleOutcome;
                 typedef std::future<AddCustomRuleOutcome> AddCustomRuleOutcomeCallable;
                 typedef std::function<void(const WafClient*, const Model::AddCustomRuleRequest&, AddCustomRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddCustomRuleAsyncHandler;
+                typedef Outcome<Core::Error, Model::AddCustomWhiteRuleResponse> AddCustomWhiteRuleOutcome;
+                typedef std::future<AddCustomWhiteRuleOutcome> AddCustomWhiteRuleOutcomeCallable;
+                typedef std::function<void(const WafClient*, const Model::AddCustomWhiteRuleRequest&, AddCustomWhiteRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddCustomWhiteRuleAsyncHandler;
                 typedef Outcome<Core::Error, Model::AddSpartaProtectionResponse> AddSpartaProtectionOutcome;
                 typedef std::future<AddSpartaProtectionOutcome> AddSpartaProtectionOutcomeCallable;
                 typedef std::function<void(const WafClient*, const Model::AddSpartaProtectionRequest&, AddSpartaProtectionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddSpartaProtectionAsyncHandler;
@@ -203,6 +246,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateHostResponse> CreateHostOutcome;
                 typedef std::future<CreateHostOutcome> CreateHostOutcomeCallable;
                 typedef std::function<void(const WafClient*, const Model::CreateHostRequest&, CreateHostOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateHostAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateIpAccessControlResponse> CreateIpAccessControlOutcome;
+                typedef std::future<CreateIpAccessControlOutcome> CreateIpAccessControlOutcomeCallable;
+                typedef std::function<void(const WafClient*, const Model::CreateIpAccessControlRequest&, CreateIpAccessControlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateIpAccessControlAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteAntiFakeUrlResponse> DeleteAntiFakeUrlOutcome;
                 typedef std::future<DeleteAntiFakeUrlOutcome> DeleteAntiFakeUrlOutcomeCallable;
                 typedef std::function<void(const WafClient*, const Model::DeleteAntiFakeUrlRequest&, DeleteAntiFakeUrlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAntiFakeUrlAsyncHandler;
@@ -215,9 +261,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteCustomRuleResponse> DeleteCustomRuleOutcome;
                 typedef std::future<DeleteCustomRuleOutcome> DeleteCustomRuleOutcomeCallable;
                 typedef std::function<void(const WafClient*, const Model::DeleteCustomRuleRequest&, DeleteCustomRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteCustomRuleAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteCustomWhiteRuleResponse> DeleteCustomWhiteRuleOutcome;
+                typedef std::future<DeleteCustomWhiteRuleOutcome> DeleteCustomWhiteRuleOutcomeCallable;
+                typedef std::function<void(const WafClient*, const Model::DeleteCustomWhiteRuleRequest&, DeleteCustomWhiteRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteCustomWhiteRuleAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteHostResponse> DeleteHostOutcome;
                 typedef std::future<DeleteHostOutcome> DeleteHostOutcomeCallable;
                 typedef std::function<void(const WafClient*, const Model::DeleteHostRequest&, DeleteHostOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteHostAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteIpAccessControlV2Response> DeleteIpAccessControlV2Outcome;
+                typedef std::future<DeleteIpAccessControlV2Outcome> DeleteIpAccessControlV2OutcomeCallable;
+                typedef std::function<void(const WafClient*, const Model::DeleteIpAccessControlV2Request&, DeleteIpAccessControlV2Outcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteIpAccessControlV2AsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteSessionResponse> DeleteSessionOutcome;
+                typedef std::future<DeleteSessionOutcome> DeleteSessionOutcomeCallable;
+                typedef std::function<void(const WafClient*, const Model::DeleteSessionRequest&, DeleteSessionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteSessionAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteSpartaProtectionResponse> DeleteSpartaProtectionOutcome;
                 typedef std::future<DeleteSpartaProtectionOutcome> DeleteSpartaProtectionOutcomeCallable;
                 typedef std::function<void(const WafClient*, const Model::DeleteSpartaProtectionRequest&, DeleteSpartaProtectionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteSpartaProtectionAsyncHandler;
@@ -254,6 +309,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeCustomRuleListResponse> DescribeCustomRuleListOutcome;
                 typedef std::future<DescribeCustomRuleListOutcome> DescribeCustomRuleListOutcomeCallable;
                 typedef std::function<void(const WafClient*, const Model::DescribeCustomRuleListRequest&, DescribeCustomRuleListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCustomRuleListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCustomWhiteRuleResponse> DescribeCustomWhiteRuleOutcome;
+                typedef std::future<DescribeCustomWhiteRuleOutcome> DescribeCustomWhiteRuleOutcomeCallable;
+                typedef std::function<void(const WafClient*, const Model::DescribeCustomWhiteRuleRequest&, DescribeCustomWhiteRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCustomWhiteRuleAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDomainCountInfoResponse> DescribeDomainCountInfoOutcome;
                 typedef std::future<DescribeDomainCountInfoOutcome> DescribeDomainCountInfoOutcomeCallable;
                 typedef std::function<void(const WafClient*, const Model::DescribeDomainCountInfoRequest&, DescribeDomainCountInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDomainCountInfoAsyncHandler;
@@ -263,6 +321,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeDomainDetailsSaasResponse> DescribeDomainDetailsSaasOutcome;
                 typedef std::future<DescribeDomainDetailsSaasOutcome> DescribeDomainDetailsSaasOutcomeCallable;
                 typedef std::function<void(const WafClient*, const Model::DescribeDomainDetailsSaasRequest&, DescribeDomainDetailsSaasOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDomainDetailsSaasAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDomainVerifyResultResponse> DescribeDomainVerifyResultOutcome;
+                typedef std::future<DescribeDomainVerifyResultOutcome> DescribeDomainVerifyResultOutcomeCallable;
+                typedef std::function<void(const WafClient*, const Model::DescribeDomainVerifyResultRequest&, DescribeDomainVerifyResultOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDomainVerifyResultAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDomainsResponse> DescribeDomainsOutcome;
                 typedef std::future<DescribeDomainsOutcome> DescribeDomainsOutcomeCallable;
                 typedef std::function<void(const WafClient*, const Model::DescribeDomainsRequest&, DescribeDomainsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDomainsAsyncHandler;
@@ -281,6 +342,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeHostsResponse> DescribeHostsOutcome;
                 typedef std::future<DescribeHostsOutcome> DescribeHostsOutcomeCallable;
                 typedef std::function<void(const WafClient*, const Model::DescribeHostsRequest&, DescribeHostsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeHostsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeInstancesResponse> DescribeInstancesOutcome;
+                typedef std::future<DescribeInstancesOutcome> DescribeInstancesOutcomeCallable;
+                typedef std::function<void(const WafClient*, const Model::DescribeInstancesRequest&, DescribeInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstancesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeIpAccessControlResponse> DescribeIpAccessControlOutcome;
+                typedef std::future<DescribeIpAccessControlOutcome> DescribeIpAccessControlOutcomeCallable;
+                typedef std::function<void(const WafClient*, const Model::DescribeIpAccessControlRequest&, DescribeIpAccessControlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeIpAccessControlAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeModuleStatusResponse> DescribeModuleStatusOutcome;
                 typedef std::future<DescribeModuleStatusOutcome> DescribeModuleStatusOutcomeCallable;
                 typedef std::function<void(const WafClient*, const Model::DescribeModuleStatusRequest&, DescribeModuleStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeModuleStatusAsyncHandler;
@@ -293,6 +360,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribePolicyStatusResponse> DescribePolicyStatusOutcome;
                 typedef std::future<DescribePolicyStatusOutcome> DescribePolicyStatusOutcomeCallable;
                 typedef std::function<void(const WafClient*, const Model::DescribePolicyStatusRequest&, DescribePolicyStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePolicyStatusAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribePortsResponse> DescribePortsOutcome;
+                typedef std::future<DescribePortsOutcome> DescribePortsOutcomeCallable;
+                typedef std::function<void(const WafClient*, const Model::DescribePortsRequest&, DescribePortsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePortsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeRuleLimitResponse> DescribeRuleLimitOutcome;
                 typedef std::future<DescribeRuleLimitOutcome> DescribeRuleLimitOutcomeCallable;
                 typedef std::function<void(const WafClient*, const Model::DescribeRuleLimitRequest&, DescribeRuleLimitOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRuleLimitAsyncHandler;
@@ -308,6 +378,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeTopAttackDomainResponse> DescribeTopAttackDomainOutcome;
                 typedef std::future<DescribeTopAttackDomainOutcome> DescribeTopAttackDomainOutcomeCallable;
                 typedef std::function<void(const WafClient*, const Model::DescribeTopAttackDomainRequest&, DescribeTopAttackDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTopAttackDomainAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeUserClbWafRegionsResponse> DescribeUserClbWafRegionsOutcome;
+                typedef std::future<DescribeUserClbWafRegionsOutcome> DescribeUserClbWafRegionsOutcomeCallable;
+                typedef std::function<void(const WafClient*, const Model::DescribeUserClbWafRegionsRequest&, DescribeUserClbWafRegionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUserClbWafRegionsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeUserDomainInfoResponse> DescribeUserDomainInfoOutcome;
                 typedef std::future<DescribeUserDomainInfoOutcome> DescribeUserDomainInfoOutcomeCallable;
                 typedef std::function<void(const WafClient*, const Model::DescribeUserDomainInfoRequest&, DescribeUserDomainInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUserDomainInfoAsyncHandler;
@@ -329,6 +402,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::GetAttackTotalCountResponse> GetAttackTotalCountOutcome;
                 typedef std::future<GetAttackTotalCountOutcome> GetAttackTotalCountOutcomeCallable;
                 typedef std::function<void(const WafClient*, const Model::GetAttackTotalCountRequest&, GetAttackTotalCountOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetAttackTotalCountAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetInstanceQpsLimitResponse> GetInstanceQpsLimitOutcome;
+                typedef std::future<GetInstanceQpsLimitOutcome> GetInstanceQpsLimitOutcomeCallable;
+                typedef std::function<void(const WafClient*, const Model::GetInstanceQpsLimitRequest&, GetInstanceQpsLimitOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetInstanceQpsLimitAsyncHandler;
+                typedef Outcome<Core::Error, Model::ImportIpAccessControlResponse> ImportIpAccessControlOutcome;
+                typedef std::future<ImportIpAccessControlOutcome> ImportIpAccessControlOutcomeCallable;
+                typedef std::function<void(const WafClient*, const Model::ImportIpAccessControlRequest&, ImportIpAccessControlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ImportIpAccessControlAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyAntiFakeUrlResponse> ModifyAntiFakeUrlOutcome;
                 typedef std::future<ModifyAntiFakeUrlOutcome> ModifyAntiFakeUrlOutcomeCallable;
                 typedef std::function<void(const WafClient*, const Model::ModifyAntiFakeUrlRequest&, ModifyAntiFakeUrlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAntiFakeUrlAsyncHandler;
@@ -353,6 +432,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyCustomRuleStatusResponse> ModifyCustomRuleStatusOutcome;
                 typedef std::future<ModifyCustomRuleStatusOutcome> ModifyCustomRuleStatusOutcomeCallable;
                 typedef std::function<void(const WafClient*, const Model::ModifyCustomRuleStatusRequest&, ModifyCustomRuleStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyCustomRuleStatusAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyCustomWhiteRuleResponse> ModifyCustomWhiteRuleOutcome;
+                typedef std::future<ModifyCustomWhiteRuleOutcome> ModifyCustomWhiteRuleOutcomeCallable;
+                typedef std::function<void(const WafClient*, const Model::ModifyCustomWhiteRuleRequest&, ModifyCustomWhiteRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyCustomWhiteRuleAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyCustomWhiteRuleStatusResponse> ModifyCustomWhiteRuleStatusOutcome;
                 typedef std::future<ModifyCustomWhiteRuleStatusOutcome> ModifyCustomWhiteRuleStatusOutcomeCallable;
                 typedef std::function<void(const WafClient*, const Model::ModifyCustomWhiteRuleStatusRequest&, ModifyCustomWhiteRuleStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyCustomWhiteRuleStatusAsyncHandler;
@@ -374,6 +456,21 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyHostStatusResponse> ModifyHostStatusOutcome;
                 typedef std::future<ModifyHostStatusOutcome> ModifyHostStatusOutcomeCallable;
                 typedef std::function<void(const WafClient*, const Model::ModifyHostStatusRequest&, ModifyHostStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyHostStatusAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyInstanceElasticModeResponse> ModifyInstanceElasticModeOutcome;
+                typedef std::future<ModifyInstanceElasticModeOutcome> ModifyInstanceElasticModeOutcomeCallable;
+                typedef std::function<void(const WafClient*, const Model::ModifyInstanceElasticModeRequest&, ModifyInstanceElasticModeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstanceElasticModeAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyInstanceNameResponse> ModifyInstanceNameOutcome;
+                typedef std::future<ModifyInstanceNameOutcome> ModifyInstanceNameOutcomeCallable;
+                typedef std::function<void(const WafClient*, const Model::ModifyInstanceNameRequest&, ModifyInstanceNameOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstanceNameAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyInstanceQpsLimitResponse> ModifyInstanceQpsLimitOutcome;
+                typedef std::future<ModifyInstanceQpsLimitOutcome> ModifyInstanceQpsLimitOutcomeCallable;
+                typedef std::function<void(const WafClient*, const Model::ModifyInstanceQpsLimitRequest&, ModifyInstanceQpsLimitOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstanceQpsLimitAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyInstanceRenewFlagResponse> ModifyInstanceRenewFlagOutcome;
+                typedef std::future<ModifyInstanceRenewFlagOutcome> ModifyInstanceRenewFlagOutcomeCallable;
+                typedef std::function<void(const WafClient*, const Model::ModifyInstanceRenewFlagRequest&, ModifyInstanceRenewFlagOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstanceRenewFlagAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyIpAccessControlResponse> ModifyIpAccessControlOutcome;
+                typedef std::future<ModifyIpAccessControlOutcome> ModifyIpAccessControlOutcomeCallable;
+                typedef std::function<void(const WafClient*, const Model::ModifyIpAccessControlRequest&, ModifyIpAccessControlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyIpAccessControlAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyModuleStatusResponse> ModifyModuleStatusOutcome;
                 typedef std::future<ModifyModuleStatusOutcome> ModifyModuleStatusOutcomeCallable;
                 typedef std::function<void(const WafClient*, const Model::ModifyModuleStatusRequest&, ModifyModuleStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyModuleStatusAsyncHandler;
@@ -401,6 +498,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::RefreshAccessCheckResultResponse> RefreshAccessCheckResultOutcome;
                 typedef std::future<RefreshAccessCheckResultOutcome> RefreshAccessCheckResultOutcomeCallable;
                 typedef std::function<void(const WafClient*, const Model::RefreshAccessCheckResultRequest&, RefreshAccessCheckResultOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RefreshAccessCheckResultAsyncHandler;
+                typedef Outcome<Core::Error, Model::SwitchElasticModeResponse> SwitchElasticModeOutcome;
+                typedef std::future<SwitchElasticModeOutcome> SwitchElasticModeOutcomeCallable;
+                typedef std::function<void(const WafClient*, const Model::SwitchElasticModeRequest&, SwitchElasticModeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SwitchElasticModeAsyncHandler;
                 typedef Outcome<Core::Error, Model::UpsertCCRuleResponse> UpsertCCRuleOutcome;
                 typedef std::future<UpsertCCRuleOutcome> UpsertCCRuleOutcomeCallable;
                 typedef std::function<void(const WafClient*, const Model::UpsertCCRuleRequest&, UpsertCCRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpsertCCRuleAsyncHandler;
@@ -438,6 +538,15 @@ namespace TencentCloud
                 AddCustomRuleOutcomeCallable AddCustomRuleCallable(const Model::AddCustomRuleRequest& request);
 
                 /**
+                 *Add precision allowlist rules
+                 * @param req AddCustomWhiteRuleRequest
+                 * @return AddCustomWhiteRuleOutcome
+                 */
+                AddCustomWhiteRuleOutcome AddCustomWhiteRule(const Model::AddCustomWhiteRuleRequest &request);
+                void AddCustomWhiteRuleAsync(const Model::AddCustomWhiteRuleRequest& request, const AddCustomWhiteRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AddCustomWhiteRuleOutcomeCallable AddCustomWhiteRuleCallable(const Model::AddCustomWhiteRuleRequest& request);
+
+                /**
                  *Add SaaS WAF protection domain
                  * @param req AddSpartaProtectionRequest
                  * @return AddSpartaProtectionOutcome
@@ -463,6 +572,15 @@ namespace TencentCloud
                 CreateHostOutcome CreateHost(const Model::CreateHostRequest &request);
                 void CreateHostAsync(const Model::CreateHostRequest& request, const CreateHostAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateHostOutcomeCallable CreateHostCallable(const Model::CreateHostRequest& request);
+
+                /**
+                 *This API is used to add WAF IP allowlists/blocklists.
+                 * @param req CreateIpAccessControlRequest
+                 * @return CreateIpAccessControlOutcome
+                 */
+                CreateIpAccessControlOutcome CreateIpAccessControl(const Model::CreateIpAccessControlRequest &request);
+                void CreateIpAccessControlAsync(const Model::CreateIpAccessControlRequest& request, const CreateIpAccessControlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateIpAccessControlOutcomeCallable CreateIpAccessControlCallable(const Model::CreateIpAccessControlRequest& request);
 
                 /**
                  *Delete tamper-proof URL
@@ -501,6 +619,15 @@ namespace TencentCloud
                 DeleteCustomRuleOutcomeCallable DeleteCustomRuleCallable(const Model::DeleteCustomRuleRequest& request);
 
                 /**
+                 *Delete precision allowlist rules
+                 * @param req DeleteCustomWhiteRuleRequest
+                 * @return DeleteCustomWhiteRuleOutcome
+                 */
+                DeleteCustomWhiteRuleOutcome DeleteCustomWhiteRule(const Model::DeleteCustomWhiteRuleRequest &request);
+                void DeleteCustomWhiteRuleAsync(const Model::DeleteCustomWhiteRuleRequest& request, const DeleteCustomWhiteRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteCustomWhiteRuleOutcomeCallable DeleteCustomWhiteRuleCallable(const Model::DeleteCustomWhiteRuleRequest& request);
+
+                /**
                  *This API is used to delete a domain name protected by CLB WAF. Batch operation is supported.
                  * @param req DeleteHostRequest
                  * @return DeleteHostOutcome
@@ -508,6 +635,24 @@ namespace TencentCloud
                 DeleteHostOutcome DeleteHost(const Model::DeleteHostRequest &request);
                 void DeleteHostAsync(const Model::DeleteHostRequest& request, const DeleteHostAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteHostOutcomeCallable DeleteHostCallable(const Model::DeleteHostRequest& request);
+
+                /**
+                 *This API is used to delete latest versions of WAF IP allowlists/blocklists.
+                 * @param req DeleteIpAccessControlV2Request
+                 * @return DeleteIpAccessControlV2Outcome
+                 */
+                DeleteIpAccessControlV2Outcome DeleteIpAccessControlV2(const Model::DeleteIpAccessControlV2Request &request);
+                void DeleteIpAccessControlV2Async(const Model::DeleteIpAccessControlV2Request& request, const DeleteIpAccessControlV2AsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteIpAccessControlV2OutcomeCallable DeleteIpAccessControlV2Callable(const Model::DeleteIpAccessControlV2Request& request);
+
+                /**
+                 *Delete CC attack session settings
+                 * @param req DeleteSessionRequest
+                 * @return DeleteSessionOutcome
+                 */
+                DeleteSessionOutcome DeleteSession(const Model::DeleteSessionRequest &request);
+                void DeleteSessionAsync(const Model::DeleteSessionRequest& request, const DeleteSessionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteSessionOutcomeCallable DeleteSessionCallable(const Model::DeleteSessionRequest& request);
 
                 /**
                  *This API is used to delete a domain name protected by SaaS WAF.
@@ -626,6 +771,15 @@ Obtain the information leakage prevention rule list
                 DescribeCustomRuleListOutcomeCallable DescribeCustomRuleListCallable(const Model::DescribeCustomRuleListRequest& request);
 
                 /**
+                 *Obtain the precision allowlist policy list in the protection configuration
+                 * @param req DescribeCustomWhiteRuleRequest
+                 * @return DescribeCustomWhiteRuleOutcome
+                 */
+                DescribeCustomWhiteRuleOutcome DescribeCustomWhiteRule(const Model::DescribeCustomWhiteRuleRequest &request);
+                void DescribeCustomWhiteRuleAsync(const Model::DescribeCustomWhiteRuleRequest& request, const DescribeCustomWhiteRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCustomWhiteRuleOutcomeCallable DescribeCustomWhiteRuleCallable(const Model::DescribeCustomWhiteRuleRequest& request);
+
+                /**
                  *Obtain domain overview
                  * @param req DescribeDomainCountInfoRequest
                  * @return DescribeDomainCountInfoOutcome
@@ -651,6 +805,15 @@ Obtain the information leakage prevention rule list
                 DescribeDomainDetailsSaasOutcome DescribeDomainDetailsSaas(const Model::DescribeDomainDetailsSaasRequest &request);
                 void DescribeDomainDetailsSaasAsync(const Model::DescribeDomainDetailsSaasRequest& request, const DescribeDomainDetailsSaasAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeDomainDetailsSaasOutcomeCallable DescribeDomainDetailsSaasCallable(const Model::DescribeDomainDetailsSaasRequest& request);
+
+                /**
+                 *Obtain the result of adding domain operation
+                 * @param req DescribeDomainVerifyResultRequest
+                 * @return DescribeDomainVerifyResultOutcome
+                 */
+                DescribeDomainVerifyResultOutcome DescribeDomainVerifyResult(const Model::DescribeDomainVerifyResultRequest &request);
+                void DescribeDomainVerifyResultAsync(const Model::DescribeDomainVerifyResultRequest& request, const DescribeDomainVerifyResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDomainVerifyResultOutcomeCallable DescribeDomainVerifyResultCallable(const Model::DescribeDomainVerifyResultRequest& request);
 
                 /**
                  *Query detailed information of all user domains
@@ -707,6 +870,24 @@ Obtain the information leakage prevention rule list
                 DescribeHostsOutcomeCallable DescribeHostsCallable(const Model::DescribeHostsRequest& request);
 
                 /**
+                 *Query detailed information of all user instances
+                 * @param req DescribeInstancesRequest
+                 * @return DescribeInstancesOutcome
+                 */
+                DescribeInstancesOutcome DescribeInstances(const Model::DescribeInstancesRequest &request);
+                void DescribeInstancesAsync(const Model::DescribeInstancesRequest& request, const DescribeInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeInstancesOutcomeCallable DescribeInstancesCallable(const Model::DescribeInstancesRequest& request);
+
+                /**
+                 *WAF IP blocklist/allowlist query
+                 * @param req DescribeIpAccessControlRequest
+                 * @return DescribeIpAccessControlOutcome
+                 */
+                DescribeIpAccessControlOutcome DescribeIpAccessControl(const Model::DescribeIpAccessControlRequest &request);
+                void DescribeIpAccessControlAsync(const Model::DescribeIpAccessControlRequest& request, const DescribeIpAccessControlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeIpAccessControlOutcomeCallable DescribeIpAccessControlCallable(const Model::DescribeIpAccessControlRequest& request);
+
+                /**
                  *Query the switch status of each WAF basic security module, check if each module is enabled
                  * @param req DescribeModuleStatusRequest
                  * @return DescribeModuleStatusOutcome
@@ -741,6 +922,15 @@ Obtain the information leakage prevention rule list
                 DescribePolicyStatusOutcome DescribePolicyStatus(const Model::DescribePolicyStatusRequest &request);
                 void DescribePolicyStatusAsync(const Model::DescribePolicyStatusRequest& request, const DescribePolicyStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribePolicyStatusOutcomeCallable DescribePolicyStatusCallable(const Model::DescribePolicyStatusRequest& request);
+
+                /**
+                 *Obtain the SaaS-type WAF protection port list
+                 * @param req DescribePortsRequest
+                 * @return DescribePortsOutcome
+                 */
+                DescribePortsOutcome DescribePorts(const Model::DescribePortsRequest &request);
+                void DescribePortsAsync(const Model::DescribePortsRequest& request, const DescribePortsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribePortsOutcomeCallable DescribePortsCallable(const Model::DescribePortsRequest& request);
 
                 /**
                  *Obtain specific specification limits for each module
@@ -786,6 +976,15 @@ Obtain the information leakage prevention rule list
                 DescribeTopAttackDomainOutcome DescribeTopAttackDomain(const Model::DescribeTopAttackDomainRequest &request);
                 void DescribeTopAttackDomainAsync(const Model::DescribeTopAttackDomainRequest& request, const DescribeTopAttackDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeTopAttackDomainOutcomeCallable DescribeTopAttackDomainCallable(const Model::DescribeTopAttackDomainRequest& request);
+
+                /**
+                 *During the addition and modification of Domain Configuration for CLB-type WAF, it is required to display the supported region list for CLB-type WAF (clb-waf) through DescribeUserClbWafRegions to obtain the currently available region list for the customer.
+                 * @param req DescribeUserClbWafRegionsRequest
+                 * @return DescribeUserClbWafRegionsOutcome
+                 */
+                DescribeUserClbWafRegionsOutcome DescribeUserClbWafRegions(const Model::DescribeUserClbWafRegionsRequest &request);
+                void DescribeUserClbWafRegionsAsync(const Model::DescribeUserClbWafRegionsRequest& request, const DescribeUserClbWafRegionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeUserClbWafRegionsOutcomeCallable DescribeUserClbWafRegionsCallable(const Model::DescribeUserClbWafRegionsRequest& request);
 
                 /**
                  *Query Domain Information for SaaS and CLB
@@ -849,6 +1048,24 @@ Obtain the information leakage prevention rule list
                 GetAttackTotalCountOutcome GetAttackTotalCount(const Model::GetAttackTotalCountRequest &request);
                 void GetAttackTotalCountAsync(const Model::GetAttackTotalCountRequest& request, const GetAttackTotalCountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 GetAttackTotalCountOutcomeCallable GetAttackTotalCountCallable(const Model::GetAttackTotalCountRequest& request);
+
+                /**
+                 *Obtain the elastic QPS limit of package instances
+                 * @param req GetInstanceQpsLimitRequest
+                 * @return GetInstanceQpsLimitOutcome
+                 */
+                GetInstanceQpsLimitOutcome GetInstanceQpsLimit(const Model::GetInstanceQpsLimitRequest &request);
+                void GetInstanceQpsLimitAsync(const Model::GetInstanceQpsLimitRequest& request, const GetInstanceQpsLimitAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetInstanceQpsLimitOutcomeCallable GetInstanceQpsLimitCallable(const Model::GetInstanceQpsLimitRequest& request);
+
+                /**
+                 *This API is used to import IP allowlists/blocklists.
+                 * @param req ImportIpAccessControlRequest
+                 * @return ImportIpAccessControlOutcome
+                 */
+                ImportIpAccessControlOutcome ImportIpAccessControl(const Model::ImportIpAccessControlRequest &request);
+                void ImportIpAccessControlAsync(const Model::ImportIpAccessControlRequest& request, const ImportIpAccessControlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ImportIpAccessControlOutcomeCallable ImportIpAccessControlCallable(const Model::ImportIpAccessControlRequest& request);
 
                 /**
                  *Edit a tamper-proof URL
@@ -923,6 +1140,15 @@ Obtain the information leakage prevention rule list
                 ModifyCustomRuleStatusOutcomeCallable ModifyCustomRuleStatusCallable(const Model::ModifyCustomRuleStatusRequest& request);
 
                 /**
+                 *This API is used to edit a precise allowlist.
+                 * @param req ModifyCustomWhiteRuleRequest
+                 * @return ModifyCustomWhiteRuleOutcome
+                 */
+                ModifyCustomWhiteRuleOutcome ModifyCustomWhiteRule(const Model::ModifyCustomWhiteRuleRequest &request);
+                void ModifyCustomWhiteRuleAsync(const Model::ModifyCustomWhiteRuleRequest& request, const ModifyCustomWhiteRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyCustomWhiteRuleOutcomeCallable ModifyCustomWhiteRuleCallable(const Model::ModifyCustomWhiteRuleRequest& request);
+
+                /**
                  *Enable or disable a precision allowlist
                  * @param req ModifyCustomWhiteRuleStatusRequest
                  * @return ModifyCustomWhiteRuleStatusOutcome
@@ -985,6 +1211,51 @@ Batch operation is supported.
                 ModifyHostStatusOutcome ModifyHostStatus(const Model::ModifyHostStatusRequest &request);
                 void ModifyHostStatusAsync(const Model::ModifyHostStatusRequest& request, const ModifyHostStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyHostStatusOutcomeCallable ModifyHostStatusCallable(const Model::ModifyHostStatusRequest& request);
+
+                /**
+                 *Modify the QPS elastic billing switch for an instance
+                 * @param req ModifyInstanceElasticModeRequest
+                 * @return ModifyInstanceElasticModeOutcome
+                 */
+                ModifyInstanceElasticModeOutcome ModifyInstanceElasticMode(const Model::ModifyInstanceElasticModeRequest &request);
+                void ModifyInstanceElasticModeAsync(const Model::ModifyInstanceElasticModeRequest& request, const ModifyInstanceElasticModeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyInstanceElasticModeOutcomeCallable ModifyInstanceElasticModeCallable(const Model::ModifyInstanceElasticModeRequest& request);
+
+                /**
+                 *Modify instance name
+                 * @param req ModifyInstanceNameRequest
+                 * @return ModifyInstanceNameOutcome
+                 */
+                ModifyInstanceNameOutcome ModifyInstanceName(const Model::ModifyInstanceNameRequest &request);
+                void ModifyInstanceNameAsync(const Model::ModifyInstanceNameRequest& request, const ModifyInstanceNameAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyInstanceNameOutcomeCallable ModifyInstanceNameCallable(const Model::ModifyInstanceNameRequest& request);
+
+                /**
+                 *Set elastic QPS limit for package instances
+                 * @param req ModifyInstanceQpsLimitRequest
+                 * @return ModifyInstanceQpsLimitOutcome
+                 */
+                ModifyInstanceQpsLimitOutcome ModifyInstanceQpsLimit(const Model::ModifyInstanceQpsLimitRequest &request);
+                void ModifyInstanceQpsLimitAsync(const Model::ModifyInstanceQpsLimitRequest& request, const ModifyInstanceQpsLimitAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyInstanceQpsLimitOutcomeCallable ModifyInstanceQpsLimitCallable(const Model::ModifyInstanceQpsLimitRequest& request);
+
+                /**
+                 *Enable or disable auto-renewal for instance
+                 * @param req ModifyInstanceRenewFlagRequest
+                 * @return ModifyInstanceRenewFlagOutcome
+                 */
+                ModifyInstanceRenewFlagOutcome ModifyInstanceRenewFlag(const Model::ModifyInstanceRenewFlagRequest &request);
+                void ModifyInstanceRenewFlagAsync(const Model::ModifyInstanceRenewFlagRequest& request, const ModifyInstanceRenewFlagAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyInstanceRenewFlagOutcomeCallable ModifyInstanceRenewFlagCallable(const Model::ModifyInstanceRenewFlagRequest& request);
+
+                /**
+                 *This API is used to edit WAF IP allowlists/blocklists.
+                 * @param req ModifyIpAccessControlRequest
+                 * @return ModifyIpAccessControlOutcome
+                 */
+                ModifyIpAccessControlOutcome ModifyIpAccessControl(const Model::ModifyIpAccessControlRequest &request);
+                void ModifyIpAccessControlAsync(const Model::ModifyIpAccessControlRequest& request, const ModifyIpAccessControlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyIpAccessControlOutcomeCallable ModifyIpAccessControlCallable(const Model::ModifyIpAccessControlRequest& request);
 
                 /**
                  *Set the switch for the basic security module under a certain domain
@@ -1066,6 +1337,15 @@ Batch operation is supported.
                 RefreshAccessCheckResultOutcome RefreshAccessCheckResult(const Model::RefreshAccessCheckResultRequest &request);
                 void RefreshAccessCheckResultAsync(const Model::RefreshAccessCheckResultRequest& request, const RefreshAccessCheckResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 RefreshAccessCheckResultOutcomeCallable RefreshAccessCheckResultCallable(const Model::RefreshAccessCheckResultRequest& request);
+
+                /**
+                 *Toggle elasticity switch
+                 * @param req SwitchElasticModeRequest
+                 * @return SwitchElasticModeOutcome
+                 */
+                SwitchElasticModeOutcome SwitchElasticMode(const Model::SwitchElasticModeRequest &request);
+                void SwitchElasticModeAsync(const Model::SwitchElasticModeRequest& request, const SwitchElasticModeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SwitchElasticModeOutcomeCallable SwitchElasticModeCallable(const Model::SwitchElasticModeRequest& request);
 
                 /**
                  *WAF CC V2 upsert API

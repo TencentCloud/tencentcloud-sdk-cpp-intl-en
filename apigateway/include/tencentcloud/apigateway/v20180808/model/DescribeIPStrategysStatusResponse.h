@@ -21,7 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/apigateway/v20180808/model/IPStrategysStatus.h>
+#include <tencentcloud/apigateway/v20180808/model/IPStrategiesStatus.h>
 
 
 namespace TencentCloud
@@ -51,7 +51,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    IPStrategysStatus GetResult() const;
+                    IPStrategiesStatus GetResult() const;
 
                     /**
                      * 判断参数 Result 是否已赋值
@@ -66,7 +66,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * List of eligible policies.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
-                    IPStrategysStatus m_result;
+                    IPStrategiesStatus m_result;
                     bool m_resultHasBeenSet;
 
                 };

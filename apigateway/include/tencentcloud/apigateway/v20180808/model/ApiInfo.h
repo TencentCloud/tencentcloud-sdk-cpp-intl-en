@@ -29,7 +29,7 @@
 #include <tencentcloud/apigateway/v20180808/model/ErrorCodes.h>
 #include <tencentcloud/apigateway/v20180808/model/ReqParameter.h>
 #include <tencentcloud/apigateway/v20180808/model/ServiceConfig.h>
-#include <tencentcloud/apigateway/v20180808/model/ServiceParameter.h>
+#include <tencentcloud/apigateway/v20180808/model/DescribeApiResultServiceParametersInfo.h>
 #include <tencentcloud/apigateway/v20180808/model/ConstantParameter.h>
 #include <tencentcloud/apigateway/v20180808/model/MicroService.h>
 #include <tencentcloud/apigateway/v20180808/model/TsfLoadBalanceConfResp.h>
@@ -665,7 +665,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    std::vector<ServiceParameter> GetServiceParameters() const;
+                    std::vector<DescribeApiResultServiceParametersInfo> GetServiceParameters() const;
 
                     /**
                      * 设置API backend service parameter.
@@ -674,7 +674,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    void SetServiceParameters(const std::vector<ServiceParameter>& _serviceParameters);
+                    void SetServiceParameters(const std::vector<DescribeApiResultServiceParametersInfo>& _serviceParameters);
 
                     /**
                      * 判断参数 ServiceParameters 是否已赋值
@@ -1507,7 +1507,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * API backend service parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
-                    std::vector<ServiceParameter> m_serviceParameters;
+                    std::vector<DescribeApiResultServiceParametersInfo> m_serviceParameters;
                     bool m_serviceParametersHasBeenSet;
 
                     /**

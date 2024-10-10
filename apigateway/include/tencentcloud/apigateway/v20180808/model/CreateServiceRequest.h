@@ -107,27 +107,6 @@ namespace TencentCloud
                     bool ServiceDescHasBeenSet() const;
 
                     /**
-                     * 获取Dedicated cluster name, which is used to specify the dedicated cluster where the service is to be created.
-                     * @return ExclusiveSetName Dedicated cluster name, which is used to specify the dedicated cluster where the service is to be created.
-                     * 
-                     */
-                    std::string GetExclusiveSetName() const;
-
-                    /**
-                     * 设置Dedicated cluster name, which is used to specify the dedicated cluster where the service is to be created.
-                     * @param _exclusiveSetName Dedicated cluster name, which is used to specify the dedicated cluster where the service is to be created.
-                     * 
-                     */
-                    void SetExclusiveSetName(const std::string& _exclusiveSetName);
-
-                    /**
-                     * 判断参数 ExclusiveSetName 是否已赋值
-                     * @return ExclusiveSetName 是否已赋值
-                     * 
-                     */
-                    bool ExclusiveSetNameHasBeenSet() const;
-
-                    /**
                      * 获取Network type list, which is used to specify the supported network types. INNER: private network access; OUTER: public network access. Default value: OUTER.
                      * @return NetTypes Network type list, which is used to specify the supported network types. INNER: private network access; OUTER: public network access. Default value: OUTER.
                      * 
@@ -293,12 +272,6 @@ namespace TencentCloud
                      */
                     std::string m_serviceDesc;
                     bool m_serviceDescHasBeenSet;
-
-                    /**
-                     * Dedicated cluster name, which is used to specify the dedicated cluster where the service is to be created.
-                     */
-                    std::string m_exclusiveSetName;
-                    bool m_exclusiveSetNameHasBeenSet;
 
                     /**
                      * Network type list, which is used to specify the supported network types. INNER: private network access; OUTER: public network access. Default value: OUTER.

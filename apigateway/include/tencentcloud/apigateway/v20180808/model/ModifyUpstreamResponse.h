@@ -21,7 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/apigateway/v20180808/model/UpstreamInfo.h>
+#include <tencentcloud/apigateway/v20180808/model/ModifyUpstreamResultInfo.h>
 
 
 namespace TencentCloud
@@ -51,7 +51,7 @@ Note: This field may return `NULL`, indicating that no valid value was found.
 Note: This field may return `NULL`, indicating that no valid value was found.
                      * 
                      */
-                    UpstreamInfo GetResult() const;
+                    ModifyUpstreamResultInfo GetResult() const;
 
                     /**
                      * 判断参数 Result 是否已赋值
@@ -66,7 +66,7 @@ Note: This field may return `NULL`, indicating that no valid value was found.
                      * Return modified upstream information
 Note: This field may return `NULL`, indicating that no valid value was found.
                      */
-                    UpstreamInfo m_result;
+                    ModifyUpstreamResultInfo m_result;
                     bool m_resultHasBeenSet;
 
                 };

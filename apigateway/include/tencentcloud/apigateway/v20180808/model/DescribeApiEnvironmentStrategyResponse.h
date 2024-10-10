@@ -21,7 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/apigateway/v20180808/model/ApiEnvironmentStrategyStataus.h>
+#include <tencentcloud/apigateway/v20180808/model/ApiEnvironmentStrategyStatus.h>
 
 
 namespace TencentCloud
@@ -51,7 +51,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    ApiEnvironmentStrategyStataus GetResult() const;
+                    ApiEnvironmentStrategyStatus GetResult() const;
 
                     /**
                      * 判断参数 Result 是否已赋值
@@ -66,7 +66,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * Details of policies bound to API
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
-                    ApiEnvironmentStrategyStataus m_result;
+                    ApiEnvironmentStrategyStatus m_result;
                     bool m_resultHasBeenSet;
 
                 };

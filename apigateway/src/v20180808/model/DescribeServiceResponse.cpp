@@ -31,7 +31,6 @@ DescribeServiceResponse::DescribeServiceResponse() :
     m_protocolHasBeenSet(false),
     m_createdTimeHasBeenSet(false),
     m_modifiedTimeHasBeenSet(false),
-    m_exclusiveSetNameHasBeenSet(false),
     m_netTypesHasBeenSet(false),
     m_internalSubDomainHasBeenSet(false),
     m_outerSubDomainHasBeenSet(false),
@@ -49,7 +48,8 @@ DescribeServiceResponse::DescribeServiceResponse() :
     m_instanceNameHasBeenSet(false),
     m_setTypeHasBeenSet(false),
     m_deploymentTypeHasBeenSet(false),
-    m_specialUseHasBeenSet(false)
+    m_specialUseHasBeenSet(false),
+    m_uniqVpcIdHasBeenSet(false)
 {
 }
 
@@ -158,16 +158,6 @@ CoreInternalOutcome DescribeServiceResponse::Deserialize(const string &payload)
         }
         m_modifiedTime = string(rsp["ModifiedTime"].GetString());
         m_modifiedTimeHasBeenSet = true;
-    }
-
-    if (rsp.HasMember("ExclusiveSetName") && !rsp["ExclusiveSetName"].IsNull())
-    {
-        if (!rsp["ExclusiveSetName"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `ExclusiveSetName` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_exclusiveSetName = string(rsp["ExclusiveSetName"].GetString());
-        m_exclusiveSetNameHasBeenSet = true;
     }
 
     if (rsp.HasMember("NetTypes") && !rsp["NetTypes"].IsNull())
@@ -383,6 +373,16 @@ CoreInternalOutcome DescribeServiceResponse::Deserialize(const string &payload)
         m_specialUseHasBeenSet = true;
     }
 
+    if (rsp.HasMember("UniqVpcId") && !rsp["UniqVpcId"].IsNull())
+    {
+        if (!rsp["UniqVpcId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `UniqVpcId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_uniqVpcId = string(rsp["UniqVpcId"].GetString());
+        m_uniqVpcIdHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -452,14 +452,6 @@ string DescribeServiceResponse::ToJsonString() const
         string key = "ModifiedTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_modifiedTime.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_exclusiveSetNameHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "ExclusiveSetName";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_exclusiveSetName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_netTypesHasBeenSet)
@@ -632,6 +624,14 @@ string DescribeServiceResponse::ToJsonString() const
         value.AddMember(iKey, rapidjson::Value(m_specialUse.c_str(), allocator).Move(), allocator);
     }
 
+    if (m_uniqVpcIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "UniqVpcId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_uniqVpcId.c_str(), allocator).Move(), allocator);
+    }
+
     rapidjson::Value iKey(rapidjson::kStringType);
     string key = "RequestId";
     iKey.SetString(key.c_str(), allocator);
@@ -712,16 +712,6 @@ string DescribeServiceResponse::GetModifiedTime() const
 bool DescribeServiceResponse::ModifiedTimeHasBeenSet() const
 {
     return m_modifiedTimeHasBeenSet;
-}
-
-string DescribeServiceResponse::GetExclusiveSetName() const
-{
-    return m_exclusiveSetName;
-}
-
-bool DescribeServiceResponse::ExclusiveSetNameHasBeenSet() const
-{
-    return m_exclusiveSetNameHasBeenSet;
 }
 
 vector<string> DescribeServiceResponse::GetNetTypes() const
@@ -902,6 +892,16 @@ string DescribeServiceResponse::GetSpecialUse() const
 bool DescribeServiceResponse::SpecialUseHasBeenSet() const
 {
     return m_specialUseHasBeenSet;
+}
+
+string DescribeServiceResponse::GetUniqVpcId() const
+{
+    return m_uniqVpcId;
+}
+
+bool DescribeServiceResponse::UniqVpcIdHasBeenSet() const
+{
+    return m_uniqVpcIdHasBeenSet;
 }
 
 

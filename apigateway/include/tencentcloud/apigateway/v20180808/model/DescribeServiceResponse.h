@@ -147,20 +147,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ModifiedTimeHasBeenSet() const;
 
                     /**
-                     * 获取Dedicated cluster name.
-                     * @return ExclusiveSetName Dedicated cluster name.
-                     * 
-                     */
-                    std::string GetExclusiveSetName() const;
-
-                    /**
-                     * 判断参数 ExclusiveSetName 是否已赋值
-                     * @return ExclusiveSetName 是否已赋值
-                     * 
-                     */
-                    bool ExclusiveSetNameHasBeenSet() const;
-
-                    /**
                      * 获取Network type list. INNER: private network access; OUTER: public network access.
                      * @return NetTypes Network type list. INNER: private network access; OUTER: public network access.
                      * 
@@ -434,6 +420,20 @@ Note: This field may return `NULL`, indicating that no valid value was found.
                      */
                     bool SpecialUseHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return UniqVpcId 
+                     * 
+                     */
+                    std::string GetUniqVpcId() const;
+
+                    /**
+                     * 判断参数 UniqVpcId 是否已赋值
+                     * @return UniqVpcId 是否已赋值
+                     * 
+                     */
+                    bool UniqVpcIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -478,12 +478,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_modifiedTime;
                     bool m_modifiedTimeHasBeenSet;
-
-                    /**
-                     * Dedicated cluster name.
-                     */
-                    std::string m_exclusiveSetName;
-                    bool m_exclusiveSetNameHasBeenSet;
 
                     /**
                      * Network type list. INNER: private network access; OUTER: public network access.
@@ -603,6 +597,12 @@ Note: This field may return `NULL`, indicating that no valid value was found.
                      */
                     std::string m_specialUse;
                     bool m_specialUseHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_uniqVpcId;
+                    bool m_uniqVpcIdHasBeenSet;
 
                 };
             }

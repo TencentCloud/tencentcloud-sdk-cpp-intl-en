@@ -235,7 +235,7 @@ req_t: ">=", "<="
 
 Note:
 ":" indicates included, and "!=" indicates not equal to. For the meanings of fields, please see the `LogSet` description of the output parameter
-                     * 
+                     * @deprecated
                      */
                     std::vector<LogQuery> GetLogQuerys() const;
 
@@ -262,14 +262,14 @@ req_t: ">=", "<="
 
 Note:
 ":" indicates included, and "!=" indicates not equal to. For the meanings of fields, please see the `LogSet` description of the output parameter
-                     * 
+                     * @deprecated
                      */
                     void SetLogQuerys(const std::vector<LogQuery>& _logQuerys);
 
                     /**
                      * 判断参数 LogQuerys 是否已赋值
                      * @return LogQuerys 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool LogQuerysHasBeenSet() const;
 

@@ -110,7 +110,7 @@ string DescribeIPStrategysStatusResponse::ToJsonString() const
 }
 
 
-IPStrategysStatus DescribeIPStrategysStatusResponse::GetResult() const
+IPStrategiesStatus DescribeIPStrategysStatusResponse::GetResult() const
 {
     return m_result;
 }

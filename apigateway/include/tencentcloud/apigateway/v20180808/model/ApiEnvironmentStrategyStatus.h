@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_APIGATEWAY_V20180808_MODEL_APIENVIRONMENTSTRATEGYSTATAUS_H_
-#define TENCENTCLOUD_APIGATEWAY_V20180808_MODEL_APIENVIRONMENTSTRATEGYSTATAUS_H_
+#ifndef TENCENTCLOUD_APIGATEWAY_V20180808_MODEL_APIENVIRONMENTSTRATEGYSTATUS_H_
+#define TENCENTCLOUD_APIGATEWAY_V20180808_MODEL_APIENVIRONMENTSTRATEGYSTATUS_H_
 
 #include <string>
 #include <vector>
@@ -36,31 +36,27 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * List of policies bound to API
+                * 
                 */
-                class ApiEnvironmentStrategyStataus : public AbstractModel
+                class ApiEnvironmentStrategyStatus : public AbstractModel
                 {
                 public:
-                    ApiEnvironmentStrategyStataus();
-                    ~ApiEnvironmentStrategyStataus() = default;
+                    ApiEnvironmentStrategyStatus();
+                    ~ApiEnvironmentStrategyStatus() = default;
                     void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
 
                     /**
-                     * 获取Number of throttling policies bound to API.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TotalCount Number of throttling policies bound to API.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return TotalCount 
                      * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
-                     * 设置Number of throttling policies bound to API.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _totalCount Number of throttling policies bound to API.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _totalCount 
                      * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
@@ -73,19 +69,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of throttling policies bound to API.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ApiEnvironmentStrategySet List of throttling policies bound to API.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return ApiEnvironmentStrategySet 
                      * 
                      */
                     std::vector<ApiEnvironmentStrategy> GetApiEnvironmentStrategySet() const;
 
                     /**
-                     * 设置List of throttling policies bound to API.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _apiEnvironmentStrategySet List of throttling policies bound to API.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _apiEnvironmentStrategySet 
                      * 
                      */
                     void SetApiEnvironmentStrategySet(const std::vector<ApiEnvironmentStrategy>& _apiEnvironmentStrategySet);
@@ -100,15 +92,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Number of throttling policies bound to API.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of throttling policies bound to API.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ApiEnvironmentStrategy> m_apiEnvironmentStrategySet;
                     bool m_apiEnvironmentStrategySetHasBeenSet;
@@ -119,4 +109,4 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 }
 
-#endif // !TENCENTCLOUD_APIGATEWAY_V20180808_MODEL_APIENVIRONMENTSTRATEGYSTATAUS_H_
+#endif // !TENCENTCLOUD_APIGATEWAY_V20180808_MODEL_APIENVIRONMENTSTRATEGYSTATUS_H_
