@@ -45,6 +45,10 @@
 #include <tencentcloud/teo/v20220901/model/CreateConfigGroupVersionResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateCustomizeErrorPageRequest.h>
 #include <tencentcloud/teo/v20220901/model/CreateCustomizeErrorPageResponse.h>
+#include <tencentcloud/teo/v20220901/model/CreateFunctionRequest.h>
+#include <tencentcloud/teo/v20220901/model/CreateFunctionResponse.h>
+#include <tencentcloud/teo/v20220901/model/CreateFunctionRuleRequest.h>
+#include <tencentcloud/teo/v20220901/model/CreateFunctionRuleResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateL4ProxyRequest.h>
 #include <tencentcloud/teo/v20220901/model/CreateL4ProxyResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateL4ProxyRulesRequest.h>
@@ -79,6 +83,10 @@
 #include <tencentcloud/teo/v20220901/model/DeleteApplicationProxyRuleResponse.h>
 #include <tencentcloud/teo/v20220901/model/DeleteCustomErrorPageRequest.h>
 #include <tencentcloud/teo/v20220901/model/DeleteCustomErrorPageResponse.h>
+#include <tencentcloud/teo/v20220901/model/DeleteFunctionRequest.h>
+#include <tencentcloud/teo/v20220901/model/DeleteFunctionResponse.h>
+#include <tencentcloud/teo/v20220901/model/DeleteFunctionRulesRequest.h>
+#include <tencentcloud/teo/v20220901/model/DeleteFunctionRulesResponse.h>
 #include <tencentcloud/teo/v20220901/model/DeleteL4ProxyRequest.h>
 #include <tencentcloud/teo/v20220901/model/DeleteL4ProxyResponse.h>
 #include <tencentcloud/teo/v20220901/model/DeleteL4ProxyRulesRequest.h>
@@ -127,6 +135,12 @@
 #include <tencentcloud/teo/v20220901/model/DescribeDeployHistoryResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeEnvironmentsRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeEnvironmentsResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeFunctionRulesRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeFunctionRulesResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeFunctionRuntimeEnvironmentRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeFunctionRuntimeEnvironmentResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeFunctionsRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeFunctionsResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeHostsSettingRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeHostsSettingResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeIPRegionRequest.h>
@@ -179,6 +193,8 @@
 #include <tencentcloud/teo/v20220901/model/DownloadL4LogsResponse.h>
 #include <tencentcloud/teo/v20220901/model/DownloadL7LogsRequest.h>
 #include <tencentcloud/teo/v20220901/model/DownloadL7LogsResponse.h>
+#include <tencentcloud/teo/v20220901/model/HandleFunctionRuntimeEnvironmentRequest.h>
+#include <tencentcloud/teo/v20220901/model/HandleFunctionRuntimeEnvironmentResponse.h>
 #include <tencentcloud/teo/v20220901/model/IdentifyZoneRequest.h>
 #include <tencentcloud/teo/v20220901/model/IdentifyZoneResponse.h>
 #include <tencentcloud/teo/v20220901/model/IncreasePlanQuotaRequest.h>
@@ -201,6 +217,12 @@
 #include <tencentcloud/teo/v20220901/model/ModifyApplicationProxyStatusResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyCustomErrorPageRequest.h>
 #include <tencentcloud/teo/v20220901/model/ModifyCustomErrorPageResponse.h>
+#include <tencentcloud/teo/v20220901/model/ModifyFunctionRequest.h>
+#include <tencentcloud/teo/v20220901/model/ModifyFunctionResponse.h>
+#include <tencentcloud/teo/v20220901/model/ModifyFunctionRuleRequest.h>
+#include <tencentcloud/teo/v20220901/model/ModifyFunctionRuleResponse.h>
+#include <tencentcloud/teo/v20220901/model/ModifyFunctionRulePriorityRequest.h>
+#include <tencentcloud/teo/v20220901/model/ModifyFunctionRulePriorityResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyHostsCertificateRequest.h>
 #include <tencentcloud/teo/v20220901/model/ModifyHostsCertificateResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyL4ProxyRequest.h>
@@ -282,6 +304,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateCustomizeErrorPageResponse> CreateCustomizeErrorPageOutcome;
                 typedef std::future<CreateCustomizeErrorPageOutcome> CreateCustomizeErrorPageOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CreateCustomizeErrorPageRequest&, CreateCustomizeErrorPageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCustomizeErrorPageAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateFunctionResponse> CreateFunctionOutcome;
+                typedef std::future<CreateFunctionOutcome> CreateFunctionOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::CreateFunctionRequest&, CreateFunctionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateFunctionAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateFunctionRuleResponse> CreateFunctionRuleOutcome;
+                typedef std::future<CreateFunctionRuleOutcome> CreateFunctionRuleOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::CreateFunctionRuleRequest&, CreateFunctionRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateFunctionRuleAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateL4ProxyResponse> CreateL4ProxyOutcome;
                 typedef std::future<CreateL4ProxyOutcome> CreateL4ProxyOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CreateL4ProxyRequest&, CreateL4ProxyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateL4ProxyAsyncHandler;
@@ -333,6 +361,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteCustomErrorPageResponse> DeleteCustomErrorPageOutcome;
                 typedef std::future<DeleteCustomErrorPageOutcome> DeleteCustomErrorPageOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DeleteCustomErrorPageRequest&, DeleteCustomErrorPageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteCustomErrorPageAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteFunctionResponse> DeleteFunctionOutcome;
+                typedef std::future<DeleteFunctionOutcome> DeleteFunctionOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DeleteFunctionRequest&, DeleteFunctionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteFunctionAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteFunctionRulesResponse> DeleteFunctionRulesOutcome;
+                typedef std::future<DeleteFunctionRulesOutcome> DeleteFunctionRulesOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DeleteFunctionRulesRequest&, DeleteFunctionRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteFunctionRulesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteL4ProxyResponse> DeleteL4ProxyOutcome;
                 typedef std::future<DeleteL4ProxyOutcome> DeleteL4ProxyOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DeleteL4ProxyRequest&, DeleteL4ProxyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteL4ProxyAsyncHandler;
@@ -405,6 +439,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeEnvironmentsResponse> DescribeEnvironmentsOutcome;
                 typedef std::future<DescribeEnvironmentsOutcome> DescribeEnvironmentsOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeEnvironmentsRequest&, DescribeEnvironmentsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeEnvironmentsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeFunctionRulesResponse> DescribeFunctionRulesOutcome;
+                typedef std::future<DescribeFunctionRulesOutcome> DescribeFunctionRulesOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeFunctionRulesRequest&, DescribeFunctionRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeFunctionRulesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeFunctionRuntimeEnvironmentResponse> DescribeFunctionRuntimeEnvironmentOutcome;
+                typedef std::future<DescribeFunctionRuntimeEnvironmentOutcome> DescribeFunctionRuntimeEnvironmentOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeFunctionRuntimeEnvironmentRequest&, DescribeFunctionRuntimeEnvironmentOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeFunctionRuntimeEnvironmentAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeFunctionsResponse> DescribeFunctionsOutcome;
+                typedef std::future<DescribeFunctionsOutcome> DescribeFunctionsOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeFunctionsRequest&, DescribeFunctionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeFunctionsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeHostsSettingResponse> DescribeHostsSettingOutcome;
                 typedef std::future<DescribeHostsSettingOutcome> DescribeHostsSettingOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeHostsSettingRequest&, DescribeHostsSettingOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeHostsSettingAsyncHandler;
@@ -483,6 +526,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DownloadL7LogsResponse> DownloadL7LogsOutcome;
                 typedef std::future<DownloadL7LogsOutcome> DownloadL7LogsOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DownloadL7LogsRequest&, DownloadL7LogsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DownloadL7LogsAsyncHandler;
+                typedef Outcome<Core::Error, Model::HandleFunctionRuntimeEnvironmentResponse> HandleFunctionRuntimeEnvironmentOutcome;
+                typedef std::future<HandleFunctionRuntimeEnvironmentOutcome> HandleFunctionRuntimeEnvironmentOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::HandleFunctionRuntimeEnvironmentRequest&, HandleFunctionRuntimeEnvironmentOutcome, const std::shared_ptr<const AsyncCallerContext>&)> HandleFunctionRuntimeEnvironmentAsyncHandler;
                 typedef Outcome<Core::Error, Model::IdentifyZoneResponse> IdentifyZoneOutcome;
                 typedef std::future<IdentifyZoneOutcome> IdentifyZoneOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::IdentifyZoneRequest&, IdentifyZoneOutcome, const std::shared_ptr<const AsyncCallerContext>&)> IdentifyZoneAsyncHandler;
@@ -516,6 +562,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyCustomErrorPageResponse> ModifyCustomErrorPageOutcome;
                 typedef std::future<ModifyCustomErrorPageOutcome> ModifyCustomErrorPageOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ModifyCustomErrorPageRequest&, ModifyCustomErrorPageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyCustomErrorPageAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyFunctionResponse> ModifyFunctionOutcome;
+                typedef std::future<ModifyFunctionOutcome> ModifyFunctionOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::ModifyFunctionRequest&, ModifyFunctionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyFunctionAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyFunctionRuleResponse> ModifyFunctionRuleOutcome;
+                typedef std::future<ModifyFunctionRuleOutcome> ModifyFunctionRuleOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::ModifyFunctionRuleRequest&, ModifyFunctionRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyFunctionRuleAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyFunctionRulePriorityResponse> ModifyFunctionRulePriorityOutcome;
+                typedef std::future<ModifyFunctionRulePriorityOutcome> ModifyFunctionRulePriorityOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::ModifyFunctionRulePriorityRequest&, ModifyFunctionRulePriorityOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyFunctionRulePriorityAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyHostsCertificateResponse> ModifyHostsCertificateOutcome;
                 typedef std::future<ModifyHostsCertificateOutcome> ModifyHostsCertificateOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ModifyHostsCertificateRequest&, ModifyHostsCertificateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyHostsCertificateAsyncHandler;
@@ -670,6 +725,24 @@ For sites connected via the CNAME, if you have not verified the ownership of the
                 CreateCustomizeErrorPageOutcome CreateCustomizeErrorPage(const Model::CreateCustomizeErrorPageRequest &request);
                 void CreateCustomizeErrorPageAsync(const Model::CreateCustomizeErrorPageRequest& request, const CreateCustomizeErrorPageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateCustomizeErrorPageOutcomeCallable CreateCustomizeErrorPageCallable(const Model::CreateCustomizeErrorPageRequest& request);
+
+                /**
+                 *This API is used to create and deploy an edge function to EdgeOne edge nodes.
+                 * @param req CreateFunctionRequest
+                 * @return CreateFunctionOutcome
+                 */
+                CreateFunctionOutcome CreateFunction(const Model::CreateFunctionRequest &request);
+                void CreateFunctionAsync(const Model::CreateFunctionRequest& request, const CreateFunctionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateFunctionOutcomeCallable CreateFunctionCallable(const Model::CreateFunctionRequest& request);
+
+                /**
+                 *This API is used to create a trigger rule for an edge function.
+                 * @param req CreateFunctionRuleRequest
+                 * @return CreateFunctionRuleOutcome
+                 */
+                CreateFunctionRuleOutcome CreateFunctionRule(const Model::CreateFunctionRuleRequest &request);
+                void CreateFunctionRuleAsync(const Model::CreateFunctionRuleRequest& request, const CreateFunctionRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateFunctionRuleOutcomeCallable CreateFunctionRuleCallable(const Model::CreateFunctionRuleRequest& request);
 
                 /**
                  *This API is used to create Layer 4 proxy instances.
@@ -829,6 +902,24 @@ If there are already EdgeOne plans under the current account, it is recommended 
                 DeleteCustomErrorPageOutcome DeleteCustomErrorPage(const Model::DeleteCustomErrorPageRequest &request);
                 void DeleteCustomErrorPageAsync(const Model::DeleteCustomErrorPageRequest& request, const DeleteCustomErrorPageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteCustomErrorPageOutcomeCallable DeleteCustomErrorPageCallable(const Model::DeleteCustomErrorPageRequest& request);
+
+                /**
+                 *This API is used to delete an edge function. Once deleted, the function cannot be recovered, and associated trigger rules are also deleted.
+                 * @param req DeleteFunctionRequest
+                 * @return DeleteFunctionOutcome
+                 */
+                DeleteFunctionOutcome DeleteFunction(const Model::DeleteFunctionRequest &request);
+                void DeleteFunctionAsync(const Model::DeleteFunctionRequest& request, const DeleteFunctionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteFunctionOutcomeCallable DeleteFunctionCallable(const Model::DeleteFunctionRequest& request);
+
+                /**
+                 *This API is used to delete a trigger rule for an edge function.
+                 * @param req DeleteFunctionRulesRequest
+                 * @return DeleteFunctionRulesOutcome
+                 */
+                DeleteFunctionRulesOutcome DeleteFunctionRules(const Model::DeleteFunctionRulesRequest &request);
+                void DeleteFunctionRulesAsync(const Model::DeleteFunctionRulesRequest& request, const DeleteFunctionRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteFunctionRulesOutcomeCallable DeleteFunctionRulesCallable(const Model::DeleteFunctionRulesRequest& request);
 
                 /**
                  *This API is used to delete a Layer 4 proxy instance.
@@ -1045,6 +1136,33 @@ If there are already EdgeOne plans under the current account, it is recommended 
                 DescribeEnvironmentsOutcome DescribeEnvironments(const Model::DescribeEnvironmentsRequest &request);
                 void DescribeEnvironmentsAsync(const Model::DescribeEnvironmentsRequest& request, const DescribeEnvironmentsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeEnvironmentsOutcomeCallable DescribeEnvironmentsCallable(const Model::DescribeEnvironmentsRequest& request);
+
+                /**
+                 *This API is used to query the list of trigger rules for an edge function. It supports filtering by rule ID, function ID, rule description, and so on.
+                 * @param req DescribeFunctionRulesRequest
+                 * @return DescribeFunctionRulesOutcome
+                 */
+                DescribeFunctionRulesOutcome DescribeFunctionRules(const Model::DescribeFunctionRulesRequest &request);
+                void DescribeFunctionRulesAsync(const Model::DescribeFunctionRulesRequest& request, const DescribeFunctionRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeFunctionRulesOutcomeCallable DescribeFunctionRulesCallable(const Model::DescribeFunctionRulesRequest& request);
+
+                /**
+                 *This API is used to query the runtime environment of an edge function, including environment variables.
+                 * @param req DescribeFunctionRuntimeEnvironmentRequest
+                 * @return DescribeFunctionRuntimeEnvironmentOutcome
+                 */
+                DescribeFunctionRuntimeEnvironmentOutcome DescribeFunctionRuntimeEnvironment(const Model::DescribeFunctionRuntimeEnvironmentRequest &request);
+                void DescribeFunctionRuntimeEnvironmentAsync(const Model::DescribeFunctionRuntimeEnvironmentRequest& request, const DescribeFunctionRuntimeEnvironmentAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeFunctionRuntimeEnvironmentOutcomeCallable DescribeFunctionRuntimeEnvironmentCallable(const Model::DescribeFunctionRuntimeEnvironmentRequest& request);
+
+                /**
+                 *This API is used to query the list of edge functions. It supports filtering by function ID, name, description, and so on.
+                 * @param req DescribeFunctionsRequest
+                 * @return DescribeFunctionsOutcome
+                 */
+                DescribeFunctionsOutcome DescribeFunctions(const Model::DescribeFunctionsRequest &request);
+                void DescribeFunctionsAsync(const Model::DescribeFunctionsRequest& request, const DescribeFunctionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeFunctionsOutcomeCallable DescribeFunctionsCallable(const Model::DescribeFunctionsRequest& request);
 
                 /**
                  *This API is used to query detailed domain name configuration.
@@ -1291,6 +1409,16 @@ A site can be deleted by using the [Delete Site](https://intl.cloud.tencent.com/
                 DownloadL7LogsOutcomeCallable DownloadL7LogsCallable(const Model::DownloadL7LogsRequest& request);
 
                 /**
+                 *This API is used to operate the runtime environment of an edge function. It supports related settings for environment variables.
+After the environment variables are set, they can be used in the function code. For details, see [Edge Functions Referencing Environment Variables](https://intl.cloud.tencent.com/document/product/1552/109151?from_cn_redirect=1#0151fd9a-8b0e-407b-ae37-54553a60ded6).
+                 * @param req HandleFunctionRuntimeEnvironmentRequest
+                 * @return HandleFunctionRuntimeEnvironmentOutcome
+                 */
+                HandleFunctionRuntimeEnvironmentOutcome HandleFunctionRuntimeEnvironment(const Model::HandleFunctionRuntimeEnvironmentRequest &request);
+                void HandleFunctionRuntimeEnvironmentAsync(const Model::HandleFunctionRuntimeEnvironmentRequest& request, const HandleFunctionRuntimeEnvironmentAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                HandleFunctionRuntimeEnvironmentOutcomeCallable HandleFunctionRuntimeEnvironmentCallable(const Model::HandleFunctionRuntimeEnvironmentRequest& request);
+
+                /**
                  *This API is used to verify ownership of the site.
                  * @param req IdentifyZoneRequest
                  * @return IdentifyZoneOutcome
@@ -1391,6 +1519,33 @@ A site can be deleted by using the [Delete Site](https://intl.cloud.tencent.com/
                 ModifyCustomErrorPageOutcome ModifyCustomErrorPage(const Model::ModifyCustomErrorPageRequest &request);
                 void ModifyCustomErrorPageAsync(const Model::ModifyCustomErrorPageRequest& request, const ModifyCustomErrorPageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyCustomErrorPageOutcomeCallable ModifyCustomErrorPageCallable(const Model::ModifyCustomErrorPageRequest& request);
+
+                /**
+                 *This API is used to modify an edge function. It supports modifying the function content and description. The function will take effect immediately after modification and redeployment.
+                 * @param req ModifyFunctionRequest
+                 * @return ModifyFunctionOutcome
+                 */
+                ModifyFunctionOutcome ModifyFunction(const Model::ModifyFunctionRequest &request);
+                void ModifyFunctionAsync(const Model::ModifyFunctionRequest& request, const ModifyFunctionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyFunctionOutcomeCallable ModifyFunctionCallable(const Model::ModifyFunctionRequest& request);
+
+                /**
+                 *This API is used to modify a trigger rule for an edge function. It supports modifying rule conditions, execution functions, and description.
+                 * @param req ModifyFunctionRuleRequest
+                 * @return ModifyFunctionRuleOutcome
+                 */
+                ModifyFunctionRuleOutcome ModifyFunctionRule(const Model::ModifyFunctionRuleRequest &request);
+                void ModifyFunctionRuleAsync(const Model::ModifyFunctionRuleRequest& request, const ModifyFunctionRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyFunctionRuleOutcomeCallable ModifyFunctionRuleCallable(const Model::ModifyFunctionRuleRequest& request);
+
+                /**
+                 *This API is used to modify the priority of trigger rules for an edge function.
+                 * @param req ModifyFunctionRulePriorityRequest
+                 * @return ModifyFunctionRulePriorityOutcome
+                 */
+                ModifyFunctionRulePriorityOutcome ModifyFunctionRulePriority(const Model::ModifyFunctionRulePriorityRequest &request);
+                void ModifyFunctionRulePriorityAsync(const Model::ModifyFunctionRulePriorityRequest& request, const ModifyFunctionRulePriorityAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyFunctionRulePriorityOutcomeCallable ModifyFunctionRulePriorityCallable(const Model::ModifyFunctionRulePriorityRequest& request);
 
                 /**
                  *This API is used to configure the certificate of a site. You can use your own certificate or [apply for a free certificate](https://intl.cloud.tencent.com/document/product/1552/90437?from_cn_redirect=1).

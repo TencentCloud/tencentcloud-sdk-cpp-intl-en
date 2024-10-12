@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取The name of the real-time log delivery task, which is a combination of numbers, English letters, - and _, containing up to 200 characters.
-                     * @return TaskName The name of the real-time log delivery task, which is a combination of numbers, English letters, - and _, containing up to 200 characters.
+                     * 获取Name of a real-time log shipping task, which can contain up to 200 characters, including digits, English letters, hyphens (-) and underscores (_).
+                     * @return TaskName Name of a real-time log shipping task, which can contain up to 200 characters, including digits, English letters, hyphens (-) and underscores (_).
                      * 
                      */
                     std::string GetTaskName() const;
 
                     /**
-                     * 设置The name of the real-time log delivery task, which is a combination of numbers, English letters, - and _, containing up to 200 characters.
-                     * @param _taskName The name of the real-time log delivery task, which is a combination of numbers, English letters, - and _, containing up to 200 characters.
+                     * 设置Name of a real-time log shipping task, which can contain up to 200 characters, including digits, English letters, hyphens (-) and underscores (_).
+                     * @param _taskName Name of a real-time log shipping task, which can contain up to 200 characters, including digits, English letters, hyphens (-) and underscores (_).
                      * 
                      */
                     void SetTaskName(const std::string& _taskName);
@@ -91,27 +91,27 @@ namespace TencentCloud
                     bool TaskNameHasBeenSet() const;
 
                     /**
-                     * 获取The type of the real-time log delivery task. Valid values:
-<li>cls: Push to Tencent Cloud CLS;</li>
-<li>custom_endpoint: Push to a user-defined HTTP(S) address;</li>
-<li>s3: Push to an AWS S3-compatible bucket address.</li>
-                     * @return TaskType The type of the real-time log delivery task. Valid values:
-<li>cls: Push to Tencent Cloud CLS;</li>
-<li>custom_endpoint: Push to a user-defined HTTP(S) address;</li>
-<li>s3: Push to an AWS S3-compatible bucket address.</li>
+                     * 获取Type of a real-time log shipping task. Valid values:
+<li>cls: push to Tencent Cloud CLS;</li>
+<li>custom_endpoint: push to a custom HTTP(S) address;</li>
+<li>s3: push to an AWS S3-compatible bucket address.</li>
+                     * @return TaskType Type of a real-time log shipping task. Valid values:
+<li>cls: push to Tencent Cloud CLS;</li>
+<li>custom_endpoint: push to a custom HTTP(S) address;</li>
+<li>s3: push to an AWS S3-compatible bucket address.</li>
                      * 
                      */
                     std::string GetTaskType() const;
 
                     /**
-                     * 设置The type of the real-time log delivery task. Valid values:
-<li>cls: Push to Tencent Cloud CLS;</li>
-<li>custom_endpoint: Push to a user-defined HTTP(S) address;</li>
-<li>s3: Push to an AWS S3-compatible bucket address.</li>
-                     * @param _taskType The type of the real-time log delivery task. Valid values:
-<li>cls: Push to Tencent Cloud CLS;</li>
-<li>custom_endpoint: Push to a user-defined HTTP(S) address;</li>
-<li>s3: Push to an AWS S3-compatible bucket address.</li>
+                     * 设置Type of a real-time log shipping task. Valid values:
+<li>cls: push to Tencent Cloud CLS;</li>
+<li>custom_endpoint: push to a custom HTTP(S) address;</li>
+<li>s3: push to an AWS S3-compatible bucket address.</li>
+                     * @param _taskType Type of a real-time log shipping task. Valid values:
+<li>cls: push to Tencent Cloud CLS;</li>
+<li>custom_endpoint: push to a custom HTTP(S) address;</li>
+<li>s3: push to an AWS S3-compatible bucket address.</li>
                      * 
                      */
                     void SetTaskType(const std::string& _taskType);
@@ -124,23 +124,23 @@ namespace TencentCloud
                     bool TaskTypeHasBeenSet() const;
 
                     /**
-                     * 获取The list of entities (Layer 7 domains or Layer 4 proxy instances) corresponding to the real-time log delivery task. Valid value examples:
-<li>Layer 7 domain: domain.example.com;</li>
-<li>Layer 4 proxy instance: sid-2s69eb5wcms7.</li>
-                     * @return EntityList The list of entities (Layer 7 domains or Layer 4 proxy instances) corresponding to the real-time log delivery task. Valid value examples:
-<li>Layer 7 domain: domain.example.com;</li>
-<li>Layer 4 proxy instance: sid-2s69eb5wcms7.</li>
+                     * 获取List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log shipping task. Valid value examples:
+<li>L7 domain name: domain.example.com;</li>
+<li>L4 proxy instance: sid-2s69eb5wcms7.</li>
+                     * @return EntityList List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log shipping task. Valid value examples:
+<li>L7 domain name: domain.example.com;</li>
+<li>L4 proxy instance: sid-2s69eb5wcms7.</li>
                      * 
                      */
                     std::vector<std::string> GetEntityList() const;
 
                     /**
-                     * 设置The list of entities (Layer 7 domains or Layer 4 proxy instances) corresponding to the real-time log delivery task. Valid value examples:
-<li>Layer 7 domain: domain.example.com;</li>
-<li>Layer 4 proxy instance: sid-2s69eb5wcms7.</li>
-                     * @param _entityList The list of entities (Layer 7 domains or Layer 4 proxy instances) corresponding to the real-time log delivery task. Valid value examples:
-<li>Layer 7 domain: domain.example.com;</li>
-<li>Layer 4 proxy instance: sid-2s69eb5wcms7.</li>
+                     * 设置List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log shipping task. Valid value examples:
+<li>L7 domain name: domain.example.com;</li>
+<li>L4 proxy instance: sid-2s69eb5wcms7.</li>
+                     * @param _entityList List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log shipping task. Valid value examples:
+<li>L7 domain name: domain.example.com;</li>
+<li>L4 proxy instance: sid-2s69eb5wcms7.</li>
                      * 
                      */
                     void SetEntityList(const std::vector<std::string>& _entityList);
@@ -153,39 +153,39 @@ namespace TencentCloud
                     bool EntityListHasBeenSet() const;
 
                     /**
-                     * 获取The type of data delivery. Valid values:
-<li>domain: Site acceleration log;</li>
-<li>application: Layer 4 proxy log;</li>
-<li>web-rateLiming: Rate limit and CC attack defense log;</li>
-<li>web-attack: Managed rule log;</li>
-<li>web-rule: Custom rule log;</li>
-<li>web-bot: Bot management log.</li>
-                     * @return LogType The type of data delivery. Valid values:
-<li>domain: Site acceleration log;</li>
-<li>application: Layer 4 proxy log;</li>
-<li>web-rateLiming: Rate limit and CC attack defense log;</li>
-<li>web-attack: Managed rule log;</li>
-<li>web-rule: Custom rule log;</li>
-<li>web-bot: Bot management log.</li>
+                     * 获取Data shipping type. Valid values:
+<li>domain: site acceleration logs;</li>
+<li>application: L4 proxy logs;</li>
+<li>web-rateLiming: rate limit and CC attack defense logs;</li>
+<li>web-attack: managed rule logs;</li>
+<li>web-rule: custom rule logs;</li>
+<li>web-bot: Bot management logs.</li>
+                     * @return LogType Data shipping type. Valid values:
+<li>domain: site acceleration logs;</li>
+<li>application: L4 proxy logs;</li>
+<li>web-rateLiming: rate limit and CC attack defense logs;</li>
+<li>web-attack: managed rule logs;</li>
+<li>web-rule: custom rule logs;</li>
+<li>web-bot: Bot management logs.</li>
                      * 
                      */
                     std::string GetLogType() const;
 
                     /**
-                     * 设置The type of data delivery. Valid values:
-<li>domain: Site acceleration log;</li>
-<li>application: Layer 4 proxy log;</li>
-<li>web-rateLiming: Rate limit and CC attack defense log;</li>
-<li>web-attack: Managed rule log;</li>
-<li>web-rule: Custom rule log;</li>
-<li>web-bot: Bot management log.</li>
-                     * @param _logType The type of data delivery. Valid values:
-<li>domain: Site acceleration log;</li>
-<li>application: Layer 4 proxy log;</li>
-<li>web-rateLiming: Rate limit and CC attack defense log;</li>
-<li>web-attack: Managed rule log;</li>
-<li>web-rule: Custom rule log;</li>
-<li>web-bot: Bot management log.</li>
+                     * 设置Data shipping type. Valid values:
+<li>domain: site acceleration logs;</li>
+<li>application: L4 proxy logs;</li>
+<li>web-rateLiming: rate limit and CC attack defense logs;</li>
+<li>web-attack: managed rule logs;</li>
+<li>web-rule: custom rule logs;</li>
+<li>web-bot: Bot management logs.</li>
+                     * @param _logType Data shipping type. Valid values:
+<li>domain: site acceleration logs;</li>
+<li>application: L4 proxy logs;</li>
+<li>web-rateLiming: rate limit and CC attack defense logs;</li>
+<li>web-attack: managed rule logs;</li>
+<li>web-rule: custom rule logs;</li>
+<li>web-bot: Bot management logs.</li>
                      * 
                      */
                     void SetLogType(const std::string& _logType);
@@ -198,23 +198,23 @@ namespace TencentCloud
                     bool LogTypeHasBeenSet() const;
 
                     /**
-                     * 获取The data delivery area. Valid values:
-<li>mainland: Within the Chinese mainland;</li>
-<li>overseas: Global (excluding the Chinese mainland).</li>
-                     * @return Area The data delivery area. Valid values:
-<li>mainland: Within the Chinese mainland;</li>
-<li>overseas: Global (excluding the Chinese mainland).</li>
+                     * 获取Data shipping area. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland).</li>
+                     * @return Area Data shipping area. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland).</li>
                      * 
                      */
                     std::string GetArea() const;
 
                     /**
-                     * 设置The data delivery area. Valid values:
-<li>mainland: Within the Chinese mainland;</li>
-<li>overseas: Global (excluding the Chinese mainland).</li>
-                     * @param _area The data delivery area. Valid values:
-<li>mainland: Within the Chinese mainland;</li>
-<li>overseas: Global (excluding the Chinese mainland).</li>
+                     * 设置Data shipping area. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland).</li>
+                     * @param _area Data shipping area. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland).</li>
                      * 
                      */
                     void SetArea(const std::string& _area);
@@ -227,15 +227,15 @@ namespace TencentCloud
                     bool AreaHasBeenSet() const;
 
                     /**
-                     * 获取The list of predefined fields for delivery.
-                     * @return Fields The list of predefined fields for delivery.
+                     * 获取List of predefined fields for shipping.
+                     * @return Fields List of predefined fields for shipping.
                      * 
                      */
                     std::vector<std::string> GetFields() const;
 
                     /**
-                     * 设置The list of predefined fields for delivery.
-                     * @param _fields The list of predefined fields for delivery.
+                     * 设置List of predefined fields for shipping.
+                     * @param _fields List of predefined fields for shipping.
                      * 
                      */
                     void SetFields(const std::vector<std::string>& _fields);
@@ -248,15 +248,15 @@ namespace TencentCloud
                     bool FieldsHasBeenSet() const;
 
                     /**
-                     * 获取The list of custom fields for delivery, supporting extracting specified field values from HTTP request headers, response headers, and cookies. Each custom field name must be unique and the maximum number of fields is 200.
-                     * @return CustomFields The list of custom fields for delivery, supporting extracting specified field values from HTTP request headers, response headers, and cookies. Each custom field name must be unique and the maximum number of fields is 200.
+                     * 获取List of custom fields for shipping. It supports extracting specified field values from HTTP request headers, response headers, and cookies. The name of each custom field must be unique and the maximum number of fields is 200.
+                     * @return CustomFields List of custom fields for shipping. It supports extracting specified field values from HTTP request headers, response headers, and cookies. The name of each custom field must be unique and the maximum number of fields is 200.
                      * 
                      */
                     std::vector<CustomField> GetCustomFields() const;
 
                     /**
-                     * 设置The list of custom fields for delivery, supporting extracting specified field values from HTTP request headers, response headers, and cookies. Each custom field name must be unique and the maximum number of fields is 200.
-                     * @param _customFields The list of custom fields for delivery, supporting extracting specified field values from HTTP request headers, response headers, and cookies. Each custom field name must be unique and the maximum number of fields is 200.
+                     * 设置List of custom fields for shipping. It supports extracting specified field values from HTTP request headers, response headers, and cookies. The name of each custom field must be unique and the maximum number of fields is 200.
+                     * @param _customFields List of custom fields for shipping. It supports extracting specified field values from HTTP request headers, response headers, and cookies. The name of each custom field must be unique and the maximum number of fields is 200.
                      * 
                      */
                     void SetCustomFields(const std::vector<CustomField>& _customFields);
@@ -269,15 +269,15 @@ namespace TencentCloud
                     bool CustomFieldsHasBeenSet() const;
 
                     /**
-                     * 获取Log delivery filter conditions. If this field is not filled in, all logs will be delivered.
-                     * @return DeliveryConditions Log delivery filter conditions. If this field is not filled in, all logs will be delivered.
+                     * 获取Filter criteria of log shipping. If this parameter is not input, all logs will be shipped.
+                     * @return DeliveryConditions Filter criteria of log shipping. If this parameter is not input, all logs will be shipped.
                      * 
                      */
                     std::vector<DeliveryCondition> GetDeliveryConditions() const;
 
                     /**
-                     * 设置Log delivery filter conditions. If this field is not filled in, all logs will be delivered.
-                     * @param _deliveryConditions Log delivery filter conditions. If this field is not filled in, all logs will be delivered.
+                     * 设置Filter criteria of log shipping. If this parameter is not input, all logs will be shipped.
+                     * @param _deliveryConditions Filter criteria of log shipping. If this parameter is not input, all logs will be shipped.
                      * 
                      */
                     void SetDeliveryConditions(const std::vector<DeliveryCondition>& _deliveryConditions);
@@ -290,15 +290,15 @@ namespace TencentCloud
                     bool DeliveryConditionsHasBeenSet() const;
 
                     /**
-                     * 获取The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%. If this field is not filled in, the sampling ratio is 100%.
-                     * @return Sample The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%. If this field is not filled in, the sampling ratio is 100%.
+                     * 获取Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%. If this parameter is not input, the sampling ratio is 100%.
+                     * @return Sample Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%. If this parameter is not input, the sampling ratio is 100%.
                      * 
                      */
                     uint64_t GetSample() const;
 
                     /**
-                     * 设置The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%. If this field is not filled in, the sampling ratio is 100%.
-                     * @param _sample The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%. If this field is not filled in, the sampling ratio is 100%.
+                     * 设置Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%. If this parameter is not input, the sampling ratio is 100%.
+                     * @param _sample Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%. If this parameter is not input, the sampling ratio is 100%.
                      * 
                      */
                     void SetSample(const uint64_t& _sample);
@@ -340,15 +340,15 @@ namespace TencentCloud
                     bool LogFormatHasBeenSet() const;
 
                     /**
-                     * 获取The configuration information of CLS. This parameter is required when TaskType is cls.
-                     * @return CLS The configuration information of CLS. This parameter is required when TaskType is cls.
+                     * 获取Configuration information of CLS. This parameter is required when TaskType is cls.
+                     * @return CLS Configuration information of CLS. This parameter is required when TaskType is cls.
                      * 
                      */
                     CLSTopic GetCLS() const;
 
                     /**
-                     * 设置The configuration information of CLS. This parameter is required when TaskType is cls.
-                     * @param _cLS The configuration information of CLS. This parameter is required when TaskType is cls.
+                     * 设置Configuration information of CLS. This parameter is required when TaskType is cls.
+                     * @param _cLS Configuration information of CLS. This parameter is required when TaskType is cls.
                      * 
                      */
                     void SetCLS(const CLSTopic& _cLS);
@@ -361,15 +361,15 @@ namespace TencentCloud
                     bool CLSHasBeenSet() const;
 
                     /**
-                     * 获取The configuration information of the custom HTTP service. This parameter is required when TaskType is custom_endpoint.
-                     * @return CustomEndpoint The configuration information of the custom HTTP service. This parameter is required when TaskType is custom_endpoint.
+                     * 获取Configuration information of the custom HTTP service. This parameter is required when TaskType is custom_endpoint.
+                     * @return CustomEndpoint Configuration information of the custom HTTP service. This parameter is required when TaskType is custom_endpoint.
                      * 
                      */
                     CustomEndpoint GetCustomEndpoint() const;
 
                     /**
-                     * 设置The configuration information of the custom HTTP service. This parameter is required when TaskType is custom_endpoint.
-                     * @param _customEndpoint The configuration information of the custom HTTP service. This parameter is required when TaskType is custom_endpoint.
+                     * 设置Configuration information of the custom HTTP service. This parameter is required when TaskType is custom_endpoint.
+                     * @param _customEndpoint Configuration information of the custom HTTP service. This parameter is required when TaskType is custom_endpoint.
                      * 
                      */
                     void SetCustomEndpoint(const CustomEndpoint& _customEndpoint);
@@ -382,15 +382,15 @@ namespace TencentCloud
                     bool CustomEndpointHasBeenSet() const;
 
                     /**
-                     * 获取The configuration information of the AWS S3-compatible bucket. This parameter is required when TaskType is s3.
-                     * @return S3 The configuration information of the AWS S3-compatible bucket. This parameter is required when TaskType is s3.
+                     * 获取Configuration information of the AWS S3-compatible bucket. This parameter is required when TaskType is s3.
+                     * @return S3 Configuration information of the AWS S3-compatible bucket. This parameter is required when TaskType is s3.
                      * 
                      */
                     S3 GetS3() const;
 
                     /**
-                     * 设置The configuration information of the AWS S3-compatible bucket. This parameter is required when TaskType is s3.
-                     * @param _s3 The configuration information of the AWS S3-compatible bucket. This parameter is required when TaskType is s3.
+                     * 设置Configuration information of the AWS S3-compatible bucket. This parameter is required when TaskType is s3.
+                     * @param _s3 Configuration information of the AWS S3-compatible bucket. This parameter is required when TaskType is s3.
                      * 
                      */
                     void SetS3(const S3& _s3);
@@ -411,68 +411,68 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * The name of the real-time log delivery task, which is a combination of numbers, English letters, - and _, containing up to 200 characters.
+                     * Name of a real-time log shipping task, which can contain up to 200 characters, including digits, English letters, hyphens (-) and underscores (_).
                      */
                     std::string m_taskName;
                     bool m_taskNameHasBeenSet;
 
                     /**
-                     * The type of the real-time log delivery task. Valid values:
-<li>cls: Push to Tencent Cloud CLS;</li>
-<li>custom_endpoint: Push to a user-defined HTTP(S) address;</li>
-<li>s3: Push to an AWS S3-compatible bucket address.</li>
+                     * Type of a real-time log shipping task. Valid values:
+<li>cls: push to Tencent Cloud CLS;</li>
+<li>custom_endpoint: push to a custom HTTP(S) address;</li>
+<li>s3: push to an AWS S3-compatible bucket address.</li>
                      */
                     std::string m_taskType;
                     bool m_taskTypeHasBeenSet;
 
                     /**
-                     * The list of entities (Layer 7 domains or Layer 4 proxy instances) corresponding to the real-time log delivery task. Valid value examples:
-<li>Layer 7 domain: domain.example.com;</li>
-<li>Layer 4 proxy instance: sid-2s69eb5wcms7.</li>
+                     * List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log shipping task. Valid value examples:
+<li>L7 domain name: domain.example.com;</li>
+<li>L4 proxy instance: sid-2s69eb5wcms7.</li>
                      */
                     std::vector<std::string> m_entityList;
                     bool m_entityListHasBeenSet;
 
                     /**
-                     * The type of data delivery. Valid values:
-<li>domain: Site acceleration log;</li>
-<li>application: Layer 4 proxy log;</li>
-<li>web-rateLiming: Rate limit and CC attack defense log;</li>
-<li>web-attack: Managed rule log;</li>
-<li>web-rule: Custom rule log;</li>
-<li>web-bot: Bot management log.</li>
+                     * Data shipping type. Valid values:
+<li>domain: site acceleration logs;</li>
+<li>application: L4 proxy logs;</li>
+<li>web-rateLiming: rate limit and CC attack defense logs;</li>
+<li>web-attack: managed rule logs;</li>
+<li>web-rule: custom rule logs;</li>
+<li>web-bot: Bot management logs.</li>
                      */
                     std::string m_logType;
                     bool m_logTypeHasBeenSet;
 
                     /**
-                     * The data delivery area. Valid values:
-<li>mainland: Within the Chinese mainland;</li>
-<li>overseas: Global (excluding the Chinese mainland).</li>
+                     * Data shipping area. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland).</li>
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;
 
                     /**
-                     * The list of predefined fields for delivery.
+                     * List of predefined fields for shipping.
                      */
                     std::vector<std::string> m_fields;
                     bool m_fieldsHasBeenSet;
 
                     /**
-                     * The list of custom fields for delivery, supporting extracting specified field values from HTTP request headers, response headers, and cookies. Each custom field name must be unique and the maximum number of fields is 200.
+                     * List of custom fields for shipping. It supports extracting specified field values from HTTP request headers, response headers, and cookies. The name of each custom field must be unique and the maximum number of fields is 200.
                      */
                     std::vector<CustomField> m_customFields;
                     bool m_customFieldsHasBeenSet;
 
                     /**
-                     * Log delivery filter conditions. If this field is not filled in, all logs will be delivered.
+                     * Filter criteria of log shipping. If this parameter is not input, all logs will be shipped.
                      */
                     std::vector<DeliveryCondition> m_deliveryConditions;
                     bool m_deliveryConditionsHasBeenSet;
 
                     /**
-                     * The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%. If this field is not filled in, the sampling ratio is 100%.
+                     * Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%. If this parameter is not input, the sampling ratio is 100%.
                      */
                     uint64_t m_sample;
                     bool m_sampleHasBeenSet;
@@ -486,19 +486,19 @@ namespace TencentCloud
                     bool m_logFormatHasBeenSet;
 
                     /**
-                     * The configuration information of CLS. This parameter is required when TaskType is cls.
+                     * Configuration information of CLS. This parameter is required when TaskType is cls.
                      */
                     CLSTopic m_cLS;
                     bool m_cLSHasBeenSet;
 
                     /**
-                     * The configuration information of the custom HTTP service. This parameter is required when TaskType is custom_endpoint.
+                     * Configuration information of the custom HTTP service. This parameter is required when TaskType is custom_endpoint.
                      */
                     CustomEndpoint m_customEndpoint;
                     bool m_customEndpointHasBeenSet;
 
                     /**
-                     * The configuration information of the AWS S3-compatible bucket. This parameter is required when TaskType is s3.
+                     * Configuration information of the AWS S3-compatible bucket. This parameter is required when TaskType is s3.
                      */
                     S3 m_s3;
                     bool m_s3HasBeenSet;

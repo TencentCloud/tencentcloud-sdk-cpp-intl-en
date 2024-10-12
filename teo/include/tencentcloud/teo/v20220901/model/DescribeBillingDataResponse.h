@@ -45,10 +45,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Data 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Data point list.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @return Data Data point list.
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     std::vector<BillingData> GetData() const;
@@ -63,8 +63,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Data point list.
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      */
                     std::vector<BillingData> m_data;
                     bool m_dataHasBeenSet;

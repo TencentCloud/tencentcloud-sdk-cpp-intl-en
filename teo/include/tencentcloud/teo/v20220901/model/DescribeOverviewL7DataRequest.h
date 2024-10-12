@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The start time.
-                     * @return StartTime The start time.
+                     * 获取Start time.
+                     * @return StartTime Start time.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置The start time.
-                     * @param _startTime The start time.
+                     * 设置Start time.
+                     * @param _startTime Start time.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取The end time.
-                     * @return EndTime The end time.
+                     * 获取End time.
+                     * @return EndTime End time.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置The end time.
-                     * @param _endTime The end time.
+                     * 设置End time.
+                     * @param _endTime End time.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -86,47 +86,47 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取The metric to query. Values:
-<li>`l7Flow_outFlux`: Traffic used for EdegOne responses</li>
-<li>`l7Flow_inFlux`: Traffic used for EdegOne requests</li>
-<li>`l7Flow_outBandwidth`: Bandwidth used for EdegOne responses</li>
-<li>`l7Flow_inBandwidth`: Bandwidth used for EdegOne requests</li>
-<li>`l7Flow_hit_outFlux`: Traffic used for cache hit</li>
-<li>`l7Flow_request`: Access requests</li>
-<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
-<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
-                     * @return MetricNames The metric to query. Values:
-<li>`l7Flow_outFlux`: Traffic used for EdegOne responses</li>
-<li>`l7Flow_inFlux`: Traffic used for EdegOne requests</li>
-<li>`l7Flow_outBandwidth`: Bandwidth used for EdegOne responses</li>
-<li>`l7Flow_inBandwidth`: Bandwidth used for EdegOne requests</li>
-<li>`l7Flow_hit_outFlux`: Traffic used for cache hit</li>
-<li>`l7Flow_request`: Access requests</li>
-<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
-<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
+                     * 获取Queried metric. Valid values:
+<li>l7Flow_outFlux: EdgeOne response traffic;</li>
+<li>l7Flow_inFlux: EdgeOne request traffic;</li>
+<li>l7Flow_outBandwidth: EdgeOne response bandwidth;</li>
+<li>l7Flow_inBandwidth: EdgeOne request traffic;</li>
+<li>l7Flow_hit_outFlux: cache hit traffic;</li>
+<li>l7Flow_request: number of access requests;</li>
+<li>l7Flow_flux: upstream and downstream traffic of access requests;</li>
+<li>l7Flow_bandwidth: upstream and downstream bandwidths of access requests.</li>
+                     * @return MetricNames Queried metric. Valid values:
+<li>l7Flow_outFlux: EdgeOne response traffic;</li>
+<li>l7Flow_inFlux: EdgeOne request traffic;</li>
+<li>l7Flow_outBandwidth: EdgeOne response bandwidth;</li>
+<li>l7Flow_inBandwidth: EdgeOne request traffic;</li>
+<li>l7Flow_hit_outFlux: cache hit traffic;</li>
+<li>l7Flow_request: number of access requests;</li>
+<li>l7Flow_flux: upstream and downstream traffic of access requests;</li>
+<li>l7Flow_bandwidth: upstream and downstream bandwidths of access requests.</li>
                      * 
                      */
                     std::vector<std::string> GetMetricNames() const;
 
                     /**
-                     * 设置The metric to query. Values:
-<li>`l7Flow_outFlux`: Traffic used for EdegOne responses</li>
-<li>`l7Flow_inFlux`: Traffic used for EdegOne requests</li>
-<li>`l7Flow_outBandwidth`: Bandwidth used for EdegOne responses</li>
-<li>`l7Flow_inBandwidth`: Bandwidth used for EdegOne requests</li>
-<li>`l7Flow_hit_outFlux`: Traffic used for cache hit</li>
-<li>`l7Flow_request`: Access requests</li>
-<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
-<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
-                     * @param _metricNames The metric to query. Values:
-<li>`l7Flow_outFlux`: Traffic used for EdegOne responses</li>
-<li>`l7Flow_inFlux`: Traffic used for EdegOne requests</li>
-<li>`l7Flow_outBandwidth`: Bandwidth used for EdegOne responses</li>
-<li>`l7Flow_inBandwidth`: Bandwidth used for EdegOne requests</li>
-<li>`l7Flow_hit_outFlux`: Traffic used for cache hit</li>
-<li>`l7Flow_request`: Access requests</li>
-<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
-<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
+                     * 设置Queried metric. Valid values:
+<li>l7Flow_outFlux: EdgeOne response traffic;</li>
+<li>l7Flow_inFlux: EdgeOne request traffic;</li>
+<li>l7Flow_outBandwidth: EdgeOne response bandwidth;</li>
+<li>l7Flow_inBandwidth: EdgeOne request traffic;</li>
+<li>l7Flow_hit_outFlux: cache hit traffic;</li>
+<li>l7Flow_request: number of access requests;</li>
+<li>l7Flow_flux: upstream and downstream traffic of access requests;</li>
+<li>l7Flow_bandwidth: upstream and downstream bandwidths of access requests.</li>
+                     * @param _metricNames Queried metric. Valid values:
+<li>l7Flow_outFlux: EdgeOne response traffic;</li>
+<li>l7Flow_inFlux: EdgeOne request traffic;</li>
+<li>l7Flow_outBandwidth: EdgeOne response bandwidth;</li>
+<li>l7Flow_inBandwidth: EdgeOne request traffic;</li>
+<li>l7Flow_hit_outFlux: cache hit traffic;</li>
+<li>l7Flow_request: number of access requests;</li>
+<li>l7Flow_flux: upstream and downstream traffic of access requests;</li>
+<li>l7Flow_bandwidth: upstream and downstream bandwidths of access requests.</li>
                      * 
                      */
                     void SetMetricNames(const std::vector<std::string>& _metricNames);
@@ -139,15 +139,15 @@ namespace TencentCloud
                     bool MetricNamesHasBeenSet() const;
 
                     /**
-                     * 获取ZoneId set. This parameter is required.
-                     * @return ZoneIds ZoneId set. This parameter is required.
+                     * 获取Site ID set. This parameter is required.
+                     * @return ZoneIds Site ID set. This parameter is required.
                      * 
                      */
                     std::vector<std::string> GetZoneIds() const;
 
                     /**
-                     * 设置ZoneId set. This parameter is required.
-                     * @param _zoneIds ZoneId set. This parameter is required.
+                     * 设置Site ID set. This parameter is required.
+                     * @param _zoneIds Site ID set. This parameter is required.
                      * 
                      */
                     void SetZoneIds(const std::vector<std::string>& _zoneIds);
@@ -160,15 +160,15 @@ namespace TencentCloud
                     bool ZoneIdsHasBeenSet() const;
 
                     /**
-                     * 获取Queried domain name set. This parameter has been discarded.
-                     * @return Domains Queried domain name set. This parameter has been discarded.
+                     * 获取Queried domain name set. This parameter has been deprecated.
+                     * @return Domains Queried domain name set. This parameter has been deprecated.
                      * 
                      */
                     std::vector<std::string> GetDomains() const;
 
                     /**
-                     * 设置Queried domain name set. This parameter has been discarded.
-                     * @param _domains Queried domain name set. This parameter has been discarded.
+                     * 设置Queried domain name set. This parameter has been deprecated.
+                     * @param _domains Queried domain name set. This parameter has been deprecated.
                      * 
                      */
                     void SetDomains(const std::vector<std::string>& _domains);
@@ -181,31 +181,31 @@ namespace TencentCloud
                     bool DomainsHasBeenSet() const;
 
                     /**
-                     * 获取The protocol type. Values:
-<li>`http`: HTTP protocol;</li>
-<li>`https`: HTTPS protocol;</li>
-<li>`http2`: HTTP2 protocol;</li>
-<li>`all`: All protocols. </li>If it's not specified, `all` is used. This parameter is not yet available now.
-                     * @return Protocol The protocol type. Values:
-<li>`http`: HTTP protocol;</li>
-<li>`https`: HTTPS protocol;</li>
-<li>`http2`: HTTP2 protocol;</li>
-<li>`all`: All protocols. </li>If it's not specified, `all` is used. This parameter is not yet available now.
+                     * 获取Protocol type of the query. Valid values:
+<li>http: HTTP protocol;</li>
+<li>https: HTTPS protocol;</li>
+<li>http2: HTTP/2 protocol;</li>
+<li>all: all protocols.</li>If this parameter is not input, the default value `all` is used. This parameter is not yet effective.
+                     * @return Protocol Protocol type of the query. Valid values:
+<li>http: HTTP protocol;</li>
+<li>https: HTTPS protocol;</li>
+<li>http2: HTTP/2 protocol;</li>
+<li>all: all protocols.</li>If this parameter is not input, the default value `all` is used. This parameter is not yet effective.
                      * 
                      */
                     std::string GetProtocol() const;
 
                     /**
-                     * 设置The protocol type. Values:
-<li>`http`: HTTP protocol;</li>
-<li>`https`: HTTPS protocol;</li>
-<li>`http2`: HTTP2 protocol;</li>
-<li>`all`: All protocols. </li>If it's not specified, `all` is used. This parameter is not yet available now.
-                     * @param _protocol The protocol type. Values:
-<li>`http`: HTTP protocol;</li>
-<li>`https`: HTTPS protocol;</li>
-<li>`http2`: HTTP2 protocol;</li>
-<li>`all`: All protocols. </li>If it's not specified, `all` is used. This parameter is not yet available now.
+                     * 设置Protocol type of the query. Valid values:
+<li>http: HTTP protocol;</li>
+<li>https: HTTPS protocol;</li>
+<li>http2: HTTP/2 protocol;</li>
+<li>all: all protocols.</li>If this parameter is not input, the default value `all` is used. This parameter is not yet effective.
+                     * @param _protocol Protocol type of the query. Valid values:
+<li>http: HTTP protocol;</li>
+<li>https: HTTPS protocol;</li>
+<li>http2: HTTP/2 protocol;</li>
+<li>all: all protocols.</li>If this parameter is not input, the default value `all` is used. This parameter is not yet effective.
                      * 
                      */
                     void SetProtocol(const std::string& _protocol);
@@ -218,31 +218,31 @@ namespace TencentCloud
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取The query granularity. Values:
-<li>`min`: 1 minute;</li>
-<li>`5min`: 5 minutes;</li>
-<li>`hour`: 1 hour;</li>
-<li>`day`: One day</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < Period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
-                     * @return Interval The query granularity. Values:
-<li>`min`: 1 minute;</li>
-<li>`5min`: 5 minutes;</li>
-<li>`hour`: 1 hour;</li>
-<li>`day`: One day</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < Period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
+                     * 获取Time granularity of the query. Valid values:
+<li>min: 1 minute;</li>
+<li>5min: 5 minutes;</li>
+<li>hour: 1 hour;</li>
+<li>day: 1 day.</li>If this parameter is not input, the granularity will be automatically inferred based on the interval between the start time and end time. Specifically, the granularity value is min, 5min, hour, and day respectively for queries of data within 1 hour, within 2 days, within 7 days, and over 7 days.
+                     * @return Interval Time granularity of the query. Valid values:
+<li>min: 1 minute;</li>
+<li>5min: 5 minutes;</li>
+<li>hour: 1 hour;</li>
+<li>day: 1 day.</li>If this parameter is not input, the granularity will be automatically inferred based on the interval between the start time and end time. Specifically, the granularity value is min, 5min, hour, and day respectively for queries of data within 1 hour, within 2 days, within 7 days, and over 7 days.
                      * 
                      */
                     std::string GetInterval() const;
 
                     /**
-                     * 设置The query granularity. Values:
-<li>`min`: 1 minute;</li>
-<li>`5min`: 5 minutes;</li>
-<li>`hour`: 1 hour;</li>
-<li>`day`: One day</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < Period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
-                     * @param _interval The query granularity. Values:
-<li>`min`: 1 minute;</li>
-<li>`5min`: 5 minutes;</li>
-<li>`hour`: 1 hour;</li>
-<li>`day`: One day</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < Period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
+                     * 设置Time granularity of the query. Valid values:
+<li>min: 1 minute;</li>
+<li>5min: 5 minutes;</li>
+<li>hour: 1 hour;</li>
+<li>day: 1 day.</li>If this parameter is not input, the granularity will be automatically inferred based on the interval between the start time and end time. Specifically, the granularity value is min, 5min, hour, and day respectively for queries of data within 1 hour, within 2 days, within 7 days, and over 7 days.
+                     * @param _interval Time granularity of the query. Valid values:
+<li>min: 1 minute;</li>
+<li>5min: 5 minutes;</li>
+<li>hour: 1 hour;</li>
+<li>day: 1 day.</li>If this parameter is not input, the granularity will be automatically inferred based on the interval between the start time and end time. Specifically, the granularity value is min, 5min, hour, and day respectively for queries of data within 1 hour, within 2 days, within 7 days, and over 7 days.
                      * 
                      */
                     void SetInterval(const std::string& _interval);
@@ -255,31 +255,31 @@ namespace TencentCloud
                     bool IntervalHasBeenSet() const;
 
                     /**
-                     * 获取Filtering condition. The detailed filtering condition key values are as follows: 
-<li>socket: Filter based on HTTP protocol type. Corresponding value options: <br> HTTP: HTTP protocol; <br> HTTPS: HTTPS protocol; <br> QUIC: QUIC protocol. </li>
-<li>domains: Filter based on domain name. </li>
-<li>tagKey: Filter based on Tag Key. </li>
-<li>tagValue: Filter based on Tag Value. </li>
-                     * @return Filters Filtering condition. The detailed filtering condition key values are as follows: 
-<li>socket: Filter based on HTTP protocol type. Corresponding value options: <br> HTTP: HTTP protocol; <br> HTTPS: HTTPS protocol; <br> QUIC: QUIC protocol. </li>
-<li>domains: Filter based on domain name. </li>
-<li>tagKey: Filter based on Tag Key. </li>
-<li>tagValue: Filter based on Tag Value. </li>
+                     * 获取Filter criteria. The detailed Key values of filter criteria are as follows:
+<li>socket:<br>   Filter by [<strong>HTTP protocol type</strong>].<br>   Valid values:<br>   HTTP: HTTP protocol; <br>   HTTPS: HTTPS protocol;<br>   QUIC: QUIC protocol.</li>
+<li>domain<br>?? Filter by [<strong>domain name</strong>].</li>
+<li>tagKey<br>?? Filter by [<strong>tag key</strong>].</li>
+<li>tagValue<br>?? Filter by [<strong>tag value</strong>].</li>
+                     * @return Filters Filter criteria. The detailed Key values of filter criteria are as follows:
+<li>socket:<br>   Filter by [<strong>HTTP protocol type</strong>].<br>   Valid values:<br>   HTTP: HTTP protocol; <br>   HTTPS: HTTPS protocol;<br>   QUIC: QUIC protocol.</li>
+<li>domain<br>?? Filter by [<strong>domain name</strong>].</li>
+<li>tagKey<br>?? Filter by [<strong>tag key</strong>].</li>
+<li>tagValue<br>?? Filter by [<strong>tag value</strong>].</li>
                      * 
                      */
                     std::vector<QueryCondition> GetFilters() const;
 
                     /**
-                     * 设置Filtering condition. The detailed filtering condition key values are as follows: 
-<li>socket: Filter based on HTTP protocol type. Corresponding value options: <br> HTTP: HTTP protocol; <br> HTTPS: HTTPS protocol; <br> QUIC: QUIC protocol. </li>
-<li>domains: Filter based on domain name. </li>
-<li>tagKey: Filter based on Tag Key. </li>
-<li>tagValue: Filter based on Tag Value. </li>
-                     * @param _filters Filtering condition. The detailed filtering condition key values are as follows: 
-<li>socket: Filter based on HTTP protocol type. Corresponding value options: <br> HTTP: HTTP protocol; <br> HTTPS: HTTPS protocol; <br> QUIC: QUIC protocol. </li>
-<li>domains: Filter based on domain name. </li>
-<li>tagKey: Filter based on Tag Key. </li>
-<li>tagValue: Filter based on Tag Value. </li>
+                     * 设置Filter criteria. The detailed Key values of filter criteria are as follows:
+<li>socket:<br>   Filter by [<strong>HTTP protocol type</strong>].<br>   Valid values:<br>   HTTP: HTTP protocol; <br>   HTTPS: HTTPS protocol;<br>   QUIC: QUIC protocol.</li>
+<li>domain<br>?? Filter by [<strong>domain name</strong>].</li>
+<li>tagKey<br>?? Filter by [<strong>tag key</strong>].</li>
+<li>tagValue<br>?? Filter by [<strong>tag value</strong>].</li>
+                     * @param _filters Filter criteria. The detailed Key values of filter criteria are as follows:
+<li>socket:<br>   Filter by [<strong>HTTP protocol type</strong>].<br>   Valid values:<br>   HTTP: HTTP protocol; <br>   HTTPS: HTTPS protocol;<br>   QUIC: QUIC protocol.</li>
+<li>domain<br>?? Filter by [<strong>domain name</strong>].</li>
+<li>tagKey<br>?? Filter by [<strong>tag key</strong>].</li>
+<li>tagValue<br>?? Filter by [<strong>tag value</strong>].</li>
                      * 
                      */
                     void SetFilters(const std::vector<QueryCondition>& _filters);
@@ -292,27 +292,27 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取Geolocation scope. Values:
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-<li>`global`: Global</li>If this field is not specified, the default value `global` is used.
-                     * @return Area Geolocation scope. Values:
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-<li>`global`: Global</li>If this field is not specified, the default value `global` is used.
+                     * 获取Data ownership area. Valid values:
+<li>overseas: global (excluding the Chinese mainland) data;</li>
+<li>mainland: Chinese mainland data;</li>
+<li>global: global data.</li>If this parameter is not input, the default value `global` is used.
+                     * @return Area Data ownership area. Valid values:
+<li>overseas: global (excluding the Chinese mainland) data;</li>
+<li>mainland: Chinese mainland data;</li>
+<li>global: global data.</li>If this parameter is not input, the default value `global` is used.
                      * 
                      */
                     std::string GetArea() const;
 
                     /**
-                     * 设置Geolocation scope. Values:
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-<li>`global`: Global</li>If this field is not specified, the default value `global` is used.
-                     * @param _area Geolocation scope. Values:
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-<li>`global`: Global</li>If this field is not specified, the default value `global` is used.
+                     * 设置Data ownership area. Valid values:
+<li>overseas: global (excluding the Chinese mainland) data;</li>
+<li>mainland: Chinese mainland data;</li>
+<li>global: global data.</li>If this parameter is not input, the default value `global` is used.
+                     * @param _area Data ownership area. Valid values:
+<li>overseas: global (excluding the Chinese mainland) data;</li>
+<li>mainland: Chinese mainland data;</li>
+<li>global: global data.</li>If this parameter is not input, the default value `global` is used.
                      * 
                      */
                     void SetArea(const std::string& _area);
@@ -327,78 +327,78 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The start time.
+                     * Start time.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * The end time.
+                     * End time.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * The metric to query. Values:
-<li>`l7Flow_outFlux`: Traffic used for EdegOne responses</li>
-<li>`l7Flow_inFlux`: Traffic used for EdegOne requests</li>
-<li>`l7Flow_outBandwidth`: Bandwidth used for EdegOne responses</li>
-<li>`l7Flow_inBandwidth`: Bandwidth used for EdegOne requests</li>
-<li>`l7Flow_hit_outFlux`: Traffic used for cache hit</li>
-<li>`l7Flow_request`: Access requests</li>
-<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
-<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
+                     * Queried metric. Valid values:
+<li>l7Flow_outFlux: EdgeOne response traffic;</li>
+<li>l7Flow_inFlux: EdgeOne request traffic;</li>
+<li>l7Flow_outBandwidth: EdgeOne response bandwidth;</li>
+<li>l7Flow_inBandwidth: EdgeOne request traffic;</li>
+<li>l7Flow_hit_outFlux: cache hit traffic;</li>
+<li>l7Flow_request: number of access requests;</li>
+<li>l7Flow_flux: upstream and downstream traffic of access requests;</li>
+<li>l7Flow_bandwidth: upstream and downstream bandwidths of access requests.</li>
                      */
                     std::vector<std::string> m_metricNames;
                     bool m_metricNamesHasBeenSet;
 
                     /**
-                     * ZoneId set. This parameter is required.
+                     * Site ID set. This parameter is required.
                      */
                     std::vector<std::string> m_zoneIds;
                     bool m_zoneIdsHasBeenSet;
 
                     /**
-                     * Queried domain name set. This parameter has been discarded.
+                     * Queried domain name set. This parameter has been deprecated.
                      */
                     std::vector<std::string> m_domains;
                     bool m_domainsHasBeenSet;
 
                     /**
-                     * The protocol type. Values:
-<li>`http`: HTTP protocol;</li>
-<li>`https`: HTTPS protocol;</li>
-<li>`http2`: HTTP2 protocol;</li>
-<li>`all`: All protocols. </li>If it's not specified, `all` is used. This parameter is not yet available now.
+                     * Protocol type of the query. Valid values:
+<li>http: HTTP protocol;</li>
+<li>https: HTTPS protocol;</li>
+<li>http2: HTTP/2 protocol;</li>
+<li>all: all protocols.</li>If this parameter is not input, the default value `all` is used. This parameter is not yet effective.
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * The query granularity. Values:
-<li>`min`: 1 minute;</li>
-<li>`5min`: 5 minutes;</li>
-<li>`hour`: 1 hour;</li>
-<li>`day`: One day</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < Period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
+                     * Time granularity of the query. Valid values:
+<li>min: 1 minute;</li>
+<li>5min: 5 minutes;</li>
+<li>hour: 1 hour;</li>
+<li>day: 1 day.</li>If this parameter is not input, the granularity will be automatically inferred based on the interval between the start time and end time. Specifically, the granularity value is min, 5min, hour, and day respectively for queries of data within 1 hour, within 2 days, within 7 days, and over 7 days.
                      */
                     std::string m_interval;
                     bool m_intervalHasBeenSet;
 
                     /**
-                     * Filtering condition. The detailed filtering condition key values are as follows: 
-<li>socket: Filter based on HTTP protocol type. Corresponding value options: <br> HTTP: HTTP protocol; <br> HTTPS: HTTPS protocol; <br> QUIC: QUIC protocol. </li>
-<li>domains: Filter based on domain name. </li>
-<li>tagKey: Filter based on Tag Key. </li>
-<li>tagValue: Filter based on Tag Value. </li>
+                     * Filter criteria. The detailed Key values of filter criteria are as follows:
+<li>socket:<br>   Filter by [<strong>HTTP protocol type</strong>].<br>   Valid values:<br>   HTTP: HTTP protocol; <br>   HTTPS: HTTPS protocol;<br>   QUIC: QUIC protocol.</li>
+<li>domain<br>?? Filter by [<strong>domain name</strong>].</li>
+<li>tagKey<br>?? Filter by [<strong>tag key</strong>].</li>
+<li>tagValue<br>?? Filter by [<strong>tag value</strong>].</li>
                      */
                     std::vector<QueryCondition> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * Geolocation scope. Values:
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-<li>`global`: Global</li>If this field is not specified, the default value `global` is used.
+                     * Data ownership area. Valid values:
+<li>overseas: global (excluding the Chinese mainland) data;</li>
+<li>mainland: Chinese mainland data;</li>
+<li>global: global data.</li>If this parameter is not input, the default value `global` is used.
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;

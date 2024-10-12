@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The address of the custom HTTP interface for real-time log delivery. Currently, only HTTP and HTTPS protocols are supported.
-                     * @return Url The address of the custom HTTP interface for real-time log delivery. Currently, only HTTP and HTTPS protocols are supported.
+                     * 获取Address of the custom HTTP API for real-time log shipping. Currently, only HTTP and HTTPS protocols are supported.
+                     * @return Url Address of the custom HTTP API for real-time log shipping. Currently, only HTTP and HTTPS protocols are supported.
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置The address of the custom HTTP interface for real-time log delivery. Currently, only HTTP and HTTPS protocols are supported.
-                     * @param _url The address of the custom HTTP interface for real-time log delivery. Currently, only HTTP and HTTPS protocols are supported.
+                     * 设置Address of the custom HTTP API for real-time log shipping. Currently, only HTTP and HTTPS protocols are supported.
+                     * @param _url Address of the custom HTTP API for real-time log shipping. Currently, only HTTP and HTTPS protocols are supported.
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the custom SecretId for generating an encrypted signature. This parameter is required if the origin server needs authentication.
-                     * @return AccessId Specifies the custom SecretId for generating an encrypted signature. This parameter is required if the origin server needs authentication.
+                     * 获取Custom SecretId used for generating an encrypted signature. This parameter is required if the origin server needs authentication.
+                     * @return AccessId Custom SecretId used for generating an encrypted signature. This parameter is required if the origin server needs authentication.
                      * 
                      */
                     std::string GetAccessId() const;
 
                     /**
-                     * 设置Specifies the custom SecretId for generating an encrypted signature. This parameter is required if the origin server needs authentication.
-                     * @param _accessId Specifies the custom SecretId for generating an encrypted signature. This parameter is required if the origin server needs authentication.
+                     * 设置Custom SecretId used for generating an encrypted signature. This parameter is required if the origin server needs authentication.
+                     * @param _accessId Custom SecretId used for generating an encrypted signature. This parameter is required if the origin server needs authentication.
                      * 
                      */
                     void SetAccessId(const std::string& _accessId);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool AccessIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the custom SecretKey for generating an encrypted signature. This parameter is required if the origin server needs authentication.
-                     * @return AccessKey Specifies the custom SecretKey for generating an encrypted signature. This parameter is required if the origin server needs authentication.
+                     * 获取Custom SecretKey used for generating an encrypted signature. This parameter is required if the origin server needs authentication.
+                     * @return AccessKey Custom SecretKey used for generating an encrypted signature. This parameter is required if the origin server needs authentication.
                      * 
                      */
                     std::string GetAccessKey() const;
 
                     /**
-                     * 设置Specifies the custom SecretKey for generating an encrypted signature. This parameter is required if the origin server needs authentication.
-                     * @param _accessKey Specifies the custom SecretKey for generating an encrypted signature. This parameter is required if the origin server needs authentication.
+                     * 设置Custom SecretKey used for generating an encrypted signature. This parameter is required if the origin server needs authentication.
+                     * @param _accessKey Custom SecretKey used for generating an encrypted signature. This parameter is required if the origin server needs authentication.
                      * 
                      */
                     void SetAccessKey(const std::string& _accessKey);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool AccessKeyHasBeenSet() const;
 
                     /**
-                     * 获取The type of data compression. Valid values:<li>gzip: gzip compression.</li>If this field is not filled in, compression is disabled.
-                     * @return CompressType The type of data compression. Valid values:<li>gzip: gzip compression.</li>If this field is not filled in, compression is disabled.
+                     * 获取Type of data compression. Valid values:<li>gzip: gzip compression.</li>If this parameter is not input, compression is disabled.
+                     * @return CompressType Type of data compression. Valid values:<li>gzip: gzip compression.</li>If this parameter is not input, compression is disabled.
                      * 
                      */
                     std::string GetCompressType() const;
 
                     /**
-                     * 设置The type of data compression. Valid values:<li>gzip: gzip compression.</li>If this field is not filled in, compression is disabled.
-                     * @param _compressType The type of data compression. Valid values:<li>gzip: gzip compression.</li>If this field is not filled in, compression is disabled.
+                     * 设置Type of data compression. Valid values:<li>gzip: gzip compression.</li>If this parameter is not input, compression is disabled.
+                     * @param _compressType Type of data compression. Valid values:<li>gzip: gzip compression.</li>If this parameter is not input, compression is disabled.
                      * 
                      */
                     void SetCompressType(const std::string& _compressType);
@@ -132,23 +132,23 @@ namespace TencentCloud
                     bool CompressTypeHasBeenSet() const;
 
                     /**
-                     * 获取The type of the application layer protocol used when POST requests log delivery. Valid values:
+                     * 获取Type of the application layer protocol used in POST requests for log shipping. Valid values: 
 <li>http: HTTP protocol;</li>
-<li>https: HTTPS protocol.</li>If this field is not filled in, the protocol type will be parsed from the URL field.
-                     * @return Protocol The type of the application layer protocol used when POST requests log delivery. Valid values:
+<li>https: HTTPS protocol.</li>If this parameter is not input, the protocol type is parsed from the URL field.	
+                     * @return Protocol Type of the application layer protocol used in POST requests for log shipping. Valid values: 
 <li>http: HTTP protocol;</li>
-<li>https: HTTPS protocol.</li>If this field is not filled in, the protocol type will be parsed from the URL field.
+<li>https: HTTPS protocol.</li>If this parameter is not input, the protocol type is parsed from the URL field.	
                      * 
                      */
                     std::string GetProtocol() const;
 
                     /**
-                     * 设置The type of the application layer protocol used when POST requests log delivery. Valid values:
+                     * 设置Type of the application layer protocol used in POST requests for log shipping. Valid values: 
 <li>http: HTTP protocol;</li>
-<li>https: HTTPS protocol.</li>If this field is not filled in, the protocol type will be parsed from the URL field.
-                     * @param _protocol The type of the application layer protocol used when POST requests log delivery. Valid values:
+<li>https: HTTPS protocol.</li>If this parameter is not input, the protocol type is parsed from the URL field.	
+                     * @param _protocol Type of the application layer protocol used in POST requests for log shipping. Valid values: 
 <li>http: HTTP protocol;</li>
-<li>https: HTTPS protocol.</li>If this field is not filled in, the protocol type will be parsed from the URL field.
+<li>https: HTTPS protocol.</li>If this parameter is not input, the protocol type is parsed from the URL field.	
                      * 
                      */
                     void SetProtocol(const std::string& _protocol);
@@ -161,15 +161,15 @@ namespace TencentCloud
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取The custom request header carried during log delivery. If the header name you fill in is the default header carried by EdgeOne log delivery such as Content-Type, then the header value you fill in will override the default value. The header value supports referring to a single variable ${batchSize} to obtain the number of log entries included in each POST request.
-                     * @return Headers The custom request header carried during log delivery. If the header name you fill in is the default header carried by EdgeOne log delivery such as Content-Type, then the header value you fill in will override the default value. The header value supports referring to a single variable ${batchSize} to obtain the number of log entries included in each POST request.
+                     * 获取Custom request header carried in log shipping. For a header carried by default in EdgeOne log pushing, such as Content-Type, the header value you input will overwrite the default value. The header value references a single variable ${batchSize} to obtain the number of log entries included in each POST request.
+                     * @return Headers Custom request header carried in log shipping. For a header carried by default in EdgeOne log pushing, such as Content-Type, the header value you input will overwrite the default value. The header value references a single variable ${batchSize} to obtain the number of log entries included in each POST request.
                      * 
                      */
                     std::vector<Header> GetHeaders() const;
 
                     /**
-                     * 设置The custom request header carried during log delivery. If the header name you fill in is the default header carried by EdgeOne log delivery such as Content-Type, then the header value you fill in will override the default value. The header value supports referring to a single variable ${batchSize} to obtain the number of log entries included in each POST request.
-                     * @param _headers The custom request header carried during log delivery. If the header name you fill in is the default header carried by EdgeOne log delivery such as Content-Type, then the header value you fill in will override the default value. The header value supports referring to a single variable ${batchSize} to obtain the number of log entries included in each POST request.
+                     * 设置Custom request header carried in log shipping. For a header carried by default in EdgeOne log pushing, such as Content-Type, the header value you input will overwrite the default value. The header value references a single variable ${batchSize} to obtain the number of log entries included in each POST request.
+                     * @param _headers Custom request header carried in log shipping. For a header carried by default in EdgeOne log pushing, such as Content-Type, the header value you input will overwrite the default value. The header value references a single variable ${batchSize} to obtain the number of log entries included in each POST request.
                      * 
                      */
                     void SetHeaders(const std::vector<Header>& _headers);
@@ -184,39 +184,39 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The address of the custom HTTP interface for real-time log delivery. Currently, only HTTP and HTTPS protocols are supported.
+                     * Address of the custom HTTP API for real-time log shipping. Currently, only HTTP and HTTPS protocols are supported.
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
 
                     /**
-                     * Specifies the custom SecretId for generating an encrypted signature. This parameter is required if the origin server needs authentication.
+                     * Custom SecretId used for generating an encrypted signature. This parameter is required if the origin server needs authentication.
                      */
                     std::string m_accessId;
                     bool m_accessIdHasBeenSet;
 
                     /**
-                     * Specifies the custom SecretKey for generating an encrypted signature. This parameter is required if the origin server needs authentication.
+                     * Custom SecretKey used for generating an encrypted signature. This parameter is required if the origin server needs authentication.
                      */
                     std::string m_accessKey;
                     bool m_accessKeyHasBeenSet;
 
                     /**
-                     * The type of data compression. Valid values:<li>gzip: gzip compression.</li>If this field is not filled in, compression is disabled.
+                     * Type of data compression. Valid values:<li>gzip: gzip compression.</li>If this parameter is not input, compression is disabled.
                      */
                     std::string m_compressType;
                     bool m_compressTypeHasBeenSet;
 
                     /**
-                     * The type of the application layer protocol used when POST requests log delivery. Valid values:
+                     * Type of the application layer protocol used in POST requests for log shipping. Valid values: 
 <li>http: HTTP protocol;</li>
-<li>https: HTTPS protocol.</li>If this field is not filled in, the protocol type will be parsed from the URL field.
+<li>https: HTTPS protocol.</li>If this parameter is not input, the protocol type is parsed from the URL field.	
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * The custom request header carried during log delivery. If the header name you fill in is the default header carried by EdgeOne log delivery such as Content-Type, then the header value you fill in will override the default value. The header value supports referring to a single variable ${batchSize} to obtain the number of log entries included in each POST request.
+                     * Custom request header carried in log shipping. For a header carried by default in EdgeOne log pushing, such as Content-Type, the header value you input will overwrite the default value. The header value references a single variable ${batchSize} to obtain the number of log entries included in each POST request.
                      */
                     std::vector<Header> m_headers;
                     bool m_headersHasBeenSet;

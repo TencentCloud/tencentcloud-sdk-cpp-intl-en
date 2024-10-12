@@ -47,15 +47,43 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @return Mode Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Template level name. Valid values:
+<li>sup_loose: super loose;</li>
+<li>loose: loose;</li>
+<li>emergency: emergency;</li>
+<li>normal: normal;</li>
+<li>strict: strict;</li>
+<li>close: disabled, effective only for precise rate limiting.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @return Mode Template level name. Valid values:
+<li>sup_loose: super loose;</li>
+<li>loose: loose;</li>
+<li>emergency: emergency;</li>
+<li>normal: normal;</li>
+<li>strict: strict;</li>
+<li>close: disabled, effective only for precise rate limiting.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     std::string GetMode() const;
 
                     /**
-                     * 设置Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @param _mode Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 设置Template level name. Valid values:
+<li>sup_loose: super loose;</li>
+<li>loose: loose;</li>
+<li>emergency: emergency;</li>
+<li>normal: normal;</li>
+<li>strict: strict;</li>
+<li>close: disabled, effective only for precise rate limiting.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @param _mode Template level name. Valid values:
+<li>sup_loose: super loose;</li>
+<li>loose: loose;</li>
+<li>emergency: emergency;</li>
+<li>normal: normal;</li>
+<li>strict: strict;</li>
+<li>close: disabled, effective only for precise rate limiting.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     void SetMode(const std::string& _mode);
@@ -68,15 +96,15 @@ namespace TencentCloud
                     bool ModeHasBeenSet() const;
 
                     /**
-                     * 获取The unique ID.
-                     * @return ID The unique ID.
+                     * 获取Unique ID.
+                     * @return ID Unique ID.
                      * 
                      */
                     int64_t GetID() const;
 
                     /**
-                     * 设置The unique ID.
-                     * @param _iD The unique ID.
+                     * 设置Unique ID.
+                     * @param _iD Unique ID.
                      * 
                      */
                     void SetID(const int64_t& _iD);
@@ -89,15 +117,27 @@ namespace TencentCloud
                     bool IDHasBeenSet() const;
 
                     /**
-                     * 获取Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @return Action Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Template action. Valid values:
+<li>alg: JavaScript challenge;</li>
+<li>monitor: observation.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @return Action Template action. Valid values:
+<li>alg: JavaScript challenge;</li>
+<li>monitor: observation.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     std::string GetAction() const;
 
                     /**
-                     * 设置Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @param _action Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 设置Template action. Valid values:
+<li>alg: JavaScript challenge;</li>
+<li>monitor: observation.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @param _action Template action. Valid values:
+<li>alg: JavaScript challenge;</li>
+<li>monitor: observation.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     void SetAction(const std::string& _action);
@@ -110,15 +150,19 @@ namespace TencentCloud
                     bool ActionHasBeenSet() const;
 
                     /**
-                     * 获取Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @return PunishTime Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Penalty duration, in seconds. Value range: 0-2 days.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @return PunishTime Penalty duration, in seconds. Value range: 0-2 days.
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     int64_t GetPunishTime() const;
 
                     /**
-                     * 设置Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @param _punishTime Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 设置Penalty duration, in seconds. Value range: 0-2 days.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @param _punishTime Penalty duration, in seconds. Value range: 0-2 days.
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     void SetPunishTime(const int64_t& _punishTime);
@@ -131,15 +175,15 @@ namespace TencentCloud
                     bool PunishTimeHasBeenSet() const;
 
                     /**
-                     * 获取The request threshold. Value range: 0-4294967294.
-                     * @return Threshold The request threshold. Value range: 0-4294967294.
+                     * 获取Statistical threshold, in times. Value range: 0-4294967294.
+                     * @return Threshold Statistical threshold, in times. Value range: 0-4294967294.
                      * 
                      */
                     int64_t GetThreshold() const;
 
                     /**
-                     * 设置The request threshold. Value range: 0-4294967294.
-                     * @param _threshold The request threshold. Value range: 0-4294967294.
+                     * 设置Statistical threshold, in times. Value range: 0-4294967294.
+                     * @param _threshold Statistical threshold, in times. Value range: 0-4294967294.
                      * 
                      */
                     void SetThreshold(const int64_t& _threshold);
@@ -152,15 +196,15 @@ namespace TencentCloud
                     bool ThresholdHasBeenSet() const;
 
                     /**
-                     * 获取The statistical period. Value range: 0-120 seconds.
-                     * @return Period The statistical period. Value range: 0-120 seconds.
+                     * 获取Statistical cycle. Value range: 0-120 seconds.
+                     * @return Period Statistical cycle. Value range: 0-120 seconds.
                      * 
                      */
                     int64_t GetPeriod() const;
 
                     /**
-                     * 设置The statistical period. Value range: 0-120 seconds.
-                     * @param _period The statistical period. Value range: 0-120 seconds.
+                     * 设置Statistical cycle. Value range: 0-120 seconds.
+                     * @param _period Statistical cycle. Value range: 0-120 seconds.
                      * 
                      */
                     void SetPeriod(const int64_t& _period);
@@ -175,37 +219,48 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * Template level name. Valid values:
+<li>sup_loose: super loose;</li>
+<li>loose: loose;</li>
+<li>emergency: emergency;</li>
+<li>normal: normal;</li>
+<li>strict: strict;</li>
+<li>close: disabled, effective only for precise rate limiting.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      */
                     std::string m_mode;
                     bool m_modeHasBeenSet;
 
                     /**
-                     * The unique ID.
+                     * Unique ID.
                      */
                     int64_t m_iD;
                     bool m_iDHasBeenSet;
 
                     /**
-                     * Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * Template action. Valid values:
+<li>alg: JavaScript challenge;</li>
+<li>monitor: observation.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;
 
                     /**
-                     * Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * Penalty duration, in seconds. Value range: 0-2 days.
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      */
                     int64_t m_punishTime;
                     bool m_punishTimeHasBeenSet;
 
                     /**
-                     * The request threshold. Value range: 0-4294967294.
+                     * Statistical threshold, in times. Value range: 0-4294967294.
                      */
                     int64_t m_threshold;
                     bool m_thresholdHasBeenSet;
 
                     /**
-                     * The statistical period. Value range: 0-120 seconds.
+                     * Statistical cycle. Value range: 0-120 seconds.
                      */
                     int64_t m_period;
                     bool m_periodHasBeenSet;

@@ -53,15 +53,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The ID of the real-time log delivery task.
-                     * @return TaskId The ID of the real-time log delivery task.
+                     * 获取ID of a real-time log shipping task.
+                     * @return TaskId ID of a real-time log shipping task.
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置The ID of the real-time log delivery task.
-                     * @param _taskId The ID of the real-time log delivery task.
+                     * 设置ID of a real-time log shipping task.
+                     * @param _taskId ID of a real-time log shipping task.
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -74,15 +74,15 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取The name of the real-time log delivery task.
-                     * @return TaskName The name of the real-time log delivery task.
+                     * 获取Name of a real-time log shipping task.
+                     * @return TaskName Name of a real-time log shipping task.
                      * 
                      */
                     std::string GetTaskName() const;
 
                     /**
-                     * 设置The name of the real-time log delivery task.
-                     * @param _taskName The name of the real-time log delivery task.
+                     * 设置Name of a real-time log shipping task.
+                     * @param _taskName Name of a real-time log shipping task.
                      * 
                      */
                     void SetTaskName(const std::string& _taskName);
@@ -95,15 +95,15 @@ namespace TencentCloud
                     bool TaskNameHasBeenSet() const;
 
                     /**
-                     * 获取The status of the real-time log delivery task. Valid values:<li>enabled: Enabled;</li><li>disabled: Disabled;</li><li>deleted: Abnormal deletion. Check whether the destination Tencent Cloud CLS log set/log topic has been deleted.</li>
-                     * @return DeliveryStatus The status of the real-time log delivery task. Valid values:<li>enabled: Enabled;</li><li>disabled: Disabled;</li><li>deleted: Abnormal deletion. Check whether the destination Tencent Cloud CLS log set/log topic has been deleted.</li>
+                     * 获取Status of a real-time log shipping task. Valid values: <li>enabled: enabled;</li><li>disabled: disabled;</li><li>deleted: deleted abnormally. Check whether the destination log set/log topic of Tencent Cloud CLS has been deleted.</li>
+                     * @return DeliveryStatus Status of a real-time log shipping task. Valid values: <li>enabled: enabled;</li><li>disabled: disabled;</li><li>deleted: deleted abnormally. Check whether the destination log set/log topic of Tencent Cloud CLS has been deleted.</li>
                      * 
                      */
                     std::string GetDeliveryStatus() const;
 
                     /**
-                     * 设置The status of the real-time log delivery task. Valid values:<li>enabled: Enabled;</li><li>disabled: Disabled;</li><li>deleted: Abnormal deletion. Check whether the destination Tencent Cloud CLS log set/log topic has been deleted.</li>
-                     * @param _deliveryStatus The status of the real-time log delivery task. Valid values:<li>enabled: Enabled;</li><li>disabled: Disabled;</li><li>deleted: Abnormal deletion. Check whether the destination Tencent Cloud CLS log set/log topic has been deleted.</li>
+                     * 设置Status of a real-time log shipping task. Valid values: <li>enabled: enabled;</li><li>disabled: disabled;</li><li>deleted: deleted abnormally. Check whether the destination log set/log topic of Tencent Cloud CLS has been deleted.</li>
+                     * @param _deliveryStatus Status of a real-time log shipping task. Valid values: <li>enabled: enabled;</li><li>disabled: disabled;</li><li>deleted: deleted abnormally. Check whether the destination log set/log topic of Tencent Cloud CLS has been deleted.</li>
                      * 
                      */
                     void SetDeliveryStatus(const std::string& _deliveryStatus);
@@ -116,15 +116,15 @@ namespace TencentCloud
                     bool DeliveryStatusHasBeenSet() const;
 
                     /**
-                     * 获取The type of the real-time log delivery task. Valid values:<li>cls: Push to Tencent Cloud CLS;</li><li>custom_endpoint: Push to a custom HTTP(S) address;</li><li>s3: Push to an AWS S3-compatible bucket address.</li>
-                     * @return TaskType The type of the real-time log delivery task. Valid values:<li>cls: Push to Tencent Cloud CLS;</li><li>custom_endpoint: Push to a custom HTTP(S) address;</li><li>s3: Push to an AWS S3-compatible bucket address.</li>
+                     * 获取Type of a real-time log shipping task. Valid values:<li>cls: push to Tencent Cloud CLS;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>s3: push to an AWS S3-compatible bucket address.</li>
+                     * @return TaskType Type of a real-time log shipping task. Valid values:<li>cls: push to Tencent Cloud CLS;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>s3: push to an AWS S3-compatible bucket address.</li>
                      * 
                      */
                     std::string GetTaskType() const;
 
                     /**
-                     * 设置The type of the real-time log delivery task. Valid values:<li>cls: Push to Tencent Cloud CLS;</li><li>custom_endpoint: Push to a custom HTTP(S) address;</li><li>s3: Push to an AWS S3-compatible bucket address.</li>
-                     * @param _taskType The type of the real-time log delivery task. Valid values:<li>cls: Push to Tencent Cloud CLS;</li><li>custom_endpoint: Push to a custom HTTP(S) address;</li><li>s3: Push to an AWS S3-compatible bucket address.</li>
+                     * 设置Type of a real-time log shipping task. Valid values:<li>cls: push to Tencent Cloud CLS;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>s3: push to an AWS S3-compatible bucket address.</li>
+                     * @param _taskType Type of a real-time log shipping task. Valid values:<li>cls: push to Tencent Cloud CLS;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>s3: push to an AWS S3-compatible bucket address.</li>
                      * 
                      */
                     void SetTaskType(const std::string& _taskType);
@@ -137,15 +137,15 @@ namespace TencentCloud
                     bool TaskTypeHasBeenSet() const;
 
                     /**
-                     * 获取The list of entities (Layer 7 domains or Layer 4 proxy instances) corresponding to the real-time log delivery task. Valid value examples:<li>Layer 7 domain: domain.example.com;</li><li>Layer 4 proxy instance: sid-2s69eb5wcms7.</li>
-                     * @return EntityList The list of entities (Layer 7 domains or Layer 4 proxy instances) corresponding to the real-time log delivery task. Valid value examples:<li>Layer 7 domain: domain.example.com;</li><li>Layer 4 proxy instance: sid-2s69eb5wcms7.</li>
+                     * 获取List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log shipping task. Valid value examples: <li>L7 domain name: domain.example.com;</li><li>L4 proxy instance: sid-2s69eb5wcms7.</li>	
+                     * @return EntityList List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log shipping task. Valid value examples: <li>L7 domain name: domain.example.com;</li><li>L4 proxy instance: sid-2s69eb5wcms7.</li>	
                      * 
                      */
                     std::vector<std::string> GetEntityList() const;
 
                     /**
-                     * 设置The list of entities (Layer 7 domains or Layer 4 proxy instances) corresponding to the real-time log delivery task. Valid value examples:<li>Layer 7 domain: domain.example.com;</li><li>Layer 4 proxy instance: sid-2s69eb5wcms7.</li>
-                     * @param _entityList The list of entities (Layer 7 domains or Layer 4 proxy instances) corresponding to the real-time log delivery task. Valid value examples:<li>Layer 7 domain: domain.example.com;</li><li>Layer 4 proxy instance: sid-2s69eb5wcms7.</li>
+                     * 设置List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log shipping task. Valid value examples: <li>L7 domain name: domain.example.com;</li><li>L4 proxy instance: sid-2s69eb5wcms7.</li>	
+                     * @param _entityList List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log shipping task. Valid value examples: <li>L7 domain name: domain.example.com;</li><li>L4 proxy instance: sid-2s69eb5wcms7.</li>	
                      * 
                      */
                     void SetEntityList(const std::vector<std::string>& _entityList);
@@ -158,15 +158,15 @@ namespace TencentCloud
                     bool EntityListHasBeenSet() const;
 
                     /**
-                     * 获取The data delivery type. Valid values: <li>domain: Site acceleration log;</li><li>application: Layer 4 proxy log;</li><li>web-rateLiming: Rate limit and CC attack defense log;</li><li>web-attack: Managed rule log;</li><li>web-rule: Custom rule log;</li><li>web-bot: Bot management log.</li>
-                     * @return LogType The data delivery type. Valid values: <li>domain: Site acceleration log;</li><li>application: Layer 4 proxy log;</li><li>web-rateLiming: Rate limit and CC attack defense log;</li><li>web-attack: Managed rule log;</li><li>web-rule: Custom rule log;</li><li>web-bot: Bot management log.</li>
+                     * 获取Data shipping type. Valid values: <li>domain: site acceleration logs;</li><li>application: L4 proxy logs;</li><li>web-rateLiming: rate limiting and CC attack defense logs;</li><li>web-attack: managed rule logs;</li><li>web-rule: custom rule logs;</li><li>web-bot: Bot management logs.</li>
+                     * @return LogType Data shipping type. Valid values: <li>domain: site acceleration logs;</li><li>application: L4 proxy logs;</li><li>web-rateLiming: rate limiting and CC attack defense logs;</li><li>web-attack: managed rule logs;</li><li>web-rule: custom rule logs;</li><li>web-bot: Bot management logs.</li>
                      * 
                      */
                     std::string GetLogType() const;
 
                     /**
-                     * 设置The data delivery type. Valid values: <li>domain: Site acceleration log;</li><li>application: Layer 4 proxy log;</li><li>web-rateLiming: Rate limit and CC attack defense log;</li><li>web-attack: Managed rule log;</li><li>web-rule: Custom rule log;</li><li>web-bot: Bot management log.</li>
-                     * @param _logType The data delivery type. Valid values: <li>domain: Site acceleration log;</li><li>application: Layer 4 proxy log;</li><li>web-rateLiming: Rate limit and CC attack defense log;</li><li>web-attack: Managed rule log;</li><li>web-rule: Custom rule log;</li><li>web-bot: Bot management log.</li>
+                     * 设置Data shipping type. Valid values: <li>domain: site acceleration logs;</li><li>application: L4 proxy logs;</li><li>web-rateLiming: rate limiting and CC attack defense logs;</li><li>web-attack: managed rule logs;</li><li>web-rule: custom rule logs;</li><li>web-bot: Bot management logs.</li>
+                     * @param _logType Data shipping type. Valid values: <li>domain: site acceleration logs;</li><li>application: L4 proxy logs;</li><li>web-rateLiming: rate limiting and CC attack defense logs;</li><li>web-attack: managed rule logs;</li><li>web-rule: custom rule logs;</li><li>web-bot: Bot management logs.</li>
                      * 
                      */
                     void SetLogType(const std::string& _logType);
@@ -179,15 +179,15 @@ namespace TencentCloud
                     bool LogTypeHasBeenSet() const;
 
                     /**
-                     * 获取The data delivery area. Valid values:<li>mainland: Within the Chinese mainland;</li><li>overseas: Global (excluding the Chinese mainland).</li>
-                     * @return Area The data delivery area. Valid values:<li>mainland: Within the Chinese mainland;</li><li>overseas: Global (excluding the Chinese mainland).</li>
+                     * 获取Data shipping area. Valid values:<li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li>
+                     * @return Area Data shipping area. Valid values:<li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li>
                      * 
                      */
                     std::string GetArea() const;
 
                     /**
-                     * 设置The data delivery area. Valid values:<li>mainland: Within the Chinese mainland;</li><li>overseas: Global (excluding the Chinese mainland).</li>
-                     * @param _area The data delivery area. Valid values:<li>mainland: Within the Chinese mainland;</li><li>overseas: Global (excluding the Chinese mainland).</li>
+                     * 设置Data shipping area. Valid values:<li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li>
+                     * @param _area Data shipping area. Valid values:<li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li>
                      * 
                      */
                     void SetArea(const std::string& _area);
@@ -200,15 +200,15 @@ namespace TencentCloud
                     bool AreaHasBeenSet() const;
 
                     /**
-                     * 获取The list of predefined fields for delivery.
-                     * @return Fields The list of predefined fields for delivery.
+                     * 获取List of predefined fields for shipping.
+                     * @return Fields List of predefined fields for shipping.
                      * 
                      */
                     std::vector<std::string> GetFields() const;
 
                     /**
-                     * 设置The list of predefined fields for delivery.
-                     * @param _fields The list of predefined fields for delivery.
+                     * 设置List of predefined fields for shipping.
+                     * @param _fields List of predefined fields for shipping.
                      * 
                      */
                     void SetFields(const std::vector<std::string>& _fields);
@@ -221,15 +221,15 @@ namespace TencentCloud
                     bool FieldsHasBeenSet() const;
 
                     /**
-                     * 获取The list of custom fields for delivery.
-                     * @return CustomFields The list of custom fields for delivery.
+                     * 获取List of custom fields for shipping.
+                     * @return CustomFields List of custom fields for shipping.
                      * 
                      */
                     std::vector<CustomField> GetCustomFields() const;
 
                     /**
-                     * 设置The list of custom fields for delivery.
-                     * @param _customFields The list of custom fields for delivery.
+                     * 设置List of custom fields for shipping.
+                     * @param _customFields List of custom fields for shipping.
                      * 
                      */
                     void SetCustomFields(const std::vector<CustomField>& _customFields);
@@ -242,15 +242,15 @@ namespace TencentCloud
                     bool CustomFieldsHasBeenSet() const;
 
                     /**
-                     * 获取Log delivery filter conditions.
-                     * @return DeliveryConditions Log delivery filter conditions.
+                     * 获取Filter criteria of log shipping.
+                     * @return DeliveryConditions Filter criteria of log shipping.
                      * 
                      */
                     std::vector<DeliveryCondition> GetDeliveryConditions() const;
 
                     /**
-                     * 设置Log delivery filter conditions.
-                     * @param _deliveryConditions Log delivery filter conditions.
+                     * 设置Filter criteria of log shipping.
+                     * @param _deliveryConditions Filter criteria of log shipping.
                      * 
                      */
                     void SetDeliveryConditions(const std::vector<DeliveryCondition>& _deliveryConditions);
@@ -263,15 +263,15 @@ namespace TencentCloud
                     bool DeliveryConditionsHasBeenSet() const;
 
                     /**
-                     * 获取The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%.
-                     * @return Sample The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%.
+                     * 获取Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%.
+                     * @return Sample Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%.
                      * 
                      */
                     uint64_t GetSample() const;
 
                     /**
-                     * 设置The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%.
-                     * @param _sample The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%.
+                     * 设置Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%.
+                     * @param _sample Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%.
                      * 
                      */
                     void SetSample(const uint64_t& _sample);
@@ -317,15 +317,19 @@ Note: This field may return 'null', which indicates a failure to obtain a valid 
                     bool LogFormatHasBeenSet() const;
 
                     /**
-                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CLS Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Configuration information of the CLS.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @return CLS Configuration information of the CLS.
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     CLSTopic GetCLS() const;
 
                     /**
-                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cLS Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Configuration information of the CLS.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @param _cLS Configuration information of the CLS.
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     void SetCLS(const CLSTopic& _cLS);
@@ -338,15 +342,19 @@ Note: This field may return 'null', which indicates a failure to obtain a valid 
                     bool CLSHasBeenSet() const;
 
                     /**
-                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CustomEndpoint Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Configuration information of the custom HTTP service.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @return CustomEndpoint Configuration information of the custom HTTP service.
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     CustomEndpoint GetCustomEndpoint() const;
 
                     /**
-                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _customEndpoint Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Configuration information of the custom HTTP service.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @param _customEndpoint Configuration information of the custom HTTP service.
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     void SetCustomEndpoint(const CustomEndpoint& _customEndpoint);
@@ -359,15 +367,19 @@ Note: This field may return 'null', which indicates a failure to obtain a valid 
                     bool CustomEndpointHasBeenSet() const;
 
                     /**
-                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return S3 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Configuration information of the AWS S3-compatible bucket.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @return S3 Configuration information of the AWS S3-compatible bucket.
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     S3 GetS3() const;
 
                     /**
-                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _s3 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Configuration information of the AWS S3-compatible bucket.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @param _s3 Configuration information of the AWS S3-compatible bucket.
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     void SetS3(const S3& _s3);
@@ -380,15 +392,15 @@ Note: This field may return 'null', which indicates a failure to obtain a valid 
                     bool S3HasBeenSet() const;
 
                     /**
-                     * 获取The creation time.
-                     * @return CreateTime The creation time.
+                     * 获取Creation time.
+                     * @return CreateTime Creation time.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置The creation time.
-                     * @param _createTime The creation time.
+                     * 设置Creation time.
+                     * @param _createTime Creation time.
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -401,15 +413,15 @@ Note: This field may return 'null', which indicates a failure to obtain a valid 
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取The update time.
-                     * @return UpdateTime The update time.
+                     * 获取Update time.
+                     * @return UpdateTime Update time.
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置The update time.
-                     * @param _updateTime The update time.
+                     * 设置Update time.
+                     * @param _updateTime Update time.
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -424,67 +436,67 @@ Note: This field may return 'null', which indicates a failure to obtain a valid 
                 private:
 
                     /**
-                     * The ID of the real-time log delivery task.
+                     * ID of a real-time log shipping task.
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * The name of the real-time log delivery task.
+                     * Name of a real-time log shipping task.
                      */
                     std::string m_taskName;
                     bool m_taskNameHasBeenSet;
 
                     /**
-                     * The status of the real-time log delivery task. Valid values:<li>enabled: Enabled;</li><li>disabled: Disabled;</li><li>deleted: Abnormal deletion. Check whether the destination Tencent Cloud CLS log set/log topic has been deleted.</li>
+                     * Status of a real-time log shipping task. Valid values: <li>enabled: enabled;</li><li>disabled: disabled;</li><li>deleted: deleted abnormally. Check whether the destination log set/log topic of Tencent Cloud CLS has been deleted.</li>
                      */
                     std::string m_deliveryStatus;
                     bool m_deliveryStatusHasBeenSet;
 
                     /**
-                     * The type of the real-time log delivery task. Valid values:<li>cls: Push to Tencent Cloud CLS;</li><li>custom_endpoint: Push to a custom HTTP(S) address;</li><li>s3: Push to an AWS S3-compatible bucket address.</li>
+                     * Type of a real-time log shipping task. Valid values:<li>cls: push to Tencent Cloud CLS;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>s3: push to an AWS S3-compatible bucket address.</li>
                      */
                     std::string m_taskType;
                     bool m_taskTypeHasBeenSet;
 
                     /**
-                     * The list of entities (Layer 7 domains or Layer 4 proxy instances) corresponding to the real-time log delivery task. Valid value examples:<li>Layer 7 domain: domain.example.com;</li><li>Layer 4 proxy instance: sid-2s69eb5wcms7.</li>
+                     * List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log shipping task. Valid value examples: <li>L7 domain name: domain.example.com;</li><li>L4 proxy instance: sid-2s69eb5wcms7.</li>	
                      */
                     std::vector<std::string> m_entityList;
                     bool m_entityListHasBeenSet;
 
                     /**
-                     * The data delivery type. Valid values: <li>domain: Site acceleration log;</li><li>application: Layer 4 proxy log;</li><li>web-rateLiming: Rate limit and CC attack defense log;</li><li>web-attack: Managed rule log;</li><li>web-rule: Custom rule log;</li><li>web-bot: Bot management log.</li>
+                     * Data shipping type. Valid values: <li>domain: site acceleration logs;</li><li>application: L4 proxy logs;</li><li>web-rateLiming: rate limiting and CC attack defense logs;</li><li>web-attack: managed rule logs;</li><li>web-rule: custom rule logs;</li><li>web-bot: Bot management logs.</li>
                      */
                     std::string m_logType;
                     bool m_logTypeHasBeenSet;
 
                     /**
-                     * The data delivery area. Valid values:<li>mainland: Within the Chinese mainland;</li><li>overseas: Global (excluding the Chinese mainland).</li>
+                     * Data shipping area. Valid values:<li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li>
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;
 
                     /**
-                     * The list of predefined fields for delivery.
+                     * List of predefined fields for shipping.
                      */
                     std::vector<std::string> m_fields;
                     bool m_fieldsHasBeenSet;
 
                     /**
-                     * The list of custom fields for delivery.
+                     * List of custom fields for shipping.
                      */
                     std::vector<CustomField> m_customFields;
                     bool m_customFieldsHasBeenSet;
 
                     /**
-                     * Log delivery filter conditions.
+                     * Filter criteria of log shipping.
                      */
                     std::vector<DeliveryCondition> m_deliveryConditions;
                     bool m_deliveryConditionsHasBeenSet;
 
                     /**
-                     * The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%.
+                     * Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%.
                      */
                     uint64_t m_sample;
                     bool m_sampleHasBeenSet;
@@ -499,31 +511,34 @@ Note: This field may return 'null', which indicates a failure to obtain a valid 
                     bool m_logFormatHasBeenSet;
 
                     /**
-                     * Note: This field may return null, indicating that no valid values can be obtained.
+                     * Configuration information of the CLS.
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      */
                     CLSTopic m_cLS;
                     bool m_cLSHasBeenSet;
 
                     /**
-                     * Note: This field may return null, indicating that no valid values can be obtained.
+                     * Configuration information of the custom HTTP service.
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      */
                     CustomEndpoint m_customEndpoint;
                     bool m_customEndpointHasBeenSet;
 
                     /**
-                     * Note: This field may return null, indicating that no valid values can be obtained.
+                     * Configuration information of the AWS S3-compatible bucket.
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      */
                     S3 m_s3;
                     bool m_s3HasBeenSet;
 
                     /**
-                     * The creation time.
+                     * Creation time.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * The update time.
+                     * Update time.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;

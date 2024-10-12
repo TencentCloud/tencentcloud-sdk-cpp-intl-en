@@ -202,23 +202,23 @@ namespace TencentCloud
                     bool IntervalHasBeenSet() const;
 
                     /**
-                     * 获取Filters
-<li>ruleId<br>   Filter by the specified <strong>forwarding rule ID</strong></li>
-<li>proxyId<br>   Filter by the specified <strong>L4 agent ID</strong></li>
-                     * @return Filters Filters
-<li>ruleId<br>   Filter by the specified <strong>forwarding rule ID</strong></li>
-<li>proxyId<br>   Filter by the specified <strong>L4 agent ID</strong></li>
+                     * 获取Filter criteria. The detailed Key values of filter criteria are as follows:
+<li>ruleId: Filter by forwarding rule ID.</li>
+<li>proxyId: Filter by L4 proxy instance ID.</li>
+                     * @return Filters Filter criteria. The detailed Key values of filter criteria are as follows:
+<li>ruleId: Filter by forwarding rule ID.</li>
+<li>proxyId: Filter by L4 proxy instance ID.</li>
                      * 
                      */
                     std::vector<QueryCondition> GetFilters() const;
 
                     /**
-                     * 设置Filters
-<li>ruleId<br>   Filter by the specified <strong>forwarding rule ID</strong></li>
-<li>proxyId<br>   Filter by the specified <strong>L4 agent ID</strong></li>
-                     * @param _filters Filters
-<li>ruleId<br>   Filter by the specified <strong>forwarding rule ID</strong></li>
-<li>proxyId<br>   Filter by the specified <strong>L4 agent ID</strong></li>
+                     * 设置Filter criteria. The detailed Key values of filter criteria are as follows:
+<li>ruleId: Filter by forwarding rule ID.</li>
+<li>proxyId: Filter by L4 proxy instance ID.</li>
+                     * @param _filters Filter criteria. The detailed Key values of filter criteria are as follows:
+<li>ruleId: Filter by forwarding rule ID.</li>
+<li>proxyId: Filter by L4 proxy instance ID.</li>
                      * 
                      */
                     void SetFilters(const std::vector<QueryCondition>& _filters);
@@ -310,9 +310,9 @@ namespace TencentCloud
                     bool m_intervalHasBeenSet;
 
                     /**
-                     * Filters
-<li>ruleId<br>   Filter by the specified <strong>forwarding rule ID</strong></li>
-<li>proxyId<br>   Filter by the specified <strong>L4 agent ID</strong></li>
+                     * Filter criteria. The detailed Key values of filter criteria are as follows:
+<li>ruleId: Filter by forwarding rule ID.</li>
+<li>proxyId: Filter by L4 proxy instance ID.</li>
                      */
                     std::vector<QueryCondition> m_filters;
                     bool m_filtersHasBeenSet;

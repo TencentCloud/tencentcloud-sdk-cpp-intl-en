@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Custom response page ID.
-                     * @return PageId Custom response page ID.
+                     * 获取Custom error page ID.
+                     * @return PageId Custom error page ID.
                      * 
                      */
                     std::string GetPageId() const;
 
                     /**
-                     * 设置Custom response page ID.
-                     * @param _pageId Custom response page ID.
+                     * 设置Custom error page ID.
+                     * @param _pageId Custom error page ID.
                      * 
                      */
                     void SetPageId(const std::string& _pageId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Custom response page name. The name must be 2-60 characters long.
-                     * @return Name Custom response page name. The name must be 2-60 characters long.
+                     * 获取Custom error page name. The name must be 2-60 characters long.
+                     * @return Name Custom error page name. The name must be 2-60 characters long.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Custom response page name. The name must be 2-60 characters long.
-                     * @param _name Custom response page name. The name must be 2-60 characters long.
+                     * 设置Custom error page name. The name must be 2-60 characters long.
+                     * @param _name Custom error page name. The name must be 2-60 characters long.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Custom response page description, not exceeding 60 characters.
-                     * @return Description Custom response page description, not exceeding 60 characters.
+                     * 获取Custom error page description, not exceeding 60 characters.
+                     * @return Description Custom error page description, not exceeding 60 characters.
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Custom response page description, not exceeding 60 characters.
-                     * @param _description Custom response page description, not exceeding 60 characters.
+                     * 设置Custom error page description, not exceeding 60 characters.
+                     * @param _description Custom error page description, not exceeding 60 characters.
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Custom response page type, with values:<li>text/html. </li><li>application/json.</li><li>plain/text.</li><li>text/xml.</li>
-                     * @return ContentType Custom response page type, with values:<li>text/html. </li><li>application/json.</li><li>plain/text.</li><li>text/xml.</li>
+                     * 获取Custom error page type, with values:<li>text/html. </li><li>application/json.</li><li>plain/text.</li><li>text/xml.</li>
+                     * @return ContentType Custom error page type, with values:<li>text/html. </li><li>application/json.</li><li>plain/text.</li><li>text/xml.</li>
                      * 
                      */
                     std::string GetContentType() const;
 
                     /**
-                     * 设置Custom response page type, with values:<li>text/html. </li><li>application/json.</li><li>plain/text.</li><li>text/xml.</li>
-                     * @param _contentType Custom response page type, with values:<li>text/html. </li><li>application/json.</li><li>plain/text.</li><li>text/xml.</li>
+                     * 设置Custom error page type, with values:<li>text/html. </li><li>application/json.</li><li>plain/text.</li><li>text/xml.</li>
+                     * @param _contentType Custom error page type, with values:<li>text/html. </li><li>application/json.</li><li>plain/text.</li><li>text/xml.</li>
                      * 
                      */
                     void SetContentType(const std::string& _contentType);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool ContentTypeHasBeenSet() const;
 
                     /**
-                     * 获取Custom response page content, not exceeding 2 KB.
-                     * @return Content Custom response page content, not exceeding 2 KB.
+                     * 获取Custom error page content, not exceeding 2 KB.
+                     * @return Content Custom error page content, not exceeding 2 KB.
                      * 
                      */
                     std::string GetContent() const;
 
                     /**
-                     * 设置Custom response page content, not exceeding 2 KB.
-                     * @param _content Custom response page content, not exceeding 2 KB.
+                     * 设置Custom error page content, not exceeding 2 KB.
+                     * @param _content Custom error page content, not exceeding 2 KB.
                      * 
                      */
                     void SetContent(const std::string& _content);
@@ -171,7 +171,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Custom response page ID.
+                     * Custom error page ID.
                      */
                     std::string m_pageId;
                     bool m_pageIdHasBeenSet;
@@ -183,25 +183,25 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Custom response page name. The name must be 2-60 characters long.
+                     * Custom error page name. The name must be 2-60 characters long.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Custom response page description, not exceeding 60 characters.
+                     * Custom error page description, not exceeding 60 characters.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Custom response page type, with values:<li>text/html. </li><li>application/json.</li><li>plain/text.</li><li>text/xml.</li>
+                     * Custom error page type, with values:<li>text/html. </li><li>application/json.</li><li>plain/text.</li><li>text/xml.</li>
                      */
                     std::string m_contentType;
                     bool m_contentTypeHasBeenSet;
 
                     /**
-                     * Custom response page content, not exceeding 2 KB.
+                     * Custom error page content, not exceeding 2 KB.
                      */
                     std::string m_content;
                     bool m_contentHasBeenSet;

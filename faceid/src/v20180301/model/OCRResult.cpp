@@ -27,7 +27,8 @@ OCRResult::OCRResult() :
     m_normalCardInfoHasBeenSet(false),
     m_requestIdHasBeenSet(false),
     m_cardCutImageBase64HasBeenSet(false),
-    m_cardBackCutImageBase64HasBeenSet(false)
+    m_cardBackCutImageBase64HasBeenSet(false),
+    m_warnCardInfosHasBeenSet(false)
 {
 }
 
@@ -120,6 +121,19 @@ CoreInternalOutcome OCRResult::Deserialize(const rapidjson::Value &value)
         m_cardBackCutImageBase64HasBeenSet = true;
     }
 
+    if (value.HasMember("WarnCardInfos") && !value["WarnCardInfos"].IsNull())
+    {
+        if (!value["WarnCardInfos"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `OCRResult.WarnCardInfos` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["WarnCardInfos"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            m_warnCardInfos.push_back((*itr).GetInt64());
+        }
+        m_warnCardInfosHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -183,6 +197,19 @@ void OCRResult::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Alloc
         string key = "CardBackCutImageBase64";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_cardBackCutImageBase64.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_warnCardInfosHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "WarnCardInfos";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_warnCardInfos.begin(); itr != m_warnCardInfos.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
+        }
     }
 
 }
@@ -298,5 +325,21 @@ void OCRResult::SetCardBackCutImageBase64(const string& _cardBackCutImageBase64)
 bool OCRResult::CardBackCutImageBase64HasBeenSet() const
 {
     return m_cardBackCutImageBase64HasBeenSet;
+}
+
+vector<int64_t> OCRResult::GetWarnCardInfos() const
+{
+    return m_warnCardInfos;
+}
+
+void OCRResult::SetWarnCardInfos(const vector<int64_t>& _warnCardInfos)
+{
+    m_warnCardInfos = _warnCardInfos;
+    m_warnCardInfosHasBeenSet = true;
+}
+
+bool OCRResult::WarnCardInfosHasBeenSet() const
+{
+    return m_warnCardInfosHasBeenSet;
 }
 

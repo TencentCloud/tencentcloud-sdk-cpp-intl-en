@@ -65,23 +65,27 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Access mode of the site. Values:
-<li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME record. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
-                     * @return Type Access mode of the site. Values:
-<li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME record. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
+                     * 获取Site access method. Valid values:
+<li>full: NS access.</li>
+<li>partial: CNAME access. If the site is currently accessed with no domain name, it can be switched only to CNAME access.</li>
+<li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>If this parameter is not input, the original configuration is maintained.
+                     * @return Type Site access method. Valid values:
+<li>full: NS access.</li>
+<li>partial: CNAME access. If the site is currently accessed with no domain name, it can be switched only to CNAME access.</li>
+<li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>If this parameter is not input, the original configuration is maintained.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Access mode of the site. Values:
-<li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME record. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
-                     * @param _type Access mode of the site. Values:
-<li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME record. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
+                     * 设置Site access method. Valid values:
+<li>full: NS access.</li>
+<li>partial: CNAME access. If the site is currently accessed with no domain name, it can be switched only to CNAME access.</li>
+<li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>If this parameter is not input, the original configuration is maintained.
+                     * @param _type Site access method. Valid values:
+<li>full: NS access.</li>
+<li>partial: CNAME access. If the site is currently accessed with no domain name, it can be switched only to CNAME access.</li>
+<li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>If this parameter is not input, the original configuration is maintained.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -198,9 +202,10 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Access mode of the site. Values:
-<li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME record. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
+                     * Site access method. Valid values:
+<li>full: NS access.</li>
+<li>partial: CNAME access. If the site is currently accessed with no domain name, it can be switched only to CNAME access.</li>
+<li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>If this parameter is not input, the original configuration is maintained.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

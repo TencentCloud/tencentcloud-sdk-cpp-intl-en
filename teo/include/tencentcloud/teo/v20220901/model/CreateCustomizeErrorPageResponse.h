@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Custom response page ID.
-                     * @return PageId Custom response page ID.
+                     * 获取Page ID.
+                     * @return PageId Page ID.
                      * 
                      */
                     std::string GetPageId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Custom response page ID.
+                     * Page ID.
                      */
                     std::string m_pageId;
                     bool m_pageIdHasBeenSet;

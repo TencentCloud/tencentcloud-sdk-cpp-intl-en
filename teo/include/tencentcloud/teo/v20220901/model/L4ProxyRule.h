@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/teo/v20220901/model/L4ProxyRemoteAuth.h>
 
 
 namespace TencentCloud
@@ -426,6 +427,35 @@ Note: Do not set this parameter when L4ProxyRule is used as an input parameter i
                      */
                     bool BuIdHasBeenSet() const;
 
+                    /**
+                     * 获取Remote authentication information.
+Note: RemoteAuth cannot be used as an input parameter in CreateL4ProxyRules or ModifyL4ProxyRules. If this parameter is input, it will be ignored. If the returned data of DescribeL4ProxyRules is empty, it indicates that remote authentication is disabled.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @return RemoteAuth Remote authentication information.
+Note: RemoteAuth cannot be used as an input parameter in CreateL4ProxyRules or ModifyL4ProxyRules. If this parameter is input, it will be ignored. If the returned data of DescribeL4ProxyRules is empty, it indicates that remote authentication is disabled.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 
+                     */
+                    L4ProxyRemoteAuth GetRemoteAuth() const;
+
+                    /**
+                     * 设置Remote authentication information.
+Note: RemoteAuth cannot be used as an input parameter in CreateL4ProxyRules or ModifyL4ProxyRules. If this parameter is input, it will be ignored. If the returned data of DescribeL4ProxyRules is empty, it indicates that remote authentication is disabled.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @param _remoteAuth Remote authentication information.
+Note: RemoteAuth cannot be used as an input parameter in CreateL4ProxyRules or ModifyL4ProxyRules. If this parameter is input, it will be ignored. If the returned data of DescribeL4ProxyRules is empty, it indicates that remote authentication is disabled.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 
+                     */
+                    void SetRemoteAuth(const L4ProxyRemoteAuth& _remoteAuth);
+
+                    /**
+                     * 判断参数 RemoteAuth 是否已赋值
+                     * @return RemoteAuth 是否已赋值
+                     * 
+                     */
+                    bool RemoteAuthHasBeenSet() const;
+
                 private:
 
                     /**
@@ -531,6 +561,14 @@ Note: Do not set this parameter when L4ProxyRule is used as an input parameter i
                      */
                     std::string m_buId;
                     bool m_buIdHasBeenSet;
+
+                    /**
+                     * Remote authentication information.
+Note: RemoteAuth cannot be used as an input parameter in CreateL4ProxyRules or ModifyL4ProxyRules. If this parameter is input, it will be ignored. If the returned data of DescribeL4ProxyRules is empty, it indicates that remote authentication is disabled.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     */
+                    L4ProxyRemoteAuth m_remoteAuth;
+                    bool m_remoteAuthHasBeenSet;
 
                 };
             }

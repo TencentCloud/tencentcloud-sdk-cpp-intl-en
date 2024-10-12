@@ -50,19 +50,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Feature execution conditions.
-Note: If any condition in the array is met, the feature will run.
-                     * @return Conditions Feature execution conditions.
-Note: If any condition in the array is met, the feature will run.
+                     * 获取Judgment condition for executing the feature.
+Note: The feature can be executed if any condition in the array is met.
+                     * @return Conditions Judgment condition for executing the feature.
+Note: The feature can be executed if any condition in the array is met.
                      * 
                      */
                     std::vector<RuleAndConditions> GetConditions() const;
 
                     /**
-                     * 设置Feature execution conditions.
-Note: If any condition in the array is met, the feature will run.
-                     * @param _conditions Feature execution conditions.
-Note: If any condition in the array is met, the feature will run.
+                     * 设置Judgment condition for executing the feature.
+Note: The feature can be executed if any condition in the array is met.
+                     * @param _conditions Judgment condition for executing the feature.
+Note: The feature can be executed if any condition in the array is met.
                      * 
                      */
                     void SetConditions(const std::vector<RuleAndConditions>& _conditions);
@@ -75,19 +75,15 @@ Note: If any condition in the array is met, the feature will run.
                     bool ConditionsHasBeenSet() const;
 
                     /**
-                     * 获取Feature to be executed.
-Note: Actions and SubRules cannot both be empty.
-                     * @return Actions Feature to be executed.
-Note: Actions and SubRules cannot both be empty.
+                     * 获取Executed feature. Note: Actions and SubRules cannot be both empty.
+                     * @return Actions Executed feature. Note: Actions and SubRules cannot be both empty.
                      * 
                      */
                     std::vector<Action> GetActions() const;
 
                     /**
-                     * 设置Feature to be executed.
-Note: Actions and SubRules cannot both be empty.
-                     * @param _actions Feature to be executed.
-Note: Actions and SubRules cannot both be empty.
+                     * 设置Executed feature. Note: Actions and SubRules cannot be both empty.
+                     * @param _actions Executed feature. Note: Actions and SubRules cannot be both empty.
                      * 
                      */
                     void SetActions(const std::vector<Action>& _actions);
@@ -100,19 +96,15 @@ Note: Actions and SubRules cannot both be empty.
                     bool ActionsHasBeenSet() const;
 
                     /**
-                     * 获取The nested rule.
-Note: Actions and SubRules cannot both be empty.
-                     * @return SubRules The nested rule.
-Note: Actions and SubRules cannot both be empty.
+                     * 获取Nested rule. Note: SubRules and Actions cannot be both empty.
+                     * @return SubRules Nested rule. Note: SubRules and Actions cannot be both empty.
                      * 
                      */
                     std::vector<SubRuleItem> GetSubRules() const;
 
                     /**
-                     * 设置The nested rule.
-Note: Actions and SubRules cannot both be empty.
-                     * @param _subRules The nested rule.
-Note: Actions and SubRules cannot both be empty.
+                     * 设置Nested rule. Note: SubRules and Actions cannot be both empty.
+                     * @param _subRules Nested rule. Note: SubRules and Actions cannot be both empty.
                      * 
                      */
                     void SetSubRules(const std::vector<SubRuleItem>& _subRules);
@@ -127,22 +119,20 @@ Note: Actions and SubRules cannot both be empty.
                 private:
 
                     /**
-                     * Feature execution conditions.
-Note: If any condition in the array is met, the feature will run.
+                     * Judgment condition for executing the feature.
+Note: The feature can be executed if any condition in the array is met.
                      */
                     std::vector<RuleAndConditions> m_conditions;
                     bool m_conditionsHasBeenSet;
 
                     /**
-                     * Feature to be executed.
-Note: Actions and SubRules cannot both be empty.
+                     * Executed feature. Note: Actions and SubRules cannot be both empty.
                      */
                     std::vector<Action> m_actions;
                     bool m_actionsHasBeenSet;
 
                     /**
-                     * The nested rule.
-Note: Actions and SubRules cannot both be empty.
+                     * Nested rule. Note: SubRules and Actions cannot be both empty.
                      */
                     std::vector<SubRuleItem> m_subRules;
                     bool m_subRulesHasBeenSet;

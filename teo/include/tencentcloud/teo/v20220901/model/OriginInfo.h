@@ -223,21 +223,21 @@ If it is not specified, the default value is off.
                     /**
                      * 获取VODEO sub-application ID. This parameter is required when OriginType is VODEO.
                      * @return VodeoSubAppId VODEO sub-application ID. This parameter is required when OriginType is VODEO.
-                     * 
+                     * @deprecated
                      */
                     int64_t GetVodeoSubAppId() const;
 
                     /**
                      * 设置VODEO sub-application ID. This parameter is required when OriginType is VODEO.
                      * @param _vodeoSubAppId VODEO sub-application ID. This parameter is required when OriginType is VODEO.
-                     * 
+                     * @deprecated
                      */
                     void SetVodeoSubAppId(const int64_t& _vodeoSubAppId);
 
                     /**
                      * 判断参数 VodeoSubAppId 是否已赋值
                      * @return VodeoSubAppId 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool VodeoSubAppIdHasBeenSet() const;
 
@@ -248,7 +248,7 @@ If it is not specified, the default value is off.
                      * @return VodeoDistributionRange VOD on EO distribution range. This parameter is required when OriginType = VODEO. The values are: 
 <li>All: all buckets under the current application;</li> 
 <li>Bucket: a specified bucket.</li>
-                     * 
+                     * @deprecated
                      */
                     std::string GetVodeoDistributionRange() const;
 
@@ -259,35 +259,35 @@ If it is not specified, the default value is off.
                      * @param _vodeoDistributionRange VOD on EO distribution range. This parameter is required when OriginType = VODEO. The values are: 
 <li>All: all buckets under the current application;</li> 
 <li>Bucket: a specified bucket.</li>
-                     * 
+                     * @deprecated
                      */
                     void SetVodeoDistributionRange(const std::string& _vodeoDistributionRange);
 
                     /**
                      * 判断参数 VodeoDistributionRange 是否已赋值
                      * @return VodeoDistributionRange 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool VodeoDistributionRangeHasBeenSet() const;
 
                     /**
                      * 获取VODEO storage bucket ID. This parameter is required when OriginType is VODEO and VodeoDistributionRange is Bucket.
                      * @return VodeoBucketId VODEO storage bucket ID. This parameter is required when OriginType is VODEO and VodeoDistributionRange is Bucket.
-                     * 
+                     * @deprecated
                      */
                     std::string GetVodeoBucketId() const;
 
                     /**
                      * 设置VODEO storage bucket ID. This parameter is required when OriginType is VODEO and VodeoDistributionRange is Bucket.
                      * @param _vodeoBucketId VODEO storage bucket ID. This parameter is required when OriginType is VODEO and VodeoDistributionRange is Bucket.
-                     * 
+                     * @deprecated
                      */
                     void SetVodeoBucketId(const std::string& _vodeoBucketId);
 
                     /**
                      * 判断参数 VodeoBucketId 是否已赋值
                      * @return VodeoBucketId 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool VodeoBucketIdHasBeenSet() const;
 

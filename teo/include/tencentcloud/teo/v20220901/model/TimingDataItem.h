@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The query time recorded in seconds using UNIX timestamp.
-                     * @return Timestamp The query time recorded in seconds using UNIX timestamp.
+                     * 获取Time point for returning data, in the format of Unix timestamp in seconds.
+                     * @return Timestamp Time point for returning data, in the format of Unix timestamp in seconds.
                      * 
                      */
                     int64_t GetTimestamp() const;
 
                     /**
-                     * 设置The query time recorded in seconds using UNIX timestamp.
-                     * @param _timestamp The query time recorded in seconds using UNIX timestamp.
+                     * 设置Time point for returning data, in the format of Unix timestamp in seconds.
+                     * @param _timestamp Time point for returning data, in the format of Unix timestamp in seconds.
                      * 
                      */
                     void SetTimestamp(const int64_t& _timestamp);
@@ -91,7 +91,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The query time recorded in seconds using UNIX timestamp.
+                     * Time point for returning data, in the format of Unix timestamp in seconds.
                      */
                     int64_t m_timestamp;
                     bool m_timestampHasBeenSet;

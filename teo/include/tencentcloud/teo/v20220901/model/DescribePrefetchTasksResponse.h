@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total entries that match the specified query condition.
-                     * @return TotalCount Total entries that match the specified query condition.
+                     * 获取Total number of items in the query condition.
+                     * @return TotalCount Total number of items in the query condition.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of tasks returned.
-                     * @return Tasks List of tasks returned.
+                     * 获取Task result list.
+                     * @return Tasks Task result list.
                      * 
                      */
                     std::vector<Task> GetTasks() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total entries that match the specified query condition.
+                     * Total number of items in the query condition.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of tasks returned.
+                     * Task result list.
                      */
                     std::vector<Task> m_tasks;
                     bool m_tasksHasBeenSet;

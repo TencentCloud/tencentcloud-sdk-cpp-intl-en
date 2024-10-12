@@ -97,7 +97,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
-                    OpsTaskCanvasDto GetCirculateTaskList() const;
+                    std::vector<OpsTaskCanvasDto> GetCirculateTaskList() const;
 
                     /**
                      * 设置Canvas Cyclic Dependency Task Information
@@ -106,7 +106,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
-                    void SetCirculateTaskList(const OpsTaskCanvasDto& _circulateTaskList);
+                    void SetCirculateTaskList(const std::vector<OpsTaskCanvasDto>& _circulateTaskList);
 
                     /**
                      * 判断参数 CirculateTaskList 是否已赋值
@@ -133,7 +133,7 @@ Note: This field may return null, indicating that no valid value can be obtained
                      * Canvas Cyclic Dependency Task Information
 Note: This field may return null, indicating that no valid value can be obtained.
                      */
-                    OpsTaskCanvasDto m_circulateTaskList;
+                    std::vector<OpsTaskCanvasDto> m_circulateTaskList;
                     bool m_circulateTaskListHasBeenSet;
 
                 };

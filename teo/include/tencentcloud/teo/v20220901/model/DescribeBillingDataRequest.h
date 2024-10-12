@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start time of the query.
-                     * @return StartTime Start time of the query.
+                     * 获取Start time.
+                     * @return StartTime Start time.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Start time of the query.
-                     * @param _startTime Start time of the query.
+                     * 设置Start time.
+                     * @param _startTime Start time.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time of the query.
-                     * @return EndTime End time of the query.
+                     * 获取End time.
+                     * @return EndTime End time.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End time of the query.
-                     * @param _endTime End time of the query.
+                     * 设置End time.
+                     * @param _endTime End time.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Zone ID set. This parameter is required.
-                     * @return ZoneIds Zone ID set. This parameter is required.
+                     * 获取Site ID set. This parameter is required.
+                     * @return ZoneIds Site ID set. This parameter is required.
                      * 
                      */
                     std::vector<std::string> GetZoneIds() const;
 
                     /**
-                     * 设置Zone ID set. This parameter is required.
-                     * @param _zoneIds Zone ID set. This parameter is required.
+                     * 设置Site ID set. This parameter is required.
+                     * @param _zoneIds Site ID set. This parameter is required.
                      * 
                      */
                     void SetZoneIds(const std::vector<std::string>& _zoneIds);
@@ -107,71 +107,79 @@ namespace TencentCloud
                     bool ZoneIdsHasBeenSet() const;
 
                     /**
-                     * 获取Indicator list. Valid values:<li>acc_flux: Content acceleration traffic, in bytes;</li>
-<li>smt_flux: Smart acceleration traffic, in bytes;</li>
-<li>l4_flux: Layer 4 acceleration traffic, in bytes;</li>
-<li>sec_flux: Exclusive DDoS mitigation traffic, in bytes;</li>
-<li>zxctg_flux: Cross-MLC-border acceleration traffic, in bytes;</li>
-<li>acc_bandwidth: Content acceleration bandwidth, in bps;</li>
-<li>smt_bandwidth: Smart acceleration bandwidth, in bps;</li>
-<li>l4_bandwidth: Layer 4 acceleration bandwidth, in bps;</li>
-<li>sec_bandwidth: Exclusive DDoS mitigation bandwidth, in bps;</li>
-<li>zxctg_bandwidth: Cross-MLC-border acceleration bandwidth, in bps;</li><li>sec_request_clean: HTTP/HTTPS requests, in count;</li>
-<li>smt_request_clean: Smart acceleration requests, in count;</li>
-<li>quic_request: QUIC requests, in count;</li>
-<li>bot_request_clean: Bot requests, in count;</li>
-<li>cls_count: Real-time log delivery log counts, in count;</li>
-<li>ddos_bandwidth: Exclusive DDoS mitigation elastic bandwidth, in bps.</li>
-                     * @return MetricName Indicator list. Valid values:<li>acc_flux: Content acceleration traffic, in bytes;</li>
-<li>smt_flux: Smart acceleration traffic, in bytes;</li>
-<li>l4_flux: Layer 4 acceleration traffic, in bytes;</li>
-<li>sec_flux: Exclusive DDoS mitigation traffic, in bytes;</li>
-<li>zxctg_flux: Cross-MLC-border acceleration traffic, in bytes;</li>
-<li>acc_bandwidth: Content acceleration bandwidth, in bps;</li>
-<li>smt_bandwidth: Smart acceleration bandwidth, in bps;</li>
-<li>l4_bandwidth: Layer 4 acceleration bandwidth, in bps;</li>
-<li>sec_bandwidth: Exclusive DDoS mitigation bandwidth, in bps;</li>
-<li>zxctg_bandwidth: Cross-MLC-border acceleration bandwidth, in bps;</li><li>sec_request_clean: HTTP/HTTPS requests, in count;</li>
-<li>smt_request_clean: Smart acceleration requests, in count;</li>
-<li>quic_request: QUIC requests, in count;</li>
-<li>bot_request_clean: Bot requests, in count;</li>
-<li>cls_count: Real-time log delivery log counts, in count;</li>
-<li>ddos_bandwidth: Exclusive DDoS mitigation elastic bandwidth, in bps.</li>
+                     * 获取Metric list. Valid values:
+<li>acc_flux: content acceleration traffic, in bytes;</li>
+<li>smt_flux: smart acceleration traffic, in bytes;</li>
+<li>l4_flux: L4 acceleration traffic, in bytes;</li>
+<li>sec_flux: exclusive protection traffic, in bytes;</li>
+<li>zxctg_flux: network optimization traffic in the Chinese mainland, in bytes;</li>
+<li>acc_bandwidth: content acceleration bandwidth, in bps;</li>
+<li>smt_bandwidth: smart acceleration bandwidth, in bps;</li>
+<li>l4_bandwidth: L4 acceleration bandwidth, in bps;</li>
+<li>sec_bandwidth: exclusive protection bandwidth, in bps;</li>
+<li>zxctg_bandwidth: network optimization bandwidth in the Chinese mainland, in bps;</li>
+<li>sec_request_clean: number of HTTP/HTTPS requests;</li>
+<li>smt_request_clean: number of smart acceleration requests;</li>
+<li>quic_request: number of QUIC requests;</li>
+<li>bot_request_clean: number of Bot requests;</li>
+<li>cls_count: number of real-time log entries pushed;</li>
+<li>ddos_bandwidth: elastic DDoS protection bandwidth, in bps.</li>
+                     * @return MetricName Metric list. Valid values:
+<li>acc_flux: content acceleration traffic, in bytes;</li>
+<li>smt_flux: smart acceleration traffic, in bytes;</li>
+<li>l4_flux: L4 acceleration traffic, in bytes;</li>
+<li>sec_flux: exclusive protection traffic, in bytes;</li>
+<li>zxctg_flux: network optimization traffic in the Chinese mainland, in bytes;</li>
+<li>acc_bandwidth: content acceleration bandwidth, in bps;</li>
+<li>smt_bandwidth: smart acceleration bandwidth, in bps;</li>
+<li>l4_bandwidth: L4 acceleration bandwidth, in bps;</li>
+<li>sec_bandwidth: exclusive protection bandwidth, in bps;</li>
+<li>zxctg_bandwidth: network optimization bandwidth in the Chinese mainland, in bps;</li>
+<li>sec_request_clean: number of HTTP/HTTPS requests;</li>
+<li>smt_request_clean: number of smart acceleration requests;</li>
+<li>quic_request: number of QUIC requests;</li>
+<li>bot_request_clean: number of Bot requests;</li>
+<li>cls_count: number of real-time log entries pushed;</li>
+<li>ddos_bandwidth: elastic DDoS protection bandwidth, in bps.</li>
                      * 
                      */
                     std::string GetMetricName() const;
 
                     /**
-                     * 设置Indicator list. Valid values:<li>acc_flux: Content acceleration traffic, in bytes;</li>
-<li>smt_flux: Smart acceleration traffic, in bytes;</li>
-<li>l4_flux: Layer 4 acceleration traffic, in bytes;</li>
-<li>sec_flux: Exclusive DDoS mitigation traffic, in bytes;</li>
-<li>zxctg_flux: Cross-MLC-border acceleration traffic, in bytes;</li>
-<li>acc_bandwidth: Content acceleration bandwidth, in bps;</li>
-<li>smt_bandwidth: Smart acceleration bandwidth, in bps;</li>
-<li>l4_bandwidth: Layer 4 acceleration bandwidth, in bps;</li>
-<li>sec_bandwidth: Exclusive DDoS mitigation bandwidth, in bps;</li>
-<li>zxctg_bandwidth: Cross-MLC-border acceleration bandwidth, in bps;</li><li>sec_request_clean: HTTP/HTTPS requests, in count;</li>
-<li>smt_request_clean: Smart acceleration requests, in count;</li>
-<li>quic_request: QUIC requests, in count;</li>
-<li>bot_request_clean: Bot requests, in count;</li>
-<li>cls_count: Real-time log delivery log counts, in count;</li>
-<li>ddos_bandwidth: Exclusive DDoS mitigation elastic bandwidth, in bps.</li>
-                     * @param _metricName Indicator list. Valid values:<li>acc_flux: Content acceleration traffic, in bytes;</li>
-<li>smt_flux: Smart acceleration traffic, in bytes;</li>
-<li>l4_flux: Layer 4 acceleration traffic, in bytes;</li>
-<li>sec_flux: Exclusive DDoS mitigation traffic, in bytes;</li>
-<li>zxctg_flux: Cross-MLC-border acceleration traffic, in bytes;</li>
-<li>acc_bandwidth: Content acceleration bandwidth, in bps;</li>
-<li>smt_bandwidth: Smart acceleration bandwidth, in bps;</li>
-<li>l4_bandwidth: Layer 4 acceleration bandwidth, in bps;</li>
-<li>sec_bandwidth: Exclusive DDoS mitigation bandwidth, in bps;</li>
-<li>zxctg_bandwidth: Cross-MLC-border acceleration bandwidth, in bps;</li><li>sec_request_clean: HTTP/HTTPS requests, in count;</li>
-<li>smt_request_clean: Smart acceleration requests, in count;</li>
-<li>quic_request: QUIC requests, in count;</li>
-<li>bot_request_clean: Bot requests, in count;</li>
-<li>cls_count: Real-time log delivery log counts, in count;</li>
-<li>ddos_bandwidth: Exclusive DDoS mitigation elastic bandwidth, in bps.</li>
+                     * 设置Metric list. Valid values:
+<li>acc_flux: content acceleration traffic, in bytes;</li>
+<li>smt_flux: smart acceleration traffic, in bytes;</li>
+<li>l4_flux: L4 acceleration traffic, in bytes;</li>
+<li>sec_flux: exclusive protection traffic, in bytes;</li>
+<li>zxctg_flux: network optimization traffic in the Chinese mainland, in bytes;</li>
+<li>acc_bandwidth: content acceleration bandwidth, in bps;</li>
+<li>smt_bandwidth: smart acceleration bandwidth, in bps;</li>
+<li>l4_bandwidth: L4 acceleration bandwidth, in bps;</li>
+<li>sec_bandwidth: exclusive protection bandwidth, in bps;</li>
+<li>zxctg_bandwidth: network optimization bandwidth in the Chinese mainland, in bps;</li>
+<li>sec_request_clean: number of HTTP/HTTPS requests;</li>
+<li>smt_request_clean: number of smart acceleration requests;</li>
+<li>quic_request: number of QUIC requests;</li>
+<li>bot_request_clean: number of Bot requests;</li>
+<li>cls_count: number of real-time log entries pushed;</li>
+<li>ddos_bandwidth: elastic DDoS protection bandwidth, in bps.</li>
+                     * @param _metricName Metric list. Valid values:
+<li>acc_flux: content acceleration traffic, in bytes;</li>
+<li>smt_flux: smart acceleration traffic, in bytes;</li>
+<li>l4_flux: L4 acceleration traffic, in bytes;</li>
+<li>sec_flux: exclusive protection traffic, in bytes;</li>
+<li>zxctg_flux: network optimization traffic in the Chinese mainland, in bytes;</li>
+<li>acc_bandwidth: content acceleration bandwidth, in bps;</li>
+<li>smt_bandwidth: smart acceleration bandwidth, in bps;</li>
+<li>l4_bandwidth: L4 acceleration bandwidth, in bps;</li>
+<li>sec_bandwidth: exclusive protection bandwidth, in bps;</li>
+<li>zxctg_bandwidth: network optimization bandwidth in the Chinese mainland, in bps;</li>
+<li>sec_request_clean: number of HTTP/HTTPS requests;</li>
+<li>smt_request_clean: number of smart acceleration requests;</li>
+<li>quic_request: number of QUIC requests;</li>
+<li>bot_request_clean: number of Bot requests;</li>
+<li>cls_count: number of real-time log entries pushed;</li>
+<li>ddos_bandwidth: elastic DDoS protection bandwidth, in bps.</li>
                      * 
                      */
                     void SetMetricName(const std::string& _metricName);
@@ -184,23 +192,27 @@ namespace TencentCloud
                     bool MetricNameHasBeenSet() const;
 
                     /**
-                     * 获取Query granularity. Valid values:<li>5min: 5-minute granularity;</li>
-<li>hour: 1-hour granularity;</li>
-<li>day: 1-day granularity.</li>
-                     * @return Interval Query granularity. Valid values:<li>5min: 5-minute granularity;</li>
-<li>hour: 1-hour granularity;</li>
-<li>day: 1-day granularity.</li>
+                     * 获取Time granularity of the query. Valid values:
+<li>5min: 5 minutes;</li>
+<li>hour: 1 hour;</li>
+<li>day: 1 day.</li>
+                     * @return Interval Time granularity of the query. Valid values:
+<li>5min: 5 minutes;</li>
+<li>hour: 1 hour;</li>
+<li>day: 1 day.</li>
                      * 
                      */
                     std::string GetInterval() const;
 
                     /**
-                     * 设置Query granularity. Valid values:<li>5min: 5-minute granularity;</li>
-<li>hour: 1-hour granularity;</li>
-<li>day: 1-day granularity.</li>
-                     * @param _interval Query granularity. Valid values:<li>5min: 5-minute granularity;</li>
-<li>hour: 1-hour granularity;</li>
-<li>day: 1-day granularity.</li>
+                     * 设置Time granularity of the query. Valid values:
+<li>5min: 5 minutes;</li>
+<li>hour: 1 hour;</li>
+<li>day: 1 day.</li>
+                     * @param _interval Time granularity of the query. Valid values:
+<li>5min: 5 minutes;</li>
+<li>hour: 1 hour;</li>
+<li>day: 1 day.</li>
                      * 
                      */
                     void SetInterval(const std::string& _interval);
@@ -213,27 +225,27 @@ namespace TencentCloud
                     bool IntervalHasBeenSet() const;
 
                     /**
-                     * 获取Filter. The detailed filters are as follows:
-<li>host: Filter by Domain Name. Example: test.example.com.<br></li>
-<li>proxy-id: Filter by Layer 4 Proxy Instance ID. Example: sid-2rugn89bkla9.<br></li>
-<li>region-id: Filter by Billing Region.Options are:<br>   CH: Chinese mainland<br>   AF: Africa<br>   AS1: Asia-Pacific Region 1<br>   AS2: Asia-Pacific Region 2<br>   AS3: Asia-Pacific Region 3<br>  EU: Europe<br>   MidEast: Middle East<br>   NA: North America<br>   SA: South America</li>
-                     * @return Filters Filter. The detailed filters are as follows:
-<li>host: Filter by Domain Name. Example: test.example.com.<br></li>
-<li>proxy-id: Filter by Layer 4 Proxy Instance ID. Example: sid-2rugn89bkla9.<br></li>
-<li>region-id: Filter by Billing Region.Options are:<br>   CH: Chinese mainland<br>   AF: Africa<br>   AS1: Asia-Pacific Region 1<br>   AS2: Asia-Pacific Region 2<br>   AS3: Asia-Pacific Region 3<br>  EU: Europe<br>   MidEast: Middle East<br>   NA: North America<br>   SA: South America</li>
+                     * 获取Filter criteria. The detailed values of filter criteria are as follows:
+<li>host: Filter by domain name, such as test.example.com.<br></li>
+<li>proxy-id: Filter by L4 proxy instance ID, such as sid-2rugn89bkla9.<br></li>
+<li>region-id: Filter by billing region. Options:<br>  CH: Chinese mainland<br>  AF: Africa<br>  AS1: Asia-Pacific Region 1<br>  AS2: Asia-Pacific Region 2<br>  AS3: Asia-Pacific Region 3<br>  EU: Europe<br>  MidEast: Middle East<br>  NA: North America<br>  SA: South America</li>
+                     * @return Filters Filter criteria. The detailed values of filter criteria are as follows:
+<li>host: Filter by domain name, such as test.example.com.<br></li>
+<li>proxy-id: Filter by L4 proxy instance ID, such as sid-2rugn89bkla9.<br></li>
+<li>region-id: Filter by billing region. Options:<br>  CH: Chinese mainland<br>  AF: Africa<br>  AS1: Asia-Pacific Region 1<br>  AS2: Asia-Pacific Region 2<br>  AS3: Asia-Pacific Region 3<br>  EU: Europe<br>  MidEast: Middle East<br>  NA: North America<br>  SA: South America</li>
                      * 
                      */
                     std::vector<BillingDataFilter> GetFilters() const;
 
                     /**
-                     * 设置Filter. The detailed filters are as follows:
-<li>host: Filter by Domain Name. Example: test.example.com.<br></li>
-<li>proxy-id: Filter by Layer 4 Proxy Instance ID. Example: sid-2rugn89bkla9.<br></li>
-<li>region-id: Filter by Billing Region.Options are:<br>   CH: Chinese mainland<br>   AF: Africa<br>   AS1: Asia-Pacific Region 1<br>   AS2: Asia-Pacific Region 2<br>   AS3: Asia-Pacific Region 3<br>  EU: Europe<br>   MidEast: Middle East<br>   NA: North America<br>   SA: South America</li>
-                     * @param _filters Filter. The detailed filters are as follows:
-<li>host: Filter by Domain Name. Example: test.example.com.<br></li>
-<li>proxy-id: Filter by Layer 4 Proxy Instance ID. Example: sid-2rugn89bkla9.<br></li>
-<li>region-id: Filter by Billing Region.Options are:<br>   CH: Chinese mainland<br>   AF: Africa<br>   AS1: Asia-Pacific Region 1<br>   AS2: Asia-Pacific Region 2<br>   AS3: Asia-Pacific Region 3<br>  EU: Europe<br>   MidEast: Middle East<br>   NA: North America<br>   SA: South America</li>
+                     * 设置Filter criteria. The detailed values of filter criteria are as follows:
+<li>host: Filter by domain name, such as test.example.com.<br></li>
+<li>proxy-id: Filter by L4 proxy instance ID, such as sid-2rugn89bkla9.<br></li>
+<li>region-id: Filter by billing region. Options:<br>  CH: Chinese mainland<br>  AF: Africa<br>  AS1: Asia-Pacific Region 1<br>  AS2: Asia-Pacific Region 2<br>  AS3: Asia-Pacific Region 3<br>  EU: Europe<br>  MidEast: Middle East<br>  NA: North America<br>  SA: South America</li>
+                     * @param _filters Filter criteria. The detailed values of filter criteria are as follows:
+<li>host: Filter by domain name, such as test.example.com.<br></li>
+<li>proxy-id: Filter by L4 proxy instance ID, such as sid-2rugn89bkla9.<br></li>
+<li>region-id: Filter by billing region. Options:<br>  CH: Chinese mainland<br>  AF: Africa<br>  AS1: Asia-Pacific Region 1<br>  AS2: Asia-Pacific Region 2<br>  AS3: Asia-Pacific Region 3<br>  EU: Europe<br>  MidEast: Middle East<br>  NA: North America<br>  SA: South America</li>
                      * 
                      */
                     void SetFilters(const std::vector<BillingDataFilter>& _filters);
@@ -248,56 +260,59 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Start time of the query.
+                     * Start time.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End time of the query.
+                     * End time.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Zone ID set. This parameter is required.
+                     * Site ID set. This parameter is required.
                      */
                     std::vector<std::string> m_zoneIds;
                     bool m_zoneIdsHasBeenSet;
 
                     /**
-                     * Indicator list. Valid values:<li>acc_flux: Content acceleration traffic, in bytes;</li>
-<li>smt_flux: Smart acceleration traffic, in bytes;</li>
-<li>l4_flux: Layer 4 acceleration traffic, in bytes;</li>
-<li>sec_flux: Exclusive DDoS mitigation traffic, in bytes;</li>
-<li>zxctg_flux: Cross-MLC-border acceleration traffic, in bytes;</li>
-<li>acc_bandwidth: Content acceleration bandwidth, in bps;</li>
-<li>smt_bandwidth: Smart acceleration bandwidth, in bps;</li>
-<li>l4_bandwidth: Layer 4 acceleration bandwidth, in bps;</li>
-<li>sec_bandwidth: Exclusive DDoS mitigation bandwidth, in bps;</li>
-<li>zxctg_bandwidth: Cross-MLC-border acceleration bandwidth, in bps;</li><li>sec_request_clean: HTTP/HTTPS requests, in count;</li>
-<li>smt_request_clean: Smart acceleration requests, in count;</li>
-<li>quic_request: QUIC requests, in count;</li>
-<li>bot_request_clean: Bot requests, in count;</li>
-<li>cls_count: Real-time log delivery log counts, in count;</li>
-<li>ddos_bandwidth: Exclusive DDoS mitigation elastic bandwidth, in bps.</li>
+                     * Metric list. Valid values:
+<li>acc_flux: content acceleration traffic, in bytes;</li>
+<li>smt_flux: smart acceleration traffic, in bytes;</li>
+<li>l4_flux: L4 acceleration traffic, in bytes;</li>
+<li>sec_flux: exclusive protection traffic, in bytes;</li>
+<li>zxctg_flux: network optimization traffic in the Chinese mainland, in bytes;</li>
+<li>acc_bandwidth: content acceleration bandwidth, in bps;</li>
+<li>smt_bandwidth: smart acceleration bandwidth, in bps;</li>
+<li>l4_bandwidth: L4 acceleration bandwidth, in bps;</li>
+<li>sec_bandwidth: exclusive protection bandwidth, in bps;</li>
+<li>zxctg_bandwidth: network optimization bandwidth in the Chinese mainland, in bps;</li>
+<li>sec_request_clean: number of HTTP/HTTPS requests;</li>
+<li>smt_request_clean: number of smart acceleration requests;</li>
+<li>quic_request: number of QUIC requests;</li>
+<li>bot_request_clean: number of Bot requests;</li>
+<li>cls_count: number of real-time log entries pushed;</li>
+<li>ddos_bandwidth: elastic DDoS protection bandwidth, in bps.</li>
                      */
                     std::string m_metricName;
                     bool m_metricNameHasBeenSet;
 
                     /**
-                     * Query granularity. Valid values:<li>5min: 5-minute granularity;</li>
-<li>hour: 1-hour granularity;</li>
-<li>day: 1-day granularity.</li>
+                     * Time granularity of the query. Valid values:
+<li>5min: 5 minutes;</li>
+<li>hour: 1 hour;</li>
+<li>day: 1 day.</li>
                      */
                     std::string m_interval;
                     bool m_intervalHasBeenSet;
 
                     /**
-                     * Filter. The detailed filters are as follows:
-<li>host: Filter by Domain Name. Example: test.example.com.<br></li>
-<li>proxy-id: Filter by Layer 4 Proxy Instance ID. Example: sid-2rugn89bkla9.<br></li>
-<li>region-id: Filter by Billing Region.Options are:<br>   CH: Chinese mainland<br>   AF: Africa<br>   AS1: Asia-Pacific Region 1<br>   AS2: Asia-Pacific Region 2<br>   AS3: Asia-Pacific Region 3<br>  EU: Europe<br>   MidEast: Middle East<br>   NA: North America<br>   SA: South America</li>
+                     * Filter criteria. The detailed values of filter criteria are as follows:
+<li>host: Filter by domain name, such as test.example.com.<br></li>
+<li>proxy-id: Filter by L4 proxy instance ID, such as sid-2rugn89bkla9.<br></li>
+<li>region-id: Filter by billing region. Options:<br>  CH: Chinese mainland<br>  AF: Africa<br>  AS1: Asia-Pacific Region 1<br>  AS2: Asia-Pacific Region 2<br>  AS3: Asia-Pacific Region 3<br>  EU: Europe<br>  MidEast: Middle East<br>  NA: North America<br>  SA: South America</li>
                      */
                     std::vector<BillingDataFilter> m_filters;
                     bool m_filtersHasBeenSet;

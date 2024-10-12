@@ -65,12 +65,12 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Filter criteria. The upper limit for Filters.Values is 20. The detailed filter criteria are as follows:
+                     * 获取Filter criteria. The maximum number of Filters.Values is 20. The detailed Name values of filter criteria are as follows:
 <li>page-id: Filter by page ID;</li>
 <li>name: Filter by page name;</li>
 <li>description: Filter by page description;</li>
 <li>content-type: Filter by page type.</li>
-                     * @return Filters Filter criteria. The upper limit for Filters.Values is 20. The detailed filter criteria are as follows:
+                     * @return Filters Filter criteria. The maximum number of Filters.Values is 20. The detailed Name values of filter criteria are as follows:
 <li>page-id: Filter by page ID;</li>
 <li>name: Filter by page name;</li>
 <li>description: Filter by page description;</li>
@@ -80,12 +80,12 @@ namespace TencentCloud
                     std::vector<AdvancedFilter> GetFilters() const;
 
                     /**
-                     * 设置Filter criteria. The upper limit for Filters.Values is 20. The detailed filter criteria are as follows:
+                     * 设置Filter criteria. The maximum number of Filters.Values is 20. The detailed Name values of filter criteria are as follows:
 <li>page-id: Filter by page ID;</li>
 <li>name: Filter by page name;</li>
 <li>description: Filter by page description;</li>
 <li>content-type: Filter by page type.</li>
-                     * @param _filters Filter criteria. The upper limit for Filters.Values is 20. The detailed filter criteria are as follows:
+                     * @param _filters Filter criteria. The maximum number of Filters.Values is 20. The detailed Name values of filter criteria are as follows:
 <li>page-id: Filter by page ID;</li>
 <li>name: Filter by page name;</li>
 <li>description: Filter by page description;</li>
@@ -123,15 +123,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取The limit of paginated query. Default value: 20. Maximum value: 1,000.
-                     * @return Limit The limit of paginated query. Default value: 20. Maximum value: 1,000.
+                     * 获取The limit of paginated query. Default value: 20. Maximum value: 1,000.  
+                     * @return Limit The limit of paginated query. Default value: 20. Maximum value: 1,000.  
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置The limit of paginated query. Default value: 20. Maximum value: 1,000.
-                     * @param _limit The limit of paginated query. Default value: 20. Maximum value: 1,000.
+                     * 设置The limit of paginated query. Default value: 20. Maximum value: 1,000.  
+                     * @param _limit The limit of paginated query. Default value: 20. Maximum value: 1,000.  
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -152,7 +152,7 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Filter criteria. The upper limit for Filters.Values is 20. The detailed filter criteria are as follows:
+                     * Filter criteria. The maximum number of Filters.Values is 20. The detailed Name values of filter criteria are as follows:
 <li>page-id: Filter by page ID;</li>
 <li>name: Filter by page name;</li>
 <li>description: Filter by page description;</li>
@@ -168,7 +168,7 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * The limit of paginated query. Default value: 20. Maximum value: 1,000.
+                     * The limit of paginated query. Default value: 20. Maximum value: 1,000.  
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
