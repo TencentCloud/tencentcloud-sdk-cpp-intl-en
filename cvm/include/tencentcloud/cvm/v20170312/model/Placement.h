@@ -110,27 +110,6 @@ namespace TencentCloud
                     bool HostIdsHasBeenSet() const;
 
                     /**
-                     * 获取IPs of the hosts to create CVMs
-                     * @return HostIps IPs of the hosts to create CVMs
-                     * 
-                     */
-                    std::vector<std::string> GetHostIps() const;
-
-                    /**
-                     * 设置IPs of the hosts to create CVMs
-                     * @param _hostIps IPs of the hosts to create CVMs
-                     * 
-                     */
-                    void SetHostIps(const std::vector<std::string>& _hostIps);
-
-                    /**
-                     * 判断参数 HostIps 是否已赋值
-                     * @return HostIps 是否已赋值
-                     * 
-                     */
-                    bool HostIpsHasBeenSet() const;
-
-                    /**
                      * 获取The ID of the CDH to which the instance belongs, only used as an output parameter.
                      * @return HostId The ID of the CDH to which the instance belongs, only used as an output parameter.
                      * 
@@ -170,12 +149,6 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_hostIds;
                     bool m_hostIdsHasBeenSet;
-
-                    /**
-                     * IPs of the hosts to create CVMs
-                     */
-                    std::vector<std::string> m_hostIps;
-                    bool m_hostIpsHasBeenSet;
 
                     /**
                      * The ID of the CDH to which the instance belongs, only used as an output parameter.

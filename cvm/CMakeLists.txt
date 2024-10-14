@@ -66,6 +66,7 @@ set(cvm_public_header_model
   include/tencentcloud/cvm/v20170312/model/InternetChargeTypeConfig.h
   include/tencentcloud/cvm/v20170312/model/DescribeImagesResponse.h
   include/tencentcloud/cvm/v20170312/model/ModifyInstancesVpcAttributeResponse.h
+  include/tencentcloud/cvm/v20170312/model/CpuTopology.h
   include/tencentcloud/cvm/v20170312/model/CreateKeyPairResponse.h
   include/tencentcloud/cvm/v20170312/model/DeleteKeyPairsResponse.h
   include/tencentcloud/cvm/v20170312/model/TagSpecification.h
@@ -267,6 +268,7 @@ set(cvm_src
   src/v20170312/model/InternetChargeTypeConfig.cpp
   src/v20170312/model/DescribeImagesResponse.cpp
   src/v20170312/model/ModifyInstancesVpcAttributeResponse.cpp
+  src/v20170312/model/CpuTopology.cpp
   src/v20170312/model/CreateKeyPairResponse.cpp
   src/v20170312/model/DeleteKeyPairsResponse.cpp
   src/v20170312/model/TagSpecification.cpp
