@@ -99,18 +99,18 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool StreamNameHasBeenSet() const;
 
                     /**
-                     * 获取Source URL, which is valid if `Type` is `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL` and can contain 1-512 characters
+                     * 获取Source URL, which is valid if `Type` is `RTMP_PULL`, `HLS_PULL`,  `MP4_PULL`, `RTSP_PULL` or `SRT_PULL`, and can contain 1-512 characters
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @return SourceUrl Source URL, which is valid if `Type` is `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL` and can contain 1-512 characters
+                     * @return SourceUrl Source URL, which is valid if `Type` is `RTMP_PULL`, `HLS_PULL`,  `MP4_PULL`, `RTSP_PULL` or `SRT_PULL`, and can contain 1-512 characters
 Note: This field may return `null`, indicating that no valid value was found.
                      * 
                      */
                     std::string GetSourceUrl() const;
 
                     /**
-                     * 设置Source URL, which is valid if `Type` is `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL` and can contain 1-512 characters
+                     * 设置Source URL, which is valid if `Type` is `RTMP_PULL`, `HLS_PULL`,  `MP4_PULL`, `RTSP_PULL` or `SRT_PULL`, and can contain 1-512 characters
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _sourceUrl Source URL, which is valid if `Type` is `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL` and can contain 1-512 characters
+                     * @param _sourceUrl Source URL, which is valid if `Type` is `RTMP_PULL`, `HLS_PULL`,  `MP4_PULL`, `RTSP_PULL` or `SRT_PULL`, and can contain 1-512 characters
 Note: This field may return `null`, indicating that no valid value was found.
                      * 
                      */
@@ -315,7 +315,7 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool m_streamNameHasBeenSet;
 
                     /**
-                     * Source URL, which is valid if `Type` is `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL` and can contain 1-512 characters
+                     * Source URL, which is valid if `Type` is `RTMP_PULL`, `HLS_PULL`,  `MP4_PULL`, `RTSP_PULL` or `SRT_PULL`, and can contain 1-512 characters
 Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::string m_sourceUrl;
