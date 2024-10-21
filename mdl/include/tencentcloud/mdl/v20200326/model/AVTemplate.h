@@ -752,6 +752,48 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
                      */
                     bool VideoEnhanceSettingsHasBeenSet() const;
 
+                    /**
+                     * 获取Key frame interval, 300-10000, optional.
+                     * @return GopSize Key frame interval, 300-10000, optional.
+                     * 
+                     */
+                    int64_t GetGopSize() const;
+
+                    /**
+                     * 设置Key frame interval, 300-10000, optional.
+                     * @param _gopSize Key frame interval, 300-10000, optional.
+                     * 
+                     */
+                    void SetGopSize(const int64_t& _gopSize);
+
+                    /**
+                     * 判断参数 GopSize 是否已赋值
+                     * @return GopSize 是否已赋值
+                     * 
+                     */
+                    bool GopSizeHasBeenSet() const;
+
+                    /**
+                     * 获取Keyframe units, only support MILLISECONDS (milliseconds).
+                     * @return GopSizeUnits Keyframe units, only support MILLISECONDS (milliseconds).
+                     * 
+                     */
+                    std::string GetGopSizeUnits() const;
+
+                    /**
+                     * 设置Keyframe units, only support MILLISECONDS (milliseconds).
+                     * @param _gopSizeUnits Keyframe units, only support MILLISECONDS (milliseconds).
+                     * 
+                     */
+                    void SetGopSizeUnits(const std::string& _gopSizeUnits);
+
+                    /**
+                     * 判断参数 GopSizeUnits 是否已赋值
+                     * @return GopSizeUnits 是否已赋值
+                     * 
+                     */
+                    bool GopSizeUnitsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -952,6 +994,18 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
                      */
                     std::vector<VideoEnhanceSetting> m_videoEnhanceSettings;
                     bool m_videoEnhanceSettingsHasBeenSet;
+
+                    /**
+                     * Key frame interval, 300-10000, optional.
+                     */
+                    int64_t m_gopSize;
+                    bool m_gopSizeHasBeenSet;
+
+                    /**
+                     * Keyframe units, only support MILLISECONDS (milliseconds).
+                     */
+                    std::string m_gopSizeUnits;
+                    bool m_gopSizeUnitsHasBeenSet;
 
                 };
             }

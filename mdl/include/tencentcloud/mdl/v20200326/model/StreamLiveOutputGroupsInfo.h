@@ -76,18 +76,30 @@ namespace TencentCloud
 
                     /**
                      * 获取Output protocol
-Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `DASH_ARCHIVE`,`HLS_STREAM_PACKAGE`, `DASH_STREAM_PACKAGE`, `FRAME_CAPTURE`,`RTP`,`RTMP`.
+Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, 
+ `DASH_ARCHIVE`, `HLS_STREAM_PACKAGE`, 
+ `DASH_STREAM_PACKAGE`, 
+ `FRAME_CAPTURE`, `RTP`, `RTMP`, `M2TS`.
                      * @return Type Output protocol
-Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `DASH_ARCHIVE`,`HLS_STREAM_PACKAGE`, `DASH_STREAM_PACKAGE`, `FRAME_CAPTURE`,`RTP`,`RTMP`.
+Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, 
+ `DASH_ARCHIVE`, `HLS_STREAM_PACKAGE`, 
+ `DASH_STREAM_PACKAGE`, 
+ `FRAME_CAPTURE`, `RTP`, `RTMP`, `M2TS`.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Output protocol
-Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `DASH_ARCHIVE`,`HLS_STREAM_PACKAGE`, `DASH_STREAM_PACKAGE`, `FRAME_CAPTURE`,`RTP`,`RTMP`.
+Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, 
+ `DASH_ARCHIVE`, `HLS_STREAM_PACKAGE`, 
+ `DASH_STREAM_PACKAGE`, 
+ `FRAME_CAPTURE`, `RTP`, `RTMP`, `M2TS`.
                      * @param _type Output protocol
-Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `DASH_ARCHIVE`,`HLS_STREAM_PACKAGE`, `DASH_STREAM_PACKAGE`, `FRAME_CAPTURE`,`RTP`,`RTMP`.
+Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, 
+ `DASH_ARCHIVE`, `HLS_STREAM_PACKAGE`, 
+ `DASH_STREAM_PACKAGE`, 
+ `FRAME_CAPTURE`, `RTP`, `RTMP`, `M2TS`.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -101,18 +113,18 @@ Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `DASH_ARCHIVE`,`HLS_STREAM_PACKAGE`,
 
                     /**
                      * 获取Output information
-If the type is RTMP or RTP, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
+If the type is RTMP, RTP or FRAME_CAPTURE, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
                      * @return Outputs Output information
-If the type is RTMP or RTP, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
+If the type is RTMP, RTP or FRAME_CAPTURE, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
                      * 
                      */
                     std::vector<OutputInfo> GetOutputs() const;
 
                     /**
                      * 设置Output information
-If the type is RTMP or RTP, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
+If the type is RTMP, RTP or FRAME_CAPTURE, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
                      * @param _outputs Output information
-If the type is RTMP or RTP, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
+If the type is RTMP, RTP or FRAME_CAPTURE, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
                      * 
                      */
                     void SetOutputs(const std::vector<OutputInfo>& _outputs);
@@ -280,14 +292,17 @@ Note: This field may return `null`, indicating that no valid value was found.
 
                     /**
                      * Output protocol
-Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `DASH_ARCHIVE`,`HLS_STREAM_PACKAGE`, `DASH_STREAM_PACKAGE`, `FRAME_CAPTURE`,`RTP`,`RTMP`.
+Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, 
+ `DASH_ARCHIVE`, `HLS_STREAM_PACKAGE`, 
+ `DASH_STREAM_PACKAGE`, 
+ `FRAME_CAPTURE`, `RTP`, `RTMP`, `M2TS`.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
                      * Output information
-If the type is RTMP or RTP, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
+If the type is RTMP, RTP or FRAME_CAPTURE, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
                      */
                     std::vector<OutputInfo> m_outputs;
                     bool m_outputsHasBeenSet;

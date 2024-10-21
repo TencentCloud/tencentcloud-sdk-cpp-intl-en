@@ -52,7 +52,9 @@ AVTemplate::AVTemplate() :
     m_multiAudioTrackEnabledHasBeenSet(false),
     m_audioTracksHasBeenSet(false),
     m_videoEnhanceEnabledHasBeenSet(false),
-    m_videoEnhanceSettingsHasBeenSet(false)
+    m_videoEnhanceSettingsHasBeenSet(false),
+    m_gopSizeHasBeenSet(false),
+    m_gopSizeUnitsHasBeenSet(false)
 {
 }
 
@@ -429,6 +431,26 @@ CoreInternalOutcome AVTemplate::Deserialize(const rapidjson::Value &value)
         m_videoEnhanceSettingsHasBeenSet = true;
     }
 
+    if (value.HasMember("GopSize") && !value["GopSize"].IsNull())
+    {
+        if (!value["GopSize"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `AVTemplate.GopSize` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_gopSize = value["GopSize"].GetInt64();
+        m_gopSizeHasBeenSet = true;
+    }
+
+    if (value.HasMember("GopSizeUnits") && !value["GopSizeUnits"].IsNull())
+    {
+        if (!value["GopSizeUnits"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AVTemplate.GopSizeUnits` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_gopSizeUnits = string(value["GopSizeUnits"].GetString());
+        m_gopSizeUnitsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -708,6 +730,22 @@ void AVTemplate::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Allo
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_gopSizeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "GopSize";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_gopSize, allocator);
+    }
+
+    if (m_gopSizeUnitsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "GopSizeUnits";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_gopSizeUnits.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -1223,5 +1261,37 @@ void AVTemplate::SetVideoEnhanceSettings(const vector<VideoEnhanceSetting>& _vid
 bool AVTemplate::VideoEnhanceSettingsHasBeenSet() const
 {
     return m_videoEnhanceSettingsHasBeenSet;
+}
+
+int64_t AVTemplate::GetGopSize() const
+{
+    return m_gopSize;
+}
+
+void AVTemplate::SetGopSize(const int64_t& _gopSize)
+{
+    m_gopSize = _gopSize;
+    m_gopSizeHasBeenSet = true;
+}
+
+bool AVTemplate::GopSizeHasBeenSet() const
+{
+    return m_gopSizeHasBeenSet;
+}
+
+string AVTemplate::GetGopSizeUnits() const
+{
+    return m_gopSizeUnits;
+}
+
+void AVTemplate::SetGopSizeUnits(const string& _gopSizeUnits)
+{
+    m_gopSizeUnits = _gopSizeUnits;
+    m_gopSizeUnitsHasBeenSet = true;
+}
+
+bool AVTemplate::GopSizeUnitsHasBeenSet() const
+{
+    return m_gopSizeUnitsHasBeenSet;
 }
 
