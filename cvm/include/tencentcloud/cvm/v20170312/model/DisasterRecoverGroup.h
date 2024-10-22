@@ -89,15 +89,27 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Type of a spread placement group. Valid values: <br><li>HOST: physical machine <br><li>SW: switch <br><li>RACK: rack.
-                     * @return Type Type of a spread placement group. Valid values: <br><li>HOST: physical machine <br><li>SW: switch <br><li>RACK: rack.
+                     * 获取Type of a spread placement group. Valid values:<br>
+<li>HOST: physical machine.<br></li>
+<li>SW: switch.<br></li>
+<li>RACK: rack.</li>
+                     * @return Type Type of a spread placement group. Valid values:<br>
+<li>HOST: physical machine.<br></li>
+<li>SW: switch.<br></li>
+<li>RACK: rack.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Type of a spread placement group. Valid values: <br><li>HOST: physical machine <br><li>SW: switch <br><li>RACK: rack.
-                     * @param _type Type of a spread placement group. Valid values: <br><li>HOST: physical machine <br><li>SW: switch <br><li>RACK: rack.
+                     * 设置Type of a spread placement group. Valid values:<br>
+<li>HOST: physical machine.<br></li>
+<li>SW: switch.<br></li>
+<li>RACK: rack.</li>
+                     * @param _type Type of a spread placement group. Valid values:<br>
+<li>HOST: physical machine.<br></li>
+<li>SW: switch.<br></li>
+<li>RACK: rack.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -216,7 +228,10 @@ Note: This field may return null, indicating that no valid value is found.
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Type of a spread placement group. Valid values: <br><li>HOST: physical machine <br><li>SW: switch <br><li>RACK: rack.
+                     * Type of a spread placement group. Valid values:<br>
+<li>HOST: physical machine.<br></li>
+<li>SW: switch.<br></li>
+<li>RACK: rack.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

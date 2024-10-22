@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Suspected attack detail
                 */
                 class AttackRiskDetail : public AbstractModel
                 {
@@ -47,15 +47,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Suspected attack trace types
+SuspectedSpoofingAttack: Suspected spoofing attack
+ SuspectedSynthesisImage: Suspected synthesis image SuspectedSynthesisVideo: Suspected synthesis video SuspectedeAnomalyAttack: Suspected anomaly attack SuspectedAdversarialAttack: Suspected adversarial attack SuspectedBlackIndustry: Suspected batch generation attack
+SuspectedWatermark: Suspected watermark
+                     * @return Type Suspected attack trace types
+SuspectedSpoofingAttack: Suspected spoofing attack
+ SuspectedSynthesisImage: Suspected synthesis image SuspectedSynthesisVideo: Suspected synthesis video SuspectedeAnomalyAttack: Suspected anomaly attack SuspectedAdversarialAttack: Suspected adversarial attack SuspectedBlackIndustry: Suspected batch generation attack
+SuspectedWatermark: Suspected watermark
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置Suspected attack trace types
+SuspectedSpoofingAttack: Suspected spoofing attack
+ SuspectedSynthesisImage: Suspected synthesis image SuspectedSynthesisVideo: Suspected synthesis video SuspectedeAnomalyAttack: Suspected anomaly attack SuspectedAdversarialAttack: Suspected adversarial attack SuspectedBlackIndustry: Suspected batch generation attack
+SuspectedWatermark: Suspected watermark
+                     * @param _type Suspected attack trace types
+SuspectedSpoofingAttack: Suspected spoofing attack
+ SuspectedSynthesisImage: Suspected synthesis image SuspectedSynthesisVideo: Suspected synthesis video SuspectedeAnomalyAttack: Suspected anomaly attack SuspectedAdversarialAttack: Suspected adversarial attack SuspectedBlackIndustry: Suspected batch generation attack
+SuspectedWatermark: Suspected watermark
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -70,7 +82,10 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Suspected attack trace types
+SuspectedSpoofingAttack: Suspected spoofing attack
+ SuspectedSynthesisImage: Suspected synthesis image SuspectedSynthesisVideo: Suspected synthesis video SuspectedeAnomalyAttack: Suspected anomaly attack SuspectedAdversarialAttack: Suspected adversarial attack SuspectedBlackIndustry: Suspected batch generation attack
+SuspectedWatermark: Suspected watermark
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

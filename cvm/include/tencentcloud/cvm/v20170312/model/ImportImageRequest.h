@@ -286,6 +286,27 @@ Valid values:
                      */
                     bool BootModeHasBeenSet() const;
 
+                    /**
+                     * 获取Image family
+                     * @return ImageFamily Image family
+                     * 
+                     */
+                    std::string GetImageFamily() const;
+
+                    /**
+                     * 设置Image family
+                     * @param _imageFamily Image family
+                     * 
+                     */
+                    void SetImageFamily(const std::string& _imageFamily);
+
+                    /**
+                     * 判断参数 ImageFamily 是否已赋值
+                     * @return ImageFamily 是否已赋值
+                     * 
+                     */
+                    bool ImageFamilyHasBeenSet() const;
+
                 private:
 
                     /**
@@ -356,6 +377,12 @@ Valid values:
                      */
                     std::string m_bootMode;
                     bool m_bootModeHasBeenSet;
+
+                    /**
+                     * Image family
+                     */
+                    std::string m_imageFamily;
+                    bool m_imageFamilyHasBeenSet;
 
                 };
             }

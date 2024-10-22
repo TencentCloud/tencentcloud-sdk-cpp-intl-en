@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool EnvironmentHasBeenSet() const;
 
                     /**
-                     * 获取Unique ID of the service to be bound
-                     * @return ServiceId Unique ID of the service to be bound
+                     * 获取Unique ID of the service to be bound.
+                     * @return ServiceId Unique ID of the service to be bound.
                      * 
                      */
                     std::string GetServiceId() const;
 
                     /**
-                     * 设置Unique ID of the service to be bound
-                     * @param _serviceId Unique ID of the service to be bound
+                     * 设置Unique ID of the service to be bound.
+                     * @param _serviceId Unique ID of the service to be bound.
                      * 
                      */
                     void SetServiceId(const std::string& _serviceId);
@@ -141,7 +141,7 @@ namespace TencentCloud
                     bool m_environmentHasBeenSet;
 
                     /**
-                     * Unique ID of the service to be bound
+                     * Unique ID of the service to be bound.
                      */
                     std::string m_serviceId;
                     bool m_serviceIdHasBeenSet;

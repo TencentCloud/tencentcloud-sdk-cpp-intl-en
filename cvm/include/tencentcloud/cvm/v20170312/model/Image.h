@@ -421,6 +421,48 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     bool LicenseTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Image family, Note: This field may return empty
+                     * @return ImageFamily Image family, Note: This field may return empty
+                     * 
+                     */
+                    std::string GetImageFamily() const;
+
+                    /**
+                     * 设置Image family, Note: This field may return empty
+                     * @param _imageFamily Image family, Note: This field may return empty
+                     * 
+                     */
+                    void SetImageFamily(const std::string& _imageFamily);
+
+                    /**
+                     * 判断参数 ImageFamily 是否已赋值
+                     * @return ImageFamily 是否已赋值
+                     * 
+                     */
+                    bool ImageFamilyHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the image is deprecated
+                     * @return ImageDeprecated Whether the image is deprecated
+                     * 
+                     */
+                    bool GetImageDeprecated() const;
+
+                    /**
+                     * 设置Whether the image is deprecated
+                     * @param _imageDeprecated Whether the image is deprecated
+                     * 
+                     */
+                    void SetImageDeprecated(const bool& _imageDeprecated);
+
+                    /**
+                     * 判断参数 ImageDeprecated 是否已赋值
+                     * @return ImageDeprecated 是否已赋值
+                     * 
+                     */
+                    bool ImageDeprecatedHasBeenSet() const;
+
                 private:
 
                     /**
@@ -528,6 +570,18 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::string m_licenseType;
                     bool m_licenseTypeHasBeenSet;
+
+                    /**
+                     * Image family, Note: This field may return empty
+                     */
+                    std::string m_imageFamily;
+                    bool m_imageFamilyHasBeenSet;
+
+                    /**
+                     * Whether the image is deprecated
+                     */
+                    bool m_imageDeprecated;
+                    bool m_imageDeprecatedHasBeenSet;
 
                 };
             }

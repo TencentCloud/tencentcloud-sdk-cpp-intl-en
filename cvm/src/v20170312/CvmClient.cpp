@@ -255,6 +255,49 @@ CvmClient::ConfigureChcDeployVpcOutcomeCallable CvmClient::ConfigureChcDeployVpc
     return task->get_future();
 }
 
+CvmClient::ConvertOperatingSystemsOutcome CvmClient::ConvertOperatingSystems(const ConvertOperatingSystemsRequest &request)
+{
+    auto outcome = MakeRequest(request, "ConvertOperatingSystems");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ConvertOperatingSystemsResponse rsp = ConvertOperatingSystemsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ConvertOperatingSystemsOutcome(rsp);
+        else
+            return ConvertOperatingSystemsOutcome(o.GetError());
+    }
+    else
+    {
+        return ConvertOperatingSystemsOutcome(outcome.GetError());
+    }
+}
+
+void CvmClient::ConvertOperatingSystemsAsync(const ConvertOperatingSystemsRequest& request, const ConvertOperatingSystemsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ConvertOperatingSystems(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CvmClient::ConvertOperatingSystemsOutcomeCallable CvmClient::ConvertOperatingSystemsCallable(const ConvertOperatingSystemsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ConvertOperatingSystemsOutcome()>>(
+        [this, request]()
+        {
+            return this->ConvertOperatingSystems(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CvmClient::CreateDisasterRecoverGroupOutcome CvmClient::CreateDisasterRecoverGroup(const CreateDisasterRecoverGroupRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateDisasterRecoverGroup");
@@ -850,6 +893,49 @@ CvmClient::DescribeHostsOutcomeCallable CvmClient::DescribeHostsCallable(const D
         [this, request]()
         {
             return this->DescribeHosts(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CvmClient::DescribeImageFromFamilyOutcome CvmClient::DescribeImageFromFamily(const DescribeImageFromFamilyRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeImageFromFamily");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeImageFromFamilyResponse rsp = DescribeImageFromFamilyResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeImageFromFamilyOutcome(rsp);
+        else
+            return DescribeImageFromFamilyOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeImageFromFamilyOutcome(outcome.GetError());
+    }
+}
+
+void CvmClient::DescribeImageFromFamilyAsync(const DescribeImageFromFamilyRequest& request, const DescribeImageFromFamilyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeImageFromFamily(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CvmClient::DescribeImageFromFamilyOutcomeCallable CvmClient::DescribeImageFromFamilyCallable(const DescribeImageFromFamilyRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeImageFromFamilyOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeImageFromFamily(request);
         }
     );
 
@@ -1667,6 +1753,92 @@ CvmClient::DisassociateSecurityGroupsOutcomeCallable CvmClient::DisassociateSecu
         [this, request]()
         {
             return this->DisassociateSecurityGroups(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CvmClient::EnterRescueModeOutcome CvmClient::EnterRescueMode(const EnterRescueModeRequest &request)
+{
+    auto outcome = MakeRequest(request, "EnterRescueMode");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        EnterRescueModeResponse rsp = EnterRescueModeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return EnterRescueModeOutcome(rsp);
+        else
+            return EnterRescueModeOutcome(o.GetError());
+    }
+    else
+    {
+        return EnterRescueModeOutcome(outcome.GetError());
+    }
+}
+
+void CvmClient::EnterRescueModeAsync(const EnterRescueModeRequest& request, const EnterRescueModeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->EnterRescueMode(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CvmClient::EnterRescueModeOutcomeCallable CvmClient::EnterRescueModeCallable(const EnterRescueModeRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<EnterRescueModeOutcome()>>(
+        [this, request]()
+        {
+            return this->EnterRescueMode(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CvmClient::ExitRescueModeOutcome CvmClient::ExitRescueMode(const ExitRescueModeRequest &request)
+{
+    auto outcome = MakeRequest(request, "ExitRescueMode");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ExitRescueModeResponse rsp = ExitRescueModeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ExitRescueModeOutcome(rsp);
+        else
+            return ExitRescueModeOutcome(o.GetError());
+    }
+    else
+    {
+        return ExitRescueModeOutcome(outcome.GetError());
+    }
+}
+
+void CvmClient::ExitRescueModeAsync(const ExitRescueModeRequest& request, const ExitRescueModeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ExitRescueMode(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CvmClient::ExitRescueModeOutcomeCallable CvmClient::ExitRescueModeCallable(const ExitRescueModeRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ExitRescueModeOutcome()>>(
+        [this, request]()
+        {
+            return this->ExitRescueMode(request);
         }
     );
 

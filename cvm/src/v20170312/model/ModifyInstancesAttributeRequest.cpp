@@ -25,11 +25,13 @@ using namespace std;
 ModifyInstancesAttributeRequest::ModifyInstancesAttributeRequest() :
     m_instanceIdsHasBeenSet(false),
     m_instanceNameHasBeenSet(false),
+    m_userDataHasBeenSet(false),
     m_securityGroupsHasBeenSet(false),
     m_camRoleNameHasBeenSet(false),
     m_hostNameHasBeenSet(false),
     m_disableApiTerminationHasBeenSet(false),
-    m_camRoleTypeHasBeenSet(false)
+    m_camRoleTypeHasBeenSet(false),
+    m_autoRebootHasBeenSet(false)
 {
 }
 
@@ -59,6 +61,14 @@ string ModifyInstancesAttributeRequest::ToJsonString() const
         string key = "InstanceName";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_instanceName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_userDataHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "UserData";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_userData.c_str(), allocator).Move(), allocator);
     }
 
     if (m_securityGroupsHasBeenSet)
@@ -106,6 +116,14 @@ string ModifyInstancesAttributeRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_camRoleType.c_str(), allocator).Move(), allocator);
     }
 
+    if (m_autoRebootHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AutoReboot";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_autoReboot, allocator);
+    }
+
 
     rapidjson::StringBuffer buffer;
     rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
@@ -144,6 +162,22 @@ void ModifyInstancesAttributeRequest::SetInstanceName(const string& _instanceNam
 bool ModifyInstancesAttributeRequest::InstanceNameHasBeenSet() const
 {
     return m_instanceNameHasBeenSet;
+}
+
+string ModifyInstancesAttributeRequest::GetUserData() const
+{
+    return m_userData;
+}
+
+void ModifyInstancesAttributeRequest::SetUserData(const string& _userData)
+{
+    m_userData = _userData;
+    m_userDataHasBeenSet = true;
+}
+
+bool ModifyInstancesAttributeRequest::UserDataHasBeenSet() const
+{
+    return m_userDataHasBeenSet;
 }
 
 vector<string> ModifyInstancesAttributeRequest::GetSecurityGroups() const
@@ -224,6 +258,22 @@ void ModifyInstancesAttributeRequest::SetCamRoleType(const string& _camRoleType)
 bool ModifyInstancesAttributeRequest::CamRoleTypeHasBeenSet() const
 {
     return m_camRoleTypeHasBeenSet;
+}
+
+bool ModifyInstancesAttributeRequest::GetAutoReboot() const
+{
+    return m_autoReboot;
+}
+
+void ModifyInstancesAttributeRequest::SetAutoReboot(const bool& _autoReboot)
+{
+    m_autoReboot = _autoReboot;
+    m_autoRebootHasBeenSet = true;
+}
+
+bool ModifyInstancesAttributeRequest::AutoRebootHasBeenSet() const
+{
+    return m_autoRebootHasBeenSet;
 }
 
 

@@ -201,6 +201,48 @@ Valid value: `Linux`.
                      */
                     bool ProductDescriptionHasBeenSet() const;
 
+                    /**
+                     * 获取Upfront total cost, in USD.
+                     * @return DiscountUsagePrice Upfront total cost, in USD.
+                     * 
+                     */
+                    double GetDiscountUsagePrice() const;
+
+                    /**
+                     * 设置Upfront total cost, in USD.
+                     * @param _discountUsagePrice Upfront total cost, in USD.
+                     * 
+                     */
+                    void SetDiscountUsagePrice(const double& _discountUsagePrice);
+
+                    /**
+                     * 判断参数 DiscountUsagePrice 是否已赋值
+                     * @return DiscountUsagePrice 是否已赋值
+                     * 
+                     */
+                    bool DiscountUsagePriceHasBeenSet() const;
+
+                    /**
+                     * 获取Discount price for subsequent total cost, in USD/hr.
+                     * @return DiscountFixedPrice Discount price for subsequent total cost, in USD/hr.
+                     * 
+                     */
+                    double GetDiscountFixedPrice() const;
+
+                    /**
+                     * 设置Discount price for subsequent total cost, in USD/hr.
+                     * @param _discountFixedPrice Discount price for subsequent total cost, in USD/hr.
+                     * 
+                     */
+                    void SetDiscountFixedPrice(const double& _discountFixedPrice);
+
+                    /**
+                     * 判断参数 DiscountFixedPrice 是否已赋值
+                     * @return DiscountFixedPrice 是否已赋值
+                     * 
+                     */
+                    bool DiscountFixedPriceHasBeenSet() const;
+
                 private:
 
                     /**
@@ -246,6 +288,18 @@ Valid value: `Linux`.
                      */
                     std::string m_productDescription;
                     bool m_productDescriptionHasBeenSet;
+
+                    /**
+                     * Upfront total cost, in USD.
+                     */
+                    double m_discountUsagePrice;
+                    bool m_discountUsagePriceHasBeenSet;
+
+                    /**
+                     * Discount price for subsequent total cost, in USD/hr.
+                     */
+                    double m_discountFixedPrice;
+                    bool m_discountFixedPriceHasBeenSet;
 
                 };
             }

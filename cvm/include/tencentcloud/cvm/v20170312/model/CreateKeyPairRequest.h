@@ -65,27 +65,31 @@ namespace TencentCloud
                     bool KeyNameHasBeenSet() const;
 
                     /**
-                     * 获取The ID of the project to which the new key pair belongs.
-You can query the project IDs in two ways:
-<li>Query the project IDs in the project list.
-<li>Call `DescribeProject` and look for `projectId` in the response.
-                     * @return ProjectId The ID of the project to which the new key pair belongs.
-You can query the project IDs in two ways:
-<li>Query the project IDs in the project list.
-<li>Call `DescribeProject` and look for `projectId` in the response.
+                     * 获取ID of the project to which the created key pair belongs.
+
+You can obtain a project ID in the following ways:
+<li>Query the project ID through the project list.</li>
+<li>Call the [DescribeProjects](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) API and obtain the `projectId` from the return information.</li>
+                     * @return ProjectId ID of the project to which the created key pair belongs.
+
+You can obtain a project ID in the following ways:
+<li>Query the project ID through the project list.</li>
+<li>Call the [DescribeProjects](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) API and obtain the `projectId` from the return information.</li>
                      * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
-                     * 设置The ID of the project to which the new key pair belongs.
-You can query the project IDs in two ways:
-<li>Query the project IDs in the project list.
-<li>Call `DescribeProject` and look for `projectId` in the response.
-                     * @param _projectId The ID of the project to which the new key pair belongs.
-You can query the project IDs in two ways:
-<li>Query the project IDs in the project list.
-<li>Call `DescribeProject` and look for `projectId` in the response.
+                     * 设置ID of the project to which the created key pair belongs.
+
+You can obtain a project ID in the following ways:
+<li>Query the project ID through the project list.</li>
+<li>Call the [DescribeProjects](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) API and obtain the `projectId` from the return information.</li>
+                     * @param _projectId ID of the project to which the created key pair belongs.
+
+You can obtain a project ID in the following ways:
+<li>Query the project ID through the project list.</li>
+<li>Call the [DescribeProjects](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) API and obtain the `projectId` from the return information.</li>
                      * 
                      */
                     void SetProjectId(const int64_t& _projectId);
@@ -127,10 +131,11 @@ You can query the project IDs in two ways:
                     bool m_keyNameHasBeenSet;
 
                     /**
-                     * The ID of the project to which the new key pair belongs.
-You can query the project IDs in two ways:
-<li>Query the project IDs in the project list.
-<li>Call `DescribeProject` and look for `projectId` in the response.
+                     * ID of the project to which the created key pair belongs.
+
+You can obtain a project ID in the following ways:
+<li>Query the project ID through the project list.</li>
+<li>Call the [DescribeProjects](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) API and obtain the `projectId` from the return information.</li>
                      */
                     int64_t m_projectId;
                     bool m_projectIdHasBeenSet;

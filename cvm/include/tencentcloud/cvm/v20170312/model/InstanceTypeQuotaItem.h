@@ -264,15 +264,15 @@ Note: This field may return null, indicating that no valid value is found.
                     bool LocalDiskTypeListHasBeenSet() const;
 
                     /**
-                     * 获取Whether an instance model is available. Valid values: <br><li>SELL: available <br><li>SOLD_OUT: sold out
-                     * @return Status Whether an instance model is available. Valid values: <br><li>SELL: available <br><li>SOLD_OUT: sold out
+                     * 获取Whether an instance is for sale. Valid values:<br><li>SELL: The instance is available for purchase.<br></li>SOLD_OUT: The instance has been sold out.
+                     * @return Status Whether an instance is for sale. Valid values:<br><li>SELL: The instance is available for purchase.<br></li>SOLD_OUT: The instance has been sold out.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Whether an instance model is available. Valid values: <br><li>SELL: available <br><li>SOLD_OUT: sold out
-                     * @param _status Whether an instance model is available. Valid values: <br><li>SELL: available <br><li>SOLD_OUT: sold out
+                     * 设置Whether an instance is for sale. Valid values:<br><li>SELL: The instance is available for purchase.<br></li>SOLD_OUT: The instance has been sold out.
+                     * @param _status Whether an instance is for sale. Valid values:<br><li>SELL: The instance is available for purchase.<br></li>SOLD_OUT: The instance has been sold out.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -519,6 +519,47 @@ Note: this field may return null, indicating that no valid value is obtained.
                      */
                     bool FrequencyHasBeenSet() const;
 
+                    /**
+                     * 获取Inventory status. Valid values:
+<li>EnoughStock: Inventory is sufficient.</li> 
+<li>NormalStock: Supply is guaranteed.</li>
+<li>UnderStock: Inventory is about to sell out.</li> 
+<li>WithoutStock: Inventory is already sold out.</li>
+Note: This field may return null, indicating that no valid value is found.
+                     * @return StatusCategory Inventory status. Valid values:
+<li>EnoughStock: Inventory is sufficient.</li> 
+<li>NormalStock: Supply is guaranteed.</li>
+<li>UnderStock: Inventory is about to sell out.</li> 
+<li>WithoutStock: Inventory is already sold out.</li>
+Note: This field may return null, indicating that no valid value is found.
+                     * 
+                     */
+                    std::string GetStatusCategory() const;
+
+                    /**
+                     * 设置Inventory status. Valid values:
+<li>EnoughStock: Inventory is sufficient.</li> 
+<li>NormalStock: Supply is guaranteed.</li>
+<li>UnderStock: Inventory is about to sell out.</li> 
+<li>WithoutStock: Inventory is already sold out.</li>
+Note: This field may return null, indicating that no valid value is found.
+                     * @param _statusCategory Inventory status. Valid values:
+<li>EnoughStock: Inventory is sufficient.</li> 
+<li>NormalStock: Supply is guaranteed.</li>
+<li>UnderStock: Inventory is about to sell out.</li> 
+<li>WithoutStock: Inventory is already sold out.</li>
+Note: This field may return null, indicating that no valid value is found.
+                     * 
+                     */
+                    void SetStatusCategory(const std::string& _statusCategory);
+
+                    /**
+                     * 判断参数 StatusCategory 是否已赋值
+                     * @return StatusCategory 是否已赋值
+                     * 
+                     */
+                    bool StatusCategoryHasBeenSet() const;
+
                 private:
 
                     /**
@@ -583,7 +624,7 @@ Note: This field may return null, indicating that no valid value is found.
                     bool m_localDiskTypeListHasBeenSet;
 
                     /**
-                     * Whether an instance model is available. Valid values: <br><li>SELL: available <br><li>SOLD_OUT: sold out
+                     * Whether an instance is for sale. Valid values:<br><li>SELL: The instance is available for purchase.<br></li>SOLD_OUT: The instance has been sold out.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
@@ -654,6 +695,17 @@ Note: this field may return null, indicating that no valid value is obtained.
                      */
                     std::string m_frequency;
                     bool m_frequencyHasBeenSet;
+
+                    /**
+                     * Inventory status. Valid values:
+<li>EnoughStock: Inventory is sufficient.</li> 
+<li>NormalStock: Supply is guaranteed.</li>
+<li>UnderStock: Inventory is about to sell out.</li> 
+<li>WithoutStock: Inventory is already sold out.</li>
+Note: This field may return null, indicating that no valid value is found.
+                     */
+                    std::string m_statusCategory;
+                    bool m_statusCategoryHasBeenSet;
 
                 };
             }

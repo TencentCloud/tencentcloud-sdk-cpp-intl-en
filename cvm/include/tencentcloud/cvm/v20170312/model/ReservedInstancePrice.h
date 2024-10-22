@@ -130,6 +130,56 @@ namespace TencentCloud
                      */
                     bool DiscountUsagePriceHasBeenSet() const;
 
+                    /**
+                     * 获取Discount on upfront cost. For example, 20.0 indicates 80% off. Note: This field may return null, indicating that no valid value is found.
+Note: This field may return null, indicating that no valid value is found.
+                     * @return FixedPriceDiscount Discount on upfront cost. For example, 20.0 indicates 80% off. Note: This field may return null, indicating that no valid value is found.
+Note: This field may return null, indicating that no valid value is found.
+                     * 
+                     */
+                    double GetFixedPriceDiscount() const;
+
+                    /**
+                     * 设置Discount on upfront cost. For example, 20.0 indicates 80% off. Note: This field may return null, indicating that no valid value is found.
+Note: This field may return null, indicating that no valid value is found.
+                     * @param _fixedPriceDiscount Discount on upfront cost. For example, 20.0 indicates 80% off. Note: This field may return null, indicating that no valid value is found.
+Note: This field may return null, indicating that no valid value is found.
+                     * 
+                     */
+                    void SetFixedPriceDiscount(const double& _fixedPriceDiscount);
+
+                    /**
+                     * 判断参数 FixedPriceDiscount 是否已赋值
+                     * @return FixedPriceDiscount 是否已赋值
+                     * 
+                     */
+                    bool FixedPriceDiscountHasBeenSet() const;
+
+                    /**
+                     * 获取Discount on subsequent cost. For example, 20.0 indicates 80% off. Note: This field may return null, indicating that no valid value is found.
+Note: This field may return null, indicating that no valid value is found.
+                     * @return UsagePriceDiscount Discount on subsequent cost. For example, 20.0 indicates 80% off. Note: This field may return null, indicating that no valid value is found.
+Note: This field may return null, indicating that no valid value is found.
+                     * 
+                     */
+                    double GetUsagePriceDiscount() const;
+
+                    /**
+                     * 设置Discount on subsequent cost. For example, 20.0 indicates 80% off. Note: This field may return null, indicating that no valid value is found.
+Note: This field may return null, indicating that no valid value is found.
+                     * @param _usagePriceDiscount Discount on subsequent cost. For example, 20.0 indicates 80% off. Note: This field may return null, indicating that no valid value is found.
+Note: This field may return null, indicating that no valid value is found.
+                     * 
+                     */
+                    void SetUsagePriceDiscount(const double& _usagePriceDiscount);
+
+                    /**
+                     * 判断参数 UsagePriceDiscount 是否已赋值
+                     * @return UsagePriceDiscount 是否已赋值
+                     * 
+                     */
+                    bool UsagePriceDiscountHasBeenSet() const;
+
                 private:
 
                     /**
@@ -155,6 +205,20 @@ namespace TencentCloud
                      */
                     double m_discountUsagePrice;
                     bool m_discountUsagePriceHasBeenSet;
+
+                    /**
+                     * Discount on upfront cost. For example, 20.0 indicates 80% off. Note: This field may return null, indicating that no valid value is found.
+Note: This field may return null, indicating that no valid value is found.
+                     */
+                    double m_fixedPriceDiscount;
+                    bool m_fixedPriceDiscountHasBeenSet;
+
+                    /**
+                     * Discount on subsequent cost. For example, 20.0 indicates 80% off. Note: This field may return null, indicating that no valid value is found.
+Note: This field may return null, indicating that no valid value is found.
+                     */
+                    double m_usagePriceDiscount;
+                    bool m_usagePriceDiscountHasBeenSet;
 
                 };
             }

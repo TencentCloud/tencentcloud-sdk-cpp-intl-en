@@ -23,10 +23,16 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
+#include <tencentcloud/trtc/v20190722/model/ControlAIConversationRequest.h>
+#include <tencentcloud/trtc/v20190722/model/ControlAIConversationResponse.h>
 #include <tencentcloud/trtc/v20190722/model/CreateCloudRecordingRequest.h>
 #include <tencentcloud/trtc/v20190722/model/CreateCloudRecordingResponse.h>
 #include <tencentcloud/trtc/v20190722/model/DeleteCloudRecordingRequest.h>
 #include <tencentcloud/trtc/v20190722/model/DeleteCloudRecordingResponse.h>
+#include <tencentcloud/trtc/v20190722/model/DescribeAIConversationRequest.h>
+#include <tencentcloud/trtc/v20190722/model/DescribeAIConversationResponse.h>
+#include <tencentcloud/trtc/v20190722/model/DescribeAITranscriptionRequest.h>
+#include <tencentcloud/trtc/v20190722/model/DescribeAITranscriptionResponse.h>
 #include <tencentcloud/trtc/v20190722/model/DescribeCallDetailInfoRequest.h>
 #include <tencentcloud/trtc/v20190722/model/DescribeCallDetailInfoResponse.h>
 #include <tencentcloud/trtc/v20190722/model/DescribeCloudRecordingRequest.h>
@@ -75,14 +81,22 @@
 #include <tencentcloud/trtc/v20190722/model/SetUserBlockedResponse.h>
 #include <tencentcloud/trtc/v20190722/model/SetUserBlockedByStrRoomIdRequest.h>
 #include <tencentcloud/trtc/v20190722/model/SetUserBlockedByStrRoomIdResponse.h>
+#include <tencentcloud/trtc/v20190722/model/StartAIConversationRequest.h>
+#include <tencentcloud/trtc/v20190722/model/StartAIConversationResponse.h>
+#include <tencentcloud/trtc/v20190722/model/StartAITranscriptionRequest.h>
+#include <tencentcloud/trtc/v20190722/model/StartAITranscriptionResponse.h>
 #include <tencentcloud/trtc/v20190722/model/StartPublishCdnStreamRequest.h>
 #include <tencentcloud/trtc/v20190722/model/StartPublishCdnStreamResponse.h>
 #include <tencentcloud/trtc/v20190722/model/StartStreamIngestRequest.h>
 #include <tencentcloud/trtc/v20190722/model/StartStreamIngestResponse.h>
+#include <tencentcloud/trtc/v20190722/model/StopAITranscriptionRequest.h>
+#include <tencentcloud/trtc/v20190722/model/StopAITranscriptionResponse.h>
 #include <tencentcloud/trtc/v20190722/model/StopPublishCdnStreamRequest.h>
 #include <tencentcloud/trtc/v20190722/model/StopPublishCdnStreamResponse.h>
 #include <tencentcloud/trtc/v20190722/model/StopStreamIngestRequest.h>
 #include <tencentcloud/trtc/v20190722/model/StopStreamIngestResponse.h>
+#include <tencentcloud/trtc/v20190722/model/UpdateAIConversationRequest.h>
+#include <tencentcloud/trtc/v20190722/model/UpdateAIConversationResponse.h>
 #include <tencentcloud/trtc/v20190722/model/UpdatePublishCdnStreamRequest.h>
 #include <tencentcloud/trtc/v20190722/model/UpdatePublishCdnStreamResponse.h>
 #include <tencentcloud/trtc/v20190722/model/UpdateStreamIngestRequest.h>
@@ -101,12 +115,21 @@ namespace TencentCloud
                 TrtcClient(const Credential &credential, const std::string &region);
                 TrtcClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
+                typedef Outcome<Core::Error, Model::ControlAIConversationResponse> ControlAIConversationOutcome;
+                typedef std::future<ControlAIConversationOutcome> ControlAIConversationOutcomeCallable;
+                typedef std::function<void(const TrtcClient*, const Model::ControlAIConversationRequest&, ControlAIConversationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ControlAIConversationAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateCloudRecordingResponse> CreateCloudRecordingOutcome;
                 typedef std::future<CreateCloudRecordingOutcome> CreateCloudRecordingOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::CreateCloudRecordingRequest&, CreateCloudRecordingOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCloudRecordingAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteCloudRecordingResponse> DeleteCloudRecordingOutcome;
                 typedef std::future<DeleteCloudRecordingOutcome> DeleteCloudRecordingOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::DeleteCloudRecordingRequest&, DeleteCloudRecordingOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteCloudRecordingAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAIConversationResponse> DescribeAIConversationOutcome;
+                typedef std::future<DescribeAIConversationOutcome> DescribeAIConversationOutcomeCallable;
+                typedef std::function<void(const TrtcClient*, const Model::DescribeAIConversationRequest&, DescribeAIConversationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAIConversationAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAITranscriptionResponse> DescribeAITranscriptionOutcome;
+                typedef std::future<DescribeAITranscriptionOutcome> DescribeAITranscriptionOutcomeCallable;
+                typedef std::function<void(const TrtcClient*, const Model::DescribeAITranscriptionRequest&, DescribeAITranscriptionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAITranscriptionAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeCallDetailInfoResponse> DescribeCallDetailInfoOutcome;
                 typedef std::future<DescribeCallDetailInfoOutcome> DescribeCallDetailInfoOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::DescribeCallDetailInfoRequest&, DescribeCallDetailInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCallDetailInfoAsyncHandler;
@@ -179,18 +202,30 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::SetUserBlockedByStrRoomIdResponse> SetUserBlockedByStrRoomIdOutcome;
                 typedef std::future<SetUserBlockedByStrRoomIdOutcome> SetUserBlockedByStrRoomIdOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::SetUserBlockedByStrRoomIdRequest&, SetUserBlockedByStrRoomIdOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SetUserBlockedByStrRoomIdAsyncHandler;
+                typedef Outcome<Core::Error, Model::StartAIConversationResponse> StartAIConversationOutcome;
+                typedef std::future<StartAIConversationOutcome> StartAIConversationOutcomeCallable;
+                typedef std::function<void(const TrtcClient*, const Model::StartAIConversationRequest&, StartAIConversationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StartAIConversationAsyncHandler;
+                typedef Outcome<Core::Error, Model::StartAITranscriptionResponse> StartAITranscriptionOutcome;
+                typedef std::future<StartAITranscriptionOutcome> StartAITranscriptionOutcomeCallable;
+                typedef std::function<void(const TrtcClient*, const Model::StartAITranscriptionRequest&, StartAITranscriptionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StartAITranscriptionAsyncHandler;
                 typedef Outcome<Core::Error, Model::StartPublishCdnStreamResponse> StartPublishCdnStreamOutcome;
                 typedef std::future<StartPublishCdnStreamOutcome> StartPublishCdnStreamOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::StartPublishCdnStreamRequest&, StartPublishCdnStreamOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StartPublishCdnStreamAsyncHandler;
                 typedef Outcome<Core::Error, Model::StartStreamIngestResponse> StartStreamIngestOutcome;
                 typedef std::future<StartStreamIngestOutcome> StartStreamIngestOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::StartStreamIngestRequest&, StartStreamIngestOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StartStreamIngestAsyncHandler;
+                typedef Outcome<Core::Error, Model::StopAITranscriptionResponse> StopAITranscriptionOutcome;
+                typedef std::future<StopAITranscriptionOutcome> StopAITranscriptionOutcomeCallable;
+                typedef std::function<void(const TrtcClient*, const Model::StopAITranscriptionRequest&, StopAITranscriptionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StopAITranscriptionAsyncHandler;
                 typedef Outcome<Core::Error, Model::StopPublishCdnStreamResponse> StopPublishCdnStreamOutcome;
                 typedef std::future<StopPublishCdnStreamOutcome> StopPublishCdnStreamOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::StopPublishCdnStreamRequest&, StopPublishCdnStreamOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StopPublishCdnStreamAsyncHandler;
                 typedef Outcome<Core::Error, Model::StopStreamIngestResponse> StopStreamIngestOutcome;
                 typedef std::future<StopStreamIngestOutcome> StopStreamIngestOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::StopStreamIngestRequest&, StopStreamIngestOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StopStreamIngestAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateAIConversationResponse> UpdateAIConversationOutcome;
+                typedef std::future<UpdateAIConversationOutcome> UpdateAIConversationOutcomeCallable;
+                typedef std::function<void(const TrtcClient*, const Model::UpdateAIConversationRequest&, UpdateAIConversationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateAIConversationAsyncHandler;
                 typedef Outcome<Core::Error, Model::UpdatePublishCdnStreamResponse> UpdatePublishCdnStreamOutcome;
                 typedef std::future<UpdatePublishCdnStreamOutcome> UpdatePublishCdnStreamOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::UpdatePublishCdnStreamRequest&, UpdatePublishCdnStreamOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdatePublishCdnStreamAsyncHandler;
@@ -199,6 +234,15 @@ namespace TencentCloud
                 typedef std::function<void(const TrtcClient*, const Model::UpdateStreamIngestRequest&, UpdateStreamIngestOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateStreamIngestAsyncHandler;
 
 
+
+                /**
+                 *Provides server-side control of AI Conversation
+                 * @param req ControlAIConversationRequest
+                 * @return ControlAIConversationOutcome
+                 */
+                ControlAIConversationOutcome ControlAIConversation(const Model::ControlAIConversationRequest &request);
+                void ControlAIConversationAsync(const Model::ControlAIConversationRequest& request, const ControlAIConversationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ControlAIConversationOutcomeCallable ControlAIConversationCallable(const Model::ControlAIConversationRequest& request);
 
                 /**
                  *API description:
@@ -228,6 +272,24 @@ Mixed-stream recording: Mix the audios and videos of subscribed users (`UserId`)
                 DeleteCloudRecordingOutcome DeleteCloudRecording(const Model::DeleteCloudRecordingRequest &request);
                 void DeleteCloudRecordingAsync(const Model::DeleteCloudRecordingRequest& request, const DeleteCloudRecordingAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteCloudRecordingOutcomeCallable DeleteCloudRecordingCallable(const Model::DeleteCloudRecordingRequest& request);
+
+                /**
+                 *Describe the AI conversation task status
+                 * @param req DescribeAIConversationRequest
+                 * @return DescribeAIConversationOutcome
+                 */
+                DescribeAIConversationOutcome DescribeAIConversation(const Model::DescribeAIConversationRequest &request);
+                void DescribeAIConversationAsync(const Model::DescribeAIConversationRequest& request, const DescribeAIConversationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAIConversationOutcomeCallable DescribeAIConversationCallable(const Model::DescribeAIConversationRequest& request);
+
+                /**
+                 *Describe AI transcription task status
+                 * @param req DescribeAITranscriptionRequest
+                 * @return DescribeAITranscriptionOutcome
+                 */
+                DescribeAITranscriptionOutcome DescribeAITranscription(const Model::DescribeAITranscriptionRequest &request);
+                void DescribeAITranscriptionAsync(const Model::DescribeAITranscriptionRequest& request, const DescribeAITranscriptionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAITranscriptionOutcomeCallable DescribeAITranscriptionCallable(const Model::DescribeAITranscriptionRequest& request);
 
                 /**
                  *This API (the old `DescribeCallDetail`) is used to query the user list and call quality data of a specified time range in the last 14 days. If `DataType` is not null, the data of up to six users during a period of up to one hour can be queried (the period can start and end on different days). If `DataType` is null, the data of up to 100 users can be returned per page (the value of `PageSize` cannot exceed 100). Six users are queried by default. The period queried cannot exceed four hours. This API is used to query call quality and is not recommended for billing purposes.
@@ -506,6 +568,28 @@ For details about the error events, see https://intl.cloud.tencent.com/document/
                 SetUserBlockedByStrRoomIdOutcomeCallable SetUserBlockedByStrRoomIdCallable(const Model::SetUserBlockedByStrRoomIdRequest& request);
 
                 /**
+                 *Initiate AI conversation task, where the AI bot enters the TRTC room to engage in AI conversation with specified members in the room. This is suitable for scenarios such as intelligent customer service and AI language teachers. The TRTC AI conversation feature has built-in speech-to-text capabilities , allowing customers to flexibly specify third-party AI model (LLM) services and text-to-speech (TTS) services. For more [feature details](https://cloud.tencent.com/document/product/647/108901).
+                 * @param req StartAIConversationRequest
+                 * @return StartAIConversationOutcome
+                 */
+                StartAIConversationOutcome StartAIConversation(const Model::StartAIConversationRequest &request);
+                void StartAIConversationAsync(const Model::StartAIConversationRequest& request, const StartAIConversationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                StartAIConversationOutcomeCallable StartAIConversationCallable(const Model::StartAIConversationRequest& request);
+
+                /**
+                 *Initiate the transcription bot. The backend will pull the stream through the bot to perform real-time speech recognition and deliver subtitles and transcription messages. The transcription bot supports two stream pulling modes, controlled by the `TranscriptionMode` field:
+- Pull the stream of the entire room.
+- Pull the stream of a specific user.
+
+The server delivers subtitles and transcription messages in real-time through TRTC's custom messages, with `CmdId` fixed at 1. The client only needs to listen for the callback of custom messages. For example, see the [C++ callback](https://cloud.tencent.com/document/product/647/79637#4cd82f4edb24992a15a25187089e1565). Other clients, such as Android, Web, etc., can also be found at the same link.
+                 * @param req StartAITranscriptionRequest
+                 * @return StartAITranscriptionOutcome
+                 */
+                StartAITranscriptionOutcome StartAITranscription(const Model::StartAITranscriptionRequest &request);
+                void StartAITranscriptionAsync(const Model::StartAITranscriptionRequest& request, const StartAITranscriptionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                StartAITranscriptionOutcomeCallable StartAITranscriptionCallable(const Model::StartAITranscriptionRequest& request);
+
+                /**
                  *In a TRTC room, there may be multiple audio and video streams concurrently active. You can use the MixTranscoding API to notify Tencent Cloud server to mix multiple video screens from the same room or multiple rooms together, and specify the position of each screen, while mixing multiple audio streams together. The final result is a single audio and video stream, which can be used for recording and live viewing. It also supports pushing this mixed audio and video stream back to the TRTC room.
 
 The Cloud API MixTranscoding feature includes three interfaces:
@@ -578,6 +662,15 @@ Usage Precautions:
                 StartStreamIngestOutcomeCallable StartStreamIngestCallable(const Model::StartStreamIngestRequest& request);
 
                 /**
+                 *Stop AI Transcription task
+                 * @param req StopAITranscriptionRequest
+                 * @return StopAITranscriptionOutcome
+                 */
+                StopAITranscriptionOutcome StopAITranscription(const Model::StopAITranscriptionRequest &request);
+                void StopAITranscriptionAsync(const Model::StopAITranscriptionRequest& request, const StopAITranscriptionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                StopAITranscriptionOutcomeCallable StopAITranscriptionCallable(const Model::StopAITranscriptionRequest& request);
+
+                /**
                  *This API is used to stop a relaying task.
                  * @param req StopPublishCdnStreamRequest
                  * @return StopPublishCdnStreamOutcome
@@ -594,6 +687,15 @@ Usage Precautions:
                 StopStreamIngestOutcome StopStreamIngest(const Model::StopStreamIngestRequest &request);
                 void StopStreamIngestAsync(const Model::StopStreamIngestRequest& request, const StopStreamIngestAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 StopStreamIngestOutcomeCallable StopStreamIngestCallable(const Model::StopStreamIngestRequest& request);
+
+                /**
+                 *Update AI conversation task parameters
+                 * @param req UpdateAIConversationRequest
+                 * @return UpdateAIConversationOutcome
+                 */
+                UpdateAIConversationOutcome UpdateAIConversation(const Model::UpdateAIConversationRequest &request);
+                void UpdateAIConversationAsync(const Model::UpdateAIConversationRequest& request, const UpdateAIConversationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateAIConversationOutcomeCallable UpdateAIConversationCallable(const Model::UpdateAIConversationRequest& request);
 
                 /**
                  *This API is used to change the parameters of a relaying task.

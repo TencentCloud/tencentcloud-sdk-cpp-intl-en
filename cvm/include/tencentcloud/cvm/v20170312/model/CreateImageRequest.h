@@ -107,15 +107,19 @@ namespace TencentCloud
                     bool ImageDescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Whether to force shut down an instance to create an image when a soft shutdown fails
-                     * @return ForcePoweroff Whether to force shut down an instance to create an image when a soft shutdown fails
+                     * 获取Whether to perform forced power-off operation to create an image.
+Valid values:<br><li>true: indicates that an image is created after forced power-off operation</li><br><li>false: indicates that an image is created in the power-on state</li><br><br>Default value: false.<br><br>Creating an image in the power-on state may result in some unbacked-up data, affecting data security.
+                     * @return ForcePoweroff Whether to perform forced power-off operation to create an image.
+Valid values:<br><li>true: indicates that an image is created after forced power-off operation</li><br><li>false: indicates that an image is created in the power-on state</li><br><br>Default value: false.<br><br>Creating an image in the power-on state may result in some unbacked-up data, affecting data security.
                      * 
                      */
                     std::string GetForcePoweroff() const;
 
                     /**
-                     * 设置Whether to force shut down an instance to create an image when a soft shutdown fails
-                     * @param _forcePoweroff Whether to force shut down an instance to create an image when a soft shutdown fails
+                     * 设置Whether to perform forced power-off operation to create an image.
+Valid values:<br><li>true: indicates that an image is created after forced power-off operation</li><br><li>false: indicates that an image is created in the power-on state</li><br><br>Default value: false.<br><br>Creating an image in the power-on state may result in some unbacked-up data, affecting data security.
+                     * @param _forcePoweroff Whether to perform forced power-off operation to create an image.
+Valid values:<br><li>true: indicates that an image is created after forced power-off operation</li><br><li>false: indicates that an image is created in the power-on state</li><br><br>Default value: false.<br><br>Creating an image in the power-on state may result in some unbacked-up data, affecting data security.
                      * 
                      */
                     void SetForcePoweroff(const std::string& _forcePoweroff);
@@ -244,6 +248,27 @@ Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_r
                      */
                     bool TagSpecificationHasBeenSet() const;
 
+                    /**
+                     * 获取Image family
+                     * @return ImageFamily Image family
+                     * 
+                     */
+                    std::string GetImageFamily() const;
+
+                    /**
+                     * 设置Image family
+                     * @param _imageFamily Image family
+                     * 
+                     */
+                    void SetImageFamily(const std::string& _imageFamily);
+
+                    /**
+                     * 判断参数 ImageFamily 是否已赋值
+                     * @return ImageFamily 是否已赋值
+                     * 
+                     */
+                    bool ImageFamilyHasBeenSet() const;
+
                 private:
 
                     /**
@@ -265,7 +290,8 @@ Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_r
                     bool m_imageDescriptionHasBeenSet;
 
                     /**
-                     * Whether to force shut down an instance to create an image when a soft shutdown fails
+                     * Whether to perform forced power-off operation to create an image.
+Valid values:<br><li>true: indicates that an image is created after forced power-off operation</li><br><li>false: indicates that an image is created in the power-on state</li><br><br>Default value: false.<br><br>Creating an image in the power-on state may result in some unbacked-up data, affecting data security.
                      */
                     std::string m_forcePoweroff;
                     bool m_forcePoweroffHasBeenSet;
@@ -302,6 +328,12 @@ Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_r
                      */
                     std::vector<TagSpecification> m_tagSpecification;
                     bool m_tagSpecificationHasBeenSet;
+
+                    /**
+                     * Image family
+                     */
+                    std::string m_imageFamily;
+                    bool m_imageFamilyHasBeenSet;
 
                 };
             }
