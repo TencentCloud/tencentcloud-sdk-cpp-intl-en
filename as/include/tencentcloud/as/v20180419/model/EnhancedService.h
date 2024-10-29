@@ -94,21 +94,21 @@ namespace TencentCloud
                     /**
                      * 获取Deprecated parameter.
                      * @return AutomationService Deprecated parameter.
-                     * 
+                     * @deprecated
                      */
                     std::vector<RunAutomationServiceEnabled> GetAutomationService() const;
 
                     /**
                      * 设置Deprecated parameter.
                      * @param _automationService Deprecated parameter.
-                     * 
+                     * @deprecated
                      */
                     void SetAutomationService(const std::vector<RunAutomationServiceEnabled>& _automationService);
 
                     /**
                      * 判断参数 AutomationService 是否已赋值
                      * @return AutomationService 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool AutomationServiceHasBeenSet() const;
 

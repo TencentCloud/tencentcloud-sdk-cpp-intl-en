@@ -44,7 +44,9 @@ ModifyLaunchConfigurationAttributesRequest::ModifyLaunchConfigurationAttributesR
     m_hpcClusterIdHasBeenSet(false),
     m_iPv6InternetAccessibleHasBeenSet(false),
     m_disasterRecoverGroupIdsHasBeenSet(false),
-    m_loginSettingsHasBeenSet(false)
+    m_loginSettingsHasBeenSet(false),
+    m_instanceTagsHasBeenSet(false),
+    m_imageFamilyHasBeenSet(false)
 {
 }
 
@@ -260,6 +262,29 @@ string ModifyLaunchConfigurationAttributesRequest::ToJsonString() const
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_loginSettings.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_instanceTagsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceTags";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_instanceTags.begin(); itr != m_instanceTags.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_imageFamilyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ImageFamily";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_imageFamily.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -620,6 +645,38 @@ void ModifyLaunchConfigurationAttributesRequest::SetLoginSettings(const LoginSet
 bool ModifyLaunchConfigurationAttributesRequest::LoginSettingsHasBeenSet() const
 {
     return m_loginSettingsHasBeenSet;
+}
+
+vector<InstanceTag> ModifyLaunchConfigurationAttributesRequest::GetInstanceTags() const
+{
+    return m_instanceTags;
+}
+
+void ModifyLaunchConfigurationAttributesRequest::SetInstanceTags(const vector<InstanceTag>& _instanceTags)
+{
+    m_instanceTags = _instanceTags;
+    m_instanceTagsHasBeenSet = true;
+}
+
+bool ModifyLaunchConfigurationAttributesRequest::InstanceTagsHasBeenSet() const
+{
+    return m_instanceTagsHasBeenSet;
+}
+
+string ModifyLaunchConfigurationAttributesRequest::GetImageFamily() const
+{
+    return m_imageFamily;
+}
+
+void ModifyLaunchConfigurationAttributesRequest::SetImageFamily(const string& _imageFamily)
+{
+    m_imageFamily = _imageFamily;
+    m_imageFamilyHasBeenSet = true;
+}
+
+bool ModifyLaunchConfigurationAttributesRequest::ImageFamilyHasBeenSet() const
+{
+    return m_imageFamilyHasBeenSet;
 }
 
 

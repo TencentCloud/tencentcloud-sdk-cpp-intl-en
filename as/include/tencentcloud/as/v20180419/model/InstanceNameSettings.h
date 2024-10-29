@@ -104,6 +104,39 @@ namespace TencentCloud
                      */
                     bool InstanceNameStyleHasBeenSet() const;
 
+                    /**
+                     * 获取CVM instance name suffix. The length of the character is within the range of [1, 105], and the combined length with InstanceName should not exceed 107.
+
+Assume the suffix name is suffix and the original instance name is test.0, then the final instance name is test.0.suffix.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return InstanceNameSuffix CVM instance name suffix. The length of the character is within the range of [1, 105], and the combined length with InstanceName should not exceed 107.
+
+Assume the suffix name is suffix and the original instance name is test.0, then the final instance name is test.0.suffix.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetInstanceNameSuffix() const;
+
+                    /**
+                     * 设置CVM instance name suffix. The length of the character is within the range of [1, 105], and the combined length with InstanceName should not exceed 107.
+
+Assume the suffix name is suffix and the original instance name is test.0, then the final instance name is test.0.suffix.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _instanceNameSuffix CVM instance name suffix. The length of the character is within the range of [1, 105], and the combined length with InstanceName should not exceed 107.
+
+Assume the suffix name is suffix and the original instance name is test.0, then the final instance name is test.0.suffix.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetInstanceNameSuffix(const std::string& _instanceNameSuffix);
+
+                    /**
+                     * 判断参数 InstanceNameSuffix 是否已赋值
+                     * @return InstanceNameSuffix 是否已赋值
+                     * 
+                     */
+                    bool InstanceNameSuffixHasBeenSet() const;
+
                 private:
 
                     /**
@@ -121,6 +154,15 @@ namespace TencentCloud
                      */
                     std::string m_instanceNameStyle;
                     bool m_instanceNameStyleHasBeenSet;
+
+                    /**
+                     * CVM instance name suffix. The length of the character is within the range of [1, 105], and the combined length with InstanceName should not exceed 107.
+
+Assume the suffix name is suffix and the original instance name is test.0, then the final instance name is test.0.suffix.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_instanceNameSuffix;
+                    bool m_instanceNameSuffixHasBeenSet;
 
                 };
             }

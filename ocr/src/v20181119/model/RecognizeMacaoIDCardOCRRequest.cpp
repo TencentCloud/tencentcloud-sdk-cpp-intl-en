@@ -24,7 +24,9 @@ using namespace std;
 
 RecognizeMacaoIDCardOCRRequest::RecognizeMacaoIDCardOCRRequest() :
     m_imageUrlHasBeenSet(false),
+    m_backImageUrlHasBeenSet(false),
     m_imageBase64HasBeenSet(false),
+    m_backImageBase64HasBeenSet(false),
     m_configHasBeenSet(false)
 {
 }
@@ -44,12 +46,28 @@ string RecognizeMacaoIDCardOCRRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_imageUrl.c_str(), allocator).Move(), allocator);
     }
 
+    if (m_backImageUrlHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BackImageUrl";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_backImageUrl.c_str(), allocator).Move(), allocator);
+    }
+
     if (m_imageBase64HasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ImageBase64";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_imageBase64.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_backImageBase64HasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BackImageBase64";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_backImageBase64.c_str(), allocator).Move(), allocator);
     }
 
     if (m_configHasBeenSet)
@@ -84,6 +102,22 @@ bool RecognizeMacaoIDCardOCRRequest::ImageUrlHasBeenSet() const
     return m_imageUrlHasBeenSet;
 }
 
+string RecognizeMacaoIDCardOCRRequest::GetBackImageUrl() const
+{
+    return m_backImageUrl;
+}
+
+void RecognizeMacaoIDCardOCRRequest::SetBackImageUrl(const string& _backImageUrl)
+{
+    m_backImageUrl = _backImageUrl;
+    m_backImageUrlHasBeenSet = true;
+}
+
+bool RecognizeMacaoIDCardOCRRequest::BackImageUrlHasBeenSet() const
+{
+    return m_backImageUrlHasBeenSet;
+}
+
 string RecognizeMacaoIDCardOCRRequest::GetImageBase64() const
 {
     return m_imageBase64;
@@ -98,6 +132,22 @@ void RecognizeMacaoIDCardOCRRequest::SetImageBase64(const string& _imageBase64)
 bool RecognizeMacaoIDCardOCRRequest::ImageBase64HasBeenSet() const
 {
     return m_imageBase64HasBeenSet;
+}
+
+string RecognizeMacaoIDCardOCRRequest::GetBackImageBase64() const
+{
+    return m_backImageBase64;
+}
+
+void RecognizeMacaoIDCardOCRRequest::SetBackImageBase64(const string& _backImageBase64)
+{
+    m_backImageBase64 = _backImageBase64;
+    m_backImageBase64HasBeenSet = true;
+}
+
+bool RecognizeMacaoIDCardOCRRequest::BackImageBase64HasBeenSet() const
+{
+    return m_backImageBase64HasBeenSet;
 }
 
 string RecognizeMacaoIDCardOCRRequest::GetConfig() const

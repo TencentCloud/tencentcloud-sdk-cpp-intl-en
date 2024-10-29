@@ -14,22 +14,21 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/tcss/v20201101/model/DescribeAssetImageRegistryRegistryListResponse.h>
+#include <tencentcloud/antiddos/v20200309/model/DescribeIpBlockListResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using TencentCloud::CoreInternalOutcome;
-using namespace TencentCloud::Tcss::V20201101::Model;
+using namespace TencentCloud::Antiddos::V20200309::Model;
 using namespace std;
 
-DescribeAssetImageRegistryRegistryListResponse::DescribeAssetImageRegistryRegistryListResponse() :
-    m_listHasBeenSet(false),
-    m_totalCountHasBeenSet(false)
+DescribeIpBlockListResponse::DescribeIpBlockListResponse() :
+    m_listHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome DescribeAssetImageRegistryRegistryListResponse::Deserialize(const string &payload)
+CoreInternalOutcome DescribeIpBlockListResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -71,7 +70,7 @@ CoreInternalOutcome DescribeAssetImageRegistryRegistryListResponse::Deserialize(
         const rapidjson::Value &tmpValue = rsp["List"];
         for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
-            ImageRepoRegistryInfo item;
+            IpBlockData item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
             if (!outcome.IsSuccess())
             {
@@ -83,21 +82,11 @@ CoreInternalOutcome DescribeAssetImageRegistryRegistryListResponse::Deserialize(
         m_listHasBeenSet = true;
     }
 
-    if (rsp.HasMember("TotalCount") && !rsp["TotalCount"].IsNull())
-    {
-        if (!rsp["TotalCount"].IsUint64())
-        {
-            return CoreInternalOutcome(Core::Error("response `TotalCount` IsUint64=false incorrectly").SetRequestId(requestId));
-        }
-        m_totalCount = rsp["TotalCount"].GetUint64();
-        m_totalCountHasBeenSet = true;
-    }
-
 
     return CoreInternalOutcome(true);
 }
 
-string DescribeAssetImageRegistryRegistryListResponse::ToJsonString() const
+string DescribeIpBlockListResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
@@ -118,14 +107,6 @@ string DescribeAssetImageRegistryRegistryListResponse::ToJsonString() const
         }
     }
 
-    if (m_totalCountHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "TotalCount";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_totalCount, allocator);
-    }
-
     rapidjson::Value iKey(rapidjson::kStringType);
     string key = "RequestId";
     iKey.SetString(key.c_str(), allocator);
@@ -138,24 +119,14 @@ string DescribeAssetImageRegistryRegistryListResponse::ToJsonString() const
 }
 
 
-vector<ImageRepoRegistryInfo> DescribeAssetImageRegistryRegistryListResponse::GetList() const
+vector<IpBlockData> DescribeIpBlockListResponse::GetList() const
 {
     return m_list;
 }
 
-bool DescribeAssetImageRegistryRegistryListResponse::ListHasBeenSet() const
+bool DescribeIpBlockListResponse::ListHasBeenSet() const
 {
     return m_listHasBeenSet;
-}
-
-uint64_t DescribeAssetImageRegistryRegistryListResponse::GetTotalCount() const
-{
-    return m_totalCount;
-}
-
-bool DescribeAssetImageRegistryRegistryListResponse::TotalCountHasBeenSet() const
-{
-    return m_totalCountHasBeenSet;
 }
 
 

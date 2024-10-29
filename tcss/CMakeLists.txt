@@ -142,6 +142,7 @@ set(tcss_public_header_model
   include/tencentcloud/tcss/v20201101/model/UpdateAssetImageRegistryRegistryDetailResponse.h
   include/tencentcloud/tcss/v20201101/model/ModifySecLogDeliveryKafkaSettingResponse.h
   include/tencentcloud/tcss/v20201101/model/DeleteAbnormalProcessRulesResponse.h
+  include/tencentcloud/tcss/v20201101/model/ImageRepoRegistryInfo.h
   include/tencentcloud/tcss/v20201101/model/RuleBaseInfo.h
   include/tencentcloud/tcss/v20201101/model/ProcessInfo.h
   include/tencentcloud/tcss/v20201101/model/ImageInfo.h
@@ -436,6 +437,7 @@ set(tcss_public_header_model
   include/tencentcloud/tcss/v20201101/model/ModifyAccessControlStatusRequest.h
   include/tencentcloud/tcss/v20201101/model/CreateProcessEventsExportJobRequest.h
   include/tencentcloud/tcss/v20201101/model/DescribeVulDetailResponse.h
+  include/tencentcloud/tcss/v20201101/model/RegistryConnDetectResult.h
   include/tencentcloud/tcss/v20201101/model/ModifyCompliancePeriodTaskResponse.h
   include/tencentcloud/tcss/v20201101/model/RiskSyscallEventInfo.h
   include/tencentcloud/tcss/v20201101/model/DescribeEscapeEventTendencyResponse.h
@@ -958,6 +960,7 @@ set(tcss_src
   src/v20201101/model/UpdateAssetImageRegistryRegistryDetailResponse.cpp
   src/v20201101/model/ModifySecLogDeliveryKafkaSettingResponse.cpp
   src/v20201101/model/DeleteAbnormalProcessRulesResponse.cpp
+  src/v20201101/model/ImageRepoRegistryInfo.cpp
   src/v20201101/model/RuleBaseInfo.cpp
   src/v20201101/model/ProcessInfo.cpp
   src/v20201101/model/ImageInfo.cpp
@@ -1252,6 +1255,7 @@ set(tcss_src
   src/v20201101/model/ModifyAccessControlStatusRequest.cpp
   src/v20201101/model/CreateProcessEventsExportJobRequest.cpp
   src/v20201101/model/DescribeVulDetailResponse.cpp
+  src/v20201101/model/RegistryConnDetectResult.cpp
   src/v20201101/model/ModifyCompliancePeriodTaskResponse.cpp
   src/v20201101/model/RiskSyscallEventInfo.cpp
   src/v20201101/model/DescribeEscapeEventTendencyResponse.cpp

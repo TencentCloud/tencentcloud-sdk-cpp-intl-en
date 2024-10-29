@@ -111,6 +111,8 @@
 #include <tencentcloud/antiddos/v20200309/model/DescribeDDoSTrendResponse.h>
 #include <tencentcloud/antiddos/v20200309/model/DescribeDefaultAlarmThresholdRequest.h>
 #include <tencentcloud/antiddos/v20200309/model/DescribeDefaultAlarmThresholdResponse.h>
+#include <tencentcloud/antiddos/v20200309/model/DescribeIpBlockListRequest.h>
+#include <tencentcloud/antiddos/v20200309/model/DescribeIpBlockListResponse.h>
 #include <tencentcloud/antiddos/v20200309/model/DescribeL7RulesBySSLCertIdRequest.h>
 #include <tencentcloud/antiddos/v20200309/model/DescribeL7RulesBySSLCertIdResponse.h>
 #include <tencentcloud/antiddos/v20200309/model/DescribeListBGPIPInstancesRequest.h>
@@ -311,6 +313,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeDefaultAlarmThresholdResponse> DescribeDefaultAlarmThresholdOutcome;
                 typedef std::future<DescribeDefaultAlarmThresholdOutcome> DescribeDefaultAlarmThresholdOutcomeCallable;
                 typedef std::function<void(const AntiddosClient*, const Model::DescribeDefaultAlarmThresholdRequest&, DescribeDefaultAlarmThresholdOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDefaultAlarmThresholdAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeIpBlockListResponse> DescribeIpBlockListOutcome;
+                typedef std::future<DescribeIpBlockListOutcome> DescribeIpBlockListOutcomeCallable;
+                typedef std::function<void(const AntiddosClient*, const Model::DescribeIpBlockListRequest&, DescribeIpBlockListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeIpBlockListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeL7RulesBySSLCertIdResponse> DescribeL7RulesBySSLCertIdOutcome;
                 typedef std::future<DescribeL7RulesBySSLCertIdOutcome> DescribeL7RulesBySSLCertIdOutcomeCallable;
                 typedef std::function<void(const AntiddosClient*, const Model::DescribeL7RulesBySSLCertIdRequest&, DescribeL7RulesBySSLCertIdOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeL7RulesBySSLCertIdAsyncHandler;
@@ -792,6 +797,15 @@ This API is used to get an Anti-DDoS IP blocklist/allowlist.
                 DescribeDefaultAlarmThresholdOutcome DescribeDefaultAlarmThreshold(const Model::DescribeDefaultAlarmThresholdRequest &request);
                 void DescribeDefaultAlarmThresholdAsync(const Model::DescribeDefaultAlarmThresholdRequest& request, const DescribeDefaultAlarmThresholdAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeDefaultAlarmThresholdOutcomeCallable DescribeDefaultAlarmThresholdCallable(const Model::DescribeDefaultAlarmThresholdRequest& request);
+
+                /**
+                 *
+                 * @param req DescribeIpBlockListRequest
+                 * @return DescribeIpBlockListOutcome
+                 */
+                DescribeIpBlockListOutcome DescribeIpBlockList(const Model::DescribeIpBlockListRequest &request);
+                void DescribeIpBlockListAsync(const Model::DescribeIpBlockListRequest& request, const DescribeIpBlockListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeIpBlockListOutcomeCallable DescribeIpBlockListCallable(const Model::DescribeIpBlockListRequest& request);
 
                 /**
                  *This API is used to query layer-7 rules matched with certificate IDs.

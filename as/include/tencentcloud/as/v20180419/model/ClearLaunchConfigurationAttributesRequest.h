@@ -163,6 +163,31 @@ Setting it to `true` will clear the instance name settings, which means that CVM
                      */
                     bool ClearDisasterRecoverGroupIdsHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to clear the instance tag list. This parameter is optional, and its default value is false.
+If true is filled in, it indicates that the instance tag list should be cleared. After the list is cleared, the CVMs created based on this will not be bound to the tags in the list.
+                     * @return ClearInstanceTags Whether to clear the instance tag list. This parameter is optional, and its default value is false.
+If true is filled in, it indicates that the instance tag list should be cleared. After the list is cleared, the CVMs created based on this will not be bound to the tags in the list.
+                     * 
+                     */
+                    bool GetClearInstanceTags() const;
+
+                    /**
+                     * 设置Whether to clear the instance tag list. This parameter is optional, and its default value is false.
+If true is filled in, it indicates that the instance tag list should be cleared. After the list is cleared, the CVMs created based on this will not be bound to the tags in the list.
+                     * @param _clearInstanceTags Whether to clear the instance tag list. This parameter is optional, and its default value is false.
+If true is filled in, it indicates that the instance tag list should be cleared. After the list is cleared, the CVMs created based on this will not be bound to the tags in the list.
+                     * 
+                     */
+                    void SetClearInstanceTags(const bool& _clearInstanceTags);
+
+                    /**
+                     * 判断参数 ClearInstanceTags 是否已赋值
+                     * @return ClearInstanceTags 是否已赋值
+                     * 
+                     */
+                    bool ClearInstanceTagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -198,6 +223,13 @@ Setting it to `true` will clear the instance name settings, which means that CVM
                      */
                     bool m_clearDisasterRecoverGroupIds;
                     bool m_clearDisasterRecoverGroupIdsHasBeenSet;
+
+                    /**
+                     * Whether to clear the instance tag list. This parameter is optional, and its default value is false.
+If true is filled in, it indicates that the instance tag list should be cleared. After the list is cleared, the CVMs created based on this will not be bound to the tags in the list.
+                     */
+                    bool m_clearInstanceTags;
+                    bool m_clearInstanceTagsHasBeenSet;
 
                 };
             }

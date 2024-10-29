@@ -32,7 +32,8 @@ HlsRemuxSettingsInfo::HlsRemuxSettingsInfo() :
     m_partialSegmentDurationHasBeenSet(false),
     m_partialSegmentPlaySiteHasBeenSet(false),
     m_streamOrderHasBeenSet(false),
-    m_videoResolutionHasBeenSet(false)
+    m_videoResolutionHasBeenSet(false),
+    m_endListTagHasBeenSet(false)
 {
 }
 
@@ -161,6 +162,16 @@ CoreInternalOutcome HlsRemuxSettingsInfo::Deserialize(const rapidjson::Value &va
         m_videoResolutionHasBeenSet = true;
     }
 
+    if (value.HasMember("EndListTag") && !value["EndListTag"].IsNull())
+    {
+        if (!value["EndListTag"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `HlsRemuxSettingsInfo.EndListTag` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_endListTag = value["EndListTag"].GetInt64();
+        m_endListTagHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -262,6 +273,14 @@ void HlsRemuxSettingsInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Docu
         string key = "VideoResolution";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_videoResolution, allocator);
+    }
+
+    if (m_endListTagHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EndListTag";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_endListTag, allocator);
     }
 
 }
@@ -457,5 +476,21 @@ void HlsRemuxSettingsInfo::SetVideoResolution(const uint64_t& _videoResolution)
 bool HlsRemuxSettingsInfo::VideoResolutionHasBeenSet() const
 {
     return m_videoResolutionHasBeenSet;
+}
+
+int64_t HlsRemuxSettingsInfo::GetEndListTag() const
+{
+    return m_endListTag;
+}
+
+void HlsRemuxSettingsInfo::SetEndListTag(const int64_t& _endListTag)
+{
+    m_endListTag = _endListTag;
+    m_endListTagHasBeenSet = true;
+}
+
+bool HlsRemuxSettingsInfo::EndListTagHasBeenSet() const
+{
+    return m_endListTagHasBeenSet;
 }
 

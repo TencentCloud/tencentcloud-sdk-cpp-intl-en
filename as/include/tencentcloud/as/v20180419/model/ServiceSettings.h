@@ -121,6 +121,43 @@ Default value: CLASSIC_SCALING
                      */
                     bool ReplaceLoadBalancerUnhealthyHasBeenSet() const;
 
+                    /**
+                     * 获取Replace mode of unhealthy replacement service. Valid values:
+RECREATE: Rebuild an instance to replace the original unhealthy instance.
+RESET: Performing a system reinstallation on unhealthy instances to keep information such as data disks, private IP addresses, and instance IDs unchanged. The instance login settings, HostName, enhanced services, and UserData will remain consistent with the current launch configuration.
+Default value: RECREATE.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ReplaceMode Replace mode of unhealthy replacement service. Valid values:
+RECREATE: Rebuild an instance to replace the original unhealthy instance.
+RESET: Performing a system reinstallation on unhealthy instances to keep information such as data disks, private IP addresses, and instance IDs unchanged. The instance login settings, HostName, enhanced services, and UserData will remain consistent with the current launch configuration.
+Default value: RECREATE.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetReplaceMode() const;
+
+                    /**
+                     * 设置Replace mode of unhealthy replacement service. Valid values:
+RECREATE: Rebuild an instance to replace the original unhealthy instance.
+RESET: Performing a system reinstallation on unhealthy instances to keep information such as data disks, private IP addresses, and instance IDs unchanged. The instance login settings, HostName, enhanced services, and UserData will remain consistent with the current launch configuration.
+Default value: RECREATE.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _replaceMode Replace mode of unhealthy replacement service. Valid values:
+RECREATE: Rebuild an instance to replace the original unhealthy instance.
+RESET: Performing a system reinstallation on unhealthy instances to keep information such as data disks, private IP addresses, and instance IDs unchanged. The instance login settings, HostName, enhanced services, and UserData will remain consistent with the current launch configuration.
+Default value: RECREATE.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetReplaceMode(const std::string& _replaceMode);
+
+                    /**
+                     * 判断参数 ReplaceMode 是否已赋值
+                     * @return ReplaceMode 是否已赋值
+                     * 
+                     */
+                    bool ReplaceModeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -143,6 +180,16 @@ Default value: CLASSIC_SCALING
                      */
                     bool m_replaceLoadBalancerUnhealthy;
                     bool m_replaceLoadBalancerUnhealthyHasBeenSet;
+
+                    /**
+                     * Replace mode of unhealthy replacement service. Valid values:
+RECREATE: Rebuild an instance to replace the original unhealthy instance.
+RESET: Performing a system reinstallation on unhealthy instances to keep information such as data disks, private IP addresses, and instance IDs unchanged. The instance login settings, HostName, enhanced services, and UserData will remain consistent with the current launch configuration.
+Default value: RECREATE.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_replaceMode;
+                    bool m_replaceModeHasBeenSet;
 
                 };
             }

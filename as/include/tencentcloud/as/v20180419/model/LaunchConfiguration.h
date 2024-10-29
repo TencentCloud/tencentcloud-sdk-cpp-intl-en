@@ -726,6 +726,31 @@ Note: This field is default to empty
                      */
                     bool DisasterRecoverGroupIdsHasBeenSet() const;
 
+                    /**
+                     * 获取Image family name.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ImageFamily Image family name.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetImageFamily() const;
+
+                    /**
+                     * 设置Image family name.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _imageFamily Image family name.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetImageFamily(const std::string& _imageFamily);
+
+                    /**
+                     * 判断参数 ImageFamily 是否已赋值
+                     * @return ImageFamily 是否已赋值
+                     * 
+                     */
+                    bool ImageFamilyHasBeenSet() const;
+
                 private:
 
                     /**
@@ -917,6 +942,13 @@ Note: This field is default to empty
                      */
                     std::vector<std::string> m_disasterRecoverGroupIds;
                     bool m_disasterRecoverGroupIdsHasBeenSet;
+
+                    /**
+                     * Image family name.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_imageFamily;
+                    bool m_imageFamilyHasBeenSet;
 
                 };
             }

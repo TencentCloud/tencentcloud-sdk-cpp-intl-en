@@ -89,6 +89,8 @@
 #include <tencentcloud/trtc/v20190722/model/StartPublishCdnStreamResponse.h>
 #include <tencentcloud/trtc/v20190722/model/StartStreamIngestRequest.h>
 #include <tencentcloud/trtc/v20190722/model/StartStreamIngestResponse.h>
+#include <tencentcloud/trtc/v20190722/model/StopAIConversationRequest.h>
+#include <tencentcloud/trtc/v20190722/model/StopAIConversationResponse.h>
 #include <tencentcloud/trtc/v20190722/model/StopAITranscriptionRequest.h>
 #include <tencentcloud/trtc/v20190722/model/StopAITranscriptionResponse.h>
 #include <tencentcloud/trtc/v20190722/model/StopPublishCdnStreamRequest.h>
@@ -214,6 +216,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::StartStreamIngestResponse> StartStreamIngestOutcome;
                 typedef std::future<StartStreamIngestOutcome> StartStreamIngestOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::StartStreamIngestRequest&, StartStreamIngestOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StartStreamIngestAsyncHandler;
+                typedef Outcome<Core::Error, Model::StopAIConversationResponse> StopAIConversationOutcome;
+                typedef std::future<StopAIConversationOutcome> StopAIConversationOutcomeCallable;
+                typedef std::function<void(const TrtcClient*, const Model::StopAIConversationRequest&, StopAIConversationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StopAIConversationAsyncHandler;
                 typedef Outcome<Core::Error, Model::StopAITranscriptionResponse> StopAITranscriptionOutcome;
                 typedef std::future<StopAITranscriptionOutcome> StopAITranscriptionOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::StopAITranscriptionRequest&, StopAITranscriptionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StopAITranscriptionAsyncHandler;
@@ -660,6 +665,15 @@ Usage Precautions:
                 StartStreamIngestOutcome StartStreamIngest(const Model::StartStreamIngestRequest &request);
                 void StartStreamIngestAsync(const Model::StartStreamIngestRequest& request, const StartStreamIngestAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 StartStreamIngestOutcomeCallable StartStreamIngestCallable(const Model::StartStreamIngestRequest& request);
+
+                /**
+                 *Stop AI conversation task
+                 * @param req StopAIConversationRequest
+                 * @return StopAIConversationOutcome
+                 */
+                StopAIConversationOutcome StopAIConversation(const Model::StopAIConversationRequest &request);
+                void StopAIConversationAsync(const Model::StopAIConversationRequest& request, const StopAIConversationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                StopAIConversationOutcomeCallable StopAIConversationCallable(const Model::StopAIConversationRequest& request);
 
                 /**
                  *Stop AI Transcription task

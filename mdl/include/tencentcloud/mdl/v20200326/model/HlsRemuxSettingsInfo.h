@@ -302,6 +302,27 @@ Currently, fMP4 segments do not support DRM or time shifting.
                      */
                     bool VideoResolutionHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to include the `EXT-X-ENDLIST` tag, 1 includes  `EXT-X-ENDLIST` tag, 2 does not include  `EXT-X-ENDLIST` tag; the default value is 1.
+                     * @return EndListTag Whether to include the `EXT-X-ENDLIST` tag, 1 includes  `EXT-X-ENDLIST` tag, 2 does not include  `EXT-X-ENDLIST` tag; the default value is 1.
+                     * 
+                     */
+                    int64_t GetEndListTag() const;
+
+                    /**
+                     * 设置Whether to include the `EXT-X-ENDLIST` tag, 1 includes  `EXT-X-ENDLIST` tag, 2 does not include  `EXT-X-ENDLIST` tag; the default value is 1.
+                     * @param _endListTag Whether to include the `EXT-X-ENDLIST` tag, 1 includes  `EXT-X-ENDLIST` tag, 2 does not include  `EXT-X-ENDLIST` tag; the default value is 1.
+                     * 
+                     */
+                    void SetEndListTag(const int64_t& _endListTag);
+
+                    /**
+                     * 判断参数 EndListTag 是否已赋值
+                     * @return EndListTag 是否已赋值
+                     * 
+                     */
+                    bool EndListTagHasBeenSet() const;
+
                 private:
 
                     /**
@@ -376,6 +397,12 @@ Currently, fMP4 segments do not support DRM or time shifting.
                      */
                     uint64_t m_videoResolution;
                     bool m_videoResolutionHasBeenSet;
+
+                    /**
+                     * Whether to include the `EXT-X-ENDLIST` tag, 1 includes  `EXT-X-ENDLIST` tag, 2 does not include  `EXT-X-ENDLIST` tag; the default value is 1.
+                     */
+                    int64_t m_endListTag;
+                    bool m_endListTagHasBeenSet;
 
                 };
             }

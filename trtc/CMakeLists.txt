@@ -40,6 +40,7 @@ set(trtc_public_header_model
   include/tencentcloud/trtc/v20190722/model/ScaleInfomation.h
   include/tencentcloud/trtc/v20190722/model/AgentParams.h
   include/tencentcloud/trtc/v20190722/model/ControlAIConversationResponse.h
+  include/tencentcloud/trtc/v20190722/model/StopAITranscriptionRequest.h
   include/tencentcloud/trtc/v20190722/model/VideoEncodeParams.h
   include/tencentcloud/trtc/v20190722/model/UpdateAIConversationResponse.h
   include/tencentcloud/trtc/v20190722/model/DescribeUserEventResponse.h
@@ -106,7 +107,7 @@ set(trtc_public_header_model
   include/tencentcloud/trtc/v20190722/model/QualityData.h
   include/tencentcloud/trtc/v20190722/model/StopPublishCdnStreamRequest.h
   include/tencentcloud/trtc/v20190722/model/ModifyCloudRecordingRequest.h
-  include/tencentcloud/trtc/v20190722/model/VideoParams.h
+  include/tencentcloud/trtc/v20190722/model/StopAIConversationResponse.h
   include/tencentcloud/trtc/v20190722/model/StartPublishCdnStreamRequest.h
   include/tencentcloud/trtc/v20190722/model/DescribeAIConversationRequest.h
   include/tencentcloud/trtc/v20190722/model/RowValues.h
@@ -131,8 +132,9 @@ set(trtc_public_header_model
   include/tencentcloud/trtc/v20190722/model/MaxVideoUser.h
   include/tencentcloud/trtc/v20190722/model/UpdateStreamIngestRequest.h
   include/tencentcloud/trtc/v20190722/model/STTConfig.h
+  include/tencentcloud/trtc/v20190722/model/VideoParams.h
   include/tencentcloud/trtc/v20190722/model/McuSeiParams.h
-  include/tencentcloud/trtc/v20190722/model/StopAITranscriptionRequest.h
+  include/tencentcloud/trtc/v20190722/model/StopAIConversationRequest.h
   include/tencentcloud/trtc/v20190722/model/EventMessage.h
   include/tencentcloud/trtc/v20190722/model/UpdatePublishCdnStreamResponse.h
   include/tencentcloud/trtc/v20190722/model/McuWaterMarkText.h
@@ -179,6 +181,7 @@ set(trtc_src
   src/v20190722/model/ScaleInfomation.cpp
   src/v20190722/model/AgentParams.cpp
   src/v20190722/model/ControlAIConversationResponse.cpp
+  src/v20190722/model/StopAITranscriptionRequest.cpp
   src/v20190722/model/VideoEncodeParams.cpp
   src/v20190722/model/UpdateAIConversationResponse.cpp
   src/v20190722/model/DescribeUserEventResponse.cpp
@@ -245,7 +248,7 @@ set(trtc_src
   src/v20190722/model/QualityData.cpp
   src/v20190722/model/StopPublishCdnStreamRequest.cpp
   src/v20190722/model/ModifyCloudRecordingRequest.cpp
-  src/v20190722/model/VideoParams.cpp
+  src/v20190722/model/StopAIConversationResponse.cpp
   src/v20190722/model/StartPublishCdnStreamRequest.cpp
   src/v20190722/model/DescribeAIConversationRequest.cpp
   src/v20190722/model/RowValues.cpp
@@ -270,8 +273,9 @@ set(trtc_src
   src/v20190722/model/MaxVideoUser.cpp
   src/v20190722/model/UpdateStreamIngestRequest.cpp
   src/v20190722/model/STTConfig.cpp
+  src/v20190722/model/VideoParams.cpp
   src/v20190722/model/McuSeiParams.cpp
-  src/v20190722/model/StopAITranscriptionRequest.cpp
+  src/v20190722/model/StopAIConversationRequest.cpp
   src/v20190722/model/EventMessage.cpp
   src/v20190722/model/UpdatePublishCdnStreamResponse.cpp
   src/v20190722/model/McuWaterMarkText.cpp

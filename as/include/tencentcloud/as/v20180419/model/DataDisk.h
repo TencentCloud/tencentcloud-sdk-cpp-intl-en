@@ -47,19 +47,51 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Data disk type. See [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>`LOCAL_BASIC`: Local disk<br><li>`LOCAL_SSD`: Local SSD disk<br><li>`CLOUD_BASIC`: HDD cloud disk<br><li>`CLOUD_PREMIUM`: Premium cloud storage<br><li>`CLOUD_SSD`: SSD cloud disk<br><li>`CLOUD_HSSD`: Enhanced SSD<br><li>`CLOUD_TSSD`: Tremendous SSD<br><br>The default value should be the same as the `DiskType` field under `SystemDisk`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return DiskType Data disk type. See [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>`LOCAL_BASIC`: Local disk<br><li>`LOCAL_SSD`: Local SSD disk<br><li>`CLOUD_BASIC`: HDD cloud disk<br><li>`CLOUD_PREMIUM`: Premium cloud storage<br><li>`CLOUD_SSD`: SSD cloud disk<br><li>`CLOUD_HSSD`: Enhanced SSD<br><li>`CLOUD_TSSD`: Tremendous SSD<br><br>The default value should be the same as the `DiskType` field under `SystemDisk`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Data disk type. For restrictions on data disk type, see [Cloud Block Storage Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
+<li>LOCAL_BASIC: Local hard disk.</li>
+<li>LOCAL_SSD: Local SSD.</li>
+<li>CLOUD_BASIC: General cloud disk.</li>
+<li>CLOUD_PREMIUM: Premium cloud disk.</li>
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>CLOUD_HSSD: Enhanced SSD.</li>
+<li>CLOUD_TSSD: Ultra SSD.</li>
+The default value is consistent with the system disk type (SystemDisk.DiskType).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DiskType Data disk type. For restrictions on data disk type, see [Cloud Block Storage Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
+<li>LOCAL_BASIC: Local hard disk.</li>
+<li>LOCAL_SSD: Local SSD.</li>
+<li>CLOUD_BASIC: General cloud disk.</li>
+<li>CLOUD_PREMIUM: Premium cloud disk.</li>
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>CLOUD_HSSD: Enhanced SSD.</li>
+<li>CLOUD_TSSD: Ultra SSD.</li>
+The default value is consistent with the system disk type (SystemDisk.DiskType).
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDiskType() const;
 
                     /**
-                     * 设置Data disk type. See [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>`LOCAL_BASIC`: Local disk<br><li>`LOCAL_SSD`: Local SSD disk<br><li>`CLOUD_BASIC`: HDD cloud disk<br><li>`CLOUD_PREMIUM`: Premium cloud storage<br><li>`CLOUD_SSD`: SSD cloud disk<br><li>`CLOUD_HSSD`: Enhanced SSD<br><li>`CLOUD_TSSD`: Tremendous SSD<br><br>The default value should be the same as the `DiskType` field under `SystemDisk`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _diskType Data disk type. See [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>`LOCAL_BASIC`: Local disk<br><li>`LOCAL_SSD`: Local SSD disk<br><li>`CLOUD_BASIC`: HDD cloud disk<br><li>`CLOUD_PREMIUM`: Premium cloud storage<br><li>`CLOUD_SSD`: SSD cloud disk<br><li>`CLOUD_HSSD`: Enhanced SSD<br><li>`CLOUD_TSSD`: Tremendous SSD<br><br>The default value should be the same as the `DiskType` field under `SystemDisk`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Data disk type. For restrictions on data disk type, see [Cloud Block Storage Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
+<li>LOCAL_BASIC: Local hard disk.</li>
+<li>LOCAL_SSD: Local SSD.</li>
+<li>CLOUD_BASIC: General cloud disk.</li>
+<li>CLOUD_PREMIUM: Premium cloud disk.</li>
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>CLOUD_HSSD: Enhanced SSD.</li>
+<li>CLOUD_TSSD: Ultra SSD.</li>
+The default value is consistent with the system disk type (SystemDisk.DiskType).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _diskType Data disk type. For restrictions on data disk type, see [Cloud Block Storage Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
+<li>LOCAL_BASIC: Local hard disk.</li>
+<li>LOCAL_SSD: Local SSD.</li>
+<li>CLOUD_BASIC: General cloud disk.</li>
+<li>CLOUD_PREMIUM: Premium cloud disk.</li>
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>CLOUD_HSSD: Enhanced SSD.</li>
+<li>CLOUD_TSSD: Ultra SSD.</li>
+The default value is consistent with the system disk type (SystemDisk.DiskType).
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDiskType(const std::string& _diskType);
@@ -122,19 +154,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SnapshotIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether the data disk is terminated along with the termination of the associated CVM instance.  Values: <br><li>`TRUE` (only available for pay-as-you-go cloud disks that are billed by hour) and `FALSE`.
-Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @return DeleteWithInstance Specifies whether the data disk is terminated along with the termination of the associated CVM instance.  Values: <br><li>`TRUE` (only available for pay-as-you-go cloud disks that are billed by hour) and `FALSE`.
-Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Whether the data disk is terminated along with the instance. Valid values:
+<li>TRUE: When the instance is terminated, the data disk is also terminated. This option is only supported for hourly postpaid cloud disks.</li>
+<li>FALSE: When the instance is terminated, the data disk is retained.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DeleteWithInstance Whether the data disk is terminated along with the instance. Valid values:
+<li>TRUE: When the instance is terminated, the data disk is also terminated. This option is only supported for hourly postpaid cloud disks.</li>
+<li>FALSE: When the instance is terminated, the data disk is retained.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     bool GetDeleteWithInstance() const;
 
                     /**
-                     * 设置Specifies whether the data disk is terminated along with the termination of the associated CVM instance.  Values: <br><li>`TRUE` (only available for pay-as-you-go cloud disks that are billed by hour) and `FALSE`.
-Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @param _deleteWithInstance Specifies whether the data disk is terminated along with the termination of the associated CVM instance.  Values: <br><li>`TRUE` (only available for pay-as-you-go cloud disks that are billed by hour) and `FALSE`.
-Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Whether the data disk is terminated along with the instance. Valid values:
+<li>TRUE: When the instance is terminated, the data disk is also terminated. This option is only supported for hourly postpaid cloud disks.</li>
+<li>FALSE: When the instance is terminated, the data disk is retained.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _deleteWithInstance Whether the data disk is terminated along with the instance. Valid values:
+<li>TRUE: When the instance is terminated, the data disk is also terminated. This option is only supported for hourly postpaid cloud disks.</li>
+<li>FALSE: When the instance is terminated, the data disk is retained.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDeleteWithInstance(const bool& _deleteWithInstance);
@@ -147,19 +187,27 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                     bool DeleteWithInstanceHasBeenSet() const;
 
                     /**
-                     * 获取Data disk encryption. Valid values: <br><li>`TRUE`: Encrypted<br><li>`FALSE`: Not encrypted
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return Encrypt Data disk encryption. Valid values: <br><li>`TRUE`: Encrypted<br><li>`FALSE`: Not encrypted
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Whether the data disk is encrypted. Valid values:
+<li>TRUE: Encrypted.</li>
+<li>FALSE: Not encrypted.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Encrypt Whether the data disk is encrypted. Valid values:
+<li>TRUE: Encrypted.</li>
+<li>FALSE: Not encrypted.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     bool GetEncrypt() const;
 
                     /**
-                     * 设置Data disk encryption. Valid values: <br><li>`TRUE`: Encrypted<br><li>`FALSE`: Not encrypted
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _encrypt Data disk encryption. Valid values: <br><li>`TRUE`: Encrypted<br><li>`FALSE`: Not encrypted
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Whether the data disk is encrypted. Valid values:
+<li>TRUE: Encrypted.</li>
+<li>FALSE: Not encrypted.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _encrypt Whether the data disk is encrypted. Valid values:
+<li>TRUE: Encrypted.</li>
+<li>FALSE: Not encrypted.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetEncrypt(const bool& _encrypt);
@@ -200,11 +248,52 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool ThroughputPerformanceHasBeenSet() const;
 
+                    /**
+                     * 获取Burst performance: Whether to enable burst performance. The default value is false.
+
+Note: This feature is in beta test and requires a ticket to be submitted for usage.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return BurstPerformance Burst performance: Whether to enable burst performance. The default value is false.
+
+Note: This feature is in beta test and requires a ticket to be submitted for usage.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    bool GetBurstPerformance() const;
+
+                    /**
+                     * 设置Burst performance: Whether to enable burst performance. The default value is false.
+
+Note: This feature is in beta test and requires a ticket to be submitted for usage.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _burstPerformance Burst performance: Whether to enable burst performance. The default value is false.
+
+Note: This feature is in beta test and requires a ticket to be submitted for usage.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetBurstPerformance(const bool& _burstPerformance);
+
+                    /**
+                     * 判断参数 BurstPerformance 是否已赋值
+                     * @return BurstPerformance 是否已赋值
+                     * 
+                     */
+                    bool BurstPerformanceHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Data disk type. See [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>`LOCAL_BASIC`: Local disk<br><li>`LOCAL_SSD`: Local SSD disk<br><li>`CLOUD_BASIC`: HDD cloud disk<br><li>`CLOUD_PREMIUM`: Premium cloud storage<br><li>`CLOUD_SSD`: SSD cloud disk<br><li>`CLOUD_HSSD`: Enhanced SSD<br><li>`CLOUD_TSSD`: Tremendous SSD<br><br>The default value should be the same as the `DiskType` field under `SystemDisk`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Data disk type. For restrictions on data disk type, see [Cloud Block Storage Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
+<li>LOCAL_BASIC: Local hard disk.</li>
+<li>LOCAL_SSD: Local SSD.</li>
+<li>CLOUD_BASIC: General cloud disk.</li>
+<li>CLOUD_PREMIUM: Premium cloud disk.</li>
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>CLOUD_HSSD: Enhanced SSD.</li>
+<li>CLOUD_TSSD: Ultra SSD.</li>
+The default value is consistent with the system disk type (SystemDisk.DiskType).
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_diskType;
                     bool m_diskTypeHasBeenSet;
@@ -224,15 +313,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_snapshotIdHasBeenSet;
 
                     /**
-                     * Specifies whether the data disk is terminated along with the termination of the associated CVM instance.  Values: <br><li>`TRUE` (only available for pay-as-you-go cloud disks that are billed by hour) and `FALSE`.
-Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * Whether the data disk is terminated along with the instance. Valid values:
+<li>TRUE: When the instance is terminated, the data disk is also terminated. This option is only supported for hourly postpaid cloud disks.</li>
+<li>FALSE: When the instance is terminated, the data disk is retained.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     bool m_deleteWithInstance;
                     bool m_deleteWithInstanceHasBeenSet;
 
                     /**
-                     * Data disk encryption. Valid values: <br><li>`TRUE`: Encrypted<br><li>`FALSE`: Not encrypted
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Whether the data disk is encrypted. Valid values:
+<li>TRUE: Encrypted.</li>
+<li>FALSE: Not encrypted.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     bool m_encrypt;
                     bool m_encryptHasBeenSet;
@@ -244,6 +337,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     uint64_t m_throughputPerformance;
                     bool m_throughputPerformanceHasBeenSet;
+
+                    /**
+                     * Burst performance: Whether to enable burst performance. The default value is false.
+
+Note: This feature is in beta test and requires a ticket to be submitted for usage.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    bool m_burstPerformance;
+                    bool m_burstPerformanceHasBeenSet;
 
                 };
             }

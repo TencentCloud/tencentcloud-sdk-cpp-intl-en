@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tcss/v20201101/model/ImageRepoRegistryInfo.h>
 
 
 namespace TencentCloud
@@ -43,7 +44,47 @@ namespace TencentCloud
                     std::string ToJsonString() const;
 
 
+                    /**
+                     * 获取Mirror repository list
+                     * @return List Mirror repository list
+                     * 
+                     */
+                    std::vector<ImageRepoRegistryInfo> GetList() const;
+
+                    /**
+                     * 判断参数 List 是否已赋值
+                     * @return List 是否已赋值
+                     * 
+                     */
+                    bool ListHasBeenSet() const;
+
+                    /**
+                     * 获取Total quantity
+                     * @return TotalCount Total quantity
+                     * 
+                     */
+                    uint64_t GetTotalCount() const;
+
+                    /**
+                     * 判断参数 TotalCount 是否已赋值
+                     * @return TotalCount 是否已赋值
+                     * 
+                     */
+                    bool TotalCountHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * Mirror repository list
+                     */
+                    std::vector<ImageRepoRegistryInfo> m_list;
+                    bool m_listHasBeenSet;
+
+                    /**
+                     * Total quantity
+                     */
+                    uint64_t m_totalCount;
+                    bool m_totalCountHasBeenSet;
 
                 };
             }

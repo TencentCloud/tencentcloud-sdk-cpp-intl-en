@@ -267,6 +267,50 @@ namespace TencentCloud
                      */
                     bool AngleHasBeenSet() const;
 
+                    /**
+                     * 获取Resident type.
+                     * @return ResidentType Resident type.
+                     * 
+                     */
+                    std::string GetResidentType() const;
+
+                    /**
+                     * 判断参数 ResidentType 是否已赋值
+                     * @return ResidentType 是否已赋值
+                     * 
+                     */
+                    bool ResidentTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Card Warning Information
+
+-9101 Alarm for covered certificate,
+-9102 Alarm for photocopied certificate,
+-9103 Alarm for photographed certificate,
+-9104 Alarm for PS certificate,
+-9107 Alarm for reflective certificate,
+-9108 Alarm for blurry image,
+-9109 This capability is not enabled.
+                     * @return WarnCardInfos Card Warning Information
+
+-9101 Alarm for covered certificate,
+-9102 Alarm for photocopied certificate,
+-9103 Alarm for photographed certificate,
+-9104 Alarm for PS certificate,
+-9107 Alarm for reflective certificate,
+-9108 Alarm for blurry image,
+-9109 This capability is not enabled.
+                     * 
+                     */
+                    std::vector<int64_t> GetWarnCardInfos() const;
+
+                    /**
+                     * 判断参数 WarnCardInfos 是否已赋值
+                     * @return WarnCardInfos 是否已赋值
+                     * 
+                     */
+                    bool WarnCardInfosHasBeenSet() const;
+
                 private:
 
                     /**
@@ -364,6 +408,26 @@ namespace TencentCloud
                      */
                     std::string m_angle;
                     bool m_angleHasBeenSet;
+
+                    /**
+                     * Resident type.
+                     */
+                    std::string m_residentType;
+                    bool m_residentTypeHasBeenSet;
+
+                    /**
+                     * Card Warning Information
+
+-9101 Alarm for covered certificate,
+-9102 Alarm for photocopied certificate,
+-9103 Alarm for photographed certificate,
+-9104 Alarm for PS certificate,
+-9107 Alarm for reflective certificate,
+-9108 Alarm for blurry image,
+-9109 This capability is not enabled.
+                     */
+                    std::vector<int64_t> m_warnCardInfos;
+                    bool m_warnCardInfosHasBeenSet;
 
                 };
             }

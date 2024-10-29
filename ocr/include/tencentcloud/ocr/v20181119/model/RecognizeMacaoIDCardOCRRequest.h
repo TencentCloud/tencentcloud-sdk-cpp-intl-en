@@ -72,6 +72,27 @@ Supported image size: The downloaded image should not exceed 7M. The image downl
                     bool ImageUrlHasBeenSet() const;
 
                     /**
+                     * 获取The URL address of the image on the back of the card. Supported image formats: PNG, JPG, JPEG. The GIF format is not supported yet. Supported image size: The downloaded image does not exceed 7M after Base64 encoding. The image download takes no more than 3 seconds. Storing images in Tencent Cloud URLs can ensure higher download speed and stability. It is recommended that images be stored in Tencent Cloud. The URL speed and stability of non-Tencent cloud storage may be affected to a certain extent.
+                     * @return BackImageUrl The URL address of the image on the back of the card. Supported image formats: PNG, JPG, JPEG. The GIF format is not supported yet. Supported image size: The downloaded image does not exceed 7M after Base64 encoding. The image download takes no more than 3 seconds. Storing images in Tencent Cloud URLs can ensure higher download speed and stability. It is recommended that images be stored in Tencent Cloud. The URL speed and stability of non-Tencent cloud storage may be affected to a certain extent.
+                     * 
+                     */
+                    std::string GetBackImageUrl() const;
+
+                    /**
+                     * 设置The URL address of the image on the back of the card. Supported image formats: PNG, JPG, JPEG. The GIF format is not supported yet. Supported image size: The downloaded image does not exceed 7M after Base64 encoding. The image download takes no more than 3 seconds. Storing images in Tencent Cloud URLs can ensure higher download speed and stability. It is recommended that images be stored in Tencent Cloud. The URL speed and stability of non-Tencent cloud storage may be affected to a certain extent.
+                     * @param _backImageUrl The URL address of the image on the back of the card. Supported image formats: PNG, JPG, JPEG. The GIF format is not supported yet. Supported image size: The downloaded image does not exceed 7M after Base64 encoding. The image download takes no more than 3 seconds. Storing images in Tencent Cloud URLs can ensure higher download speed and stability. It is recommended that images be stored in Tencent Cloud. The URL speed and stability of non-Tencent cloud storage may be affected to a certain extent.
+                     * 
+                     */
+                    void SetBackImageUrl(const std::string& _backImageUrl);
+
+                    /**
+                     * 判断参数 BackImageUrl 是否已赋值
+                     * @return BackImageUrl 是否已赋值
+                     * 
+                     */
+                    bool BackImageUrlHasBeenSet() const;
+
+                    /**
                      * 获取Base64 value of the image.Supported image formats: PNG, JPG, JPEG. Not support GIF yet.
 Supported image size: The downloaded image should not exceed 7M after Base64 encoding. The image download takes no more than 3 seconds.
 One of ImageUrl and ImageBase64 of the image must be provided. If both are provided, only ImageUrl will be used.
@@ -99,6 +120,27 @@ One of ImageUrl and ImageBase64 of the image must be provided. If both are provi
                      * 
                      */
                     bool ImageBase64HasBeenSet() const;
+
+                    /**
+                     * 获取Base64 value of the image on the back of the card. Supported image formats: PNG, JPG, JPEG. The GIF format is not supported yet. Supported image size: The downloaded image does not exceed 7M after Base64 encoding. The image download takes no more than 3 seconds. One of ImageUrl and ImageBase64 of the image must be provided. If both are provided, only ImageUrl will be used.
+                     * @return BackImageBase64 Base64 value of the image on the back of the card. Supported image formats: PNG, JPG, JPEG. The GIF format is not supported yet. Supported image size: The downloaded image does not exceed 7M after Base64 encoding. The image download takes no more than 3 seconds. One of ImageUrl and ImageBase64 of the image must be provided. If both are provided, only ImageUrl will be used.
+                     * 
+                     */
+                    std::string GetBackImageBase64() const;
+
+                    /**
+                     * 设置Base64 value of the image on the back of the card. Supported image formats: PNG, JPG, JPEG. The GIF format is not supported yet. Supported image size: The downloaded image does not exceed 7M after Base64 encoding. The image download takes no more than 3 seconds. One of ImageUrl and ImageBase64 of the image must be provided. If both are provided, only ImageUrl will be used.
+                     * @param _backImageBase64 Base64 value of the image on the back of the card. Supported image formats: PNG, JPG, JPEG. The GIF format is not supported yet. Supported image size: The downloaded image does not exceed 7M after Base64 encoding. The image download takes no more than 3 seconds. One of ImageUrl and ImageBase64 of the image must be provided. If both are provided, only ImageUrl will be used.
+                     * 
+                     */
+                    void SetBackImageBase64(const std::string& _backImageBase64);
+
+                    /**
+                     * 判断参数 BackImageBase64 是否已赋值
+                     * @return BackImageBase64 是否已赋值
+                     * 
+                     */
+                    bool BackImageBase64HasBeenSet() const;
 
                     /**
                      * 获取The following optional fields are of string type and are empty by default: 
@@ -136,12 +178,24 @@ Supported image size: The downloaded image should not exceed 7M. The image downl
                     bool m_imageUrlHasBeenSet;
 
                     /**
+                     * The URL address of the image on the back of the card. Supported image formats: PNG, JPG, JPEG. The GIF format is not supported yet. Supported image size: The downloaded image does not exceed 7M after Base64 encoding. The image download takes no more than 3 seconds. Storing images in Tencent Cloud URLs can ensure higher download speed and stability. It is recommended that images be stored in Tencent Cloud. The URL speed and stability of non-Tencent cloud storage may be affected to a certain extent.
+                     */
+                    std::string m_backImageUrl;
+                    bool m_backImageUrlHasBeenSet;
+
+                    /**
                      * Base64 value of the image.Supported image formats: PNG, JPG, JPEG. Not support GIF yet.
 Supported image size: The downloaded image should not exceed 7M after Base64 encoding. The image download takes no more than 3 seconds.
 One of ImageUrl and ImageBase64 of the image must be provided. If both are provided, only ImageUrl will be used.
                      */
                     std::string m_imageBase64;
                     bool m_imageBase64HasBeenSet;
+
+                    /**
+                     * Base64 value of the image on the back of the card. Supported image formats: PNG, JPG, JPEG. The GIF format is not supported yet. Supported image size: The downloaded image does not exceed 7M after Base64 encoding. The image download takes no more than 3 seconds. One of ImageUrl and ImageBase64 of the image must be provided. If both are provided, only ImageUrl will be used.
+                     */
+                    std::string m_backImageBase64;
+                    bool m_backImageBase64HasBeenSet;
 
                     /**
                      * The following optional fields are of string type and are empty by default: 

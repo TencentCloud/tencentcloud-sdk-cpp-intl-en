@@ -14,56 +14,57 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_APIGATEWAY_V20180808_MODEL_ATTACHPLUGINRESPONSE_H_
-#define TENCENTCLOUD_APIGATEWAY_V20180808_MODEL_ATTACHPLUGINRESPONSE_H_
+#ifndef TENCENTCLOUD_ANTIDDOS_V20200309_MODEL_DESCRIBEIPBLOCKLISTRESPONSE_H_
+#define TENCENTCLOUD_ANTIDDOS_V20200309_MODEL_DESCRIBEIPBLOCKLISTRESPONSE_H_
 
 #include <string>
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/antiddos/v20200309/model/IpBlockData.h>
 
 
 namespace TencentCloud
 {
-    namespace Apigateway
+    namespace Antiddos
     {
-        namespace V20180808
+        namespace V20200309
         {
             namespace Model
             {
                 /**
-                * AttachPlugin response structure.
+                * DescribeIpBlockList response structure.
                 */
-                class AttachPluginResponse : public AbstractModel
+                class DescribeIpBlockListResponse : public AbstractModel
                 {
                 public:
-                    AttachPluginResponse();
-                    ~AttachPluginResponse() = default;
+                    DescribeIpBlockListResponse();
+                    ~DescribeIpBlockListResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Whether the binding operation is successful.
-                     * @return Result Whether the binding operation is successful.
+                     * 获取IP block list
+                     * @return List IP block list
                      * 
                      */
-                    bool GetResult() const;
+                    std::vector<IpBlockData> GetList() const;
 
                     /**
-                     * 判断参数 Result 是否已赋值
-                     * @return Result 是否已赋值
+                     * 判断参数 List 是否已赋值
+                     * @return List 是否已赋值
                      * 
                      */
-                    bool ResultHasBeenSet() const;
+                    bool ListHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Whether the binding operation is successful.
+                     * IP block list
                      */
-                    bool m_result;
-                    bool m_resultHasBeenSet;
+                    std::vector<IpBlockData> m_list;
+                    bool m_listHasBeenSet;
 
                 };
             }
@@ -71,4 +72,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_APIGATEWAY_V20180808_MODEL_ATTACHPLUGINRESPONSE_H_
+#endif // !TENCENTCLOUD_ANTIDDOS_V20200309_MODEL_DESCRIBEIPBLOCKLISTRESPONSE_H_

@@ -39,7 +39,9 @@ RecognizeMacaoIDCardOCRResponse::RecognizeMacaoIDCardOCRResponse() :
     m_symbolHasBeenSet(false),
     m_heightHasBeenSet(false),
     m_retImageHasBeenSet(false),
-    m_angleHasBeenSet(false)
+    m_angleHasBeenSet(false),
+    m_residentTypeHasBeenSet(false),
+    m_warnCardInfosHasBeenSet(false)
 {
 }
 
@@ -237,6 +239,29 @@ CoreInternalOutcome RecognizeMacaoIDCardOCRResponse::Deserialize(const string &p
         m_angleHasBeenSet = true;
     }
 
+    if (rsp.HasMember("ResidentType") && !rsp["ResidentType"].IsNull())
+    {
+        if (!rsp["ResidentType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ResidentType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_residentType = string(rsp["ResidentType"].GetString());
+        m_residentTypeHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("WarnCardInfos") && !rsp["WarnCardInfos"].IsNull())
+    {
+        if (!rsp["WarnCardInfos"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `WarnCardInfos` is not array type"));
+
+        const rapidjson::Value &tmpValue = rsp["WarnCardInfos"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            m_warnCardInfos.push_back((*itr).GetInt64());
+        }
+        m_warnCardInfosHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -373,6 +398,27 @@ string RecognizeMacaoIDCardOCRResponse::ToJsonString() const
         string key = "Angle";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_angle.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_residentTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ResidentType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_residentType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_warnCardInfosHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "WarnCardInfos";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_warnCardInfos.begin(); itr != m_warnCardInfos.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
+        }
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -545,6 +591,26 @@ string RecognizeMacaoIDCardOCRResponse::GetAngle() const
 bool RecognizeMacaoIDCardOCRResponse::AngleHasBeenSet() const
 {
     return m_angleHasBeenSet;
+}
+
+string RecognizeMacaoIDCardOCRResponse::GetResidentType() const
+{
+    return m_residentType;
+}
+
+bool RecognizeMacaoIDCardOCRResponse::ResidentTypeHasBeenSet() const
+{
+    return m_residentTypeHasBeenSet;
+}
+
+vector<int64_t> RecognizeMacaoIDCardOCRResponse::GetWarnCardInfos() const
+{
+    return m_warnCardInfos;
+}
+
+bool RecognizeMacaoIDCardOCRResponse::WarnCardInfosHasBeenSet() const
+{
+    return m_warnCardInfosHasBeenSet;
 }
 
 

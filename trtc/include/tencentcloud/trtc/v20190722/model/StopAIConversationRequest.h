@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_APIGATEWAY_V20180808_MODEL_ATTACHPLUGINRESPONSE_H_
-#define TENCENTCLOUD_APIGATEWAY_V20180808_MODEL_ATTACHPLUGINRESPONSE_H_
+#ifndef TENCENTCLOUD_TRTC_V20190722_MODEL_STOPAICONVERSATIONREQUEST_H_
+#define TENCENTCLOUD_TRTC_V20190722_MODEL_STOPAICONVERSATIONREQUEST_H_
 
 #include <string>
 #include <vector>
@@ -25,45 +25,51 @@
 
 namespace TencentCloud
 {
-    namespace Apigateway
+    namespace Trtc
     {
-        namespace V20180808
+        namespace V20190722
         {
             namespace Model
             {
                 /**
-                * AttachPlugin response structure.
+                * StopAIConversation request structure.
                 */
-                class AttachPluginResponse : public AbstractModel
+                class StopAIConversationRequest : public AbstractModel
                 {
                 public:
-                    AttachPluginResponse();
-                    ~AttachPluginResponse() = default;
-                    CoreInternalOutcome Deserialize(const std::string &payload);
+                    StopAIConversationRequest();
+                    ~StopAIConversationRequest() = default;
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Whether the binding operation is successful.
-                     * @return Result Whether the binding operation is successful.
+                     * 获取Task Unique ID
+                     * @return TaskId Task Unique ID
                      * 
                      */
-                    bool GetResult() const;
+                    std::string GetTaskId() const;
 
                     /**
-                     * 判断参数 Result 是否已赋值
-                     * @return Result 是否已赋值
+                     * 设置Task Unique ID
+                     * @param _taskId Task Unique ID
                      * 
                      */
-                    bool ResultHasBeenSet() const;
+                    void SetTaskId(const std::string& _taskId);
+
+                    /**
+                     * 判断参数 TaskId 是否已赋值
+                     * @return TaskId 是否已赋值
+                     * 
+                     */
+                    bool TaskIdHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Whether the binding operation is successful.
+                     * Task Unique ID
                      */
-                    bool m_result;
-                    bool m_resultHasBeenSet;
+                    std::string m_taskId;
+                    bool m_taskIdHasBeenSet;
 
                 };
             }
@@ -71,4 +77,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_APIGATEWAY_V20180808_MODEL_ATTACHPLUGINRESPONSE_H_
+#endif // !TENCENTCLOUD_TRTC_V20190722_MODEL_STOPAICONVERSATIONREQUEST_H_

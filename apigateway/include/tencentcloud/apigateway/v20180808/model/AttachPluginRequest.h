@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the plugin to be bound.
-                     * @return PluginId ID of the plugin to be bound.
+                     * 获取ID of the bound API gateway plugin.
+                     * @return PluginId ID of the bound API gateway plugin.
                      * 
                      */
                     std::string GetPluginId() const;
 
                     /**
-                     * 设置ID of the plugin to be bound.
-                     * @param _pluginId ID of the plugin to be bound.
+                     * 设置ID of the bound API gateway plugin.
+                     * @param _pluginId ID of the bound API gateway plugin.
                      * 
                      */
                     void SetPluginId(const std::string& _pluginId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool PluginIdHasBeenSet() const;
 
                     /**
-                     * 获取Service ID.
-                     * @return ServiceId Service ID.
+                     * 获取ID of the service to be operated
+                     * @return ServiceId ID of the service to be operated
                      * 
                      */
                     std::string GetServiceId() const;
 
                     /**
-                     * 设置Service ID.
-                     * @param _serviceId Service ID.
+                     * 设置ID of the service to be operated
+                     * @param _serviceId ID of the service to be operated
                      * 
                      */
                     void SetServiceId(const std::string& _serviceId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool ServiceIdHasBeenSet() const;
 
                     /**
-                     * 获取API environment.
-                     * @return EnvironmentName API environment.
+                     * 获取Environment for operating the API.
+                     * @return EnvironmentName Environment for operating the API.
                      * 
                      */
                     std::string GetEnvironmentName() const;
 
                     /**
-                     * 设置API environment.
-                     * @param _environmentName API environment.
+                     * 设置Environment for operating the API.
+                     * @param _environmentName Environment for operating the API.
                      * 
                      */
                     void SetEnvironmentName(const std::string& _environmentName);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool EnvironmentNameHasBeenSet() const;
 
                     /**
-                     * 获取List of APIs bound with the plugin
-                     * @return ApiIds List of APIs bound with the plugin
+                     * 获取List of APIs to be bound.
+                     * @return ApiIds List of APIs to be bound.
                      * 
                      */
                     std::vector<std::string> GetApiIds() const;
 
                     /**
-                     * 设置List of APIs bound with the plugin
-                     * @param _apiIds List of APIs bound with the plugin
+                     * 设置List of APIs to be bound.
+                     * @param _apiIds List of APIs to be bound.
                      * 
                      */
                     void SetApiIds(const std::vector<std::string>& _apiIds);
@@ -129,25 +129,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the plugin to be bound.
+                     * ID of the bound API gateway plugin.
                      */
                     std::string m_pluginId;
                     bool m_pluginIdHasBeenSet;
 
                     /**
-                     * Service ID.
+                     * ID of the service to be operated
                      */
                     std::string m_serviceId;
                     bool m_serviceIdHasBeenSet;
 
                     /**
-                     * API environment.
+                     * Environment for operating the API.
                      */
                     std::string m_environmentName;
                     bool m_environmentNameHasBeenSet;
 
                     /**
-                     * List of APIs bound with the plugin
+                     * List of APIs to be bound.
                      */
                     std::vector<std::string> m_apiIds;
                     bool m_apiIdsHasBeenSet;
