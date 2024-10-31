@@ -28,6 +28,7 @@
 #include <tencentcloud/vod/v20180717/model/OcrWordsConfigureInfoForUpdate.h>
 #include <tencentcloud/vod/v20180717/model/AsrFullTextConfigureInfoForUpdate.h>
 #include <tencentcloud/vod/v20180717/model/AsrWordsConfigureInfoForUpdate.h>
+#include <tencentcloud/vod/v20180717/model/AsrTranslateConfigureInfoForUpdate.h>
 #include <tencentcloud/vod/v20180717/model/ObjectConfigureInfoForUpdate.h>
 
 
@@ -282,6 +283,27 @@ namespace TencentCloud
                     bool AsrWordsConfigureHasBeenSet() const;
 
                     /**
+                     * 获取Control parameter of voice translation.
+                     * @return AsrTranslateConfigure Control parameter of voice translation.
+                     * 
+                     */
+                    AsrTranslateConfigureInfoForUpdate GetAsrTranslateConfigure() const;
+
+                    /**
+                     * 设置Control parameter of voice translation.
+                     * @param _asrTranslateConfigure Control parameter of voice translation.
+                     * 
+                     */
+                    void SetAsrTranslateConfigure(const AsrTranslateConfigureInfoForUpdate& _asrTranslateConfigure);
+
+                    /**
+                     * 判断参数 AsrTranslateConfigure 是否已赋值
+                     * @return AsrTranslateConfigure 是否已赋值
+                     * 
+                     */
+                    bool AsrTranslateConfigureHasBeenSet() const;
+
+                    /**
                      * 获取Control parameter of object recognition.
                      * @return ObjectConfigure Control parameter of object recognition.
                      * 
@@ -390,6 +412,12 @@ namespace TencentCloud
                      */
                     AsrWordsConfigureInfoForUpdate m_asrWordsConfigure;
                     bool m_asrWordsConfigureHasBeenSet;
+
+                    /**
+                     * Control parameter of voice translation.
+                     */
+                    AsrTranslateConfigureInfoForUpdate m_asrTranslateConfigure;
+                    bool m_asrTranslateConfigureHasBeenSet;
 
                     /**
                      * Control parameter of object recognition.

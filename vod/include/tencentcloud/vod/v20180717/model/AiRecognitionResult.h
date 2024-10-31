@@ -29,6 +29,7 @@
 #include <tencentcloud/vod/v20180717/model/AiRecognitionTaskFaceResult.h>
 #include <tencentcloud/vod/v20180717/model/AiRecognitionTaskAsrWordsResult.h>
 #include <tencentcloud/vod/v20180717/model/AiRecognitionTaskAsrFullTextResult.h>
+#include <tencentcloud/vod/v20180717/model/AiRecognitionTaskAsrTranslateResult.h>
 #include <tencentcloud/vod/v20180717/model/AiRecognitionTaskOcrWordsResult.h>
 #include <tencentcloud/vod/v20180717/model/AiRecognitionTaskOcrFullTextResult.h>
 #include <tencentcloud/vod/v20180717/model/AiRecognitionTaskObjectResult.h>
@@ -60,6 +61,7 @@ namespace TencentCloud
 <li>AsrWordsRecognition: speech keyword recognition,</li>
 <li>OcrWordsRecognition: text keyword recognition,</li>
 <li>AsrFullTextRecognition: full speech recognition,</li>
+<li>AsrTranslateRecognition: voice translation recognition,</li>
 <li>OcrFullTextRecognition: full text recognition,</li>
 <li>HeadTailRecognition: video opening and ending credits recognition,</li>
 <li>ObjectRecognition: object recognition.</li>
@@ -68,6 +70,7 @@ namespace TencentCloud
 <li>AsrWordsRecognition: speech keyword recognition,</li>
 <li>OcrWordsRecognition: text keyword recognition,</li>
 <li>AsrFullTextRecognition: full speech recognition,</li>
+<li>AsrTranslateRecognition: voice translation recognition,</li>
 <li>OcrFullTextRecognition: full text recognition,</li>
 <li>HeadTailRecognition: video opening and ending credits recognition,</li>
 <li>ObjectRecognition: object recognition.</li>
@@ -81,6 +84,7 @@ namespace TencentCloud
 <li>AsrWordsRecognition: speech keyword recognition,</li>
 <li>OcrWordsRecognition: text keyword recognition,</li>
 <li>AsrFullTextRecognition: full speech recognition,</li>
+<li>AsrTranslateRecognition: voice translation recognition,</li>
 <li>OcrFullTextRecognition: full text recognition,</li>
 <li>HeadTailRecognition: video opening and ending credits recognition,</li>
 <li>ObjectRecognition: object recognition.</li>
@@ -89,6 +93,7 @@ namespace TencentCloud
 <li>AsrWordsRecognition: speech keyword recognition,</li>
 <li>OcrWordsRecognition: text keyword recognition,</li>
 <li>AsrFullTextRecognition: full speech recognition,</li>
+<li>AsrTranslateRecognition: voice translation recognition,</li>
 <li>OcrFullTextRecognition: full text recognition,</li>
 <li>HeadTailRecognition: video opening and ending credits recognition,</li>
 <li>ObjectRecognition: object recognition.</li>
@@ -249,6 +254,27 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool AsrFullTextTaskHasBeenSet() const;
 
                     /**
+                     * 获取Voice translation result, valid when Type is AsrTranslateRecognition.
+                     * @return AsrTranslateTask Voice translation result, valid when Type is AsrTranslateRecognition.
+                     * 
+                     */
+                    AiRecognitionTaskAsrTranslateResult GetAsrTranslateTask() const;
+
+                    /**
+                     * 设置Voice translation result, valid when Type is AsrTranslateRecognition.
+                     * @param _asrTranslateTask Voice translation result, valid when Type is AsrTranslateRecognition.
+                     * 
+                     */
+                    void SetAsrTranslateTask(const AiRecognitionTaskAsrTranslateResult& _asrTranslateTask);
+
+                    /**
+                     * 判断参数 AsrTranslateTask 是否已赋值
+                     * @return AsrTranslateTask 是否已赋值
+                     * 
+                     */
+                    bool AsrTranslateTaskHasBeenSet() const;
+
+                    /**
                      * 获取Text keyword recognition result, which is valid when `Type` is
  `OcrWordsRecognition`.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -343,6 +369,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>AsrWordsRecognition: speech keyword recognition,</li>
 <li>OcrWordsRecognition: text keyword recognition,</li>
 <li>AsrFullTextRecognition: full speech recognition,</li>
+<li>AsrTranslateRecognition: voice translation recognition,</li>
 <li>OcrFullTextRecognition: full text recognition,</li>
 <li>HeadTailRecognition: video opening and ending credits recognition,</li>
 <li>ObjectRecognition: object recognition.</li>
@@ -389,6 +416,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     AiRecognitionTaskAsrFullTextResult m_asrFullTextTask;
                     bool m_asrFullTextTaskHasBeenSet;
+
+                    /**
+                     * Voice translation result, valid when Type is AsrTranslateRecognition.
+                     */
+                    AiRecognitionTaskAsrTranslateResult m_asrTranslateTask;
+                    bool m_asrTranslateTaskHasBeenSet;
 
                     /**
                      * Text keyword recognition result, which is valid when `Type` is

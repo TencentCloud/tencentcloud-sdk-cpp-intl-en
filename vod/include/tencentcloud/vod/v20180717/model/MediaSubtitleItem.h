@@ -90,30 +90,66 @@ namespace TencentCloud
 
                     /**
                      * 获取Subtitle language. Common values:
-<li>`cn`: Chinese</li>
+<li>`zh`: Chinese</li>
+<li>`en`: English</li>
 <li>`ja`: Japanese</li>
-<li>`en-US`: English</li>
-For other values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
+<li>`ko`: Korean</li>
+<li>`vi`: Vietnamese</li>
+<li>`ms`: Malay</li>
+<li>`th`: Thai</li>
+<li>`pt`: Portuguese</li>
+<li>`tr`: Turkish</li>
+<li>`ar`: Arabic</li>
+<li>`es`: Spanish</li>
+<li>`hi`: Hindi</li>
+<li>`fr`: French</li>For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
                      * @return Language Subtitle language. Common values:
-<li>`cn`: Chinese</li>
+<li>`zh`: Chinese</li>
+<li>`en`: English</li>
 <li>`ja`: Japanese</li>
-<li>`en-US`: English</li>
-For other values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
+<li>`ko`: Korean</li>
+<li>`vi`: Vietnamese</li>
+<li>`ms`: Malay</li>
+<li>`th`: Thai</li>
+<li>`pt`: Portuguese</li>
+<li>`tr`: Turkish</li>
+<li>`ar`: Arabic</li>
+<li>`es`: Spanish</li>
+<li>`hi`: Hindi</li>
+<li>`fr`: French</li>For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
                      * 
                      */
                     std::string GetLanguage() const;
 
                     /**
                      * 设置Subtitle language. Common values:
-<li>`cn`: Chinese</li>
+<li>`zh`: Chinese</li>
+<li>`en`: English</li>
 <li>`ja`: Japanese</li>
-<li>`en-US`: English</li>
-For other values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
+<li>`ko`: Korean</li>
+<li>`vi`: Vietnamese</li>
+<li>`ms`: Malay</li>
+<li>`th`: Thai</li>
+<li>`pt`: Portuguese</li>
+<li>`tr`: Turkish</li>
+<li>`ar`: Arabic</li>
+<li>`es`: Spanish</li>
+<li>`hi`: Hindi</li>
+<li>`fr`: French</li>For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
                      * @param _language Subtitle language. Common values:
-<li>`cn`: Chinese</li>
+<li>`zh`: Chinese</li>
+<li>`en`: English</li>
 <li>`ja`: Japanese</li>
-<li>`en-US`: English</li>
-For other values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
+<li>`ko`: Korean</li>
+<li>`vi`: Vietnamese</li>
+<li>`ms`: Malay</li>
+<li>`th`: Thai</li>
+<li>`pt`: Portuguese</li>
+<li>`tr`: Turkish</li>
+<li>`ar`: Arabic</li>
+<li>`es`: Spanish</li>
+<li>`hi`: Hindi</li>
+<li>`fr`: French</li>For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
                      * 
                      */
                     void SetLanguage(const std::string& _language);
@@ -171,6 +207,35 @@ For other values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
                      */
                     bool UrlHasBeenSet() const;
 
+                    /**
+                     * 获取Subtitle source, values:
+<li>UserUploaded: user uploaded;</li>
+<li>AIRecognition: AI recognition, generated through asr full text recognition or voice translation.</li>
+                     * @return Source Subtitle source, values:
+<li>UserUploaded: user uploaded;</li>
+<li>AIRecognition: AI recognition, generated through asr full text recognition or voice translation.</li>
+                     * 
+                     */
+                    std::string GetSource() const;
+
+                    /**
+                     * 设置Subtitle source, values:
+<li>UserUploaded: user uploaded;</li>
+<li>AIRecognition: AI recognition, generated through asr full text recognition or voice translation.</li>
+                     * @param _source Subtitle source, values:
+<li>UserUploaded: user uploaded;</li>
+<li>AIRecognition: AI recognition, generated through asr full text recognition or voice translation.</li>
+                     * 
+                     */
+                    void SetSource(const std::string& _source);
+
+                    /**
+                     * 判断参数 Source 是否已赋值
+                     * @return Source 是否已赋值
+                     * 
+                     */
+                    bool SourceHasBeenSet() const;
+
                 private:
 
                     /**
@@ -187,10 +252,19 @@ For other values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
 
                     /**
                      * Subtitle language. Common values:
-<li>`cn`: Chinese</li>
+<li>`zh`: Chinese</li>
+<li>`en`: English</li>
 <li>`ja`: Japanese</li>
-<li>`en-US`: English</li>
-For other values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
+<li>`ko`: Korean</li>
+<li>`vi`: Vietnamese</li>
+<li>`ms`: Malay</li>
+<li>`th`: Thai</li>
+<li>`pt`: Portuguese</li>
+<li>`tr`: Turkish</li>
+<li>`ar`: Arabic</li>
+<li>`es`: Spanish</li>
+<li>`hi`: Hindi</li>
+<li>`fr`: French</li>For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
                      */
                     std::string m_language;
                     bool m_languageHasBeenSet;
@@ -207,6 +281,14 @@ For other values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
+
+                    /**
+                     * Subtitle source, values:
+<li>UserUploaded: user uploaded;</li>
+<li>AIRecognition: AI recognition, generated through asr full text recognition or voice translation.</li>
+                     */
+                    std::string m_source;
+                    bool m_sourceHasBeenSet;
 
                 };
             }

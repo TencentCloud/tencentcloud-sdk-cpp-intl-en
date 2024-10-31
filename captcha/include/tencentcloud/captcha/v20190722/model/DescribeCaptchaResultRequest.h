@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取It must be `9` here. You can configure the CAPTCHA types in the console.
-                     * @return CaptchaType It must be `9` here. You can configure the CAPTCHA types in the console.
+                     * 获取It must be `9` here.
+                     * @return CaptchaType It must be `9` here.
                      * 
                      */
                     uint64_t GetCaptchaType() const;
 
                     /**
-                     * 设置It must be `9` here. You can configure the CAPTCHA types in the console.
-                     * @param _captchaType It must be `9` here. You can configure the CAPTCHA types in the console.
+                     * 设置It must be `9` here.
+                     * @param _captchaType It must be `9` here.
                      * 
                      */
                     void SetCaptchaType(const uint64_t& _captchaType);
@@ -276,7 +276,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * It must be `9` here. You can configure the CAPTCHA types in the console.
+                     * It must be `9` here.
                      */
                     uint64_t m_captchaType;
                     bool m_captchaTypeHasBeenSet;

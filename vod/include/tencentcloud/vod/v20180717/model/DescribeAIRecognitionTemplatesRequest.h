@@ -85,6 +85,35 @@ namespace TencentCloud
                     bool DefinitionsHasBeenSet() const;
 
                     /**
+                     * 获取Template type filter. Optional values:
+<li>Preset: preset template;</li>
+<li>Custom: user-defined template.</li>If not filled default is empty, i.e., no template type filter.
+                     * @return Type Template type filter. Optional values:
+<li>Preset: preset template;</li>
+<li>Custom: user-defined template.</li>If not filled default is empty, i.e., no template type filter.
+                     * 
+                     */
+                    std::string GetType() const;
+
+                    /**
+                     * 设置Template type filter. Optional values:
+<li>Preset: preset template;</li>
+<li>Custom: user-defined template.</li>If not filled default is empty, i.e., no template type filter.
+                     * @param _type Template type filter. Optional values:
+<li>Preset: preset template;</li>
+<li>Custom: user-defined template.</li>If not filled default is empty, i.e., no template type filter.
+                     * 
+                     */
+                    void SetType(const std::string& _type);
+
+                    /**
+                     * 判断参数 Type 是否已赋值
+                     * @return Type 是否已赋值
+                     * 
+                     */
+                    bool TypeHasBeenSet() const;
+
+                    /**
                      * 获取Pagination offset. Default value: 0.
                      * @return Offset Pagination offset. Default value: 0.
                      * 
@@ -139,6 +168,14 @@ namespace TencentCloud
                      */
                     std::vector<int64_t> m_definitions;
                     bool m_definitionsHasBeenSet;
+
+                    /**
+                     * Template type filter. Optional values:
+<li>Preset: preset template;</li>
+<li>Custom: user-defined template.</li>If not filled default is empty, i.e., no template type filter.
+                     */
+                    std::string m_type;
+                    bool m_typeHasBeenSet;
 
                     /**
                      * Pagination offset. Default value: 0.

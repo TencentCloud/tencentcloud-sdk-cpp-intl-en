@@ -409,6 +409,8 @@
 #include <tencentcloud/vpc/v20170312/model/ModifyAddressTemplateGroupAttributeResponse.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyAddressesBandwidthRequest.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyAddressesBandwidthResponse.h>
+#include <tencentcloud/vpc/v20170312/model/ModifyAddressesRenewFlagRequest.h>
+#include <tencentcloud/vpc/v20170312/model/ModifyAddressesRenewFlagResponse.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyAssistantCidrRequest.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyAssistantCidrResponse.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyBandwidthPackageAttributeRequest.h>
@@ -1126,6 +1128,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyAddressesBandwidthResponse> ModifyAddressesBandwidthOutcome;
                 typedef std::future<ModifyAddressesBandwidthOutcome> ModifyAddressesBandwidthOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::ModifyAddressesBandwidthRequest&, ModifyAddressesBandwidthOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAddressesBandwidthAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyAddressesRenewFlagResponse> ModifyAddressesRenewFlagOutcome;
+                typedef std::future<ModifyAddressesRenewFlagOutcome> ModifyAddressesRenewFlagOutcomeCallable;
+                typedef std::function<void(const VpcClient*, const Model::ModifyAddressesRenewFlagRequest&, ModifyAddressesRenewFlagOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAddressesRenewFlagAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyAssistantCidrResponse> ModifyAssistantCidrOutcome;
                 typedef std::future<ModifyAssistantCidrOutcome> ModifyAssistantCidrOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::ModifyAssistantCidrRequest&, ModifyAssistantCidrOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAssistantCidrAsyncHandler;
@@ -3217,6 +3222,15 @@ This API is completed asynchronously. If you need to query the execution result 
                 ModifyAddressesBandwidthOutcome ModifyAddressesBandwidth(const Model::ModifyAddressesBandwidthRequest &request);
                 void ModifyAddressesBandwidthAsync(const Model::ModifyAddressesBandwidthRequest& request, const ModifyAddressesBandwidthAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyAddressesBandwidthOutcomeCallable ModifyAddressesBandwidthCallable(const Model::ModifyAddressesBandwidthRequest& request);
+
+                /**
+                 *This API is used to adjust the renewal flag for the monthly subscription EIP.
+                 * @param req ModifyAddressesRenewFlagRequest
+                 * @return ModifyAddressesRenewFlagOutcome
+                 */
+                ModifyAddressesRenewFlagOutcome ModifyAddressesRenewFlag(const Model::ModifyAddressesRenewFlagRequest &request);
+                void ModifyAddressesRenewFlagAsync(const Model::ModifyAddressesRenewFlagRequest& request, const ModifyAddressesRenewFlagAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyAddressesRenewFlagOutcomeCallable ModifyAddressesRenewFlagCallable(const Model::ModifyAddressesRenewFlagRequest& request);
 
                 /**
                  *This API is used to batch modify (add or delete) secondary CIDR blocks.

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The subtitle information.
+                * Subtitle information.
                 */
                 class AiRecognitionTaskAsrFullTextResultOutputSubtitleItem : public AbstractModel
                 {
@@ -45,6 +45,77 @@ namespace TencentCloud
                     void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
+
+                    /**
+                     * 获取Media asset subtitle ID, used for media asset subtitle management, only valid when Format is vtt.
+<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
+                     * @return Id Media asset subtitle ID, used for media asset subtitle management, only valid when Format is vtt.
+<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
+                     * 
+                     */
+                    std::string GetId() const;
+
+                    /**
+                     * 设置Media asset subtitle ID, used for media asset subtitle management, only valid when Format is vtt.
+<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
+                     * @param _id Media asset subtitle ID, used for media asset subtitle management, only valid when Format is vtt.
+<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
+                     * 
+                     */
+                    void SetId(const std::string& _id);
+
+                    /**
+                     * 判断参数 Id 是否已赋值
+                     * @return Id 是否已赋值
+                     * 
+                     */
+                    bool IdHasBeenSet() const;
+
+                    /**
+                     * 获取Media asset subtitle name, used for player display, only valid when Format is vtt.
+<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
+                     * @return Name Media asset subtitle name, used for player display, only valid when Format is vtt.
+<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
+                     * 
+                     */
+                    std::string GetName() const;
+
+                    /**
+                     * 设置Media asset subtitle name, used for player display, only valid when Format is vtt.
+<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
+                     * @param _name Media asset subtitle name, used for player display, only valid when Format is vtt.
+<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
+                     * 
+                     */
+                    void SetName(const std::string& _name);
+
+                    /**
+                     * 判断参数 Name 是否已赋值
+                     * @return Name 是否已赋值
+                     * 
+                     */
+                    bool NameHasBeenSet() const;
+
+                    /**
+                     * 获取Subtitle Language.
+                     * @return Language Subtitle Language.
+                     * 
+                     */
+                    std::string GetLanguage() const;
+
+                    /**
+                     * 设置Subtitle Language.
+                     * @param _language Subtitle Language.
+                     * 
+                     */
+                    void SetLanguage(const std::string& _language);
+
+                    /**
+                     * 判断参数 Language 是否已赋值
+                     * @return Language 是否已赋值
+                     * 
+                     */
+                    bool LanguageHasBeenSet() const;
 
                     /**
                      * 获取The format of the subtitle files. Valid values:
@@ -97,6 +168,26 @@ namespace TencentCloud
                     bool UrlHasBeenSet() const;
 
                 private:
+
+                    /**
+                     * Media asset subtitle ID, used for media asset subtitle management, only valid when Format is vtt.
+<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
+                     */
+                    std::string m_id;
+                    bool m_idHasBeenSet;
+
+                    /**
+                     * Media asset subtitle name, used for player display, only valid when Format is vtt.
+<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
+                     */
+                    std::string m_name;
+                    bool m_nameHasBeenSet;
+
+                    /**
+                     * Subtitle Language.
+                     */
+                    std::string m_language;
+                    bool m_languageHasBeenSet;
 
                     /**
                      * The format of the subtitle files. Valid values:

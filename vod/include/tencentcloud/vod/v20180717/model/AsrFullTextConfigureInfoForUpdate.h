@@ -151,6 +151,27 @@ namespace TencentCloud
                      */
                     bool SrcLanguageHasBeenSet() const;
 
+                    /**
+                     * 获取Specify subtitle name, length limit: 64 characters. This value will be used for player display.
+                     * @return SubtitleName Specify subtitle name, length limit: 64 characters. This value will be used for player display.
+                     * 
+                     */
+                    std::string GetSubtitleName() const;
+
+                    /**
+                     * 设置Specify subtitle name, length limit: 64 characters. This value will be used for player display.
+                     * @param _subtitleName Specify subtitle name, length limit: 64 characters. This value will be used for player display.
+                     * 
+                     */
+                    void SetSubtitleName(const std::string& _subtitleName);
+
+                    /**
+                     * 判断参数 SubtitleName 是否已赋值
+                     * @return SubtitleName 是否已赋值
+                     * 
+                     */
+                    bool SubtitleNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -181,6 +202,12 @@ namespace TencentCloud
                      */
                     std::string m_srcLanguage;
                     bool m_srcLanguageHasBeenSet;
+
+                    /**
+                     * Specify subtitle name, length limit: 64 characters. This value will be used for player display.
+                     */
+                    std::string m_subtitleName;
+                    bool m_subtitleNameHasBeenSet;
 
                 };
             }

@@ -31,6 +31,7 @@
 #include <tencentcloud/vod/v20180717/model/OcrWordsConfigureInfo.h>
 #include <tencentcloud/vod/v20180717/model/AsrFullTextConfigureInfo.h>
 #include <tencentcloud/vod/v20180717/model/AsrWordsConfigureInfo.h>
+#include <tencentcloud/vod/v20180717/model/AsrTranslateConfigureInfo.h>
 #include <tencentcloud/vod/v20180717/model/ObjectConfigureInfo.h>
 
 
@@ -43,7 +44,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Video content recognition template details
+                * Video content recognition template details.
                 */
                 class AIRecognitionTemplateItem : public AbstractModel
                 {
@@ -116,6 +117,35 @@ namespace TencentCloud
                      * 
                      */
                     bool CommentHasBeenSet() const;
+
+                    /**
+                     * 获取Template type, values:
+<li>Preset: system preset template;</li>
+<li>Custom: user-defined template.</li>
+                     * @return Type Template type, values:
+<li>Preset: system preset template;</li>
+<li>Custom: user-defined template.</li>
+                     * 
+                     */
+                    std::string GetType() const;
+
+                    /**
+                     * 设置Template type, values:
+<li>Preset: system preset template;</li>
+<li>Custom: user-defined template.</li>
+                     * @param _type Template type, values:
+<li>Preset: system preset template;</li>
+<li>Custom: user-defined template.</li>
+                     * 
+                     */
+                    void SetType(const std::string& _type);
+
+                    /**
+                     * 判断参数 Type 是否已赋值
+                     * @return Type 是否已赋值
+                     * 
+                     */
+                    bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Control parameter of opening and closing credits recognition.
@@ -293,6 +323,31 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool AsrWordsConfigureHasBeenSet() const;
 
                     /**
+                     * 获取Voice translation control parameter.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return AsrTranslateConfigure Voice translation control parameter.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    AsrTranslateConfigureInfo GetAsrTranslateConfigure() const;
+
+                    /**
+                     * 设置Voice translation control parameter.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param _asrTranslateConfigure Voice translation control parameter.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetAsrTranslateConfigure(const AsrTranslateConfigureInfo& _asrTranslateConfigure);
+
+                    /**
+                     * 判断参数 AsrTranslateConfigure 是否已赋值
+                     * @return AsrTranslateConfigure 是否已赋值
+                     * 
+                     */
+                    bool AsrTranslateConfigureHasBeenSet() const;
+
+                    /**
                      * 获取Control parameter of object recognition.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ObjectConfigure Control parameter of object recognition.
@@ -401,6 +456,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_commentHasBeenSet;
 
                     /**
+                     * Template type, values:
+<li>Preset: system preset template;</li>
+<li>Custom: user-defined template.</li>
+                     */
+                    std::string m_type;
+                    bool m_typeHasBeenSet;
+
+                    /**
                      * Control parameter of opening and closing credits recognition.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
@@ -448,6 +511,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     AsrWordsConfigureInfo m_asrWordsConfigure;
                     bool m_asrWordsConfigureHasBeenSet;
+
+                    /**
+                     * Voice translation control parameter.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    AsrTranslateConfigureInfo m_asrTranslateConfigure;
+                    bool m_asrTranslateConfigureHasBeenSet;
 
                     /**
                      * Control parameter of object recognition.

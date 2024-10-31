@@ -28,6 +28,7 @@
 #include <tencentcloud/vod/v20180717/model/OcrWordsConfigureInfo.h>
 #include <tencentcloud/vod/v20180717/model/AsrFullTextConfigureInfo.h>
 #include <tencentcloud/vod/v20180717/model/AsrWordsConfigureInfo.h>
+#include <tencentcloud/vod/v20180717/model/AsrTranslateConfigureInfo.h>
 #include <tencentcloud/vod/v20180717/model/ObjectConfigureInfo.h>
 
 
@@ -261,6 +262,27 @@ namespace TencentCloud
                     bool AsrWordsConfigureHasBeenSet() const;
 
                     /**
+                     * 获取Control parameter of voice translation.
+                     * @return AsrTranslateConfigure Control parameter of voice translation.
+                     * 
+                     */
+                    AsrTranslateConfigureInfo GetAsrTranslateConfigure() const;
+
+                    /**
+                     * 设置Control parameter of voice translation.
+                     * @param _asrTranslateConfigure Control parameter of voice translation.
+                     * 
+                     */
+                    void SetAsrTranslateConfigure(const AsrTranslateConfigureInfo& _asrTranslateConfigure);
+
+                    /**
+                     * 判断参数 AsrTranslateConfigure 是否已赋值
+                     * @return AsrTranslateConfigure 是否已赋值
+                     * 
+                     */
+                    bool AsrTranslateConfigureHasBeenSet() const;
+
+                    /**
                      * 获取Control parameter of object recognition.
                      * @return ObjectConfigure Control parameter of object recognition.
                      * 
@@ -363,6 +385,12 @@ namespace TencentCloud
                      */
                     AsrWordsConfigureInfo m_asrWordsConfigure;
                     bool m_asrWordsConfigureHasBeenSet;
+
+                    /**
+                     * Control parameter of voice translation.
+                     */
+                    AsrTranslateConfigureInfo m_asrTranslateConfigure;
+                    bool m_asrTranslateConfigureHasBeenSet;
 
                     /**
                      * Control parameter of object recognition.

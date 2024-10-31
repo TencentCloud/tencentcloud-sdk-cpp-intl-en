@@ -105,10 +105,10 @@ Image restrictions: The single-edge resolution must be less than 5,000 and great
                     /**
                      * 获取Text description.
 It is used to increase the possibility that the generation result contains the described content.
-Chinese is recommended. A maximum of 256 UTF-8 characters are supported.
+A maximum of 256 UTF-8 characters are supported.
                      * @return Prompt Text description.
 It is used to increase the possibility that the generation result contains the described content.
-Chinese is recommended. A maximum of 256 UTF-8 characters are supported.
+A maximum of 256 UTF-8 characters are supported.
                      * 
                      */
                     std::string GetPrompt() const;
@@ -116,10 +116,10 @@ Chinese is recommended. A maximum of 256 UTF-8 characters are supported.
                     /**
                      * 设置Text description.
 It is used to increase the possibility that the generation result contains the described content.
-Chinese is recommended. A maximum of 256 UTF-8 characters are supported.
+A maximum of 256 UTF-8 characters are supported.
                      * @param _prompt Text description.
 It is used to increase the possibility that the generation result contains the described content.
-Chinese is recommended. A maximum of 256 UTF-8 characters are supported.
+A maximum of 256 UTF-8 characters are supported.
                      * 
                      */
                     void SetPrompt(const std::string& _prompt);
@@ -134,10 +134,10 @@ Chinese is recommended. A maximum of 256 UTF-8 characters are supported.
                     /**
                      * 获取Negative text description.
 It is used to reduce the possibility that the generation result contains the described content, but such content cannot be completely avoided.
-Chinese is recommended. A maximum of 256 UTF-8 characters are supported.
+English is recommended. A maximum of 256 UTF-8 characters are supported.
                      * @return NegativePrompt Negative text description.
 It is used to reduce the possibility that the generation result contains the described content, but such content cannot be completely avoided.
-Chinese is recommended. A maximum of 256 UTF-8 characters are supported.
+English is recommended. A maximum of 256 UTF-8 characters are supported.
                      * 
                      */
                     std::string GetNegativePrompt() const;
@@ -145,10 +145,10 @@ Chinese is recommended. A maximum of 256 UTF-8 characters are supported.
                     /**
                      * 设置Negative text description.
 It is used to reduce the possibility that the generation result contains the described content, but such content cannot be completely avoided.
-Chinese is recommended. A maximum of 256 UTF-8 characters are supported.
+English is recommended. A maximum of 256 UTF-8 characters are supported.
                      * @param _negativePrompt Negative text description.
 It is used to reduce the possibility that the generation result contains the described content, but such content cannot be completely avoided.
-Chinese is recommended. A maximum of 256 UTF-8 characters are supported.
+English is recommended. A maximum of 256 UTF-8 characters are supported.
                      * 
                      */
                     void SetNegativePrompt(const std::string& _negativePrompt);
@@ -342,11 +342,11 @@ The URL is valid for 1 hour.
                      * 获取Switch indicating whether to  enhance image clarity. Default value: 0.
 1: on
 0: off
-If the switch is turned on, the image clarity will be enhanced, but the generation time will increase.
+If the switch is turned on, the image clarity will be enhanced and the generation time will increase.
                      * @return EnhanceImage Switch indicating whether to  enhance image clarity. Default value: 0.
 1: on
 0: off
-If the switch is turned on, the image clarity will be enhanced, but the generation time will increase.
+If the switch is turned on, the image clarity will be enhanced and the generation time will increase.
                      * 
                      */
                     int64_t GetEnhanceImage() const;
@@ -355,11 +355,11 @@ If the switch is turned on, the image clarity will be enhanced, but the generati
                      * 设置Switch indicating whether to  enhance image clarity. Default value: 0.
 1: on
 0: off
-If the switch is turned on, the image clarity will be enhanced, but the generation time will increase.
+If the switch is turned on, the image clarity will be enhanced and the generation time will increase.
                      * @param _enhanceImage Switch indicating whether to  enhance image clarity. Default value: 0.
 1: on
 0: off
-If the switch is turned on, the image clarity will be enhanced, but the generation time will increase.
+If the switch is turned on, the image clarity will be enhanced and the generation time will increase.
                      * 
                      */
                     void SetEnhanceImage(const int64_t& _enhanceImage);
@@ -417,7 +417,7 @@ Image restrictions: The single-edge resolution must be less than 5,000 and great
                     /**
                      * Text description.
 It is used to increase the possibility that the generation result contains the described content.
-Chinese is recommended. A maximum of 256 UTF-8 characters are supported.
+A maximum of 256 UTF-8 characters are supported.
                      */
                     std::string m_prompt;
                     bool m_promptHasBeenSet;
@@ -425,7 +425,7 @@ Chinese is recommended. A maximum of 256 UTF-8 characters are supported.
                     /**
                      * Negative text description.
 It is used to reduce the possibility that the generation result contains the described content, but such content cannot be completely avoided.
-Chinese is recommended. A maximum of 256 UTF-8 characters are supported.
+English is recommended. A maximum of 256 UTF-8 characters are supported.
                      */
                     std::string m_negativePrompt;
                     bool m_negativePromptHasBeenSet;
@@ -483,7 +483,7 @@ The URL is valid for 1 hour.
                      * Switch indicating whether to  enhance image clarity. Default value: 0.
 1: on
 0: off
-If the switch is turned on, the image clarity will be enhanced, but the generation time will increase.
+If the switch is turned on, the image clarity will be enhanced and the generation time will increase.
                      */
                     int64_t m_enhanceImage;
                     bool m_enhanceImageHasBeenSet;
