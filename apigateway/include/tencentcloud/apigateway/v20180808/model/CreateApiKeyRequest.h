@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/apigateway/v20180808/model/Tag.h>
 
 
 namespace TencentCloud
@@ -85,15 +86,15 @@ namespace TencentCloud
                     bool AccessKeyTypeHasBeenSet() const;
 
                     /**
-                     * 获取Custom key ID, which is required if `AccessKeyType` is `manual`. It can contain 5–50 letters, digits, and underscores.
-                     * @return AccessKeyId Custom key ID, which is required if `AccessKeyType` is `manual`. It can contain 5–50 letters, digits, and underscores.
+                     * 获取Custom key ID, which is required if `AccessKeyType` is `manual`. It can contain 5-50 letters, digits, and underscores.
+                     * @return AccessKeyId Custom key ID, which is required if `AccessKeyType` is `manual`. It can contain 5-50 letters, digits, and underscores.
                      * 
                      */
                     std::string GetAccessKeyId() const;
 
                     /**
-                     * 设置Custom key ID, which is required if `AccessKeyType` is `manual`. It can contain 5–50 letters, digits, and underscores.
-                     * @param _accessKeyId Custom key ID, which is required if `AccessKeyType` is `manual`. It can contain 5–50 letters, digits, and underscores.
+                     * 设置Custom key ID, which is required if `AccessKeyType` is `manual`. It can contain 5-50 letters, digits, and underscores.
+                     * @param _accessKeyId Custom key ID, which is required if `AccessKeyType` is `manual`. It can contain 5-50 letters, digits, and underscores.
                      * 
                      */
                     void SetAccessKeyId(const std::string& _accessKeyId);
@@ -106,15 +107,15 @@ namespace TencentCloud
                     bool AccessKeyIdHasBeenSet() const;
 
                     /**
-                     * 获取Custom key, which is required if `AccessKeyType` is `manual`. It can contain 10–50 letters, digits, and underscores.
-                     * @return AccessKeySecret Custom key, which is required if `AccessKeyType` is `manual`. It can contain 10–50 letters, digits, and underscores.
+                     * 获取Custom key, which is required if `AccessKeyType` is `manual`. It can contain 10-50 letters, digits, and underscores.
+                     * @return AccessKeySecret Custom key, which is required if `AccessKeyType` is `manual`. It can contain 10-50 letters, digits, and underscores.
                      * 
                      */
                     std::string GetAccessKeySecret() const;
 
                     /**
-                     * 设置Custom key, which is required if `AccessKeyType` is `manual`. It can contain 10–50 letters, digits, and underscores.
-                     * @param _accessKeySecret Custom key, which is required if `AccessKeyType` is `manual`. It can contain 10–50 letters, digits, and underscores.
+                     * 设置Custom key, which is required if `AccessKeyType` is `manual`. It can contain 10-50 letters, digits, and underscores.
+                     * @param _accessKeySecret Custom key, which is required if `AccessKeyType` is `manual`. It can contain 10-50 letters, digits, and underscores.
                      * 
                      */
                     void SetAccessKeySecret(const std::string& _accessKeySecret);
@@ -125,6 +126,27 @@ namespace TencentCloud
                      * 
                      */
                     bool AccessKeySecretHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return Tags 
+                     * 
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 设置
+                     * @param _tags 
+                     * 
+                     */
+                    void SetTags(const std::vector<Tag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     * 
+                     */
+                    bool TagsHasBeenSet() const;
 
                 private:
 
@@ -141,16 +163,22 @@ namespace TencentCloud
                     bool m_accessKeyTypeHasBeenSet;
 
                     /**
-                     * Custom key ID, which is required if `AccessKeyType` is `manual`. It can contain 5–50 letters, digits, and underscores.
+                     * Custom key ID, which is required if `AccessKeyType` is `manual`. It can contain 5-50 letters, digits, and underscores.
                      */
                     std::string m_accessKeyId;
                     bool m_accessKeyIdHasBeenSet;
 
                     /**
-                     * Custom key, which is required if `AccessKeyType` is `manual`. It can contain 10–50 letters, digits, and underscores.
+                     * Custom key, which is required if `AccessKeyType` is `manual`. It can contain 10-50 letters, digits, and underscores.
                      */
                     std::string m_accessKeySecret;
                     bool m_accessKeySecretHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
 
                 };
             }
