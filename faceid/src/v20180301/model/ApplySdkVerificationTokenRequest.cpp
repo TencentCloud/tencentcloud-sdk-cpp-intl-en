@@ -30,7 +30,8 @@ ApplySdkVerificationTokenRequest::ApplySdkVerificationTokenRequest() :
     m_needVerifyIdCardHasBeenSet(false),
     m_disableChangeOcrResultHasBeenSet(false),
     m_disableCheckOcrWarningsHasBeenSet(false),
-    m_extraHasBeenSet(false)
+    m_extraHasBeenSet(false),
+    m_actionListHasBeenSet(false)
 {
 }
 
@@ -103,6 +104,14 @@ string ApplySdkVerificationTokenRequest::ToJsonString() const
         string key = "Extra";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_extra.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_actionListHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ActionList";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_actionList.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -239,6 +248,22 @@ void ApplySdkVerificationTokenRequest::SetExtra(const string& _extra)
 bool ApplySdkVerificationTokenRequest::ExtraHasBeenSet() const
 {
     return m_extraHasBeenSet;
+}
+
+string ApplySdkVerificationTokenRequest::GetActionList() const
+{
+    return m_actionList;
+}
+
+void ApplySdkVerificationTokenRequest::SetActionList(const string& _actionList)
+{
+    m_actionList = _actionList;
+    m_actionListHasBeenSet = true;
+}
+
+bool ApplySdkVerificationTokenRequest::ActionListHasBeenSet() const
+{
+    return m_actionListHasBeenSet;
 }
 
 

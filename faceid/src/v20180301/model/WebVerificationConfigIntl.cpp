@@ -31,7 +31,8 @@ WebVerificationConfigIntl::WebVerificationConfigIntl() :
     m_idCardCutReturnHasBeenSet(false),
     m_themeColorHasBeenSet(false),
     m_languageHasBeenSet(false),
-    m_autoDowngradeHasBeenSet(false)
+    m_autoDowngradeHasBeenSet(false),
+    m_actionListHasBeenSet(false)
 {
 }
 
@@ -150,6 +151,16 @@ CoreInternalOutcome WebVerificationConfigIntl::Deserialize(const rapidjson::Valu
         m_autoDowngradeHasBeenSet = true;
     }
 
+    if (value.HasMember("ActionList") && !value["ActionList"].IsNull())
+    {
+        if (!value["ActionList"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `WebVerificationConfigIntl.ActionList` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_actionList = string(value["ActionList"].GetString());
+        m_actionListHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -243,6 +254,14 @@ void WebVerificationConfigIntl::ToJsonObject(rapidjson::Value &value, rapidjson:
         string key = "AutoDowngrade";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_autoDowngrade, allocator);
+    }
+
+    if (m_actionListHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ActionList";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_actionList.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -422,5 +441,21 @@ void WebVerificationConfigIntl::SetAutoDowngrade(const int64_t& _autoDowngrade)
 bool WebVerificationConfigIntl::AutoDowngradeHasBeenSet() const
 {
     return m_autoDowngradeHasBeenSet;
+}
+
+string WebVerificationConfigIntl::GetActionList() const
+{
+    return m_actionList;
+}
+
+void WebVerificationConfigIntl::SetActionList(const string& _actionList)
+{
+    m_actionList = _actionList;
+    m_actionListHasBeenSet = true;
+}
+
+bool WebVerificationConfigIntl::ActionListHasBeenSet() const
+{
+    return m_actionListHasBeenSet;
 }
 

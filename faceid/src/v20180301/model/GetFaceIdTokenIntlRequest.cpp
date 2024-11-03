@@ -26,7 +26,8 @@ GetFaceIdTokenIntlRequest::GetFaceIdTokenIntlRequest() :
     m_checkModeHasBeenSet(false),
     m_secureLevelHasBeenSet(false),
     m_imageHasBeenSet(false),
-    m_extraHasBeenSet(false)
+    m_extraHasBeenSet(false),
+    m_actionListHasBeenSet(false)
 {
 }
 
@@ -67,6 +68,14 @@ string GetFaceIdTokenIntlRequest::ToJsonString() const
         string key = "Extra";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_extra.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_actionListHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ActionList";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_actionList.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -139,6 +148,22 @@ void GetFaceIdTokenIntlRequest::SetExtra(const string& _extra)
 bool GetFaceIdTokenIntlRequest::ExtraHasBeenSet() const
 {
     return m_extraHasBeenSet;
+}
+
+string GetFaceIdTokenIntlRequest::GetActionList() const
+{
+    return m_actionList;
+}
+
+void GetFaceIdTokenIntlRequest::SetActionList(const string& _actionList)
+{
+    m_actionList = _actionList;
+    m_actionListHasBeenSet = true;
+}
+
+bool GetFaceIdTokenIntlRequest::ActionListHasBeenSet() const
+{
+    return m_actionListHasBeenSet;
 }
 
 

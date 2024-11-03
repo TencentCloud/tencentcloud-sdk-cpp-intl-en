@@ -385,6 +385,63 @@ Example: HKIDCard
                      */
                     bool AutoDowngradeHasBeenSet() const;
 
+                    /**
+                     * 获取This interface is used to control th action sequences.
+Action types are as follows:
+"blink"
+"mouth"
+"nod"
+"shake"
+You can choose 1-2 actions out of the four.
+Single action example: "blink"
+Multiple action example: "blink,mouth"
+The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
+                     * @return ActionList This interface is used to control th action sequences.
+Action types are as follows:
+"blink"
+"mouth"
+"nod"
+"shake"
+You can choose 1-2 actions out of the four.
+Single action example: "blink"
+Multiple action example: "blink,mouth"
+The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
+                     * 
+                     */
+                    std::string GetActionList() const;
+
+                    /**
+                     * 设置This interface is used to control th action sequences.
+Action types are as follows:
+"blink"
+"mouth"
+"nod"
+"shake"
+You can choose 1-2 actions out of the four.
+Single action example: "blink"
+Multiple action example: "blink,mouth"
+The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
+                     * @param _actionList This interface is used to control th action sequences.
+Action types are as follows:
+"blink"
+"mouth"
+"nod"
+"shake"
+You can choose 1-2 actions out of the four.
+Single action example: "blink"
+Multiple action example: "blink,mouth"
+The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
+                     * 
+                     */
+                    void SetActionList(const std::string& _actionList);
+
+                    /**
+                     * 判断参数 ActionList 是否已赋值
+                     * @return ActionList 是否已赋值
+                     * 
+                     */
+                    bool ActionListHasBeenSet() const;
+
                 private:
 
                     /**
@@ -479,6 +536,21 @@ Example: HKIDCard
                      */
                     int64_t m_autoDowngrade;
                     bool m_autoDowngradeHasBeenSet;
+
+                    /**
+                     * This interface is used to control th action sequences.
+Action types are as follows:
+"blink"
+"mouth"
+"nod"
+"shake"
+You can choose 1-2 actions out of the four.
+Single action example: "blink"
+Multiple action example: "blink,mouth"
+The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
+                     */
+                    std::string m_actionList;
+                    bool m_actionListHasBeenSet;
 
                 };
             }
