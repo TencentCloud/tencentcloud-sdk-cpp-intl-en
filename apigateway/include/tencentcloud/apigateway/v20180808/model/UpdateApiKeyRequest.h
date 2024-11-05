@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool AccessKeyIdHasBeenSet() const;
 
                     /**
-                     * 获取Key to be updated, which is required when a custom key is updated. It can contain 10–50 letters, digits, and underscores.
-                     * @return AccessKeySecret Key to be updated, which is required when a custom key is updated. It can contain 10–50 letters, digits, and underscores.
+                     * 获取Key to be updated, which is required when a custom key is updated. It can contain 10-50 letters, digits, and underscores.
+                     * @return AccessKeySecret Key to be updated, which is required when a custom key is updated. It can contain 10-50 letters, digits, and underscores.
                      * 
                      */
                     std::string GetAccessKeySecret() const;
 
                     /**
-                     * 设置Key to be updated, which is required when a custom key is updated. It can contain 10–50 letters, digits, and underscores.
-                     * @param _accessKeySecret Key to be updated, which is required when a custom key is updated. It can contain 10–50 letters, digits, and underscores.
+                     * 设置Key to be updated, which is required when a custom key is updated. It can contain 10-50 letters, digits, and underscores.
+                     * @param _accessKeySecret Key to be updated, which is required when a custom key is updated. It can contain 10-50 letters, digits, and underscores.
                      * 
                      */
                     void SetAccessKeySecret(const std::string& _accessKeySecret);
@@ -93,7 +93,7 @@ namespace TencentCloud
                     bool m_accessKeyIdHasBeenSet;
 
                     /**
-                     * Key to be updated, which is required when a custom key is updated. It can contain 10–50 letters, digits, and underscores.
+                     * Key to be updated, which is required when a custom key is updated. It can contain 10-50 letters, digits, and underscores.
                      */
                     std::string m_accessKeySecret;
                     bool m_accessKeySecretHasBeenSet;

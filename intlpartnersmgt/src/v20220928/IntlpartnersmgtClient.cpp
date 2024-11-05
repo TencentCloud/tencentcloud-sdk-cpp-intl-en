@@ -1115,3 +1115,46 @@ IntlpartnersmgtClient::QueryVoucherPoolOutcomeCallable IntlpartnersmgtClient::Qu
     return task->get_future();
 }
 
+IntlpartnersmgtClient::SendVerifyCodeOutcome IntlpartnersmgtClient::SendVerifyCode(const SendVerifyCodeRequest &request)
+{
+    auto outcome = MakeRequest(request, "SendVerifyCode");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        SendVerifyCodeResponse rsp = SendVerifyCodeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return SendVerifyCodeOutcome(rsp);
+        else
+            return SendVerifyCodeOutcome(o.GetError());
+    }
+    else
+    {
+        return SendVerifyCodeOutcome(outcome.GetError());
+    }
+}
+
+void IntlpartnersmgtClient::SendVerifyCodeAsync(const SendVerifyCodeRequest& request, const SendVerifyCodeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->SendVerifyCode(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+IntlpartnersmgtClient::SendVerifyCodeOutcomeCallable IntlpartnersmgtClient::SendVerifyCodeCallable(const SendVerifyCodeRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<SendVerifyCodeOutcome()>>(
+        [this, request]()
+        {
+            return this->SendVerifyCode(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+

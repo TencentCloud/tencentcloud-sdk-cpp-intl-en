@@ -73,6 +73,8 @@
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryVoucherListByUinResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryVoucherPoolRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryVoucherPoolResponse.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/SendVerifyCodeRequest.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/SendVerifyCodeResponse.h>
 
 
 namespace TencentCloud
@@ -162,6 +164,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::QueryVoucherPoolResponse> QueryVoucherPoolOutcome;
                 typedef std::future<QueryVoucherPoolOutcome> QueryVoucherPoolOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::QueryVoucherPoolRequest&, QueryVoucherPoolOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryVoucherPoolAsyncHandler;
+                typedef Outcome<Core::Error, Model::SendVerifyCodeResponse> SendVerifyCodeOutcome;
+                typedef std::future<SendVerifyCodeOutcome> SendVerifyCodeOutcomeCallable;
+                typedef std::function<void(const IntlpartnersmgtClient*, const Model::SendVerifyCodeRequest&, SendVerifyCodeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SendVerifyCodeAsyncHandler;
 
 
 
@@ -393,6 +398,15 @@ namespace TencentCloud
                 QueryVoucherPoolOutcome QueryVoucherPool(const Model::QueryVoucherPoolRequest &request);
                 void QueryVoucherPoolAsync(const Model::QueryVoucherPoolRequest& request, const QueryVoucherPoolAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 QueryVoucherPoolOutcomeCallable QueryVoucherPoolCallable(const Model::QueryVoucherPoolRequest& request);
+
+                /**
+                 *This API is used to send a verification code for account registration.
+                 * @param req SendVerifyCodeRequest
+                 * @return SendVerifyCodeOutcome
+                 */
+                SendVerifyCodeOutcome SendVerifyCode(const Model::SendVerifyCodeRequest &request);
+                void SendVerifyCodeAsync(const Model::SendVerifyCodeRequest& request, const SendVerifyCodeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SendVerifyCodeOutcomeCallable SendVerifyCodeCallable(const Model::SendVerifyCodeRequest& request);
 
             };
         }

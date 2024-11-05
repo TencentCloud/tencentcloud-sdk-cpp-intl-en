@@ -139,19 +139,15 @@ A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not
                     bool ConfirmPasswordHasBeenSet() const;
 
                     /**
-                     * 获取Customer mobile number, which should be valid and correct.
-A global mobile number within 1-32 digits is allowed, such as 18888888888.
-                     * @return PhoneNum Customer mobile number, which should be valid and correct.
-A global mobile number within 1-32 digits is allowed, such as 18888888888.
+                     * 获取Customer's mobile number. The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. Starting from October 25, 2024, the system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
+                     * @return PhoneNum Customer's mobile number. The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. Starting from October 25, 2024, the system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
                      * 
                      */
                     std::string GetPhoneNum() const;
 
                     /**
-                     * 设置Customer mobile number, which should be valid and correct.
-A global mobile number within 1-32 digits is allowed, such as 18888888888.
-                     * @param _phoneNum Customer mobile number, which should be valid and correct.
-A global mobile number within 1-32 digits is allowed, such as 18888888888.
+                     * 设置Customer's mobile number. The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. Starting from October 25, 2024, the system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
+                     * @param _phoneNum Customer's mobile number. The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. Starting from October 25, 2024, the system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
                      * 
                      */
                     void SetPhoneNum(const std::string& _phoneNum);
@@ -226,6 +222,27 @@ A global mobile number within 1-32 digits is allowed, such as 18888888888.
                      */
                     bool ExtendedHasBeenSet() const;
 
+                    /**
+                     * 获取Verification code. Starting from October 25, 2024, a new parameter will be used to verify the validity of the mobile number you provide. When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
+                     * @return VerifyCode Verification code. Starting from October 25, 2024, a new parameter will be used to verify the validity of the mobile number you provide. When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
+                     * 
+                     */
+                    std::string GetVerifyCode() const;
+
+                    /**
+                     * 设置Verification code. Starting from October 25, 2024, a new parameter will be used to verify the validity of the mobile number you provide. When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
+                     * @param _verifyCode Verification code. Starting from October 25, 2024, a new parameter will be used to verify the validity of the mobile number you provide. When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
+                     * 
+                     */
+                    void SetVerifyCode(const std::string& _verifyCode);
+
+                    /**
+                     * 判断参数 VerifyCode 是否已赋值
+                     * @return VerifyCode 是否已赋值
+                     * 
+                     */
+                    bool VerifyCodeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -256,8 +273,7 @@ A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not
                     bool m_confirmPasswordHasBeenSet;
 
                     /**
-                     * Customer mobile number, which should be valid and correct.
-A global mobile number within 1-32 digits is allowed, such as 18888888888.
+                     * Customer's mobile number. The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. Starting from October 25, 2024, the system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
                      */
                     std::string m_phoneNum;
                     bool m_phoneNumHasBeenSet;
@@ -279,6 +295,12 @@ A global mobile number within 1-32 digits is allowed, such as 18888888888.
                      */
                     std::string m_extended;
                     bool m_extendedHasBeenSet;
+
+                    /**
+                     * Verification code. Starting from October 25, 2024, a new parameter will be used to verify the validity of the mobile number you provide. When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
+                     */
+                    std::string m_verifyCode;
+                    bool m_verifyCodeHasBeenSet;
 
                 };
             }

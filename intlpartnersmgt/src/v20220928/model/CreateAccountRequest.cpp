@@ -30,7 +30,8 @@ CreateAccountRequest::CreateAccountRequest() :
     m_phoneNumHasBeenSet(false),
     m_countryCodeHasBeenSet(false),
     m_areaHasBeenSet(false),
-    m_extendedHasBeenSet(false)
+    m_extendedHasBeenSet(false),
+    m_verifyCodeHasBeenSet(false)
 {
 }
 
@@ -103,6 +104,14 @@ string CreateAccountRequest::ToJsonString() const
         string key = "Extended";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_extended.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_verifyCodeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "VerifyCode";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_verifyCode.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -239,6 +248,22 @@ void CreateAccountRequest::SetExtended(const string& _extended)
 bool CreateAccountRequest::ExtendedHasBeenSet() const
 {
     return m_extendedHasBeenSet;
+}
+
+string CreateAccountRequest::GetVerifyCode() const
+{
+    return m_verifyCode;
+}
+
+void CreateAccountRequest::SetVerifyCode(const string& _verifyCode)
+{
+    m_verifyCode = _verifyCode;
+    m_verifyCodeHasBeenSet = true;
+}
+
+bool CreateAccountRequest::VerifyCodeHasBeenSet() const
+{
+    return m_verifyCodeHasBeenSet;
 }
 
 
