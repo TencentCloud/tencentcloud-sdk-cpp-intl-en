@@ -93,21 +93,21 @@ namespace TencentCloud
                     /**
                      * 获取Subtitles file storage location.
                      * @return OutputStorage Subtitles file storage location.
-                     * 
+                     * @deprecated
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
                      * 设置Subtitles file storage location.
                      * @param _outputStorage Subtitles file storage location.
-                     * 
+                     * @deprecated
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
 
                     /**
                      * 判断参数 OutputStorage 是否已赋值
                      * @return OutputStorage 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool OutputStorageHasBeenSet() const;
 

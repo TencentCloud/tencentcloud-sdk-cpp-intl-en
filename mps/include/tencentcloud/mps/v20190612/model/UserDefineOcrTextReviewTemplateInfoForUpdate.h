@@ -82,7 +82,7 @@ There can be up to 10 tags, each with a length limit of 16 characters.
 There can be up to 10 tags, each with a length limit of 16 characters.
                      * 
                      */
-                    std::string GetLabelSet() const;
+                    std::vector<std::string> GetLabelSet() const;
 
                     /**
                      * 设置Custom text filter tag. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. To use the tag filtering feature, you need to add the corresponding tag when adding materials for custom text keywords.
@@ -91,7 +91,7 @@ There can be up to 10 tags, each with a length limit of 16 characters.
 There can be up to 10 tags, each with a length limit of 16 characters.
                      * 
                      */
-                    void SetLabelSet(const std::string& _labelSet);
+                    void SetLabelSet(const std::vector<std::string>& _labelSet);
 
                     /**
                      * 判断参数 LabelSet 是否已赋值
@@ -156,7 +156,7 @@ There can be up to 10 tags, each with a length limit of 16 characters.
                      * Custom text filter tag. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. To use the tag filtering feature, you need to add the corresponding tag when adding materials for custom text keywords.
 There can be up to 10 tags, each with a length limit of 16 characters.
                      */
-                    std::string m_labelSet;
+                    std::vector<std::string> m_labelSet;
                     bool m_labelSetHasBeenSet;
 
                     /**

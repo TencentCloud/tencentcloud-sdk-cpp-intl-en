@@ -82,7 +82,7 @@ If this parameter is left empty or 0 is entered, there will be no upper limit fo
 If this parameter is left empty or 0 is entered, there will be no upper limit for bitrate.
                      * 
                      */
-                    uint64_t GetMaxVideoBitrate() const;
+                    int64_t GetMaxVideoBitrate() const;
 
                     /**
                      * 设置Maximum bitrate, which is valid when `Type` is `TESHD`.
@@ -91,7 +91,7 @@ If this parameter is left empty or 0 is entered, there will be no upper limit fo
 If this parameter is left empty or 0 is entered, there will be no upper limit for bitrate.
                      * 
                      */
-                    void SetMaxVideoBitrate(const uint64_t& _maxVideoBitrate);
+                    void SetMaxVideoBitrate(const int64_t& _maxVideoBitrate);
 
                     /**
                      * 判断参数 MaxVideoBitrate 是否已赋值
@@ -114,7 +114,7 @@ If this parameter is left empty, TESHD will not be enabled.
                      * Maximum bitrate, which is valid when `Type` is `TESHD`.
 If this parameter is left empty or 0 is entered, there will be no upper limit for bitrate.
                      */
-                    uint64_t m_maxVideoBitrate;
+                    int64_t m_maxVideoBitrate;
                     bool m_maxVideoBitrateHasBeenSet;
 
                 };

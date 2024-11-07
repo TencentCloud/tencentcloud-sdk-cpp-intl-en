@@ -51,15 +51,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Adaptive bitrate streaming template ID.
-                     * @return Definition Adaptive bitrate streaming template ID.
+                     * 获取Adaptive dynamic streaming template ID.
+                     * @return Definition Adaptive dynamic streaming template ID.
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置Adaptive bitrate streaming template ID.
-                     * @param _definition Adaptive bitrate streaming template ID.
+                     * 设置Adaptive dynamic streaming template ID.
+                     * @param _definition Adaptive dynamic streaming template ID.
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -72,15 +72,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取List of up to 10 image or text watermarks.
-                     * @return WatermarkSet List of up to 10 image or text watermarks.
+                     * 获取Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
+                     * @return WatermarkSet Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
                      * 
                      */
                     std::vector<WatermarkInput> GetWatermarkSet() const;
 
                     /**
-                     * 设置List of up to 10 image or text watermarks.
-                     * @param _watermarkSet List of up to 10 image or text watermarks.
+                     * 设置Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
+                     * @param _watermarkSet Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
                      * 
                      */
                     void SetWatermarkSet(const std::vector<WatermarkInput>& _watermarkSet);
@@ -93,19 +93,19 @@ namespace TencentCloud
                     bool WatermarkSetHasBeenSet() const;
 
                     /**
-                     * 获取
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return OutputStorage 
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Target storage for files after adaptive dynamic streaming. If left blank, it inherits the upper-level OutputStorage value.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return OutputStorage Target storage for files after adaptive dynamic streaming. If left blank, it inherits the upper-level OutputStorage value.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _outputStorage 
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Target storage for files after adaptive dynamic streaming. If left blank, it inherits the upper-level OutputStorage value.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _outputStorage Target storage for files after adaptive dynamic streaming. If left blank, it inherits the upper-level OutputStorage value.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
@@ -118,15 +118,43 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool OutputStorageHasBeenSet() const;
 
                     /**
-                     * 获取The relative or absolute output path of the manifest file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}.{format}`.
-                     * @return OutputObjectPath The relative or absolute output path of the manifest file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}.{format}`.
+                     * 获取Output path for the manifest file after adaptive dynamic streaming. It can be either a relative path or an absolute path.
+If you need to define an output path, the path must end with `.{format}`. Refer to [Filename Variable Description](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1) for variable names.
+Example of relative path:
+<li>filename_{variable name}.{format}</li>
+<li>filename.{format}</li>
+Example of absolute path:
+<li>/custom path/filename_{variable name}.{format}</li>
+If not filled in, it is a relative path by default: {inputName}_adaptiveDynamicStreaming_{definition}.{format}.
+                     * @return OutputObjectPath Output path for the manifest file after adaptive dynamic streaming. It can be either a relative path or an absolute path.
+If you need to define an output path, the path must end with `.{format}`. Refer to [Filename Variable Description](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1) for variable names.
+Example of relative path:
+<li>filename_{variable name}.{format}</li>
+<li>filename.{format}</li>
+Example of absolute path:
+<li>/custom path/filename_{variable name}.{format}</li>
+If not filled in, it is a relative path by default: {inputName}_adaptiveDynamicStreaming_{definition}.{format}.
                      * 
                      */
                     std::string GetOutputObjectPath() const;
 
                     /**
-                     * 设置The relative or absolute output path of the manifest file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}.{format}`.
-                     * @param _outputObjectPath The relative or absolute output path of the manifest file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}.{format}`.
+                     * 设置Output path for the manifest file after adaptive dynamic streaming. It can be either a relative path or an absolute path.
+If you need to define an output path, the path must end with `.{format}`. Refer to [Filename Variable Description](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1) for variable names.
+Example of relative path:
+<li>filename_{variable name}.{format}</li>
+<li>filename.{format}</li>
+Example of absolute path:
+<li>/custom path/filename_{variable name}.{format}</li>
+If not filled in, it is a relative path by default: {inputName}_adaptiveDynamicStreaming_{definition}.{format}.
+                     * @param _outputObjectPath Output path for the manifest file after adaptive dynamic streaming. It can be either a relative path or an absolute path.
+If you need to define an output path, the path must end with `.{format}`. Refer to [Filename Variable Description](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1) for variable names.
+Example of relative path:
+<li>filename_{variable name}.{format}</li>
+<li>filename.{format}</li>
+Example of absolute path:
+<li>/custom path/filename_{variable name}.{format}</li>
+If not filled in, it is a relative path by default: {inputName}_adaptiveDynamicStreaming_{definition}.{format}.
                      * 
                      */
                     void SetOutputObjectPath(const std::string& _outputObjectPath);
@@ -139,15 +167,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool OutputObjectPathHasBeenSet() const;
 
                     /**
-                     * 获取The relative output path of the substream file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`.
-                     * @return SubStreamObjectName The relative output path of the substream file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`.
+                     * 获取After adaptive dynamic streaming, the output path of substream files can only be a relative path. If not filled in, it is a relative path by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`.
+                     * @return SubStreamObjectName After adaptive dynamic streaming, the output path of substream files can only be a relative path. If not filled in, it is a relative path by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`.
                      * 
                      */
                     std::string GetSubStreamObjectName() const;
 
                     /**
-                     * 设置The relative output path of the substream file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`.
-                     * @param _subStreamObjectName The relative output path of the substream file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`.
+                     * 设置After adaptive dynamic streaming, the output path of substream files can only be a relative path. If not filled in, it is a relative path by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`.
+                     * @param _subStreamObjectName After adaptive dynamic streaming, the output path of substream files can only be a relative path. If not filled in, it is a relative path by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`.
                      * 
                      */
                     void SetSubStreamObjectName(const std::string& _subStreamObjectName);
@@ -160,15 +188,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool SubStreamObjectNameHasBeenSet() const;
 
                     /**
-                     * 获取The relative output path of the segment file after being transcoded to adaptive bitrate streaming (in HLS format only). If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`.
-                     * @return SegmentObjectName The relative output path of the segment file after being transcoded to adaptive bitrate streaming (in HLS format only). If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`.
+                     * 获取After adaptive dynamic streaming (for HLS only), the output path of segment files can only be a relative path. If not filled in, it is a relative path by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`.
+                     * @return SegmentObjectName After adaptive dynamic streaming (for HLS only), the output path of segment files can only be a relative path. If not filled in, it is a relative path by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`.
                      * 
                      */
                     std::string GetSegmentObjectName() const;
 
                     /**
-                     * 设置The relative output path of the segment file after being transcoded to adaptive bitrate streaming (in HLS format only). If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`.
-                     * @param _segmentObjectName The relative output path of the segment file after being transcoded to adaptive bitrate streaming (in HLS format only). If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`.
+                     * 设置After adaptive dynamic streaming (for HLS only), the output path of segment files can only be a relative path. If not filled in, it is a relative path by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`.
+                     * @param _segmentObjectName After adaptive dynamic streaming (for HLS only), the output path of segment files can only be a relative path. If not filled in, it is a relative path by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`.
                      * 
                      */
                     void SetSegmentObjectName(const std::string& _segmentObjectName);
@@ -181,19 +209,19 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool SegmentObjectNameHasBeenSet() const;
 
                     /**
-                     * 获取
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return AddOnSubtitles 
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Subtitle file to be inserted.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return AddOnSubtitles Subtitle file to be inserted.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::vector<AddOnSubtitle> GetAddOnSubtitles() const;
 
                     /**
-                     * 设置
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _addOnSubtitles 
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Subtitle file to be inserted.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _addOnSubtitles Subtitle file to be inserted.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetAddOnSubtitles(const std::vector<AddOnSubtitle>& _addOnSubtitles);
@@ -206,19 +234,19 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool AddOnSubtitlesHasBeenSet() const;
 
                     /**
-                     * 获取
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return DrmInfo 
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Drm information.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return DrmInfo Drm information.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     DrmInfo GetDrmInfo() const;
 
                     /**
-                     * 设置
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _drmInfo 
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Drm information.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _drmInfo Drm information.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetDrmInfo(const DrmInfo& _drmInfo);
@@ -266,52 +294,59 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Adaptive bitrate streaming template ID.
+                     * Adaptive dynamic streaming template ID.
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * List of up to 10 image or text watermarks.
+                     * Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
                      */
                     std::vector<WatermarkInput> m_watermarkSet;
                     bool m_watermarkSetHasBeenSet;
 
                     /**
-                     * 
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Target storage for files after adaptive dynamic streaming. If left blank, it inherits the upper-level OutputStorage value.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;
 
                     /**
-                     * The relative or absolute output path of the manifest file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}.{format}`.
+                     * Output path for the manifest file after adaptive dynamic streaming. It can be either a relative path or an absolute path.
+If you need to define an output path, the path must end with `.{format}`. Refer to [Filename Variable Description](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1) for variable names.
+Example of relative path:
+<li>filename_{variable name}.{format}</li>
+<li>filename.{format}</li>
+Example of absolute path:
+<li>/custom path/filename_{variable name}.{format}</li>
+If not filled in, it is a relative path by default: {inputName}_adaptiveDynamicStreaming_{definition}.{format}.
                      */
                     std::string m_outputObjectPath;
                     bool m_outputObjectPathHasBeenSet;
 
                     /**
-                     * The relative output path of the substream file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`.
+                     * After adaptive dynamic streaming, the output path of substream files can only be a relative path. If not filled in, it is a relative path by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`.
                      */
                     std::string m_subStreamObjectName;
                     bool m_subStreamObjectNameHasBeenSet;
 
                     /**
-                     * The relative output path of the segment file after being transcoded to adaptive bitrate streaming (in HLS format only). If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`.
+                     * After adaptive dynamic streaming (for HLS only), the output path of segment files can only be a relative path. If not filled in, it is a relative path by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`.
                      */
                     std::string m_segmentObjectName;
                     bool m_segmentObjectNameHasBeenSet;
 
                     /**
-                     * 
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Subtitle file to be inserted.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::vector<AddOnSubtitle> m_addOnSubtitles;
                     bool m_addOnSubtitlesHasBeenSet;
 
                     /**
-                     * 
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Drm information.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     DrmInfo m_drmInfo;
                     bool m_drmInfoHasBeenSet;

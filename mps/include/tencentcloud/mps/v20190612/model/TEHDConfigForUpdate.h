@@ -90,7 +90,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
-                    uint64_t GetMaxVideoBitrate() const;
+                    int64_t GetMaxVideoBitrate() const;
 
                     /**
                      * 设置The maximum video bitrate. If this parameter is not specified, no modifications will be made.
@@ -99,7 +99,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
-                    void SetMaxVideoBitrate(const uint64_t& _maxVideoBitrate);
+                    void SetMaxVideoBitrate(const int64_t& _maxVideoBitrate);
 
                     /**
                      * 判断参数 MaxVideoBitrate 是否已赋值
@@ -124,7 +124,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
                      * The maximum video bitrate. If this parameter is not specified, no modifications will be made.
 Note: This field may return·null, indicating that no valid values can be obtained.
                      */
-                    uint64_t m_maxVideoBitrate;
+                    int64_t m_maxVideoBitrate;
                     bool m_maxVideoBitrateHasBeenSet;
 
                 };

@@ -24,8 +24,8 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/mps/v20190612/model/TerrorismOcrReviewTemplateInfo.h>
 #include <tencentcloud/mps/v20190612/model/TerrorismImgReviewTemplateInfo.h>
+#include <tencentcloud/mps/v20190612/model/TerrorismOcrReviewTemplateInfo.h>
 
 
 namespace TencentCloud
@@ -49,27 +49,6 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The parameters for detecting sensitive information based on OCR.
-                     * @return OcrReviewInfo The parameters for detecting sensitive information based on OCR.
-                     * 
-                     */
-                    TerrorismOcrReviewTemplateInfo GetOcrReviewInfo() const;
-
-                    /**
-                     * 设置The parameters for detecting sensitive information based on OCR.
-                     * @param _ocrReviewInfo The parameters for detecting sensitive information based on OCR.
-                     * 
-                     */
-                    void SetOcrReviewInfo(const TerrorismOcrReviewTemplateInfo& _ocrReviewInfo);
-
-                    /**
-                     * 判断参数 OcrReviewInfo 是否已赋值
-                     * @return OcrReviewInfo 是否已赋值
-                     * 
-                     */
-                    bool OcrReviewInfoHasBeenSet() const;
-
-                    /**
                      * 获取The parameters for detecting sensitive information in images.
                      * @return ImgReviewInfo The parameters for detecting sensitive information in images.
                      * 
@@ -90,19 +69,40 @@ namespace TencentCloud
                      */
                     bool ImgReviewInfoHasBeenSet() const;
 
-                private:
+                    /**
+                     * 获取The parameters for detecting sensitive information based on OCR.
+                     * @return OcrReviewInfo The parameters for detecting sensitive information based on OCR.
+                     * 
+                     */
+                    TerrorismOcrReviewTemplateInfo GetOcrReviewInfo() const;
 
                     /**
-                     * The parameters for detecting sensitive information based on OCR.
+                     * 设置The parameters for detecting sensitive information based on OCR.
+                     * @param _ocrReviewInfo The parameters for detecting sensitive information based on OCR.
+                     * 
                      */
-                    TerrorismOcrReviewTemplateInfo m_ocrReviewInfo;
-                    bool m_ocrReviewInfoHasBeenSet;
+                    void SetOcrReviewInfo(const TerrorismOcrReviewTemplateInfo& _ocrReviewInfo);
+
+                    /**
+                     * 判断参数 OcrReviewInfo 是否已赋值
+                     * @return OcrReviewInfo 是否已赋值
+                     * 
+                     */
+                    bool OcrReviewInfoHasBeenSet() const;
+
+                private:
 
                     /**
                      * The parameters for detecting sensitive information in images.
                      */
                     TerrorismImgReviewTemplateInfo m_imgReviewInfo;
                     bool m_imgReviewInfoHasBeenSet;
+
+                    /**
+                     * The parameters for detecting sensitive information based on OCR.
+                     */
+                    TerrorismOcrReviewTemplateInfo m_ocrReviewInfo;
+                    bool m_ocrReviewInfoHasBeenSet;
 
                 };
             }

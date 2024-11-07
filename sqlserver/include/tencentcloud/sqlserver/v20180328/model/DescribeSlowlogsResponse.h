@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/sqlserver/v20180328/model/SlowlogInfo.h>
+#include <tencentcloud/sqlserver/v20180328/model/SlowLog.h>
 
 
 namespace TencentCloud
@@ -61,16 +62,30 @@ namespace TencentCloud
                     /**
                      * 获取Information list of slow query logs
                      * @return Slowlogs Information list of slow query logs
-                     * 
+                     * @deprecated
                      */
                     std::vector<SlowlogInfo> GetSlowlogs() const;
 
                     /**
                      * 判断参数 Slowlogs 是否已赋值
                      * @return Slowlogs 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool SlowlogsHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return SlowLogs 
+                     * 
+                     */
+                    std::vector<SlowLog> GetSlowLogs() const;
+
+                    /**
+                     * 判断参数 SlowLogs 是否已赋值
+                     * @return SlowLogs 是否已赋值
+                     * 
+                     */
+                    bool SlowLogsHasBeenSet() const;
 
                 private:
 
@@ -85,6 +100,12 @@ namespace TencentCloud
                      */
                     std::vector<SlowlogInfo> m_slowlogs;
                     bool m_slowlogsHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<SlowLog> m_slowLogs;
+                    bool m_slowLogsHasBeenSet;
 
                 };
             }

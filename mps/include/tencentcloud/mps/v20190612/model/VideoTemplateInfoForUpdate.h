@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/mps/v20190612/model/SegmentSpecificInfo.h>
 
 
 namespace TencentCloud
@@ -47,79 +48,83 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Video stream encoding format. Valid values:
-<li>h264: H.264 encoding.</li>
-<li>h265: H.265 encoding.</li>
-<li>h266: H.266 encoding.</li>
-<li>av1: AOMedia Video 1 encoding.</li>
-<li>vp8: VP8 encoding.</li>
-<li>vp9: VP9 encoding.</li>
-<li>mpeg2: MPEG2 encoding.</li>
-<li>dnxhd: DNxHD encoding.</li>
-<li>mv-hevc: MV-HEVC encoding.</li>
-Note: A resolution within 640x480 should be specified for H.265 encoding.
+                     * 获取Encoding format for video streams. Optional values:
+<li>h264: H.264 encoding</li>
+<li>h265: H.265 encoding</li>
+<li>h266: H.266 encoding</li>
+<li>av1: AOMedia Video 1 encoding</li>
+<li>vp8: VP8 encoding</li>
+<li>vp9: VP9 encoding</li>
+<li>mpeg2: MPEG2 encoding</li>
+<li>dnxhd: DNxHD encoding</li>
+<li>mv-hevc: MV-HEVC encoding</li>
 
-Note: AV1 encoding containers only support mp4, webm, and mkv.
-Note: H.266 encoding containers only support mp4, hls, ts, and mov.
-Note: VP8 and VP9 encoding containers only support webm and mkv.
-Note: MPEG2 and DNxHD encoding containers only support mxf.
-Note: MV-HEVC encoding containers only support mp4, hls, and mov. Among them, the hls format only supports mp4 segmentation format.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Codec Video stream encoding format. Valid values:
-<li>h264: H.264 encoding.</li>
-<li>h265: H.265 encoding.</li>
-<li>h266: H.266 encoding.</li>
-<li>av1: AOMedia Video 1 encoding.</li>
-<li>vp8: VP8 encoding.</li>
-<li>vp9: VP9 encoding.</li>
-<li>mpeg2: MPEG2 encoding.</li>
-<li>dnxhd: DNxHD encoding.</li>
-<li>mv-hevc: MV-HEVC encoding.</li>
-Note: A resolution within 640x480 should be specified for H.265 encoding.
+Note: AV1 encoding containers currently only support mp4, webm, and mkv.
+Note: H.266 encoding containers currently only support mp4, hls, ts, and mov.
+Note: VP8 and VP9 encoding containers currently only support webm and mkv.
+Note: MPEG2 and DNxHD encoding containers currently only support mxf.
+Note: MV-HEVC encoding containers only support mp4, hls, and mov. Among them, the hls format only supports mp4 segmentation format.
 
-Note: AV1 encoding containers only support mp4, webm, and mkv.
-Note: H.266 encoding containers only support mp4, hls, ts, and mov.
-Note: VP8 and VP9 encoding containers only support webm and mkv.
-Note: MPEG2 and DNxHD encoding containers only support mxf.
-Note: MV-HEVC encoding containers only support mp4, hls, and mov. Among them, the hls format only supports mp4 segmentation format.Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return Codec Encoding format for video streams. Optional values:
+<li>h264: H.264 encoding</li>
+<li>h265: H.265 encoding</li>
+<li>h266: H.266 encoding</li>
+<li>av1: AOMedia Video 1 encoding</li>
+<li>vp8: VP8 encoding</li>
+<li>vp9: VP9 encoding</li>
+<li>mpeg2: MPEG2 encoding</li>
+<li>dnxhd: DNxHD encoding</li>
+<li>mv-hevc: MV-HEVC encoding</li>
+
+Note: AV1 encoding containers currently only support mp4, webm, and mkv.
+Note: H.266 encoding containers currently only support mp4, hls, ts, and mov.
+Note: VP8 and VP9 encoding containers currently only support webm and mkv.
+Note: MPEG2 and DNxHD encoding containers currently only support mxf.
+Note: MV-HEVC encoding containers only support mp4, hls, and mov. Among them, the hls format only supports mp4 segmentation format.
+
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetCodec() const;
 
                     /**
-                     * 设置Video stream encoding format. Valid values:
-<li>h264: H.264 encoding.</li>
-<li>h265: H.265 encoding.</li>
-<li>h266: H.266 encoding.</li>
-<li>av1: AOMedia Video 1 encoding.</li>
-<li>vp8: VP8 encoding.</li>
-<li>vp9: VP9 encoding.</li>
-<li>mpeg2: MPEG2 encoding.</li>
-<li>dnxhd: DNxHD encoding.</li>
-<li>mv-hevc: MV-HEVC encoding.</li>
-Note: A resolution within 640x480 should be specified for H.265 encoding.
+                     * 设置Encoding format for video streams. Optional values:
+<li>h264: H.264 encoding</li>
+<li>h265: H.265 encoding</li>
+<li>h266: H.266 encoding</li>
+<li>av1: AOMedia Video 1 encoding</li>
+<li>vp8: VP8 encoding</li>
+<li>vp9: VP9 encoding</li>
+<li>mpeg2: MPEG2 encoding</li>
+<li>dnxhd: DNxHD encoding</li>
+<li>mv-hevc: MV-HEVC encoding</li>
 
-Note: AV1 encoding containers only support mp4, webm, and mkv.
-Note: H.266 encoding containers only support mp4, hls, ts, and mov.
-Note: VP8 and VP9 encoding containers only support webm and mkv.
-Note: MPEG2 and DNxHD encoding containers only support mxf.
-Note: MV-HEVC encoding containers only support mp4, hls, and mov. Among them, the hls format only supports mp4 segmentation format.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _codec Video stream encoding format. Valid values:
-<li>h264: H.264 encoding.</li>
-<li>h265: H.265 encoding.</li>
-<li>h266: H.266 encoding.</li>
-<li>av1: AOMedia Video 1 encoding.</li>
-<li>vp8: VP8 encoding.</li>
-<li>vp9: VP9 encoding.</li>
-<li>mpeg2: MPEG2 encoding.</li>
-<li>dnxhd: DNxHD encoding.</li>
-<li>mv-hevc: MV-HEVC encoding.</li>
-Note: A resolution within 640x480 should be specified for H.265 encoding.
+Note: AV1 encoding containers currently only support mp4, webm, and mkv.
+Note: H.266 encoding containers currently only support mp4, hls, ts, and mov.
+Note: VP8 and VP9 encoding containers currently only support webm and mkv.
+Note: MPEG2 and DNxHD encoding containers currently only support mxf.
+Note: MV-HEVC encoding containers only support mp4, hls, and mov. Among them, the hls format only supports mp4 segmentation format.
 
-Note: AV1 encoding containers only support mp4, webm, and mkv.
-Note: H.266 encoding containers only support mp4, hls, ts, and mov.
-Note: VP8 and VP9 encoding containers only support webm and mkv.
-Note: MPEG2 and DNxHD encoding containers only support mxf.
-Note: MV-HEVC encoding containers only support mp4, hls, and mov. Among them, the hls format only supports mp4 segmentation format.Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _codec Encoding format for video streams. Optional values:
+<li>h264: H.264 encoding</li>
+<li>h265: H.265 encoding</li>
+<li>h266: H.266 encoding</li>
+<li>av1: AOMedia Video 1 encoding</li>
+<li>vp8: VP8 encoding</li>
+<li>vp9: VP9 encoding</li>
+<li>mpeg2: MPEG2 encoding</li>
+<li>dnxhd: DNxHD encoding</li>
+<li>mv-hevc: MV-HEVC encoding</li>
+
+Note: AV1 encoding containers currently only support mp4, webm, and mkv.
+Note: H.266 encoding containers currently only support mp4, hls, ts, and mov.
+Note: VP8 and VP9 encoding containers currently only support webm and mkv.
+Note: MPEG2 and DNxHD encoding containers currently only support mxf.
+Note: MV-HEVC encoding containers only support mp4, hls, and mov. Among them, the hls format only supports mp4 segmentation format.
+
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetCodec(const std::string& _codec);
@@ -277,15 +282,23 @@ Note: When resolution adaption is enabled, `Width` cannot be smaller than `Heigh
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取Frame interval between I keyframes. Value range: 0 and [1,100000]. If this parameter is 0, the system will automatically set the GOP length.
-                     * @return Gop Frame interval between I keyframes. Value range: 0 and [1,100000]. If this parameter is 0, the system will automatically set the GOP length.
+                     * 获取Interval between I-frames (keyframes), which can be customized in frames or seconds. GOP value range: 0 and [1, 100000].
+If this parameter is 0, the system will automatically set the GOP length.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return Gop Interval between I-frames (keyframes), which can be customized in frames or seconds. GOP value range: 0 and [1, 100000].
+If this parameter is 0, the system will automatically set the GOP length.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     uint64_t GetGop() const;
 
                     /**
-                     * 设置Frame interval between I keyframes. Value range: 0 and [1,100000]. If this parameter is 0, the system will automatically set the GOP length.
-                     * @param _gop Frame interval between I keyframes. Value range: 0 and [1,100000]. If this parameter is 0, the system will automatically set the GOP length.
+                     * 设置Interval between I-frames (keyframes), which can be customized in frames or seconds. GOP value range: 0 and [1, 100000].
+If this parameter is 0, the system will automatically set the GOP length.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _gop Interval between I-frames (keyframes), which can be customized in frames or seconds. GOP value range: 0 and [1, 100000].
+If this parameter is 0, the system will automatically set the GOP length.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetGop(const uint64_t& _gop);
@@ -298,31 +311,96 @@ Note: When resolution adaption is enabled, `Width` cannot be smaller than `Heigh
                     bool GopHasBeenSet() const;
 
                     /**
-                     * 获取Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-<li>white: fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
-<li>gauss: fill with Gaussian blur. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with Gaussian blur.</li>
-                     * @return FillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-<li>white: fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
-<li>gauss: fill with Gaussian blur. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with Gaussian blur.</li>
+                     * 获取GOP value unit. Optional values: 
+frame: indicates frame 
+second: indicates second
+Default value: frame
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return GopUnit GOP value unit. Optional values: 
+frame: indicates frame 
+second: indicates second
+Default value: frame
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    std::string GetGopUnit() const;
+
+                    /**
+                     * 设置GOP value unit. Optional values: 
+frame: indicates frame 
+second: indicates second
+Default value: frame
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _gopUnit GOP value unit. Optional values: 
+frame: indicates frame 
+second: indicates second
+Default value: frame
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetGopUnit(const std::string& _gopUnit);
+
+                    /**
+                     * 判断参数 GopUnit 是否已赋值
+                     * @return GopUnit 是否已赋值
+                     * 
+                     */
+                    bool GopUnitHasBeenSet() const;
+
+                    /**
+                     * 获取Filling mode. When the configured aspect ratio parameter for video streams differs from the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes:
+ <li>stretch: Each frame is stretched to fill the entire screen, which may cause the transcoded video to be "flattened" or "stretched".</li>
+<li>black: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with black.</li>
+<li>white: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with white.</li>
+<li>gauss: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with a Gaussian blur.</li>
+
+<li>smarttailor: Video images are smartly selected to ensure proportional image cropping.</li>
+Default value: black.
+
+Note: Only stretch and black are supported for adaptive bitrate streaming.
+
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return FillType Filling mode. When the configured aspect ratio parameter for video streams differs from the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes:
+ <li>stretch: Each frame is stretched to fill the entire screen, which may cause the transcoded video to be "flattened" or "stretched".</li>
+<li>black: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with black.</li>
+<li>white: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with white.</li>
+<li>gauss: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with a Gaussian blur.</li>
+
+<li>smarttailor: Video images are smartly selected to ensure proportional image cropping.</li>
+Default value: black.
+
+Note: Only stretch and black are supported for adaptive bitrate streaming.
+
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetFillType() const;
 
                     /**
-                     * 设置Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-<li>white: fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
-<li>gauss: fill with Gaussian blur. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with Gaussian blur.</li>
-                     * @param _fillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-<li>white: fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
-<li>gauss: fill with Gaussian blur. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with Gaussian blur.</li>
+                     * 设置Filling mode. When the configured aspect ratio parameter for video streams differs from the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes:
+ <li>stretch: Each frame is stretched to fill the entire screen, which may cause the transcoded video to be "flattened" or "stretched".</li>
+<li>black: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with black.</li>
+<li>white: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with white.</li>
+<li>gauss: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with a Gaussian blur.</li>
+
+<li>smarttailor: Video images are smartly selected to ensure proportional image cropping.</li>
+Default value: black.
+
+Note: Only stretch and black are supported for adaptive bitrate streaming.
+
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _fillType Filling mode. When the configured aspect ratio parameter for video streams differs from the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes:
+ <li>stretch: Each frame is stretched to fill the entire screen, which may cause the transcoded video to be "flattened" or "stretched".</li>
+<li>black: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with black.</li>
+<li>white: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with white.</li>
+<li>gauss: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with a Gaussian blur.</li>
+
+<li>smarttailor: Video images are smartly selected to ensure proportional image cropping.</li>
+Default value: black.
+
+Note: Only stretch and black are supported for adaptive bitrate streaming.
+
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetFillType(const std::string& _fillType);
@@ -335,19 +413,43 @@ Note: When resolution adaption is enabled, `Width` cannot be smaller than `Heigh
                     bool FillTypeHasBeenSet() const;
 
                     /**
-                     * 获取The control factor of video constant bitrate. Value range: [0, 51]. This parameter will be disabled if you enter `0`.
-It is not recommended to specify this parameter if there are no special requirements.
-                     * @return Vcrf The control factor of video constant bitrate. Value range: [0, 51]. This parameter will be disabled if you enter `0`.
-It is not recommended to specify this parameter if there are no special requirements.
+                     * 获取Control factor for constant video bitrate. Value range: [0, 51] and 100.
+It is recommended not to specify this parameter if there are no special requirements.
+
+Note:
+When you need to set it to auto, fill in 100.
+If Mode is set to ABR, the Vcrf value does not need to be configured.
+If Mode is set to CBR, the Vcrf value does not need to be configured.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return Vcrf Control factor for constant video bitrate. Value range: [0, 51] and 100.
+It is recommended not to specify this parameter if there are no special requirements.
+
+Note:
+When you need to set it to auto, fill in 100.
+If Mode is set to ABR, the Vcrf value does not need to be configured.
+If Mode is set to CBR, the Vcrf value does not need to be configured.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     uint64_t GetVcrf() const;
 
                     /**
-                     * 设置The control factor of video constant bitrate. Value range: [0, 51]. This parameter will be disabled if you enter `0`.
-It is not recommended to specify this parameter if there are no special requirements.
-                     * @param _vcrf The control factor of video constant bitrate. Value range: [0, 51]. This parameter will be disabled if you enter `0`.
-It is not recommended to specify this parameter if there are no special requirements.
+                     * 设置Control factor for constant video bitrate. Value range: [0, 51] and 100.
+It is recommended not to specify this parameter if there are no special requirements.
+
+Note:
+When you need to set it to auto, fill in 100.
+If Mode is set to ABR, the Vcrf value does not need to be configured.
+If Mode is set to CBR, the Vcrf value does not need to be configured.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _vcrf Control factor for constant video bitrate. Value range: [0, 51] and 100.
+It is recommended not to specify this parameter if there are no special requirements.
+
+Note:
+When you need to set it to auto, fill in 100.
+If Mode is set to ABR, the Vcrf value does not need to be configured.
+If Mode is set to CBR, the Vcrf value does not need to be configured.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetVcrf(const uint64_t& _vcrf);
@@ -391,6 +493,39 @@ Default value: 0. If this parameter is set to `1`, multiple streams with differe
                      * 
                      */
                     bool ContentAdaptStreamHasBeenSet() const;
+
+                    /**
+                     * 获取Average segment duration. Value range: (0-10], unit: second
+Default value: 10
+Note: It is used only in the format of HLS.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return HlsTime Average segment duration. Value range: (0-10], unit: second
+Default value: 10
+Note: It is used only in the format of HLS.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    uint64_t GetHlsTime() const;
+
+                    /**
+                     * 设置Average segment duration. Value range: (0-10], unit: second
+Default value: 10
+Note: It is used only in the format of HLS.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _hlsTime Average segment duration. Value range: (0-10], unit: second
+Default value: 10
+Note: It is used only in the format of HLS.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetHlsTime(const uint64_t& _hlsTime);
+
+                    /**
+                     * 判断参数 HlsTime 是否已赋值
+                     * @return HlsTime 是否已赋值
+                     * 
+                     */
+                    bool HlsTimeHasBeenSet() const;
 
                     /**
                      * 获取HLS segment type. Valid values:
@@ -507,26 +642,377 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool Stereo3dTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Profile, suitable for different scenarios. 
+baseline: It only supports I/P-frames and non-interlaced scenarios, and is suitable for scenarios such as video calls and mobile videos. 
+main: It offers I-frames, P-frames, and B-frames, and supports both interlaced and non-interlaced modes. It is mainly used in mainstream audio and video consumption products such as video players and streaming media transmission devices. 
+high: the highest encoding level, with 8x8 prediction added to the main profile and support for custom quantification. It is widely used in scenarios such as Blu-ray storage and HDTV.
+default: automatic filling along with the original video
+
+This configuration appears only when the encoding standard is set to H264. Default value: default
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return VideoProfile Profile, suitable for different scenarios. 
+baseline: It only supports I/P-frames and non-interlaced scenarios, and is suitable for scenarios such as video calls and mobile videos. 
+main: It offers I-frames, P-frames, and B-frames, and supports both interlaced and non-interlaced modes. It is mainly used in mainstream audio and video consumption products such as video players and streaming media transmission devices. 
+high: the highest encoding level, with 8x8 prediction added to the main profile and support for custom quantification. It is widely used in scenarios such as Blu-ray storage and HDTV.
+default: automatic filling along with the original video
+
+This configuration appears only when the encoding standard is set to H264. Default value: default
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    std::string GetVideoProfile() const;
+
+                    /**
+                     * 设置Profile, suitable for different scenarios. 
+baseline: It only supports I/P-frames and non-interlaced scenarios, and is suitable for scenarios such as video calls and mobile videos. 
+main: It offers I-frames, P-frames, and B-frames, and supports both interlaced and non-interlaced modes. It is mainly used in mainstream audio and video consumption products such as video players and streaming media transmission devices. 
+high: the highest encoding level, with 8x8 prediction added to the main profile and support for custom quantification. It is widely used in scenarios such as Blu-ray storage and HDTV.
+default: automatic filling along with the original video
+
+This configuration appears only when the encoding standard is set to H264. Default value: default
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _videoProfile Profile, suitable for different scenarios. 
+baseline: It only supports I/P-frames and non-interlaced scenarios, and is suitable for scenarios such as video calls and mobile videos. 
+main: It offers I-frames, P-frames, and B-frames, and supports both interlaced and non-interlaced modes. It is mainly used in mainstream audio and video consumption products such as video players and streaming media transmission devices. 
+high: the highest encoding level, with 8x8 prediction added to the main profile and support for custom quantification. It is widely used in scenarios such as Blu-ray storage and HDTV.
+default: automatic filling along with the original video
+
+This configuration appears only when the encoding standard is set to H264. Default value: default
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetVideoProfile(const std::string& _videoProfile);
+
+                    /**
+                     * 判断参数 VideoProfile 是否已赋值
+                     * @return VideoProfile 是否已赋值
+                     * 
+                     */
+                    bool VideoProfileHasBeenSet() const;
+
+                    /**
+                     * 获取Encoder level. Default value: auto ("")
+If the encoding standard is set to H264, the following options are supported: "", 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, and 5.1. 
+If the encoding standard is set to H265, the following options are supported: "", 1, 2, 2.1, 3, 3.1, 4, 4.1, 5, 5.1, 5.2, 6, 6.1, 6.2, and 8.5.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return VideoLevel Encoder level. Default value: auto ("")
+If the encoding standard is set to H264, the following options are supported: "", 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, and 5.1. 
+If the encoding standard is set to H265, the following options are supported: "", 1, 2, 2.1, 3, 3.1, 4, 4.1, 5, 5.1, 5.2, 6, 6.1, 6.2, and 8.5.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    std::string GetVideoLevel() const;
+
+                    /**
+                     * 设置Encoder level. Default value: auto ("")
+If the encoding standard is set to H264, the following options are supported: "", 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, and 5.1. 
+If the encoding standard is set to H265, the following options are supported: "", 1, 2, 2.1, 3, 3.1, 4, 4.1, 5, 5.1, 5.2, 6, 6.1, 6.2, and 8.5.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _videoLevel Encoder level. Default value: auto ("")
+If the encoding standard is set to H264, the following options are supported: "", 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, and 5.1. 
+If the encoding standard is set to H265, the following options are supported: "", 1, 2, 2.1, 3, 3.1, 4, 4.1, 5, 5.1, 5.2, 6, 6.1, 6.2, and 8.5.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetVideoLevel(const std::string& _videoLevel);
+
+                    /**
+                     * 判断参数 VideoLevel 是否已赋值
+                     * @return VideoLevel 是否已赋值
+                     * 
+                     */
+                    bool VideoLevelHasBeenSet() const;
+
+                    /**
+                     * 获取Maximum number of consecutive B-frames. The default is auto, and 0 - 16 and -1 are supported.
+Note:
+
+-1 indicates auto.	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return Bframes Maximum number of consecutive B-frames. The default is auto, and 0 - 16 and -1 are supported.
+Note:
+
+-1 indicates auto.	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    int64_t GetBframes() const;
+
+                    /**
+                     * 设置Maximum number of consecutive B-frames. The default is auto, and 0 - 16 and -1 are supported.
+Note:
+
+-1 indicates auto.	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _bframes Maximum number of consecutive B-frames. The default is auto, and 0 - 16 and -1 are supported.
+Note:
+
+-1 indicates auto.	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetBframes(const int64_t& _bframes);
+
+                    /**
+                     * 判断参数 Bframes 是否已赋值
+                     * @return Bframes 是否已赋值
+                     * 
+                     */
+                    bool BframesHasBeenSet() const;
+
+                    /**
+                     * 获取Bitrate control mode. Optional values: 
+VBR: variable bitrate. The output bitrate is adjusted based on the complexity of the video image, ensuring higher image quality. This mode is suitable for storage scenarios as well as applications with high image quality requirements. 
+ABR: average bitrate. The average bitrate of the output video is kept stable to the greatest extent, but short-term bitrate fluctuations are allowed. This mode is suitable for scenarios where it is necessary to minimize the overall bitrate while a certain quality is maintained. 
+CBR: constant bitrate. The output bitrate remains constant during the video encoding process, regardless of changes in image complexity. This mode is suitable for scenarios with strict network bandwidth requirements, such as live streaming. 
+VCRF: constant rate factor. The video quality is controlled by setting a quality factor, achieving constant quality encoding of videos. The bitrate is automatically adjusted based on the complexity of the content. This mode is suitable for scenarios where maintaining a certain quality is desired. 
+VBR is selected by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return Mode Bitrate control mode. Optional values: 
+VBR: variable bitrate. The output bitrate is adjusted based on the complexity of the video image, ensuring higher image quality. This mode is suitable for storage scenarios as well as applications with high image quality requirements. 
+ABR: average bitrate. The average bitrate of the output video is kept stable to the greatest extent, but short-term bitrate fluctuations are allowed. This mode is suitable for scenarios where it is necessary to minimize the overall bitrate while a certain quality is maintained. 
+CBR: constant bitrate. The output bitrate remains constant during the video encoding process, regardless of changes in image complexity. This mode is suitable for scenarios with strict network bandwidth requirements, such as live streaming. 
+VCRF: constant rate factor. The video quality is controlled by setting a quality factor, achieving constant quality encoding of videos. The bitrate is automatically adjusted based on the complexity of the content. This mode is suitable for scenarios where maintaining a certain quality is desired. 
+VBR is selected by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    std::string GetMode() const;
+
+                    /**
+                     * 设置Bitrate control mode. Optional values: 
+VBR: variable bitrate. The output bitrate is adjusted based on the complexity of the video image, ensuring higher image quality. This mode is suitable for storage scenarios as well as applications with high image quality requirements. 
+ABR: average bitrate. The average bitrate of the output video is kept stable to the greatest extent, but short-term bitrate fluctuations are allowed. This mode is suitable for scenarios where it is necessary to minimize the overall bitrate while a certain quality is maintained. 
+CBR: constant bitrate. The output bitrate remains constant during the video encoding process, regardless of changes in image complexity. This mode is suitable for scenarios with strict network bandwidth requirements, such as live streaming. 
+VCRF: constant rate factor. The video quality is controlled by setting a quality factor, achieving constant quality encoding of videos. The bitrate is automatically adjusted based on the complexity of the content. This mode is suitable for scenarios where maintaining a certain quality is desired. 
+VBR is selected by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _mode Bitrate control mode. Optional values: 
+VBR: variable bitrate. The output bitrate is adjusted based on the complexity of the video image, ensuring higher image quality. This mode is suitable for storage scenarios as well as applications with high image quality requirements. 
+ABR: average bitrate. The average bitrate of the output video is kept stable to the greatest extent, but short-term bitrate fluctuations are allowed. This mode is suitable for scenarios where it is necessary to minimize the overall bitrate while a certain quality is maintained. 
+CBR: constant bitrate. The output bitrate remains constant during the video encoding process, regardless of changes in image complexity. This mode is suitable for scenarios with strict network bandwidth requirements, such as live streaming. 
+VCRF: constant rate factor. The video quality is controlled by setting a quality factor, achieving constant quality encoding of videos. The bitrate is automatically adjusted based on the complexity of the content. This mode is suitable for scenarios where maintaining a certain quality is desired. 
+VBR is selected by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetMode(const std::string& _mode);
+
+                    /**
+                     * 判断参数 Mode 是否已赋值
+                     * @return Mode 是否已赋值
+                     * 
+                     */
+                    bool ModeHasBeenSet() const;
+
+                    /**
+                     * 获取Display aspect ratio. Optional values: [1:1, 2:1, default]
+Default value: default
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return Sar Display aspect ratio. Optional values: [1:1, 2:1, default]
+Default value: default
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    std::string GetSar() const;
+
+                    /**
+                     * 设置Display aspect ratio. Optional values: [1:1, 2:1, default]
+Default value: default
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _sar Display aspect ratio. Optional values: [1:1, 2:1, default]
+Default value: default
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetSar(const std::string& _sar);
+
+                    /**
+                     * 判断参数 Sar 是否已赋值
+                     * @return Sar 是否已赋值
+                     * 
+                     */
+                    bool SarHasBeenSet() const;
+
+                    /**
+                     * 获取Adaptive I-frame decision. When it is enabled, Media Processing Service will automatically identify transition points between different scenarios in the video (usually they are visually distinct frames, such as those of switching from one shot to another) and adaptively insert keyframes (I-frames) at these points to improve the random accessibility and encoding efficiency of the video. Optional values: 
+0: Disable the adaptive I-frame decision 
+1: Enable the adaptive I-frame decision 
+Default value: 0	
+	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return NoScenecut Adaptive I-frame decision. When it is enabled, Media Processing Service will automatically identify transition points between different scenarios in the video (usually they are visually distinct frames, such as those of switching from one shot to another) and adaptively insert keyframes (I-frames) at these points to improve the random accessibility and encoding efficiency of the video. Optional values: 
+0: Disable the adaptive I-frame decision 
+1: Enable the adaptive I-frame decision 
+Default value: 0	
+	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    int64_t GetNoScenecut() const;
+
+                    /**
+                     * 设置Adaptive I-frame decision. When it is enabled, Media Processing Service will automatically identify transition points between different scenarios in the video (usually they are visually distinct frames, such as those of switching from one shot to another) and adaptively insert keyframes (I-frames) at these points to improve the random accessibility and encoding efficiency of the video. Optional values: 
+0: Disable the adaptive I-frame decision 
+1: Enable the adaptive I-frame decision 
+Default value: 0	
+	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _noScenecut Adaptive I-frame decision. When it is enabled, Media Processing Service will automatically identify transition points between different scenarios in the video (usually they are visually distinct frames, such as those of switching from one shot to another) and adaptively insert keyframes (I-frames) at these points to improve the random accessibility and encoding efficiency of the video. Optional values: 
+0: Disable the adaptive I-frame decision 
+1: Enable the adaptive I-frame decision 
+Default value: 0	
+	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetNoScenecut(const int64_t& _noScenecut);
+
+                    /**
+                     * 判断参数 NoScenecut 是否已赋值
+                     * @return NoScenecut 是否已赋值
+                     * 
+                     */
+                    bool NoScenecutHasBeenSet() const;
+
+                    /**
+                     * 获取Bit: 8/10 is supported. Default value: 8	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return BitDepth Bit: 8/10 is supported. Default value: 8	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    int64_t GetBitDepth() const;
+
+                    /**
+                     * 设置Bit: 8/10 is supported. Default value: 8	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _bitDepth Bit: 8/10 is supported. Default value: 8	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetBitDepth(const int64_t& _bitDepth);
+
+                    /**
+                     * 判断参数 BitDepth 是否已赋值
+                     * @return BitDepth 是否已赋值
+                     * 
+                     */
+                    bool BitDepthHasBeenSet() const;
+
+                    /**
+                     * 获取Preservation of original timestamp. Optional values: 
+0: Disabled 
+1: Enabled 
+Default value: Disabled	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return RawPts Preservation of original timestamp. Optional values: 
+0: Disabled 
+1: Enabled 
+Default value: Disabled	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    int64_t GetRawPts() const;
+
+                    /**
+                     * 设置Preservation of original timestamp. Optional values: 
+0: Disabled 
+1: Enabled 
+Default value: Disabled	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _rawPts Preservation of original timestamp. Optional values: 
+0: Disabled 
+1: Enabled 
+Default value: Disabled	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetRawPts(const int64_t& _rawPts);
+
+                    /**
+                     * 判断参数 RawPts 是否已赋值
+                     * @return RawPts 是否已赋值
+                     * 
+                     */
+                    bool RawPtsHasBeenSet() const;
+
+                    /**
+                     * 获取Proportional compression bitrate. When it is enabled, the bitrate of the output video will be adjusted according to the proportion. After the compression ratio is entered, the system will automatically calculate the target output bitrate based on the source video bitrate. Compression ratio range: 0-100, optional values: [0-100] and -1 
+Note: -1 indicates auto.	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return Compress Proportional compression bitrate. When it is enabled, the bitrate of the output video will be adjusted according to the proportion. After the compression ratio is entered, the system will automatically calculate the target output bitrate based on the source video bitrate. Compression ratio range: 0-100, optional values: [0-100] and -1 
+Note: -1 indicates auto.	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    int64_t GetCompress() const;
+
+                    /**
+                     * 设置Proportional compression bitrate. When it is enabled, the bitrate of the output video will be adjusted according to the proportion. After the compression ratio is entered, the system will automatically calculate the target output bitrate based on the source video bitrate. Compression ratio range: 0-100, optional values: [0-100] and -1 
+Note: -1 indicates auto.	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _compress Proportional compression bitrate. When it is enabled, the bitrate of the output video will be adjusted according to the proportion. After the compression ratio is entered, the system will automatically calculate the target output bitrate based on the source video bitrate. Compression ratio range: 0-100, optional values: [0-100] and -1 
+Note: -1 indicates auto.	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetCompress(const int64_t& _compress);
+
+                    /**
+                     * 判断参数 Compress 是否已赋值
+                     * @return Compress 是否已赋值
+                     * 
+                     */
+                    bool CompressHasBeenSet() const;
+
+                    /**
+                     * 获取Special segment configuration	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return SegmentSpecificInfo Special segment configuration	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    SegmentSpecificInfo GetSegmentSpecificInfo() const;
+
+                    /**
+                     * 设置Special segment configuration	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _segmentSpecificInfo Special segment configuration	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetSegmentSpecificInfo(const SegmentSpecificInfo& _segmentSpecificInfo);
+
+                    /**
+                     * 判断参数 SegmentSpecificInfo 是否已赋值
+                     * @return SegmentSpecificInfo 是否已赋值
+                     * 
+                     */
+                    bool SegmentSpecificInfoHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Video stream encoding format. Valid values:
-<li>h264: H.264 encoding.</li>
-<li>h265: H.265 encoding.</li>
-<li>h266: H.266 encoding.</li>
-<li>av1: AOMedia Video 1 encoding.</li>
-<li>vp8: VP8 encoding.</li>
-<li>vp9: VP9 encoding.</li>
-<li>mpeg2: MPEG2 encoding.</li>
-<li>dnxhd: DNxHD encoding.</li>
-<li>mv-hevc: MV-HEVC encoding.</li>
-Note: A resolution within 640x480 should be specified for H.265 encoding.
+                     * Encoding format for video streams. Optional values:
+<li>h264: H.264 encoding</li>
+<li>h265: H.265 encoding</li>
+<li>h266: H.266 encoding</li>
+<li>av1: AOMedia Video 1 encoding</li>
+<li>vp8: VP8 encoding</li>
+<li>vp9: VP9 encoding</li>
+<li>mpeg2: MPEG2 encoding</li>
+<li>dnxhd: DNxHD encoding</li>
+<li>mv-hevc: MV-HEVC encoding</li>
 
-Note: AV1 encoding containers only support mp4, webm, and mkv.
-Note: H.266 encoding containers only support mp4, hls, ts, and mov.
-Note: VP8 and VP9 encoding containers only support webm and mkv.
-Note: MPEG2 and DNxHD encoding containers only support mxf.
-Note: MV-HEVC encoding containers only support mp4, hls, and mov. Among them, the hls format only supports mp4 segmentation format.Note: This field may return null, indicating that no valid values can be obtained.
+Note: AV1 encoding containers currently only support mp4, webm, and mkv.
+Note: H.266 encoding containers currently only support mp4, hls, ts, and mov.
+Note: VP8 and VP9 encoding containers currently only support webm and mkv.
+Note: MPEG2 and DNxHD encoding containers currently only support mxf.
+Note: MV-HEVC encoding containers only support mp4, hls, and mov. Among them, the hls format only supports mp4 segmentation format.
+
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_codec;
                     bool m_codecHasBeenSet;
@@ -572,24 +1058,49 @@ Note: When resolution adaption is enabled, `Width` cannot be smaller than `Heigh
                     bool m_heightHasBeenSet;
 
                     /**
-                     * Frame interval between I keyframes. Value range: 0 and [1,100000]. If this parameter is 0, the system will automatically set the GOP length.
+                     * Interval between I-frames (keyframes), which can be customized in frames or seconds. GOP value range: 0 and [1, 100000].
+If this parameter is 0, the system will automatically set the GOP length.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     uint64_t m_gop;
                     bool m_gopHasBeenSet;
 
                     /**
-                     * Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-<li>white: fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
-<li>gauss: fill with Gaussian blur. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with Gaussian blur.</li>
+                     * GOP value unit. Optional values: 
+frame: indicates frame 
+second: indicates second
+Default value: frame
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string m_gopUnit;
+                    bool m_gopUnitHasBeenSet;
+
+                    /**
+                     * Filling mode. When the configured aspect ratio parameter for video streams differs from the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes:
+ <li>stretch: Each frame is stretched to fill the entire screen, which may cause the transcoded video to be "flattened" or "stretched".</li>
+<li>black: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with black.</li>
+<li>white: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with white.</li>
+<li>gauss: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with a Gaussian blur.</li>
+
+<li>smarttailor: Video images are smartly selected to ensure proportional image cropping.</li>
+Default value: black.
+
+Note: Only stretch and black are supported for adaptive bitrate streaming.
+
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_fillType;
                     bool m_fillTypeHasBeenSet;
 
                     /**
-                     * The control factor of video constant bitrate. Value range: [0, 51]. This parameter will be disabled if you enter `0`.
-It is not recommended to specify this parameter if there are no special requirements.
+                     * Control factor for constant video bitrate. Value range: [0, 51] and 100.
+It is recommended not to specify this parameter if there are no special requirements.
+
+Note:
+When you need to set it to auto, fill in 100.
+If Mode is set to ABR, the Vcrf value does not need to be configured.
+If Mode is set to CBR, the Vcrf value does not need to be configured.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     uint64_t m_vcrf;
                     bool m_vcrfHasBeenSet;
@@ -602,6 +1113,15 @@ Default value: 0. If this parameter is set to `1`, multiple streams with differe
                      */
                     uint64_t m_contentAdaptStream;
                     bool m_contentAdaptStreamHasBeenSet;
+
+                    /**
+                     * Average segment duration. Value range: (0-10], unit: second
+Default value: 10
+Note: It is used only in the format of HLS.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    uint64_t m_hlsTime;
+                    bool m_hlsTimeHasBeenSet;
 
                     /**
                      * HLS segment type. Valid values:
@@ -633,6 +1153,101 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_stereo3dType;
                     bool m_stereo3dTypeHasBeenSet;
+
+                    /**
+                     * Profile, suitable for different scenarios. 
+baseline: It only supports I/P-frames and non-interlaced scenarios, and is suitable for scenarios such as video calls and mobile videos. 
+main: It offers I-frames, P-frames, and B-frames, and supports both interlaced and non-interlaced modes. It is mainly used in mainstream audio and video consumption products such as video players and streaming media transmission devices. 
+high: the highest encoding level, with 8x8 prediction added to the main profile and support for custom quantification. It is widely used in scenarios such as Blu-ray storage and HDTV.
+default: automatic filling along with the original video
+
+This configuration appears only when the encoding standard is set to H264. Default value: default
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string m_videoProfile;
+                    bool m_videoProfileHasBeenSet;
+
+                    /**
+                     * Encoder level. Default value: auto ("")
+If the encoding standard is set to H264, the following options are supported: "", 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, and 5.1. 
+If the encoding standard is set to H265, the following options are supported: "", 1, 2, 2.1, 3, 3.1, 4, 4.1, 5, 5.1, 5.2, 6, 6.1, 6.2, and 8.5.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string m_videoLevel;
+                    bool m_videoLevelHasBeenSet;
+
+                    /**
+                     * Maximum number of consecutive B-frames. The default is auto, and 0 - 16 and -1 are supported.
+Note:
+
+-1 indicates auto.	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    int64_t m_bframes;
+                    bool m_bframesHasBeenSet;
+
+                    /**
+                     * Bitrate control mode. Optional values: 
+VBR: variable bitrate. The output bitrate is adjusted based on the complexity of the video image, ensuring higher image quality. This mode is suitable for storage scenarios as well as applications with high image quality requirements. 
+ABR: average bitrate. The average bitrate of the output video is kept stable to the greatest extent, but short-term bitrate fluctuations are allowed. This mode is suitable for scenarios where it is necessary to minimize the overall bitrate while a certain quality is maintained. 
+CBR: constant bitrate. The output bitrate remains constant during the video encoding process, regardless of changes in image complexity. This mode is suitable for scenarios with strict network bandwidth requirements, such as live streaming. 
+VCRF: constant rate factor. The video quality is controlled by setting a quality factor, achieving constant quality encoding of videos. The bitrate is automatically adjusted based on the complexity of the content. This mode is suitable for scenarios where maintaining a certain quality is desired. 
+VBR is selected by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string m_mode;
+                    bool m_modeHasBeenSet;
+
+                    /**
+                     * Display aspect ratio. Optional values: [1:1, 2:1, default]
+Default value: default
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string m_sar;
+                    bool m_sarHasBeenSet;
+
+                    /**
+                     * Adaptive I-frame decision. When it is enabled, Media Processing Service will automatically identify transition points between different scenarios in the video (usually they are visually distinct frames, such as those of switching from one shot to another) and adaptively insert keyframes (I-frames) at these points to improve the random accessibility and encoding efficiency of the video. Optional values: 
+0: Disable the adaptive I-frame decision 
+1: Enable the adaptive I-frame decision 
+Default value: 0	
+	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    int64_t m_noScenecut;
+                    bool m_noScenecutHasBeenSet;
+
+                    /**
+                     * Bit: 8/10 is supported. Default value: 8	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    int64_t m_bitDepth;
+                    bool m_bitDepthHasBeenSet;
+
+                    /**
+                     * Preservation of original timestamp. Optional values: 
+0: Disabled 
+1: Enabled 
+Default value: Disabled	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    int64_t m_rawPts;
+                    bool m_rawPtsHasBeenSet;
+
+                    /**
+                     * Proportional compression bitrate. When it is enabled, the bitrate of the output video will be adjusted according to the proportion. After the compression ratio is entered, the system will automatically calculate the target output bitrate based on the source video bitrate. Compression ratio range: 0-100, optional values: [0-100] and -1 
+Note: -1 indicates auto.	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    int64_t m_compress;
+                    bool m_compressHasBeenSet;
+
+                    /**
+                     * Special segment configuration	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    SegmentSpecificInfo m_segmentSpecificInfo;
+                    bool m_segmentSpecificInfoHasBeenSet;
 
                 };
             }

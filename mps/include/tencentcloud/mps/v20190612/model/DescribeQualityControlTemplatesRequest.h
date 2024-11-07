@@ -118,15 +118,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Preset: preset template. Custom: custom template.
-                     * @return Type Preset: preset template. Custom: custom template.
+                     * 获取"Preset": preset template, "Custom": custom template
+                     * @return Type "Preset": preset template, "Custom": custom template
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Preset: preset template. Custom: custom template.
-                     * @param _type Preset: preset template. Custom: custom template.
+                     * 设置"Preset": preset template, "Custom": custom template
+                     * @param _type "Preset": preset template, "Custom": custom template
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -183,7 +183,7 @@ namespace TencentCloud
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Preset: preset template. Custom: custom template.
+                     * "Preset": preset template, "Custom": custom template
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

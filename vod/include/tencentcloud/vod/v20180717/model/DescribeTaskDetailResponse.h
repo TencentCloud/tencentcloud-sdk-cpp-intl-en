@@ -42,6 +42,7 @@
 #include <tencentcloud/vod/v20180717/model/DescribeFileAttributesTask.h>
 #include <tencentcloud/vod/v20180717/model/QualityInspectTask.h>
 #include <tencentcloud/vod/v20180717/model/QualityEnhanceTask.h>
+#include <tencentcloud/vod/v20180717/model/ComplexAdaptiveDynamicStreamingTask.h>
 
 
 namespace TencentCloud
@@ -79,6 +80,7 @@ namespace TencentCloud
 <li> `ReviewAudioVideo`: Moderation</li>
 <li>`ExtractTraceWatermark`: Digital watermark extraction</li>
 <li>`QualityEnhance`: Enhance audio/video</li>
+<li>`ComplexAdaptiveDynamicStreaming`: Complex adaptive bitrate streaming processing task</li>
                      * @return TaskType The task type. Valid values:
 <li>`Procedure`: Video processing</li>
 <li>`EditMedia`: Video editing</li>
@@ -93,6 +95,7 @@ namespace TencentCloud
 <li> `ReviewAudioVideo`: Moderation</li>
 <li>`ExtractTraceWatermark`: Digital watermark extraction</li>
 <li>`QualityEnhance`: Enhance audio/video</li>
+<li>`ComplexAdaptiveDynamicStreaming`: Complex adaptive bitrate streaming processing task</li>
                      * 
                      */
                     std::string GetTaskType() const;
@@ -502,6 +505,22 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool QualityEnhanceTaskHasBeenSet() const;
 
+                    /**
+                     * 获取Complex adaptive bitrate streaming processing task information. This field has a value only when TaskType is ComplexAdaptiveDynamicStreaming. 
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return ComplexAdaptiveDynamicStreamingTask Complex adaptive bitrate streaming processing task information. This field has a value only when TaskType is ComplexAdaptiveDynamicStreaming. 
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    ComplexAdaptiveDynamicStreamingTask GetComplexAdaptiveDynamicStreamingTask() const;
+
+                    /**
+                     * 判断参数 ComplexAdaptiveDynamicStreamingTask 是否已赋值
+                     * @return ComplexAdaptiveDynamicStreamingTask 是否已赋值
+                     * 
+                     */
+                    bool ComplexAdaptiveDynamicStreamingTaskHasBeenSet() const;
+
                 private:
 
                     /**
@@ -519,6 +538,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 <li> `ReviewAudioVideo`: Moderation</li>
 <li>`ExtractTraceWatermark`: Digital watermark extraction</li>
 <li>`QualityEnhance`: Enhance audio/video</li>
+<li>`ComplexAdaptiveDynamicStreaming`: Complex adaptive bitrate streaming processing task</li>
                      */
                     std::string m_taskType;
                     bool m_taskTypeHasBeenSet;
@@ -696,6 +716,13 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     QualityEnhanceTask m_qualityEnhanceTask;
                     bool m_qualityEnhanceTaskHasBeenSet;
+
+                    /**
+                     * Complex adaptive bitrate streaming processing task information. This field has a value only when TaskType is ComplexAdaptiveDynamicStreaming. 
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    ComplexAdaptiveDynamicStreamingTask m_complexAdaptiveDynamicStreamingTask;
+                    bool m_complexAdaptiveDynamicStreamingTaskHasBeenSet;
 
                 };
             }

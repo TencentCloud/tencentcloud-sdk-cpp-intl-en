@@ -72,15 +72,23 @@ namespace TencentCloud
                     bool InputInfoHasBeenSet() const;
 
                     /**
-                     * 获取The storage location of the media processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
-                     * @return OutputStorage The storage location of the media processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
+                     * 获取Target storage for Media Processing Service output files. If left blank, it inherits the storage location in InputInfo.
+
+Note: When InputInfo.Type is URL, this parameter is required.
+                     * @return OutputStorage Target storage for Media Processing Service output files. If left blank, it inherits the storage location in InputInfo.
+
+Note: When InputInfo.Type is URL, this parameter is required.
                      * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置The storage location of the media processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
-                     * @param _outputStorage The storage location of the media processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
+                     * 设置Target storage for Media Processing Service output files. If left blank, it inherits the storage location in InputInfo.
+
+Note: When InputInfo.Type is URL, this parameter is required.
+                     * @param _outputStorage Target storage for Media Processing Service output files. If left blank, it inherits the storage location in InputInfo.
+
+Note: When InputInfo.Type is URL, this parameter is required.
                      * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
@@ -393,7 +401,9 @@ Note 3: The trigger configured for an orchestration is for automatically startin
                     bool m_inputInfoHasBeenSet;
 
                     /**
-                     * The storage location of the media processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
+                     * Target storage for Media Processing Service output files. If left blank, it inherits the storage location in InputInfo.
+
+Note: When InputInfo.Type is URL, this parameter is required.
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;

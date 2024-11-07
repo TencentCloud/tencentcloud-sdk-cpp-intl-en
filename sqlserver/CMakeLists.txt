@@ -210,6 +210,7 @@ set(sqlserver_public_header_model
   include/tencentcloud/sqlserver/v20180328/model/ResetAccountPasswordRequest.h
   include/tencentcloud/sqlserver/v20180328/model/DescribeInstanceParamsResponse.h
   include/tencentcloud/sqlserver/v20180328/model/ModifyDBInstanceProjectRequest.h
+  include/tencentcloud/sqlserver/v20180328/model/SlowLog.h
   include/tencentcloud/sqlserver/v20180328/model/DBRenameRes.h
   include/tencentcloud/sqlserver/v20180328/model/TerminateDBInstanceResponse.h
   include/tencentcloud/sqlserver/v20180328/model/DescribeAccountsResponse.h
@@ -423,6 +424,7 @@ set(sqlserver_src
   src/v20180328/model/ResetAccountPasswordRequest.cpp
   src/v20180328/model/DescribeInstanceParamsResponse.cpp
   src/v20180328/model/ModifyDBInstanceProjectRequest.cpp
+  src/v20180328/model/SlowLog.cpp
   src/v20180328/model/DBRenameRes.cpp
   src/v20180328/model/TerminateDBInstanceResponse.cpp
   src/v20180328/model/DescribeAccountsResponse.cpp

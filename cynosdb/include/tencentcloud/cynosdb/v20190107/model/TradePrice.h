@@ -47,18 +47,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The non-discounted total price of monthly subscribed resources (unit: US cent)
+                     * 获取The non-discounted total price of monthly subscribed resources (unit: 0.000001 cent)
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TotalPrice The non-discounted total price of monthly subscribed resources (unit: US cent)
+                     * @return TotalPrice The non-discounted total price of monthly subscribed resources (unit: 0.000001 cent)
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetTotalPrice() const;
 
                     /**
-                     * 设置The non-discounted total price of monthly subscribed resources (unit: US cent)
+                     * 设置The non-discounted total price of monthly subscribed resources (unit: 0.000001 cent)
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _totalPrice The non-discounted total price of monthly subscribed resources (unit: US cent)
+                     * @param _totalPrice The non-discounted total price of monthly subscribed resources (unit: 0.000001 cent)
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -93,18 +93,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DiscountHasBeenSet() const;
 
                     /**
-                     * 获取The discounted total price of monthly subscribed resources (unit: US cent). If a discount is applied, `TotalPriceDiscount` will be the product of `TotalPrice` and `Discount`.
+                     * 获取The discounted total price of monthly subscribed resources (unit: 0.000001 cent). If a discount is applied, `TotalPriceDiscount` will be the product of `TotalPrice` and `Discount`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TotalPriceDiscount The discounted total price of monthly subscribed resources (unit: US cent). If a discount is applied, `TotalPriceDiscount` will be the product of `TotalPrice` and `Discount`.
+                     * @return TotalPriceDiscount The discounted total price of monthly subscribed resources (unit: 0.000001 cent). If a discount is applied, `TotalPriceDiscount` will be the product of `TotalPrice` and `Discount`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetTotalPriceDiscount() const;
 
                     /**
-                     * 设置The discounted total price of monthly subscribed resources (unit: US cent). If a discount is applied, `TotalPriceDiscount` will be the product of `TotalPrice` and `Discount`.
+                     * 设置The discounted total price of monthly subscribed resources (unit: 0.000001 cent). If a discount is applied, `TotalPriceDiscount` will be the product of `TotalPrice` and `Discount`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _totalPriceDiscount The discounted total price of monthly subscribed resources (unit: US cent). If a discount is applied, `TotalPriceDiscount` will be the product of `TotalPrice` and `Discount`.
+                     * @param _totalPriceDiscount The discounted total price of monthly subscribed resources (unit: 0.000001 cent). If a discount is applied, `TotalPriceDiscount` will be the product of `TotalPrice` and `Discount`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -118,18 +118,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TotalPriceDiscountHasBeenSet() const;
 
                     /**
-                     * 获取The non-discounted unit price of pay-as-you-go resources (unit: US cent)
+                     * 获取The non-discounted unit price of pay-as-you-go resources (unit: 0.000001 cent)
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UnitPrice The non-discounted unit price of pay-as-you-go resources (unit: US cent)
+                     * @return UnitPrice The non-discounted unit price of pay-as-you-go resources (unit: 0.000001 cent)
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetUnitPrice() const;
 
                     /**
-                     * 设置The non-discounted unit price of pay-as-you-go resources (unit: US cent)
+                     * 设置The non-discounted unit price of pay-as-you-go resources (unit: 0.000001 cent)
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _unitPrice The non-discounted unit price of pay-as-you-go resources (unit: US cent)
+                     * @param _unitPrice The non-discounted unit price of pay-as-you-go resources (unit: 0.000001 cent)
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -143,18 +143,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UnitPriceHasBeenSet() const;
 
                     /**
-                     * 获取The discounted unit price of pay-as-you-go resources (unit: US cent). If a discount is applied, `UnitPriceDiscount` will be the product of `UnitPrice` and `Discount`.
+                     * 获取The discounted unit price of pay-as-you-go resources (unit: 0.000001 cent). If a discount is applied, `UnitPriceDiscount` will be the product of `UnitPrice` and `Discount`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UnitPriceDiscount The discounted unit price of pay-as-you-go resources (unit: US cent). If a discount is applied, `UnitPriceDiscount` will be the product of `UnitPrice` and `Discount`.
+                     * @return UnitPriceDiscount The discounted unit price of pay-as-you-go resources (unit: 0.000001 cent). If a discount is applied, `UnitPriceDiscount` will be the product of `UnitPrice` and `Discount`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetUnitPriceDiscount() const;
 
                     /**
-                     * 设置The discounted unit price of pay-as-you-go resources (unit: US cent). If a discount is applied, `UnitPriceDiscount` will be the product of `UnitPrice` and `Discount`.
+                     * 设置The discounted unit price of pay-as-you-go resources (unit: 0.000001 cent). If a discount is applied, `UnitPriceDiscount` will be the product of `UnitPrice` and `Discount`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _unitPriceDiscount The discounted unit price of pay-as-you-go resources (unit: US cent). If a discount is applied, `UnitPriceDiscount` will be the product of `UnitPrice` and `Discount`.
+                     * @param _unitPriceDiscount The discounted unit price of pay-as-you-go resources (unit: 0.000001 cent). If a discount is applied, `UnitPriceDiscount` will be the product of `UnitPrice` and `Discount`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -191,7 +191,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The non-discounted total price of monthly subscribed resources (unit: US cent)
+                     * The non-discounted total price of monthly subscribed resources (unit: 0.000001 cent)
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_totalPrice;
@@ -204,21 +204,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_discountHasBeenSet;
 
                     /**
-                     * The discounted total price of monthly subscribed resources (unit: US cent). If a discount is applied, `TotalPriceDiscount` will be the product of `TotalPrice` and `Discount`.
+                     * The discounted total price of monthly subscribed resources (unit: 0.000001 cent). If a discount is applied, `TotalPriceDiscount` will be the product of `TotalPrice` and `Discount`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_totalPriceDiscount;
                     bool m_totalPriceDiscountHasBeenSet;
 
                     /**
-                     * The non-discounted unit price of pay-as-you-go resources (unit: US cent)
+                     * The non-discounted unit price of pay-as-you-go resources (unit: 0.000001 cent)
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_unitPrice;
                     bool m_unitPriceHasBeenSet;
 
                     /**
-                     * The discounted unit price of pay-as-you-go resources (unit: US cent). If a discount is applied, `UnitPriceDiscount` will be the product of `UnitPrice` and `Discount`.
+                     * The discounted unit price of pay-as-you-go resources (unit: 0.000001 cent). If a discount is applied, `UnitPriceDiscount` will be the product of `UnitPrice` and `Discount`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_unitPriceDiscount;

@@ -47,6 +47,8 @@
 #include <tencentcloud/vod/v20180717/model/CreateCDNDomainResponse.h>
 #include <tencentcloud/vod/v20180717/model/CreateClassRequest.h>
 #include <tencentcloud/vod/v20180717/model/CreateClassResponse.h>
+#include <tencentcloud/vod/v20180717/model/CreateComplexAdaptiveDynamicStreamingTaskRequest.h>
+#include <tencentcloud/vod/v20180717/model/CreateComplexAdaptiveDynamicStreamingTaskResponse.h>
 #include <tencentcloud/vod/v20180717/model/CreateContentReviewTemplateRequest.h>
 #include <tencentcloud/vod/v20180717/model/CreateContentReviewTemplateResponse.h>
 #include <tencentcloud/vod/v20180717/model/CreateDomainVerifyRecordRequest.h>
@@ -409,6 +411,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateClassResponse> CreateClassOutcome;
                 typedef std::future<CreateClassOutcome> CreateClassOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::CreateClassRequest&, CreateClassOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateClassAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateComplexAdaptiveDynamicStreamingTaskResponse> CreateComplexAdaptiveDynamicStreamingTaskOutcome;
+                typedef std::future<CreateComplexAdaptiveDynamicStreamingTaskOutcome> CreateComplexAdaptiveDynamicStreamingTaskOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::CreateComplexAdaptiveDynamicStreamingTaskRequest&, CreateComplexAdaptiveDynamicStreamingTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateComplexAdaptiveDynamicStreamingTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateContentReviewTemplateResponse> CreateContentReviewTemplateOutcome;
                 typedef std::future<CreateContentReviewTemplateOutcome> CreateContentReviewTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::CreateContentReviewTemplateRequest&, CreateContentReviewTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateContentReviewTemplateAsyncHandler;
@@ -1004,6 +1009,25 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
                 CreateClassOutcome CreateClass(const Model::CreateClassRequest &request);
                 void CreateClassAsync(const Model::CreateClassRequest& request, const CreateClassAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateClassOutcomeCallable CreateClassCallable(const Model::CreateClassRequest& request);
+
+                /**
+                 *Initiate an adaptive bitrate streaming processing task, with the following features:
+1. Output HLS and MPEG-DASH adaptive streams based on the specified templates;
+2. DRM options for the adaptive bitrate streaming include no encryption, Widevine, or FairPlay.
+3. The output adaptive bitrate streaming can include multiple audio streams in different languages, with each language sourced from different media files.
+4. The output adaptive stream can also include multiple subtitle streams in different languages.
+
+**Notes:**
+1. When using opening/closing credits, the video stream in the opening credit must be synchronized with the audio stream; otherwise, it will result in audio and video desynchronization in the output content.
+2. If the output adaptive bitrate streaming needs to include audio from the main media, the FileId of the main media must be specified in the AudioSet parameter.
+3. Subtitles must be added to the main media beforehand, which can be done through the ModifyMediaInfo API interface or the Video Management page in the console.
+4. Support for TESHD transcoding and watermarking is currently not available.
+                 * @param req CreateComplexAdaptiveDynamicStreamingTaskRequest
+                 * @return CreateComplexAdaptiveDynamicStreamingTaskOutcome
+                 */
+                CreateComplexAdaptiveDynamicStreamingTaskOutcome CreateComplexAdaptiveDynamicStreamingTask(const Model::CreateComplexAdaptiveDynamicStreamingTaskRequest &request);
+                void CreateComplexAdaptiveDynamicStreamingTaskAsync(const Model::CreateComplexAdaptiveDynamicStreamingTaskRequest& request, const CreateComplexAdaptiveDynamicStreamingTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateComplexAdaptiveDynamicStreamingTaskOutcomeCallable CreateComplexAdaptiveDynamicStreamingTaskCallable(const Model::CreateComplexAdaptiveDynamicStreamingTaskRequest& request);
 
                 /**
                  *We have <font color=red>stopped updating</font> this API. Our new moderation templates can moderate audio/video as well as images. For details, see [CreateReviewTemplate](https://intl.cloud.tencent.com/document/api/266/84391?from_cn_redirect=1).

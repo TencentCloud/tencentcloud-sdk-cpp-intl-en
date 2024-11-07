@@ -24,8 +24,8 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/mps/v20190612/model/VideoTemplateInfo.h>
 #include <tencentcloud/mps/v20190612/model/AudioTemplateInfo.h>
+#include <tencentcloud/mps/v20190612/model/VideoTemplateInfo.h>
 
 
 namespace TencentCloud
@@ -49,27 +49,6 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Video parameter information.
-                     * @return Video Video parameter information.
-                     * 
-                     */
-                    VideoTemplateInfo GetVideo() const;
-
-                    /**
-                     * 设置Video parameter information.
-                     * @param _video Video parameter information.
-                     * 
-                     */
-                    void SetVideo(const VideoTemplateInfo& _video);
-
-                    /**
-                     * 判断参数 Video 是否已赋值
-                     * @return Video 是否已赋值
-                     * 
-                     */
-                    bool VideoHasBeenSet() const;
-
-                    /**
                      * 获取Audio parameter information.
                      * @return Audio Audio parameter information.
                      * 
@@ -89,6 +68,27 @@ namespace TencentCloud
                      * 
                      */
                     bool AudioHasBeenSet() const;
+
+                    /**
+                     * 获取Video parameter information.
+                     * @return Video Video parameter information.
+                     * 
+                     */
+                    VideoTemplateInfo GetVideo() const;
+
+                    /**
+                     * 设置Video parameter information.
+                     * @param _video Video parameter information.
+                     * 
+                     */
+                    void SetVideo(const VideoTemplateInfo& _video);
+
+                    /**
+                     * 判断参数 Video 是否已赋值
+                     * @return Video 是否已赋值
+                     * 
+                     */
+                    bool VideoHasBeenSet() const;
 
                     /**
                      * 获取Whether to remove audio stream. Valid values:
@@ -151,16 +151,16 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Video parameter information.
-                     */
-                    VideoTemplateInfo m_video;
-                    bool m_videoHasBeenSet;
-
-                    /**
                      * Audio parameter information.
                      */
                     AudioTemplateInfo m_audio;
                     bool m_audioHasBeenSet;
+
+                    /**
+                     * Video parameter information.
+                     */
+                    VideoTemplateInfo m_video;
+                    bool m_videoHasBeenSet;
 
                     /**
                      * Whether to remove audio stream. Valid values:
