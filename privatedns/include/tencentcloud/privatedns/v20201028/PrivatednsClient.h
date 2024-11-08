@@ -23,6 +23,12 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
+#include <tencentcloud/privatedns/v20201028/model/CreateEndPointRequest.h>
+#include <tencentcloud/privatedns/v20201028/model/CreateEndPointResponse.h>
+#include <tencentcloud/privatedns/v20201028/model/CreateEndPointAndEndPointServiceRequest.h>
+#include <tencentcloud/privatedns/v20201028/model/CreateEndPointAndEndPointServiceResponse.h>
+#include <tencentcloud/privatedns/v20201028/model/CreateForwardRuleRequest.h>
+#include <tencentcloud/privatedns/v20201028/model/CreateForwardRuleResponse.h>
 #include <tencentcloud/privatedns/v20201028/model/CreatePrivateDNSAccountRequest.h>
 #include <tencentcloud/privatedns/v20201028/model/CreatePrivateDNSAccountResponse.h>
 #include <tencentcloud/privatedns/v20201028/model/CreatePrivateZoneRequest.h>
@@ -37,6 +43,10 @@
 #include <tencentcloud/privatedns/v20201028/model/DescribeAuditLogResponse.h>
 #include <tencentcloud/privatedns/v20201028/model/DescribeDashboardRequest.h>
 #include <tencentcloud/privatedns/v20201028/model/DescribeDashboardResponse.h>
+#include <tencentcloud/privatedns/v20201028/model/DescribeEndPointListRequest.h>
+#include <tencentcloud/privatedns/v20201028/model/DescribeEndPointListResponse.h>
+#include <tencentcloud/privatedns/v20201028/model/DescribeForwardRuleListRequest.h>
+#include <tencentcloud/privatedns/v20201028/model/DescribeForwardRuleListResponse.h>
 #include <tencentcloud/privatedns/v20201028/model/DescribePrivateDNSAccountListRequest.h>
 #include <tencentcloud/privatedns/v20201028/model/DescribePrivateDNSAccountListResponse.h>
 #include <tencentcloud/privatedns/v20201028/model/DescribePrivateZoneListRequest.h>
@@ -73,6 +83,15 @@ namespace TencentCloud
                 PrivatednsClient(const Credential &credential, const std::string &region);
                 PrivatednsClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
+                typedef Outcome<Core::Error, Model::CreateEndPointResponse> CreateEndPointOutcome;
+                typedef std::future<CreateEndPointOutcome> CreateEndPointOutcomeCallable;
+                typedef std::function<void(const PrivatednsClient*, const Model::CreateEndPointRequest&, CreateEndPointOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateEndPointAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateEndPointAndEndPointServiceResponse> CreateEndPointAndEndPointServiceOutcome;
+                typedef std::future<CreateEndPointAndEndPointServiceOutcome> CreateEndPointAndEndPointServiceOutcomeCallable;
+                typedef std::function<void(const PrivatednsClient*, const Model::CreateEndPointAndEndPointServiceRequest&, CreateEndPointAndEndPointServiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateEndPointAndEndPointServiceAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateForwardRuleResponse> CreateForwardRuleOutcome;
+                typedef std::future<CreateForwardRuleOutcome> CreateForwardRuleOutcomeCallable;
+                typedef std::function<void(const PrivatednsClient*, const Model::CreateForwardRuleRequest&, CreateForwardRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateForwardRuleAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreatePrivateDNSAccountResponse> CreatePrivateDNSAccountOutcome;
                 typedef std::future<CreatePrivateDNSAccountOutcome> CreatePrivateDNSAccountOutcomeCallable;
                 typedef std::function<void(const PrivatednsClient*, const Model::CreatePrivateDNSAccountRequest&, CreatePrivateDNSAccountOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreatePrivateDNSAccountAsyncHandler;
@@ -94,6 +113,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeDashboardResponse> DescribeDashboardOutcome;
                 typedef std::future<DescribeDashboardOutcome> DescribeDashboardOutcomeCallable;
                 typedef std::function<void(const PrivatednsClient*, const Model::DescribeDashboardRequest&, DescribeDashboardOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDashboardAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeEndPointListResponse> DescribeEndPointListOutcome;
+                typedef std::future<DescribeEndPointListOutcome> DescribeEndPointListOutcomeCallable;
+                typedef std::function<void(const PrivatednsClient*, const Model::DescribeEndPointListRequest&, DescribeEndPointListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeEndPointListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeForwardRuleListResponse> DescribeForwardRuleListOutcome;
+                typedef std::future<DescribeForwardRuleListOutcome> DescribeForwardRuleListOutcomeCallable;
+                typedef std::function<void(const PrivatednsClient*, const Model::DescribeForwardRuleListRequest&, DescribeForwardRuleListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeForwardRuleListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribePrivateDNSAccountListResponse> DescribePrivateDNSAccountListOutcome;
                 typedef std::future<DescribePrivateDNSAccountListOutcome> DescribePrivateDNSAccountListOutcomeCallable;
                 typedef std::function<void(const PrivatednsClient*, const Model::DescribePrivateDNSAccountListRequest&, DescribePrivateDNSAccountListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePrivateDNSAccountListAsyncHandler;
@@ -129,6 +154,33 @@ namespace TencentCloud
                 typedef std::function<void(const PrivatednsClient*, const Model::SubscribePrivateZoneServiceRequest&, SubscribePrivateZoneServiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SubscribePrivateZoneServiceAsyncHandler;
 
 
+
+                /**
+                 *This API is used to create an endpoint.
+                 * @param req CreateEndPointRequest
+                 * @return CreateEndPointOutcome
+                 */
+                CreateEndPointOutcome CreateEndPoint(const Model::CreateEndPointRequest &request);
+                void CreateEndPointAsync(const Model::CreateEndPointRequest& request, const CreateEndPointAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateEndPointOutcomeCallable CreateEndPointCallable(const Model::CreateEndPointRequest& request);
+
+                /**
+                 *This API is used to create an endpoint and an endpoint service simultaneously.
+                 * @param req CreateEndPointAndEndPointServiceRequest
+                 * @return CreateEndPointAndEndPointServiceOutcome
+                 */
+                CreateEndPointAndEndPointServiceOutcome CreateEndPointAndEndPointService(const Model::CreateEndPointAndEndPointServiceRequest &request);
+                void CreateEndPointAndEndPointServiceAsync(const Model::CreateEndPointAndEndPointServiceRequest& request, const CreateEndPointAndEndPointServiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateEndPointAndEndPointServiceOutcomeCallable CreateEndPointAndEndPointServiceCallable(const Model::CreateEndPointAndEndPointServiceRequest& request);
+
+                /**
+                 *This API is used to create a custom forwarding rule.
+                 * @param req CreateForwardRuleRequest
+                 * @return CreateForwardRuleOutcome
+                 */
+                CreateForwardRuleOutcome CreateForwardRule(const Model::CreateForwardRuleRequest &request);
+                void CreateForwardRuleAsync(const Model::CreateForwardRuleRequest& request, const CreateForwardRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateForwardRuleOutcomeCallable CreateForwardRuleCallable(const Model::CreateForwardRuleRequest& request);
 
                 /**
                  *This API is used to create a Private DNS account.
@@ -192,6 +244,24 @@ namespace TencentCloud
                 DescribeDashboardOutcome DescribeDashboard(const Model::DescribeDashboardRequest &request);
                 void DescribeDashboardAsync(const Model::DescribeDashboardRequest& request, const DescribeDashboardAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeDashboardOutcomeCallable DescribeDashboardCallable(const Model::DescribeDashboardRequest& request);
+
+                /**
+                 *This API is used to obtain the endpoint list.
+                 * @param req DescribeEndPointListRequest
+                 * @return DescribeEndPointListOutcome
+                 */
+                DescribeEndPointListOutcome DescribeEndPointList(const Model::DescribeEndPointListRequest &request);
+                void DescribeEndPointListAsync(const Model::DescribeEndPointListRequest& request, const DescribeEndPointListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeEndPointListOutcomeCallable DescribeEndPointListCallable(const Model::DescribeEndPointListRequest& request);
+
+                /**
+                 *This API is used to query the forwarding rule list.
+                 * @param req DescribeForwardRuleListRequest
+                 * @return DescribeForwardRuleListOutcome
+                 */
+                DescribeForwardRuleListOutcome DescribeForwardRuleList(const Model::DescribeForwardRuleListRequest &request);
+                void DescribeForwardRuleListAsync(const Model::DescribeForwardRuleListRequest& request, const DescribeForwardRuleListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeForwardRuleListOutcomeCallable DescribeForwardRuleListCallable(const Model::DescribeForwardRuleListRequest& request);
 
                 /**
                  *This API is used to get the list of Private DNS accounts.
