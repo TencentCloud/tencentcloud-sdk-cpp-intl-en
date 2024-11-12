@@ -68,15 +68,27 @@ namespace TencentCloud
                     bool BatchNumberHasBeenSet() const;
 
                     /**
-                     * 获取Pause policy between batches. Default value: Automatic. Valid values: <br><li>FIRST_BATCH_PAUSE: Pause after the first batch update completes.</li> <li>BATCH_INTERVAL_PAUSE: Pause between each batch update.</li> <li>AUTOMATIC: No pauses.
-                     * @return BatchPause Pause policy between batches. Default value: Automatic. Valid values: <br><li>FIRST_BATCH_PAUSE: Pause after the first batch update completes.</li> <li>BATCH_INTERVAL_PAUSE: Pause between each batch update.</li> <li>AUTOMATIC: No pauses.
+                     * 获取Pause policy between batches. Default value: Automatic. Valid values:
+<li>FIRST_BATCH_PAUSE: Pause after the first batch of updates is completed.</li>
+<li>BATCH_INTERVAL_PAUSE: Pause between batches.</li>
+<li>AUTOMATIC: Do not pause.</li>
+                     * @return BatchPause Pause policy between batches. Default value: Automatic. Valid values:
+<li>FIRST_BATCH_PAUSE: Pause after the first batch of updates is completed.</li>
+<li>BATCH_INTERVAL_PAUSE: Pause between batches.</li>
+<li>AUTOMATIC: Do not pause.</li>
                      * 
                      */
                     std::string GetBatchPause() const;
 
                     /**
-                     * 设置Pause policy between batches. Default value: Automatic. Valid values: <br><li>FIRST_BATCH_PAUSE: Pause after the first batch update completes.</li> <li>BATCH_INTERVAL_PAUSE: Pause between each batch update.</li> <li>AUTOMATIC: No pauses.
-                     * @param _batchPause Pause policy between batches. Default value: Automatic. Valid values: <br><li>FIRST_BATCH_PAUSE: Pause after the first batch update completes.</li> <li>BATCH_INTERVAL_PAUSE: Pause between each batch update.</li> <li>AUTOMATIC: No pauses.
+                     * 设置Pause policy between batches. Default value: Automatic. Valid values:
+<li>FIRST_BATCH_PAUSE: Pause after the first batch of updates is completed.</li>
+<li>BATCH_INTERVAL_PAUSE: Pause between batches.</li>
+<li>AUTOMATIC: Do not pause.</li>
+                     * @param _batchPause Pause policy between batches. Default value: Automatic. Valid values:
+<li>FIRST_BATCH_PAUSE: Pause after the first batch of updates is completed.</li>
+<li>BATCH_INTERVAL_PAUSE: Pause between batches.</li>
+<li>AUTOMATIC: Do not pause.</li>
                      * 
                      */
                     void SetBatchPause(const std::string& _batchPause);
@@ -88,6 +100,27 @@ namespace TencentCloud
                      */
                     bool BatchPauseHasBeenSet() const;
 
+                    /**
+                     * 获取The maximum additional quantity of instances. After this parameter is set, create a batch of additional pay-as-you-go instances according to the launch configuration before the rolling update starts. After the rolling update is completed, the additional instances will be terminated.This parameter is used to ensure a certain number of instances available during the rolling update. The maximum additional quantity of instances cannot exceed the number of refreshing instances in a single batch of the rolling update. The rollback process does not support this parameter currently.
+                     * @return MaxSurge The maximum additional quantity of instances. After this parameter is set, create a batch of additional pay-as-you-go instances according to the launch configuration before the rolling update starts. After the rolling update is completed, the additional instances will be terminated.This parameter is used to ensure a certain number of instances available during the rolling update. The maximum additional quantity of instances cannot exceed the number of refreshing instances in a single batch of the rolling update. The rollback process does not support this parameter currently.
+                     * 
+                     */
+                    int64_t GetMaxSurge() const;
+
+                    /**
+                     * 设置The maximum additional quantity of instances. After this parameter is set, create a batch of additional pay-as-you-go instances according to the launch configuration before the rolling update starts. After the rolling update is completed, the additional instances will be terminated.This parameter is used to ensure a certain number of instances available during the rolling update. The maximum additional quantity of instances cannot exceed the number of refreshing instances in a single batch of the rolling update. The rollback process does not support this parameter currently.
+                     * @param _maxSurge The maximum additional quantity of instances. After this parameter is set, create a batch of additional pay-as-you-go instances according to the launch configuration before the rolling update starts. After the rolling update is completed, the additional instances will be terminated.This parameter is used to ensure a certain number of instances available during the rolling update. The maximum additional quantity of instances cannot exceed the number of refreshing instances in a single batch of the rolling update. The rollback process does not support this parameter currently.
+                     * 
+                     */
+                    void SetMaxSurge(const int64_t& _maxSurge);
+
+                    /**
+                     * 判断参数 MaxSurge 是否已赋值
+                     * @return MaxSurge 是否已赋值
+                     * 
+                     */
+                    bool MaxSurgeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -97,10 +130,19 @@ namespace TencentCloud
                     bool m_batchNumberHasBeenSet;
 
                     /**
-                     * Pause policy between batches. Default value: Automatic. Valid values: <br><li>FIRST_BATCH_PAUSE: Pause after the first batch update completes.</li> <li>BATCH_INTERVAL_PAUSE: Pause between each batch update.</li> <li>AUTOMATIC: No pauses.
+                     * Pause policy between batches. Default value: Automatic. Valid values:
+<li>FIRST_BATCH_PAUSE: Pause after the first batch of updates is completed.</li>
+<li>BATCH_INTERVAL_PAUSE: Pause between batches.</li>
+<li>AUTOMATIC: Do not pause.</li>
                      */
                     std::string m_batchPause;
                     bool m_batchPauseHasBeenSet;
+
+                    /**
+                     * The maximum additional quantity of instances. After this parameter is set, create a batch of additional pay-as-you-go instances according to the launch configuration before the rolling update starts. After the rolling update is completed, the additional instances will be terminated.This parameter is used to ensure a certain number of instances available during the rolling update. The maximum additional quantity of instances cannot exceed the number of refreshing instances in a single batch of the rolling update. The rollback process does not support this parameter currently.
+                     */
+                    int64_t m_maxSurge;
+                    bool m_maxSurgeHasBeenSet;
 
                 };
             }

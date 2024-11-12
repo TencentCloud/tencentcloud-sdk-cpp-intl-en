@@ -231,31 +231,19 @@ The `PendingCreate` and `CreateFailed` status only take effect when `SecretType`
                     bool SecretTypeHasBeenSet() const;
 
                     /**
-                     * 获取This parameter is valid only when SecretType is `1`.
- 
-An empty value indicates querying all types of Tencent Cloud service secrets.
-`Mysql`: queries MySQL database credentials.
-`Tdsql-mysql`: queries TDSQL MySQL database credentials.
-                     * @return ProductName This parameter is valid only when SecretType is `1`.
- 
-An empty value indicates querying all types of Tencent Cloud service secrets.
-`Mysql`: queries MySQL database credentials.
-`Tdsql-mysql`: queries TDSQL MySQL database credentials.
+                     * 获取This parameter only takes effect when the value of the SecretType parameter is 1.\nWhen the value of SecretType is `1`:
+If the ProductName value is empty, it means querying all types of Tencent Cloud product secrets;If the ProductName value is a specific cloud product value such as MySQL, it means querying MySQL database credential;If the ProductName value is multiple cloud product values, such as: Mysql, Tdsql-mysql, Tdsql_C_Mysql (multiple values are separated by commas in English), it means querying the secrets of three cloud product types;To query the list of supported cloud products, use the interface: `DescribeSupportedProducts`.
+                     * @return ProductName This parameter only takes effect when the value of the SecretType parameter is 1.\nWhen the value of SecretType is `1`:
+If the ProductName value is empty, it means querying all types of Tencent Cloud product secrets;If the ProductName value is a specific cloud product value such as MySQL, it means querying MySQL database credential;If the ProductName value is multiple cloud product values, such as: Mysql, Tdsql-mysql, Tdsql_C_Mysql (multiple values are separated by commas in English), it means querying the secrets of three cloud product types;To query the list of supported cloud products, use the interface: `DescribeSupportedProducts`.
                      * 
                      */
                     std::string GetProductName() const;
 
                     /**
-                     * 设置This parameter is valid only when SecretType is `1`.
- 
-An empty value indicates querying all types of Tencent Cloud service secrets.
-`Mysql`: queries MySQL database credentials.
-`Tdsql-mysql`: queries TDSQL MySQL database credentials.
-                     * @param _productName This parameter is valid only when SecretType is `1`.
- 
-An empty value indicates querying all types of Tencent Cloud service secrets.
-`Mysql`: queries MySQL database credentials.
-`Tdsql-mysql`: queries TDSQL MySQL database credentials.
+                     * 设置This parameter only takes effect when the value of the SecretType parameter is 1.\nWhen the value of SecretType is `1`:
+If the ProductName value is empty, it means querying all types of Tencent Cloud product secrets;If the ProductName value is a specific cloud product value such as MySQL, it means querying MySQL database credential;If the ProductName value is multiple cloud product values, such as: Mysql, Tdsql-mysql, Tdsql_C_Mysql (multiple values are separated by commas in English), it means querying the secrets of three cloud product types;To query the list of supported cloud products, use the interface: `DescribeSupportedProducts`.
+                     * @param _productName This parameter only takes effect when the value of the SecretType parameter is 1.\nWhen the value of SecretType is `1`:
+If the ProductName value is empty, it means querying all types of Tencent Cloud product secrets;If the ProductName value is a specific cloud product value such as MySQL, it means querying MySQL database credential;If the ProductName value is multiple cloud product values, such as: Mysql, Tdsql-mysql, Tdsql_C_Mysql (multiple values are separated by commas in English), it means querying the secrets of three cloud product types;To query the list of supported cloud products, use the interface: `DescribeSupportedProducts`.
                      * 
                      */
                     void SetProductName(const std::string& _productName);
@@ -322,11 +310,8 @@ The `PendingCreate` and `CreateFailed` status only take effect when `SecretType`
                     bool m_secretTypeHasBeenSet;
 
                     /**
-                     * This parameter is valid only when SecretType is `1`.
- 
-An empty value indicates querying all types of Tencent Cloud service secrets.
-`Mysql`: queries MySQL database credentials.
-`Tdsql-mysql`: queries TDSQL MySQL database credentials.
+                     * This parameter only takes effect when the value of the SecretType parameter is 1.\nWhen the value of SecretType is `1`:
+If the ProductName value is empty, it means querying all types of Tencent Cloud product secrets;If the ProductName value is a specific cloud product value such as MySQL, it means querying MySQL database credential;If the ProductName value is multiple cloud product values, such as: Mysql, Tdsql-mysql, Tdsql_C_Mysql (multiple values are separated by commas in English), it means querying the secrets of three cloud product types;To query the list of supported cloud products, use the interface: `DescribeSupportedProducts`.
                      */
                     std::string m_productName;
                     bool m_productNameHasBeenSet;

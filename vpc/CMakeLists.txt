@@ -368,6 +368,7 @@ set(vpc_public_header_model
   include/tencentcloud/vpc/v20170312/model/DeleteVpnGatewayRequest.h
   include/tencentcloud/vpc/v20170312/model/ReplaceRouteTableAssociationResponse.h
   include/tencentcloud/vpc/v20170312/model/AttachCcnInstancesRequest.h
+  include/tencentcloud/vpc/v20170312/model/ModifyBandwidthPackageBandwidthResponse.h
   include/tencentcloud/vpc/v20170312/model/DescribeDirectConnectGatewayCcnRoutesRequest.h
   include/tencentcloud/vpc/v20170312/model/CcnInstance.h
   include/tencentcloud/vpc/v20170312/model/DescribeLocalGatewayResponse.h
@@ -477,6 +478,7 @@ set(vpc_public_header_model
   include/tencentcloud/vpc/v20170312/model/AdjustPublicAddressRequest.h
   include/tencentcloud/vpc/v20170312/model/CreateDirectConnectGatewayResponse.h
   include/tencentcloud/vpc/v20170312/model/ModifyVpcEndPointAttributeRequest.h
+  include/tencentcloud/vpc/v20170312/model/ModifyBandwidthPackageBandwidthRequest.h
   include/tencentcloud/vpc/v20170312/model/DescribeTaskResultResponse.h
   include/tencentcloud/vpc/v20170312/model/DisassociateNetworkAclSubnetsRequest.h
   include/tencentcloud/vpc/v20170312/model/ModifyAddressTemplateGroupAttributeRequest.h
@@ -990,6 +992,7 @@ set(vpc_src
   src/v20170312/model/DeleteVpnGatewayRequest.cpp
   src/v20170312/model/ReplaceRouteTableAssociationResponse.cpp
   src/v20170312/model/AttachCcnInstancesRequest.cpp
+  src/v20170312/model/ModifyBandwidthPackageBandwidthResponse.cpp
   src/v20170312/model/DescribeDirectConnectGatewayCcnRoutesRequest.cpp
   src/v20170312/model/CcnInstance.cpp
   src/v20170312/model/DescribeLocalGatewayResponse.cpp
@@ -1099,6 +1102,7 @@ set(vpc_src
   src/v20170312/model/AdjustPublicAddressRequest.cpp
   src/v20170312/model/CreateDirectConnectGatewayResponse.cpp
   src/v20170312/model/ModifyVpcEndPointAttributeRequest.cpp
+  src/v20170312/model/ModifyBandwidthPackageBandwidthRequest.cpp
   src/v20170312/model/DescribeTaskResultResponse.cpp
   src/v20170312/model/DisassociateNetworkAclSubnetsRequest.cpp
   src/v20170312/model/ModifyAddressTemplateGroupAttributeRequest.cpp

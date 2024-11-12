@@ -415,6 +415,8 @@
 #include <tencentcloud/vpc/v20170312/model/ModifyAssistantCidrResponse.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyBandwidthPackageAttributeRequest.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyBandwidthPackageAttributeResponse.h>
+#include <tencentcloud/vpc/v20170312/model/ModifyBandwidthPackageBandwidthRequest.h>
+#include <tencentcloud/vpc/v20170312/model/ModifyBandwidthPackageBandwidthResponse.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyCcnAttachedInstancesAttributeRequest.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyCcnAttachedInstancesAttributeResponse.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyCcnAttributeRequest.h>
@@ -1137,6 +1139,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyBandwidthPackageAttributeResponse> ModifyBandwidthPackageAttributeOutcome;
                 typedef std::future<ModifyBandwidthPackageAttributeOutcome> ModifyBandwidthPackageAttributeOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::ModifyBandwidthPackageAttributeRequest&, ModifyBandwidthPackageAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyBandwidthPackageAttributeAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyBandwidthPackageBandwidthResponse> ModifyBandwidthPackageBandwidthOutcome;
+                typedef std::future<ModifyBandwidthPackageBandwidthOutcome> ModifyBandwidthPackageBandwidthOutcomeCallable;
+                typedef std::function<void(const VpcClient*, const Model::ModifyBandwidthPackageBandwidthRequest&, ModifyBandwidthPackageBandwidthOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyBandwidthPackageBandwidthAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyCcnAttachedInstancesAttributeResponse> ModifyCcnAttachedInstancesAttributeOutcome;
                 typedef std::future<ModifyCcnAttachedInstancesAttributeOutcome> ModifyCcnAttachedInstancesAttributeOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::ModifyCcnAttachedInstancesAttributeRequest&, ModifyCcnAttachedInstancesAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyCcnAttachedInstancesAttributeAsyncHandler;
@@ -3249,6 +3254,15 @@ This API is completed asynchronously. If you need to query the execution result 
                 ModifyBandwidthPackageAttributeOutcome ModifyBandwidthPackageAttribute(const Model::ModifyBandwidthPackageAttributeRequest &request);
                 void ModifyBandwidthPackageAttributeAsync(const Model::ModifyBandwidthPackageAttributeRequest& request, const ModifyBandwidthPackageAttributeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyBandwidthPackageAttributeOutcomeCallable ModifyBandwidthPackageAttributeCallable(const Model::ModifyBandwidthPackageAttributeRequest& request);
+
+                /**
+                 *This API is used to adjust the bandwidth of a [bandwidth package](https://www.tencentcloud.com/document/product/684/15245).
+                 * @param req ModifyBandwidthPackageBandwidthRequest
+                 * @return ModifyBandwidthPackageBandwidthOutcome
+                 */
+                ModifyBandwidthPackageBandwidthOutcome ModifyBandwidthPackageBandwidth(const Model::ModifyBandwidthPackageBandwidthRequest &request);
+                void ModifyBandwidthPackageBandwidthAsync(const Model::ModifyBandwidthPackageBandwidthRequest& request, const ModifyBandwidthPackageBandwidthAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyBandwidthPackageBandwidthOutcomeCallable ModifyBandwidthPackageBandwidthCallable(const Model::ModifyBandwidthPackageBandwidthRequest& request);
 
                 /**
                  *This API is used to modify CCN-associated instance attributes. Currently, only the `description` can be modified.
