@@ -53,6 +53,8 @@
 #include <tencentcloud/teo/v20220901/model/CreateL4ProxyResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateL4ProxyRulesRequest.h>
 #include <tencentcloud/teo/v20220901/model/CreateL4ProxyRulesResponse.h>
+#include <tencentcloud/teo/v20220901/model/CreateLoadBalancerRequest.h>
+#include <tencentcloud/teo/v20220901/model/CreateLoadBalancerResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateOriginGroupRequest.h>
 #include <tencentcloud/teo/v20220901/model/CreateOriginGroupResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreatePlanRequest.h>
@@ -91,6 +93,8 @@
 #include <tencentcloud/teo/v20220901/model/DeleteL4ProxyResponse.h>
 #include <tencentcloud/teo/v20220901/model/DeleteL4ProxyRulesRequest.h>
 #include <tencentcloud/teo/v20220901/model/DeleteL4ProxyRulesResponse.h>
+#include <tencentcloud/teo/v20220901/model/DeleteLoadBalancerRequest.h>
+#include <tencentcloud/teo/v20220901/model/DeleteLoadBalancerResponse.h>
 #include <tencentcloud/teo/v20220901/model/DeleteOriginGroupRequest.h>
 #include <tencentcloud/teo/v20220901/model/DeleteOriginGroupResponse.h>
 #include <tencentcloud/teo/v20220901/model/DeleteRealtimeLogDeliveryTaskRequest.h>
@@ -151,8 +155,12 @@
 #include <tencentcloud/teo/v20220901/model/DescribeL4ProxyResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeL4ProxyRulesRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeL4ProxyRulesResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeLoadBalancerListRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeLoadBalancerListResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeOriginGroupRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeOriginGroupResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeOriginGroupHealthStatusRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeOriginGroupHealthStatusResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeOriginProtectionRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeOriginProtectionResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeOverviewL7DataRequest.h>
@@ -233,6 +241,8 @@
 #include <tencentcloud/teo/v20220901/model/ModifyL4ProxyRulesStatusResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyL4ProxyStatusRequest.h>
 #include <tencentcloud/teo/v20220901/model/ModifyL4ProxyStatusResponse.h>
+#include <tencentcloud/teo/v20220901/model/ModifyLoadBalancerRequest.h>
+#include <tencentcloud/teo/v20220901/model/ModifyLoadBalancerResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyOriginGroupRequest.h>
 #include <tencentcloud/teo/v20220901/model/ModifyOriginGroupResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyPlanRequest.h>
@@ -316,6 +326,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateL4ProxyRulesResponse> CreateL4ProxyRulesOutcome;
                 typedef std::future<CreateL4ProxyRulesOutcome> CreateL4ProxyRulesOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CreateL4ProxyRulesRequest&, CreateL4ProxyRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateL4ProxyRulesAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateLoadBalancerResponse> CreateLoadBalancerOutcome;
+                typedef std::future<CreateLoadBalancerOutcome> CreateLoadBalancerOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::CreateLoadBalancerRequest&, CreateLoadBalancerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLoadBalancerAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateOriginGroupResponse> CreateOriginGroupOutcome;
                 typedef std::future<CreateOriginGroupOutcome> CreateOriginGroupOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CreateOriginGroupRequest&, CreateOriginGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateOriginGroupAsyncHandler;
@@ -373,6 +386,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteL4ProxyRulesResponse> DeleteL4ProxyRulesOutcome;
                 typedef std::future<DeleteL4ProxyRulesOutcome> DeleteL4ProxyRulesOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DeleteL4ProxyRulesRequest&, DeleteL4ProxyRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteL4ProxyRulesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteLoadBalancerResponse> DeleteLoadBalancerOutcome;
+                typedef std::future<DeleteLoadBalancerOutcome> DeleteLoadBalancerOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DeleteLoadBalancerRequest&, DeleteLoadBalancerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLoadBalancerAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteOriginGroupResponse> DeleteOriginGroupOutcome;
                 typedef std::future<DeleteOriginGroupOutcome> DeleteOriginGroupOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DeleteOriginGroupRequest&, DeleteOriginGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteOriginGroupAsyncHandler;
@@ -463,9 +479,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeL4ProxyRulesResponse> DescribeL4ProxyRulesOutcome;
                 typedef std::future<DescribeL4ProxyRulesOutcome> DescribeL4ProxyRulesOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeL4ProxyRulesRequest&, DescribeL4ProxyRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeL4ProxyRulesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeLoadBalancerListResponse> DescribeLoadBalancerListOutcome;
+                typedef std::future<DescribeLoadBalancerListOutcome> DescribeLoadBalancerListOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeLoadBalancerListRequest&, DescribeLoadBalancerListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLoadBalancerListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeOriginGroupResponse> DescribeOriginGroupOutcome;
                 typedef std::future<DescribeOriginGroupOutcome> DescribeOriginGroupOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeOriginGroupRequest&, DescribeOriginGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeOriginGroupAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeOriginGroupHealthStatusResponse> DescribeOriginGroupHealthStatusOutcome;
+                typedef std::future<DescribeOriginGroupHealthStatusOutcome> DescribeOriginGroupHealthStatusOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeOriginGroupHealthStatusRequest&, DescribeOriginGroupHealthStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeOriginGroupHealthStatusAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeOriginProtectionResponse> DescribeOriginProtectionOutcome;
                 typedef std::future<DescribeOriginProtectionOutcome> DescribeOriginProtectionOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeOriginProtectionRequest&, DescribeOriginProtectionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeOriginProtectionAsyncHandler;
@@ -586,6 +608,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyL4ProxyStatusResponse> ModifyL4ProxyStatusOutcome;
                 typedef std::future<ModifyL4ProxyStatusOutcome> ModifyL4ProxyStatusOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ModifyL4ProxyStatusRequest&, ModifyL4ProxyStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyL4ProxyStatusAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyLoadBalancerResponse> ModifyLoadBalancerOutcome;
+                typedef std::future<ModifyLoadBalancerOutcome> ModifyLoadBalancerOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::ModifyLoadBalancerRequest&, ModifyLoadBalancerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLoadBalancerAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyOriginGroupResponse> ModifyOriginGroupOutcome;
                 typedef std::future<ModifyOriginGroupOutcome> ModifyOriginGroupOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ModifyOriginGroupRequest&, ModifyOriginGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyOriginGroupAsyncHandler;
@@ -763,6 +788,15 @@ For sites connected via the CNAME, if you have not verified the ownership of the
                 CreateL4ProxyRulesOutcomeCallable CreateL4ProxyRulesCallable(const Model::CreateL4ProxyRulesRequest& request);
 
                 /**
+                 *This API is used to create a LoadBalancer. For details, see [Quickly Create Load Balancers](https://intl.cloud.tencent.com/document/product/1552/104223?from_cn_redirect=1). The load balancing feature is in beta test. If you need to use it, [contact us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service).
+                 * @param req CreateLoadBalancerRequest
+                 * @return CreateLoadBalancerOutcome
+                 */
+                CreateLoadBalancerOutcome CreateLoadBalancer(const Model::CreateLoadBalancerRequest &request);
+                void CreateLoadBalancerAsync(const Model::CreateLoadBalancerRequest& request, const CreateLoadBalancerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateLoadBalancerOutcomeCallable CreateLoadBalancerCallable(const Model::CreateLoadBalancerRequest& request);
+
+                /**
                  *This API is used to create an origin group for easy management. The created origin server group can be used for **adding acceleration domain names** and **layer-4 proxy configuration**.
                  * @param req CreateOriginGroupRequest
                  * @return CreateOriginGroupOutcome
@@ -938,6 +972,15 @@ If there are already EdgeOne plans under the current account, it is recommended 
                 DeleteL4ProxyRulesOutcome DeleteL4ProxyRules(const Model::DeleteL4ProxyRulesRequest &request);
                 void DeleteL4ProxyRulesAsync(const Model::DeleteL4ProxyRulesRequest& request, const DeleteL4ProxyRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteL4ProxyRulesOutcomeCallable DeleteL4ProxyRulesCallable(const Model::DeleteL4ProxyRulesRequest& request);
+
+                /**
+                 *This API is used to delete a LoadBalancer. If the LoadBalancer is referenced by other services (for example, Layer-4 proxy), the LoadBalancer cannot be deleted until the reference relationship is removed. The load balancing feature is in beta test. If you need to use it, [contact us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service).
+                 * @param req DeleteLoadBalancerRequest
+                 * @return DeleteLoadBalancerOutcome
+                 */
+                DeleteLoadBalancerOutcome DeleteLoadBalancer(const Model::DeleteLoadBalancerRequest &request);
+                void DeleteLoadBalancerAsync(const Model::DeleteLoadBalancerRequest& request, const DeleteLoadBalancerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteLoadBalancerOutcomeCallable DeleteLoadBalancerCallable(const Model::DeleteLoadBalancerRequest& request);
 
                 /**
                  *This API is used to delete an origin group. Note that an origin group can not be deleted if it is referenced by services (e.g. L4 Proxy, domain name service, load balancing, rule engines). 
@@ -1210,6 +1253,15 @@ If there are already EdgeOne plans under the current account, it is recommended 
                 DescribeL4ProxyRulesOutcomeCallable DescribeL4ProxyRulesCallable(const Model::DescribeL4ProxyRulesRequest& request);
 
                 /**
+                 *This API is used to query the LoadBalancer list. The load balancing feature is in beta test. If you need to use it, [contact us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service).
+                 * @param req DescribeLoadBalancerListRequest
+                 * @return DescribeLoadBalancerListOutcome
+                 */
+                DescribeLoadBalancerListOutcome DescribeLoadBalancerList(const Model::DescribeLoadBalancerListRequest &request);
+                void DescribeLoadBalancerListAsync(const Model::DescribeLoadBalancerListRequest& request, const DescribeLoadBalancerListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeLoadBalancerListOutcomeCallable DescribeLoadBalancerListCallable(const Model::DescribeLoadBalancerListRequest& request);
+
+                /**
                  *This API is used to obtain a list of origin groups.
                  * @param req DescribeOriginGroupRequest
                  * @return DescribeOriginGroupOutcome
@@ -1217,6 +1269,15 @@ If there are already EdgeOne plans under the current account, it is recommended 
                 DescribeOriginGroupOutcome DescribeOriginGroup(const Model::DescribeOriginGroupRequest &request);
                 void DescribeOriginGroupAsync(const Model::DescribeOriginGroupRequest& request, const DescribeOriginGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeOriginGroupOutcomeCallable DescribeOriginGroupCallable(const Model::DescribeOriginGroupRequest& request);
+
+                /**
+                 *This API is used to query the health status of origin server groups under a LoadBalancer. The load balancing feature is in beta test. If you need to use it, [contact us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service).
+                 * @param req DescribeOriginGroupHealthStatusRequest
+                 * @return DescribeOriginGroupHealthStatusOutcome
+                 */
+                DescribeOriginGroupHealthStatusOutcome DescribeOriginGroupHealthStatus(const Model::DescribeOriginGroupHealthStatusRequest &request);
+                void DescribeOriginGroupHealthStatusAsync(const Model::DescribeOriginGroupHealthStatusRequest& request, const DescribeOriginGroupHealthStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeOriginGroupHealthStatusOutcomeCallable DescribeOriginGroupHealthStatusCallable(const Model::DescribeOriginGroupHealthStatusRequest& request);
 
                 /**
                  *This API is used to query the origin protection configuration.
@@ -1321,7 +1382,7 @@ This API is used to query the configuration information of an IP group, includin
                 DescribeTimingL4DataOutcomeCallable DescribeTimingL4DataCallable(const Model::DescribeTimingL4DataRequest& request);
 
                 /**
-                 *This API is used to query the L7 data recorded over time.
+                 *This API is used to query the time series data of the L7 domain name. Note that there is a delay of about 10 minutes for this API. It is recommended to pull data from 10 minutes before the current time.
                  * @param req DescribeTimingL7AnalysisDataRequest
                  * @return DescribeTimingL7AnalysisDataOutcome
                  */
@@ -1330,7 +1391,7 @@ This API is used to query the configuration information of an IP group, includin
                 DescribeTimingL7AnalysisDataOutcomeCallable DescribeTimingL7AnalysisDataCallable(const Model::DescribeTimingL7AnalysisDataRequest& request);
 
                 /**
-                 *This API is used to query the time-series L7 cached data.
+                 *This API is used to query the time series traffic data of the L7 cache analysis. It will be deprecated. Use the <a href="https://intl.cloud.tencent.com/document/product/1552/80648?from_cn_redirect=1">DescribeTimingL7AnalysisData</a> API instead.
                  * @param req DescribeTimingL7CacheDataRequest
                  * @return DescribeTimingL7CacheDataOutcome
                  */
@@ -1339,7 +1400,7 @@ This API is used to query the configuration information of an IP group, includin
                 DescribeTimingL7CacheDataOutcomeCallable DescribeTimingL7CacheDataCallable(const Model::DescribeTimingL7CacheDataRequest& request);
 
                 /**
-                 *This API is used to query the top-ranked L7 traffic data.
+                 *This API is used to query the top N data of the L7 domain name by a specified dimension. Note that there is a delay of about 10 minutes for this API. It is recommended to pull data from 10 minutes before the current time.
                  * @param req DescribeTopL7AnalysisDataRequest
                  * @return DescribeTopL7AnalysisDataOutcome
                  */
@@ -1348,7 +1409,7 @@ This API is used to query the configuration information of an IP group, includin
                 DescribeTopL7AnalysisDataOutcomeCallable DescribeTopL7AnalysisDataCallable(const Model::DescribeTopL7AnalysisDataRequest& request);
 
                 /**
-                 *This API is used to query the cached L7 top-ranked data.
+                 *This API is used to query the top N data of the L7 cache analysis. It will be deprecated. Use the <a href="https://intl.cloud.tencent.com/document/product/1552/80646?from_cn_redirect=1"> DescribeTopL7AnalysisData</a> API instead.
                  * @param req DescribeTopL7CacheDataRequest
                  * @return DescribeTopL7CacheDataOutcome
                  */
@@ -1595,6 +1656,15 @@ To use an external certificate, upload the certificate to [SSL Certificates Cons
                 ModifyL4ProxyStatusOutcomeCallable ModifyL4ProxyStatusCallable(const Model::ModifyL4ProxyStatusRequest& request);
 
                 /**
+                 *This API is used to modify LoadBalancer configuration. The load balancing feature is in beta test. If you need to use it, [contact us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service).
+                 * @param req ModifyLoadBalancerRequest
+                 * @return ModifyLoadBalancerOutcome
+                 */
+                ModifyLoadBalancerOutcome ModifyLoadBalancer(const Model::ModifyLoadBalancerRequest &request);
+                void ModifyLoadBalancerAsync(const Model::ModifyLoadBalancerRequest& request, const ModifyLoadBalancerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyLoadBalancerOutcomeCallable ModifyLoadBalancerCallable(const Model::ModifyLoadBalancerRequest& request);
+
+                /**
                  *This API is used to modify the configuration of an origin group. The original configuration will be overwritten. 
                  * @param req ModifyOriginGroupRequest
                  * @return ModifyOriginGroupOutcome
@@ -1613,7 +1683,7 @@ To use an external certificate, upload the certificate to [SSL Certificates Cons
                 ModifyPlanOutcomeCallable ModifyPlanCallable(const Model::ModifyPlanRequest& request);
 
                 /**
-                 *This API is used to modify the real-time log delivery task configuration. This API has the following restrictions:<li>Does not support modifying the destination type of the real-time log delivery task (TaskType);</li><li>Does not support modifying the data delivery type (LogType)</li><li>Does not support modifying the data delivery area (Area)</li><li>Does not support modifying the detailed destination configuration, such as log set and log topic, when the destination of the original real-time log delivery task is Tencent Cloud CLS.</li>
+                 *This API is used to modify the real-time log delivery task configuration. This API has the following restrictions:<li>Does not support modifying the destination type of the real-time log delivery task (TaskType);</li><li>Does not support modifying the data delivery type (LogType);</li><li>Does not support modifying the data delivery area (Area);</li><li>Does not support modifying the detailed destination configuration, such as log set and log topic, when the destination of the original real-time log delivery task is Tencent Cloud CLS.</li>
                  * @param req ModifyRealtimeLogDeliveryTaskRequest
                  * @return ModifyRealtimeLogDeliveryTaskOutcome
                  */

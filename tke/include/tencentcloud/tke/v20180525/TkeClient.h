@@ -37,6 +37,8 @@
 #include <tencentcloud/tke/v20180525/model/CheckInstancesUpgradeAbleResponse.h>
 #include <tencentcloud/tke/v20180525/model/CreateBackupStorageLocationRequest.h>
 #include <tencentcloud/tke/v20180525/model/CreateBackupStorageLocationResponse.h>
+#include <tencentcloud/tke/v20180525/model/CreateCLSLogConfigRequest.h>
+#include <tencentcloud/tke/v20180525/model/CreateCLSLogConfigResponse.h>
 #include <tencentcloud/tke/v20180525/model/CreateClusterRequest.h>
 #include <tencentcloud/tke/v20180525/model/CreateClusterResponse.h>
 #include <tencentcloud/tke/v20180525/model/CreateClusterEndpointRequest.h>
@@ -59,6 +61,8 @@
 #include <tencentcloud/tke/v20180525/model/CreateEdgeCVMInstancesResponse.h>
 #include <tencentcloud/tke/v20180525/model/CreateEdgeLogConfigRequest.h>
 #include <tencentcloud/tke/v20180525/model/CreateEdgeLogConfigResponse.h>
+#include <tencentcloud/tke/v20180525/model/CreateEksLogConfigRequest.h>
+#include <tencentcloud/tke/v20180525/model/CreateEksLogConfigResponse.h>
 #include <tencentcloud/tke/v20180525/model/CreatePrometheusAlertRuleRequest.h>
 #include <tencentcloud/tke/v20180525/model/CreatePrometheusAlertRuleResponse.h>
 #include <tencentcloud/tke/v20180525/model/CreateTKEEdgeClusterRequest.h>
@@ -93,6 +97,8 @@
 #include <tencentcloud/tke/v20180525/model/DeleteEdgeCVMInstancesResponse.h>
 #include <tencentcloud/tke/v20180525/model/DeleteEdgeClusterInstancesRequest.h>
 #include <tencentcloud/tke/v20180525/model/DeleteEdgeClusterInstancesResponse.h>
+#include <tencentcloud/tke/v20180525/model/DeleteLogConfigsRequest.h>
+#include <tencentcloud/tke/v20180525/model/DeleteLogConfigsResponse.h>
 #include <tencentcloud/tke/v20180525/model/DeletePrometheusAlertRuleRequest.h>
 #include <tencentcloud/tke/v20180525/model/DeletePrometheusAlertRuleResponse.h>
 #include <tencentcloud/tke/v20180525/model/DeleteTKEEdgeClusterRequest.h>
@@ -107,6 +113,8 @@
 #include <tencentcloud/tke/v20180525/model/DescribeAvailableTKEEdgeVersionResponse.h>
 #include <tencentcloud/tke/v20180525/model/DescribeBackupStorageLocationsRequest.h>
 #include <tencentcloud/tke/v20180525/model/DescribeBackupStorageLocationsResponse.h>
+#include <tencentcloud/tke/v20180525/model/DescribeBatchModifyTagsStatusRequest.h>
+#include <tencentcloud/tke/v20180525/model/DescribeBatchModifyTagsStatusResponse.h>
 #include <tencentcloud/tke/v20180525/model/DescribeClusterAsGroupOptionRequest.h>
 #include <tencentcloud/tke/v20180525/model/DescribeClusterAsGroupOptionResponse.h>
 #include <tencentcloud/tke/v20180525/model/DescribeClusterAsGroupsRequest.h>
@@ -121,6 +129,8 @@
 #include <tencentcloud/tke/v20180525/model/DescribeClusterEndpointVipStatusResponse.h>
 #include <tencentcloud/tke/v20180525/model/DescribeClusterEndpointsRequest.h>
 #include <tencentcloud/tke/v20180525/model/DescribeClusterEndpointsResponse.h>
+#include <tencentcloud/tke/v20180525/model/DescribeClusterExtraArgsRequest.h>
+#include <tencentcloud/tke/v20180525/model/DescribeClusterExtraArgsResponse.h>
 #include <tencentcloud/tke/v20180525/model/DescribeClusterInstancesRequest.h>
 #include <tencentcloud/tke/v20180525/model/DescribeClusterInstancesResponse.h>
 #include <tencentcloud/tke/v20180525/model/DescribeClusterKubeconfigRequest.h>
@@ -167,16 +177,30 @@
 #include <tencentcloud/tke/v20180525/model/DescribeEncryptionStatusResponse.h>
 #include <tencentcloud/tke/v20180525/model/DescribeExistedInstancesRequest.h>
 #include <tencentcloud/tke/v20180525/model/DescribeExistedInstancesResponse.h>
+#include <tencentcloud/tke/v20180525/model/DescribeExternalNodeSupportConfigRequest.h>
+#include <tencentcloud/tke/v20180525/model/DescribeExternalNodeSupportConfigResponse.h>
+#include <tencentcloud/tke/v20180525/model/DescribeIPAMDRequest.h>
+#include <tencentcloud/tke/v20180525/model/DescribeIPAMDResponse.h>
 #include <tencentcloud/tke/v20180525/model/DescribeImagesRequest.h>
 #include <tencentcloud/tke/v20180525/model/DescribeImagesResponse.h>
+#include <tencentcloud/tke/v20180525/model/DescribeLogConfigsRequest.h>
+#include <tencentcloud/tke/v20180525/model/DescribeLogConfigsResponse.h>
+#include <tencentcloud/tke/v20180525/model/DescribeLogSwitchesRequest.h>
+#include <tencentcloud/tke/v20180525/model/DescribeLogSwitchesResponse.h>
+#include <tencentcloud/tke/v20180525/model/DescribePodChargeInfoRequest.h>
+#include <tencentcloud/tke/v20180525/model/DescribePodChargeInfoResponse.h>
 #include <tencentcloud/tke/v20180525/model/DescribePrometheusInstanceRequest.h>
 #include <tencentcloud/tke/v20180525/model/DescribePrometheusInstanceResponse.h>
 #include <tencentcloud/tke/v20180525/model/DescribeRegionsRequest.h>
 #include <tencentcloud/tke/v20180525/model/DescribeRegionsResponse.h>
+#include <tencentcloud/tke/v20180525/model/DescribeReservedInstanceUtilizationRateRequest.h>
+#include <tencentcloud/tke/v20180525/model/DescribeReservedInstanceUtilizationRateResponse.h>
 #include <tencentcloud/tke/v20180525/model/DescribeResourceUsageRequest.h>
 #include <tencentcloud/tke/v20180525/model/DescribeResourceUsageResponse.h>
 #include <tencentcloud/tke/v20180525/model/DescribeRouteTableConflictsRequest.h>
 #include <tencentcloud/tke/v20180525/model/DescribeRouteTableConflictsResponse.h>
+#include <tencentcloud/tke/v20180525/model/DescribeSupportedRuntimeRequest.h>
+#include <tencentcloud/tke/v20180525/model/DescribeSupportedRuntimeResponse.h>
 #include <tencentcloud/tke/v20180525/model/DescribeTKEEdgeClusterCredentialRequest.h>
 #include <tencentcloud/tke/v20180525/model/DescribeTKEEdgeClusterCredentialResponse.h>
 #include <tencentcloud/tke/v20180525/model/DescribeTKEEdgeClusterStatusRequest.h>
@@ -223,8 +247,14 @@
 #include <tencentcloud/tke/v20180525/model/ModifyClusterAuthenticationOptionsResponse.h>
 #include <tencentcloud/tke/v20180525/model/ModifyClusterEndpointSPRequest.h>
 #include <tencentcloud/tke/v20180525/model/ModifyClusterEndpointSPResponse.h>
+#include <tencentcloud/tke/v20180525/model/ModifyClusterImageRequest.h>
+#include <tencentcloud/tke/v20180525/model/ModifyClusterImageResponse.h>
 #include <tencentcloud/tke/v20180525/model/ModifyClusterNodePoolRequest.h>
 #include <tencentcloud/tke/v20180525/model/ModifyClusterNodePoolResponse.h>
+#include <tencentcloud/tke/v20180525/model/ModifyClusterRuntimeConfigRequest.h>
+#include <tencentcloud/tke/v20180525/model/ModifyClusterRuntimeConfigResponse.h>
+#include <tencentcloud/tke/v20180525/model/ModifyClusterTagsRequest.h>
+#include <tencentcloud/tke/v20180525/model/ModifyClusterTagsResponse.h>
 #include <tencentcloud/tke/v20180525/model/ModifyClusterVirtualNodePoolRequest.h>
 #include <tencentcloud/tke/v20180525/model/ModifyClusterVirtualNodePoolResponse.h>
 #include <tencentcloud/tke/v20180525/model/ModifyNodePoolInstanceTypesRequest.h>
@@ -282,6 +312,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateBackupStorageLocationResponse> CreateBackupStorageLocationOutcome;
                 typedef std::future<CreateBackupStorageLocationOutcome> CreateBackupStorageLocationOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::CreateBackupStorageLocationRequest&, CreateBackupStorageLocationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateBackupStorageLocationAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateCLSLogConfigResponse> CreateCLSLogConfigOutcome;
+                typedef std::future<CreateCLSLogConfigOutcome> CreateCLSLogConfigOutcomeCallable;
+                typedef std::function<void(const TkeClient*, const Model::CreateCLSLogConfigRequest&, CreateCLSLogConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCLSLogConfigAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateClusterResponse> CreateClusterOutcome;
                 typedef std::future<CreateClusterOutcome> CreateClusterOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::CreateClusterRequest&, CreateClusterOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateClusterAsyncHandler;
@@ -315,6 +348,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateEdgeLogConfigResponse> CreateEdgeLogConfigOutcome;
                 typedef std::future<CreateEdgeLogConfigOutcome> CreateEdgeLogConfigOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::CreateEdgeLogConfigRequest&, CreateEdgeLogConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateEdgeLogConfigAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateEksLogConfigResponse> CreateEksLogConfigOutcome;
+                typedef std::future<CreateEksLogConfigOutcome> CreateEksLogConfigOutcomeCallable;
+                typedef std::function<void(const TkeClient*, const Model::CreateEksLogConfigRequest&, CreateEksLogConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateEksLogConfigAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreatePrometheusAlertRuleResponse> CreatePrometheusAlertRuleOutcome;
                 typedef std::future<CreatePrometheusAlertRuleOutcome> CreatePrometheusAlertRuleOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::CreatePrometheusAlertRuleRequest&, CreatePrometheusAlertRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreatePrometheusAlertRuleAsyncHandler;
@@ -366,6 +402,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteEdgeClusterInstancesResponse> DeleteEdgeClusterInstancesOutcome;
                 typedef std::future<DeleteEdgeClusterInstancesOutcome> DeleteEdgeClusterInstancesOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::DeleteEdgeClusterInstancesRequest&, DeleteEdgeClusterInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteEdgeClusterInstancesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteLogConfigsResponse> DeleteLogConfigsOutcome;
+                typedef std::future<DeleteLogConfigsOutcome> DeleteLogConfigsOutcomeCallable;
+                typedef std::function<void(const TkeClient*, const Model::DeleteLogConfigsRequest&, DeleteLogConfigsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLogConfigsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeletePrometheusAlertRuleResponse> DeletePrometheusAlertRuleOutcome;
                 typedef std::future<DeletePrometheusAlertRuleOutcome> DeletePrometheusAlertRuleOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::DeletePrometheusAlertRuleRequest&, DeletePrometheusAlertRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeletePrometheusAlertRuleAsyncHandler;
@@ -387,6 +426,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeBackupStorageLocationsResponse> DescribeBackupStorageLocationsOutcome;
                 typedef std::future<DescribeBackupStorageLocationsOutcome> DescribeBackupStorageLocationsOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::DescribeBackupStorageLocationsRequest&, DescribeBackupStorageLocationsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBackupStorageLocationsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBatchModifyTagsStatusResponse> DescribeBatchModifyTagsStatusOutcome;
+                typedef std::future<DescribeBatchModifyTagsStatusOutcome> DescribeBatchModifyTagsStatusOutcomeCallable;
+                typedef std::function<void(const TkeClient*, const Model::DescribeBatchModifyTagsStatusRequest&, DescribeBatchModifyTagsStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBatchModifyTagsStatusAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeClusterAsGroupOptionResponse> DescribeClusterAsGroupOptionOutcome;
                 typedef std::future<DescribeClusterAsGroupOptionOutcome> DescribeClusterAsGroupOptionOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::DescribeClusterAsGroupOptionRequest&, DescribeClusterAsGroupOptionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeClusterAsGroupOptionAsyncHandler;
@@ -408,6 +450,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeClusterEndpointsResponse> DescribeClusterEndpointsOutcome;
                 typedef std::future<DescribeClusterEndpointsOutcome> DescribeClusterEndpointsOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::DescribeClusterEndpointsRequest&, DescribeClusterEndpointsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeClusterEndpointsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeClusterExtraArgsResponse> DescribeClusterExtraArgsOutcome;
+                typedef std::future<DescribeClusterExtraArgsOutcome> DescribeClusterExtraArgsOutcomeCallable;
+                typedef std::function<void(const TkeClient*, const Model::DescribeClusterExtraArgsRequest&, DescribeClusterExtraArgsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeClusterExtraArgsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeClusterInstancesResponse> DescribeClusterInstancesOutcome;
                 typedef std::future<DescribeClusterInstancesOutcome> DescribeClusterInstancesOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::DescribeClusterInstancesRequest&, DescribeClusterInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeClusterInstancesAsyncHandler;
@@ -477,21 +522,42 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeExistedInstancesResponse> DescribeExistedInstancesOutcome;
                 typedef std::future<DescribeExistedInstancesOutcome> DescribeExistedInstancesOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::DescribeExistedInstancesRequest&, DescribeExistedInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeExistedInstancesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeExternalNodeSupportConfigResponse> DescribeExternalNodeSupportConfigOutcome;
+                typedef std::future<DescribeExternalNodeSupportConfigOutcome> DescribeExternalNodeSupportConfigOutcomeCallable;
+                typedef std::function<void(const TkeClient*, const Model::DescribeExternalNodeSupportConfigRequest&, DescribeExternalNodeSupportConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeExternalNodeSupportConfigAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeIPAMDResponse> DescribeIPAMDOutcome;
+                typedef std::future<DescribeIPAMDOutcome> DescribeIPAMDOutcomeCallable;
+                typedef std::function<void(const TkeClient*, const Model::DescribeIPAMDRequest&, DescribeIPAMDOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeIPAMDAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeImagesResponse> DescribeImagesOutcome;
                 typedef std::future<DescribeImagesOutcome> DescribeImagesOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::DescribeImagesRequest&, DescribeImagesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeImagesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeLogConfigsResponse> DescribeLogConfigsOutcome;
+                typedef std::future<DescribeLogConfigsOutcome> DescribeLogConfigsOutcomeCallable;
+                typedef std::function<void(const TkeClient*, const Model::DescribeLogConfigsRequest&, DescribeLogConfigsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLogConfigsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeLogSwitchesResponse> DescribeLogSwitchesOutcome;
+                typedef std::future<DescribeLogSwitchesOutcome> DescribeLogSwitchesOutcomeCallable;
+                typedef std::function<void(const TkeClient*, const Model::DescribeLogSwitchesRequest&, DescribeLogSwitchesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLogSwitchesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribePodChargeInfoResponse> DescribePodChargeInfoOutcome;
+                typedef std::future<DescribePodChargeInfoOutcome> DescribePodChargeInfoOutcomeCallable;
+                typedef std::function<void(const TkeClient*, const Model::DescribePodChargeInfoRequest&, DescribePodChargeInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePodChargeInfoAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribePrometheusInstanceResponse> DescribePrometheusInstanceOutcome;
                 typedef std::future<DescribePrometheusInstanceOutcome> DescribePrometheusInstanceOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::DescribePrometheusInstanceRequest&, DescribePrometheusInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePrometheusInstanceAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeRegionsResponse> DescribeRegionsOutcome;
                 typedef std::future<DescribeRegionsOutcome> DescribeRegionsOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::DescribeRegionsRequest&, DescribeRegionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRegionsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeReservedInstanceUtilizationRateResponse> DescribeReservedInstanceUtilizationRateOutcome;
+                typedef std::future<DescribeReservedInstanceUtilizationRateOutcome> DescribeReservedInstanceUtilizationRateOutcomeCallable;
+                typedef std::function<void(const TkeClient*, const Model::DescribeReservedInstanceUtilizationRateRequest&, DescribeReservedInstanceUtilizationRateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeReservedInstanceUtilizationRateAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeResourceUsageResponse> DescribeResourceUsageOutcome;
                 typedef std::future<DescribeResourceUsageOutcome> DescribeResourceUsageOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::DescribeResourceUsageRequest&, DescribeResourceUsageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeResourceUsageAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeRouteTableConflictsResponse> DescribeRouteTableConflictsOutcome;
                 typedef std::future<DescribeRouteTableConflictsOutcome> DescribeRouteTableConflictsOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::DescribeRouteTableConflictsRequest&, DescribeRouteTableConflictsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRouteTableConflictsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeSupportedRuntimeResponse> DescribeSupportedRuntimeOutcome;
+                typedef std::future<DescribeSupportedRuntimeOutcome> DescribeSupportedRuntimeOutcomeCallable;
+                typedef std::function<void(const TkeClient*, const Model::DescribeSupportedRuntimeRequest&, DescribeSupportedRuntimeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSupportedRuntimeAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeTKEEdgeClusterCredentialResponse> DescribeTKEEdgeClusterCredentialOutcome;
                 typedef std::future<DescribeTKEEdgeClusterCredentialOutcome> DescribeTKEEdgeClusterCredentialOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::DescribeTKEEdgeClusterCredentialRequest&, DescribeTKEEdgeClusterCredentialOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTKEEdgeClusterCredentialAsyncHandler;
@@ -561,9 +627,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyClusterEndpointSPResponse> ModifyClusterEndpointSPOutcome;
                 typedef std::future<ModifyClusterEndpointSPOutcome> ModifyClusterEndpointSPOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::ModifyClusterEndpointSPRequest&, ModifyClusterEndpointSPOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyClusterEndpointSPAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyClusterImageResponse> ModifyClusterImageOutcome;
+                typedef std::future<ModifyClusterImageOutcome> ModifyClusterImageOutcomeCallable;
+                typedef std::function<void(const TkeClient*, const Model::ModifyClusterImageRequest&, ModifyClusterImageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyClusterImageAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyClusterNodePoolResponse> ModifyClusterNodePoolOutcome;
                 typedef std::future<ModifyClusterNodePoolOutcome> ModifyClusterNodePoolOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::ModifyClusterNodePoolRequest&, ModifyClusterNodePoolOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyClusterNodePoolAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyClusterRuntimeConfigResponse> ModifyClusterRuntimeConfigOutcome;
+                typedef std::future<ModifyClusterRuntimeConfigOutcome> ModifyClusterRuntimeConfigOutcomeCallable;
+                typedef std::function<void(const TkeClient*, const Model::ModifyClusterRuntimeConfigRequest&, ModifyClusterRuntimeConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyClusterRuntimeConfigAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyClusterTagsResponse> ModifyClusterTagsOutcome;
+                typedef std::future<ModifyClusterTagsOutcome> ModifyClusterTagsOutcomeCallable;
+                typedef std::function<void(const TkeClient*, const Model::ModifyClusterTagsRequest&, ModifyClusterTagsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyClusterTagsAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyClusterVirtualNodePoolResponse> ModifyClusterVirtualNodePoolOutcome;
                 typedef std::future<ModifyClusterVirtualNodePoolOutcome> ModifyClusterVirtualNodePoolOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::ModifyClusterVirtualNodePoolRequest&, ModifyClusterVirtualNodePoolOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyClusterVirtualNodePoolAsyncHandler;
@@ -664,6 +739,15 @@ namespace TencentCloud
                 CreateBackupStorageLocationOutcomeCallable CreateBackupStorageLocationCallable(const Model::CreateBackupStorageLocationRequest& request);
 
                 /**
+                 *This API is used to create log collection configuration.
+                 * @param req CreateCLSLogConfigRequest
+                 * @return CreateCLSLogConfigOutcome
+                 */
+                CreateCLSLogConfigOutcome CreateCLSLogConfig(const Model::CreateCLSLogConfigRequest &request);
+                void CreateCLSLogConfigAsync(const Model::CreateCLSLogConfigRequest& request, const CreateCLSLogConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateCLSLogConfigOutcomeCallable CreateCLSLogConfigCallable(const Model::CreateCLSLogConfigRequest& request);
+
+                /**
                  *This API is used to create a cluster.
                  * @param req CreateClusterRequest
                  * @return CreateClusterOutcome
@@ -718,7 +802,7 @@ namespace TencentCloud
                 CreateClusterRouteTableOutcomeCallable CreateClusterRouteTableCallable(const Model::CreateClusterRouteTableRequest& request);
 
                 /**
-                 *This API is used to create a virtual node.
+                 *This API is used to create the Pay-as-you-go Super Node.
                  * @param req CreateClusterVirtualNodeRequest
                  * @return CreateClusterVirtualNodeOutcome
                  */
@@ -727,7 +811,7 @@ namespace TencentCloud
                 CreateClusterVirtualNodeOutcomeCallable CreateClusterVirtualNodeCallable(const Model::CreateClusterVirtualNodeRequest& request);
 
                 /**
-                 *This API is used to create a virtual node pool.
+                 *This API is used to create the Super Node Pool.
                  * @param req CreateClusterVirtualNodePoolRequest
                  * @return CreateClusterVirtualNodePoolOutcome
                  */
@@ -761,6 +845,15 @@ namespace TencentCloud
                 CreateEdgeLogConfigOutcome CreateEdgeLogConfig(const Model::CreateEdgeLogConfigRequest &request);
                 void CreateEdgeLogConfigAsync(const Model::CreateEdgeLogConfigRequest& request, const CreateEdgeLogConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateEdgeLogConfigOutcomeCallable CreateEdgeLogConfigCallable(const Model::CreateEdgeLogConfigRequest& request);
+
+                /**
+                 *This API is used to create Log Collection Configuration for Elastic Cluster.
+                 * @param req CreateEksLogConfigRequest
+                 * @return CreateEksLogConfigOutcome
+                 */
+                CreateEksLogConfigOutcome CreateEksLogConfig(const Model::CreateEksLogConfigRequest &request);
+                void CreateEksLogConfigAsync(const Model::CreateEksLogConfigRequest& request, const CreateEksLogConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateEksLogConfigOutcomeCallable CreateEksLogConfigCallable(const Model::CreateEksLogConfigRequest& request);
 
                 /**
                  *This API is used to create an alarm rule.
@@ -871,7 +964,7 @@ namespace TencentCloud
                 DeleteClusterRouteTableOutcomeCallable DeleteClusterRouteTableCallable(const Model::DeleteClusterRouteTableRequest& request);
 
                 /**
-                 *This API is used to delete a virtual node.
+                 *This API is used to delete the super node.
                  * @param req DeleteClusterVirtualNodeRequest
                  * @return DeleteClusterVirtualNodeOutcome
                  */
@@ -880,7 +973,7 @@ namespace TencentCloud
                 DeleteClusterVirtualNodeOutcomeCallable DeleteClusterVirtualNodeCallable(const Model::DeleteClusterVirtualNodeRequest& request);
 
                 /**
-                 *This API is used to delete a virtual node pool.
+                 *This API is used to delete the Super Node Pool.
                  * @param req DeleteClusterVirtualNodePoolRequest
                  * @return DeleteClusterVirtualNodePoolOutcome
                  */
@@ -914,6 +1007,15 @@ namespace TencentCloud
                 DeleteEdgeClusterInstancesOutcome DeleteEdgeClusterInstances(const Model::DeleteEdgeClusterInstancesRequest &request);
                 void DeleteEdgeClusterInstancesAsync(const Model::DeleteEdgeClusterInstancesRequest& request, const DeleteEdgeClusterInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteEdgeClusterInstancesOutcomeCallable DeleteEdgeClusterInstancesCallable(const Model::DeleteEdgeClusterInstancesRequest& request);
+
+                /**
+                 *This API is used to delete collection rules within the cluster.
+                 * @param req DeleteLogConfigsRequest
+                 * @return DeleteLogConfigsOutcome
+                 */
+                DeleteLogConfigsOutcome DeleteLogConfigs(const Model::DeleteLogConfigsRequest &request);
+                void DeleteLogConfigsAsync(const Model::DeleteLogConfigsRequest& request, const DeleteLogConfigsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteLogConfigsOutcomeCallable DeleteLogConfigsCallable(const Model::DeleteLogConfigsRequest& request);
 
                 /**
                  *This API is used to delete an alarm rule.
@@ -979,6 +1081,15 @@ namespace TencentCloud
                 DescribeBackupStorageLocationsOutcomeCallable DescribeBackupStorageLocationsCallable(const Model::DescribeBackupStorageLocationsRequest& request);
 
                 /**
+                 *This API is used to query batch modification Tag status.
+                 * @param req DescribeBatchModifyTagsStatusRequest
+                 * @return DescribeBatchModifyTagsStatusOutcome
+                 */
+                DescribeBatchModifyTagsStatusOutcome DescribeBatchModifyTagsStatus(const Model::DescribeBatchModifyTagsStatusRequest &request);
+                void DescribeBatchModifyTagsStatusAsync(const Model::DescribeBatchModifyTagsStatusRequest& request, const DescribeBatchModifyTagsStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBatchModifyTagsStatusOutcomeCallable DescribeBatchModifyTagsStatusCallable(const Model::DescribeBatchModifyTagsStatusRequest& request);
+
+                /**
                  *Cluster auto scaling configuration
                  * @param req DescribeClusterAsGroupOptionRequest
                  * @return DescribeClusterAsGroupOptionOutcome
@@ -1040,6 +1151,15 @@ namespace TencentCloud
                 DescribeClusterEndpointsOutcome DescribeClusterEndpoints(const Model::DescribeClusterEndpointsRequest &request);
                 void DescribeClusterEndpointsAsync(const Model::DescribeClusterEndpointsRequest& request, const DescribeClusterEndpointsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeClusterEndpointsOutcomeCallable DescribeClusterEndpointsCallable(const Model::DescribeClusterEndpointsRequest& request);
+
+                /**
+                 *This API is used to query custom parameters of a cluster.
+                 * @param req DescribeClusterExtraArgsRequest
+                 * @return DescribeClusterExtraArgsOutcome
+                 */
+                DescribeClusterExtraArgsOutcome DescribeClusterExtraArgs(const Model::DescribeClusterExtraArgsRequest &request);
+                void DescribeClusterExtraArgsAsync(const Model::DescribeClusterExtraArgsRequest& request, const DescribeClusterExtraArgsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeClusterExtraArgsOutcomeCallable DescribeClusterExtraArgsCallable(const Model::DescribeClusterExtraArgsRequest& request);
 
                 /**
                  *This API is used to query information of node instances in a cluster.
@@ -1132,7 +1252,7 @@ namespace TencentCloud
                 DescribeClusterStatusOutcomeCallable DescribeClusterStatusCallable(const Model::DescribeClusterStatusRequest& request);
 
                 /**
-                 *This API is used to query the list of virtual nodes.
+                 *This API is used to view the Super Node list.
                  * @param req DescribeClusterVirtualNodeRequest
                  * @return DescribeClusterVirtualNodeOutcome
                  */
@@ -1141,7 +1261,7 @@ namespace TencentCloud
                 DescribeClusterVirtualNodeOutcomeCallable DescribeClusterVirtualNodeCallable(const Model::DescribeClusterVirtualNodeRequest& request);
 
                 /**
-                 *This API is used to query the list of virtual node pools.
+                 *This API is used to view the Super Node Pool list.
                  * @param req DescribeClusterVirtualNodePoolsRequest
                  * @return DescribeClusterVirtualNodePoolsOutcome
                  */
@@ -1249,6 +1369,24 @@ namespace TencentCloud
                 DescribeExistedInstancesOutcomeCallable DescribeExistedInstancesCallable(const Model::DescribeExistedInstancesRequest& request);
 
                 /**
+                 *This API is used to view third-party node pool configuration information.
+                 * @param req DescribeExternalNodeSupportConfigRequest
+                 * @return DescribeExternalNodeSupportConfigOutcome
+                 */
+                DescribeExternalNodeSupportConfigOutcome DescribeExternalNodeSupportConfig(const Model::DescribeExternalNodeSupportConfigRequest &request);
+                void DescribeExternalNodeSupportConfigAsync(const Model::DescribeExternalNodeSupportConfigRequest& request, const DescribeExternalNodeSupportConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeExternalNodeSupportConfigOutcomeCallable DescribeExternalNodeSupportConfigCallable(const Model::DescribeExternalNodeSupportConfigRequest& request);
+
+                /**
+                 *This API is used to obtain eniipamd component information.
+                 * @param req DescribeIPAMDRequest
+                 * @return DescribeIPAMDOutcome
+                 */
+                DescribeIPAMDOutcome DescribeIPAMD(const Model::DescribeIPAMDRequest &request);
+                void DescribeIPAMDAsync(const Model::DescribeIPAMDRequest& request, const DescribeIPAMDAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeIPAMDOutcomeCallable DescribeIPAMDCallable(const Model::DescribeIPAMDRequest& request);
+
+                /**
                  *This API is used to get image information.
                  * @param req DescribeImagesRequest
                  * @return DescribeImagesOutcome
@@ -1256,6 +1394,33 @@ namespace TencentCloud
                 DescribeImagesOutcome DescribeImages(const Model::DescribeImagesRequest &request);
                 void DescribeImagesAsync(const Model::DescribeImagesRequest& request, const DescribeImagesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeImagesOutcomeCallable DescribeImagesCallable(const Model::DescribeImagesRequest& request);
+
+                /**
+                 *This API is used to query the log collection rules.
+                 * @param req DescribeLogConfigsRequest
+                 * @return DescribeLogConfigsOutcome
+                 */
+                DescribeLogConfigsOutcome DescribeLogConfigs(const Model::DescribeLogConfigsRequest &request);
+                void DescribeLogConfigsAsync(const Model::DescribeLogConfigsRequest& request, const DescribeLogConfigsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeLogConfigsOutcomeCallable DescribeLogConfigsCallable(const Model::DescribeLogConfigsRequest& request);
+
+                /**
+                 *This API is used to query Cluster Log (Auditing, Event, Common Log) Switch List.
+                 * @param req DescribeLogSwitchesRequest
+                 * @return DescribeLogSwitchesOutcome
+                 */
+                DescribeLogSwitchesOutcome DescribeLogSwitches(const Model::DescribeLogSwitchesRequest &request);
+                void DescribeLogSwitchesAsync(const Model::DescribeLogSwitchesRequest& request, const DescribeLogSwitchesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeLogSwitchesOutcomeCallable DescribeLogSwitchesCallable(const Model::DescribeLogSwitchesRequest& request);
+
+                /**
+                 *This API is used to query the billing information of running Pods. You can query a specific Pod by Namespace and Name or batch query by Pod Uid.
+                 * @param req DescribePodChargeInfoRequest
+                 * @return DescribePodChargeInfoOutcome
+                 */
+                DescribePodChargeInfoOutcome DescribePodChargeInfo(const Model::DescribePodChargeInfoRequest &request);
+                void DescribePodChargeInfoAsync(const Model::DescribePodChargeInfoRequest& request, const DescribePodChargeInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribePodChargeInfoOutcomeCallable DescribePodChargeInfoCallable(const Model::DescribePodChargeInfoRequest& request);
 
                 /**
                  *This API is used to obtain the instance details.
@@ -1276,6 +1441,15 @@ namespace TencentCloud
                 DescribeRegionsOutcomeCallable DescribeRegionsCallable(const Model::DescribeRegionsRequest& request);
 
                 /**
+                 *This API is used to query the usage rate of various types of Reserved Coupons.
+                 * @param req DescribeReservedInstanceUtilizationRateRequest
+                 * @return DescribeReservedInstanceUtilizationRateOutcome
+                 */
+                DescribeReservedInstanceUtilizationRateOutcome DescribeReservedInstanceUtilizationRate(const Model::DescribeReservedInstanceUtilizationRateRequest &request);
+                void DescribeReservedInstanceUtilizationRateAsync(const Model::DescribeReservedInstanceUtilizationRateRequest& request, const DescribeReservedInstanceUtilizationRateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeReservedInstanceUtilizationRateOutcomeCallable DescribeReservedInstanceUtilizationRateCallable(const Model::DescribeReservedInstanceUtilizationRateRequest& request);
+
+                /**
                  *This API is used to query the cluster resource usage.
                  * @param req DescribeResourceUsageRequest
                  * @return DescribeResourceUsageOutcome
@@ -1292,6 +1466,15 @@ namespace TencentCloud
                 DescribeRouteTableConflictsOutcome DescribeRouteTableConflicts(const Model::DescribeRouteTableConflictsRequest &request);
                 void DescribeRouteTableConflictsAsync(const Model::DescribeRouteTableConflictsRequest& request, const DescribeRouteTableConflictsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeRouteTableConflictsOutcomeCallable DescribeRouteTableConflictsCallable(const Model::DescribeRouteTableConflictsRequest& request);
+
+                /**
+                 *This API is used to retrieve optional runtime versions based on K8S version.
+                 * @param req DescribeSupportedRuntimeRequest
+                 * @return DescribeSupportedRuntimeOutcome
+                 */
+                DescribeSupportedRuntimeOutcome DescribeSupportedRuntime(const Model::DescribeSupportedRuntimeRequest &request);
+                void DescribeSupportedRuntimeAsync(const Model::DescribeSupportedRuntimeRequest& request, const DescribeSupportedRuntimeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeSupportedRuntimeOutcomeCallable DescribeSupportedRuntimeCallable(const Model::DescribeSupportedRuntimeRequest& request);
 
                 /**
                  *This API is used to obtain the authentication information of a TKE Edge cluster.
@@ -1375,7 +1558,7 @@ namespace TencentCloud
                 DisableEncryptionProtectionOutcomeCallable DisableEncryptionProtectionCallable(const Model::DisableEncryptionProtectionRequest& request);
 
                 /**
-                 *This API is used to drain a virtual node.
+                 *This API is used to evict the Super Node.
                  * @param req DrainClusterVirtualNodeRequest
                  * @return DrainClusterVirtualNodeOutcome
                  */
@@ -1393,7 +1576,7 @@ namespace TencentCloud
                 EnableClusterDeletionProtectionOutcomeCallable EnableClusterDeletionProtectionCallable(const Model::EnableClusterDeletionProtectionRequest& request);
 
                 /**
-                 *This API is used to enable encryption protection.
+                 *This API is used to enable Encrypted Data Protection, which requires enabling KMS capability and completing KMS authorization.
                  * @param req EnableEncryptionProtectionRequest
                  * @return EnableEncryptionProtectionOutcome
                  */
@@ -1429,7 +1612,7 @@ namespace TencentCloud
                 GetClusterLevelPriceOutcomeCallable GetClusterLevelPriceCallable(const Model::GetClusterLevelPriceRequest& request);
 
                 /**
-                 *This API is used to obtain the current progress of the node upgrade.
+                 *This API is used to obtain the current progress of node upgrade. If the cluster is not in node upgrade status, the API will report an error: Task not found.
                  * @param req GetUpgradeInstanceProgressRequest
                  * @return GetUpgradeInstanceProgressOutcome
                  */
@@ -1501,6 +1684,15 @@ namespace TencentCloud
                 ModifyClusterEndpointSPOutcomeCallable ModifyClusterEndpointSPCallable(const Model::ModifyClusterEndpointSPRequest& request);
 
                 /**
+                 *This API is used to modify the cluster image.
+                 * @param req ModifyClusterImageRequest
+                 * @return ModifyClusterImageOutcome
+                 */
+                ModifyClusterImageOutcome ModifyClusterImage(const Model::ModifyClusterImageRequest &request);
+                void ModifyClusterImageAsync(const Model::ModifyClusterImageRequest& request, const ModifyClusterImageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyClusterImageOutcomeCallable ModifyClusterImageCallable(const Model::ModifyClusterImageRequest& request);
+
+                /**
                  *This API is used to edit a node pool.
                  * @param req ModifyClusterNodePoolRequest
                  * @return ModifyClusterNodePoolOutcome
@@ -1510,7 +1702,25 @@ namespace TencentCloud
                 ModifyClusterNodePoolOutcomeCallable ModifyClusterNodePoolCallable(const Model::ModifyClusterNodePoolRequest& request);
 
                 /**
-                 *This API is used to modify a virtual node pool.
+                 *This API is used to modify the latitude runtime configuration of clusters and node pools.
+                 * @param req ModifyClusterRuntimeConfigRequest
+                 * @return ModifyClusterRuntimeConfigOutcome
+                 */
+                ModifyClusterRuntimeConfigOutcome ModifyClusterRuntimeConfig(const Model::ModifyClusterRuntimeConfigRequest &request);
+                void ModifyClusterRuntimeConfigAsync(const Model::ModifyClusterRuntimeConfigRequest& request, const ModifyClusterRuntimeConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyClusterRuntimeConfigOutcomeCallable ModifyClusterRuntimeConfigCallable(const Model::ModifyClusterRuntimeConfigRequest& request);
+
+                /**
+                 *This API is used to modify cluster tags.
+                 * @param req ModifyClusterTagsRequest
+                 * @return ModifyClusterTagsOutcome
+                 */
+                ModifyClusterTagsOutcome ModifyClusterTags(const Model::ModifyClusterTagsRequest &request);
+                void ModifyClusterTagsAsync(const Model::ModifyClusterTagsRequest& request, const ModifyClusterTagsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyClusterTagsOutcomeCallable ModifyClusterTagsCallable(const Model::ModifyClusterTagsRequest& request);
+
+                /**
+                 *This API is used to modify the Super Node Pool.
                  * @param req ModifyClusterVirtualNodePoolRequest
                  * @return ModifyClusterVirtualNodePoolOutcome
                  */

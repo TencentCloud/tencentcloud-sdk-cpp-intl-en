@@ -121,6 +121,31 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                      */
                     bool TKEDirectENIHasBeenSet() const;
 
+                    /**
+                     * 获取Number of Pods supported by TKE relay network card mode
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * @return TKESubENI Number of Pods supported by TKE relay network card mode
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * 
+                     */
+                    int64_t GetTKESubENI() const;
+
+                    /**
+                     * 设置Number of Pods supported by TKE relay network card mode
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * @param _tKESubENI Number of Pods supported by TKE relay network card mode
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetTKESubENI(const int64_t& _tKESubENI);
+
+                    /**
+                     * 判断参数 TKESubENI 是否已赋值
+                     * @return TKESubENI 是否已赋值
+                     * 
+                     */
+                    bool TKESubENIHasBeenSet() const;
+
                 private:
 
                     /**
@@ -143,6 +168,13 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                      */
                     int64_t m_tKEDirectENI;
                     bool m_tKEDirectENIHasBeenSet;
+
+                    /**
+                     * Number of Pods supported by TKE relay network card mode
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     */
+                    int64_t m_tKESubENI;
+                    bool m_tKESubENIHasBeenSet;
 
                 };
             }

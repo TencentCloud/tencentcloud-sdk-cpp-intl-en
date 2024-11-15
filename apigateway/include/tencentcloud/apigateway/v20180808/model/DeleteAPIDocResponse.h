@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether the operation succeeded
-                     * @return Result Whether the operation succeeded
+                     * 获取Whether the operation succeeded.
+                     * @return Result Whether the operation succeeded.
                      * 
                      */
                     bool GetResult() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether the operation succeeded
+                     * Whether the operation succeeded.
                      */
                     bool m_result;
                     bool m_resultHasBeenSet;

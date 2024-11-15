@@ -48,14 +48,22 @@ namespace TencentCloud
 
                     /**
                      * 获取cuDNN version
+
+Note: This field may return "null", indicating that no valid value can be obtained.
                      * @return Version cuDNN version
+
+Note: This field may return "null", indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetVersion() const;
 
                     /**
                      * 设置cuDNN version
+
+Note: This field may return "null", indicating that no valid value can be obtained.
                      * @param _version cuDNN version
+
+Note: This field may return "null", indicating that no valid value can be obtained.
                      * 
                      */
                     void SetVersion(const std::string& _version);
@@ -69,14 +77,22 @@ namespace TencentCloud
 
                     /**
                      * 获取cuDNN name
+
+Note: This field may return "null", indicating that no valid value can be obtained.
                      * @return Name cuDNN name
+
+Note: This field may return "null", indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置cuDNN name
+
+Note: This field may return "null", indicating that no valid value can be obtained.
                      * @param _name cuDNN name
+
+Note: This field may return "null", indicating that no valid value can be obtained.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -90,14 +106,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Doc name of cuDNN
+
+Note: This field may return "null", indicating that no valid value can be obtained.
                      * @return DocName Doc name of cuDNN
+
+Note: This field may return "null", indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetDocName() const;
 
                     /**
                      * 设置Doc name of cuDNN
+
+Note: This field may return "null", indicating that no valid value can be obtained.
                      * @param _docName Doc name of cuDNN
+
+Note: This field may return "null", indicating that no valid value can be obtained.
                      * 
                      */
                     void SetDocName(const std::string& _docName);
@@ -111,14 +135,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Dev name of cuDNN
+
+Note: This field may return "null", indicating that no valid value can be obtained.
                      * @return DevName Dev name of cuDNN
+
+Note: This field may return "null", indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetDevName() const;
 
                     /**
                      * 设置Dev name of cuDNN
+
+Note: This field may return "null", indicating that no valid value can be obtained.
                      * @param _devName Dev name of cuDNN
+
+Note: This field may return "null", indicating that no valid value can be obtained.
                      * 
                      */
                     void SetDevName(const std::string& _devName);
@@ -134,24 +166,32 @@ namespace TencentCloud
 
                     /**
                      * cuDNN version
+
+Note: This field may return "null", indicating that no valid value can be obtained.
                      */
                     std::string m_version;
                     bool m_versionHasBeenSet;
 
                     /**
                      * cuDNN name
+
+Note: This field may return "null", indicating that no valid value can be obtained.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
                      * Doc name of cuDNN
+
+Note: This field may return "null", indicating that no valid value can be obtained.
                      */
                     std::string m_docName;
                     bool m_docNameHasBeenSet;
 
                     /**
                      * Dev name of cuDNN
+
+Note: This field may return "null", indicating that no valid value can be obtained.
                      */
                     std::string m_devName;
                     bool m_devNameHasBeenSet;

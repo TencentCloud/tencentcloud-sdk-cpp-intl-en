@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Nodes that are added in scale-out
+                * Nodes for automatic scaling
                 */
                 class AutoscalingAdded : public AbstractModel
                 {

@@ -41,6 +41,7 @@
 #include <tencentcloud/teo/v20220901/model/Grpc.h>
 #include <tencentcloud/teo/v20220901/model/ImageOptimize.h>
 #include <tencentcloud/teo/v20220901/model/StandardDebug.h>
+#include <tencentcloud/teo/v20220901/model/JITVideoProcess.h>
 
 
 namespace TencentCloud
@@ -579,6 +580,27 @@ It is disabled if this parameter is not specified.
                      */
                     bool StandardDebugHasBeenSet() const;
 
+                    /**
+                     * 获取Just-in-time media processing configuration. The original configuration applies if this field is not specified.
+                     * @return JITVideoProcess Just-in-time media processing configuration. The original configuration applies if this field is not specified.
+                     * 
+                     */
+                    JITVideoProcess GetJITVideoProcess() const;
+
+                    /**
+                     * 设置Just-in-time media processing configuration. The original configuration applies if this field is not specified.
+                     * @param _jITVideoProcess Just-in-time media processing configuration. The original configuration applies if this field is not specified.
+                     * 
+                     */
+                    void SetJITVideoProcess(const JITVideoProcess& _jITVideoProcess);
+
+                    /**
+                     * 判断参数 JITVideoProcess 是否已赋值
+                     * @return JITVideoProcess 是否已赋值
+                     * 
+                     */
+                    bool JITVideoProcessHasBeenSet() const;
+
                 private:
 
                     /**
@@ -725,6 +747,12 @@ It is disabled if this parameter is not specified.
                      */
                     StandardDebug m_standardDebug;
                     bool m_standardDebugHasBeenSet;
+
+                    /**
+                     * Just-in-time media processing configuration. The original configuration applies if this field is not specified.
+                     */
+                    JITVideoProcess m_jITVideoProcess;
+                    bool m_jITVideoProcessHasBeenSet;
 
                 };
             }

@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Resource type, for example `CBS`
-                     * @return ResourceType Resource type, for example `CBS`
+                     * 获取Resource type, such as CBS, CLB, CVM
+                     * @return ResourceType Resource type, such as CBS, CLB, CVM
                      * 
                      */
                     std::string GetResourceType() const;
 
                     /**
-                     * 设置Resource type, for example `CBS`
-                     * @param _resourceType Resource type, for example `CBS`
+                     * 设置Resource type, such as CBS, CLB, CVM
+                     * @param _resourceType Resource type, such as CBS, CLB, CVM
                      * 
                      */
                     void SetResourceType(const std::string& _resourceType);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ResourceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the policy to deal with resources in the cluster when the cluster is deleted. It can be `terminate` or `retain`.
-                     * @return DeleteMode Specifies the policy to deal with resources in the cluster when the cluster is deleted. It can be `terminate` or `retain`.
+                     * 获取Deletion mode for CBS resources when the cluster is deleted: terminate, retain. Other resources are terminated by default.
+                     * @return DeleteMode Deletion mode for CBS resources when the cluster is deleted: terminate, retain. Other resources are terminated by default.
                      * 
                      */
                     std::string GetDeleteMode() const;
 
                     /**
-                     * 设置Specifies the policy to deal with resources in the cluster when the cluster is deleted. It can be `terminate` or `retain`.
-                     * @param _deleteMode Specifies the policy to deal with resources in the cluster when the cluster is deleted. It can be `terminate` or `retain`.
+                     * 设置Deletion mode for CBS resources when the cluster is deleted: terminate, retain. Other resources are terminated by default.
+                     * @param _deleteMode Deletion mode for CBS resources when the cluster is deleted: terminate, retain. Other resources are terminated by default.
                      * 
                      */
                     void SetDeleteMode(const std::string& _deleteMode);
@@ -88,19 +88,46 @@ namespace TencentCloud
                      */
                     bool DeleteModeHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to skip the resources with deletion protection enabled. It is false by default. When set to true, the resources with deletion protection enabled are not cleaned up. CLB with terminal nodes also belongs to the resources with deletion protection enabled.
+                     * @return SkipDeletionProtection Whether to skip the resources with deletion protection enabled. It is false by default. When set to true, the resources with deletion protection enabled are not cleaned up. CLB with terminal nodes also belongs to the resources with deletion protection enabled.
+                     * 
+                     */
+                    bool GetSkipDeletionProtection() const;
+
+                    /**
+                     * 设置Whether to skip the resources with deletion protection enabled. It is false by default. When set to true, the resources with deletion protection enabled are not cleaned up. CLB with terminal nodes also belongs to the resources with deletion protection enabled.
+                     * @param _skipDeletionProtection Whether to skip the resources with deletion protection enabled. It is false by default. When set to true, the resources with deletion protection enabled are not cleaned up. CLB with terminal nodes also belongs to the resources with deletion protection enabled.
+                     * 
+                     */
+                    void SetSkipDeletionProtection(const bool& _skipDeletionProtection);
+
+                    /**
+                     * 判断参数 SkipDeletionProtection 是否已赋值
+                     * @return SkipDeletionProtection 是否已赋值
+                     * 
+                     */
+                    bool SkipDeletionProtectionHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Resource type, for example `CBS`
+                     * Resource type, such as CBS, CLB, CVM
                      */
                     std::string m_resourceType;
                     bool m_resourceTypeHasBeenSet;
 
                     /**
-                     * Specifies the policy to deal with resources in the cluster when the cluster is deleted. It can be `terminate` or `retain`.
+                     * Deletion mode for CBS resources when the cluster is deleted: terminate, retain. Other resources are terminated by default.
                      */
                     std::string m_deleteMode;
                     bool m_deleteModeHasBeenSet;
+
+                    /**
+                     * Whether to skip the resources with deletion protection enabled. It is false by default. When set to true, the resources with deletion protection enabled are not cleaned up. CLB with terminal nodes also belongs to the resources with deletion protection enabled.
+                     */
+                    bool m_skipDeletionProtection;
+                    bool m_skipDeletionProtectionHasBeenSet;
 
                 };
             }

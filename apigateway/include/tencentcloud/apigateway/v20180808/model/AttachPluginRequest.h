@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool PluginIdHasBeenSet() const;
 
                     /**
-                     * 获取ID of the service to be operated
-                     * @return ServiceId ID of the service to be operated
+                     * 获取ID of the service to be operated.
+                     * @return ServiceId ID of the service to be operated.
                      * 
                      */
                     std::string GetServiceId() const;
 
                     /**
-                     * 设置ID of the service to be operated
-                     * @param _serviceId ID of the service to be operated
+                     * 设置ID of the service to be operated.
+                     * @param _serviceId ID of the service to be operated.
                      * 
                      */
                     void SetServiceId(const std::string& _serviceId);
@@ -135,7 +135,7 @@ namespace TencentCloud
                     bool m_pluginIdHasBeenSet;
 
                     /**
-                     * ID of the service to be operated
+                     * ID of the service to be operated.
                      */
                     std::string m_serviceId;
                     bool m_serviceIdHasBeenSet;

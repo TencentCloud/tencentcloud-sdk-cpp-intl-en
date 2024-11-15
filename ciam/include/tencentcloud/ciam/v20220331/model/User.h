@@ -532,6 +532,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AlipayUserIdHasBeenSet() const;
 
                     /**
+                     * 获取WeCom user ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return WeComUserId WeCom user ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetWeComUserId() const;
+
+                    /**
+                     * 设置WeCom user ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _weComUserId WeCom user ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetWeComUserId(const std::string& _weComUserId);
+
+                    /**
+                     * 判断参数 WeComUserId 是否已赋值
+                     * @return WeComUserId 是否已赋值
+                     * 
+                     */
+                    bool WeComUserIdHasBeenSet() const;
+
+                    /**
                      * 获取Description
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Description Description
@@ -1193,6 +1218,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_alipayUserId;
                     bool m_alipayUserIdHasBeenSet;
+
+                    /**
+                     * WeCom user ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_weComUserId;
+                    bool m_weComUserIdHasBeenSet;
 
                     /**
                      * Description

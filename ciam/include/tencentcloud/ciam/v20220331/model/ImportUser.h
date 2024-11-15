@@ -37,13 +37,13 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Imported user information
-1. One of the eight attributes of `UserName`, `PhoneNumber`, `Email`, `WechatOpenId`, `WechatUnionId`, `AlipayUserId`, `QqOpenId`, and `QqUnionId` must be included during import and comply with the regular expression rules for initializing custom attributes. The regular expressions for `UserName`, `PhoneNumber`, and `Email` can be queried in the custom attributes in the console.
-2. For password import, the imported password supports plaintext import, MD5 ciphertext import, SHA1 ciphertext import, and BCRYPT ciphertext import. This needs to be specified in the `PasswordEncryptTypeEnum` field.
-3. `IdentityVerified` and `IdentityVerificationMethod` can be imported.
-If `IdentityVerified` is `true`, `IdentityVerificationMethod` is required.
-If `IdentityVerificationMethod` is `nameAndIdCard`, `Name` and `ResidentIdentityCard` are required.
-If `IdentityVerificationMethod` is `nameIdCardAndPhone`, `Name`, `PhoneNumber`, and `ResidentIdentityCard` are required.
+                * Import user information.
+1. At least one of the following nine attributes should be included during the import: UserName, PhoneNumber, Email, WeChatOpenId, WeChatUnionId, AlipayUserId, QQOpenId, QQUnionId, and WeComUserId. Each of these attributes should adhere to the regular expression rules for initial custom attributes. The regular expressions for UserName, PhoneNumber, and Email can be queried in Custom Attributes on the console.
+2. For the import of passwords, plaintext import, MD5 ciphertext import, SHA1 ciphertext import, and BCRYPT ciphertext import are supported. The import method should be specified in the PasswordEncryptTypeEnum field.
+3. IdentityVerified and IdentityVerificationMethod can be imported.
+When IdentityVerified is true, IdentityVerificationMethod should be entered.
+When IdentityVerificationMethod is nameAndIdCard, Name and ResidentIdentityCard should be entered.
+When IdentityVerificationMethod is nameIdCardAndPhone, Name, PhoneNumber, and ResidentIdentityCard should be entered.
                 */
                 class ImportUser : public AbstractModel
                 {
@@ -305,6 +305,27 @@ If `IdentityVerificationMethod` is `nameIdCardAndPhone`, `Name`, `PhoneNumber`, 
                      * 
                      */
                     bool AlipayUserIdHasBeenSet() const;
+
+                    /**
+                     * 获取WeCom user ID.
+                     * @return WeComUserId WeCom user ID.
+                     * 
+                     */
+                    std::string GetWeComUserId() const;
+
+                    /**
+                     * 设置WeCom user ID.
+                     * @param _weComUserId WeCom user ID.
+                     * 
+                     */
+                    void SetWeComUserId(const std::string& _weComUserId);
+
+                    /**
+                     * 判断参数 WeComUserId 是否已赋值
+                     * @return WeComUserId 是否已赋值
+                     * 
+                     */
+                    bool WeComUserIdHasBeenSet() const;
 
                     /**
                      * 获取Description
@@ -778,6 +799,12 @@ If `IdentityVerificationMethod` is `nameIdCardAndPhone`, `Name`, `PhoneNumber`, 
                      */
                     std::string m_alipayUserId;
                     bool m_alipayUserIdHasBeenSet;
+
+                    /**
+                     * WeCom user ID.
+                     */
+                    std::string m_weComUserId;
+                    bool m_weComUserIdHasBeenSet;
 
                     /**
                      * Description

@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/teo/v20220901/model/ServerCertInfo.h>
+#include <tencentcloud/teo/v20220901/model/MutualTLS.h>
 
 
 namespace TencentCloud
@@ -119,15 +120,15 @@ namespace TencentCloud
                     bool ModeHasBeenSet() const;
 
                     /**
-                     * 获取ID of the SSL certificate. It takes effect when `mode=sslcert`. To check the certificate ID, go to the [SSL Certificate](https://console.cloud.tencent.com/certoview) console.
-                     * @return ServerCertInfo ID of the SSL certificate. It takes effect when `mode=sslcert`. To check the certificate ID, go to the [SSL Certificate](https://console.cloud.tencent.com/certoview) console.
+                     * 获取SSL certificate configuration. This parameter is effective only when the mode is sslcert. You only need to provide the CertId of the corresponding certificate. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
+                     * @return ServerCertInfo SSL certificate configuration. This parameter is effective only when the mode is sslcert. You only need to provide the CertId of the corresponding certificate. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
                      * 
                      */
                     std::vector<ServerCertInfo> GetServerCertInfo() const;
 
                     /**
-                     * 设置ID of the SSL certificate. It takes effect when `mode=sslcert`. To check the certificate ID, go to the [SSL Certificate](https://console.cloud.tencent.com/certoview) console.
-                     * @param _serverCertInfo ID of the SSL certificate. It takes effect when `mode=sslcert`. To check the certificate ID, go to the [SSL Certificate](https://console.cloud.tencent.com/certoview) console.
+                     * 设置SSL certificate configuration. This parameter is effective only when the mode is sslcert. You only need to provide the CertId of the corresponding certificate. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
+                     * @param _serverCertInfo SSL certificate configuration. This parameter is effective only when the mode is sslcert. You only need to provide the CertId of the corresponding certificate. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
                      * 
                      */
                     void SetServerCertInfo(const std::vector<ServerCertInfo>& _serverCertInfo);
@@ -172,6 +173,27 @@ Default value: `none`.
                      */
                     bool ApplyTypeHasBeenSet() const;
 
+                    /**
+                     * 获取In the Edge mTLS scenario, this field represents the client's CA certificate, which is deployed at the EO entry side for authenticating the client access to EO nodes. The original configuration applies if this field is not specified.
+                     * @return ClientCertInfo In the Edge mTLS scenario, this field represents the client's CA certificate, which is deployed at the EO entry side for authenticating the client access to EO nodes. The original configuration applies if this field is not specified.
+                     * 
+                     */
+                    MutualTLS GetClientCertInfo() const;
+
+                    /**
+                     * 设置In the Edge mTLS scenario, this field represents the client's CA certificate, which is deployed at the EO entry side for authenticating the client access to EO nodes. The original configuration applies if this field is not specified.
+                     * @param _clientCertInfo In the Edge mTLS scenario, this field represents the client's CA certificate, which is deployed at the EO entry side for authenticating the client access to EO nodes. The original configuration applies if this field is not specified.
+                     * 
+                     */
+                    void SetClientCertInfo(const MutualTLS& _clientCertInfo);
+
+                    /**
+                     * 判断参数 ClientCertInfo 是否已赋值
+                     * @return ClientCertInfo 是否已赋值
+                     * 
+                     */
+                    bool ClientCertInfoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -196,7 +218,7 @@ Default value: `none`.
                     bool m_modeHasBeenSet;
 
                     /**
-                     * ID of the SSL certificate. It takes effect when `mode=sslcert`. To check the certificate ID, go to the [SSL Certificate](https://console.cloud.tencent.com/certoview) console.
+                     * SSL certificate configuration. This parameter is effective only when the mode is sslcert. You only need to provide the CertId of the corresponding certificate. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
                      */
                     std::vector<ServerCertInfo> m_serverCertInfo;
                     bool m_serverCertInfoHasBeenSet;
@@ -209,6 +231,12 @@ Default value: `none`.
                      */
                     std::string m_applyType;
                     bool m_applyTypeHasBeenSet;
+
+                    /**
+                     * In the Edge mTLS scenario, this field represents the client's CA certificate, which is deployed at the EO entry side for authenticating the client access to EO nodes. The original configuration applies if this field is not specified.
+                     */
+                    MutualTLS m_clientCertInfo;
+                    bool m_clientCertInfoHasBeenSet;
 
                 };
             }

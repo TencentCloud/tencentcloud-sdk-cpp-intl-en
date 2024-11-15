@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/tke/v20180525/model/AutoUpgradeClusterLevel.h>
+#include <tencentcloud/tke/v20180525/model/ClusterProperty.h>
 
 
 namespace TencentCloud
@@ -140,6 +141,22 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool QGPUShareEnableHasBeenSet() const;
 
+                    /**
+                     * 获取Cluster attributes
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * @return ClusterProperty Cluster attributes
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * 
+                     */
+                    ClusterProperty GetClusterProperty() const;
+
+                    /**
+                     * 判断参数 ClusterProperty 是否已赋值
+                     * @return ClusterProperty 是否已赋值
+                     * 
+                     */
+                    bool ClusterPropertyHasBeenSet() const;
+
                 private:
 
                     /**
@@ -183,6 +200,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool m_qGPUShareEnable;
                     bool m_qGPUShareEnableHasBeenSet;
+
+                    /**
+                     * Cluster attributes
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     */
+                    ClusterProperty m_clusterProperty;
+                    bool m_clusterPropertyHasBeenSet;
 
                 };
             }

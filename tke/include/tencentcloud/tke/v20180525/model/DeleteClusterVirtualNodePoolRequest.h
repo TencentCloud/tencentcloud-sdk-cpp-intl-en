@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取List of virtual node pool IDs
-                     * @return NodePoolIds List of virtual node pool IDs
+                     * 获取Super Node Pool ID list
+                     * @return NodePoolIds Super Node Pool ID list
                      * 
                      */
                     std::vector<std::string> GetNodePoolIds() const;
 
                     /**
-                     * 设置List of virtual node pool IDs
-                     * @param _nodePoolIds List of virtual node pool IDs
+                     * 设置Super Node Pool ID list
+                     * @param _nodePoolIds Super Node Pool ID list
                      * 
                      */
                     void SetNodePoolIds(const std::vector<std::string>& _nodePoolIds);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool NodePoolIdsHasBeenSet() const;
 
                     /**
-                     * 获取Whether to forcibly delete the nodes with pods. Values: `true`, `false`.
-                     * @return Force Whether to forcibly delete the nodes with pods. Values: `true`, `false`.
+                     * 获取Mandatory deletion or not. If there are pods on the super node, and you choose non-mandatory deletion, the deletion will fail.
+                     * @return Force Mandatory deletion or not. If there are pods on the super node, and you choose non-mandatory deletion, the deletion will fail.
                      * 
                      */
                     bool GetForce() const;
 
                     /**
-                     * 设置Whether to forcibly delete the nodes with pods. Values: `true`, `false`.
-                     * @param _force Whether to forcibly delete the nodes with pods. Values: `true`, `false`.
+                     * 设置Mandatory deletion or not. If there are pods on the super node, and you choose non-mandatory deletion, the deletion will fail.
+                     * @param _force Mandatory deletion or not. If there are pods on the super node, and you choose non-mandatory deletion, the deletion will fail.
                      * 
                      */
                     void SetForce(const bool& _force);
@@ -114,13 +114,13 @@ namespace TencentCloud
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * List of virtual node pool IDs
+                     * Super Node Pool ID list
                      */
                     std::vector<std::string> m_nodePoolIds;
                     bool m_nodePoolIdsHasBeenSet;
 
                     /**
-                     * Whether to forcibly delete the nodes with pods. Values: `true`, `false`.
+                     * Mandatory deletion or not. If there are pods on the super node, and you choose non-mandatory deletion, the deletion will fail.
                      */
                     bool m_force;
                     bool m_forceHasBeenSet;

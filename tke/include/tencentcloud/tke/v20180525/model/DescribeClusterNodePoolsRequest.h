@@ -65,87 +65,83 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取·  NodePoolsName
-    Filters by the node pool name
+                     * 获取· "Name":"NodePoolsName","Values": ["test"]
+    Filter by [Node Pool Name].
     Type: String
-    Required: No
+        Required: No
 
-·  NodePoolsId
-    Filters by the node pool ID
-    Type: String
-    Required: No
 
-·  tags
-    Filters by key-value pairs of tags
-    Type: String
-    Required: No
 
-·  tag:tag-key
-    Filters by key-value pairs of tags
+·  "Name":"NodePoolsId","Values": ["np-d2mb2zb"]
+    Filter by [Node Pool ID].
     Type: String
-    Required: No
-                     * @return Filters ·  NodePoolsName
-    Filters by the node pool name
-    Type: String
-    Required: No
+        Required: No
 
-·  NodePoolsId
-    Filters by the node pool ID
-    Type: String
-    Required: No
 
-·  tags
-    Filters by key-value pairs of tags
-    Type: String
-    Required: No
 
-·  tag:tag-key
-    Filters by key-value pairs of tags
+·  "Name":"Tags","Values": ["abc:1"]
+    Filter by [Key-value Pairs of Tags].
     Type: String
-    Required: No
+        Required: No
+                     * @return Filters · "Name":"NodePoolsName","Values": ["test"]
+    Filter by [Node Pool Name].
+    Type: String
+        Required: No
+
+
+
+·  "Name":"NodePoolsId","Values": ["np-d2mb2zb"]
+    Filter by [Node Pool ID].
+    Type: String
+        Required: No
+
+
+
+·  "Name":"Tags","Values": ["abc:1"]
+    Filter by [Key-value Pairs of Tags].
+    Type: String
+        Required: No
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置·  NodePoolsName
-    Filters by the node pool name
+                     * 设置· "Name":"NodePoolsName","Values": ["test"]
+    Filter by [Node Pool Name].
     Type: String
-    Required: No
+        Required: No
 
-·  NodePoolsId
-    Filters by the node pool ID
-    Type: String
-    Required: No
 
-·  tags
-    Filters by key-value pairs of tags
-    Type: String
-    Required: No
 
-·  tag:tag-key
-    Filters by key-value pairs of tags
+·  "Name":"NodePoolsId","Values": ["np-d2mb2zb"]
+    Filter by [Node Pool ID].
     Type: String
-    Required: No
-                     * @param _filters ·  NodePoolsName
-    Filters by the node pool name
-    Type: String
-    Required: No
+        Required: No
 
-·  NodePoolsId
-    Filters by the node pool ID
-    Type: String
-    Required: No
 
-·  tags
-    Filters by key-value pairs of tags
-    Type: String
-    Required: No
 
-·  tag:tag-key
-    Filters by key-value pairs of tags
+·  "Name":"Tags","Values": ["abc:1"]
+    Filter by [Key-value Pairs of Tags].
     Type: String
-    Required: No
+        Required: No
+                     * @param _filters · "Name":"NodePoolsName","Values": ["test"]
+    Filter by [Node Pool Name].
+    Type: String
+        Required: No
+
+
+
+·  "Name":"NodePoolsId","Values": ["np-d2mb2zb"]
+    Filter by [Node Pool ID].
+    Type: String
+        Required: No
+
+
+
+·  "Name":"Tags","Values": ["abc:1"]
+    Filter by [Key-value Pairs of Tags].
+    Type: String
+        Required: No
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -166,25 +162,24 @@ namespace TencentCloud
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * ·  NodePoolsName
-    Filters by the node pool name
+                     * · "Name":"NodePoolsName","Values": ["test"]
+    Filter by [Node Pool Name].
     Type: String
-    Required: No
+        Required: No
 
-·  NodePoolsId
-    Filters by the node pool ID
-    Type: String
-    Required: No
 
-·  tags
-    Filters by key-value pairs of tags
-    Type: String
-    Required: No
 
-·  tag:tag-key
-    Filters by key-value pairs of tags
+·  "Name":"NodePoolsId","Values": ["np-d2mb2zb"]
+    Filter by [Node Pool ID].
     Type: String
-    Required: No
+        Required: No
+
+
+
+·  "Name":"Tags","Values": ["abc:1"]
+    Filter by [Key-value Pairs of Tags].
+    Type: String
+        Required: No
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

@@ -44,10 +44,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Upgradeable cluster component
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return ComponentVersion Upgradeable cluster component
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Upgradable cluster components and their versions
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * @return ComponentVersion Upgradable cluster components and their versions
+Note: This field may return "null", indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetComponentVersion() const;
@@ -126,8 +126,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * Upgradeable cluster component
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Upgradable cluster components and their versions
+Note: This field may return "null", indicating that no valid value can be obtained.
                      */
                     std::string m_componentVersion;
                     bool m_componentVersionHasBeenSet;

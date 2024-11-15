@@ -59,10 +59,10 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取The list of top-ranked L7 traffic data.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Data The list of top-ranked L7 traffic data.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The top N data list obtained from the statistics of L7 access data by a specified dimension MetricName.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @return Data The top N data list obtained from the statistics of L7 access data by a specified dimension MetricName.
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     std::vector<TopDataRecord> GetData() const;
@@ -83,8 +83,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * The list of top-ranked L7 traffic data.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The top N data list obtained from the statistics of L7 access data by a specified dimension MetricName.
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      */
                     std::vector<TopDataRecord> m_data;
                     bool m_dataHasBeenSet;

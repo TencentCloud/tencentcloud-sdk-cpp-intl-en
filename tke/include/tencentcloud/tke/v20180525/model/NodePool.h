@@ -26,8 +26,13 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/tke/v20180525/model/Label.h>
 #include <tencentcloud/tke/v20180525/model/Taint.h>
+#include <tencentcloud/tke/v20180525/model/AnnotationValue.h>
 #include <tencentcloud/tke/v20180525/model/NodeCountSummary.h>
+#include <tencentcloud/tke/v20180525/model/RuntimeConfig.h>
 #include <tencentcloud/tke/v20180525/model/Tag.h>
+#include <tencentcloud/tke/v20180525/model/InstanceExtraArgs.h>
+#include <tencentcloud/tke/v20180525/model/GPUArgs.h>
+#include <tencentcloud/tke/v20180525/model/DataDisk.h>
 
 
 namespace TencentCloud
@@ -219,6 +224,27 @@ namespace TencentCloud
                     bool TaintsHasBeenSet() const;
 
                     /**
+                     * 获取Node Annotation List
+                     * @return Annotations Node Annotation List
+                     * 
+                     */
+                    std::vector<AnnotationValue> GetAnnotations() const;
+
+                    /**
+                     * 设置Node Annotation List
+                     * @param _annotations Node Annotation List
+                     * 
+                     */
+                    void SetAnnotations(const std::vector<AnnotationValue>& _annotations);
+
+                    /**
+                     * 判断参数 Annotations 是否已赋值
+                     * @return Annotations 是否已赋值
+                     * 
+                     */
+                    bool AnnotationsHasBeenSet() const;
+
+                    /**
                      * 获取Node list
                      * @return NodeCountSummary Node list
                      * 
@@ -334,6 +360,31 @@ Note: this field may return `null`, indicating that no valid value is obtained.
                      * 
                      */
                     bool DesiredNodesNumHasBeenSet() const;
+
+                    /**
+                     * 获取Runtime Description
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * @return RuntimeConfig Runtime Description
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * 
+                     */
+                    RuntimeConfig GetRuntimeConfig() const;
+
+                    /**
+                     * 设置Runtime Description
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * @param _runtimeConfig Runtime Description
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetRuntimeConfig(const RuntimeConfig& _runtimeConfig);
+
+                    /**
+                     * 判断参数 RuntimeConfig 是否已赋值
+                     * @return RuntimeConfig 是否已赋值
+                     * 
+                     */
+                    bool RuntimeConfigHasBeenSet() const;
 
                     /**
                      * 获取The operating system of the node pool
@@ -510,6 +561,164 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool DeletionProtectionHasBeenSet() const;
 
+                    /**
+                     * 获取Node Configuration
+
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * @return ExtraArgs Node Configuration
+
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * 
+                     */
+                    InstanceExtraArgs GetExtraArgs() const;
+
+                    /**
+                     * 设置Node Configuration
+
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * @param _extraArgs Node Configuration
+
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetExtraArgs(const InstanceExtraArgs& _extraArgs);
+
+                    /**
+                     * 判断参数 ExtraArgs 是否已赋值
+                     * @return ExtraArgs 是否已赋值
+                     * 
+                     */
+                    bool ExtraArgsHasBeenSet() const;
+
+                    /**
+                     * 获取GPU Driver-related Parameters
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * @return GPUArgs GPU Driver-related Parameters
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * 
+                     */
+                    GPUArgs GetGPUArgs() const;
+
+                    /**
+                     * 设置GPU Driver-related Parameters
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * @param _gPUArgs GPU Driver-related Parameters
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetGPUArgs(const GPUArgs& _gPUArgs);
+
+                    /**
+                     * 判断参数 GPUArgs 是否已赋值
+                     * @return GPUArgs 是否已赋值
+                     * 
+                     */
+                    bool GPUArgsHasBeenSet() const;
+
+                    /**
+                     * 获取Specified value of dockerd --graph. Default value: /var/lib/docker
+
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * @return DockerGraphPath Specified value of dockerd --graph. Default value: /var/lib/docker
+
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * 
+                     */
+                    std::string GetDockerGraphPath() const;
+
+                    /**
+                     * 设置Specified value of dockerd --graph. Default value: /var/lib/docker
+
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * @param _dockerGraphPath Specified value of dockerd --graph. Default value: /var/lib/docker
+
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetDockerGraphPath(const std::string& _dockerGraphPath);
+
+                    /**
+                     * 判断参数 DockerGraphPath 是否已赋值
+                     * @return DockerGraphPath 是否已赋值
+                     * 
+                     */
+                    bool DockerGraphPathHasBeenSet() const;
+
+                    /**
+                     * 获取Multiple Disk Data Disk Mount Information: When creating a new node, make sure that the CVM purchase parameters include the information of purchasing multiple data disks. For example, in the DataDisks under RunInstancesPara of CreateClusterInstances API, it must also be set to purchase multiple data disks. Refer to the example of adding cluster nodes (multiple data disks) of CreateClusterInstances API; when adding existing nodes, ensure that the specified partition information actually exists on the node.
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * @return DataDisks Multiple Disk Data Disk Mount Information: When creating a new node, make sure that the CVM purchase parameters include the information of purchasing multiple data disks. For example, in the DataDisks under RunInstancesPara of CreateClusterInstances API, it must also be set to purchase multiple data disks. Refer to the example of adding cluster nodes (multiple data disks) of CreateClusterInstances API; when adding existing nodes, ensure that the specified partition information actually exists on the node.
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * 
+                     */
+                    std::vector<DataDisk> GetDataDisks() const;
+
+                    /**
+                     * 设置Multiple Disk Data Disk Mount Information: When creating a new node, make sure that the CVM purchase parameters include the information of purchasing multiple data disks. For example, in the DataDisks under RunInstancesPara of CreateClusterInstances API, it must also be set to purchase multiple data disks. Refer to the example of adding cluster nodes (multiple data disks) of CreateClusterInstances API; when adding existing nodes, ensure that the specified partition information actually exists on the node.
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * @param _dataDisks Multiple Disk Data Disk Mount Information: When creating a new node, make sure that the CVM purchase parameters include the information of purchasing multiple data disks. For example, in the DataDisks under RunInstancesPara of CreateClusterInstances API, it must also be set to purchase multiple data disks. Refer to the example of adding cluster nodes (multiple data disks) of CreateClusterInstances API; when adding existing nodes, ensure that the specified partition information actually exists on the node.
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetDataDisks(const std::vector<DataDisk>& _dataDisks);
+
+                    /**
+                     * 判断参数 DataDisks 是否已赋值
+                     * @return DataDisks 是否已赋值
+                     * 
+                     */
+                    bool DataDisksHasBeenSet() const;
+
+                    /**
+                     * 获取Unschedulable or not
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * @return Unschedulable Unschedulable or not
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * 
+                     */
+                    int64_t GetUnschedulable() const;
+
+                    /**
+                     * 设置Unschedulable or not
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * @param _unschedulable Unschedulable or not
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetUnschedulable(const int64_t& _unschedulable);
+
+                    /**
+                     * 判断参数 Unschedulable 是否已赋值
+                     * @return Unschedulable 是否已赋值
+                     * 
+                     */
+                    bool UnschedulableHasBeenSet() const;
+
+                    /**
+                     * 获取Custom script, executed before UserScript
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * @return PreStartUserScript Custom script, executed before UserScript
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * 
+                     */
+                    std::string GetPreStartUserScript() const;
+
+                    /**
+                     * 设置Custom script, executed before UserScript
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * @param _preStartUserScript Custom script, executed before UserScript
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetPreStartUserScript(const std::string& _preStartUserScript);
+
+                    /**
+                     * 判断参数 PreStartUserScript 是否已赋值
+                     * @return PreStartUserScript 是否已赋值
+                     * 
+                     */
+                    bool PreStartUserScriptHasBeenSet() const;
+
                 private:
 
                     /**
@@ -561,6 +770,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_taintsHasBeenSet;
 
                     /**
+                     * Node Annotation List
+                     */
+                    std::vector<AnnotationValue> m_annotations;
+                    bool m_annotationsHasBeenSet;
+
+                    /**
                      * Node list
                      */
                     NodeCountSummary m_nodeCountSummary;
@@ -592,6 +807,13 @@ Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     int64_t m_desiredNodesNum;
                     bool m_desiredNodesNumHasBeenSet;
+
+                    /**
+                     * Runtime Description
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     */
+                    RuntimeConfig m_runtimeConfig;
+                    bool m_runtimeConfigHasBeenSet;
 
                     /**
                      * The operating system of the node pool
@@ -641,6 +863,50 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool m_deletionProtection;
                     bool m_deletionProtectionHasBeenSet;
+
+                    /**
+                     * Node Configuration
+
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     */
+                    InstanceExtraArgs m_extraArgs;
+                    bool m_extraArgsHasBeenSet;
+
+                    /**
+                     * GPU Driver-related Parameters
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     */
+                    GPUArgs m_gPUArgs;
+                    bool m_gPUArgsHasBeenSet;
+
+                    /**
+                     * Specified value of dockerd --graph. Default value: /var/lib/docker
+
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     */
+                    std::string m_dockerGraphPath;
+                    bool m_dockerGraphPathHasBeenSet;
+
+                    /**
+                     * Multiple Disk Data Disk Mount Information: When creating a new node, make sure that the CVM purchase parameters include the information of purchasing multiple data disks. For example, in the DataDisks under RunInstancesPara of CreateClusterInstances API, it must also be set to purchase multiple data disks. Refer to the example of adding cluster nodes (multiple data disks) of CreateClusterInstances API; when adding existing nodes, ensure that the specified partition information actually exists on the node.
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     */
+                    std::vector<DataDisk> m_dataDisks;
+                    bool m_dataDisksHasBeenSet;
+
+                    /**
+                     * Unschedulable or not
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     */
+                    int64_t m_unschedulable;
+                    bool m_unschedulableHasBeenSet;
+
+                    /**
+                     * Custom script, executed before UserScript
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     */
+                    std::string m_preStartUserScript;
+                    bool m_preStartUserScriptHasBeenSet;
 
                 };
             }

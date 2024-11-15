@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取ENI
-                     * @return Interface ENI
+                     * 获取Network Card Name, specifies the network card used by the kubelet on edge nodes to register with the apiserver.
+                     * @return Interface Network Card Name, specifies the network card used by the kubelet on edge nodes to register with the apiserver.
                      * 
                      */
                     std::string GetInterface() const;
 
                     /**
-                     * 设置ENI
-                     * @param _interface ENI
+                     * 设置Network Card Name, specifies the network card used by the kubelet on edge nodes to register with the apiserver.
+                     * @param _interface Network Card Name, specifies the network card used by the kubelet on edge nodes to register with the apiserver.
                      * 
                      */
                     void SetInterface(const std::string& _interface);
@@ -156,7 +156,7 @@ namespace TencentCloud
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * ENI
+                     * Network Card Name, specifies the network card used by the kubelet on edge nodes to register with the apiserver.
                      */
                     std::string m_interface;
                     bool m_interfaceHasBeenSet;

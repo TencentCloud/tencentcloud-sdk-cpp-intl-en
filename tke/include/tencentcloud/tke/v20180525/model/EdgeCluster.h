@@ -409,19 +409,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EdgeVersionHasBeenSet() const;
 
                     /**
-                     * 获取u200dTags bound with the cluster
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
-                     * @return TagSpecification u200dTags bound with the cluster
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Tags bound with the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return TagSpecification Tags bound with the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     TagSpecification GetTagSpecification() const;
 
                     /**
-                     * 设置u200dTags bound with the cluster
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
-                     * @param _tagSpecification u200dTags bound with the cluster
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Tags bound with the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param _tagSpecification Tags bound with the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTagSpecification(const TagSpecification& _tagSpecification);
@@ -538,8 +538,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_edgeVersionHasBeenSet;
 
                     /**
-                     * u200dTags bound with the cluster
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+                     * Tags bound with the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     TagSpecification m_tagSpecification;
                     bool m_tagSpecificationHasBeenSet;

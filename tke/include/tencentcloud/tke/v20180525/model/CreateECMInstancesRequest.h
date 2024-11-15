@@ -45,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID
-                     * @return ClusterID Cluster ID
+                     * 获取Cluster ID. Edge clusters need to enable public network access before adding ECM nodes.
+                     * @return ClusterID Cluster ID. Edge clusters need to enable public network access before adding ECM nodes.
                      * 
                      */
                     std::string GetClusterID() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _clusterID Cluster ID
+                     * 设置Cluster ID. Edge clusters need to enable public network access before adding ECM nodes.
+                     * @param _clusterID Cluster ID. Edge clusters need to enable public network access before adding ECM nodes.
                      * 
                      */
                     void SetClusterID(const std::string& _clusterID);
@@ -66,15 +66,15 @@ namespace TencentCloud
                     bool ClusterIDHasBeenSet() const;
 
                     /**
-                     * 获取Module ID
-                     * @return ModuleId Module ID
+                     * 获取Edge module ID
+                     * @return ModuleId Edge module ID
                      * 
                      */
                     std::string GetModuleId() const;
 
                     /**
-                     * 设置Module ID
-                     * @param _moduleId Module ID
+                     * 设置Edge module ID
+                     * @param _moduleId Edge module ID
                      * 
                      */
                     void SetModuleId(const std::string& _moduleId);
@@ -299,13 +299,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster ID
+                     * Cluster ID. Edge clusters need to enable public network access before adding ECM nodes.
                      */
                     std::string m_clusterID;
                     bool m_clusterIDHasBeenSet;
 
                     /**
-                     * Module ID
+                     * Edge module ID
                      */
                     std::string m_moduleId;
                     bool m_moduleIdHasBeenSet;

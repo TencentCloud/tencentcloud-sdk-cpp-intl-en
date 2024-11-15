@@ -48,14 +48,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Version of GPU driver or CUDA
+
+Note: This field may return "null", indicating that no valid value can be obtained.
                      * @return Version Version of GPU driver or CUDA
+
+Note: This field may return "null", indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetVersion() const;
 
                     /**
                      * 设置Version of GPU driver or CUDA
+
+Note: This field may return "null", indicating that no valid value can be obtained.
                      * @param _version Version of GPU driver or CUDA
+
+Note: This field may return "null", indicating that no valid value can be obtained.
                      * 
                      */
                     void SetVersion(const std::string& _version);
@@ -69,14 +77,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Name of GPU driver or CUDA
+
+Note: This field may return "null", indicating that no valid value can be obtained.
                      * @return Name Name of GPU driver or CUDA
+
+Note: This field may return "null", indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Name of GPU driver or CUDA
+
+Note: This field may return "null", indicating that no valid value can be obtained.
                      * @param _name Name of GPU driver or CUDA
+
+Note: This field may return "null", indicating that no valid value can be obtained.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -92,12 +108,16 @@ namespace TencentCloud
 
                     /**
                      * Version of GPU driver or CUDA
+
+Note: This field may return "null", indicating that no valid value can be obtained.
                      */
                     std::string m_version;
                     bool m_versionHasBeenSet;
 
                     /**
                      * Name of GPU driver or CUDA
+
+Note: This field may return "null", indicating that no valid value can be obtained.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;

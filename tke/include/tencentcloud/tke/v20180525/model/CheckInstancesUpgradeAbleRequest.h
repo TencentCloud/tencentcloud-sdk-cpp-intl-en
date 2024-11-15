@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Upgrade type
-                     * @return UpgradeType Upgrade type
+                     * 获取Upgrade type, enum values: reset (Reinstallation and Upgrade, supports major and minor versions), hot (In-place Rolling Minor Version Upgrade), major (In-place Rolling Major Version Upgrade).
+                     * @return UpgradeType Upgrade type, enum values: reset (Reinstallation and Upgrade, supports major and minor versions), hot (In-place Rolling Minor Version Upgrade), major (In-place Rolling Major Version Upgrade).
                      * 
                      */
                     std::string GetUpgradeType() const;
 
                     /**
-                     * 设置Upgrade type
-                     * @param _upgradeType Upgrade type
+                     * 设置Upgrade type, enum values: reset (Reinstallation and Upgrade, supports major and minor versions), hot (In-place Rolling Minor Version Upgrade), major (In-place Rolling Major Version Upgrade).
+                     * @param _upgradeType Upgrade type, enum values: reset (Reinstallation and Upgrade, supports major and minor versions), hot (In-place Rolling Minor Version Upgrade), major (In-place Rolling Major Version Upgrade).
                      * 
                      */
                     void SetUpgradeType(const std::string& _upgradeType);
@@ -184,7 +184,7 @@ namespace TencentCloud
                     bool m_instanceIdsHasBeenSet;
 
                     /**
-                     * Upgrade type
+                     * Upgrade type, enum values: reset (Reinstallation and Upgrade, supports major and minor versions), hot (In-place Rolling Minor Version Upgrade), major (In-place Rolling Major Version Upgrade).
                      */
                     std::string m_upgradeType;
                     bool m_upgradeTypeHasBeenSet;

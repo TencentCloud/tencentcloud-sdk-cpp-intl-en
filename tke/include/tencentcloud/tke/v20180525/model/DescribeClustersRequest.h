@@ -111,167 +111,15 @@ all clusters under the account will be obtained)
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取·  ClusterName
-    Filters by the cluster name
-    Type: String
-    Required: No
-
-·  ClusterType
-    Filters by the cluster type
-    Type: String
-    Required: No
-
-·  ClusterStatus
-    Filters by the cluster status
-    Type: String
-    Required: No
-
-·  Tags
-    Filters by key-value pairs of tags
-    Type: String
-    Required: No
-
-·  vpc-id
-    Filters by the VPC ID
-    Type: String
-    Required: No
-
-·  tag-key
-    Filters by the tag key
-    Type: String
-    Required: No
-
-·  tag-value
-    Filters by the tag value
-    Type: String
-    Required: No
-
-·  tag:tag-key
-    Filters by key-value pairs of tags
-    Type: String
-    Required: No
-                     * @return Filters ·  ClusterName
-    Filters by the cluster name
-    Type: String
-    Required: No
-
-·  ClusterType
-    Filters by the cluster type
-    Type: String
-    Required: No
-
-·  ClusterStatus
-    Filters by the cluster status
-    Type: String
-    Required: No
-
-·  Tags
-    Filters by key-value pairs of tags
-    Type: String
-    Required: No
-
-·  vpc-id
-    Filters by the VPC ID
-    Type: String
-    Required: No
-
-·  tag-key
-    Filters by the tag key
-    Type: String
-    Required: No
-
-·  tag-value
-    Filters by the tag value
-    Type: String
-    Required: No
-
-·  tag:tag-key
-    Filters by key-value pairs of tags
-    Type: String
-    Required: No
+                     * 获取· "Name":"ClusterName","Values": ["test"] Filter by the [cluster name]. Type: String Required: No · "Name":"ClusterType","Values": ["MANAGED_CLUSTER"] Filter by the [cluster type]. Type: String Required: No · "Name":"ClusterStatus","Values": ["Running"] Filter by the [cluster status]. Type: String Required: No · "Name":"vpc-id","Values": ["vpc-123qajzs"] Filter by the [VPC]. Type: String Required: No · "Name":"tag-key","Values": ["testKey"] Filter by the [tag key]. Type: String Required: No · "Name":"tag-value","Values": ["testValue"] Filter by the [tag value]. Type: String Required: No · "Name":"Tags","Values": ["abc:1"] Filter by [key-value pairs of tags]. Type: String Required: No
+                     * @return Filters · "Name":"ClusterName","Values": ["test"] Filter by the [cluster name]. Type: String Required: No · "Name":"ClusterType","Values": ["MANAGED_CLUSTER"] Filter by the [cluster type]. Type: String Required: No · "Name":"ClusterStatus","Values": ["Running"] Filter by the [cluster status]. Type: String Required: No · "Name":"vpc-id","Values": ["vpc-123qajzs"] Filter by the [VPC]. Type: String Required: No · "Name":"tag-key","Values": ["testKey"] Filter by the [tag key]. Type: String Required: No · "Name":"tag-value","Values": ["testValue"] Filter by the [tag value]. Type: String Required: No · "Name":"Tags","Values": ["abc:1"] Filter by [key-value pairs of tags]. Type: String Required: No
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置·  ClusterName
-    Filters by the cluster name
-    Type: String
-    Required: No
-
-·  ClusterType
-    Filters by the cluster type
-    Type: String
-    Required: No
-
-·  ClusterStatus
-    Filters by the cluster status
-    Type: String
-    Required: No
-
-·  Tags
-    Filters by key-value pairs of tags
-    Type: String
-    Required: No
-
-·  vpc-id
-    Filters by the VPC ID
-    Type: String
-    Required: No
-
-·  tag-key
-    Filters by the tag key
-    Type: String
-    Required: No
-
-·  tag-value
-    Filters by the tag value
-    Type: String
-    Required: No
-
-·  tag:tag-key
-    Filters by key-value pairs of tags
-    Type: String
-    Required: No
-                     * @param _filters ·  ClusterName
-    Filters by the cluster name
-    Type: String
-    Required: No
-
-·  ClusterType
-    Filters by the cluster type
-    Type: String
-    Required: No
-
-·  ClusterStatus
-    Filters by the cluster status
-    Type: String
-    Required: No
-
-·  Tags
-    Filters by key-value pairs of tags
-    Type: String
-    Required: No
-
-·  vpc-id
-    Filters by the VPC ID
-    Type: String
-    Required: No
-
-·  tag-key
-    Filters by the tag key
-    Type: String
-    Required: No
-
-·  tag-value
-    Filters by the tag value
-    Type: String
-    Required: No
-
-·  tag:tag-key
-    Filters by key-value pairs of tags
-    Type: String
-    Required: No
+                     * 设置· "Name":"ClusterName","Values": ["test"] Filter by the [cluster name]. Type: String Required: No · "Name":"ClusterType","Values": ["MANAGED_CLUSTER"] Filter by the [cluster type]. Type: String Required: No · "Name":"ClusterStatus","Values": ["Running"] Filter by the [cluster status]. Type: String Required: No · "Name":"vpc-id","Values": ["vpc-123qajzs"] Filter by the [VPC]. Type: String Required: No · "Name":"tag-key","Values": ["testKey"] Filter by the [tag key]. Type: String Required: No · "Name":"tag-value","Values": ["testValue"] Filter by the [tag value]. Type: String Required: No · "Name":"Tags","Values": ["abc:1"] Filter by [key-value pairs of tags]. Type: String Required: No
+                     * @param _filters · "Name":"ClusterName","Values": ["test"] Filter by the [cluster name]. Type: String Required: No · "Name":"ClusterType","Values": ["MANAGED_CLUSTER"] Filter by the [cluster type]. Type: String Required: No · "Name":"ClusterStatus","Values": ["Running"] Filter by the [cluster status]. Type: String Required: No · "Name":"vpc-id","Values": ["vpc-123qajzs"] Filter by the [VPC]. Type: String Required: No · "Name":"tag-key","Values": ["testKey"] Filter by the [tag key]. Type: String Required: No · "Name":"tag-value","Values": ["testValue"] Filter by the [tag value]. Type: String Required: No · "Name":"Tags","Values": ["abc:1"] Filter by [key-value pairs of tags]. Type: String Required: No
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -326,45 +174,7 @@ all clusters under the account will be obtained)
                     bool m_limitHasBeenSet;
 
                     /**
-                     * ·  ClusterName
-    Filters by the cluster name
-    Type: String
-    Required: No
-
-·  ClusterType
-    Filters by the cluster type
-    Type: String
-    Required: No
-
-·  ClusterStatus
-    Filters by the cluster status
-    Type: String
-    Required: No
-
-·  Tags
-    Filters by key-value pairs of tags
-    Type: String
-    Required: No
-
-·  vpc-id
-    Filters by the VPC ID
-    Type: String
-    Required: No
-
-·  tag-key
-    Filters by the tag key
-    Type: String
-    Required: No
-
-·  tag-value
-    Filters by the tag value
-    Type: String
-    Required: No
-
-·  tag:tag-key
-    Filters by key-value pairs of tags
-    Type: String
-    Required: No
+                     * · "Name":"ClusterName","Values": ["test"] Filter by the [cluster name]. Type: String Required: No · "Name":"ClusterType","Values": ["MANAGED_CLUSTER"] Filter by the [cluster type]. Type: String Required: No · "Name":"ClusterStatus","Values": ["Running"] Filter by the [cluster status]. Type: String Required: No · "Name":"vpc-id","Values": ["vpc-123qajzs"] Filter by the [VPC]. Type: String Required: No · "Name":"tag-key","Values": ["testKey"] Filter by the [tag key]. Type: String Required: No · "Name":"tag-value","Values": ["testValue"] Filter by the [tag value]. Type: String Required: No · "Name":"Tags","Values": ["abc:1"] Filter by [key-value pairs of tags]. Type: String Required: No
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

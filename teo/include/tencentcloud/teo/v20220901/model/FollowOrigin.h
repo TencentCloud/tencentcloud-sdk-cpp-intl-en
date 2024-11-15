@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The origin cache configuration
+                * Following origin server configuration for caching.
                 */
                 class FollowOrigin : public AbstractModel
                 {
@@ -76,44 +76,27 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Sets the default cache time when the origin server does not return the Cache-Control header.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return DefaultCacheTime Sets the default cache time when the origin server does not return the Cache-Control header.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * 
-                     */
-                    int64_t GetDefaultCacheTime() const;
-
-                    /**
-                     * 设置Sets the default cache time when the origin server does not return the Cache-Control header.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _defaultCacheTime Sets the default cache time when the origin server does not return the Cache-Control header.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * 
-                     */
-                    void SetDefaultCacheTime(const int64_t& _defaultCacheTime);
-
-                    /**
-                     * 判断参数 DefaultCacheTime 是否已赋值
-                     * @return DefaultCacheTime 是否已赋值
-                     * 
-                     */
-                    bool DefaultCacheTimeHasBeenSet() const;
-
-                    /**
-                     * 获取Specifies whether to enable cache when the origin server does not return the Cache-Control header.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return DefaultCache Specifies whether to enable cache when the origin server does not return the Cache-Control header.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Whether to cache when an origin server does not return the Cache-Control header. This field is required when Switch is on; otherwise, it is ineffective. Valid values:
+<li>on: Cache.</li>
+<li>off: Do not cache.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @return DefaultCache Whether to cache when an origin server does not return the Cache-Control header. This field is required when Switch is on; otherwise, it is ineffective. Valid values:
+<li>on: Cache.</li>
+<li>off: Do not cache.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     std::string GetDefaultCache() const;
 
                     /**
-                     * 设置Specifies whether to enable cache when the origin server does not return the Cache-Control header.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _defaultCache Specifies whether to enable cache when the origin server does not return the Cache-Control header.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Whether to cache when an origin server does not return the Cache-Control header. This field is required when Switch is on; otherwise, it is ineffective. Valid values:
+<li>on: Cache.</li>
+<li>off: Do not cache.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @param _defaultCache Whether to cache when an origin server does not return the Cache-Control header. This field is required when Switch is on; otherwise, it is ineffective. Valid values:
+<li>on: Cache.</li>
+<li>off: Do not cache.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     void SetDefaultCache(const std::string& _defaultCache);
@@ -126,19 +109,27 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool DefaultCacheHasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether to use the default caching policy when Cache-Control is not returned from the origin
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return DefaultCacheStrategy Specifies whether to use the default caching policy when Cache-Control is not returned from the origin
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Whether to use the default caching policy when an origin server does not return the Cache-Control header. This field is required when DefaultCache is set to on; otherwise, it is ineffective. When DefaultCacheTime is not 0, this field should be off. Valid values:
+<li>on: Use the default caching policy.</li>
+<li>off: Do not use the default caching policy.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @return DefaultCacheStrategy Whether to use the default caching policy when an origin server does not return the Cache-Control header. This field is required when DefaultCache is set to on; otherwise, it is ineffective. When DefaultCacheTime is not 0, this field should be off. Valid values:
+<li>on: Use the default caching policy.</li>
+<li>off: Do not use the default caching policy.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     std::string GetDefaultCacheStrategy() const;
 
                     /**
-                     * 设置Specifies whether to use the default caching policy when Cache-Control is not returned from the origin
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _defaultCacheStrategy Specifies whether to use the default caching policy when Cache-Control is not returned from the origin
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Whether to use the default caching policy when an origin server does not return the Cache-Control header. This field is required when DefaultCache is set to on; otherwise, it is ineffective. When DefaultCacheTime is not 0, this field should be off. Valid values:
+<li>on: Use the default caching policy.</li>
+<li>off: Do not use the default caching policy.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @param _defaultCacheStrategy Whether to use the default caching policy when an origin server does not return the Cache-Control header. This field is required when DefaultCache is set to on; otherwise, it is ineffective. When DefaultCacheTime is not 0, this field should be off. Valid values:
+<li>on: Use the default caching policy.</li>
+<li>off: Do not use the default caching policy.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     void SetDefaultCacheStrategy(const std::string& _defaultCacheStrategy);
@@ -149,6 +140,31 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * 
                      */
                     bool DefaultCacheStrategyHasBeenSet() const;
+
+                    /**
+                     * 获取The default cache time in seconds when an origin server does not return the Cache-Control header. The value ranges from 0 to 315360000. This field is required when DefaultCache is set to on; otherwise, it is ineffective. When DefaultCacheStrategy is on, this field should be 0.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @return DefaultCacheTime The default cache time in seconds when an origin server does not return the Cache-Control header. The value ranges from 0 to 315360000. This field is required when DefaultCache is set to on; otherwise, it is ineffective. When DefaultCacheStrategy is on, this field should be 0.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 
+                     */
+                    int64_t GetDefaultCacheTime() const;
+
+                    /**
+                     * 设置The default cache time in seconds when an origin server does not return the Cache-Control header. The value ranges from 0 to 315360000. This field is required when DefaultCache is set to on; otherwise, it is ineffective. When DefaultCacheStrategy is on, this field should be 0.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @param _defaultCacheTime The default cache time in seconds when an origin server does not return the Cache-Control header. The value ranges from 0 to 315360000. This field is required when DefaultCache is set to on; otherwise, it is ineffective. When DefaultCacheStrategy is on, this field should be 0.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 
+                     */
+                    void SetDefaultCacheTime(const int64_t& _defaultCacheTime);
+
+                    /**
+                     * 判断参数 DefaultCacheTime 是否已赋值
+                     * @return DefaultCacheTime 是否已赋值
+                     * 
+                     */
+                    bool DefaultCacheTimeHasBeenSet() const;
 
                 private:
 
@@ -161,25 +177,29 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Sets the default cache time when the origin server does not return the Cache-Control header.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     */
-                    int64_t m_defaultCacheTime;
-                    bool m_defaultCacheTimeHasBeenSet;
-
-                    /**
-                     * Specifies whether to enable cache when the origin server does not return the Cache-Control header.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Whether to cache when an origin server does not return the Cache-Control header. This field is required when Switch is on; otherwise, it is ineffective. Valid values:
+<li>on: Cache.</li>
+<li>off: Do not cache.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      */
                     std::string m_defaultCache;
                     bool m_defaultCacheHasBeenSet;
 
                     /**
-                     * Specifies whether to use the default caching policy when Cache-Control is not returned from the origin
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Whether to use the default caching policy when an origin server does not return the Cache-Control header. This field is required when DefaultCache is set to on; otherwise, it is ineffective. When DefaultCacheTime is not 0, this field should be off. Valid values:
+<li>on: Use the default caching policy.</li>
+<li>off: Do not use the default caching policy.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      */
                     std::string m_defaultCacheStrategy;
                     bool m_defaultCacheStrategyHasBeenSet;
+
+                    /**
+                     * The default cache time in seconds when an origin server does not return the Cache-Control header. The value ranges from 0 to 315360000. This field is required when DefaultCache is set to on; otherwise, it is ineffective. When DefaultCacheStrategy is on, this field should be 0.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     */
+                    int64_t m_defaultCacheTime;
+                    bool m_defaultCacheTimeHasBeenSet;
 
                 };
             }

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取API document ID
-                     * @return ApiDocId API document ID
+                     * 获取API document ID.
+                     * @return ApiDocId API document ID.
                      * 
                      */
                     std::string GetApiDocId() const;
 
                     /**
-                     * 设置API document ID
-                     * @param _apiDocId API document ID
+                     * 设置API document ID.
+                     * @param _apiDocId API document ID.
                      * 
                      */
                     void SetApiDocId(const std::string& _apiDocId);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * API document ID
+                     * API document ID.
                      */
                     std::string m_apiDocId;
                     bool m_apiDocIdHasBeenSet;

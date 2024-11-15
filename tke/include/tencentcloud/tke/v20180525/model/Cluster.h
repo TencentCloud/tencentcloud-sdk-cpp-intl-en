@@ -596,6 +596,31 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool ClusterEtcdNodeNumHasBeenSet() const;
 
+                    /**
+                     * 获取CDC Id
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * @return CdcId CDC Id
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * 
+                     */
+                    std::string GetCdcId() const;
+
+                    /**
+                     * 设置CDC Id
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * @param _cdcId CDC Id
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetCdcId(const std::string& _cdcId);
+
+                    /**
+                     * 判断参数 CdcId 是否已赋值
+                     * @return CdcId 是否已赋值
+                     * 
+                     */
+                    bool CdcIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -752,6 +777,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     uint64_t m_clusterEtcdNodeNum;
                     bool m_clusterEtcdNodeNumHasBeenSet;
+
+                    /**
+                     * CDC Id
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     */
+                    std::string m_cdcId;
+                    bool m_cdcIdHasBeenSet;
 
                 };
             }

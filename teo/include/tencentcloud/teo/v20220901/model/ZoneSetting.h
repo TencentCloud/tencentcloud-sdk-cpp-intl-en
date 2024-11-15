@@ -45,6 +45,7 @@
 #include <tencentcloud/teo/v20220901/model/ImageOptimize.h>
 #include <tencentcloud/teo/v20220901/model/AccelerateMainland.h>
 #include <tencentcloud/teo/v20220901/model/StandardDebug.h>
+#include <tencentcloud/teo/v20220901/model/JITVideoProcess.h>
 
 
 namespace TencentCloud
@@ -642,6 +643,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool StandardDebugHasBeenSet() const;
 
+                    /**
+                     * 获取Just-in-time media processing configuration.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @return JITVideoProcess Just-in-time media processing configuration.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 
+                     */
+                    JITVideoProcess GetJITVideoProcess() const;
+
+                    /**
+                     * 设置Just-in-time media processing configuration.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @param _jITVideoProcess Just-in-time media processing configuration.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 
+                     */
+                    void SetJITVideoProcess(const JITVideoProcess& _jITVideoProcess);
+
+                    /**
+                     * 判断参数 JITVideoProcess 是否已赋值
+                     * @return JITVideoProcess 是否已赋值
+                     * 
+                     */
+                    bool JITVideoProcessHasBeenSet() const;
+
                 private:
 
                     /**
@@ -804,6 +830,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     StandardDebug m_standardDebug;
                     bool m_standardDebugHasBeenSet;
+
+                    /**
+                     * Just-in-time media processing configuration.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     */
+                    JITVideoProcess m_jITVideoProcess;
+                    bool m_jITVideoProcessHasBeenSet;
 
                 };
             }

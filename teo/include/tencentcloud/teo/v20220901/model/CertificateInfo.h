@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the server certificate.
-                     * @return CertId ID of the server certificate.
+                     * 获取Certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
+                     * @return CertId Certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
                      * 
                      */
                     std::string GetCertId() const;
 
                     /**
-                     * 设置ID of the server certificate.
-                     * @param _certId ID of the server certificate.
+                     * 设置Certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
+                     * @param _certId Certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
                      * 
                      */
                     void SetCertId(const std::string& _certId);
@@ -228,7 +228,7 @@ u200c<li>`failed`: Application rejected</li>
                 private:
 
                     /**
-                     * ID of the server certificate.
+                     * Certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
                      */
                     std::string m_certId;
                     bool m_certIdHasBeenSet;

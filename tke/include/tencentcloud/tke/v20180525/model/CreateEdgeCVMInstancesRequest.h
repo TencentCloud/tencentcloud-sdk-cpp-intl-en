@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID
-                     * @return ClusterID Cluster ID
+                     * 获取Cluster ID. Edge clusters need to enable public network access before adding CVM nodes.
+                     * @return ClusterID Cluster ID. Edge clusters need to enable public network access before adding CVM nodes.
                      * 
                      */
                     std::string GetClusterID() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _clusterID Cluster ID
+                     * 设置Cluster ID. Edge clusters need to enable public network access before adding CVM nodes.
+                     * @param _clusterID Cluster ID. Edge clusters need to enable public network access before adding CVM nodes.
                      * 
                      */
                     void SetClusterID(const std::string& _clusterID);
@@ -192,7 +192,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster ID
+                     * Cluster ID. Edge clusters need to enable public network access before adding CVM nodes.
                      */
                     std::string m_clusterID;
                     bool m_clusterIDHasBeenSet;

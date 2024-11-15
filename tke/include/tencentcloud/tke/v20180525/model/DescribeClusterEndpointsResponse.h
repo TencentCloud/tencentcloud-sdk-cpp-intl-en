@@ -165,6 +165,22 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool SecurityGroupHasBeenSet() const;
 
+                    /**
+                     * 获取Subnet for Private Network Access
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * @return ClusterIntranetSubnetId Subnet for Private Network Access
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * 
+                     */
+                    std::string GetClusterIntranetSubnetId() const;
+
+                    /**
+                     * 判断参数 ClusterIntranetSubnetId 是否已赋值
+                     * @return ClusterIntranetSubnetId 是否已赋值
+                     * 
+                     */
+                    bool ClusterIntranetSubnetIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -219,6 +235,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     std::string m_securityGroup;
                     bool m_securityGroupHasBeenSet;
+
+                    /**
+                     * Subnet for Private Network Access
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     */
+                    std::string m_clusterIntranetSubnetId;
+                    bool m_clusterIntranetSubnetIdHasBeenSet;
 
                 };
             }

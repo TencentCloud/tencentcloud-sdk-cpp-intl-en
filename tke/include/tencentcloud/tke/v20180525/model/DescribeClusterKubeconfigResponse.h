@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Sub-account kubeconfig file, used to access the cluster kube-apiserver directly
-                     * @return Kubeconfig Sub-account kubeconfig file, used to access the cluster kube-apiserver directly
+                     * 获取Sub-account kubeconfig file can be used to access the cluster kube-apiserver directly (if the "IsExtranet" parameter is false, it returns the kubeconfig for private network access, and the server will be a default domain name if the private network is not enabled; if the "IsExtranet" parameter is true, it returns the kubeconfig for public network access, and the server will be a default domain name if the public network is not enabled. The default domain name is not accessible by default and needs to be handled by the user).
+                     * @return Kubeconfig Sub-account kubeconfig file can be used to access the cluster kube-apiserver directly (if the "IsExtranet" parameter is false, it returns the kubeconfig for private network access, and the server will be a default domain name if the private network is not enabled; if the "IsExtranet" parameter is true, it returns the kubeconfig for public network access, and the server will be a default domain name if the public network is not enabled. The default domain name is not accessible by default and needs to be handled by the user).
                      * 
                      */
                     std::string GetKubeconfig() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Sub-account kubeconfig file, used to access the cluster kube-apiserver directly
+                     * Sub-account kubeconfig file can be used to access the cluster kube-apiserver directly (if the "IsExtranet" parameter is false, it returns the kubeconfig for private network access, and the server will be a default domain name if the private network is not enabled; if the "IsExtranet" parameter is true, it returns the kubeconfig for public network access, and the server will be a default domain name if the public network is not enabled. The default domain name is not accessible by default and needs to be handled by the user).
                      */
                     std::string m_kubeconfig;
                     bool m_kubeconfigHasBeenSet;

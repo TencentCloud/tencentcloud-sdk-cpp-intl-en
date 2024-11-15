@@ -47,19 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the server certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CertId ID of the server certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Server certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
+
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @return CertId Server certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
+
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     std::string GetCertId() const;
 
                     /**
-                     * 设置ID of the server certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _certId ID of the server certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Server certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
+
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @param _certId Server certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
+
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     void SetCertId(const std::string& _certId);
@@ -236,8 +240,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * ID of the server certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Server certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
+
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      */
                     std::string m_certId;
                     bool m_certIdHasBeenSet;

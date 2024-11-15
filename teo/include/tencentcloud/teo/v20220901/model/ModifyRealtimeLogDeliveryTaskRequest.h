@@ -112,22 +112,22 @@ namespace TencentCloud
 
                     /**
                      * 获取The status of the real-time log delivery task. Valid values:
-<li>`enabled`: Enabled;</li>
-<li>`disabled`: Disabled.</li>If this field is not filled in, the original configuration will be retained.
+<li>enabled: Enabled;</li>
+<li>disabled: Disabled.</li>If this field is not filled in, the original configuration will be retained.
                      * @return DeliveryStatus The status of the real-time log delivery task. Valid values:
-<li>`enabled`: Enabled;</li>
-<li>`disabled`: Disabled.</li>If this field is not filled in, the original configuration will be retained.
+<li>enabled: Enabled;</li>
+<li>disabled: Disabled.</li>If this field is not filled in, the original configuration will be retained.
                      * 
                      */
                     std::string GetDeliveryStatus() const;
 
                     /**
                      * 设置The status of the real-time log delivery task. Valid values:
-<li>`enabled`: Enabled;</li>
-<li>`disabled`: Disabled.</li>If this field is not filled in, the original configuration will be retained.
+<li>enabled: Enabled;</li>
+<li>disabled: Disabled.</li>If this field is not filled in, the original configuration will be retained.
                      * @param _deliveryStatus The status of the real-time log delivery task. Valid values:
-<li>`enabled`: Enabled;</li>
-<li>`disabled`: Disabled.</li>If this field is not filled in, the original configuration will be retained.
+<li>enabled: Enabled;</li>
+<li>disabled: Disabled.</li>If this field is not filled in, the original configuration will be retained.
                      * 
                      */
                     void SetDeliveryStatus(const std::string& _deliveryStatus);
@@ -190,15 +190,15 @@ namespace TencentCloud
                     bool FieldsHasBeenSet() const;
 
                     /**
-                     * 获取The list of custom fields for delivery, supporting extracting specified field values from HTTP request headers, response headers, and cookies. Each custom field name must be unique and the maximum number of fields is 200. If this field is not filled in, the original configuration will be retained.
-                     * @return CustomFields The list of custom fields for delivery, supporting extracting specified field values from HTTP request headers, response headers, and cookies. Each custom field name must be unique and the maximum number of fields is 200. If this field is not filled in, the original configuration will be retained.
+                     * 获取The list of custom fields for shipping, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. If this parameter is not filled in, the original configuration will be retained. The name of each custom field should be unique and the maximum number of fields is 200. Up to 5 custom fields of the request body type can be added for a single real-time log push task. Currently, adding custom fields is supported only for site acceleration logs (LogType=domain).
+                     * @return CustomFields The list of custom fields for shipping, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. If this parameter is not filled in, the original configuration will be retained. The name of each custom field should be unique and the maximum number of fields is 200. Up to 5 custom fields of the request body type can be added for a single real-time log push task. Currently, adding custom fields is supported only for site acceleration logs (LogType=domain).
                      * 
                      */
                     std::vector<CustomField> GetCustomFields() const;
 
                     /**
-                     * 设置The list of custom fields for delivery, supporting extracting specified field values from HTTP request headers, response headers, and cookies. Each custom field name must be unique and the maximum number of fields is 200. If this field is not filled in, the original configuration will be retained.
-                     * @param _customFields The list of custom fields for delivery, supporting extracting specified field values from HTTP request headers, response headers, and cookies. Each custom field name must be unique and the maximum number of fields is 200. If this field is not filled in, the original configuration will be retained.
+                     * 设置The list of custom fields for shipping, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. If this parameter is not filled in, the original configuration will be retained. The name of each custom field should be unique and the maximum number of fields is 200. Up to 5 custom fields of the request body type can be added for a single real-time log push task. Currently, adding custom fields is supported only for site acceleration logs (LogType=domain).
+                     * @param _customFields The list of custom fields for shipping, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. If this parameter is not filled in, the original configuration will be retained. The name of each custom field should be unique and the maximum number of fields is 200. Up to 5 custom fields of the request body type can be added for a single real-time log push task. Currently, adding custom fields is supported only for site acceleration logs (LogType=domain).
                      * 
                      */
                     void SetCustomFields(const std::vector<CustomField>& _customFields);
@@ -253,15 +253,15 @@ namespace TencentCloud
                     bool SampleHasBeenSet() const;
 
                     /**
-                     * 获取Output format for log delivery. If this field is not specified, the original configuration will be retained.Specifically, when TaskType is set to cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
-                     * @return LogFormat Output format for log delivery. If this field is not specified, the original configuration will be retained.Specifically, when TaskType is set to cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
+                     * 获取Output format for log delivery. If this field is not specified, the original configuration will be retained. Specifically, when TaskType is cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
+                     * @return LogFormat Output format for log delivery. If this field is not specified, the original configuration will be retained. Specifically, when TaskType is cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
                      * 
                      */
                     LogFormat GetLogFormat() const;
 
                     /**
-                     * 设置Output format for log delivery. If this field is not specified, the original configuration will be retained.Specifically, when TaskType is set to cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
-                     * @param _logFormat Output format for log delivery. If this field is not specified, the original configuration will be retained.Specifically, when TaskType is set to cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
+                     * 设置Output format for log delivery. If this field is not specified, the original configuration will be retained. Specifically, when TaskType is cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
+                     * @param _logFormat Output format for log delivery. If this field is not specified, the original configuration will be retained. Specifically, when TaskType is cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
                      * 
                      */
                     void SetLogFormat(const LogFormat& _logFormat);
@@ -337,8 +337,8 @@ namespace TencentCloud
 
                     /**
                      * The status of the real-time log delivery task. Valid values:
-<li>`enabled`: Enabled;</li>
-<li>`disabled`: Disabled.</li>If this field is not filled in, the original configuration will be retained.
+<li>enabled: Enabled;</li>
+<li>disabled: Disabled.</li>If this field is not filled in, the original configuration will be retained.
                      */
                     std::string m_deliveryStatus;
                     bool m_deliveryStatusHasBeenSet;
@@ -358,7 +358,7 @@ namespace TencentCloud
                     bool m_fieldsHasBeenSet;
 
                     /**
-                     * The list of custom fields for delivery, supporting extracting specified field values from HTTP request headers, response headers, and cookies. Each custom field name must be unique and the maximum number of fields is 200. If this field is not filled in, the original configuration will be retained.
+                     * The list of custom fields for shipping, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. If this parameter is not filled in, the original configuration will be retained. The name of each custom field should be unique and the maximum number of fields is 200. Up to 5 custom fields of the request body type can be added for a single real-time log push task. Currently, adding custom fields is supported only for site acceleration logs (LogType=domain).
                      */
                     std::vector<CustomField> m_customFields;
                     bool m_customFieldsHasBeenSet;
@@ -376,7 +376,7 @@ namespace TencentCloud
                     bool m_sampleHasBeenSet;
 
                     /**
-                     * Output format for log delivery. If this field is not specified, the original configuration will be retained.Specifically, when TaskType is set to cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
+                     * Output format for log delivery. If this field is not specified, the original configuration will be retained. Specifically, when TaskType is cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
                      */
                     LogFormat m_logFormat;
                     bool m_logFormatHasBeenSet;

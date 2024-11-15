@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Route table name
-                     * @return RouteTableName Route table name
+                     * 获取Route table name, usually the cluster ID
+                     * @return RouteTableName Route table name, usually the cluster ID
                      * 
                      */
                     std::string GetRouteTableName() const;
 
                     /**
-                     * 设置Route table name
-                     * @param _routeTableName Route table name
+                     * 设置Route table name, usually the cluster ID
+                     * @param _routeTableName Route table name, usually the cluster ID
                      * 
                      */
                     void SetRouteTableName(const std::string& _routeTableName);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether to ignore CIDR conflicts
-                     * @return IgnoreClusterCidrConflict Whether to ignore CIDR conflicts
+                     * 获取Whether to ignore CIDR and VPC route table conflicts, 0 means not to ignore, 1 means to ignore. The default is not to ignore.
+                     * @return IgnoreClusterCidrConflict Whether to ignore CIDR and VPC route table conflicts, 0 means not to ignore, 1 means to ignore. The default is not to ignore.
                      * 
                      */
                     int64_t GetIgnoreClusterCidrConflict() const;
 
                     /**
-                     * 设置Whether to ignore CIDR conflicts
-                     * @param _ignoreClusterCidrConflict Whether to ignore CIDR conflicts
+                     * 设置Whether to ignore CIDR and VPC route table conflicts, 0 means not to ignore, 1 means to ignore. The default is not to ignore.
+                     * @param _ignoreClusterCidrConflict Whether to ignore CIDR and VPC route table conflicts, 0 means not to ignore, 1 means to ignore. The default is not to ignore.
                      * 
                      */
                     void SetIgnoreClusterCidrConflict(const int64_t& _ignoreClusterCidrConflict);
@@ -129,7 +129,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Route table name
+                     * Route table name, usually the cluster ID
                      */
                     std::string m_routeTableName;
                     bool m_routeTableNameHasBeenSet;
@@ -147,7 +147,7 @@ namespace TencentCloud
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Whether to ignore CIDR conflicts
+                     * Whether to ignore CIDR and VPC route table conflicts, 0 means not to ignore, 1 means to ignore. The default is not to ignore.
                      */
                     int64_t m_ignoreClusterCidrConflict;
                     bool m_ignoreClusterCidrConflictHasBeenSet;

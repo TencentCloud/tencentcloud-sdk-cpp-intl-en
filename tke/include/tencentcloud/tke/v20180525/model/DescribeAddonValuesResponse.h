@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Parameters in a JSON string. If the add-on has been installed, the configured parameters are used for rendering.
-                     * @return Values Parameters in a JSON string. If the add-on has been installed, the configured parameters are used for rendering.
+                     * 获取Parameters list. If the add-on has been installed, the configured parameters are used for rendering, in a JSON string.
+                     * @return Values Parameters list. If the add-on has been installed, the configured parameters are used for rendering, in a JSON string.
                      * 
                      */
                     std::string GetValues() const;
@@ -74,7 +74,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Parameters in a JSON string. If the add-on has been installed, the configured parameters are used for rendering.
+                     * Parameters list. If the add-on has been installed, the configured parameters are used for rendering, in a JSON string.
                      */
                     std::string m_values;
                     bool m_valuesHasBeenSet;

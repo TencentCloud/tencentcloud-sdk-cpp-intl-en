@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/tke/v20180525/model/Label.h>
 #include <tencentcloud/tke/v20180525/model/Taint.h>
+#include <tencentcloud/tke/v20180525/model/AnnotationValue.h>
 #include <tencentcloud/tke/v20180525/model/GPUArgs.h>
 #include <tencentcloud/tke/v20180525/model/InstanceExtraArgs.h>
 #include <tencentcloud/tke/v20180525/model/Tag.h>
@@ -193,6 +194,27 @@ namespace TencentCloud
                      * 
                      */
                     bool TaintsHasBeenSet() const;
+
+                    /**
+                     * 获取Node Annotation List
+                     * @return Annotations Node Annotation List
+                     * 
+                     */
+                    std::vector<AnnotationValue> GetAnnotations() const;
+
+                    /**
+                     * 设置Node Annotation List
+                     * @param _annotations Node Annotation List
+                     * 
+                     */
+                    void SetAnnotations(const std::vector<AnnotationValue>& _annotations);
+
+                    /**
+                     * 判断参数 Annotations 是否已赋值
+                     * @return Annotations 是否已赋值
+                     * 
+                     */
+                    bool AnnotationsHasBeenSet() const;
 
                     /**
                      * 获取Indicates whether auto scaling is enabled.
@@ -425,6 +447,27 @@ namespace TencentCloud
                      */
                     bool DockerGraphPathHasBeenSet() const;
 
+                    /**
+                     * 获取Base64-encoded custom script
+                     * @return PreStartUserScript Base64-encoded custom script
+                     * 
+                     */
+                    std::string GetPreStartUserScript() const;
+
+                    /**
+                     * 设置Base64-encoded custom script
+                     * @param _preStartUserScript Base64-encoded custom script
+                     * 
+                     */
+                    void SetPreStartUserScript(const std::string& _preStartUserScript);
+
+                    /**
+                     * 判断参数 PreStartUserScript 是否已赋值
+                     * @return PreStartUserScript 是否已赋值
+                     * 
+                     */
+                    bool PreStartUserScriptHasBeenSet() const;
+
                 private:
 
                     /**
@@ -468,6 +511,12 @@ namespace TencentCloud
                      */
                     std::vector<Taint> m_taints;
                     bool m_taintsHasBeenSet;
+
+                    /**
+                     * Node Annotation List
+                     */
+                    std::vector<AnnotationValue> m_annotations;
+                    bool m_annotationsHasBeenSet;
 
                     /**
                      * Indicates whether auto scaling is enabled.
@@ -534,6 +583,12 @@ namespace TencentCloud
                      */
                     std::string m_dockerGraphPath;
                     bool m_dockerGraphPathHasBeenSet;
+
+                    /**
+                     * Base64-encoded custom script
+                     */
+                    std::string m_preStartUserScript;
+                    bool m_preStartUserScriptHasBeenSet;
 
                 };
             }

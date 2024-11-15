@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Additional parameter to be set for the instance
-                     * @return InstanceAdvancedSettings Additional parameter to be set for the instance
+                     * 获取Additional parameter information required for the instance (currently not supported by the backend, we will implement this in future versions)
+                     * @return InstanceAdvancedSettings Additional parameter information required for the instance (currently not supported by the backend, we will implement this in future versions)
                      * 
                      */
                     InstanceAdvancedSettings GetInstanceAdvancedSettings() const;
 
                     /**
-                     * 设置Additional parameter to be set for the instance
-                     * @param _instanceAdvancedSettings Additional parameter to be set for the instance
+                     * 设置Additional parameter information required for the instance (currently not supported by the backend, we will implement this in future versions)
+                     * @param _instanceAdvancedSettings Additional parameter information required for the instance (currently not supported by the backend, we will implement this in future versions)
                      * 
                      */
                     void SetInstanceAdvancedSettings(const InstanceAdvancedSettings& _instanceAdvancedSettings);
@@ -184,7 +184,7 @@ namespace TencentCloud
                     bool m_instanceIdsHasBeenSet;
 
                     /**
-                     * Additional parameter to be set for the instance
+                     * Additional parameter information required for the instance (currently not supported by the backend, we will implement this in future versions)
                      */
                     InstanceAdvancedSettings m_instanceAdvancedSettings;
                     bool m_instanceAdvancedSettingsHasBeenSet;

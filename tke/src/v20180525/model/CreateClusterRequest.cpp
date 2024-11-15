@@ -23,15 +23,16 @@ using namespace TencentCloud::Tke::V20180525::Model;
 using namespace std;
 
 CreateClusterRequest::CreateClusterRequest() :
-    m_clusterCIDRSettingsHasBeenSet(false),
     m_clusterTypeHasBeenSet(false),
+    m_clusterCIDRSettingsHasBeenSet(false),
     m_runInstancesForNodeHasBeenSet(false),
     m_clusterBasicSettingsHasBeenSet(false),
     m_clusterAdvancedSettingsHasBeenSet(false),
     m_instanceAdvancedSettingsHasBeenSet(false),
     m_existedInstancesForNodeHasBeenSet(false),
     m_instanceDataDiskMountSettingsHasBeenSet(false),
-    m_extensionAddonsHasBeenSet(false)
+    m_extensionAddonsHasBeenSet(false),
+    m_cdcIdHasBeenSet(false)
 {
 }
 
@@ -42,6 +43,14 @@ string CreateClusterRequest::ToJsonString() const
     rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
+    if (m_clusterTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ClusterType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_clusterType.c_str(), allocator).Move(), allocator);
+    }
+
     if (m_clusterCIDRSettingsHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -49,14 +58,6 @@ string CreateClusterRequest::ToJsonString() const
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_clusterCIDRSettings.ToJsonObject(d[key.c_str()], allocator);
-    }
-
-    if (m_clusterTypeHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "ClusterType";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_clusterType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_runInstancesForNodeHasBeenSet)
@@ -146,6 +147,14 @@ string CreateClusterRequest::ToJsonString() const
         }
     }
 
+    if (m_cdcIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CdcId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_cdcId.c_str(), allocator).Move(), allocator);
+    }
+
 
     rapidjson::StringBuffer buffer;
     rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
@@ -153,22 +162,6 @@ string CreateClusterRequest::ToJsonString() const
     return buffer.GetString();
 }
 
-
-ClusterCIDRSettings CreateClusterRequest::GetClusterCIDRSettings() const
-{
-    return m_clusterCIDRSettings;
-}
-
-void CreateClusterRequest::SetClusterCIDRSettings(const ClusterCIDRSettings& _clusterCIDRSettings)
-{
-    m_clusterCIDRSettings = _clusterCIDRSettings;
-    m_clusterCIDRSettingsHasBeenSet = true;
-}
-
-bool CreateClusterRequest::ClusterCIDRSettingsHasBeenSet() const
-{
-    return m_clusterCIDRSettingsHasBeenSet;
-}
 
 string CreateClusterRequest::GetClusterType() const
 {
@@ -184,6 +177,22 @@ void CreateClusterRequest::SetClusterType(const string& _clusterType)
 bool CreateClusterRequest::ClusterTypeHasBeenSet() const
 {
     return m_clusterTypeHasBeenSet;
+}
+
+ClusterCIDRSettings CreateClusterRequest::GetClusterCIDRSettings() const
+{
+    return m_clusterCIDRSettings;
+}
+
+void CreateClusterRequest::SetClusterCIDRSettings(const ClusterCIDRSettings& _clusterCIDRSettings)
+{
+    m_clusterCIDRSettings = _clusterCIDRSettings;
+    m_clusterCIDRSettingsHasBeenSet = true;
+}
+
+bool CreateClusterRequest::ClusterCIDRSettingsHasBeenSet() const
+{
+    return m_clusterCIDRSettingsHasBeenSet;
 }
 
 vector<RunInstancesForNode> CreateClusterRequest::GetRunInstancesForNode() const
@@ -296,6 +305,22 @@ void CreateClusterRequest::SetExtensionAddons(const vector<ExtensionAddon>& _ext
 bool CreateClusterRequest::ExtensionAddonsHasBeenSet() const
 {
     return m_extensionAddonsHasBeenSet;
+}
+
+string CreateClusterRequest::GetCdcId() const
+{
+    return m_cdcId;
+}
+
+void CreateClusterRequest::SetCdcId(const string& _cdcId)
+{
+    m_cdcId = _cdcId;
+    m_cdcIdHasBeenSet = true;
+}
+
+bool CreateClusterRequest::CdcIdHasBeenSet() const
+{
+    return m_cdcIdHasBeenSet;
 }
 
 

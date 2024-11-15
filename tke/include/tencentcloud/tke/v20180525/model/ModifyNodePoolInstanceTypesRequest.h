@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool NodePoolIdHasBeenSet() const;
 
                     /**
-                     * 获取List of instance types
-                     * @return InstanceTypes List of instance types
+                     * 获取Model list, master instance model does not support modification.
+                     * @return InstanceTypes Model list, master instance model does not support modification.
                      * 
                      */
                     std::vector<std::string> GetInstanceTypes() const;
 
                     /**
-                     * 设置List of instance types
-                     * @param _instanceTypes List of instance types
+                     * 设置Model list, master instance model does not support modification.
+                     * @param _instanceTypes Model list, master instance model does not support modification.
                      * 
                      */
                     void SetInstanceTypes(const std::vector<std::string>& _instanceTypes);
@@ -120,7 +120,7 @@ namespace TencentCloud
                     bool m_nodePoolIdHasBeenSet;
 
                     /**
-                     * List of instance types
+                     * Model list, master instance model does not support modification.
                      */
                     std::vector<std::string> m_instanceTypes;
                     bool m_instanceTypesHasBeenSet;

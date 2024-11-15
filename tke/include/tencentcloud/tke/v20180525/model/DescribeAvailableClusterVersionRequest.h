@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID
-                     * @return ClusterId Cluster ID
+                     * 获取Cluster ID. If you need to query the upgradable version of a specific cluster, this field is required.
+                     * @return ClusterId Cluster ID. If you need to query the upgradable version of a specific cluster, this field is required.
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _clusterId Cluster ID
+                     * 设置Cluster ID. If you need to query the upgradable version of a specific cluster, this field is required.
+                     * @param _clusterId Cluster ID. If you need to query the upgradable version of a specific cluster, this field is required.
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取List of cluster IDs
-                     * @return ClusterIds List of cluster IDs
+                     * 获取Cluster ID list. If you need to query the upgradable versions of multiple clusters, this field is required.
+                     * @return ClusterIds Cluster ID list. If you need to query the upgradable versions of multiple clusters, this field is required.
                      * 
                      */
                     std::vector<std::string> GetClusterIds() const;
 
                     /**
-                     * 设置List of cluster IDs
-                     * @param _clusterIds List of cluster IDs
+                     * 设置Cluster ID list. If you need to query the upgradable versions of multiple clusters, this field is required.
+                     * @param _clusterIds Cluster ID list. If you need to query the upgradable versions of multiple clusters, this field is required.
                      * 
                      */
                     void SetClusterIds(const std::vector<std::string>& _clusterIds);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster ID
+                     * Cluster ID. If you need to query the upgradable version of a specific cluster, this field is required.
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * List of cluster IDs
+                     * Cluster ID list. If you need to query the upgradable versions of multiple clusters, this field is required.
                      */
                     std::vector<std::string> m_clusterIds;
                     bool m_clusterIdsHasBeenSet;

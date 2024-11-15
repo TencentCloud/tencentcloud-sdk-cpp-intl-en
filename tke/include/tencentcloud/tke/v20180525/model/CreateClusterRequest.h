@@ -51,27 +51,6 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Container networking configuration information for the cluster
-                     * @return ClusterCIDRSettings Container networking configuration information for the cluster
-                     * 
-                     */
-                    ClusterCIDRSettings GetClusterCIDRSettings() const;
-
-                    /**
-                     * 设置Container networking configuration information for the cluster
-                     * @param _clusterCIDRSettings Container networking configuration information for the cluster
-                     * 
-                     */
-                    void SetClusterCIDRSettings(const ClusterCIDRSettings& _clusterCIDRSettings);
-
-                    /**
-                     * 判断参数 ClusterCIDRSettings 是否已赋值
-                     * @return ClusterCIDRSettings 是否已赋值
-                     * 
-                     */
-                    bool ClusterCIDRSettingsHasBeenSet() const;
-
-                    /**
                      * 获取Cluster type. Managed cluster: MANAGED_CLUSTER; self-deployed cluster: INDEPENDENT_CLUSTER.
                      * @return ClusterType Cluster type. Managed cluster: MANAGED_CLUSTER; self-deployed cluster: INDEPENDENT_CLUSTER.
                      * 
@@ -91,6 +70,27 @@ namespace TencentCloud
                      * 
                      */
                     bool ClusterTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Container networking configuration information for the cluster
+                     * @return ClusterCIDRSettings Container networking configuration information for the cluster
+                     * 
+                     */
+                    ClusterCIDRSettings GetClusterCIDRSettings() const;
+
+                    /**
+                     * 设置Container networking configuration information for the cluster
+                     * @param _clusterCIDRSettings Container networking configuration information for the cluster
+                     * 
+                     */
+                    void SetClusterCIDRSettings(const ClusterCIDRSettings& _clusterCIDRSettings);
+
+                    /**
+                     * 判断参数 ClusterCIDRSettings 是否已赋值
+                     * @return ClusterCIDRSettings 是否已赋值
+                     * 
+                     */
+                    bool ClusterCIDRSettingsHasBeenSet() const;
 
                     /**
                      * 获取Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the API for [creating a CVM instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1).
@@ -239,19 +239,40 @@ namespace TencentCloud
                      */
                     bool ExtensionAddonsHasBeenSet() const;
 
-                private:
+                    /**
+                     * 获取CDC Id
+                     * @return CdcId CDC Id
+                     * 
+                     */
+                    std::string GetCdcId() const;
 
                     /**
-                     * Container networking configuration information for the cluster
+                     * 设置CDC Id
+                     * @param _cdcId CDC Id
+                     * 
                      */
-                    ClusterCIDRSettings m_clusterCIDRSettings;
-                    bool m_clusterCIDRSettingsHasBeenSet;
+                    void SetCdcId(const std::string& _cdcId);
+
+                    /**
+                     * 判断参数 CdcId 是否已赋值
+                     * @return CdcId 是否已赋值
+                     * 
+                     */
+                    bool CdcIdHasBeenSet() const;
+
+                private:
 
                     /**
                      * Cluster type. Managed cluster: MANAGED_CLUSTER; self-deployed cluster: INDEPENDENT_CLUSTER.
                      */
                     std::string m_clusterType;
                     bool m_clusterTypeHasBeenSet;
+
+                    /**
+                     * Container networking configuration information for the cluster
+                     */
+                    ClusterCIDRSettings m_clusterCIDRSettings;
+                    bool m_clusterCIDRSettingsHasBeenSet;
 
                     /**
                      * Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the API for [creating a CVM instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1).
@@ -294,6 +315,12 @@ namespace TencentCloud
                      */
                     std::vector<ExtensionAddon> m_extensionAddons;
                     bool m_extensionAddonsHasBeenSet;
+
+                    /**
+                     * CDC Id
+                     */
+                    std::string m_cdcId;
+                    bool m_cdcIdHasBeenSet;
 
                 };
             }
