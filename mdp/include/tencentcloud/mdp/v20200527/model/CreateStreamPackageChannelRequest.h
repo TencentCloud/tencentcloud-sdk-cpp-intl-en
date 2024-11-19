@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Channel name
-                     * @return Name Channel name
+                     * 获取Channel name.
+                     * @return Name Channel name.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Channel name
-                     * @param _name Channel name
+                     * 设置Channel name.
+                     * @param _name Channel name.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Channel protocol. Valid values: HLS, DASH
-                     * @return Protocol Channel protocol. Valid values: HLS, DASH
+                     * 获取Channel protocol. Valid values: HLS, DASH, CMAF.
+                     * @return Protocol Channel protocol. Valid values: HLS, DASH, CMAF.
                      * 
                      */
                     std::string GetProtocol() const;
 
                     /**
-                     * 设置Channel protocol. Valid values: HLS, DASH
-                     * @param _protocol Channel protocol. Valid values: HLS, DASH
+                     * 设置Channel protocol. Valid values: HLS, DASH, CMAF.
+                     * @param _protocol Channel protocol. Valid values: HLS, DASH, CMAF.
                      * 
                      */
                     void SetProtocol(const std::string& _protocol);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取Cache configuration
-                     * @return CacheInfo Cache configuration
+                     * 获取Cache configuration.
+                     * @return CacheInfo Cache configuration.
                      * 
                      */
                     CacheInfo GetCacheInfo() const;
 
                     /**
-                     * 设置Cache configuration
-                     * @param _cacheInfo Cache configuration
+                     * 设置Cache configuration.
+                     * @param _cacheInfo Cache configuration.
                      * 
                      */
                     void SetCacheInfo(const CacheInfo& _cacheInfo);
@@ -109,19 +109,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Channel name
+                     * Channel name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Channel protocol. Valid values: HLS, DASH
+                     * Channel protocol. Valid values: HLS, DASH, CMAF.
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * Cache configuration
+                     * Cache configuration.
                      */
                     CacheInfo m_cacheInfo;
                     bool m_cacheInfoHasBeenSet;

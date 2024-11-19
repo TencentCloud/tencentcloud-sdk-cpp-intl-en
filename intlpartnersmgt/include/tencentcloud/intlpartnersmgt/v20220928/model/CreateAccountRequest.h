@@ -43,15 +43,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Account type of a new customer. Valid values: `personal`, `company`.
-                     * @return AccountType Account type of a new customer. Valid values: `personal`, `company`.
+                     * 获取Account type of a new customer.
+Valid values: `personal`, `company`.
+                     * @return AccountType Account type of a new customer.
+Valid values: `personal`, `company`.
                      * 
                      */
                     std::string GetAccountType() const;
 
                     /**
-                     * 设置Account type of a new customer. Valid values: `personal`, `company`.
-                     * @param _accountType Account type of a new customer. Valid values: `personal`, `company`.
+                     * 设置Account type of a new customer.
+Valid values: `personal`, `company`.
+                     * @param _accountType Account type of a new customer.
+Valid values: `personal`, `company`.
                      * 
                      */
                     void SetAccountType(const std::string& _accountType);
@@ -89,10 +93,10 @@ For example, account@qq.com.
                     bool MailHasBeenSet() const;
 
                     /**
-                     * 获取Account password
+                     * 获取Account password.
 Length limit: 8-20 characters
 A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not allowed.
-                     * @return Password Account password
+                     * @return Password Account password.
 Length limit: 8-20 characters
 A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not allowed.
                      * 
@@ -100,10 +104,10 @@ A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not
                     std::string GetPassword() const;
 
                     /**
-                     * 设置Account password
+                     * 设置Account password.
 Length limit: 8-20 characters
 A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not allowed.
-                     * @param _password Account password
+                     * @param _password Account password.
 Length limit: 8-20 characters
 A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not allowed.
                      * 
@@ -139,15 +143,23 @@ A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not
                     bool ConfirmPasswordHasBeenSet() const;
 
                     /**
-                     * 获取Customer's mobile number. The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. Starting from October 25, 2024, the system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
-                     * @return PhoneNum Customer's mobile number. The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. Starting from October 25, 2024, the system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
+                     * 获取Customer's mobile number. 
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. 
+The system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
+                     * @return PhoneNum Customer's mobile number. 
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. 
+The system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
                      * 
                      */
                     std::string GetPhoneNum() const;
 
                     /**
-                     * 设置Customer's mobile number. The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. Starting from October 25, 2024, the system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
-                     * @param _phoneNum Customer's mobile number. The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. Starting from October 25, 2024, the system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
+                     * 设置Customer's mobile number. 
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. 
+The system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
+                     * @param _phoneNum Customer's mobile number. 
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. 
+The system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
                      * 
                      */
                     void SetPhoneNum(const std::string& _phoneNum);
@@ -161,14 +173,18 @@ A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not
 
                     /**
                      * 获取Customer's country/region code, which can be obtained via the `GetCountryCodes` API, such as "852".
+Parameter value is not allowed to be 7,380,86.
                      * @return CountryCode Customer's country/region code, which can be obtained via the `GetCountryCodes` API, such as "852".
+Parameter value is not allowed to be 7,380,86.
                      * 
                      */
                     std::string GetCountryCode() const;
 
                     /**
                      * 设置Customer's country/region code, which can be obtained via the `GetCountryCodes` API, such as "852".
+Parameter value is not allowed to be 7,380,86.
                      * @param _countryCode Customer's country/region code, which can be obtained via the `GetCountryCodes` API, such as "852".
+Parameter value is not allowed to be 7,380,86.
                      * 
                      */
                     void SetCountryCode(const std::string& _countryCode);
@@ -223,15 +239,23 @@ A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not
                     bool ExtendedHasBeenSet() const;
 
                     /**
-                     * 获取Verification code. Starting from October 25, 2024, a new parameter will be used to verify the validity of the mobile number you provide. When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
-                     * @return VerifyCode Verification code. Starting from October 25, 2024, a new parameter will be used to verify the validity of the mobile number you provide. When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
+                     * 获取Verification code. 
+It will be used to verify the validity of the mobile number you provide. 
+When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
+                     * @return VerifyCode Verification code. 
+It will be used to verify the validity of the mobile number you provide. 
+When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
                      * 
                      */
                     std::string GetVerifyCode() const;
 
                     /**
-                     * 设置Verification code. Starting from October 25, 2024, a new parameter will be used to verify the validity of the mobile number you provide. When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
-                     * @param _verifyCode Verification code. Starting from October 25, 2024, a new parameter will be used to verify the validity of the mobile number you provide. When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
+                     * 设置Verification code. 
+It will be used to verify the validity of the mobile number you provide. 
+When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
+                     * @param _verifyCode Verification code. 
+It will be used to verify the validity of the mobile number you provide. 
+When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
                      * 
                      */
                     void SetVerifyCode(const std::string& _verifyCode);
@@ -246,7 +270,8 @@ A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not
                 private:
 
                     /**
-                     * Account type of a new customer. Valid values: `personal`, `company`.
+                     * Account type of a new customer.
+Valid values: `personal`, `company`.
                      */
                     std::string m_accountType;
                     bool m_accountTypeHasBeenSet;
@@ -259,7 +284,7 @@ For example, account@qq.com.
                     bool m_mailHasBeenSet;
 
                     /**
-                     * Account password
+                     * Account password.
 Length limit: 8-20 characters
 A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not allowed.
                      */
@@ -273,13 +298,16 @@ A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not
                     bool m_confirmPasswordHasBeenSet;
 
                     /**
-                     * Customer's mobile number. The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. Starting from October 25, 2024, the system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
+                     * Customer's mobile number. 
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. 
+The system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
                      */
                     std::string m_phoneNum;
                     bool m_phoneNumHasBeenSet;
 
                     /**
                      * Customer's country/region code, which can be obtained via the `GetCountryCodes` API, such as "852".
+Parameter value is not allowed to be 7,380,86.
                      */
                     std::string m_countryCode;
                     bool m_countryCodeHasBeenSet;
@@ -297,7 +325,9 @@ A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not
                     bool m_extendedHasBeenSet;
 
                     /**
-                     * Verification code. Starting from October 25, 2024, a new parameter will be used to verify the validity of the mobile number you provide. When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
+                     * Verification code. 
+It will be used to verify the validity of the mobile number you provide. 
+When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
                      */
                     std::string m_verifyCode;
                     bool m_verifyCodeHasBeenSet;

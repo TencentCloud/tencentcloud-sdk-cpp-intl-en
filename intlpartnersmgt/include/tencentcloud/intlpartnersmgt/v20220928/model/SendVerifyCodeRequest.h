@@ -44,14 +44,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Country code.
+Parameter value is not allowed to be 7,380,86.
                      * @return CountryCode Country code.
+Parameter value is not allowed to be 7,380,86.
                      * 
                      */
                     std::string GetCountryCode() const;
 
                     /**
                      * 设置Country code.
+Parameter value is not allowed to be 7,380,86.
                      * @param _countryCode Country code.
+Parameter value is not allowed to be 7,380,86.
                      * 
                      */
                     void SetCountryCode(const std::string& _countryCode);
@@ -88,6 +92,7 @@ namespace TencentCloud
 
                     /**
                      * Country code.
+Parameter value is not allowed to be 7,380,86.
                      */
                     std::string m_countryCode;
                     bool m_countryCodeHasBeenSet;

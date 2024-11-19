@@ -212,6 +212,178 @@ MdpClient::CreateStreamPackageHarvestJobOutcomeCallable MdpClient::CreateStreamP
     return task->get_future();
 }
 
+MdpClient::CreateStreamPackageLinearAssemblyChannelOutcome MdpClient::CreateStreamPackageLinearAssemblyChannel(const CreateStreamPackageLinearAssemblyChannelRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateStreamPackageLinearAssemblyChannel");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateStreamPackageLinearAssemblyChannelResponse rsp = CreateStreamPackageLinearAssemblyChannelResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateStreamPackageLinearAssemblyChannelOutcome(rsp);
+        else
+            return CreateStreamPackageLinearAssemblyChannelOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateStreamPackageLinearAssemblyChannelOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::CreateStreamPackageLinearAssemblyChannelAsync(const CreateStreamPackageLinearAssemblyChannelRequest& request, const CreateStreamPackageLinearAssemblyChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateStreamPackageLinearAssemblyChannel(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::CreateStreamPackageLinearAssemblyChannelOutcomeCallable MdpClient::CreateStreamPackageLinearAssemblyChannelCallable(const CreateStreamPackageLinearAssemblyChannelRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateStreamPackageLinearAssemblyChannelOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateStreamPackageLinearAssemblyChannel(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdpClient::CreateStreamPackageLinearAssemblyProgramOutcome MdpClient::CreateStreamPackageLinearAssemblyProgram(const CreateStreamPackageLinearAssemblyProgramRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateStreamPackageLinearAssemblyProgram");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateStreamPackageLinearAssemblyProgramResponse rsp = CreateStreamPackageLinearAssemblyProgramResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateStreamPackageLinearAssemblyProgramOutcome(rsp);
+        else
+            return CreateStreamPackageLinearAssemblyProgramOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateStreamPackageLinearAssemblyProgramOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::CreateStreamPackageLinearAssemblyProgramAsync(const CreateStreamPackageLinearAssemblyProgramRequest& request, const CreateStreamPackageLinearAssemblyProgramAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateStreamPackageLinearAssemblyProgram(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::CreateStreamPackageLinearAssemblyProgramOutcomeCallable MdpClient::CreateStreamPackageLinearAssemblyProgramCallable(const CreateStreamPackageLinearAssemblyProgramRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateStreamPackageLinearAssemblyProgramOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateStreamPackageLinearAssemblyProgram(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdpClient::CreateStreamPackageSourceOutcome MdpClient::CreateStreamPackageSource(const CreateStreamPackageSourceRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateStreamPackageSource");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateStreamPackageSourceResponse rsp = CreateStreamPackageSourceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateStreamPackageSourceOutcome(rsp);
+        else
+            return CreateStreamPackageSourceOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateStreamPackageSourceOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::CreateStreamPackageSourceAsync(const CreateStreamPackageSourceRequest& request, const CreateStreamPackageSourceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateStreamPackageSource(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::CreateStreamPackageSourceOutcomeCallable MdpClient::CreateStreamPackageSourceCallable(const CreateStreamPackageSourceRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateStreamPackageSourceOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateStreamPackageSource(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdpClient::CreateStreamPackageSourceLocationOutcome MdpClient::CreateStreamPackageSourceLocation(const CreateStreamPackageSourceLocationRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateStreamPackageSourceLocation");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateStreamPackageSourceLocationResponse rsp = CreateStreamPackageSourceLocationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateStreamPackageSourceLocationOutcome(rsp);
+        else
+            return CreateStreamPackageSourceLocationOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateStreamPackageSourceLocationOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::CreateStreamPackageSourceLocationAsync(const CreateStreamPackageSourceLocationRequest& request, const CreateStreamPackageSourceLocationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateStreamPackageSourceLocation(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::CreateStreamPackageSourceLocationOutcomeCallable MdpClient::CreateStreamPackageSourceLocationCallable(const CreateStreamPackageSourceLocationRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateStreamPackageSourceLocationOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateStreamPackageSourceLocation(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 MdpClient::DeleteStreamPackageChannelEndpointsOutcome MdpClient::DeleteStreamPackageChannelEndpoints(const DeleteStreamPackageChannelEndpointsRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteStreamPackageChannelEndpoints");
@@ -377,6 +549,264 @@ MdpClient::DeleteStreamPackageHarvestJobsOutcomeCallable MdpClient::DeleteStream
         [this, request]()
         {
             return this->DeleteStreamPackageHarvestJobs(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdpClient::DeleteStreamPackageLinearAssemblyChannelOutcome MdpClient::DeleteStreamPackageLinearAssemblyChannel(const DeleteStreamPackageLinearAssemblyChannelRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteStreamPackageLinearAssemblyChannel");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteStreamPackageLinearAssemblyChannelResponse rsp = DeleteStreamPackageLinearAssemblyChannelResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteStreamPackageLinearAssemblyChannelOutcome(rsp);
+        else
+            return DeleteStreamPackageLinearAssemblyChannelOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteStreamPackageLinearAssemblyChannelOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::DeleteStreamPackageLinearAssemblyChannelAsync(const DeleteStreamPackageLinearAssemblyChannelRequest& request, const DeleteStreamPackageLinearAssemblyChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteStreamPackageLinearAssemblyChannel(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::DeleteStreamPackageLinearAssemblyChannelOutcomeCallable MdpClient::DeleteStreamPackageLinearAssemblyChannelCallable(const DeleteStreamPackageLinearAssemblyChannelRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteStreamPackageLinearAssemblyChannelOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteStreamPackageLinearAssemblyChannel(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdpClient::DeleteStreamPackageLinearAssemblyChannelsOutcome MdpClient::DeleteStreamPackageLinearAssemblyChannels(const DeleteStreamPackageLinearAssemblyChannelsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteStreamPackageLinearAssemblyChannels");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteStreamPackageLinearAssemblyChannelsResponse rsp = DeleteStreamPackageLinearAssemblyChannelsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteStreamPackageLinearAssemblyChannelsOutcome(rsp);
+        else
+            return DeleteStreamPackageLinearAssemblyChannelsOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteStreamPackageLinearAssemblyChannelsOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::DeleteStreamPackageLinearAssemblyChannelsAsync(const DeleteStreamPackageLinearAssemblyChannelsRequest& request, const DeleteStreamPackageLinearAssemblyChannelsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteStreamPackageLinearAssemblyChannels(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::DeleteStreamPackageLinearAssemblyChannelsOutcomeCallable MdpClient::DeleteStreamPackageLinearAssemblyChannelsCallable(const DeleteStreamPackageLinearAssemblyChannelsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteStreamPackageLinearAssemblyChannelsOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteStreamPackageLinearAssemblyChannels(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdpClient::DeleteStreamPackageLinearAssemblyProgramOutcome MdpClient::DeleteStreamPackageLinearAssemblyProgram(const DeleteStreamPackageLinearAssemblyProgramRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteStreamPackageLinearAssemblyProgram");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteStreamPackageLinearAssemblyProgramResponse rsp = DeleteStreamPackageLinearAssemblyProgramResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteStreamPackageLinearAssemblyProgramOutcome(rsp);
+        else
+            return DeleteStreamPackageLinearAssemblyProgramOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteStreamPackageLinearAssemblyProgramOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::DeleteStreamPackageLinearAssemblyProgramAsync(const DeleteStreamPackageLinearAssemblyProgramRequest& request, const DeleteStreamPackageLinearAssemblyProgramAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteStreamPackageLinearAssemblyProgram(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::DeleteStreamPackageLinearAssemblyProgramOutcomeCallable MdpClient::DeleteStreamPackageLinearAssemblyProgramCallable(const DeleteStreamPackageLinearAssemblyProgramRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteStreamPackageLinearAssemblyProgramOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteStreamPackageLinearAssemblyProgram(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdpClient::DeleteStreamPackageLinearAssemblyProgramsOutcome MdpClient::DeleteStreamPackageLinearAssemblyPrograms(const DeleteStreamPackageLinearAssemblyProgramsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteStreamPackageLinearAssemblyPrograms");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteStreamPackageLinearAssemblyProgramsResponse rsp = DeleteStreamPackageLinearAssemblyProgramsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteStreamPackageLinearAssemblyProgramsOutcome(rsp);
+        else
+            return DeleteStreamPackageLinearAssemblyProgramsOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteStreamPackageLinearAssemblyProgramsOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::DeleteStreamPackageLinearAssemblyProgramsAsync(const DeleteStreamPackageLinearAssemblyProgramsRequest& request, const DeleteStreamPackageLinearAssemblyProgramsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteStreamPackageLinearAssemblyPrograms(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::DeleteStreamPackageLinearAssemblyProgramsOutcomeCallable MdpClient::DeleteStreamPackageLinearAssemblyProgramsCallable(const DeleteStreamPackageLinearAssemblyProgramsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteStreamPackageLinearAssemblyProgramsOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteStreamPackageLinearAssemblyPrograms(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdpClient::DeleteStreamPackageSourceOutcome MdpClient::DeleteStreamPackageSource(const DeleteStreamPackageSourceRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteStreamPackageSource");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteStreamPackageSourceResponse rsp = DeleteStreamPackageSourceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteStreamPackageSourceOutcome(rsp);
+        else
+            return DeleteStreamPackageSourceOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteStreamPackageSourceOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::DeleteStreamPackageSourceAsync(const DeleteStreamPackageSourceRequest& request, const DeleteStreamPackageSourceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteStreamPackageSource(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::DeleteStreamPackageSourceOutcomeCallable MdpClient::DeleteStreamPackageSourceCallable(const DeleteStreamPackageSourceRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteStreamPackageSourceOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteStreamPackageSource(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdpClient::DeleteStreamPackageSourceLocationOutcome MdpClient::DeleteStreamPackageSourceLocation(const DeleteStreamPackageSourceLocationRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteStreamPackageSourceLocation");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteStreamPackageSourceLocationResponse rsp = DeleteStreamPackageSourceLocationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteStreamPackageSourceLocationOutcome(rsp);
+        else
+            return DeleteStreamPackageSourceLocationOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteStreamPackageSourceLocationOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::DeleteStreamPackageSourceLocationAsync(const DeleteStreamPackageSourceLocationRequest& request, const DeleteStreamPackageSourceLocationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteStreamPackageSourceLocation(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::DeleteStreamPackageSourceLocationOutcomeCallable MdpClient::DeleteStreamPackageSourceLocationCallable(const DeleteStreamPackageSourceLocationRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteStreamPackageSourceLocationOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteStreamPackageSourceLocation(request);
         }
     );
 
@@ -556,6 +986,522 @@ MdpClient::DescribeStreamPackageHarvestJobsOutcomeCallable MdpClient::DescribeSt
     return task->get_future();
 }
 
+MdpClient::DescribeStreamPackageLinearAssemblyChannelOutcome MdpClient::DescribeStreamPackageLinearAssemblyChannel(const DescribeStreamPackageLinearAssemblyChannelRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeStreamPackageLinearAssemblyChannel");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeStreamPackageLinearAssemblyChannelResponse rsp = DescribeStreamPackageLinearAssemblyChannelResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeStreamPackageLinearAssemblyChannelOutcome(rsp);
+        else
+            return DescribeStreamPackageLinearAssemblyChannelOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeStreamPackageLinearAssemblyChannelOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::DescribeStreamPackageLinearAssemblyChannelAsync(const DescribeStreamPackageLinearAssemblyChannelRequest& request, const DescribeStreamPackageLinearAssemblyChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeStreamPackageLinearAssemblyChannel(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::DescribeStreamPackageLinearAssemblyChannelOutcomeCallable MdpClient::DescribeStreamPackageLinearAssemblyChannelCallable(const DescribeStreamPackageLinearAssemblyChannelRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeStreamPackageLinearAssemblyChannelOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeStreamPackageLinearAssemblyChannel(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdpClient::DescribeStreamPackageLinearAssemblyChannelAlertsOutcome MdpClient::DescribeStreamPackageLinearAssemblyChannelAlerts(const DescribeStreamPackageLinearAssemblyChannelAlertsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeStreamPackageLinearAssemblyChannelAlerts");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeStreamPackageLinearAssemblyChannelAlertsResponse rsp = DescribeStreamPackageLinearAssemblyChannelAlertsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeStreamPackageLinearAssemblyChannelAlertsOutcome(rsp);
+        else
+            return DescribeStreamPackageLinearAssemblyChannelAlertsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeStreamPackageLinearAssemblyChannelAlertsOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::DescribeStreamPackageLinearAssemblyChannelAlertsAsync(const DescribeStreamPackageLinearAssemblyChannelAlertsRequest& request, const DescribeStreamPackageLinearAssemblyChannelAlertsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeStreamPackageLinearAssemblyChannelAlerts(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::DescribeStreamPackageLinearAssemblyChannelAlertsOutcomeCallable MdpClient::DescribeStreamPackageLinearAssemblyChannelAlertsCallable(const DescribeStreamPackageLinearAssemblyChannelAlertsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeStreamPackageLinearAssemblyChannelAlertsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeStreamPackageLinearAssemblyChannelAlerts(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdpClient::DescribeStreamPackageLinearAssemblyChannelsOutcome MdpClient::DescribeStreamPackageLinearAssemblyChannels(const DescribeStreamPackageLinearAssemblyChannelsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeStreamPackageLinearAssemblyChannels");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeStreamPackageLinearAssemblyChannelsResponse rsp = DescribeStreamPackageLinearAssemblyChannelsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeStreamPackageLinearAssemblyChannelsOutcome(rsp);
+        else
+            return DescribeStreamPackageLinearAssemblyChannelsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeStreamPackageLinearAssemblyChannelsOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::DescribeStreamPackageLinearAssemblyChannelsAsync(const DescribeStreamPackageLinearAssemblyChannelsRequest& request, const DescribeStreamPackageLinearAssemblyChannelsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeStreamPackageLinearAssemblyChannels(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::DescribeStreamPackageLinearAssemblyChannelsOutcomeCallable MdpClient::DescribeStreamPackageLinearAssemblyChannelsCallable(const DescribeStreamPackageLinearAssemblyChannelsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeStreamPackageLinearAssemblyChannelsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeStreamPackageLinearAssemblyChannels(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdpClient::DescribeStreamPackageLinearAssemblyProgramOutcome MdpClient::DescribeStreamPackageLinearAssemblyProgram(const DescribeStreamPackageLinearAssemblyProgramRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeStreamPackageLinearAssemblyProgram");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeStreamPackageLinearAssemblyProgramResponse rsp = DescribeStreamPackageLinearAssemblyProgramResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeStreamPackageLinearAssemblyProgramOutcome(rsp);
+        else
+            return DescribeStreamPackageLinearAssemblyProgramOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeStreamPackageLinearAssemblyProgramOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::DescribeStreamPackageLinearAssemblyProgramAsync(const DescribeStreamPackageLinearAssemblyProgramRequest& request, const DescribeStreamPackageLinearAssemblyProgramAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeStreamPackageLinearAssemblyProgram(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::DescribeStreamPackageLinearAssemblyProgramOutcomeCallable MdpClient::DescribeStreamPackageLinearAssemblyProgramCallable(const DescribeStreamPackageLinearAssemblyProgramRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeStreamPackageLinearAssemblyProgramOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeStreamPackageLinearAssemblyProgram(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdpClient::DescribeStreamPackageLinearAssemblyProgramSchedulesOutcome MdpClient::DescribeStreamPackageLinearAssemblyProgramSchedules(const DescribeStreamPackageLinearAssemblyProgramSchedulesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeStreamPackageLinearAssemblyProgramSchedules");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeStreamPackageLinearAssemblyProgramSchedulesResponse rsp = DescribeStreamPackageLinearAssemblyProgramSchedulesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeStreamPackageLinearAssemblyProgramSchedulesOutcome(rsp);
+        else
+            return DescribeStreamPackageLinearAssemblyProgramSchedulesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeStreamPackageLinearAssemblyProgramSchedulesOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::DescribeStreamPackageLinearAssemblyProgramSchedulesAsync(const DescribeStreamPackageLinearAssemblyProgramSchedulesRequest& request, const DescribeStreamPackageLinearAssemblyProgramSchedulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeStreamPackageLinearAssemblyProgramSchedules(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::DescribeStreamPackageLinearAssemblyProgramSchedulesOutcomeCallable MdpClient::DescribeStreamPackageLinearAssemblyProgramSchedulesCallable(const DescribeStreamPackageLinearAssemblyProgramSchedulesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeStreamPackageLinearAssemblyProgramSchedulesOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeStreamPackageLinearAssemblyProgramSchedules(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdpClient::DescribeStreamPackageLinearAssemblyProgramsOutcome MdpClient::DescribeStreamPackageLinearAssemblyPrograms(const DescribeStreamPackageLinearAssemblyProgramsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeStreamPackageLinearAssemblyPrograms");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeStreamPackageLinearAssemblyProgramsResponse rsp = DescribeStreamPackageLinearAssemblyProgramsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeStreamPackageLinearAssemblyProgramsOutcome(rsp);
+        else
+            return DescribeStreamPackageLinearAssemblyProgramsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeStreamPackageLinearAssemblyProgramsOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::DescribeStreamPackageLinearAssemblyProgramsAsync(const DescribeStreamPackageLinearAssemblyProgramsRequest& request, const DescribeStreamPackageLinearAssemblyProgramsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeStreamPackageLinearAssemblyPrograms(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::DescribeStreamPackageLinearAssemblyProgramsOutcomeCallable MdpClient::DescribeStreamPackageLinearAssemblyProgramsCallable(const DescribeStreamPackageLinearAssemblyProgramsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeStreamPackageLinearAssemblyProgramsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeStreamPackageLinearAssemblyPrograms(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdpClient::DescribeStreamPackageSourceOutcome MdpClient::DescribeStreamPackageSource(const DescribeStreamPackageSourceRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeStreamPackageSource");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeStreamPackageSourceResponse rsp = DescribeStreamPackageSourceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeStreamPackageSourceOutcome(rsp);
+        else
+            return DescribeStreamPackageSourceOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeStreamPackageSourceOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::DescribeStreamPackageSourceAsync(const DescribeStreamPackageSourceRequest& request, const DescribeStreamPackageSourceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeStreamPackageSource(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::DescribeStreamPackageSourceOutcomeCallable MdpClient::DescribeStreamPackageSourceCallable(const DescribeStreamPackageSourceRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeStreamPackageSourceOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeStreamPackageSource(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdpClient::DescribeStreamPackageSourceAlertsOutcome MdpClient::DescribeStreamPackageSourceAlerts(const DescribeStreamPackageSourceAlertsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeStreamPackageSourceAlerts");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeStreamPackageSourceAlertsResponse rsp = DescribeStreamPackageSourceAlertsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeStreamPackageSourceAlertsOutcome(rsp);
+        else
+            return DescribeStreamPackageSourceAlertsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeStreamPackageSourceAlertsOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::DescribeStreamPackageSourceAlertsAsync(const DescribeStreamPackageSourceAlertsRequest& request, const DescribeStreamPackageSourceAlertsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeStreamPackageSourceAlerts(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::DescribeStreamPackageSourceAlertsOutcomeCallable MdpClient::DescribeStreamPackageSourceAlertsCallable(const DescribeStreamPackageSourceAlertsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeStreamPackageSourceAlertsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeStreamPackageSourceAlerts(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdpClient::DescribeStreamPackageSourceLocationOutcome MdpClient::DescribeStreamPackageSourceLocation(const DescribeStreamPackageSourceLocationRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeStreamPackageSourceLocation");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeStreamPackageSourceLocationResponse rsp = DescribeStreamPackageSourceLocationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeStreamPackageSourceLocationOutcome(rsp);
+        else
+            return DescribeStreamPackageSourceLocationOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeStreamPackageSourceLocationOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::DescribeStreamPackageSourceLocationAsync(const DescribeStreamPackageSourceLocationRequest& request, const DescribeStreamPackageSourceLocationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeStreamPackageSourceLocation(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::DescribeStreamPackageSourceLocationOutcomeCallable MdpClient::DescribeStreamPackageSourceLocationCallable(const DescribeStreamPackageSourceLocationRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeStreamPackageSourceLocationOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeStreamPackageSourceLocation(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdpClient::DescribeStreamPackageSourceLocationAlertsOutcome MdpClient::DescribeStreamPackageSourceLocationAlerts(const DescribeStreamPackageSourceLocationAlertsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeStreamPackageSourceLocationAlerts");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeStreamPackageSourceLocationAlertsResponse rsp = DescribeStreamPackageSourceLocationAlertsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeStreamPackageSourceLocationAlertsOutcome(rsp);
+        else
+            return DescribeStreamPackageSourceLocationAlertsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeStreamPackageSourceLocationAlertsOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::DescribeStreamPackageSourceLocationAlertsAsync(const DescribeStreamPackageSourceLocationAlertsRequest& request, const DescribeStreamPackageSourceLocationAlertsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeStreamPackageSourceLocationAlerts(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::DescribeStreamPackageSourceLocationAlertsOutcomeCallable MdpClient::DescribeStreamPackageSourceLocationAlertsCallable(const DescribeStreamPackageSourceLocationAlertsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeStreamPackageSourceLocationAlertsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeStreamPackageSourceLocationAlerts(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdpClient::DescribeStreamPackageSourceLocationsOutcome MdpClient::DescribeStreamPackageSourceLocations(const DescribeStreamPackageSourceLocationsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeStreamPackageSourceLocations");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeStreamPackageSourceLocationsResponse rsp = DescribeStreamPackageSourceLocationsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeStreamPackageSourceLocationsOutcome(rsp);
+        else
+            return DescribeStreamPackageSourceLocationsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeStreamPackageSourceLocationsOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::DescribeStreamPackageSourceLocationsAsync(const DescribeStreamPackageSourceLocationsRequest& request, const DescribeStreamPackageSourceLocationsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeStreamPackageSourceLocations(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::DescribeStreamPackageSourceLocationsOutcomeCallable MdpClient::DescribeStreamPackageSourceLocationsCallable(const DescribeStreamPackageSourceLocationsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeStreamPackageSourceLocationsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeStreamPackageSourceLocations(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdpClient::DescribeStreamPackageSourcesOutcome MdpClient::DescribeStreamPackageSources(const DescribeStreamPackageSourcesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeStreamPackageSources");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeStreamPackageSourcesResponse rsp = DescribeStreamPackageSourcesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeStreamPackageSourcesOutcome(rsp);
+        else
+            return DescribeStreamPackageSourcesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeStreamPackageSourcesOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::DescribeStreamPackageSourcesAsync(const DescribeStreamPackageSourcesRequest& request, const DescribeStreamPackageSourcesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeStreamPackageSources(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::DescribeStreamPackageSourcesOutcomeCallable MdpClient::DescribeStreamPackageSourcesCallable(const DescribeStreamPackageSourcesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeStreamPackageSourcesOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeStreamPackageSources(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 MdpClient::ModifyStreamPackageChannelOutcome MdpClient::ModifyStreamPackageChannel(const ModifyStreamPackageChannelRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyStreamPackageChannel");
@@ -678,6 +1624,264 @@ MdpClient::ModifyStreamPackageChannelInputAuthInfoOutcomeCallable MdpClient::Mod
         [this, request]()
         {
             return this->ModifyStreamPackageChannelInputAuthInfo(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdpClient::ModifyStreamPackageLinearAssemblyChannelOutcome MdpClient::ModifyStreamPackageLinearAssemblyChannel(const ModifyStreamPackageLinearAssemblyChannelRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyStreamPackageLinearAssemblyChannel");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyStreamPackageLinearAssemblyChannelResponse rsp = ModifyStreamPackageLinearAssemblyChannelResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyStreamPackageLinearAssemblyChannelOutcome(rsp);
+        else
+            return ModifyStreamPackageLinearAssemblyChannelOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyStreamPackageLinearAssemblyChannelOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::ModifyStreamPackageLinearAssemblyChannelAsync(const ModifyStreamPackageLinearAssemblyChannelRequest& request, const ModifyStreamPackageLinearAssemblyChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyStreamPackageLinearAssemblyChannel(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::ModifyStreamPackageLinearAssemblyChannelOutcomeCallable MdpClient::ModifyStreamPackageLinearAssemblyChannelCallable(const ModifyStreamPackageLinearAssemblyChannelRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyStreamPackageLinearAssemblyChannelOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyStreamPackageLinearAssemblyChannel(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdpClient::ModifyStreamPackageLinearAssemblyProgramOutcome MdpClient::ModifyStreamPackageLinearAssemblyProgram(const ModifyStreamPackageLinearAssemblyProgramRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyStreamPackageLinearAssemblyProgram");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyStreamPackageLinearAssemblyProgramResponse rsp = ModifyStreamPackageLinearAssemblyProgramResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyStreamPackageLinearAssemblyProgramOutcome(rsp);
+        else
+            return ModifyStreamPackageLinearAssemblyProgramOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyStreamPackageLinearAssemblyProgramOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::ModifyStreamPackageLinearAssemblyProgramAsync(const ModifyStreamPackageLinearAssemblyProgramRequest& request, const ModifyStreamPackageLinearAssemblyProgramAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyStreamPackageLinearAssemblyProgram(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::ModifyStreamPackageLinearAssemblyProgramOutcomeCallable MdpClient::ModifyStreamPackageLinearAssemblyProgramCallable(const ModifyStreamPackageLinearAssemblyProgramRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyStreamPackageLinearAssemblyProgramOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyStreamPackageLinearAssemblyProgram(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdpClient::ModifyStreamPackageSourceOutcome MdpClient::ModifyStreamPackageSource(const ModifyStreamPackageSourceRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyStreamPackageSource");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyStreamPackageSourceResponse rsp = ModifyStreamPackageSourceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyStreamPackageSourceOutcome(rsp);
+        else
+            return ModifyStreamPackageSourceOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyStreamPackageSourceOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::ModifyStreamPackageSourceAsync(const ModifyStreamPackageSourceRequest& request, const ModifyStreamPackageSourceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyStreamPackageSource(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::ModifyStreamPackageSourceOutcomeCallable MdpClient::ModifyStreamPackageSourceCallable(const ModifyStreamPackageSourceRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyStreamPackageSourceOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyStreamPackageSource(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdpClient::ModifyStreamPackageSourceLocationOutcome MdpClient::ModifyStreamPackageSourceLocation(const ModifyStreamPackageSourceLocationRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyStreamPackageSourceLocation");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyStreamPackageSourceLocationResponse rsp = ModifyStreamPackageSourceLocationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyStreamPackageSourceLocationOutcome(rsp);
+        else
+            return ModifyStreamPackageSourceLocationOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyStreamPackageSourceLocationOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::ModifyStreamPackageSourceLocationAsync(const ModifyStreamPackageSourceLocationRequest& request, const ModifyStreamPackageSourceLocationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyStreamPackageSourceLocation(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::ModifyStreamPackageSourceLocationOutcomeCallable MdpClient::ModifyStreamPackageSourceLocationCallable(const ModifyStreamPackageSourceLocationRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyStreamPackageSourceLocationOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyStreamPackageSourceLocation(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdpClient::StartStreamPackageLinearAssemblyChannelOutcome MdpClient::StartStreamPackageLinearAssemblyChannel(const StartStreamPackageLinearAssemblyChannelRequest &request)
+{
+    auto outcome = MakeRequest(request, "StartStreamPackageLinearAssemblyChannel");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        StartStreamPackageLinearAssemblyChannelResponse rsp = StartStreamPackageLinearAssemblyChannelResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return StartStreamPackageLinearAssemblyChannelOutcome(rsp);
+        else
+            return StartStreamPackageLinearAssemblyChannelOutcome(o.GetError());
+    }
+    else
+    {
+        return StartStreamPackageLinearAssemblyChannelOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::StartStreamPackageLinearAssemblyChannelAsync(const StartStreamPackageLinearAssemblyChannelRequest& request, const StartStreamPackageLinearAssemblyChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->StartStreamPackageLinearAssemblyChannel(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::StartStreamPackageLinearAssemblyChannelOutcomeCallable MdpClient::StartStreamPackageLinearAssemblyChannelCallable(const StartStreamPackageLinearAssemblyChannelRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<StartStreamPackageLinearAssemblyChannelOutcome()>>(
+        [this, request]()
+        {
+            return this->StartStreamPackageLinearAssemblyChannel(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdpClient::StopStreamPackageLinearAssemblyChannelOutcome MdpClient::StopStreamPackageLinearAssemblyChannel(const StopStreamPackageLinearAssemblyChannelRequest &request)
+{
+    auto outcome = MakeRequest(request, "StopStreamPackageLinearAssemblyChannel");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        StopStreamPackageLinearAssemblyChannelResponse rsp = StopStreamPackageLinearAssemblyChannelResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return StopStreamPackageLinearAssemblyChannelOutcome(rsp);
+        else
+            return StopStreamPackageLinearAssemblyChannelOutcome(o.GetError());
+    }
+    else
+    {
+        return StopStreamPackageLinearAssemblyChannelOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::StopStreamPackageLinearAssemblyChannelAsync(const StopStreamPackageLinearAssemblyChannelRequest& request, const StopStreamPackageLinearAssemblyChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->StopStreamPackageLinearAssemblyChannel(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::StopStreamPackageLinearAssemblyChannelOutcomeCallable MdpClient::StopStreamPackageLinearAssemblyChannelCallable(const StopStreamPackageLinearAssemblyChannelRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<StopStreamPackageLinearAssemblyChannelOutcome()>>(
+        [this, request]()
+        {
+            return this->StopStreamPackageLinearAssemblyChannel(request);
         }
     );
 

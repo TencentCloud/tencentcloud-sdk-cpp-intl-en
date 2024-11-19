@@ -148,6 +148,27 @@ namespace TencentCloud
                     bool LegalPersonHasBeenSet() const;
 
                     /**
+                     * 获取
+                     * @return LegalPersonId 
+                     * 
+                     */
+                    std::string GetLegalPersonId() const;
+
+                    /**
+                     * 设置
+                     * @param _legalPersonId 
+                     * 
+                     */
+                    void SetLegalPersonId(const std::string& _legalPersonId);
+
+                    /**
+                     * 判断参数 LegalPersonId 是否已赋值
+                     * @return LegalPersonId 是否已赋值
+                     * 
+                     */
+                    bool LegalPersonIdHasBeenSet() const;
+
+                    /**
                      * 获取(Fuzzy match) Issuing authority.
                      * @return IssuingAuthority (Fuzzy match) Issuing authority.
                      * 
@@ -451,6 +472,12 @@ namespace TencentCloud
                      */
                     std::string m_legalPerson;
                     bool m_legalPersonHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_legalPersonId;
+                    bool m_legalPersonIdHasBeenSet;
 
                     /**
                      * (Fuzzy match) Issuing authority.
