@@ -24,7 +24,7 @@ set(intlpartnersmgt_public_header_model
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryPartnerCreditResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryVoucherListByUinRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryVoucherAmountByUinRequest.h
-  include/tencentcloud/intlpartnersmgt/v20220928/model/QueryVoucherAmountByUinResponse.h
+  include/tencentcloud/intlpartnersmgt/v20220928/model/ForceQNResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/SendVerifyCodeResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryVoucherAmountByUinItem.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryCreditAllocationHistoryData.h
@@ -48,11 +48,12 @@ set(intlpartnersmgt_public_header_model
   include/tencentcloud/intlpartnersmgt/v20220928/model/GetCountryCodesResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryCreditByUinListResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerInfoResponse.h
+  include/tencentcloud/intlpartnersmgt/v20220928/model/QueryVoucherAmountByUinResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/BusinessSummaryOverviewItem.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerUinData.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerUinResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillSummaryByRegionRequest.h
-  include/tencentcloud/intlpartnersmgt/v20220928/model/QueryVoucherPoolResponse.h
+  include/tencentcloud/intlpartnersmgt/v20220928/model/ForceQNRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/TagInfo.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerBillDetailRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerBillDetailResponse.h
@@ -75,6 +76,7 @@ set(intlpartnersmgt_public_header_model
   include/tencentcloud/intlpartnersmgt/v20220928/model/CountryCodeItem.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/BillDetailData.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillDetailResponse.h
+  include/tencentcloud/intlpartnersmgt/v20220928/model/QueryVoucherPoolResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryCreditAllocationHistoryRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryCustomersCreditResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillDownloadUrlRequest.h
@@ -98,7 +100,7 @@ set(intlpartnersmgt_src
   src/v20220928/model/QueryPartnerCreditResponse.cpp
   src/v20220928/model/QueryVoucherListByUinRequest.cpp
   src/v20220928/model/QueryVoucherAmountByUinRequest.cpp
-  src/v20220928/model/QueryVoucherAmountByUinResponse.cpp
+  src/v20220928/model/ForceQNResponse.cpp
   src/v20220928/model/SendVerifyCodeResponse.cpp
   src/v20220928/model/QueryVoucherAmountByUinItem.cpp
   src/v20220928/model/QueryCreditAllocationHistoryData.cpp
@@ -122,11 +124,12 @@ set(intlpartnersmgt_src
   src/v20220928/model/GetCountryCodesResponse.cpp
   src/v20220928/model/QueryCreditByUinListResponse.cpp
   src/v20220928/model/DescribeCustomerInfoResponse.cpp
+  src/v20220928/model/QueryVoucherAmountByUinResponse.cpp
   src/v20220928/model/BusinessSummaryOverviewItem.cpp
   src/v20220928/model/DescribeCustomerUinData.cpp
   src/v20220928/model/DescribeCustomerUinResponse.cpp
   src/v20220928/model/DescribeBillSummaryByRegionRequest.cpp
-  src/v20220928/model/QueryVoucherPoolResponse.cpp
+  src/v20220928/model/ForceQNRequest.cpp
   src/v20220928/model/TagInfo.cpp
   src/v20220928/model/DescribeCustomerBillDetailRequest.cpp
   src/v20220928/model/DescribeCustomerBillDetailResponse.cpp
@@ -149,6 +152,7 @@ set(intlpartnersmgt_src
   src/v20220928/model/CountryCodeItem.cpp
   src/v20220928/model/BillDetailData.cpp
   src/v20220928/model/DescribeBillDetailResponse.cpp
+  src/v20220928/model/QueryVoucherPoolResponse.cpp
   src/v20220928/model/QueryCreditAllocationHistoryRequest.cpp
   src/v20220928/model/QueryCustomersCreditResponse.cpp
   src/v20220928/model/DescribeBillDownloadUrlRequest.cpp

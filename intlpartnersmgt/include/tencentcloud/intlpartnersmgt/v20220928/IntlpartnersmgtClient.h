@@ -49,6 +49,8 @@
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerInfoResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerUinRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerUinResponse.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/ForceQNRequest.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/ForceQNResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/GetCountryCodesRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/GetCountryCodesResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/ModifyClientRemarkRequest.h>
@@ -128,6 +130,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeCustomerUinResponse> DescribeCustomerUinOutcome;
                 typedef std::future<DescribeCustomerUinOutcome> DescribeCustomerUinOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::DescribeCustomerUinRequest&, DescribeCustomerUinOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCustomerUinAsyncHandler;
+                typedef Outcome<Core::Error, Model::ForceQNResponse> ForceQNOutcome;
+                typedef std::future<ForceQNOutcome> ForceQNOutcomeCallable;
+                typedef std::function<void(const IntlpartnersmgtClient*, const Model::ForceQNRequest&, ForceQNOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ForceQNAsyncHandler;
                 typedef Outcome<Core::Error, Model::GetCountryCodesResponse> GetCountryCodesOutcome;
                 typedef std::future<GetCountryCodesOutcome> GetCountryCodesOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::GetCountryCodesRequest&, GetCountryCodesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetCountryCodesAsyncHandler;
@@ -293,6 +298,15 @@ namespace TencentCloud
                 DescribeCustomerUinOutcome DescribeCustomerUin(const Model::DescribeCustomerUinRequest &request);
                 void DescribeCustomerUinAsync(const Model::DescribeCustomerUinRequest& request, const DescribeCustomerUinAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeCustomerUinOutcomeCallable DescribeCustomerUinCallable(const Model::DescribeCustomerUinRequest& request);
+
+                /**
+                 *This API is used to set and cancel forced service suspension.Reseller need to be allowlisted to use the API.
+                 * @param req ForceQNRequest
+                 * @return ForceQNOutcome
+                 */
+                ForceQNOutcome ForceQN(const Model::ForceQNRequest &request);
+                void ForceQNAsync(const Model::ForceQNRequest& request, const ForceQNAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ForceQNOutcomeCallable ForceQNCallable(const Model::ForceQNRequest& request);
 
                 /**
                  *This API is used to obtain country/region codes.

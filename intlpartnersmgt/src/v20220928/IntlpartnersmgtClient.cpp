@@ -599,6 +599,49 @@ IntlpartnersmgtClient::DescribeCustomerUinOutcomeCallable IntlpartnersmgtClient:
     return task->get_future();
 }
 
+IntlpartnersmgtClient::ForceQNOutcome IntlpartnersmgtClient::ForceQN(const ForceQNRequest &request)
+{
+    auto outcome = MakeRequest(request, "ForceQN");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ForceQNResponse rsp = ForceQNResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ForceQNOutcome(rsp);
+        else
+            return ForceQNOutcome(o.GetError());
+    }
+    else
+    {
+        return ForceQNOutcome(outcome.GetError());
+    }
+}
+
+void IntlpartnersmgtClient::ForceQNAsync(const ForceQNRequest& request, const ForceQNAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ForceQN(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+IntlpartnersmgtClient::ForceQNOutcomeCallable IntlpartnersmgtClient::ForceQNCallable(const ForceQNRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ForceQNOutcome()>>(
+        [this, request]()
+        {
+            return this->ForceQN(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 IntlpartnersmgtClient::GetCountryCodesOutcome IntlpartnersmgtClient::GetCountryCodes(const GetCountryCodesRequest &request)
 {
     auto outcome = MakeRequest(request, "GetCountryCodes");
