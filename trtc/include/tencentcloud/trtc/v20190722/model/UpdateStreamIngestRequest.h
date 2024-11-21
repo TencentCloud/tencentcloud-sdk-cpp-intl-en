@@ -105,6 +105,27 @@ namespace TencentCloud
                      */
                     bool StreamUrlHasBeenSet() const;
 
+                    /**
+                     * 获取Volume. Valid value range: [0, 100], default value is 100, indicating the original volume.
+                     * @return Volume Volume. Valid value range: [0, 100], default value is 100, indicating the original volume.
+                     * 
+                     */
+                    uint64_t GetVolume() const;
+
+                    /**
+                     * 设置Volume. Valid value range: [0, 100], default value is 100, indicating the original volume.
+                     * @param _volume Volume. Valid value range: [0, 100], default value is 100, indicating the original volume.
+                     * 
+                     */
+                    void SetVolume(const uint64_t& _volume);
+
+                    /**
+                     * 判断参数 Volume 是否已赋值
+                     * @return Volume 是否已赋值
+                     * 
+                     */
+                    bool VolumeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -124,6 +145,12 @@ namespace TencentCloud
                      */
                     std::string m_streamUrl;
                     bool m_streamUrlHasBeenSet;
+
+                    /**
+                     * Volume. Valid value range: [0, 100], default value is 100, indicating the original volume.
+                     */
+                    uint64_t m_volume;
+                    bool m_volumeHasBeenSet;
 
                 };
             }

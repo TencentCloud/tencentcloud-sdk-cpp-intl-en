@@ -88,7 +88,6 @@ set(cdb_public_header_model
   include/tencentcloud/cdb/v20170320/model/ModifyAutoRenewFlagRequest.h
   include/tencentcloud/cdb/v20170320/model/ModifyBackupConfigResponse.h
   include/tencentcloud/cdb/v20170320/model/OpenWanServiceRequest.h
-  include/tencentcloud/cdb/v20170320/model/InitDBInstancesResponse.h
   include/tencentcloud/cdb/v20170320/model/DescribeParamTemplateInfoResponse.h
   include/tencentcloud/cdb/v20170320/model/DescribeInstanceParamsResponse.h
   include/tencentcloud/cdb/v20170320/model/UploadInfo.h
@@ -165,7 +164,7 @@ set(cdb_public_header_model
   include/tencentcloud/cdb/v20170320/model/TagsInfoOfInstance.h
   include/tencentcloud/cdb/v20170320/model/DescribeDeviceMonitorInfoRequest.h
   include/tencentcloud/cdb/v20170320/model/SwitchDrInstanceToMasterResponse.h
-  include/tencentcloud/cdb/v20170320/model/DescribeDBPriceRequest.h
+  include/tencentcloud/cdb/v20170320/model/DescribeDBInstanceConfigResponse.h
   include/tencentcloud/cdb/v20170320/model/SlaveConfig.h
   include/tencentcloud/cdb/v20170320/model/ModifyAccountPrivilegesResponse.h
   include/tencentcloud/cdb/v20170320/model/StopRollbackRequest.h
@@ -176,7 +175,6 @@ set(cdb_public_header_model
   include/tencentcloud/cdb/v20170320/model/ModifyDBInstanceNameResponse.h
   include/tencentcloud/cdb/v20170320/model/DescribeCloneListResponse.h
   include/tencentcloud/cdb/v20170320/model/DescribeDBInstanceLogToCLSRequest.h
-  include/tencentcloud/cdb/v20170320/model/DescribeDBInstanceConfigResponse.h
   include/tencentcloud/cdb/v20170320/model/StartBatchRollbackRequest.h
   include/tencentcloud/cdb/v20170320/model/OpenDBInstanceEncryptionRequest.h
   include/tencentcloud/cdb/v20170320/model/DescribeDBInstanceCharsetRequest.h
@@ -346,7 +344,7 @@ set(cdb_public_header_model
   include/tencentcloud/cdb/v20170320/model/ModifyInstanceParamResponse.h
   include/tencentcloud/cdb/v20170320/model/ColumnPrivilege.h
   include/tencentcloud/cdb/v20170320/model/DescribeUploadedFilesResponse.h
-  include/tencentcloud/cdb/v20170320/model/InitDBInstancesRequest.h
+  include/tencentcloud/cdb/v20170320/model/DescribeDBPriceRequest.h
   include/tencentcloud/cdb/v20170320/model/CreateBackupResponse.h
   include/tencentcloud/cdb/v20170320/model/OpenDBInstanceGTIDRequest.h
   include/tencentcloud/cdb/v20170320/model/OpenDBInstanceEncryptionResponse.h
@@ -451,7 +449,6 @@ set(cdb_src
   src/v20170320/model/ModifyAutoRenewFlagRequest.cpp
   src/v20170320/model/ModifyBackupConfigResponse.cpp
   src/v20170320/model/OpenWanServiceRequest.cpp
-  src/v20170320/model/InitDBInstancesResponse.cpp
   src/v20170320/model/DescribeParamTemplateInfoResponse.cpp
   src/v20170320/model/DescribeInstanceParamsResponse.cpp
   src/v20170320/model/UploadInfo.cpp
@@ -528,7 +525,7 @@ set(cdb_src
   src/v20170320/model/TagsInfoOfInstance.cpp
   src/v20170320/model/DescribeDeviceMonitorInfoRequest.cpp
   src/v20170320/model/SwitchDrInstanceToMasterResponse.cpp
-  src/v20170320/model/DescribeDBPriceRequest.cpp
+  src/v20170320/model/DescribeDBInstanceConfigResponse.cpp
   src/v20170320/model/SlaveConfig.cpp
   src/v20170320/model/ModifyAccountPrivilegesResponse.cpp
   src/v20170320/model/StopRollbackRequest.cpp
@@ -539,7 +536,6 @@ set(cdb_src
   src/v20170320/model/ModifyDBInstanceNameResponse.cpp
   src/v20170320/model/DescribeCloneListResponse.cpp
   src/v20170320/model/DescribeDBInstanceLogToCLSRequest.cpp
-  src/v20170320/model/DescribeDBInstanceConfigResponse.cpp
   src/v20170320/model/StartBatchRollbackRequest.cpp
   src/v20170320/model/OpenDBInstanceEncryptionRequest.cpp
   src/v20170320/model/DescribeDBInstanceCharsetRequest.cpp
@@ -709,7 +705,7 @@ set(cdb_src
   src/v20170320/model/ModifyInstanceParamResponse.cpp
   src/v20170320/model/ColumnPrivilege.cpp
   src/v20170320/model/DescribeUploadedFilesResponse.cpp
-  src/v20170320/model/InitDBInstancesRequest.cpp
+  src/v20170320/model/DescribeDBPriceRequest.cpp
   src/v20170320/model/CreateBackupResponse.cpp
   src/v20170320/model/OpenDBInstanceGTIDRequest.cpp
   src/v20170320/model/OpenDBInstanceEncryptionResponse.cpp

@@ -81,7 +81,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
-                    int64_t GetVPort() const;
+                    std::string GetVPort() const;
 
                     /**
                      * 判断参数 VPort 是否已赋值
@@ -109,7 +109,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      * Instance port
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
-                    int64_t m_vPort;
+                    std::string m_vPort;
                     bool m_vPortHasBeenSet;
 
                 };

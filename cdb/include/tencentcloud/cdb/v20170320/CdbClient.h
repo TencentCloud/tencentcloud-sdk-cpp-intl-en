@@ -189,8 +189,6 @@
 #include <tencentcloud/cdb/v20170320/model/DescribeUploadedFilesResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DisassociateSecurityGroupsRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DisassociateSecurityGroupsResponse.h>
-#include <tencentcloud/cdb/v20170320/model/InitDBInstancesRequest.h>
-#include <tencentcloud/cdb/v20170320/model/InitDBInstancesResponse.h>
 #include <tencentcloud/cdb/v20170320/model/IsolateDBInstanceRequest.h>
 #include <tencentcloud/cdb/v20170320/model/IsolateDBInstanceResponse.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyAccountDescriptionRequest.h>
@@ -554,9 +552,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DisassociateSecurityGroupsResponse> DisassociateSecurityGroupsOutcome;
                 typedef std::future<DisassociateSecurityGroupsOutcome> DisassociateSecurityGroupsOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DisassociateSecurityGroupsRequest&, DisassociateSecurityGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisassociateSecurityGroupsAsyncHandler;
-                typedef Outcome<Core::Error, Model::InitDBInstancesResponse> InitDBInstancesOutcome;
-                typedef std::future<InitDBInstancesOutcome> InitDBInstancesOutcomeCallable;
-                typedef std::function<void(const CdbClient*, const Model::InitDBInstancesRequest&, InitDBInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InitDBInstancesAsyncHandler;
                 typedef Outcome<Core::Error, Model::IsolateDBInstanceResponse> IsolateDBInstanceOutcome;
                 typedef std::future<IsolateDBInstanceOutcome> IsolateDBInstanceOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::IsolateDBInstanceRequest&, IsolateDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> IsolateDBInstanceAsyncHandler;
@@ -1479,19 +1474,6 @@ Note: the HTTP response packet will be very large if it contain a single large s
                 DisassociateSecurityGroupsOutcome DisassociateSecurityGroups(const Model::DisassociateSecurityGroupsRequest &request);
                 void DisassociateSecurityGroupsAsync(const Model::DisassociateSecurityGroupsRequest& request, const DisassociateSecurityGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DisassociateSecurityGroupsOutcomeCallable DisassociateSecurityGroupsCallable(const Model::DisassociateSecurityGroupsRequest& request);
-
-                /**
-                 *该接口不再维护，参考CreateDBInstance+API文档，在发货时即可完成初始化。
-
-This API was disused. You can refer to the CreateDBInstance API, and initialize the instance when creating it.
-
-This API is used to initialize a TencentDB instance, including initial password, default character set, and instance port number. But it is disused and not recommended. You can now set the instance information by using the parameter `Password`, `ParamList`, and `Port` respectively in the `CreateDBInstance` and `CreateDBInstanceHour` APIs.
-                 * @param req InitDBInstancesRequest
-                 * @return InitDBInstancesOutcome
-                 */
-                InitDBInstancesOutcome InitDBInstances(const Model::InitDBInstancesRequest &request);
-                void InitDBInstancesAsync(const Model::InitDBInstancesRequest& request, const InitDBInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                InitDBInstancesOutcomeCallable InitDBInstancesCallable(const Model::InitDBInstancesRequest& request);
 
                 /**
                  *This API is used to isolate a TencentDB instance, which will no longer be accessible via IP and port. The isolated instance can be started up in the recycle bin. If it is isolated due to arrears, please top up your account as soon as possible.
