@@ -23,6 +23,8 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
+#include <tencentcloud/tag/v20180813/model/AddProjectRequest.h>
+#include <tencentcloud/tag/v20180813/model/AddProjectResponse.h>
 #include <tencentcloud/tag/v20180813/model/AddResourceTagRequest.h>
 #include <tencentcloud/tag/v20180813/model/AddResourceTagResponse.h>
 #include <tencentcloud/tag/v20180813/model/AttachResourcesTagRequest.h>
@@ -95,6 +97,9 @@ namespace TencentCloud
                 TagClient(const Credential &credential, const std::string &region);
                 TagClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
+                typedef Outcome<Core::Error, Model::AddProjectResponse> AddProjectOutcome;
+                typedef std::future<AddProjectOutcome> AddProjectOutcomeCallable;
+                typedef std::function<void(const TagClient*, const Model::AddProjectRequest&, AddProjectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddProjectAsyncHandler;
                 typedef Outcome<Core::Error, Model::AddResourceTagResponse> AddResourceTagOutcome;
                 typedef std::future<AddResourceTagOutcome> AddResourceTagOutcomeCallable;
                 typedef std::function<void(const TagClient*, const Model::AddResourceTagRequest&, AddResourceTagOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddResourceTagAsyncHandler;
@@ -184,6 +189,15 @@ namespace TencentCloud
                 typedef std::function<void(const TagClient*, const Model::UpdateResourceTagValueRequest&, UpdateResourceTagValueOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateResourceTagValueAsyncHandler;
 
 
+
+                /**
+                 *Creates a project
+                 * @param req AddProjectRequest
+                 * @return AddProjectOutcome
+                 */
+                AddProjectOutcome AddProject(const Model::AddProjectRequest &request);
+                void AddProjectAsync(const Model::AddProjectRequest& request, const AddProjectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AddProjectOutcomeCallable AddProjectCallable(const Model::AddProjectRequest& request);
 
                 /**
                  *This API is used to associate resources with tags.

@@ -24,7 +24,7 @@ set(tag_public_header_model
   include/tencentcloud/tag/v20180813/model/DetachResourcesTagRequest.h
   include/tencentcloud/tag/v20180813/model/GetTagValuesResponse.h
   include/tencentcloud/tag/v20180813/model/AttachResourcesTagResponse.h
-  include/tencentcloud/tag/v20180813/model/GetTagKeysResponse.h
+  include/tencentcloud/tag/v20180813/model/AddProjectResponse.h
   include/tencentcloud/tag/v20180813/model/GetResourcesRequest.h
   include/tencentcloud/tag/v20180813/model/DeleteTagRequest.h
   include/tencentcloud/tag/v20180813/model/DeleteResourceTagResponse.h
@@ -50,7 +50,7 @@ set(tag_public_header_model
   include/tencentcloud/tag/v20180813/model/GetTagsResponse.h
   include/tencentcloud/tag/v20180813/model/ModifyResourcesTagValueRequest.h
   include/tencentcloud/tag/v20180813/model/TagResource.h
-  include/tencentcloud/tag/v20180813/model/GetTagKeysRequest.h
+  include/tencentcloud/tag/v20180813/model/AddProjectRequest.h
   include/tencentcloud/tag/v20180813/model/AddResourceTagResponse.h
   include/tencentcloud/tag/v20180813/model/DescribeResourcesByTagsResponse.h
   include/tencentcloud/tag/v20180813/model/AddResourceTagRequest.h
@@ -67,6 +67,7 @@ set(tag_public_header_model
   include/tencentcloud/tag/v20180813/model/CreateTagResponse.h
   include/tencentcloud/tag/v20180813/model/FailedResource.h
   include/tencentcloud/tag/v20180813/model/ResourceTagMapping.h
+  include/tencentcloud/tag/v20180813/model/GetTagKeysRequest.h
   include/tencentcloud/tag/v20180813/model/DetachResourcesTagResponse.h
   include/tencentcloud/tag/v20180813/model/GetResourcesResponse.h
   include/tencentcloud/tag/v20180813/model/DescribeResourceTagsByResourceIdsSeqResponse.h
@@ -74,6 +75,7 @@ set(tag_public_header_model
   include/tencentcloud/tag/v20180813/model/DescribeTagKeysResponse.h
   include/tencentcloud/tag/v20180813/model/DescribeTagValuesSeqRequest.h
   include/tencentcloud/tag/v20180813/model/UpdateResourceTagValueRequest.h
+  include/tencentcloud/tag/v20180813/model/GetTagKeysResponse.h
   include/tencentcloud/tag/v20180813/model/TagResourcesResponse.h
   include/tencentcloud/tag/v20180813/model/CreateTagsRequest.h
   include/tencentcloud/tag/v20180813/model/CreateTagsResponse.h
@@ -96,7 +98,7 @@ set(tag_src
   src/v20180813/model/DetachResourcesTagRequest.cpp
   src/v20180813/model/GetTagValuesResponse.cpp
   src/v20180813/model/AttachResourcesTagResponse.cpp
-  src/v20180813/model/GetTagKeysResponse.cpp
+  src/v20180813/model/AddProjectResponse.cpp
   src/v20180813/model/GetResourcesRequest.cpp
   src/v20180813/model/DeleteTagRequest.cpp
   src/v20180813/model/DeleteResourceTagResponse.cpp
@@ -122,7 +124,7 @@ set(tag_src
   src/v20180813/model/GetTagsResponse.cpp
   src/v20180813/model/ModifyResourcesTagValueRequest.cpp
   src/v20180813/model/TagResource.cpp
-  src/v20180813/model/GetTagKeysRequest.cpp
+  src/v20180813/model/AddProjectRequest.cpp
   src/v20180813/model/AddResourceTagResponse.cpp
   src/v20180813/model/DescribeResourcesByTagsResponse.cpp
   src/v20180813/model/AddResourceTagRequest.cpp
@@ -139,6 +141,7 @@ set(tag_src
   src/v20180813/model/CreateTagResponse.cpp
   src/v20180813/model/FailedResource.cpp
   src/v20180813/model/ResourceTagMapping.cpp
+  src/v20180813/model/GetTagKeysRequest.cpp
   src/v20180813/model/DetachResourcesTagResponse.cpp
   src/v20180813/model/GetResourcesResponse.cpp
   src/v20180813/model/DescribeResourceTagsByResourceIdsSeqResponse.cpp
@@ -146,6 +149,7 @@ set(tag_src
   src/v20180813/model/DescribeTagKeysResponse.cpp
   src/v20180813/model/DescribeTagValuesSeqRequest.cpp
   src/v20180813/model/UpdateResourceTagValueRequest.cpp
+  src/v20180813/model/GetTagKeysResponse.cpp
   src/v20180813/model/TagResourcesResponse.cpp
   src/v20180813/model/CreateTagsRequest.cpp
   src/v20180813/model/CreateTagsResponse.cpp
