@@ -47,6 +47,39 @@ namespace TencentCloud
 
 
                     /**
+                     * 获取The type of the associated instance. Available values are:
+<li>`VPC`: VPC</li>
+<li>`DIRECTCONNECT`: Direct Connect</li>
+<li>`BMVPC`: BM VPC</li>
+                     * @return InstanceType The type of the associated instance. Available values are:
+<li>`VPC`: VPC</li>
+<li>`DIRECTCONNECT`: Direct Connect</li>
+<li>`BMVPC`: BM VPC</li>
+                     * 
+                     */
+                    std::string GetInstanceType() const;
+
+                    /**
+                     * 设置The type of the associated instance. Available values are:
+<li>`VPC`: VPC</li>
+<li>`DIRECTCONNECT`: Direct Connect</li>
+<li>`BMVPC`: BM VPC</li>
+                     * @param _instanceType The type of the associated instance. Available values are:
+<li>`VPC`: VPC</li>
+<li>`DIRECTCONNECT`: Direct Connect</li>
+<li>`BMVPC`: BM VPC</li>
+                     * 
+                     */
+                    void SetInstanceType(const std::string& _instanceType);
+
+                    /**
+                     * 判断参数 InstanceType 是否已赋值
+                     * @return InstanceType 是否已赋值
+                     * 
+                     */
+                    bool InstanceTypeHasBeenSet() const;
+
+                    /**
                      * 获取The ID of the associated instance.
                      * @return InstanceId The ID of the associated instance.
                      * 
@@ -87,39 +120,6 @@ namespace TencentCloud
                      * 
                      */
                     bool InstanceRegionHasBeenSet() const;
-
-                    /**
-                     * 获取The type of the associated instance. Available values are:
-<li>`VPC`: VPC</li>
-<li>`DIRECTCONNECT`: Direct Connect</li>
-<li>`BMVPC`: BM VPC</li>
-                     * @return InstanceType The type of the associated instance. Available values are:
-<li>`VPC`: VPC</li>
-<li>`DIRECTCONNECT`: Direct Connect</li>
-<li>`BMVPC`: BM VPC</li>
-                     * 
-                     */
-                    std::string GetInstanceType() const;
-
-                    /**
-                     * 设置The type of the associated instance. Available values are:
-<li>`VPC`: VPC</li>
-<li>`DIRECTCONNECT`: Direct Connect</li>
-<li>`BMVPC`: BM VPC</li>
-                     * @param _instanceType The type of the associated instance. Available values are:
-<li>`VPC`: VPC</li>
-<li>`DIRECTCONNECT`: Direct Connect</li>
-<li>`BMVPC`: BM VPC</li>
-                     * 
-                     */
-                    void SetInstanceType(const std::string& _instanceType);
-
-                    /**
-                     * 判断参数 InstanceType 是否已赋值
-                     * @return InstanceType 是否已赋值
-                     * 
-                     */
-                    bool InstanceTypeHasBeenSet() const;
 
                     /**
                      * 获取Description
@@ -170,6 +170,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
+                     * The type of the associated instance. Available values are:
+<li>`VPC`: VPC</li>
+<li>`DIRECTCONNECT`: Direct Connect</li>
+<li>`BMVPC`: BM VPC</li>
+                     */
+                    std::string m_instanceType;
+                    bool m_instanceTypeHasBeenSet;
+
+                    /**
                      * The ID of the associated instance.
                      */
                     std::string m_instanceId;
@@ -180,15 +189,6 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     std::string m_instanceRegion;
                     bool m_instanceRegionHasBeenSet;
-
-                    /**
-                     * The type of the associated instance. Available values are:
-<li>`VPC`: VPC</li>
-<li>`DIRECTCONNECT`: Direct Connect</li>
-<li>`BMVPC`: BM VPC</li>
-                     */
-                    std::string m_instanceType;
-                    bool m_instanceTypeHasBeenSet;
 
                     /**
                      * Description

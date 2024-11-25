@@ -214,21 +214,21 @@ namespace TencentCloud
                     /**
                      * 获取Subnet of the NAT gateway
                      * @return SubnetId Subnet of the NAT gateway
-                     * 
+                     * @deprecated
                      */
                     std::string GetSubnetId() const;
 
                     /**
                      * 设置Subnet of the NAT gateway
                      * @param _subnetId Subnet of the NAT gateway
-                     * 
+                     * @deprecated
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
                     /**
                      * 判断参数 SubnetId 是否已赋值
                      * @return SubnetId 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool SubnetIdHasBeenSet() const;
 
@@ -296,15 +296,15 @@ namespace TencentCloud
                     bool PublicIpFromSameZoneHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return NatProductVersion 
+                     * 获取NAT gateway major version. `1`: Classic, `2`: Standard
+                     * @return NatProductVersion NAT gateway major version. `1`: Classic, `2`: Standard
                      * 
                      */
                     uint64_t GetNatProductVersion() const;
 
                     /**
-                     * 设置
-                     * @param _natProductVersion 
+                     * 设置NAT gateway major version. `1`: Classic, `2`: Standard
+                     * @param _natProductVersion NAT gateway major version. `1`: Classic, `2`: Standard
                      * 
                      */
                     void SetNatProductVersion(const uint64_t& _natProductVersion);
@@ -391,7 +391,7 @@ namespace TencentCloud
                     bool m_publicIpFromSameZoneHasBeenSet;
 
                     /**
-                     * 
+                     * NAT gateway major version. `1`: Classic, `2`: Standard
                      */
                     uint64_t m_natProductVersion;
                     bool m_natProductVersionHasBeenSet;

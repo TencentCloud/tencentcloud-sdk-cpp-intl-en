@@ -30,10 +30,12 @@ AllocateAddressesRequest::AllocateAddressesRequest() :
     m_addressChargePrepaidHasBeenSet(false),
     m_addressTypeHasBeenSet(false),
     m_anycastZoneHasBeenSet(false),
+    m_vipClusterHasBeenSet(false),
     m_applicableForCLBHasBeenSet(false),
     m_tagsHasBeenSet(false),
     m_bandwidthPackageIdHasBeenSet(false),
     m_addressNameHasBeenSet(false),
+    m_dedicatedClusterIdHasBeenSet(false),
     m_egressHasBeenSet(false),
     m_antiDDoSPackageIdHasBeenSet(false),
     m_clientTokenHasBeenSet(false)
@@ -104,6 +106,19 @@ string AllocateAddressesRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_anycastZone.c_str(), allocator).Move(), allocator);
     }
 
+    if (m_vipClusterHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "VipCluster";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_vipCluster.begin(); itr != m_vipCluster.end(); ++itr)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
     if (m_applicableForCLBHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -141,6 +156,14 @@ string AllocateAddressesRequest::ToJsonString() const
         string key = "AddressName";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_addressName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_dedicatedClusterIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DedicatedClusterId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_dedicatedClusterId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_egressHasBeenSet)
@@ -287,6 +310,22 @@ bool AllocateAddressesRequest::AnycastZoneHasBeenSet() const
     return m_anycastZoneHasBeenSet;
 }
 
+vector<string> AllocateAddressesRequest::GetVipCluster() const
+{
+    return m_vipCluster;
+}
+
+void AllocateAddressesRequest::SetVipCluster(const vector<string>& _vipCluster)
+{
+    m_vipCluster = _vipCluster;
+    m_vipClusterHasBeenSet = true;
+}
+
+bool AllocateAddressesRequest::VipClusterHasBeenSet() const
+{
+    return m_vipClusterHasBeenSet;
+}
+
 bool AllocateAddressesRequest::GetApplicableForCLB() const
 {
     return m_applicableForCLB;
@@ -349,6 +388,22 @@ void AllocateAddressesRequest::SetAddressName(const string& _addressName)
 bool AllocateAddressesRequest::AddressNameHasBeenSet() const
 {
     return m_addressNameHasBeenSet;
+}
+
+string AllocateAddressesRequest::GetDedicatedClusterId() const
+{
+    return m_dedicatedClusterId;
+}
+
+void AllocateAddressesRequest::SetDedicatedClusterId(const string& _dedicatedClusterId)
+{
+    m_dedicatedClusterId = _dedicatedClusterId;
+    m_dedicatedClusterIdHasBeenSet = true;
+}
+
+bool AllocateAddressesRequest::DedicatedClusterIdHasBeenSet() const
+{
+    return m_dedicatedClusterIdHasBeenSet;
 }
 
 string AllocateAddressesRequest::GetEgress() const

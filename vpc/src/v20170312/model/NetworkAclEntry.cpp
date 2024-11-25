@@ -21,13 +21,13 @@ using namespace TencentCloud::Vpc::V20170312::Model;
 using namespace std;
 
 NetworkAclEntry::NetworkAclEntry() :
-    m_modifyTimeHasBeenSet(false),
     m_protocolHasBeenSet(false),
     m_portHasBeenSet(false),
     m_cidrBlockHasBeenSet(false),
     m_ipv6CidrBlockHasBeenSet(false),
     m_actionHasBeenSet(false),
-    m_descriptionHasBeenSet(false)
+    m_descriptionHasBeenSet(false),
+    m_modifyTimeHasBeenSet(false)
 {
 }
 
@@ -35,16 +35,6 @@ CoreInternalOutcome NetworkAclEntry::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
-
-    if (value.HasMember("ModifyTime") && !value["ModifyTime"].IsNull())
-    {
-        if (!value["ModifyTime"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `NetworkAclEntry.ModifyTime` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_modifyTime = string(value["ModifyTime"].GetString());
-        m_modifyTimeHasBeenSet = true;
-    }
 
     if (value.HasMember("Protocol") && !value["Protocol"].IsNull())
     {
@@ -106,20 +96,22 @@ CoreInternalOutcome NetworkAclEntry::Deserialize(const rapidjson::Value &value)
         m_descriptionHasBeenSet = true;
     }
 
+    if (value.HasMember("ModifyTime") && !value["ModifyTime"].IsNull())
+    {
+        if (!value["ModifyTime"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `NetworkAclEntry.ModifyTime` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_modifyTime = string(value["ModifyTime"].GetString());
+        m_modifyTimeHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
 void NetworkAclEntry::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
-
-    if (m_modifyTimeHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "ModifyTime";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_modifyTime.c_str(), allocator).Move(), allocator);
-    }
 
     if (m_protocolHasBeenSet)
     {
@@ -169,24 +161,16 @@ void NetworkAclEntry::ToJsonObject(rapidjson::Value &value, rapidjson::Document:
         value.AddMember(iKey, rapidjson::Value(m_description.c_str(), allocator).Move(), allocator);
     }
 
+    if (m_modifyTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ModifyTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_modifyTime.c_str(), allocator).Move(), allocator);
+    }
+
 }
 
-
-string NetworkAclEntry::GetModifyTime() const
-{
-    return m_modifyTime;
-}
-
-void NetworkAclEntry::SetModifyTime(const string& _modifyTime)
-{
-    m_modifyTime = _modifyTime;
-    m_modifyTimeHasBeenSet = true;
-}
-
-bool NetworkAclEntry::ModifyTimeHasBeenSet() const
-{
-    return m_modifyTimeHasBeenSet;
-}
 
 string NetworkAclEntry::GetProtocol() const
 {
@@ -282,5 +266,21 @@ void NetworkAclEntry::SetDescription(const string& _description)
 bool NetworkAclEntry::DescriptionHasBeenSet() const
 {
     return m_descriptionHasBeenSet;
+}
+
+string NetworkAclEntry::GetModifyTime() const
+{
+    return m_modifyTime;
+}
+
+void NetworkAclEntry::SetModifyTime(const string& _modifyTime)
+{
+    m_modifyTime = _modifyTime;
+    m_modifyTimeHasBeenSet = true;
+}
+
+bool NetworkAclEntry::ModifyTimeHasBeenSet() const
+{
+    return m_modifyTimeHasBeenSet;
 }
 

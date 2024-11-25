@@ -68,15 +68,27 @@ namespace TencentCloud
                     bool HealthSwitchHasBeenSet() const;
 
                     /**
-                     * 获取Protocol used for health checks. ICMP and TCP are supported, and the default is ICMP.
-                     * @return Protocol Protocol used for health checks. ICMP and TCP are supported, and the default is ICMP.
+                     * 获取Protocol used for health check, which supports PING and TCP and is PING by default.
+
+- PING: icmp
+- TCP: tcp
+                     * @return Protocol Protocol used for health check, which supports PING and TCP and is PING by default.
+
+- PING: icmp
+- TCP: tcp
                      * 
                      */
                     std::string GetProtocol() const;
 
                     /**
-                     * 设置Protocol used for health checks. ICMP and TCP are supported, and the default is ICMP.
-                     * @param _protocol Protocol used for health checks. ICMP and TCP are supported, and the default is ICMP.
+                     * 设置Protocol used for health check, which supports PING and TCP and is PING by default.
+
+- PING: icmp
+- TCP: tcp
+                     * @param _protocol Protocol used for health check, which supports PING and TCP and is PING by default.
+
+- PING: icmp
+- TCP: tcp
                      * 
                      */
                     void SetProtocol(const std::string& _protocol);
@@ -202,7 +214,10 @@ namespace TencentCloud
                     bool m_healthSwitchHasBeenSet;
 
                     /**
-                     * Protocol used for health checks. ICMP and TCP are supported, and the default is ICMP.
+                     * Protocol used for health check, which supports PING and TCP and is PING by default.
+
+- PING: icmp
+- TCP: tcp
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;

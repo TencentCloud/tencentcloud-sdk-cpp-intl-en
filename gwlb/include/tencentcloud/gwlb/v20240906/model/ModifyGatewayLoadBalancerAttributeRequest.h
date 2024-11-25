@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
-                     * 获取GWLB name.
-                     * @return LoadBalancerName GWLB name.
+                     * 获取GWLB instance name. It supports input of 1 to 60 characters.
+                     * @return LoadBalancerName GWLB instance name. It supports input of 1 to 60 characters.
                      * 
                      */
                     std::string GetLoadBalancerName() const;
 
                     /**
-                     * 设置GWLB name.
-                     * @param _loadBalancerName GWLB name.
+                     * 设置GWLB instance name. It supports input of 1 to 60 characters.
+                     * @param _loadBalancerName GWLB instance name. It supports input of 1 to 60 characters.
                      * 
                      */
                     void SetLoadBalancerName(const std::string& _loadBalancerName);
@@ -93,7 +93,7 @@ namespace TencentCloud
                     bool m_loadBalancerIdHasBeenSet;
 
                     /**
-                     * GWLB name.
+                     * GWLB instance name. It supports input of 1 to 60 characters.
                      */
                     std::string m_loadBalancerName;
                     bool m_loadBalancerNameHasBeenSet;

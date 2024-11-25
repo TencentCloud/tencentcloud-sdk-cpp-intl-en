@@ -105,6 +105,8 @@
 #include <tencentcloud/vpc/v20170312/model/CreateNetworkAclQuintupleEntriesResponse.h>
 #include <tencentcloud/vpc/v20170312/model/CreateNetworkInterfaceRequest.h>
 #include <tencentcloud/vpc/v20170312/model/CreateNetworkInterfaceResponse.h>
+#include <tencentcloud/vpc/v20170312/model/CreateReserveIpAddressesRequest.h>
+#include <tencentcloud/vpc/v20170312/model/CreateReserveIpAddressesResponse.h>
 #include <tencentcloud/vpc/v20170312/model/CreateRouteTableRequest.h>
 #include <tencentcloud/vpc/v20170312/model/CreateRouteTableResponse.h>
 #include <tencentcloud/vpc/v20170312/model/CreateRoutesRequest.h>
@@ -175,6 +177,8 @@
 #include <tencentcloud/vpc/v20170312/model/DeleteNetworkAclQuintupleEntriesResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DeleteNetworkInterfaceRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DeleteNetworkInterfaceResponse.h>
+#include <tencentcloud/vpc/v20170312/model/DeleteReserveIpAddressesRequest.h>
+#include <tencentcloud/vpc/v20170312/model/DeleteReserveIpAddressesResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DeleteRouteTableRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DeleteRouteTableResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DeleteRoutesRequest.h>
@@ -283,6 +287,8 @@
 #include <tencentcloud/vpc/v20170312/model/DescribeNetworkInterfaceLimitResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeNetworkInterfacesRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeNetworkInterfacesResponse.h>
+#include <tencentcloud/vpc/v20170312/model/DescribeReserveIpAddressesRequest.h>
+#include <tencentcloud/vpc/v20170312/model/DescribeReserveIpAddressesResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeRouteTablesRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeRouteTablesResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeSecurityGroupAssociationStatisticsRequest.h>
@@ -455,6 +461,8 @@
 #include <tencentcloud/vpc/v20170312/model/ModifyNetworkInterfaceAttributeResponse.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyPrivateIpAddressesAttributeRequest.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyPrivateIpAddressesAttributeResponse.h>
+#include <tencentcloud/vpc/v20170312/model/ModifyReserveIpAddressRequest.h>
+#include <tencentcloud/vpc/v20170312/model/ModifyReserveIpAddressResponse.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyRouteTableAttributeRequest.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyRouteTableAttributeResponse.h>
 #include <tencentcloud/vpc/v20170312/model/ModifySecurityGroupAttributeRequest.h>
@@ -674,6 +682,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateNetworkInterfaceResponse> CreateNetworkInterfaceOutcome;
                 typedef std::future<CreateNetworkInterfaceOutcome> CreateNetworkInterfaceOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::CreateNetworkInterfaceRequest&, CreateNetworkInterfaceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateNetworkInterfaceAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateReserveIpAddressesResponse> CreateReserveIpAddressesOutcome;
+                typedef std::future<CreateReserveIpAddressesOutcome> CreateReserveIpAddressesOutcomeCallable;
+                typedef std::function<void(const VpcClient*, const Model::CreateReserveIpAddressesRequest&, CreateReserveIpAddressesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateReserveIpAddressesAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateRouteTableResponse> CreateRouteTableOutcome;
                 typedef std::future<CreateRouteTableOutcome> CreateRouteTableOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::CreateRouteTableRequest&, CreateRouteTableOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateRouteTableAsyncHandler;
@@ -779,6 +790,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteNetworkInterfaceResponse> DeleteNetworkInterfaceOutcome;
                 typedef std::future<DeleteNetworkInterfaceOutcome> DeleteNetworkInterfaceOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DeleteNetworkInterfaceRequest&, DeleteNetworkInterfaceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteNetworkInterfaceAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteReserveIpAddressesResponse> DeleteReserveIpAddressesOutcome;
+                typedef std::future<DeleteReserveIpAddressesOutcome> DeleteReserveIpAddressesOutcomeCallable;
+                typedef std::function<void(const VpcClient*, const Model::DeleteReserveIpAddressesRequest&, DeleteReserveIpAddressesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteReserveIpAddressesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteRouteTableResponse> DeleteRouteTableOutcome;
                 typedef std::future<DeleteRouteTableOutcome> DeleteRouteTableOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DeleteRouteTableRequest&, DeleteRouteTableOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteRouteTableAsyncHandler;
@@ -941,6 +955,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeNetworkInterfacesResponse> DescribeNetworkInterfacesOutcome;
                 typedef std::future<DescribeNetworkInterfacesOutcome> DescribeNetworkInterfacesOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DescribeNetworkInterfacesRequest&, DescribeNetworkInterfacesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeNetworkInterfacesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeReserveIpAddressesResponse> DescribeReserveIpAddressesOutcome;
+                typedef std::future<DescribeReserveIpAddressesOutcome> DescribeReserveIpAddressesOutcomeCallable;
+                typedef std::function<void(const VpcClient*, const Model::DescribeReserveIpAddressesRequest&, DescribeReserveIpAddressesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeReserveIpAddressesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeRouteTablesResponse> DescribeRouteTablesOutcome;
                 typedef std::future<DescribeRouteTablesOutcome> DescribeRouteTablesOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DescribeRouteTablesRequest&, DescribeRouteTablesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRouteTablesAsyncHandler;
@@ -1199,6 +1216,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyPrivateIpAddressesAttributeResponse> ModifyPrivateIpAddressesAttributeOutcome;
                 typedef std::future<ModifyPrivateIpAddressesAttributeOutcome> ModifyPrivateIpAddressesAttributeOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::ModifyPrivateIpAddressesAttributeRequest&, ModifyPrivateIpAddressesAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyPrivateIpAddressesAttributeAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyReserveIpAddressResponse> ModifyReserveIpAddressOutcome;
+                typedef std::future<ModifyReserveIpAddressOutcome> ModifyReserveIpAddressOutcomeCallable;
+                typedef std::function<void(const VpcClient*, const Model::ModifyReserveIpAddressRequest&, ModifyReserveIpAddressOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyReserveIpAddressAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyRouteTableAttributeResponse> ModifyRouteTableAttributeOutcome;
                 typedef std::future<ModifyRouteTableAttributeOutcome> ModifyRouteTableAttributeOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::ModifyRouteTableAttributeRequest&, ModifyRouteTableAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyRouteTableAttributeAsyncHandler;
@@ -1761,6 +1781,15 @@ Before taking actions on a NAT gateway, ensure that it has been successfully cre
                 CreateNetworkInterfaceOutcomeCallable CreateNetworkInterfaceCallable(const Model::CreateNetworkInterfaceRequest& request);
 
                 /**
+                 *This API is used to create a reserved private IP address.
+                 * @param req CreateReserveIpAddressesRequest
+                 * @return CreateReserveIpAddressesOutcome
+                 */
+                CreateReserveIpAddressesOutcome CreateReserveIpAddresses(const Model::CreateReserveIpAddressesRequest &request);
+                void CreateReserveIpAddressesAsync(const Model::CreateReserveIpAddressesRequest& request, const CreateReserveIpAddressesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateReserveIpAddressesOutcomeCallable CreateReserveIpAddressesCallable(const Model::CreateReserveIpAddressesRequest& request);
+
+                /**
                  *This API is used to create a route table.
 * After the VPC instance has been created, the system creates a default route table with which all newly created subnets will be associated. By default, you can use this route table to manage your routing policies. If you have multiple routing policies, you can call the API for creating route tables to create more route tables to manage these routing policies.
 * You can bind a tag when creating a route table. The tag list in the response indicates the tags that have been successfully added.
@@ -1817,20 +1846,20 @@ For parameters of `SecurityGroupPolicySet`,
                 CreateSecurityGroupPoliciesOutcomeCallable CreateSecurityGroupPoliciesCallable(const Model::CreateSecurityGroupPoliciesRequest& request);
 
                 /**
-                 *This API is used to create u200da security group, and add security group policies.
+                 *This API is used to create a security group, and add security group policies.
 * For the the upper limit of security groups per project in each region under each account, <a href="https://intl.cloud.tencent.com/document/product/213/12453?from_cn_redirect=1">see here</a>
-* u200dFor u200dnewly u200dcreated security groups, u200dthe inbound and outbound policies are set to `Deny All` by default. You need to call <a href="https://intl.cloud.tencent.com/document/product/215/15807?from_cn_redirect=1">CreateSecurityGroupPolicies</a>
+* For newly created security groups, the inbound and outbound policies are set to `Deny All` by default. You need to call <a href="https://intl.cloud.tencent.com/document/product/215/15807?from_cn_redirect=1">CreateSecurityGroupPolicies</a>
 to change it.
 
 Description:
 * `Version`: The version number of a security group policy. It automatically increments by 1 every time you update the security policy, so to prevent the expiration of the updated policies. If this field is left empty, any conflicts will be ignored.
 * `Protocol`: Values can be `TCP`, `UDP`, `ICMP`, `ICMPV6`, `GRE`, and `ALL`.
-* `CidrBlock`: Enter a CIDR block in the correct format. In the classic network, even if the CIDR block specified in u200d`CidrBlock` contains the Tencent Cloud private IPs not used for CVMs under your Tencent Cloud account, it does not mean this policy allows you to access those resources. The network isolation policies between tenants take priority over the private network policies in security groups.
+* `CidrBlock`: Enter a CIDR block in the correct format. In the classic network, even if the CIDR block specified in `CidrBlock` contains the Tencent Cloud private IPs not used for CVMs under your Tencent Cloud account, it does not mean this policy allows you to access those resources. The network isolation policies between tenants take priority over the private network policies in security groups.
 * `Ipv6CidrBlock`: Enter an IPv6 CIDR block in the correct format. In the classic network, even if the CIDR block specified in `Ipv6CidrBlock` contains the Tencent Cloud private IPv6 addresses not used for CVMs under your Tencent Cloud account, it does not mean this policy allows you to access those resources. The network isolation policies between tenants take priority over the private network policies in security groups.
 * `SecurityGroupId`: ID of the security group. It can be the ID of a security group to be modified, or the ID of another security group in the same project. All private IPs of all CVMs under the security group will be covered. If this field is used, the policy will automatically change according to the CVM associated with the group ID while being used to match network messages. You don't need to change it manually.
 * `Port`: Enter a single port number (such as `80`), or a port range (such as `8000-8010`). `Port` is only applicable when `Protocol` is `TCP` or `UDP`. If `Protocol` is not `TCP` or `UDP`, `Protocol` and `Port` cannot be both specified. 
 * `Action`: Values can be `ACCEPT` or `DROP`.
-* `CidrBlock`, `Ipv6CidrBlock`, `SecurityGroupId`, and `AddressTemplate` are exclusive u200dto one another. “Protocol + Port” and `ServiceTemplate` are mutually exclusive.
+* `CidrBlock`, `Ipv6CidrBlock`, `SecurityGroupId`, and `AddressTemplate` are exclusive to one another. "Protocol + Port" and `ServiceTemplate` are mutually exclusive.
 * Only policies in one direction can be created in each request. If you need to specify the `PolicyIndex` parameter, the indexes of policies must be consistent.
                  * @param req CreateSecurityGroupWithPoliciesRequest
                  * @return CreateSecurityGroupWithPoliciesOutcome
@@ -2137,6 +2166,15 @@ This API is completed asynchronously. If you need to query the execution result 
                 DeleteNetworkInterfaceOutcome DeleteNetworkInterface(const Model::DeleteNetworkInterfaceRequest &request);
                 void DeleteNetworkInterfaceAsync(const Model::DeleteNetworkInterfaceRequest& request, const DeleteNetworkInterfaceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteNetworkInterfaceOutcomeCallable DeleteNetworkInterfaceCallable(const Model::DeleteNetworkInterfaceRequest& request);
+
+                /**
+                 *This API is used to delete a reserved private IP address.
+                 * @param req DeleteReserveIpAddressesRequest
+                 * @return DeleteReserveIpAddressesOutcome
+                 */
+                DeleteReserveIpAddressesOutcome DeleteReserveIpAddresses(const Model::DeleteReserveIpAddressesRequest &request);
+                void DeleteReserveIpAddressesAsync(const Model::DeleteReserveIpAddressesRequest& request, const DeleteReserveIpAddressesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteReserveIpAddressesOutcomeCallable DeleteReserveIpAddressesCallable(const Model::DeleteReserveIpAddressesRequest& request);
 
                 /**
                  *This API is used to delete a route table.
@@ -2639,6 +2677,15 @@ A service provider can query all review requests created by any `APPID` under it
                 DescribeNetworkInterfacesOutcome DescribeNetworkInterfaces(const Model::DescribeNetworkInterfacesRequest &request);
                 void DescribeNetworkInterfacesAsync(const Model::DescribeNetworkInterfacesRequest& request, const DescribeNetworkInterfacesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeNetworkInterfacesOutcomeCallable DescribeNetworkInterfacesCallable(const Model::DescribeNetworkInterfacesRequest& request);
+
+                /**
+                 *This API is used to query reserved private IP addresses.
+                 * @param req DescribeReserveIpAddressesRequest
+                 * @return DescribeReserveIpAddressesOutcome
+                 */
+                DescribeReserveIpAddressesOutcome DescribeReserveIpAddresses(const Model::DescribeReserveIpAddressesRequest &request);
+                void DescribeReserveIpAddressesAsync(const Model::DescribeReserveIpAddressesRequest& request, const DescribeReserveIpAddressesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeReserveIpAddressesOutcomeCallable DescribeReserveIpAddressesCallable(const Model::DescribeReserveIpAddressesRequest& request);
 
                 /**
                  *This API is used to query route tables.
@@ -3437,6 +3484,15 @@ This API is completed asynchronously. If you need to query the execution result 
                 ModifyPrivateIpAddressesAttributeOutcome ModifyPrivateIpAddressesAttribute(const Model::ModifyPrivateIpAddressesAttributeRequest &request);
                 void ModifyPrivateIpAddressesAttributeAsync(const Model::ModifyPrivateIpAddressesAttributeRequest& request, const ModifyPrivateIpAddressesAttributeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyPrivateIpAddressesAttributeOutcomeCallable ModifyPrivateIpAddressesAttributeCallable(const Model::ModifyPrivateIpAddressesAttributeRequest& request);
+
+                /**
+                 *This API is used to modify a reserved private IP address.
+                 * @param req ModifyReserveIpAddressRequest
+                 * @return ModifyReserveIpAddressOutcome
+                 */
+                ModifyReserveIpAddressOutcome ModifyReserveIpAddress(const Model::ModifyReserveIpAddressRequest &request);
+                void ModifyReserveIpAddressAsync(const Model::ModifyReserveIpAddressRequest& request, const ModifyReserveIpAddressAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyReserveIpAddressOutcomeCallable ModifyReserveIpAddressCallable(const Model::ModifyReserveIpAddressRequest& request);
 
                 /**
                  *This API (ModifyRouteTableAttribute) is used to modify the attributes of a route table.

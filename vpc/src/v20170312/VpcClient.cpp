@@ -1803,6 +1803,49 @@ VpcClient::CreateNetworkInterfaceOutcomeCallable VpcClient::CreateNetworkInterfa
     return task->get_future();
 }
 
+VpcClient::CreateReserveIpAddressesOutcome VpcClient::CreateReserveIpAddresses(const CreateReserveIpAddressesRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateReserveIpAddresses");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateReserveIpAddressesResponse rsp = CreateReserveIpAddressesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateReserveIpAddressesOutcome(rsp);
+        else
+            return CreateReserveIpAddressesOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateReserveIpAddressesOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::CreateReserveIpAddressesAsync(const CreateReserveIpAddressesRequest& request, const CreateReserveIpAddressesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateReserveIpAddresses(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::CreateReserveIpAddressesOutcomeCallable VpcClient::CreateReserveIpAddressesCallable(const CreateReserveIpAddressesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateReserveIpAddressesOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateReserveIpAddresses(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 VpcClient::CreateRouteTableOutcome VpcClient::CreateRouteTable(const CreateRouteTableRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateRouteTable");
@@ -3301,6 +3344,49 @@ VpcClient::DeleteNetworkInterfaceOutcomeCallable VpcClient::DeleteNetworkInterfa
         [this, request]()
         {
             return this->DeleteNetworkInterface(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VpcClient::DeleteReserveIpAddressesOutcome VpcClient::DeleteReserveIpAddresses(const DeleteReserveIpAddressesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteReserveIpAddresses");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteReserveIpAddressesResponse rsp = DeleteReserveIpAddressesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteReserveIpAddressesOutcome(rsp);
+        else
+            return DeleteReserveIpAddressesOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteReserveIpAddressesOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::DeleteReserveIpAddressesAsync(const DeleteReserveIpAddressesRequest& request, const DeleteReserveIpAddressesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteReserveIpAddresses(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::DeleteReserveIpAddressesOutcomeCallable VpcClient::DeleteReserveIpAddressesCallable(const DeleteReserveIpAddressesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteReserveIpAddressesOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteReserveIpAddresses(request);
         }
     );
 
@@ -5623,6 +5709,49 @@ VpcClient::DescribeNetworkInterfacesOutcomeCallable VpcClient::DescribeNetworkIn
         [this, request]()
         {
             return this->DescribeNetworkInterfaces(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VpcClient::DescribeReserveIpAddressesOutcome VpcClient::DescribeReserveIpAddresses(const DescribeReserveIpAddressesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeReserveIpAddresses");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeReserveIpAddressesResponse rsp = DescribeReserveIpAddressesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeReserveIpAddressesOutcome(rsp);
+        else
+            return DescribeReserveIpAddressesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeReserveIpAddressesOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::DescribeReserveIpAddressesAsync(const DescribeReserveIpAddressesRequest& request, const DescribeReserveIpAddressesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeReserveIpAddresses(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::DescribeReserveIpAddressesOutcomeCallable VpcClient::DescribeReserveIpAddressesCallable(const DescribeReserveIpAddressesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeReserveIpAddressesOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeReserveIpAddresses(request);
         }
     );
 
@@ -9321,6 +9450,49 @@ VpcClient::ModifyPrivateIpAddressesAttributeOutcomeCallable VpcClient::ModifyPri
         [this, request]()
         {
             return this->ModifyPrivateIpAddressesAttribute(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VpcClient::ModifyReserveIpAddressOutcome VpcClient::ModifyReserveIpAddress(const ModifyReserveIpAddressRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyReserveIpAddress");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyReserveIpAddressResponse rsp = ModifyReserveIpAddressResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyReserveIpAddressOutcome(rsp);
+        else
+            return ModifyReserveIpAddressOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyReserveIpAddressOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::ModifyReserveIpAddressAsync(const ModifyReserveIpAddressRequest& request, const ModifyReserveIpAddressAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyReserveIpAddress(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::ModifyReserveIpAddressOutcomeCallable VpcClient::ModifyReserveIpAddressCallable(const ModifyReserveIpAddressRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyReserveIpAddressOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyReserveIpAddress(request);
         }
     );
 

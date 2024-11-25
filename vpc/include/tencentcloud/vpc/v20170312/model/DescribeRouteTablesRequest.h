@@ -151,6 +151,27 @@ namespace TencentCloud
                      */
                     bool LimitHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return NeedRouterInfo 
+                     * 
+                     */
+                    bool GetNeedRouterInfo() const;
+
+                    /**
+                     * 设置
+                     * @param _needRouterInfo 
+                     * 
+                     */
+                    void SetNeedRouterInfo(const bool& _needRouterInfo);
+
+                    /**
+                     * 判断参数 NeedRouterInfo 是否已赋值
+                     * @return NeedRouterInfo 是否已赋值
+                     * 
+                     */
+                    bool NeedRouterInfoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -182,6 +203,12 @@ namespace TencentCloud
                      */
                     std::string m_limit;
                     bool m_limitHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_needRouterInfo;
+                    bool m_needRouterInfoHasBeenSet;
 
                 };
             }

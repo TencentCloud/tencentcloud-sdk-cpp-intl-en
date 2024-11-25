@@ -210,6 +210,27 @@ namespace TencentCloud
                      */
                     bool ProtocolHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return TimeSpan 
+                     * 
+                     */
+                    uint64_t GetTimeSpan() const;
+
+                    /**
+                     * 设置
+                     * @param _timeSpan 
+                     * 
+                     */
+                    void SetTimeSpan(const uint64_t& _timeSpan);
+
+                    /**
+                     * 判断参数 TimeSpan 是否已赋值
+                     * @return TimeSpan 是否已赋值
+                     * 
+                     */
+                    bool TimeSpanHasBeenSet() const;
+
                 private:
 
                     /**
@@ -258,6 +279,12 @@ namespace TencentCloud
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_timeSpan;
+                    bool m_timeSpanHasBeenSet;
 
                 };
             }

@@ -21,9 +21,9 @@ using namespace TencentCloud::Vpc::V20170312::Model;
 using namespace std;
 
 CcnInstance::CcnInstance() :
+    m_instanceTypeHasBeenSet(false),
     m_instanceIdHasBeenSet(false),
     m_instanceRegionHasBeenSet(false),
-    m_instanceTypeHasBeenSet(false),
     m_descriptionHasBeenSet(false),
     m_routeTableIdHasBeenSet(false)
 {
@@ -33,6 +33,16 @@ CoreInternalOutcome CcnInstance::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
+
+    if (value.HasMember("InstanceType") && !value["InstanceType"].IsNull())
+    {
+        if (!value["InstanceType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `CcnInstance.InstanceType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_instanceType = string(value["InstanceType"].GetString());
+        m_instanceTypeHasBeenSet = true;
+    }
 
     if (value.HasMember("InstanceId") && !value["InstanceId"].IsNull())
     {
@@ -52,16 +62,6 @@ CoreInternalOutcome CcnInstance::Deserialize(const rapidjson::Value &value)
         }
         m_instanceRegion = string(value["InstanceRegion"].GetString());
         m_instanceRegionHasBeenSet = true;
-    }
-
-    if (value.HasMember("InstanceType") && !value["InstanceType"].IsNull())
-    {
-        if (!value["InstanceType"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `CcnInstance.InstanceType` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_instanceType = string(value["InstanceType"].GetString());
-        m_instanceTypeHasBeenSet = true;
     }
 
     if (value.HasMember("Description") && !value["Description"].IsNull())
@@ -91,6 +91,14 @@ CoreInternalOutcome CcnInstance::Deserialize(const rapidjson::Value &value)
 void CcnInstance::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
+    if (m_instanceTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceType.c_str(), allocator).Move(), allocator);
+    }
+
     if (m_instanceIdHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -105,14 +113,6 @@ void CcnInstance::ToJsonObject(rapidjson::Value &value, rapidjson::Document::All
         string key = "InstanceRegion";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_instanceRegion.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_instanceTypeHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "InstanceType";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_instanceType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_descriptionHasBeenSet)
@@ -133,6 +133,22 @@ void CcnInstance::ToJsonObject(rapidjson::Value &value, rapidjson::Document::All
 
 }
 
+
+string CcnInstance::GetInstanceType() const
+{
+    return m_instanceType;
+}
+
+void CcnInstance::SetInstanceType(const string& _instanceType)
+{
+    m_instanceType = _instanceType;
+    m_instanceTypeHasBeenSet = true;
+}
+
+bool CcnInstance::InstanceTypeHasBeenSet() const
+{
+    return m_instanceTypeHasBeenSet;
+}
 
 string CcnInstance::GetInstanceId() const
 {
@@ -164,22 +180,6 @@ void CcnInstance::SetInstanceRegion(const string& _instanceRegion)
 bool CcnInstance::InstanceRegionHasBeenSet() const
 {
     return m_instanceRegionHasBeenSet;
-}
-
-string CcnInstance::GetInstanceType() const
-{
-    return m_instanceType;
-}
-
-void CcnInstance::SetInstanceType(const string& _instanceType)
-{
-    m_instanceType = _instanceType;
-    m_instanceTypeHasBeenSet = true;
-}
-
-bool CcnInstance::InstanceTypeHasBeenSet() const
-{
-    return m_instanceTypeHasBeenSet;
 }
 
 string CcnInstance::GetDescription() const

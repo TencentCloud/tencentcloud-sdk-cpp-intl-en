@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of associated CLB instance
-                     * @return LoadBalancerId ID of associated CLB instance
+                     * 获取Associated GWLB instance ID
+                     * @return LoadBalancerId Associated GWLB instance ID
                      * 
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
-                     * 设置ID of associated CLB instance
-                     * @param _loadBalancerId ID of associated CLB instance
+                     * 设置Associated GWLB instance ID
+                     * @param _loadBalancerId Associated GWLB instance ID
                      * 
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
-                     * 获取CLB name
-                     * @return LoadBalancerName CLB name
+                     * 获取GWLB instance name
+                     * @return LoadBalancerName GWLB instance name
                      * 
                      */
                     std::string GetLoadBalancerName() const;
 
                     /**
-                     * 设置CLB name
-                     * @param _loadBalancerName CLB name
+                     * 设置GWLB instance name
+                     * @param _loadBalancerName GWLB instance name
                      * 
                      */
                     void SetLoadBalancerName(const std::string& _loadBalancerName);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of associated CLB instance
+                     * Associated GWLB instance ID
                      */
                     std::string m_loadBalancerId;
                     bool m_loadBalancerIdHasBeenSet;
 
                     /**
-                     * CLB name
+                     * GWLB instance name
                      */
                     std::string m_loadBalancerName;
                     bool m_loadBalancerNameHasBeenSet;

@@ -215,6 +215,27 @@ namespace TencentCloud
                      */
                     bool BandwidthHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return Egress 
+                     * 
+                     */
+                    std::string GetEgress() const;
+
+                    /**
+                     * 设置
+                     * @param _egress 
+                     * 
+                     */
+                    void SetEgress(const std::string& _egress);
+
+                    /**
+                     * 判断参数 Egress 是否已赋值
+                     * @return Egress 是否已赋值
+                     * 
+                     */
+                    bool EgressHasBeenSet() const;
+
                 private:
 
                     /**
@@ -264,6 +285,12 @@ namespace TencentCloud
                      */
                     int64_t m_bandwidth;
                     bool m_bandwidthHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_egress;
+                    bool m_egressHasBeenSet;
 
                 };
             }

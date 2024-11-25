@@ -70,21 +70,21 @@ namespace TencentCloud
                     /**
                      * 获取Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `SHA1`.
                      * @return IntegrityAlgorith Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `SHA1`.
-                     * 
+                     * @deprecated
                      */
                     std::string GetIntegrityAlgorith() const;
 
                     /**
                      * 设置Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `SHA1`.
                      * @param _integrityAlgorith Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `SHA1`.
-                     * 
+                     * @deprecated
                      */
                     void SetIntegrityAlgorith(const std::string& _integrityAlgorith);
 
                     /**
                      * 判断参数 IntegrityAlgorith 是否已赋值
                      * @return IntegrityAlgorith 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool IntegrityAlgorithHasBeenSet() const;
 

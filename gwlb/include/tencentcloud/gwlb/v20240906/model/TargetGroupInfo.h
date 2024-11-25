@@ -225,15 +225,23 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取Scheduling algorithm.ip_hash_3: 3-tuple symmetric elastic hashingip_hash_3_consistent: 3-tuple symmetric consistent hashingNote: This field may return null, indicating that no valid value can be obtained.
-                     * @return ScheduleAlgorithm Scheduling algorithm.ip_hash_3: 3-tuple symmetric elastic hashingip_hash_3_consistent: 3-tuple symmetric consistent hashingNote: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Scheduling algorithm.
+ip_hash_3: elastic hashing
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return ScheduleAlgorithm Scheduling algorithm.
+ip_hash_3: elastic hashing
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetScheduleAlgorithm() const;
 
                     /**
-                     * 设置Scheduling algorithm.ip_hash_3: 3-tuple symmetric elastic hashingip_hash_3_consistent: 3-tuple symmetric consistent hashingNote: This field may return null, indicating that no valid value can be obtained.
-                     * @param _scheduleAlgorithm Scheduling algorithm.ip_hash_3: 3-tuple symmetric elastic hashingip_hash_3_consistent: 3-tuple symmetric consistent hashingNote: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Scheduling algorithm.
+ip_hash_3: elastic hashing
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _scheduleAlgorithm Scheduling algorithm.
+ip_hash_3: elastic hashing
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetScheduleAlgorithm(const std::string& _scheduleAlgorithm);
@@ -382,7 +390,9 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * Scheduling algorithm.ip_hash_3: 3-tuple symmetric elastic hashingip_hash_3_consistent: 3-tuple symmetric consistent hashingNote: This field may return null, indicating that no valid value can be obtained.
+                     * Scheduling algorithm.
+ip_hash_3: elastic hashing
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_scheduleAlgorithm;
                     bool m_scheduleAlgorithmHasBeenSet;

@@ -47,27 +47,6 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Modification time.
-                     * @return ModifyTime Modification time.
-                     * 
-                     */
-                    std::string GetModifyTime() const;
-
-                    /**
-                     * 设置Modification time.
-                     * @param _modifyTime Modification time.
-                     * 
-                     */
-                    void SetModifyTime(const std::string& _modifyTime);
-
-                    /**
-                     * 判断参数 ModifyTime 是否已赋值
-                     * @return ModifyTime 是否已赋值
-                     * 
-                     */
-                    bool ModifyTimeHasBeenSet() const;
-
-                    /**
                      * 获取Protocol. Valid values: TCP, UDP, ICMP, ALL.
                      * @return Protocol Protocol. Valid values: TCP, UDP, ICMP, ALL.
                      * 
@@ -193,13 +172,28 @@ namespace TencentCloud
                      */
                     bool DescriptionHasBeenSet() const;
 
-                private:
+                    /**
+                     * 获取Modification time.
+                     * @return ModifyTime Modification time.
+                     * 
+                     */
+                    std::string GetModifyTime() const;
 
                     /**
-                     * Modification time.
+                     * 设置Modification time.
+                     * @param _modifyTime Modification time.
+                     * 
                      */
-                    std::string m_modifyTime;
-                    bool m_modifyTimeHasBeenSet;
+                    void SetModifyTime(const std::string& _modifyTime);
+
+                    /**
+                     * 判断参数 ModifyTime 是否已赋值
+                     * @return ModifyTime 是否已赋值
+                     * 
+                     */
+                    bool ModifyTimeHasBeenSet() const;
+
+                private:
 
                     /**
                      * Protocol. Valid values: TCP, UDP, ICMP, ALL.
@@ -236,6 +230,12 @@ namespace TencentCloud
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
+
+                    /**
+                     * Modification time.
+                     */
+                    std::string m_modifyTime;
+                    bool m_modifyTimeHasBeenSet;
 
                 };
             }

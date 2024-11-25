@@ -64,88 +64,6 @@ namespace TencentCloud
                     bool DetectDestinationIpHasBeenSet() const;
 
                     /**
-                     * 获取The type of the next hop. Currently supported types are:
-VPN: VPN gateway;
-DIRECTCONNECT: direct connect gateway;
-PEERCONNECTION: peering connection;
-NAT: NAT gateway;
-NORMAL_CVM: normal CVM.
-                     * @return NextHopType The type of the next hop. Currently supported types are:
-VPN: VPN gateway;
-DIRECTCONNECT: direct connect gateway;
-PEERCONNECTION: peering connection;
-NAT: NAT gateway;
-NORMAL_CVM: normal CVM.
-                     * 
-                     */
-                    std::string GetNextHopType() const;
-
-                    /**
-                     * 设置The type of the next hop. Currently supported types are:
-VPN: VPN gateway;
-DIRECTCONNECT: direct connect gateway;
-PEERCONNECTION: peering connection;
-NAT: NAT gateway;
-NORMAL_CVM: normal CVM.
-                     * @param _nextHopType The type of the next hop. Currently supported types are:
-VPN: VPN gateway;
-DIRECTCONNECT: direct connect gateway;
-PEERCONNECTION: peering connection;
-NAT: NAT gateway;
-NORMAL_CVM: normal CVM.
-                     * 
-                     */
-                    void SetNextHopType(const std::string& _nextHopType);
-
-                    /**
-                     * 判断参数 NextHopType 是否已赋值
-                     * @return NextHopType 是否已赋值
-                     * 
-                     */
-                    bool NextHopTypeHasBeenSet() const;
-
-                    /**
-                     * 获取The next-hop destination gateway. The value is related to NextHopType.
-If NextHopType is set to VPN, the value of this parameter is the VPN gateway ID, such as vpngw-12345678.
-If NextHopType is set to DIRECTCONNECT, the value of this parameter is the direct connect gateway ID, such as dcg-12345678.
-If NextHopType is set to PEERCONNECTION, the value of this parameter is the peering connection ID, such as pcx-12345678.
-If NextHopType is set to NAT, the value of this parameter is the NAT gateway ID, such as nat-12345678.
-If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 address of the CVM, such as 10.0.0.12.
-                     * @return NextHopDestination The next-hop destination gateway. The value is related to NextHopType.
-If NextHopType is set to VPN, the value of this parameter is the VPN gateway ID, such as vpngw-12345678.
-If NextHopType is set to DIRECTCONNECT, the value of this parameter is the direct connect gateway ID, such as dcg-12345678.
-If NextHopType is set to PEERCONNECTION, the value of this parameter is the peering connection ID, such as pcx-12345678.
-If NextHopType is set to NAT, the value of this parameter is the NAT gateway ID, such as nat-12345678.
-If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 address of the CVM, such as 10.0.0.12.
-                     * 
-                     */
-                    std::string GetNextHopDestination() const;
-
-                    /**
-                     * 设置The next-hop destination gateway. The value is related to NextHopType.
-If NextHopType is set to VPN, the value of this parameter is the VPN gateway ID, such as vpngw-12345678.
-If NextHopType is set to DIRECTCONNECT, the value of this parameter is the direct connect gateway ID, such as dcg-12345678.
-If NextHopType is set to PEERCONNECTION, the value of this parameter is the peering connection ID, such as pcx-12345678.
-If NextHopType is set to NAT, the value of this parameter is the NAT gateway ID, such as nat-12345678.
-If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 address of the CVM, such as 10.0.0.12.
-                     * @param _nextHopDestination The next-hop destination gateway. The value is related to NextHopType.
-If NextHopType is set to VPN, the value of this parameter is the VPN gateway ID, such as vpngw-12345678.
-If NextHopType is set to DIRECTCONNECT, the value of this parameter is the direct connect gateway ID, such as dcg-12345678.
-If NextHopType is set to PEERCONNECTION, the value of this parameter is the peering connection ID, such as pcx-12345678.
-If NextHopType is set to NAT, the value of this parameter is the NAT gateway ID, such as nat-12345678.
-If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 address of the CVM, such as 10.0.0.12.
-                     * 
-                     */
-                    void SetNextHopDestination(const std::string& _nextHopDestination);
-
-                    /**
-                     * 判断参数 NextHopDestination 是否已赋值
-                     * @return NextHopDestination 是否已赋值
-                     * 
-                     */
-                    bool NextHopDestinationHasBeenSet() const;
-
-                    /**
                      * 获取ID of a network inspector instance, e.g. netd-12345678. Enter at least one of this parameter, VpcId, SubnetId, and NetDetectName. Use NetDetectId if it is present.
                      * @return NetDetectId ID of a network inspector instance, e.g. netd-12345678. Enter at least one of this parameter, VpcId, SubnetId, and NetDetectName. Use NetDetectId if it is present.
                      * 
@@ -229,6 +147,88 @@ If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 add
                      */
                     bool NetDetectNameHasBeenSet() const;
 
+                    /**
+                     * 获取The type of the next hop. Currently supported types are:
+VPN: VPN gateway;
+DIRECTCONNECT: direct connect gateway;
+PEERCONNECTION: peering connection;
+NAT: NAT gateway;
+NORMAL_CVM: normal CVM.
+                     * @return NextHopType The type of the next hop. Currently supported types are:
+VPN: VPN gateway;
+DIRECTCONNECT: direct connect gateway;
+PEERCONNECTION: peering connection;
+NAT: NAT gateway;
+NORMAL_CVM: normal CVM.
+                     * 
+                     */
+                    std::string GetNextHopType() const;
+
+                    /**
+                     * 设置The type of the next hop. Currently supported types are:
+VPN: VPN gateway;
+DIRECTCONNECT: direct connect gateway;
+PEERCONNECTION: peering connection;
+NAT: NAT gateway;
+NORMAL_CVM: normal CVM.
+                     * @param _nextHopType The type of the next hop. Currently supported types are:
+VPN: VPN gateway;
+DIRECTCONNECT: direct connect gateway;
+PEERCONNECTION: peering connection;
+NAT: NAT gateway;
+NORMAL_CVM: normal CVM.
+                     * 
+                     */
+                    void SetNextHopType(const std::string& _nextHopType);
+
+                    /**
+                     * 判断参数 NextHopType 是否已赋值
+                     * @return NextHopType 是否已赋值
+                     * 
+                     */
+                    bool NextHopTypeHasBeenSet() const;
+
+                    /**
+                     * 获取The next-hop destination gateway. The value is related to NextHopType.
+If NextHopType is set to VPN, the value of this parameter is the VPN gateway ID, such as vpngw-12345678.
+If NextHopType is set to DIRECTCONNECT, the value of this parameter is the direct connect gateway ID, such as dcg-12345678.
+If NextHopType is set to PEERCONNECTION, the value of this parameter is the peering connection ID, such as pcx-12345678.
+If NextHopType is set to NAT, the value of this parameter is the NAT gateway ID, such as nat-12345678.
+If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 address of the CVM, such as 10.0.0.12.
+                     * @return NextHopDestination The next-hop destination gateway. The value is related to NextHopType.
+If NextHopType is set to VPN, the value of this parameter is the VPN gateway ID, such as vpngw-12345678.
+If NextHopType is set to DIRECTCONNECT, the value of this parameter is the direct connect gateway ID, such as dcg-12345678.
+If NextHopType is set to PEERCONNECTION, the value of this parameter is the peering connection ID, such as pcx-12345678.
+If NextHopType is set to NAT, the value of this parameter is the NAT gateway ID, such as nat-12345678.
+If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 address of the CVM, such as 10.0.0.12.
+                     * 
+                     */
+                    std::string GetNextHopDestination() const;
+
+                    /**
+                     * 设置The next-hop destination gateway. The value is related to NextHopType.
+If NextHopType is set to VPN, the value of this parameter is the VPN gateway ID, such as vpngw-12345678.
+If NextHopType is set to DIRECTCONNECT, the value of this parameter is the direct connect gateway ID, such as dcg-12345678.
+If NextHopType is set to PEERCONNECTION, the value of this parameter is the peering connection ID, such as pcx-12345678.
+If NextHopType is set to NAT, the value of this parameter is the NAT gateway ID, such as nat-12345678.
+If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 address of the CVM, such as 10.0.0.12.
+                     * @param _nextHopDestination The next-hop destination gateway. The value is related to NextHopType.
+If NextHopType is set to VPN, the value of this parameter is the VPN gateway ID, such as vpngw-12345678.
+If NextHopType is set to DIRECTCONNECT, the value of this parameter is the direct connect gateway ID, such as dcg-12345678.
+If NextHopType is set to PEERCONNECTION, the value of this parameter is the peering connection ID, such as pcx-12345678.
+If NextHopType is set to NAT, the value of this parameter is the NAT gateway ID, such as nat-12345678.
+If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 address of the CVM, such as 10.0.0.12.
+                     * 
+                     */
+                    void SetNextHopDestination(const std::string& _nextHopDestination);
+
+                    /**
+                     * 判断参数 NextHopDestination 是否已赋值
+                     * @return NextHopDestination 是否已赋值
+                     * 
+                     */
+                    bool NextHopDestinationHasBeenSet() const;
+
                 private:
 
                     /**
@@ -236,28 +236,6 @@ If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 add
                      */
                     std::vector<std::string> m_detectDestinationIp;
                     bool m_detectDestinationIpHasBeenSet;
-
-                    /**
-                     * The type of the next hop. Currently supported types are:
-VPN: VPN gateway;
-DIRECTCONNECT: direct connect gateway;
-PEERCONNECTION: peering connection;
-NAT: NAT gateway;
-NORMAL_CVM: normal CVM.
-                     */
-                    std::string m_nextHopType;
-                    bool m_nextHopTypeHasBeenSet;
-
-                    /**
-                     * The next-hop destination gateway. The value is related to NextHopType.
-If NextHopType is set to VPN, the value of this parameter is the VPN gateway ID, such as vpngw-12345678.
-If NextHopType is set to DIRECTCONNECT, the value of this parameter is the direct connect gateway ID, such as dcg-12345678.
-If NextHopType is set to PEERCONNECTION, the value of this parameter is the peering connection ID, such as pcx-12345678.
-If NextHopType is set to NAT, the value of this parameter is the NAT gateway ID, such as nat-12345678.
-If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 address of the CVM, such as 10.0.0.12.
-                     */
-                    std::string m_nextHopDestination;
-                    bool m_nextHopDestinationHasBeenSet;
 
                     /**
                      * ID of a network inspector instance, e.g. netd-12345678. Enter at least one of this parameter, VpcId, SubnetId, and NetDetectName. Use NetDetectId if it is present.
@@ -282,6 +260,28 @@ If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 add
                      */
                     std::string m_netDetectName;
                     bool m_netDetectNameHasBeenSet;
+
+                    /**
+                     * The type of the next hop. Currently supported types are:
+VPN: VPN gateway;
+DIRECTCONNECT: direct connect gateway;
+PEERCONNECTION: peering connection;
+NAT: NAT gateway;
+NORMAL_CVM: normal CVM.
+                     */
+                    std::string m_nextHopType;
+                    bool m_nextHopTypeHasBeenSet;
+
+                    /**
+                     * The next-hop destination gateway. The value is related to NextHopType.
+If NextHopType is set to VPN, the value of this parameter is the VPN gateway ID, such as vpngw-12345678.
+If NextHopType is set to DIRECTCONNECT, the value of this parameter is the direct connect gateway ID, such as dcg-12345678.
+If NextHopType is set to PEERCONNECTION, the value of this parameter is the peering connection ID, such as pcx-12345678.
+If NextHopType is set to NAT, the value of this parameter is the NAT gateway ID, such as nat-12345678.
+If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 address of the CVM, such as 10.0.0.12.
+                     */
+                    std::string m_nextHopDestination;
+                    bool m_nextHopDestinationHasBeenSet;
 
                 };
             }

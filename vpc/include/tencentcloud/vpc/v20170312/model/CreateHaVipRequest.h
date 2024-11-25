@@ -64,27 +64,6 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取The `ID` of the subnet to which the `HAVIP` belongs.
-                     * @return SubnetId The `ID` of the subnet to which the `HAVIP` belongs.
-                     * 
-                     */
-                    std::string GetSubnetId() const;
-
-                    /**
-                     * 设置The `ID` of the subnet to which the `HAVIP` belongs.
-                     * @param _subnetId The `ID` of the subnet to which the `HAVIP` belongs.
-                     * 
-                     */
-                    void SetSubnetId(const std::string& _subnetId);
-
-                    /**
-                     * 判断参数 SubnetId 是否已赋值
-                     * @return SubnetId 是否已赋值
-                     * 
-                     */
-                    bool SubnetIdHasBeenSet() const;
-
-                    /**
                      * 获取The name of the `HAVIP`.
                      * @return HaVipName The name of the `HAVIP`.
                      * 
@@ -104,6 +83,27 @@ namespace TencentCloud
                      * 
                      */
                     bool HaVipNameHasBeenSet() const;
+
+                    /**
+                     * 获取The `ID` of the subnet to which the `HAVIP` belongs.
+                     * @return SubnetId The `ID` of the subnet to which the `HAVIP` belongs.
+                     * 
+                     */
+                    std::string GetSubnetId() const;
+
+                    /**
+                     * 设置The `ID` of the subnet to which the `HAVIP` belongs.
+                     * @param _subnetId The `ID` of the subnet to which the `HAVIP` belongs.
+                     * 
+                     */
+                    void SetSubnetId(const std::string& _subnetId);
+
+                    /**
+                     * 判断参数 SubnetId 是否已赋值
+                     * @return SubnetId 是否已赋值
+                     * 
+                     */
+                    bool SubnetIdHasBeenSet() const;
 
                     /**
                      * 获取The specified virtual IP address, which must be within the IP range of the `VPC` and not in use. It will be automatically assigned if not specified.
@@ -156,16 +156,16 @@ namespace TencentCloud
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * The `ID` of the subnet to which the `HAVIP` belongs.
-                     */
-                    std::string m_subnetId;
-                    bool m_subnetIdHasBeenSet;
-
-                    /**
                      * The name of the `HAVIP`.
                      */
                     std::string m_haVipName;
                     bool m_haVipNameHasBeenSet;
+
+                    /**
+                     * The `ID` of the subnet to which the `HAVIP` belongs.
+                     */
+                    std::string m_subnetId;
+                    bool m_subnetIdHasBeenSet;
 
                     /**
                      * The specified virtual IP address, which must be within the IP range of the `VPC` and not in use. It will be automatically assigned if not specified.

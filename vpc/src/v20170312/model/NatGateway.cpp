@@ -40,7 +40,8 @@ NatGateway::NatGateway() :
     m_isExclusiveHasBeenSet(false),
     m_exclusiveGatewayBandwidthHasBeenSet(false),
     m_restrictStateHasBeenSet(false),
-    m_natProductVersionHasBeenSet(false)
+    m_natProductVersionHasBeenSet(false),
+    m_smartScheduleModeHasBeenSet(false)
 {
 }
 
@@ -295,6 +296,16 @@ CoreInternalOutcome NatGateway::Deserialize(const rapidjson::Value &value)
         m_natProductVersionHasBeenSet = true;
     }
 
+    if (value.HasMember("SmartScheduleMode") && !value["SmartScheduleMode"].IsNull())
+    {
+        if (!value["SmartScheduleMode"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `NatGateway.SmartScheduleMode` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_smartScheduleMode = value["SmartScheduleMode"].GetBool();
+        m_smartScheduleModeHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -498,6 +509,14 @@ void NatGateway::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Allo
         string key = "NatProductVersion";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_natProductVersion, allocator);
+    }
+
+    if (m_smartScheduleModeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SmartScheduleMode";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_smartScheduleMode, allocator);
     }
 
 }
@@ -821,5 +840,21 @@ void NatGateway::SetNatProductVersion(const uint64_t& _natProductVersion)
 bool NatGateway::NatProductVersionHasBeenSet() const
 {
     return m_natProductVersionHasBeenSet;
+}
+
+bool NatGateway::GetSmartScheduleMode() const
+{
+    return m_smartScheduleMode;
+}
+
+void NatGateway::SetSmartScheduleMode(const bool& _smartScheduleMode)
+{
+    m_smartScheduleMode = _smartScheduleMode;
+    m_smartScheduleModeHasBeenSet = true;
+}
+
+bool NatGateway::SmartScheduleModeHasBeenSet() const
+{
+    return m_smartScheduleModeHasBeenSet;
 }
 

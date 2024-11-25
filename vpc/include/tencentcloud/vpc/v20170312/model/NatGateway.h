@@ -510,6 +510,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool NatProductVersionHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return SmartScheduleMode 
+                     * 
+                     */
+                    bool GetSmartScheduleMode() const;
+
+                    /**
+                     * 设置
+                     * @param _smartScheduleMode 
+                     * 
+                     */
+                    void SetSmartScheduleMode(const bool& _smartScheduleMode);
+
+                    /**
+                     * 判断参数 SmartScheduleMode 是否已赋值
+                     * @return SmartScheduleMode 是否已赋值
+                     * 
+                     */
+                    bool SmartScheduleModeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -641,6 +662,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     uint64_t m_natProductVersion;
                     bool m_natProductVersionHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_smartScheduleMode;
+                    bool m_smartScheduleModeHasBeenSet;
 
                 };
             }

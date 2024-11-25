@@ -69,15 +69,19 @@ namespace TencentCloud
                     bool InstancePriceHasBeenSet() const;
 
                     /**
-                     * 获取It describes the instance price.Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return LcuPrice It describes the instance price.Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取It describes the price of GLCU.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return LcuPrice It describes the price of GLCU.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     ItemPrice GetLcuPrice() const;
 
                     /**
-                     * 设置It describes the instance price.Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _lcuPrice It describes the instance price.Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置It describes the price of GLCU.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _lcuPrice It describes the price of GLCU.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetLcuPrice(const ItemPrice& _lcuPrice);
@@ -98,7 +102,8 @@ namespace TencentCloud
                     bool m_instancePriceHasBeenSet;
 
                     /**
-                     * It describes the instance price.Note: This field may return null, indicating that no valid value can be obtained.
+                     * It describes the price of GLCU.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     ItemPrice m_lcuPrice;
                     bool m_lcuPriceHasBeenSet;

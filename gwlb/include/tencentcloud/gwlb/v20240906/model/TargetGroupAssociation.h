@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取CLB ID.
-                     * @return LoadBalancerId CLB ID.
+                     * 获取GWLB instance ID.
+                     * @return LoadBalancerId GWLB instance ID.
                      * 
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
-                     * 设置CLB ID.
-                     * @param _loadBalancerId CLB ID.
+                     * 设置GWLB instance ID.
+                     * @param _loadBalancerId GWLB instance ID.
                      * 
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
@@ -91,7 +91,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * CLB ID.
+                     * GWLB instance ID.
                      */
                     std::string m_loadBalancerId;
                     bool m_loadBalancerIdHasBeenSet;

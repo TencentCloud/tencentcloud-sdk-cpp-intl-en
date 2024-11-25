@@ -45,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Target group name, up to 50 characters
-                     * @return TargetGroupName Target group name, up to 50 characters
+                     * 获取Target group name, limited to 60 characters.
+                     * @return TargetGroupName Target group name, limited to 60 characters.
                      * 
                      */
                     std::string GetTargetGroupName() const;
 
                     /**
-                     * 设置Target group name, up to 50 characters
-                     * @param _targetGroupName Target group name, up to 50 characters
+                     * 设置Target group name, limited to 60 characters.
+                     * @param _targetGroupName Target group name, limited to 60 characters.
                      * 
                      */
                     void SetTargetGroupName(const std::string& _targetGroupName);
@@ -87,15 +87,15 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Default port of target group. This default port can be used when servers are added subsequently. Either Port or port in TargetGroupInstances.N is required.
-                     * @return Port Default port of target group. This default port can be used when servers are added subsequently. Either Port or port in TargetGroupInstances.N is required.
+                     * 获取Default port of the target group, which can be used when servers are added later. Either 'Port' or 'TargetGroupInstances.N.port' must be filled in.
+                     * @return Port Default port of the target group, which can be used when servers are added later. Either 'Port' or 'TargetGroupInstances.N.port' must be filled in.
                      * 
                      */
                     uint64_t GetPort() const;
 
                     /**
-                     * 设置Default port of target group. This default port can be used when servers are added subsequently. Either Port or port in TargetGroupInstances.N is required.
-                     * @param _port Default port of target group. This default port can be used when servers are added subsequently. Either Port or port in TargetGroupInstances.N is required.
+                     * 设置Default port of the target group, which can be used when servers are added later. Either 'Port' or 'TargetGroupInstances.N.port' must be filled in.
+                     * @param _port Default port of the target group, which can be used when servers are added later. Either 'Port' or 'TargetGroupInstances.N.port' must be filled in.
                      * 
                      */
                     void SetPort(const uint64_t& _port);
@@ -129,15 +129,27 @@ namespace TencentCloud
                     bool TargetGroupInstancesHasBeenSet() const;
 
                     /**
-                     * 获取GWLB target group protocol.- AWS_GENEVE: GENEVE compatible protocol - TENCENT_GENEVE: GENEVE standard protocol
-                     * @return Protocol GWLB target group protocol.- AWS_GENEVE: GENEVE compatible protocol - TENCENT_GENEVE: GENEVE standard protocol
+                     * 获取GWLB target group protocol.
+- TENCENT_GENEVE: GENEVE standard protocol
+
+- AWS_GENEVE: GENEVE compatibility protocol (a ticket is required for allowlisting)
+                     * @return Protocol GWLB target group protocol.
+- TENCENT_GENEVE: GENEVE standard protocol
+
+- AWS_GENEVE: GENEVE compatibility protocol (a ticket is required for allowlisting)
                      * 
                      */
                     std::string GetProtocol() const;
 
                     /**
-                     * 设置GWLB target group protocol.- AWS_GENEVE: GENEVE compatible protocol - TENCENT_GENEVE: GENEVE standard protocol
-                     * @param _protocol GWLB target group protocol.- AWS_GENEVE: GENEVE compatible protocol - TENCENT_GENEVE: GENEVE standard protocol
+                     * 设置GWLB target group protocol.
+- TENCENT_GENEVE: GENEVE standard protocol
+
+- AWS_GENEVE: GENEVE compatibility protocol (a ticket is required for allowlisting)
+                     * @param _protocol GWLB target group protocol.
+- TENCENT_GENEVE: GENEVE standard protocol
+
+- AWS_GENEVE: GENEVE compatibility protocol (a ticket is required for allowlisting)
                      * 
                      */
                     void SetProtocol(const std::string& _protocol);
@@ -150,15 +162,15 @@ namespace TencentCloud
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取Health check.
-                     * @return HealthCheck Health check.
+                     * 获取Health check settings.
+                     * @return HealthCheck Health check settings.
                      * 
                      */
                     TargetGroupHealthCheck GetHealthCheck() const;
 
                     /**
-                     * 设置Health check.
-                     * @param _healthCheck Health check.
+                     * 设置Health check settings.
+                     * @param _healthCheck Health check settings.
                      * 
                      */
                     void SetHealthCheck(const TargetGroupHealthCheck& _healthCheck);
@@ -171,15 +183,19 @@ namespace TencentCloud
                     bool HealthCheckHasBeenSet() const;
 
                     /**
-                     * 获取RS scheduling algorithm.- IP_HASH_3_ELASTIC: elastic hashing
-                     * @return ScheduleAlgorithm RS scheduling algorithm.- IP_HASH_3_ELASTIC: elastic hashing
+                     * 获取Load balancing algorithm.
+- IP_HASH_3_ELASTIC: elastic hashing
+                     * @return ScheduleAlgorithm Load balancing algorithm.
+- IP_HASH_3_ELASTIC: elastic hashing
                      * 
                      */
                     std::string GetScheduleAlgorithm() const;
 
                     /**
-                     * 设置RS scheduling algorithm.- IP_HASH_3_ELASTIC: elastic hashing
-                     * @param _scheduleAlgorithm RS scheduling algorithm.- IP_HASH_3_ELASTIC: elastic hashing
+                     * 设置Load balancing algorithm.
+- IP_HASH_3_ELASTIC: elastic hashing
+                     * @param _scheduleAlgorithm Load balancing algorithm.
+- IP_HASH_3_ELASTIC: elastic hashing
                      * 
                      */
                     void SetScheduleAlgorithm(const std::string& _scheduleAlgorithm);
@@ -215,7 +231,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Target group name, up to 50 characters
+                     * Target group name, limited to 60 characters.
                      */
                     std::string m_targetGroupName;
                     bool m_targetGroupNameHasBeenSet;
@@ -227,7 +243,7 @@ namespace TencentCloud
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Default port of target group. This default port can be used when servers are added subsequently. Either Port or port in TargetGroupInstances.N is required.
+                     * Default port of the target group, which can be used when servers are added later. Either 'Port' or 'TargetGroupInstances.N.port' must be filled in.
                      */
                     uint64_t m_port;
                     bool m_portHasBeenSet;
@@ -239,19 +255,23 @@ namespace TencentCloud
                     bool m_targetGroupInstancesHasBeenSet;
 
                     /**
-                     * GWLB target group protocol.- AWS_GENEVE: GENEVE compatible protocol - TENCENT_GENEVE: GENEVE standard protocol
+                     * GWLB target group protocol.
+- TENCENT_GENEVE: GENEVE standard protocol
+
+- AWS_GENEVE: GENEVE compatibility protocol (a ticket is required for allowlisting)
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * Health check.
+                     * Health check settings.
                      */
                     TargetGroupHealthCheck m_healthCheck;
                     bool m_healthCheckHasBeenSet;
 
                     /**
-                     * RS scheduling algorithm.- IP_HASH_3_ELASTIC: elastic hashing
+                     * Load balancing algorithm.
+- IP_HASH_3_ELASTIC: elastic hashing
                      */
                     std::string m_scheduleAlgorithm;
                     bool m_scheduleAlgorithmHasBeenSet;

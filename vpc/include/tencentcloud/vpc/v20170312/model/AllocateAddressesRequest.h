@@ -264,6 +264,27 @@ namespace TencentCloud
                     bool AnycastZoneHasBeenSet() const;
 
                     /**
+                     * 获取
+                     * @return VipCluster 
+                     * 
+                     */
+                    std::vector<std::string> GetVipCluster() const;
+
+                    /**
+                     * 设置
+                     * @param _vipCluster 
+                     * 
+                     */
+                    void SetVipCluster(const std::vector<std::string>& _vipCluster);
+
+                    /**
+                     * 判断参数 VipCluster 是否已赋值
+                     * @return VipCluster 是否已赋值
+                     * 
+                     */
+                    bool VipClusterHasBeenSet() const;
+
+                    /**
                      * 获取<b>**[Disused]**</b>
 Whether the Anycast EIP can be bound to CLB instances.
 <ul style="margin:0"><li>Valid for users who have activated the AIA. Values:<ul><li>TRUE: the Anycast EIP can be bound to CLB instances.</li>
@@ -358,6 +379,27 @@ Whether the Anycast EIP can be bound to CLB instances.
                      * 
                      */
                     bool AddressNameHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return DedicatedClusterId 
+                     * 
+                     */
+                    std::string GetDedicatedClusterId() const;
+
+                    /**
+                     * 设置
+                     * @param _dedicatedClusterId 
+                     * 
+                     */
+                    void SetDedicatedClusterId(const std::string& _dedicatedClusterId);
+
+                    /**
+                     * 判断参数 DedicatedClusterId 是否已赋值
+                     * @return DedicatedClusterId 是否已赋值
+                     * 
+                     */
+                    bool DedicatedClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Network egress. It defaults to `center_egress1`.
@@ -485,6 +527,12 @@ Whether the Anycast EIP can be bound to CLB instances.
                     bool m_anycastZoneHasBeenSet;
 
                     /**
+                     * 
+                     */
+                    std::vector<std::string> m_vipCluster;
+                    bool m_vipClusterHasBeenSet;
+
+                    /**
                      * <b>**[Disused]**</b>
 Whether the Anycast EIP can be bound to CLB instances.
 <ul style="margin:0"><li>Valid for users who have activated the AIA. Values:<ul><li>TRUE: the Anycast EIP can be bound to CLB instances.</li>
@@ -510,6 +558,12 @@ Whether the Anycast EIP can be bound to CLB instances.
                      */
                     std::string m_addressName;
                     bool m_addressNameHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_dedicatedClusterId;
+                    bool m_dedicatedClusterIdHasBeenSet;
 
                     /**
                      * Network egress. It defaults to `center_egress1`.
