@@ -116,14 +116,14 @@ namespace TencentCloud
                     /**
                      * 获取Temporary key (Token)
                      * @return XCosSecurityToken Temporary key (Token)
-                     * 
+                     * @deprecated
                      */
                     std::string GetXCosSecurityToken() const;
 
                     /**
                      * 判断参数 XCosSecurityToken 是否已赋值
                      * @return XCosSecurityToken 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool XCosSecurityTokenHasBeenSet() const;
 
@@ -154,6 +154,20 @@ namespace TencentCloud
                      * 
                      */
                     bool ExpiredTimeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return CosSecurityToken 
+                     * 
+                     */
+                    std::string GetCosSecurityToken() const;
+
+                    /**
+                     * 判断参数 CosSecurityToken 是否已赋值
+                     * @return CosSecurityToken 是否已赋值
+                     * 
+                     */
+                    bool CosSecurityTokenHasBeenSet() const;
 
                 private:
 
@@ -204,6 +218,12 @@ namespace TencentCloud
                      */
                     std::string m_expiredTime;
                     bool m_expiredTimeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_cosSecurityToken;
+                    bool m_cosSecurityTokenHasBeenSet;
 
                 };
             }

@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of private domains
-                     * @return TotalCount Number of private domains
+                     * 获取Number of private domains.
+                     * @return TotalCount Number of private domains.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of private domains
-                     * @return PrivateZoneSet List of private domains
+                     * 获取Private domain list.
+                     * @return PrivateZoneSet Private domain list.
                      * 
                      */
                     std::vector<PrivateZone> GetPrivateZoneSet() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of private domains
+                     * Number of private domains.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of private domains
+                     * Private domain list.
                      */
                     std::vector<PrivateZone> m_privateZoneSet;
                     bool m_privateZoneSetHasBeenSet;

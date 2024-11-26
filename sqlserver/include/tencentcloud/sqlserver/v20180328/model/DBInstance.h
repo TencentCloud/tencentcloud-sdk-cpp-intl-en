@@ -721,19 +721,15 @@ namespace TencentCloud
                     bool UniqSubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance isolation.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return IsolateOperator Instance isolation.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IsolateOperator Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetIsolateOperator() const;
 
                     /**
-                     * 设置Instance isolation.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _isolateOperator Instance isolation.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _isolateOperator Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIsolateOperator(const std::string& _isolateOperator);
@@ -746,19 +742,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool IsolateOperatorHasBeenSet() const;
 
                     /**
-                     * 获取Pub/sub flag. Valid values: SUB (subscribe instance), PUB (publish instance). If it is left empty, it refers to a regular instance without a pub/sub design.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return SubFlag Pub/sub flag. Valid values: SUB (subscribe instance), PUB (publish instance). If it is left empty, it refers to a regular instance without a pub/sub design.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SubFlag Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSubFlag() const;
 
                     /**
-                     * 设置Pub/sub flag. Valid values: SUB (subscribe instance), PUB (publish instance). If it is left empty, it refers to a regular instance without a pub/sub design.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _subFlag Pub/sub flag. Valid values: SUB (subscribe instance), PUB (publish instance). If it is left empty, it refers to a regular instance without a pub/sub design.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _subFlag Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSubFlag(const std::string& _subFlag);
@@ -771,19 +763,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SubFlagHasBeenSet() const;
 
                     /**
-                     * 获取Read-only flag. Valid values: RO (read-only instance), MASTER (primary instance with read-only instances). If it is left empty, it refers to an instance which is not read-only and has no RO group.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ROFlag Read-only flag. Valid values: RO (read-only instance), MASTER (primary instance with read-only instances). If it is left empty, it refers to an instance which is not read-only and has no RO group.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ROFlag Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetROFlag() const;
 
                     /**
-                     * 设置Read-only flag. Valid values: RO (read-only instance), MASTER (primary instance with read-only instances). If it is left empty, it refers to an instance which is not read-only and has no RO group.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _rOFlag Read-only flag. Valid values: RO (read-only instance), MASTER (primary instance with read-only instances). If it is left empty, it refers to an instance which is not read-only and has no RO group.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _rOFlag Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetROFlag(const std::string& _rOFlag);
@@ -796,19 +784,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ROFlagHasBeenSet() const;
 
                     /**
-                     * 获取Disaster recovery type. Valid values: MIRROR (image), ALWAYSON (AlwaysOn), SINGLE (singleton).
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return HAFlag Disaster recovery type. Valid values: MIRROR (image), ALWAYSON (AlwaysOn), SINGLE (singleton).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return HAFlag Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetHAFlag() const;
 
                     /**
-                     * 设置Disaster recovery type. Valid values: MIRROR (image), ALWAYSON (AlwaysOn), SINGLE (singleton).
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _hAFlag Disaster recovery type. Valid values: MIRROR (image), ALWAYSON (AlwaysOn), SINGLE (singleton).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _hAFlag Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHAFlag(const std::string& _hAFlag);
@@ -821,19 +805,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool HAFlagHasBeenSet() const;
 
                     /**
-                     * 获取The list of tags associated with the instance
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return ResourceTags The list of tags associated with the instance
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ResourceTags Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<ResourceTag> GetResourceTags() const;
 
                     /**
-                     * 设置The list of tags associated with the instance
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _resourceTags The list of tags associated with the instance
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _resourceTags Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetResourceTags(const std::vector<ResourceTag>& _resourceTags);
@@ -846,19 +826,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool ResourceTagsHasBeenSet() const;
 
                     /**
-                     * 获取Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node (default value)), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node (valid for Always On clusters)), `slave_no_pkg` (do not archive the backup files of the replica node (valid for Always On clusters)). This parameter is invalid for read-only instances.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return BackupModel Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node (default value)), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node (valid for Always On clusters)), `slave_no_pkg` (do not archive the backup files of the replica node (valid for Always On clusters)). This parameter is invalid for read-only instances.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return BackupModel Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetBackupModel() const;
 
                     /**
-                     * 设置Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node (default value)), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node (valid for Always On clusters)), `slave_no_pkg` (do not archive the backup files of the replica node (valid for Always On clusters)). This parameter is invalid for read-only instances.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _backupModel Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node (default value)), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node (valid for Always On clusters)), `slave_no_pkg` (do not archive the backup files of the replica node (valid for Always On clusters)). This parameter is invalid for read-only instances.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _backupModel Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetBackupModel(const std::string& _backupModel);
@@ -871,19 +847,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool BackupModelHasBeenSet() const;
 
                     /**
-                     * 获取Instance backup info
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return InstanceNote Instance backup info
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return InstanceNote Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetInstanceNote() const;
 
                     /**
-                     * 设置Instance backup info
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _instanceNote Instance backup info
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _instanceNote Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetInstanceNote(const std::string& _instanceNote);
@@ -1148,19 +1120,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool IsDrZoneHasBeenSet() const;
 
                     /**
-                     * 获取Replica AZ information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SlaveZones Replica AZ information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SlaveZones Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     SlaveZones GetSlaveZones() const;
 
                     /**
-                     * 设置Replica AZ information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _slaveZones Replica AZ information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _slaveZones Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSlaveZones(const SlaveZones& _slaveZones);
@@ -1173,19 +1141,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SlaveZonesHasBeenSet() const;
 
                     /**
-                     * 获取Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node).
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-                     * @return Architecture Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node).
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Architecture Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetArchitecture() const;
 
                     /**
-                     * 设置Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node).
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-                     * @param _architecture Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node).
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _architecture Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetArchitecture(const std::string& _architecture);
@@ -1198,19 +1162,15 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
                     bool ArchitectureHasBeenSet() const;
 
                     /**
-                     * 获取Instance type. Valid values: `EXCLUSIVE` (dedicated), `SHARED` (shared)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Style Instance type. Valid values: `EXCLUSIVE` (dedicated), `SHARED` (shared)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Style Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetStyle() const;
 
                     /**
-                     * 设置Instance type. Valid values: `EXCLUSIVE` (dedicated), `SHARED` (shared)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _style Instance type. Valid values: `EXCLUSIVE` (dedicated), `SHARED` (shared)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _style Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetStyle(const std::string& _style);
@@ -1417,50 +1377,43 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_uniqSubnetIdHasBeenSet;
 
                     /**
-                     * Instance isolation.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_isolateOperator;
                     bool m_isolateOperatorHasBeenSet;
 
                     /**
-                     * Pub/sub flag. Valid values: SUB (subscribe instance), PUB (publish instance). If it is left empty, it refers to a regular instance without a pub/sub design.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_subFlag;
                     bool m_subFlagHasBeenSet;
 
                     /**
-                     * Read-only flag. Valid values: RO (read-only instance), MASTER (primary instance with read-only instances). If it is left empty, it refers to an instance which is not read-only and has no RO group.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_rOFlag;
                     bool m_rOFlagHasBeenSet;
 
                     /**
-                     * Disaster recovery type. Valid values: MIRROR (image), ALWAYSON (AlwaysOn), SINGLE (singleton).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_hAFlag;
                     bool m_hAFlagHasBeenSet;
 
                     /**
-                     * The list of tags associated with the instance
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<ResourceTag> m_resourceTags;
                     bool m_resourceTagsHasBeenSet;
 
                     /**
-                     * Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node (default value)), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node (valid for Always On clusters)), `slave_no_pkg` (do not archive the backup files of the replica node (valid for Always On clusters)). This parameter is invalid for read-only instances.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_backupModel;
                     bool m_backupModelHasBeenSet;
 
                     /**
-                     * Instance backup info
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_instanceNote;
                     bool m_instanceNoteHasBeenSet;
@@ -1538,22 +1491,19 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_isDrZoneHasBeenSet;
 
                     /**
-                     * Replica AZ information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     SlaveZones m_slaveZones;
                     bool m_slaveZonesHasBeenSet;
 
                     /**
-                     * Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node).
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_architecture;
                     bool m_architectureHasBeenSet;
 
                     /**
-                     * Instance type. Valid values: `EXCLUSIVE` (dedicated), `SHARED` (shared)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_style;
                     bool m_styleHasBeenSet;

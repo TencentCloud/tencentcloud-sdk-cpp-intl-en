@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_SQLSERVER_V20180328_MODEL_RESETACCOUNTPASSWORDRESPONSE_H_
-#define TENCENTCLOUD_SQLSERVER_V20180328_MODEL_RESETACCOUNTPASSWORDRESPONSE_H_
+#ifndef TENCENTCLOUD_SQLSERVER_V20180328_MODEL_MODIFYDREADABLERESPONSE_H_
+#define TENCENTCLOUD_SQLSERVER_V20180328_MODEL_MODIFYDREADABLERESPONSE_H_
 
 #include <string>
 #include <vector>
@@ -32,20 +32,20 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * ResetAccountPassword response structure.
+                * ModifyDReadable response structure.
                 */
-                class ResetAccountPasswordResponse : public AbstractModel
+                class ModifyDReadableResponse : public AbstractModel
                 {
                 public:
-                    ResetAccountPasswordResponse();
-                    ~ResetAccountPasswordResponse() = default;
+                    ModifyDReadableResponse();
+                    ~ModifyDReadableResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取ID of asynchronous task flow for account password modification
-                     * @return FlowId ID of asynchronous task flow for account password modification
+                     * 获取Task ID
+                     * @return FlowId Task ID
                      * 
                      */
                     int64_t GetFlowId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of asynchronous task flow for account password modification
+                     * Task ID
                      */
                     int64_t m_flowId;
                     bool m_flowIdHasBeenSet;
@@ -71,4 +71,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_SQLSERVER_V20180328_MODEL_RESETACCOUNTPASSWORDRESPONSE_H_
+#endif // !TENCENTCLOUD_SQLSERVER_V20180328_MODEL_MODIFYDREADABLERESPONSE_H_

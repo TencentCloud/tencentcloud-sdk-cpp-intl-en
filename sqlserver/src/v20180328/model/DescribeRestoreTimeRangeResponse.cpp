@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/sqlserver/v20180328/model/ModifyBackupStrategyResponse.h>
+#include <tencentcloud/sqlserver/v20180328/model/DescribeRestoreTimeRangeResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -23,14 +23,13 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Sqlserver::V20180328::Model;
 using namespace std;
 
-ModifyBackupStrategyResponse::ModifyBackupStrategyResponse() :
-    m_errnoHasBeenSet(false),
-    m_msgHasBeenSet(false),
-    m_codeHasBeenSet(false)
+DescribeRestoreTimeRangeResponse::DescribeRestoreTimeRangeResponse() :
+    m_minTimeHasBeenSet(false),
+    m_maxTimeHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome ModifyBackupStrategyResponse::Deserialize(const string &payload)
+CoreInternalOutcome DescribeRestoreTimeRangeResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -64,68 +63,50 @@ CoreInternalOutcome ModifyBackupStrategyResponse::Deserialize(const string &payl
     }
 
 
-    if (rsp.HasMember("Errno") && !rsp["Errno"].IsNull())
+    if (rsp.HasMember("MinTime") && !rsp["MinTime"].IsNull())
     {
-        if (!rsp["Errno"].IsInt64())
+        if (!rsp["MinTime"].IsString())
         {
-            return CoreInternalOutcome(Core::Error("response `Errno` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MinTime` IsString=false incorrectly").SetRequestId(requestId));
         }
-        m_errno = rsp["Errno"].GetInt64();
-        m_errnoHasBeenSet = true;
+        m_minTime = string(rsp["MinTime"].GetString());
+        m_minTimeHasBeenSet = true;
     }
 
-    if (rsp.HasMember("Msg") && !rsp["Msg"].IsNull())
+    if (rsp.HasMember("MaxTime") && !rsp["MaxTime"].IsNull())
     {
-        if (!rsp["Msg"].IsString())
+        if (!rsp["MaxTime"].IsString())
         {
-            return CoreInternalOutcome(Core::Error("response `Msg` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MaxTime` IsString=false incorrectly").SetRequestId(requestId));
         }
-        m_msg = string(rsp["Msg"].GetString());
-        m_msgHasBeenSet = true;
-    }
-
-    if (rsp.HasMember("Code") && !rsp["Code"].IsNull())
-    {
-        if (!rsp["Code"].IsInt64())
-        {
-            return CoreInternalOutcome(Core::Error("response `Code` IsInt64=false incorrectly").SetRequestId(requestId));
-        }
-        m_code = rsp["Code"].GetInt64();
-        m_codeHasBeenSet = true;
+        m_maxTime = string(rsp["MaxTime"].GetString());
+        m_maxTimeHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string ModifyBackupStrategyResponse::ToJsonString() const
+string DescribeRestoreTimeRangeResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_errnoHasBeenSet)
+    if (m_minTimeHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Errno";
+        string key = "MinTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_errno, allocator);
+        value.AddMember(iKey, rapidjson::Value(m_minTime.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_msgHasBeenSet)
+    if (m_maxTimeHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Msg";
+        string key = "MaxTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_msg.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_codeHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Code";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_code, allocator);
+        value.AddMember(iKey, rapidjson::Value(m_maxTime.c_str(), allocator).Move(), allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -140,34 +121,24 @@ string ModifyBackupStrategyResponse::ToJsonString() const
 }
 
 
-int64_t ModifyBackupStrategyResponse::GetErrno() const
+string DescribeRestoreTimeRangeResponse::GetMinTime() const
 {
-    return m_errno;
+    return m_minTime;
 }
 
-bool ModifyBackupStrategyResponse::ErrnoHasBeenSet() const
+bool DescribeRestoreTimeRangeResponse::MinTimeHasBeenSet() const
 {
-    return m_errnoHasBeenSet;
+    return m_minTimeHasBeenSet;
 }
 
-string ModifyBackupStrategyResponse::GetMsg() const
+string DescribeRestoreTimeRangeResponse::GetMaxTime() const
 {
-    return m_msg;
+    return m_maxTime;
 }
 
-bool ModifyBackupStrategyResponse::MsgHasBeenSet() const
+bool DescribeRestoreTimeRangeResponse::MaxTimeHasBeenSet() const
 {
-    return m_msgHasBeenSet;
-}
-
-int64_t ModifyBackupStrategyResponse::GetCode() const
-{
-    return m_code;
-}
-
-bool ModifyBackupStrategyResponse::CodeHasBeenSet() const
-{
-    return m_codeHasBeenSet;
+    return m_maxTimeHasBeenSet;
 }
 
 

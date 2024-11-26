@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Private domain information
+                * Private domain information.
                 */
                 class PrivateZone : public AbstractModel
                 {
@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Private domain ID: zone-xxxxxxxx
-                     * @return ZoneId Private domain ID: zone-xxxxxxxx
+                     * 获取Private domain ID, which is in zone-xxxxxxxx format.
+                     * @return ZoneId Private domain ID, which is in zone-xxxxxxxx format.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Private domain ID: zone-xxxxxxxx
-                     * @param _zoneId Private domain ID: zone-xxxxxxxx
+                     * 设置Private domain ID, which is in zone-xxxxxxxx format.
+                     * @param _zoneId Private domain ID, which is in zone-xxxxxxxx format.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Domain name owner UIN
-                     * @return OwnerUin Domain name owner UIN
+                     * 获取UIN of the domain name owner.
+                     * @return OwnerUin UIN of the domain name owner.
                      * 
                      */
                     int64_t GetOwnerUin() const;
 
                     /**
-                     * 设置Domain name owner UIN
-                     * @param _ownerUin Domain name owner UIN
+                     * 设置UIN of the domain name owner.
+                     * @param _ownerUin UIN of the domain name owner.
                      * 
                      */
                     void SetOwnerUin(const int64_t& _ownerUin);
@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool OwnerUinHasBeenSet() const;
 
                     /**
-                     * 获取Private domain
-                     * @return Domain Private domain
+                     * 获取Private domain name.
+                     * @return Domain Private domain name.
                      * 
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置Private domain
-                     * @param _domain Private domain
+                     * 设置Private domain name.
+                     * @param _domain Private domain name.
                      * 
                      */
                     void SetDomain(const std::string& _domain);
@@ -155,15 +155,15 @@ namespace TencentCloud
                     bool UpdatedOnHasBeenSet() const;
 
                     /**
-                     * 获取Number of results
-                     * @return RecordCount Number of results
+                     * 获取Number of records.
+                     * @return RecordCount Number of records.
                      * 
                      */
                     int64_t GetRecordCount() const;
 
                     /**
-                     * 设置Number of results
-                     * @param _recordCount Number of results
+                     * 设置Number of records.
+                     * @param _recordCount Number of records.
                      * 
                      */
                     void SetRecordCount(const int64_t& _recordCount);
@@ -176,19 +176,19 @@ namespace TencentCloud
                     bool RecordCountHasBeenSet() const;
 
                     /**
-                     * 获取Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Remark Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Remarks.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Remark Remarks.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRemark() const;
 
                     /**
-                     * 设置Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _remark Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Remarks.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _remark Remarks.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRemark(const std::string& _remark);
@@ -201,15 +201,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取List of bound VPCs
-                     * @return VpcSet List of bound VPCs
+                     * 获取List of bound VPCs.
+                     * @return VpcSet List of bound VPCs.
                      * 
                      */
                     std::vector<VpcInfo> GetVpcSet() const;
 
                     /**
-                     * 设置List of bound VPCs
-                     * @param _vpcSet List of bound VPCs
+                     * 设置List of bound VPCs.
+                     * @param _vpcSet List of bound VPCs.
                      * 
                      */
                     void SetVpcSet(const std::vector<VpcInfo>& _vpcSet);
@@ -222,15 +222,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool VpcSetHasBeenSet() const;
 
                     /**
-                     * 获取Private domain status. Valid values: ENABLED (DNS enabled); SUSPEND (DNS paused); FROZEN (locked)
-                     * @return Status Private domain status. Valid values: ENABLED (DNS enabled); SUSPEND (DNS paused); FROZEN (locked)
+                     * 获取Status of the VPC bound with the private domain. SUSPEND: The VPC is not associated; ENABLED: the VPC has been associated.
+, FAILED: the VPC fails to be associated.
+                     * @return Status Status of the VPC bound with the private domain. SUSPEND: The VPC is not associated; ENABLED: the VPC has been associated.
+, FAILED: the VPC fails to be associated.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Private domain status. Valid values: ENABLED (DNS enabled); SUSPEND (DNS paused); FROZEN (locked)
-                     * @param _status Private domain status. Valid values: ENABLED (DNS enabled); SUSPEND (DNS paused); FROZEN (locked)
+                     * 设置Status of the VPC bound with the private domain. SUSPEND: The VPC is not associated; ENABLED: the VPC has been associated.
+, FAILED: the VPC fails to be associated.
+                     * @param _status Status of the VPC bound with the private domain. SUSPEND: The VPC is not associated; ENABLED: the VPC has been associated.
+, FAILED: the VPC fails to be associated.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -243,15 +247,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Subdomain recursive DNS status. Valid values: ENABLED, DISABLED
-                     * @return DnsForwardStatus Subdomain recursive DNS status. Valid values: ENABLED, DISABLED
+                     * 获取Recursive resolution status of the domain name. ENABLED: enabled; DISABLED: disabled.
+                     * @return DnsForwardStatus Recursive resolution status of the domain name. ENABLED: enabled; DISABLED: disabled.
                      * 
                      */
                     std::string GetDnsForwardStatus() const;
 
                     /**
-                     * 设置Subdomain recursive DNS status. Valid values: ENABLED, DISABLED
-                     * @param _dnsForwardStatus Subdomain recursive DNS status. Valid values: ENABLED, DISABLED
+                     * 设置Recursive resolution status of the domain name. ENABLED: enabled; DISABLED: disabled.
+                     * @param _dnsForwardStatus Recursive resolution status of the domain name. ENABLED: enabled; DISABLED: disabled.
                      * 
                      */
                     void SetDnsForwardStatus(const std::string& _dnsForwardStatus);
@@ -264,15 +268,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DnsForwardStatusHasBeenSet() const;
 
                     /**
-                     * 获取Set of tag key-value pairs
-                     * @return Tags Set of tag key-value pairs
+                     * 获取Tag key-value pair collection.
+                     * @return Tags Tag key-value pair collection.
                      * 
                      */
                     std::vector<TagInfo> GetTags() const;
 
                     /**
-                     * 设置Set of tag key-value pairs
-                     * @param _tags Set of tag key-value pairs
+                     * 设置Tag key-value pair collection.
+                     * @param _tags Tag key-value pair collection.
                      * 
                      */
                     void SetTags(const std::vector<TagInfo>& _tags);
@@ -285,19 +289,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取List of authorized accounts' VPCs associated with the private domain
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return AccountVpcSet List of authorized accounts' VPCs associated with the private domain
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取List of bound VPCs of the associated account.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AccountVpcSet List of bound VPCs of the associated account.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<AccountVpcInfoOutput> GetAccountVpcSet() const;
 
                     /**
-                     * 设置List of authorized accounts' VPCs associated with the private domain
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _accountVpcSet List of authorized accounts' VPCs associated with the private domain
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置List of bound VPCs of the associated account.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _accountVpcSet List of bound VPCs of the associated account.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAccountVpcSet(const std::vector<AccountVpcInfoOutput>& _accountVpcSet);
@@ -309,22 +313,193 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool AccountVpcSetHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the TLD is a custom one.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IsCustomTld Whether the TLD is a custom one.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    bool GetIsCustomTld() const;
+
+                    /**
+                     * 设置Whether the TLD is a custom one.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _isCustomTld Whether the TLD is a custom one.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetIsCustomTld(const bool& _isCustomTld);
+
+                    /**
+                     * 判断参数 IsCustomTld 是否已赋值
+                     * @return IsCustomTld 是否已赋值
+                     * 
+                     */
+                    bool IsCustomTldHasBeenSet() const;
+
+                    /**
+                     * 获取CNAME acceleration status. ENABLED: enabled; DISABLED: disabled.
+                     * @return CnameSpeedupStatus CNAME acceleration status. ENABLED: enabled; DISABLED: disabled.
+                     * 
+                     */
+                    std::string GetCnameSpeedupStatus() const;
+
+                    /**
+                     * 设置CNAME acceleration status. ENABLED: enabled; DISABLED: disabled.
+                     * @param _cnameSpeedupStatus CNAME acceleration status. ENABLED: enabled; DISABLED: disabled.
+                     * 
+                     */
+                    void SetCnameSpeedupStatus(const std::string& _cnameSpeedupStatus);
+
+                    /**
+                     * 判断参数 CnameSpeedupStatus 是否已赋值
+                     * @return CnameSpeedupStatus 是否已赋值
+                     * 
+                     */
+                    bool CnameSpeedupStatusHasBeenSet() const;
+
+                    /**
+                     * 获取Forwarding rule name.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ForwardRuleName Forwarding rule name.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetForwardRuleName() const;
+
+                    /**
+                     * 设置Forwarding rule name.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _forwardRuleName Forwarding rule name.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetForwardRuleName(const std::string& _forwardRuleName);
+
+                    /**
+                     * 判断参数 ForwardRuleName 是否已赋值
+                     * @return ForwardRuleName 是否已赋值
+                     * 
+                     */
+                    bool ForwardRuleNameHasBeenSet() const;
+
+                    /**
+                     * 获取Forwarding rule type. DOWN: from cloud to off-cloud; UP: from off-cloud to cloud. Currently, only DOWN is supported.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ForwardRuleType Forwarding rule type. DOWN: from cloud to off-cloud; UP: from off-cloud to cloud. Currently, only DOWN is supported.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetForwardRuleType() const;
+
+                    /**
+                     * 设置Forwarding rule type. DOWN: from cloud to off-cloud; UP: from off-cloud to cloud. Currently, only DOWN is supported.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _forwardRuleType Forwarding rule type. DOWN: from cloud to off-cloud; UP: from off-cloud to cloud. Currently, only DOWN is supported.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetForwardRuleType(const std::string& _forwardRuleType);
+
+                    /**
+                     * 判断参数 ForwardRuleType 是否已赋值
+                     * @return ForwardRuleType 是否已赋值
+                     * 
+                     */
+                    bool ForwardRuleTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Forwarding address.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ForwardAddress Forwarding address.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetForwardAddress() const;
+
+                    /**
+                     * 设置Forwarding address.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _forwardAddress Forwarding address.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetForwardAddress(const std::string& _forwardAddress);
+
+                    /**
+                     * 判断参数 ForwardAddress 是否已赋值
+                     * @return ForwardAddress 是否已赋值
+                     * 
+                     */
+                    bool ForwardAddressHasBeenSet() const;
+
+                    /**
+                     * 获取Endpoint name.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return EndPointName Endpoint name.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetEndPointName() const;
+
+                    /**
+                     * 设置Endpoint name.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _endPointName Endpoint name.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetEndPointName(const std::string& _endPointName);
+
+                    /**
+                     * 判断参数 EndPointName 是否已赋值
+                     * @return EndPointName 是否已赋值
+                     * 
+                     */
+                    bool EndPointNameHasBeenSet() const;
+
+                    /**
+                     * 获取Deleted VPC.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DeletedVpcSet Deleted VPC.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<VpcInfo> GetDeletedVpcSet() const;
+
+                    /**
+                     * 设置Deleted VPC.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _deletedVpcSet Deleted VPC.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetDeletedVpcSet(const std::vector<VpcInfo>& _deletedVpcSet);
+
+                    /**
+                     * 判断参数 DeletedVpcSet 是否已赋值
+                     * @return DeletedVpcSet 是否已赋值
+                     * 
+                     */
+                    bool DeletedVpcSetHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Private domain ID: zone-xxxxxxxx
+                     * Private domain ID, which is in zone-xxxxxxxx format.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Domain name owner UIN
+                     * UIN of the domain name owner.
                      */
                     int64_t m_ownerUin;
                     bool m_ownerUinHasBeenSet;
 
                     /**
-                     * Private domain
+                     * Private domain name.
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
@@ -342,48 +517,97 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_updatedOnHasBeenSet;
 
                     /**
-                     * Number of results
+                     * Number of records.
                      */
                     int64_t m_recordCount;
                     bool m_recordCountHasBeenSet;
 
                     /**
-                     * Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Remarks.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * List of bound VPCs
+                     * List of bound VPCs.
                      */
                     std::vector<VpcInfo> m_vpcSet;
                     bool m_vpcSetHasBeenSet;
 
                     /**
-                     * Private domain status. Valid values: ENABLED (DNS enabled); SUSPEND (DNS paused); FROZEN (locked)
+                     * Status of the VPC bound with the private domain. SUSPEND: The VPC is not associated; ENABLED: the VPC has been associated.
+, FAILED: the VPC fails to be associated.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Subdomain recursive DNS status. Valid values: ENABLED, DISABLED
+                     * Recursive resolution status of the domain name. ENABLED: enabled; DISABLED: disabled.
                      */
                     std::string m_dnsForwardStatus;
                     bool m_dnsForwardStatusHasBeenSet;
 
                     /**
-                     * Set of tag key-value pairs
+                     * Tag key-value pair collection.
                      */
                     std::vector<TagInfo> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * List of authorized accounts' VPCs associated with the private domain
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * List of bound VPCs of the associated account.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<AccountVpcInfoOutput> m_accountVpcSet;
                     bool m_accountVpcSetHasBeenSet;
+
+                    /**
+                     * Whether the TLD is a custom one.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    bool m_isCustomTld;
+                    bool m_isCustomTldHasBeenSet;
+
+                    /**
+                     * CNAME acceleration status. ENABLED: enabled; DISABLED: disabled.
+                     */
+                    std::string m_cnameSpeedupStatus;
+                    bool m_cnameSpeedupStatusHasBeenSet;
+
+                    /**
+                     * Forwarding rule name.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_forwardRuleName;
+                    bool m_forwardRuleNameHasBeenSet;
+
+                    /**
+                     * Forwarding rule type. DOWN: from cloud to off-cloud; UP: from off-cloud to cloud. Currently, only DOWN is supported.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_forwardRuleType;
+                    bool m_forwardRuleTypeHasBeenSet;
+
+                    /**
+                     * Forwarding address.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_forwardAddress;
+                    bool m_forwardAddressHasBeenSet;
+
+                    /**
+                     * Endpoint name.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_endPointName;
+                    bool m_endPointNameHasBeenSet;
+
+                    /**
+                     * Deleted VPC.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<VpcInfo> m_deletedVpcSet;
+                    bool m_deletedVpcSetHasBeenSet;
 
                 };
             }

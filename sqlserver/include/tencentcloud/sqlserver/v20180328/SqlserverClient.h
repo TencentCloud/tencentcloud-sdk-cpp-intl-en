@@ -33,6 +33,8 @@
 #include <tencentcloud/sqlserver/v20180328/model/CreateBackupResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/CreateBackupMigrationRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/CreateBackupMigrationResponse.h>
+#include <tencentcloud/sqlserver/v20180328/model/CreateBasicDBInstancesRequest.h>
+#include <tencentcloud/sqlserver/v20180328/model/CreateBasicDBInstancesResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/CreateBusinessDBInstancesRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/CreateBusinessDBInstancesResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/CreateBusinessIntelligenceFileRequest.h>
@@ -49,6 +51,8 @@
 #include <tencentcloud/sqlserver/v20180328/model/CreateIncrementalMigrationResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/CreateMigrationRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/CreateMigrationResponse.h>
+#include <tencentcloud/sqlserver/v20180328/model/CreateReadOnlyDBInstancesRequest.h>
+#include <tencentcloud/sqlserver/v20180328/model/CreateReadOnlyDBInstancesResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DeleteAccountRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/DeleteAccountResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DeleteBackupMigrationRequest.h>
@@ -107,6 +111,8 @@
 #include <tencentcloud/sqlserver/v20180328/model/DescribeProductConfigResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeRegionsRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeRegionsResponse.h>
+#include <tencentcloud/sqlserver/v20180328/model/DescribeRestoreTimeRangeRequest.h>
+#include <tencentcloud/sqlserver/v20180328/model/DescribeRestoreTimeRangeResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeRollbackTimeRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeRollbackTimeResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeSlowlogsRequest.h>
@@ -141,6 +147,8 @@
 #include <tencentcloud/sqlserver/v20180328/model/ModifyDBNameResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/ModifyDBRemarkRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/ModifyDBRemarkResponse.h>
+#include <tencentcloud/sqlserver/v20180328/model/ModifyDReadableRequest.h>
+#include <tencentcloud/sqlserver/v20180328/model/ModifyDReadableResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/ModifyDatabaseCDCRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/ModifyDatabaseCDCResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/ModifyDatabaseCTRequest.h>
@@ -208,6 +216,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateBackupMigrationResponse> CreateBackupMigrationOutcome;
                 typedef std::future<CreateBackupMigrationOutcome> CreateBackupMigrationOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::CreateBackupMigrationRequest&, CreateBackupMigrationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateBackupMigrationAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateBasicDBInstancesResponse> CreateBasicDBInstancesOutcome;
+                typedef std::future<CreateBasicDBInstancesOutcome> CreateBasicDBInstancesOutcomeCallable;
+                typedef std::function<void(const SqlserverClient*, const Model::CreateBasicDBInstancesRequest&, CreateBasicDBInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateBasicDBInstancesAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateBusinessDBInstancesResponse> CreateBusinessDBInstancesOutcome;
                 typedef std::future<CreateBusinessDBInstancesOutcome> CreateBusinessDBInstancesOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::CreateBusinessDBInstancesRequest&, CreateBusinessDBInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateBusinessDBInstancesAsyncHandler;
@@ -232,6 +243,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateMigrationResponse> CreateMigrationOutcome;
                 typedef std::future<CreateMigrationOutcome> CreateMigrationOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::CreateMigrationRequest&, CreateMigrationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateMigrationAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateReadOnlyDBInstancesResponse> CreateReadOnlyDBInstancesOutcome;
+                typedef std::future<CreateReadOnlyDBInstancesOutcome> CreateReadOnlyDBInstancesOutcomeCallable;
+                typedef std::function<void(const SqlserverClient*, const Model::CreateReadOnlyDBInstancesRequest&, CreateReadOnlyDBInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateReadOnlyDBInstancesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteAccountResponse> DeleteAccountOutcome;
                 typedef std::future<DeleteAccountOutcome> DeleteAccountOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::DeleteAccountRequest&, DeleteAccountOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAccountAsyncHandler;
@@ -319,6 +333,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeRegionsResponse> DescribeRegionsOutcome;
                 typedef std::future<DescribeRegionsOutcome> DescribeRegionsOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::DescribeRegionsRequest&, DescribeRegionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRegionsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRestoreTimeRangeResponse> DescribeRestoreTimeRangeOutcome;
+                typedef std::future<DescribeRestoreTimeRangeOutcome> DescribeRestoreTimeRangeOutcomeCallable;
+                typedef std::function<void(const SqlserverClient*, const Model::DescribeRestoreTimeRangeRequest&, DescribeRestoreTimeRangeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRestoreTimeRangeAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeRollbackTimeResponse> DescribeRollbackTimeOutcome;
                 typedef std::future<DescribeRollbackTimeOutcome> DescribeRollbackTimeOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::DescribeRollbackTimeRequest&, DescribeRollbackTimeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRollbackTimeAsyncHandler;
@@ -370,6 +387,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyDBRemarkResponse> ModifyDBRemarkOutcome;
                 typedef std::future<ModifyDBRemarkOutcome> ModifyDBRemarkOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::ModifyDBRemarkRequest&, ModifyDBRemarkOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDBRemarkAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyDReadableResponse> ModifyDReadableOutcome;
+                typedef std::future<ModifyDReadableOutcome> ModifyDReadableOutcomeCallable;
+                typedef std::function<void(const SqlserverClient*, const Model::ModifyDReadableRequest&, ModifyDReadableOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDReadableAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyDatabaseCDCResponse> ModifyDatabaseCDCOutcome;
                 typedef std::future<ModifyDatabaseCDCOutcome> ModifyDatabaseCDCOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::ModifyDatabaseCDCRequest&, ModifyDatabaseCDCOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDatabaseCDCAsyncHandler;
@@ -476,7 +496,16 @@ namespace TencentCloud
                 CreateBackupMigrationOutcomeCallable CreateBackupMigrationCallable(const Model::CreateBackupMigrationRequest& request);
 
                 /**
-                 *This API is used to create a business intelligence service instance.
+                 *This API is used to create basic edition instances (cloud disk).
+                 * @param req CreateBasicDBInstancesRequest
+                 * @return CreateBasicDBInstancesOutcome
+                 */
+                CreateBasicDBInstancesOutcome CreateBasicDBInstances(const Model::CreateBasicDBInstancesRequest &request);
+                void CreateBasicDBInstancesAsync(const Model::CreateBasicDBInstancesRequest& request, const CreateBasicDBInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateBasicDBInstancesOutcomeCallable CreateBasicDBInstancesCallable(const Model::CreateBasicDBInstancesRequest& request);
+
+                /**
+                 *This API is used to create business intelligence service instances (cloud disk).
                  * @param req CreateBusinessDBInstancesRequest
                  * @return CreateBusinessDBInstancesOutcome
                  */
@@ -494,7 +523,7 @@ namespace TencentCloud
                 CreateBusinessIntelligenceFileOutcomeCallable CreateBusinessIntelligenceFileCallable(const Model::CreateBusinessIntelligenceFileRequest& request);
 
                 /**
-                 *This API is used to create a high-availability instance of cloud disk edition.
+                 *This API is used to create high-availability instances (cloud disk).
                  * @param req CreateCloudDBInstancesRequest
                  * @return CreateCloudDBInstancesOutcome
                  */
@@ -503,7 +532,7 @@ namespace TencentCloud
                 CreateCloudDBInstancesOutcomeCallable CreateCloudDBInstancesCallable(const Model::CreateCloudDBInstancesRequest& request);
 
                 /**
-                 *This API is used to add a read-only replica instance of cloud disk edition.
+                 *This API is used to create read-only instances (cloud disk).
                  * @param req CreateCloudReadOnlyDBInstancesRequest
                  * @return CreateCloudReadOnlyDBInstancesOutcome
                  */
@@ -521,7 +550,7 @@ namespace TencentCloud
                 CreateDBOutcomeCallable CreateDBCallable(const Model::CreateDBRequest& request);
 
                 /**
-                 *This API is used to create an instance.
+                 *This API is used to create high-availability instances (local disk)
                  * @param req CreateDBInstancesRequest
                  * @return CreateDBInstancesOutcome
                  */
@@ -546,6 +575,15 @@ namespace TencentCloud
                 CreateMigrationOutcome CreateMigration(const Model::CreateMigrationRequest &request);
                 void CreateMigrationAsync(const Model::CreateMigrationRequest& request, const CreateMigrationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateMigrationOutcomeCallable CreateMigrationCallable(const Model::CreateMigrationRequest& request);
+
+                /**
+                 *This API is used to create read-only instances (local disk).
+                 * @param req CreateReadOnlyDBInstancesRequest
+                 * @return CreateReadOnlyDBInstancesOutcome
+                 */
+                CreateReadOnlyDBInstancesOutcome CreateReadOnlyDBInstances(const Model::CreateReadOnlyDBInstancesRequest &request);
+                void CreateReadOnlyDBInstancesAsync(const Model::CreateReadOnlyDBInstancesRequest& request, const CreateReadOnlyDBInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateReadOnlyDBInstancesOutcomeCallable CreateReadOnlyDBInstancesCallable(const Model::CreateReadOnlyDBInstancesRequest& request);
 
                 /**
                  *This API is used to delete an instance account.
@@ -809,6 +847,15 @@ namespace TencentCloud
                 DescribeRegionsOutcomeCallable DescribeRegionsCallable(const Model::DescribeRegionsRequest& request);
 
                 /**
+                 *This API is used to query the time range available for rollback by time point.
+                 * @param req DescribeRestoreTimeRangeRequest
+                 * @return DescribeRestoreTimeRangeOutcome
+                 */
+                DescribeRestoreTimeRangeOutcome DescribeRestoreTimeRange(const Model::DescribeRestoreTimeRangeRequest &request);
+                void DescribeRestoreTimeRangeAsync(const Model::DescribeRestoreTimeRangeRequest& request, const DescribeRestoreTimeRangeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRestoreTimeRangeOutcomeCallable DescribeRestoreTimeRangeCallable(const Model::DescribeRestoreTimeRangeRequest& request);
+
+                /**
                  *This API is used to query the time range available for instance rollback.
                  * @param req DescribeRollbackTimeRequest
                  * @return DescribeRollbackTimeOutcome
@@ -961,6 +1008,15 @@ namespace TencentCloud
                 ModifyDBRemarkOutcome ModifyDBRemark(const Model::ModifyDBRemarkRequest &request);
                 void ModifyDBRemarkAsync(const Model::ModifyDBRemarkRequest& request, const ModifyDBRemarkAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyDBRemarkOutcomeCallable ModifyDBRemarkCallable(const Model::ModifyDBRemarkRequest& request);
+
+                /**
+                 *This API is used to enable or disable the read-only feature of the replica server.
+                 * @param req ModifyDReadableRequest
+                 * @return ModifyDReadableOutcome
+                 */
+                ModifyDReadableOutcome ModifyDReadable(const Model::ModifyDReadableRequest &request);
+                void ModifyDReadableAsync(const Model::ModifyDReadableRequest& request, const ModifyDReadableAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyDReadableOutcomeCallable ModifyDReadableCallable(const Model::ModifyDReadableRequest& request);
 
                 /**
                  *This API is used to enable or disable the change data capture (CDC) feature.

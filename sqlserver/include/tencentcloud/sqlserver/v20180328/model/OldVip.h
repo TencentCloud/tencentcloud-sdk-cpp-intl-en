@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * This API is used to return the number of unrecovered IP addresses for the instance.
                 */
                 class OldVip : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Vip 
+                     * 获取Unrecovered old IP addresses
+                     * @return Vip Unrecovered old IP addresses
                      * 
                      */
                     std::string GetVip() const;
 
                     /**
-                     * 设置
-                     * @param _vip 
+                     * 设置Unrecovered old IP addresses
+                     * @param _vip Unrecovered old IP addresses
                      * 
                      */
                     void SetVip(const std::string& _vip);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool VipHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RecycleTime 
+                     * 获取IP recovery time
+                     * @return RecycleTime IP recovery time
                      * 
                      */
                     std::string GetRecycleTime() const;
 
                     /**
-                     * 设置
-                     * @param _recycleTime 
+                     * 设置IP recovery time
+                     * @param _recycleTime IP recovery time
                      * 
                      */
                     void SetRecycleTime(const std::string& _recycleTime);
@@ -89,15 +89,19 @@ namespace TencentCloud
                     bool RecycleTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OldIpRetainTime 
+                     * 获取Old IP retention time (hours)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return OldIpRetainTime Old IP retention time (hours)
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetOldIpRetainTime() const;
 
                     /**
-                     * 设置
-                     * @param _oldIpRetainTime 
+                     * 设置Old IP retention time (hours)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _oldIpRetainTime Old IP retention time (hours)
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetOldIpRetainTime(const int64_t& _oldIpRetainTime);
@@ -112,19 +116,20 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Unrecovered old IP addresses
                      */
                     std::string m_vip;
                     bool m_vipHasBeenSet;
 
                     /**
-                     * 
+                     * IP recovery time
                      */
                     std::string m_recycleTime;
                     bool m_recycleTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Old IP retention time (hours)
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_oldIpRetainTime;
                     bool m_oldIpRetainTimeHasBeenSet;

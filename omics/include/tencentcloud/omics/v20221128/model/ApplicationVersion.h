@@ -251,7 +251,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return GitInfo Git information
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
+                     * @deprecated
                      */
                     std::string GetGitInfo() const;
 
@@ -260,14 +260,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _gitInfo Git information
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
+                     * @deprecated
                      */
                     void SetGitInfo(const std::string& _gitInfo);
 
                     /**
                      * 判断参数 GitInfo 是否已赋值
                      * @return GitInfo 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool GitInfoHasBeenSet() const;
 

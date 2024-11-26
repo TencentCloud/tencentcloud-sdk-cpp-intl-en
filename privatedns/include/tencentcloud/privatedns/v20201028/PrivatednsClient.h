@@ -273,7 +273,7 @@ namespace TencentCloud
                 DescribePrivateDNSAccountListOutcomeCallable DescribePrivateDNSAccountListCallable(const Model::DescribePrivateDNSAccountListRequest& request);
 
                 /**
-                 *This API is used to get the list of private domains.
+                 *This API is used to obtain the private domain list.
                  * @param req DescribePrivateZoneListRequest
                  * @return DescribePrivateZoneListOutcome
                  */

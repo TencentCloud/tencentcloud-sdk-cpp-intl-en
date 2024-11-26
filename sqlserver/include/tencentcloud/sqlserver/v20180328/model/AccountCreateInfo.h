@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is an admin account. Valid values: `true` (Yes. It is an admin account when the instance is a basic edition type and `AccountType` is `L0`; it is a privileged account when the instance is a dual-server high availability edition type and `AccountType` is `L1`.), `false` (No. It is a standard account when `AccountType` is `L3`.)
-                     * @return IsAdmin Whether it is an admin account. Valid values: `true` (Yes. It is an admin account when the instance is a basic edition type and `AccountType` is `L0`; it is a privileged account when the instance is a dual-server high availability edition type and `AccountType` is `L1`.), `false` (No. It is a standard account when `AccountType` is `L3`.)
+                     * 获取Whether it is an admin account. Valid values: true (it is an admin account when the instance is a single-node type and AccountType is L0; when the instance is a two-node type and AccountType is L1), false (it is a standard account when AccountType is L3)
+                     * @return IsAdmin Whether it is an admin account. Valid values: true (it is an admin account when the instance is a single-node type and AccountType is L0; when the instance is a two-node type and AccountType is L1), false (it is a standard account when AccountType is L3)
                      * 
                      */
                     bool GetIsAdmin() const;
 
                     /**
-                     * 设置Whether it is an admin account. Valid values: `true` (Yes. It is an admin account when the instance is a basic edition type and `AccountType` is `L0`; it is a privileged account when the instance is a dual-server high availability edition type and `AccountType` is `L1`.), `false` (No. It is a standard account when `AccountType` is `L3`.)
-                     * @param _isAdmin Whether it is an admin account. Valid values: `true` (Yes. It is an admin account when the instance is a basic edition type and `AccountType` is `L0`; it is a privileged account when the instance is a dual-server high availability edition type and `AccountType` is `L1`.), `false` (No. It is a standard account when `AccountType` is `L3`.)
+                     * 设置Whether it is an admin account. Valid values: true (it is an admin account when the instance is a single-node type and AccountType is L0; when the instance is a two-node type and AccountType is L1), false (it is a standard account when AccountType is L3)
+                     * @param _isAdmin Whether it is an admin account. Valid values: true (it is an admin account when the instance is a single-node type and AccountType is L0; when the instance is a two-node type and AccountType is L1), false (it is a standard account when AccountType is L3)
                      * 
                      */
                     void SetIsAdmin(const bool& _isAdmin);
@@ -194,6 +194,27 @@ namespace TencentCloud
                      */
                     bool AccountTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Whether CAM authentication is enabled
+                     * @return IsCam Whether CAM authentication is enabled
+                     * 
+                     */
+                    bool GetIsCam() const;
+
+                    /**
+                     * 设置Whether CAM authentication is enabled
+                     * @param _isCam Whether CAM authentication is enabled
+                     * 
+                     */
+                    void SetIsCam(const bool& _isCam);
+
+                    /**
+                     * 判断参数 IsCam 是否已赋值
+                     * @return IsCam 是否已赋值
+                     * 
+                     */
+                    bool IsCamHasBeenSet() const;
+
                 private:
 
                     /**
@@ -221,7 +242,7 @@ namespace TencentCloud
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * Whether it is an admin account. Valid values: `true` (Yes. It is an admin account when the instance is a basic edition type and `AccountType` is `L0`; it is a privileged account when the instance is a dual-server high availability edition type and `AccountType` is `L1`.), `false` (No. It is a standard account when `AccountType` is `L3`.)
+                     * Whether it is an admin account. Valid values: true (it is an admin account when the instance is a single-node type and AccountType is L0; when the instance is a two-node type and AccountType is L1), false (it is a standard account when AccountType is L3)
                      */
                     bool m_isAdmin;
                     bool m_isAdminHasBeenSet;
@@ -237,6 +258,12 @@ namespace TencentCloud
                      */
                     std::string m_accountType;
                     bool m_accountTypeHasBeenSet;
+
+                    /**
+                     * Whether CAM authentication is enabled
+                     */
+                    bool m_isCam;
+                    bool m_isCamHasBeenSet;
 
                 };
             }

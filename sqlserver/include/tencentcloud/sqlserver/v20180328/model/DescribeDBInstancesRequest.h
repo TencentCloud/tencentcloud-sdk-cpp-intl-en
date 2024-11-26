@@ -426,6 +426,27 @@ namespace TencentCloud
                      */
                     bool InstanceTypeHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return PaginationType 
+                     * 
+                     */
+                    std::string GetPaginationType() const;
+
+                    /**
+                     * 设置
+                     * @param _paginationType 
+                     * 
+                     */
+                    void SetPaginationType(const std::string& _paginationType);
+
+                    /**
+                     * 判断参数 PaginationType 是否已赋值
+                     * @return PaginationType 是否已赋值
+                     * 
+                     */
+                    bool PaginationTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -535,6 +556,12 @@ namespace TencentCloud
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_paginationType;
+                    bool m_paginationTypeHasBeenSet;
 
                 };
             }

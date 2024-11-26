@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_SQLSERVER_V20180328_MODEL_RESETACCOUNTPASSWORDRESPONSE_H_
-#define TENCENTCLOUD_SQLSERVER_V20180328_MODEL_RESETACCOUNTPASSWORDRESPONSE_H_
+#ifndef TENCENTCLOUD_SQLSERVER_V20180328_MODEL_CREATEREADONLYDBINSTANCESRESPONSE_H_
+#define TENCENTCLOUD_SQLSERVER_V20180328_MODEL_CREATEREADONLYDBINSTANCESRESPONSE_H_
 
 #include <string>
 #include <vector>
@@ -32,38 +32,38 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * ResetAccountPassword response structure.
+                * CreateReadOnlyDBInstances response structure.
                 */
-                class ResetAccountPasswordResponse : public AbstractModel
+                class CreateReadOnlyDBInstancesResponse : public AbstractModel
                 {
                 public:
-                    ResetAccountPasswordResponse();
-                    ~ResetAccountPasswordResponse() = default;
+                    CreateReadOnlyDBInstancesResponse();
+                    ~CreateReadOnlyDBInstancesResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取ID of asynchronous task flow for account password modification
-                     * @return FlowId ID of asynchronous task flow for account password modification
+                     * 获取
+                     * @return DealNames 
                      * 
                      */
-                    int64_t GetFlowId() const;
+                    std::vector<std::string> GetDealNames() const;
 
                     /**
-                     * 判断参数 FlowId 是否已赋值
-                     * @return FlowId 是否已赋值
+                     * 判断参数 DealNames 是否已赋值
+                     * @return DealNames 是否已赋值
                      * 
                      */
-                    bool FlowIdHasBeenSet() const;
+                    bool DealNamesHasBeenSet() const;
 
                 private:
 
                     /**
-                     * ID of asynchronous task flow for account password modification
+                     * 
                      */
-                    int64_t m_flowId;
-                    bool m_flowIdHasBeenSet;
+                    std::vector<std::string> m_dealNames;
+                    bool m_dealNamesHasBeenSet;
 
                 };
             }
@@ -71,4 +71,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_SQLSERVER_V20180328_MODEL_RESETACCOUNTPASSWORDRESPONSE_H_
+#endif // !TENCENTCLOUD_SQLSERVER_V20180328_MODEL_CREATEREADONLYDBINSTANCESRESPONSE_H_

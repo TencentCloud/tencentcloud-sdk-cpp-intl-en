@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Replica server read-only information
                 */
                 class DrReadableInfo : public AbstractModel
                 {
@@ -47,15 +47,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SlaveStatus 
+                     * 获取Replica server status. Valid values: enable - running; disable - unavailable
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SlaveStatus Replica server status. Valid values: enable - running; disable - unavailable
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSlaveStatus() const;
 
                     /**
-                     * 设置
-                     * @param _slaveStatus 
+                     * 设置Replica server status. Valid values: enable - running; disable - unavailable
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _slaveStatus Replica server status. Valid values: enable - running; disable - unavailable
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSlaveStatus(const std::string& _slaveStatus);
@@ -68,15 +72,19 @@ namespace TencentCloud
                     bool SlaveStatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ReadableStatus 
+                     * 获取Replica server readable status. Valid values: enable - enabled; disable - disabled
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ReadableStatus Replica server readable status. Valid values: enable - enabled; disable - disabled
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetReadableStatus() const;
 
                     /**
-                     * 设置
-                     * @param _readableStatus 
+                     * 设置Replica server readable status. Valid values: enable - enabled; disable - disabled
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _readableStatus Replica server readable status. Valid values: enable - enabled; disable - disabled
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetReadableStatus(const std::string& _readableStatus);
@@ -89,15 +97,19 @@ namespace TencentCloud
                     bool ReadableStatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Vip 
+                     * 获取Replica server read-only VIP
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Vip Replica server read-only VIP
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetVip() const;
 
                     /**
-                     * 设置
-                     * @param _vip 
+                     * 设置Replica server read-only VIP
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _vip Replica server read-only VIP
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetVip(const std::string& _vip);
@@ -110,15 +122,19 @@ namespace TencentCloud
                     bool VipHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VPort 
+                     * 获取Replica server read-only port
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return VPort Replica server read-only port
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetVPort() const;
 
                     /**
-                     * 设置
-                     * @param _vPort 
+                     * 设置Replica server read-only port
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _vPort Replica server read-only port
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetVPort(const int64_t& _vPort);
@@ -131,15 +147,19 @@ namespace TencentCloud
                     bool VPortHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return UniqVpcId 
+                     * 获取Replica server VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return UniqVpcId Replica server VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUniqVpcId() const;
 
                     /**
-                     * 设置
-                     * @param _uniqVpcId 
+                     * 设置Replica server VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _uniqVpcId Replica server VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUniqVpcId(const std::string& _uniqVpcId);
@@ -152,15 +172,19 @@ namespace TencentCloud
                     bool UniqVpcIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return UniqSubnetId 
+                     * 获取Replica server VPC subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return UniqSubnetId Replica server VPC subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUniqSubnetId() const;
 
                     /**
-                     * 设置
-                     * @param _uniqSubnetId 
+                     * 设置Replica server VPC subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _uniqSubnetId Replica server VPC subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUniqSubnetId(const std::string& _uniqSubnetId);
@@ -175,37 +199,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Replica server status. Valid values: enable - running; disable - unavailable
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_slaveStatus;
                     bool m_slaveStatusHasBeenSet;
 
                     /**
-                     * 
+                     * Replica server readable status. Valid values: enable - enabled; disable - disabled
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_readableStatus;
                     bool m_readableStatusHasBeenSet;
 
                     /**
-                     * 
+                     * Replica server read-only VIP
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_vip;
                     bool m_vipHasBeenSet;
 
                     /**
-                     * 
+                     * Replica server read-only port
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_vPort;
                     bool m_vPortHasBeenSet;
 
                     /**
-                     * 
+                     * Replica server VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_uniqVpcId;
                     bool m_uniqVpcIdHasBeenSet;
 
                     /**
-                     * 
+                     * Replica server VPC subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_uniqSubnetId;
                     bool m_uniqSubnetIdHasBeenSet;

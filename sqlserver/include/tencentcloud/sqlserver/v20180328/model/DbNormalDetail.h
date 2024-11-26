@@ -196,21 +196,21 @@ namespace TencentCloud
                     /**
                      * 获取Whether full-text indexes are enabled. Valid values: `0` (no), `1` (yes)
                      * @return IsFulltextEnabled Whether full-text indexes are enabled. Valid values: `0` (no), `1` (yes)
-                     * 
+                     * @deprecated
                      */
                     std::string GetIsFulltextEnabled() const;
 
                     /**
                      * 设置Whether full-text indexes are enabled. Valid values: `0` (no), `1` (yes)
                      * @param _isFulltextEnabled Whether full-text indexes are enabled. Valid values: `0` (no), `1` (yes)
-                     * 
+                     * @deprecated
                      */
                     void SetIsFulltextEnabled(const std::string& _isFulltextEnabled);
 
                     /**
                      * 判断参数 IsFulltextEnabled 是否已赋值
                      * @return IsFulltextEnabled 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool IsFulltextEnabledHasBeenSet() const;
 

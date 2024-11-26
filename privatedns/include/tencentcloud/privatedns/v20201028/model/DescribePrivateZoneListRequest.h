@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Pagination offset, starting from 0
-                     * @return Offset Pagination offset, starting from 0
+                     * 获取Pagination offset, starting from 0.
+                     * @return Offset Pagination offset, starting from 0.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Pagination offset, starting from 0
-                     * @param _offset Pagination offset, starting from 0
+                     * 设置Pagination offset, starting from 0.
+                     * @param _offset Pagination offset, starting from 0.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of entries per page. Maximum value: 100. Default value: 20
-                     * @return Limit Number of entries per page. Maximum value: 100. Default value: 20
+                     * 获取Pagination limit. Maximum value: 100. Default value: 20.
+                     * @return Limit Pagination limit. Maximum value: 100. Default value: 20.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of entries per page. Maximum value: 100. Default value: 20
-                     * @param _limit Number of entries per page. Maximum value: 100. Default value: 20
+                     * 设置Pagination limit. Maximum value: 100. Default value: 20.
+                     * @param _limit Pagination limit. Maximum value: 100. Default value: 20.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Filter parameter
-                     * @return Filters Filter parameter
+                     * 获取Filter parameters.
+                     * @return Filters Filter parameters.
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter parameter
-                     * @param _filters Filter parameter
+                     * 设置Filter parameters.
+                     * @param _filters Filter parameters.
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -109,19 +109,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Pagination offset, starting from 0
+                     * Pagination offset, starting from 0.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of entries per page. Maximum value: 100. Default value: 20
+                     * Pagination limit. Maximum value: 100. Default value: 20.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Filter parameter
+                     * Filter parameters.
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

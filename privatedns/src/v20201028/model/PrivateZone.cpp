@@ -32,7 +32,14 @@ PrivateZone::PrivateZone() :
     m_statusHasBeenSet(false),
     m_dnsForwardStatusHasBeenSet(false),
     m_tagsHasBeenSet(false),
-    m_accountVpcSetHasBeenSet(false)
+    m_accountVpcSetHasBeenSet(false),
+    m_isCustomTldHasBeenSet(false),
+    m_cnameSpeedupStatusHasBeenSet(false),
+    m_forwardRuleNameHasBeenSet(false),
+    m_forwardRuleTypeHasBeenSet(false),
+    m_forwardAddressHasBeenSet(false),
+    m_endPointNameHasBeenSet(false),
+    m_deletedVpcSetHasBeenSet(false)
 {
 }
 
@@ -191,6 +198,86 @@ CoreInternalOutcome PrivateZone::Deserialize(const rapidjson::Value &value)
         m_accountVpcSetHasBeenSet = true;
     }
 
+    if (value.HasMember("IsCustomTld") && !value["IsCustomTld"].IsNull())
+    {
+        if (!value["IsCustomTld"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `PrivateZone.IsCustomTld` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_isCustomTld = value["IsCustomTld"].GetBool();
+        m_isCustomTldHasBeenSet = true;
+    }
+
+    if (value.HasMember("CnameSpeedupStatus") && !value["CnameSpeedupStatus"].IsNull())
+    {
+        if (!value["CnameSpeedupStatus"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `PrivateZone.CnameSpeedupStatus` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_cnameSpeedupStatus = string(value["CnameSpeedupStatus"].GetString());
+        m_cnameSpeedupStatusHasBeenSet = true;
+    }
+
+    if (value.HasMember("ForwardRuleName") && !value["ForwardRuleName"].IsNull())
+    {
+        if (!value["ForwardRuleName"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `PrivateZone.ForwardRuleName` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_forwardRuleName = string(value["ForwardRuleName"].GetString());
+        m_forwardRuleNameHasBeenSet = true;
+    }
+
+    if (value.HasMember("ForwardRuleType") && !value["ForwardRuleType"].IsNull())
+    {
+        if (!value["ForwardRuleType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `PrivateZone.ForwardRuleType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_forwardRuleType = string(value["ForwardRuleType"].GetString());
+        m_forwardRuleTypeHasBeenSet = true;
+    }
+
+    if (value.HasMember("ForwardAddress") && !value["ForwardAddress"].IsNull())
+    {
+        if (!value["ForwardAddress"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `PrivateZone.ForwardAddress` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_forwardAddress = string(value["ForwardAddress"].GetString());
+        m_forwardAddressHasBeenSet = true;
+    }
+
+    if (value.HasMember("EndPointName") && !value["EndPointName"].IsNull())
+    {
+        if (!value["EndPointName"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `PrivateZone.EndPointName` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_endPointName = string(value["EndPointName"].GetString());
+        m_endPointNameHasBeenSet = true;
+    }
+
+    if (value.HasMember("DeletedVpcSet") && !value["DeletedVpcSet"].IsNull())
+    {
+        if (!value["DeletedVpcSet"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `PrivateZone.DeletedVpcSet` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["DeletedVpcSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            VpcInfo item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_deletedVpcSet.push_back(item);
+        }
+        m_deletedVpcSetHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -309,6 +396,69 @@ void PrivateZone::ToJsonObject(rapidjson::Value &value, rapidjson::Document::All
 
         int i=0;
         for (auto itr = m_accountVpcSet.begin(); itr != m_accountVpcSet.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_isCustomTldHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsCustomTld";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_isCustomTld, allocator);
+    }
+
+    if (m_cnameSpeedupStatusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CnameSpeedupStatus";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cnameSpeedupStatus.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_forwardRuleNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ForwardRuleName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_forwardRuleName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_forwardRuleTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ForwardRuleType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_forwardRuleType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_forwardAddressHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ForwardAddress";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_forwardAddress.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_endPointNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EndPointName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_endPointName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_deletedVpcSetHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DeletedVpcSet";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_deletedVpcSet.begin(); itr != m_deletedVpcSet.end(); ++itr, ++i)
         {
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
@@ -508,5 +658,117 @@ void PrivateZone::SetAccountVpcSet(const vector<AccountVpcInfoOutput>& _accountV
 bool PrivateZone::AccountVpcSetHasBeenSet() const
 {
     return m_accountVpcSetHasBeenSet;
+}
+
+bool PrivateZone::GetIsCustomTld() const
+{
+    return m_isCustomTld;
+}
+
+void PrivateZone::SetIsCustomTld(const bool& _isCustomTld)
+{
+    m_isCustomTld = _isCustomTld;
+    m_isCustomTldHasBeenSet = true;
+}
+
+bool PrivateZone::IsCustomTldHasBeenSet() const
+{
+    return m_isCustomTldHasBeenSet;
+}
+
+string PrivateZone::GetCnameSpeedupStatus() const
+{
+    return m_cnameSpeedupStatus;
+}
+
+void PrivateZone::SetCnameSpeedupStatus(const string& _cnameSpeedupStatus)
+{
+    m_cnameSpeedupStatus = _cnameSpeedupStatus;
+    m_cnameSpeedupStatusHasBeenSet = true;
+}
+
+bool PrivateZone::CnameSpeedupStatusHasBeenSet() const
+{
+    return m_cnameSpeedupStatusHasBeenSet;
+}
+
+string PrivateZone::GetForwardRuleName() const
+{
+    return m_forwardRuleName;
+}
+
+void PrivateZone::SetForwardRuleName(const string& _forwardRuleName)
+{
+    m_forwardRuleName = _forwardRuleName;
+    m_forwardRuleNameHasBeenSet = true;
+}
+
+bool PrivateZone::ForwardRuleNameHasBeenSet() const
+{
+    return m_forwardRuleNameHasBeenSet;
+}
+
+string PrivateZone::GetForwardRuleType() const
+{
+    return m_forwardRuleType;
+}
+
+void PrivateZone::SetForwardRuleType(const string& _forwardRuleType)
+{
+    m_forwardRuleType = _forwardRuleType;
+    m_forwardRuleTypeHasBeenSet = true;
+}
+
+bool PrivateZone::ForwardRuleTypeHasBeenSet() const
+{
+    return m_forwardRuleTypeHasBeenSet;
+}
+
+string PrivateZone::GetForwardAddress() const
+{
+    return m_forwardAddress;
+}
+
+void PrivateZone::SetForwardAddress(const string& _forwardAddress)
+{
+    m_forwardAddress = _forwardAddress;
+    m_forwardAddressHasBeenSet = true;
+}
+
+bool PrivateZone::ForwardAddressHasBeenSet() const
+{
+    return m_forwardAddressHasBeenSet;
+}
+
+string PrivateZone::GetEndPointName() const
+{
+    return m_endPointName;
+}
+
+void PrivateZone::SetEndPointName(const string& _endPointName)
+{
+    m_endPointName = _endPointName;
+    m_endPointNameHasBeenSet = true;
+}
+
+bool PrivateZone::EndPointNameHasBeenSet() const
+{
+    return m_endPointNameHasBeenSet;
+}
+
+vector<VpcInfo> PrivateZone::GetDeletedVpcSet() const
+{
+    return m_deletedVpcSet;
+}
+
+void PrivateZone::SetDeletedVpcSet(const vector<VpcInfo>& _deletedVpcSet)
+{
+    m_deletedVpcSet = _deletedVpcSet;
+    m_deletedVpcSetHasBeenSet = true;
+}
+
+bool PrivateZone::DeletedVpcSetHasBeenSet() const
+{
+    return m_deletedVpcSetHasBeenSet;
 }
 

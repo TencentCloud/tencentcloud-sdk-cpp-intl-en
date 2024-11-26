@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/sqlserver/v20180328/model/ModifyBackupStrategyResponse.h>
+#include <tencentcloud/sqlserver/v20180328/model/CreateReadOnlyDBInstancesResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -23,14 +23,12 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Sqlserver::V20180328::Model;
 using namespace std;
 
-ModifyBackupStrategyResponse::ModifyBackupStrategyResponse() :
-    m_errnoHasBeenSet(false),
-    m_msgHasBeenSet(false),
-    m_codeHasBeenSet(false)
+CreateReadOnlyDBInstancesResponse::CreateReadOnlyDBInstancesResponse() :
+    m_dealNamesHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome ModifyBackupStrategyResponse::Deserialize(const string &payload)
+CoreInternalOutcome CreateReadOnlyDBInstancesResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -64,68 +62,40 @@ CoreInternalOutcome ModifyBackupStrategyResponse::Deserialize(const string &payl
     }
 
 
-    if (rsp.HasMember("Errno") && !rsp["Errno"].IsNull())
+    if (rsp.HasMember("DealNames") && !rsp["DealNames"].IsNull())
     {
-        if (!rsp["Errno"].IsInt64())
-        {
-            return CoreInternalOutcome(Core::Error("response `Errno` IsInt64=false incorrectly").SetRequestId(requestId));
-        }
-        m_errno = rsp["Errno"].GetInt64();
-        m_errnoHasBeenSet = true;
-    }
+        if (!rsp["DealNames"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `DealNames` is not array type"));
 
-    if (rsp.HasMember("Msg") && !rsp["Msg"].IsNull())
-    {
-        if (!rsp["Msg"].IsString())
+        const rapidjson::Value &tmpValue = rsp["DealNames"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
-            return CoreInternalOutcome(Core::Error("response `Msg` IsString=false incorrectly").SetRequestId(requestId));
+            m_dealNames.push_back((*itr).GetString());
         }
-        m_msg = string(rsp["Msg"].GetString());
-        m_msgHasBeenSet = true;
-    }
-
-    if (rsp.HasMember("Code") && !rsp["Code"].IsNull())
-    {
-        if (!rsp["Code"].IsInt64())
-        {
-            return CoreInternalOutcome(Core::Error("response `Code` IsInt64=false incorrectly").SetRequestId(requestId));
-        }
-        m_code = rsp["Code"].GetInt64();
-        m_codeHasBeenSet = true;
+        m_dealNamesHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string ModifyBackupStrategyResponse::ToJsonString() const
+string CreateReadOnlyDBInstancesResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_errnoHasBeenSet)
+    if (m_dealNamesHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Errno";
+        string key = "DealNames";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_errno, allocator);
-    }
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
-    if (m_msgHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Msg";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_msg.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_codeHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Code";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_code, allocator);
+        for (auto itr = m_dealNames.begin(); itr != m_dealNames.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -140,34 +110,14 @@ string ModifyBackupStrategyResponse::ToJsonString() const
 }
 
 
-int64_t ModifyBackupStrategyResponse::GetErrno() const
+vector<string> CreateReadOnlyDBInstancesResponse::GetDealNames() const
 {
-    return m_errno;
+    return m_dealNames;
 }
 
-bool ModifyBackupStrategyResponse::ErrnoHasBeenSet() const
+bool CreateReadOnlyDBInstancesResponse::DealNamesHasBeenSet() const
 {
-    return m_errnoHasBeenSet;
-}
-
-string ModifyBackupStrategyResponse::GetMsg() const
-{
-    return m_msg;
-}
-
-bool ModifyBackupStrategyResponse::MsgHasBeenSet() const
-{
-    return m_msgHasBeenSet;
-}
-
-int64_t ModifyBackupStrategyResponse::GetCode() const
-{
-    return m_code;
-}
-
-bool ModifyBackupStrategyResponse::CodeHasBeenSet() const
-{
-    return m_codeHasBeenSet;
+    return m_dealNamesHasBeenSet;
 }
 
 

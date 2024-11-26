@@ -86,27 +86,6 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Database to be rolled back
-                     * @return DBs Database to be rolled back
-                     * 
-                     */
-                    std::vector<std::string> GetDBs() const;
-
-                    /**
-                     * 设置Database to be rolled back
-                     * @param _dBs Database to be rolled back
-                     * 
-                     */
-                    void SetDBs(const std::vector<std::string>& _dBs);
-
-                    /**
-                     * 判断参数 DBs 是否已赋值
-                     * @return DBs 是否已赋值
-                     * 
-                     */
-                    bool DBsHasBeenSet() const;
-
-                    /**
                      * 获取Target time point for rollback
                      * @return Time Target time point for rollback
                      * 
@@ -126,6 +105,27 @@ namespace TencentCloud
                      * 
                      */
                     bool TimeHasBeenSet() const;
+
+                    /**
+                     * 获取Database to be rolled back
+                     * @return DBs Database to be rolled back
+                     * 
+                     */
+                    std::vector<std::string> GetDBs() const;
+
+                    /**
+                     * 设置Database to be rolled back
+                     * @param _dBs Database to be rolled back
+                     * 
+                     */
+                    void SetDBs(const std::vector<std::string>& _dBs);
+
+                    /**
+                     * 判断参数 DBs 是否已赋值
+                     * @return DBs 是否已赋值
+                     * 
+                     */
+                    bool DBsHasBeenSet() const;
 
                     /**
                      * 获取ID of the target instance to which the backup is restored. The target instance should be under the same `APPID`. If this parameter is left empty, ID of the source instance will be used.
@@ -184,16 +184,16 @@ namespace TencentCloud
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Database to be rolled back
-                     */
-                    std::vector<std::string> m_dBs;
-                    bool m_dBsHasBeenSet;
-
-                    /**
                      * Target time point for rollback
                      */
                     std::string m_time;
                     bool m_timeHasBeenSet;
+
+                    /**
+                     * Database to be rolled back
+                     */
+                    std::vector<std::string> m_dBs;
+                    bool m_dBsHasBeenSet;
 
                     /**
                      * ID of the target instance to which the backup is restored. The target instance should be under the same `APPID`. If this parameter is left empty, ID of the source instance will be used.

@@ -89,19 +89,15 @@ namespace TencentCloud
                     bool CertificateAttributionHasBeenSet() const;
 
                     /**
-                     * 获取ID of the other referenced root account when enabling TDE
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return QuoteUin ID of the other referenced root account when enabling TDE
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return QuoteUin Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetQuoteUin() const;
 
                     /**
-                     * 设置ID of the other referenced root account when enabling TDE
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _quoteUin ID of the other referenced root account when enabling TDE
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _quoteUin Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetQuoteUin(const std::string& _quoteUin);
@@ -128,8 +124,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_certificateAttributionHasBeenSet;
 
                     /**
-                     * ID of the other referenced root account when enabling TDE
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_quoteUin;
                     bool m_quoteUinHasBeenSet;
