@@ -814,92 +814,6 @@ WafClient::DescribeAntiFakeRulesOutcomeCallable WafClient::DescribeAntiFakeRules
     return task->get_future();
 }
 
-WafClient::DescribeAntiFakeUrlOutcome WafClient::DescribeAntiFakeUrl(const DescribeAntiFakeUrlRequest &request)
-{
-    auto outcome = MakeRequest(request, "DescribeAntiFakeUrl");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        DescribeAntiFakeUrlResponse rsp = DescribeAntiFakeUrlResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return DescribeAntiFakeUrlOutcome(rsp);
-        else
-            return DescribeAntiFakeUrlOutcome(o.GetError());
-    }
-    else
-    {
-        return DescribeAntiFakeUrlOutcome(outcome.GetError());
-    }
-}
-
-void WafClient::DescribeAntiFakeUrlAsync(const DescribeAntiFakeUrlRequest& request, const DescribeAntiFakeUrlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeAntiFakeUrl(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-WafClient::DescribeAntiFakeUrlOutcomeCallable WafClient::DescribeAntiFakeUrlCallable(const DescribeAntiFakeUrlRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<DescribeAntiFakeUrlOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeAntiFakeUrl(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
-WafClient::DescribeAntiInfoLeakRulesOutcome WafClient::DescribeAntiInfoLeakRules(const DescribeAntiInfoLeakRulesRequest &request)
-{
-    auto outcome = MakeRequest(request, "DescribeAntiInfoLeakRules");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        DescribeAntiInfoLeakRulesResponse rsp = DescribeAntiInfoLeakRulesResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return DescribeAntiInfoLeakRulesOutcome(rsp);
-        else
-            return DescribeAntiInfoLeakRulesOutcome(o.GetError());
-    }
-    else
-    {
-        return DescribeAntiInfoLeakRulesOutcome(outcome.GetError());
-    }
-}
-
-void WafClient::DescribeAntiInfoLeakRulesAsync(const DescribeAntiInfoLeakRulesRequest& request, const DescribeAntiInfoLeakRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeAntiInfoLeakRules(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-WafClient::DescribeAntiInfoLeakRulesOutcomeCallable WafClient::DescribeAntiInfoLeakRulesCallable(const DescribeAntiInfoLeakRulesRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<DescribeAntiInfoLeakRulesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeAntiInfoLeakRules(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
 WafClient::DescribeAntiInfoLeakageRulesOutcome WafClient::DescribeAntiInfoLeakageRules(const DescribeAntiInfoLeakageRulesRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeAntiInfoLeakageRules");
@@ -936,6 +850,49 @@ WafClient::DescribeAntiInfoLeakageRulesOutcomeCallable WafClient::DescribeAntiIn
         [this, request]()
         {
             return this->DescribeAntiInfoLeakageRules(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+WafClient::DescribeAttackOverviewOutcome WafClient::DescribeAttackOverview(const DescribeAttackOverviewRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAttackOverview");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAttackOverviewResponse rsp = DescribeAttackOverviewResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAttackOverviewOutcome(rsp);
+        else
+            return DescribeAttackOverviewOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAttackOverviewOutcome(outcome.GetError());
+    }
+}
+
+void WafClient::DescribeAttackOverviewAsync(const DescribeAttackOverviewRequest& request, const DescribeAttackOverviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeAttackOverview(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+WafClient::DescribeAttackOverviewOutcomeCallable WafClient::DescribeAttackOverviewCallable(const DescribeAttackOverviewRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeAttackOverviewOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeAttackOverview(request);
         }
     );
 
@@ -2534,6 +2491,49 @@ WafClient::GenerateDealsAndPayNewOutcomeCallable WafClient::GenerateDealsAndPayN
     return task->get_future();
 }
 
+WafClient::GetAttackHistogramOutcome WafClient::GetAttackHistogram(const GetAttackHistogramRequest &request)
+{
+    auto outcome = MakeRequest(request, "GetAttackHistogram");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        GetAttackHistogramResponse rsp = GetAttackHistogramResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return GetAttackHistogramOutcome(rsp);
+        else
+            return GetAttackHistogramOutcome(o.GetError());
+    }
+    else
+    {
+        return GetAttackHistogramOutcome(outcome.GetError());
+    }
+}
+
+void WafClient::GetAttackHistogramAsync(const GetAttackHistogramRequest& request, const GetAttackHistogramAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->GetAttackHistogram(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+WafClient::GetAttackHistogramOutcomeCallable WafClient::GetAttackHistogramCallable(const GetAttackHistogramRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<GetAttackHistogramOutcome()>>(
+        [this, request]()
+        {
+            return this->GetAttackHistogram(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 WafClient::GetAttackTotalCountOutcome WafClient::GetAttackTotalCount(const GetAttackTotalCountRequest &request)
 {
     auto outcome = MakeRequest(request, "GetAttackTotalCount");
@@ -3129,6 +3129,49 @@ WafClient::ModifyDomainIpv6StatusOutcomeCallable WafClient::ModifyDomainIpv6Stat
         [this, request]()
         {
             return this->ModifyDomainIpv6Status(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+WafClient::ModifyDomainPostActionOutcome WafClient::ModifyDomainPostAction(const ModifyDomainPostActionRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyDomainPostAction");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyDomainPostActionResponse rsp = ModifyDomainPostActionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyDomainPostActionOutcome(rsp);
+        else
+            return ModifyDomainPostActionOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyDomainPostActionOutcome(outcome.GetError());
+    }
+}
+
+void WafClient::ModifyDomainPostActionAsync(const ModifyDomainPostActionRequest& request, const ModifyDomainPostActionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyDomainPostAction(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+WafClient::ModifyDomainPostActionOutcomeCallable WafClient::ModifyDomainPostActionCallable(const ModifyDomainPostActionRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyDomainPostActionOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyDomainPostAction(request);
         }
     );
 
@@ -3946,6 +3989,49 @@ WafClient::RefreshAccessCheckResultOutcomeCallable WafClient::RefreshAccessCheck
         [this, request]()
         {
             return this->RefreshAccessCheckResult(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+WafClient::SearchAttackLogOutcome WafClient::SearchAttackLog(const SearchAttackLogRequest &request)
+{
+    auto outcome = MakeRequest(request, "SearchAttackLog");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        SearchAttackLogResponse rsp = SearchAttackLogResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return SearchAttackLogOutcome(rsp);
+        else
+            return SearchAttackLogOutcome(o.GetError());
+    }
+    else
+    {
+        return SearchAttackLogOutcome(outcome.GetError());
+    }
+}
+
+void WafClient::SearchAttackLogAsync(const SearchAttackLogRequest& request, const SearchAttackLogAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->SearchAttackLog(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+WafClient::SearchAttackLogOutcomeCallable WafClient::SearchAttackLogCallable(const SearchAttackLogRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<SearchAttackLogOutcome()>>(
+        [this, request]()
+        {
+            return this->SearchAttackLog(request);
         }
     );
 

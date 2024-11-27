@@ -427,6 +427,92 @@ OrganizationClient::CreateOrgServiceAssignOutcomeCallable OrganizationClient::Cr
     return task->get_future();
 }
 
+OrganizationClient::CreateOrganizationOutcome OrganizationClient::CreateOrganization(const CreateOrganizationRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateOrganization");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateOrganizationResponse rsp = CreateOrganizationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateOrganizationOutcome(rsp);
+        else
+            return CreateOrganizationOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateOrganizationOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::CreateOrganizationAsync(const CreateOrganizationRequest& request, const CreateOrganizationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateOrganization(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OrganizationClient::CreateOrganizationOutcomeCallable OrganizationClient::CreateOrganizationCallable(const CreateOrganizationRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateOrganizationOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateOrganization(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+OrganizationClient::CreateOrganizationIdentityOutcome OrganizationClient::CreateOrganizationIdentity(const CreateOrganizationIdentityRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateOrganizationIdentity");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateOrganizationIdentityResponse rsp = CreateOrganizationIdentityResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateOrganizationIdentityOutcome(rsp);
+        else
+            return CreateOrganizationIdentityOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateOrganizationIdentityOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::CreateOrganizationIdentityAsync(const CreateOrganizationIdentityRequest& request, const CreateOrganizationIdentityAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateOrganizationIdentity(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OrganizationClient::CreateOrganizationIdentityOutcomeCallable OrganizationClient::CreateOrganizationIdentityCallable(const CreateOrganizationIdentityRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateOrganizationIdentityOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateOrganizationIdentity(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 OrganizationClient::CreateOrganizationMemberOutcome OrganizationClient::CreateOrganizationMember(const CreateOrganizationMemberRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateOrganizationMember");
@@ -470,6 +556,49 @@ OrganizationClient::CreateOrganizationMemberOutcomeCallable OrganizationClient::
     return task->get_future();
 }
 
+OrganizationClient::CreateOrganizationMemberAuthIdentityOutcome OrganizationClient::CreateOrganizationMemberAuthIdentity(const CreateOrganizationMemberAuthIdentityRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateOrganizationMemberAuthIdentity");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateOrganizationMemberAuthIdentityResponse rsp = CreateOrganizationMemberAuthIdentityResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateOrganizationMemberAuthIdentityOutcome(rsp);
+        else
+            return CreateOrganizationMemberAuthIdentityOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateOrganizationMemberAuthIdentityOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::CreateOrganizationMemberAuthIdentityAsync(const CreateOrganizationMemberAuthIdentityRequest& request, const CreateOrganizationMemberAuthIdentityAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateOrganizationMemberAuthIdentity(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OrganizationClient::CreateOrganizationMemberAuthIdentityOutcomeCallable OrganizationClient::CreateOrganizationMemberAuthIdentityCallable(const CreateOrganizationMemberAuthIdentityRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateOrganizationMemberAuthIdentityOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateOrganizationMemberAuthIdentity(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 OrganizationClient::CreateOrganizationMemberPolicyOutcome OrganizationClient::CreateOrganizationMemberPolicy(const CreateOrganizationMemberPolicyRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateOrganizationMemberPolicy");
@@ -506,6 +635,49 @@ OrganizationClient::CreateOrganizationMemberPolicyOutcomeCallable OrganizationCl
         [this, request]()
         {
             return this->CreateOrganizationMemberPolicy(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+OrganizationClient::CreateOrganizationMembersPolicyOutcome OrganizationClient::CreateOrganizationMembersPolicy(const CreateOrganizationMembersPolicyRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateOrganizationMembersPolicy");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateOrganizationMembersPolicyResponse rsp = CreateOrganizationMembersPolicyResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateOrganizationMembersPolicyOutcome(rsp);
+        else
+            return CreateOrganizationMembersPolicyOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateOrganizationMembersPolicyOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::CreateOrganizationMembersPolicyAsync(const CreateOrganizationMembersPolicyRequest& request, const CreateOrganizationMembersPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateOrganizationMembersPolicy(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OrganizationClient::CreateOrganizationMembersPolicyOutcomeCallable OrganizationClient::CreateOrganizationMembersPolicyCallable(const CreateOrganizationMembersPolicyRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateOrganizationMembersPolicyOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateOrganizationMembersPolicy(request);
         }
     );
 
@@ -592,6 +764,49 @@ OrganizationClient::CreateRoleConfigurationOutcomeCallable OrganizationClient::C
         [this, request]()
         {
             return this->CreateRoleConfiguration(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+OrganizationClient::CreateSCIMCredentialOutcome OrganizationClient::CreateSCIMCredential(const CreateSCIMCredentialRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateSCIMCredential");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateSCIMCredentialResponse rsp = CreateSCIMCredentialResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateSCIMCredentialOutcome(rsp);
+        else
+            return CreateSCIMCredentialOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateSCIMCredentialOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::CreateSCIMCredentialAsync(const CreateSCIMCredentialRequest& request, const CreateSCIMCredentialAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateSCIMCredential(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OrganizationClient::CreateSCIMCredentialOutcomeCallable OrganizationClient::CreateSCIMCredentialCallable(const CreateSCIMCredentialRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateSCIMCredentialOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateSCIMCredential(request);
         }
     );
 
@@ -771,6 +986,135 @@ OrganizationClient::DeleteOrgServiceAssignOutcomeCallable OrganizationClient::De
     return task->get_future();
 }
 
+OrganizationClient::DeleteOrganizationOutcome OrganizationClient::DeleteOrganization(const DeleteOrganizationRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteOrganization");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteOrganizationResponse rsp = DeleteOrganizationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteOrganizationOutcome(rsp);
+        else
+            return DeleteOrganizationOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteOrganizationOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::DeleteOrganizationAsync(const DeleteOrganizationRequest& request, const DeleteOrganizationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteOrganization(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OrganizationClient::DeleteOrganizationOutcomeCallable OrganizationClient::DeleteOrganizationCallable(const DeleteOrganizationRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteOrganizationOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteOrganization(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+OrganizationClient::DeleteOrganizationIdentityOutcome OrganizationClient::DeleteOrganizationIdentity(const DeleteOrganizationIdentityRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteOrganizationIdentity");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteOrganizationIdentityResponse rsp = DeleteOrganizationIdentityResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteOrganizationIdentityOutcome(rsp);
+        else
+            return DeleteOrganizationIdentityOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteOrganizationIdentityOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::DeleteOrganizationIdentityAsync(const DeleteOrganizationIdentityRequest& request, const DeleteOrganizationIdentityAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteOrganizationIdentity(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OrganizationClient::DeleteOrganizationIdentityOutcomeCallable OrganizationClient::DeleteOrganizationIdentityCallable(const DeleteOrganizationIdentityRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteOrganizationIdentityOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteOrganizationIdentity(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+OrganizationClient::DeleteOrganizationMemberAuthIdentityOutcome OrganizationClient::DeleteOrganizationMemberAuthIdentity(const DeleteOrganizationMemberAuthIdentityRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteOrganizationMemberAuthIdentity");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteOrganizationMemberAuthIdentityResponse rsp = DeleteOrganizationMemberAuthIdentityResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteOrganizationMemberAuthIdentityOutcome(rsp);
+        else
+            return DeleteOrganizationMemberAuthIdentityOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteOrganizationMemberAuthIdentityOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::DeleteOrganizationMemberAuthIdentityAsync(const DeleteOrganizationMemberAuthIdentityRequest& request, const DeleteOrganizationMemberAuthIdentityAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteOrganizationMemberAuthIdentity(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OrganizationClient::DeleteOrganizationMemberAuthIdentityOutcomeCallable OrganizationClient::DeleteOrganizationMemberAuthIdentityCallable(const DeleteOrganizationMemberAuthIdentityRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteOrganizationMemberAuthIdentityOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteOrganizationMemberAuthIdentity(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 OrganizationClient::DeleteOrganizationMembersOutcome OrganizationClient::DeleteOrganizationMembers(const DeleteOrganizationMembersRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteOrganizationMembers");
@@ -807,6 +1151,49 @@ OrganizationClient::DeleteOrganizationMembersOutcomeCallable OrganizationClient:
         [this, request]()
         {
             return this->DeleteOrganizationMembers(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+OrganizationClient::DeleteOrganizationMembersPolicyOutcome OrganizationClient::DeleteOrganizationMembersPolicy(const DeleteOrganizationMembersPolicyRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteOrganizationMembersPolicy");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteOrganizationMembersPolicyResponse rsp = DeleteOrganizationMembersPolicyResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteOrganizationMembersPolicyOutcome(rsp);
+        else
+            return DeleteOrganizationMembersPolicyOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteOrganizationMembersPolicyOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::DeleteOrganizationMembersPolicyAsync(const DeleteOrganizationMembersPolicyRequest& request, const DeleteOrganizationMembersPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteOrganizationMembersPolicy(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OrganizationClient::DeleteOrganizationMembersPolicyOutcomeCallable OrganizationClient::DeleteOrganizationMembersPolicyCallable(const DeleteOrganizationMembersPolicyRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteOrganizationMembersPolicyOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteOrganizationMembersPolicy(request);
         }
     );
 
@@ -936,6 +1323,49 @@ OrganizationClient::DeleteRoleConfigurationOutcomeCallable OrganizationClient::D
         [this, request]()
         {
             return this->DeleteRoleConfiguration(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+OrganizationClient::DeleteSCIMCredentialOutcome OrganizationClient::DeleteSCIMCredential(const DeleteSCIMCredentialRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteSCIMCredential");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteSCIMCredentialResponse rsp = DeleteSCIMCredentialResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteSCIMCredentialOutcome(rsp);
+        else
+            return DeleteSCIMCredentialOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteSCIMCredentialOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::DeleteSCIMCredentialAsync(const DeleteSCIMCredentialRequest& request, const DeleteSCIMCredentialAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteSCIMCredential(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OrganizationClient::DeleteSCIMCredentialOutcomeCallable OrganizationClient::DeleteSCIMCredentialCallable(const DeleteSCIMCredentialRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteSCIMCredentialOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteSCIMCredential(request);
         }
     );
 
@@ -1538,6 +1968,49 @@ OrganizationClient::GetRoleConfigurationOutcomeCallable OrganizationClient::GetR
         [this, request]()
         {
             return this->GetRoleConfiguration(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+OrganizationClient::GetSCIMSynchronizationStatusOutcome OrganizationClient::GetSCIMSynchronizationStatus(const GetSCIMSynchronizationStatusRequest &request)
+{
+    auto outcome = MakeRequest(request, "GetSCIMSynchronizationStatus");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        GetSCIMSynchronizationStatusResponse rsp = GetSCIMSynchronizationStatusResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return GetSCIMSynchronizationStatusOutcome(rsp);
+        else
+            return GetSCIMSynchronizationStatusOutcome(o.GetError());
+    }
+    else
+    {
+        return GetSCIMSynchronizationStatusOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::GetSCIMSynchronizationStatusAsync(const GetSCIMSynchronizationStatusRequest& request, const GetSCIMSynchronizationStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->GetSCIMSynchronizationStatus(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OrganizationClient::GetSCIMSynchronizationStatusOutcomeCallable OrganizationClient::GetSCIMSynchronizationStatusCallable(const GetSCIMSynchronizationStatusRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<GetSCIMSynchronizationStatusOutcome()>>(
+        [this, request]()
+        {
+            return this->GetSCIMSynchronizationStatus(request);
         }
     );
 
@@ -2276,6 +2749,49 @@ OrganizationClient::ListRoleConfigurationsOutcomeCallable OrganizationClient::Li
     return task->get_future();
 }
 
+OrganizationClient::ListSCIMCredentialsOutcome OrganizationClient::ListSCIMCredentials(const ListSCIMCredentialsRequest &request)
+{
+    auto outcome = MakeRequest(request, "ListSCIMCredentials");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ListSCIMCredentialsResponse rsp = ListSCIMCredentialsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ListSCIMCredentialsOutcome(rsp);
+        else
+            return ListSCIMCredentialsOutcome(o.GetError());
+    }
+    else
+    {
+        return ListSCIMCredentialsOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::ListSCIMCredentialsAsync(const ListSCIMCredentialsRequest& request, const ListSCIMCredentialsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ListSCIMCredentials(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OrganizationClient::ListSCIMCredentialsOutcomeCallable OrganizationClient::ListSCIMCredentialsCallable(const ListSCIMCredentialsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ListSCIMCredentialsOutcome()>>(
+        [this, request]()
+        {
+            return this->ListSCIMCredentials(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 OrganizationClient::ListTasksOutcome OrganizationClient::ListTasks(const ListTasksRequest &request)
 {
     auto outcome = MakeRequest(request, "ListTasks");
@@ -2534,6 +3050,49 @@ OrganizationClient::ProvisionRoleConfigurationOutcomeCallable OrganizationClient
     return task->get_future();
 }
 
+OrganizationClient::QuitOrganizationOutcome OrganizationClient::QuitOrganization(const QuitOrganizationRequest &request)
+{
+    auto outcome = MakeRequest(request, "QuitOrganization");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        QuitOrganizationResponse rsp = QuitOrganizationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return QuitOrganizationOutcome(rsp);
+        else
+            return QuitOrganizationOutcome(o.GetError());
+    }
+    else
+    {
+        return QuitOrganizationOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::QuitOrganizationAsync(const QuitOrganizationRequest& request, const QuitOrganizationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->QuitOrganization(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OrganizationClient::QuitOrganizationOutcomeCallable OrganizationClient::QuitOrganizationCallable(const QuitOrganizationRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<QuitOrganizationOutcome()>>(
+        [this, request]()
+        {
+            return this->QuitOrganization(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 OrganizationClient::RemoveExternalSAMLIdPCertificateOutcome OrganizationClient::RemoveExternalSAMLIdPCertificate(const RemoveExternalSAMLIdPCertificateRequest &request)
 {
     auto outcome = MakeRequest(request, "RemoveExternalSAMLIdPCertificate");
@@ -2706,6 +3265,49 @@ OrganizationClient::SetExternalSAMLIdentityProviderOutcomeCallable OrganizationC
     return task->get_future();
 }
 
+OrganizationClient::UpdateCustomPolicyForRoleConfigurationOutcome OrganizationClient::UpdateCustomPolicyForRoleConfiguration(const UpdateCustomPolicyForRoleConfigurationRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdateCustomPolicyForRoleConfiguration");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdateCustomPolicyForRoleConfigurationResponse rsp = UpdateCustomPolicyForRoleConfigurationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdateCustomPolicyForRoleConfigurationOutcome(rsp);
+        else
+            return UpdateCustomPolicyForRoleConfigurationOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdateCustomPolicyForRoleConfigurationOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::UpdateCustomPolicyForRoleConfigurationAsync(const UpdateCustomPolicyForRoleConfigurationRequest& request, const UpdateCustomPolicyForRoleConfigurationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->UpdateCustomPolicyForRoleConfiguration(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OrganizationClient::UpdateCustomPolicyForRoleConfigurationOutcomeCallable OrganizationClient::UpdateCustomPolicyForRoleConfigurationCallable(const UpdateCustomPolicyForRoleConfigurationRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<UpdateCustomPolicyForRoleConfigurationOutcome()>>(
+        [this, request]()
+        {
+            return this->UpdateCustomPolicyForRoleConfiguration(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 OrganizationClient::UpdateGroupOutcome OrganizationClient::UpdateGroup(const UpdateGroupRequest &request)
 {
     auto outcome = MakeRequest(request, "UpdateGroup");
@@ -2742,6 +3344,92 @@ OrganizationClient::UpdateGroupOutcomeCallable OrganizationClient::UpdateGroupCa
         [this, request]()
         {
             return this->UpdateGroup(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+OrganizationClient::UpdateOrganizationIdentityOutcome OrganizationClient::UpdateOrganizationIdentity(const UpdateOrganizationIdentityRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdateOrganizationIdentity");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdateOrganizationIdentityResponse rsp = UpdateOrganizationIdentityResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdateOrganizationIdentityOutcome(rsp);
+        else
+            return UpdateOrganizationIdentityOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdateOrganizationIdentityOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::UpdateOrganizationIdentityAsync(const UpdateOrganizationIdentityRequest& request, const UpdateOrganizationIdentityAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->UpdateOrganizationIdentity(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OrganizationClient::UpdateOrganizationIdentityOutcomeCallable OrganizationClient::UpdateOrganizationIdentityCallable(const UpdateOrganizationIdentityRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<UpdateOrganizationIdentityOutcome()>>(
+        [this, request]()
+        {
+            return this->UpdateOrganizationIdentity(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+OrganizationClient::UpdateOrganizationMemberOutcome OrganizationClient::UpdateOrganizationMember(const UpdateOrganizationMemberRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdateOrganizationMember");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdateOrganizationMemberResponse rsp = UpdateOrganizationMemberResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdateOrganizationMemberOutcome(rsp);
+        else
+            return UpdateOrganizationMemberOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdateOrganizationMemberOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::UpdateOrganizationMemberAsync(const UpdateOrganizationMemberRequest& request, const UpdateOrganizationMemberAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->UpdateOrganizationMember(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OrganizationClient::UpdateOrganizationMemberOutcomeCallable OrganizationClient::UpdateOrganizationMemberCallable(const UpdateOrganizationMemberRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<UpdateOrganizationMemberOutcome()>>(
+        [this, request]()
+        {
+            return this->UpdateOrganizationMember(request);
         }
     );
 
@@ -2828,6 +3516,92 @@ OrganizationClient::UpdateRoleConfigurationOutcomeCallable OrganizationClient::U
         [this, request]()
         {
             return this->UpdateRoleConfiguration(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+OrganizationClient::UpdateSCIMCredentialStatusOutcome OrganizationClient::UpdateSCIMCredentialStatus(const UpdateSCIMCredentialStatusRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdateSCIMCredentialStatus");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdateSCIMCredentialStatusResponse rsp = UpdateSCIMCredentialStatusResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdateSCIMCredentialStatusOutcome(rsp);
+        else
+            return UpdateSCIMCredentialStatusOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdateSCIMCredentialStatusOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::UpdateSCIMCredentialStatusAsync(const UpdateSCIMCredentialStatusRequest& request, const UpdateSCIMCredentialStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->UpdateSCIMCredentialStatus(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OrganizationClient::UpdateSCIMCredentialStatusOutcomeCallable OrganizationClient::UpdateSCIMCredentialStatusCallable(const UpdateSCIMCredentialStatusRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<UpdateSCIMCredentialStatusOutcome()>>(
+        [this, request]()
+        {
+            return this->UpdateSCIMCredentialStatus(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+OrganizationClient::UpdateSCIMSynchronizationStatusOutcome OrganizationClient::UpdateSCIMSynchronizationStatus(const UpdateSCIMSynchronizationStatusRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdateSCIMSynchronizationStatus");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdateSCIMSynchronizationStatusResponse rsp = UpdateSCIMSynchronizationStatusResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdateSCIMSynchronizationStatusOutcome(rsp);
+        else
+            return UpdateSCIMSynchronizationStatusOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdateSCIMSynchronizationStatusOutcome(outcome.GetError());
+    }
+}
+
+void OrganizationClient::UpdateSCIMSynchronizationStatusAsync(const UpdateSCIMSynchronizationStatusRequest& request, const UpdateSCIMSynchronizationStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->UpdateSCIMSynchronizationStatus(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OrganizationClient::UpdateSCIMSynchronizationStatusOutcomeCallable OrganizationClient::UpdateSCIMSynchronizationStatusCallable(const UpdateSCIMSynchronizationStatusRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<UpdateSCIMSynchronizationStatusOutcome()>>(
+        [this, request]()
+        {
+            return this->UpdateSCIMSynchronizationStatus(request);
         }
     );
 

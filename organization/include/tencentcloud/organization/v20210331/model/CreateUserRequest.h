@@ -210,6 +210,27 @@ namespace TencentCloud
                      */
                     bool UserStatusHasBeenSet() const;
 
+                    /**
+                     * 获取User type. Manual: manually created, Synchronized: imported from external sources.
+                     * @return UserType User type. Manual: manually created, Synchronized: imported from external sources.
+                     * 
+                     */
+                    std::string GetUserType() const;
+
+                    /**
+                     * 设置User type. Manual: manually created, Synchronized: imported from external sources.
+                     * @param _userType User type. Manual: manually created, Synchronized: imported from external sources.
+                     * 
+                     */
+                    void SetUserType(const std::string& _userType);
+
+                    /**
+                     * 判断参数 UserType 是否已赋值
+                     * @return UserType 是否已赋值
+                     * 
+                     */
+                    bool UserTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -259,6 +280,12 @@ namespace TencentCloud
                      */
                     std::string m_userStatus;
                     bool m_userStatusHasBeenSet;
+
+                    /**
+                     * User type. Manual: manually created, Synchronized: imported from external sources.
+                     */
+                    std::string m_userType;
+                    bool m_userTypeHasBeenSet;
 
                 };
             }

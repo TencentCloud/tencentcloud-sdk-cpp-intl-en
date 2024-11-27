@@ -105,6 +105,27 @@ namespace TencentCloud
                      */
                     bool DescriptionHasBeenSet() const;
 
+                    /**
+                     * 获取User group type. Manual: manually created, Synchronized: imported from external sources.
+                     * @return GroupType User group type. Manual: manually created, Synchronized: imported from external sources.
+                     * 
+                     */
+                    std::string GetGroupType() const;
+
+                    /**
+                     * 设置User group type. Manual: manually created, Synchronized: imported from external sources.
+                     * @param _groupType User group type. Manual: manually created, Synchronized: imported from external sources.
+                     * 
+                     */
+                    void SetGroupType(const std::string& _groupType);
+
+                    /**
+                     * 判断参数 GroupType 是否已赋值
+                     * @return GroupType 是否已赋值
+                     * 
+                     */
+                    bool GroupTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -124,6 +145,12 @@ namespace TencentCloud
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
+
+                    /**
+                     * User group type. Manual: manually created, Synchronized: imported from external sources.
+                     */
+                    std::string m_groupType;
+                    bool m_groupTypeHasBeenSet;
 
                 };
             }

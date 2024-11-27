@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool RoleConfigurationIdHasBeenSet() const;
 
                     /**
-                     * 获取Description of new access configuration, which contains up to 1024 characters.
-                     * @return NewDescription Description of new access configuration, which contains up to 1024 characters.
+                     * 获取New permission configuration description, which contains up to 1,024 characters.
+                     * @return NewDescription New permission configuration description, which contains up to 1,024 characters.
                      * 
                      */
                     std::string GetNewDescription() const;
 
                     /**
-                     * 设置Description of new access configuration, which contains up to 1024 characters.
-                     * @param _newDescription Description of new access configuration, which contains up to 1024 characters.
+                     * 设置New permission configuration description, which contains up to 1,024 characters.
+                     * @param _newDescription New permission configuration description, which contains up to 1,024 characters.
                      * 
                      */
                     void SetNewDescription(const std::string& _newDescription);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool NewDescriptionHasBeenSet() const;
 
                     /**
-                     * 获取New session duration. It indicates the maximum session duration when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. Unit: seconds. Value range: 900-43,200 (15 minutes to 12 hours).
-                     * @return NewSessionDuration New session duration. It indicates the maximum session duration when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. Unit: seconds. Value range: 900-43,200 (15 minutes to 12 hours).
+                     * 获取New session duration, in seconds. It is the maximum time a CIC user can maintain a session while using permission configurations to access a target account in TCO. Value range: 900 to 43200 (15 minutes to 12 hours).
+                     * @return NewSessionDuration New session duration, in seconds. It is the maximum time a CIC user can maintain a session while using permission configurations to access a target account in TCO. Value range: 900 to 43200 (15 minutes to 12 hours).
                      * 
                      */
                     int64_t GetNewSessionDuration() const;
 
                     /**
-                     * 设置New session duration. It indicates the maximum session duration when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. Unit: seconds. Value range: 900-43,200 (15 minutes to 12 hours).
-                     * @param _newSessionDuration New session duration. It indicates the maximum session duration when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. Unit: seconds. Value range: 900-43,200 (15 minutes to 12 hours).
+                     * 设置New session duration, in seconds. It is the maximum time a CIC user can maintain a session while using permission configurations to access a target account in TCO. Value range: 900 to 43200 (15 minutes to 12 hours).
+                     * @param _newSessionDuration New session duration, in seconds. It is the maximum time a CIC user can maintain a session while using permission configurations to access a target account in TCO. Value range: 900 to 43200 (15 minutes to 12 hours).
                      * 
                      */
                     void SetNewSessionDuration(const int64_t& _newSessionDuration);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool NewSessionDurationHasBeenSet() const;
 
                     /**
-                     * 获取New initial access page. It indicates the initial access page URL when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. This page must be the Tencent Cloud console page.
-                     * @return NewRelayState New initial access page. It indicates the initial access page URL when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. This page must be the Tencent Cloud console page.
+                     * 获取New initial access page. It is the initial page address when a CIC user uses permission configurations to access a target account in TCO. This page must be a Tencent Cloud console page.
+                     * @return NewRelayState New initial access page. It is the initial page address when a CIC user uses permission configurations to access a target account in TCO. This page must be a Tencent Cloud console page.
                      * 
                      */
                     std::string GetNewRelayState() const;
 
                     /**
-                     * 设置New initial access page. It indicates the initial access page URL when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. This page must be the Tencent Cloud console page.
-                     * @param _newRelayState New initial access page. It indicates the initial access page URL when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. This page must be the Tencent Cloud console page.
+                     * 设置New initial access page. It is the initial page address when a CIC user uses permission configurations to access a target account in TCO. This page must be a Tencent Cloud console page.
+                     * @param _newRelayState New initial access page. It is the initial page address when a CIC user uses permission configurations to access a target account in TCO. This page must be a Tencent Cloud console page.
                      * 
                      */
                     void SetNewRelayState(const std::string& _newRelayState);
@@ -162,19 +162,19 @@ namespace TencentCloud
                     bool m_roleConfigurationIdHasBeenSet;
 
                     /**
-                     * Description of new access configuration, which contains up to 1024 characters.
+                     * New permission configuration description, which contains up to 1,024 characters.
                      */
                     std::string m_newDescription;
                     bool m_newDescriptionHasBeenSet;
 
                     /**
-                     * New session duration. It indicates the maximum session duration when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. Unit: seconds. Value range: 900-43,200 (15 minutes to 12 hours).
+                     * New session duration, in seconds. It is the maximum time a CIC user can maintain a session while using permission configurations to access a target account in TCO. Value range: 900 to 43200 (15 minutes to 12 hours).
                      */
                     int64_t m_newSessionDuration;
                     bool m_newSessionDurationHasBeenSet;
 
                     /**
-                     * New initial access page. It indicates the initial access page URL when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. This page must be the Tencent Cloud console page.
+                     * New initial access page. It is the initial page address when a CIC user uses permission configurations to access a target account in TCO. This page must be a Tencent Cloud console page.
                      */
                     std::string m_newRelayState;
                     bool m_newRelayStateHasBeenSet;

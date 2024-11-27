@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取Rule ID list, which supports deletion in batches.
-                     * @return RuleIds Rule ID list, which supports deletion in batches.
+                     * 获取Rule ID list. Batch deletion is supported. This parameter does not need to be specified when DeleteAll is true.
+                     * @return RuleIds Rule ID list. Batch deletion is supported. This parameter does not need to be specified when DeleteAll is true.
                      * 
                      */
                     std::vector<uint64_t> GetRuleIds() const;
 
                     /**
-                     * 设置Rule ID list, which supports deletion in batches.
-                     * @param _ruleIds Rule ID list, which supports deletion in batches.
+                     * 设置Rule ID list. Batch deletion is supported. This parameter does not need to be specified when DeleteAll is true.
+                     * @param _ruleIds Rule ID list. Batch deletion is supported. This parameter does not need to be specified when DeleteAll is true.
                      * 
                      */
                     void SetRuleIds(const std::vector<uint64_t>& _ruleIds);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool RuleIdsHasBeenSet() const;
 
                     /**
-                     * 获取Whether to delete all IP blocklists/allowlists under the corresponding domain. True indicates deleting all; false indicates only deleting a specified IP list.
-                     * @return DeleteAll Whether to delete all IP blocklists/allowlists under the corresponding domain. True indicates deleting all; false indicates only deleting a specified IP list.
+                     * 获取Whether to delete all IP blocklists/allowlists under the corresponding domain name. true: delete all lists; false: delete only the specified lists. Batch protection is not supported.
+                     * @return DeleteAll Whether to delete all IP blocklists/allowlists under the corresponding domain name. true: delete all lists; false: delete only the specified lists. Batch protection is not supported.
                      * 
                      */
                     bool GetDeleteAll() const;
 
                     /**
-                     * 设置Whether to delete all IP blocklists/allowlists under the corresponding domain. True indicates deleting all; false indicates only deleting a specified IP list.
-                     * @param _deleteAll Whether to delete all IP blocklists/allowlists under the corresponding domain. True indicates deleting all; false indicates only deleting a specified IP list.
+                     * 设置Whether to delete all IP blocklists/allowlists under the corresponding domain name. true: delete all lists; false: delete only the specified lists. Batch protection is not supported.
+                     * @param _deleteAll Whether to delete all IP blocklists/allowlists under the corresponding domain name. true: delete all lists; false: delete only the specified lists. Batch protection is not supported.
                      * 
                      */
                     void SetDeleteAll(const bool& _deleteAll);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool SourceTypeHasBeenSet() const;
 
                     /**
-                     * 获取IP allowlist/blocklist type. 40: IP allowlist; 42: IP blocklist.
-                     * @return ActionType IP allowlist/blocklist type. 40: IP allowlist; 42: IP blocklist.
+                     * 获取IP blocklist/allowlist type. 40: IP allowlist; 42: IP blocklist. This parameter should be passed in when DeleteAll is true.
+                     * @return ActionType IP blocklist/allowlist type. 40: IP allowlist; 42: IP blocklist. This parameter should be passed in when DeleteAll is true.
                      * 
                      */
                     uint64_t GetActionType() const;
 
                     /**
-                     * 设置IP allowlist/blocklist type. 40: IP allowlist; 42: IP blocklist.
-                     * @param _actionType IP allowlist/blocklist type. 40: IP allowlist; 42: IP blocklist.
+                     * 设置IP blocklist/allowlist type. 40: IP allowlist; 42: IP blocklist. This parameter should be passed in when DeleteAll is true.
+                     * @param _actionType IP blocklist/allowlist type. 40: IP allowlist; 42: IP blocklist. This parameter should be passed in when DeleteAll is true.
                      * 
                      */
                     void SetActionType(const uint64_t& _actionType);
@@ -156,13 +156,13 @@ namespace TencentCloud
                     bool m_domainHasBeenSet;
 
                     /**
-                     * Rule ID list, which supports deletion in batches.
+                     * Rule ID list. Batch deletion is supported. This parameter does not need to be specified when DeleteAll is true.
                      */
                     std::vector<uint64_t> m_ruleIds;
                     bool m_ruleIdsHasBeenSet;
 
                     /**
-                     * Whether to delete all IP blocklists/allowlists under the corresponding domain. True indicates deleting all; false indicates only deleting a specified IP list.
+                     * Whether to delete all IP blocklists/allowlists under the corresponding domain name. true: delete all lists; false: delete only the specified lists. Batch protection is not supported.
                      */
                     bool m_deleteAll;
                     bool m_deleteAllHasBeenSet;
@@ -174,7 +174,7 @@ namespace TencentCloud
                     bool m_sourceTypeHasBeenSet;
 
                     /**
-                     * IP allowlist/blocklist type. 40: IP allowlist; 42: IP blocklist.
+                     * IP blocklist/allowlist type. 40: IP allowlist; 42: IP blocklist. This parameter should be passed in when DeleteAll is true.
                      */
                     uint64_t m_actionType;
                     bool m_actionTypeHasBeenSet;

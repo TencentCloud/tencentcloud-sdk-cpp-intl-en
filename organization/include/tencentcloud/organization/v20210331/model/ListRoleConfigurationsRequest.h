@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool MaxResultsHasBeenSet() const;
 
                     /**
-                     * 获取Filter criterion, case-insensitive. Currently, only RoleConfigurationName is supported, and only eq (Equals) and sw (Starts With) are supported. For example, Filter = "RoleConfigurationName, sw test" indicates querying all access configurations with names starting with test; Filter = "RoleConfigurationName, eq TestRoleConfiguration" indicates querying the access configuration with the name TestRoleConfiguration.
-                     * @return Filter Filter criterion, case-insensitive. Currently, only RoleConfigurationName is supported, and only eq (Equals) and sw (Starts With) are supported. For example, Filter = "RoleConfigurationName, sw test" indicates querying all access configurations with names starting with test; Filter = "RoleConfigurationName, eq TestRoleConfiguration" indicates querying the access configuration with the name TestRoleConfiguration.
+                     * 获取Filter criteria, which are case insensitive. Currently, only RoleConfigurationName is supported and only eq (Equals) and sw (Start With) are supported. Example: Filter = "RoleConfigurationName, only sw test" means querying all permission configurations starting with test. Filter = "RoleConfigurationName, only eq TestRoleConfiguration" means querying the permission configuration named TestRoleConfiguration.
+                     * @return Filter Filter criteria, which are case insensitive. Currently, only RoleConfigurationName is supported and only eq (Equals) and sw (Start With) are supported. Example: Filter = "RoleConfigurationName, only sw test" means querying all permission configurations starting with test. Filter = "RoleConfigurationName, only eq TestRoleConfiguration" means querying the permission configuration named TestRoleConfiguration.
                      * 
                      */
                     std::string GetFilter() const;
 
                     /**
-                     * 设置Filter criterion, case-insensitive. Currently, only RoleConfigurationName is supported, and only eq (Equals) and sw (Starts With) are supported. For example, Filter = "RoleConfigurationName, sw test" indicates querying all access configurations with names starting with test; Filter = "RoleConfigurationName, eq TestRoleConfiguration" indicates querying the access configuration with the name TestRoleConfiguration.
-                     * @param _filter Filter criterion, case-insensitive. Currently, only RoleConfigurationName is supported, and only eq (Equals) and sw (Starts With) are supported. For example, Filter = "RoleConfigurationName, sw test" indicates querying all access configurations with names starting with test; Filter = "RoleConfigurationName, eq TestRoleConfiguration" indicates querying the access configuration with the name TestRoleConfiguration.
+                     * 设置Filter criteria, which are case insensitive. Currently, only RoleConfigurationName is supported and only eq (Equals) and sw (Start With) are supported. Example: Filter = "RoleConfigurationName, only sw test" means querying all permission configurations starting with test. Filter = "RoleConfigurationName, only eq TestRoleConfiguration" means querying the permission configuration named TestRoleConfiguration.
+                     * @param _filter Filter criteria, which are case insensitive. Currently, only RoleConfigurationName is supported and only eq (Equals) and sw (Start With) are supported. Example: Filter = "RoleConfigurationName, only sw test" means querying all permission configurations starting with test. Filter = "RoleConfigurationName, only eq TestRoleConfiguration" means querying the permission configuration named TestRoleConfiguration.
                      * 
                      */
                     void SetFilter(const std::string& _filter);
@@ -189,7 +189,7 @@ namespace TencentCloud
                     bool m_maxResultsHasBeenSet;
 
                     /**
-                     * Filter criterion, case-insensitive. Currently, only RoleConfigurationName is supported, and only eq (Equals) and sw (Starts With) are supported. For example, Filter = "RoleConfigurationName, sw test" indicates querying all access configurations with names starting with test; Filter = "RoleConfigurationName, eq TestRoleConfiguration" indicates querying the access configuration with the name TestRoleConfiguration.
+                     * Filter criteria, which are case insensitive. Currently, only RoleConfigurationName is supported and only eq (Equals) and sw (Start With) are supported. Example: Filter = "RoleConfigurationName, only sw test" means querying all permission configurations starting with test. Filter = "RoleConfigurationName, only eq TestRoleConfiguration" means querying the permission configuration named TestRoleConfiguration.
                      */
                     std::string m_filter;
                     bool m_filterHasBeenSet;

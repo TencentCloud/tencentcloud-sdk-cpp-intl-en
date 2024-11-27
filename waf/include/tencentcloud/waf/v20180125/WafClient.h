@@ -59,12 +59,10 @@
 #include <tencentcloud/waf/v20180125/model/DeleteSpartaProtectionResponse.h>
 #include <tencentcloud/waf/v20180125/model/DescribeAntiFakeRulesRequest.h>
 #include <tencentcloud/waf/v20180125/model/DescribeAntiFakeRulesResponse.h>
-#include <tencentcloud/waf/v20180125/model/DescribeAntiFakeUrlRequest.h>
-#include <tencentcloud/waf/v20180125/model/DescribeAntiFakeUrlResponse.h>
-#include <tencentcloud/waf/v20180125/model/DescribeAntiInfoLeakRulesRequest.h>
-#include <tencentcloud/waf/v20180125/model/DescribeAntiInfoLeakRulesResponse.h>
 #include <tencentcloud/waf/v20180125/model/DescribeAntiInfoLeakageRulesRequest.h>
 #include <tencentcloud/waf/v20180125/model/DescribeAntiInfoLeakageRulesResponse.h>
+#include <tencentcloud/waf/v20180125/model/DescribeAttackOverviewRequest.h>
+#include <tencentcloud/waf/v20180125/model/DescribeAttackOverviewResponse.h>
 #include <tencentcloud/waf/v20180125/model/DescribeAttackTypeRequest.h>
 #include <tencentcloud/waf/v20180125/model/DescribeAttackTypeResponse.h>
 #include <tencentcloud/waf/v20180125/model/DescribeBatchIpAccessControlRequest.h>
@@ -139,6 +137,8 @@
 #include <tencentcloud/waf/v20180125/model/FreshAntiFakeUrlResponse.h>
 #include <tencentcloud/waf/v20180125/model/GenerateDealsAndPayNewRequest.h>
 #include <tencentcloud/waf/v20180125/model/GenerateDealsAndPayNewResponse.h>
+#include <tencentcloud/waf/v20180125/model/GetAttackHistogramRequest.h>
+#include <tencentcloud/waf/v20180125/model/GetAttackHistogramResponse.h>
 #include <tencentcloud/waf/v20180125/model/GetAttackTotalCountRequest.h>
 #include <tencentcloud/waf/v20180125/model/GetAttackTotalCountResponse.h>
 #include <tencentcloud/waf/v20180125/model/GetInstanceQpsLimitRequest.h>
@@ -167,6 +167,8 @@
 #include <tencentcloud/waf/v20180125/model/ModifyCustomWhiteRuleStatusResponse.h>
 #include <tencentcloud/waf/v20180125/model/ModifyDomainIpv6StatusRequest.h>
 #include <tencentcloud/waf/v20180125/model/ModifyDomainIpv6StatusResponse.h>
+#include <tencentcloud/waf/v20180125/model/ModifyDomainPostActionRequest.h>
+#include <tencentcloud/waf/v20180125/model/ModifyDomainPostActionResponse.h>
 #include <tencentcloud/waf/v20180125/model/ModifyDomainsCLSStatusRequest.h>
 #include <tencentcloud/waf/v20180125/model/ModifyDomainsCLSStatusResponse.h>
 #include <tencentcloud/waf/v20180125/model/ModifyHostRequest.h>
@@ -205,6 +207,8 @@
 #include <tencentcloud/waf/v20180125/model/ModifyWebshellStatusResponse.h>
 #include <tencentcloud/waf/v20180125/model/RefreshAccessCheckResultRequest.h>
 #include <tencentcloud/waf/v20180125/model/RefreshAccessCheckResultResponse.h>
+#include <tencentcloud/waf/v20180125/model/SearchAttackLogRequest.h>
+#include <tencentcloud/waf/v20180125/model/SearchAttackLogResponse.h>
 #include <tencentcloud/waf/v20180125/model/SwitchElasticModeRequest.h>
 #include <tencentcloud/waf/v20180125/model/SwitchElasticModeResponse.h>
 #include <tencentcloud/waf/v20180125/model/UpsertCCRuleRequest.h>
@@ -279,15 +283,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeAntiFakeRulesResponse> DescribeAntiFakeRulesOutcome;
                 typedef std::future<DescribeAntiFakeRulesOutcome> DescribeAntiFakeRulesOutcomeCallable;
                 typedef std::function<void(const WafClient*, const Model::DescribeAntiFakeRulesRequest&, DescribeAntiFakeRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAntiFakeRulesAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeAntiFakeUrlResponse> DescribeAntiFakeUrlOutcome;
-                typedef std::future<DescribeAntiFakeUrlOutcome> DescribeAntiFakeUrlOutcomeCallable;
-                typedef std::function<void(const WafClient*, const Model::DescribeAntiFakeUrlRequest&, DescribeAntiFakeUrlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAntiFakeUrlAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeAntiInfoLeakRulesResponse> DescribeAntiInfoLeakRulesOutcome;
-                typedef std::future<DescribeAntiInfoLeakRulesOutcome> DescribeAntiInfoLeakRulesOutcomeCallable;
-                typedef std::function<void(const WafClient*, const Model::DescribeAntiInfoLeakRulesRequest&, DescribeAntiInfoLeakRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAntiInfoLeakRulesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAntiInfoLeakageRulesResponse> DescribeAntiInfoLeakageRulesOutcome;
                 typedef std::future<DescribeAntiInfoLeakageRulesOutcome> DescribeAntiInfoLeakageRulesOutcomeCallable;
                 typedef std::function<void(const WafClient*, const Model::DescribeAntiInfoLeakageRulesRequest&, DescribeAntiInfoLeakageRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAntiInfoLeakageRulesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAttackOverviewResponse> DescribeAttackOverviewOutcome;
+                typedef std::future<DescribeAttackOverviewOutcome> DescribeAttackOverviewOutcomeCallable;
+                typedef std::function<void(const WafClient*, const Model::DescribeAttackOverviewRequest&, DescribeAttackOverviewOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAttackOverviewAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAttackTypeResponse> DescribeAttackTypeOutcome;
                 typedef std::future<DescribeAttackTypeOutcome> DescribeAttackTypeOutcomeCallable;
                 typedef std::function<void(const WafClient*, const Model::DescribeAttackTypeRequest&, DescribeAttackTypeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAttackTypeAsyncHandler;
@@ -399,6 +400,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::GenerateDealsAndPayNewResponse> GenerateDealsAndPayNewOutcome;
                 typedef std::future<GenerateDealsAndPayNewOutcome> GenerateDealsAndPayNewOutcomeCallable;
                 typedef std::function<void(const WafClient*, const Model::GenerateDealsAndPayNewRequest&, GenerateDealsAndPayNewOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GenerateDealsAndPayNewAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetAttackHistogramResponse> GetAttackHistogramOutcome;
+                typedef std::future<GetAttackHistogramOutcome> GetAttackHistogramOutcomeCallable;
+                typedef std::function<void(const WafClient*, const Model::GetAttackHistogramRequest&, GetAttackHistogramOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetAttackHistogramAsyncHandler;
                 typedef Outcome<Core::Error, Model::GetAttackTotalCountResponse> GetAttackTotalCountOutcome;
                 typedef std::future<GetAttackTotalCountOutcome> GetAttackTotalCountOutcomeCallable;
                 typedef std::function<void(const WafClient*, const Model::GetAttackTotalCountRequest&, GetAttackTotalCountOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetAttackTotalCountAsyncHandler;
@@ -441,6 +445,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyDomainIpv6StatusResponse> ModifyDomainIpv6StatusOutcome;
                 typedef std::future<ModifyDomainIpv6StatusOutcome> ModifyDomainIpv6StatusOutcomeCallable;
                 typedef std::function<void(const WafClient*, const Model::ModifyDomainIpv6StatusRequest&, ModifyDomainIpv6StatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDomainIpv6StatusAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyDomainPostActionResponse> ModifyDomainPostActionOutcome;
+                typedef std::future<ModifyDomainPostActionOutcome> ModifyDomainPostActionOutcomeCallable;
+                typedef std::function<void(const WafClient*, const Model::ModifyDomainPostActionRequest&, ModifyDomainPostActionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDomainPostActionAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyDomainsCLSStatusResponse> ModifyDomainsCLSStatusOutcome;
                 typedef std::future<ModifyDomainsCLSStatusOutcome> ModifyDomainsCLSStatusOutcomeCallable;
                 typedef std::function<void(const WafClient*, const Model::ModifyDomainsCLSStatusRequest&, ModifyDomainsCLSStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDomainsCLSStatusAsyncHandler;
@@ -498,6 +505,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::RefreshAccessCheckResultResponse> RefreshAccessCheckResultOutcome;
                 typedef std::future<RefreshAccessCheckResultOutcome> RefreshAccessCheckResultOutcomeCallable;
                 typedef std::function<void(const WafClient*, const Model::RefreshAccessCheckResultRequest&, RefreshAccessCheckResultOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RefreshAccessCheckResultAsyncHandler;
+                typedef Outcome<Core::Error, Model::SearchAttackLogResponse> SearchAttackLogOutcome;
+                typedef std::future<SearchAttackLogOutcome> SearchAttackLogOutcomeCallable;
+                typedef std::function<void(const WafClient*, const Model::SearchAttackLogRequest&, SearchAttackLogOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SearchAttackLogAsyncHandler;
                 typedef Outcome<Core::Error, Model::SwitchElasticModeResponse> SwitchElasticModeOutcome;
                 typedef std::future<SwitchElasticModeOutcome> SwitchElasticModeOutcomeCallable;
                 typedef std::function<void(const WafClient*, const Model::SwitchElasticModeRequest&, SwitchElasticModeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SwitchElasticModeAsyncHandler;
@@ -673,32 +683,6 @@ namespace TencentCloud
                 DescribeAntiFakeRulesOutcomeCallable DescribeAntiFakeRulesCallable(const Model::DescribeAntiFakeRulesRequest& request);
 
                 /**
-                 *废弃接口
-
-This API has been deprecated.
-
-Obtain a tamper-proof URL
-                 * @param req DescribeAntiFakeUrlRequest
-                 * @return DescribeAntiFakeUrlOutcome
-                 */
-                DescribeAntiFakeUrlOutcome DescribeAntiFakeUrl(const Model::DescribeAntiFakeUrlRequest &request);
-                void DescribeAntiFakeUrlAsync(const Model::DescribeAntiFakeUrlRequest& request, const DescribeAntiFakeUrlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeAntiFakeUrlOutcomeCallable DescribeAntiFakeUrlCallable(const Model::DescribeAntiFakeUrlRequest& request);
-
-                /**
-                 *老接口已经不再使用。
-
-The old API is no longer in use.
-
-Obtain the information leakage prevention rule list
-                 * @param req DescribeAntiInfoLeakRulesRequest
-                 * @return DescribeAntiInfoLeakRulesOutcome
-                 */
-                DescribeAntiInfoLeakRulesOutcome DescribeAntiInfoLeakRules(const Model::DescribeAntiInfoLeakRulesRequest &request);
-                void DescribeAntiInfoLeakRulesAsync(const Model::DescribeAntiInfoLeakRulesRequest& request, const DescribeAntiInfoLeakRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeAntiInfoLeakRulesOutcomeCallable DescribeAntiInfoLeakRulesCallable(const Model::DescribeAntiInfoLeakRulesRequest& request);
-
-                /**
                  *Obtain the information leakage prevention rule list
                  * @param req DescribeAntiInfoLeakageRulesRequest
                  * @return DescribeAntiInfoLeakageRulesOutcome
@@ -706,6 +690,15 @@ Obtain the information leakage prevention rule list
                 DescribeAntiInfoLeakageRulesOutcome DescribeAntiInfoLeakageRules(const Model::DescribeAntiInfoLeakageRulesRequest &request);
                 void DescribeAntiInfoLeakageRulesAsync(const Model::DescribeAntiInfoLeakageRulesRequest& request, const DescribeAntiInfoLeakageRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeAntiInfoLeakageRulesOutcomeCallable DescribeAntiInfoLeakageRulesCallable(const Model::DescribeAntiInfoLeakageRulesRequest& request);
+
+                /**
+                 *This API is used to describe the attack overview.
+                 * @param req DescribeAttackOverviewRequest
+                 * @return DescribeAttackOverviewOutcome
+                 */
+                DescribeAttackOverviewOutcome DescribeAttackOverview(const Model::DescribeAttackOverviewRequest &request);
+                void DescribeAttackOverviewAsync(const Model::DescribeAttackOverviewRequest& request, const DescribeAttackOverviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAttackOverviewOutcomeCallable DescribeAttackOverviewCallable(const Model::DescribeAttackOverviewRequest& request);
 
                 /**
                  *Query the top N attack types for a specified domain
@@ -1041,6 +1034,15 @@ Obtain the information leakage prevention rule list
                 GenerateDealsAndPayNewOutcomeCallable GenerateDealsAndPayNewCallable(const Model::GenerateDealsAndPayNewRequest& request);
 
                 /**
+                 *This API is used to generate a bar chart for the generation time of attack logs.
+                 * @param req GetAttackHistogramRequest
+                 * @return GetAttackHistogramOutcome
+                 */
+                GetAttackHistogramOutcome GetAttackHistogram(const Model::GetAttackHistogramRequest &request);
+                void GetAttackHistogramAsync(const Model::GetAttackHistogramRequest& request, const GetAttackHistogramAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetAttackHistogramOutcomeCallable GetAttackHistogramCallable(const Model::GetAttackHistogramRequest& request);
+
+                /**
                  *Display total attack count by querying based on conditions
                  * @param req GetAttackTotalCountRequest
                  * @return GetAttackTotalCountOutcome
@@ -1165,6 +1167,15 @@ Obtain the information leakage prevention rule list
                 ModifyDomainIpv6StatusOutcome ModifyDomainIpv6Status(const Model::ModifyDomainIpv6StatusRequest &request);
                 void ModifyDomainIpv6StatusAsync(const Model::ModifyDomainIpv6StatusRequest& request, const ModifyDomainIpv6StatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyDomainIpv6StatusOutcomeCallable ModifyDomainIpv6StatusCallable(const Model::ModifyDomainIpv6StatusRequest& request);
+
+                /**
+                 *This API is used to modify the domain shipping status.
+                 * @param req ModifyDomainPostActionRequest
+                 * @return ModifyDomainPostActionOutcome
+                 */
+                ModifyDomainPostActionOutcome ModifyDomainPostAction(const Model::ModifyDomainPostActionRequest &request);
+                void ModifyDomainPostActionAsync(const Model::ModifyDomainPostActionRequest& request, const ModifyDomainPostActionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyDomainPostActionOutcomeCallable ModifyDomainPostActionCallable(const Model::ModifyDomainPostActionRequest& request);
 
                 /**
                  *Enable or disable access log for domain list
@@ -1337,6 +1348,15 @@ Batch operation is supported.
                 RefreshAccessCheckResultOutcome RefreshAccessCheckResult(const Model::RefreshAccessCheckResultRequest &request);
                 void RefreshAccessCheckResultAsync(const Model::RefreshAccessCheckResultRequest& request, const RefreshAccessCheckResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 RefreshAccessCheckResultOutcomeCallable RefreshAccessCheckResultCallable(const Model::RefreshAccessCheckResultRequest& request);
+
+                /**
+                 *The new version of the CLS API has parameter changes, with query changed to query_string to support Lucene syntax for API search queries.
+                 * @param req SearchAttackLogRequest
+                 * @return SearchAttackLogOutcome
+                 */
+                SearchAttackLogOutcome SearchAttackLog(const Model::SearchAttackLogRequest &request);
+                void SearchAttackLogAsync(const Model::SearchAttackLogRequest& request, const SearchAttackLogAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SearchAttackLogOutcomeCallable SearchAttackLogCallable(const Model::SearchAttackLogRequest& request);
 
                 /**
                  *Toggle elasticity switch

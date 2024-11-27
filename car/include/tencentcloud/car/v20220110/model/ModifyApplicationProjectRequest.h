@@ -212,15 +212,15 @@ namespace TencentCloud
                     bool FPSHasBeenSet() const;
 
                     /**
-                     * 获取Waiting time for application pre-launch.
-                     * @return PreloadDuration Waiting time for application pre-launch.
+                     * 获取Waiting time for pre-launch.
+                     * @return PreloadDuration Waiting time for pre-launch.
                      * 
                      */
                     std::string GetPreloadDuration() const;
 
                     /**
-                     * 设置Waiting time for application pre-launch.
-                     * @param _preloadDuration Waiting time for application pre-launch.
+                     * 设置Waiting time for pre-launch.
+                     * @param _preloadDuration Waiting time for pre-launch.
                      * 
                      */
                     void SetPreloadDuration(const std::string& _preloadDuration);
@@ -451,7 +451,7 @@ namespace TencentCloud
                     bool m_fPSHasBeenSet;
 
                     /**
-                     * Waiting time for application pre-launch.
+                     * Waiting time for pre-launch.
                      */
                     std::string m_preloadDuration;
                     bool m_preloadDurationHasBeenSet;

@@ -24,8 +24,9 @@ using namespace std;
 
 CreateVodDomainRequest::CreateVodDomainRequest() :
     m_domainHasBeenSet(false),
+    m_subAppIdHasBeenSet(false),
     m_accelerateAreaHasBeenSet(false),
-    m_subAppIdHasBeenSet(false)
+    m_typeHasBeenSet(false)
 {
 }
 
@@ -44,6 +45,14 @@ string CreateVodDomainRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_domain.c_str(), allocator).Move(), allocator);
     }
 
+    if (m_subAppIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SubAppId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_subAppId, allocator);
+    }
+
     if (m_accelerateAreaHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -52,12 +61,12 @@ string CreateVodDomainRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_accelerateArea.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_subAppIdHasBeenSet)
+    if (m_typeHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "SubAppId";
+        string key = "Type";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, m_subAppId, allocator);
+        d.AddMember(iKey, rapidjson::Value(m_type.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -84,6 +93,22 @@ bool CreateVodDomainRequest::DomainHasBeenSet() const
     return m_domainHasBeenSet;
 }
 
+uint64_t CreateVodDomainRequest::GetSubAppId() const
+{
+    return m_subAppId;
+}
+
+void CreateVodDomainRequest::SetSubAppId(const uint64_t& _subAppId)
+{
+    m_subAppId = _subAppId;
+    m_subAppIdHasBeenSet = true;
+}
+
+bool CreateVodDomainRequest::SubAppIdHasBeenSet() const
+{
+    return m_subAppIdHasBeenSet;
+}
+
 string CreateVodDomainRequest::GetAccelerateArea() const
 {
     return m_accelerateArea;
@@ -100,20 +125,20 @@ bool CreateVodDomainRequest::AccelerateAreaHasBeenSet() const
     return m_accelerateAreaHasBeenSet;
 }
 
-uint64_t CreateVodDomainRequest::GetSubAppId() const
+string CreateVodDomainRequest::GetType() const
 {
-    return m_subAppId;
+    return m_type;
 }
 
-void CreateVodDomainRequest::SetSubAppId(const uint64_t& _subAppId)
+void CreateVodDomainRequest::SetType(const string& _type)
 {
-    m_subAppId = _subAppId;
-    m_subAppIdHasBeenSet = true;
+    m_type = _type;
+    m_typeHasBeenSet = true;
 }
 
-bool CreateVodDomainRequest::SubAppIdHasBeenSet() const
+bool CreateVodDomainRequest::TypeHasBeenSet() const
 {
-    return m_subAppIdHasBeenSet;
+    return m_typeHasBeenSet;
 }
 
 

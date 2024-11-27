@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取`queueId` of a successfully created queue
-                     * @return QueueId `queueId` of a successfully created queue
+                     * 获取"queueId" of a successfully created queue
+                     * @return QueueId "queueId" of a successfully created queue
                      * 
                      */
                     std::string GetQueueId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * `queueId` of a successfully created queue
+                     * "queueId" of a successfully created queue
                      */
                     std::string m_queueId;
                     bool m_queueIdHasBeenSet;

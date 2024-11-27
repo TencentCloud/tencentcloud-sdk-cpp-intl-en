@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool QueueNameHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of heaped messages. The value range is 1,000,000–10,000,000 during the beta test and can be 1,000,000–1,000,000,000 after the product is officially released. The default value is 10,000,000 during the beta test and will be 100,000,000 after the product is officially released.
-                     * @return MaxMsgHeapNum Maximum number of heaped messages. The value range is 1,000,000–10,000,000 during the beta test and can be 1,000,000–1,000,000,000 after the product is officially released. The default value is 10,000,000 during the beta test and will be 100,000,000 after the product is officially released.
+                     * 获取Maximum number of heaped messages. The value range is 1,000,000-10,000,000 during the beta test and can be 1,000,000-1,000,000,000 after the product is officially released. The default value is 10,000,000 during the beta test and will be 100,000,000 after the product is officially released.
+                     * @return MaxMsgHeapNum Maximum number of heaped messages. The value range is 1,000,000-10,000,000 during the beta test and can be 1,000,000-1,000,000,000 after the product is officially released. The default value is 10,000,000 during the beta test and will be 100,000,000 after the product is officially released.
                      * 
                      */
                     uint64_t GetMaxMsgHeapNum() const;
 
                     /**
-                     * 设置Maximum number of heaped messages. The value range is 1,000,000–10,000,000 during the beta test and can be 1,000,000–1,000,000,000 after the product is officially released. The default value is 10,000,000 during the beta test and will be 100,000,000 after the product is officially released.
-                     * @param _maxMsgHeapNum Maximum number of heaped messages. The value range is 1,000,000–10,000,000 during the beta test and can be 1,000,000–1,000,000,000 after the product is officially released. The default value is 10,000,000 during the beta test and will be 100,000,000 after the product is officially released.
+                     * 设置Maximum number of heaped messages. The value range is 1,000,000-10,000,000 during the beta test and can be 1,000,000-1,000,000,000 after the product is officially released. The default value is 10,000,000 during the beta test and will be 100,000,000 after the product is officially released.
+                     * @param _maxMsgHeapNum Maximum number of heaped messages. The value range is 1,000,000-10,000,000 during the beta test and can be 1,000,000-1,000,000,000 after the product is officially released. The default value is 10,000,000 during the beta test and will be 100,000,000 after the product is officially released.
                      * 
                      */
                     void SetMaxMsgHeapNum(const uint64_t& _maxMsgHeapNum);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool MaxMsgHeapNumHasBeenSet() const;
 
                     /**
-                     * 获取Long polling wait time for message reception. Value range: 0–30 seconds. Default value: 0.
-                     * @return PollingWaitSeconds Long polling wait time for message reception. Value range: 0–30 seconds. Default value: 0.
+                     * 获取Long polling wait time for message reception. Value range: 0-30 seconds. Default value: 0.
+                     * @return PollingWaitSeconds Long polling wait time for message reception. Value range: 0-30 seconds. Default value: 0.
                      * 
                      */
                     uint64_t GetPollingWaitSeconds() const;
 
                     /**
-                     * 设置Long polling wait time for message reception. Value range: 0–30 seconds. Default value: 0.
-                     * @param _pollingWaitSeconds Long polling wait time for message reception. Value range: 0–30 seconds. Default value: 0.
+                     * 设置Long polling wait time for message reception. Value range: 0-30 seconds. Default value: 0.
+                     * @param _pollingWaitSeconds Long polling wait time for message reception. Value range: 0-30 seconds. Default value: 0.
                      * 
                      */
                     void SetPollingWaitSeconds(const uint64_t& _pollingWaitSeconds);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool PollingWaitSecondsHasBeenSet() const;
 
                     /**
-                     * 获取Message visibility timeout period. Value range: 1–43200 seconds (i.e., 12 hours). Default value: 30.
-                     * @return VisibilityTimeout Message visibility timeout period. Value range: 1–43200 seconds (i.e., 12 hours). Default value: 30.
+                     * 获取Message visibility timeout period. Value range: 1-43200 seconds (i.e., 12 hours). Default value: 30.
+                     * @return VisibilityTimeout Message visibility timeout period. Value range: 1-43200 seconds (i.e., 12 hours). Default value: 30.
                      * 
                      */
                     uint64_t GetVisibilityTimeout() const;
 
                     /**
-                     * 设置Message visibility timeout period. Value range: 1–43200 seconds (i.e., 12 hours). Default value: 30.
-                     * @param _visibilityTimeout Message visibility timeout period. Value range: 1–43200 seconds (i.e., 12 hours). Default value: 30.
+                     * 设置Message visibility timeout period. Value range: 1-43200 seconds (i.e., 12 hours). Default value: 30.
+                     * @param _visibilityTimeout Message visibility timeout period. Value range: 1-43200 seconds (i.e., 12 hours). Default value: 30.
                      * 
                      */
                     void SetVisibilityTimeout(const uint64_t& _visibilityTimeout);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool VisibilityTimeoutHasBeenSet() const;
 
                     /**
-                     * 获取Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
-                     * @return MaxMsgSize Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
+                     * 获取Maximum message length. Value range: 1024-65536 bytes (i.e., 1-64 KB). Default value: 65536.
+                     * @return MaxMsgSize Maximum message length. Value range: 1024-65536 bytes (i.e., 1-64 KB). Default value: 65536.
                      * 
                      */
                     uint64_t GetMaxMsgSize() const;
 
                     /**
-                     * 设置Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
-                     * @param _maxMsgSize Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
+                     * 设置Maximum message length. Value range: 1024-65536 bytes (i.e., 1-64 KB). Default value: 65536.
+                     * @param _maxMsgSize Maximum message length. Value range: 1024-65536 bytes (i.e., 1-64 KB). Default value: 65536.
                      * 
                      */
                     void SetMaxMsgSize(const uint64_t& _maxMsgSize);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool MaxMsgSizeHasBeenSet() const;
 
                     /**
-                     * 获取Message retention period. Value range: 60–1296000 seconds (i.e., 1 minute–15 days). Default value: 345600 (i.e., 4 days).
-                     * @return MsgRetentionSeconds Message retention period. Value range: 60–1296000 seconds (i.e., 1 minute–15 days). Default value: 345600 (i.e., 4 days).
+                     * 获取Message retention period. Value range: 60-1296000 seconds (i.e., 1 minute-15 days). Default value: 345600 (i.e., 4 days).
+                     * @return MsgRetentionSeconds Message retention period. Value range: 60-1296000 seconds (i.e., 1 minute-15 days). Default value: 345600 (i.e., 4 days).
                      * 
                      */
                     uint64_t GetMsgRetentionSeconds() const;
 
                     /**
-                     * 设置Message retention period. Value range: 60–1296000 seconds (i.e., 1 minute–15 days). Default value: 345600 (i.e., 4 days).
-                     * @param _msgRetentionSeconds Message retention period. Value range: 60–1296000 seconds (i.e., 1 minute–15 days). Default value: 345600 (i.e., 4 days).
+                     * 设置Message retention period. Value range: 60-1296000 seconds (i.e., 1 minute-15 days). Default value: 345600 (i.e., 4 days).
+                     * @param _msgRetentionSeconds Message retention period. Value range: 60-1296000 seconds (i.e., 1 minute-15 days). Default value: 345600 (i.e., 4 days).
                      * 
                      */
                     void SetMsgRetentionSeconds(const uint64_t& _msgRetentionSeconds);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool MsgRetentionSecondsHasBeenSet() const;
 
                     /**
-                     * 获取Maximum message rewindable period. Value range: 0–msgRetentionSeconds (maximum message retention period of a queue). 0 means not to enable message rewinding.
-                     * @return RewindSeconds Maximum message rewindable period. Value range: 0–msgRetentionSeconds (maximum message retention period of a queue). 0 means not to enable message rewinding.
+                     * 获取Maximum message rewindable period. Value range: 0-msgRetentionSeconds (maximum message retention period of a queue). 0 means not to enable message rewinding.
+                     * @return RewindSeconds Maximum message rewindable period. Value range: 0-msgRetentionSeconds (maximum message retention period of a queue). 0 means not to enable message rewinding.
                      * 
                      */
                     uint64_t GetRewindSeconds() const;
 
                     /**
-                     * 设置Maximum message rewindable period. Value range: 0–msgRetentionSeconds (maximum message retention period of a queue). 0 means not to enable message rewinding.
-                     * @param _rewindSeconds Maximum message rewindable period. Value range: 0–msgRetentionSeconds (maximum message retention period of a queue). 0 means not to enable message rewinding.
+                     * 设置Maximum message rewindable period. Value range: 0-msgRetentionSeconds (maximum message retention period of a queue). 0 means not to enable message rewinding.
+                     * @param _rewindSeconds Maximum message rewindable period. Value range: 0-msgRetentionSeconds (maximum message retention period of a queue). 0 means not to enable message rewinding.
                      * 
                      */
                     void SetRewindSeconds(const uint64_t& _rewindSeconds);
@@ -253,15 +253,15 @@ namespace TencentCloud
                     bool DeadLetterQueueNameHasBeenSet() const;
 
                     /**
-                     * 获取Maximum period in seconds before an unconsumed message expires, which is required if `MaxTimeToLivepolicy` is 1. Value range: 300–43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
-                     * @return MaxTimeToLive Maximum period in seconds before an unconsumed message expires, which is required if `MaxTimeToLivepolicy` is 1. Value range: 300–43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
+                     * 获取Maximum period in seconds before an unconsumed message expires, which is required if `MaxTimeToLivepolicy` is 1. Value range: 300-43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
+                     * @return MaxTimeToLive Maximum period in seconds before an unconsumed message expires, which is required if `MaxTimeToLivepolicy` is 1. Value range: 300-43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
                      * 
                      */
                     uint64_t GetMaxTimeToLive() const;
 
                     /**
-                     * 设置Maximum period in seconds before an unconsumed message expires, which is required if `MaxTimeToLivepolicy` is 1. Value range: 300–43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
-                     * @param _maxTimeToLive Maximum period in seconds before an unconsumed message expires, which is required if `MaxTimeToLivepolicy` is 1. Value range: 300–43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
+                     * 设置Maximum period in seconds before an unconsumed message expires, which is required if `MaxTimeToLivepolicy` is 1. Value range: 300-43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
+                     * @param _maxTimeToLive Maximum period in seconds before an unconsumed message expires, which is required if `MaxTimeToLivepolicy` is 1. Value range: 300-43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
                      * 
                      */
                     void SetMaxTimeToLive(const uint64_t& _maxTimeToLive);
@@ -345,37 +345,37 @@ namespace TencentCloud
                     bool m_queueNameHasBeenSet;
 
                     /**
-                     * Maximum number of heaped messages. The value range is 1,000,000–10,000,000 during the beta test and can be 1,000,000–1,000,000,000 after the product is officially released. The default value is 10,000,000 during the beta test and will be 100,000,000 after the product is officially released.
+                     * Maximum number of heaped messages. The value range is 1,000,000-10,000,000 during the beta test and can be 1,000,000-1,000,000,000 after the product is officially released. The default value is 10,000,000 during the beta test and will be 100,000,000 after the product is officially released.
                      */
                     uint64_t m_maxMsgHeapNum;
                     bool m_maxMsgHeapNumHasBeenSet;
 
                     /**
-                     * Long polling wait time for message reception. Value range: 0–30 seconds. Default value: 0.
+                     * Long polling wait time for message reception. Value range: 0-30 seconds. Default value: 0.
                      */
                     uint64_t m_pollingWaitSeconds;
                     bool m_pollingWaitSecondsHasBeenSet;
 
                     /**
-                     * Message visibility timeout period. Value range: 1–43200 seconds (i.e., 12 hours). Default value: 30.
+                     * Message visibility timeout period. Value range: 1-43200 seconds (i.e., 12 hours). Default value: 30.
                      */
                     uint64_t m_visibilityTimeout;
                     bool m_visibilityTimeoutHasBeenSet;
 
                     /**
-                     * Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
+                     * Maximum message length. Value range: 1024-65536 bytes (i.e., 1-64 KB). Default value: 65536.
                      */
                     uint64_t m_maxMsgSize;
                     bool m_maxMsgSizeHasBeenSet;
 
                     /**
-                     * Message retention period. Value range: 60–1296000 seconds (i.e., 1 minute–15 days). Default value: 345600 (i.e., 4 days).
+                     * Message retention period. Value range: 60-1296000 seconds (i.e., 1 minute-15 days). Default value: 345600 (i.e., 4 days).
                      */
                     uint64_t m_msgRetentionSeconds;
                     bool m_msgRetentionSecondsHasBeenSet;
 
                     /**
-                     * Maximum message rewindable period. Value range: 0–msgRetentionSeconds (maximum message retention period of a queue). 0 means not to enable message rewinding.
+                     * Maximum message rewindable period. Value range: 0-msgRetentionSeconds (maximum message retention period of a queue). 0 means not to enable message rewinding.
                      */
                     uint64_t m_rewindSeconds;
                     bool m_rewindSecondsHasBeenSet;
@@ -399,7 +399,7 @@ namespace TencentCloud
                     bool m_deadLetterQueueNameHasBeenSet;
 
                     /**
-                     * Maximum period in seconds before an unconsumed message expires, which is required if `MaxTimeToLivepolicy` is 1. Value range: 300–43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
+                     * Maximum period in seconds before an unconsumed message expires, which is required if `MaxTimeToLivepolicy` is 1. Value range: 300-43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
                      */
                     uint64_t m_maxTimeToLive;
                     bool m_maxTimeToLiveHasBeenSet;

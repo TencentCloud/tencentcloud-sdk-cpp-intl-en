@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return AlbType 
+                     * 获取Traffic source. The default value is clb if not specified. clb: Cloud Load Balancer; tsegw: cloud-native API gateway; scf: Serverless Cloud Function; apisix: other gateways on Tencent Cloud.
+                     * @return AlbType Traffic source. The default value is clb if not specified. clb: Cloud Load Balancer; tsegw: cloud-native API gateway; scf: Serverless Cloud Function; apisix: other gateways on Tencent Cloud.
                      * 
                      */
                     std::string GetAlbType() const;
 
                     /**
-                     * 设置
-                     * @param _albType 
+                     * 设置Traffic source. The default value is clb if not specified. clb: Cloud Load Balancer; tsegw: cloud-native API gateway; scf: Serverless Cloud Function; apisix: other gateways on Tencent Cloud.
+                     * @param _albType Traffic source. The default value is clb if not specified. clb: Cloud Load Balancer; tsegw: cloud-native API gateway; scf: Serverless Cloud Function; apisix: other gateways on Tencent Cloud.
                      * 
                      */
                     void SetAlbType(const std::string& _albType);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Traffic source. The default value is clb if not specified. clb: Cloud Load Balancer; tsegw: cloud-native API gateway; scf: Serverless Cloud Function; apisix: other gateways on Tencent Cloud.
                      */
                     std::string m_albType;
                     bool m_albTypeHasBeenSet;

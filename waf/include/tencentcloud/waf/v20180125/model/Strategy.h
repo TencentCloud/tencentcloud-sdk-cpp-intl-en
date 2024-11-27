@@ -274,6 +274,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ArgHasBeenSet() const;
 
+                    /**
+                     * 获取0: case-sensitive.
+1: case-insensitive.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CaseNotSensitive 0: case-sensitive.
+1: case-insensitive.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    uint64_t GetCaseNotSensitive() const;
+
+                    /**
+                     * 设置0: case-sensitive.
+1: case-insensitive.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _caseNotSensitive 0: case-sensitive.
+1: case-insensitive.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetCaseNotSensitive(const uint64_t& _caseNotSensitive);
+
+                    /**
+                     * 判断参数 CaseNotSensitive 是否已赋值
+                     * @return CaseNotSensitive 是否已赋值
+                     * 
+                     */
+                    bool CaseNotSensitiveHasBeenSet() const;
+
                 private:
 
                     /**
@@ -335,6 +364,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_arg;
                     bool m_argHasBeenSet;
+
+                    /**
+                     * 0: case-sensitive.
+1: case-insensitive.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_caseNotSensitive;
+                    bool m_caseNotSensitiveHasBeenSet;
 
                 };
             }

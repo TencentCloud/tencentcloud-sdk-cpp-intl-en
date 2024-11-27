@@ -1135,6 +1135,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool AccessStatusHasBeenSet() const;
 
+                    /**
+                     * 获取Domain name tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Labels Domain name tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<std::string> GetLabels() const;
+
+                    /**
+                     * 设置Domain name tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _labels Domain name tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetLabels(const std::vector<std::string>& _labels);
+
+                    /**
+                     * 判断参数 Labels 是否已赋值
+                     * @return Labels 是否已赋值
+                     * 
+                     */
+                    bool LabelsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1434,6 +1459,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_accessStatus;
                     bool m_accessStatusHasBeenSet;
+
+                    /**
+                     * Domain name tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_labels;
+                    bool m_labelsHasBeenSet;
 
                 };
             }

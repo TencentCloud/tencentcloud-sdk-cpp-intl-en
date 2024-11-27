@@ -540,6 +540,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ObjectFlowModeHasBeenSet() const;
 
+                    /**
+                     * 获取VPC ID in numerical format
+
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return NumericalVpcId VPC ID in numerical format
+
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetNumericalVpcId() const;
+
+                    /**
+                     * 设置VPC ID in numerical format
+
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _numericalVpcId VPC ID in numerical format
+
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetNumericalVpcId(const int64_t& _numericalVpcId);
+
+                    /**
+                     * 判断参数 NumericalVpcId 是否已赋值
+                     * @return NumericalVpcId 是否已赋值
+                     * 
+                     */
+                    bool NumericalVpcIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -681,6 +710,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_objectFlowMode;
                     bool m_objectFlowModeHasBeenSet;
+
+                    /**
+                     * VPC ID in numerical format
+
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_numericalVpcId;
+                    bool m_numericalVpcIdHasBeenSet;
 
                 };
             }

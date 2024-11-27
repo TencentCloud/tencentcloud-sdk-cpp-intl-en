@@ -210,6 +210,27 @@ namespace TencentCloud
                      */
                     bool SortTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Pagination offset. Do not use it together with NextToken, prioritizing using NextToken.
+                     * @return Offset Pagination offset. Do not use it together with NextToken, prioritizing using NextToken.
+                     * 
+                     */
+                    int64_t GetOffset() const;
+
+                    /**
+                     * 设置Pagination offset. Do not use it together with NextToken, prioritizing using NextToken.
+                     * @param _offset Pagination offset. Do not use it together with NextToken, prioritizing using NextToken.
+                     * 
+                     */
+                    void SetOffset(const int64_t& _offset);
+
+                    /**
+                     * 判断参数 Offset 是否已赋值
+                     * @return Offset 是否已赋值
+                     * 
+                     */
+                    bool OffsetHasBeenSet() const;
+
                 private:
 
                     /**
@@ -259,6 +280,12 @@ namespace TencentCloud
                      */
                     std::string m_sortType;
                     bool m_sortTypeHasBeenSet;
+
+                    /**
+                     * Pagination offset. Do not use it together with NextToken, prioritizing using NextToken.
+                     */
+                    int64_t m_offset;
+                    bool m_offsetHasBeenSet;
 
                 };
             }

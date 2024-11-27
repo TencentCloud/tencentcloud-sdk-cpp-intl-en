@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Access configuration name, which contains up to 128 characters, including English letters, digits, and hyphens (-).
-                     * @return RoleConfigurationName Access configuration name, which contains up to 128 characters, including English letters, digits, and hyphens (-).
+                     * 获取Permission configuration name, which contains up to 128 characters, including English letters, digits, and hyphens (-).
+                     * @return RoleConfigurationName Permission configuration name, which contains up to 128 characters, including English letters, digits, and hyphens (-).
                      * 
                      */
                     std::string GetRoleConfigurationName() const;
 
                     /**
-                     * 设置Access configuration name, which contains up to 128 characters, including English letters, digits, and hyphens (-).
-                     * @param _roleConfigurationName Access configuration name, which contains up to 128 characters, including English letters, digits, and hyphens (-).
+                     * 设置Permission configuration name, which contains up to 128 characters, including English letters, digits, and hyphens (-).
+                     * @param _roleConfigurationName Permission configuration name, which contains up to 128 characters, including English letters, digits, and hyphens (-).
                      * 
                      */
                     void SetRoleConfigurationName(const std::string& _roleConfigurationName);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool RoleConfigurationNameHasBeenSet() const;
 
                     /**
-                     * 获取Access configuration description, which contains up to 1024 characters.
-                     * @return Description Access configuration description, which contains up to 1024 characters.
+                     * 获取Permission configuration description, which contains up to 1,024 characters.
+                     * @return Description Permission configuration description, which contains up to 1,024 characters.
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Access configuration description, which contains up to 1024 characters.
-                     * @param _description Access configuration description, which contains up to 1024 characters.
+                     * 设置Permission configuration description, which contains up to 1,024 characters.
+                     * @param _description Permission configuration description, which contains up to 1,024 characters.
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Session duration. It indicates the maximum session duration when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. Unit: seconds. Value range: 900-43,200 (15 minutes to 12 hours). Default value: 3600 (1 hour).
-                     * @return SessionDuration Session duration. It indicates the maximum session duration when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. Unit: seconds. Value range: 900-43,200 (15 minutes to 12 hours). Default value: 3600 (1 hour).
+                     * 获取Session duration, in seconds. It is the maximum time a CIC user can maintain a session while using permission configurations to access a target account in TCO. Value range: 900 to 43200 (15 minutes to 12 hours). Default: 3600 (1 hour).
+                     * @return SessionDuration Session duration, in seconds. It is the maximum time a CIC user can maintain a session while using permission configurations to access a target account in TCO. Value range: 900 to 43200 (15 minutes to 12 hours). Default: 3600 (1 hour).
                      * 
                      */
                     int64_t GetSessionDuration() const;
 
                     /**
-                     * 设置Session duration. It indicates the maximum session duration when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. Unit: seconds. Value range: 900-43,200 (15 minutes to 12 hours). Default value: 3600 (1 hour).
-                     * @param _sessionDuration Session duration. It indicates the maximum session duration when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. Unit: seconds. Value range: 900-43,200 (15 minutes to 12 hours). Default value: 3600 (1 hour).
+                     * 设置Session duration, in seconds. It is the maximum time a CIC user can maintain a session while using permission configurations to access a target account in TCO. Value range: 900 to 43200 (15 minutes to 12 hours). Default: 3600 (1 hour).
+                     * @param _sessionDuration Session duration, in seconds. It is the maximum time a CIC user can maintain a session while using permission configurations to access a target account in TCO. Value range: 900 to 43200 (15 minutes to 12 hours). Default: 3600 (1 hour).
                      * 
                      */
                     void SetSessionDuration(const int64_t& _sessionDuration);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool SessionDurationHasBeenSet() const;
 
                     /**
-                     * 获取Initial access page. It indicates the initial access page URL when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. This page must be the Tencent Cloud console page. The default is null, which indicates navigating to the home page of the Tencent Cloud console.
-                     * @return RelayState Initial access page. It indicates the initial access page URL when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. This page must be the Tencent Cloud console page. The default is null, which indicates navigating to the home page of the Tencent Cloud console.
+                     * 获取Initial access page. It is the initial page address when a CIC user uses permission configurations to access a target account in TCO. This page must be a Tencent Cloud console page. The default value is empty, representing a redirection to the home page of the Tencent Cloud console.
+                     * @return RelayState Initial access page. It is the initial page address when a CIC user uses permission configurations to access a target account in TCO. This page must be a Tencent Cloud console page. The default value is empty, representing a redirection to the home page of the Tencent Cloud console.
                      * 
                      */
                     std::string GetRelayState() const;
 
                     /**
-                     * 设置Initial access page. It indicates the initial access page URL when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. This page must be the Tencent Cloud console page. The default is null, which indicates navigating to the home page of the Tencent Cloud console.
-                     * @param _relayState Initial access page. It indicates the initial access page URL when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. This page must be the Tencent Cloud console page. The default is null, which indicates navigating to the home page of the Tencent Cloud console.
+                     * 设置Initial access page. It is the initial page address when a CIC user uses permission configurations to access a target account in TCO. This page must be a Tencent Cloud console page. The default value is empty, representing a redirection to the home page of the Tencent Cloud console.
+                     * @param _relayState Initial access page. It is the initial page address when a CIC user uses permission configurations to access a target account in TCO. This page must be a Tencent Cloud console page. The default value is empty, representing a redirection to the home page of the Tencent Cloud console.
                      * 
                      */
                     void SetRelayState(const std::string& _relayState);
@@ -156,25 +156,25 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Access configuration name, which contains up to 128 characters, including English letters, digits, and hyphens (-).
+                     * Permission configuration name, which contains up to 128 characters, including English letters, digits, and hyphens (-).
                      */
                     std::string m_roleConfigurationName;
                     bool m_roleConfigurationNameHasBeenSet;
 
                     /**
-                     * Access configuration description, which contains up to 1024 characters.
+                     * Permission configuration description, which contains up to 1,024 characters.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Session duration. It indicates the maximum session duration when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. Unit: seconds. Value range: 900-43,200 (15 minutes to 12 hours). Default value: 3600 (1 hour).
+                     * Session duration, in seconds. It is the maximum time a CIC user can maintain a session while using permission configurations to access a target account in TCO. Value range: 900 to 43200 (15 minutes to 12 hours). Default: 3600 (1 hour).
                      */
                     int64_t m_sessionDuration;
                     bool m_sessionDurationHasBeenSet;
 
                     /**
-                     * Initial access page. It indicates the initial access page URL when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. This page must be the Tencent Cloud console page. The default is null, which indicates navigating to the home page of the Tencent Cloud console.
+                     * Initial access page. It is the initial page address when a CIC user uses permission configurations to access a target account in TCO. This page must be a Tencent Cloud console page. The default value is empty, representing a redirection to the home page of the Tencent Cloud console.
                      */
                     std::string m_relayState;
                     bool m_relayStateHasBeenSet;

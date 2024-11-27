@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool TopicNameHasBeenSet() const;
 
                     /**
-                     * 获取Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
-                     * @return MaxMsgSize Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
+                     * 获取Maximum message length. Value range: 1024-65536 bytes (i.e., 1-64 KB). Default value: 65536.
+                     * @return MaxMsgSize Maximum message length. Value range: 1024-65536 bytes (i.e., 1-64 KB). Default value: 65536.
                      * 
                      */
                     uint64_t GetMaxMsgSize() const;
 
                     /**
-                     * 设置Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
-                     * @param _maxMsgSize Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
+                     * 设置Maximum message length. Value range: 1024-65536 bytes (i.e., 1-64 KB). Default value: 65536.
+                     * @param _maxMsgSize Maximum message length. Value range: 1024-65536 bytes (i.e., 1-64 KB). Default value: 65536.
                      * 
                      */
                     void SetMaxMsgSize(const uint64_t& _maxMsgSize);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool FilterTypeHasBeenSet() const;
 
                     /**
-                     * 获取Message retention period. Value range: 60–86400 seconds (i.e., 1 minute–1 day). Default value: 86400.
-                     * @return MsgRetentionSeconds Message retention period. Value range: 60–86400 seconds (i.e., 1 minute–1 day). Default value: 86400.
+                     * 获取Message retention period. Value range: 60-86400 seconds (i.e., 1 minute-1 day). Default value: 86400.
+                     * @return MsgRetentionSeconds Message retention period. Value range: 60-86400 seconds (i.e., 1 minute-1 day). Default value: 86400.
                      * 
                      */
                     uint64_t GetMsgRetentionSeconds() const;
 
                     /**
-                     * 设置Message retention period. Value range: 60–86400 seconds (i.e., 1 minute–1 day). Default value: 86400.
-                     * @param _msgRetentionSeconds Message retention period. Value range: 60–86400 seconds (i.e., 1 minute–1 day). Default value: 86400.
+                     * 设置Message retention period. Value range: 60-86400 seconds (i.e., 1 minute-1 day). Default value: 86400.
+                     * @param _msgRetentionSeconds Message retention period. Value range: 60-86400 seconds (i.e., 1 minute-1 day). Default value: 86400.
                      * 
                      */
                     void SetMsgRetentionSeconds(const uint64_t& _msgRetentionSeconds);
@@ -156,7 +156,7 @@ namespace TencentCloud
                     bool m_topicNameHasBeenSet;
 
                     /**
-                     * Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
+                     * Maximum message length. Value range: 1024-65536 bytes (i.e., 1-64 KB). Default value: 65536.
                      */
                     uint64_t m_maxMsgSize;
                     bool m_maxMsgSizeHasBeenSet;
@@ -168,7 +168,7 @@ namespace TencentCloud
                     bool m_filterTypeHasBeenSet;
 
                     /**
-                     * Message retention period. Value range: 60–86400 seconds (i.e., 1 minute–1 day). Default value: 86400.
+                     * Message retention period. Value range: 60-86400 seconds (i.e., 1 minute-1 day). Default value: 86400.
                      */
                     uint64_t m_msgRetentionSeconds;
                     bool m_msgRetentionSecondsHasBeenSet;

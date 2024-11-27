@@ -111,27 +111,6 @@ Global domain name, that is, global.
                     bool ActionTypeHasBeenSet() const;
 
                     /**
-                     * 获取valid_ts indicates a valid date. Its value is a second-level timestamp, such as 1680570420, which indicates 2023-04-04 09:07:00.
-                     * @return ValidTS valid_ts indicates a valid date. Its value is a second-level timestamp, such as 1680570420, which indicates 2023-04-04 09:07:00.
-                     * 
-                     */
-                    int64_t GetValidTS() const;
-
-                    /**
-                     * 设置valid_ts indicates a valid date. Its value is a second-level timestamp, such as 1680570420, which indicates 2023-04-04 09:07:00.
-                     * @param _validTS valid_ts indicates a valid date. Its value is a second-level timestamp, such as 1680570420, which indicates 2023-04-04 09:07:00.
-                     * 
-                     */
-                    void SetValidTS(const int64_t& _validTS);
-
-                    /**
-                     * 判断参数 ValidTS 是否已赋值
-                     * @return ValidTS 是否已赋值
-                     * 
-                     */
-                    bool ValidTSHasBeenSet() const;
-
-                    /**
                      * 获取Rule ID
                      * @return RuleId Rule ID
                      * 
@@ -151,6 +130,27 @@ Global domain name, that is, global.
                      * 
                      */
                     bool RuleIdHasBeenSet() const;
+
+                    /**
+                     * 获取valid_ts indicates a valid date. Its value is a second-level timestamp, such as 1680570420, which indicates 2023-04-04 09:07:00.
+                     * @return ValidTS valid_ts indicates a valid date. Its value is a second-level timestamp, such as 1680570420, which indicates 2023-04-04 09:07:00.
+                     * @deprecated
+                     */
+                    int64_t GetValidTS() const;
+
+                    /**
+                     * 设置valid_ts indicates a valid date. Its value is a second-level timestamp, such as 1680570420, which indicates 2023-04-04 09:07:00.
+                     * @param _validTS valid_ts indicates a valid date. Its value is a second-level timestamp, such as 1680570420, which indicates 2023-04-04 09:07:00.
+                     * @deprecated
+                     */
+                    void SetValidTS(const int64_t& _validTS);
+
+                    /**
+                     * 判断参数 ValidTS 是否已赋值
+                     * @return ValidTS 是否已赋值
+                     * @deprecated
+                     */
+                    bool ValidTSHasBeenSet() const;
 
                     /**
                      * 获取Instance ID
@@ -300,16 +300,16 @@ Global domain name, that is, global.
                     bool m_actionTypeHasBeenSet;
 
                     /**
-                     * valid_ts indicates a valid date. Its value is a second-level timestamp, such as 1680570420, which indicates 2023-04-04 09:07:00.
-                     */
-                    int64_t m_validTS;
-                    bool m_validTSHasBeenSet;
-
-                    /**
                      * Rule ID
                      */
                     uint64_t m_ruleId;
                     bool m_ruleIdHasBeenSet;
+
+                    /**
+                     * valid_ts indicates a valid date. Its value is a second-level timestamp, such as 1680570420, which indicates 2023-04-04 09:07:00.
+                     */
+                    int64_t m_validTS;
+                    bool m_validTSHasBeenSet;
 
                     /**
                      * Instance ID

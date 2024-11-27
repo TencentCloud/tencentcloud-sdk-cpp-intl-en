@@ -29,6 +29,7 @@
 #include <tencentcloud/vod/v20180717/model/UrlSignatureAuthPolicy.h>
 #include <tencentcloud/vod/v20180717/model/RefererAuthPolicy.h>
 #include <tencentcloud/vod/v20180717/model/DomainQUICConfig.h>
+#include <tencentcloud/vod/v20180717/model/IPFilterPolicy.h>
 
 
 namespace TencentCloud
@@ -255,6 +256,52 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool QUICConfigHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return IPFilterPolicy 
+                     * 
+                     */
+                    IPFilterPolicy GetIPFilterPolicy() const;
+
+                    /**
+                     * 设置
+                     * @param _iPFilterPolicy 
+                     * 
+                     */
+                    void SetIPFilterPolicy(const IPFilterPolicy& _iPFilterPolicy);
+
+                    /**
+                     * 判断参数 IPFilterPolicy 是否已赋值
+                     * @return IPFilterPolicy 是否已赋值
+                     * 
+                     */
+                    bool IPFilterPolicyHasBeenSet() const;
+
+                    /**
+                     * 获取Domain type. Valid values:
+<li>`VOD`: Domain name distributed using the VOD product;</li> <li>`EdgeOne`: Domain name distributed using the EdgeOne product.</li>
+                     * @return Type Domain type. Valid values:
+<li>`VOD`: Domain name distributed using the VOD product;</li> <li>`EdgeOne`: Domain name distributed using the EdgeOne product.</li>
+                     * 
+                     */
+                    std::string GetType() const;
+
+                    /**
+                     * 设置Domain type. Valid values:
+<li>`VOD`: Domain name distributed using the VOD product;</li> <li>`EdgeOne`: Domain name distributed using the EdgeOne product.</li>
+                     * @param _type Domain type. Valid values:
+<li>`VOD`: Domain name distributed using the VOD product;</li> <li>`EdgeOne`: Domain name distributed using the EdgeOne product.</li>
+                     * 
+                     */
+                    void SetType(const std::string& _type);
+
+                    /**
+                     * 判断参数 Type 是否已赋值
+                     * @return Type 是否已赋值
+                     * 
+                     */
+                    bool TypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -313,6 +360,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     DomainQUICConfig m_qUICConfig;
                     bool m_qUICConfigHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    IPFilterPolicy m_iPFilterPolicy;
+                    bool m_iPFilterPolicyHasBeenSet;
+
+                    /**
+                     * Domain type. Valid values:
+<li>`VOD`: Domain name distributed using the VOD product;</li> <li>`EdgeOne`: Domain name distributed using the EdgeOne product.</li>
+                     */
+                    std::string m_type;
+                    bool m_typeHasBeenSet;
 
                 };
             }

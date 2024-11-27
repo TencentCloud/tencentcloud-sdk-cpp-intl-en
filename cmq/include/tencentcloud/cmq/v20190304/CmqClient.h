@@ -145,7 +145,6 @@ namespace TencentCloud
 
                 /**
                  *This API is used to create a queue.
-
                  * @param req CreateQueueRequest
                  * @return CreateQueueOutcome
                  */

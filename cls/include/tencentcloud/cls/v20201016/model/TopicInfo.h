@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cls/v20201016/model/Tag.h>
+#include <tencentcloud/cls/v20201016/model/TopicExtendInfo.h>
 
 
 namespace TencentCloud
@@ -461,6 +462,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool IsWebTrackingHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return Extends 
+                     * 
+                     */
+                    TopicExtendInfo GetExtends() const;
+
+                    /**
+                     * 设置
+                     * @param _extends 
+                     * 
+                     */
+                    void SetExtends(const TopicExtendInfo& _extends);
+
+                    /**
+                     * 判断参数 Extends 是否已赋值
+                     * @return Extends 是否已赋值
+                     * 
+                     */
+                    bool ExtendsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -579,6 +601,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool m_isWebTracking;
                     bool m_isWebTrackingHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    TopicExtendInfo m_extends;
+                    bool m_extendsHasBeenSet;
 
                 };
             }

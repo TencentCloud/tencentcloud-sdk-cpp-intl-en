@@ -1193,6 +1193,206 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ProxyBufferHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to enable SM. 0: do not enable SM; 1: add support for SM based on the existing TLS option; 2: enable SM and support only SM client access.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return GmType Whether to enable SM. 0: do not enable SM; 1: add support for SM based on the existing TLS option; 2: enable SM and support only SM client access.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetGmType() const;
+
+                    /**
+                     * 设置Whether to enable SM. 0: do not enable SM; 1: add support for SM based on the existing TLS option; 2: enable SM and support only SM client access.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _gmType Whether to enable SM. 0: do not enable SM; 1: add support for SM based on the existing TLS option; 2: enable SM and support only SM client access.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetGmType(const int64_t& _gmType);
+
+                    /**
+                     * 判断参数 GmType 是否已赋值
+                     * @return GmType 是否已赋值
+                     * 
+                     */
+                    bool GmTypeHasBeenSet() const;
+
+                    /**
+                     * 获取SM certificate type. 0: no SM certificate is available; 1: the certificate is a self-owned SM certificate; 2: the certificate is a managed SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return GmCertType SM certificate type. 0: no SM certificate is available; 1: the certificate is a self-owned SM certificate; 2: the certificate is a managed SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetGmCertType() const;
+
+                    /**
+                     * 设置SM certificate type. 0: no SM certificate is available; 1: the certificate is a self-owned SM certificate; 2: the certificate is a managed SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _gmCertType SM certificate type. 0: no SM certificate is available; 1: the certificate is a self-owned SM certificate; 2: the certificate is a managed SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetGmCertType(const int64_t& _gmCertType);
+
+                    /**
+                     * 判断参数 GmCertType 是否已赋值
+                     * @return GmCertType 是否已赋值
+                     * 
+                     */
+                    bool GmCertTypeHasBeenSet() const;
+
+                    /**
+                     * 获取When GmCertType is 1, this parameter needs to be set, indicating the certificate chain of the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return GmCert When GmCertType is 1, this parameter needs to be set, indicating the certificate chain of the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetGmCert() const;
+
+                    /**
+                     * 设置When GmCertType is 1, this parameter needs to be set, indicating the certificate chain of the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _gmCert When GmCertType is 1, this parameter needs to be set, indicating the certificate chain of the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetGmCert(const std::string& _gmCert);
+
+                    /**
+                     * 判断参数 GmCert 是否已赋值
+                     * @return GmCert 是否已赋值
+                     * 
+                     */
+                    bool GmCertHasBeenSet() const;
+
+                    /**
+                     * 获取When GmCertType is 1, this parameter needs to be set, indicating the private key of the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return GmPrivateKey When GmCertType is 1, this parameter needs to be set, indicating the private key of the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetGmPrivateKey() const;
+
+                    /**
+                     * 设置When GmCertType is 1, this parameter needs to be set, indicating the private key of the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _gmPrivateKey When GmCertType is 1, this parameter needs to be set, indicating the private key of the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetGmPrivateKey(const std::string& _gmPrivateKey);
+
+                    /**
+                     * 判断参数 GmPrivateKey 是否已赋值
+                     * @return GmPrivateKey 是否已赋值
+                     * 
+                     */
+                    bool GmPrivateKeyHasBeenSet() const;
+
+                    /**
+                     * 获取When GmCertType is 1, this parameter needs to be set, indicating the encryption certificate of the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return GmEncCert When GmCertType is 1, this parameter needs to be set, indicating the encryption certificate of the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetGmEncCert() const;
+
+                    /**
+                     * 设置When GmCertType is 1, this parameter needs to be set, indicating the encryption certificate of the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _gmEncCert When GmCertType is 1, this parameter needs to be set, indicating the encryption certificate of the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetGmEncCert(const std::string& _gmEncCert);
+
+                    /**
+                     * 判断参数 GmEncCert 是否已赋值
+                     * @return GmEncCert 是否已赋值
+                     * 
+                     */
+                    bool GmEncCertHasBeenSet() const;
+
+                    /**
+                     * 获取When GmCertType is 1, this parameter needs to be set, indicating the private key of the encryption certificate for the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return GmEncPrivateKey When GmCertType is 1, this parameter needs to be set, indicating the private key of the encryption certificate for the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetGmEncPrivateKey() const;
+
+                    /**
+                     * 设置When GmCertType is 1, this parameter needs to be set, indicating the private key of the encryption certificate for the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _gmEncPrivateKey When GmCertType is 1, this parameter needs to be set, indicating the private key of the encryption certificate for the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetGmEncPrivateKey(const std::string& _gmEncPrivateKey);
+
+                    /**
+                     * 判断参数 GmEncPrivateKey 是否已赋值
+                     * @return GmEncPrivateKey 是否已赋值
+                     * 
+                     */
+                    bool GmEncPrivateKeyHasBeenSet() const;
+
+                    /**
+                     * 获取When GmCertType is 2, this parameter needs to be set, indicating the ID of the certificate managed by the Tencent Cloud SSL platform.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return GmSSLId When GmCertType is 2, this parameter needs to be set, indicating the ID of the certificate managed by the Tencent Cloud SSL platform.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetGmSSLId() const;
+
+                    /**
+                     * 设置When GmCertType is 2, this parameter needs to be set, indicating the ID of the certificate managed by the Tencent Cloud SSL platform.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _gmSSLId When GmCertType is 2, this parameter needs to be set, indicating the ID of the certificate managed by the Tencent Cloud SSL platform.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetGmSSLId(const std::string& _gmSSLId);
+
+                    /**
+                     * 判断参数 GmSSLId 是否已赋值
+                     * @return GmSSLId 是否已赋值
+                     * 
+                     */
+                    bool GmSSLIdHasBeenSet() const;
+
+                    /**
+                     * 获取Domain name tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Labels Domain name tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<std::string> GetLabels() const;
+
+                    /**
+                     * 设置Domain name tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _labels Domain name tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetLabels(const std::vector<std::string>& _labels);
+
+                    /**
+                     * 判断参数 Labels 是否已赋值
+                     * @return Labels 是否已赋值
+                     * 
+                     */
+                    bool LabelsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1512,6 +1712,62 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_proxyBuffer;
                     bool m_proxyBufferHasBeenSet;
+
+                    /**
+                     * Whether to enable SM. 0: do not enable SM; 1: add support for SM based on the existing TLS option; 2: enable SM and support only SM client access.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_gmType;
+                    bool m_gmTypeHasBeenSet;
+
+                    /**
+                     * SM certificate type. 0: no SM certificate is available; 1: the certificate is a self-owned SM certificate; 2: the certificate is a managed SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_gmCertType;
+                    bool m_gmCertTypeHasBeenSet;
+
+                    /**
+                     * When GmCertType is 1, this parameter needs to be set, indicating the certificate chain of the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_gmCert;
+                    bool m_gmCertHasBeenSet;
+
+                    /**
+                     * When GmCertType is 1, this parameter needs to be set, indicating the private key of the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_gmPrivateKey;
+                    bool m_gmPrivateKeyHasBeenSet;
+
+                    /**
+                     * When GmCertType is 1, this parameter needs to be set, indicating the encryption certificate of the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_gmEncCert;
+                    bool m_gmEncCertHasBeenSet;
+
+                    /**
+                     * When GmCertType is 1, this parameter needs to be set, indicating the private key of the encryption certificate for the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_gmEncPrivateKey;
+                    bool m_gmEncPrivateKeyHasBeenSet;
+
+                    /**
+                     * When GmCertType is 2, this parameter needs to be set, indicating the ID of the certificate managed by the Tencent Cloud SSL platform.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_gmSSLId;
+                    bool m_gmSSLIdHasBeenSet;
+
+                    /**
+                     * Domain name tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_labels;
+                    bool m_labelsHasBeenSet;
 
                 };
             }

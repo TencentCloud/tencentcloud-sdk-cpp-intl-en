@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Project ID/Workspace ID
-                     * @return ProjectId Project ID/Workspace ID
+                     * 获取Project ID/Workspace ID.
+                     * @return ProjectId Project ID/Workspace ID.
                      * 
                      */
                     std::string GetProjectId() const;
 
                     /**
-                     * 设置Project ID/Workspace ID
-                     * @param _projectId Project ID/Workspace ID
+                     * 设置Project ID/Workspace ID.
+                     * @param _projectId Project ID/Workspace ID.
                      * 
                      */
                     void SetProjectId(const std::string& _projectId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取Task Type (consistent with scheduling parameters)
-                     * @return TypeId Task Type (consistent with scheduling parameters)
+                     * 获取Task Type (consistent with scheduling parameters).
+                     * @return TypeId Task Type (consistent with scheduling parameters).
                      * 
                      */
                     int64_t GetTypeId() const;
 
                     /**
-                     * 设置Task Type (consistent with scheduling parameters)
-                     * @param _typeId Task Type (consistent with scheduling parameters)
+                     * 设置Task Type (consistent with scheduling parameters).
+                     * @param _typeId Task Type (consistent with scheduling parameters).
                      * 
                      */
                     void SetTypeId(const int64_t& _typeId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool TypeIdHasBeenSet() const;
 
                     /**
-                     * 获取Task Name
-                     * @return TaskName Task Name
+                     * 获取Task Name.
+                     * @return TaskName Task Name.
                      * 
                      */
                     std::string GetTaskName() const;
 
                     /**
-                     * 设置Task Name
-                     * @param _taskName Task Name
+                     * 设置Task Name.
+                     * @param _taskName Task Name.
                      * 
                      */
                     void SetTaskName(const std::string& _taskName);
@@ -108,19 +108,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Project ID/Workspace ID
+                     * Project ID/Workspace ID.
                      */
                     std::string m_projectId;
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * Task Type (consistent with scheduling parameters)
+                     * Task Type (consistent with scheduling parameters).
                      */
                     int64_t m_typeId;
                     bool m_typeIdHasBeenSet;
 
                     /**
-                     * Task Name
+                     * Task Name.
                      */
                     std::string m_taskName;
                     bool m_taskNameHasBeenSet;

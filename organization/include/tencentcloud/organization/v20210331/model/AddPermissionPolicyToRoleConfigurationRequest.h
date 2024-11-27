@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool RoleConfigurationIdHasBeenSet() const;
 
                     /**
-                     * 获取Permission policy type. Valid values: System: system policy, namely the CAM system policy reused; Custom: custom policy, namely the custom policy prepared according to the CAM permission policy syntax and structure. Only the system policy is supported at the early stage, and the custom policy will be supported later.
-                     * @return RolePolicyType Permission policy type. Valid values: System: system policy, namely the CAM system policy reused; Custom: custom policy, namely the custom policy prepared according to the CAM permission policy syntax and structure. Only the system policy is supported at the early stage, and the custom policy will be supported later.
+                     * 获取Permission policy type. Valid values: System: system policy, namely the CAM system policy reused; Custom: custom policy, namely the custom policy prepared according to the CAM permission policy syntax and structure.  
+                     * @return RolePolicyType Permission policy type. Valid values: System: system policy, namely the CAM system policy reused; Custom: custom policy, namely the custom policy prepared according to the CAM permission policy syntax and structure.  
                      * 
                      */
                     std::string GetRolePolicyType() const;
 
                     /**
-                     * 设置Permission policy type. Valid values: System: system policy, namely the CAM system policy reused; Custom: custom policy, namely the custom policy prepared according to the CAM permission policy syntax and structure. Only the system policy is supported at the early stage, and the custom policy will be supported later.
-                     * @param _rolePolicyType Permission policy type. Valid values: System: system policy, namely the CAM system policy reused; Custom: custom policy, namely the custom policy prepared according to the CAM permission policy syntax and structure. Only the system policy is supported at the early stage, and the custom policy will be supported later.
+                     * 设置Permission policy type. Valid values: System: system policy, namely the CAM system policy reused; Custom: custom policy, namely the custom policy prepared according to the CAM permission policy syntax and structure.  
+                     * @param _rolePolicyType Permission policy type. Valid values: System: system policy, namely the CAM system policy reused; Custom: custom policy, namely the custom policy prepared according to the CAM permission policy syntax and structure.  
                      * 
                      */
                     void SetRolePolicyType(const std::string& _rolePolicyType);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool RolePolicyTypeHasBeenSet() const;
 
                     /**
-                     * 获取Permission policy name, which includes up to 20 policies, each containing up to 32 characters.
-                     * @return RolePolicyNames Permission policy name, which includes up to 20 policies, each containing up to 32 characters.
+                     * 获取Permission policy name, supporting up to 20 policies, with each policy having a maximum of 32 characters. If you need to add a system policy, it is recommended to use the RolePolicies parameter. For custom policies, the array length is up to 1.
+                     * @return RolePolicyNames Permission policy name, supporting up to 20 policies, with each policy having a maximum of 32 characters. If you need to add a system policy, it is recommended to use the RolePolicies parameter. For custom policies, the array length is up to 1.
                      * 
                      */
                     std::vector<std::string> GetRolePolicyNames() const;
 
                     /**
-                     * 设置Permission policy name, which includes up to 20 policies, each containing up to 32 characters.
-                     * @param _rolePolicyNames Permission policy name, which includes up to 20 policies, each containing up to 32 characters.
+                     * 设置Permission policy name, supporting up to 20 policies, with each policy having a maximum of 32 characters. If you need to add a system policy, it is recommended to use the RolePolicies parameter. For custom policies, the array length is up to 1.
+                     * @param _rolePolicyNames Permission policy name, supporting up to 20 policies, with each policy having a maximum of 32 characters. If you need to add a system policy, it is recommended to use the RolePolicies parameter. For custom policies, the array length is up to 1.
                      * 
                      */
                     void SetRolePolicyNames(const std::vector<std::string>& _rolePolicyNames);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool RolePolicyNamesHasBeenSet() const;
 
                     /**
-                     * 获取Policy details.
-                     * @return RolePolicies Policy details.
+                     * 获取Details of an added system policy.
+                     * @return RolePolicies Details of an added system policy.
                      * 
                      */
                     std::vector<PolicyDetail> GetRolePolicies() const;
 
                     /**
-                     * 设置Policy details.
-                     * @param _rolePolicies Policy details.
+                     * 设置Details of an added system policy.
+                     * @param _rolePolicies Details of an added system policy.
                      * 
                      */
                     void SetRolePolicies(const std::vector<PolicyDetail>& _rolePolicies);
@@ -184,19 +184,19 @@ namespace TencentCloud
                     bool m_roleConfigurationIdHasBeenSet;
 
                     /**
-                     * Permission policy type. Valid values: System: system policy, namely the CAM system policy reused; Custom: custom policy, namely the custom policy prepared according to the CAM permission policy syntax and structure. Only the system policy is supported at the early stage, and the custom policy will be supported later.
+                     * Permission policy type. Valid values: System: system policy, namely the CAM system policy reused; Custom: custom policy, namely the custom policy prepared according to the CAM permission policy syntax and structure.  
                      */
                     std::string m_rolePolicyType;
                     bool m_rolePolicyTypeHasBeenSet;
 
                     /**
-                     * Permission policy name, which includes up to 20 policies, each containing up to 32 characters.
+                     * Permission policy name, supporting up to 20 policies, with each policy having a maximum of 32 characters. If you need to add a system policy, it is recommended to use the RolePolicies parameter. For custom policies, the array length is up to 1.
                      */
                     std::vector<std::string> m_rolePolicyNames;
                     bool m_rolePolicyNamesHasBeenSet;
 
                     /**
-                     * Policy details.
+                     * Details of an added system policy.
                      */
                     std::vector<PolicyDetail> m_rolePolicies;
                     bool m_rolePoliciesHasBeenSet;

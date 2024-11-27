@@ -550,6 +550,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ResourceIdHasBeenSet() const;
 
+                    /**
+                     * 获取CLB WAF or SaaS WAF mode.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MicroVersion CLB WAF or SaaS WAF mode.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetMicroVersion() const;
+
+                    /**
+                     * 设置CLB WAF or SaaS WAF mode.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _microVersion CLB WAF or SaaS WAF mode.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetMicroVersion(const std::string& _microVersion);
+
+                    /**
+                     * 判断参数 MicroVersion 是否已赋值
+                     * @return MicroVersion 是否已赋值
+                     * 
+                     */
+                    bool MicroVersionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -686,6 +711,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_resourceId;
                     bool m_resourceIdHasBeenSet;
+
+                    /**
+                     * CLB WAF or SaaS WAF mode.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_microVersion;
+                    bool m_microVersionHasBeenSet;
 
                 };
             }
