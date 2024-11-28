@@ -22,7 +22,9 @@ using namespace std;
 
 AccelerationDomainCertificate::AccelerationDomainCertificate() :
     m_modeHasBeenSet(false),
-    m_listHasBeenSet(false)
+    m_listHasBeenSet(false),
+    m_clientCertInfoHasBeenSet(false),
+    m_upstreamCertInfoHasBeenSet(false)
 {
 }
 
@@ -61,6 +63,40 @@ CoreInternalOutcome AccelerationDomainCertificate::Deserialize(const rapidjson::
         m_listHasBeenSet = true;
     }
 
+    if (value.HasMember("ClientCertInfo") && !value["ClientCertInfo"].IsNull())
+    {
+        if (!value["ClientCertInfo"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `AccelerationDomainCertificate.ClientCertInfo` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_clientCertInfo.Deserialize(value["ClientCertInfo"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_clientCertInfoHasBeenSet = true;
+    }
+
+    if (value.HasMember("UpstreamCertInfo") && !value["UpstreamCertInfo"].IsNull())
+    {
+        if (!value["UpstreamCertInfo"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `AccelerationDomainCertificate.UpstreamCertInfo` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_upstreamCertInfo.Deserialize(value["UpstreamCertInfo"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_upstreamCertInfoHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -89,6 +125,24 @@ void AccelerationDomainCertificate::ToJsonObject(rapidjson::Value &value, rapidj
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_clientCertInfoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ClientCertInfo";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_clientCertInfo.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_upstreamCertInfoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "UpstreamCertInfo";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_upstreamCertInfo.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -124,5 +178,37 @@ void AccelerationDomainCertificate::SetList(const vector<CertificateInfo>& _list
 bool AccelerationDomainCertificate::ListHasBeenSet() const
 {
     return m_listHasBeenSet;
+}
+
+MutualTLS AccelerationDomainCertificate::GetClientCertInfo() const
+{
+    return m_clientCertInfo;
+}
+
+void AccelerationDomainCertificate::SetClientCertInfo(const MutualTLS& _clientCertInfo)
+{
+    m_clientCertInfo = _clientCertInfo;
+    m_clientCertInfoHasBeenSet = true;
+}
+
+bool AccelerationDomainCertificate::ClientCertInfoHasBeenSet() const
+{
+    return m_clientCertInfoHasBeenSet;
+}
+
+UpstreamCertInfo AccelerationDomainCertificate::GetUpstreamCertInfo() const
+{
+    return m_upstreamCertInfo;
+}
+
+void AccelerationDomainCertificate::SetUpstreamCertInfo(const UpstreamCertInfo& _upstreamCertInfo)
+{
+    m_upstreamCertInfo = _upstreamCertInfo;
+    m_upstreamCertInfoHasBeenSet = true;
+}
+
+bool AccelerationDomainCertificate::UpstreamCertInfoHasBeenSet() const
+{
+    return m_upstreamCertInfoHasBeenSet;
 }
 

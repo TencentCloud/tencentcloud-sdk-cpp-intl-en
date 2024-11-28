@@ -412,9 +412,9 @@ namespace TencentCloud
 
                 /**
                  *This API is used to roll back the system disk snapshot of the specified instance.
-<li>Only rollback to the original system disk is supported.</li>
+<li>Only rollback to the original system disk is supported. </li>
 <li>Only snapshots in `NORMAL` status can be used for rollback. To query the status of a snapshot, you can call the `DescribeSnapshots` API and see the `SnapshotState` field in the response.</li>
-<li>When a snapshot is rolled back, the status of the instance must be `STOPPED` or `RUNNING`. You can call the `DescribeInstances` API to query the instance status. Instances in `RUNNING` status will be forcibly shut down before snapshot rollback.</li>
+<li>When a snapshot is rolled back, the status of the instance must be `STOPPED` or `RUNNING`. You can call the `DescribeInstances` API to query the instance status. Instances in `RUNNING` status will be forcibly shut down before snapshot rollback. </li>
                  * @param req ApplyInstanceSnapshotRequest
                  * @return ApplyInstanceSnapshotOutcome
                  */

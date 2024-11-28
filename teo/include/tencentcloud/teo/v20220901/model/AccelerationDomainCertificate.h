@@ -25,6 +25,8 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/teo/v20220901/model/CertificateInfo.h>
+#include <tencentcloud/teo/v20220901/model/MutualTLS.h>
+#include <tencentcloud/teo/v20220901/model/UpstreamCertInfo.h>
 
 
 namespace TencentCloud
@@ -69,19 +71,19 @@ namespace TencentCloud
                     bool ModeHasBeenSet() const;
 
                     /**
-                     * 获取List of certificates
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return List List of certificates
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取List of server certificates. The relevant certificates are deployed on the entrance side of the EO.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @return List List of server certificates. The relevant certificates are deployed on the entrance side of the EO.
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     std::vector<CertificateInfo> GetList() const;
 
                     /**
-                     * 设置List of certificates
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _list List of certificates
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置List of server certificates. The relevant certificates are deployed on the entrance side of the EO.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @param _list List of server certificates. The relevant certificates are deployed on the entrance side of the EO.
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     void SetList(const std::vector<CertificateInfo>& _list);
@@ -93,6 +95,48 @@ Note: This field may return·null, indicating that no valid values can be obtain
                      */
                     bool ListHasBeenSet() const;
 
+                    /**
+                     * 获取In the edge mutual authentication scenario, this field represents the client's CA certificate, which is deployed inside the EO node and used for EO node authentication of the client certificate.
+                     * @return ClientCertInfo In the edge mutual authentication scenario, this field represents the client's CA certificate, which is deployed inside the EO node and used for EO node authentication of the client certificate.
+                     * 
+                     */
+                    MutualTLS GetClientCertInfo() const;
+
+                    /**
+                     * 设置In the edge mutual authentication scenario, this field represents the client's CA certificate, which is deployed inside the EO node and used for EO node authentication of the client certificate.
+                     * @param _clientCertInfo In the edge mutual authentication scenario, this field represents the client's CA certificate, which is deployed inside the EO node and used for EO node authentication of the client certificate.
+                     * 
+                     */
+                    void SetClientCertInfo(const MutualTLS& _clientCertInfo);
+
+                    /**
+                     * 判断参数 ClientCertInfo 是否已赋值
+                     * @return ClientCertInfo 是否已赋值
+                     * 
+                     */
+                    bool ClientCertInfoHasBeenSet() const;
+
+                    /**
+                     * 获取The certificate carried during EO node origin-pull is used when the origin server enables the mutual authentication handshake to validate the client certificate, ensuring that the request originates from a trusted EO node.
+                     * @return UpstreamCertInfo The certificate carried during EO node origin-pull is used when the origin server enables the mutual authentication handshake to validate the client certificate, ensuring that the request originates from a trusted EO node.
+                     * 
+                     */
+                    UpstreamCertInfo GetUpstreamCertInfo() const;
+
+                    /**
+                     * 设置The certificate carried during EO node origin-pull is used when the origin server enables the mutual authentication handshake to validate the client certificate, ensuring that the request originates from a trusted EO node.
+                     * @param _upstreamCertInfo The certificate carried during EO node origin-pull is used when the origin server enables the mutual authentication handshake to validate the client certificate, ensuring that the request originates from a trusted EO node.
+                     * 
+                     */
+                    void SetUpstreamCertInfo(const UpstreamCertInfo& _upstreamCertInfo);
+
+                    /**
+                     * 判断参数 UpstreamCertInfo 是否已赋值
+                     * @return UpstreamCertInfo 是否已赋值
+                     * 
+                     */
+                    bool UpstreamCertInfoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -102,11 +146,23 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_modeHasBeenSet;
 
                     /**
-                     * List of certificates
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * List of server certificates. The relevant certificates are deployed on the entrance side of the EO.
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      */
                     std::vector<CertificateInfo> m_list;
                     bool m_listHasBeenSet;
+
+                    /**
+                     * In the edge mutual authentication scenario, this field represents the client's CA certificate, which is deployed inside the EO node and used for EO node authentication of the client certificate.
+                     */
+                    MutualTLS m_clientCertInfo;
+                    bool m_clientCertInfoHasBeenSet;
+
+                    /**
+                     * The certificate carried during EO node origin-pull is used when the origin server enables the mutual authentication handshake to validate the client certificate, ensuring that the request originates from a trusted EO node.
+                     */
+                    UpstreamCertInfo m_upstreamCertInfo;
+                    bool m_upstreamCertInfoHasBeenSet;
 
                 };
             }
