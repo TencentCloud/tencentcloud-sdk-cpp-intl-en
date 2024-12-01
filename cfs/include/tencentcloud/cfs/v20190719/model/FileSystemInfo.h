@@ -27,6 +27,7 @@
 #include <tencentcloud/cfs/v20190719/model/PGroup.h>
 #include <tencentcloud/cfs/v20190719/model/TagInfo.h>
 #include <tencentcloud/cfs/v20190719/model/TieringDetailInfo.h>
+#include <tencentcloud/cfs/v20190719/model/AutoScaleUpRule.h>
 
 
 namespace TencentCloud
@@ -452,6 +453,48 @@ namespace TencentCloud
                     bool BandwidthLimitHasBeenSet() const;
 
                     /**
+                     * 获取
+                     * @return AutoSnapshotPolicyId 
+                     * 
+                     */
+                    std::string GetAutoSnapshotPolicyId() const;
+
+                    /**
+                     * 设置
+                     * @param _autoSnapshotPolicyId 
+                     * 
+                     */
+                    void SetAutoSnapshotPolicyId(const std::string& _autoSnapshotPolicyId);
+
+                    /**
+                     * 判断参数 AutoSnapshotPolicyId 是否已赋值
+                     * @return AutoSnapshotPolicyId 是否已赋值
+                     * 
+                     */
+                    bool AutoSnapshotPolicyIdHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return SnapStatus 
+                     * 
+                     */
+                    std::string GetSnapStatus() const;
+
+                    /**
+                     * 设置
+                     * @param _snapStatus 
+                     * 
+                     */
+                    void SetSnapStatus(const std::string& _snapStatus);
+
+                    /**
+                     * 判断参数 SnapStatus 是否已赋值
+                     * @return SnapStatus 是否已赋值
+                     * 
+                     */
+                    bool SnapStatusHasBeenSet() const;
+
+                    /**
                      * 获取Total capacity of the file system
                      * @return Capacity Total capacity of the file system
                      * 
@@ -538,6 +581,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool TieringDetailHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return AutoScaleUpRule 
+                     * 
+                     */
+                    AutoScaleUpRule GetAutoScaleUpRule() const;
+
+                    /**
+                     * 设置
+                     * @param _autoScaleUpRule 
+                     * 
+                     */
+                    void SetAutoScaleUpRule(const AutoScaleUpRule& _autoScaleUpRule);
+
+                    /**
+                     * 判断参数 AutoScaleUpRule 是否已赋值
+                     * @return AutoScaleUpRule 是否已赋值
+                     * 
+                     */
+                    bool AutoScaleUpRuleHasBeenSet() const;
 
                 private:
 
@@ -656,6 +720,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_bandwidthLimitHasBeenSet;
 
                     /**
+                     * 
+                     */
+                    std::string m_autoSnapshotPolicyId;
+                    bool m_autoSnapshotPolicyIdHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_snapStatus;
+                    bool m_snapStatusHasBeenSet;
+
+                    /**
                      * Total capacity of the file system
                      */
                     uint64_t m_capacity;
@@ -679,6 +755,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     TieringDetailInfo m_tieringDetail;
                     bool m_tieringDetailHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    AutoScaleUpRule m_autoScaleUpRule;
+                    bool m_autoScaleUpRuleHasBeenSet;
 
                 };
             }

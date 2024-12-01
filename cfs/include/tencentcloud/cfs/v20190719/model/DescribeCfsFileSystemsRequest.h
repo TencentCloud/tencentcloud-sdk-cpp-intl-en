@@ -105,6 +105,69 @@ namespace TencentCloud
                      */
                     bool SubnetIdHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return Offset 
+                     * 
+                     */
+                    uint64_t GetOffset() const;
+
+                    /**
+                     * 设置
+                     * @param _offset 
+                     * 
+                     */
+                    void SetOffset(const uint64_t& _offset);
+
+                    /**
+                     * 判断参数 Offset 是否已赋值
+                     * @return Offset 是否已赋值
+                     * 
+                     */
+                    bool OffsetHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return Limit 
+                     * 
+                     */
+                    uint64_t GetLimit() const;
+
+                    /**
+                     * 设置
+                     * @param _limit 
+                     * 
+                     */
+                    void SetLimit(const uint64_t& _limit);
+
+                    /**
+                     * 判断参数 Limit 是否已赋值
+                     * @return Limit 是否已赋值
+                     * 
+                     */
+                    bool LimitHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return CreationToken 
+                     * 
+                     */
+                    std::string GetCreationToken() const;
+
+                    /**
+                     * 设置
+                     * @param _creationToken 
+                     * 
+                     */
+                    void SetCreationToken(const std::string& _creationToken);
+
+                    /**
+                     * 判断参数 CreationToken 是否已赋值
+                     * @return CreationToken 是否已赋值
+                     * 
+                     */
+                    bool CreationTokenHasBeenSet() const;
+
                 private:
 
                     /**
@@ -124,6 +187,24 @@ namespace TencentCloud
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_offset;
+                    bool m_offsetHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_limit;
+                    bool m_limitHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_creationToken;
+                    bool m_creationTokenHasBeenSet;
 
                 };
             }

@@ -76,6 +76,7 @@ set(cfs_public_header_model
   include/tencentcloud/cfs/v20190719/model/DescribeBucketListResponse.h
   include/tencentcloud/cfs/v20190719/model/UpdateCfsFileSystemNameResponse.h
   include/tencentcloud/cfs/v20190719/model/DescribeCfsSnapshotOverviewResponse.h
+  include/tencentcloud/cfs/v20190719/model/AutoScaleUpRule.h
   include/tencentcloud/cfs/v20190719/model/DeleteCfsSnapshotRequest.h
   include/tencentcloud/cfs/v20190719/model/DescribeCfsFileSystemClientsRequest.h
   include/tencentcloud/cfs/v20190719/model/AvailableProtoStatus.h
@@ -178,6 +179,7 @@ set(cfs_src
   src/v20190719/model/DescribeBucketListResponse.cpp
   src/v20190719/model/UpdateCfsFileSystemNameResponse.cpp
   src/v20190719/model/DescribeCfsSnapshotOverviewResponse.cpp
+  src/v20190719/model/AutoScaleUpRule.cpp
   src/v20190719/model/DeleteCfsSnapshotRequest.cpp
   src/v20190719/model/DescribeCfsFileSystemClientsRequest.cpp
   src/v20190719/model/AvailableProtoStatus.cpp

@@ -39,10 +39,13 @@ FileSystemInfo::FileSystemInfo() :
     m_kmsKeyIdHasBeenSet(false),
     m_appIdHasBeenSet(false),
     m_bandwidthLimitHasBeenSet(false),
+    m_autoSnapshotPolicyIdHasBeenSet(false),
+    m_snapStatusHasBeenSet(false),
     m_capacityHasBeenSet(false),
     m_tagsHasBeenSet(false),
     m_tieringStateHasBeenSet(false),
-    m_tieringDetailHasBeenSet(false)
+    m_tieringDetailHasBeenSet(false),
+    m_autoScaleUpRuleHasBeenSet(false)
 {
 }
 
@@ -238,6 +241,26 @@ CoreInternalOutcome FileSystemInfo::Deserialize(const rapidjson::Value &value)
         m_bandwidthLimitHasBeenSet = true;
     }
 
+    if (value.HasMember("AutoSnapshotPolicyId") && !value["AutoSnapshotPolicyId"].IsNull())
+    {
+        if (!value["AutoSnapshotPolicyId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `FileSystemInfo.AutoSnapshotPolicyId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_autoSnapshotPolicyId = string(value["AutoSnapshotPolicyId"].GetString());
+        m_autoSnapshotPolicyIdHasBeenSet = true;
+    }
+
+    if (value.HasMember("SnapStatus") && !value["SnapStatus"].IsNull())
+    {
+        if (!value["SnapStatus"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `FileSystemInfo.SnapStatus` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_snapStatus = string(value["SnapStatus"].GetString());
+        m_snapStatusHasBeenSet = true;
+    }
+
     if (value.HasMember("Capacity") && !value["Capacity"].IsNull())
     {
         if (!value["Capacity"].IsUint64())
@@ -293,6 +316,23 @@ CoreInternalOutcome FileSystemInfo::Deserialize(const rapidjson::Value &value)
         }
 
         m_tieringDetailHasBeenSet = true;
+    }
+
+    if (value.HasMember("AutoScaleUpRule") && !value["AutoScaleUpRule"].IsNull())
+    {
+        if (!value["AutoScaleUpRule"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `FileSystemInfo.AutoScaleUpRule` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_autoScaleUpRule.Deserialize(value["AutoScaleUpRule"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_autoScaleUpRuleHasBeenSet = true;
     }
 
 
@@ -447,6 +487,22 @@ void FileSystemInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::
         value.AddMember(iKey, m_bandwidthLimit, allocator);
     }
 
+    if (m_autoSnapshotPolicyIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AutoSnapshotPolicyId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_autoSnapshotPolicyId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_snapStatusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SnapStatus";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_snapStatus.c_str(), allocator).Move(), allocator);
+    }
+
     if (m_capacityHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -485,6 +541,15 @@ void FileSystemInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_tieringDetail.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_autoScaleUpRuleHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AutoScaleUpRule";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_autoScaleUpRule.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -778,6 +843,38 @@ bool FileSystemInfo::BandwidthLimitHasBeenSet() const
     return m_bandwidthLimitHasBeenSet;
 }
 
+string FileSystemInfo::GetAutoSnapshotPolicyId() const
+{
+    return m_autoSnapshotPolicyId;
+}
+
+void FileSystemInfo::SetAutoSnapshotPolicyId(const string& _autoSnapshotPolicyId)
+{
+    m_autoSnapshotPolicyId = _autoSnapshotPolicyId;
+    m_autoSnapshotPolicyIdHasBeenSet = true;
+}
+
+bool FileSystemInfo::AutoSnapshotPolicyIdHasBeenSet() const
+{
+    return m_autoSnapshotPolicyIdHasBeenSet;
+}
+
+string FileSystemInfo::GetSnapStatus() const
+{
+    return m_snapStatus;
+}
+
+void FileSystemInfo::SetSnapStatus(const string& _snapStatus)
+{
+    m_snapStatus = _snapStatus;
+    m_snapStatusHasBeenSet = true;
+}
+
+bool FileSystemInfo::SnapStatusHasBeenSet() const
+{
+    return m_snapStatusHasBeenSet;
+}
+
 uint64_t FileSystemInfo::GetCapacity() const
 {
     return m_capacity;
@@ -840,5 +937,21 @@ void FileSystemInfo::SetTieringDetail(const TieringDetailInfo& _tieringDetail)
 bool FileSystemInfo::TieringDetailHasBeenSet() const
 {
     return m_tieringDetailHasBeenSet;
+}
+
+AutoScaleUpRule FileSystemInfo::GetAutoScaleUpRule() const
+{
+    return m_autoScaleUpRule;
+}
+
+void FileSystemInfo::SetAutoScaleUpRule(const AutoScaleUpRule& _autoScaleUpRule)
+{
+    m_autoScaleUpRule = _autoScaleUpRule;
+    m_autoScaleUpRuleHasBeenSet = true;
+}
+
+bool FileSystemInfo::AutoScaleUpRuleHasBeenSet() const
+{
+    return m_autoScaleUpRuleHasBeenSet;
 }
 
