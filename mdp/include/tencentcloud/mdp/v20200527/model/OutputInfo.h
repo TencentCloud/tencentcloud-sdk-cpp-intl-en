@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mdp/v20200527/model/ManifestInfo.h>
+#include <tencentcloud/mdp/v20200527/model/DashManifestInfo.h>
 
 
 namespace TencentCloud
@@ -111,15 +112,15 @@ namespace TencentCloud
                     bool ManifestNameHasBeenSet() const;
 
                     /**
-                     * 获取Advertisement configuration.
-                     * @return ManifestConf Advertisement configuration.
+                     * 获取The manifest info, used when Type is HLS.
+                     * @return ManifestConf The manifest info, used when Type is HLS.
                      * 
                      */
                     ManifestInfo GetManifestConf() const;
 
                     /**
-                     * 设置Advertisement configuration.
-                     * @param _manifestConf Advertisement configuration.
+                     * 设置The manifest info, used when Type is HLS.
+                     * @param _manifestConf The manifest info, used when Type is HLS.
                      * 
                      */
                     void SetManifestConf(const ManifestInfo& _manifestConf);
@@ -152,6 +153,27 @@ namespace TencentCloud
                      */
                     bool PlaybackURLHasBeenSet() const;
 
+                    /**
+                     * 获取The manifest info, used when Type is DASH.
+                     * @return DashManifestConf The manifest info, used when Type is DASH.
+                     * 
+                     */
+                    DashManifestInfo GetDashManifestConf() const;
+
+                    /**
+                     * 设置The manifest info, used when Type is DASH.
+                     * @param _dashManifestConf The manifest info, used when Type is DASH.
+                     * 
+                     */
+                    void SetDashManifestConf(const DashManifestInfo& _dashManifestConf);
+
+                    /**
+                     * 判断参数 DashManifestConf 是否已赋值
+                     * @return DashManifestConf 是否已赋值
+                     * 
+                     */
+                    bool DashManifestConfHasBeenSet() const;
+
                 private:
 
                     /**
@@ -173,7 +195,7 @@ namespace TencentCloud
                     bool m_manifestNameHasBeenSet;
 
                     /**
-                     * Advertisement configuration.
+                     * The manifest info, used when Type is HLS.
                      */
                     ManifestInfo m_manifestConf;
                     bool m_manifestConfHasBeenSet;
@@ -183,6 +205,12 @@ namespace TencentCloud
                      */
                     std::string m_playbackURL;
                     bool m_playbackURLHasBeenSet;
+
+                    /**
+                     * The manifest info, used when Type is DASH.
+                     */
+                    DashManifestInfo m_dashManifestConf;
+                    bool m_dashManifestConfHasBeenSet;
 
                 };
             }

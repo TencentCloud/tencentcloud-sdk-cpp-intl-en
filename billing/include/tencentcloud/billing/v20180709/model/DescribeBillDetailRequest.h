@@ -305,95 +305,71 @@ ccli billing DescribeBillDetail --cli-unfold-argument --Offset 1 --Limit 100 --M
                     bool ResourceIdHasBeenSet() const;
 
                     /**
-                     * 获取Action type to query. Valid values:
-Purchase
-Renewal
-Modify
-Refund
-Deduction
-Hourly settlement
+                     * 获取Hourly settlement
 Daily settlement
 Monthly settlement
-Offline project deduction
-Offline deduction
-adjust-CR
-adjust-DR
-One-off RI Fee
 Spot
-Hourly RI fee
 New monthly subscription
 Monthly subscription renewal
 Monthly subscription specification adjustment
-Monthly subscription specification adjustment
 Monthly subscription refund
-                     * @return ActionType Action type to query. Valid values:
-Purchase
-Renewal
-Modify
-Refund
-Deduction
-Hourly settlement
+Adjustment - deduction
+Adjustment - refund
+Hourly RI fee
+One-off RI Fee
+Hourly Savings Plan fee
+Offline project deduction
+Offline product deduction
+                     * @return ActionType Hourly settlement
 Daily settlement
 Monthly settlement
-Offline project deduction
-Offline deduction
-adjust-CR
-adjust-DR
-One-off RI Fee
 Spot
-Hourly RI fee
 New monthly subscription
 Monthly subscription renewal
 Monthly subscription specification adjustment
-Monthly subscription specification adjustment
 Monthly subscription refund
+Adjustment - deduction
+Adjustment - refund
+Hourly RI fee
+One-off RI Fee
+Hourly Savings Plan fee
+Offline project deduction
+Offline product deduction
                      * 
                      */
                     std::string GetActionType() const;
 
                     /**
-                     * 设置Action type to query. Valid values:
-Purchase
-Renewal
-Modify
-Refund
-Deduction
-Hourly settlement
+                     * 设置Hourly settlement
 Daily settlement
 Monthly settlement
-Offline project deduction
-Offline deduction
-adjust-CR
-adjust-DR
-One-off RI Fee
 Spot
-Hourly RI fee
 New monthly subscription
 Monthly subscription renewal
 Monthly subscription specification adjustment
-Monthly subscription specification adjustment
 Monthly subscription refund
-                     * @param _actionType Action type to query. Valid values:
-Purchase
-Renewal
-Modify
-Refund
-Deduction
-Hourly settlement
+Adjustment - deduction
+Adjustment - refund
+Hourly RI fee
+One-off RI Fee
+Hourly Savings Plan fee
+Offline project deduction
+Offline product deduction
+                     * @param _actionType Hourly settlement
 Daily settlement
 Monthly settlement
-Offline project deduction
-Offline deduction
-adjust-CR
-adjust-DR
-One-off RI Fee
 Spot
-Hourly RI fee
 New monthly subscription
 Monthly subscription renewal
 Monthly subscription specification adjustment
-Monthly subscription specification adjustment
 Monthly subscription refund
+Adjustment - deduction
+Adjustment - refund
+Hourly RI fee
+One-off RI Fee
+Hourly Savings Plan fee
+Offline project deduction
+Offline product deduction
                      * 
                      */
                     void SetActionType(const std::string& _actionType);
@@ -569,27 +545,21 @@ ccli billing DescribeBillDetail --cli-unfold-argument --Offset 1 --Limit 100 --M
                     bool m_resourceIdHasBeenSet;
 
                     /**
-                     * Action type to query. Valid values:
-Purchase
-Renewal
-Modify
-Refund
-Deduction
-Hourly settlement
+                     * Hourly settlement
 Daily settlement
 Monthly settlement
-Offline project deduction
-Offline deduction
-adjust-CR
-adjust-DR
-One-off RI Fee
 Spot
-Hourly RI fee
 New monthly subscription
 Monthly subscription renewal
 Monthly subscription specification adjustment
-Monthly subscription specification adjustment
 Monthly subscription refund
+Adjustment - deduction
+Adjustment - refund
+Hourly RI fee
+One-off RI Fee
+Hourly Savings Plan fee
+Offline project deduction
+Offline product deduction
                      */
                     std::string m_actionType;
                     bool m_actionTypeHasBeenSet;

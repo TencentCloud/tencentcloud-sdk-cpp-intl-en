@@ -24,7 +24,8 @@ OutputReq::OutputReq() :
     m_typeHasBeenSet(false),
     m_groupNameHasBeenSet(false),
     m_manifestNameHasBeenSet(false),
-    m_manifestConfHasBeenSet(false)
+    m_manifestConfHasBeenSet(false),
+    m_dashManifestConfHasBeenSet(false)
 {
 }
 
@@ -80,6 +81,23 @@ CoreInternalOutcome OutputReq::Deserialize(const rapidjson::Value &value)
         m_manifestConfHasBeenSet = true;
     }
 
+    if (value.HasMember("DashManifestConf") && !value["DashManifestConf"].IsNull())
+    {
+        if (!value["DashManifestConf"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `OutputReq.DashManifestConf` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_dashManifestConf.Deserialize(value["DashManifestConf"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_dashManifestConfHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -118,6 +136,15 @@ void OutputReq::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Alloc
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_manifestConf.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_dashManifestConfHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DashManifestConf";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_dashManifestConf.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -185,5 +212,21 @@ void OutputReq::SetManifestConf(const ManifestInfo& _manifestConf)
 bool OutputReq::ManifestConfHasBeenSet() const
 {
     return m_manifestConfHasBeenSet;
+}
+
+DashManifestInfo OutputReq::GetDashManifestConf() const
+{
+    return m_dashManifestConf;
+}
+
+void OutputReq::SetDashManifestConf(const DashManifestInfo& _dashManifestConf)
+{
+    m_dashManifestConf = _dashManifestConf;
+    m_dashManifestConfHasBeenSet = true;
+}
+
+bool OutputReq::DashManifestConfHasBeenSet() const
+{
+    return m_dashManifestConfHasBeenSet;
 }
 

@@ -31,6 +31,7 @@ set(ccc_public_header_model
   include/tencentcloud/ccc/v20200210/model/DisableCCCPhoneNumberResponse.h
   include/tencentcloud/ccc/v20200210/model/DescribeProtectedTelCdrResponse.h
   include/tencentcloud/ccc/v20200210/model/DescribeAutoCalloutTaskRequest.h
+  include/tencentcloud/ccc/v20200210/model/CreateAICallRequest.h
   include/tencentcloud/ccc/v20200210/model/CreateAdminURLResponse.h
   include/tencentcloud/ccc/v20200210/model/PausePredictiveDialingCampaignRequest.h
   include/tencentcloud/ccc/v20200210/model/CreateCallOutSessionResponse.h
@@ -127,6 +128,7 @@ set(ccc_public_header_model
   include/tencentcloud/ccc/v20200210/model/UploadIvrAudioFailedInfo.h
   include/tencentcloud/ccc/v20200210/model/DescribeCallInMetricsResponse.h
   include/tencentcloud/ccc/v20200210/model/DescribeAgentCruiseDialingCampaignResponse.h
+  include/tencentcloud/ccc/v20200210/model/CreateAICallResponse.h
   include/tencentcloud/ccc/v20200210/model/CreateIVRSessionResponse.h
   include/tencentcloud/ccc/v20200210/model/UnbindStaffSkillGroupListRequest.h
   include/tencentcloud/ccc/v20200210/model/DescribeTelCdrResponse.h
@@ -167,6 +169,7 @@ set(ccc_src
   src/v20200210/model/DisableCCCPhoneNumberResponse.cpp
   src/v20200210/model/DescribeProtectedTelCdrResponse.cpp
   src/v20200210/model/DescribeAutoCalloutTaskRequest.cpp
+  src/v20200210/model/CreateAICallRequest.cpp
   src/v20200210/model/CreateAdminURLResponse.cpp
   src/v20200210/model/PausePredictiveDialingCampaignRequest.cpp
   src/v20200210/model/CreateCallOutSessionResponse.cpp
@@ -263,6 +266,7 @@ set(ccc_src
   src/v20200210/model/UploadIvrAudioFailedInfo.cpp
   src/v20200210/model/DescribeCallInMetricsResponse.cpp
   src/v20200210/model/DescribeAgentCruiseDialingCampaignResponse.cpp
+  src/v20200210/model/CreateAICallResponse.cpp
   src/v20200210/model/CreateIVRSessionResponse.cpp
   src/v20200210/model/UnbindStaffSkillGroupListRequest.cpp
   src/v20200210/model/DescribeTelCdrResponse.cpp

@@ -106,23 +106,23 @@ namespace TencentCloud
                     bool MonthHasBeenSet() const;
 
                     /**
-                     * 获取The period type. byUsedTime: By usage period; byPayTime: by payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page.
-                     * @return PeriodType The period type. byUsedTime: By usage period; byPayTime: by payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page.
-                     * 
+                     * 获取The period type. byUsedTime
+                     * @return PeriodType The period type. byUsedTime
+                     * @deprecated
                      */
                     std::string GetPeriodType() const;
 
                     /**
-                     * 设置The period type. byUsedTime: By usage period; byPayTime: by payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page.
-                     * @param _periodType The period type. byUsedTime: By usage period; byPayTime: by payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page.
-                     * 
+                     * 设置The period type. byUsedTime
+                     * @param _periodType The period type. byUsedTime
+                     * @deprecated
                      */
                     void SetPeriodType(const std::string& _periodType);
 
                     /**
                      * 判断参数 PeriodType 是否已赋值
                      * @return PeriodType 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool PeriodTypeHasBeenSet() const;
 
@@ -152,91 +152,71 @@ namespace TencentCloud
                     bool NeedRecordNumHasBeenSet() const;
 
                     /**
-                     * 获取Action type to query. Valid values:
-Purchase
-Renewal
-Modify
-Refund
-Deduction
-Hourly settlement
+                     * 获取Hourly settlement
 Daily settlement
 Monthly settlement
-Offline project deduction
-Offline deduction
-adjust-CR
-adjust-DR
-One-off RI Fee
 Spot
-Hourly RI fee
 New monthly subscription
 Monthly subscription renewal
 Monthly subscription specification adjustment
 Monthly subscription refund
-                     * @return ActionType Action type to query. Valid values:
-Purchase
-Renewal
-Modify
-Refund
-Deduction
-Hourly settlement
+Adjustment - deduction
+Adjustment - refund
+Hourly RI fee
+One-off RI Fee
+Hourly Savings Plan fee
+Offline project deduction
+Offline product deduction
+                     * @return ActionType Hourly settlement
 Daily settlement
 Monthly settlement
-Offline project deduction
-Offline deduction
-adjust-CR
-adjust-DR
-One-off RI Fee
 Spot
-Hourly RI fee
 New monthly subscription
 Monthly subscription renewal
 Monthly subscription specification adjustment
 Monthly subscription refund
+Adjustment - deduction
+Adjustment - refund
+Hourly RI fee
+One-off RI Fee
+Hourly Savings Plan fee
+Offline project deduction
+Offline product deduction
                      * 
                      */
                     std::string GetActionType() const;
 
                     /**
-                     * 设置Action type to query. Valid values:
-Purchase
-Renewal
-Modify
-Refund
-Deduction
-Hourly settlement
+                     * 设置Hourly settlement
 Daily settlement
 Monthly settlement
-Offline project deduction
-Offline deduction
-adjust-CR
-adjust-DR
-One-off RI Fee
 Spot
-Hourly RI fee
 New monthly subscription
 Monthly subscription renewal
 Monthly subscription specification adjustment
 Monthly subscription refund
-                     * @param _actionType Action type to query. Valid values:
-Purchase
-Renewal
-Modify
-Refund
-Deduction
-Hourly settlement
+Adjustment - deduction
+Adjustment - refund
+Hourly RI fee
+One-off RI Fee
+Hourly Savings Plan fee
+Offline project deduction
+Offline product deduction
+                     * @param _actionType Hourly settlement
 Daily settlement
 Monthly settlement
-Offline project deduction
-Offline deduction
-adjust-CR
-adjust-DR
-One-off RI Fee
 Spot
-Hourly RI fee
 New monthly subscription
 Monthly subscription renewal
 Monthly subscription specification adjustment
 Monthly subscription refund
+Adjustment - deduction
+Adjustment - refund
+Hourly RI fee
+One-off RI Fee
+Hourly Savings Plan fee
+Offline project deduction
+Offline product deduction
                      * 
                      */
                     void SetActionType(const std::string& _actionType);
@@ -270,15 +250,15 @@ Monthly subscription refund
                     bool ResourceIdHasBeenSet() const;
 
                     /**
-                     * 获取Billing mode. Valid values: `prePay` (prepaid), `postPay` (postpaid)
-                     * @return PayMode Billing mode. Valid values: `prePay` (prepaid), `postPay` (postpaid)
+                     * 获取Billing mode: prePay/postPay
+                     * @return PayMode Billing mode: prePay/postPay
                      * 
                      */
                     std::string GetPayMode() const;
 
                     /**
-                     * 设置Billing mode. Valid values: `prePay` (prepaid), `postPay` (postpaid)
-                     * @param _payMode Billing mode. Valid values: `prePay` (prepaid), `postPay` (postpaid)
+                     * 设置Billing mode: prePay/postPay
+                     * @param _payMode Billing mode: prePay/postPay
                      * 
                      */
                     void SetPayMode(const std::string& _payMode);
@@ -403,7 +383,7 @@ This parameter can be used for querying bills after January 2021.
                     bool m_monthHasBeenSet;
 
                     /**
-                     * The period type. byUsedTime: By usage period; byPayTime: by payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page.
+                     * The period type. byUsedTime
                      */
                     std::string m_periodType;
                     bool m_periodTypeHasBeenSet;
@@ -416,26 +396,21 @@ This parameter can be used for querying bills after January 2021.
                     bool m_needRecordNumHasBeenSet;
 
                     /**
-                     * Action type to query. Valid values:
-Purchase
-Renewal
-Modify
-Refund
-Deduction
-Hourly settlement
+                     * Hourly settlement
 Daily settlement
 Monthly settlement
-Offline project deduction
-Offline deduction
-adjust-CR
-adjust-DR
-One-off RI Fee
 Spot
-Hourly RI fee
 New monthly subscription
 Monthly subscription renewal
 Monthly subscription specification adjustment
 Monthly subscription refund
+Adjustment - deduction
+Adjustment - refund
+Hourly RI fee
+One-off RI Fee
+Hourly Savings Plan fee
+Offline project deduction
+Offline product deduction
                      */
                     std::string m_actionType;
                     bool m_actionTypeHasBeenSet;
@@ -447,7 +422,7 @@ Monthly subscription refund
                     bool m_resourceIdHasBeenSet;
 
                     /**
-                     * Billing mode. Valid values: `prePay` (prepaid), `postPay` (postpaid)
+                     * Billing mode: prePay/postPay
                      */
                     std::string m_payMode;
                     bool m_payModeHasBeenSet;

@@ -384,15 +384,19 @@ namespace TencentCloud
                     bool VoucherPayAmountHasBeenSet() const;
 
                     /**
-                     * 获取Cash credit: The amount paid from the user’s cash account
-                     * @return CashPayAmount Cash credit: The amount paid from the user’s cash account
+                     * 获取Cash credit: The amount paid from the user's cash account
+
+                     * @return CashPayAmount Cash credit: The amount paid from the user's cash account
+
                      * 
                      */
                     std::string GetCashPayAmount() const;
 
                     /**
-                     * 设置Cash credit: The amount paid from the user’s cash account
-                     * @param _cashPayAmount Cash credit: The amount paid from the user’s cash account
+                     * 设置Cash credit: The amount paid from the user's cash account
+
+                     * @param _cashPayAmount Cash credit: The amount paid from the user's cash account
+
                      * 
                      */
                     void SetCashPayAmount(const std::string& _cashPayAmount);
@@ -405,15 +409,19 @@ namespace TencentCloud
                     bool CashPayAmountHasBeenSet() const;
 
                     /**
-                     * 获取Free credit: The amount paid with the user’s free credit
-                     * @return IncentivePayAmount Free credit: The amount paid with the user’s free credit
+                     * 获取Free credit: The amount paid with the user's free credit
+
+                     * @return IncentivePayAmount Free credit: The amount paid with the user's free credit
+
                      * 
                      */
                     std::string GetIncentivePayAmount() const;
 
                     /**
-                     * 设置Free credit: The amount paid with the user’s free credit
-                     * @param _incentivePayAmount Free credit: The amount paid with the user’s free credit
+                     * 设置Free credit: The amount paid with the user's free credit
+
+                     * @param _incentivePayAmount Free credit: The amount paid with the user's free credit
+
                      * 
                      */
                     void SetIncentivePayAmount(const std::string& _incentivePayAmount);
@@ -426,15 +434,15 @@ namespace TencentCloud
                     bool IncentivePayAmountHasBeenSet() const;
 
                     /**
-                     * 获取Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TransferPayAmount Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TransferPayAmount Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTransferPayAmount() const;
 
                     /**
-                     * 设置Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _transferPayAmount Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _transferPayAmount Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTransferPayAmount(const std::string& _transferPayAmount);
@@ -681,6 +689,69 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ComponentConfigHasBeenSet() const;
 
+                    /**
+                     * 获取The tax rate.
+                     * @return TaxRate The tax rate.
+                     * 
+                     */
+                    std::string GetTaxRate() const;
+
+                    /**
+                     * 设置The tax rate.
+                     * @param _taxRate The tax rate.
+                     * 
+                     */
+                    void SetTaxRate(const std::string& _taxRate);
+
+                    /**
+                     * 判断参数 TaxRate 是否已赋值
+                     * @return TaxRate 是否已赋值
+                     * 
+                     */
+                    bool TaxRateHasBeenSet() const;
+
+                    /**
+                     * 获取The tax amount.
+                     * @return TaxAmount The tax amount.
+                     * 
+                     */
+                    std::string GetTaxAmount() const;
+
+                    /**
+                     * 设置The tax amount.
+                     * @param _taxAmount The tax amount.
+                     * 
+                     */
+                    void SetTaxAmount(const std::string& _taxAmount);
+
+                    /**
+                     * 判断参数 TaxAmount 是否已赋值
+                     * @return TaxAmount 是否已赋值
+                     * 
+                     */
+                    bool TaxAmountHasBeenSet() const;
+
+                    /**
+                     * 获取The currency used for the settlement of a component.
+                     * @return Currency The currency used for the settlement of a component.
+                     * 
+                     */
+                    std::string GetCurrency() const;
+
+                    /**
+                     * 设置The currency used for the settlement of a component.
+                     * @param _currency The currency used for the settlement of a component.
+                     * 
+                     */
+                    void SetCurrency(const std::string& _currency);
+
+                    /**
+                     * 判断参数 Currency 是否已赋值
+                     * @return Currency 是否已赋值
+                     * 
+                     */
+                    bool CurrencyHasBeenSet() const;
+
                 private:
 
                     /**
@@ -780,19 +851,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_voucherPayAmountHasBeenSet;
 
                     /**
-                     * Cash credit: The amount paid from the user’s cash account
+                     * Cash credit: The amount paid from the user's cash account
+
                      */
                     std::string m_cashPayAmount;
                     bool m_cashPayAmountHasBeenSet;
 
                     /**
-                     * Free credit: The amount paid with the user’s free credit
+                     * Free credit: The amount paid with the user's free credit
+
                      */
                     std::string m_incentivePayAmount;
                     bool m_incentivePayAmountHasBeenSet;
 
                     /**
-                     * Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_transferPayAmount;
                     bool m_transferPayAmountHasBeenSet;
@@ -863,6 +936,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<BillDetailComponentConfig> m_componentConfig;
                     bool m_componentConfigHasBeenSet;
+
+                    /**
+                     * The tax rate.
+                     */
+                    std::string m_taxRate;
+                    bool m_taxRateHasBeenSet;
+
+                    /**
+                     * The tax amount.
+                     */
+                    std::string m_taxAmount;
+                    bool m_taxAmountHasBeenSet;
+
+                    /**
+                     * The currency used for the settlement of a component.
+                     */
+                    std::string m_currency;
+                    bool m_currencyHasBeenSet;
 
                 };
             }

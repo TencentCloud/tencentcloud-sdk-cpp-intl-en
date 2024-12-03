@@ -31,6 +31,8 @@
 #include <tencentcloud/ccc/v20200210/model/BindNumberCallOutSkillGroupResponse.h>
 #include <tencentcloud/ccc/v20200210/model/BindStaffSkillGroupListRequest.h>
 #include <tencentcloud/ccc/v20200210/model/BindStaffSkillGroupListResponse.h>
+#include <tencentcloud/ccc/v20200210/model/CreateAICallRequest.h>
+#include <tencentcloud/ccc/v20200210/model/CreateAICallResponse.h>
 #include <tencentcloud/ccc/v20200210/model/CreateAdminURLRequest.h>
 #include <tencentcloud/ccc/v20200210/model/CreateAdminURLResponse.h>
 #include <tencentcloud/ccc/v20200210/model/CreateAgentCruiseDialingCampaignRequest.h>
@@ -151,6 +153,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::BindStaffSkillGroupListResponse> BindStaffSkillGroupListOutcome;
                 typedef std::future<BindStaffSkillGroupListOutcome> BindStaffSkillGroupListOutcomeCallable;
                 typedef std::function<void(const CccClient*, const Model::BindStaffSkillGroupListRequest&, BindStaffSkillGroupListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> BindStaffSkillGroupListAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateAICallResponse> CreateAICallOutcome;
+                typedef std::future<CreateAICallOutcome> CreateAICallOutcomeCallable;
+                typedef std::function<void(const CccClient*, const Model::CreateAICallRequest&, CreateAICallOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAICallAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateAdminURLResponse> CreateAdminURLOutcome;
                 typedef std::future<CreateAdminURLOutcome> CreateAdminURLOutcomeCallable;
                 typedef std::function<void(const CccClient*, const Model::CreateAdminURLRequest&, CreateAdminURLOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAdminURLAsyncHandler;
@@ -330,6 +335,17 @@ namespace TencentCloud
                 BindStaffSkillGroupListOutcome BindStaffSkillGroupList(const Model::BindStaffSkillGroupListRequest &request);
                 void BindStaffSkillGroupListAsync(const Model::BindStaffSkillGroupListRequest& request, const BindStaffSkillGroupListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 BindStaffSkillGroupListOutcomeCallable BindStaffSkillGroupListCallable(const Model::BindStaffSkillGroupListRequest& request);
+
+                /**
+                 *Used to make outbound calls by invoking AI models, limited to the use of proprietary phone numbers. Currently, the Advanced version seats are available for a **limited time** free trial.
+
+Before initiating a call, please ensure your AI model is compatible with OpenAI, Azure, or Minimax protocols, and visit the model provider's website to obtain relevant authentication information. For detailed feature descriptions, please refer to the documentation [Tencent Cloud Contact Center AI Call Platform](https://intl.cloud.tencent.com/document/product/679/112100?from_cn_redirect=1).
+                 * @param req CreateAICallRequest
+                 * @return CreateAICallOutcome
+                 */
+                CreateAICallOutcome CreateAICall(const Model::CreateAICallRequest &request);
+                void CreateAICallAsync(const Model::CreateAICallRequest& request, const CreateAICallAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateAICallOutcomeCallable CreateAICallCallable(const Model::CreateAICallRequest& request);
 
                 /**
                  *This API is used to create a management access link.

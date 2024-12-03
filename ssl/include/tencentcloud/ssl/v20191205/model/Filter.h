@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool FilterKeyHasBeenSet() const;
 
                     /**
-                     * 获取u200cThe value of the filter parameter.
-                     * @return FilterValue u200cThe value of the filter parameter.
+                     * 获取The value of the filter parameter.
+                     * @return FilterValue The value of the filter parameter.
                      * 
                      */
                     std::string GetFilterValue() const;
 
                     /**
-                     * 设置u200cThe value of the filter parameter.
-                     * @param _filterValue u200cThe value of the filter parameter.
+                     * 设置The value of the filter parameter.
+                     * @param _filterValue The value of the filter parameter.
                      * 
                      */
                     void SetFilterValue(const std::string& _filterValue);
@@ -97,7 +97,7 @@ namespace TencentCloud
                     bool m_filterKeyHasBeenSet;
 
                     /**
-                     * u200cThe value of the filter parameter.
+                     * The value of the filter parameter.
                      */
                     std::string m_filterValue;
                     bool m_filterValueHasBeenSet;

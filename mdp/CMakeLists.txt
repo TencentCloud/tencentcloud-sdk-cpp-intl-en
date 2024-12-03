@@ -95,6 +95,7 @@ set(mdp_public_header_model
   include/tencentcloud/mdp/v20200527/model/DescribeStreamPackageChannelsRequest.h
   include/tencentcloud/mdp/v20200527/model/ModifyStreamPackageChannelInputAuthInfoResponse.h
   include/tencentcloud/mdp/v20200527/model/SlateInfo.h
+  include/tencentcloud/mdp/v20200527/model/DashManifestInfo.h
   include/tencentcloud/mdp/v20200527/model/CreateStreamPackageChannelResponse.h
   include/tencentcloud/mdp/v20200527/model/DescribeStreamPackageLinearAssemblyChannelResponse.h
   include/tencentcloud/mdp/v20200527/model/DescribeStreamPackageLinearAssemblyChannelAlertsResponse.h
@@ -224,6 +225,7 @@ set(mdp_src
   src/v20200527/model/DescribeStreamPackageChannelsRequest.cpp
   src/v20200527/model/ModifyStreamPackageChannelInputAuthInfoResponse.cpp
   src/v20200527/model/SlateInfo.cpp
+  src/v20200527/model/DashManifestInfo.cpp
   src/v20200527/model/CreateStreamPackageChannelResponse.cpp
   src/v20200527/model/DescribeStreamPackageLinearAssemblyChannelResponse.cpp
   src/v20200527/model/DescribeStreamPackageLinearAssemblyChannelAlertsResponse.cpp

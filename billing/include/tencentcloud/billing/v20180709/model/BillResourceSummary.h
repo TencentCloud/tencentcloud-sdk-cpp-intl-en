@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool BusinessCodeNameHasBeenSet() const;
 
                     /**
-                     * 获取Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
-                     * @return ProductCodeName Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
+                     * 获取Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM Computing C5t.
+                     * @return ProductCodeName Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM Computing C5t.
                      * 
                      */
                     std::string GetProductCodeName() const;
 
                     /**
-                     * 设置Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
-                     * @param _productCodeName Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
+                     * 设置Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM Computing C5t.
+                     * @param _productCodeName Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM Computing C5t.
                      * 
                      */
                     void SetProductCodeName(const std::string& _productCodeName);
@@ -447,15 +447,15 @@ namespace TencentCloud
                     bool ReduceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Total amount after discount
-                     * @return RealTotalCost Total amount after discount
+                     * 获取Total amount after discount (Including Tax):  = Total Amount After Discount (Excluding Tax) + TaxAmount
+                     * @return RealTotalCost Total amount after discount (Including Tax):  = Total Amount After Discount (Excluding Tax) + TaxAmount
                      * 
                      */
                     std::string GetRealTotalCost() const;
 
                     /**
-                     * 设置Total amount after discount
-                     * @param _realTotalCost Total amount after discount
+                     * 设置Total amount after discount (Including Tax):  = Total Amount After Discount (Excluding Tax) + TaxAmount
+                     * @param _realTotalCost Total amount after discount (Including Tax):  = Total Amount After Discount (Excluding Tax) + TaxAmount
                      * 
                      */
                     void SetRealTotalCost(const std::string& _realTotalCost);
@@ -489,15 +489,19 @@ namespace TencentCloud
                     bool VoucherPayAmountHasBeenSet() const;
 
                     /**
-                     * 获取Cash credit: The amount paid from the user’s cash account
-                     * @return CashPayAmount Cash credit: The amount paid from the user’s cash account
+                     * 获取Cash credit: The amount paid from the user's cash account
+
+                     * @return CashPayAmount Cash credit: The amount paid from the user's cash account
+
                      * 
                      */
                     std::string GetCashPayAmount() const;
 
                     /**
-                     * 设置Cash credit: The amount paid from the user’s cash account
-                     * @param _cashPayAmount Cash credit: The amount paid from the user’s cash account
+                     * 设置Cash credit: The amount paid from the user's cash account
+
+                     * @param _cashPayAmount Cash credit: The amount paid from the user's cash account
+
                      * 
                      */
                     void SetCashPayAmount(const std::string& _cashPayAmount);
@@ -510,15 +514,19 @@ namespace TencentCloud
                     bool CashPayAmountHasBeenSet() const;
 
                     /**
-                     * 获取Free credit: The amount paid with the user’s free credit
-                     * @return IncentivePayAmount Free credit: The amount paid with the user’s free credit
+                     * 获取Free credit: The amount paid with the user's free credit
+
+                     * @return IncentivePayAmount Free credit: The amount paid with the user's free credit
+
                      * 
                      */
                     std::string GetIncentivePayAmount() const;
 
                     /**
-                     * 设置Free credit: The amount paid with the user’s free credit
-                     * @param _incentivePayAmount Free credit: The amount paid with the user’s free credit
+                     * 设置Free credit: The amount paid with the user's free credit
+
+                     * @param _incentivePayAmount Free credit: The amount paid with the user's free credit
+
                      * 
                      */
                     void SetIncentivePayAmount(const std::string& _incentivePayAmount);
@@ -531,15 +539,15 @@ namespace TencentCloud
                     bool IncentivePayAmountHasBeenSet() const;
 
                     /**
-                     * 获取Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TransferPayAmount Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TransferPayAmount Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTransferPayAmount() const;
 
                     /**
-                     * 设置Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _transferPayAmount Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _transferPayAmount Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTransferPayAmount(const std::string& _transferPayAmount);
@@ -875,7 +883,7 @@ namespace TencentCloud
                     bool m_businessCodeNameHasBeenSet;
 
                     /**
-                     * Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
+                     * Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM Computing C5t.
                      */
                     std::string m_productCodeName;
                     bool m_productCodeNameHasBeenSet;
@@ -983,7 +991,7 @@ namespace TencentCloud
                     bool m_reduceTypeHasBeenSet;
 
                     /**
-                     * Total amount after discount
+                     * Total amount after discount (Including Tax):  = Total Amount After Discount (Excluding Tax) + TaxAmount
                      */
                     std::string m_realTotalCost;
                     bool m_realTotalCostHasBeenSet;
@@ -995,19 +1003,21 @@ namespace TencentCloud
                     bool m_voucherPayAmountHasBeenSet;
 
                     /**
-                     * Cash credit: The amount paid from the user’s cash account
+                     * Cash credit: The amount paid from the user's cash account
+
                      */
                     std::string m_cashPayAmount;
                     bool m_cashPayAmountHasBeenSet;
 
                     /**
-                     * Free credit: The amount paid with the user’s free credit
+                     * Free credit: The amount paid with the user's free credit
+
                      */
                     std::string m_incentivePayAmount;
                     bool m_incentivePayAmountHasBeenSet;
 
                     /**
-                     * Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_transferPayAmount;
                     bool m_transferPayAmountHasBeenSet;

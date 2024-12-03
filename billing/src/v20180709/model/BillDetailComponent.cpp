@@ -50,7 +50,10 @@ BillDetailComponent::BillDetailComponent() :
     m_sPDeductionHasBeenSet(false),
     m_originalCostWithSPHasBeenSet(false),
     m_blendedDiscountHasBeenSet(false),
-    m_componentConfigHasBeenSet(false)
+    m_componentConfigHasBeenSet(false),
+    m_taxRateHasBeenSet(false),
+    m_taxAmountHasBeenSet(false),
+    m_currencyHasBeenSet(false)
 {
 }
 
@@ -369,6 +372,36 @@ CoreInternalOutcome BillDetailComponent::Deserialize(const rapidjson::Value &val
         m_componentConfigHasBeenSet = true;
     }
 
+    if (value.HasMember("TaxRate") && !value["TaxRate"].IsNull())
+    {
+        if (!value["TaxRate"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `BillDetailComponent.TaxRate` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_taxRate = string(value["TaxRate"].GetString());
+        m_taxRateHasBeenSet = true;
+    }
+
+    if (value.HasMember("TaxAmount") && !value["TaxAmount"].IsNull())
+    {
+        if (!value["TaxAmount"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `BillDetailComponent.TaxAmount` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_taxAmount = string(value["TaxAmount"].GetString());
+        m_taxAmountHasBeenSet = true;
+    }
+
+    if (value.HasMember("Currency") && !value["Currency"].IsNull())
+    {
+        if (!value["Currency"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `BillDetailComponent.Currency` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_currency = string(value["Currency"].GetString());
+        m_currencyHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -621,6 +654,30 @@ void BillDetailComponent::ToJsonObject(rapidjson::Value &value, rapidjson::Docum
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_taxRateHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TaxRate";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_taxRate.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_taxAmountHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TaxAmount";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_taxAmount.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_currencyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Currency";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_currency.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -1104,5 +1161,53 @@ void BillDetailComponent::SetComponentConfig(const vector<BillDetailComponentCon
 bool BillDetailComponent::ComponentConfigHasBeenSet() const
 {
     return m_componentConfigHasBeenSet;
+}
+
+string BillDetailComponent::GetTaxRate() const
+{
+    return m_taxRate;
+}
+
+void BillDetailComponent::SetTaxRate(const string& _taxRate)
+{
+    m_taxRate = _taxRate;
+    m_taxRateHasBeenSet = true;
+}
+
+bool BillDetailComponent::TaxRateHasBeenSet() const
+{
+    return m_taxRateHasBeenSet;
+}
+
+string BillDetailComponent::GetTaxAmount() const
+{
+    return m_taxAmount;
+}
+
+void BillDetailComponent::SetTaxAmount(const string& _taxAmount)
+{
+    m_taxAmount = _taxAmount;
+    m_taxAmountHasBeenSet = true;
+}
+
+bool BillDetailComponent::TaxAmountHasBeenSet() const
+{
+    return m_taxAmountHasBeenSet;
+}
+
+string BillDetailComponent::GetCurrency() const
+{
+    return m_currency;
+}
+
+void BillDetailComponent::SetCurrency(const string& _currency)
+{
+    m_currency = _currency;
+    m_currencyHasBeenSet = true;
+}
+
+bool BillDetailComponent::CurrencyHasBeenSet() const
+{
+    return m_currencyHasBeenSet;
 }
 
