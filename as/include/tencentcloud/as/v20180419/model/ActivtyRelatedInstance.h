@@ -68,31 +68,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Status of the instance in the scaling activity. Value range:
-<li>INIT: initializing
-<li>RUNNING: running
-<li>SUCCESSFUL: succeeded
-<li>FAILED: failed
-                     * @return InstanceStatus Status of the instance in the scaling activity. Value range:
-<li>INIT: initializing
-<li>RUNNING: running
-<li>SUCCESSFUL: succeeded
-<li>FAILED: failed
+                     * 获取Status of the instance in the scaling activity. Valid values: <br><li>INIT: initializing;</li> <li>RUNNING: instance in operation;</li> <li>SUCCESSFUL: activity successful;</li> <li>FAILED: activity failed.
+                     * @return InstanceStatus Status of the instance in the scaling activity. Valid values: <br><li>INIT: initializing;</li> <li>RUNNING: instance in operation;</li> <li>SUCCESSFUL: activity successful;</li> <li>FAILED: activity failed.
                      * 
                      */
                     std::string GetInstanceStatus() const;
 
                     /**
-                     * 设置Status of the instance in the scaling activity. Value range:
-<li>INIT: initializing
-<li>RUNNING: running
-<li>SUCCESSFUL: succeeded
-<li>FAILED: failed
-                     * @param _instanceStatus Status of the instance in the scaling activity. Value range:
-<li>INIT: initializing
-<li>RUNNING: running
-<li>SUCCESSFUL: succeeded
-<li>FAILED: failed
+                     * 设置Status of the instance in the scaling activity. Valid values: <br><li>INIT: initializing;</li> <li>RUNNING: instance in operation;</li> <li>SUCCESSFUL: activity successful;</li> <li>FAILED: activity failed.
+                     * @param _instanceStatus Status of the instance in the scaling activity. Valid values: <br><li>INIT: initializing;</li> <li>RUNNING: instance in operation;</li> <li>SUCCESSFUL: activity successful;</li> <li>FAILED: activity failed.
                      * 
                      */
                     void SetInstanceStatus(const std::string& _instanceStatus);
@@ -113,11 +97,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Status of the instance in the scaling activity. Value range:
-<li>INIT: initializing
-<li>RUNNING: running
-<li>SUCCESSFUL: succeeded
-<li>FAILED: failed
+                     * Status of the instance in the scaling activity. Valid values: <br><li>INIT: initializing;</li> <li>RUNNING: instance in operation;</li> <li>SUCCESSFUL: activity successful;</li> <li>FAILED: activity failed.
                      */
                     std::string m_instanceStatus;
                     bool m_instanceStatusHasBeenSet;

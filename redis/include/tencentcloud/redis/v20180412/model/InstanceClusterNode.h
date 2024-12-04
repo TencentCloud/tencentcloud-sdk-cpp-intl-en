@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Node name
-                     * @return Name Node name
+                     * 获取Node group name.
+                     * @return Name Node group name.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Node name
-                     * @param _name Node name
+                     * 设置Node group name.
+                     * @param _name Node group name.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -322,7 +322,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Node name
+                     * Node group name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;

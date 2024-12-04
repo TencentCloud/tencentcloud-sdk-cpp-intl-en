@@ -657,6 +657,27 @@ This parameter will overwrite the original instance tag list. To add new tags, y
                      */
                     bool ImageFamilyHasBeenSet() const;
 
+                    /**
+                     * 获取Cloud Dedicated Cluster (CDC) ID.
+                     * @return DedicatedClusterId Cloud Dedicated Cluster (CDC) ID.
+                     * 
+                     */
+                    std::string GetDedicatedClusterId() const;
+
+                    /**
+                     * 设置Cloud Dedicated Cluster (CDC) ID.
+                     * @param _dedicatedClusterId Cloud Dedicated Cluster (CDC) ID.
+                     * 
+                     */
+                    void SetDedicatedClusterId(const std::string& _dedicatedClusterId);
+
+                    /**
+                     * 判断参数 DedicatedClusterId 是否已赋值
+                     * @return DedicatedClusterId 是否已赋值
+                     * 
+                     */
+                    bool DedicatedClusterIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -827,6 +848,12 @@ This parameter will overwrite the original instance tag list. To add new tags, y
                      */
                     std::string m_imageFamily;
                     bool m_imageFamilyHasBeenSet;
+
+                    /**
+                     * Cloud Dedicated Cluster (CDC) ID.
+                     */
+                    std::string m_dedicatedClusterId;
+                    bool m_dedicatedClusterIdHasBeenSet;
 
                 };
             }

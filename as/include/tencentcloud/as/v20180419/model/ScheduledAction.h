@@ -257,15 +257,23 @@ namespace TencentCloud
                     bool CreatedTimeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies how the scheduled action is executed. <br><li>`CRONTAB`: execute repeatedly <br><li>`ONCE`: execute only once
-                     * @return ScheduledType Specifies how the scheduled action is executed. <br><li>`CRONTAB`: execute repeatedly <br><li>`ONCE`: execute only once
+                     * 获取Scheduled task execution type. Valid values:
+<li>CRONTAB: repeated execution.</li>
+<li>ONCE: single execution.</li>
+                     * @return ScheduledType Scheduled task execution type. Valid values:
+<li>CRONTAB: repeated execution.</li>
+<li>ONCE: single execution.</li>
                      * 
                      */
                     std::string GetScheduledType() const;
 
                     /**
-                     * 设置Specifies how the scheduled action is executed. <br><li>`CRONTAB`: execute repeatedly <br><li>`ONCE`: execute only once
-                     * @param _scheduledType Specifies how the scheduled action is executed. <br><li>`CRONTAB`: execute repeatedly <br><li>`ONCE`: execute only once
+                     * 设置Scheduled task execution type. Valid values:
+<li>CRONTAB: repeated execution.</li>
+<li>ONCE: single execution.</li>
+                     * @param _scheduledType Scheduled task execution type. Valid values:
+<li>CRONTAB: repeated execution.</li>
+<li>ONCE: single execution.</li>
                      * 
                      */
                     void SetScheduledType(const std::string& _scheduledType);
@@ -340,7 +348,9 @@ namespace TencentCloud
                     bool m_createdTimeHasBeenSet;
 
                     /**
-                     * Specifies how the scheduled action is executed. <br><li>`CRONTAB`: execute repeatedly <br><li>`ONCE`: execute only once
+                     * Scheduled task execution type. Valid values:
+<li>CRONTAB: repeated execution.</li>
+<li>ONCE: single execution.</li>
                      */
                     std::string m_scheduledType;
                     bool m_scheduledTypeHasBeenSet;

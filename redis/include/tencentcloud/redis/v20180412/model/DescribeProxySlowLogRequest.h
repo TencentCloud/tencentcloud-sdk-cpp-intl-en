@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Start time of slow query
-                     * @return BeginTime Start time of slow query
+                     * 获取Start time of a slow query, with a maximum query span of 30 days.
+                     * @return BeginTime Start time of a slow query, with a maximum query span of 30 days.
                      * 
                      */
                     std::string GetBeginTime() const;
 
                     /**
-                     * 设置Start time of slow query
-                     * @param _beginTime Start time of slow query
+                     * 设置Start time of a slow query, with a maximum query span of 30 days.
+                     * @param _beginTime Start time of a slow query, with a maximum query span of 30 days.
                      * 
                      */
                     void SetBeginTime(const std::string& _beginTime);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool BeginTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time of slow query
-                     * @return EndTime End time of slow query
+                     * 获取End time of a slow query, with a maximum query span of 30 days.
+                     * @return EndTime End time of a slow query, with a maximum query span of 30 days.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End time of slow query
-                     * @param _endTime End time of slow query
+                     * 设置End time of a slow query, with a maximum query span of 30 days.
+                     * @param _endTime End time of a slow query, with a maximum query span of 30 days.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool MinQueryTimeHasBeenSet() const;
 
                     /**
-                     * 获取Number of results per page.  Default value: `20`. Value range: [20,1000].
-                     * @return Limit Number of results per page.  Default value: `20`. Value range: [20,1000].
+                     * 获取Number of tasks output on each page. Default value: 20. Maximum value: 100.
+                     * @return Limit Number of tasks output on each page. Default value: 20. Maximum value: 100.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of results per page.  Default value: `20`. Value range: [20,1000].
-                     * @param _limit Number of results per page.  Default value: `20`. Value range: [20,1000].
+                     * 设置Number of tasks output on each page. Default value: 20. Maximum value: 100.
+                     * @param _limit Number of tasks output on each page. Default value: 20. Maximum value: 100.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset, which is an integral multiple of `Limit`.
-                     * @return Offset Offset, which is an integral multiple of `Limit`.
+                     * 获取Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
+                     * @return Offset Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset, which is an integral multiple of `Limit`.
-                     * @param _offset Offset, which is an integral multiple of `Limit`.
+                     * 设置Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
+                     * @param _offset Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -182,13 +182,13 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Start time of slow query
+                     * Start time of a slow query, with a maximum query span of 30 days.
                      */
                     std::string m_beginTime;
                     bool m_beginTimeHasBeenSet;
 
                     /**
-                     * End time of slow query
+                     * End time of a slow query, with a maximum query span of 30 days.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
@@ -200,13 +200,13 @@ namespace TencentCloud
                     bool m_minQueryTimeHasBeenSet;
 
                     /**
-                     * Number of results per page.  Default value: `20`. Value range: [20,1000].
+                     * Number of tasks output on each page. Default value: 20. Maximum value: 100.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset, which is an integral multiple of `Limit`.
+                     * Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;

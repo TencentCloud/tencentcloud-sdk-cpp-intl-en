@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ProductHasBeenSet() const;
 
                     /**
-                     * 获取ID of the security group to be associated in the format of sg-efil73jd.
-                     * @return SecurityGroupId ID of the security group to be associated in the format of sg-efil73jd.
+                     * 获取ID of the security group to be bound. Obtain it on the [security group](https://console.tencentcloud.com/vpc/security-group) page of the console.
+                     * @return SecurityGroupId ID of the security group to be bound. Obtain it on the [security group](https://console.tencentcloud.com/vpc/security-group) page of the console.
                      * 
                      */
                     std::string GetSecurityGroupId() const;
 
                     /**
-                     * 设置ID of the security group to be associated in the format of sg-efil73jd.
-                     * @param _securityGroupId ID of the security group to be associated in the format of sg-efil73jd.
+                     * 设置ID of the security group to be bound. Obtain it on the [security group](https://console.tencentcloud.com/vpc/security-group) page of the console.
+                     * @param _securityGroupId ID of the security group to be bound. Obtain it on the [security group](https://console.tencentcloud.com/vpc/security-group) page of the console.
                      * 
                      */
                     void SetSecurityGroupId(const std::string& _securityGroupId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool SecurityGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取ID(s) of the instance(s) to be associated in the format of ins-lesecurk. You can specify multiple instances.
-                     * @return InstanceIds ID(s) of the instance(s) to be associated in the format of ins-lesecurk. You can specify multiple instances.
+                     * 获取ID of the bound instance. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. You can specify multiple instance IDs.
+                     * @return InstanceIds ID of the bound instance. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. You can specify multiple instance IDs.
                      * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置ID(s) of the instance(s) to be associated in the format of ins-lesecurk. You can specify multiple instances.
-                     * @param _instanceIds ID(s) of the instance(s) to be associated in the format of ins-lesecurk. You can specify multiple instances.
+                     * 设置ID of the bound instance. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. You can specify multiple instance IDs.
+                     * @param _instanceIds ID of the bound instance. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. You can specify multiple instance IDs.
                      * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
@@ -114,13 +114,13 @@ namespace TencentCloud
                     bool m_productHasBeenSet;
 
                     /**
-                     * ID of the security group to be associated in the format of sg-efil73jd.
+                     * ID of the security group to be bound. Obtain it on the [security group](https://console.tencentcloud.com/vpc/security-group) page of the console.
                      */
                     std::string m_securityGroupId;
                     bool m_securityGroupIdHasBeenSet;
 
                     /**
-                     * ID(s) of the instance(s) to be associated in the format of ins-lesecurk. You can specify multiple instances.
+                     * ID of the bound instance. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. You can specify multiple instance IDs.
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;

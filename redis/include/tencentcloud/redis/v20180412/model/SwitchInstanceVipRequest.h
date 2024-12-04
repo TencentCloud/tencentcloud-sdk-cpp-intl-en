@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Source instance ID
-                     * @return SrcInstanceId Source instance ID
+                     * 获取Source instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+                     * @return SrcInstanceId Source instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
                      * 
                      */
                     std::string GetSrcInstanceId() const;
 
                     /**
-                     * 设置Source instance ID
-                     * @param _srcInstanceId Source instance ID
+                     * 设置Source instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+                     * @param _srcInstanceId Source instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
                      * 
                      */
                     void SetSrcInstanceId(const std::string& _srcInstanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SrcInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Target instance ID
-                     * @return DstInstanceId Target instance ID
+                     * 获取Target instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+                     * @return DstInstanceId Target instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
                      * 
                      */
                     std::string GetDstInstanceId() const;
 
                     /**
-                     * 设置Target instance ID
-                     * @param _dstInstanceId Target instance ID
+                     * 设置Target instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+                     * @param _dstInstanceId Target instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
                      * 
                      */
                     void SetDstInstanceId(const std::string& _dstInstanceId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool DstInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取The time that lapses in seconds since DTS is disconnected between the source instance and the target instance. If the DTS disconnection time period is greater than TimeDelay, the VIP will not be switched. We recommend you set an acceptable value based on the actual business conditions.
-                     * @return TimeDelay The time that lapses in seconds since DTS is disconnected between the source instance and the target instance. If the DTS disconnection time period is greater than TimeDelay, the VIP will not be switched. We recommend you set an acceptable value based on the actual business conditions.
+                     * 获取DTS disconnection time between the source instance and target instance. Unit: second. If the DTS disconnection time exceeds TimeDelay, the VIP will not be switched. It is recommended to set an acceptable value based on business needs.
+                     * @return TimeDelay DTS disconnection time between the source instance and target instance. Unit: second. If the DTS disconnection time exceeds TimeDelay, the VIP will not be switched. It is recommended to set an acceptable value based on business needs.
                      * 
                      */
                     int64_t GetTimeDelay() const;
 
                     /**
-                     * 设置The time that lapses in seconds since DTS is disconnected between the source instance and the target instance. If the DTS disconnection time period is greater than TimeDelay, the VIP will not be switched. We recommend you set an acceptable value based on the actual business conditions.
-                     * @param _timeDelay The time that lapses in seconds since DTS is disconnected between the source instance and the target instance. If the DTS disconnection time period is greater than TimeDelay, the VIP will not be switched. We recommend you set an acceptable value based on the actual business conditions.
+                     * 设置DTS disconnection time between the source instance and target instance. Unit: second. If the DTS disconnection time exceeds TimeDelay, the VIP will not be switched. It is recommended to set an acceptable value based on business needs.
+                     * @param _timeDelay DTS disconnection time between the source instance and target instance. Unit: second. If the DTS disconnection time exceeds TimeDelay, the VIP will not be switched. It is recommended to set an acceptable value based on business needs.
                      * 
                      */
                     void SetTimeDelay(const int64_t& _timeDelay);
@@ -106,15 +106,23 @@ namespace TencentCloud
                     bool TimeDelayHasBeenSet() const;
 
                     /**
-                     * 获取Whether to force the switch when DTS is disconnected. 1: yes; 0: no.
-                     * @return ForceSwitch Whether to force the switch when DTS is disconnected. 1: yes; 0: no.
+                     * 获取Whether to force a switch in the case of a DTS disconnection.
+- 1: Force the switch.
+- 0: Do not force the switch.
+                     * @return ForceSwitch Whether to force a switch in the case of a DTS disconnection.
+- 1: Force the switch.
+- 0: Do not force the switch.
                      * 
                      */
                     int64_t GetForceSwitch() const;
 
                     /**
-                     * 设置Whether to force the switch when DTS is disconnected. 1: yes; 0: no.
-                     * @param _forceSwitch Whether to force the switch when DTS is disconnected. 1: yes; 0: no.
+                     * 设置Whether to force a switch in the case of a DTS disconnection.
+- 1: Force the switch.
+- 0: Do not force the switch.
+                     * @param _forceSwitch Whether to force a switch in the case of a DTS disconnection.
+- 1: Force the switch.
+- 0: Do not force the switch.
                      * 
                      */
                     void SetForceSwitch(const int64_t& _forceSwitch);
@@ -150,25 +158,27 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Source instance ID
+                     * Source instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
                      */
                     std::string m_srcInstanceId;
                     bool m_srcInstanceIdHasBeenSet;
 
                     /**
-                     * Target instance ID
+                     * Target instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
                      */
                     std::string m_dstInstanceId;
                     bool m_dstInstanceIdHasBeenSet;
 
                     /**
-                     * The time that lapses in seconds since DTS is disconnected between the source instance and the target instance. If the DTS disconnection time period is greater than TimeDelay, the VIP will not be switched. We recommend you set an acceptable value based on the actual business conditions.
+                     * DTS disconnection time between the source instance and target instance. Unit: second. If the DTS disconnection time exceeds TimeDelay, the VIP will not be switched. It is recommended to set an acceptable value based on business needs.
                      */
                     int64_t m_timeDelay;
                     bool m_timeDelayHasBeenSet;
 
                     /**
-                     * Whether to force the switch when DTS is disconnected. 1: yes; 0: no.
+                     * Whether to force a switch in the case of a DTS disconnection.
+- 1: Force the switch.
+- 0: Do not force the switch.
                      */
                     int64_t m_forceSwitch;
                     bool m_forceSwitchHasBeenSet;

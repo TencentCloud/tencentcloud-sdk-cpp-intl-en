@@ -89,18 +89,18 @@ namespace TencentCloud
                     bool ValueHasBeenSet() const;
 
                     /**
-                     * 获取Type of the resource binded to the tag. Currently supported types include "auto-scaling-group"
+                     * 获取Resource type bound with tags. Valid values: auto-scaling-group and launch-configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ResourceType Type of the resource binded to the tag. Currently supported types include "auto-scaling-group"
+                     * @return ResourceType Resource type bound with tags. Valid values: auto-scaling-group and launch-configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetResourceType() const;
 
                     /**
-                     * 设置Type of the resource binded to the tag. Currently supported types include "auto-scaling-group"
+                     * 设置Resource type bound with tags. Valid values: auto-scaling-group and launch-configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _resourceType Type of the resource binded to the tag. Currently supported types include "auto-scaling-group"
+                     * @param _resourceType Resource type bound with tags. Valid values: auto-scaling-group and launch-configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -128,7 +128,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_valueHasBeenSet;
 
                     /**
-                     * Type of the resource binded to the tag. Currently supported types include "auto-scaling-group"
+                     * Resource type bound with tags. Valid values: auto-scaling-group and launch-configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_resourceType;

@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Latency distribution information
-                     * @return Data Latency distribution information
+                     * 获取Latency distribution information.
+                     * @return Data Latency distribution information.
                      * 
                      */
                     std::vector<DelayDistribution> GetData() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Latency distribution information
+                     * Latency distribution information.
                      */
                     std::vector<DelayDistribution> m_data;
                     bool m_dataHasBeenSet;

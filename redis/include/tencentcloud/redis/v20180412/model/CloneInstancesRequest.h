@@ -459,6 +459,35 @@ namespace TencentCloud
                      */
                     bool AlarmPolicyListHasBeenSet() const;
 
+                    /**
+                     * 获取Time to restore data for cloning.
+Only instances with second-level backup enabled are supported.
+
+                     * @return CloneTime Time to restore data for cloning.
+Only instances with second-level backup enabled are supported.
+
+                     * 
+                     */
+                    std::string GetCloneTime() const;
+
+                    /**
+                     * 设置Time to restore data for cloning.
+Only instances with second-level backup enabled are supported.
+
+                     * @param _cloneTime Time to restore data for cloning.
+Only instances with second-level backup enabled are supported.
+
+                     * 
+                     */
+                    void SetCloneTime(const std::string& _cloneTime);
+
+                    /**
+                     * 判断参数 CloneTime 是否已赋值
+                     * @return CloneTime 是否已赋值
+                     * 
+                     */
+                    bool CloneTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -578,6 +607,14 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_alarmPolicyList;
                     bool m_alarmPolicyListHasBeenSet;
+
+                    /**
+                     * Time to restore data for cloning.
+Only instances with second-level backup enabled are supported.
+
+                     */
+                    std::string m_cloneTime;
+                    bool m_cloneTimeHasBeenSet;
 
                 };
             }

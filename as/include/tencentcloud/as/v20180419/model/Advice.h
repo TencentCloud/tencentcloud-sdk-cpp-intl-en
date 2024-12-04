@@ -110,23 +110,23 @@ namespace TencentCloud
                     bool SolutionHasBeenSet() const;
 
                     /**
-                     * 获取Risk level of the scaling group configuration. Valid values: <br>
-<li>WARNING<br>
-<li>CRITICAL<br>
-                     * @return Level Risk level of the scaling group configuration. Valid values: <br>
-<li>WARNING<br>
-<li>CRITICAL<br>
+                     * 获取Scaling suggestion warning level. Valid values:
+<li>WARNING: warning.</li>
+<li>CRITICAL: critical.</li>
+                     * @return Level Scaling suggestion warning level. Valid values:
+<li>WARNING: warning.</li>
+<li>CRITICAL: critical.</li>
                      * 
                      */
                     std::string GetLevel() const;
 
                     /**
-                     * 设置Risk level of the scaling group configuration. Valid values: <br>
-<li>WARNING<br>
-<li>CRITICAL<br>
-                     * @param _level Risk level of the scaling group configuration. Valid values: <br>
-<li>WARNING<br>
-<li>CRITICAL<br>
+                     * 设置Scaling suggestion warning level. Valid values:
+<li>WARNING: warning.</li>
+<li>CRITICAL: critical.</li>
+                     * @param _level Scaling suggestion warning level. Valid values:
+<li>WARNING: warning.</li>
+<li>CRITICAL: critical.</li>
                      * 
                      */
                     void SetLevel(const std::string& _level);
@@ -159,9 +159,9 @@ namespace TencentCloud
                     bool m_solutionHasBeenSet;
 
                     /**
-                     * Risk level of the scaling group configuration. Valid values: <br>
-<li>WARNING<br>
-<li>CRITICAL<br>
+                     * Scaling suggestion warning level. Valid values:
+<li>WARNING: warning.</li>
+<li>CRITICAL: critical.</li>
                      */
                     std::string m_level;
                     bool m_levelHasBeenSet;

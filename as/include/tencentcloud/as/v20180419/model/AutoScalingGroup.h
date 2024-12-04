@@ -94,55 +94,55 @@ namespace TencentCloud
                     bool AutoScalingGroupNameHasBeenSet() const;
 
                     /**
-                     * 获取Current scaling group status. Valid values:<br>
-<li>NORMAL: Normal<br>
-<li>CVM_ABNORMAL: Abnormal launch configuration<br>
-<li>LB_ABNORMAL: Abnormal load balancer<br>
-<li>LB_LISTENER_ABNORMAL: Abnormal load balancer listener<br>
-<li>LB_LOCATION_ABNORMAL: Abnormal forwarding configuration of the load balancer listener<br>
-<li>VPC_ABNORMAL: VPC network error<br>
-<li>SUBNET_ABNORMAL: VPC subnet exception<br>
-<li>INSUFFICIENT_BALANCE: Insufficient account balance<br>
-<li>LB_BACKEND_REGION_NOT_MATCH: The CLB backend and the AS service are not in the same region.<br>
-<li>LB_BACKEND_VPC_NOT_MATCH: The CLB instance and the scaling group are not in the same VPC.
-                     * @return AutoScalingGroupStatus Current scaling group status. Valid values:<br>
-<li>NORMAL: Normal<br>
-<li>CVM_ABNORMAL: Abnormal launch configuration<br>
-<li>LB_ABNORMAL: Abnormal load balancer<br>
-<li>LB_LISTENER_ABNORMAL: Abnormal load balancer listener<br>
-<li>LB_LOCATION_ABNORMAL: Abnormal forwarding configuration of the load balancer listener<br>
-<li>VPC_ABNORMAL: VPC network error<br>
-<li>SUBNET_ABNORMAL: VPC subnet exception<br>
-<li>INSUFFICIENT_BALANCE: Insufficient account balance<br>
-<li>LB_BACKEND_REGION_NOT_MATCH: The CLB backend and the AS service are not in the same region.<br>
-<li>LB_BACKEND_VPC_NOT_MATCH: The CLB instance and the scaling group are not in the same VPC.
+                     * 获取Current status of the scaling group. Valid values:
+<li>NORMAL: The scaling group is normal.</li>
+<li>CVM_ABNORMAL: The launch configuration is abnormal.</li>
+<li>LB_ABNORMAL: The CLB is abnormal.</li>
+<li>LB_LISTENER_ABNORMAL: The CLB listener is abnormal.</li>
+<li>LB_LOCATION_ABNORMAL: The forwarding configuration of the CLB listener is abnormal.</li>
+<li>VPC_ABNORMAL: The VPC is abnormal.</li>
+<li>SUBNET_ABNORMAL: The VPC subnet is abnormal.</li>
+<li>INSUFFICIENT_BALANCE: The balance is insufficient.</li>
+<li>LB_BACKEND_REGION_NOT_MATCH: The region of the CLB instance backend does not match that of the AS service.</li>
+<li>LB_BACKEND_VPC_NOT_MATCH: The VPC of the CLB instance does not match that of the scaling group.</li>
+                     * @return AutoScalingGroupStatus Current status of the scaling group. Valid values:
+<li>NORMAL: The scaling group is normal.</li>
+<li>CVM_ABNORMAL: The launch configuration is abnormal.</li>
+<li>LB_ABNORMAL: The CLB is abnormal.</li>
+<li>LB_LISTENER_ABNORMAL: The CLB listener is abnormal.</li>
+<li>LB_LOCATION_ABNORMAL: The forwarding configuration of the CLB listener is abnormal.</li>
+<li>VPC_ABNORMAL: The VPC is abnormal.</li>
+<li>SUBNET_ABNORMAL: The VPC subnet is abnormal.</li>
+<li>INSUFFICIENT_BALANCE: The balance is insufficient.</li>
+<li>LB_BACKEND_REGION_NOT_MATCH: The region of the CLB instance backend does not match that of the AS service.</li>
+<li>LB_BACKEND_VPC_NOT_MATCH: The VPC of the CLB instance does not match that of the scaling group.</li>
                      * 
                      */
                     std::string GetAutoScalingGroupStatus() const;
 
                     /**
-                     * 设置Current scaling group status. Valid values:<br>
-<li>NORMAL: Normal<br>
-<li>CVM_ABNORMAL: Abnormal launch configuration<br>
-<li>LB_ABNORMAL: Abnormal load balancer<br>
-<li>LB_LISTENER_ABNORMAL: Abnormal load balancer listener<br>
-<li>LB_LOCATION_ABNORMAL: Abnormal forwarding configuration of the load balancer listener<br>
-<li>VPC_ABNORMAL: VPC network error<br>
-<li>SUBNET_ABNORMAL: VPC subnet exception<br>
-<li>INSUFFICIENT_BALANCE: Insufficient account balance<br>
-<li>LB_BACKEND_REGION_NOT_MATCH: The CLB backend and the AS service are not in the same region.<br>
-<li>LB_BACKEND_VPC_NOT_MATCH: The CLB instance and the scaling group are not in the same VPC.
-                     * @param _autoScalingGroupStatus Current scaling group status. Valid values:<br>
-<li>NORMAL: Normal<br>
-<li>CVM_ABNORMAL: Abnormal launch configuration<br>
-<li>LB_ABNORMAL: Abnormal load balancer<br>
-<li>LB_LISTENER_ABNORMAL: Abnormal load balancer listener<br>
-<li>LB_LOCATION_ABNORMAL: Abnormal forwarding configuration of the load balancer listener<br>
-<li>VPC_ABNORMAL: VPC network error<br>
-<li>SUBNET_ABNORMAL: VPC subnet exception<br>
-<li>INSUFFICIENT_BALANCE: Insufficient account balance<br>
-<li>LB_BACKEND_REGION_NOT_MATCH: The CLB backend and the AS service are not in the same region.<br>
-<li>LB_BACKEND_VPC_NOT_MATCH: The CLB instance and the scaling group are not in the same VPC.
+                     * 设置Current status of the scaling group. Valid values:
+<li>NORMAL: The scaling group is normal.</li>
+<li>CVM_ABNORMAL: The launch configuration is abnormal.</li>
+<li>LB_ABNORMAL: The CLB is abnormal.</li>
+<li>LB_LISTENER_ABNORMAL: The CLB listener is abnormal.</li>
+<li>LB_LOCATION_ABNORMAL: The forwarding configuration of the CLB listener is abnormal.</li>
+<li>VPC_ABNORMAL: The VPC is abnormal.</li>
+<li>SUBNET_ABNORMAL: The VPC subnet is abnormal.</li>
+<li>INSUFFICIENT_BALANCE: The balance is insufficient.</li>
+<li>LB_BACKEND_REGION_NOT_MATCH: The region of the CLB instance backend does not match that of the AS service.</li>
+<li>LB_BACKEND_VPC_NOT_MATCH: The VPC of the CLB instance does not match that of the scaling group.</li>
+                     * @param _autoScalingGroupStatus Current status of the scaling group. Valid values:
+<li>NORMAL: The scaling group is normal.</li>
+<li>CVM_ABNORMAL: The launch configuration is abnormal.</li>
+<li>LB_ABNORMAL: The CLB is abnormal.</li>
+<li>LB_LISTENER_ABNORMAL: The CLB listener is abnormal.</li>
+<li>LB_LOCATION_ABNORMAL: The forwarding configuration of the CLB listener is abnormal.</li>
+<li>VPC_ABNORMAL: The VPC is abnormal.</li>
+<li>SUBNET_ABNORMAL: The VPC subnet is abnormal.</li>
+<li>INSUFFICIENT_BALANCE: The balance is insufficient.</li>
+<li>LB_BACKEND_REGION_NOT_MATCH: The region of the CLB instance backend does not match that of the AS service.</li>
+<li>LB_BACKEND_VPC_NOT_MATCH: The VPC of the CLB instance does not match that of the scaling group.</li>
                      * 
                      */
                     void SetAutoScalingGroupStatus(const std::string& _autoScalingGroupStatus);
@@ -617,23 +617,23 @@ namespace TencentCloud
                     bool Ipv6AddressCountHasBeenSet() const;
 
                     /**
-                     * 获取The policy applied when there are multiple availability zones/subnets
-<br><li> PRIORITY: when creating instances, choose the availability zone/subnet based on the order in the list from top to bottom. If the first instance is successfully created in the availability zone/subnet of the highest priority, all instances will be created in this availability zone/subnet.
-<br><li> EQUALITY: chooses the availability zone/subnet with the least instances for scale-out. This gives each availability zone/subnet an opportunity for scale-out and disperses the instances created during multiple scale-out operations across different availability zones/subnets.
-                     * @return MultiZoneSubnetPolicy The policy applied when there are multiple availability zones/subnets
-<br><li> PRIORITY: when creating instances, choose the availability zone/subnet based on the order in the list from top to bottom. If the first instance is successfully created in the availability zone/subnet of the highest priority, all instances will be created in this availability zone/subnet.
-<br><li> EQUALITY: chooses the availability zone/subnet with the least instances for scale-out. This gives each availability zone/subnet an opportunity for scale-out and disperses the instances created during multiple scale-out operations across different availability zones/subnets.
+                     * 获取Multi-AZ/subnet policy.
+<li>PRIORITY: The instances are attempted to be created taking the order of the AZ/subnet list as the priority. If the highest-priority AZ/subnet can create instances successfully, instances can always be created in that AZ/subnet.</li>
+<li>EQUALITY: Select the AZ/subnet with the least number of instances for scale-out. In this way, each AZ/subnet has an opportunity for scale-out. Instances produced from multiple scale-out operations will be distributed to multiple AZs/subnets.</li>
+                     * @return MultiZoneSubnetPolicy Multi-AZ/subnet policy.
+<li>PRIORITY: The instances are attempted to be created taking the order of the AZ/subnet list as the priority. If the highest-priority AZ/subnet can create instances successfully, instances can always be created in that AZ/subnet.</li>
+<li>EQUALITY: Select the AZ/subnet with the least number of instances for scale-out. In this way, each AZ/subnet has an opportunity for scale-out. Instances produced from multiple scale-out operations will be distributed to multiple AZs/subnets.</li>
                      * 
                      */
                     std::string GetMultiZoneSubnetPolicy() const;
 
                     /**
-                     * 设置The policy applied when there are multiple availability zones/subnets
-<br><li> PRIORITY: when creating instances, choose the availability zone/subnet based on the order in the list from top to bottom. If the first instance is successfully created in the availability zone/subnet of the highest priority, all instances will be created in this availability zone/subnet.
-<br><li> EQUALITY: chooses the availability zone/subnet with the least instances for scale-out. This gives each availability zone/subnet an opportunity for scale-out and disperses the instances created during multiple scale-out operations across different availability zones/subnets.
-                     * @param _multiZoneSubnetPolicy The policy applied when there are multiple availability zones/subnets
-<br><li> PRIORITY: when creating instances, choose the availability zone/subnet based on the order in the list from top to bottom. If the first instance is successfully created in the availability zone/subnet of the highest priority, all instances will be created in this availability zone/subnet.
-<br><li> EQUALITY: chooses the availability zone/subnet with the least instances for scale-out. This gives each availability zone/subnet an opportunity for scale-out and disperses the instances created during multiple scale-out operations across different availability zones/subnets.
+                     * 设置Multi-AZ/subnet policy.
+<li>PRIORITY: The instances are attempted to be created taking the order of the AZ/subnet list as the priority. If the highest-priority AZ/subnet can create instances successfully, instances can always be created in that AZ/subnet.</li>
+<li>EQUALITY: Select the AZ/subnet with the least number of instances for scale-out. In this way, each AZ/subnet has an opportunity for scale-out. Instances produced from multiple scale-out operations will be distributed to multiple AZs/subnets.</li>
+                     * @param _multiZoneSubnetPolicy Multi-AZ/subnet policy.
+<li>PRIORITY: The instances are attempted to be created taking the order of the AZ/subnet list as the priority. If the highest-priority AZ/subnet can create instances successfully, instances can always be created in that AZ/subnet.</li>
+<li>EQUALITY: Select the AZ/subnet with the least number of instances for scale-out. In this way, each AZ/subnet has an opportunity for scale-out. Instances produced from multiple scale-out operations will be distributed to multiple AZs/subnets.</li>
                      * 
                      */
                     void SetMultiZoneSubnetPolicy(const std::string& _multiZoneSubnetPolicy);
@@ -646,15 +646,23 @@ namespace TencentCloud
                     bool MultiZoneSubnetPolicyHasBeenSet() const;
 
                     /**
-                     * 获取Health check type of instances in a scaling group.<br><li>CVM: confirm whether an instance is healthy based on the network status. If the pinged instance is unreachable, the instance will be considered unhealthy. For more information, see [Instance Health Check](https://intl.cloud.tencent.com/document/product/377/8553?from_cn_redirect=1)<br><li>CLB: confirm whether an instance is healthy based on the CLB health check status. For more information, see [Health Check Overview](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1).
-                     * @return HealthCheckType Health check type of instances in a scaling group.<br><li>CVM: confirm whether an instance is healthy based on the network status. If the pinged instance is unreachable, the instance will be considered unhealthy. For more information, see [Instance Health Check](https://intl.cloud.tencent.com/document/product/377/8553?from_cn_redirect=1)<br><li>CLB: confirm whether an instance is healthy based on the CLB health check status. For more information, see [Health Check Overview](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1).
+                     * 获取Scaling group instance health check type, whose valid values include:
+<li>CVM: Determine whether an instance is unhealthy based on its network status. An unhealthy network status is indicated by an event where instances become unreachable via PING. Detailed criteria of judgment can be found in [Instance Health Check](https://intl.cloud.tencent.com/document/product/377/8553?from_cn_redirect=1).</li>
+<li>CLB: Determine whether an instance is unhealthy based on the health check status of CLB. For principles behind CLB health checks, see [Health Check](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1).</li>
+                     * @return HealthCheckType Scaling group instance health check type, whose valid values include:
+<li>CVM: Determine whether an instance is unhealthy based on its network status. An unhealthy network status is indicated by an event where instances become unreachable via PING. Detailed criteria of judgment can be found in [Instance Health Check](https://intl.cloud.tencent.com/document/product/377/8553?from_cn_redirect=1).</li>
+<li>CLB: Determine whether an instance is unhealthy based on the health check status of CLB. For principles behind CLB health checks, see [Health Check](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1).</li>
                      * 
                      */
                     std::string GetHealthCheckType() const;
 
                     /**
-                     * 设置Health check type of instances in a scaling group.<br><li>CVM: confirm whether an instance is healthy based on the network status. If the pinged instance is unreachable, the instance will be considered unhealthy. For more information, see [Instance Health Check](https://intl.cloud.tencent.com/document/product/377/8553?from_cn_redirect=1)<br><li>CLB: confirm whether an instance is healthy based on the CLB health check status. For more information, see [Health Check Overview](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1).
-                     * @param _healthCheckType Health check type of instances in a scaling group.<br><li>CVM: confirm whether an instance is healthy based on the network status. If the pinged instance is unreachable, the instance will be considered unhealthy. For more information, see [Instance Health Check](https://intl.cloud.tencent.com/document/product/377/8553?from_cn_redirect=1)<br><li>CLB: confirm whether an instance is healthy based on the CLB health check status. For more information, see [Health Check Overview](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1).
+                     * 设置Scaling group instance health check type, whose valid values include:
+<li>CVM: Determine whether an instance is unhealthy based on its network status. An unhealthy network status is indicated by an event where instances become unreachable via PING. Detailed criteria of judgment can be found in [Instance Health Check](https://intl.cloud.tencent.com/document/product/377/8553?from_cn_redirect=1).</li>
+<li>CLB: Determine whether an instance is unhealthy based on the health check status of CLB. For principles behind CLB health checks, see [Health Check](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1).</li>
+                     * @param _healthCheckType Scaling group instance health check type, whose valid values include:
+<li>CVM: Determine whether an instance is unhealthy based on its network status. An unhealthy network status is indicated by an event where instances become unreachable via PING. Detailed criteria of judgment can be found in [Instance Health Check](https://intl.cloud.tencent.com/document/product/377/8553?from_cn_redirect=1).</li>
+<li>CLB: Determine whether an instance is unhealthy based on the health check status of CLB. For principles behind CLB health checks, see [Health Check](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1).</li>
                      * 
                      */
                     void SetHealthCheckType(const std::string& _healthCheckType);
@@ -688,23 +696,23 @@ namespace TencentCloud
                     bool LoadBalancerHealthCheckGracePeriodHasBeenSet() const;
 
                     /**
-                     * 获取Specifies how to assign instances. Valid values: `LAUNCH_CONFIGURATION` and `SPOT_MIXED`.
-<br><li>`LAUNCH_CONFIGURATION`: the launch configuration mode.
-<br><li>`SPOT_MIXED`: a mixed instance mode. Currently, this mode is supported only when the launch configuration takes the pay-as-you-go billing mode. With this mode, the scaling group can provision a combination of pay-as-you-go instances and spot instances to meet the configured capacity. Note that the billing mode of the associated launch configuration cannot be modified when this mode is used.
-                     * @return InstanceAllocationPolicy Specifies how to assign instances. Valid values: `LAUNCH_CONFIGURATION` and `SPOT_MIXED`.
-<br><li>`LAUNCH_CONFIGURATION`: the launch configuration mode.
-<br><li>`SPOT_MIXED`: a mixed instance mode. Currently, this mode is supported only when the launch configuration takes the pay-as-you-go billing mode. With this mode, the scaling group can provision a combination of pay-as-you-go instances and spot instances to meet the configured capacity. Note that the billing mode of the associated launch configuration cannot be modified when this mode is used.
+                     * 获取Instance assignment policy, whose valid values include LAUNCH_CONFIGURATION and SPOT_MIXED.
+<li>LAUNCH_CONFIGURATION: Represent the traditional mode of assigning instances according to the launch configuration.</li>
+<li>SPOT_MIXED: Represent the spot mixed mode. Currently, this mode is supported only when the launch configuration is set to the pay-as-you-go billing mode. In the mixed mode, the scaling group will scale out pay-as-you-go models or spot models based on the predefined settings. When the mixed mode is used, the billing type of the associated launch configuration cannot be modified.</li>
+                     * @return InstanceAllocationPolicy Instance assignment policy, whose valid values include LAUNCH_CONFIGURATION and SPOT_MIXED.
+<li>LAUNCH_CONFIGURATION: Represent the traditional mode of assigning instances according to the launch configuration.</li>
+<li>SPOT_MIXED: Represent the spot mixed mode. Currently, this mode is supported only when the launch configuration is set to the pay-as-you-go billing mode. In the mixed mode, the scaling group will scale out pay-as-you-go models or spot models based on the predefined settings. When the mixed mode is used, the billing type of the associated launch configuration cannot be modified.</li>
                      * 
                      */
                     std::string GetInstanceAllocationPolicy() const;
 
                     /**
-                     * 设置Specifies how to assign instances. Valid values: `LAUNCH_CONFIGURATION` and `SPOT_MIXED`.
-<br><li>`LAUNCH_CONFIGURATION`: the launch configuration mode.
-<br><li>`SPOT_MIXED`: a mixed instance mode. Currently, this mode is supported only when the launch configuration takes the pay-as-you-go billing mode. With this mode, the scaling group can provision a combination of pay-as-you-go instances and spot instances to meet the configured capacity. Note that the billing mode of the associated launch configuration cannot be modified when this mode is used.
-                     * @param _instanceAllocationPolicy Specifies how to assign instances. Valid values: `LAUNCH_CONFIGURATION` and `SPOT_MIXED`.
-<br><li>`LAUNCH_CONFIGURATION`: the launch configuration mode.
-<br><li>`SPOT_MIXED`: a mixed instance mode. Currently, this mode is supported only when the launch configuration takes the pay-as-you-go billing mode. With this mode, the scaling group can provision a combination of pay-as-you-go instances and spot instances to meet the configured capacity. Note that the billing mode of the associated launch configuration cannot be modified when this mode is used.
+                     * 设置Instance assignment policy, whose valid values include LAUNCH_CONFIGURATION and SPOT_MIXED.
+<li>LAUNCH_CONFIGURATION: Represent the traditional mode of assigning instances according to the launch configuration.</li>
+<li>SPOT_MIXED: Represent the spot mixed mode. Currently, this mode is supported only when the launch configuration is set to the pay-as-you-go billing mode. In the mixed mode, the scaling group will scale out pay-as-you-go models or spot models based on the predefined settings. When the mixed mode is used, the billing type of the associated launch configuration cannot be modified.</li>
+                     * @param _instanceAllocationPolicy Instance assignment policy, whose valid values include LAUNCH_CONFIGURATION and SPOT_MIXED.
+<li>LAUNCH_CONFIGURATION: Represent the traditional mode of assigning instances according to the launch configuration.</li>
+<li>SPOT_MIXED: Represent the spot mixed mode. Currently, this mode is supported only when the launch configuration is set to the pay-as-you-go billing mode. In the mixed mode, the scaling group will scale out pay-as-you-go models or spot models based on the predefined settings. When the mixed mode is used, the billing type of the associated launch configuration cannot be modified.</li>
                      * 
                      */
                     void SetInstanceAllocationPolicy(const std::string& _instanceAllocationPolicy);
@@ -742,23 +750,23 @@ A valid value will be returned only when `InstanceAllocationPolicy` is set to `S
                     bool SpotMixedAllocationPolicyHasBeenSet() const;
 
                     /**
-                     * 获取Indicates whether the capacity rebalancing feature is enabled. This parameter is only valid for spot instances in the scaling group. Valid values:
-<br><li>`TRUE`: yes. Before the spot instances in the scaling group are about to be automatically repossessed, AS will terminate them. The scale-in hook (if configured) will take effect before the termination. After the termination process starts, AS will asynchronously initiate a scaling activity to meet the desired capacity.
-<br><li>`FALSE`: no. AS will add instances to meet the desired capacity only after the spot instances are terminated.
-                     * @return CapacityRebalance Indicates whether the capacity rebalancing feature is enabled. This parameter is only valid for spot instances in the scaling group. Valid values:
-<br><li>`TRUE`: yes. Before the spot instances in the scaling group are about to be automatically repossessed, AS will terminate them. The scale-in hook (if configured) will take effect before the termination. After the termination process starts, AS will asynchronously initiate a scaling activity to meet the desired capacity.
-<br><li>`FALSE`: no. AS will add instances to meet the desired capacity only after the spot instances are terminated.
+                     * 获取Capacity rebalancing feature, which is applicable only to spot instances within the scaling group. Valid values:
+<li>TRUE: Enable this feature. When spot instances in the scaling group are about to be automatically recycled by the spot instance service, AS proactively initiates the termination process of the spot instances. If there is a configured scale-in hook, it will be triggered before termination. After the termination process starts, AS asynchronously initiates the scale-out to reach the expected number of instances.</li>
+<li>FALSE: Disable this feature. AS waits for the spot instance to be terminated before scaling out to reach the number of instances expected by the scaling group.</li>
+                     * @return CapacityRebalance Capacity rebalancing feature, which is applicable only to spot instances within the scaling group. Valid values:
+<li>TRUE: Enable this feature. When spot instances in the scaling group are about to be automatically recycled by the spot instance service, AS proactively initiates the termination process of the spot instances. If there is a configured scale-in hook, it will be triggered before termination. After the termination process starts, AS asynchronously initiates the scale-out to reach the expected number of instances.</li>
+<li>FALSE: Disable this feature. AS waits for the spot instance to be terminated before scaling out to reach the number of instances expected by the scaling group.</li>
                      * 
                      */
                     bool GetCapacityRebalance() const;
 
                     /**
-                     * 设置Indicates whether the capacity rebalancing feature is enabled. This parameter is only valid for spot instances in the scaling group. Valid values:
-<br><li>`TRUE`: yes. Before the spot instances in the scaling group are about to be automatically repossessed, AS will terminate them. The scale-in hook (if configured) will take effect before the termination. After the termination process starts, AS will asynchronously initiate a scaling activity to meet the desired capacity.
-<br><li>`FALSE`: no. AS will add instances to meet the desired capacity only after the spot instances are terminated.
-                     * @param _capacityRebalance Indicates whether the capacity rebalancing feature is enabled. This parameter is only valid for spot instances in the scaling group. Valid values:
-<br><li>`TRUE`: yes. Before the spot instances in the scaling group are about to be automatically repossessed, AS will terminate them. The scale-in hook (if configured) will take effect before the termination. After the termination process starts, AS will asynchronously initiate a scaling activity to meet the desired capacity.
-<br><li>`FALSE`: no. AS will add instances to meet the desired capacity only after the spot instances are terminated.
+                     * 设置Capacity rebalancing feature, which is applicable only to spot instances within the scaling group. Valid values:
+<li>TRUE: Enable this feature. When spot instances in the scaling group are about to be automatically recycled by the spot instance service, AS proactively initiates the termination process of the spot instances. If there is a configured scale-in hook, it will be triggered before termination. After the termination process starts, AS asynchronously initiates the scale-out to reach the expected number of instances.</li>
+<li>FALSE: Disable this feature. AS waits for the spot instance to be terminated before scaling out to reach the number of instances expected by the scaling group.</li>
+                     * @param _capacityRebalance Capacity rebalancing feature, which is applicable only to spot instances within the scaling group. Valid values:
+<li>TRUE: Enable this feature. When spot instances in the scaling group are about to be automatically recycled by the spot instance service, AS proactively initiates the termination process of the spot instances. If there is a configured scale-in hook, it will be triggered before termination. After the termination process starts, AS asynchronously initiates the scale-out to reach the expected number of instances.</li>
+<li>FALSE: Disable this feature. AS waits for the spot instance to be terminated before scaling out to reach the number of instances expected by the scaling group.</li>
                      * 
                      */
                     void SetCapacityRebalance(const bool& _capacityRebalance);
@@ -810,17 +818,17 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_autoScalingGroupNameHasBeenSet;
 
                     /**
-                     * Current scaling group status. Valid values:<br>
-<li>NORMAL: Normal<br>
-<li>CVM_ABNORMAL: Abnormal launch configuration<br>
-<li>LB_ABNORMAL: Abnormal load balancer<br>
-<li>LB_LISTENER_ABNORMAL: Abnormal load balancer listener<br>
-<li>LB_LOCATION_ABNORMAL: Abnormal forwarding configuration of the load balancer listener<br>
-<li>VPC_ABNORMAL: VPC network error<br>
-<li>SUBNET_ABNORMAL: VPC subnet exception<br>
-<li>INSUFFICIENT_BALANCE: Insufficient account balance<br>
-<li>LB_BACKEND_REGION_NOT_MATCH: The CLB backend and the AS service are not in the same region.<br>
-<li>LB_BACKEND_VPC_NOT_MATCH: The CLB instance and the scaling group are not in the same VPC.
+                     * Current status of the scaling group. Valid values:
+<li>NORMAL: The scaling group is normal.</li>
+<li>CVM_ABNORMAL: The launch configuration is abnormal.</li>
+<li>LB_ABNORMAL: The CLB is abnormal.</li>
+<li>LB_LISTENER_ABNORMAL: The CLB listener is abnormal.</li>
+<li>LB_LOCATION_ABNORMAL: The forwarding configuration of the CLB listener is abnormal.</li>
+<li>VPC_ABNORMAL: The VPC is abnormal.</li>
+<li>SUBNET_ABNORMAL: The VPC subnet is abnormal.</li>
+<li>INSUFFICIENT_BALANCE: The balance is insufficient.</li>
+<li>LB_BACKEND_REGION_NOT_MATCH: The region of the CLB instance backend does not match that of the AS service.</li>
+<li>LB_BACKEND_VPC_NOT_MATCH: The VPC of the CLB instance does not match that of the scaling group.</li>
                      */
                     std::string m_autoScalingGroupStatus;
                     bool m_autoScalingGroupStatusHasBeenSet;
@@ -958,15 +966,17 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_ipv6AddressCountHasBeenSet;
 
                     /**
-                     * The policy applied when there are multiple availability zones/subnets
-<br><li> PRIORITY: when creating instances, choose the availability zone/subnet based on the order in the list from top to bottom. If the first instance is successfully created in the availability zone/subnet of the highest priority, all instances will be created in this availability zone/subnet.
-<br><li> EQUALITY: chooses the availability zone/subnet with the least instances for scale-out. This gives each availability zone/subnet an opportunity for scale-out and disperses the instances created during multiple scale-out operations across different availability zones/subnets.
+                     * Multi-AZ/subnet policy.
+<li>PRIORITY: The instances are attempted to be created taking the order of the AZ/subnet list as the priority. If the highest-priority AZ/subnet can create instances successfully, instances can always be created in that AZ/subnet.</li>
+<li>EQUALITY: Select the AZ/subnet with the least number of instances for scale-out. In this way, each AZ/subnet has an opportunity for scale-out. Instances produced from multiple scale-out operations will be distributed to multiple AZs/subnets.</li>
                      */
                     std::string m_multiZoneSubnetPolicy;
                     bool m_multiZoneSubnetPolicyHasBeenSet;
 
                     /**
-                     * Health check type of instances in a scaling group.<br><li>CVM: confirm whether an instance is healthy based on the network status. If the pinged instance is unreachable, the instance will be considered unhealthy. For more information, see [Instance Health Check](https://intl.cloud.tencent.com/document/product/377/8553?from_cn_redirect=1)<br><li>CLB: confirm whether an instance is healthy based on the CLB health check status. For more information, see [Health Check Overview](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1).
+                     * Scaling group instance health check type, whose valid values include:
+<li>CVM: Determine whether an instance is unhealthy based on its network status. An unhealthy network status is indicated by an event where instances become unreachable via PING. Detailed criteria of judgment can be found in [Instance Health Check](https://intl.cloud.tencent.com/document/product/377/8553?from_cn_redirect=1).</li>
+<li>CLB: Determine whether an instance is unhealthy based on the health check status of CLB. For principles behind CLB health checks, see [Health Check](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1).</li>
                      */
                     std::string m_healthCheckType;
                     bool m_healthCheckTypeHasBeenSet;
@@ -978,9 +988,9 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_loadBalancerHealthCheckGracePeriodHasBeenSet;
 
                     /**
-                     * Specifies how to assign instances. Valid values: `LAUNCH_CONFIGURATION` and `SPOT_MIXED`.
-<br><li>`LAUNCH_CONFIGURATION`: the launch configuration mode.
-<br><li>`SPOT_MIXED`: a mixed instance mode. Currently, this mode is supported only when the launch configuration takes the pay-as-you-go billing mode. With this mode, the scaling group can provision a combination of pay-as-you-go instances and spot instances to meet the configured capacity. Note that the billing mode of the associated launch configuration cannot be modified when this mode is used.
+                     * Instance assignment policy, whose valid values include LAUNCH_CONFIGURATION and SPOT_MIXED.
+<li>LAUNCH_CONFIGURATION: Represent the traditional mode of assigning instances according to the launch configuration.</li>
+<li>SPOT_MIXED: Represent the spot mixed mode. Currently, this mode is supported only when the launch configuration is set to the pay-as-you-go billing mode. In the mixed mode, the scaling group will scale out pay-as-you-go models or spot models based on the predefined settings. When the mixed mode is used, the billing type of the associated launch configuration cannot be modified.</li>
                      */
                     std::string m_instanceAllocationPolicy;
                     bool m_instanceAllocationPolicyHasBeenSet;
@@ -993,9 +1003,9 @@ A valid value will be returned only when `InstanceAllocationPolicy` is set to `S
                     bool m_spotMixedAllocationPolicyHasBeenSet;
 
                     /**
-                     * Indicates whether the capacity rebalancing feature is enabled. This parameter is only valid for spot instances in the scaling group. Valid values:
-<br><li>`TRUE`: yes. Before the spot instances in the scaling group are about to be automatically repossessed, AS will terminate them. The scale-in hook (if configured) will take effect before the termination. After the termination process starts, AS will asynchronously initiate a scaling activity to meet the desired capacity.
-<br><li>`FALSE`: no. AS will add instances to meet the desired capacity only after the spot instances are terminated.
+                     * Capacity rebalancing feature, which is applicable only to spot instances within the scaling group. Valid values:
+<li>TRUE: Enable this feature. When spot instances in the scaling group are about to be automatically recycled by the spot instance service, AS proactively initiates the termination process of the spot instances. If there is a configured scale-in hook, it will be triggered before termination. After the termination process starts, AS asynchronously initiates the scale-out to reach the expected number of instances.</li>
+<li>FALSE: Disable this feature. AS waits for the spot instance to be terminated before scaling out to reach the number of instances expected by the scaling group.</li>
                      */
                     bool m_capacityRebalance;
                     bool m_capacityRebalanceHasBeenSet;

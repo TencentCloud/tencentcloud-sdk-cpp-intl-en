@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Node group type. Valid values: master (master node group); replica (replica node group)
-                     * @return Role Node group type. Valid values: master (master node group); replica (replica node group)
+                     * 获取Node group type. master: primary node; replica: replica node.
+                     * @return Role Node group type. master: primary node; replica: replica node.
                      * 
                      */
                     std::string GetRole() const;
 
                     /**
-                     * 设置Node group type. Valid values: master (master node group); replica (replica node group)
-                     * @param _role Node group type. Valid values: master (master node group); replica (replica node group)
+                     * 设置Node group type. master: primary node; replica: replica node.
+                     * @param _role Node group type. master: primary node; replica: replica node.
                      * 
                      */
                     void SetRole(const std::string& _role);
@@ -173,7 +173,7 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Node group type. Valid values: master (master node group); replica (replica node group)
+                     * Node group type. master: primary node; replica: replica node.
                      */
                     std::string m_role;
                     bool m_roleHasBeenSet;

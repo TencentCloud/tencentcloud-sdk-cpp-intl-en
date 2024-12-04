@@ -200,15 +200,15 @@ namespace TencentCloud
                     bool SaleoutHasBeenSet() const;
 
                     /**
-                     * 获取Product engines, including Tencent Cloud CKV and Redis Community Edition.
-                     * @return Engine Product engines, including Tencent Cloud CKV and Redis Community Edition.
+                     * 获取Product engine. Valid values: Redis and CKV.
+                     * @return Engine Product engine. Valid values: Redis and CKV.
                      * 
                      */
                     std::string GetEngine() const;
 
                     /**
-                     * 设置Product engines, including Tencent Cloud CKV and Redis Community Edition.
-                     * @param _engine Product engines, including Tencent Cloud CKV and Redis Community Edition.
+                     * 设置Product engine. Valid values: Redis and CKV.
+                     * @param _engine Product engine. Valid values: Redis and CKV.
                      * 
                      */
                     void SetEngine(const std::string& _engine);
@@ -461,7 +461,7 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_saleoutHasBeenSet;
 
                     /**
-                     * Product engines, including Tencent Cloud CKV and Redis Community Edition.
+                     * Product engine. Valid values: Redis and CKV.
                      */
                     std::string m_engine;
                     bool m_engineHasBeenSet;

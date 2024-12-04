@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+                     * @return InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+                     * @param _instanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,23 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance input mode. Valid values: `0` (read/write), `1` (read-only)
-                     * @return InputMode Instance input mode. Valid values: `0` (read/write), `1` (read-only)
+                     * 获取Instance input mode.
+- 0: read/write.
+- 1: read-only.
+                     * @return InputMode Instance input mode.
+- 0: read/write.
+- 1: read-only.
                      * 
                      */
                     std::string GetInputMode() const;
 
                     /**
-                     * 设置Instance input mode. Valid values: `0` (read/write), `1` (read-only)
-                     * @param _inputMode Instance input mode. Valid values: `0` (read/write), `1` (read-only)
+                     * 设置Instance input mode.
+- 0: read/write.
+- 1: read-only.
+                     * @param _inputMode Instance input mode.
+- 0: read/write.
+- 1: read-only.
                      * 
                      */
                     void SetInputMode(const std::string& _inputMode);
@@ -87,13 +95,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Instance input mode. Valid values: `0` (read/write), `1` (read-only)
+                     * Instance input mode.
+- 0: read/write.
+- 1: read-only.
                      */
                     std::string m_inputMode;
                     bool m_inputModeHasBeenSet;

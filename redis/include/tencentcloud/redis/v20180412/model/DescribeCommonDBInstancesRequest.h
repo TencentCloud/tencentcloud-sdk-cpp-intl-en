@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取List of instance IDs
-                     * @return InstanceIds List of instance IDs
+                     * 获取Instance ID filter information list, with a maximum array length of 100.
+                     * @return InstanceIds Instance ID filter information list, with a maximum array length of 100.
                      * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置List of instance IDs
-                     * @param _instanceIds List of instance IDs
+                     * 设置Instance ID filter information list, with a maximum array length of 100.
+                     * @param _instanceIds Instance ID filter information list, with a maximum array length of 100.
                      * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
@@ -336,7 +336,7 @@ namespace TencentCloud
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * List of instance IDs
+                     * Instance ID filter information list, with a maximum array length of 100.
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;

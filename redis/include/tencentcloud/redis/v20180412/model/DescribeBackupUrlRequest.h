@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+                     * @return InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+                     * @param _instanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -86,31 +86,31 @@ namespace TencentCloud
                     bool BackupIdHasBeenSet() const;
 
                     /**
-                     * 获取Type of the network restriction for downloading backup files. If this parameter is not configured, the user-defined configuration will be used.
-
-- `NoLimit`: Backup files can be downloaded over both public and private networks.
-- `LimitOnlyIntranet`: Backup files can be downloaded only at private network addresses auto-assigned by Tencent Cloud.
-- `Customize`: Backup files can be downloaded only in the customized VPC.
-                     * @return LimitType Type of the network restriction for downloading backup files. If this parameter is not configured, the user-defined configuration will be used.
-
-- `NoLimit`: Backup files can be downloaded over both public and private networks.
-- `LimitOnlyIntranet`: Backup files can be downloaded only at private network addresses auto-assigned by Tencent Cloud.
-- `Customize`: Backup files can be downloaded only in the customized VPC.
+                     * 获取Limit type of the network from which you can download backup files. If this parameter is not configured, the user-defined configuration will be used.
+- NoLimit: There is no limit. Backup files can be downloaded from both Tencent Cloud private and public networks.
+- LimitOnlyIntranet: Backup files can be downloaded 
+ only from the private IP address automatically assigned by Tencent Cloud.
+- Customize: Backup files can be downloaded from the user-defined VPC.
+                     * @return LimitType Limit type of the network from which you can download backup files. If this parameter is not configured, the user-defined configuration will be used.
+- NoLimit: There is no limit. Backup files can be downloaded from both Tencent Cloud private and public networks.
+- LimitOnlyIntranet: Backup files can be downloaded 
+ only from the private IP address automatically assigned by Tencent Cloud.
+- Customize: Backup files can be downloaded from the user-defined VPC.
                      * 
                      */
                     std::string GetLimitType() const;
 
                     /**
-                     * 设置Type of the network restriction for downloading backup files. If this parameter is not configured, the user-defined configuration will be used.
-
-- `NoLimit`: Backup files can be downloaded over both public and private networks.
-- `LimitOnlyIntranet`: Backup files can be downloaded only at private network addresses auto-assigned by Tencent Cloud.
-- `Customize`: Backup files can be downloaded only in the customized VPC.
-                     * @param _limitType Type of the network restriction for downloading backup files. If this parameter is not configured, the user-defined configuration will be used.
-
-- `NoLimit`: Backup files can be downloaded over both public and private networks.
-- `LimitOnlyIntranet`: Backup files can be downloaded only at private network addresses auto-assigned by Tencent Cloud.
-- `Customize`: Backup files can be downloaded only in the customized VPC.
+                     * 设置Limit type of the network from which you can download backup files. If this parameter is not configured, the user-defined configuration will be used.
+- NoLimit: There is no limit. Backup files can be downloaded from both Tencent Cloud private and public networks.
+- LimitOnlyIntranet: Backup files can be downloaded 
+ only from the private IP address automatically assigned by Tencent Cloud.
+- Customize: Backup files can be downloaded from the user-defined VPC.
+                     * @param _limitType Limit type of the network from which you can download backup files. If this parameter is not configured, the user-defined configuration will be used.
+- NoLimit: There is no limit. Backup files can be downloaded from both Tencent Cloud private and public networks.
+- LimitOnlyIntranet: Backup files can be downloaded 
+ only from the private IP address automatically assigned by Tencent Cloud.
+- Customize: Backup files can be downloaded from the user-defined VPC.
                      * 
                      */
                     void SetLimitType(const std::string& _limitType);
@@ -144,27 +144,23 @@ namespace TencentCloud
                     bool VpcComparisonSymbolHasBeenSet() const;
 
                     /**
-                     * 获取Whether backups can be downloaded at the custom `LimitIp` address.
-
-- `In` (default value): Download is allowed for the custom IP.
-- `NotIn`: Download is not allowed for the custom IP.
-                     * @return IpComparisonSymbol Whether backups can be downloaded at the custom `LimitIp` address.
-
-- `In` (default value): Download is allowed for the custom IP.
-- `NotIn`: Download is not allowed for the custom IP.
+                     * 获取Whether backup files can be downloaded from the custom IP address specified by LimitIp.
+- In: yes. This is the default value.
+- NotIn: no.
+                     * @return IpComparisonSymbol Whether backup files can be downloaded from the custom IP address specified by LimitIp.
+- In: yes. This is the default value.
+- NotIn: no.
                      * 
                      */
                     std::string GetIpComparisonSymbol() const;
 
                     /**
-                     * 设置Whether backups can be downloaded at the custom `LimitIp` address.
-
-- `In` (default value): Download is allowed for the custom IP.
-- `NotIn`: Download is not allowed for the custom IP.
-                     * @param _ipComparisonSymbol Whether backups can be downloaded at the custom `LimitIp` address.
-
-- `In` (default value): Download is allowed for the custom IP.
-- `NotIn`: Download is not allowed for the custom IP.
+                     * 设置Whether backup files can be downloaded from the custom IP address specified by LimitIp.
+- In: yes. This is the default value.
+- NotIn: no.
+                     * @param _ipComparisonSymbol Whether backup files can be downloaded from the custom IP address specified by LimitIp.
+- In: yes. This is the default value.
+- NotIn: no.
                      * 
                      */
                     void SetIpComparisonSymbol(const std::string& _ipComparisonSymbol);
@@ -221,7 +217,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -233,11 +229,11 @@ namespace TencentCloud
                     bool m_backupIdHasBeenSet;
 
                     /**
-                     * Type of the network restriction for downloading backup files. If this parameter is not configured, the user-defined configuration will be used.
-
-- `NoLimit`: Backup files can be downloaded over both public and private networks.
-- `LimitOnlyIntranet`: Backup files can be downloaded only at private network addresses auto-assigned by Tencent Cloud.
-- `Customize`: Backup files can be downloaded only in the customized VPC.
+                     * Limit type of the network from which you can download backup files. If this parameter is not configured, the user-defined configuration will be used.
+- NoLimit: There is no limit. Backup files can be downloaded from both Tencent Cloud private and public networks.
+- LimitOnlyIntranet: Backup files can be downloaded 
+ only from the private IP address automatically assigned by Tencent Cloud.
+- Customize: Backup files can be downloaded from the user-defined VPC.
                      */
                     std::string m_limitType;
                     bool m_limitTypeHasBeenSet;
@@ -249,10 +245,9 @@ namespace TencentCloud
                     bool m_vpcComparisonSymbolHasBeenSet;
 
                     /**
-                     * Whether backups can be downloaded at the custom `LimitIp` address.
-
-- `In` (default value): Download is allowed for the custom IP.
-- `NotIn`: Download is not allowed for the custom IP.
+                     * Whether backup files can be downloaded from the custom IP address specified by LimitIp.
+- In: yes. This is the default value.
+- NotIn: no.
                      */
                     std::string m_ipComparisonSymbol;
                     bool m_ipComparisonSymbolHasBeenSet;

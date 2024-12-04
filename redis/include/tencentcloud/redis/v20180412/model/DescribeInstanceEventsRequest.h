@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Configures the start date for querying the event execution schedule.
-                     * @return ExecutionStartDate Configures the start date for querying the event execution schedule.
+                     * 获取Start date for querying the event execution plan, with a maximum query span of 30 days.
+                     * @return ExecutionStartDate Start date for querying the event execution plan, with a maximum query span of 30 days.
                      * 
                      */
                     std::string GetExecutionStartDate() const;
 
                     /**
-                     * 设置Configures the start date for querying the event execution schedule.
-                     * @param _executionStartDate Configures the start date for querying the event execution schedule.
+                     * 设置Start date for querying the event execution plan, with a maximum query span of 30 days.
+                     * @param _executionStartDate Start date for querying the event execution plan, with a maximum query span of 30 days.
                      * 
                      */
                     void SetExecutionStartDate(const std::string& _executionStartDate);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ExecutionStartDateHasBeenSet() const;
 
                     /**
-                     * 获取Configures the end date for querying the event execution schedule.
-                     * @return ExecutionEndDate Configures the end date for querying the event execution schedule.
+                     * 获取End date for querying the event execution plan, with a maximum query span of 30 days.
+                     * @return ExecutionEndDate End date for querying the event execution plan, with a maximum query span of 30 days.
                      * 
                      */
                     std::string GetExecutionEndDate() const;
 
                     /**
-                     * 设置Configures the end date for querying the event execution schedule.
-                     * @param _executionEndDate Configures the end date for querying the event execution schedule.
+                     * 设置End date for querying the event execution plan, with a maximum query span of 30 days.
+                     * @param _executionEndDate End date for querying the event execution plan, with a maximum query span of 30 days.
                      * 
                      */
                     void SetExecutionEndDate(const std::string& _executionEndDate);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Outputs the number of events displayed per page. Default value: 10.
-                     * @return PageSize Outputs the number of events displayed per page. Default value: 10.
+                     * 获取Number of events displayed per page. Default value: 10. Maximum value: 100.
+                     * @return PageSize Number of events displayed per page. Default value: 10. Maximum value: 100.
                      * 
                      */
                     int64_t GetPageSize() const;
 
                     /**
-                     * 设置Outputs the number of events displayed per page. Default value: 10.
-                     * @param _pageSize Outputs the number of events displayed per page. Default value: 10.
+                     * 设置Number of events displayed per page. Default value: 10. Maximum value: 100.
+                     * @param _pageSize Number of events displayed per page. Default value: 10. Maximum value: 100.
                      * 
                      */
                     void SetPageSize(const int64_t& _pageSize);
@@ -213,13 +213,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Configures the start date for querying the event execution schedule.
+                     * Start date for querying the event execution plan, with a maximum query span of 30 days.
                      */
                     std::string m_executionStartDate;
                     bool m_executionStartDateHasBeenSet;
 
                     /**
-                     * Configures the end date for querying the event execution schedule.
+                     * End date for querying the event execution plan, with a maximum query span of 30 days.
                      */
                     std::string m_executionEndDate;
                     bool m_executionEndDateHasBeenSet;
@@ -231,7 +231,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Outputs the number of events displayed per page. Default value: 10.
+                     * Number of events displayed per page. Default value: 10. Maximum value: 100.
                      */
                     int64_t m_pageSize;
                     bool m_pageSizeHasBeenSet;

@@ -86,15 +86,51 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Instance type. Valid values: `1` (Redis 2.8 Memory Edition in cluster architecture), `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `5` (Redis 2.8 Memory Edition in standalone architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture). If `TempateId` is specified, this parameter can be left blank; otherwise, it is required.
-                     * @return ProductType Instance type. Valid values: `1` (Redis 2.8 Memory Edition in cluster architecture), `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `5` (Redis 2.8 Memory Edition in standalone architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture). If `TempateId` is specified, this parameter can be left blank; otherwise, it is required.
+                     * 获取Product type.
+- 2: Redis 2.8 Memory Edition (standard architecture).
+- 6: Redis 4.0 Memory Edition (standard architecture).
+- 7: Redis 4.0 Memory Edition (cluster architecture).
+- 8: Redis 5.0 Memory Edition (standard architecture).
+- 9: Redis 5.0 Memory Edition (cluster architecture).
+- 15: Redis 6.2 Memory Edition (standard architecture).
+- 16: Redis 6.2 Memory Edition (cluster architecture).
+- 17: Redis 7.0 Memory Edition (standard architecture).
+- 18: Redis 7.0 Memory Edition (cluster architecture).
+                     * @return ProductType Product type.
+- 2: Redis 2.8 Memory Edition (standard architecture).
+- 6: Redis 4.0 Memory Edition (standard architecture).
+- 7: Redis 4.0 Memory Edition (cluster architecture).
+- 8: Redis 5.0 Memory Edition (standard architecture).
+- 9: Redis 5.0 Memory Edition (cluster architecture).
+- 15: Redis 6.2 Memory Edition (standard architecture).
+- 16: Redis 6.2 Memory Edition (cluster architecture).
+- 17: Redis 7.0 Memory Edition (standard architecture).
+- 18: Redis 7.0 Memory Edition (cluster architecture).
                      * 
                      */
                     uint64_t GetProductType() const;
 
                     /**
-                     * 设置Instance type. Valid values: `1` (Redis 2.8 Memory Edition in cluster architecture), `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `5` (Redis 2.8 Memory Edition in standalone architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture). If `TempateId` is specified, this parameter can be left blank; otherwise, it is required.
-                     * @param _productType Instance type. Valid values: `1` (Redis 2.8 Memory Edition in cluster architecture), `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `5` (Redis 2.8 Memory Edition in standalone architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture). If `TempateId` is specified, this parameter can be left blank; otherwise, it is required.
+                     * 设置Product type.
+- 2: Redis 2.8 Memory Edition (standard architecture).
+- 6: Redis 4.0 Memory Edition (standard architecture).
+- 7: Redis 4.0 Memory Edition (cluster architecture).
+- 8: Redis 5.0 Memory Edition (standard architecture).
+- 9: Redis 5.0 Memory Edition (cluster architecture).
+- 15: Redis 6.2 Memory Edition (standard architecture).
+- 16: Redis 6.2 Memory Edition (cluster architecture).
+- 17: Redis 7.0 Memory Edition (standard architecture).
+- 18: Redis 7.0 Memory Edition (cluster architecture).
+                     * @param _productType Product type.
+- 2: Redis 2.8 Memory Edition (standard architecture).
+- 6: Redis 4.0 Memory Edition (standard architecture).
+- 7: Redis 4.0 Memory Edition (cluster architecture).
+- 8: Redis 5.0 Memory Edition (standard architecture).
+- 9: Redis 5.0 Memory Edition (cluster architecture).
+- 15: Redis 6.2 Memory Edition (standard architecture).
+- 16: Redis 6.2 Memory Edition (cluster architecture).
+- 17: Redis 7.0 Memory Edition (standard architecture).
+- 18: Redis 7.0 Memory Edition (cluster architecture).
                      * 
                      */
                     void SetProductType(const uint64_t& _productType);
@@ -163,7 +199,16 @@ namespace TencentCloud
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Instance type. Valid values: `1` (Redis 2.8 Memory Edition in cluster architecture), `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `5` (Redis 2.8 Memory Edition in standalone architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture). If `TempateId` is specified, this parameter can be left blank; otherwise, it is required.
+                     * Product type.
+- 2: Redis 2.8 Memory Edition (standard architecture).
+- 6: Redis 4.0 Memory Edition (standard architecture).
+- 7: Redis 4.0 Memory Edition (cluster architecture).
+- 8: Redis 5.0 Memory Edition (standard architecture).
+- 9: Redis 5.0 Memory Edition (cluster architecture).
+- 15: Redis 6.2 Memory Edition (standard architecture).
+- 16: Redis 6.2 Memory Edition (cluster architecture).
+- 17: Redis 7.0 Memory Edition (standard architecture).
+- 18: Redis 7.0 Memory Edition (cluster architecture).
                      */
                     uint64_t m_productType;
                     bool m_productTypeHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+                     * @return InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+                     * @param _instanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取The current redis version
-                     * @return CurrentRedisVersion The current redis version
+                     * 获取Current Redis minor version. For minor version information, see [Upgrading Instance Version](https://www.tencentcloud.com/document/product/239/37710).
+                     * @return CurrentRedisVersion Current Redis minor version. For minor version information, see [Upgrading Instance Version](https://www.tencentcloud.com/document/product/239/37710).
                      * 
                      */
                     std::string GetCurrentRedisVersion() const;
 
                     /**
-                     * 设置The current redis version
-                     * @param _currentRedisVersion The current redis version
+                     * 设置Current Redis minor version. For minor version information, see [Upgrading Instance Version](https://www.tencentcloud.com/document/product/239/37710).
+                     * @param _currentRedisVersion Current Redis minor version. For minor version information, see [Upgrading Instance Version](https://www.tencentcloud.com/document/product/239/37710).
                      * 
                      */
                     void SetCurrentRedisVersion(const std::string& _currentRedisVersion);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool CurrentRedisVersionHasBeenSet() const;
 
                     /**
-                     * 获取Upgradeable redis version
-                     * @return UpgradeRedisVersion Upgradeable redis version
+                     * 获取Upgraded Redis minor version. For minor version information, see [Upgrading Instance Version](https://www.tencentcloud.com/document/product/239/37710).
+                     * @return UpgradeRedisVersion Upgraded Redis minor version. For minor version information, see [Upgrading Instance Version](https://www.tencentcloud.com/document/product/239/37710).
                      * 
                      */
                     std::string GetUpgradeRedisVersion() const;
 
                     /**
-                     * 设置Upgradeable redis version
-                     * @param _upgradeRedisVersion Upgradeable redis version
+                     * 设置Upgraded Redis minor version. For minor version information, see [Upgrading Instance Version](https://www.tencentcloud.com/document/product/239/37710).
+                     * @param _upgradeRedisVersion Upgraded Redis minor version. For minor version information, see [Upgrading Instance Version](https://www.tencentcloud.com/document/product/239/37710).
                      * 
                      */
                     void SetUpgradeRedisVersion(const std::string& _upgradeRedisVersion);
@@ -106,15 +106,23 @@ namespace TencentCloud
                     bool UpgradeRedisVersionHasBeenSet() const;
 
                     /**
-                     * 获取`1` (upgrade immediately), `0` (upgrade during maintenance time)
-                     * @return InstanceTypeUpgradeNow `1` (upgrade immediately), `0` (upgrade during maintenance time)
+                     * 获取Whether to upgrade immediately.
+- 1: Upgrade immediately.
+- 0: Upgrade during the maintenance window.
+                     * @return InstanceTypeUpgradeNow Whether to upgrade immediately.
+- 1: Upgrade immediately.
+- 0: Upgrade during the maintenance window.
                      * 
                      */
                     int64_t GetInstanceTypeUpgradeNow() const;
 
                     /**
-                     * 设置`1` (upgrade immediately), `0` (upgrade during maintenance time)
-                     * @param _instanceTypeUpgradeNow `1` (upgrade immediately), `0` (upgrade during maintenance time)
+                     * 设置Whether to upgrade immediately.
+- 1: Upgrade immediately.
+- 0: Upgrade during the maintenance window.
+                     * @param _instanceTypeUpgradeNow Whether to upgrade immediately.
+- 1: Upgrade immediately.
+- 0: Upgrade during the maintenance window.
                      * 
                      */
                     void SetInstanceTypeUpgradeNow(const int64_t& _instanceTypeUpgradeNow);
@@ -129,25 +137,27 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * The current redis version
+                     * Current Redis minor version. For minor version information, see [Upgrading Instance Version](https://www.tencentcloud.com/document/product/239/37710).
                      */
                     std::string m_currentRedisVersion;
                     bool m_currentRedisVersionHasBeenSet;
 
                     /**
-                     * Upgradeable redis version
+                     * Upgraded Redis minor version. For minor version information, see [Upgrading Instance Version](https://www.tencentcloud.com/document/product/239/37710).
                      */
                     std::string m_upgradeRedisVersion;
                     bool m_upgradeRedisVersionHasBeenSet;
 
                     /**
-                     * `1` (upgrade immediately), `0` (upgrade during maintenance time)
+                     * Whether to upgrade immediately.
+- 1: Upgrade immediately.
+- 0: Upgrade during the maintenance window.
                      */
                     int64_t m_instanceTypeUpgradeNow;
                     bool m_instanceTypeUpgradeNowHasBeenSet;

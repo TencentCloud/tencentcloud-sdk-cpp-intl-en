@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start time of the maintenance window, such as 17:00.
-                     * @return StartTime Start time of the maintenance window, such as 17:00.
+                     * 获取Start time of the maintenance window. Value range: any time point between 00:00 and 23:00, for example, 03:24.
+                     * @return StartTime Start time of the maintenance window. Value range: any time point between 00:00 and 23:00, for example, 03:24.
                      * 
                      */
                     std::string GetStartTime() const;
@@ -58,8 +58,14 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time of the maintenance window, such as 19:00.
-                     * @return EndTime End time of the maintenance window, such as 19:00.
+                     * 获取End time of the maintenance window.
+- Value range: any time point between 00:00 and 23:00, for example, 04:24.
+- The minimum maintenance duration is 30 minutes and the maximum is 3 hours.
+- The end time should be later than the start time.
+                     * @return EndTime End time of the maintenance window.
+- Value range: any time point between 00:00 and 23:00, for example, 04:24.
+- The minimum maintenance duration is 30 minutes and the maximum is 3 hours.
+- The end time should be later than the start time.
                      * 
                      */
                     std::string GetEndTime() const;
@@ -74,13 +80,16 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Start time of the maintenance window, such as 17:00.
+                     * Start time of the maintenance window. Value range: any time point between 00:00 and 23:00, for example, 03:24.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End time of the maintenance window, such as 19:00.
+                     * End time of the maintenance window.
+- Value range: any time point between 00:00 and 23:00, for example, 04:24.
+- The minimum maintenance duration is 30 minutes and the maximum is 3 hours.
+- The end time should be later than the start time.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;

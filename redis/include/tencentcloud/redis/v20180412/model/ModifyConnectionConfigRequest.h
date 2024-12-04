@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID, which can contain 12 to 36 characters.
-                     * @return InstanceId Instance ID, which can contain 12 to 36 characters.
+                     * 获取Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+                     * @return InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID, which can contain 12 to 36 characters.
-                     * @param _instanceId Instance ID, which can contain 12 to 36 characters.
+                     * 设置Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+                     * @param _instanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -85,15 +85,23 @@ namespace TencentCloud
                     bool BandwidthHasBeenSet() const;
 
                     /**
-                     * 获取Total number of connections of a single shard.When read-only replicas are not enabled, the lower limit is 10,000, and the upper limit is 40,000.When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is 10,000 × (the number of read-only replicas + 3).
-                     * @return ClientLimit Total number of connections of a single shard.When read-only replicas are not enabled, the lower limit is 10,000, and the upper limit is 40,000.When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is 10,000 × (the number of read-only replicas + 3).
+                     * 获取Total number of connections per shard.
+- When read-only replicas are not enabled, the lower limit is 10,000 and the upper limit is 40,000.
+- When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is calculated as follows: 10,000 x (Number of read-only replicas + 3).
+                     * @return ClientLimit Total number of connections per shard.
+- When read-only replicas are not enabled, the lower limit is 10,000 and the upper limit is 40,000.
+- When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is calculated as follows: 10,000 x (Number of read-only replicas + 3).
                      * 
                      */
                     int64_t GetClientLimit() const;
 
                     /**
-                     * 设置Total number of connections of a single shard.When read-only replicas are not enabled, the lower limit is 10,000, and the upper limit is 40,000.When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is 10,000 × (the number of read-only replicas + 3).
-                     * @param _clientLimit Total number of connections of a single shard.When read-only replicas are not enabled, the lower limit is 10,000, and the upper limit is 40,000.When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is 10,000 × (the number of read-only replicas + 3).
+                     * 设置Total number of connections per shard.
+- When read-only replicas are not enabled, the lower limit is 10,000 and the upper limit is 40,000.
+- When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is calculated as follows: 10,000 x (Number of read-only replicas + 3).
+                     * @param _clientLimit Total number of connections per shard.
+- When read-only replicas are not enabled, the lower limit is 10,000 and the upper limit is 40,000.
+- When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is calculated as follows: 10,000 x (Number of read-only replicas + 3).
                      * 
                      */
                     void SetClientLimit(const int64_t& _clientLimit);
@@ -108,7 +116,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID, which can contain 12 to 36 characters.
+                     * Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -120,7 +128,9 @@ namespace TencentCloud
                     bool m_bandwidthHasBeenSet;
 
                     /**
-                     * Total number of connections of a single shard.When read-only replicas are not enabled, the lower limit is 10,000, and the upper limit is 40,000.When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is 10,000 × (the number of read-only replicas + 3).
+                     * Total number of connections per shard.
+- When read-only replicas are not enabled, the lower limit is 10,000 and the upper limit is 40,000.
+- When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is calculated as follows: 10,000 x (Number of read-only replicas + 3).
                      */
                     int64_t m_clientLimit;
                     bool m_clientLimitHasBeenSet;

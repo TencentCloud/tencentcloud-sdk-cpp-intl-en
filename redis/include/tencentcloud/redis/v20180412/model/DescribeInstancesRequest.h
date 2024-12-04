@@ -482,15 +482,63 @@ namespace TencentCloud
                     bool BillingModeHasBeenSet() const;
 
                     /**
-                     * 获取Instance type. Valid values:  - `2`: Redis 2.8 Memory Edition (Standard Architecture). - `3`: CKV 3.2 Memory Edition (Standard Architecture). - `4`: CKV 3.2 Memory Edition (Cluster Architecture). - `5`: Redis 2.8 Memory Edition (Standalone). - `6`: Redis 4.0 Memory Edition (Standard Architecture). - `7`: Redis 4.0 Memory Edition (Cluster Architecture). - `8`: Redis 5.0 Memory Edition (Standard Architecture). - `9`: Redis 5.0 Memory Edition (Cluster Architecture). - `15`: Redis 6.2 Memory Edition (Standard Architecture). - `16`: Redis 6.2 Memory Edition (Cluster Architecture).
-                     * @return Type Instance type. Valid values:  - `2`: Redis 2.8 Memory Edition (Standard Architecture). - `3`: CKV 3.2 Memory Edition (Standard Architecture). - `4`: CKV 3.2 Memory Edition (Cluster Architecture). - `5`: Redis 2.8 Memory Edition (Standalone). - `6`: Redis 4.0 Memory Edition (Standard Architecture). - `7`: Redis 4.0 Memory Edition (Cluster Architecture). - `8`: Redis 5.0 Memory Edition (Standard Architecture). - `9`: Redis 5.0 Memory Edition (Cluster Architecture). - `15`: Redis 6.2 Memory Edition (Standard Architecture). - `16`: Redis 6.2 Memory Edition (Cluster Architecture).
+                     * 获取Instance type.
+- 2: Redis 2.8 Memory Edition (standard architecture).
+- 3: CKV 3.2 Memory Edition (standard architecture).
+- 4: CKV 3.2 Memory Edition (cluster architecture).
+- 5: Redis 2.8 Memory Edition (stand-alone).
+- 6: Redis 4.0 Memory Edition (standard architecture).
+- 7: Redis 4.0 Memory Edition (cluster architecture).
+- 8: Redis 5.0 Memory Edition (standard architecture).
+- 9: Redis 5.0 Memory Edition (cluster architecture).
+- 15: Redis 6.2 Memory Edition (standard architecture).
+- 16: Redis 6.2 Memory Edition (cluster architecture).
+- 17: Redis 7.0 Memory Edition (standard architecture).
+- 18: Redis 7.0 Memory Edition (cluster architecture).
+                     * @return Type Instance type.
+- 2: Redis 2.8 Memory Edition (standard architecture).
+- 3: CKV 3.2 Memory Edition (standard architecture).
+- 4: CKV 3.2 Memory Edition (cluster architecture).
+- 5: Redis 2.8 Memory Edition (stand-alone).
+- 6: Redis 4.0 Memory Edition (standard architecture).
+- 7: Redis 4.0 Memory Edition (cluster architecture).
+- 8: Redis 5.0 Memory Edition (standard architecture).
+- 9: Redis 5.0 Memory Edition (cluster architecture).
+- 15: Redis 6.2 Memory Edition (standard architecture).
+- 16: Redis 6.2 Memory Edition (cluster architecture).
+- 17: Redis 7.0 Memory Edition (standard architecture).
+- 18: Redis 7.0 Memory Edition (cluster architecture).
                      * 
                      */
                     int64_t GetType() const;
 
                     /**
-                     * 设置Instance type. Valid values:  - `2`: Redis 2.8 Memory Edition (Standard Architecture). - `3`: CKV 3.2 Memory Edition (Standard Architecture). - `4`: CKV 3.2 Memory Edition (Cluster Architecture). - `5`: Redis 2.8 Memory Edition (Standalone). - `6`: Redis 4.0 Memory Edition (Standard Architecture). - `7`: Redis 4.0 Memory Edition (Cluster Architecture). - `8`: Redis 5.0 Memory Edition (Standard Architecture). - `9`: Redis 5.0 Memory Edition (Cluster Architecture). - `15`: Redis 6.2 Memory Edition (Standard Architecture). - `16`: Redis 6.2 Memory Edition (Cluster Architecture).
-                     * @param _type Instance type. Valid values:  - `2`: Redis 2.8 Memory Edition (Standard Architecture). - `3`: CKV 3.2 Memory Edition (Standard Architecture). - `4`: CKV 3.2 Memory Edition (Cluster Architecture). - `5`: Redis 2.8 Memory Edition (Standalone). - `6`: Redis 4.0 Memory Edition (Standard Architecture). - `7`: Redis 4.0 Memory Edition (Cluster Architecture). - `8`: Redis 5.0 Memory Edition (Standard Architecture). - `9`: Redis 5.0 Memory Edition (Cluster Architecture). - `15`: Redis 6.2 Memory Edition (Standard Architecture). - `16`: Redis 6.2 Memory Edition (Cluster Architecture).
+                     * 设置Instance type.
+- 2: Redis 2.8 Memory Edition (standard architecture).
+- 3: CKV 3.2 Memory Edition (standard architecture).
+- 4: CKV 3.2 Memory Edition (cluster architecture).
+- 5: Redis 2.8 Memory Edition (stand-alone).
+- 6: Redis 4.0 Memory Edition (standard architecture).
+- 7: Redis 4.0 Memory Edition (cluster architecture).
+- 8: Redis 5.0 Memory Edition (standard architecture).
+- 9: Redis 5.0 Memory Edition (cluster architecture).
+- 15: Redis 6.2 Memory Edition (standard architecture).
+- 16: Redis 6.2 Memory Edition (cluster architecture).
+- 17: Redis 7.0 Memory Edition (standard architecture).
+- 18: Redis 7.0 Memory Edition (cluster architecture).
+                     * @param _type Instance type.
+- 2: Redis 2.8 Memory Edition (standard architecture).
+- 3: CKV 3.2 Memory Edition (standard architecture).
+- 4: CKV 3.2 Memory Edition (cluster architecture).
+- 5: Redis 2.8 Memory Edition (stand-alone).
+- 6: Redis 4.0 Memory Edition (standard architecture).
+- 7: Redis 4.0 Memory Edition (cluster architecture).
+- 8: Redis 5.0 Memory Edition (standard architecture).
+- 9: Redis 5.0 Memory Edition (cluster architecture).
+- 15: Redis 6.2 Memory Edition (standard architecture).
+- 16: Redis 6.2 Memory Edition (cluster architecture).
+- 17: Redis 7.0 Memory Edition (standard architecture).
+- 18: Redis 7.0 Memory Edition (cluster architecture).
                      * 
                      */
                     void SetType(const int64_t& _type);
@@ -812,7 +860,19 @@ namespace TencentCloud
                     bool m_billingModeHasBeenSet;
 
                     /**
-                     * Instance type. Valid values:  - `2`: Redis 2.8 Memory Edition (Standard Architecture). - `3`: CKV 3.2 Memory Edition (Standard Architecture). - `4`: CKV 3.2 Memory Edition (Cluster Architecture). - `5`: Redis 2.8 Memory Edition (Standalone). - `6`: Redis 4.0 Memory Edition (Standard Architecture). - `7`: Redis 4.0 Memory Edition (Cluster Architecture). - `8`: Redis 5.0 Memory Edition (Standard Architecture). - `9`: Redis 5.0 Memory Edition (Cluster Architecture). - `15`: Redis 6.2 Memory Edition (Standard Architecture). - `16`: Redis 6.2 Memory Edition (Cluster Architecture).
+                     * Instance type.
+- 2: Redis 2.8 Memory Edition (standard architecture).
+- 3: CKV 3.2 Memory Edition (standard architecture).
+- 4: CKV 3.2 Memory Edition (cluster architecture).
+- 5: Redis 2.8 Memory Edition (stand-alone).
+- 6: Redis 4.0 Memory Edition (standard architecture).
+- 7: Redis 4.0 Memory Edition (cluster architecture).
+- 8: Redis 5.0 Memory Edition (standard architecture).
+- 9: Redis 5.0 Memory Edition (cluster architecture).
+- 15: Redis 6.2 Memory Edition (standard architecture).
+- 16: Redis 6.2 Memory Edition (cluster architecture).
+- 17: Redis 7.0 Memory Edition (standard architecture).
+- 18: Redis 7.0 Memory Edition (cluster architecture).
                      */
                     int64_t m_type;
                     bool m_typeHasBeenSet;

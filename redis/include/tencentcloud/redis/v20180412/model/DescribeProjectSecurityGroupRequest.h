@@ -43,15 +43,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取0: default project; -1: all projects; >0: specified project
-                     * @return ProjectId 0: default project; -1: all projects; >0: specified project
+                     * 获取Project ID for query.
+- 0: default project.
+- -1: all projects.
+- Greater than 0: specific project. Log in to the [project management](https://console.tencentcloud.com/project) page of the Redis console and copy the project ID in **Project Name**.
+                     * @return ProjectId Project ID for query.
+- 0: default project.
+- -1: all projects.
+- Greater than 0: specific project. Log in to the [project management](https://console.tencentcloud.com/project) page of the Redis console and copy the project ID in **Project Name**.
                      * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
-                     * 设置0: default project; -1: all projects; >0: specified project
-                     * @param _projectId 0: default project; -1: all projects; >0: specified project
+                     * 设置Project ID for query.
+- 0: default project.
+- -1: all projects.
+- Greater than 0: specific project. Log in to the [project management](https://console.tencentcloud.com/project) page of the Redis console and copy the project ID in **Project Name**.
+                     * @param _projectId Project ID for query.
+- 0: default project.
+- -1: all projects.
+- Greater than 0: specific project. Log in to the [project management](https://console.tencentcloud.com/project) page of the Redis console and copy the project ID in **Project Name**.
                      * 
                      */
                     void SetProjectId(const int64_t& _projectId);
@@ -64,15 +76,15 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取Security group ID
-                     * @return SecurityGroupId Security group ID
+                     * 获取Security group ID, which can be obtained through the sub-parameter **SecurityGroupId** of the response parameter **InstanceSecurityGroupsDetail** of the API [DescribeInstanceSecurityGroup](https://intl.cloud.tencent.com/document/product/239/34447?from_cn_redirect=1).
+                     * @return SecurityGroupId Security group ID, which can be obtained through the sub-parameter **SecurityGroupId** of the response parameter **InstanceSecurityGroupsDetail** of the API [DescribeInstanceSecurityGroup](https://intl.cloud.tencent.com/document/product/239/34447?from_cn_redirect=1).
                      * 
                      */
                     std::string GetSecurityGroupId() const;
 
                     /**
-                     * 设置Security group ID
-                     * @param _securityGroupId Security group ID
+                     * 设置Security group ID, which can be obtained through the sub-parameter **SecurityGroupId** of the response parameter **InstanceSecurityGroupsDetail** of the API [DescribeInstanceSecurityGroup](https://intl.cloud.tencent.com/document/product/239/34447?from_cn_redirect=1).
+                     * @param _securityGroupId Security group ID, which can be obtained through the sub-parameter **SecurityGroupId** of the response parameter **InstanceSecurityGroupsDetail** of the API [DescribeInstanceSecurityGroup](https://intl.cloud.tencent.com/document/product/239/34447?from_cn_redirect=1).
                      * 
                      */
                     void SetSecurityGroupId(const std::string& _securityGroupId);
@@ -87,13 +99,16 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 0: default project; -1: all projects; >0: specified project
+                     * Project ID for query.
+- 0: default project.
+- -1: all projects.
+- Greater than 0: specific project. Log in to the [project management](https://console.tencentcloud.com/project) page of the Redis console and copy the project ID in **Project Name**.
                      */
                     int64_t m_projectId;
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * Security group ID
+                     * Security group ID, which can be obtained through the sub-parameter **SecurityGroupId** of the response parameter **InstanceSecurityGroupsDetail** of the API [DescribeInstanceSecurityGroup](https://intl.cloud.tencent.com/document/product/239/34447?from_cn_redirect=1).
                      */
                     std::string m_securityGroupId;
                     bool m_securityGroupIdHasBeenSet;

@@ -43,15 +43,51 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance type. Valid values: `2` (Redis 2.8 memory edition in standard architecture), `3` (CKV 3.2 memory edition in standard architecture), `4` (CKV 3.2 memory edition in cluster architecture), `6` (Redis 4.0 memory edition in standard architecture), `7` (Redis 4.0 memory edition in cluster architecture), `8` (Redis 5.0 memory edition in standard architecture), `9` (Redis 5.0 memory edition in cluster architecture).
-                     * @return TypeId Instance type. Valid values: `2` (Redis 2.8 memory edition in standard architecture), `3` (CKV 3.2 memory edition in standard architecture), `4` (CKV 3.2 memory edition in cluster architecture), `6` (Redis 4.0 memory edition in standard architecture), `7` (Redis 4.0 memory edition in cluster architecture), `8` (Redis 5.0 memory edition in standard architecture), `9` (Redis 5.0 memory edition in cluster architecture).
+                     * 获取Instance type.
+- 2: Redis 2.8 Memory Edition (standard architecture).
+- 6: Redis 4.0 Memory Edition (standard architecture).
+- 7: Redis 4.0 Memory Edition (cluster architecture).
+- 8: Redis 5.0 Memory Edition (standard architecture).
+- 9: Redis 5.0 Memory Edition (cluster architecture).
+- 15: Redis 6.2 Memory Edition (standard architecture).
+- 16: Redis 6.2 Memory Edition (cluster architecture).
+- 17: Redis 7.0 Memory Edition (standard architecture).
+- 18: Redis 7.0 Memory Edition (cluster architecture).
+                     * @return TypeId Instance type.
+- 2: Redis 2.8 Memory Edition (standard architecture).
+- 6: Redis 4.0 Memory Edition (standard architecture).
+- 7: Redis 4.0 Memory Edition (cluster architecture).
+- 8: Redis 5.0 Memory Edition (standard architecture).
+- 9: Redis 5.0 Memory Edition (cluster architecture).
+- 15: Redis 6.2 Memory Edition (standard architecture).
+- 16: Redis 6.2 Memory Edition (cluster architecture).
+- 17: Redis 7.0 Memory Edition (standard architecture).
+- 18: Redis 7.0 Memory Edition (cluster architecture).
                      * 
                      */
                     uint64_t GetTypeId() const;
 
                     /**
-                     * 设置Instance type. Valid values: `2` (Redis 2.8 memory edition in standard architecture), `3` (CKV 3.2 memory edition in standard architecture), `4` (CKV 3.2 memory edition in cluster architecture), `6` (Redis 4.0 memory edition in standard architecture), `7` (Redis 4.0 memory edition in cluster architecture), `8` (Redis 5.0 memory edition in standard architecture), `9` (Redis 5.0 memory edition in cluster architecture).
-                     * @param _typeId Instance type. Valid values: `2` (Redis 2.8 memory edition in standard architecture), `3` (CKV 3.2 memory edition in standard architecture), `4` (CKV 3.2 memory edition in cluster architecture), `6` (Redis 4.0 memory edition in standard architecture), `7` (Redis 4.0 memory edition in cluster architecture), `8` (Redis 5.0 memory edition in standard architecture), `9` (Redis 5.0 memory edition in cluster architecture).
+                     * 设置Instance type.
+- 2: Redis 2.8 Memory Edition (standard architecture).
+- 6: Redis 4.0 Memory Edition (standard architecture).
+- 7: Redis 4.0 Memory Edition (cluster architecture).
+- 8: Redis 5.0 Memory Edition (standard architecture).
+- 9: Redis 5.0 Memory Edition (cluster architecture).
+- 15: Redis 6.2 Memory Edition (standard architecture).
+- 16: Redis 6.2 Memory Edition (cluster architecture).
+- 17: Redis 7.0 Memory Edition (standard architecture).
+- 18: Redis 7.0 Memory Edition (cluster architecture).
+                     * @param _typeId Instance type.
+- 2: Redis 2.8 Memory Edition (standard architecture).
+- 6: Redis 4.0 Memory Edition (standard architecture).
+- 7: Redis 4.0 Memory Edition (cluster architecture).
+- 8: Redis 5.0 Memory Edition (standard architecture).
+- 9: Redis 5.0 Memory Edition (cluster architecture).
+- 15: Redis 6.2 Memory Edition (standard architecture).
+- 16: Redis 6.2 Memory Edition (cluster architecture).
+- 17: Redis 7.0 Memory Edition (standard architecture).
+- 18: Redis 7.0 Memory Edition (cluster architecture).
                      * 
                      */
                     void SetTypeId(const uint64_t& _typeId);
@@ -131,15 +167,23 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
                     bool PeriodHasBeenSet() const;
 
                     /**
-                     * 获取Billing mode. Valid values: `0` (pay-as-you-go), `1` (monthly subscription).
-                     * @return BillingMode Billing mode. Valid values: `0` (pay-as-you-go), `1` (monthly subscription).
+                     * 获取Billing mode.
+- 0: pay-as-you-go.
+- 1: monthly subscription.
+                     * @return BillingMode Billing mode.
+- 0: pay-as-you-go.
+- 1: monthly subscription.
                      * 
                      */
                     int64_t GetBillingMode() const;
 
                     /**
-                     * 设置Billing mode. Valid values: `0` (pay-as-you-go), `1` (monthly subscription).
-                     * @param _billingMode Billing mode. Valid values: `0` (pay-as-you-go), `1` (monthly subscription).
+                     * 设置Billing mode.
+- 0: pay-as-you-go.
+- 1: monthly subscription.
+                     * @param _billingMode Billing mode.
+- 0: pay-as-you-go.
+- 1: monthly subscription.
                      * 
                      */
                     void SetBillingMode(const int64_t& _billingMode);
@@ -173,15 +217,15 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance shard quantity. This field is not required by Redis 2.8 standard architecture, CKV standard architecture, Redis 2.8 standalone edition, and Redis 4.0 standard architecture.
-                     * @return RedisShardNum Instance shard quantity. This field is not required by Redis 2.8 standard architecture, CKV standard architecture, Redis 2.8 standalone edition, and Redis 4.0 standard architecture.
+                     * 获取Number of instance shards. For the standard architecture of 2.8, the number of shards does not need to be configured. For the standard architecture of other versions, the number of shards should be set to 1. For the cluster architecture, the number of shards to be purchased needs to be specified.
+                     * @return RedisShardNum Number of instance shards. For the standard architecture of 2.8, the number of shards does not need to be configured. For the standard architecture of other versions, the number of shards should be set to 1. For the cluster architecture, the number of shards to be purchased needs to be specified.
                      * 
                      */
                     int64_t GetRedisShardNum() const;
 
                     /**
-                     * 设置Instance shard quantity. This field is not required by Redis 2.8 standard architecture, CKV standard architecture, Redis 2.8 standalone edition, and Redis 4.0 standard architecture.
-                     * @param _redisShardNum Instance shard quantity. This field is not required by Redis 2.8 standard architecture, CKV standard architecture, Redis 2.8 standalone edition, and Redis 4.0 standard architecture.
+                     * 设置Number of instance shards. For the standard architecture of 2.8, the number of shards does not need to be configured. For the standard architecture of other versions, the number of shards should be set to 1. For the cluster architecture, the number of shards to be purchased needs to be specified.
+                     * @param _redisShardNum Number of instance shards. For the standard architecture of 2.8, the number of shards does not need to be configured. For the standard architecture of other versions, the number of shards should be set to 1. For the cluster architecture, the number of shards to be purchased needs to be specified.
                      * 
                      */
                     void SetRedisShardNum(const int64_t& _redisShardNum);
@@ -194,15 +238,15 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
                     bool RedisShardNumHasBeenSet() const;
 
                     /**
-                     * 获取Instance replica quantity. This field is not required by Redis 2.8 standard architecture, CKV standard architecture, and Redis 2.8 standalone edition.
-                     * @return RedisReplicasNum Instance replica quantity. This field is not required by Redis 2.8 standard architecture, CKV standard architecture, and Redis 2.8 standalone edition.
+                     * 获取Number of instance replicas. For the standard architecture of 2.8, the number of replicas does not need to be configured.
+                     * @return RedisReplicasNum Number of instance replicas. For the standard architecture of 2.8, the number of replicas does not need to be configured.
                      * 
                      */
                     int64_t GetRedisReplicasNum() const;
 
                     /**
-                     * 设置Instance replica quantity. This field is not required by Redis 2.8 standard architecture, CKV standard architecture, and Redis 2.8 standalone edition.
-                     * @param _redisReplicasNum Instance replica quantity. This field is not required by Redis 2.8 standard architecture, CKV standard architecture, and Redis 2.8 standalone edition.
+                     * 设置Number of instance replicas. For the standard architecture of 2.8, the number of replicas does not need to be configured.
+                     * @param _redisReplicasNum Number of instance replicas. For the standard architecture of 2.8, the number of replicas does not need to be configured.
                      * 
                      */
                     void SetRedisReplicasNum(const int64_t& _redisReplicasNum);
@@ -215,15 +259,23 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
                     bool RedisReplicasNumHasBeenSet() const;
 
                     /**
-                     * 获取Whether to support read-only replicas. This field is not required by Redis 2.8 standard architecture, CKV standard architecture, and Redis 2.8 standalone edition.
-                     * @return ReplicasReadonly Whether to support read-only replicas. This field is not required by Redis 2.8 standard architecture, CKV standard architecture, and Redis 2.8 standalone edition.
+                     * 获取Whether replica read-only is supported. For the standard architecture of Redis 2.8 and CKV, this parameter does not need to be configured.
+- true: Replica read-only is not required.
+- false: Replica read-only is required.
+                     * @return ReplicasReadonly Whether replica read-only is supported. For the standard architecture of Redis 2.8 and CKV, this parameter does not need to be configured.
+- true: Replica read-only is not required.
+- false: Replica read-only is required.
                      * 
                      */
                     bool GetReplicasReadonly() const;
 
                     /**
-                     * 设置Whether to support read-only replicas. This field is not required by Redis 2.8 standard architecture, CKV standard architecture, and Redis 2.8 standalone edition.
-                     * @param _replicasReadonly Whether to support read-only replicas. This field is not required by Redis 2.8 standard architecture, CKV standard architecture, and Redis 2.8 standalone edition.
+                     * 设置Whether replica read-only is supported. For the standard architecture of Redis 2.8 and CKV, this parameter does not need to be configured.
+- true: Replica read-only is not required.
+- false: Replica read-only is required.
+                     * @param _replicasReadonly Whether replica read-only is supported. For the standard architecture of Redis 2.8 and CKV, this parameter does not need to be configured.
+- true: Replica read-only is not required.
+- false: Replica read-only is required.
                      * 
                      */
                     void SetReplicasReadonly(const bool& _replicasReadonly);
@@ -257,15 +309,27 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
                     bool ZoneNameHasBeenSet() const;
 
                     /**
-                     * 获取Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). Default value: `local` (local disk edition)
-                     * @return ProductVersion Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). Default value: `local` (local disk edition)
+                     * 获取Deployment mode.
+- local: local disk. This is the default value.
+- cloud: cloud disk.
+- cdc: CDC.
+                     * @return ProductVersion Deployment mode.
+- local: local disk. This is the default value.
+- cloud: cloud disk.
+- cdc: CDC.
                      * 
                      */
                     std::string GetProductVersion() const;
 
                     /**
-                     * 设置Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). Default value: `local` (local disk edition)
-                     * @param _productVersion Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). Default value: `local` (local disk edition)
+                     * 设置Deployment mode.
+- local: local disk. This is the default value.
+- cloud: cloud disk.
+- cdc: CDC.
+                     * @param _productVersion Deployment mode.
+- local: local disk. This is the default value.
+- cloud: cloud disk.
+- cdc: CDC.
                      * 
                      */
                     void SetProductVersion(const std::string& _productVersion);
@@ -280,7 +344,16 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
                 private:
 
                     /**
-                     * Instance type. Valid values: `2` (Redis 2.8 memory edition in standard architecture), `3` (CKV 3.2 memory edition in standard architecture), `4` (CKV 3.2 memory edition in cluster architecture), `6` (Redis 4.0 memory edition in standard architecture), `7` (Redis 4.0 memory edition in cluster architecture), `8` (Redis 5.0 memory edition in standard architecture), `9` (Redis 5.0 memory edition in cluster architecture).
+                     * Instance type.
+- 2: Redis 2.8 Memory Edition (standard architecture).
+- 6: Redis 4.0 Memory Edition (standard architecture).
+- 7: Redis 4.0 Memory Edition (cluster architecture).
+- 8: Redis 5.0 Memory Edition (standard architecture).
+- 9: Redis 5.0 Memory Edition (cluster architecture).
+- 15: Redis 6.2 Memory Edition (standard architecture).
+- 16: Redis 6.2 Memory Edition (cluster architecture).
+- 17: Redis 7.0 Memory Edition (standard architecture).
+- 18: Redis 7.0 Memory Edition (cluster architecture).
                      */
                     uint64_t m_typeId;
                     bool m_typeIdHasBeenSet;
@@ -305,7 +378,9 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
                     bool m_periodHasBeenSet;
 
                     /**
-                     * Billing mode. Valid values: `0` (pay-as-you-go), `1` (monthly subscription).
+                     * Billing mode.
+- 0: pay-as-you-go.
+- 1: monthly subscription.
                      */
                     int64_t m_billingMode;
                     bool m_billingModeHasBeenSet;
@@ -317,19 +392,21 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Instance shard quantity. This field is not required by Redis 2.8 standard architecture, CKV standard architecture, Redis 2.8 standalone edition, and Redis 4.0 standard architecture.
+                     * Number of instance shards. For the standard architecture of 2.8, the number of shards does not need to be configured. For the standard architecture of other versions, the number of shards should be set to 1. For the cluster architecture, the number of shards to be purchased needs to be specified.
                      */
                     int64_t m_redisShardNum;
                     bool m_redisShardNumHasBeenSet;
 
                     /**
-                     * Instance replica quantity. This field is not required by Redis 2.8 standard architecture, CKV standard architecture, and Redis 2.8 standalone edition.
+                     * Number of instance replicas. For the standard architecture of 2.8, the number of replicas does not need to be configured.
                      */
                     int64_t m_redisReplicasNum;
                     bool m_redisReplicasNumHasBeenSet;
 
                     /**
-                     * Whether to support read-only replicas. This field is not required by Redis 2.8 standard architecture, CKV standard architecture, and Redis 2.8 standalone edition.
+                     * Whether replica read-only is supported. For the standard architecture of Redis 2.8 and CKV, this parameter does not need to be configured.
+- true: Replica read-only is not required.
+- false: Replica read-only is required.
                      */
                     bool m_replicasReadonly;
                     bool m_replicasReadonlyHasBeenSet;
@@ -341,7 +418,10 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
                     bool m_zoneNameHasBeenSet;
 
                     /**
-                     * Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). Default value: `local` (local disk edition)
+                     * Deployment mode.
+- local: local disk. This is the default value.
+- cloud: cloud disk.
+- cdc: CDC.
                      */
                     std::string m_productVersion;
                     bool m_productVersionHasBeenSet;

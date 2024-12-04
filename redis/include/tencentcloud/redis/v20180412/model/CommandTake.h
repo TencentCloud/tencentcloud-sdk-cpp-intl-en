@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Command
-                     * @return Cmd Command
+                     * 获取Command name.
+                     * @return Cmd Command name.
                      * 
                      */
                     std::string GetCmd() const;
 
                     /**
-                     * 设置Command
-                     * @param _cmd Command
+                     * 设置Command name.
+                     * @param _cmd Command name.
                      * 
                      */
                     void SetCmd(const std::string& _cmd);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool CmdHasBeenSet() const;
 
                     /**
-                     * 获取Duration
-                     * @return Took Duration
+                     * 获取Time consumed. Unit: ms.
+                     * @return Took Time consumed. Unit: ms.
                      * 
                      */
                     int64_t GetTook() const;
 
                     /**
-                     * 设置Duration
-                     * @param _took Duration
+                     * 设置Time consumed. Unit: ms.
+                     * @param _took Time consumed. Unit: ms.
                      * 
                      */
                     void SetTook(const int64_t& _took);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Command
+                     * Command name.
                      */
                     std::string m_cmd;
                     bool m_cmdHasBeenSet;
 
                     /**
-                     * Duration
+                     * Time consumed. Unit: ms.
                      */
                     int64_t m_took;
                     bool m_tookHasBeenSet;

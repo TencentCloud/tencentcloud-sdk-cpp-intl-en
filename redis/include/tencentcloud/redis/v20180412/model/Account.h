@@ -47,15 +47,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceId Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Instance ID.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return InstanceId Instance ID.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceId Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Instance ID.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _instanceId Instance ID.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -68,15 +72,19 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AccountName Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Account name.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return AccountName Account name.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetAccountName() const;
 
                     /**
-                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _accountName Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Account name.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _accountName Account name.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetAccountName(const std::string& _accountName);
@@ -89,15 +97,19 @@ namespace TencentCloud
                     bool AccountNameHasBeenSet() const;
 
                     /**
-                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Remark Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Account description.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return Remark Account description.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetRemark() const;
 
                     /**
-                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _remark Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Account description.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _remark Account description.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetRemark(const std::string& _remark);
@@ -110,15 +122,31 @@ namespace TencentCloud
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Privilege Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Read/write permission policy.
+- r: read-only.
+- w: write-only.
+- rw: read/write.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return Privilege Read/write permission policy.
+- r: read-only.
+- w: write-only.
+- rw: read/write.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetPrivilege() const;
 
                     /**
-                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _privilege Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Read/write permission policy.
+- r: read-only.
+- w: write-only.
+- rw: read/write.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _privilege Read/write permission policy.
+- r: read-only.
+- w: write-only.
+- rw: read/write.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetPrivilege(const std::string& _privilege);
@@ -131,15 +159,27 @@ namespace TencentCloud
                     bool PrivilegeHasBeenSet() const;
 
                     /**
-                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ReadonlyPolicy Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Read-only routing policy.
+- master: primary node.
+- replication: secondary node.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return ReadonlyPolicy Read-only routing policy.
+- master: primary node.
+- replication: secondary node.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::vector<std::string> GetReadonlyPolicy() const;
 
                     /**
-                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _readonlyPolicy Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Read-only routing policy.
+- master: primary node.
+- replication: secondary node.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _readonlyPolicy Read-only routing policy.
+- master: primary node.
+- replication: secondary node.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetReadonlyPolicy(const std::vector<std::string>& _readonlyPolicy);
@@ -152,15 +192,31 @@ namespace TencentCloud
                     bool ReadonlyPolicyHasBeenSet() const;
 
                     /**
-                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Sub-account status.
+- 1: changing.
+- 2: valid.
+- 4: deleted.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return Status Sub-account status.
+- 1: changing.
+- 2: valid.
+- 4: deleted.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _status Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Sub-account status.
+- 1: changing.
+- 2: valid.
+- 4: deleted.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _status Sub-account status.
+- 1: changing.
+- 2: valid.
+- 4: deleted.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -196,37 +252,51 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Note: This field may return null, indicating that no valid values can be obtained.
+                     * Instance ID.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Note: This field may return null, indicating that no valid values can be obtained.
+                     * Account name.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_accountName;
                     bool m_accountNameHasBeenSet;
 
                     /**
-                     * Note: This field may return null, indicating that no valid values can be obtained.
+                     * Account description.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * Note: This field may return null, indicating that no valid values can be obtained.
+                     * Read/write permission policy.
+- r: read-only.
+- w: write-only.
+- rw: read/write.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_privilege;
                     bool m_privilegeHasBeenSet;
 
                     /**
-                     * Note: This field may return null, indicating that no valid values can be obtained.
+                     * Read-only routing policy.
+- master: primary node.
+- replication: secondary node.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::vector<std::string> m_readonlyPolicy;
                     bool m_readonlyPolicyHasBeenSet;
 
                     /**
-                     * Note: This field may return null, indicating that no valid values can be obtained.
+                     * Sub-account status.
+- 1: changing.
+- 2: valid.
+- 4: deleted.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;

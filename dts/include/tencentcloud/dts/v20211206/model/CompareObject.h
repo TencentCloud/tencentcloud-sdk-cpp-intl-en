@@ -98,19 +98,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ObjectItemsHasBeenSet() const;
 
                     /**
-                     * 获取Advanced object type (`account`: Account; `index`: Index; `shardkey`: Shard key, which may be adjusted later; `schema`: Database/table structure)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AdvancedObjects Advanced object type (`account`: Account; `index`: Index; `shardkey`: Shard key, which may be adjusted later; `schema`: Database/table structure)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Advanced object types, such as account, index, shardkey, schema.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AdvancedObjects Advanced object types, such as account, index, shardkey, schema.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetAdvancedObjects() const;
 
                     /**
-                     * 设置Advanced object type (`account`: Account; `index`: Index; `shardkey`: Shard key, which may be adjusted later; `schema`: Database/table structure)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _advancedObjects Advanced object type (`account`: Account; `index`: Index; `shardkey`: Shard key, which may be adjusted later; `schema`: Database/table structure)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Advanced object types, such as account, index, shardkey, schema.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _advancedObjects Advanced object types, such as account, index, shardkey, schema.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAdvancedObjects(const std::vector<std::string>& _advancedObjects);
@@ -139,8 +135,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_objectItemsHasBeenSet;
 
                     /**
-                     * Advanced object type (`account`: Account; `index`: Index; `shardkey`: Shard key, which may be adjusted later; `schema`: Database/table structure)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Advanced object types, such as account, index, shardkey, schema.Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_advancedObjects;
                     bool m_advancedObjectsHasBeenSet;

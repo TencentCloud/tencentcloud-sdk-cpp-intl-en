@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Replication group ID
-                     * @return GroupId Replication group ID
+                     * 获取Replication group ID. Log in to the [global replication](https://console.tencentcloud.com/redis/replication) page of the Redis console and obtain it.
+                     * @return GroupId Replication group ID. Log in to the [global replication](https://console.tencentcloud.com/redis/replication) page of the Redis console and obtain it.
                      * 
                      */
                     std::string GetGroupId() const;
 
                     /**
-                     * 设置Replication group ID
-                     * @param _groupId Replication group ID
+                     * 设置Replication group ID. Log in to the [global replication](https://console.tencentcloud.com/redis/replication) page of the Redis console and obtain it.
+                     * @param _groupId Replication group ID. Log in to the [global replication](https://console.tencentcloud.com/redis/replication) page of the Redis console and obtain it.
                      * 
                      */
                     void SetGroupId(const std::string& _groupId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool GroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+                     * @return InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+                     * @param _instanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -85,15 +85,23 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance role. Valid values: `rw` (read-write), `r`( read-only).
-                     * @return InstanceRole Instance role. Valid values: `rw` (read-write), `r`( read-only).
+                     * 获取Instance role.
+- rw: read/write.
+- r: read-only.
+                     * @return InstanceRole Instance role.
+- rw: read/write.
+- r: read-only.
                      * 
                      */
                     std::string GetInstanceRole() const;
 
                     /**
-                     * 设置Instance role. Valid values: `rw` (read-write), `r`( read-only).
-                     * @param _instanceRole Instance role. Valid values: `rw` (read-write), `r`( read-only).
+                     * 设置Instance role.
+- rw: read/write.
+- r: read-only.
+                     * @param _instanceRole Instance role.
+- rw: read/write.
+- r: read-only.
                      * 
                      */
                     void SetInstanceRole(const std::string& _instanceRole);
@@ -108,19 +116,21 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Replication group ID
+                     * Replication group ID. Log in to the [global replication](https://console.tencentcloud.com/redis/replication) page of the Redis console and obtain it.
                      */
                     std::string m_groupId;
                     bool m_groupIdHasBeenSet;
 
                     /**
-                     * Instance ID
+                     * Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Instance role. Valid values: `rw` (read-write), `r`( read-only).
+                     * Instance role.
+- rw: read/write.
+- r: read-only.
                      */
                     std::string m_instanceRole;
                     bool m_instanceRoleHasBeenSet;

@@ -87,28 +87,32 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Product type
-- `2`: Redis 2.8 Memory Edition (Standard Architecture).
-- `3`: CKV 3.2 Memory Edition (Standard Architecture).
-- `4`: CKV 3.2 Memory Edition (Cluster Architecture).
-- `5`: Redis 2.8 Memory Edition (Standalone).
-- `6`: Redis 4.0 Memory Edition (Standard Architecture).
-- `7`: Redis 4.0 Memory Edition (Cluster Architecture).
-- `8`: Redis 5.0 Memory Edition (Standard Architecture).
-- `9`: Redis 5.0 Memory Edition (Cluster Architecture).
-- `15`: Redis 6.2 Memory Edition (Standard Architecture).
-- `16`: Redis 6.2 Memory Edition (Cluster Architecture).
-                     * @return ProductType Product type
-- `2`: Redis 2.8 Memory Edition (Standard Architecture).
-- `3`: CKV 3.2 Memory Edition (Standard Architecture).
-- `4`: CKV 3.2 Memory Edition (Cluster Architecture).
-- `5`: Redis 2.8 Memory Edition (Standalone).
-- `6`: Redis 4.0 Memory Edition (Standard Architecture).
-- `7`: Redis 4.0 Memory Edition (Cluster Architecture).
-- `8`: Redis 5.0 Memory Edition (Standard Architecture).
-- `9`: Redis 5.0 Memory Edition (Cluster Architecture).
-- `15`: Redis 6.2 Memory Edition (Standard Architecture).
-- `16`: Redis 6.2 Memory Edition (Cluster Architecture).
+                     * 获取Product type.
+- 2: Redis 2.8 Memory Edition (standard architecture).
+- 3: CKV 3.2 Memory Edition (standard architecture).
+- 4: CKV 3.2 Memory Edition (cluster architecture).
+- 5: Redis 2.8 Memory Edition (stand-alone).
+- 6: Redis 4.0 Memory Edition (standard architecture).
+- 7: Redis 4.0 Memory Edition (cluster architecture).
+- 8: Redis 5.0 Memory Edition (standard architecture).
+- 9: Redis 5.0 Memory Edition (cluster architecture).
+- 15: Redis 6.2 Memory Edition (standard architecture).
+- 16: Redis 6.2 Memory Edition (cluster architecture).
+- 17: Redis 7.0 Memory Edition (standard architecture).
+- 18: Redis 7.0 Memory Edition (cluster architecture).
+                     * @return ProductType Product type.
+- 2: Redis 2.8 Memory Edition (standard architecture).
+- 3: CKV 3.2 Memory Edition (standard architecture).
+- 4: CKV 3.2 Memory Edition (cluster architecture).
+- 5: Redis 2.8 Memory Edition (stand-alone).
+- 6: Redis 4.0 Memory Edition (standard architecture).
+- 7: Redis 4.0 Memory Edition (cluster architecture).
+- 8: Redis 5.0 Memory Edition (standard architecture).
+- 9: Redis 5.0 Memory Edition (cluster architecture).
+- 15: Redis 6.2 Memory Edition (standard architecture).
+- 16: Redis 6.2 Memory Edition (cluster architecture).
+- 17: Redis 7.0 Memory Edition (standard architecture).
+- 18: Redis 7.0 Memory Edition (cluster architecture).
                      * 
                      */
                     uint64_t GetProductType() const;
@@ -169,17 +173,19 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Product type
-- `2`: Redis 2.8 Memory Edition (Standard Architecture).
-- `3`: CKV 3.2 Memory Edition (Standard Architecture).
-- `4`: CKV 3.2 Memory Edition (Cluster Architecture).
-- `5`: Redis 2.8 Memory Edition (Standalone).
-- `6`: Redis 4.0 Memory Edition (Standard Architecture).
-- `7`: Redis 4.0 Memory Edition (Cluster Architecture).
-- `8`: Redis 5.0 Memory Edition (Standard Architecture).
-- `9`: Redis 5.0 Memory Edition (Cluster Architecture).
-- `15`: Redis 6.2 Memory Edition (Standard Architecture).
-- `16`: Redis 6.2 Memory Edition (Cluster Architecture).
+                     * Product type.
+- 2: Redis 2.8 Memory Edition (standard architecture).
+- 3: CKV 3.2 Memory Edition (standard architecture).
+- 4: CKV 3.2 Memory Edition (cluster architecture).
+- 5: Redis 2.8 Memory Edition (stand-alone).
+- 6: Redis 4.0 Memory Edition (standard architecture).
+- 7: Redis 4.0 Memory Edition (cluster architecture).
+- 8: Redis 5.0 Memory Edition (standard architecture).
+- 9: Redis 5.0 Memory Edition (cluster architecture).
+- 15: Redis 6.2 Memory Edition (standard architecture).
+- 16: Redis 6.2 Memory Edition (cluster architecture).
+- 17: Redis 7.0 Memory Edition (standard architecture).
+- 18: Redis 7.0 Memory Edition (cluster architecture).
                      */
                     uint64_t m_productType;
                     bool m_productTypeHasBeenSet;

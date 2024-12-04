@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether the parameter is modified successfully. <br><li>`True`: Yes<br><li>`False`: No<br>
-                     * @return Changed Whether the parameter is modified successfully. <br><li>`True`: Yes<br><li>`False`: No<br>
+                     * 获取Whether the parameter configuration is successfully modified.<br> <li>true: successful;</li> <li>false: failed.</li>
+                     * @return Changed Whether the parameter configuration is successfully modified.<br> <li>true: successful;</li> <li>false: failed.</li>
                      * 
                      */
                     bool GetChanged() const;
@@ -74,7 +74,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether the parameter is modified successfully. <br><li>`True`: Yes<br><li>`False`: No<br>
+                     * Whether the parameter configuration is successfully modified.<br> <li>true: successful;</li> <li>false: failed.</li>
                      */
                     bool m_changed;
                     bool m_changedHasBeenSet;

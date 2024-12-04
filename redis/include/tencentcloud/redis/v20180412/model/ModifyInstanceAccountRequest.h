@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+                     * @return InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+                     * @param _instanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Sub-account name. If the root account is to be modified, enter `root`.
-                     * @return AccountName Sub-account name. If the root account is to be modified, enter `root`.
+                     * 获取Sub-account name. If you want to change it to the root account, fill in root.
+                     * @return AccountName Sub-account name. If you want to change it to the root account, fill in root.
                      * 
                      */
                     std::string GetAccountName() const;
 
                     /**
-                     * 设置Sub-account name. If the root account is to be modified, enter `root`.
-                     * @param _accountName Sub-account name. If the root account is to be modified, enter `root`.
+                     * 设置Sub-account name. If you want to change it to the root account, fill in root.
+                     * @param _accountName Sub-account name. If you want to change it to the root account, fill in root.
                      * 
                      */
                     void SetAccountName(const std::string& _accountName);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool AccountNameHasBeenSet() const;
 
                     /**
-                     * 获取Sub-account password
-                     * @return AccountPassword Sub-account password
+                     * 获取Sub-account password.
+                     * @return AccountPassword Sub-account password.
                      * 
                      */
                     std::string GetAccountPassword() const;
 
                     /**
-                     * 设置Sub-account password
-                     * @param _accountPassword Sub-account password
+                     * 设置Sub-account password.
+                     * @param _accountPassword Sub-account password.
                      * 
                      */
                     void SetAccountPassword(const std::string& _accountPassword);
@@ -127,15 +127,23 @@ namespace TencentCloud
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取Routing policy. Valid values: master (master node); replication (replica node)
-                     * @return ReadonlyPolicy Routing policy. Valid values: master (master node); replication (replica node)
+                     * 获取Account read/write routing policy.
+- master: primary node.
+- replication: secondary node.
+                     * @return ReadonlyPolicy Account read/write routing policy.
+- master: primary node.
+- replication: secondary node.
                      * 
                      */
                     std::vector<std::string> GetReadonlyPolicy() const;
 
                     /**
-                     * 设置Routing policy. Valid values: master (master node); replication (replica node)
-                     * @param _readonlyPolicy Routing policy. Valid values: master (master node); replication (replica node)
+                     * 设置Account read/write routing policy.
+- master: primary node.
+- replication: secondary node.
+                     * @param _readonlyPolicy Account read/write routing policy.
+- master: primary node.
+- replication: secondary node.
                      * 
                      */
                     void SetReadonlyPolicy(const std::vector<std::string>& _readonlyPolicy);
@@ -148,15 +156,27 @@ namespace TencentCloud
                     bool ReadonlyPolicyHasBeenSet() const;
 
                     /**
-                     * 获取Sub-account read/write policy. Valid values: r (read-only); w (write-only); rw (read/write).
-                     * @return Privilege Sub-account read/write policy. Valid values: r (read-only); w (write-only); rw (read/write).
+                     * 获取Sub-account read/write policy.
+- r: read-only.
+- w: write-only.
+- rw: read/write.
+                     * @return Privilege Sub-account read/write policy.
+- r: read-only.
+- w: write-only.
+- rw: read/write.
                      * 
                      */
                     std::string GetPrivilege() const;
 
                     /**
-                     * 设置Sub-account read/write policy. Valid values: r (read-only); w (write-only); rw (read/write).
-                     * @param _privilege Sub-account read/write policy. Valid values: r (read-only); w (write-only); rw (read/write).
+                     * 设置Sub-account read/write policy.
+- r: read-only.
+- w: write-only.
+- rw: read/write.
+                     * @param _privilege Sub-account read/write policy.
+- r: read-only.
+- w: write-only.
+- rw: read/write.
                      * 
                      */
                     void SetPrivilege(const std::string& _privilege);
@@ -169,15 +189,23 @@ namespace TencentCloud
                     bool PrivilegeHasBeenSet() const;
 
                     /**
-                     * 获取true: make the root account password-free. This is applicable to root accounts only. Sub-accounts cannot be made password-free.
-                     * @return NoAuth true: make the root account password-free. This is applicable to root accounts only. Sub-accounts cannot be made password-free.
+                     * 获取Whether to switch the root account to a password-free account. This applies only to the root account. Sub-accounts do not support password-free access.
+- true: Switch the root account to a password-free account.
+- false: Do not switch it.
+                     * @return NoAuth Whether to switch the root account to a password-free account. This applies only to the root account. Sub-accounts do not support password-free access.
+- true: Switch the root account to a password-free account.
+- false: Do not switch it.
                      * 
                      */
                     bool GetNoAuth() const;
 
                     /**
-                     * 设置true: make the root account password-free. This is applicable to root accounts only. Sub-accounts cannot be made password-free.
-                     * @param _noAuth true: make the root account password-free. This is applicable to root accounts only. Sub-accounts cannot be made password-free.
+                     * 设置Whether to switch the root account to a password-free account. This applies only to the root account. Sub-accounts do not support password-free access.
+- true: Switch the root account to a password-free account.
+- false: Do not switch it.
+                     * @param _noAuth Whether to switch the root account to a password-free account. This applies only to the root account. Sub-accounts do not support password-free access.
+- true: Switch the root account to a password-free account.
+- false: Do not switch it.
                      * 
                      */
                     void SetNoAuth(const bool& _noAuth);
@@ -192,19 +220,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Sub-account name. If the root account is to be modified, enter `root`.
+                     * Sub-account name. If you want to change it to the root account, fill in root.
                      */
                     std::string m_accountName;
                     bool m_accountNameHasBeenSet;
 
                     /**
-                     * Sub-account password
+                     * Sub-account password.
                      */
                     std::string m_accountPassword;
                     bool m_accountPasswordHasBeenSet;
@@ -216,19 +244,26 @@ namespace TencentCloud
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * Routing policy. Valid values: master (master node); replication (replica node)
+                     * Account read/write routing policy.
+- master: primary node.
+- replication: secondary node.
                      */
                     std::vector<std::string> m_readonlyPolicy;
                     bool m_readonlyPolicyHasBeenSet;
 
                     /**
-                     * Sub-account read/write policy. Valid values: r (read-only); w (write-only); rw (read/write).
+                     * Sub-account read/write policy.
+- r: read-only.
+- w: write-only.
+- rw: read/write.
                      */
                     std::string m_privilege;
                     bool m_privilegeHasBeenSet;
 
                     /**
-                     * true: make the root account password-free. This is applicable to root accounts only. Sub-accounts cannot be made password-free.
+                     * Whether to switch the root account to a password-free account. This applies only to the root account. Sub-accounts do not support password-free access.
+- true: Switch the root account to a password-free account.
+- false: Do not switch it.
                      */
                     bool m_noAuth;
                     bool m_noAuthHasBeenSet;

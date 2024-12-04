@@ -107,23 +107,23 @@ namespace TencentCloud
                     bool ForwardLoadBalancersHasBeenSet() const;
 
                     /**
-                     * 获取CLB verification policy. Valid values: "ALL" and "DIFF". Default value: "ALL"
-<br><li> ALL. Verification is successful only when all CLBs are valid. Otherwise, verification fails.
-<br><li> DIFF. Only the changes in the CLB parameters are verified. If valid, the verification is successful. Otherwise, verification fails.
-                     * @return LoadBalancersCheckPolicy CLB verification policy. Valid values: "ALL" and "DIFF". Default value: "ALL"
-<br><li> ALL. Verification is successful only when all CLBs are valid. Otherwise, verification fails.
-<br><li> DIFF. Only the changes in the CLB parameters are verified. If valid, the verification is successful. Otherwise, verification fails.
+                     * 获取CLB verification policy. Valid values: ALL and DIFF. Default value: ALL.
+<li>ALL: The CLB passes the verification only when all CLB parameters are valid. Otherwise, a verification error occurs.</li>
+<li>DIFF: The CLB passes the verification only when the CLB parameters with changes are valid. Otherwise, a verification error occurs.</li>
+                     * @return LoadBalancersCheckPolicy CLB verification policy. Valid values: ALL and DIFF. Default value: ALL.
+<li>ALL: The CLB passes the verification only when all CLB parameters are valid. Otherwise, a verification error occurs.</li>
+<li>DIFF: The CLB passes the verification only when the CLB parameters with changes are valid. Otherwise, a verification error occurs.</li>
                      * 
                      */
                     std::string GetLoadBalancersCheckPolicy() const;
 
                     /**
-                     * 设置CLB verification policy. Valid values: "ALL" and "DIFF". Default value: "ALL"
-<br><li> ALL. Verification is successful only when all CLBs are valid. Otherwise, verification fails.
-<br><li> DIFF. Only the changes in the CLB parameters are verified. If valid, the verification is successful. Otherwise, verification fails.
-                     * @param _loadBalancersCheckPolicy CLB verification policy. Valid values: "ALL" and "DIFF". Default value: "ALL"
-<br><li> ALL. Verification is successful only when all CLBs are valid. Otherwise, verification fails.
-<br><li> DIFF. Only the changes in the CLB parameters are verified. If valid, the verification is successful. Otherwise, verification fails.
+                     * 设置CLB verification policy. Valid values: ALL and DIFF. Default value: ALL.
+<li>ALL: The CLB passes the verification only when all CLB parameters are valid. Otherwise, a verification error occurs.</li>
+<li>DIFF: The CLB passes the verification only when the CLB parameters with changes are valid. Otherwise, a verification error occurs.</li>
+                     * @param _loadBalancersCheckPolicy CLB verification policy. Valid values: ALL and DIFF. Default value: ALL.
+<li>ALL: The CLB passes the verification only when all CLB parameters are valid. Otherwise, a verification error occurs.</li>
+<li>DIFF: The CLB passes the verification only when the CLB parameters with changes are valid. Otherwise, a verification error occurs.</li>
                      * 
                      */
                     void SetLoadBalancersCheckPolicy(const std::string& _loadBalancersCheckPolicy);
@@ -156,9 +156,9 @@ namespace TencentCloud
                     bool m_forwardLoadBalancersHasBeenSet;
 
                     /**
-                     * CLB verification policy. Valid values: "ALL" and "DIFF". Default value: "ALL"
-<br><li> ALL. Verification is successful only when all CLBs are valid. Otherwise, verification fails.
-<br><li> DIFF. Only the changes in the CLB parameters are verified. If valid, the verification is successful. Otherwise, verification fails.
+                     * CLB verification policy. Valid values: ALL and DIFF. Default value: ALL.
+<li>ALL: The CLB passes the verification only when all CLB parameters are valid. Otherwise, a verification error occurs.</li>
+<li>DIFF: The CLB passes the verification only when the CLB parameters with changes are valid. Otherwise, a verification error occurs.</li>
                      */
                     std::string m_loadBalancersCheckPolicy;
                     bool m_loadBalancersCheckPolicyHasBeenSet;

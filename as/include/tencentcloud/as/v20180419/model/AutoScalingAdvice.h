@@ -69,27 +69,27 @@ namespace TencentCloud
                     bool AutoScalingGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Scaling group warning level. Valid values:<br>
-<li>NORMAL: Normal<br>
-<li>WARNING: Warning<br>
-<li>CRITICAL: Serious warning<br>
-                     * @return Level Scaling group warning level. Valid values:<br>
-<li>NORMAL: Normal<br>
-<li>WARNING: Warning<br>
-<li>CRITICAL: Serious warning<br>
+                     * 获取Scaling group warning level. Valid values:
+<li>NORMAL: normal.</li>
+<li>WARNING: warning.</li>
+<li>CRITICAL: critical.</li>
+                     * @return Level Scaling group warning level. Valid values:
+<li>NORMAL: normal.</li>
+<li>WARNING: warning.</li>
+<li>CRITICAL: critical.</li>
                      * 
                      */
                     std::string GetLevel() const;
 
                     /**
-                     * 设置Scaling group warning level. Valid values:<br>
-<li>NORMAL: Normal<br>
-<li>WARNING: Warning<br>
-<li>CRITICAL: Serious warning<br>
-                     * @param _level Scaling group warning level. Valid values:<br>
-<li>NORMAL: Normal<br>
-<li>WARNING: Warning<br>
-<li>CRITICAL: Serious warning<br>
+                     * 设置Scaling group warning level. Valid values:
+<li>NORMAL: normal.</li>
+<li>WARNING: warning.</li>
+<li>CRITICAL: critical.</li>
+                     * @param _level Scaling group warning level. Valid values:
+<li>NORMAL: normal.</li>
+<li>WARNING: warning.</li>
+<li>CRITICAL: critical.</li>
                      * 
                      */
                     void SetLevel(const std::string& _level);
@@ -131,10 +131,10 @@ namespace TencentCloud
                     bool m_autoScalingGroupIdHasBeenSet;
 
                     /**
-                     * Scaling group warning level. Valid values:<br>
-<li>NORMAL: Normal<br>
-<li>WARNING: Warning<br>
-<li>CRITICAL: Serious warning<br>
+                     * Scaling group warning level. Valid values:
+<li>NORMAL: normal.</li>
+<li>WARNING: warning.</li>
+<li>CRITICAL: critical.</li>
                      */
                     std::string m_level;
                     bool m_levelHasBeenSet;

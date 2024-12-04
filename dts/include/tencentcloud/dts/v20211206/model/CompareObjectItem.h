@@ -174,19 +174,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TablesHasBeenSet() const;
 
                     /**
-                     * 获取View selection mode. Valid values: `all`, `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ViewMode View selection mode. Valid values: `all`, `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取View selection mode: all refers to all view objects under the current object, partial refers to partial view objects (consistency check does not check views, and the current parameters are disabled).Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ViewMode View selection mode: all refers to all view objects under the current object, partial refers to partial view objects (consistency check does not check views, and the current parameters are disabled).Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetViewMode() const;
 
                     /**
-                     * 设置View selection mode. Valid values: `all`, `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _viewMode View selection mode. Valid values: `all`, `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置View selection mode: all refers to all view objects under the current object, partial refers to partial view objects (consistency check does not check views, and the current parameters are disabled).Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _viewMode View selection mode: all refers to all view objects under the current object, partial refers to partial view objects (consistency check does not check views, and the current parameters are disabled).Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetViewMode(const std::string& _viewMode);
@@ -199,19 +195,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ViewModeHasBeenSet() const;
 
                     /**
-                     * 获取View configuration for data consistency check, which is required if `ViewMode` is `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Views View configuration for data consistency check, which is required if `ViewMode` is `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取View configuration used for consistency check. When ViewMode is partial, it needs to be filled in (consistency check does not check views, and the current parameters are disabled).Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Views View configuration used for consistency check. When ViewMode is partial, it needs to be filled in (consistency check does not check views, and the current parameters are disabled).Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<CompareViewItem> GetViews() const;
 
                     /**
-                     * 设置View configuration for data consistency check, which is required if `ViewMode` is `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _views View configuration for data consistency check, which is required if `ViewMode` is `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置View configuration used for consistency check. When ViewMode is partial, it needs to be filled in (consistency check does not check views, and the current parameters are disabled).Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _views View configuration used for consistency check. When ViewMode is partial, it needs to be filled in (consistency check does not check views, and the current parameters are disabled).Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetViews(const std::vector<CompareViewItem>& _views);
@@ -261,15 +253,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_tablesHasBeenSet;
 
                     /**
-                     * View selection mode. Valid values: `all`, `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * View selection mode: all refers to all view objects under the current object, partial refers to partial view objects (consistency check does not check views, and the current parameters are disabled).Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_viewMode;
                     bool m_viewModeHasBeenSet;
 
                     /**
-                     * View configuration for data consistency check, which is required if `ViewMode` is `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * View configuration used for consistency check. When ViewMode is partial, it needs to be filled in (consistency check does not check views, and the current parameters are disabled).Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<CompareViewItem> m_views;
                     bool m_viewsHasBeenSet;

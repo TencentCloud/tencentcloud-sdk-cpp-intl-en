@@ -85,15 +85,19 @@ namespace TencentCloud
                     bool PasswordHasBeenSet() const;
 
                     /**
-                     * 获取Shard ID of a sharded cluster
-                     * @return ShardIds Shard ID of a sharded cluster
+                     * 获取Sharded cluster ID, which can be obtained through **ClusterId** of the response parameter 
+ **Redis** of the API [DescribeInstanceNodeInfo](https://intl.cloud.tencent.com/document/product/239/48603?from_cn_redirect=1).
+                     * @return ShardIds Sharded cluster ID, which can be obtained through **ClusterId** of the response parameter 
+ **Redis** of the API [DescribeInstanceNodeInfo](https://intl.cloud.tencent.com/document/product/239/48603?from_cn_redirect=1).
                      * 
                      */
                     std::vector<int64_t> GetShardIds() const;
 
                     /**
-                     * 设置Shard ID of a sharded cluster
-                     * @param _shardIds Shard ID of a sharded cluster
+                     * 设置Sharded cluster ID, which can be obtained through **ClusterId** of the response parameter 
+ **Redis** of the API [DescribeInstanceNodeInfo](https://intl.cloud.tencent.com/document/product/239/48603?from_cn_redirect=1).
+                     * @param _shardIds Sharded cluster ID, which can be obtained through **ClusterId** of the response parameter 
+ **Redis** of the API [DescribeInstanceNodeInfo](https://intl.cloud.tencent.com/document/product/239/48603?from_cn_redirect=1).
                      * 
                      */
                     void SetShardIds(const std::vector<int64_t>& _shardIds);
@@ -120,7 +124,8 @@ namespace TencentCloud
                     bool m_passwordHasBeenSet;
 
                     /**
-                     * Shard ID of a sharded cluster
+                     * Sharded cluster ID, which can be obtained through **ClusterId** of the response parameter 
+ **Redis** of the API [DescribeInstanceNodeInfo](https://intl.cloud.tencent.com/document/product/239/48603?from_cn_redirect=1).
                      */
                     std::vector<int64_t> m_shardIds;
                     bool m_shardIdsHasBeenSet;

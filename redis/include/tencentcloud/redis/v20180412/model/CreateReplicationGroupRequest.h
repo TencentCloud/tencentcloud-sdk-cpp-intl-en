@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the ID of the primary instance in the replication group.
-                     * @return InstanceId Specifies the ID of the primary instance in the replication group.
+                     * 获取ID of the primary instance in the replication group. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+                     * @return InstanceId ID of the primary instance in the replication group. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Specifies the ID of the primary instance in the replication group.
-                     * @param _instanceId Specifies the ID of the primary instance in the replication group.
+                     * 设置ID of the primary instance in the replication group. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+                     * @param _instanceId ID of the primary instance in the replication group. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Replication group name. It supports only Chinese characters, letters, digits, underscores (_), and hyphens (-), with a length of 2-64 characters.
-                     * @return GroupName Replication group name. It supports only Chinese characters, letters, digits, underscores (_), and hyphens (-), with a length of 2-64 characters.
+                     * 获取Replication group name. The name should contain 2 to 64 characters, including only letters, digits, underscores (_), and hyphens (-).
+                     * @return GroupName Replication group name. The name should contain 2 to 64 characters, including only letters, digits, underscores (_), and hyphens (-).
                      * 
                      */
                     std::string GetGroupName() const;
 
                     /**
-                     * 设置Replication group name. It supports only Chinese characters, letters, digits, underscores (_), and hyphens (-), with a length of 2-64 characters.
-                     * @param _groupName Replication group name. It supports only Chinese characters, letters, digits, underscores (_), and hyphens (-), with a length of 2-64 characters.
+                     * 设置Replication group name. The name should contain 2 to 64 characters, including only letters, digits, underscores (_), and hyphens (-).
+                     * @param _groupName Replication group name. The name should contain 2 to 64 characters, including only letters, digits, underscores (_), and hyphens (-).
                      * 
                      */
                     void SetGroupName(const std::string& _groupName);
@@ -108,13 +108,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the ID of the primary instance in the replication group.
+                     * ID of the primary instance in the replication group. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Replication group name. It supports only Chinese characters, letters, digits, underscores (_), and hyphens (-), with a length of 2-64 characters.
+                     * Replication group name. The name should contain 2 to 64 characters, including only letters, digits, underscores (_), and hyphens (-).
                      */
                     std::string m_groupName;
                     bool m_groupNameHasBeenSet;

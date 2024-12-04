@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取Instance ID.
+                     * @return InstanceId Instance ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置Instance ID.
+                     * @param _instanceId Instance ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,31 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Time span. 1: real time; 2: last 30 minutes; 3: last 6 hours; 4: last 24 hours
-                     * @return SpanType Time span. 1: real time; 2: last 30 minutes; 3: last 6 hours; 4: last 24 hours
+                     * 获取Time range.
+- 1: real-time.
+- 2: last 30 minutes.
+- 3: last 6 hours.
+- 4: last 24 hours.
+                     * @return SpanType Time range.
+- 1: real-time.
+- 2: last 30 minutes.
+- 3: last 6 hours.
+- 4: last 24 hours.
                      * 
                      */
                     int64_t GetSpanType() const;
 
                     /**
-                     * 设置Time span. 1: real time; 2: last 30 minutes; 3: last 6 hours; 4: last 24 hours
-                     * @param _spanType Time span. 1: real time; 2: last 30 minutes; 3: last 6 hours; 4: last 24 hours
+                     * 设置Time range.
+- 1: real-time.
+- 2: last 30 minutes.
+- 3: last 6 hours.
+- 4: last 24 hours.
+                     * @param _spanType Time range.
+- 1: real-time.
+- 2: last 30 minutes.
+- 3: last 6 hours.
+- 4: last 24 hours.
                      * 
                      */
                     void SetSpanType(const int64_t& _spanType);
@@ -87,13 +103,17 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * Instance ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Time span. 1: real time; 2: last 30 minutes; 3: last 6 hours; 4: last 24 hours
+                     * Time range.
+- 1: real-time.
+- 2: last 30 minutes.
+- 3: last 6 hours.
+- 4: last 24 hours.
                      */
                     int64_t m_spanType;
                     bool m_spanTypeHasBeenSet;

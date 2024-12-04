@@ -47,18 +47,30 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable the [Cloud Security](https://intl.cloud.tencent.com/document/product/296?from_cn_redirect=1) service. Value range: <br><li>TRUE: Cloud Security is enabled <br><li>FALSE: Cloud Security is disabled <br><br>Default value: TRUE.
+                     * 获取Whether to enable the [Cloud Workload Protection Platform](https://www.tencentcloud.com/document/product/296?lang=en&pg=) service. Valid values:
+<li>TRUE: enable.</li>
+<li>FALSE: disable.</li>
+Default value: TRUE.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Enabled Whether to enable the [Cloud Security](https://intl.cloud.tencent.com/document/product/296?from_cn_redirect=1) service. Value range: <br><li>TRUE: Cloud Security is enabled <br><li>FALSE: Cloud Security is disabled <br><br>Default value: TRUE.
+                     * @return Enabled Whether to enable the [Cloud Workload Protection Platform](https://www.tencentcloud.com/document/product/296?lang=en&pg=) service. Valid values:
+<li>TRUE: enable.</li>
+<li>FALSE: disable.</li>
+Default value: TRUE.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     bool GetEnabled() const;
 
                     /**
-                     * 设置Whether to enable the [Cloud Security](https://intl.cloud.tencent.com/document/product/296?from_cn_redirect=1) service. Value range: <br><li>TRUE: Cloud Security is enabled <br><li>FALSE: Cloud Security is disabled <br><br>Default value: TRUE.
+                     * 设置Whether to enable the [Cloud Workload Protection Platform](https://www.tencentcloud.com/document/product/296?lang=en&pg=) service. Valid values:
+<li>TRUE: enable.</li>
+<li>FALSE: disable.</li>
+Default value: TRUE.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _enabled Whether to enable the [Cloud Security](https://intl.cloud.tencent.com/document/product/296?from_cn_redirect=1) service. Value range: <br><li>TRUE: Cloud Security is enabled <br><li>FALSE: Cloud Security is disabled <br><br>Default value: TRUE.
+                     * @param _enabled Whether to enable the [Cloud Workload Protection Platform](https://www.tencentcloud.com/document/product/296?lang=en&pg=) service. Valid values:
+<li>TRUE: enable.</li>
+<li>FALSE: disable.</li>
+Default value: TRUE.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -74,7 +86,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Whether to enable the [Cloud Security](https://intl.cloud.tencent.com/document/product/296?from_cn_redirect=1) service. Value range: <br><li>TRUE: Cloud Security is enabled <br><li>FALSE: Cloud Security is disabled <br><br>Default value: TRUE.
+                     * Whether to enable the [Cloud Workload Protection Platform](https://www.tencentcloud.com/document/product/296?lang=en&pg=) service. Valid values:
+<li>TRUE: enable.</li>
+<li>FALSE: disable.</li>
+Default value: TRUE.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     bool m_enabled;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID.
-                     * @return InstanceId Instance ID.
+                     * 获取Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+                     * @return InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID.
-                     * @param _instanceId Instance ID.
+                     * 设置Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+                     * @param _instanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,22 +64,22 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Custom the name of the database to access.
-- Contains only letters, digits, underscores, and hyphens.
+                     * 获取Custom account name for accessing the database.
+- It contains only letters, digits, underscores (_), and hyphens (-).
 - The length cannot exceed 32 characters.
-                     * @return AccountName Custom the name of the database to access.
-- Contains only letters, digits, underscores, and hyphens.
+                     * @return AccountName Custom account name for accessing the database.
+- It contains only letters, digits, underscores (_), and hyphens (-).
 - The length cannot exceed 32 characters.
                      * 
                      */
                     std::string GetAccountName() const;
 
                     /**
-                     * 设置Custom the name of the database to access.
-- Contains only letters, digits, underscores, and hyphens.
+                     * 设置Custom account name for accessing the database.
+- It contains only letters, digits, underscores (_), and hyphens (-).
 - The length cannot exceed 32 characters.
-                     * @param _accountName Custom the name of the database to access.
-- Contains only letters, digits, underscores, and hyphens.
+                     * @param _accountName Custom account name for accessing the database.
+- It contains only letters, digits, underscores (_), and hyphens (-).
 - The length cannot exceed 32 characters.
                      * 
                      */
@@ -93,26 +93,30 @@ namespace TencentCloud
                     bool AccountNameHasBeenSet() const;
 
                     /**
-                     * 获取Set a password for the customized account. The password complexity requirements are as follows:
-- Value range: [8, 32].
-- Contains at least two types of characters from the following categories: lowercase letters, uppercase letters, digits, and characters ()`~!@#$%^&*-+=_|{}[]:;<>,.? /.- Cannot start with "/".
+                     * 获取Password of the custom account. The password complexity requirements are as follows:
+- It can contain 8 to 64 characters.
+- It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
+- It cannot start with a forward slash (/).
 
-                     * @return AccountPassword Set a password for the customized account. The password complexity requirements are as follows:
-- Value range: [8, 32].
-- Contains at least two types of characters from the following categories: lowercase letters, uppercase letters, digits, and characters ()`~!@#$%^&*-+=_|{}[]:;<>,.? /.- Cannot start with "/".
+                     * @return AccountPassword Password of the custom account. The password complexity requirements are as follows:
+- It can contain 8 to 64 characters.
+- It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
+- It cannot start with a forward slash (/).
 
                      * 
                      */
                     std::string GetAccountPassword() const;
 
                     /**
-                     * 设置Set a password for the customized account. The password complexity requirements are as follows:
-- Value range: [8, 32].
-- Contains at least two types of characters from the following categories: lowercase letters, uppercase letters, digits, and characters ()`~!@#$%^&*-+=_|{}[]:;<>,.? /.- Cannot start with "/".
+                     * 设置Password of the custom account. The password complexity requirements are as follows:
+- It can contain 8 to 64 characters.
+- It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
+- It cannot start with a forward slash (/).
 
-                     * @param _accountPassword Set a password for the customized account. The password complexity requirements are as follows:
-- Value range: [8, 32].
-- Contains at least two types of characters from the following categories: lowercase letters, uppercase letters, digits, and characters ()`~!@#$%^&*-+=_|{}[]:;<>,.? /.- Cannot start with "/".
+                     * @param _accountPassword Password of the custom account. The password complexity requirements are as follows:
+- It can contain 8 to 64 characters.
+- It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
+- It cannot start with a forward slash (/).
 
                      * 
                      */
@@ -203,23 +207,24 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID.
+                     * Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Custom the name of the database to access.
-- Contains only letters, digits, underscores, and hyphens.
+                     * Custom account name for accessing the database.
+- It contains only letters, digits, underscores (_), and hyphens (-).
 - The length cannot exceed 32 characters.
                      */
                     std::string m_accountName;
                     bool m_accountNameHasBeenSet;
 
                     /**
-                     * Set a password for the customized account. The password complexity requirements are as follows:
-- Value range: [8, 32].
-- Contains at least two types of characters from the following categories: lowercase letters, uppercase letters, digits, and characters ()`~!@#$%^&*-+=_|{}[]:;<>,.? /.- Cannot start with "/".
+                     * Password of the custom account. The password complexity requirements are as follows:
+- It can contain 8 to 64 characters.
+- It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
+- It cannot start with a forward slash (/).
 
                      */
                     std::string m_accountPassword;

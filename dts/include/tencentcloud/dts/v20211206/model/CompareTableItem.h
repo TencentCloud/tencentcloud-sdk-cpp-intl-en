@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/dts/v20211206/model/CompareColumnItem.h>
 
 
 namespace TencentCloud
@@ -71,6 +72,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool TableNameHasBeenSet() const;
 
+                    /**
+                     * 获取In column mode, all refers to all data, while partial refers to part of the data (this parameter is only valid for data sync tasks).Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ColumnMode In column mode, all refers to all data, while partial refers to part of the data (this parameter is only valid for data sync tasks).Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetColumnMode() const;
+
+                    /**
+                     * 设置In column mode, all refers to all data, while partial refers to part of the data (this parameter is only valid for data sync tasks).Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _columnMode In column mode, all refers to all data, while partial refers to part of the data (this parameter is only valid for data sync tasks).Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetColumnMode(const std::string& _columnMode);
+
+                    /**
+                     * 判断参数 ColumnMode 是否已赋值
+                     * @return ColumnMode 是否已赋值
+                     * 
+                     */
+                    bool ColumnModeHasBeenSet() const;
+
+                    /**
+                     * 获取This field is required when ColumnMode is set to partial (this parameter is only valid for data sync tasks).Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Columns This field is required when ColumnMode is set to partial (this parameter is only valid for data sync tasks).Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<CompareColumnItem> GetColumns() const;
+
+                    /**
+                     * 设置This field is required when ColumnMode is set to partial (this parameter is only valid for data sync tasks).Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _columns This field is required when ColumnMode is set to partial (this parameter is only valid for data sync tasks).Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetColumns(const std::vector<CompareColumnItem>& _columns);
+
+                    /**
+                     * 判断参数 Columns 是否已赋值
+                     * @return Columns 是否已赋值
+                     * 
+                     */
+                    bool ColumnsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -79,6 +122,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_tableName;
                     bool m_tableNameHasBeenSet;
+
+                    /**
+                     * In column mode, all refers to all data, while partial refers to part of the data (this parameter is only valid for data sync tasks).Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_columnMode;
+                    bool m_columnModeHasBeenSet;
+
+                    /**
+                     * This field is required when ColumnMode is set to partial (this parameter is only valid for data sync tasks).Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<CompareColumnItem> m_columns;
+                    bool m_columnsHasBeenSet;
 
                 };
             }

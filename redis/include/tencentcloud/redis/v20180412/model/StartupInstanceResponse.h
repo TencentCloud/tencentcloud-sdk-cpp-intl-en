@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task ID
-                     * @return TaskId Task ID
+                     * 获取This parameter has been deprecated. Determine whether the instance has been deisolated based on the status obtained through the instance query API.
+                     * @return TaskId This parameter has been deprecated. Determine whether the instance has been deisolated based on the status obtained through the instance query API.
                      * 
                      */
                     int64_t GetTaskId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Task ID
+                     * This parameter has been deprecated. Determine whether the instance has been deisolated based on the status obtained through the instance query API.
                      */
                     int64_t m_taskId;
                     bool m_taskIdHasBeenSet;

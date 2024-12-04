@@ -751,6 +751,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ImageFamilyHasBeenSet() const;
 
+                    /**
+                     * 获取CDC ID.
+                     * @return DedicatedClusterId CDC ID.
+                     * 
+                     */
+                    std::string GetDedicatedClusterId() const;
+
+                    /**
+                     * 设置CDC ID.
+                     * @param _dedicatedClusterId CDC ID.
+                     * 
+                     */
+                    void SetDedicatedClusterId(const std::string& _dedicatedClusterId);
+
+                    /**
+                     * 判断参数 DedicatedClusterId 是否已赋值
+                     * @return DedicatedClusterId 是否已赋值
+                     * 
+                     */
+                    bool DedicatedClusterIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -949,6 +970,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_imageFamily;
                     bool m_imageFamilyHasBeenSet;
+
+                    /**
+                     * CDC ID.
+                     */
+                    std::string m_dedicatedClusterId;
+                    bool m_dedicatedClusterIdHasBeenSet;
 
                 };
             }

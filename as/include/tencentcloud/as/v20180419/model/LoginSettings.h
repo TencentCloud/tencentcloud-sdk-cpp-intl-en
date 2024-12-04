@@ -47,15 +47,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance login password. <br><li>Linux: 8-16 characters. It should contain at least two sets of the following categories: [a-z], [A-Z], [0-9] and [()`~!@#$%^&*-+=|{}[]:;',.?/]. <br><li>Windows: 12-16 characters. It should contain at least three sets of the following categories: [a-z], [A-Z], [0-9] and [()`~!@#$%^&*-+={}[]:;',.?/]. <br><br>If this parameter is not specified, a random password is generated and sent to you via the Message Center.
-                     * @return Password Instance login password. <br><li>Linux: 8-16 characters. It should contain at least two sets of the following categories: [a-z], [A-Z], [0-9] and [()`~!@#$%^&*-+=|{}[]:;',.?/]. <br><li>Windows: 12-16 characters. It should contain at least three sets of the following categories: [a-z], [A-Z], [0-9] and [()`~!@#$%^&*-+={}[]:;',.?/]. <br><br>If this parameter is not specified, a random password is generated and sent to you via the Message Center.
+                     * 获取Instance login password. The password complexity requirements vary according to the operating system type. The details are as follows:
+<li>The login password for Linux instances should contain 8 to 16 characters, including at least two types of the following characters: letters, digits, and special characters (such as ()`~!@#$%^&*-+=|{}[]:;',.?/).</li>
+<li>The login password for Windows instances should contain 12 to 16 characters, including at least three types of the following characters: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+={}[]:;',.?/).</li>
+If this parameter is not specified, the system will generate a random password and notify the user via the message center.
+                     * @return Password Instance login password. The password complexity requirements vary according to the operating system type. The details are as follows:
+<li>The login password for Linux instances should contain 8 to 16 characters, including at least two types of the following characters: letters, digits, and special characters (such as ()`~!@#$%^&*-+=|{}[]:;',.?/).</li>
+<li>The login password for Windows instances should contain 12 to 16 characters, including at least three types of the following characters: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+={}[]:;',.?/).</li>
+If this parameter is not specified, the system will generate a random password and notify the user via the message center.
                      * 
                      */
                     std::string GetPassword() const;
 
                     /**
-                     * 设置Instance login password. <br><li>Linux: 8-16 characters. It should contain at least two sets of the following categories: [a-z], [A-Z], [0-9] and [()`~!@#$%^&*-+=|{}[]:;',.?/]. <br><li>Windows: 12-16 characters. It should contain at least three sets of the following categories: [a-z], [A-Z], [0-9] and [()`~!@#$%^&*-+={}[]:;',.?/]. <br><br>If this parameter is not specified, a random password is generated and sent to you via the Message Center.
-                     * @param _password Instance login password. <br><li>Linux: 8-16 characters. It should contain at least two sets of the following categories: [a-z], [A-Z], [0-9] and [()`~!@#$%^&*-+=|{}[]:;',.?/]. <br><li>Windows: 12-16 characters. It should contain at least three sets of the following categories: [a-z], [A-Z], [0-9] and [()`~!@#$%^&*-+={}[]:;',.?/]. <br><br>If this parameter is not specified, a random password is generated and sent to you via the Message Center.
+                     * 设置Instance login password. The password complexity requirements vary according to the operating system type. The details are as follows:
+<li>The login password for Linux instances should contain 8 to 16 characters, including at least two types of the following characters: letters, digits, and special characters (such as ()`~!@#$%^&*-+=|{}[]:;',.?/).</li>
+<li>The login password for Windows instances should contain 12 to 16 characters, including at least three types of the following characters: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+={}[]:;',.?/).</li>
+If this parameter is not specified, the system will generate a random password and notify the user via the message center.
+                     * @param _password Instance login password. The password complexity requirements vary according to the operating system type. The details are as follows:
+<li>The login password for Linux instances should contain 8 to 16 characters, including at least two types of the following characters: letters, digits, and special characters (such as ()`~!@#$%^&*-+=|{}[]:;',.?/).</li>
+<li>The login password for Windows instances should contain 12 to 16 characters, including at least three types of the following characters: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+={}[]:;',.?/).</li>
+If this parameter is not specified, the system will generate a random password and notify the user via the message center.
                      * 
                      */
                     void SetPassword(const std::string& _password);
@@ -89,15 +101,23 @@ namespace TencentCloud
                     bool KeyIdsHasBeenSet() const;
 
                     /**
-                     * 获取Whether to keep the original settings of an image. It cannot be specified together with `Password` or `KeyIds.N`. You can specify this parameter as `TRUE` only when you create an instance using a custom image, a shared image, or an imported image. Valid values: <br><li>`TRUE`: Keep the login settings of the image <br><li>`FALSE` (Default): Do not keep the login settings of the image <br>
-                     * @return KeepImageLogin Whether to keep the original settings of an image. It cannot be specified together with `Password` or `KeyIds.N`. You can specify this parameter as `TRUE` only when you create an instance using a custom image, a shared image, or an imported image. Valid values: <br><li>`TRUE`: Keep the login settings of the image <br><li>`FALSE` (Default): Do not keep the login settings of the image <br>
+                     * 获取Retain the original settings of the image. This parameter cannot be specified simultaneously with Password or KeyIds.N. It can only be set to TRUE when you create an instance by using a custom image, shared image, or externally imported image. Valid values:
+<li>TRUE: Retain the login settings of the image.</li>
+<li>FALSE: Do not retain the login settings of the image.</li> Default value: FALSE.
+                     * @return KeepImageLogin Retain the original settings of the image. This parameter cannot be specified simultaneously with Password or KeyIds.N. It can only be set to TRUE when you create an instance by using a custom image, shared image, or externally imported image. Valid values:
+<li>TRUE: Retain the login settings of the image.</li>
+<li>FALSE: Do not retain the login settings of the image.</li> Default value: FALSE.
                      * 
                      */
                     bool GetKeepImageLogin() const;
 
                     /**
-                     * 设置Whether to keep the original settings of an image. It cannot be specified together with `Password` or `KeyIds.N`. You can specify this parameter as `TRUE` only when you create an instance using a custom image, a shared image, or an imported image. Valid values: <br><li>`TRUE`: Keep the login settings of the image <br><li>`FALSE` (Default): Do not keep the login settings of the image <br>
-                     * @param _keepImageLogin Whether to keep the original settings of an image. It cannot be specified together with `Password` or `KeyIds.N`. You can specify this parameter as `TRUE` only when you create an instance using a custom image, a shared image, or an imported image. Valid values: <br><li>`TRUE`: Keep the login settings of the image <br><li>`FALSE` (Default): Do not keep the login settings of the image <br>
+                     * 设置Retain the original settings of the image. This parameter cannot be specified simultaneously with Password or KeyIds.N. It can only be set to TRUE when you create an instance by using a custom image, shared image, or externally imported image. Valid values:
+<li>TRUE: Retain the login settings of the image.</li>
+<li>FALSE: Do not retain the login settings of the image.</li> Default value: FALSE.
+                     * @param _keepImageLogin Retain the original settings of the image. This parameter cannot be specified simultaneously with Password or KeyIds.N. It can only be set to TRUE when you create an instance by using a custom image, shared image, or externally imported image. Valid values:
+<li>TRUE: Retain the login settings of the image.</li>
+<li>FALSE: Do not retain the login settings of the image.</li> Default value: FALSE.
                      * 
                      */
                     void SetKeepImageLogin(const bool& _keepImageLogin);
@@ -112,7 +132,10 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance login password. <br><li>Linux: 8-16 characters. It should contain at least two sets of the following categories: [a-z], [A-Z], [0-9] and [()`~!@#$%^&*-+=|{}[]:;',.?/]. <br><li>Windows: 12-16 characters. It should contain at least three sets of the following categories: [a-z], [A-Z], [0-9] and [()`~!@#$%^&*-+={}[]:;',.?/]. <br><br>If this parameter is not specified, a random password is generated and sent to you via the Message Center.
+                     * Instance login password. The password complexity requirements vary according to the operating system type. The details are as follows:
+<li>The login password for Linux instances should contain 8 to 16 characters, including at least two types of the following characters: letters, digits, and special characters (such as ()`~!@#$%^&*-+=|{}[]:;',.?/).</li>
+<li>The login password for Windows instances should contain 12 to 16 characters, including at least three types of the following characters: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+={}[]:;',.?/).</li>
+If this parameter is not specified, the system will generate a random password and notify the user via the message center.
                      */
                     std::string m_password;
                     bool m_passwordHasBeenSet;
@@ -124,7 +147,9 @@ namespace TencentCloud
                     bool m_keyIdsHasBeenSet;
 
                     /**
-                     * Whether to keep the original settings of an image. It cannot be specified together with `Password` or `KeyIds.N`. You can specify this parameter as `TRUE` only when you create an instance using a custom image, a shared image, or an imported image. Valid values: <br><li>`TRUE`: Keep the login settings of the image <br><li>`FALSE` (Default): Do not keep the login settings of the image <br>
+                     * Retain the original settings of the image. This parameter cannot be specified simultaneously with Password or KeyIds.N. It can only be set to TRUE when you create an instance by using a custom image, shared image, or externally imported image. Valid values:
+<li>TRUE: Retain the login settings of the image.</li>
+<li>FALSE: Do not retain the login settings of the image.</li> Default value: FALSE.
                      */
                     bool m_keepImageLogin;
                     bool m_keepImageLoginHasBeenSet;

@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Due to the naming irregularity of this parameter. It is recommended to use the parameter InstanceSlowLogDetail instead. Details of slow queries.
-                     * @return InstanceSlowlogDetail Due to the naming irregularity of this parameter. It is recommended to use the parameter InstanceSlowLogDetail instead. Details of slow queries.
+                     * 获取Slow query log details. This parameter has been deprecated and will be replaced by InstanceSlowLogDetail because it is not properly named.
+                     * @return InstanceSlowlogDetail Slow query log details. This parameter has been deprecated and will be replaced by InstanceSlowLogDetail because it is not properly named.
                      * 
                      */
                     std::vector<InstanceSlowlogDetail> GetInstanceSlowlogDetail() const;
@@ -95,7 +95,7 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Due to the naming irregularity of this parameter. It is recommended to use the parameter InstanceSlowLogDetail instead. Details of slow queries.
+                     * Slow query log details. This parameter has been deprecated and will be replaced by InstanceSlowLogDetail because it is not properly named.
                      */
                     std::vector<InstanceSlowlogDetail> m_instanceSlowlogDetail;
                     bool m_instanceSlowlogDetailHasBeenSet;

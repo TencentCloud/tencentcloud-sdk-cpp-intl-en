@@ -87,23 +87,23 @@ namespace TencentCloud
                     bool LifecycleHookNameHasBeenSet() const;
 
                     /**
-                     * 获取The time when the lifecycle hook is applied. Valid values:
-<li> `INSTANCE_LAUNCHING`: After the instance launch
-<li> `INSTANCE_TERMINATING`: Before the instance termination
-                     * @return LifecycleTransition The time when the lifecycle hook is applied. Valid values:
-<li> `INSTANCE_LAUNCHING`: After the instance launch
-<li> `INSTANCE_TERMINATING`: Before the instance termination
+                     * 获取Scenario for entering the lifecycle hook. Valid values:
+<li>INSTANCE_LAUNCHING: after the instance is launched.</li>
+<li>INSTANCE_TERMINATING: before the instance is terminated.</li>
+                     * @return LifecycleTransition Scenario for entering the lifecycle hook. Valid values:
+<li>INSTANCE_LAUNCHING: after the instance is launched.</li>
+<li>INSTANCE_TERMINATING: before the instance is terminated.</li>
                      * 
                      */
                     std::string GetLifecycleTransition() const;
 
                     /**
-                     * 设置The time when the lifecycle hook is applied. Valid values:
-<li> `INSTANCE_LAUNCHING`: After the instance launch
-<li> `INSTANCE_TERMINATING`: Before the instance termination
-                     * @param _lifecycleTransition The time when the lifecycle hook is applied. Valid values:
-<li> `INSTANCE_LAUNCHING`: After the instance launch
-<li> `INSTANCE_TERMINATING`: Before the instance termination
+                     * 设置Scenario for entering the lifecycle hook. Valid values:
+<li>INSTANCE_LAUNCHING: after the instance is launched.</li>
+<li>INSTANCE_TERMINATING: before the instance is terminated.</li>
+                     * @param _lifecycleTransition Scenario for entering the lifecycle hook. Valid values:
+<li>INSTANCE_LAUNCHING: after the instance is launched.</li>
+<li>INSTANCE_TERMINATING: before the instance is terminated.</li>
                      * 
                      */
                     void SetLifecycleTransition(const std::string& _lifecycleTransition);
@@ -116,23 +116,23 @@ namespace TencentCloud
                     bool LifecycleTransitionHasBeenSet() const;
 
                     /**
-                     * 获取Actions after the lifecycle hook times out. Valid values:
-<li> `CONTINUE`: Continue the scaling activity after the timeout
-<li> `ABANDON`: Terminate the scaling activity after the timeout
-                     * @return DefaultResult Actions after the lifecycle hook times out. Valid values:
-<li> `CONTINUE`: Continue the scaling activity after the timeout
-<li> `ABANDON`: Terminate the scaling activity after the timeout
+                     * 获取Action to be taken by the scaling group in case of lifecycle hook timeout. Valid values:
+<li>CONTINUE: Continue the scaling activity after timeout.</li>
+<li>ABANDON: Terminate the scaling activity after timeout.</li>
+                     * @return DefaultResult Action to be taken by the scaling group in case of lifecycle hook timeout. Valid values:
+<li>CONTINUE: Continue the scaling activity after timeout.</li>
+<li>ABANDON: Terminate the scaling activity after timeout.</li>
                      * 
                      */
                     std::string GetDefaultResult() const;
 
                     /**
-                     * 设置Actions after the lifecycle hook times out. Valid values:
-<li> `CONTINUE`: Continue the scaling activity after the timeout
-<li> `ABANDON`: Terminate the scaling activity after the timeout
-                     * @param _defaultResult Actions after the lifecycle hook times out. Valid values:
-<li> `CONTINUE`: Continue the scaling activity after the timeout
-<li> `ABANDON`: Terminate the scaling activity after the timeout
+                     * 设置Action to be taken by the scaling group in case of lifecycle hook timeout. Valid values:
+<li>CONTINUE: Continue the scaling activity after timeout.</li>
+<li>ABANDON: Terminate the scaling activity after timeout.</li>
+                     * @param _defaultResult Action to be taken by the scaling group in case of lifecycle hook timeout. Valid values:
+<li>CONTINUE: Continue the scaling activity after timeout.</li>
+<li>ABANDON: Terminate the scaling activity after timeout.</li>
                      * 
                      */
                     void SetDefaultResult(const std::string& _defaultResult);
@@ -264,17 +264,17 @@ namespace TencentCloud
                     bool m_lifecycleHookNameHasBeenSet;
 
                     /**
-                     * The time when the lifecycle hook is applied. Valid values:
-<li> `INSTANCE_LAUNCHING`: After the instance launch
-<li> `INSTANCE_TERMINATING`: Before the instance termination
+                     * Scenario for entering the lifecycle hook. Valid values:
+<li>INSTANCE_LAUNCHING: after the instance is launched.</li>
+<li>INSTANCE_TERMINATING: before the instance is terminated.</li>
                      */
                     std::string m_lifecycleTransition;
                     bool m_lifecycleTransitionHasBeenSet;
 
                     /**
-                     * Actions after the lifecycle hook times out. Valid values:
-<li> `CONTINUE`: Continue the scaling activity after the timeout
-<li> `ABANDON`: Terminate the scaling activity after the timeout
+                     * Action to be taken by the scaling group in case of lifecycle hook timeout. Valid values:
+<li>CONTINUE: Continue the scaling activity after timeout.</li>
+<li>ABANDON: Terminate the scaling activity after timeout.</li>
                      */
                     std::string m_defaultResult;
                     bool m_defaultResultHasBeenSet;

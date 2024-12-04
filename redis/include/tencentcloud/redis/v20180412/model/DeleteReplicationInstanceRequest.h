@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Replication group ID.
-                     * @return GroupId Replication group ID.
+                     * 获取Replication group ID. Log in to the [global replication](https://console.tencentcloud.com/redis/replication) page of the Redis console and obtain it.
+                     * @return GroupId Replication group ID. Log in to the [global replication](https://console.tencentcloud.com/redis/replication) page of the Redis console and obtain it.
                      * 
                      */
                     std::string GetGroupId() const;
 
                     /**
-                     * 设置Replication group ID.
-                     * @param _groupId Replication group ID.
+                     * 设置Replication group ID. Log in to the [global replication](https://console.tencentcloud.com/redis/replication) page of the Redis console and obtain it.
+                     * @param _groupId Replication group ID. Log in to the [global replication](https://console.tencentcloud.com/redis/replication) page of the Redis console and obtain it.
                      * 
                      */
                     void SetGroupId(const std::string& _groupId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool GroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID.
-                     * @return InstanceId Instance ID.
+                     * 获取Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+                     * @return InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID.
-                     * @param _instanceId Instance ID.
+                     * 设置Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+                     * @param _instanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -85,15 +85,23 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Data synchronization type. Valid values: true (Strong synchronization is required.) and false (Strong synchronization is not required. This value applies only to primary instance deletion.)
-                     * @return SyncType Data synchronization type. Valid values: true (Strong synchronization is required.) and false (Strong synchronization is not required. This value applies only to primary instance deletion.)
+                     * 获取Data synchronization type.
+- true: Strong synchronization is required.
+- false: Strong synchronization is not required, and only the primary instance can be deleted.
+                     * @return SyncType Data synchronization type.
+- true: Strong synchronization is required.
+- false: Strong synchronization is not required, and only the primary instance can be deleted.
                      * 
                      */
                     bool GetSyncType() const;
 
                     /**
-                     * 设置Data synchronization type. Valid values: true (Strong synchronization is required.) and false (Strong synchronization is not required. This value applies only to primary instance deletion.)
-                     * @param _syncType Data synchronization type. Valid values: true (Strong synchronization is required.) and false (Strong synchronization is not required. This value applies only to primary instance deletion.)
+                     * 设置Data synchronization type.
+- true: Strong synchronization is required.
+- false: Strong synchronization is not required, and only the primary instance can be deleted.
+                     * @param _syncType Data synchronization type.
+- true: Strong synchronization is required.
+- false: Strong synchronization is not required, and only the primary instance can be deleted.
                      * 
                      */
                     void SetSyncType(const bool& _syncType);
@@ -108,19 +116,21 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Replication group ID.
+                     * Replication group ID. Log in to the [global replication](https://console.tencentcloud.com/redis/replication) page of the Redis console and obtain it.
                      */
                     std::string m_groupId;
                     bool m_groupIdHasBeenSet;
 
                     /**
-                     * Instance ID.
+                     * Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Data synchronization type. Valid values: true (Strong synchronization is required.) and false (Strong synchronization is not required. This value applies only to primary instance deletion.)
+                     * Data synchronization type.
+- true: Strong synchronization is required.
+- false: Strong synchronization is not required, and only the primary instance can be deleted.
                      */
                     bool m_syncType;
                     bool m_syncTypeHasBeenSet;

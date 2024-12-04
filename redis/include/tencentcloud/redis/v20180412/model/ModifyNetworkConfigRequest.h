@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+                     * @return InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+                     * @param _instanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -122,15 +122,27 @@ namespace TencentCloud
                     bool VipHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
-                     * @return VpcId VPC ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
+                     * 获取VPC ID after the modification.
+- Configure this parameter when **Operation** is set to **changeVpc** or **changeBaseToVpc**.
+- Log in to the [Redis console](https://console.tencentcloud.com/redis/instance), switch to the **Instance Details** page, and click the VPC name next to the associated network in the **Network Information** area to obtain the VPC ID.
+
+                     * @return VpcId VPC ID after the modification.
+- Configure this parameter when **Operation** is set to **changeVpc** or **changeBaseToVpc**.
+- Log in to the [Redis console](https://console.tencentcloud.com/redis/instance), switch to the **Instance Details** page, and click the VPC name next to the associated network in the **Network Information** area to obtain the VPC ID.
+
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置VPC ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
-                     * @param _vpcId VPC ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
+                     * 设置VPC ID after the modification.
+- Configure this parameter when **Operation** is set to **changeVpc** or **changeBaseToVpc**.
+- Log in to the [Redis console](https://console.tencentcloud.com/redis/instance), switch to the **Instance Details** page, and click the VPC name next to the associated network in the **Network Information** area to obtain the VPC ID.
+
+                     * @param _vpcId VPC ID after the modification.
+- Configure this parameter when **Operation** is set to **changeVpc** or **changeBaseToVpc**.
+- Log in to the [Redis console](https://console.tencentcloud.com/redis/instance), switch to the **Instance Details** page, and click the VPC name next to the associated network in the **Network Information** area to obtain the VPC ID.
+
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -143,15 +155,23 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Subnet ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
-                     * @return SubnetId Subnet ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
+                     * 获取ID of the subnet to which the VPC belongs after the modification.
+- Configure this parameter when **Operation** is set to **changeVpc** or **changeBaseToVpc**.
+- Log in to the [Redis console](https://console.tencentcloud.com/redis/instance), switch to the **Instance Details** page, and click the subnet name next to the associated network in the **Network Information** area to obtain the subnet ID.
+                     * @return SubnetId ID of the subnet to which the VPC belongs after the modification.
+- Configure this parameter when **Operation** is set to **changeVpc** or **changeBaseToVpc**.
+- Log in to the [Redis console](https://console.tencentcloud.com/redis/instance), switch to the **Instance Details** page, and click the subnet name next to the associated network in the **Network Information** area to obtain the subnet ID.
                      * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置Subnet ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
-                     * @param _subnetId Subnet ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
+                     * 设置ID of the subnet to which the VPC belongs after the modification.
+- Configure this parameter when **Operation** is set to **changeVpc** or **changeBaseToVpc**.
+- Log in to the [Redis console](https://console.tencentcloud.com/redis/instance), switch to the **Instance Details** page, and click the subnet name next to the associated network in the **Network Information** area to obtain the subnet ID.
+                     * @param _subnetId ID of the subnet to which the VPC belongs after the modification.
+- Configure this parameter when **Operation** is set to **changeVpc** or **changeBaseToVpc**.
+- Log in to the [Redis console](https://console.tencentcloud.com/redis/instance), switch to the **Instance Details** page, and click the subnet name next to the associated network in the **Network Information** area to obtain the subnet ID.
                      * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
@@ -164,31 +184,27 @@ namespace TencentCloud
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Retention period of the original private IPv4 address
-- Unit: Days.
-- Valid values: `0`, `1`, `2`, `3`, `7`, `15`.
+                     * 获取Retention duration of the original private IPv4 address.
+- Unit: day.
+- Valid values: 0, 1, 2, 3, 7, and 15.
 
-**Note**: You can set the retention period of the original address only in the latest SDK. In earlier SDKs, the original address is released immediately. To view the SDK version, go to [SDK Center](https://intl.cloud.tencent.com/document/sdk?from_cn_redirect=1).
-                     * @return Recycle Retention period of the original private IPv4 address
-- Unit: Days.
-- Valid values: `0`, `1`, `2`, `3`, `7`, `15`.
+                     * @return Recycle Retention duration of the original private IPv4 address.
+- Unit: day.
+- Valid values: 0, 1, 2, 3, 7, and 15.
 
-**Note**: You can set the retention period of the original address only in the latest SDK. In earlier SDKs, the original address is released immediately. To view the SDK version, go to [SDK Center](https://intl.cloud.tencent.com/document/sdk?from_cn_redirect=1).
                      * 
                      */
                     int64_t GetRecycle() const;
 
                     /**
-                     * 设置Retention period of the original private IPv4 address
-- Unit: Days.
-- Valid values: `0`, `1`, `2`, `3`, `7`, `15`.
+                     * 设置Retention duration of the original private IPv4 address.
+- Unit: day.
+- Valid values: 0, 1, 2, 3, 7, and 15.
 
-**Note**: You can set the retention period of the original address only in the latest SDK. In earlier SDKs, the original address is released immediately. To view the SDK version, go to [SDK Center](https://intl.cloud.tencent.com/document/sdk?from_cn_redirect=1).
-                     * @param _recycle Retention period of the original private IPv4 address
-- Unit: Days.
-- Valid values: `0`, `1`, `2`, `3`, `7`, `15`.
+                     * @param _recycle Retention duration of the original private IPv4 address.
+- Unit: day.
+- Valid values: 0, 1, 2, 3, 7, and 15.
 
-**Note**: You can set the retention period of the original address only in the latest SDK. In earlier SDKs, the original address is released immediately. To view the SDK version, go to [SDK Center](https://intl.cloud.tencent.com/document/sdk?from_cn_redirect=1).
                      * 
                      */
                     void SetRecycle(const int64_t& _recycle);
@@ -224,7 +240,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -246,23 +262,27 @@ namespace TencentCloud
                     bool m_vipHasBeenSet;
 
                     /**
-                     * VPC ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
+                     * VPC ID after the modification.
+- Configure this parameter when **Operation** is set to **changeVpc** or **changeBaseToVpc**.
+- Log in to the [Redis console](https://console.tencentcloud.com/redis/instance), switch to the **Instance Details** page, and click the VPC name next to the associated network in the **Network Information** area to obtain the VPC ID.
+
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Subnet ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
+                     * ID of the subnet to which the VPC belongs after the modification.
+- Configure this parameter when **Operation** is set to **changeVpc** or **changeBaseToVpc**.
+- Log in to the [Redis console](https://console.tencentcloud.com/redis/instance), switch to the **Instance Details** page, and click the subnet name next to the associated network in the **Network Information** area to obtain the subnet ID.
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * Retention period of the original private IPv4 address
-- Unit: Days.
-- Valid values: `0`, `1`, `2`, `3`, `7`, `15`.
+                     * Retention duration of the original private IPv4 address.
+- Unit: day.
+- Valid values: 0, 1, 2, 3, 7, and 15.
 
-**Note**: You can set the retention period of the original address only in the latest SDK. In earlier SDKs, the original address is released immediately. To view the SDK version, go to [SDK Center](https://intl.cloud.tencent.com/document/sdk?from_cn_redirect=1).
                      */
                     int64_t m_recycle;
                     bool m_recycleHasBeenSet;

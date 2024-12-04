@@ -84,15 +84,15 @@ namespace TencentCloud
                     bool OperatorHasBeenSet() const;
 
                     /**
-                     * 获取Match type. Valid values: <li> filename: File name; </li> <li> extension: File extension; </li> <li> host: Host name; </li> <li> full_url: The complete URL path under the current site, which must include the HTTP protocol, host, and path; </li> <li> url: Request for the URL path under the current site; </li><li> client_country: Client country/region;</li> <li> query_string: The query string of the URL requested under the current site; </li> <li> request_header: HTTP request header; </li><li> client_ip: Client IP address. </li>
-                     * @return Target Match type. Valid values: <li> filename: File name; </li> <li> extension: File extension; </li> <li> host: Host name; </li> <li> full_url: The complete URL path under the current site, which must include the HTTP protocol, host, and path; </li> <li> url: Request for the URL path under the current site; </li><li> client_country: Client country/region;</li> <li> query_string: The query string of the URL requested under the current site; </li> <li> request_header: HTTP request header; </li><li> client_ip: Client IP address. </li>
+                     * 获取Match type. Valid values: <li> filename: File name; </li> <li> extension: File extension; </li> <li> host: Host name; </li> <li> full_url: The complete URL path under the current site, which must include the HTTP protocol, host, and path; </li> <li> url: Request for the URL path under the current site; </li><li> client_country: Client country/region;</li> <li> query_string: The query string of the URL requested under the current site; </li> <li> request_header: HTTP request header; </li><li> client_ip: Client IP address; </li><li> request_protocol: Request Protocol; </li><li> request_method: HTTP Request Methods. </li>
+                     * @return Target Match type. Valid values: <li> filename: File name; </li> <li> extension: File extension; </li> <li> host: Host name; </li> <li> full_url: The complete URL path under the current site, which must include the HTTP protocol, host, and path; </li> <li> url: Request for the URL path under the current site; </li><li> client_country: Client country/region;</li> <li> query_string: The query string of the URL requested under the current site; </li> <li> request_header: HTTP request header; </li><li> client_ip: Client IP address; </li><li> request_protocol: Request Protocol; </li><li> request_method: HTTP Request Methods. </li>
                      * 
                      */
                     std::string GetTarget() const;
 
                     /**
-                     * 设置Match type. Valid values: <li> filename: File name; </li> <li> extension: File extension; </li> <li> host: Host name; </li> <li> full_url: The complete URL path under the current site, which must include the HTTP protocol, host, and path; </li> <li> url: Request for the URL path under the current site; </li><li> client_country: Client country/region;</li> <li> query_string: The query string of the URL requested under the current site; </li> <li> request_header: HTTP request header; </li><li> client_ip: Client IP address. </li>
-                     * @param _target Match type. Valid values: <li> filename: File name; </li> <li> extension: File extension; </li> <li> host: Host name; </li> <li> full_url: The complete URL path under the current site, which must include the HTTP protocol, host, and path; </li> <li> url: Request for the URL path under the current site; </li><li> client_country: Client country/region;</li> <li> query_string: The query string of the URL requested under the current site; </li> <li> request_header: HTTP request header; </li><li> client_ip: Client IP address. </li>
+                     * 设置Match type. Valid values: <li> filename: File name; </li> <li> extension: File extension; </li> <li> host: Host name; </li> <li> full_url: The complete URL path under the current site, which must include the HTTP protocol, host, and path; </li> <li> url: Request for the URL path under the current site; </li><li> client_country: Client country/region;</li> <li> query_string: The query string of the URL requested under the current site; </li> <li> request_header: HTTP request header; </li><li> client_ip: Client IP address; </li><li> request_protocol: Request Protocol; </li><li> request_method: HTTP Request Methods. </li>
+                     * @param _target Match type. Valid values: <li> filename: File name; </li> <li> extension: File extension; </li> <li> host: Host name; </li> <li> full_url: The complete URL path under the current site, which must include the HTTP protocol, host, and path; </li> <li> url: Request for the URL path under the current site; </li><li> client_country: Client country/region;</li> <li> query_string: The query string of the URL requested under the current site; </li> <li> request_header: HTTP request header; </li><li> client_ip: Client IP address; </li><li> request_protocol: Request Protocol; </li><li> request_method: HTTP Request Methods. </li>
                      * 
                      */
                     void SetTarget(const std::string& _target);
@@ -115,7 +115,9 @@ namespace TencentCloud
 <li> Client country/region: Country/region codes compliant with the ISO3166 standard;</li>
 <li> Query string: The parameter values in the query string of the URL requested under the current site, for example, cn and 1 in lang=cn&version=1; </li>
 <li> HTTP request header: The value of the HTTP request header field, for example, zh-CN,zh;q=0.9 in Accept-Language:zh-CN,zh;q=0.9; </li>
-<li> Client IP: The client IP address carried by the current request, supporting IPv4, IPv6, and an IP range. </li>
+<li> Client IP: The client IP address carried by the current request, supporting IPv4, IPv6, and an IP range; </li>
+<li> Request Protocol: The protocol of the current request, with possible values: HTTP, HTTPS; </li>
+<li> HTTP Request Methods: The method of the current request, with possible values: GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT, OPTIONS, PATCH, COPY, LOCK, MKCOL, MOVE, PROPFIND, PROPPATCH, UNLOCK. </li>
                      * @return Values The parameter values for match types. It is allowed to pass an empty array only when the match type is query_string or request_header and the operator value is Exist or Does Not Exist. The corresponding match types include:
 <li> File extension: Extensions like jpg, txt, etc.;</li>
 <li> File name: For example, foo in foo.jpg;</li>
@@ -126,7 +128,9 @@ namespace TencentCloud
 <li> Client country/region: Country/region codes compliant with the ISO3166 standard;</li>
 <li> Query string: The parameter values in the query string of the URL requested under the current site, for example, cn and 1 in lang=cn&version=1; </li>
 <li> HTTP request header: The value of the HTTP request header field, for example, zh-CN,zh;q=0.9 in Accept-Language:zh-CN,zh;q=0.9; </li>
-<li> Client IP: The client IP address carried by the current request, supporting IPv4, IPv6, and an IP range. </li>
+<li> Client IP: The client IP address carried by the current request, supporting IPv4, IPv6, and an IP range; </li>
+<li> Request Protocol: The protocol of the current request, with possible values: HTTP, HTTPS; </li>
+<li> HTTP Request Methods: The method of the current request, with possible values: GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT, OPTIONS, PATCH, COPY, LOCK, MKCOL, MOVE, PROPFIND, PROPPATCH, UNLOCK. </li>
                      * 
                      */
                     std::vector<std::string> GetValues() const;
@@ -142,7 +146,9 @@ namespace TencentCloud
 <li> Client country/region: Country/region codes compliant with the ISO3166 standard;</li>
 <li> Query string: The parameter values in the query string of the URL requested under the current site, for example, cn and 1 in lang=cn&version=1; </li>
 <li> HTTP request header: The value of the HTTP request header field, for example, zh-CN,zh;q=0.9 in Accept-Language:zh-CN,zh;q=0.9; </li>
-<li> Client IP: The client IP address carried by the current request, supporting IPv4, IPv6, and an IP range. </li>
+<li> Client IP: The client IP address carried by the current request, supporting IPv4, IPv6, and an IP range; </li>
+<li> Request Protocol: The protocol of the current request, with possible values: HTTP, HTTPS; </li>
+<li> HTTP Request Methods: The method of the current request, with possible values: GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT, OPTIONS, PATCH, COPY, LOCK, MKCOL, MOVE, PROPFIND, PROPPATCH, UNLOCK. </li>
                      * @param _values The parameter values for match types. It is allowed to pass an empty array only when the match type is query_string or request_header and the operator value is Exist or Does Not Exist. The corresponding match types include:
 <li> File extension: Extensions like jpg, txt, etc.;</li>
 <li> File name: For example, foo in foo.jpg;</li>
@@ -153,7 +159,9 @@ namespace TencentCloud
 <li> Client country/region: Country/region codes compliant with the ISO3166 standard;</li>
 <li> Query string: The parameter values in the query string of the URL requested under the current site, for example, cn and 1 in lang=cn&version=1; </li>
 <li> HTTP request header: The value of the HTTP request header field, for example, zh-CN,zh;q=0.9 in Accept-Language:zh-CN,zh;q=0.9; </li>
-<li> Client IP: The client IP address carried by the current request, supporting IPv4, IPv6, and an IP range. </li>
+<li> Client IP: The client IP address carried by the current request, supporting IPv4, IPv6, and an IP range; </li>
+<li> Request Protocol: The protocol of the current request, with possible values: HTTP, HTTPS; </li>
+<li> HTTP Request Methods: The method of the current request, with possible values: GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT, OPTIONS, PATCH, COPY, LOCK, MKCOL, MOVE, PROPFIND, PROPPATCH, UNLOCK. </li>
                      * 
                      */
                     void SetValues(const std::vector<std::string>& _values);
@@ -253,7 +261,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_operatorHasBeenSet;
 
                     /**
-                     * Match type. Valid values: <li> filename: File name; </li> <li> extension: File extension; </li> <li> host: Host name; </li> <li> full_url: The complete URL path under the current site, which must include the HTTP protocol, host, and path; </li> <li> url: Request for the URL path under the current site; </li><li> client_country: Client country/region;</li> <li> query_string: The query string of the URL requested under the current site; </li> <li> request_header: HTTP request header; </li><li> client_ip: Client IP address. </li>
+                     * Match type. Valid values: <li> filename: File name; </li> <li> extension: File extension; </li> <li> host: Host name; </li> <li> full_url: The complete URL path under the current site, which must include the HTTP protocol, host, and path; </li> <li> url: Request for the URL path under the current site; </li><li> client_country: Client country/region;</li> <li> query_string: The query string of the URL requested under the current site; </li> <li> request_header: HTTP request header; </li><li> client_ip: Client IP address; </li><li> request_protocol: Request Protocol; </li><li> request_method: HTTP Request Methods. </li>
                      */
                     std::string m_target;
                     bool m_targetHasBeenSet;
@@ -269,7 +277,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li> Client country/region: Country/region codes compliant with the ISO3166 standard;</li>
 <li> Query string: The parameter values in the query string of the URL requested under the current site, for example, cn and 1 in lang=cn&version=1; </li>
 <li> HTTP request header: The value of the HTTP request header field, for example, zh-CN,zh;q=0.9 in Accept-Language:zh-CN,zh;q=0.9; </li>
-<li> Client IP: The client IP address carried by the current request, supporting IPv4, IPv6, and an IP range. </li>
+<li> Client IP: The client IP address carried by the current request, supporting IPv4, IPv6, and an IP range; </li>
+<li> Request Protocol: The protocol of the current request, with possible values: HTTP, HTTPS; </li>
+<li> HTTP Request Methods: The method of the current request, with possible values: GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT, OPTIONS, PATCH, COPY, LOCK, MKCOL, MOVE, PROPFIND, PROPPATCH, UNLOCK. </li>
                      */
                     std::vector<std::string> m_values;
                     bool m_valuesHasBeenSet;

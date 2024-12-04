@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID in the format of crs-ngvou0i1
-                     * @return InstanceId Instance ID in the format of crs-ngvou0i1
+                     * 获取Instance ID. Log in to the [Tendis console](https://console.cloud.tencent.com/tendis) and copy it in the instance list.
+                     * @return InstanceId Instance ID. Log in to the [Tendis console](https://console.cloud.tencent.com/tendis) and copy it in the instance list.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID in the format of crs-ngvou0i1
-                     * @param _instanceId Instance ID in the format of crs-ngvou0i1
+                     * 设置Instance ID. Log in to the [Tendis console](https://console.cloud.tencent.com/tendis) and copy it in the instance list.
+                     * @param _instanceId Instance ID. Log in to the [Tendis console](https://console.cloud.tencent.com/tendis) and copy it in the instance list.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Start time in the format of 2019-09-08 12:12:41
-                     * @return BeginTime Start time in the format of 2019-09-08 12:12:41
+                     * 获取Start time for a query, for example, 2019-09-08 12:12:41, with a maximum query span of 30 days.
+                     * @return BeginTime Start time for a query, for example, 2019-09-08 12:12:41, with a maximum query span of 30 days.
                      * 
                      */
                     std::string GetBeginTime() const;
 
                     /**
-                     * 设置Start time in the format of 2019-09-08 12:12:41
-                     * @param _beginTime Start time in the format of 2019-09-08 12:12:41
+                     * 设置Start time for a query, for example, 2019-09-08 12:12:41, with a maximum query span of 30 days.
+                     * @param _beginTime Start time for a query, for example, 2019-09-08 12:12:41, with a maximum query span of 30 days.
                      * 
                      */
                     void SetBeginTime(const std::string& _beginTime);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool BeginTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time in the format of 2019-09-09 12:12:41
-                     * @return EndTime End time in the format of 2019-09-09 12:12:41
+                     * 获取End time for a query, for example, 2019-09-09 12:12:41, with a maximum query span of 30 days.
+                     * @return EndTime End time for a query, for example, 2019-09-09 12:12:41, with a maximum query span of 30 days.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End time in the format of 2019-09-09 12:12:41
-                     * @param _endTime End time in the format of 2019-09-09 12:12:41
+                     * 设置End time for a query, for example, 2019-09-09 12:12:41, with a maximum query span of 30 days.
+                     * @param _endTime End time for a query, for example, 2019-09-09 12:12:41, with a maximum query span of 30 days.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool MinQueryTimeHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of results returned per page. Default value: 20.
-                     * @return Limit Maximum number of results returned per page. Default value: 20.
+                     * 获取Page size. Default value 20. Maximum value 100.
+                     * @return Limit Page size. Default value 20. Maximum value 100.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Maximum number of results returned per page. Default value: 20.
-                     * @param _limit Maximum number of results returned per page. Default value: 20.
+                     * 设置Page size. Default value 20. Maximum value 100.
+                     * @param _limit Page size. Default value 20. Maximum value 100.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset, which is an integral multiple of `Limit`.
-                     * @return Offset Offset, which is an integral multiple of `Limit`.
+                     * 获取Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
+                     * @return Offset Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset, which is an integral multiple of `Limit`.
-                     * @param _offset Offset, which is an integral multiple of `Limit`.
+                     * 设置Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
+                     * @param _offset Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -171,19 +171,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID in the format of crs-ngvou0i1
+                     * Instance ID. Log in to the [Tendis console](https://console.cloud.tencent.com/tendis) and copy it in the instance list.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Start time in the format of 2019-09-08 12:12:41
+                     * Start time for a query, for example, 2019-09-08 12:12:41, with a maximum query span of 30 days.
                      */
                     std::string m_beginTime;
                     bool m_beginTimeHasBeenSet;
 
                     /**
-                     * End time in the format of 2019-09-09 12:12:41
+                     * End time for a query, for example, 2019-09-09 12:12:41, with a maximum query span of 30 days.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
@@ -195,13 +195,13 @@ namespace TencentCloud
                     bool m_minQueryTimeHasBeenSet;
 
                     /**
-                     * Maximum number of results returned per page. Default value: 20.
+                     * Page size. Default value 20. Maximum value 100.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset, which is an integral multiple of `Limit`.
+                     * Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;

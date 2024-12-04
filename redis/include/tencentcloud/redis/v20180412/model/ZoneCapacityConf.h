@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取AZ name
-                     * @return ZoneName AZ name
+                     * 获取Availability zone name.
+                     * @return ZoneName Availability zone name.
                      * 
                      */
                     std::string GetZoneName() const;
 
                     /**
-                     * 设置AZ name
-                     * @param _zoneName AZ name
+                     * 设置Availability zone name.
+                     * @param _zoneName Availability zone name.
                      * 
                      */
                     void SetZoneName(const std::string& _zoneName);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool ZoneNameHasBeenSet() const;
 
                     /**
-                     * 获取Whether a product is sold out in an AZ
-                     * @return IsSaleout Whether a product is sold out in an AZ
+                     * 获取Whether the AZ is sold out.
+                     * @return IsSaleout Whether the AZ is sold out.
                      * 
                      */
                     bool GetIsSaleout() const;
 
                     /**
-                     * 设置Whether a product is sold out in an AZ
-                     * @param _isSaleout Whether a product is sold out in an AZ
+                     * 设置Whether the AZ is sold out.
+                     * @param _isSaleout Whether the AZ is sold out.
                      * 
                      */
                     void SetIsSaleout(const bool& _isSaleout);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool IsSaleoutHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is a default AZ
-                     * @return IsDefault Whether it is a default AZ
+                     * 获取Whether the default AZ is used.
+                     * @return IsDefault Whether the default AZ is used.
                      * 
                      */
                     bool GetIsDefault() const;
 
                     /**
-                     * 设置Whether it is a default AZ
-                     * @param _isDefault Whether it is a default AZ
+                     * 设置Whether the default AZ is used.
+                     * @param _isDefault Whether the default AZ is used.
                      * 
                      */
                     void SetIsDefault(const bool& _isDefault);
@@ -132,15 +132,27 @@ namespace TencentCloud
                     bool IsDefaultHasBeenSet() const;
 
                     /**
-                     * 获取Network type. basenet: basic network; vpcnet: VPC
-                     * @return NetWorkType Network type. basenet: basic network; vpcnet: VPC
+                     * 获取Network type.
+
+- basenet: basic network.
+- vpcnet: VPC.
+                     * @return NetWorkType Network type.
+
+- basenet: basic network.
+- vpcnet: VPC.
                      * 
                      */
                     std::vector<std::string> GetNetWorkType() const;
 
                     /**
-                     * 设置Network type. basenet: basic network; vpcnet: VPC
-                     * @param _netWorkType Network type. basenet: basic network; vpcnet: VPC
+                     * 设置Network type.
+
+- basenet: basic network.
+- vpcnet: VPC.
+                     * @param _netWorkType Network type.
+
+- basenet: basic network.
+- vpcnet: VPC.
                      * 
                      */
                     void SetNetWorkType(const std::vector<std::string>& _netWorkType);
@@ -203,25 +215,28 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * AZ name
+                     * Availability zone name.
                      */
                     std::string m_zoneName;
                     bool m_zoneNameHasBeenSet;
 
                     /**
-                     * Whether a product is sold out in an AZ
+                     * Whether the AZ is sold out.
                      */
                     bool m_isSaleout;
                     bool m_isSaleoutHasBeenSet;
 
                     /**
-                     * Whether it is a default AZ
+                     * Whether the default AZ is used.
                      */
                     bool m_isDefault;
                     bool m_isDefaultHasBeenSet;
 
                     /**
-                     * Network type. basenet: basic network; vpcnet: VPC
+                     * Network type.
+
+- basenet: basic network.
+- vpcnet: VPC.
                      */
                     std::vector<std::string> m_netWorkType;
                     bool m_netWorkTypeHasBeenSet;

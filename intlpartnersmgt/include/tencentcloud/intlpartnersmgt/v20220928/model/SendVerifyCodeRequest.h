@@ -69,14 +69,18 @@ Parameter value is not allowed to be 7,380,86.
 
                     /**
                      * 获取Mobile number.
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed.No need to add CountryCode before mobile number.
                      * @return PhoneNum Mobile number.
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed.No need to add CountryCode before mobile number.
                      * 
                      */
                     std::string GetPhoneNum() const;
 
                     /**
                      * 设置Mobile number.
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed.No need to add CountryCode before mobile number.
                      * @param _phoneNum Mobile number.
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed.No need to add CountryCode before mobile number.
                      * 
                      */
                     void SetPhoneNum(const std::string& _phoneNum);
@@ -99,6 +103,7 @@ Parameter value is not allowed to be 7,380,86.
 
                     /**
                      * Mobile number.
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed.No need to add CountryCode before mobile number.
                      */
                     std::string m_phoneNum;
                     bool m_phoneNumHasBeenSet;

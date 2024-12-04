@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Identify whether the IP and port for accessing the database are allowed
-                     * @return Action Identify whether the IP and port for accessing the database are allowed
+                     * 获取Whether the inbound and outbound IP addresses and ports of the database are allowed.
+- ACCEPT: allowed.
+- DROP: disallowed.
+                     * @return Action Whether the inbound and outbound IP addresses and ports of the database are allowed.
+- ACCEPT: allowed.
+- DROP: disallowed.
                      * 
                      */
                     std::string GetAction() const;
 
                     /**
-                     * 设置Identify whether the IP and port for accessing the database are allowed
-                     * @param _action Identify whether the IP and port for accessing the database are allowed
+                     * 设置Whether the inbound and outbound IP addresses and ports of the database are allowed.
+- ACCEPT: allowed.
+- DROP: disallowed.
+                     * @param _action Whether the inbound and outbound IP addresses and ports of the database are allowed.
+- ACCEPT: allowed.
+- DROP: disallowed.
                      * 
                      */
                     void SetAction(const std::string& _action);
@@ -133,7 +141,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Identify whether the IP and port for accessing the database are allowed
+                     * Whether the inbound and outbound IP addresses and ports of the database are allowed.
+- ACCEPT: allowed.
+- DROP: disallowed.
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;

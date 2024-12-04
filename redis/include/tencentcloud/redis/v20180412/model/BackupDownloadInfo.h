@@ -72,14 +72,14 @@ namespace TencentCloud
                      * @return FileSize Backup file size in bytes. If the parameter value is `0`, the backup file size is unknown.
                      * 
                      */
-                    uint64_t GetFileSize() const;
+                    int64_t GetFileSize() const;
 
                     /**
                      * 设置Backup file size in bytes. If the parameter value is `0`, the backup file size is unknown.
                      * @param _fileSize Backup file size in bytes. If the parameter value is `0`, the backup file size is unknown.
                      * 
                      */
-                    void SetFileSize(const uint64_t& _fileSize);
+                    void SetFileSize(const int64_t& _fileSize);
 
                     /**
                      * 判断参数 FileSize 是否已赋值
@@ -141,7 +141,7 @@ namespace TencentCloud
                     /**
                      * Backup file size in bytes. If the parameter value is `0`, the backup file size is unknown.
                      */
-                    uint64_t m_fileSize;
+                    int64_t m_fileSize;
                     bool m_fileSizeHasBeenSet;
 
                     /**

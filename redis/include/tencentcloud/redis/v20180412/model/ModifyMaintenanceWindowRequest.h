@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+                     * @return InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+                     * @param _instanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Maintenance start time, such as 17:00
-                     * @return StartTime Maintenance start time, such as 17:00
+                     * 获取Start time of the maintenance window, for example, 17:00.
+                     * @return StartTime Start time of the maintenance window, for example, 17:00.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Maintenance start time, such as 17:00
-                     * @param _startTime Maintenance start time, such as 17:00
+                     * 设置Start time of the maintenance window, for example, 17:00.
+                     * @param _startTime Start time of the maintenance window, for example, 17:00.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Maintenance end time, such as 19:00
-                     * @return EndTime Maintenance end time, such as 19:00
+                     * 获取End time of the maintenance window, for example, 19:00.
+                     * @return EndTime End time of the maintenance window, for example, 19:00.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置Maintenance end time, such as 19:00
-                     * @param _endTime Maintenance end time, such as 19:00
+                     * 设置End time of the maintenance window, for example, 19:00.
+                     * @param _endTime End time of the maintenance window, for example, 19:00.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -108,19 +108,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Maintenance start time, such as 17:00
+                     * Start time of the maintenance window, for example, 17:00.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Maintenance end time, such as 19:00
+                     * End time of the maintenance window, for example, 19:00.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;

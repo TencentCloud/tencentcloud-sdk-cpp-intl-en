@@ -179,15 +179,23 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool RefreshSettingsHasBeenSet() const;
 
                     /**
-                     * 获取Refresh activity type. Valid values: <br><li>NORMAL: Normal refresh activity.</li> <li>ROLLBACK: Rollback refresh activity.
-                     * @return ActivityType Refresh activity type. Valid values: <br><li>NORMAL: Normal refresh activity.</li> <li>ROLLBACK: Rollback refresh activity.
+                     * 获取Refresh activity type. Valid values:
+<li>NORMAL: normal refresh activity.</li>
+<li>ROLLBACK: rollback refresh activity.</li>
+                     * @return ActivityType Refresh activity type. Valid values:
+<li>NORMAL: normal refresh activity.</li>
+<li>ROLLBACK: rollback refresh activity.</li>
                      * 
                      */
                     std::string GetActivityType() const;
 
                     /**
-                     * 设置Refresh activity type. Valid values: <br><li>NORMAL: Normal refresh activity.</li> <li>ROLLBACK: Rollback refresh activity.
-                     * @param _activityType Refresh activity type. Valid values: <br><li>NORMAL: Normal refresh activity.</li> <li>ROLLBACK: Rollback refresh activity.
+                     * 设置Refresh activity type. Valid values:
+<li>NORMAL: normal refresh activity.</li>
+<li>ROLLBACK: rollback refresh activity.</li>
+                     * @param _activityType Refresh activity type. Valid values:
+<li>NORMAL: normal refresh activity.</li>
+<li>ROLLBACK: rollback refresh activity.</li>
                      * 
                      */
                     void SetActivityType(const std::string& _activityType);
@@ -200,15 +208,47 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ActivityTypeHasBeenSet() const;
 
                     /**
-                     * 获取Refresh activity status. Valid values: <br><li>INIT: Initializing.</li> <li>RUNNING: Running.</li> <li>SUCCESSFUL: Activity successful.</li> <li>FAILED_PAUSE: Paused due to a failed refresh batch.</li> <li>AUTO_PAUSE: Automatically paused according to pause policy.</li> <li>MANUAL_PAUSE: Manually paused.</li> <li>CANCELLED: Activity canceled.</li> <li>FAILED: Activity failed.
-                     * @return Status Refresh activity status. Valid values: <br><li>INIT: Initializing.</li> <li>RUNNING: Running.</li> <li>SUCCESSFUL: Activity successful.</li> <li>FAILED_PAUSE: Paused due to a failed refresh batch.</li> <li>AUTO_PAUSE: Automatically paused according to pause policy.</li> <li>MANUAL_PAUSE: Manually paused.</li> <li>CANCELLED: Activity canceled.</li> <li>FAILED: Activity failed.
+                     * 获取Refresh activity status. Valid values:
+<li>INIT: initializing.</li>
+<li>RUNNING: running.</li>
+<li>SUCCESSFUL: successful.</li>
+<li>FAILED_PAUSE: paused due to the failure of a refresh batch.</li>
+<li>AUTO_PAUSE: automatically paused due to the pause policy.</li>
+<li>MANUAL_PAUSE: manually paused.</li>
+<li>CANCELLED: canceled.</li>
+<li>FAILED: failed.</li>
+                     * @return Status Refresh activity status. Valid values:
+<li>INIT: initializing.</li>
+<li>RUNNING: running.</li>
+<li>SUCCESSFUL: successful.</li>
+<li>FAILED_PAUSE: paused due to the failure of a refresh batch.</li>
+<li>AUTO_PAUSE: automatically paused due to the pause policy.</li>
+<li>MANUAL_PAUSE: manually paused.</li>
+<li>CANCELLED: canceled.</li>
+<li>FAILED: failed.</li>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Refresh activity status. Valid values: <br><li>INIT: Initializing.</li> <li>RUNNING: Running.</li> <li>SUCCESSFUL: Activity successful.</li> <li>FAILED_PAUSE: Paused due to a failed refresh batch.</li> <li>AUTO_PAUSE: Automatically paused according to pause policy.</li> <li>MANUAL_PAUSE: Manually paused.</li> <li>CANCELLED: Activity canceled.</li> <li>FAILED: Activity failed.
-                     * @param _status Refresh activity status. Valid values: <br><li>INIT: Initializing.</li> <li>RUNNING: Running.</li> <li>SUCCESSFUL: Activity successful.</li> <li>FAILED_PAUSE: Paused due to a failed refresh batch.</li> <li>AUTO_PAUSE: Automatically paused according to pause policy.</li> <li>MANUAL_PAUSE: Manually paused.</li> <li>CANCELLED: Activity canceled.</li> <li>FAILED: Activity failed.
+                     * 设置Refresh activity status. Valid values:
+<li>INIT: initializing.</li>
+<li>RUNNING: running.</li>
+<li>SUCCESSFUL: successful.</li>
+<li>FAILED_PAUSE: paused due to the failure of a refresh batch.</li>
+<li>AUTO_PAUSE: automatically paused due to the pause policy.</li>
+<li>MANUAL_PAUSE: manually paused.</li>
+<li>CANCELLED: canceled.</li>
+<li>FAILED: failed.</li>
+                     * @param _status Refresh activity status. Valid values:
+<li>INIT: initializing.</li>
+<li>RUNNING: running.</li>
+<li>SUCCESSFUL: successful.</li>
+<li>FAILED_PAUSE: paused due to the failure of a refresh batch.</li>
+<li>AUTO_PAUSE: automatically paused due to the pause policy.</li>
+<li>MANUAL_PAUSE: manually paused.</li>
+<li>CANCELLED: canceled.</li>
+<li>FAILED: failed.</li>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -360,13 +400,23 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_refreshSettingsHasBeenSet;
 
                     /**
-                     * Refresh activity type. Valid values: <br><li>NORMAL: Normal refresh activity.</li> <li>ROLLBACK: Rollback refresh activity.
+                     * Refresh activity type. Valid values:
+<li>NORMAL: normal refresh activity.</li>
+<li>ROLLBACK: rollback refresh activity.</li>
                      */
                     std::string m_activityType;
                     bool m_activityTypeHasBeenSet;
 
                     /**
-                     * Refresh activity status. Valid values: <br><li>INIT: Initializing.</li> <li>RUNNING: Running.</li> <li>SUCCESSFUL: Activity successful.</li> <li>FAILED_PAUSE: Paused due to a failed refresh batch.</li> <li>AUTO_PAUSE: Automatically paused according to pause policy.</li> <li>MANUAL_PAUSE: Manually paused.</li> <li>CANCELLED: Activity canceled.</li> <li>FAILED: Activity failed.
+                     * Refresh activity status. Valid values:
+<li>INIT: initializing.</li>
+<li>RUNNING: running.</li>
+<li>SUCCESSFUL: successful.</li>
+<li>FAILED_PAUSE: paused due to the failure of a refresh batch.</li>
+<li>AUTO_PAUSE: automatically paused due to the pause policy.</li>
+<li>MANUAL_PAUSE: manually paused.</li>
+<li>CANCELLED: canceled.</li>
+<li>FAILED: failed.</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

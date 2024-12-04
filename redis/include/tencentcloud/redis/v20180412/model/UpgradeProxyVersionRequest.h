@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+                     * @return InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+                     * @param _instanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取The current proxy version
-                     * @return CurrentProxyVersion The current proxy version
+                     * 获取Current Proxy version.
+                     * @return CurrentProxyVersion Current Proxy version.
                      * 
                      */
                     std::string GetCurrentProxyVersion() const;
 
                     /**
-                     * 设置The current proxy version
-                     * @param _currentProxyVersion The current proxy version
+                     * 设置Current Proxy version.
+                     * @param _currentProxyVersion Current Proxy version.
                      * 
                      */
                     void SetCurrentProxyVersion(const std::string& _currentProxyVersion);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool CurrentProxyVersionHasBeenSet() const;
 
                     /**
-                     * 获取Upgradeable redis version
-                     * @return UpgradeProxyVersion Upgradeable redis version
+                     * 获取Upgradable Redis version.
+                     * @return UpgradeProxyVersion Upgradable Redis version.
                      * 
                      */
                     std::string GetUpgradeProxyVersion() const;
 
                     /**
-                     * 设置Upgradeable redis version
-                     * @param _upgradeProxyVersion Upgradeable redis version
+                     * 设置Upgradable Redis version.
+                     * @param _upgradeProxyVersion Upgradable Redis version.
                      * 
                      */
                     void SetUpgradeProxyVersion(const std::string& _upgradeProxyVersion);
@@ -106,15 +106,23 @@ namespace TencentCloud
                     bool UpgradeProxyVersionHasBeenSet() const;
 
                     /**
-                     * 获取`1` (upgrade immediately), `0` (upgrade during maintenance time)
-                     * @return InstanceTypeUpgradeNow `1` (upgrade immediately), `0` (upgrade during maintenance time)
+                     * 获取Specifies whether to upgrade immediately.
+- 1: Upgrade immediately.
+- 0: Upgrade during the maintenance window.
+                     * @return InstanceTypeUpgradeNow Specifies whether to upgrade immediately.
+- 1: Upgrade immediately.
+- 0: Upgrade during the maintenance window.
                      * 
                      */
                     int64_t GetInstanceTypeUpgradeNow() const;
 
                     /**
-                     * 设置`1` (upgrade immediately), `0` (upgrade during maintenance time)
-                     * @param _instanceTypeUpgradeNow `1` (upgrade immediately), `0` (upgrade during maintenance time)
+                     * 设置Specifies whether to upgrade immediately.
+- 1: Upgrade immediately.
+- 0: Upgrade during the maintenance window.
+                     * @param _instanceTypeUpgradeNow Specifies whether to upgrade immediately.
+- 1: Upgrade immediately.
+- 0: Upgrade during the maintenance window.
                      * 
                      */
                     void SetInstanceTypeUpgradeNow(const int64_t& _instanceTypeUpgradeNow);
@@ -129,25 +137,27 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * The current proxy version
+                     * Current Proxy version.
                      */
                     std::string m_currentProxyVersion;
                     bool m_currentProxyVersionHasBeenSet;
 
                     /**
-                     * Upgradeable redis version
+                     * Upgradable Redis version.
                      */
                     std::string m_upgradeProxyVersion;
                     bool m_upgradeProxyVersionHasBeenSet;
 
                     /**
-                     * `1` (upgrade immediately), `0` (upgrade during maintenance time)
+                     * Specifies whether to upgrade immediately.
+- 1: Upgrade immediately.
+- 0: Upgrade during the maintenance window.
                      */
                     int64_t m_instanceTypeUpgradeNow;
                     bool m_instanceTypeUpgradeNowHasBeenSet;
