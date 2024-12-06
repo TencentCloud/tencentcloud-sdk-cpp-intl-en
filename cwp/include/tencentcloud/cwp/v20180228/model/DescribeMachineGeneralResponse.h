@@ -60,70 +60,70 @@ namespace TencentCloud
                     /**
                      * 获取Number of Tencent Cloud machines
                      * @return TencentCloudMachineCnt Number of Tencent Cloud machines
-                     * 
+                     * @deprecated
                      */
                     uint64_t GetTencentCloudMachineCnt() const;
 
                     /**
                      * 判断参数 TencentCloudMachineCnt 是否已赋值
                      * @return TencentCloudMachineCnt 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool TencentCloudMachineCntHasBeenSet() const;
 
                     /**
                      * 获取Number of Alibaba Cloud machines
                      * @return AliCloudMachineCnt Number of Alibaba Cloud machines
-                     * 
+                     * @deprecated
                      */
                     uint64_t GetAliCloudMachineCnt() const;
 
                     /**
                      * 判断参数 AliCloudMachineCnt 是否已赋值
                      * @return AliCloudMachineCnt 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool AliCloudMachineCntHasBeenSet() const;
 
                     /**
                      * 获取Number of Baidu Cloud machines
                      * @return BaiduCloudMachineCnt Number of Baidu Cloud machines
-                     * 
+                     * @deprecated
                      */
                     uint64_t GetBaiduCloudMachineCnt() const;
 
                     /**
                      * 判断参数 BaiduCloudMachineCnt 是否已赋值
                      * @return BaiduCloudMachineCnt 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool BaiduCloudMachineCntHasBeenSet() const;
 
                     /**
                      * 获取Number of IDC machines
                      * @return IDCMachineCnt Number of IDC machines
-                     * 
+                     * @deprecated
                      */
                     uint64_t GetIDCMachineCnt() const;
 
                     /**
                      * 判断参数 IDCMachineCnt 是否已赋值
                      * @return IDCMachineCnt 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool IDCMachineCntHasBeenSet() const;
 
                     /**
                      * 获取Number of machines from other cloud service vendors
                      * @return OtherCloudMachineCnt Number of machines from other cloud service vendors
-                     * 
+                     * @deprecated
                      */
                     uint64_t GetOtherCloudMachineCnt() const;
 
                     /**
                      * 判断参数 OtherCloudMachineCnt 是否已赋值
                      * @return OtherCloudMachineCnt 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool OtherCloudMachineCntHasBeenSet() const;
 

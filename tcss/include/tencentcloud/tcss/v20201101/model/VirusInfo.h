@@ -865,15 +865,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NodeUniqueIDHasBeenSet() const;
 
                     /**
-                     * 获取ID for u200dthe general node
-                     * @return HostID ID for u200dthe general node
+                     * 获取ID for the general node
+                     * @return HostID ID for the general node
                      * 
                      */
                     std::string GetHostID() const;
 
                     /**
-                     * 设置ID for u200dthe general node
-                     * @param _hostID ID for u200dthe general node
+                     * 设置ID for the general node
+                     * @param _hostID ID for the general node
                      * 
                      */
                     void SetHostID(const std::string& _hostID);
@@ -1136,7 +1136,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_nodeUniqueIDHasBeenSet;
 
                     /**
-                     * ID for u200dthe general node
+                     * ID for the general node
                      */
                     std::string m_hostID;
                     bool m_hostIDHasBeenSet;

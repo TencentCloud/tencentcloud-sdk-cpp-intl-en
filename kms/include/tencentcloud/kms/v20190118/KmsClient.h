@@ -306,7 +306,7 @@ namespace TencentCloud
 
 
                 /**
-                 *This API is used to archive keys. The archived keys can only be used for decryption but not encryption.
+                 *This API is used to archive keys.The archived keys can only be used for decryption but not encryption.
                  * @param req ArchiveKeyRequest
                  * @return ArchiveKeyOutcome
                  */

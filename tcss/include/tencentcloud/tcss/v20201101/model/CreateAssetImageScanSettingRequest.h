@@ -171,21 +171,21 @@ namespace TencentCloud
                     /**
                      * 获取All images
                      * @return All All images
-                     * 
+                     * @deprecated
                      */
                     bool GetAll() const;
 
                     /**
                      * 设置All images
                      * @param _all All images
-                     * 
+                     * @deprecated
                      */
                     void SetAll(const bool& _all);
 
                     /**
                      * 判断参数 All 是否已赋值
                      * @return All 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool AllHasBeenSet() const;
 

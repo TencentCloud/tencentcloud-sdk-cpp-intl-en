@@ -23,8 +23,8 @@ using namespace TencentCloud::Cwp::V20180228::Model;
 using namespace std;
 
 ModifyJavaMemShellsStatusRequest::ModifyJavaMemShellsStatusRequest() :
-    m_idsHasBeenSet(false),
-    m_statusHasBeenSet(false)
+    m_statusHasBeenSet(false),
+    m_idsHasBeenSet(false)
 {
 }
 
@@ -34,6 +34,14 @@ string ModifyJavaMemShellsStatusRequest::ToJsonString() const
     d.SetObject();
     rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
+
+    if (m_statusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Status";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_status, allocator);
+    }
 
     if (m_idsHasBeenSet)
     {
@@ -48,14 +56,6 @@ string ModifyJavaMemShellsStatusRequest::ToJsonString() const
         }
     }
 
-    if (m_statusHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Status";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, m_status, allocator);
-    }
-
 
     rapidjson::StringBuffer buffer;
     rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
@@ -63,22 +63,6 @@ string ModifyJavaMemShellsStatusRequest::ToJsonString() const
     return buffer.GetString();
 }
 
-
-vector<uint64_t> ModifyJavaMemShellsStatusRequest::GetIds() const
-{
-    return m_ids;
-}
-
-void ModifyJavaMemShellsStatusRequest::SetIds(const vector<uint64_t>& _ids)
-{
-    m_ids = _ids;
-    m_idsHasBeenSet = true;
-}
-
-bool ModifyJavaMemShellsStatusRequest::IdsHasBeenSet() const
-{
-    return m_idsHasBeenSet;
-}
 
 uint64_t ModifyJavaMemShellsStatusRequest::GetStatus() const
 {
@@ -94,6 +78,22 @@ void ModifyJavaMemShellsStatusRequest::SetStatus(const uint64_t& _status)
 bool ModifyJavaMemShellsStatusRequest::StatusHasBeenSet() const
 {
     return m_statusHasBeenSet;
+}
+
+vector<uint64_t> ModifyJavaMemShellsStatusRequest::GetIds() const
+{
+    return m_ids;
+}
+
+void ModifyJavaMemShellsStatusRequest::SetIds(const vector<uint64_t>& _ids)
+{
+    m_ids = _ids;
+    m_idsHasBeenSet = true;
+}
+
+bool ModifyJavaMemShellsStatusRequest::IdsHasBeenSet() const
+{
+    return m_idsHasBeenSet;
 }
 
 

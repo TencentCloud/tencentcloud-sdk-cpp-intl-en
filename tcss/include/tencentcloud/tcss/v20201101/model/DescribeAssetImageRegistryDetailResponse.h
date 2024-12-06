@@ -208,14 +208,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SentiveInfoCnt Number of sensitive data items
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
+                     * @deprecated
                      */
                     uint64_t GetSentiveInfoCnt() const;
 
                     /**
                      * 判断参数 SentiveInfoCnt 是否已赋值
                      * @return SentiveInfoCnt 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool SentiveInfoCntHasBeenSet() const;
 

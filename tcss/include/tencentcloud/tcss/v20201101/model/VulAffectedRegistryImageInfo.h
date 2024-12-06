@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * This API is used to query the list of repository images u200daffected by a specific vulnerability.
+                * This API is used to query the list of repository images affected by a specific vulnerability.
                 */
                 class VulAffectedRegistryImageInfo : public AbstractModel
                 {

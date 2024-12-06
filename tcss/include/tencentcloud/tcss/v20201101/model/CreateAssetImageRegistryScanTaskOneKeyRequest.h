@@ -46,21 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取Whether to scan all images
                      * @return All Whether to scan all images
-                     * 
+                     * @deprecated
                      */
                     bool GetAll() const;
 
                     /**
                      * 设置Whether to scan all images
                      * @param _all Whether to scan all images
-                     * 
+                     * @deprecated
                      */
                     void SetAll(const bool& _all);
 
                     /**
                      * 判断参数 All 是否已赋值
                      * @return All 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool AllHasBeenSet() const;
 

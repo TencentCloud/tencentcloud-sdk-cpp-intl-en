@@ -2261,7 +2261,9 @@ namespace TencentCloud
                 DeleteCompliancePolicyAssetSetFromWhitelistOutcomeCallable DeleteCompliancePolicyAssetSetFromWhitelistCallable(const Model::DeleteCompliancePolicyAssetSetFromWhitelistRequest& request);
 
                 /**
-                 *This API is used to remove the specified check item from the allowlist.
+                 *产品重构优化，这几个接口已经没有调用了
+
+This API is used to remove the specified check item from the allowlist.
                  * @param req DeleteCompliancePolicyItemFromWhitelistRequest
                  * @return DeleteCompliancePolicyItemFromWhitelistOutcome
                  */
@@ -2396,7 +2398,9 @@ namespace TencentCloud
                 DescribeAbnormalProcessEventsOutcomeCallable DescribeAbnormalProcessEventsCallable(const Model::DescribeAbnormalProcessEventsRequest& request);
 
                 /**
-                 *This API is used to query and export the list of abnormal process events at runtime.
+                 *接口已废弃
+
+This API is used to query and export the list of abnormal process events at runtime.
                  * @param req DescribeAbnormalProcessEventsExportRequest
                  * @return DescribeAbnormalProcessEventsExportOutcome
                  */
@@ -2432,7 +2436,9 @@ namespace TencentCloud
                 DescribeAbnormalProcessRulesOutcomeCallable DescribeAbnormalProcessRulesCallable(const Model::DescribeAbnormalProcessRulesRequest& request);
 
                 /**
-                 *This API is used to query and export the list of abnormal process policies at runtime.
+                 *接口已废弃
+
+This API is used to query and export the list of abnormal process policies at runtime.
                  * @param req DescribeAbnormalProcessRulesExportRequest
                  * @return DescribeAbnormalProcessRulesExportOutcome
                  */
@@ -2486,7 +2492,9 @@ namespace TencentCloud
                 DescribeAccessControlRulesOutcomeCallable DescribeAccessControlRulesCallable(const Model::DescribeAccessControlRulesRequest& request);
 
                 /**
-                 *This API is used to export the list of access control policies at runtime.
+                 *接口已废弃
+
+This API is used to export the list of access control policies at runtime.
                  * @param req DescribeAccessControlRulesExportRequest
                  * @return DescribeAccessControlRulesExportOutcome
                  */
@@ -2648,7 +2656,9 @@ namespace TencentCloud
                 DescribeAssetImageListOutcomeCallable DescribeAssetImageListCallable(const Model::DescribeAssetImageListRequest& request);
 
                 /**
-                 *This API is used to export the list of images.
+                 *接口已废弃
+
+This API is used to export the list of images.
                  * @param req DescribeAssetImageListExportRequest
                  * @return DescribeAssetImageListExportOutcome
                  */
@@ -3125,7 +3135,9 @@ namespace TencentCloud
                 DescribeEscapeEventTypeSummaryOutcomeCallable DescribeEscapeEventTypeSummaryCallable(const Model::DescribeEscapeEventTypeSummaryRequest& request);
 
                 /**
-                 *This API is used to export the list of container escape events.
+                 *接口已废弃
+
+This API is used to export the list of container escape events.
                  * @param req DescribeEscapeEventsExportRequest
                  * @return DescribeEscapeEventsExportOutcome
                  */

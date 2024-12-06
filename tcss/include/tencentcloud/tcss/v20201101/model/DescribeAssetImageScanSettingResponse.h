@@ -130,14 +130,14 @@ namespace TencentCloud
                     /**
                      * 获取Scan of all images
                      * @return All Scan of all images
-                     * 
+                     * @deprecated
                      */
                     bool GetAll() const;
 
                     /**
                      * 判断参数 All 是否已赋值
                      * @return All 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool AllHasBeenSet() const;
 

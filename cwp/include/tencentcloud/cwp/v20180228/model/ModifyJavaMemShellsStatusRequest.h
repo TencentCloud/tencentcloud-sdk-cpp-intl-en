@@ -43,27 +43,6 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Event ID Array
-                     * @return Ids Event ID Array
-                     * 
-                     */
-                    std::vector<uint64_t> GetIds() const;
-
-                    /**
-                     * 设置Event ID Array
-                     * @param _ids Event ID Array
-                     * 
-                     */
-                    void SetIds(const std::vector<uint64_t>& _ids);
-
-                    /**
-                     * 判断参数 Ids 是否已赋值
-                     * @return Ids 是否已赋值
-                     * 
-                     */
-                    bool IdsHasBeenSet() const;
-
-                    /**
                      * 获取Target Processing Status: 0 - Pending, 1 - Allowlisted, 2 - Deleted, 3 - Ignored, 4 - Manually Processed
                      * @return Status Target Processing Status: 0 - Pending, 1 - Allowlisted, 2 - Deleted, 3 - Ignored, 4 - Manually Processed
                      * 
@@ -84,19 +63,40 @@ namespace TencentCloud
                      */
                     bool StatusHasBeenSet() const;
 
-                private:
+                    /**
+                     * 获取Event ID Array
+                     * @return Ids Event ID Array
+                     * 
+                     */
+                    std::vector<uint64_t> GetIds() const;
 
                     /**
-                     * Event ID Array
+                     * 设置Event ID Array
+                     * @param _ids Event ID Array
+                     * 
                      */
-                    std::vector<uint64_t> m_ids;
-                    bool m_idsHasBeenSet;
+                    void SetIds(const std::vector<uint64_t>& _ids);
+
+                    /**
+                     * 判断参数 Ids 是否已赋值
+                     * @return Ids 是否已赋值
+                     * 
+                     */
+                    bool IdsHasBeenSet() const;
+
+                private:
 
                     /**
                      * Target Processing Status: 0 - Pending, 1 - Allowlisted, 2 - Deleted, 3 - Ignored, 4 - Manually Processed
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;
+
+                    /**
+                     * Event ID Array
+                     */
+                    std::vector<uint64_t> m_ids;
+                    bool m_idsHasBeenSet;
 
                 };
             }

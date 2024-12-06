@@ -49,8 +49,6 @@
 #include <tencentcloud/cwp/v20180228/model/CreateBaselineStrategyResponse.h>
 #include <tencentcloud/cwp/v20180228/model/CreateBuyBindTaskRequest.h>
 #include <tencentcloud/cwp/v20180228/model/CreateBuyBindTaskResponse.h>
-#include <tencentcloud/cwp/v20180228/model/CreateCloudProtectServiceOrderRecordRequest.h>
-#include <tencentcloud/cwp/v20180228/model/CreateCloudProtectServiceOrderRecordResponse.h>
 #include <tencentcloud/cwp/v20180228/model/CreateEmergencyVulScanRequest.h>
 #include <tencentcloud/cwp/v20180228/model/CreateEmergencyVulScanResponse.h>
 #include <tencentcloud/cwp/v20180228/model/CreateIncidentBacktrackingRequest.h>
@@ -331,8 +329,6 @@
 #include <tencentcloud/cwp/v20180228/model/DescribeCanNotSeparateMachineResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeClientExceptionRequest.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeClientExceptionResponse.h>
-#include <tencentcloud/cwp/v20180228/model/DescribeCloudProtectServiceOrderListRequest.h>
-#include <tencentcloud/cwp/v20180228/model/DescribeCloudProtectServiceOrderListResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeComponentStatisticsRequest.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeComponentStatisticsResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeDefenceEventDetailRequest.h>
@@ -1010,9 +1006,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateBuyBindTaskResponse> CreateBuyBindTaskOutcome;
                 typedef std::future<CreateBuyBindTaskOutcome> CreateBuyBindTaskOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::CreateBuyBindTaskRequest&, CreateBuyBindTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateBuyBindTaskAsyncHandler;
-                typedef Outcome<Core::Error, Model::CreateCloudProtectServiceOrderRecordResponse> CreateCloudProtectServiceOrderRecordOutcome;
-                typedef std::future<CreateCloudProtectServiceOrderRecordOutcome> CreateCloudProtectServiceOrderRecordOutcomeCallable;
-                typedef std::function<void(const CwpClient*, const Model::CreateCloudProtectServiceOrderRecordRequest&, CreateCloudProtectServiceOrderRecordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCloudProtectServiceOrderRecordAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateEmergencyVulScanResponse> CreateEmergencyVulScanOutcome;
                 typedef std::future<CreateEmergencyVulScanOutcome> CreateEmergencyVulScanOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::CreateEmergencyVulScanRequest&, CreateEmergencyVulScanOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateEmergencyVulScanAsyncHandler;
@@ -1433,9 +1426,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeClientExceptionResponse> DescribeClientExceptionOutcome;
                 typedef std::future<DescribeClientExceptionOutcome> DescribeClientExceptionOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::DescribeClientExceptionRequest&, DescribeClientExceptionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeClientExceptionAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeCloudProtectServiceOrderListResponse> DescribeCloudProtectServiceOrderListOutcome;
-                typedef std::future<DescribeCloudProtectServiceOrderListOutcome> DescribeCloudProtectServiceOrderListOutcomeCallable;
-                typedef std::function<void(const CwpClient*, const Model::DescribeCloudProtectServiceOrderListRequest&, DescribeCloudProtectServiceOrderListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCloudProtectServiceOrderListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeComponentStatisticsResponse> DescribeComponentStatisticsOutcome;
                 typedef std::future<DescribeComponentStatisticsOutcome> DescribeComponentStatisticsOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::DescribeComponentStatisticsRequest&, DescribeComponentStatisticsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeComponentStatisticsAsyncHandler;
@@ -2493,17 +2483,6 @@ namespace TencentCloud
                 CreateBuyBindTaskOutcomeCallable CreateBuyBindTaskCallable(const Model::CreateBuyBindTaskRequest& request);
 
                 /**
-                 *云护航计费产品已下线
-
-This API is used to confirm the receipt after using the cloud escort service.
-                 * @param req CreateCloudProtectServiceOrderRecordRequest
-                 * @return CreateCloudProtectServiceOrderRecordOutcome
-                 */
-                CreateCloudProtectServiceOrderRecordOutcome CreateCloudProtectServiceOrderRecord(const Model::CreateCloudProtectServiceOrderRecordRequest &request);
-                void CreateCloudProtectServiceOrderRecordAsync(const Model::CreateCloudProtectServiceOrderRecordRequest& request, const CreateCloudProtectServiceOrderRecordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                CreateCloudProtectServiceOrderRecordOutcomeCallable CreateCloudProtectServiceOrderRecordCallable(const Model::CreateCloudProtectServiceOrderRecordRequest& request);
-
-                /**
                  *This API is used to create emergency vulnerability scan tasks.
                  * @param req CreateEmergencyVulScanRequest
                  * @return CreateEmergencyVulScanOutcome
@@ -3416,7 +3395,9 @@ This API is used to call the billing payment API for payment since prepaid order
                 DescribeAttackEventsOutcomeCallable DescribeAttackEventsCallable(const Model::DescribeAttackEventsRequest& request);
 
                 /**
-                 *This API is used to display the list of network attack logs in pagination.
+                 *DescribeAttackEvents 代替
+
+This API is used to display the list of network attack logs in pagination.
                  * @param req DescribeAttackLogsRequest
                  * @return DescribeAttackLogsOutcome
                  */
@@ -3425,7 +3406,9 @@ This API is used to call the billing payment API for payment since prepaid order
                 DescribeAttackLogsOutcomeCallable DescribeAttackLogsCallable(const Model::DescribeAttackLogsRequest& request);
 
                 /**
-                 *This API is used to backtrack attacks.
+                 *已废弃
+
+This API is used to backtrack attacks.
                  * @param req DescribeAttackSourceRequest
                  * @return DescribeAttackSourceOutcome
                  */
@@ -3434,7 +3417,9 @@ This API is used to call the billing payment API for payment since prepaid order
                 DescribeAttackSourceOutcomeCallable DescribeAttackSourceCallable(const Model::DescribeAttackSourceRequest& request);
 
                 /**
-                 *This API is used to query attack backtracking events.
+                 *已废弃
+
+This API is used to query attack backtracking events.
                  * @param req DescribeAttackSourceEventsRequest
                  * @return DescribeAttackSourceEventsOutcome
                  */
@@ -3767,18 +3752,9 @@ This API is used to call the billing payment API for payment since prepaid order
                 DescribeClientExceptionOutcomeCallable DescribeClientExceptionCallable(const Model::DescribeClientExceptionRequest& request);
 
                 /**
-                 *云护航计费产品已下线
+                 *接口已无效
 
-This API is used to query the list of cloud escort service orders.
-                 * @param req DescribeCloudProtectServiceOrderListRequest
-                 * @return DescribeCloudProtectServiceOrderListOutcome
-                 */
-                DescribeCloudProtectServiceOrderListOutcome DescribeCloudProtectServiceOrderList(const Model::DescribeCloudProtectServiceOrderListRequest &request);
-                void DescribeCloudProtectServiceOrderListAsync(const Model::DescribeCloudProtectServiceOrderListRequest& request, const DescribeCloudProtectServiceOrderListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeCloudProtectServiceOrderListOutcomeCallable DescribeCloudProtectServiceOrderListCallable(const Model::DescribeCloudProtectServiceOrderListRequest& request);
-
-                /**
-                 *This API is used to obtain the data of the component statistics list.
+This API is used to obtain the data of the component statistics list.
                  * @param req DescribeComponentStatisticsRequest
                  * @return DescribeComponentStatisticsOutcome
                  */
@@ -4003,7 +3979,9 @@ This API is used to query the list of cloud escort service orders.
                 DescribeIgnoreRuleEffectHostListOutcomeCallable DescribeIgnoreRuleEffectHostListCallable(const Model::DescribeIgnoreRuleEffectHostListRequest& request);
 
                 /**
-                 *This API is used to obtain the index list.
+                 *接口已废弃
+
+This API is used to obtain the index list.
                  * @param req DescribeIndexListRequest
                  * @return DescribeIndexListOutcome
                  */
@@ -4930,7 +4908,9 @@ This API is used to query the list of cloud escort service orders.
                 DescribeSecurityEventsCntOutcomeCallable DescribeSecurityEventsCntCallable(const Model::DescribeSecurityEventsCntRequest& request);
 
                 /**
-                 *This API is used to obtain the summary of security protection statuses.
+                 *接口已无效
+
+This API is used to obtain the summary of security protection statuses.
                  * @param req DescribeSecurityProtectionStatRequest
                  * @return DescribeSecurityProtectionStatOutcome
                  */

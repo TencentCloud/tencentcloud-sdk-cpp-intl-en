@@ -280,21 +280,21 @@ namespace TencentCloud
                     /**
                      * 获取Number of sensitive data items
                      * @return SentiveInfoCnt Number of sensitive data items
-                     * 
+                     * @deprecated
                      */
                     uint64_t GetSentiveInfoCnt() const;
 
                     /**
                      * 设置Number of sensitive data items
                      * @param _sentiveInfoCnt Number of sensitive data items
-                     * 
+                     * @deprecated
                      */
                     void SetSentiveInfoCnt(const uint64_t& _sentiveInfoCnt);
 
                     /**
                      * 判断参数 SentiveInfoCnt 是否已赋值
                      * @return SentiveInfoCnt 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool SentiveInfoCntHasBeenSet() const;
 

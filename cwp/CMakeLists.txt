@@ -72,7 +72,6 @@ set(cwp_public_header_model
   include/tencentcloud/cwp/v20180228/model/DescribeRiskProcessEventsRequest.h
   include/tencentcloud/cwp/v20180228/model/DescribeAssetTypesResponse.h
   include/tencentcloud/cwp/v20180228/model/DescribeScreenEmergentMsgRequest.h
-  include/tencentcloud/cwp/v20180228/model/DescribeCloudProtectServiceOrderListResponse.h
   include/tencentcloud/cwp/v20180228/model/ModifyAutoOpenProVersionConfigResponse.h
   include/tencentcloud/cwp/v20180228/model/DescribeVulInfoCvssResponse.h
   include/tencentcloud/cwp/v20180228/model/DescribeBaselineStrategyDetailRequest.h
@@ -85,7 +84,7 @@ set(cwp_public_header_model
   include/tencentcloud/cwp/v20180228/model/DescribeServersAndRiskAndFirstInfoResponse.h
   include/tencentcloud/cwp/v20180228/model/ModifyMalwareWhiteListRequest.h
   include/tencentcloud/cwp/v20180228/model/DescribeSecurityProtectionStatResponse.h
-  include/tencentcloud/cwp/v20180228/model/DescribeAssetJarListRequest.h
+  include/tencentcloud/cwp/v20180228/model/DescribeBaselineEffectHostListResponse.h
   include/tencentcloud/cwp/v20180228/model/DescribeJavaMemShellPluginInfoRequest.h
   include/tencentcloud/cwp/v20180228/model/DescribeMachineFileTamperRulesRequest.h
   include/tencentcloud/cwp/v20180228/model/ExportVulDefenceEventResponse.h
@@ -129,7 +128,6 @@ set(cwp_public_header_model
   include/tencentcloud/cwp/v20180228/model/DescribeAESKeyResponse.h
   include/tencentcloud/cwp/v20180228/model/DescribeBashRulesResponse.h
   include/tencentcloud/cwp/v20180228/model/DescribeAvailableExpertServiceDetailResponse.h
-  include/tencentcloud/cwp/v20180228/model/DescribeCloudProtectServiceOrderListRequest.h
   include/tencentcloud/cwp/v20180228/model/DescribeLogStorageConfigRequest.h
   include/tencentcloud/cwp/v20180228/model/ExportAssetWebLocationListResponse.h
   include/tencentcloud/cwp/v20180228/model/ScreenBroadcasts.h
@@ -146,7 +144,7 @@ set(cwp_public_header_model
   include/tencentcloud/cwp/v20180228/model/ModifyMachineAutoClearConfigRequest.h
   include/tencentcloud/cwp/v20180228/model/ModifyEventAttackStatusRequest.h
   include/tencentcloud/cwp/v20180228/model/DescribeVulLevelCountResponse.h
-  include/tencentcloud/cwp/v20180228/model/FileTamperRuleInfo.h
+  include/tencentcloud/cwp/v20180228/model/BruteAttackRule.h
   include/tencentcloud/cwp/v20180228/model/DescribeVersionStatisticsResponse.h
   include/tencentcloud/cwp/v20180228/model/DescribeAvailableExpertServiceDetailRequest.h
   include/tencentcloud/cwp/v20180228/model/DescribeMachineFileTamperRulesResponse.h
@@ -174,7 +172,6 @@ set(cwp_public_header_model
   include/tencentcloud/cwp/v20180228/model/DescribeScreenAttackHotspotRequest.h
   include/tencentcloud/cwp/v20180228/model/ScanVulAgainRequest.h
   include/tencentcloud/cwp/v20180228/model/DeleteSearchTemplateRequest.h
-  include/tencentcloud/cwp/v20180228/model/CreateCloudProtectServiceOrderRecordRequest.h
   include/tencentcloud/cwp/v20180228/model/ExportJavaMemShellPluginsResponse.h
   include/tencentcloud/cwp/v20180228/model/DescribeAssetTotalCountResponse.h
   include/tencentcloud/cwp/v20180228/model/ExportNonlocalLoginPlacesRequest.h
@@ -321,6 +318,7 @@ set(cwp_public_header_model
   include/tencentcloud/cwp/v20180228/model/DescribeReverseShellEventsRequest.h
   include/tencentcloud/cwp/v20180228/model/DescribeCanNotSeparateMachineResponse.h
   include/tencentcloud/cwp/v20180228/model/ExportAssetPortInfoListResponse.h
+  include/tencentcloud/cwp/v20180228/model/FileTamperRuleInfo.h
   include/tencentcloud/cwp/v20180228/model/DescribeEventByTableResponse.h
   include/tencentcloud/cwp/v20180228/model/ModifyLogStorageConfigRequest.h
   include/tencentcloud/cwp/v20180228/model/DescribeAttackVulTypeListRequest.h
@@ -427,7 +425,7 @@ set(cwp_public_header_model
   include/tencentcloud/cwp/v20180228/model/DescribeAssetHostTotalCountResponse.h
   include/tencentcloud/cwp/v20180228/model/DescribeMachineSnapshotRequest.h
   include/tencentcloud/cwp/v20180228/model/StopAssetScanResponse.h
-  include/tencentcloud/cwp/v20180228/model/BruteAttackRule.h
+  include/tencentcloud/cwp/v20180228/model/DescribeAssetJarListRequest.h
   include/tencentcloud/cwp/v20180228/model/LoginWhiteLists.h
   include/tencentcloud/cwp/v20180228/model/TrustMalwaresRequest.h
   include/tencentcloud/cwp/v20180228/model/AssetKeyVal.h
@@ -578,7 +576,6 @@ set(cwp_public_header_model
   include/tencentcloud/cwp/v20180228/model/CreateLogExportResponse.h
   include/tencentcloud/cwp/v20180228/model/EmergencyResponseInfo.h
   include/tencentcloud/cwp/v20180228/model/ExportVulDefenceListResponse.h
-  include/tencentcloud/cwp/v20180228/model/CloudProtectService.h
   include/tencentcloud/cwp/v20180228/model/ModifyLogKafkaDeliverTypeResponse.h
   include/tencentcloud/cwp/v20180228/model/DescribeBaselineScanScheduleRequest.h
   include/tencentcloud/cwp/v20180228/model/RetryCreateSnapshotRequest.h
@@ -607,7 +604,7 @@ set(cwp_public_header_model
   include/tencentcloud/cwp/v20180228/model/SetBashEventsStatusRequest.h
   include/tencentcloud/cwp/v20180228/model/ReverseShell.h
   include/tencentcloud/cwp/v20180228/model/AssetAppProcessInfo.h
-  include/tencentcloud/cwp/v20180228/model/DescribeBaselineEffectHostListResponse.h
+  include/tencentcloud/cwp/v20180228/model/NetAttackWhiteRule.h
   include/tencentcloud/cwp/v20180228/model/DescribeWebHookRuleResponse.h
   include/tencentcloud/cwp/v20180228/model/DescribeBaselineStrategyListRequest.h
   include/tencentcloud/cwp/v20180228/model/ExportJavaMemShellsRequest.h
@@ -774,7 +771,6 @@ set(cwp_public_header_model
   include/tencentcloud/cwp/v20180228/model/DescribeSecurityTrendsResponse.h
   include/tencentcloud/cwp/v20180228/model/BashEventsInfo.h
   include/tencentcloud/cwp/v20180228/model/StopNoticeBanTipsResponse.h
-  include/tencentcloud/cwp/v20180228/model/NetAttackWhiteRule.h
   include/tencentcloud/cwp/v20180228/model/AssetSystemPackageInfo.h
   include/tencentcloud/cwp/v20180228/model/DescribeEmergencyVulListRequest.h
   include/tencentcloud/cwp/v20180228/model/DescribeSecurityDynamicsResponse.h
@@ -918,7 +914,6 @@ set(cwp_public_header_model
   include/tencentcloud/cwp/v20180228/model/DescribeAssetMachineListRequest.h
   include/tencentcloud/cwp/v20180228/model/ABTestConfig.h
   include/tencentcloud/cwp/v20180228/model/ScreenBaselineInfo.h
-  include/tencentcloud/cwp/v20180228/model/DescribeProductStatusRequest.h
   include/tencentcloud/cwp/v20180228/model/Filter.h
   include/tencentcloud/cwp/v20180228/model/DescribeAssetMachineTagTopRequest.h
   include/tencentcloud/cwp/v20180228/model/DescribeAgentInstallationTokenRequest.h
@@ -1082,7 +1077,7 @@ set(cwp_public_header_model
   include/tencentcloud/cwp/v20180228/model/DescribeBaselineListRequest.h
   include/tencentcloud/cwp/v20180228/model/DescribePublicProxyInstallCommandRequest.h
   include/tencentcloud/cwp/v20180228/model/ExportJavaMemShellsResponse.h
-  include/tencentcloud/cwp/v20180228/model/CreateCloudProtectServiceOrderRecordResponse.h
+  include/tencentcloud/cwp/v20180228/model/DescribeProductStatusRequest.h
   include/tencentcloud/cwp/v20180228/model/DescribeRiskProcessEventsResponse.h
   include/tencentcloud/cwp/v20180228/model/DescribeScreenHostInvasionResponse.h
   include/tencentcloud/cwp/v20180228/model/ExportBaselineFixListResponse.h
@@ -1248,7 +1243,6 @@ set(cwp_src
   src/v20180228/model/DescribeRiskProcessEventsRequest.cpp
   src/v20180228/model/DescribeAssetTypesResponse.cpp
   src/v20180228/model/DescribeScreenEmergentMsgRequest.cpp
-  src/v20180228/model/DescribeCloudProtectServiceOrderListResponse.cpp
   src/v20180228/model/ModifyAutoOpenProVersionConfigResponse.cpp
   src/v20180228/model/DescribeVulInfoCvssResponse.cpp
   src/v20180228/model/DescribeBaselineStrategyDetailRequest.cpp
@@ -1261,7 +1255,7 @@ set(cwp_src
   src/v20180228/model/DescribeServersAndRiskAndFirstInfoResponse.cpp
   src/v20180228/model/ModifyMalwareWhiteListRequest.cpp
   src/v20180228/model/DescribeSecurityProtectionStatResponse.cpp
-  src/v20180228/model/DescribeAssetJarListRequest.cpp
+  src/v20180228/model/DescribeBaselineEffectHostListResponse.cpp
   src/v20180228/model/DescribeJavaMemShellPluginInfoRequest.cpp
   src/v20180228/model/DescribeMachineFileTamperRulesRequest.cpp
   src/v20180228/model/ExportVulDefenceEventResponse.cpp
@@ -1305,7 +1299,6 @@ set(cwp_src
   src/v20180228/model/DescribeAESKeyResponse.cpp
   src/v20180228/model/DescribeBashRulesResponse.cpp
   src/v20180228/model/DescribeAvailableExpertServiceDetailResponse.cpp
-  src/v20180228/model/DescribeCloudProtectServiceOrderListRequest.cpp
   src/v20180228/model/DescribeLogStorageConfigRequest.cpp
   src/v20180228/model/ExportAssetWebLocationListResponse.cpp
   src/v20180228/model/ScreenBroadcasts.cpp
@@ -1322,7 +1315,7 @@ set(cwp_src
   src/v20180228/model/ModifyMachineAutoClearConfigRequest.cpp
   src/v20180228/model/ModifyEventAttackStatusRequest.cpp
   src/v20180228/model/DescribeVulLevelCountResponse.cpp
-  src/v20180228/model/FileTamperRuleInfo.cpp
+  src/v20180228/model/BruteAttackRule.cpp
   src/v20180228/model/DescribeVersionStatisticsResponse.cpp
   src/v20180228/model/DescribeAvailableExpertServiceDetailRequest.cpp
   src/v20180228/model/DescribeMachineFileTamperRulesResponse.cpp
@@ -1350,7 +1343,6 @@ set(cwp_src
   src/v20180228/model/DescribeScreenAttackHotspotRequest.cpp
   src/v20180228/model/ScanVulAgainRequest.cpp
   src/v20180228/model/DeleteSearchTemplateRequest.cpp
-  src/v20180228/model/CreateCloudProtectServiceOrderRecordRequest.cpp
   src/v20180228/model/ExportJavaMemShellPluginsResponse.cpp
   src/v20180228/model/DescribeAssetTotalCountResponse.cpp
   src/v20180228/model/ExportNonlocalLoginPlacesRequest.cpp
@@ -1497,6 +1489,7 @@ set(cwp_src
   src/v20180228/model/DescribeReverseShellEventsRequest.cpp
   src/v20180228/model/DescribeCanNotSeparateMachineResponse.cpp
   src/v20180228/model/ExportAssetPortInfoListResponse.cpp
+  src/v20180228/model/FileTamperRuleInfo.cpp
   src/v20180228/model/DescribeEventByTableResponse.cpp
   src/v20180228/model/ModifyLogStorageConfigRequest.cpp
   src/v20180228/model/DescribeAttackVulTypeListRequest.cpp
@@ -1603,7 +1596,7 @@ set(cwp_src
   src/v20180228/model/DescribeAssetHostTotalCountResponse.cpp
   src/v20180228/model/DescribeMachineSnapshotRequest.cpp
   src/v20180228/model/StopAssetScanResponse.cpp
-  src/v20180228/model/BruteAttackRule.cpp
+  src/v20180228/model/DescribeAssetJarListRequest.cpp
   src/v20180228/model/LoginWhiteLists.cpp
   src/v20180228/model/TrustMalwaresRequest.cpp
   src/v20180228/model/AssetKeyVal.cpp
@@ -1754,7 +1747,6 @@ set(cwp_src
   src/v20180228/model/CreateLogExportResponse.cpp
   src/v20180228/model/EmergencyResponseInfo.cpp
   src/v20180228/model/ExportVulDefenceListResponse.cpp
-  src/v20180228/model/CloudProtectService.cpp
   src/v20180228/model/ModifyLogKafkaDeliverTypeResponse.cpp
   src/v20180228/model/DescribeBaselineScanScheduleRequest.cpp
   src/v20180228/model/RetryCreateSnapshotRequest.cpp
@@ -1783,7 +1775,7 @@ set(cwp_src
   src/v20180228/model/SetBashEventsStatusRequest.cpp
   src/v20180228/model/ReverseShell.cpp
   src/v20180228/model/AssetAppProcessInfo.cpp
-  src/v20180228/model/DescribeBaselineEffectHostListResponse.cpp
+  src/v20180228/model/NetAttackWhiteRule.cpp
   src/v20180228/model/DescribeWebHookRuleResponse.cpp
   src/v20180228/model/DescribeBaselineStrategyListRequest.cpp
   src/v20180228/model/ExportJavaMemShellsRequest.cpp
@@ -1950,7 +1942,6 @@ set(cwp_src
   src/v20180228/model/DescribeSecurityTrendsResponse.cpp
   src/v20180228/model/BashEventsInfo.cpp
   src/v20180228/model/StopNoticeBanTipsResponse.cpp
-  src/v20180228/model/NetAttackWhiteRule.cpp
   src/v20180228/model/AssetSystemPackageInfo.cpp
   src/v20180228/model/DescribeEmergencyVulListRequest.cpp
   src/v20180228/model/DescribeSecurityDynamicsResponse.cpp
@@ -2094,7 +2085,6 @@ set(cwp_src
   src/v20180228/model/DescribeAssetMachineListRequest.cpp
   src/v20180228/model/ABTestConfig.cpp
   src/v20180228/model/ScreenBaselineInfo.cpp
-  src/v20180228/model/DescribeProductStatusRequest.cpp
   src/v20180228/model/Filter.cpp
   src/v20180228/model/DescribeAssetMachineTagTopRequest.cpp
   src/v20180228/model/DescribeAgentInstallationTokenRequest.cpp
@@ -2258,7 +2248,7 @@ set(cwp_src
   src/v20180228/model/DescribeBaselineListRequest.cpp
   src/v20180228/model/DescribePublicProxyInstallCommandRequest.cpp
   src/v20180228/model/ExportJavaMemShellsResponse.cpp
-  src/v20180228/model/CreateCloudProtectServiceOrderRecordResponse.cpp
+  src/v20180228/model/DescribeProductStatusRequest.cpp
   src/v20180228/model/DescribeRiskProcessEventsResponse.cpp
   src/v20180228/model/DescribeScreenHostInvasionResponse.cpp
   src/v20180228/model/ExportBaselineFixListResponse.cpp
