@@ -61,6 +61,7 @@ set(mdl_public_header_model
   include/tencentcloud/mdl/v20200326/model/CreateTextSettings.h
   include/tencentcloud/mdl/v20200326/model/DashRemuxSettingsInfo.h
   include/tencentcloud/mdl/v20200326/model/CreateStreamLiveWatermarkRequest.h
+  include/tencentcloud/mdl/v20200326/model/ColorSpaceSetting.h
   include/tencentcloud/mdl/v20200326/model/StreamInfo.h
   include/tencentcloud/mdl/v20200326/model/SDMCSettingsInfo.h
   include/tencentcloud/mdl/v20200326/model/DeleteStreamLiveInputSecurityGroupRequest.h
@@ -217,6 +218,7 @@ set(mdl_src
   src/v20200326/model/CreateTextSettings.cpp
   src/v20200326/model/DashRemuxSettingsInfo.cpp
   src/v20200326/model/CreateStreamLiveWatermarkRequest.cpp
+  src/v20200326/model/ColorSpaceSetting.cpp
   src/v20200326/model/StreamInfo.cpp
   src/v20200326/model/SDMCSettingsInfo.cpp
   src/v20200326/model/DeleteStreamLiveInputSecurityGroupRequest.cpp

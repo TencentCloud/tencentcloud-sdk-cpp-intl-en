@@ -44,6 +44,27 @@ namespace TencentCloud
 
 
                     /**
+                     * 获取Member id
+                     * @return MemberId Member id
+                     * 
+                     */
+                    std::vector<std::string> GetMemberId() const;
+
+                    /**
+                     * 设置Member id
+                     * @param _memberId Member id
+                     * 
+                     */
+                    void SetMemberId(const std::vector<std::string>& _memberId);
+
+                    /**
+                     * 判断参数 MemberId 是否已赋值
+                     * @return MemberId 是否已赋值
+                     * 
+                     */
+                    bool MemberIdHasBeenSet() const;
+
+                    /**
                      * 获取Filter conditions
                      * @return Filter Filter conditions
                      * 
@@ -65,6 +86,12 @@ namespace TencentCloud
                     bool FilterHasBeenSet() const;
 
                 private:
+
+                    /**
+                     * Member id
+                     */
+                    std::vector<std::string> m_memberId;
+                    bool m_memberIdHasBeenSet;
 
                     /**
                      * Filter conditions

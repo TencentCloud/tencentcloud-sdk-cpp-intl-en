@@ -259,7 +259,7 @@ namespace TencentCloud
                 DescribeCVMAssetsOutcomeCallable DescribeCVMAssetsCallable(const Model::DescribeCVMAssetsRequest& request);
 
                 /**
-                 *This API is used to list cluster pods. 
+                 *This API is used to list cluster pods.
                  * @param req DescribeClusterPodAssetsRequest
                  * @return DescribeClusterPodAssetsOutcome
                  */

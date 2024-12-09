@@ -27,6 +27,7 @@
 #include <tencentcloud/mdl/v20200326/model/AdditionalRateSetting.h>
 #include <tencentcloud/mdl/v20200326/model/VideoCodecDetail.h>
 #include <tencentcloud/mdl/v20200326/model/VideoEnhanceSetting.h>
+#include <tencentcloud/mdl/v20200326/model/ColorSpaceSetting.h>
 
 
 namespace TencentCloud
@@ -473,6 +474,27 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     bool VideoEnhanceSettingsHasBeenSet() const;
 
+                    /**
+                     * 获取Color space setting.
+                     * @return ColorSpaceSettings Color space setting.
+                     * 
+                     */
+                    ColorSpaceSetting GetColorSpaceSettings() const;
+
+                    /**
+                     * 设置Color space setting.
+                     * @param _colorSpaceSettings Color space setting.
+                     * 
+                     */
+                    void SetColorSpaceSettings(const ColorSpaceSetting& _colorSpaceSettings);
+
+                    /**
+                     * 判断参数 ColorSpaceSettings 是否已赋值
+                     * @return ColorSpaceSettings 是否已赋值
+                     * 
+                     */
+                    bool ColorSpaceSettingsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -595,6 +617,12 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::vector<VideoEnhanceSetting> m_videoEnhanceSettings;
                     bool m_videoEnhanceSettingsHasBeenSet;
+
+                    /**
+                     * Color space setting.
+                     */
+                    ColorSpaceSetting m_colorSpaceSettings;
+                    bool m_colorSpaceSettingsHasBeenSet;
 
                 };
             }

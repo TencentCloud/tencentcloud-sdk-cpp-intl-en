@@ -109,22 +109,22 @@ Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
                     bool VideoBase64HasBeenSet() const;
 
                     /**
-                     * 获取The liveness detection type. Valid values: `LIP`, `ACTION`, and `SILENT`.
-`LIP`: Numeric mode; `ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
+                     * 获取The liveness detection type. Valid values: `ACTION`, and `SILENT`.
+`ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
 Example value: "SILENT"
-                     * @return LivenessType The liveness detection type. Valid values: `LIP`, `ACTION`, and `SILENT`.
-`LIP`: Numeric mode; `ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
+                     * @return LivenessType The liveness detection type. Valid values: `ACTION`, and `SILENT`.
+`ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
 Example value: "SILENT"
                      * 
                      */
                     std::string GetLivenessType() const;
 
                     /**
-                     * 设置The liveness detection type. Valid values: `LIP`, `ACTION`, and `SILENT`.
-`LIP`: Numeric mode; `ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
+                     * 设置The liveness detection type. Valid values: `ACTION`, and `SILENT`.
+`ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
 Example value: "SILENT"
-                     * @param _livenessType The liveness detection type. Valid values: `LIP`, `ACTION`, and `SILENT`.
-`LIP`: Numeric mode; `ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
+                     * @param _livenessType The liveness detection type. Valid values: `ACTION`, and `SILENT`.
+`ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
 Example value: "SILENT"
                      * 
                      */
@@ -219,8 +219,8 @@ Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
                     bool m_videoBase64HasBeenSet;
 
                     /**
-                     * The liveness detection type. Valid values: `LIP`, `ACTION`, and `SILENT`.
-`LIP`: Numeric mode; `ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
+                     * The liveness detection type. Valid values: `ACTION`, and `SILENT`.
+`ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
 Example value: "SILENT"
                      */
                     std::string m_livenessType;

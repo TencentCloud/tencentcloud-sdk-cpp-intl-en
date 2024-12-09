@@ -30,6 +30,7 @@
 #include <tencentcloud/mdl/v20200326/model/AudioCodecDetail.h>
 #include <tencentcloud/mdl/v20200326/model/AudioTrackInfo.h>
 #include <tencentcloud/mdl/v20200326/model/VideoEnhanceSetting.h>
+#include <tencentcloud/mdl/v20200326/model/ColorSpaceSetting.h>
 
 
 namespace TencentCloud
@@ -794,6 +795,27 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
                      */
                     bool GopSizeUnitsHasBeenSet() const;
 
+                    /**
+                     * 获取Color space setting.
+                     * @return ColorSpaceSettings Color space setting.
+                     * 
+                     */
+                    ColorSpaceSetting GetColorSpaceSettings() const;
+
+                    /**
+                     * 设置Color space setting.
+                     * @param _colorSpaceSettings Color space setting.
+                     * 
+                     */
+                    void SetColorSpaceSettings(const ColorSpaceSetting& _colorSpaceSettings);
+
+                    /**
+                     * 判断参数 ColorSpaceSettings 是否已赋值
+                     * @return ColorSpaceSettings 是否已赋值
+                     * 
+                     */
+                    bool ColorSpaceSettingsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1006,6 +1028,12 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
                      */
                     std::string m_gopSizeUnits;
                     bool m_gopSizeUnitsHasBeenSet;
+
+                    /**
+                     * Color space setting.
+                     */
+                    ColorSpaceSetting m_colorSpaceSettings;
+                    bool m_colorSpaceSettingsHasBeenSet;
 
                 };
             }

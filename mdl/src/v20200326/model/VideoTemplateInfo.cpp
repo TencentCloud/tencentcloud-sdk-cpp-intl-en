@@ -40,7 +40,8 @@ VideoTemplateInfo::VideoTemplateInfo() :
     m_additionalRateSettingsHasBeenSet(false),
     m_videoCodecDetailsHasBeenSet(false),
     m_videoEnhanceEnabledHasBeenSet(false),
-    m_videoEnhanceSettingsHasBeenSet(false)
+    m_videoEnhanceSettingsHasBeenSet(false),
+    m_colorSpaceSettingsHasBeenSet(false)
 {
 }
 
@@ -273,6 +274,23 @@ CoreInternalOutcome VideoTemplateInfo::Deserialize(const rapidjson::Value &value
         m_videoEnhanceSettingsHasBeenSet = true;
     }
 
+    if (value.HasMember("ColorSpaceSettings") && !value["ColorSpaceSettings"].IsNull())
+    {
+        if (!value["ColorSpaceSettings"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `VideoTemplateInfo.ColorSpaceSettings` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_colorSpaceSettings.Deserialize(value["ColorSpaceSettings"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_colorSpaceSettingsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -447,6 +465,15 @@ void VideoTemplateInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Documen
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_colorSpaceSettingsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ColorSpaceSettings";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_colorSpaceSettings.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -770,5 +797,21 @@ void VideoTemplateInfo::SetVideoEnhanceSettings(const vector<VideoEnhanceSetting
 bool VideoTemplateInfo::VideoEnhanceSettingsHasBeenSet() const
 {
     return m_videoEnhanceSettingsHasBeenSet;
+}
+
+ColorSpaceSetting VideoTemplateInfo::GetColorSpaceSettings() const
+{
+    return m_colorSpaceSettings;
+}
+
+void VideoTemplateInfo::SetColorSpaceSettings(const ColorSpaceSetting& _colorSpaceSettings)
+{
+    m_colorSpaceSettings = _colorSpaceSettings;
+    m_colorSpaceSettingsHasBeenSet = true;
+}
+
+bool VideoTemplateInfo::ColorSpaceSettingsHasBeenSet() const
+{
+    return m_colorSpaceSettingsHasBeenSet;
 }
 

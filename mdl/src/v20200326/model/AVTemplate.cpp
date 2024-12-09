@@ -54,7 +54,8 @@ AVTemplate::AVTemplate() :
     m_videoEnhanceEnabledHasBeenSet(false),
     m_videoEnhanceSettingsHasBeenSet(false),
     m_gopSizeHasBeenSet(false),
-    m_gopSizeUnitsHasBeenSet(false)
+    m_gopSizeUnitsHasBeenSet(false),
+    m_colorSpaceSettingsHasBeenSet(false)
 {
 }
 
@@ -451,6 +452,23 @@ CoreInternalOutcome AVTemplate::Deserialize(const rapidjson::Value &value)
         m_gopSizeUnitsHasBeenSet = true;
     }
 
+    if (value.HasMember("ColorSpaceSettings") && !value["ColorSpaceSettings"].IsNull())
+    {
+        if (!value["ColorSpaceSettings"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `AVTemplate.ColorSpaceSettings` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_colorSpaceSettings.Deserialize(value["ColorSpaceSettings"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_colorSpaceSettingsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -746,6 +764,15 @@ void AVTemplate::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Allo
         string key = "GopSizeUnits";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_gopSizeUnits.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_colorSpaceSettingsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ColorSpaceSettings";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_colorSpaceSettings.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -1293,5 +1320,21 @@ void AVTemplate::SetGopSizeUnits(const string& _gopSizeUnits)
 bool AVTemplate::GopSizeUnitsHasBeenSet() const
 {
     return m_gopSizeUnitsHasBeenSet;
+}
+
+ColorSpaceSetting AVTemplate::GetColorSpaceSettings() const
+{
+    return m_colorSpaceSettings;
+}
+
+void AVTemplate::SetColorSpaceSettings(const ColorSpaceSetting& _colorSpaceSettings)
+{
+    m_colorSpaceSettings = _colorSpaceSettings;
+    m_colorSpaceSettingsHasBeenSet = true;
+}
+
+bool AVTemplate::ColorSpaceSettingsHasBeenSet() const
+{
+    return m_colorSpaceSettingsHasBeenSet;
 }
 
