@@ -47,27 +47,6 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Target instance ID, such as cdb-jd92ijd8
-                     * @return InstanceId Target instance ID, such as cdb-jd92ijd8
-                     * 
-                     */
-                    std::string GetInstanceId() const;
-
-                    /**
-                     * 设置Target instance ID, such as cdb-jd92ijd8
-                     * @param _instanceId Target instance ID, such as cdb-jd92ijd8
-                     * 
-                     */
-                    void SetInstanceId(const std::string& _instanceId);
-
-                    /**
-                     * 判断参数 InstanceId 是否已赋值
-                     * @return InstanceId 是否已赋值
-                     * 
-                     */
-                    bool InstanceIdHasBeenSet() const;
-
-                    /**
                      * 获取Target instance region, such as ap-guangzhou
                      * @return Region Target instance region, such as ap-guangzhou
                      * 
@@ -87,6 +66,27 @@ namespace TencentCloud
                      * 
                      */
                     bool RegionHasBeenSet() const;
+
+                    /**
+                     * 获取Target instance ID, such as cdb-jd92ijd8
+                     * @return InstanceId Target instance ID, such as cdb-jd92ijd8
+                     * 
+                     */
+                    std::string GetInstanceId() const;
+
+                    /**
+                     * 设置Target instance ID, such as cdb-jd92ijd8
+                     * @param _instanceId Target instance ID, such as cdb-jd92ijd8
+                     * 
+                     */
+                    void SetInstanceId(const std::string& _instanceId);
+
+                    /**
+                     * 判断参数 InstanceId 是否已赋值
+                     * @return InstanceId 是否已赋值
+                     * 
+                     */
+                    bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Target instance VIP, which has been disused and does not need to be entered
@@ -196,16 +196,16 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Target instance ID, such as cdb-jd92ijd8
-                     */
-                    std::string m_instanceId;
-                    bool m_instanceIdHasBeenSet;
-
-                    /**
                      * Target instance region, such as ap-guangzhou
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
+
+                    /**
+                     * Target instance ID, such as cdb-jd92ijd8
+                     */
+                    std::string m_instanceId;
+                    bool m_instanceIdHasBeenSet;
 
                     /**
                      * Target instance VIP, which has been disused and does not need to be entered

@@ -204,6 +204,20 @@ MyKid   Kid card
                     bool BirthdayHasBeenSet() const;
 
                     /**
+                     * 获取Number on the back of Malaysia ID card 
+                     * @return MyKadNumber Number on the back of Malaysia ID card 
+                     * 
+                     */
+                    std::string GetMyKadNumber() const;
+
+                    /**
+                     * 判断参数 MyKadNumber 是否已赋值
+                     * @return MyKadNumber 是否已赋值
+                     * 
+                     */
+                    bool MyKadNumberHasBeenSet() const;
+
+                    /**
                      * 获取Card Warning Information
 
 -9101 Alarm for covered certificate,
@@ -305,6 +319,12 @@ MyKid   Kid card
                      */
                     std::string m_birthday;
                     bool m_birthdayHasBeenSet;
+
+                    /**
+                     * Number on the back of Malaysia ID card 
+                     */
+                    std::string m_myKadNumber;
+                    bool m_myKadNumberHasBeenSet;
 
                     /**
                      * Card Warning Information
