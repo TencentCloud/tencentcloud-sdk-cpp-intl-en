@@ -67,6 +67,27 @@ namespace TencentCloud
                      */
                     bool DefinitionHasBeenSet() const;
 
+                    /**
+                     * 获取User extension field, which does not need to be filled in for general scenarios.
+                     * @return UserExtPara User extension field, which does not need to be filled in for general scenarios.
+                     * 
+                     */
+                    std::string GetUserExtPara() const;
+
+                    /**
+                     * 设置User extension field, which does not need to be filled in for general scenarios.
+                     * @param _userExtPara User extension field, which does not need to be filled in for general scenarios.
+                     * 
+                     */
+                    void SetUserExtPara(const std::string& _userExtPara);
+
+                    /**
+                     * 判断参数 UserExtPara 是否已赋值
+                     * @return UserExtPara 是否已赋值
+                     * 
+                     */
+                    bool UserExtParaHasBeenSet() const;
+
                 private:
 
                     /**
@@ -74,6 +95,12 @@ namespace TencentCloud
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;
+
+                    /**
+                     * User extension field, which does not need to be filled in for general scenarios.
+                     */
+                    std::string m_userExtPara;
+                    bool m_userExtParaHasBeenSet;
 
                 };
             }

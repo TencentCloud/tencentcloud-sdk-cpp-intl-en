@@ -47,23 +47,35 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+                     * 获取Notification type:
 
-<font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
-                     * @return NotifyType The notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+"CMQ": Callback messages are written to the CMQ queue; 
+"URL": When a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. The callback protocol is http+json. The content of the packet body is the same as the output parameters of the [ParseLiveStreamProcessNotification API](https://intl.cloud.tencent.com/document/product/862/39229?from_cn_redirect=1).
 
-<font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
+<font color="red">Note: If left blank, it is CMQ by default. To use the other type, you need to fill in the corresponding type value.</font>
+                     * @return NotifyType Notification type:
+
+"CMQ": Callback messages are written to the CMQ queue; 
+"URL": When a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. The callback protocol is http+json. The content of the packet body is the same as the output parameters of the [ParseLiveStreamProcessNotification API](https://intl.cloud.tencent.com/document/product/862/39229?from_cn_redirect=1).
+
+<font color="red">Note: If left blank, it is CMQ by default. To use the other type, you need to fill in the corresponding type value.</font>
                      * 
                      */
                     std::string GetNotifyType() const;
 
                     /**
-                     * 设置The notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+                     * 设置Notification type:
 
-<font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
-                     * @param _notifyType The notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+"CMQ": Callback messages are written to the CMQ queue; 
+"URL": When a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. The callback protocol is http+json. The content of the packet body is the same as the output parameters of the [ParseLiveStreamProcessNotification API](https://intl.cloud.tencent.com/document/product/862/39229?from_cn_redirect=1).
 
-<font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
+<font color="red">Note: If left blank, it is CMQ by default. To use the other type, you need to fill in the corresponding type value.</font>
+                     * @param _notifyType Notification type:
+
+"CMQ": Callback messages are written to the CMQ queue; 
+"URL": When a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. The callback protocol is http+json. The content of the packet body is the same as the output parameters of the [ParseLiveStreamProcessNotification API](https://intl.cloud.tencent.com/document/product/862/39229?from_cn_redirect=1).
+
+<font color="red">Note: If left blank, it is CMQ by default. To use the other type, you need to fill in the corresponding type value.</font>
                      * 
                      */
                     void SetNotifyType(const std::string& _notifyType);
@@ -74,6 +86,27 @@ namespace TencentCloud
                      * 
                      */
                     bool NotifyTypeHasBeenSet() const;
+
+                    /**
+                     * 获取HTTP callback URL, required if `NotifyType` is set to `URL`
+                     * @return NotifyUrl HTTP callback URL, required if `NotifyType` is set to `URL`
+                     * 
+                     */
+                    std::string GetNotifyUrl() const;
+
+                    /**
+                     * 设置HTTP callback URL, required if `NotifyType` is set to `URL`
+                     * @param _notifyUrl HTTP callback URL, required if `NotifyType` is set to `URL`
+                     * 
+                     */
+                    void SetNotifyUrl(const std::string& _notifyUrl);
+
+                    /**
+                     * 判断参数 NotifyUrl 是否已赋值
+                     * @return NotifyUrl 是否已赋值
+                     * 
+                     */
+                    bool NotifyUrlHasBeenSet() const;
 
                     /**
                      * 获取CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported.
@@ -160,27 +193,6 @@ namespace TencentCloud
                     bool TopicNameHasBeenSet() const;
 
                     /**
-                     * 获取HTTP callback URL, required if `NotifyType` is set to `URL`
-                     * @return NotifyUrl HTTP callback URL, required if `NotifyType` is set to `URL`
-                     * 
-                     */
-                    std::string GetNotifyUrl() const;
-
-                    /**
-                     * 设置HTTP callback URL, required if `NotifyType` is set to `URL`
-                     * @param _notifyUrl HTTP callback URL, required if `NotifyType` is set to `URL`
-                     * 
-                     */
-                    void SetNotifyUrl(const std::string& _notifyUrl);
-
-                    /**
-                     * 判断参数 NotifyUrl 是否已赋值
-                     * @return NotifyUrl 是否已赋值
-                     * 
-                     */
-                    bool NotifyUrlHasBeenSet() const;
-
-                    /**
                      * 获取Key used to generate a callback signature.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NotifyKey Key used to generate a callback signature.
@@ -208,12 +220,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+                     * Notification type:
 
-<font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
+"CMQ": Callback messages are written to the CMQ queue; 
+"URL": When a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. The callback protocol is http+json. The content of the packet body is the same as the output parameters of the [ParseLiveStreamProcessNotification API](https://intl.cloud.tencent.com/document/product/862/39229?from_cn_redirect=1).
+
+<font color="red">Note: If left blank, it is CMQ by default. To use the other type, you need to fill in the corresponding type value.</font>
                      */
                     std::string m_notifyType;
                     bool m_notifyTypeHasBeenSet;
+
+                    /**
+                     * HTTP callback URL, required if `NotifyType` is set to `URL`
+                     */
+                    std::string m_notifyUrl;
+                    bool m_notifyUrlHasBeenSet;
 
                     /**
                      * CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported.
@@ -238,12 +259,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_topicName;
                     bool m_topicNameHasBeenSet;
-
-                    /**
-                     * HTTP callback URL, required if `NotifyType` is set to `URL`
-                     */
-                    std::string m_notifyUrl;
-                    bool m_notifyUrlHasBeenSet;
 
                     /**
                      * Key used to generate a callback signature.

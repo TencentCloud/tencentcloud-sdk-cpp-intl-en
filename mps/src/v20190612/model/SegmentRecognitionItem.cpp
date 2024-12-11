@@ -25,8 +25,12 @@ SegmentRecognitionItem::SegmentRecognitionItem() :
     m_startTimeOffsetHasBeenSet(false),
     m_endTimeOffsetHasBeenSet(false),
     m_segmentUrlHasBeenSet(false),
+    m_covImgUrlHasBeenSet(false),
     m_titleHasBeenSet(false),
-    m_summaryHasBeenSet(false)
+    m_summaryHasBeenSet(false),
+    m_keywordsHasBeenSet(false),
+    m_beginTimeHasBeenSet(false),
+    m_endTimeHasBeenSet(false)
 {
 }
 
@@ -75,6 +79,16 @@ CoreInternalOutcome SegmentRecognitionItem::Deserialize(const rapidjson::Value &
         m_segmentUrlHasBeenSet = true;
     }
 
+    if (value.HasMember("CovImgUrl") && !value["CovImgUrl"].IsNull())
+    {
+        if (!value["CovImgUrl"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `SegmentRecognitionItem.CovImgUrl` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_covImgUrl = string(value["CovImgUrl"].GetString());
+        m_covImgUrlHasBeenSet = true;
+    }
+
     if (value.HasMember("Title") && !value["Title"].IsNull())
     {
         if (!value["Title"].IsString())
@@ -93,6 +107,39 @@ CoreInternalOutcome SegmentRecognitionItem::Deserialize(const rapidjson::Value &
         }
         m_summary = string(value["Summary"].GetString());
         m_summaryHasBeenSet = true;
+    }
+
+    if (value.HasMember("Keywords") && !value["Keywords"].IsNull())
+    {
+        if (!value["Keywords"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `SegmentRecognitionItem.Keywords` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["Keywords"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            m_keywords.push_back((*itr).GetString());
+        }
+        m_keywordsHasBeenSet = true;
+    }
+
+    if (value.HasMember("BeginTime") && !value["BeginTime"].IsNull())
+    {
+        if (!value["BeginTime"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `SegmentRecognitionItem.BeginTime` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_beginTime = string(value["BeginTime"].GetString());
+        m_beginTimeHasBeenSet = true;
+    }
+
+    if (value.HasMember("EndTime") && !value["EndTime"].IsNull())
+    {
+        if (!value["EndTime"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `SegmentRecognitionItem.EndTime` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_endTime = string(value["EndTime"].GetString());
+        m_endTimeHasBeenSet = true;
     }
 
 
@@ -134,6 +181,14 @@ void SegmentRecognitionItem::ToJsonObject(rapidjson::Value &value, rapidjson::Do
         value.AddMember(iKey, rapidjson::Value(m_segmentUrl.c_str(), allocator).Move(), allocator);
     }
 
+    if (m_covImgUrlHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CovImgUrl";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_covImgUrl.c_str(), allocator).Move(), allocator);
+    }
+
     if (m_titleHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -148,6 +203,35 @@ void SegmentRecognitionItem::ToJsonObject(rapidjson::Value &value, rapidjson::Do
         string key = "Summary";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_summary.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_keywordsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Keywords";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_keywords.begin(); itr != m_keywords.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_beginTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BeginTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_beginTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_endTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EndTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_endTime.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -217,6 +301,22 @@ bool SegmentRecognitionItem::SegmentUrlHasBeenSet() const
     return m_segmentUrlHasBeenSet;
 }
 
+string SegmentRecognitionItem::GetCovImgUrl() const
+{
+    return m_covImgUrl;
+}
+
+void SegmentRecognitionItem::SetCovImgUrl(const string& _covImgUrl)
+{
+    m_covImgUrl = _covImgUrl;
+    m_covImgUrlHasBeenSet = true;
+}
+
+bool SegmentRecognitionItem::CovImgUrlHasBeenSet() const
+{
+    return m_covImgUrlHasBeenSet;
+}
+
 string SegmentRecognitionItem::GetTitle() const
 {
     return m_title;
@@ -247,5 +347,53 @@ void SegmentRecognitionItem::SetSummary(const string& _summary)
 bool SegmentRecognitionItem::SummaryHasBeenSet() const
 {
     return m_summaryHasBeenSet;
+}
+
+vector<string> SegmentRecognitionItem::GetKeywords() const
+{
+    return m_keywords;
+}
+
+void SegmentRecognitionItem::SetKeywords(const vector<string>& _keywords)
+{
+    m_keywords = _keywords;
+    m_keywordsHasBeenSet = true;
+}
+
+bool SegmentRecognitionItem::KeywordsHasBeenSet() const
+{
+    return m_keywordsHasBeenSet;
+}
+
+string SegmentRecognitionItem::GetBeginTime() const
+{
+    return m_beginTime;
+}
+
+void SegmentRecognitionItem::SetBeginTime(const string& _beginTime)
+{
+    m_beginTime = _beginTime;
+    m_beginTimeHasBeenSet = true;
+}
+
+bool SegmentRecognitionItem::BeginTimeHasBeenSet() const
+{
+    return m_beginTimeHasBeenSet;
+}
+
+string SegmentRecognitionItem::GetEndTime() const
+{
+    return m_endTime;
+}
+
+void SegmentRecognitionItem::SetEndTime(const string& _endTime)
+{
+    m_endTime = _endTime;
+    m_endTimeHasBeenSet = true;
+}
+
+bool SegmentRecognitionItem::EndTimeHasBeenSet() const
+{
+    return m_endTimeHasBeenSet;
 }
 

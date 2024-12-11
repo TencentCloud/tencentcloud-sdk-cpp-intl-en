@@ -131,6 +131,31 @@ namespace TencentCloud
                     bool SegmentUrlHasBeenSet() const;
 
                     /**
+                     * 获取Segment cover.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return CovImgUrl Segment cover.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    std::string GetCovImgUrl() const;
+
+                    /**
+                     * 设置Segment cover.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _covImgUrl Segment cover.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetCovImgUrl(const std::string& _covImgUrl);
+
+                    /**
+                     * 判断参数 CovImgUrl 是否已赋值
+                     * @return CovImgUrl 是否已赋值
+                     * 
+                     */
+                    bool CovImgUrlHasBeenSet() const;
+
+                    /**
                      * 获取Segment title.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Title Segment title.
@@ -180,6 +205,77 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool SummaryHasBeenSet() const;
 
+                    /**
+                     * 获取Segmentation keywords.
+                     * @return Keywords Segmentation keywords.
+                     * 
+                     */
+                    std::vector<std::string> GetKeywords() const;
+
+                    /**
+                     * 设置Segmentation keywords.
+                     * @param _keywords Segmentation keywords.
+                     * 
+                     */
+                    void SetKeywords(const std::vector<std::string>& _keywords);
+
+                    /**
+                     * 判断参数 Keywords 是否已赋值
+                     * @return Keywords 是否已赋值
+                     * 
+                     */
+                    bool KeywordsHasBeenSet() const;
+
+                    /**
+                     * 获取The start time of a live streaming segment, in the ISO date format.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return BeginTime The start time of a live streaming segment, in the ISO date format.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    std::string GetBeginTime() const;
+
+                    /**
+                     * 设置The start time of a live streaming segment, in the ISO date format.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _beginTime The start time of a live streaming segment, in the ISO date format.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetBeginTime(const std::string& _beginTime);
+
+                    /**
+                     * 判断参数 BeginTime 是否已赋值
+                     * @return BeginTime 是否已赋值
+                     * 
+                     */
+                    bool BeginTimeHasBeenSet() const;
+
+                    /**
+                     * 获取The end time of a live streaming segment, in the ISO date format.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return EndTime The end time of a live streaming segment, in the ISO date format.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    std::string GetEndTime() const;
+
+                    /**
+                     * 设置The end time of a live streaming segment, in the ISO date format.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _endTime The end time of a live streaming segment, in the ISO date format.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetEndTime(const std::string& _endTime);
+
+                    /**
+                     * 判断参数 EndTime 是否已赋值
+                     * @return EndTime 是否已赋值
+                     * 
+                     */
+                    bool EndTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -207,6 +303,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_segmentUrlHasBeenSet;
 
                     /**
+                     * Segment cover.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string m_covImgUrl;
+                    bool m_covImgUrlHasBeenSet;
+
+                    /**
                      * Segment title.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
@@ -219,6 +322,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_summary;
                     bool m_summaryHasBeenSet;
+
+                    /**
+                     * Segmentation keywords.
+                     */
+                    std::vector<std::string> m_keywords;
+                    bool m_keywordsHasBeenSet;
+
+                    /**
+                     * The start time of a live streaming segment, in the ISO date format.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string m_beginTime;
+                    bool m_beginTimeHasBeenSet;
+
+                    /**
+                     * The end time of a live streaming segment, in the ISO date format.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string m_endTime;
+                    bool m_endTimeHasBeenSet;
 
                 };
             }

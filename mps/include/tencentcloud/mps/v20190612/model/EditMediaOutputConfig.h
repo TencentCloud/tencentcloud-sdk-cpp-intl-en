@@ -72,19 +72,31 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool ContainerHasBeenSet() const;
 
                     /**
-                     * 获取The clip mode. Valid values: `normal` (default), `fast`.
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Type The clip mode. Valid values: `normal` (default), `fast`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Editing mode. Optional values:
+normal (default): Precise editing
+fast: Fast editing, with faster processing speed but lower precision to some extent
+Note: fast only supports individual files, and the default output transcoding format of normal is h264.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return Type Editing mode. Optional values:
+normal (default): Precise editing
+fast: Fast editing, with faster processing speed but lower precision to some extent
+Note: fast only supports individual files, and the default output transcoding format of normal is h264.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置The clip mode. Valid values: `normal` (default), `fast`.
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _type The clip mode. Valid values: `normal` (default), `fast`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Editing mode. Optional values:
+normal (default): Precise editing
+fast: Fast editing, with faster processing speed but lower precision to some extent
+Note: fast only supports individual files, and the default output transcoding format of normal is h264.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _type Editing mode. Optional values:
+normal (default): Precise editing
+fast: Fast editing, with faster processing speed but lower precision to some extent
+Note: fast only supports individual files, and the default output transcoding format of normal is h264.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -106,8 +118,11 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_containerHasBeenSet;
 
                     /**
-                     * The clip mode. Valid values: `normal` (default), `fast`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Editing mode. Optional values:
+normal (default): Precise editing
+fast: Fast editing, with faster processing speed but lower precision to some extent
+Note: fast only supports individual files, and the default output transcoding format of normal is h264.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

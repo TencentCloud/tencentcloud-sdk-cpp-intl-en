@@ -400,6 +400,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool EnhanceConfigHasBeenSet() const;
 
+                    /**
+                     * 获取Transcoding template alias.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return AliasName Transcoding template alias.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    std::string GetAliasName() const;
+
+                    /**
+                     * 设置Transcoding template alias.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _aliasName Transcoding template alias.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetAliasName(const std::string& _aliasName);
+
+                    /**
+                     * 判断参数 AliasName 是否已赋值
+                     * @return AliasName 是否已赋值
+                     * 
+                     */
+                    bool AliasNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -499,6 +524,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     EnhanceConfig m_enhanceConfig;
                     bool m_enhanceConfigHasBeenSet;
+
+                    /**
+                     * Transcoding template alias.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string m_aliasName;
+                    bool m_aliasNameHasBeenSet;
 
                 };
             }
