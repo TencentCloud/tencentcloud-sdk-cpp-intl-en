@@ -191,6 +191,8 @@
 #include <tencentcloud/teo/v20220901/model/DescribeTopL7AnalysisDataResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeTopL7CacheDataRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeTopL7CacheDataResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeZoneConfigImportResultRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeZoneConfigImportResultResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeZoneSettingRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeZoneSettingResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeZonesRequest.h>
@@ -201,10 +203,14 @@
 #include <tencentcloud/teo/v20220901/model/DownloadL4LogsResponse.h>
 #include <tencentcloud/teo/v20220901/model/DownloadL7LogsRequest.h>
 #include <tencentcloud/teo/v20220901/model/DownloadL7LogsResponse.h>
+#include <tencentcloud/teo/v20220901/model/ExportZoneConfigRequest.h>
+#include <tencentcloud/teo/v20220901/model/ExportZoneConfigResponse.h>
 #include <tencentcloud/teo/v20220901/model/HandleFunctionRuntimeEnvironmentRequest.h>
 #include <tencentcloud/teo/v20220901/model/HandleFunctionRuntimeEnvironmentResponse.h>
 #include <tencentcloud/teo/v20220901/model/IdentifyZoneRequest.h>
 #include <tencentcloud/teo/v20220901/model/IdentifyZoneResponse.h>
+#include <tencentcloud/teo/v20220901/model/ImportZoneConfigRequest.h>
+#include <tencentcloud/teo/v20220901/model/ImportZoneConfigResponse.h>
 #include <tencentcloud/teo/v20220901/model/IncreasePlanQuotaRequest.h>
 #include <tencentcloud/teo/v20220901/model/IncreasePlanQuotaResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyAccelerationDomainRequest.h>
@@ -533,6 +539,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeTopL7CacheDataResponse> DescribeTopL7CacheDataOutcome;
                 typedef std::future<DescribeTopL7CacheDataOutcome> DescribeTopL7CacheDataOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeTopL7CacheDataRequest&, DescribeTopL7CacheDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTopL7CacheDataAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeZoneConfigImportResultResponse> DescribeZoneConfigImportResultOutcome;
+                typedef std::future<DescribeZoneConfigImportResultOutcome> DescribeZoneConfigImportResultOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeZoneConfigImportResultRequest&, DescribeZoneConfigImportResultOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeZoneConfigImportResultAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeZoneSettingResponse> DescribeZoneSettingOutcome;
                 typedef std::future<DescribeZoneSettingOutcome> DescribeZoneSettingOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeZoneSettingRequest&, DescribeZoneSettingOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeZoneSettingAsyncHandler;
@@ -548,12 +557,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DownloadL7LogsResponse> DownloadL7LogsOutcome;
                 typedef std::future<DownloadL7LogsOutcome> DownloadL7LogsOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DownloadL7LogsRequest&, DownloadL7LogsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DownloadL7LogsAsyncHandler;
+                typedef Outcome<Core::Error, Model::ExportZoneConfigResponse> ExportZoneConfigOutcome;
+                typedef std::future<ExportZoneConfigOutcome> ExportZoneConfigOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::ExportZoneConfigRequest&, ExportZoneConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ExportZoneConfigAsyncHandler;
                 typedef Outcome<Core::Error, Model::HandleFunctionRuntimeEnvironmentResponse> HandleFunctionRuntimeEnvironmentOutcome;
                 typedef std::future<HandleFunctionRuntimeEnvironmentOutcome> HandleFunctionRuntimeEnvironmentOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::HandleFunctionRuntimeEnvironmentRequest&, HandleFunctionRuntimeEnvironmentOutcome, const std::shared_ptr<const AsyncCallerContext>&)> HandleFunctionRuntimeEnvironmentAsyncHandler;
                 typedef Outcome<Core::Error, Model::IdentifyZoneResponse> IdentifyZoneOutcome;
                 typedef std::future<IdentifyZoneOutcome> IdentifyZoneOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::IdentifyZoneRequest&, IdentifyZoneOutcome, const std::shared_ptr<const AsyncCallerContext>&)> IdentifyZoneAsyncHandler;
+                typedef Outcome<Core::Error, Model::ImportZoneConfigResponse> ImportZoneConfigOutcome;
+                typedef std::future<ImportZoneConfigOutcome> ImportZoneConfigOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::ImportZoneConfigRequest&, ImportZoneConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ImportZoneConfigAsyncHandler;
                 typedef Outcome<Core::Error, Model::IncreasePlanQuotaResponse> IncreasePlanQuotaOutcome;
                 typedef std::future<IncreasePlanQuotaOutcome> IncreasePlanQuotaOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::IncreasePlanQuotaRequest&, IncreasePlanQuotaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> IncreasePlanQuotaAsyncHandler;
@@ -1418,6 +1433,15 @@ This API is used to query the configuration information of an IP group, includin
                 DescribeTopL7CacheDataOutcomeCallable DescribeTopL7CacheDataCallable(const Model::DescribeTopL7CacheDataRequest& request);
 
                 /**
+                 *This API is used to query the results of site configuration import via API (ImportZoneConfig). This feature only supports the sites in the plans of the Standard Edition and the Enterprise Edition.
+                 * @param req DescribeZoneConfigImportResultRequest
+                 * @return DescribeZoneConfigImportResultOutcome
+                 */
+                DescribeZoneConfigImportResultOutcome DescribeZoneConfigImportResult(const Model::DescribeZoneConfigImportResultRequest &request);
+                void DescribeZoneConfigImportResultAsync(const Model::DescribeZoneConfigImportResultRequest& request, const DescribeZoneConfigImportResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeZoneConfigImportResultOutcomeCallable DescribeZoneConfigImportResultCallable(const Model::DescribeZoneConfigImportResultRequest& request);
+
+                /**
                  *This API is used to query the site configuration.
                  * @param req DescribeZoneSettingRequest
                  * @return DescribeZoneSettingOutcome
@@ -1470,6 +1494,15 @@ A site can be deleted by using the [Delete Site](https://intl.cloud.tencent.com/
                 DownloadL7LogsOutcomeCallable DownloadL7LogsCallable(const Model::DownloadL7LogsRequest& request);
 
                 /**
+                 *This API is used to export site configuration . The exported configuration is used for import via the API (ImportZoneConfig). This feature only supports the sites in the plans of the Standard Edition and the Enterprise Edition.
+                 * @param req ExportZoneConfigRequest
+                 * @return ExportZoneConfigOutcome
+                 */
+                ExportZoneConfigOutcome ExportZoneConfig(const Model::ExportZoneConfigRequest &request);
+                void ExportZoneConfigAsync(const Model::ExportZoneConfigRequest& request, const ExportZoneConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ExportZoneConfigOutcomeCallable ExportZoneConfigCallable(const Model::ExportZoneConfigRequest& request);
+
+                /**
                  *This API is used to operate the runtime environment of an edge function. It supports related settings for environment variables.
 After the environment variables are set, they can be used in the function code. For details, see [Edge Functions Referencing Environment Variables](https://intl.cloud.tencent.com/document/product/1552/109151?from_cn_redirect=1#0151fd9a-8b0e-407b-ae37-54553a60ded6).
                  * @param req HandleFunctionRuntimeEnvironmentRequest
@@ -1487,6 +1520,15 @@ After the environment variables are set, they can be used in the function code. 
                 IdentifyZoneOutcome IdentifyZone(const Model::IdentifyZoneRequest &request);
                 void IdentifyZoneAsync(const Model::IdentifyZoneRequest& request, const IdentifyZoneAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 IdentifyZoneOutcomeCallable IdentifyZoneCallable(const Model::IdentifyZoneRequest& request);
+
+                /**
+                 *This API is used to quickly import site configuration files. After the import is initiated, the API will return the corresponding task ID (TaskId). Users need to use the site configuration import result query API (DescribeZoneConfigImportResult) to obtain the results of this import task. This feature only supports the sites in the plans of the Standard Edition and the Enterprise Edition.
+                 * @param req ImportZoneConfigRequest
+                 * @return ImportZoneConfigOutcome
+                 */
+                ImportZoneConfigOutcome ImportZoneConfig(const Model::ImportZoneConfigRequest &request);
+                void ImportZoneConfigAsync(const Model::ImportZoneConfigRequest& request, const ImportZoneConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ImportZoneConfigOutcomeCallable ImportZoneConfigCallable(const Model::ImportZoneConfigRequest& request);
 
                 /**
                  *When the number of sites bound to your plan, the number of rules under "Web Protection - Custom Rules - Precision Matching Policy", or the number of rules under "Web Protection - Rate Limiting - Precision Rate Limiting Module" reaches the plan's quota, you can use this interface to purchase additional quotas.

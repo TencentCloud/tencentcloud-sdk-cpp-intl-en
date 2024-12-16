@@ -69,6 +69,8 @@
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryDirectCustomersCreditResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryPartnerCreditRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryPartnerCreditResponse.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/QueryPolicyProductListByCodeRequest.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/QueryPolicyProductListByCodeResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryVoucherAmountByUinRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryVoucherAmountByUinResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryVoucherListByUinRequest.h>
@@ -160,6 +162,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::QueryPartnerCreditResponse> QueryPartnerCreditOutcome;
                 typedef std::future<QueryPartnerCreditOutcome> QueryPartnerCreditOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::QueryPartnerCreditRequest&, QueryPartnerCreditOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryPartnerCreditAsyncHandler;
+                typedef Outcome<Core::Error, Model::QueryPolicyProductListByCodeResponse> QueryPolicyProductListByCodeOutcome;
+                typedef std::future<QueryPolicyProductListByCodeOutcome> QueryPolicyProductListByCodeOutcomeCallable;
+                typedef std::function<void(const IntlpartnersmgtClient*, const Model::QueryPolicyProductListByCodeRequest&, QueryPolicyProductListByCodeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryPolicyProductListByCodeAsyncHandler;
                 typedef Outcome<Core::Error, Model::QueryVoucherAmountByUinResponse> QueryVoucherAmountByUinOutcome;
                 typedef std::future<QueryVoucherAmountByUinOutcome> QueryVoucherAmountByUinOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::QueryVoucherAmountByUinRequest&, QueryVoucherAmountByUinOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryVoucherAmountByUinAsyncHandler;
@@ -388,6 +393,15 @@ namespace TencentCloud
                 QueryPartnerCreditOutcome QueryPartnerCredit(const Model::QueryPartnerCreditRequest &request);
                 void QueryPartnerCreditAsync(const Model::QueryPartnerCreditRequest& request, const QueryPartnerCreditAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 QueryPartnerCreditOutcomeCallable QueryPartnerCreditCallable(const Model::QueryPartnerCreditRequest& request);
+
+                /**
+                 *This API is used to query the product list information within the specified policy range. To call this API, contact your account manager to add it to the allowlist.
+                 * @param req QueryPolicyProductListByCodeRequest
+                 * @return QueryPolicyProductListByCodeOutcome
+                 */
+                QueryPolicyProductListByCodeOutcome QueryPolicyProductListByCode(const Model::QueryPolicyProductListByCodeRequest &request);
+                void QueryPolicyProductListByCodeAsync(const Model::QueryPolicyProductListByCodeRequest& request, const QueryPolicyProductListByCodeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                QueryPolicyProductListByCodeOutcomeCallable QueryPolicyProductListByCodeCallable(const Model::QueryPolicyProductListByCodeRequest& request);
 
                 /**
                  *This API is used to query the voucher quota based on the customer UIN.

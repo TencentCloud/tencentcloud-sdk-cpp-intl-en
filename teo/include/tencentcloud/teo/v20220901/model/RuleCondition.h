@@ -84,15 +84,15 @@ namespace TencentCloud
                     bool OperatorHasBeenSet() const;
 
                     /**
-                     * 获取Match type. Valid values: <li> filename: File name; </li> <li> extension: File extension; </li> <li> host: Host name; </li> <li> full_url: The complete URL path under the current site, which must include the HTTP protocol, host, and path; </li> <li> url: Request for the URL path under the current site; </li><li> client_country: Client country/region;</li> <li> query_string: The query string of the URL requested under the current site; </li> <li> request_header: HTTP request header; </li><li> client_ip: Client IP address; </li><li> request_protocol: Request Protocol; </li><li> request_method: HTTP Request Methods. </li>
-                     * @return Target Match type. Valid values: <li> filename: File name; </li> <li> extension: File extension; </li> <li> host: Host name; </li> <li> full_url: The complete URL path under the current site, which must include the HTTP protocol, host, and path; </li> <li> url: Request for the URL path under the current site; </li><li> client_country: Client country/region;</li> <li> query_string: The query string of the URL requested under the current site; </li> <li> request_header: HTTP request header; </li><li> client_ip: Client IP address; </li><li> request_protocol: Request Protocol; </li><li> request_method: HTTP Request Methods. </li>
+                     * 获取Matching type. Valid values: <li>filename: Filename;</li><li>extension: File suffix;</li><li>host: Host;</li><li>full_url: A complete URL path under the current site, including the HTTP protocol, the host, and the path;</li><li>url: The request for a URL path under the current site;</li><li>client_country: Client country/region;</li><li>query_string: The query string for a requested URL under the current site;</li><li>request_header: HTTP request header;</li><li>client_ip: Client IP;</li><li>request_protocol: Request protocol;</li><li>request_method: HTTP request method.</li>
+                     * @return Target Matching type. Valid values: <li>filename: Filename;</li><li>extension: File suffix;</li><li>host: Host;</li><li>full_url: A complete URL path under the current site, including the HTTP protocol, the host, and the path;</li><li>url: The request for a URL path under the current site;</li><li>client_country: Client country/region;</li><li>query_string: The query string for a requested URL under the current site;</li><li>request_header: HTTP request header;</li><li>client_ip: Client IP;</li><li>request_protocol: Request protocol;</li><li>request_method: HTTP request method.</li>
                      * 
                      */
                     std::string GetTarget() const;
 
                     /**
-                     * 设置Match type. Valid values: <li> filename: File name; </li> <li> extension: File extension; </li> <li> host: Host name; </li> <li> full_url: The complete URL path under the current site, which must include the HTTP protocol, host, and path; </li> <li> url: Request for the URL path under the current site; </li><li> client_country: Client country/region;</li> <li> query_string: The query string of the URL requested under the current site; </li> <li> request_header: HTTP request header; </li><li> client_ip: Client IP address; </li><li> request_protocol: Request Protocol; </li><li> request_method: HTTP Request Methods. </li>
-                     * @param _target Match type. Valid values: <li> filename: File name; </li> <li> extension: File extension; </li> <li> host: Host name; </li> <li> full_url: The complete URL path under the current site, which must include the HTTP protocol, host, and path; </li> <li> url: Request for the URL path under the current site; </li><li> client_country: Client country/region;</li> <li> query_string: The query string of the URL requested under the current site; </li> <li> request_header: HTTP request header; </li><li> client_ip: Client IP address; </li><li> request_protocol: Request Protocol; </li><li> request_method: HTTP Request Methods. </li>
+                     * 设置Matching type. Valid values: <li>filename: Filename;</li><li>extension: File suffix;</li><li>host: Host;</li><li>full_url: A complete URL path under the current site, including the HTTP protocol, the host, and the path;</li><li>url: The request for a URL path under the current site;</li><li>client_country: Client country/region;</li><li>query_string: The query string for a requested URL under the current site;</li><li>request_header: HTTP request header;</li><li>client_ip: Client IP;</li><li>request_protocol: Request protocol;</li><li>request_method: HTTP request method.</li>
+                     * @param _target Matching type. Valid values: <li>filename: Filename;</li><li>extension: File suffix;</li><li>host: Host;</li><li>full_url: A complete URL path under the current site, including the HTTP protocol, the host, and the path;</li><li>url: The request for a URL path under the current site;</li><li>client_country: Client country/region;</li><li>query_string: The query string for a requested URL under the current site;</li><li>request_header: HTTP request header;</li><li>client_ip: Client IP;</li><li>request_protocol: Request protocol;</li><li>request_method: HTTP request method.</li>
                      * 
                      */
                     void SetTarget(const std::string& _target);
@@ -105,63 +105,63 @@ namespace TencentCloud
                     bool TargetHasBeenSet() const;
 
                     /**
-                     * 获取The parameter values for match types. It is allowed to pass an empty array only when the match type is query_string or request_header and the operator value is Exist or Does Not Exist. The corresponding match types include:
-<li> File extension: Extensions like jpg, txt, etc.;</li>
-<li> File name: For example, foo in foo.jpg;</li>
-<li> All: All requests for domain names under the site; </li>
-<li> HOST: The host under the current site, for example, www.maxx55.com;</li>
-<li> URL Path: Request for the URL path under the current site, for example, /example;</li>
-<li> URL Full: The complete URL request under the current site, which must include the HTTP protocol, host, and path, for example, https://www.maxx55.cn/example;</li>
-<li> Client country/region: Country/region codes compliant with the ISO3166 standard;</li>
-<li> Query string: The parameter values in the query string of the URL requested under the current site, for example, cn and 1 in lang=cn&version=1; </li>
-<li> HTTP request header: The value of the HTTP request header field, for example, zh-CN,zh;q=0.9 in Accept-Language:zh-CN,zh;q=0.9; </li>
-<li> Client IP: The client IP address carried by the current request, supporting IPv4, IPv6, and an IP range; </li>
-<li> Request Protocol: The protocol of the current request, with possible values: HTTP, HTTPS; </li>
-<li> HTTP Request Methods: The method of the current request, with possible values: GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT, OPTIONS, PATCH, COPY, LOCK, MKCOL, MOVE, PROPFIND, PROPPATCH, UNLOCK. </li>
-                     * @return Values The parameter values for match types. It is allowed to pass an empty array only when the match type is query_string or request_header and the operator value is Exist or Does Not Exist. The corresponding match types include:
-<li> File extension: Extensions like jpg, txt, etc.;</li>
-<li> File name: For example, foo in foo.jpg;</li>
-<li> All: All requests for domain names under the site; </li>
-<li> HOST: The host under the current site, for example, www.maxx55.com;</li>
-<li> URL Path: Request for the URL path under the current site, for example, /example;</li>
-<li> URL Full: The complete URL request under the current site, which must include the HTTP protocol, host, and path, for example, https://www.maxx55.cn/example;</li>
-<li> Client country/region: Country/region codes compliant with the ISO3166 standard;</li>
-<li> Query string: The parameter values in the query string of the URL requested under the current site, for example, cn and 1 in lang=cn&version=1; </li>
-<li> HTTP request header: The value of the HTTP request header field, for example, zh-CN,zh;q=0.9 in Accept-Language:zh-CN,zh;q=0.9; </li>
-<li> Client IP: The client IP address carried by the current request, supporting IPv4, IPv6, and an IP range; </li>
-<li> Request Protocol: The protocol of the current request, with possible values: HTTP, HTTPS; </li>
-<li> HTTP Request Methods: The method of the current request, with possible values: GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT, OPTIONS, PATCH, COPY, LOCK, MKCOL, MOVE, PROPFIND, PROPPATCH, UNLOCK. </li>
+                     * 获取Parameter values for corresponding matching types. It is allowed to pass an empty array only when the matching type is query_string or request_header and the operator value is exist or not exist. Corresponding match types include:
+<li>extension: File suffix such as jpg or txt;</li>
+<li> filename: For example, foo in foo.jpg;</li>
+<li> all (any request under the site): all;</li>
+<li> host: The host under the current site. For example, www.maxx55.com;</li>
+<li> URL path: The request for a URL path under the current site. For example, /example;</li>
+<li> URL full: The request for a complete URL under the current site, including the HTTP protocol, the host, and the path. For example: https://www.maxx55.cn/example;</li>
+<li> client_country: Country/region identifier compliant with the ISO3166 standard;</li>
+<li> query_string: The parameter value in the query string of the requested URL under the current site. For example, cn and 1 in lang=cn&version=1;</li>
+<li> request_header: The value of the HTTP request header field. For example, zh-CN,zh;q=0.9 in Accept-Language:zh-CN,zh;q=0.9;</li>
+<li> client_ip: The client request IP carried in the current request, which supports IPv4/IPv6 and an IP range;</li>
+<li> request_protocol: The protocol of the current request. Valid values: HTTP and HTTPS;</li>
+<li> request_method: The method of the current request. Valid values: GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT, OPTIONS, PATCH, COPY, LOCK, MKCOL, MOVE, PROPFIND, PROPPATCH, and UNLOCK. </li>
+                     * @return Values Parameter values for corresponding matching types. It is allowed to pass an empty array only when the matching type is query_string or request_header and the operator value is exist or not exist. Corresponding match types include:
+<li>extension: File suffix such as jpg or txt;</li>
+<li> filename: For example, foo in foo.jpg;</li>
+<li> all (any request under the site): all;</li>
+<li> host: The host under the current site. For example, www.maxx55.com;</li>
+<li> URL path: The request for a URL path under the current site. For example, /example;</li>
+<li> URL full: The request for a complete URL under the current site, including the HTTP protocol, the host, and the path. For example: https://www.maxx55.cn/example;</li>
+<li> client_country: Country/region identifier compliant with the ISO3166 standard;</li>
+<li> query_string: The parameter value in the query string of the requested URL under the current site. For example, cn and 1 in lang=cn&version=1;</li>
+<li> request_header: The value of the HTTP request header field. For example, zh-CN,zh;q=0.9 in Accept-Language:zh-CN,zh;q=0.9;</li>
+<li> client_ip: The client request IP carried in the current request, which supports IPv4/IPv6 and an IP range;</li>
+<li> request_protocol: The protocol of the current request. Valid values: HTTP and HTTPS;</li>
+<li> request_method: The method of the current request. Valid values: GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT, OPTIONS, PATCH, COPY, LOCK, MKCOL, MOVE, PROPFIND, PROPPATCH, and UNLOCK. </li>
                      * 
                      */
                     std::vector<std::string> GetValues() const;
 
                     /**
-                     * 设置The parameter values for match types. It is allowed to pass an empty array only when the match type is query_string or request_header and the operator value is Exist or Does Not Exist. The corresponding match types include:
-<li> File extension: Extensions like jpg, txt, etc.;</li>
-<li> File name: For example, foo in foo.jpg;</li>
-<li> All: All requests for domain names under the site; </li>
-<li> HOST: The host under the current site, for example, www.maxx55.com;</li>
-<li> URL Path: Request for the URL path under the current site, for example, /example;</li>
-<li> URL Full: The complete URL request under the current site, which must include the HTTP protocol, host, and path, for example, https://www.maxx55.cn/example;</li>
-<li> Client country/region: Country/region codes compliant with the ISO3166 standard;</li>
-<li> Query string: The parameter values in the query string of the URL requested under the current site, for example, cn and 1 in lang=cn&version=1; </li>
-<li> HTTP request header: The value of the HTTP request header field, for example, zh-CN,zh;q=0.9 in Accept-Language:zh-CN,zh;q=0.9; </li>
-<li> Client IP: The client IP address carried by the current request, supporting IPv4, IPv6, and an IP range; </li>
-<li> Request Protocol: The protocol of the current request, with possible values: HTTP, HTTPS; </li>
-<li> HTTP Request Methods: The method of the current request, with possible values: GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT, OPTIONS, PATCH, COPY, LOCK, MKCOL, MOVE, PROPFIND, PROPPATCH, UNLOCK. </li>
-                     * @param _values The parameter values for match types. It is allowed to pass an empty array only when the match type is query_string or request_header and the operator value is Exist or Does Not Exist. The corresponding match types include:
-<li> File extension: Extensions like jpg, txt, etc.;</li>
-<li> File name: For example, foo in foo.jpg;</li>
-<li> All: All requests for domain names under the site; </li>
-<li> HOST: The host under the current site, for example, www.maxx55.com;</li>
-<li> URL Path: Request for the URL path under the current site, for example, /example;</li>
-<li> URL Full: The complete URL request under the current site, which must include the HTTP protocol, host, and path, for example, https://www.maxx55.cn/example;</li>
-<li> Client country/region: Country/region codes compliant with the ISO3166 standard;</li>
-<li> Query string: The parameter values in the query string of the URL requested under the current site, for example, cn and 1 in lang=cn&version=1; </li>
-<li> HTTP request header: The value of the HTTP request header field, for example, zh-CN,zh;q=0.9 in Accept-Language:zh-CN,zh;q=0.9; </li>
-<li> Client IP: The client IP address carried by the current request, supporting IPv4, IPv6, and an IP range; </li>
-<li> Request Protocol: The protocol of the current request, with possible values: HTTP, HTTPS; </li>
-<li> HTTP Request Methods: The method of the current request, with possible values: GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT, OPTIONS, PATCH, COPY, LOCK, MKCOL, MOVE, PROPFIND, PROPPATCH, UNLOCK. </li>
+                     * 设置Parameter values for corresponding matching types. It is allowed to pass an empty array only when the matching type is query_string or request_header and the operator value is exist or not exist. Corresponding match types include:
+<li>extension: File suffix such as jpg or txt;</li>
+<li> filename: For example, foo in foo.jpg;</li>
+<li> all (any request under the site): all;</li>
+<li> host: The host under the current site. For example, www.maxx55.com;</li>
+<li> URL path: The request for a URL path under the current site. For example, /example;</li>
+<li> URL full: The request for a complete URL under the current site, including the HTTP protocol, the host, and the path. For example: https://www.maxx55.cn/example;</li>
+<li> client_country: Country/region identifier compliant with the ISO3166 standard;</li>
+<li> query_string: The parameter value in the query string of the requested URL under the current site. For example, cn and 1 in lang=cn&version=1;</li>
+<li> request_header: The value of the HTTP request header field. For example, zh-CN,zh;q=0.9 in Accept-Language:zh-CN,zh;q=0.9;</li>
+<li> client_ip: The client request IP carried in the current request, which supports IPv4/IPv6 and an IP range;</li>
+<li> request_protocol: The protocol of the current request. Valid values: HTTP and HTTPS;</li>
+<li> request_method: The method of the current request. Valid values: GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT, OPTIONS, PATCH, COPY, LOCK, MKCOL, MOVE, PROPFIND, PROPPATCH, and UNLOCK. </li>
+                     * @param _values Parameter values for corresponding matching types. It is allowed to pass an empty array only when the matching type is query_string or request_header and the operator value is exist or not exist. Corresponding match types include:
+<li>extension: File suffix such as jpg or txt;</li>
+<li> filename: For example, foo in foo.jpg;</li>
+<li> all (any request under the site): all;</li>
+<li> host: The host under the current site. For example, www.maxx55.com;</li>
+<li> URL path: The request for a URL path under the current site. For example, /example;</li>
+<li> URL full: The request for a complete URL under the current site, including the HTTP protocol, the host, and the path. For example: https://www.maxx55.cn/example;</li>
+<li> client_country: Country/region identifier compliant with the ISO3166 standard;</li>
+<li> query_string: The parameter value in the query string of the requested URL under the current site. For example, cn and 1 in lang=cn&version=1;</li>
+<li> request_header: The value of the HTTP request header field. For example, zh-CN,zh;q=0.9 in Accept-Language:zh-CN,zh;q=0.9;</li>
+<li> client_ip: The client request IP carried in the current request, which supports IPv4/IPv6 and an IP range;</li>
+<li> request_protocol: The protocol of the current request. Valid values: HTTP and HTTPS;</li>
+<li> request_method: The method of the current request. Valid values: GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT, OPTIONS, PATCH, COPY, LOCK, MKCOL, MOVE, PROPFIND, PROPPATCH, and UNLOCK. </li>
                      * 
                      */
                     void SetValues(const std::vector<std::string>& _values);
@@ -261,25 +261,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_operatorHasBeenSet;
 
                     /**
-                     * Match type. Valid values: <li> filename: File name; </li> <li> extension: File extension; </li> <li> host: Host name; </li> <li> full_url: The complete URL path under the current site, which must include the HTTP protocol, host, and path; </li> <li> url: Request for the URL path under the current site; </li><li> client_country: Client country/region;</li> <li> query_string: The query string of the URL requested under the current site; </li> <li> request_header: HTTP request header; </li><li> client_ip: Client IP address; </li><li> request_protocol: Request Protocol; </li><li> request_method: HTTP Request Methods. </li>
+                     * Matching type. Valid values: <li>filename: Filename;</li><li>extension: File suffix;</li><li>host: Host;</li><li>full_url: A complete URL path under the current site, including the HTTP protocol, the host, and the path;</li><li>url: The request for a URL path under the current site;</li><li>client_country: Client country/region;</li><li>query_string: The query string for a requested URL under the current site;</li><li>request_header: HTTP request header;</li><li>client_ip: Client IP;</li><li>request_protocol: Request protocol;</li><li>request_method: HTTP request method.</li>
                      */
                     std::string m_target;
                     bool m_targetHasBeenSet;
 
                     /**
-                     * The parameter values for match types. It is allowed to pass an empty array only when the match type is query_string or request_header and the operator value is Exist or Does Not Exist. The corresponding match types include:
-<li> File extension: Extensions like jpg, txt, etc.;</li>
-<li> File name: For example, foo in foo.jpg;</li>
-<li> All: All requests for domain names under the site; </li>
-<li> HOST: The host under the current site, for example, www.maxx55.com;</li>
-<li> URL Path: Request for the URL path under the current site, for example, /example;</li>
-<li> URL Full: The complete URL request under the current site, which must include the HTTP protocol, host, and path, for example, https://www.maxx55.cn/example;</li>
-<li> Client country/region: Country/region codes compliant with the ISO3166 standard;</li>
-<li> Query string: The parameter values in the query string of the URL requested under the current site, for example, cn and 1 in lang=cn&version=1; </li>
-<li> HTTP request header: The value of the HTTP request header field, for example, zh-CN,zh;q=0.9 in Accept-Language:zh-CN,zh;q=0.9; </li>
-<li> Client IP: The client IP address carried by the current request, supporting IPv4, IPv6, and an IP range; </li>
-<li> Request Protocol: The protocol of the current request, with possible values: HTTP, HTTPS; </li>
-<li> HTTP Request Methods: The method of the current request, with possible values: GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT, OPTIONS, PATCH, COPY, LOCK, MKCOL, MOVE, PROPFIND, PROPPATCH, UNLOCK. </li>
+                     * Parameter values for corresponding matching types. It is allowed to pass an empty array only when the matching type is query_string or request_header and the operator value is exist or not exist. Corresponding match types include:
+<li>extension: File suffix such as jpg or txt;</li>
+<li> filename: For example, foo in foo.jpg;</li>
+<li> all (any request under the site): all;</li>
+<li> host: The host under the current site. For example, www.maxx55.com;</li>
+<li> URL path: The request for a URL path under the current site. For example, /example;</li>
+<li> URL full: The request for a complete URL under the current site, including the HTTP protocol, the host, and the path. For example: https://www.maxx55.cn/example;</li>
+<li> client_country: Country/region identifier compliant with the ISO3166 standard;</li>
+<li> query_string: The parameter value in the query string of the requested URL under the current site. For example, cn and 1 in lang=cn&version=1;</li>
+<li> request_header: The value of the HTTP request header field. For example, zh-CN,zh;q=0.9 in Accept-Language:zh-CN,zh;q=0.9;</li>
+<li> client_ip: The client request IP carried in the current request, which supports IPv4/IPv6 and an IP range;</li>
+<li> request_protocol: The protocol of the current request. Valid values: HTTP and HTTPS;</li>
+<li> request_method: The method of the current request. Valid values: GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT, OPTIONS, PATCH, COPY, LOCK, MKCOL, MOVE, PROPFIND, PROPPATCH, and UNLOCK. </li>
                      */
                     std::vector<std::string> m_values;
                     bool m_valuesHasBeenSet;
