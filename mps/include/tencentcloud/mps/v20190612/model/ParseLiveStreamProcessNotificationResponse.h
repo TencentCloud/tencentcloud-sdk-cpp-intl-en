@@ -51,14 +51,16 @@ namespace TencentCloud
 
                     /**
                      * 获取Live stream processing result type, including:
-<li>AiReviewResult: content moderation result;</li>
-<li>AiRecognitionResult: content recognition result;</li>
-<li>LiveRecordResult: live recording result;</li>
+<li>AiReviewResult: content auditing result.</li>
+<li>AiRecognitionResult: content recognition result.</li>
+<li>LiveRecordResult: live recording result.</li>
+<li>AiQualityControlResult: media quality inspection result.</li>
 <li>ProcessEof: live stream processing result.</li>
                      * @return NotificationType Live stream processing result type, including:
-<li>AiReviewResult: content moderation result;</li>
-<li>AiRecognitionResult: content recognition result;</li>
-<li>LiveRecordResult: live recording result;</li>
+<li>AiReviewResult: content auditing result.</li>
+<li>AiRecognitionResult: content recognition result.</li>
+<li>LiveRecordResult: live recording result.</li>
+<li>AiQualityControlResult: media quality inspection result.</li>
 <li>ProcessEof: live stream processing result.</li>
                      * 
                      */
@@ -87,9 +89,9 @@ namespace TencentCloud
 
                     /**
                      * 获取Information of a live stream processing error, which is valid when `NotificationType` is `ProcessEof`.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: when this field return null, means no valid values can be obtained.
                      * @return ProcessEofInfo Information of a live stream processing error, which is valid when `NotificationType` is `ProcessEof`.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: when this field return null, means no valid values can be obtained.
                      * 
                      */
                     LiveStreamProcessErrorInfo GetProcessEofInfo() const;
@@ -103,9 +105,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Content audit result, which is valid when `NotificationType` is `AiReviewResult`.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: when this field return null, means no valid values can be obtained.
                      * @return AiReviewResultInfo Content audit result, which is valid when `NotificationType` is `AiReviewResult`.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: when this field return null, means no valid values can be obtained.
                      * 
                      */
                     LiveStreamAiReviewResultInfo GetAiReviewResultInfo() const;
@@ -132,8 +134,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AiRecognitionResultInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AiAnalysisResultInfo 
+                     * 获取Content analysis result, which is valid if `NotificationType` is `AiAnalysisResult`.
+                     * @return AiAnalysisResultInfo Content analysis result, which is valid if `NotificationType` is `AiAnalysisResult`.
                      * 
                      */
                     LiveStreamAiAnalysisResultInfo GetAiAnalysisResultInfo() const;
@@ -146,8 +148,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AiAnalysisResultInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AiQualityControlResultInfo 
+                     * 获取Media quality inspection result, which is valid if `NotificationType` is `AiQualityControlResult`.
+                     * @return AiQualityControlResultInfo Media quality inspection result, which is valid if `NotificationType` is `AiQualityControlResult`.
                      * 
                      */
                     LiveStreamAiQualityControlResultInfo GetAiQualityControlResultInfo() const;
@@ -161,9 +163,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Live recording result is valid when NotificationType is LiveRecordResult.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: when this field return null, means no valid values can be obtained.
                      * @return LiveRecordResultInfo Live recording result is valid when NotificationType is LiveRecordResult.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: when this field return null, means no valid values can be obtained.
                      * 
                      */
                     LiveStreamRecordResultInfo GetLiveRecordResultInfo() const;
@@ -203,13 +205,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool SessionContextHasBeenSet() const;
 
+                    /**
+                     * 获取- Expiration time, event notification signature expiration UNIX timestamp. - By default, notifications sent by MPS expire after 10 minutes. If the expiration time specified has elapsed, a notification will be considered invalid. This can prevent replay attacks. - The format of Timestamp is a decimal UNIX timestamp, which is the number of seconds that have elapsed since January 1, 1970 (midnight UTC/GMT).
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return Timestamp - Expiration time, event notification signature expiration UNIX timestamp. - By default, notifications sent by MPS expire after 10 minutes. If the expiration time specified has elapsed, a notification will be considered invalid. This can prevent replay attacks. - The format of Timestamp is a decimal UNIX timestamp, which is the number of seconds that have elapsed since January 1, 1970 (midnight UTC/GMT).
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    int64_t GetTimestamp() const;
+
+                    /**
+                     * 判断参数 Timestamp 是否已赋值
+                     * @return Timestamp 是否已赋值
+                     * 
+                     */
+                    bool TimestampHasBeenSet() const;
+
+                    /**
+                     * 获取Event notification security signature. Sign = MD5 (Timestamp + NotifyKey). Note: Media Processing Service concatenates Timestamp and NotifyKey from TaskNotifyConfig as a string and calculates the Sign value through MD5. This value is included in the notification message. Your backend server can verify whether the Sign is correct using the same algorithm, to confirm whether the message is indeed from the Media Processing Service backend.
+
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return Sign Event notification security signature. Sign = MD5 (Timestamp + NotifyKey). Note: Media Processing Service concatenates Timestamp and NotifyKey from TaskNotifyConfig as a string and calculates the Sign value through MD5. This value is included in the notification message. Your backend server can verify whether the Sign is correct using the same algorithm, to confirm whether the message is indeed from the Media Processing Service backend.
+
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    std::string GetSign() const;
+
+                    /**
+                     * 判断参数 Sign 是否已赋值
+                     * @return Sign 是否已赋值
+                     * 
+                     */
+                    bool SignHasBeenSet() const;
+
                 private:
 
                     /**
                      * Live stream processing result type, including:
-<li>AiReviewResult: content moderation result;</li>
-<li>AiRecognitionResult: content recognition result;</li>
-<li>LiveRecordResult: live recording result;</li>
+<li>AiReviewResult: content auditing result.</li>
+<li>AiRecognitionResult: content recognition result.</li>
+<li>LiveRecordResult: live recording result.</li>
+<li>AiQualityControlResult: media quality inspection result.</li>
 <li>ProcessEof: live stream processing result.</li>
                      */
                     std::string m_notificationType;
@@ -223,14 +260,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Information of a live stream processing error, which is valid when `NotificationType` is `ProcessEof`.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: when this field return null, means no valid values can be obtained.
                      */
                     LiveStreamProcessErrorInfo m_processEofInfo;
                     bool m_processEofInfoHasBeenSet;
 
                     /**
                      * Content audit result, which is valid when `NotificationType` is `AiReviewResult`.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: when this field return null, means no valid values can be obtained.
                      */
                     LiveStreamAiReviewResultInfo m_aiReviewResultInfo;
                     bool m_aiReviewResultInfoHasBeenSet;
@@ -242,20 +279,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_aiRecognitionResultInfoHasBeenSet;
 
                     /**
-                     * 
+                     * Content analysis result, which is valid if `NotificationType` is `AiAnalysisResult`.
                      */
                     LiveStreamAiAnalysisResultInfo m_aiAnalysisResultInfo;
                     bool m_aiAnalysisResultInfoHasBeenSet;
 
                     /**
-                     * 
+                     * Media quality inspection result, which is valid if `NotificationType` is `AiQualityControlResult`.
                      */
                     LiveStreamAiQualityControlResultInfo m_aiQualityControlResultInfo;
                     bool m_aiQualityControlResultInfoHasBeenSet;
 
                     /**
                      * Live recording result is valid when NotificationType is LiveRecordResult.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: when this field return null, means no valid values can be obtained.
                      */
                     LiveStreamRecordResultInfo m_liveRecordResultInfo;
                     bool m_liveRecordResultInfoHasBeenSet;
@@ -271,6 +308,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;
+
+                    /**
+                     * - Expiration time, event notification signature expiration UNIX timestamp. - By default, notifications sent by MPS expire after 10 minutes. If the expiration time specified has elapsed, a notification will be considered invalid. This can prevent replay attacks. - The format of Timestamp is a decimal UNIX timestamp, which is the number of seconds that have elapsed since January 1, 1970 (midnight UTC/GMT).
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    int64_t m_timestamp;
+                    bool m_timestampHasBeenSet;
+
+                    /**
+                     * Event notification security signature. Sign = MD5 (Timestamp + NotifyKey). Note: Media Processing Service concatenates Timestamp and NotifyKey from TaskNotifyConfig as a string and calculates the Sign value through MD5. This value is included in the notification message. Your backend server can verify whether the Sign is correct using the same algorithm, to confirm whether the message is indeed from the Media Processing Service backend.
+
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string m_sign;
+                    bool m_signHasBeenSet;
 
                 };
             }

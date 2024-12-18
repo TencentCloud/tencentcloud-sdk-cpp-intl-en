@@ -69,18 +69,18 @@ Valid values: `personal`, `company`.
 
                     /**
                      * 获取Registered email address, which should be valid and correct.
-For example, account@qq.com.
+such as "account@qq.com"
                      * @return Mail Registered email address, which should be valid and correct.
-For example, account@qq.com.
+such as "account@qq.com"
                      * 
                      */
                     std::string GetMail() const;
 
                     /**
                      * 设置Registered email address, which should be valid and correct.
-For example, account@qq.com.
+such as "account@qq.com"
                      * @param _mail Registered email address, which should be valid and correct.
-For example, account@qq.com.
+such as "account@qq.com"
                      * 
                      */
                     void SetMail(const std::string& _mail);
@@ -143,22 +143,22 @@ A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not
                     bool ConfirmPasswordHasBeenSet() const;
 
                     /**
-                     * 获取Customer's mobile number. 
-The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. 
+                     * 获取Customer's mobile number.
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed.
 The system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
-                     * @return PhoneNum Customer's mobile number. 
-The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. 
+                     * @return PhoneNum Customer's mobile number.
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed.
 The system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
                      * 
                      */
                     std::string GetPhoneNum() const;
 
                     /**
-                     * 设置Customer's mobile number. 
-The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. 
+                     * 设置Customer's mobile number.
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed.
 The system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
-                     * @param _phoneNum Customer's mobile number. 
-The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. 
+                     * @param _phoneNum Customer's mobile number.
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed.
 The system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
                      * 
                      */
@@ -172,18 +172,18 @@ The system will perform binding limit verification of the mobile number you prov
                     bool PhoneNumHasBeenSet() const;
 
                     /**
-                     * 获取Customer's country/region code, which can be obtained via the `GetCountryCodes` API, such as "852".
+                     * 获取Customer's country/region code, which can be obtained via the  [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416), such as "852".
 Parameter value is not allowed to be 7,380,86.
-                     * @return CountryCode Customer's country/region code, which can be obtained via the `GetCountryCodes` API, such as "852".
+                     * @return CountryCode Customer's country/region code, which can be obtained via the  [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416), such as "852".
 Parameter value is not allowed to be 7,380,86.
                      * 
                      */
                     std::string GetCountryCode() const;
 
                     /**
-                     * 设置Customer's country/region code, which can be obtained via the `GetCountryCodes` API, such as "852".
+                     * 设置Customer's country/region code, which can be obtained via the  [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416), such as "852".
 Parameter value is not allowed to be 7,380,86.
-                     * @param _countryCode Customer's country/region code, which can be obtained via the `GetCountryCodes` API, such as "852".
+                     * @param _countryCode Customer's country/region code, which can be obtained via the  [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416), such as "852".
 Parameter value is not allowed to be 7,380,86.
                      * 
                      */
@@ -197,15 +197,15 @@ Parameter value is not allowed to be 7,380,86.
                     bool CountryCodeHasBeenSet() const;
 
                     /**
-                     * 获取Customer's ISO2 standard country/region code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field, such as `HK`.
-                     * @return Area Customer's ISO2 standard country/region code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field, such as `HK`.
+                     * 获取Customer's ISO2 standard country/region code, which can be obtained via the [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416). It should correspond to the `CountryCode` field, such as `HK`.
+                     * @return Area Customer's ISO2 standard country/region code, which can be obtained via the [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416). It should correspond to the `CountryCode` field, such as `HK`.
                      * 
                      */
                     std::string GetArea() const;
 
                     /**
-                     * 设置Customer's ISO2 standard country/region code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field, such as `HK`.
-                     * @param _area Customer's ISO2 standard country/region code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field, such as `HK`.
+                     * 设置Customer's ISO2 standard country/region code, which can be obtained via the [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416). It should correspond to the `CountryCode` field, such as `HK`.
+                     * @param _area Customer's ISO2 standard country/region code, which can be obtained via the [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416). It should correspond to the `CountryCode` field, such as `HK`.
                      * 
                      */
                     void SetArea(const std::string& _area);
@@ -239,23 +239,19 @@ Parameter value is not allowed to be 7,380,86.
                     bool ExtendedHasBeenSet() const;
 
                     /**
-                     * 获取Verification code. 
-It will be used to verify the validity of the mobile number you provide. 
-When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
-                     * @return VerifyCode Verification code. 
-It will be used to verify the validity of the mobile number you provide. 
-When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
+                     * 获取VerifyCode. This field is required. 
+Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
+                     * @return VerifyCode VerifyCode. This field is required. 
+Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
                      * 
                      */
                     std::string GetVerifyCode() const;
 
                     /**
-                     * 设置Verification code. 
-It will be used to verify the validity of the mobile number you provide. 
-When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
-                     * @param _verifyCode Verification code. 
-It will be used to verify the validity of the mobile number you provide. 
-When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
+                     * 设置VerifyCode. This field is required. 
+Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
+                     * @param _verifyCode VerifyCode. This field is required. 
+Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
                      * 
                      */
                     void SetVerifyCode(const std::string& _verifyCode);
@@ -278,7 +274,7 @@ Valid values: `personal`, `company`.
 
                     /**
                      * Registered email address, which should be valid and correct.
-For example, account@qq.com.
+such as "account@qq.com"
                      */
                     std::string m_mail;
                     bool m_mailHasBeenSet;
@@ -298,22 +294,22 @@ A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not
                     bool m_confirmPasswordHasBeenSet;
 
                     /**
-                     * Customer's mobile number. 
-The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. 
+                     * Customer's mobile number.
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed.
 The system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
                      */
                     std::string m_phoneNum;
                     bool m_phoneNumHasBeenSet;
 
                     /**
-                     * Customer's country/region code, which can be obtained via the `GetCountryCodes` API, such as "852".
+                     * Customer's country/region code, which can be obtained via the  [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416), such as "852".
 Parameter value is not allowed to be 7,380,86.
                      */
                     std::string m_countryCode;
                     bool m_countryCodeHasBeenSet;
 
                     /**
-                     * Customer's ISO2 standard country/region code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field, such as `HK`.
+                     * Customer's ISO2 standard country/region code, which can be obtained via the [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416). It should correspond to the `CountryCode` field, such as `HK`.
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;
@@ -325,9 +321,8 @@ Parameter value is not allowed to be 7,380,86.
                     bool m_extendedHasBeenSet;
 
                     /**
-                     * Verification code. 
-It will be used to verify the validity of the mobile number you provide. 
-When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
+                     * VerifyCode. This field is required. 
+Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
                      */
                     std::string m_verifyCode;
                     bool m_verifyCodeHasBeenSet;

@@ -52,12 +52,12 @@ namespace TencentCloud
 <li>`subtitle-stream`: Add a subtitle track.</li>
 <li>`close-caption-708`: Embed CEA-708 subtitles in SEI frames.</li>
 <li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Type The mode. Valid values:
 <li>`subtitle-stream`: Add a subtitle track.</li>
 <li>`close-caption-708`: Embed CEA-708 subtitles in SEI frames.</li>
 <li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetType() const;
@@ -67,12 +67,12 @@ Note: This field may return·null, indicating that no valid values can be obtain
 <li>`subtitle-stream`: Add a subtitle track.</li>
 <li>`close-caption-708`: Embed CEA-708 subtitles in SEI frames.</li>
 <li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _type The mode. Valid values:
 <li>`subtitle-stream`: Add a subtitle track.</li>
 <li>`close-caption-708`: Embed CEA-708 subtitles in SEI frames.</li>
 <li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -86,18 +86,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取The subtitle file.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Subtitle The subtitle file.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     MediaInputInfo GetSubtitle() const;
 
                     /**
                      * 设置The subtitle file.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _subtitle The subtitle file.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSubtitle(const MediaInputInfo& _subtitle);
@@ -109,6 +109,31 @@ Note: This field may return·null, indicating that no valid values can be obtain
                      */
                     bool SubtitleHasBeenSet() const;
 
+                    /**
+                     * 获取Subtitle name.	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return SubtitleName Subtitle name.	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    std::string GetSubtitleName() const;
+
+                    /**
+                     * 设置Subtitle name.	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _subtitleName Subtitle name.	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetSubtitleName(const std::string& _subtitleName);
+
+                    /**
+                     * 判断参数 SubtitleName 是否已赋值
+                     * @return SubtitleName 是否已赋值
+                     * 
+                     */
+                    bool SubtitleNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -116,17 +141,24 @@ Note: This field may return·null, indicating that no valid values can be obtain
 <li>`subtitle-stream`: Add a subtitle track.</li>
 <li>`close-caption-708`: Embed CEA-708 subtitles in SEI frames.</li>
 <li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
                      * The subtitle file.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     MediaInputInfo m_subtitle;
                     bool m_subtitleHasBeenSet;
+
+                    /**
+                     * Subtitle name.	
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string m_subtitleName;
+                    bool m_subtitleNameHasBeenSet;
 
                 };
             }

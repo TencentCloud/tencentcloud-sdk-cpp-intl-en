@@ -52,18 +52,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Super-resolution configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+
                      * @return SuperResolution Super-resolution configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+
                      * 
                      */
                     SuperResolutionConfig GetSuperResolution() const;
 
                     /**
                      * 设置Super-resolution configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+
                      * @param _superResolution Super-resolution configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+
                      * 
                      */
                     void SetSuperResolution(const SuperResolutionConfig& _superResolution);
@@ -76,15 +76,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool SuperResolutionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ColorEnhance 
+                     * 获取Color enhancement configuration.
+
+                     * @return ColorEnhance Color enhancement configuration.
+
                      * 
                      */
                     ColorEnhanceConfig GetColorEnhance() const;
 
                     /**
-                     * 设置
-                     * @param _colorEnhance 
+                     * 设置Color enhancement configuration.
+
+                     * @param _colorEnhance Color enhancement configuration.
+
                      * 
                      */
                     void SetColorEnhance(const ColorEnhanceConfig& _colorEnhance);
@@ -97,15 +101,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ColorEnhanceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SharpEnhance 
+                     * 获取Detail enhancement configuration.
+
+                     * @return SharpEnhance Detail enhancement configuration.
+
                      * 
                      */
                     SharpEnhanceConfig GetSharpEnhance() const;
 
                     /**
-                     * 设置
-                     * @param _sharpEnhance 
+                     * 设置Detail enhancement configuration.
+
+                     * @param _sharpEnhance Detail enhancement configuration.
+
                      * 
                      */
                     void SetSharpEnhance(const SharpEnhanceConfig& _sharpEnhance);
@@ -118,15 +126,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool SharpEnhanceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FaceEnhance 
+                     * 获取Face enhancement configuration.
+
+                     * @return FaceEnhance Face enhancement configuration.
+
                      * 
                      */
                     FaceEnhanceConfig GetFaceEnhance() const;
 
                     /**
-                     * 设置
-                     * @param _faceEnhance 
+                     * 设置Face enhancement configuration.
+
+                     * @param _faceEnhance Face enhancement configuration.
+
                      * 
                      */
                     void SetFaceEnhance(const FaceEnhanceConfig& _faceEnhance);
@@ -142,25 +154,28 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * Super-resolution configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+
                      */
                     SuperResolutionConfig m_superResolution;
                     bool m_superResolutionHasBeenSet;
 
                     /**
-                     * 
+                     * Color enhancement configuration.
+
                      */
                     ColorEnhanceConfig m_colorEnhance;
                     bool m_colorEnhanceHasBeenSet;
 
                     /**
-                     * 
+                     * Detail enhancement configuration.
+
                      */
                     SharpEnhanceConfig m_sharpEnhance;
                     bool m_sharpEnhanceHasBeenSet;
 
                     /**
-                     * 
+                     * Face enhancement configuration.
+
                      */
                     FaceEnhanceConfig m_faceEnhance;
                     bool m_faceEnhanceHasBeenSet;
