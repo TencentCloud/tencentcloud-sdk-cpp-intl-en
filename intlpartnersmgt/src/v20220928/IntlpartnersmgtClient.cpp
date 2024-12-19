@@ -169,6 +169,49 @@ IntlpartnersmgtClient::CreateAccountOutcomeCallable IntlpartnersmgtClient::Creat
     return task->get_future();
 }
 
+IntlpartnersmgtClient::CreateAndSendClientInvitationMailOutcome IntlpartnersmgtClient::CreateAndSendClientInvitationMail(const CreateAndSendClientInvitationMailRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateAndSendClientInvitationMail");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateAndSendClientInvitationMailResponse rsp = CreateAndSendClientInvitationMailResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateAndSendClientInvitationMailOutcome(rsp);
+        else
+            return CreateAndSendClientInvitationMailOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateAndSendClientInvitationMailOutcome(outcome.GetError());
+    }
+}
+
+void IntlpartnersmgtClient::CreateAndSendClientInvitationMailAsync(const CreateAndSendClientInvitationMailRequest& request, const CreateAndSendClientInvitationMailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateAndSendClientInvitationMail(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+IntlpartnersmgtClient::CreateAndSendClientInvitationMailOutcomeCallable IntlpartnersmgtClient::CreateAndSendClientInvitationMailCallable(const CreateAndSendClientInvitationMailRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateAndSendClientInvitationMailOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateAndSendClientInvitationMail(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 IntlpartnersmgtClient::DescribeBillDetailOutcome IntlpartnersmgtClient::DescribeBillDetail(const DescribeBillDetailRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeBillDetail");

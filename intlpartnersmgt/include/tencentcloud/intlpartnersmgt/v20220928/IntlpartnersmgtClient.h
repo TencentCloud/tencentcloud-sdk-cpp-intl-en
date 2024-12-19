@@ -29,6 +29,8 @@
 #include <tencentcloud/intlpartnersmgt/v20220928/model/AllocateCustomerCreditResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/CreateAccountRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/CreateAccountResponse.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/CreateAndSendClientInvitationMailRequest.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/CreateAndSendClientInvitationMailResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillDetailRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillDetailResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillDownloadUrlRequest.h>
@@ -102,6 +104,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateAccountResponse> CreateAccountOutcome;
                 typedef std::future<CreateAccountOutcome> CreateAccountOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::CreateAccountRequest&, CreateAccountOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAccountAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateAndSendClientInvitationMailResponse> CreateAndSendClientInvitationMailOutcome;
+                typedef std::future<CreateAndSendClientInvitationMailOutcome> CreateAndSendClientInvitationMailOutcomeCallable;
+                typedef std::function<void(const IntlpartnersmgtClient*, const Model::CreateAndSendClientInvitationMailRequest&, CreateAndSendClientInvitationMailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAndSendClientInvitationMailAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeBillDetailResponse> DescribeBillDetailOutcome;
                 typedef std::future<DescribeBillDetailOutcome> DescribeBillDetailOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::DescribeBillDetailRequest&, DescribeBillDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBillDetailAsyncHandler;
@@ -213,6 +218,20 @@ namespace TencentCloud
                 CreateAccountOutcome CreateAccount(const Model::CreateAccountRequest &request);
                 void CreateAccountAsync(const Model::CreateAccountRequest& request, const CreateAccountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateAccountOutcomeCallable CreateAccountCallable(const Model::CreateAccountRequest& request);
+
+                /**
+                 *This API is used to apply for the allowlist. If needed, please contact your business representative.Directions:
+1.This API is used to create an invitation link, which you can send to a specified email address.
+2.Customer need to click the invitation link in the email, fill in and submit the required information.
+3.You can review the customer's application in customer management  after submission.
+
+Note:This API is used to manually send the invitation link to the customer if the specified email does not receive it.
+                 * @param req CreateAndSendClientInvitationMailRequest
+                 * @return CreateAndSendClientInvitationMailOutcome
+                 */
+                CreateAndSendClientInvitationMailOutcome CreateAndSendClientInvitationMail(const Model::CreateAndSendClientInvitationMailRequest &request);
+                void CreateAndSendClientInvitationMailAsync(const Model::CreateAndSendClientInvitationMailRequest& request, const CreateAndSendClientInvitationMailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateAndSendClientInvitationMailOutcomeCallable CreateAndSendClientInvitationMailCallable(const Model::CreateAndSendClientInvitationMailRequest& request);
 
                 /**
                  *This API is used to query bill details by customers.
