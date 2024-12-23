@@ -294,6 +294,27 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool TagsHasBeenSet() const;
 
+                    /**
+                     * 获取The Role Arn 
+                     * @return RoleArn The Role Arn 
+                     * 
+                     */
+                    std::string GetRoleArn() const;
+
+                    /**
+                     * 设置The Role Arn 
+                     * @param _roleArn The Role Arn 
+                     * 
+                     */
+                    void SetRoleArn(const std::string& _roleArn);
+
+                    /**
+                     * 判断参数 RoleArn 是否已赋值
+                     * @return RoleArn 是否已赋值
+                     * 
+                     */
+                    bool RoleArnHasBeenSet() const;
+
                 private:
 
                     /**
@@ -365,6 +386,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     std::vector<RoleTags> m_tags;
                     bool m_tagsHasBeenSet;
+
+                    /**
+                     * The Role Arn 
+                     */
+                    std::string m_roleArn;
+                    bool m_roleArnHasBeenSet;
 
                 };
             }

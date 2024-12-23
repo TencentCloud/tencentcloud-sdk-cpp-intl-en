@@ -43,27 +43,6 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start time
-                     * @return StartTime Start time
-                     * 
-                     */
-                    std::string GetStartTime() const;
-
-                    /**
-                     * 设置Start time
-                     * @param _startTime Start time
-                     * 
-                     */
-                    void SetStartTime(const std::string& _startTime);
-
-                    /**
-                     * 判断参数 StartTime 是否已赋值
-                     * @return StartTime 是否已赋值
-                     * 
-                     */
-                    bool StartTimeHasBeenSet() const;
-
-                    /**
                      * 获取End time
                      * @return EndTime End time
                      * 
@@ -106,25 +85,25 @@ namespace TencentCloud
                     bool IpHasBeenSet() const;
 
                     /**
-                     * 获取Region
-                     * @return Zone Region
+                     * 获取Start time
+                     * @return StartTime Start time
                      * 
                      */
-                    std::string GetZone() const;
+                    std::string GetStartTime() const;
 
                     /**
-                     * 设置Region
-                     * @param _zone Region
+                     * 设置Start time
+                     * @param _startTime Start time
                      * 
                      */
-                    void SetZone(const std::string& _zone);
+                    void SetStartTime(const std::string& _startTime);
 
                     /**
-                     * 判断参数 Zone 是否已赋值
-                     * @return Zone 是否已赋值
+                     * 判断参数 StartTime 是否已赋值
+                     * @return StartTime 是否已赋值
                      * 
                      */
-                    bool ZoneHasBeenSet() const;
+                    bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取Direction
@@ -146,27 +125,6 @@ namespace TencentCloud
                      * 
                      */
                     bool DirectionHasBeenSet() const;
-
-                    /**
-                     * 获取Source
-                     * @return Source Source
-                     * 
-                     */
-                    std::string GetSource() const;
-
-                    /**
-                     * 设置Source
-                     * @param _source Source
-                     * 
-                     */
-                    void SetSource(const std::string& _source);
-
-                    /**
-                     * 判断参数 Source 是否已赋值
-                     * @return Source 是否已赋值
-                     * 
-                     */
-                    bool SourceHasBeenSet() const;
 
                     /**
                      * 获取Inter-VPC firewall toggle edge ID
@@ -210,13 +168,49 @@ namespace TencentCloud
                      */
                     bool LogSourceHasBeenSet() const;
 
-                private:
+                    /**
+                     * 获取Source
+                     * @return Source Source
+                     * 
+                     */
+                    std::string GetSource() const;
 
                     /**
-                     * Start time
+                     * 设置Source
+                     * @param _source Source
+                     * 
                      */
-                    std::string m_startTime;
-                    bool m_startTimeHasBeenSet;
+                    void SetSource(const std::string& _source);
+
+                    /**
+                     * 判断参数 Source 是否已赋值
+                     * @return Source 是否已赋值
+                     * 
+                     */
+                    bool SourceHasBeenSet() const;
+
+                    /**
+                     * 获取Region
+                     * @return Zone Region
+                     * 
+                     */
+                    std::string GetZone() const;
+
+                    /**
+                     * 设置Region
+                     * @param _zone Region
+                     * 
+                     */
+                    void SetZone(const std::string& _zone);
+
+                    /**
+                     * 判断参数 Zone 是否已赋值
+                     * @return Zone 是否已赋值
+                     * 
+                     */
+                    bool ZoneHasBeenSet() const;
+
+                private:
 
                     /**
                      * End time
@@ -231,22 +225,16 @@ namespace TencentCloud
                     bool m_ipHasBeenSet;
 
                     /**
-                     * Region
+                     * Start time
                      */
-                    std::string m_zone;
-                    bool m_zoneHasBeenSet;
+                    std::string m_startTime;
+                    bool m_startTimeHasBeenSet;
 
                     /**
                      * Direction
                      */
                     std::string m_direction;
                     bool m_directionHasBeenSet;
-
-                    /**
-                     * Source
-                     */
-                    std::string m_source;
-                    bool m_sourceHasBeenSet;
 
                     /**
                      * Inter-VPC firewall toggle edge ID
@@ -259,6 +247,18 @@ namespace TencentCloud
                      */
                     std::string m_logSource;
                     bool m_logSourceHasBeenSet;
+
+                    /**
+                     * Source
+                     */
+                    std::string m_source;
+                    bool m_sourceHasBeenSet;
+
+                    /**
+                     * Region
+                     */
+                    std::string m_zone;
+                    bool m_zoneHasBeenSet;
 
                 };
             }

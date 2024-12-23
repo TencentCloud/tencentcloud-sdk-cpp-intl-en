@@ -47,6 +47,8 @@
 #include <tencentcloud/iai/v20200303/model/DetectFaceResponse.h>
 #include <tencentcloud/iai/v20200303/model/DetectFaceAttributesRequest.h>
 #include <tencentcloud/iai/v20200303/model/DetectFaceAttributesResponse.h>
+#include <tencentcloud/iai/v20200303/model/DetectFaceSimilarityRequest.h>
+#include <tencentcloud/iai/v20200303/model/DetectFaceSimilarityResponse.h>
 #include <tencentcloud/iai/v20200303/model/DetectLiveFaceRequest.h>
 #include <tencentcloud/iai/v20200303/model/DetectLiveFaceResponse.h>
 #include <tencentcloud/iai/v20200303/model/DetectLiveFaceAccurateRequest.h>
@@ -129,6 +131,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DetectFaceAttributesResponse> DetectFaceAttributesOutcome;
                 typedef std::future<DetectFaceAttributesOutcome> DetectFaceAttributesOutcomeCallable;
                 typedef std::function<void(const IaiClient*, const Model::DetectFaceAttributesRequest&, DetectFaceAttributesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DetectFaceAttributesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DetectFaceSimilarityResponse> DetectFaceSimilarityOutcome;
+                typedef std::future<DetectFaceSimilarityOutcome> DetectFaceSimilarityOutcomeCallable;
+                typedef std::function<void(const IaiClient*, const Model::DetectFaceSimilarityRequest&, DetectFaceSimilarityOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DetectFaceSimilarityAsyncHandler;
                 typedef Outcome<Core::Error, Model::DetectLiveFaceResponse> DetectLiveFaceOutcome;
                 typedef std::future<DetectLiveFaceOutcome> DetectLiveFaceOutcomeCallable;
                 typedef std::function<void(const IaiClient*, const Model::DetectLiveFaceRequest&, DetectLiveFaceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DetectLiveFaceAsyncHandler;
@@ -345,6 +350,16 @@ Use this API for corresponding face detection and attribute analysis.
                 DetectFaceAttributesOutcome DetectFaceAttributes(const Model::DetectFaceAttributesRequest &request);
                 void DetectFaceAttributesAsync(const Model::DetectFaceAttributesRequest& request, const DetectFaceAttributesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DetectFaceAttributesOutcomeCallable DetectFaceAttributesCallable(const Model::DetectFaceAttributesRequest& request);
+
+                /**
+                 *Compare the faces in the two pictures for similarity and return the face similarity score. If you need to determine "whether this person is someone", that is, to verify whether the person in a picture is someone with a known identity, such as a common face login scenario, it is recommended to use [VerifyFace] (https://www.tencentcloud.com/document/product/1059/36972) or [VerifyPerson] (https://www.tencentcloud.com/document/product/1059/36971) inferface. 
+Please use the V3 version for the signature method in the public parameters, that is, configure the SignatureMethod parameter to TC3-HMAC-SHA256
+                 * @param req DetectFaceSimilarityRequest
+                 * @return DetectFaceSimilarityOutcome
+                 */
+                DetectFaceSimilarityOutcome DetectFaceSimilarity(const Model::DetectFaceSimilarityRequest &request);
+                void DetectFaceSimilarityAsync(const Model::DetectFaceSimilarityRequest& request, const DetectFaceSimilarityAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DetectFaceSimilarityOutcomeCallable DetectFaceSimilarityCallable(const Model::DetectFaceSimilarityRequest& request);
 
                 /**
                  *This API is used to detect the liveness of a face in a static image uploaded by a user. Compared with dynamic liveness detection, static liveness detection does not require moving lips, shaking head, or blinking for recognition.

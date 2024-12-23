@@ -110,18 +110,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SubtitleHasBeenSet() const;
 
                     /**
-                     * 获取Subtitle name.	
+                     * 获取Subtitle name.
+Note: supports Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and parentheses. Max 64 characters.
 Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return SubtitleName Subtitle name.	
+                     * @return SubtitleName Subtitle name.
+Note: supports Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and parentheses. Max 64 characters.
 Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetSubtitleName() const;
 
                     /**
-                     * 设置Subtitle name.	
+                     * 设置Subtitle name.
+Note: supports Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and parentheses. Max 64 characters.
 Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _subtitleName Subtitle name.	
+                     * @param _subtitleName Subtitle name.
+Note: supports Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and parentheses. Max 64 characters.
 Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
@@ -154,7 +158,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_subtitleHasBeenSet;
 
                     /**
-                     * Subtitle name.	
+                     * Subtitle name.
+Note: supports Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and parentheses. Max 64 characters.
 Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_subtitleName;

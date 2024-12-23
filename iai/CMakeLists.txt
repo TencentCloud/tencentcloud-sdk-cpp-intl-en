@@ -29,6 +29,7 @@ set(iai_public_header_model
   include/tencentcloud/iai/v20200303/model/SearchPersonsReturnsByGroupResponse.h
   include/tencentcloud/iai/v20200303/model/DeleteFaceRequest.h
   include/tencentcloud/iai/v20200303/model/HeadPose.h
+  include/tencentcloud/iai/v20200303/model/DetectFaceSimilarityResponse.h
   include/tencentcloud/iai/v20200303/model/ModifyPersonGroupInfoRequest.h
   include/tencentcloud/iai/v20200303/model/GetGroupListResponse.h
   include/tencentcloud/iai/v20200303/model/GroupInfo.h
@@ -43,7 +44,7 @@ set(iai_public_header_model
   include/tencentcloud/iai/v20200303/model/DeleteGroupRequest.h
   include/tencentcloud/iai/v20200303/model/CreateFaceResponse.h
   include/tencentcloud/iai/v20200303/model/DetectFaceAttributesResponse.h
-  include/tencentcloud/iai/v20200303/model/GroupCandidate.h
+  include/tencentcloud/iai/v20200303/model/DetectFaceSimilarityRequest.h
   include/tencentcloud/iai/v20200303/model/SearchPersonsResponse.h
   include/tencentcloud/iai/v20200303/model/DetectLiveFaceAccurateRequest.h
   include/tencentcloud/iai/v20200303/model/CompareFaceResponse.h
@@ -71,6 +72,7 @@ set(iai_public_header_model
   include/tencentcloud/iai/v20200303/model/DetectFaceResponse.h
   include/tencentcloud/iai/v20200303/model/CopyPersonRequest.h
   include/tencentcloud/iai/v20200303/model/GetPersonListNumRequest.h
+  include/tencentcloud/iai/v20200303/model/GroupCandidate.h
   include/tencentcloud/iai/v20200303/model/SearchPersonsReturnsByGroupRequest.h
   include/tencentcloud/iai/v20200303/model/DeletePersonFromGroupResponse.h
   include/tencentcloud/iai/v20200303/model/VerifyPersonResponse.h
@@ -115,6 +117,7 @@ set(iai_src
   src/v20200303/model/SearchPersonsReturnsByGroupResponse.cpp
   src/v20200303/model/DeleteFaceRequest.cpp
   src/v20200303/model/HeadPose.cpp
+  src/v20200303/model/DetectFaceSimilarityResponse.cpp
   src/v20200303/model/ModifyPersonGroupInfoRequest.cpp
   src/v20200303/model/GetGroupListResponse.cpp
   src/v20200303/model/GroupInfo.cpp
@@ -129,7 +132,7 @@ set(iai_src
   src/v20200303/model/DeleteGroupRequest.cpp
   src/v20200303/model/CreateFaceResponse.cpp
   src/v20200303/model/DetectFaceAttributesResponse.cpp
-  src/v20200303/model/GroupCandidate.cpp
+  src/v20200303/model/DetectFaceSimilarityRequest.cpp
   src/v20200303/model/SearchPersonsResponse.cpp
   src/v20200303/model/DetectLiveFaceAccurateRequest.cpp
   src/v20200303/model/CompareFaceResponse.cpp
@@ -157,6 +160,7 @@ set(iai_src
   src/v20200303/model/DetectFaceResponse.cpp
   src/v20200303/model/CopyPersonRequest.cpp
   src/v20200303/model/GetPersonListNumRequest.cpp
+  src/v20200303/model/GroupCandidate.cpp
   src/v20200303/model/SearchPersonsReturnsByGroupRequest.cpp
   src/v20200303/model/DeletePersonFromGroupResponse.cpp
   src/v20200303/model/VerifyPersonResponse.cpp

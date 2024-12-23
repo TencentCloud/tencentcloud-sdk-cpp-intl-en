@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取EIP of the Anti-DDoS instance ID
-                     * @return Eip EIP of the Anti-DDoS instance ID
+                     * 获取EIP of the Anti-DDoS instance ID.
+                     * @return Eip EIP of the Anti-DDoS instance ID.
                      * 
                      */
                     std::string GetEip() const;
 
                     /**
-                     * 设置EIP of the Anti-DDoS instance ID
-                     * @param _eip EIP of the Anti-DDoS instance ID
+                     * 设置EIP of the Anti-DDoS instance ID.
+                     * @param _eip EIP of the Anti-DDoS instance ID.
                      * 
                      */
                     void SetEip(const std::string& _eip);
@@ -135,7 +135,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * EIP of the Anti-DDoS instance ID
+                     * EIP of the Anti-DDoS instance ID.
                      */
                     std::string m_eip;
                     bool m_eipHasBeenSet;
