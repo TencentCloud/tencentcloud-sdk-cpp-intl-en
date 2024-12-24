@@ -163,6 +163,64 @@ Default value: false.
                      */
                     bool ImageSetRequiredHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to synchronize as an encrypted custom image.
+Default value is `false`.
+Synchronization to an encrypted custom image is only supported within the same region.
+                     * @return Encrypt Whether to synchronize as an encrypted custom image.
+Default value is `false`.
+Synchronization to an encrypted custom image is only supported within the same region.
+                     * 
+                     */
+                    bool GetEncrypt() const;
+
+                    /**
+                     * 设置Whether to synchronize as an encrypted custom image.
+Default value is `false`.
+Synchronization to an encrypted custom image is only supported within the same region.
+                     * @param _encrypt Whether to synchronize as an encrypted custom image.
+Default value is `false`.
+Synchronization to an encrypted custom image is only supported within the same region.
+                     * 
+                     */
+                    void SetEncrypt(const bool& _encrypt);
+
+                    /**
+                     * 判断参数 Encrypt 是否已赋值
+                     * @return Encrypt 是否已赋值
+                     * 
+                     */
+                    bool EncryptHasBeenSet() const;
+
+                    /**
+                     * 获取KMS key ID used when synchronizing to an encrypted custom image. 
+This parameter is valid only synchronizing to an encrypted image.
+If KmsKeyId is not specified, the default CBS cloud product KMS key is used.
+                     * @return KmsKeyId KMS key ID used when synchronizing to an encrypted custom image. 
+This parameter is valid only synchronizing to an encrypted image.
+If KmsKeyId is not specified, the default CBS cloud product KMS key is used.
+                     * 
+                     */
+                    std::string GetKmsKeyId() const;
+
+                    /**
+                     * 设置KMS key ID used when synchronizing to an encrypted custom image. 
+This parameter is valid only synchronizing to an encrypted image.
+If KmsKeyId is not specified, the default CBS cloud product KMS key is used.
+                     * @param _kmsKeyId KMS key ID used when synchronizing to an encrypted custom image. 
+This parameter is valid only synchronizing to an encrypted image.
+If KmsKeyId is not specified, the default CBS cloud product KMS key is used.
+                     * 
+                     */
+                    void SetKmsKeyId(const std::string& _kmsKeyId);
+
+                    /**
+                     * 判断参数 KmsKeyId 是否已赋值
+                     * @return KmsKeyId 是否已赋值
+                     * 
+                     */
+                    bool KmsKeyIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -198,6 +256,22 @@ Default value: false.
                      */
                     bool m_imageSetRequired;
                     bool m_imageSetRequiredHasBeenSet;
+
+                    /**
+                     * Whether to synchronize as an encrypted custom image.
+Default value is `false`.
+Synchronization to an encrypted custom image is only supported within the same region.
+                     */
+                    bool m_encrypt;
+                    bool m_encryptHasBeenSet;
+
+                    /**
+                     * KMS key ID used when synchronizing to an encrypted custom image. 
+This parameter is valid only synchronizing to an encrypted image.
+If KmsKeyId is not specified, the default CBS cloud product KMS key is used.
+                     */
+                    std::string m_kmsKeyId;
+                    bool m_kmsKeyIdHasBeenSet;
 
                 };
             }
