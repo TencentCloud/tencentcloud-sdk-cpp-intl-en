@@ -97,12 +97,14 @@ Example value: false
 1: OCR+living detection & face comparison;
 2: Living detection & face comparison;
 3: Living detection;
+4: OCR;
 The default value is 2.
 Example value: 3
                      * @return CheckMode Detection mode, parameter values are as follows:
 1: OCR+living detection & face comparison;
 2: Living detection & face comparison;
 3: Living detection;
+4: OCR;
 The default value is 2.
 Example value: 3
                      * 
@@ -114,12 +116,14 @@ Example value: 3
 1: OCR+living detection & face comparison;
 2: Living detection & face comparison;
 3: Living detection;
+4: OCR;
 The default value is 2.
 Example value: 3
                      * @param _checkMode Detection mode, parameter values are as follows:
 1: OCR+living detection & face comparison;
 2: Living detection & face comparison;
 3: Living detection;
+4: OCR;
 The default value is 2.
 Example value: 3
                      * 
@@ -462,6 +466,7 @@ Example value: false
 1: OCR+living detection & face comparison;
 2: Living detection & face comparison;
 3: Living detection;
+4: OCR;
 The default value is 2.
 Example value: 3
                      */
