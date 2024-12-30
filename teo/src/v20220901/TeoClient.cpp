@@ -513,6 +513,49 @@ TeoClient::CreateCustomizeErrorPageOutcomeCallable TeoClient::CreateCustomizeErr
     return task->get_future();
 }
 
+TeoClient::CreateDnsRecordOutcome TeoClient::CreateDnsRecord(const CreateDnsRecordRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateDnsRecord");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateDnsRecordResponse rsp = CreateDnsRecordResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateDnsRecordOutcome(rsp);
+        else
+            return CreateDnsRecordOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateDnsRecordOutcome(outcome.GetError());
+    }
+}
+
+void TeoClient::CreateDnsRecordAsync(const CreateDnsRecordRequest& request, const CreateDnsRecordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateDnsRecord(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TeoClient::CreateDnsRecordOutcomeCallable TeoClient::CreateDnsRecordCallable(const CreateDnsRecordRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateDnsRecordOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateDnsRecord(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TeoClient::CreateFunctionOutcome TeoClient::CreateFunction(const CreateFunctionRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateFunction");
@@ -1366,6 +1409,49 @@ TeoClient::DeleteCustomErrorPageOutcomeCallable TeoClient::DeleteCustomErrorPage
         [this, request]()
         {
             return this->DeleteCustomErrorPage(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TeoClient::DeleteDnsRecordsOutcome TeoClient::DeleteDnsRecords(const DeleteDnsRecordsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteDnsRecords");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteDnsRecordsResponse rsp = DeleteDnsRecordsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteDnsRecordsOutcome(rsp);
+        else
+            return DeleteDnsRecordsOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteDnsRecordsOutcome(outcome.GetError());
+    }
+}
+
+void TeoClient::DeleteDnsRecordsAsync(const DeleteDnsRecordsRequest& request, const DeleteDnsRecordsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteDnsRecords(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TeoClient::DeleteDnsRecordsOutcomeCallable TeoClient::DeleteDnsRecordsCallable(const DeleteDnsRecordsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteDnsRecordsOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteDnsRecords(request);
         }
     );
 
@@ -2484,6 +2570,49 @@ TeoClient::DescribeDeployHistoryOutcomeCallable TeoClient::DescribeDeployHistory
         [this, request]()
         {
             return this->DescribeDeployHistory(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TeoClient::DescribeDnsRecordsOutcome TeoClient::DescribeDnsRecords(const DescribeDnsRecordsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDnsRecords");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDnsRecordsResponse rsp = DescribeDnsRecordsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDnsRecordsOutcome(rsp);
+        else
+            return DescribeDnsRecordsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDnsRecordsOutcome(outcome.GetError());
+    }
+}
+
+void TeoClient::DescribeDnsRecordsAsync(const DescribeDnsRecordsRequest& request, const DescribeDnsRecordsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeDnsRecords(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TeoClient::DescribeDnsRecordsOutcomeCallable TeoClient::DescribeDnsRecordsCallable(const DescribeDnsRecordsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeDnsRecordsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeDnsRecords(request);
         }
     );
 
@@ -4505,6 +4634,92 @@ TeoClient::ModifyCustomErrorPageOutcomeCallable TeoClient::ModifyCustomErrorPage
         [this, request]()
         {
             return this->ModifyCustomErrorPage(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TeoClient::ModifyDnsRecordsOutcome TeoClient::ModifyDnsRecords(const ModifyDnsRecordsRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyDnsRecords");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyDnsRecordsResponse rsp = ModifyDnsRecordsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyDnsRecordsOutcome(rsp);
+        else
+            return ModifyDnsRecordsOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyDnsRecordsOutcome(outcome.GetError());
+    }
+}
+
+void TeoClient::ModifyDnsRecordsAsync(const ModifyDnsRecordsRequest& request, const ModifyDnsRecordsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyDnsRecords(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TeoClient::ModifyDnsRecordsOutcomeCallable TeoClient::ModifyDnsRecordsCallable(const ModifyDnsRecordsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyDnsRecordsOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyDnsRecords(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TeoClient::ModifyDnsRecordsStatusOutcome TeoClient::ModifyDnsRecordsStatus(const ModifyDnsRecordsStatusRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyDnsRecordsStatus");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyDnsRecordsStatusResponse rsp = ModifyDnsRecordsStatusResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyDnsRecordsStatusOutcome(rsp);
+        else
+            return ModifyDnsRecordsStatusOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyDnsRecordsStatusOutcome(outcome.GetError());
+    }
+}
+
+void TeoClient::ModifyDnsRecordsStatusAsync(const ModifyDnsRecordsStatusRequest& request, const ModifyDnsRecordsStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyDnsRecordsStatus(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TeoClient::ModifyDnsRecordsStatusOutcomeCallable TeoClient::ModifyDnsRecordsStatusCallable(const ModifyDnsRecordsStatusRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyDnsRecordsStatusOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyDnsRecordsStatus(request);
         }
     );
 

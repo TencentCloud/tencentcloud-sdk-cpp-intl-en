@@ -397,6 +397,12 @@
 #include <tencentcloud/vpc/v20170312/model/HaVipDisassociateAddressIpResponse.h>
 #include <tencentcloud/vpc/v20170312/model/InquirePriceCreateDirectConnectGatewayRequest.h>
 #include <tencentcloud/vpc/v20170312/model/InquirePriceCreateDirectConnectGatewayResponse.h>
+#include <tencentcloud/vpc/v20170312/model/InquiryPriceAllocateAddressesRequest.h>
+#include <tencentcloud/vpc/v20170312/model/InquiryPriceAllocateAddressesResponse.h>
+#include <tencentcloud/vpc/v20170312/model/InquiryPriceModifyAddressesBandwidthRequest.h>
+#include <tencentcloud/vpc/v20170312/model/InquiryPriceModifyAddressesBandwidthResponse.h>
+#include <tencentcloud/vpc/v20170312/model/InquiryPriceRenewAddressesRequest.h>
+#include <tencentcloud/vpc/v20170312/model/InquiryPriceRenewAddressesResponse.h>
 #include <tencentcloud/vpc/v20170312/model/InquiryPriceRenewVpnGatewayRequest.h>
 #include <tencentcloud/vpc/v20170312/model/InquiryPriceRenewVpnGatewayResponse.h>
 #include <tencentcloud/vpc/v20170312/model/InquiryPriceResetVpnGatewayInternetMaxBandwidthRequest.h>
@@ -1120,6 +1126,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::InquirePriceCreateDirectConnectGatewayResponse> InquirePriceCreateDirectConnectGatewayOutcome;
                 typedef std::future<InquirePriceCreateDirectConnectGatewayOutcome> InquirePriceCreateDirectConnectGatewayOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::InquirePriceCreateDirectConnectGatewayRequest&, InquirePriceCreateDirectConnectGatewayOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquirePriceCreateDirectConnectGatewayAsyncHandler;
+                typedef Outcome<Core::Error, Model::InquiryPriceAllocateAddressesResponse> InquiryPriceAllocateAddressesOutcome;
+                typedef std::future<InquiryPriceAllocateAddressesOutcome> InquiryPriceAllocateAddressesOutcomeCallable;
+                typedef std::function<void(const VpcClient*, const Model::InquiryPriceAllocateAddressesRequest&, InquiryPriceAllocateAddressesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquiryPriceAllocateAddressesAsyncHandler;
+                typedef Outcome<Core::Error, Model::InquiryPriceModifyAddressesBandwidthResponse> InquiryPriceModifyAddressesBandwidthOutcome;
+                typedef std::future<InquiryPriceModifyAddressesBandwidthOutcome> InquiryPriceModifyAddressesBandwidthOutcomeCallable;
+                typedef std::function<void(const VpcClient*, const Model::InquiryPriceModifyAddressesBandwidthRequest&, InquiryPriceModifyAddressesBandwidthOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquiryPriceModifyAddressesBandwidthAsyncHandler;
+                typedef Outcome<Core::Error, Model::InquiryPriceRenewAddressesResponse> InquiryPriceRenewAddressesOutcome;
+                typedef std::future<InquiryPriceRenewAddressesOutcome> InquiryPriceRenewAddressesOutcomeCallable;
+                typedef std::function<void(const VpcClient*, const Model::InquiryPriceRenewAddressesRequest&, InquiryPriceRenewAddressesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquiryPriceRenewAddressesAsyncHandler;
                 typedef Outcome<Core::Error, Model::InquiryPriceRenewVpnGatewayResponse> InquiryPriceRenewVpnGatewayOutcome;
                 typedef std::future<InquiryPriceRenewVpnGatewayOutcome> InquiryPriceRenewVpnGatewayOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::InquiryPriceRenewVpnGatewayRequest&, InquiryPriceRenewVpnGatewayOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquiryPriceRenewVpnGatewayAsyncHandler;
@@ -3186,6 +3201,33 @@ This API is completed asynchronously. If you need to query the execution result 
                 InquirePriceCreateDirectConnectGatewayOutcome InquirePriceCreateDirectConnectGateway(const Model::InquirePriceCreateDirectConnectGatewayRequest &request);
                 void InquirePriceCreateDirectConnectGatewayAsync(const Model::InquirePriceCreateDirectConnectGatewayRequest& request, const InquirePriceCreateDirectConnectGatewayAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 InquirePriceCreateDirectConnectGatewayOutcomeCallable InquirePriceCreateDirectConnectGatewayCallable(const Model::InquirePriceCreateDirectConnectGatewayRequest& request);
+
+                /**
+                 *This API (InquiryPriceAllocateAddresses) is used to query the price of purchasing EIPs.
+                 * @param req InquiryPriceAllocateAddressesRequest
+                 * @return InquiryPriceAllocateAddressesOutcome
+                 */
+                InquiryPriceAllocateAddressesOutcome InquiryPriceAllocateAddresses(const Model::InquiryPriceAllocateAddressesRequest &request);
+                void InquiryPriceAllocateAddressesAsync(const Model::InquiryPriceAllocateAddressesRequest& request, const InquiryPriceAllocateAddressesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                InquiryPriceAllocateAddressesOutcomeCallable InquiryPriceAllocateAddressesCallable(const Model::InquiryPriceAllocateAddressesRequest& request);
+
+                /**
+                 *This API is used to query the price of modifying EIP bandwidth.
+                 * @param req InquiryPriceModifyAddressesBandwidthRequest
+                 * @return InquiryPriceModifyAddressesBandwidthOutcome
+                 */
+                InquiryPriceModifyAddressesBandwidthOutcome InquiryPriceModifyAddressesBandwidth(const Model::InquiryPriceModifyAddressesBandwidthRequest &request);
+                void InquiryPriceModifyAddressesBandwidthAsync(const Model::InquiryPriceModifyAddressesBandwidthRequest& request, const InquiryPriceModifyAddressesBandwidthAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                InquiryPriceModifyAddressesBandwidthOutcomeCallable InquiryPriceModifyAddressesBandwidthCallable(const Model::InquiryPriceModifyAddressesBandwidthRequest& request);
+
+                /**
+                 *This API (InquiryPriceRenewAddresses) is used to query the price of renewing prepaid EIPs.
+                 * @param req InquiryPriceRenewAddressesRequest
+                 * @return InquiryPriceRenewAddressesOutcome
+                 */
+                InquiryPriceRenewAddressesOutcome InquiryPriceRenewAddresses(const Model::InquiryPriceRenewAddressesRequest &request);
+                void InquiryPriceRenewAddressesAsync(const Model::InquiryPriceRenewAddressesRequest& request, const InquiryPriceRenewAddressesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                InquiryPriceRenewAddressesOutcomeCallable InquiryPriceRenewAddressesCallable(const Model::InquiryPriceRenewAddressesRequest& request);
 
                 /**
                  *This API (InquiryPriceRenewVpnGateway) is used to query the price for VPN gateway renewal. Currently, only querying prices for IPSEC-type gateways is supported.

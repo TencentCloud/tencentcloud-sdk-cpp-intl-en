@@ -126,6 +126,27 @@ namespace TencentCloud
                      */
                     bool VolumeHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to pause, the default value of false indicates no pause. During the pause, the task is still in progress and is billed. If you want to terminate the task, please call the stop interface.
+                     * @return IsPause Whether to pause, the default value of false indicates no pause. During the pause, the task is still in progress and is billed. If you want to terminate the task, please call the stop interface.
+                     * 
+                     */
+                    bool GetIsPause() const;
+
+                    /**
+                     * 设置Whether to pause, the default value of false indicates no pause. During the pause, the task is still in progress and is billed. If you want to terminate the task, please call the stop interface.
+                     * @param _isPause Whether to pause, the default value of false indicates no pause. During the pause, the task is still in progress and is billed. If you want to terminate the task, please call the stop interface.
+                     * 
+                     */
+                    void SetIsPause(const bool& _isPause);
+
+                    /**
+                     * 判断参数 IsPause 是否已赋值
+                     * @return IsPause 是否已赋值
+                     * 
+                     */
+                    bool IsPauseHasBeenSet() const;
+
                 private:
 
                     /**
@@ -151,6 +172,12 @@ namespace TencentCloud
                      */
                     uint64_t m_volume;
                     bool m_volumeHasBeenSet;
+
+                    /**
+                     * Whether to pause, the default value of false indicates no pause. During the pause, the task is still in progress and is billed. If you want to terminate the task, please call the stop interface.
+                     */
+                    bool m_isPause;
+                    bool m_isPauseHasBeenSet;
 
                 };
             }
