@@ -239,18 +239,14 @@ namespace TencentCloud
 
                     /**
                      * 获取List of VPCs bound to the private domain.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VpcSet List of VPCs bound to the private domain.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<VpcInfo> GetVpcSet() const;
 
                     /**
                      * 设置List of VPCs bound to the private domain.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _vpcSet List of VPCs bound to the private domain.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetVpcSet(const std::vector<VpcInfo>& _vpcSet);
@@ -284,19 +280,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Tag.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Tags Tag.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Tag
+                     * @return Tags Tag
                      * 
                      */
                     std::vector<TagInfo> GetTags() const;
 
                     /**
-                     * 设置Tag.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tags Tag.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Tag
+                     * @param _tags Tag
                      * 
                      */
                     void SetTags(const std::vector<TagInfo>& _tags);
@@ -366,7 +358,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * List of VPCs bound to the private domain.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<VpcInfo> m_vpcSet;
                     bool m_vpcSetHasBeenSet;
@@ -378,8 +369,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Tag.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Tag
                      */
                     std::vector<TagInfo> m_tags;
                     bool m_tagsHasBeenSet;

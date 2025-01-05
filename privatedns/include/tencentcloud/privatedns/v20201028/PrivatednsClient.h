@@ -27,6 +27,8 @@
 #include <tencentcloud/privatedns/v20201028/model/CreateEndPointResponse.h>
 #include <tencentcloud/privatedns/v20201028/model/CreateEndPointAndEndPointServiceRequest.h>
 #include <tencentcloud/privatedns/v20201028/model/CreateEndPointAndEndPointServiceResponse.h>
+#include <tencentcloud/privatedns/v20201028/model/CreateExtendEndpointRequest.h>
+#include <tencentcloud/privatedns/v20201028/model/CreateExtendEndpointResponse.h>
 #include <tencentcloud/privatedns/v20201028/model/CreateForwardRuleRequest.h>
 #include <tencentcloud/privatedns/v20201028/model/CreateForwardRuleResponse.h>
 #include <tencentcloud/privatedns/v20201028/model/CreatePrivateDNSAccountRequest.h>
@@ -35,6 +37,10 @@
 #include <tencentcloud/privatedns/v20201028/model/CreatePrivateZoneResponse.h>
 #include <tencentcloud/privatedns/v20201028/model/CreatePrivateZoneRecordRequest.h>
 #include <tencentcloud/privatedns/v20201028/model/CreatePrivateZoneRecordResponse.h>
+#include <tencentcloud/privatedns/v20201028/model/DeleteEndPointRequest.h>
+#include <tencentcloud/privatedns/v20201028/model/DeleteEndPointResponse.h>
+#include <tencentcloud/privatedns/v20201028/model/DeleteForwardRuleRequest.h>
+#include <tencentcloud/privatedns/v20201028/model/DeleteForwardRuleResponse.h>
 #include <tencentcloud/privatedns/v20201028/model/DeletePrivateZoneRecordRequest.h>
 #include <tencentcloud/privatedns/v20201028/model/DeletePrivateZoneRecordResponse.h>
 #include <tencentcloud/privatedns/v20201028/model/DescribeAccountVpcListRequest.h>
@@ -45,6 +51,12 @@
 #include <tencentcloud/privatedns/v20201028/model/DescribeDashboardResponse.h>
 #include <tencentcloud/privatedns/v20201028/model/DescribeEndPointListRequest.h>
 #include <tencentcloud/privatedns/v20201028/model/DescribeEndPointListResponse.h>
+#include <tencentcloud/privatedns/v20201028/model/DescribeEndPointRegionRequest.h>
+#include <tencentcloud/privatedns/v20201028/model/DescribeEndPointRegionResponse.h>
+#include <tencentcloud/privatedns/v20201028/model/DescribeExtendEndpointListRequest.h>
+#include <tencentcloud/privatedns/v20201028/model/DescribeExtendEndpointListResponse.h>
+#include <tencentcloud/privatedns/v20201028/model/DescribeForwardRuleRequest.h>
+#include <tencentcloud/privatedns/v20201028/model/DescribeForwardRuleResponse.h>
 #include <tencentcloud/privatedns/v20201028/model/DescribeForwardRuleListRequest.h>
 #include <tencentcloud/privatedns/v20201028/model/DescribeForwardRuleListResponse.h>
 #include <tencentcloud/privatedns/v20201028/model/DescribePrivateDNSAccountListRequest.h>
@@ -59,6 +71,8 @@
 #include <tencentcloud/privatedns/v20201028/model/DescribeQuotaUsageResponse.h>
 #include <tencentcloud/privatedns/v20201028/model/DescribeRequestDataRequest.h>
 #include <tencentcloud/privatedns/v20201028/model/DescribeRequestDataResponse.h>
+#include <tencentcloud/privatedns/v20201028/model/ModifyForwardRuleRequest.h>
+#include <tencentcloud/privatedns/v20201028/model/ModifyForwardRuleResponse.h>
 #include <tencentcloud/privatedns/v20201028/model/ModifyPrivateZoneRequest.h>
 #include <tencentcloud/privatedns/v20201028/model/ModifyPrivateZoneResponse.h>
 #include <tencentcloud/privatedns/v20201028/model/ModifyPrivateZoneRecordRequest.h>
@@ -89,6 +103,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateEndPointAndEndPointServiceResponse> CreateEndPointAndEndPointServiceOutcome;
                 typedef std::future<CreateEndPointAndEndPointServiceOutcome> CreateEndPointAndEndPointServiceOutcomeCallable;
                 typedef std::function<void(const PrivatednsClient*, const Model::CreateEndPointAndEndPointServiceRequest&, CreateEndPointAndEndPointServiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateEndPointAndEndPointServiceAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateExtendEndpointResponse> CreateExtendEndpointOutcome;
+                typedef std::future<CreateExtendEndpointOutcome> CreateExtendEndpointOutcomeCallable;
+                typedef std::function<void(const PrivatednsClient*, const Model::CreateExtendEndpointRequest&, CreateExtendEndpointOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateExtendEndpointAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateForwardRuleResponse> CreateForwardRuleOutcome;
                 typedef std::future<CreateForwardRuleOutcome> CreateForwardRuleOutcomeCallable;
                 typedef std::function<void(const PrivatednsClient*, const Model::CreateForwardRuleRequest&, CreateForwardRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateForwardRuleAsyncHandler;
@@ -101,6 +118,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreatePrivateZoneRecordResponse> CreatePrivateZoneRecordOutcome;
                 typedef std::future<CreatePrivateZoneRecordOutcome> CreatePrivateZoneRecordOutcomeCallable;
                 typedef std::function<void(const PrivatednsClient*, const Model::CreatePrivateZoneRecordRequest&, CreatePrivateZoneRecordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreatePrivateZoneRecordAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteEndPointResponse> DeleteEndPointOutcome;
+                typedef std::future<DeleteEndPointOutcome> DeleteEndPointOutcomeCallable;
+                typedef std::function<void(const PrivatednsClient*, const Model::DeleteEndPointRequest&, DeleteEndPointOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteEndPointAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteForwardRuleResponse> DeleteForwardRuleOutcome;
+                typedef std::future<DeleteForwardRuleOutcome> DeleteForwardRuleOutcomeCallable;
+                typedef std::function<void(const PrivatednsClient*, const Model::DeleteForwardRuleRequest&, DeleteForwardRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteForwardRuleAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeletePrivateZoneRecordResponse> DeletePrivateZoneRecordOutcome;
                 typedef std::future<DeletePrivateZoneRecordOutcome> DeletePrivateZoneRecordOutcomeCallable;
                 typedef std::function<void(const PrivatednsClient*, const Model::DeletePrivateZoneRecordRequest&, DeletePrivateZoneRecordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeletePrivateZoneRecordAsyncHandler;
@@ -116,6 +139,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeEndPointListResponse> DescribeEndPointListOutcome;
                 typedef std::future<DescribeEndPointListOutcome> DescribeEndPointListOutcomeCallable;
                 typedef std::function<void(const PrivatednsClient*, const Model::DescribeEndPointListRequest&, DescribeEndPointListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeEndPointListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeEndPointRegionResponse> DescribeEndPointRegionOutcome;
+                typedef std::future<DescribeEndPointRegionOutcome> DescribeEndPointRegionOutcomeCallable;
+                typedef std::function<void(const PrivatednsClient*, const Model::DescribeEndPointRegionRequest&, DescribeEndPointRegionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeEndPointRegionAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeExtendEndpointListResponse> DescribeExtendEndpointListOutcome;
+                typedef std::future<DescribeExtendEndpointListOutcome> DescribeExtendEndpointListOutcomeCallable;
+                typedef std::function<void(const PrivatednsClient*, const Model::DescribeExtendEndpointListRequest&, DescribeExtendEndpointListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeExtendEndpointListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeForwardRuleResponse> DescribeForwardRuleOutcome;
+                typedef std::future<DescribeForwardRuleOutcome> DescribeForwardRuleOutcomeCallable;
+                typedef std::function<void(const PrivatednsClient*, const Model::DescribeForwardRuleRequest&, DescribeForwardRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeForwardRuleAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeForwardRuleListResponse> DescribeForwardRuleListOutcome;
                 typedef std::future<DescribeForwardRuleListOutcome> DescribeForwardRuleListOutcomeCallable;
                 typedef std::function<void(const PrivatednsClient*, const Model::DescribeForwardRuleListRequest&, DescribeForwardRuleListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeForwardRuleListAsyncHandler;
@@ -137,6 +169,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeRequestDataResponse> DescribeRequestDataOutcome;
                 typedef std::future<DescribeRequestDataOutcome> DescribeRequestDataOutcomeCallable;
                 typedef std::function<void(const PrivatednsClient*, const Model::DescribeRequestDataRequest&, DescribeRequestDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRequestDataAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyForwardRuleResponse> ModifyForwardRuleOutcome;
+                typedef std::future<ModifyForwardRuleOutcome> ModifyForwardRuleOutcomeCallable;
+                typedef std::function<void(const PrivatednsClient*, const Model::ModifyForwardRuleRequest&, ModifyForwardRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyForwardRuleAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyPrivateZoneResponse> ModifyPrivateZoneOutcome;
                 typedef std::future<ModifyPrivateZoneOutcome> ModifyPrivateZoneOutcomeCallable;
                 typedef std::function<void(const PrivatednsClient*, const Model::ModifyPrivateZoneRequest&, ModifyPrivateZoneOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyPrivateZoneAsyncHandler;
@@ -174,6 +209,15 @@ namespace TencentCloud
                 CreateEndPointAndEndPointServiceOutcomeCallable CreateEndPointAndEndPointServiceCallable(const Model::CreateEndPointAndEndPointServiceRequest& request);
 
                 /**
+                 *This API is used to create an endpoint.
+                 * @param req CreateExtendEndpointRequest
+                 * @return CreateExtendEndpointOutcome
+                 */
+                CreateExtendEndpointOutcome CreateExtendEndpoint(const Model::CreateExtendEndpointRequest &request);
+                void CreateExtendEndpointAsync(const Model::CreateExtendEndpointRequest& request, const CreateExtendEndpointAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateExtendEndpointOutcomeCallable CreateExtendEndpointCallable(const Model::CreateExtendEndpointRequest& request);
+
+                /**
                  *This API is used to create a custom forwarding rule.
                  * @param req CreateForwardRuleRequest
                  * @return CreateForwardRuleOutcome
@@ -208,6 +252,24 @@ namespace TencentCloud
                 CreatePrivateZoneRecordOutcome CreatePrivateZoneRecord(const Model::CreatePrivateZoneRecordRequest &request);
                 void CreatePrivateZoneRecordAsync(const Model::CreatePrivateZoneRecordRequest& request, const CreatePrivateZoneRecordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreatePrivateZoneRecordOutcomeCallable CreatePrivateZoneRecordCallable(const Model::CreatePrivateZoneRecordRequest& request);
+
+                /**
+                 *Deletes an endpoint
+                 * @param req DeleteEndPointRequest
+                 * @return DeleteEndPointOutcome
+                 */
+                DeleteEndPointOutcome DeleteEndPoint(const Model::DeleteEndPointRequest &request);
+                void DeleteEndPointAsync(const Model::DeleteEndPointRequest& request, const DeleteEndPointAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteEndPointOutcomeCallable DeleteEndPointCallable(const Model::DeleteEndPointRequest& request);
+
+                /**
+                 *This API is used to delete a forwarding rule and stop forwarding.
+                 * @param req DeleteForwardRuleRequest
+                 * @return DeleteForwardRuleOutcome
+                 */
+                DeleteForwardRuleOutcome DeleteForwardRule(const Model::DeleteForwardRuleRequest &request);
+                void DeleteForwardRuleAsync(const Model::DeleteForwardRuleRequest& request, const DeleteForwardRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteForwardRuleOutcomeCallable DeleteForwardRuleCallable(const Model::DeleteForwardRuleRequest& request);
 
                 /**
                  *This API is used to delete a DNS record for a private domain.
@@ -253,6 +315,33 @@ namespace TencentCloud
                 DescribeEndPointListOutcome DescribeEndPointList(const Model::DescribeEndPointListRequest &request);
                 void DescribeEndPointListAsync(const Model::DescribeEndPointListRequest& request, const DescribeEndPointListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeEndPointListOutcomeCallable DescribeEndPointListCallable(const Model::DescribeEndPointListRequest& request);
+
+                /**
+                 *This API is used to query the regions where the endpoint is enabled.
+                 * @param req DescribeEndPointRegionRequest
+                 * @return DescribeEndPointRegionOutcome
+                 */
+                DescribeEndPointRegionOutcome DescribeEndPointRegion(const Model::DescribeEndPointRegionRequest &request);
+                void DescribeEndPointRegionAsync(const Model::DescribeEndPointRegionRequest& request, const DescribeEndPointRegionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeEndPointRegionOutcomeCallable DescribeEndPointRegionCallable(const Model::DescribeEndPointRegionRequest& request);
+
+                /**
+                 *This API is used to obtain the endpoint list.
+                 * @param req DescribeExtendEndpointListRequest
+                 * @return DescribeExtendEndpointListOutcome
+                 */
+                DescribeExtendEndpointListOutcome DescribeExtendEndpointList(const Model::DescribeExtendEndpointListRequest &request);
+                void DescribeExtendEndpointListAsync(const Model::DescribeExtendEndpointListRequest& request, const DescribeExtendEndpointListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeExtendEndpointListOutcomeCallable DescribeExtendEndpointListCallable(const Model::DescribeExtendEndpointListRequest& request);
+
+                /**
+                 *This API is used to query forwarding rules.
+                 * @param req DescribeForwardRuleRequest
+                 * @return DescribeForwardRuleOutcome
+                 */
+                DescribeForwardRuleOutcome DescribeForwardRule(const Model::DescribeForwardRuleRequest &request);
+                void DescribeForwardRuleAsync(const Model::DescribeForwardRuleRequest& request, const DescribeForwardRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeForwardRuleOutcomeCallable DescribeForwardRuleCallable(const Model::DescribeForwardRuleRequest& request);
 
                 /**
                  *This API is used to query the forwarding rule list.
@@ -316,6 +405,15 @@ namespace TencentCloud
                 DescribeRequestDataOutcome DescribeRequestData(const Model::DescribeRequestDataRequest &request);
                 void DescribeRequestDataAsync(const Model::DescribeRequestDataRequest& request, const DescribeRequestDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeRequestDataOutcomeCallable DescribeRequestDataCallable(const Model::DescribeRequestDataRequest& request);
+
+                /**
+                 *This API is used to modify a forwarding rule.
+                 * @param req ModifyForwardRuleRequest
+                 * @return ModifyForwardRuleOutcome
+                 */
+                ModifyForwardRuleOutcome ModifyForwardRule(const Model::ModifyForwardRuleRequest &request);
+                void ModifyForwardRuleAsync(const Model::ModifyForwardRuleRequest& request, const ModifyForwardRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyForwardRuleOutcomeCallable ModifyForwardRuleCallable(const Model::ModifyForwardRuleRequest& request);
 
                 /**
                  *This API is used to modify a private domain.
