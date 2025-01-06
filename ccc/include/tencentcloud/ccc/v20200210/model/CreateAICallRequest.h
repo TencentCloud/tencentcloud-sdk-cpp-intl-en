@@ -914,6 +914,27 @@ Currently, the supported languages are as follows. The English name of the langu
                     bool NotifyMessageHasBeenSet() const;
 
                     /**
+                     * 获取
+                     * @return NotifyMaxCount 
+                     * 
+                     */
+                    uint64_t GetNotifyMaxCount() const;
+
+                    /**
+                     * 设置
+                     * @param _notifyMaxCount 
+                     * 
+                     */
+                    void SetNotifyMaxCount(const uint64_t& _notifyMaxCount);
+
+                    /**
+                     * 判断参数 NotifyMaxCount 是否已赋值
+                     * @return NotifyMaxCount 是否已赋值
+                     * 
+                     */
+                    bool NotifyMaxCountHasBeenSet() const;
+
+                    /**
                      * 获取<p>And VoiceType field needs to select one, here is to use your own custom TTS, VoiceType is some built-in sound qualities</p>
 <ul>
 <li>Tencent TTS<br>
@@ -1479,6 +1500,12 @@ Currently, the supported languages are as follows. The English name of the langu
                      */
                     std::string m_notifyMessage;
                     bool m_notifyMessageHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_notifyMaxCount;
+                    bool m_notifyMaxCountHasBeenSet;
 
                     /**
                      * <p>And VoiceType field needs to select one, here is to use your own custom TTS, VoiceType is some built-in sound qualities</p>
