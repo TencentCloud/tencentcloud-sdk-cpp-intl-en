@@ -77,6 +77,8 @@
 #include <tencentcloud/ocr/v20181119/model/SealOCRResponse.h>
 #include <tencentcloud/ocr/v20181119/model/SmartStructuralOCRV2Request.h>
 #include <tencentcloud/ocr/v20181119/model/SmartStructuralOCRV2Response.h>
+#include <tencentcloud/ocr/v20181119/model/SmartStructuralProRequest.h>
+#include <tencentcloud/ocr/v20181119/model/SmartStructuralProResponse.h>
 #include <tencentcloud/ocr/v20181119/model/TableOCRRequest.h>
 #include <tencentcloud/ocr/v20181119/model/TableOCRResponse.h>
 #include <tencentcloud/ocr/v20181119/model/VinOCRRequest.h>
@@ -176,6 +178,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::SmartStructuralOCRV2Response> SmartStructuralOCRV2Outcome;
                 typedef std::future<SmartStructuralOCRV2Outcome> SmartStructuralOCRV2OutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::SmartStructuralOCRV2Request&, SmartStructuralOCRV2Outcome, const std::shared_ptr<const AsyncCallerContext>&)> SmartStructuralOCRV2AsyncHandler;
+                typedef Outcome<Core::Error, Model::SmartStructuralProResponse> SmartStructuralProOutcome;
+                typedef std::future<SmartStructuralProOutcome> SmartStructuralProOutcomeCallable;
+                typedef std::function<void(const OcrClient*, const Model::SmartStructuralProRequest&, SmartStructuralProOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SmartStructuralProAsyncHandler;
                 typedef Outcome<Core::Error, Model::TableOCRResponse> TableOCROutcome;
                 typedef std::future<TableOCROutcome> TableOCROutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::TableOCRRequest&, TableOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> TableOCRAsyncHandler;
@@ -644,6 +649,17 @@ A maximum of 10 requests can be initiated per second for this API.
                 SmartStructuralOCRV2Outcome SmartStructuralOCRV2(const Model::SmartStructuralOCRV2Request &request);
                 void SmartStructuralOCRV2Async(const Model::SmartStructuralOCRV2Request& request, const SmartStructuralOCRV2AsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 SmartStructuralOCRV2OutcomeCallable SmartStructuralOCRV2Callable(const Model::SmartStructuralOCRV2Request& request);
+
+                /**
+                 *This API is used to recognize fields from cards, documents, bills, forms, contracts, and other structured information. It is flexible and efficient to use, without any configuration required. This API is suitable for recognizing structured information.
+
+A maximum of 10 requests can be initiated per second for this API.
+                 * @param req SmartStructuralProRequest
+                 * @return SmartStructuralProOutcome
+                 */
+                SmartStructuralProOutcome SmartStructuralPro(const Model::SmartStructuralProRequest &request);
+                void SmartStructuralProAsync(const Model::SmartStructuralProRequest& request, const SmartStructuralProAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SmartStructuralProOutcomeCallable SmartStructuralProCallable(const Model::SmartStructuralProRequest& request);
 
                 /**
                  *This API is used to detect and recognize Chinese and English forms in images. It can return the text content of each cell and save the recognition result as Excel.

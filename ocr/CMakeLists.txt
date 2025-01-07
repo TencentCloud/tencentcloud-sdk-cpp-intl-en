@@ -39,9 +39,10 @@ set(ocr_public_header_model
   include/tencentcloud/ocr/v20181119/model/RecognizePhilippinesVoteIDOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/RecognizeKoreanDrivingLicenseOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/OtherInvoiceItem.h
-  include/tencentcloud/ocr/v20181119/model/TextDetection.h
+  include/tencentcloud/ocr/v20181119/model/SmartStructuralProRequest.h
   include/tencentcloud/ocr/v20181119/model/VatInvoiceItemInfo.h
   include/tencentcloud/ocr/v20181119/model/MainlandPermitOCRRequest.h
+  include/tencentcloud/ocr/v20181119/model/TextDetection.h
   include/tencentcloud/ocr/v20181119/model/RecognizePhilippinesTinIDOCRResponse.h
   include/tencentcloud/ocr/v20181119/model/DetectedWords.h
   include/tencentcloud/ocr/v20181119/model/TableCellInfo.h
@@ -114,6 +115,7 @@ set(ocr_public_header_model
   include/tencentcloud/ocr/v20181119/model/MainlandPermitOCRResponse.h
   include/tencentcloud/ocr/v20181119/model/NonTaxItem.h
   include/tencentcloud/ocr/v20181119/model/TollInvoice.h
+  include/tencentcloud/ocr/v20181119/model/SmartStructuralProResponse.h
   include/tencentcloud/ocr/v20181119/model/TableOCRResponse.h
   include/tencentcloud/ocr/v20181119/model/DetectedWordCoordPoint.h
   include/tencentcloud/ocr/v20181119/model/RecognizeKoreanIDCardOCRRequest.h
@@ -147,9 +149,10 @@ set(ocr_src
   src/v20181119/model/RecognizePhilippinesVoteIDOCRRequest.cpp
   src/v20181119/model/RecognizeKoreanDrivingLicenseOCRRequest.cpp
   src/v20181119/model/OtherInvoiceItem.cpp
-  src/v20181119/model/TextDetection.cpp
+  src/v20181119/model/SmartStructuralProRequest.cpp
   src/v20181119/model/VatInvoiceItemInfo.cpp
   src/v20181119/model/MainlandPermitOCRRequest.cpp
+  src/v20181119/model/TextDetection.cpp
   src/v20181119/model/RecognizePhilippinesTinIDOCRResponse.cpp
   src/v20181119/model/DetectedWords.cpp
   src/v20181119/model/TableCellInfo.cpp
@@ -222,6 +225,7 @@ set(ocr_src
   src/v20181119/model/MainlandPermitOCRResponse.cpp
   src/v20181119/model/NonTaxItem.cpp
   src/v20181119/model/TollInvoice.cpp
+  src/v20181119/model/SmartStructuralProResponse.cpp
   src/v20181119/model/TableOCRResponse.cpp
   src/v20181119/model/DetectedWordCoordPoint.cpp
   src/v20181119/model/RecognizeKoreanIDCardOCRRequest.cpp
