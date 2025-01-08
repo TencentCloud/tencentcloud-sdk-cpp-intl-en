@@ -122,6 +122,89 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool ExternalsHasBeenSet() const;
 
+                    /**
+                     * 获取Timer ID.
+                     * @return ActionTimerId Timer ID.
+                     * 
+                     */
+                    std::string GetActionTimerId() const;
+
+                    /**
+                     * 设置Timer ID.
+                     * @param _actionTimerId Timer ID.
+                     * 
+                     */
+                    void SetActionTimerId(const std::string& _actionTimerId);
+
+                    /**
+                     * 判断参数 ActionTimerId 是否已赋值
+                     * @return ActionTimerId 是否已赋值
+                     * 
+                     */
+                    bool ActionTimerIdHasBeenSet() const;
+
+                    /**
+                     * 获取Timer status. Valid values:
+
+UNDO: Not triggered.
+DOING: Triggering.
+DONE: Triggered already.
+
+                     * @return Status Timer status. Valid values:
+
+UNDO: Not triggered.
+DOING: Triggering.
+DONE: Triggered already.
+
+                     * 
+                     */
+                    std::string GetStatus() const;
+
+                    /**
+                     * 设置Timer status. Valid values:
+
+UNDO: Not triggered.
+DOING: Triggering.
+DONE: Triggered already.
+
+                     * @param _status Timer status. Valid values:
+
+UNDO: Not triggered.
+DOING: Triggering.
+DONE: Triggered already.
+
+                     * 
+                     */
+                    void SetStatus(const std::string& _status);
+
+                    /**
+                     * 判断参数 Status 是否已赋值
+                     * @return Status 是否已赋值
+                     * 
+                     */
+                    bool StatusHasBeenSet() const;
+
+                    /**
+                     * 获取Instance ID corresponding to a timer.
+                     * @return InstanceId Instance ID corresponding to a timer.
+                     * 
+                     */
+                    std::string GetInstanceId() const;
+
+                    /**
+                     * 设置Instance ID corresponding to a timer.
+                     * @param _instanceId Instance ID corresponding to a timer.
+                     * 
+                     */
+                    void SetInstanceId(const std::string& _instanceId);
+
+                    /**
+                     * 判断参数 InstanceId 是否已赋值
+                     * @return InstanceId 是否已赋值
+                     * 
+                     */
+                    bool InstanceIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -144,6 +227,29 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     Externals m_externals;
                     bool m_externalsHasBeenSet;
+
+                    /**
+                     * Timer ID.
+                     */
+                    std::string m_actionTimerId;
+                    bool m_actionTimerIdHasBeenSet;
+
+                    /**
+                     * Timer status. Valid values:
+
+UNDO: Not triggered.
+DOING: Triggering.
+DONE: Triggered already.
+
+                     */
+                    std::string m_status;
+                    bool m_statusHasBeenSet;
+
+                    /**
+                     * Instance ID corresponding to a timer.
+                     */
+                    std::string m_instanceId;
+                    bool m_instanceIdHasBeenSet;
 
                 };
             }

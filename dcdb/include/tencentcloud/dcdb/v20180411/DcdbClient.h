@@ -43,6 +43,8 @@
 #include <tencentcloud/dcdb/v20180411/model/CreateDedicatedClusterDCDBInstanceResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/CreateHourDCDBInstanceRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/CreateHourDCDBInstanceResponse.h>
+#include <tencentcloud/dcdb/v20180411/model/CreateOnlineDDLJobRequest.h>
+#include <tencentcloud/dcdb/v20180411/model/CreateOnlineDDLJobResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/DeleteAccountRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/DeleteAccountResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeAccountPrivilegesRequest.h>
@@ -189,6 +191,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateHourDCDBInstanceResponse> CreateHourDCDBInstanceOutcome;
                 typedef std::future<CreateHourDCDBInstanceOutcome> CreateHourDCDBInstanceOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::CreateHourDCDBInstanceRequest&, CreateHourDCDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateHourDCDBInstanceAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateOnlineDDLJobResponse> CreateOnlineDDLJobOutcome;
+                typedef std::future<CreateOnlineDDLJobOutcome> CreateOnlineDDLJobOutcomeCallable;
+                typedef std::function<void(const DcdbClient*, const Model::CreateOnlineDDLJobRequest&, CreateOnlineDDLJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateOnlineDDLJobAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteAccountResponse> DeleteAccountOutcome;
                 typedef std::future<DeleteAccountOutcome> DeleteAccountOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::DeleteAccountRequest&, DeleteAccountOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAccountAsyncHandler;
@@ -435,6 +440,15 @@ Note: Accounts with the same username but different hosts are different accounts
                 CreateHourDCDBInstanceOutcome CreateHourDCDBInstance(const Model::CreateHourDCDBInstanceRequest &request);
                 void CreateHourDCDBInstanceAsync(const Model::CreateHourDCDBInstanceRequest& request, const CreateHourDCDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateHourDCDBInstanceOutcomeCallable CreateHourDCDBInstanceCallable(const Model::CreateHourDCDBInstanceRequest& request);
+
+                /**
+                 *This API is used to create an online DDL job.
+                 * @param req CreateOnlineDDLJobRequest
+                 * @return CreateOnlineDDLJobOutcome
+                 */
+                CreateOnlineDDLJobOutcome CreateOnlineDDLJob(const Model::CreateOnlineDDLJobRequest &request);
+                void CreateOnlineDDLJobAsync(const Model::CreateOnlineDDLJobRequest& request, const CreateOnlineDDLJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateOnlineDDLJobOutcomeCallable CreateOnlineDDLJobCallable(const Model::CreateOnlineDDLJobRequest& request);
 
                 /**
                  *This API is used to delete a TencentDB account, which is uniquely identified by username and host.
