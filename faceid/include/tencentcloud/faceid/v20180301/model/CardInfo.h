@@ -40,6 +40,11 @@
 #include <tencentcloud/faceid/v20180301/model/MacaoIDCard.h>
 #include <tencentcloud/faceid/v20180301/model/TaiWanIDCard.h>
 #include <tencentcloud/faceid/v20180301/model/JapanIDCard.h>
+#include <tencentcloud/faceid/v20180301/model/BangladeshIDCard.h>
+#include <tencentcloud/faceid/v20180301/model/NigeriaIDCard.h>
+#include <tencentcloud/faceid/v20180301/model/NigeriaDrivingLicense.h>
+#include <tencentcloud/faceid/v20180301/model/PakistanIDCard.h>
+#include <tencentcloud/faceid/v20180301/model/PakistanDrivingLicense.h>
 
 
 namespace TencentCloud
@@ -462,6 +467,131 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool JapanIDCardHasBeenSet() const;
 
+                    /**
+                     * 获取Bangladesh ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return BangladeshIDCard Bangladesh ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    BangladeshIDCard GetBangladeshIDCard() const;
+
+                    /**
+                     * 设置Bangladesh ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _bangladeshIDCard Bangladesh ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetBangladeshIDCard(const BangladeshIDCard& _bangladeshIDCard);
+
+                    /**
+                     * 判断参数 BangladeshIDCard 是否已赋值
+                     * @return BangladeshIDCard 是否已赋值
+                     * 
+                     */
+                    bool BangladeshIDCardHasBeenSet() const;
+
+                    /**
+                     * 获取Nigeria ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return NigeriaIDCard Nigeria ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    NigeriaIDCard GetNigeriaIDCard() const;
+
+                    /**
+                     * 设置Nigeria ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _nigeriaIDCard Nigeria ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetNigeriaIDCard(const NigeriaIDCard& _nigeriaIDCard);
+
+                    /**
+                     * 判断参数 NigeriaIDCard 是否已赋值
+                     * @return NigeriaIDCard 是否已赋值
+                     * 
+                     */
+                    bool NigeriaIDCardHasBeenSet() const;
+
+                    /**
+                     * 获取Nigeria driving license
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return NigeriaDrivingLicense Nigeria driving license
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    NigeriaDrivingLicense GetNigeriaDrivingLicense() const;
+
+                    /**
+                     * 设置Nigeria driving license
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _nigeriaDrivingLicense Nigeria driving license
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetNigeriaDrivingLicense(const NigeriaDrivingLicense& _nigeriaDrivingLicense);
+
+                    /**
+                     * 判断参数 NigeriaDrivingLicense 是否已赋值
+                     * @return NigeriaDrivingLicense 是否已赋值
+                     * 
+                     */
+                    bool NigeriaDrivingLicenseHasBeenSet() const;
+
+                    /**
+                     * 获取Pakistan ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return PakistanIDCard Pakistan ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    PakistanIDCard GetPakistanIDCard() const;
+
+                    /**
+                     * 设置Pakistan ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _pakistanIDCard Pakistan ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetPakistanIDCard(const PakistanIDCard& _pakistanIDCard);
+
+                    /**
+                     * 判断参数 PakistanIDCard 是否已赋值
+                     * @return PakistanIDCard 是否已赋值
+                     * 
+                     */
+                    bool PakistanIDCardHasBeenSet() const;
+
+                    /**
+                     * 获取Pakistan driving license
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return PakistanDrivingLicense Pakistan driving license
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    PakistanDrivingLicense GetPakistanDrivingLicense() const;
+
+                    /**
+                     * 设置Pakistan driving license
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _pakistanDrivingLicense Pakistan driving license
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetPakistanDrivingLicense(const PakistanDrivingLicense& _pakistanDrivingLicense);
+
+                    /**
+                     * 判断参数 PakistanDrivingLicense 是否已赋值
+                     * @return PakistanDrivingLicense 是否已赋值
+                     * 
+                     */
+                    bool PakistanDrivingLicenseHasBeenSet() const;
+
                 private:
 
                     /**
@@ -575,6 +705,41 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     JapanIDCard m_japanIDCard;
                     bool m_japanIDCardHasBeenSet;
+
+                    /**
+                     * Bangladesh ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    BangladeshIDCard m_bangladeshIDCard;
+                    bool m_bangladeshIDCardHasBeenSet;
+
+                    /**
+                     * Nigeria ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    NigeriaIDCard m_nigeriaIDCard;
+                    bool m_nigeriaIDCardHasBeenSet;
+
+                    /**
+                     * Nigeria driving license
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    NigeriaDrivingLicense m_nigeriaDrivingLicense;
+                    bool m_nigeriaDrivingLicenseHasBeenSet;
+
+                    /**
+                     * Pakistan ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    PakistanIDCard m_pakistanIDCard;
+                    bool m_pakistanIDCardHasBeenSet;
+
+                    /**
+                     * Pakistan driving license
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    PakistanDrivingLicense m_pakistanDrivingLicense;
+                    bool m_pakistanDrivingLicenseHasBeenSet;
 
                 };
             }

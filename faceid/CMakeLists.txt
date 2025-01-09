@@ -22,12 +22,14 @@ set(faceid_public_header_model
   include/tencentcloud/faceid/v20180301/model/GetLivenessResultResponse.h
   include/tencentcloud/faceid/v20180301/model/GetFaceIdTokenIntlResponse.h
   include/tencentcloud/faceid/v20180301/model/InternationalIDPassport.h
+  include/tencentcloud/faceid/v20180301/model/NigeriaDrivingLicense.h
   include/tencentcloud/faceid/v20180301/model/GetSdkVerificationResultResponse.h
   include/tencentcloud/faceid/v20180301/model/GetSdkVerificationResultRequest.h
   include/tencentcloud/faceid/v20180301/model/DetectAIFakeFacesRequest.h
   include/tencentcloud/faceid/v20180301/model/AttackRiskDetail.h
   include/tencentcloud/faceid/v20180301/model/ExtraInfo.h
   include/tencentcloud/faceid/v20180301/model/CreateUploadUrlResponse.h
+  include/tencentcloud/faceid/v20180301/model/NormalMLIDCard.h
   include/tencentcloud/faceid/v20180301/model/ApplyCardVerificationResponse.h
   include/tencentcloud/faceid/v20180301/model/DetectReflectLivenessAndCompareRequest.h
   include/tencentcloud/faceid/v20180301/model/GetFaceIdTokenIntlRequest.h
@@ -48,7 +50,7 @@ set(faceid_public_header_model
   include/tencentcloud/faceid/v20180301/model/GetFaceIdResultIntlResponse.h
   include/tencentcloud/faceid/v20180301/model/ApplySdkVerificationTokenRequest.h
   include/tencentcloud/faceid/v20180301/model/GenerateReflectSequenceRequest.h
-  include/tencentcloud/faceid/v20180301/model/DetectAIFakeFacesResponse.h
+  include/tencentcloud/faceid/v20180301/model/BangladeshIDCard.h
   include/tencentcloud/faceid/v20180301/model/VideoLivenessCompareResponse.h
   include/tencentcloud/faceid/v20180301/model/PhilippinesSSSID.h
   include/tencentcloud/faceid/v20180301/model/CardVerifyResult.h
@@ -56,7 +58,7 @@ set(faceid_public_header_model
   include/tencentcloud/faceid/v20180301/model/VideoLivenessCompareRequest.h
   include/tencentcloud/faceid/v20180301/model/ApplyWebVerificationTokenRequest.h
   include/tencentcloud/faceid/v20180301/model/ApplyWebVerificationBizTokenIntlResponse.h
-  include/tencentcloud/faceid/v20180301/model/RetrievalLivenessExtraInfo.h
+  include/tencentcloud/faceid/v20180301/model/PakistanIDCard.h
   include/tencentcloud/faceid/v20180301/model/ApplyLivenessTokenResponse.h
   include/tencentcloud/faceid/v20180301/model/GetCardVerificationResultRequest.h
   include/tencentcloud/faceid/v20180301/model/CardInfo.h
@@ -65,11 +67,13 @@ set(faceid_public_header_model
   include/tencentcloud/faceid/v20180301/model/MainlandIDCard.h
   include/tencentcloud/faceid/v20180301/model/Encryption.h
   include/tencentcloud/faceid/v20180301/model/Address.h
-  include/tencentcloud/faceid/v20180301/model/NormalMLIDCard.h
+  include/tencentcloud/faceid/v20180301/model/RetrievalLivenessExtraInfo.h
+  include/tencentcloud/faceid/v20180301/model/NigeriaIDCard.h
   include/tencentcloud/faceid/v20180301/model/NormalIndonesiaIDCard.h
   include/tencentcloud/faceid/v20180301/model/CompareFaceLivenessResponse.h
   include/tencentcloud/faceid/v20180301/model/IndonesiaIDCard.h
   include/tencentcloud/faceid/v20180301/model/ApplySdkVerificationTokenResponse.h
+  include/tencentcloud/faceid/v20180301/model/HMTPermit.h
   include/tencentcloud/faceid/v20180301/model/CreateUploadUrlRequest.h
   include/tencentcloud/faceid/v20180301/model/ApplyWebVerificationBizTokenIntlRequest.h
   include/tencentcloud/faceid/v20180301/model/GetWebVerificationResultResponse.h
@@ -83,7 +87,7 @@ set(faceid_public_header_model
   include/tencentcloud/faceid/v20180301/model/GetWebVerificationResultIntlRequest.h
   include/tencentcloud/faceid/v20180301/model/GeneralCard.h
   include/tencentcloud/faceid/v20180301/model/LivenessCompareResponse.h
-  include/tencentcloud/faceid/v20180301/model/HMTPermit.h
+  include/tencentcloud/faceid/v20180301/model/DetectAIFakeFacesResponse.h
   include/tencentcloud/faceid/v20180301/model/PhilippinesUMID.h
   include/tencentcloud/faceid/v20180301/model/PhilippinesTinID.h
   include/tencentcloud/faceid/v20180301/model/ApplyCardVerificationRequest.h
@@ -92,6 +96,7 @@ set(faceid_public_header_model
   include/tencentcloud/faceid/v20180301/model/OCRResult.h
   include/tencentcloud/faceid/v20180301/model/DetectReflectLivenessAndCompareResponse.h
   include/tencentcloud/faceid/v20180301/model/GetLivenessResultRequest.h
+  include/tencentcloud/faceid/v20180301/model/PakistanDrivingLicense.h
   include/tencentcloud/faceid/v20180301/model/CompareResult.h
   )
 
@@ -100,12 +105,14 @@ set(faceid_src
   src/v20180301/model/GetLivenessResultResponse.cpp
   src/v20180301/model/GetFaceIdTokenIntlResponse.cpp
   src/v20180301/model/InternationalIDPassport.cpp
+  src/v20180301/model/NigeriaDrivingLicense.cpp
   src/v20180301/model/GetSdkVerificationResultResponse.cpp
   src/v20180301/model/GetSdkVerificationResultRequest.cpp
   src/v20180301/model/DetectAIFakeFacesRequest.cpp
   src/v20180301/model/AttackRiskDetail.cpp
   src/v20180301/model/ExtraInfo.cpp
   src/v20180301/model/CreateUploadUrlResponse.cpp
+  src/v20180301/model/NormalMLIDCard.cpp
   src/v20180301/model/ApplyCardVerificationResponse.cpp
   src/v20180301/model/DetectReflectLivenessAndCompareRequest.cpp
   src/v20180301/model/GetFaceIdTokenIntlRequest.cpp
@@ -126,7 +133,7 @@ set(faceid_src
   src/v20180301/model/GetFaceIdResultIntlResponse.cpp
   src/v20180301/model/ApplySdkVerificationTokenRequest.cpp
   src/v20180301/model/GenerateReflectSequenceRequest.cpp
-  src/v20180301/model/DetectAIFakeFacesResponse.cpp
+  src/v20180301/model/BangladeshIDCard.cpp
   src/v20180301/model/VideoLivenessCompareResponse.cpp
   src/v20180301/model/PhilippinesSSSID.cpp
   src/v20180301/model/CardVerifyResult.cpp
@@ -134,7 +141,7 @@ set(faceid_src
   src/v20180301/model/VideoLivenessCompareRequest.cpp
   src/v20180301/model/ApplyWebVerificationTokenRequest.cpp
   src/v20180301/model/ApplyWebVerificationBizTokenIntlResponse.cpp
-  src/v20180301/model/RetrievalLivenessExtraInfo.cpp
+  src/v20180301/model/PakistanIDCard.cpp
   src/v20180301/model/ApplyLivenessTokenResponse.cpp
   src/v20180301/model/GetCardVerificationResultRequest.cpp
   src/v20180301/model/CardInfo.cpp
@@ -143,11 +150,13 @@ set(faceid_src
   src/v20180301/model/MainlandIDCard.cpp
   src/v20180301/model/Encryption.cpp
   src/v20180301/model/Address.cpp
-  src/v20180301/model/NormalMLIDCard.cpp
+  src/v20180301/model/RetrievalLivenessExtraInfo.cpp
+  src/v20180301/model/NigeriaIDCard.cpp
   src/v20180301/model/NormalIndonesiaIDCard.cpp
   src/v20180301/model/CompareFaceLivenessResponse.cpp
   src/v20180301/model/IndonesiaIDCard.cpp
   src/v20180301/model/ApplySdkVerificationTokenResponse.cpp
+  src/v20180301/model/HMTPermit.cpp
   src/v20180301/model/CreateUploadUrlRequest.cpp
   src/v20180301/model/ApplyWebVerificationBizTokenIntlRequest.cpp
   src/v20180301/model/GetWebVerificationResultResponse.cpp
@@ -161,7 +170,7 @@ set(faceid_src
   src/v20180301/model/GetWebVerificationResultIntlRequest.cpp
   src/v20180301/model/GeneralCard.cpp
   src/v20180301/model/LivenessCompareResponse.cpp
-  src/v20180301/model/HMTPermit.cpp
+  src/v20180301/model/DetectAIFakeFacesResponse.cpp
   src/v20180301/model/PhilippinesUMID.cpp
   src/v20180301/model/PhilippinesTinID.cpp
   src/v20180301/model/ApplyCardVerificationRequest.cpp
@@ -170,6 +179,7 @@ set(faceid_src
   src/v20180301/model/OCRResult.cpp
   src/v20180301/model/DetectReflectLivenessAndCompareResponse.cpp
   src/v20180301/model/GetLivenessResultRequest.cpp
+  src/v20180301/model/PakistanDrivingLicense.cpp
   src/v20180301/model/CompareResult.cpp
   )
 

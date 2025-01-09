@@ -51,6 +51,9 @@ MYS: Malaysia
 SGP: Singapore
 JPN: Japan
 TWN:Taiwan
+BGD:Bangladesh 
+NGA:Nigeria
+PAK:Pakistan
 AUTO: Automatic Identification
                      * @return Nationality Please select the country code of ID document.
 IDN: Indonesia
@@ -60,6 +63,9 @@ MYS: Malaysia
 SGP: Singapore
 JPN: Japan
 TWN:Taiwan
+BGD:Bangladesh 
+NGA:Nigeria
+PAK:Pakistan
 AUTO: Automatic Identification
                      * 
                      */
@@ -74,6 +80,9 @@ MYS: Malaysia
 SGP: Singapore
 JPN: Japan
 TWN:Taiwan
+BGD:Bangladesh 
+NGA:Nigeria
+PAK:Pakistan
 AUTO: Automatic Identification
                      * @param _nationality Please select the country code of ID document.
 IDN: Indonesia
@@ -83,6 +92,9 @@ MYS: Malaysia
 SGP: Singapore
 JPN: Japan
 TWN:Taiwan
+BGD:Bangladesh 
+NGA:Nigeria
+PAK:Pakistan
 AUTO: Automatic Identification
                      * 
                      */
@@ -247,6 +259,9 @@ MYS: Malaysia
 SGP: Singapore
 JPN: Japan
 TWN:Taiwan
+BGD:Bangladesh 
+NGA:Nigeria
+PAK:Pakistan
 AUTO: Automatic Identification
                      */
                     std::string m_nationality;

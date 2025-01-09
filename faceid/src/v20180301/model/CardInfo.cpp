@@ -36,7 +36,12 @@ CardInfo::CardInfo() :
     m_singaporeIDCardHasBeenSet(false),
     m_macaoIDCardHasBeenSet(false),
     m_taiWanIDCardHasBeenSet(false),
-    m_japanIDCardHasBeenSet(false)
+    m_japanIDCardHasBeenSet(false),
+    m_bangladeshIDCardHasBeenSet(false),
+    m_nigeriaIDCardHasBeenSet(false),
+    m_nigeriaDrivingLicenseHasBeenSet(false),
+    m_pakistanIDCardHasBeenSet(false),
+    m_pakistanDrivingLicenseHasBeenSet(false)
 {
 }
 
@@ -317,6 +322,91 @@ CoreInternalOutcome CardInfo::Deserialize(const rapidjson::Value &value)
         m_japanIDCardHasBeenSet = true;
     }
 
+    if (value.HasMember("BangladeshIDCard") && !value["BangladeshIDCard"].IsNull())
+    {
+        if (!value["BangladeshIDCard"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `CardInfo.BangladeshIDCard` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_bangladeshIDCard.Deserialize(value["BangladeshIDCard"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_bangladeshIDCardHasBeenSet = true;
+    }
+
+    if (value.HasMember("NigeriaIDCard") && !value["NigeriaIDCard"].IsNull())
+    {
+        if (!value["NigeriaIDCard"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `CardInfo.NigeriaIDCard` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_nigeriaIDCard.Deserialize(value["NigeriaIDCard"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_nigeriaIDCardHasBeenSet = true;
+    }
+
+    if (value.HasMember("NigeriaDrivingLicense") && !value["NigeriaDrivingLicense"].IsNull())
+    {
+        if (!value["NigeriaDrivingLicense"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `CardInfo.NigeriaDrivingLicense` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_nigeriaDrivingLicense.Deserialize(value["NigeriaDrivingLicense"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_nigeriaDrivingLicenseHasBeenSet = true;
+    }
+
+    if (value.HasMember("PakistanIDCard") && !value["PakistanIDCard"].IsNull())
+    {
+        if (!value["PakistanIDCard"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `CardInfo.PakistanIDCard` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_pakistanIDCard.Deserialize(value["PakistanIDCard"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_pakistanIDCardHasBeenSet = true;
+    }
+
+    if (value.HasMember("PakistanDrivingLicense") && !value["PakistanDrivingLicense"].IsNull())
+    {
+        if (!value["PakistanDrivingLicense"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `CardInfo.PakistanDrivingLicense` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_pakistanDrivingLicense.Deserialize(value["PakistanDrivingLicense"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_pakistanDrivingLicenseHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -466,6 +556,51 @@ void CardInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Alloca
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_japanIDCard.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_bangladeshIDCardHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BangladeshIDCard";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_bangladeshIDCard.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_nigeriaIDCardHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NigeriaIDCard";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_nigeriaIDCard.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_nigeriaDrivingLicenseHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NigeriaDrivingLicense";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_nigeriaDrivingLicense.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_pakistanIDCardHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PakistanIDCard";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_pakistanIDCard.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_pakistanDrivingLicenseHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PakistanDrivingLicense";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_pakistanDrivingLicense.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -725,5 +860,85 @@ void CardInfo::SetJapanIDCard(const JapanIDCard& _japanIDCard)
 bool CardInfo::JapanIDCardHasBeenSet() const
 {
     return m_japanIDCardHasBeenSet;
+}
+
+BangladeshIDCard CardInfo::GetBangladeshIDCard() const
+{
+    return m_bangladeshIDCard;
+}
+
+void CardInfo::SetBangladeshIDCard(const BangladeshIDCard& _bangladeshIDCard)
+{
+    m_bangladeshIDCard = _bangladeshIDCard;
+    m_bangladeshIDCardHasBeenSet = true;
+}
+
+bool CardInfo::BangladeshIDCardHasBeenSet() const
+{
+    return m_bangladeshIDCardHasBeenSet;
+}
+
+NigeriaIDCard CardInfo::GetNigeriaIDCard() const
+{
+    return m_nigeriaIDCard;
+}
+
+void CardInfo::SetNigeriaIDCard(const NigeriaIDCard& _nigeriaIDCard)
+{
+    m_nigeriaIDCard = _nigeriaIDCard;
+    m_nigeriaIDCardHasBeenSet = true;
+}
+
+bool CardInfo::NigeriaIDCardHasBeenSet() const
+{
+    return m_nigeriaIDCardHasBeenSet;
+}
+
+NigeriaDrivingLicense CardInfo::GetNigeriaDrivingLicense() const
+{
+    return m_nigeriaDrivingLicense;
+}
+
+void CardInfo::SetNigeriaDrivingLicense(const NigeriaDrivingLicense& _nigeriaDrivingLicense)
+{
+    m_nigeriaDrivingLicense = _nigeriaDrivingLicense;
+    m_nigeriaDrivingLicenseHasBeenSet = true;
+}
+
+bool CardInfo::NigeriaDrivingLicenseHasBeenSet() const
+{
+    return m_nigeriaDrivingLicenseHasBeenSet;
+}
+
+PakistanIDCard CardInfo::GetPakistanIDCard() const
+{
+    return m_pakistanIDCard;
+}
+
+void CardInfo::SetPakistanIDCard(const PakistanIDCard& _pakistanIDCard)
+{
+    m_pakistanIDCard = _pakistanIDCard;
+    m_pakistanIDCardHasBeenSet = true;
+}
+
+bool CardInfo::PakistanIDCardHasBeenSet() const
+{
+    return m_pakistanIDCardHasBeenSet;
+}
+
+PakistanDrivingLicense CardInfo::GetPakistanDrivingLicense() const
+{
+    return m_pakistanDrivingLicense;
+}
+
+void CardInfo::SetPakistanDrivingLicense(const PakistanDrivingLicense& _pakistanDrivingLicense)
+{
+    m_pakistanDrivingLicense = _pakistanDrivingLicense;
+    m_pakistanDrivingLicenseHasBeenSet = true;
+}
+
+bool CardInfo::PakistanDrivingLicenseHasBeenSet() const
+{
+    return m_pakistanDrivingLicenseHasBeenSet;
 }
 
