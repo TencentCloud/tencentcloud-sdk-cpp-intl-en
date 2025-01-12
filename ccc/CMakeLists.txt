@@ -111,6 +111,7 @@ set(ccc_public_header_model
   include/tencentcloud/ccc/v20200210/model/CallInNumberMetrics.h
   include/tencentcloud/ccc/v20200210/model/CreateExtensionRequest.h
   include/tencentcloud/ccc/v20200210/model/StaffSkillGroupList.h
+  include/tencentcloud/ccc/v20200210/model/AITransferItem.h
   include/tencentcloud/ccc/v20200210/model/AbortAgentCruiseDialingCampaignRequest.h
   include/tencentcloud/ccc/v20200210/model/DescribePredictiveDialingCampaignsElement.h
   include/tencentcloud/ccc/v20200210/model/HangUpCallResponse.h
@@ -249,6 +250,7 @@ set(ccc_src
   src/v20200210/model/CallInNumberMetrics.cpp
   src/v20200210/model/CreateExtensionRequest.cpp
   src/v20200210/model/StaffSkillGroupList.cpp
+  src/v20200210/model/AITransferItem.cpp
   src/v20200210/model/AbortAgentCruiseDialingCampaignRequest.cpp
   src/v20200210/model/DescribePredictiveDialingCampaignsElement.cpp
   src/v20200210/model/HangUpCallResponse.cpp

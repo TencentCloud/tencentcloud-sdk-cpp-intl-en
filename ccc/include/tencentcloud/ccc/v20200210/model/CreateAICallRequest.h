@@ -21,6 +21,8 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/ccc/v20200210/model/AITransferItem.h>
+#include <tencentcloud/ccc/v20200210/model/Variable.h>
 
 
 namespace TencentCloud
@@ -872,6 +874,48 @@ Currently, the supported languages are as follows. The English name of the langu
                     bool EndFunctionDescHasBeenSet() const;
 
                     /**
+                     * 获取
+                     * @return TransferFunctionEnable 
+                     * 
+                     */
+                    bool GetTransferFunctionEnable() const;
+
+                    /**
+                     * 设置
+                     * @param _transferFunctionEnable 
+                     * 
+                     */
+                    void SetTransferFunctionEnable(const bool& _transferFunctionEnable);
+
+                    /**
+                     * 判断参数 TransferFunctionEnable 是否已赋值
+                     * @return TransferFunctionEnable 是否已赋值
+                     * 
+                     */
+                    bool TransferFunctionEnableHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return TransferItems 
+                     * 
+                     */
+                    std::vector<AITransferItem> GetTransferItems() const;
+
+                    /**
+                     * 设置
+                     * @param _transferItems 
+                     * 
+                     */
+                    void SetTransferItems(const std::vector<AITransferItem>& _transferItems);
+
+                    /**
+                     * 判断参数 TransferItems 是否已赋值
+                     * @return TransferItems 是否已赋值
+                     * 
+                     */
+                    bool TransferItemsHasBeenSet() const;
+
+                    /**
                      * 获取The duration after which the user hasn't spoken to trigger a notification, minimum 10 seconds, default 10 seconds
                      * @return NotifyDuration The duration after which the user hasn't spoken to trigger a notification, minimum 10 seconds, default 10 seconds
                      * 
@@ -1267,6 +1311,27 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
                      */
                     bool CustomTTSConfigHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return PromptVariables 
+                     * 
+                     */
+                    std::vector<Variable> GetPromptVariables() const;
+
+                    /**
+                     * 设置
+                     * @param _promptVariables 
+                     * 
+                     */
+                    void SetPromptVariables(const std::vector<Variable>& _promptVariables);
+
+                    /**
+                     * 判断参数 PromptVariables 是否已赋值
+                     * @return PromptVariables 是否已赋值
+                     * 
+                     */
+                    bool PromptVariablesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1490,6 +1555,18 @@ Currently, the supported languages are as follows. The English name of the langu
                     bool m_endFunctionDescHasBeenSet;
 
                     /**
+                     * 
+                     */
+                    bool m_transferFunctionEnable;
+                    bool m_transferFunctionEnableHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<AITransferItem> m_transferItems;
+                    bool m_transferItemsHasBeenSet;
+
+                    /**
                      * The duration after which the user hasn't spoken to trigger a notification, minimum 10 seconds, default 10 seconds
                      */
                     int64_t m_notifyDuration;
@@ -1590,6 +1667,12 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
                      */
                     std::string m_customTTSConfig;
                     bool m_customTTSConfigHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<Variable> m_promptVariables;
+                    bool m_promptVariablesHasBeenSet;
 
                 };
             }
