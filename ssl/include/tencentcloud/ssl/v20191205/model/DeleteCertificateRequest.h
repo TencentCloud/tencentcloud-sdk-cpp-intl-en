@@ -63,6 +63,27 @@ namespace TencentCloud
                      */
                     bool CertificateIdHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return IsCheckResource 
+                     * 
+                     */
+                    bool GetIsCheckResource() const;
+
+                    /**
+                     * 设置
+                     * @param _isCheckResource 
+                     * 
+                     */
+                    void SetIsCheckResource(const bool& _isCheckResource);
+
+                    /**
+                     * 判断参数 IsCheckResource 是否已赋值
+                     * @return IsCheckResource 是否已赋值
+                     * 
+                     */
+                    bool IsCheckResourceHasBeenSet() const;
+
                 private:
 
                     /**
@@ -70,6 +91,12 @@ namespace TencentCloud
                      */
                     std::string m_certificateId;
                     bool m_certificateIdHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_isCheckResource;
+                    bool m_isCheckResourceHasBeenSet;
 
                 };
             }

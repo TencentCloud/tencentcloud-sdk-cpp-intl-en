@@ -14,22 +14,20 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/ssl/v20191205/model/DeleteCertificateResponse.h>
+#include <tencentcloud/apigateway/v20180808/model/DescribeExclusiveInstanceRegionsResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using TencentCloud::CoreInternalOutcome;
-using namespace TencentCloud::Ssl::V20191205::Model;
+using namespace TencentCloud::Apigateway::V20180808::Model;
 using namespace std;
 
-DeleteCertificateResponse::DeleteCertificateResponse() :
-    m_deleteResultHasBeenSet(false),
-    m_taskIdHasBeenSet(false)
+DescribeExclusiveInstanceRegionsResponse::DescribeExclusiveInstanceRegionsResponse()
 {
 }
 
-CoreInternalOutcome DeleteCertificateResponse::Deserialize(const string &payload)
+CoreInternalOutcome DescribeExclusiveInstanceRegionsResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -63,51 +61,15 @@ CoreInternalOutcome DeleteCertificateResponse::Deserialize(const string &payload
     }
 
 
-    if (rsp.HasMember("DeleteResult") && !rsp["DeleteResult"].IsNull())
-    {
-        if (!rsp["DeleteResult"].IsBool())
-        {
-            return CoreInternalOutcome(Core::Error("response `DeleteResult` IsBool=false incorrectly").SetRequestId(requestId));
-        }
-        m_deleteResult = rsp["DeleteResult"].GetBool();
-        m_deleteResultHasBeenSet = true;
-    }
-
-    if (rsp.HasMember("TaskId") && !rsp["TaskId"].IsNull())
-    {
-        if (!rsp["TaskId"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `TaskId` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_taskId = string(rsp["TaskId"].GetString());
-        m_taskIdHasBeenSet = true;
-    }
-
 
     return CoreInternalOutcome(true);
 }
 
-string DeleteCertificateResponse::ToJsonString() const
+string DescribeExclusiveInstanceRegionsResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
-
-    if (m_deleteResultHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "DeleteResult";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_deleteResult, allocator);
-    }
-
-    if (m_taskIdHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "TaskId";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_taskId.c_str(), allocator).Move(), allocator);
-    }
 
     rapidjson::Value iKey(rapidjson::kStringType);
     string key = "RequestId";
@@ -120,25 +82,5 @@ string DeleteCertificateResponse::ToJsonString() const
     return buffer.GetString();
 }
 
-
-bool DeleteCertificateResponse::GetDeleteResult() const
-{
-    return m_deleteResult;
-}
-
-bool DeleteCertificateResponse::DeleteResultHasBeenSet() const
-{
-    return m_deleteResultHasBeenSet;
-}
-
-string DeleteCertificateResponse::GetTaskId() const
-{
-    return m_taskId;
-}
-
-bool DeleteCertificateResponse::TaskIdHasBeenSet() const
-{
-    return m_taskIdHasBeenSet;
-}
 
 

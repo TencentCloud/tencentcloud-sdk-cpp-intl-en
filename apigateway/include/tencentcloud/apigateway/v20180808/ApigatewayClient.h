@@ -105,6 +105,8 @@
 #include <tencentcloud/apigateway/v20180808/model/DescribeApiUsagePlanResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/DescribeApisStatusRequest.h>
 #include <tencentcloud/apigateway/v20180808/model/DescribeApisStatusResponse.h>
+#include <tencentcloud/apigateway/v20180808/model/DescribeExclusiveInstanceRegionsRequest.h>
+#include <tencentcloud/apigateway/v20180808/model/DescribeExclusiveInstanceRegionsResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/DescribeIPStrategyRequest.h>
 #include <tencentcloud/apigateway/v20180808/model/DescribeIPStrategyResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/DescribeIPStrategyApisStatusRequest.h>
@@ -342,6 +344,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeApisStatusResponse> DescribeApisStatusOutcome;
                 typedef std::future<DescribeApisStatusOutcome> DescribeApisStatusOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::DescribeApisStatusRequest&, DescribeApisStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeApisStatusAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeExclusiveInstanceRegionsResponse> DescribeExclusiveInstanceRegionsOutcome;
+                typedef std::future<DescribeExclusiveInstanceRegionsOutcome> DescribeExclusiveInstanceRegionsOutcomeCallable;
+                typedef std::function<void(const ApigatewayClient*, const Model::DescribeExclusiveInstanceRegionsRequest&, DescribeExclusiveInstanceRegionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeExclusiveInstanceRegionsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeIPStrategyResponse> DescribeIPStrategyOutcome;
                 typedef std::future<DescribeIPStrategyOutcome> DescribeIPStrategyOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::DescribeIPStrategyRequest&, DescribeIPStrategyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeIPStrategyAsyncHandler;
@@ -874,6 +879,15 @@ To make authentication and throttling for a service take effect, you need to bin
                 DescribeApisStatusOutcome DescribeApisStatus(const Model::DescribeApisStatusRequest &request);
                 void DescribeApisStatusAsync(const Model::DescribeApisStatusRequest& request, const DescribeApisStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeApisStatusOutcomeCallable DescribeApisStatusCallable(const Model::DescribeApisStatusRequest& request);
+
+                /**
+                 *Get the list of supported regions for dedicated instances
+                 * @param req DescribeExclusiveInstanceRegionsRequest
+                 * @return DescribeExclusiveInstanceRegionsOutcome
+                 */
+                DescribeExclusiveInstanceRegionsOutcome DescribeExclusiveInstanceRegions(const Model::DescribeExclusiveInstanceRegionsRequest &request);
+                void DescribeExclusiveInstanceRegionsAsync(const Model::DescribeExclusiveInstanceRegionsRequest& request, const DescribeExclusiveInstanceRegionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeExclusiveInstanceRegionsOutcomeCallable DescribeExclusiveInstanceRegionsCallable(const Model::DescribeExclusiveInstanceRegionsRequest& request);
 
                 /**
                  *This API is used to query IP policy details.

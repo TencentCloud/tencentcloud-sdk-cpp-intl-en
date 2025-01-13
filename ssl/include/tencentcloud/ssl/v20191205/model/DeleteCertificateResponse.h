@@ -57,6 +57,20 @@ namespace TencentCloud
                      */
                     bool DeleteResultHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return TaskId 
+                     * 
+                     */
+                    std::string GetTaskId() const;
+
+                    /**
+                     * 判断参数 TaskId 是否已赋值
+                     * @return TaskId 是否已赋值
+                     * 
+                     */
+                    bool TaskIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -64,6 +78,12 @@ namespace TencentCloud
                      */
                     bool m_deleteResult;
                     bool m_deleteResultHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_taskId;
+                    bool m_taskIdHasBeenSet;
 
                 };
             }
