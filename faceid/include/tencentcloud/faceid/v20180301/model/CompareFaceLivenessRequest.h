@@ -43,27 +43,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Base64 value of photos used for face comparison. 
-The size of image data encoded by Base64 shall not exceed 3M, only jpg and png are supported. 
-Please use standard Base64 encoding (use = for padding). Refer to RFC4648 for encoding specifications. 
-Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
-                     * @return ImageBase64 Base64 value of photos used for face comparison. 
-The size of image data encoded by Base64 shall not exceed 3M, only jpg and png are supported. 
-Please use standard Base64 encoding (use = for padding). Refer to RFC4648 for encoding specifications. 
-Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
+                     * 获取Base64 string of the image for face comparison.
+- The size of the Base64-encoded image data can be up to 3 MB. JPG and PNG formats are supported.
+- Please use the standard Base64 encoding method (with = padding). Refer to RFC4648 for the encoding specification.
+                     * @return ImageBase64 Base64 string of the image for face comparison.
+- The size of the Base64-encoded image data can be up to 3 MB. JPG and PNG formats are supported.
+- Please use the standard Base64 encoding method (with = padding). Refer to RFC4648 for the encoding specification.
                      * 
                      */
                     std::string GetImageBase64() const;
 
                     /**
-                     * 设置Base64 value of photos used for face comparison. 
-The size of image data encoded by Base64 shall not exceed 3M, only jpg and png are supported. 
-Please use standard Base64 encoding (use = for padding). Refer to RFC4648 for encoding specifications. 
-Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
-                     * @param _imageBase64 Base64 value of photos used for face comparison. 
-The size of image data encoded by Base64 shall not exceed 3M, only jpg and png are supported. 
-Please use standard Base64 encoding (use = for padding). Refer to RFC4648 for encoding specifications. 
-Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
+                     * 设置Base64 string of the image for face comparison.
+- The size of the Base64-encoded image data can be up to 3 MB. JPG and PNG formats are supported.
+- Please use the standard Base64 encoding method (with = padding). Refer to RFC4648 for the encoding specification.
+                     * @param _imageBase64 Base64 string of the image for face comparison.
+- The size of the Base64-encoded image data can be up to 3 MB. JPG and PNG formats are supported.
+- Please use the standard Base64 encoding method (with = padding). Refer to RFC4648 for the encoding specification.
                      * 
                      */
                     void SetImageBase64(const std::string& _imageBase64);
@@ -76,27 +72,23 @@ Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
                     bool ImageBase64HasBeenSet() const;
 
                     /**
-                     * 获取Base64 value of videos used for face comparison. 
-The size of videos data encoded by Base64 shall not exceed 8M, only mp4,avi,flv are supported. 
-Please use standard Base64 encoding (use = for padding). Refer to RFC4648 for encoding specifications. 
-Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
-                     * @return VideoBase64 Base64 value of videos used for face comparison. 
-The size of videos data encoded by Base64 shall not exceed 8M, only mp4,avi,flv are supported. 
-Please use standard Base64 encoding (use = for padding). Refer to RFC4648 for encoding specifications. 
-Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
+                     * 获取Base64 string of the video for liveness detection.
+- The size of the Base64-encoded video data can be up to 8 MB. MP4, AVI, and FLV formats are supported.
+-Use standard Base64 encoding (with = padding), following RFC4648.
+                     * @return VideoBase64 Base64 string of the video for liveness detection.
+- The size of the Base64-encoded video data can be up to 8 MB. MP4, AVI, and FLV formats are supported.
+-Use standard Base64 encoding (with = padding), following RFC4648.
                      * 
                      */
                     std::string GetVideoBase64() const;
 
                     /**
-                     * 设置Base64 value of videos used for face comparison. 
-The size of videos data encoded by Base64 shall not exceed 8M, only mp4,avi,flv are supported. 
-Please use standard Base64 encoding (use = for padding). Refer to RFC4648 for encoding specifications. 
-Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
-                     * @param _videoBase64 Base64 value of videos used for face comparison. 
-The size of videos data encoded by Base64 shall not exceed 8M, only mp4,avi,flv are supported. 
-Please use standard Base64 encoding (use = for padding). Refer to RFC4648 for encoding specifications. 
-Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
+                     * 设置Base64 string of the video for liveness detection.
+- The size of the Base64-encoded video data can be up to 8 MB. MP4, AVI, and FLV formats are supported.
+-Use standard Base64 encoding (with = padding), following RFC4648.
+                     * @param _videoBase64 Base64 string of the video for liveness detection.
+- The size of the Base64-encoded video data can be up to 8 MB. MP4, AVI, and FLV formats are supported.
+-Use standard Base64 encoding (with = padding), following RFC4648.
                      * 
                      */
                     void SetVideoBase64(const std::string& _videoBase64);
@@ -109,23 +101,31 @@ Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
                     bool VideoBase64HasBeenSet() const;
 
                     /**
-                     * 获取The liveness detection type. Valid values: `ACTION`, and `SILENT`.
-`ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
-Example value: "SILENT"
-                     * @return LivenessType The liveness detection type. Valid values: `ACTION`, and `SILENT`.
-`ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
-Example value: "SILENT"
+                     * 获取Liveness detection type.
+-Values:
+ACTION is action mode.
+SILENT is silent mode.
+-Choose one of the two modes to pass in.
+                     * @return LivenessType Liveness detection type.
+-Values:
+ACTION is action mode.
+SILENT is silent mode.
+-Choose one of the two modes to pass in.
                      * 
                      */
                     std::string GetLivenessType() const;
 
                     /**
-                     * 设置The liveness detection type. Valid values: `ACTION`, and `SILENT`.
-`ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
-Example value: "SILENT"
-                     * @param _livenessType The liveness detection type. Valid values: `ACTION`, and `SILENT`.
-`ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
-Example value: "SILENT"
+                     * 设置Liveness detection type.
+-Values:
+ACTION is action mode.
+SILENT is silent mode.
+-Choose one of the two modes to pass in.
+                     * @param _livenessType Liveness detection type.
+-Values:
+ACTION is action mode.
+SILENT is silent mode.
+-Choose one of the two modes to pass in.
                      * 
                      */
                     void SetLivenessType(const std::string& _livenessType);
@@ -138,55 +138,31 @@ Example value: "SILENT"
                     bool LivenessTypeHasBeenSet() const;
 
                     /**
-                     * 获取When the "LivenessType" parameter is "ACTION", it must be specified.
-It is used to control the action sequence. Action types: 
-1 (open mouth)
-2 (blink)
-3 (nod)
-4 (shake head). 
-Select one or two from the four actions.
-Example of passing single action parameter: "1".
-Example of passing multiple action parameters: "4,2".
-When the "LivenessType" parameter value is "SILENT", it shall be unspecified.
-Example value: ""
-                     * @return ValidateData When the "LivenessType" parameter is "ACTION", it must be specified.
-It is used to control the action sequence. Action types: 
-1 (open mouth)
-2 (blink)
-3 (nod)
-4 (shake head). 
-Select one or two from the four actions.
-Example of passing single action parameter: "1".
-Example of passing multiple action parameters: "4,2".
-When the "LivenessType" parameter value is "SILENT", it shall be unspecified.
-Example value: ""
+                     * 获取Control the action sequence. Action types include: 1 (open mouth), 2 (blink), 3 (nod), 4 (shake head). Supports one or two actions.
+-Required when the LivenessType parameter is set to ACTION.
+-Single action example: "1".
+-Multiple actions parameter passing example: "4,2".
+-When the LivenessType parameter is set to SILENT, leave it blank.
+                     * @return ValidateData Control the action sequence. Action types include: 1 (open mouth), 2 (blink), 3 (nod), 4 (shake head). Supports one or two actions.
+-Required when the LivenessType parameter is set to ACTION.
+-Single action example: "1".
+-Multiple actions parameter passing example: "4,2".
+-When the LivenessType parameter is set to SILENT, leave it blank.
                      * 
                      */
                     std::string GetValidateData() const;
 
                     /**
-                     * 设置When the "LivenessType" parameter is "ACTION", it must be specified.
-It is used to control the action sequence. Action types: 
-1 (open mouth)
-2 (blink)
-3 (nod)
-4 (shake head). 
-Select one or two from the four actions.
-Example of passing single action parameter: "1".
-Example of passing multiple action parameters: "4,2".
-When the "LivenessType" parameter value is "SILENT", it shall be unspecified.
-Example value: ""
-                     * @param _validateData When the "LivenessType" parameter is "ACTION", it must be specified.
-It is used to control the action sequence. Action types: 
-1 (open mouth)
-2 (blink)
-3 (nod)
-4 (shake head). 
-Select one or two from the four actions.
-Example of passing single action parameter: "1".
-Example of passing multiple action parameters: "4,2".
-When the "LivenessType" parameter value is "SILENT", it shall be unspecified.
-Example value: ""
+                     * 设置Control the action sequence. Action types include: 1 (open mouth), 2 (blink), 3 (nod), 4 (shake head). Supports one or two actions.
+-Required when the LivenessType parameter is set to ACTION.
+-Single action example: "1".
+-Multiple actions parameter passing example: "4,2".
+-When the LivenessType parameter is set to SILENT, leave it blank.
+                     * @param _validateData Control the action sequence. Action types include: 1 (open mouth), 2 (blink), 3 (nod), 4 (shake head). Supports one or two actions.
+-Required when the LivenessType parameter is set to ACTION.
+-Single action example: "1".
+-Multiple actions parameter passing example: "4,2".
+-When the LivenessType parameter is set to SILENT, leave it blank.
                      * 
                      */
                     void SetValidateData(const std::string& _validateData);
@@ -201,43 +177,37 @@ Example value: ""
                 private:
 
                     /**
-                     * Base64 value of photos used for face comparison. 
-The size of image data encoded by Base64 shall not exceed 3M, only jpg and png are supported. 
-Please use standard Base64 encoding (use = for padding). Refer to RFC4648 for encoding specifications. 
-Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
+                     * Base64 string of the image for face comparison.
+- The size of the Base64-encoded image data can be up to 3 MB. JPG and PNG formats are supported.
+- Please use the standard Base64 encoding method (with = padding). Refer to RFC4648 for the encoding specification.
                      */
                     std::string m_imageBase64;
                     bool m_imageBase64HasBeenSet;
 
                     /**
-                     * Base64 value of videos used for face comparison. 
-The size of videos data encoded by Base64 shall not exceed 8M, only mp4,avi,flv are supported. 
-Please use standard Base64 encoding (use = for padding). Refer to RFC4648 for encoding specifications. 
-Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
+                     * Base64 string of the video for liveness detection.
+- The size of the Base64-encoded video data can be up to 8 MB. MP4, AVI, and FLV formats are supported.
+-Use standard Base64 encoding (with = padding), following RFC4648.
                      */
                     std::string m_videoBase64;
                     bool m_videoBase64HasBeenSet;
 
                     /**
-                     * The liveness detection type. Valid values: `ACTION`, and `SILENT`.
-`ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
-Example value: "SILENT"
+                     * Liveness detection type.
+-Values:
+ACTION is action mode.
+SILENT is silent mode.
+-Choose one of the two modes to pass in.
                      */
                     std::string m_livenessType;
                     bool m_livenessTypeHasBeenSet;
 
                     /**
-                     * When the "LivenessType" parameter is "ACTION", it must be specified.
-It is used to control the action sequence. Action types: 
-1 (open mouth)
-2 (blink)
-3 (nod)
-4 (shake head). 
-Select one or two from the four actions.
-Example of passing single action parameter: "1".
-Example of passing multiple action parameters: "4,2".
-When the "LivenessType" parameter value is "SILENT", it shall be unspecified.
-Example value: ""
+                     * Control the action sequence. Action types include: 1 (open mouth), 2 (blink), 3 (nod), 4 (shake head). Supports one or two actions.
+-Required when the LivenessType parameter is set to ACTION.
+-Single action example: "1".
+-Multiple actions parameter passing example: "4,2".
+-When the LivenessType parameter is set to SILENT, leave it blank.
                      */
                     std::string m_validateData;
                     bool m_validateDataHasBeenSet;

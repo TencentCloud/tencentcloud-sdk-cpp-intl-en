@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The ID of the SDK-based liveness detection and face comparison process, which is generated when the `GetFaceIdTokenIntl` API is called.	
-                     * @return SdkToken The ID of the SDK-based liveness detection and face comparison process, which is generated when the `GetFaceIdTokenIntl` API is called.	
+                     * 获取The ID of the SDK-based selfie verification process, which is generated when the `GetFaceIdTokenIntl` API is called.	
+                     * @return SdkToken The ID of the SDK-based selfie verification process, which is generated when the `GetFaceIdTokenIntl` API is called.	
                      * 
                      */
                     std::string GetSdkToken() const;
 
                     /**
-                     * 设置The ID of the SDK-based liveness detection and face comparison process, which is generated when the `GetFaceIdTokenIntl` API is called.	
-                     * @param _sdkToken The ID of the SDK-based liveness detection and face comparison process, which is generated when the `GetFaceIdTokenIntl` API is called.	
+                     * 设置The ID of the SDK-based selfie verification process, which is generated when the `GetFaceIdTokenIntl` API is called.	
+                     * @param _sdkToken The ID of the SDK-based selfie verification process, which is generated when the `GetFaceIdTokenIntl` API is called.	
                      * 
                      */
                     void SetSdkToken(const std::string& _sdkToken);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The ID of the SDK-based liveness detection and face comparison process, which is generated when the `GetFaceIdTokenIntl` API is called.	
+                     * The ID of the SDK-based selfie verification process, which is generated when the `GetFaceIdTokenIntl` API is called.	
                      */
                     std::string m_sdkToken;
                     bool m_sdkTokenHasBeenSet;

@@ -45,11 +45,11 @@ namespace TencentCloud
                     /**
                      * 获取The detection mode. Valid values:
 `liveness`: Liveness detection only.
-`compare`: Liveness detection and face comparison.
+`compare`: Selfie verification.
 Default value: `liveness`.
                      * @return CheckMode The detection mode. Valid values:
 `liveness`: Liveness detection only.
-`compare`: Liveness detection and face comparison.
+`compare`: Selfie verification.
 Default value: `liveness`.
                      * 
                      */
@@ -58,11 +58,11 @@ Default value: `liveness`.
                     /**
                      * 设置The detection mode. Valid values:
 `liveness`: Liveness detection only.
-`compare`: Liveness detection and face comparison.
+`compare`: Selfie verification.
 Default value: `liveness`.
                      * @param _checkMode The detection mode. Valid values:
 `liveness`: Liveness detection only.
-`compare`: Liveness detection and face comparison.
+`compare`: Selfie verification.
 Default value: `liveness`.
                      * 
                      */
@@ -220,7 +220,7 @@ The default value is blink. The different action types passed in this parameter 
                     /**
                      * The detection mode. Valid values:
 `liveness`: Liveness detection only.
-`compare`: Liveness detection and face comparison.
+`compare`: Selfie verification.
 Default value: `liveness`.
                      */
                     std::string m_checkMode;

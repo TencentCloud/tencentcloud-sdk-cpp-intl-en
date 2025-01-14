@@ -47,7 +47,7 @@ namespace TencentCloud
                      * 获取The return code of the verification result.
 0: Succeeded.
 1001: System error.
-1004: Liveness detection and face comparison failed.
+1004: Selfie verification comparison failed.
 2004: The image passed in is too large or too small.
 2012: Several faces were detected.
 2013: No face was detected, or the face detected was incomplete.
@@ -58,7 +58,7 @@ namespace TencentCloud
                      * @return Result The return code of the verification result.
 0: Succeeded.
 1001: System error.
-1004: Liveness detection and face comparison failed.
+1004: Selfie verification comparison failed.
 2004: The image passed in is too large or too small.
 2012: Several faces were detected.
 2013: No face was detected, or the face detected was incomplete.
@@ -120,9 +120,9 @@ namespace TencentCloud
                     bool VideoHasBeenSet() const;
 
                     /**
-                     * 获取The similarity, with a value range of 0-100. A greater value indicates higher similarity. This parameter is returned only in the `compare` (liveness detection and face comparison) mode.
+                     * 获取The similarity, with a value range of 0-100. A greater value indicates higher similarity. This parameter is returned only in the `compare` (selfie verification) mode.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return Similarity The similarity, with a value range of 0-100. A greater value indicates higher similarity. This parameter is returned only in the `compare` (liveness detection and face comparison) mode.
+                     * @return Similarity The similarity, with a value range of 0-100. A greater value indicates higher similarity. This parameter is returned only in the `compare` (selfie verification) mode.
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
@@ -157,7 +157,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * The return code of the verification result.
 0: Succeeded.
 1001: System error.
-1004: Liveness detection and face comparison failed.
+1004: Selfie verification comparison failed.
 2004: The image passed in is too large or too small.
 2012: Several faces were detected.
 2013: No face was detected, or the face detected was incomplete.
@@ -188,7 +188,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_videoHasBeenSet;
 
                     /**
-                     * The similarity, with a value range of 0-100. A greater value indicates higher similarity. This parameter is returned only in the `compare` (liveness detection and face comparison) mode.
+                     * The similarity, with a value range of 0-100. A greater value indicates higher similarity. This parameter is returned only in the `compare` (selfie verification) mode.
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     double m_similarity;

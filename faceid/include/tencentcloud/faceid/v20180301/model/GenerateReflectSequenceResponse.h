@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The resource URL of the light sequence, which needs to be downloaded and passed through to the SDK to start the identity verification process.
-                     * @return ReflectSequenceUrl The resource URL of the light sequence, which needs to be downloaded and passed through to the SDK to start the identity verification process.
+                     * 获取The resource URL of the light sequence, which needs to be downloaded and passed through to the SDK to start the eKYC process.
+                     * @return ReflectSequenceUrl The resource URL of the light sequence, which needs to be downloaded and passed through to the SDK to start the eKYC process.
                      * 
                      */
                     std::string GetReflectSequenceUrl() const;
@@ -74,7 +74,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The resource URL of the light sequence, which needs to be downloaded and passed through to the SDK to start the identity verification process.
+                     * The resource URL of the light sequence, which needs to be downloaded and passed through to the SDK to start the eKYC process.
                      */
                     std::string m_reflectSequenceUrl;
                     bool m_reflectSequenceUrlHasBeenSet;
