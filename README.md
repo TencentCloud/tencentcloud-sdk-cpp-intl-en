@@ -1,5 +1,5 @@
 ## Introduction
-* Welcome to Tencent Cloud Software Development Kit (SDK) 3.0, a companion tool for TencentCloud API 3.0. Tencent Cloud SDK 3.0 has been capable of calling the APIs of Cloud Virtual Machine (CVM), Virtual Private Cloud (VPC), and Cloud Block Storage (CBS). Tencent Cloud SDK 3.0 will extend its support for all Tencent Cloud services and products in the future. The new SDK version is unified and provides the following features for you: you can use the same SDK usage method, API call methods, error codes, and return packet formats for different programming languages.
+* Welcome to Tencent Cloud Software Development Kit (SDK) 3.0, a companion tool for TencentCloud API 3.0.
 * This document introduces Tencent Cloud SDK for C++ to help C++ developers debug and integrate TencentCloud APIs. If you are using Tencent Cloud SDK for C++ for the first time, you can follow the sample code provided in this document.
 
 ## Environmental Dependencies
