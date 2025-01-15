@@ -27,6 +27,8 @@
 #include <tencentcloud/config/v20220802/model/DescribeDiscoveredResourceResponse.h>
 #include <tencentcloud/config/v20220802/model/ListAggregateConfigRulesRequest.h>
 #include <tencentcloud/config/v20220802/model/ListAggregateConfigRulesResponse.h>
+#include <tencentcloud/config/v20220802/model/ListAggregateDiscoveredResourcesRequest.h>
+#include <tencentcloud/config/v20220802/model/ListAggregateDiscoveredResourcesResponse.h>
 #include <tencentcloud/config/v20220802/model/ListConfigRulesRequest.h>
 #include <tencentcloud/config/v20220802/model/ListConfigRulesResponse.h>
 #include <tencentcloud/config/v20220802/model/ListDiscoveredResourcesRequest.h>
@@ -53,6 +55,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ListAggregateConfigRulesResponse> ListAggregateConfigRulesOutcome;
                 typedef std::future<ListAggregateConfigRulesOutcome> ListAggregateConfigRulesOutcomeCallable;
                 typedef std::function<void(const ConfigClient*, const Model::ListAggregateConfigRulesRequest&, ListAggregateConfigRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListAggregateConfigRulesAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListAggregateDiscoveredResourcesResponse> ListAggregateDiscoveredResourcesOutcome;
+                typedef std::future<ListAggregateDiscoveredResourcesOutcome> ListAggregateDiscoveredResourcesOutcomeCallable;
+                typedef std::function<void(const ConfigClient*, const Model::ListAggregateDiscoveredResourcesRequest&, ListAggregateDiscoveredResourcesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListAggregateDiscoveredResourcesAsyncHandler;
                 typedef Outcome<Core::Error, Model::ListConfigRulesResponse> ListConfigRulesOutcome;
                 typedef std::future<ListConfigRulesOutcome> ListConfigRulesOutcomeCallable;
                 typedef std::function<void(const ConfigClient*, const Model::ListConfigRulesRequest&, ListConfigRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListConfigRulesAsyncHandler;
@@ -82,6 +87,15 @@ namespace TencentCloud
                 ListAggregateConfigRulesOutcome ListAggregateConfigRules(const Model::ListAggregateConfigRulesRequest &request);
                 void ListAggregateConfigRulesAsync(const Model::ListAggregateConfigRulesRequest& request, const ListAggregateConfigRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ListAggregateConfigRulesOutcomeCallable ListAggregateConfigRulesCallable(const Model::ListAggregateConfigRulesRequest& request);
+
+                /**
+                 *Account Group access the list of resources.
+                 * @param req ListAggregateDiscoveredResourcesRequest
+                 * @return ListAggregateDiscoveredResourcesOutcome
+                 */
+                ListAggregateDiscoveredResourcesOutcome ListAggregateDiscoveredResources(const Model::ListAggregateDiscoveredResourcesRequest &request);
+                void ListAggregateDiscoveredResourcesAsync(const Model::ListAggregateDiscoveredResourcesRequest& request, const ListAggregateDiscoveredResourcesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListAggregateDiscoveredResourcesOutcomeCallable ListAggregateDiscoveredResourcesCallable(const Model::ListAggregateDiscoveredResourcesRequest& request);
 
                 /**
                  *This API is used to get the rule list.

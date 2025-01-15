@@ -126,6 +126,49 @@ ConfigClient::ListAggregateConfigRulesOutcomeCallable ConfigClient::ListAggregat
     return task->get_future();
 }
 
+ConfigClient::ListAggregateDiscoveredResourcesOutcome ConfigClient::ListAggregateDiscoveredResources(const ListAggregateDiscoveredResourcesRequest &request)
+{
+    auto outcome = MakeRequest(request, "ListAggregateDiscoveredResources");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ListAggregateDiscoveredResourcesResponse rsp = ListAggregateDiscoveredResourcesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ListAggregateDiscoveredResourcesOutcome(rsp);
+        else
+            return ListAggregateDiscoveredResourcesOutcome(o.GetError());
+    }
+    else
+    {
+        return ListAggregateDiscoveredResourcesOutcome(outcome.GetError());
+    }
+}
+
+void ConfigClient::ListAggregateDiscoveredResourcesAsync(const ListAggregateDiscoveredResourcesRequest& request, const ListAggregateDiscoveredResourcesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ListAggregateDiscoveredResources(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+ConfigClient::ListAggregateDiscoveredResourcesOutcomeCallable ConfigClient::ListAggregateDiscoveredResourcesCallable(const ListAggregateDiscoveredResourcesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ListAggregateDiscoveredResourcesOutcome()>>(
+        [this, request]()
+        {
+            return this->ListAggregateDiscoveredResources(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 ConfigClient::ListConfigRulesOutcome ConfigClient::ListConfigRules(const ListConfigRulesRequest &request)
 {
     auto outcome = MakeRequest(request, "ListConfigRules");
