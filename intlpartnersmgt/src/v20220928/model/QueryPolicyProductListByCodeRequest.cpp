@@ -27,7 +27,9 @@ QueryPolicyProductListByCodeRequest::QueryPolicyProductListByCodeRequest() :
     m_productCodeHasBeenSet(false),
     m_productNameHasBeenSet(false),
     m_subProductCodeHasBeenSet(false),
-    m_subProductNameHasBeenSet(false)
+    m_subProductNameHasBeenSet(false),
+    m_pageHasBeenSet(false),
+    m_pageSizeHasBeenSet(false)
 {
 }
 
@@ -76,6 +78,22 @@ string QueryPolicyProductListByCodeRequest::ToJsonString() const
         string key = "SubProductName";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_subProductName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_pageHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Page";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_page, allocator);
+    }
+
+    if (m_pageSizeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PageSize";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_pageSize, allocator);
     }
 
 
@@ -164,6 +182,38 @@ void QueryPolicyProductListByCodeRequest::SetSubProductName(const string& _subPr
 bool QueryPolicyProductListByCodeRequest::SubProductNameHasBeenSet() const
 {
     return m_subProductNameHasBeenSet;
+}
+
+uint64_t QueryPolicyProductListByCodeRequest::GetPage() const
+{
+    return m_page;
+}
+
+void QueryPolicyProductListByCodeRequest::SetPage(const uint64_t& _page)
+{
+    m_page = _page;
+    m_pageHasBeenSet = true;
+}
+
+bool QueryPolicyProductListByCodeRequest::PageHasBeenSet() const
+{
+    return m_pageHasBeenSet;
+}
+
+uint64_t QueryPolicyProductListByCodeRequest::GetPageSize() const
+{
+    return m_pageSize;
+}
+
+void QueryPolicyProductListByCodeRequest::SetPageSize(const uint64_t& _pageSize)
+{
+    m_pageSize = _pageSize;
+    m_pageSizeHasBeenSet = true;
+}
+
+bool QueryPolicyProductListByCodeRequest::PageSizeHasBeenSet() const
+{
+    return m_pageSizeHasBeenSet;
 }
 
 

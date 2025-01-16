@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Policy product list
-                     * @return ProductList Policy product list
+                     * 获取Dealer policy product list.
+                     * @return ProductList Dealer policy product list.
                      * 
                      */
                     std::vector<PolicyProductList> GetProductList() const;
@@ -58,13 +58,33 @@ namespace TencentCloud
                      */
                     bool ProductListHasBeenSet() const;
 
+                    /**
+                     * 获取Total number of data entries
+                     * @return Total Total number of data entries
+                     * 
+                     */
+                    uint64_t GetTotal() const;
+
+                    /**
+                     * 判断参数 Total 是否已赋值
+                     * @return Total 是否已赋值
+                     * 
+                     */
+                    bool TotalHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Policy product list
+                     * Dealer policy product list.
                      */
                     std::vector<PolicyProductList> m_productList;
                     bool m_productListHasBeenSet;
+
+                    /**
+                     * Total number of data entries
+                     */
+                    uint64_t m_total;
+                    bool m_totalHasBeenSet;
 
                 };
             }

@@ -28,6 +28,7 @@ set(billing_public_header_model
   include/tencentcloud/billing/v20180709/model/AnalyseActionTypeDetail.h
   include/tencentcloud/billing/v20180709/model/DescribeCostExplorerSummaryRequest.h
   include/tencentcloud/billing/v20180709/model/DescribeCostSummaryByProductResponse.h
+  include/tencentcloud/billing/v20180709/model/ProductInfo.h
   include/tencentcloud/billing/v20180709/model/DeleteAllocationTagResponse.h
   include/tencentcloud/billing/v20180709/model/DescribeBillDetailForOrganizationResponse.h
   include/tencentcloud/billing/v20180709/model/BillDetailComponentConfig.h
@@ -64,6 +65,8 @@ set(billing_public_header_model
   include/tencentcloud/billing/v20180709/model/DescribeBillSummaryByProjectRequest.h
   include/tencentcloud/billing/v20180709/model/BillDetail.h
   include/tencentcloud/billing/v20180709/model/DescribeBillDetailResponse.h
+  include/tencentcloud/billing/v20180709/model/Deal.h
+  include/tencentcloud/billing/v20180709/model/DescribeDealsByCondResponse.h
   include/tencentcloud/billing/v20180709/model/ConditionPayMode.h
   include/tencentcloud/billing/v20180709/model/DescribeBillSummaryByProjectResponse.h
   include/tencentcloud/billing/v20180709/model/DescribeBillAdjustInfoRequest.h
@@ -115,6 +118,7 @@ set(billing_public_header_model
   include/tencentcloud/billing/v20180709/model/BusinessSummaryOverviewItem.h
   include/tencentcloud/billing/v20180709/model/UsageRecords.h
   include/tencentcloud/billing/v20180709/model/DescribeVoucherInfoRequest.h
+  include/tencentcloud/billing/v20180709/model/DescribeDealsByCondRequest.h
   include/tencentcloud/billing/v20180709/model/DescribeDosageCosDetailByDateResponse.h
   include/tencentcloud/billing/v20180709/model/ProjectSummaryOverviewItem.h
   include/tencentcloud/billing/v20180709/model/DescribeBillSummaryForOrganizationResponse.h
@@ -138,6 +142,7 @@ set(billing_src
   src/v20180709/model/AnalyseActionTypeDetail.cpp
   src/v20180709/model/DescribeCostExplorerSummaryRequest.cpp
   src/v20180709/model/DescribeCostSummaryByProductResponse.cpp
+  src/v20180709/model/ProductInfo.cpp
   src/v20180709/model/DeleteAllocationTagResponse.cpp
   src/v20180709/model/DescribeBillDetailForOrganizationResponse.cpp
   src/v20180709/model/BillDetailComponentConfig.cpp
@@ -174,6 +179,8 @@ set(billing_src
   src/v20180709/model/DescribeBillSummaryByProjectRequest.cpp
   src/v20180709/model/BillDetail.cpp
   src/v20180709/model/DescribeBillDetailResponse.cpp
+  src/v20180709/model/Deal.cpp
+  src/v20180709/model/DescribeDealsByCondResponse.cpp
   src/v20180709/model/ConditionPayMode.cpp
   src/v20180709/model/DescribeBillSummaryByProjectResponse.cpp
   src/v20180709/model/DescribeBillAdjustInfoRequest.cpp
@@ -225,6 +232,7 @@ set(billing_src
   src/v20180709/model/BusinessSummaryOverviewItem.cpp
   src/v20180709/model/UsageRecords.cpp
   src/v20180709/model/DescribeVoucherInfoRequest.cpp
+  src/v20180709/model/DescribeDealsByCondRequest.cpp
   src/v20180709/model/DescribeDosageCosDetailByDateResponse.cpp
   src/v20180709/model/ProjectSummaryOverviewItem.cpp
   src/v20180709/model/DescribeBillSummaryForOrganizationResponse.cpp

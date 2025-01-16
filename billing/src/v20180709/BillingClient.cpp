@@ -986,6 +986,49 @@ BillingClient::DescribeCostSummaryByResourceOutcomeCallable BillingClient::Descr
     return task->get_future();
 }
 
+BillingClient::DescribeDealsByCondOutcome BillingClient::DescribeDealsByCond(const DescribeDealsByCondRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDealsByCond");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDealsByCondResponse rsp = DescribeDealsByCondResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDealsByCondOutcome(rsp);
+        else
+            return DescribeDealsByCondOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDealsByCondOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::DescribeDealsByCondAsync(const DescribeDealsByCondRequest& request, const DescribeDealsByCondAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeDealsByCond(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+BillingClient::DescribeDealsByCondOutcomeCallable BillingClient::DescribeDealsByCondCallable(const DescribeDealsByCondRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeDealsByCondOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeDealsByCond(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 BillingClient::DescribeDosageCosDetailByDateOutcome BillingClient::DescribeDosageCosDetailByDate(const DescribeDosageCosDetailByDateRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeDosageCosDetailByDate");

@@ -14,22 +14,22 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/intlpartnersmgt/v20220928/model/QueryPolicyProductListByCodeResponse.h>
+#include <tencentcloud/billing/v20180709/model/DescribeDealsByCondResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using TencentCloud::CoreInternalOutcome;
-using namespace TencentCloud::Intlpartnersmgt::V20220928::Model;
+using namespace TencentCloud::Billing::V20180709::Model;
 using namespace std;
 
-QueryPolicyProductListByCodeResponse::QueryPolicyProductListByCodeResponse() :
-    m_productListHasBeenSet(false),
-    m_totalHasBeenSet(false)
+DescribeDealsByCondResponse::DescribeDealsByCondResponse() :
+    m_dealsHasBeenSet(false),
+    m_totalCountHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome QueryPolicyProductListByCodeResponse::Deserialize(const string &payload)
+CoreInternalOutcome DescribeDealsByCondResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -63,67 +63,67 @@ CoreInternalOutcome QueryPolicyProductListByCodeResponse::Deserialize(const stri
     }
 
 
-    if (rsp.HasMember("ProductList") && !rsp["ProductList"].IsNull())
+    if (rsp.HasMember("Deals") && !rsp["Deals"].IsNull())
     {
-        if (!rsp["ProductList"].IsArray())
-            return CoreInternalOutcome(Core::Error("response `ProductList` is not array type"));
+        if (!rsp["Deals"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `Deals` is not array type"));
 
-        const rapidjson::Value &tmpValue = rsp["ProductList"];
+        const rapidjson::Value &tmpValue = rsp["Deals"];
         for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
-            PolicyProductList item;
+            Deal item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
             if (!outcome.IsSuccess())
             {
                 outcome.GetError().SetRequestId(requestId);
                 return outcome;
             }
-            m_productList.push_back(item);
+            m_deals.push_back(item);
         }
-        m_productListHasBeenSet = true;
+        m_dealsHasBeenSet = true;
     }
 
-    if (rsp.HasMember("Total") && !rsp["Total"].IsNull())
+    if (rsp.HasMember("TotalCount") && !rsp["TotalCount"].IsNull())
     {
-        if (!rsp["Total"].IsUint64())
+        if (!rsp["TotalCount"].IsInt64())
         {
-            return CoreInternalOutcome(Core::Error("response `Total` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TotalCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
-        m_total = rsp["Total"].GetUint64();
-        m_totalHasBeenSet = true;
+        m_totalCount = rsp["TotalCount"].GetInt64();
+        m_totalCountHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string QueryPolicyProductListByCodeResponse::ToJsonString() const
+string DescribeDealsByCondResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_productListHasBeenSet)
+    if (m_dealsHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "ProductList";
+        string key = "Deals";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
-        for (auto itr = m_productList.begin(); itr != m_productList.end(); ++itr, ++i)
+        for (auto itr = m_deals.begin(); itr != m_deals.end(); ++itr, ++i)
         {
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
-    if (m_totalHasBeenSet)
+    if (m_totalCountHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Total";
+        string key = "TotalCount";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_total, allocator);
+        value.AddMember(iKey, m_totalCount, allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -138,24 +138,24 @@ string QueryPolicyProductListByCodeResponse::ToJsonString() const
 }
 
 
-vector<PolicyProductList> QueryPolicyProductListByCodeResponse::GetProductList() const
+vector<Deal> DescribeDealsByCondResponse::GetDeals() const
 {
-    return m_productList;
+    return m_deals;
 }
 
-bool QueryPolicyProductListByCodeResponse::ProductListHasBeenSet() const
+bool DescribeDealsByCondResponse::DealsHasBeenSet() const
 {
-    return m_productListHasBeenSet;
+    return m_dealsHasBeenSet;
 }
 
-uint64_t QueryPolicyProductListByCodeResponse::GetTotal() const
+int64_t DescribeDealsByCondResponse::GetTotalCount() const
 {
-    return m_total;
+    return m_totalCount;
 }
 
-bool QueryPolicyProductListByCodeResponse::TotalHasBeenSet() const
+bool DescribeDealsByCondResponse::TotalCountHasBeenSet() const
 {
-    return m_totalHasBeenSet;
+    return m_totalCountHasBeenSet;
 }
 
 

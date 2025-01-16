@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Policy code
-                     * @return PolicyCode Policy code
+                     * 获取Dealer policy code.
+                     * @return PolicyCode Dealer policy code.
                      * 
                      */
                     std::string GetPolicyCode() const;
 
                     /**
-                     * 设置Policy code
-                     * @param _policyCode Policy code
+                     * 设置Dealer policy code.
+                     * @param _policyCode Dealer policy code.
                      * 
                      */
                     void SetPolicyCode(const std::string& _policyCode);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool PolicyCodeHasBeenSet() const;
 
                     /**
-                     * 获取Product code
-                     * @return ProductCode Product code
+                     * 获取Product level 1 code.
+                     * @return ProductCode Product level 1 code.
                      * 
                      */
                     std::string GetProductCode() const;
 
                     /**
-                     * 设置Product code
-                     * @param _productCode Product code
+                     * 设置Product level 1 code.
+                     * @param _productCode Product level 1 code.
                      * 
                      */
                     void SetProductCode(const std::string& _productCode);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool ProductCodeHasBeenSet() const;
 
                     /**
-                     * 获取Product name
-                     * @return ProductName Product name
+                     * 获取Product level 1 name.
+                     * @return ProductName Product level 1 name.
                      * 
                      */
                     std::string GetProductName() const;
 
                     /**
-                     * 设置Product name
-                     * @param _productName Product name
+                     * 设置Product level 1 name.
+                     * @param _productName Product level 1 name.
                      * 
                      */
                     void SetProductName(const std::string& _productName);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool ProductNameHasBeenSet() const;
 
                     /**
-                     * 获取Subproduct code
-                     * @return SubProductCode Subproduct code
+                     * 获取Product level 2 code.
+                     * @return SubProductCode Product level 2 code.
                      * 
                      */
                     std::string GetSubProductCode() const;
 
                     /**
-                     * 设置Subproduct code
-                     * @param _subProductCode Subproduct code
+                     * 设置Product level 2 code.
+                     * @param _subProductCode Product level 2 code.
                      * 
                      */
                     void SetSubProductCode(const std::string& _subProductCode);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool SubProductCodeHasBeenSet() const;
 
                     /**
-                     * 获取Subproduct name
-                     * @return SubProductName Subproduct name
+                     * 获取Product level 2 name.
+                     * @return SubProductName Product level 2 name.
                      * 
                      */
                     std::string GetSubProductName() const;
 
                     /**
-                     * 设置Subproduct name
-                     * @param _subProductName Subproduct name
+                     * 设置Product level 2 name.
+                     * @param _subProductName Product level 2 name.
                      * 
                      */
                     void SetSubProductName(const std::string& _subProductName);
@@ -147,37 +147,91 @@ namespace TencentCloud
                      */
                     bool SubProductNameHasBeenSet() const;
 
+                    /**
+                     * 获取Page parameter: current page number. The minimum value is 1.
+                     * @return Page Page parameter: current page number. The minimum value is 1.
+                     * 
+                     */
+                    uint64_t GetPage() const;
+
+                    /**
+                     * 设置Page parameter: current page number. The minimum value is 1.
+                     * @param _page Page parameter: current page number. The minimum value is 1.
+                     * 
+                     */
+                    void SetPage(const uint64_t& _page);
+
+                    /**
+                     * 判断参数 Page 是否已赋值
+                     * @return Page 是否已赋值
+                     * 
+                     */
+                    bool PageHasBeenSet() const;
+
+                    /**
+                     * 获取Page parameter: Indicates the number of entries per page. Value range: [1, 200], default is 200.
+                     * @return PageSize Page parameter: Indicates the number of entries per page. Value range: [1, 200], default is 200.
+                     * 
+                     */
+                    uint64_t GetPageSize() const;
+
+                    /**
+                     * 设置Page parameter: Indicates the number of entries per page. Value range: [1, 200], default is 200.
+                     * @param _pageSize Page parameter: Indicates the number of entries per page. Value range: [1, 200], default is 200.
+                     * 
+                     */
+                    void SetPageSize(const uint64_t& _pageSize);
+
+                    /**
+                     * 判断参数 PageSize 是否已赋值
+                     * @return PageSize 是否已赋值
+                     * 
+                     */
+                    bool PageSizeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Policy code
+                     * Dealer policy code.
                      */
                     std::string m_policyCode;
                     bool m_policyCodeHasBeenSet;
 
                     /**
-                     * Product code
+                     * Product level 1 code.
                      */
                     std::string m_productCode;
                     bool m_productCodeHasBeenSet;
 
                     /**
-                     * Product name
+                     * Product level 1 name.
                      */
                     std::string m_productName;
                     bool m_productNameHasBeenSet;
 
                     /**
-                     * Subproduct code
+                     * Product level 2 code.
                      */
                     std::string m_subProductCode;
                     bool m_subProductCodeHasBeenSet;
 
                     /**
-                     * Subproduct name
+                     * Product level 2 name.
                      */
                     std::string m_subProductName;
                     bool m_subProductNameHasBeenSet;
+
+                    /**
+                     * Page parameter: current page number. The minimum value is 1.
+                     */
+                    uint64_t m_page;
+                    bool m_pageHasBeenSet;
+
+                    /**
+                     * Page parameter: Indicates the number of entries per page. Value range: [1, 200], default is 200.
+                     */
+                    uint64_t m_pageSize;
+                    bool m_pageSizeHasBeenSet;
 
                 };
             }
