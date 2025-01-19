@@ -226,6 +226,20 @@ namespace TencentCloud
                     bool AddressHasBeenSet() const;
 
                     /**
+                     * 获取LaserID in the back of the card.
+                     * @return LaserID LaserID in the back of the card.
+                     * 
+                     */
+                    std::string GetLaserID() const;
+
+                    /**
+                     * 判断参数 LaserID 是否已赋值
+                     * @return LaserID 是否已赋值
+                     * 
+                     */
+                    bool LaserIDHasBeenSet() const;
+
+                    /**
                      * 获取Identity photo
                      * @return PortraitImage Identity photo
                      * 
@@ -362,6 +376,12 @@ namespace TencentCloud
                      */
                     std::string m_address;
                     bool m_addressHasBeenSet;
+
+                    /**
+                     * LaserID in the back of the card.
+                     */
+                    std::string m_laserID;
+                    bool m_laserIDHasBeenSet;
 
                     /**
                      * Identity photo

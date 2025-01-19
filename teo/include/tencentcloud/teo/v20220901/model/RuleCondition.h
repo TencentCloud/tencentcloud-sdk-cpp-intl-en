@@ -48,12 +48,12 @@ namespace TencentCloud
 
                     /**
                      * 获取Operator. Valid values:
-<li>`equals`: Equals</li>
+<li>`equal`: Equal</li>
 <li>`notEquals`: Does not equal</li>
 <li>`exist`: Exists</li>
 <li>`notexist`: Does not exist</li>
                      * @return Operator Operator. Valid values:
-<li>`equals`: Equals</li>
+<li>`equal`: Equal</li>
 <li>`notEquals`: Does not equal</li>
 <li>`exist`: Exists</li>
 <li>`notexist`: Does not exist</li>
@@ -63,12 +63,12 @@ namespace TencentCloud
 
                     /**
                      * 设置Operator. Valid values:
-<li>`equals`: Equals</li>
+<li>`equal`: Equal</li>
 <li>`notEquals`: Does not equal</li>
 <li>`exist`: Exists</li>
 <li>`notexist`: Does not exist</li>
                      * @param _operator Operator. Valid values:
-<li>`equals`: Equals</li>
+<li>`equal`: Equal</li>
 <li>`notEquals`: Does not equal</li>
 <li>`exist`: Exists</li>
 <li>`notexist`: Does not exist</li>
@@ -252,7 +252,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Operator. Valid values:
-<li>`equals`: Equals</li>
+<li>`equal`: Equal</li>
 <li>`notEquals`: Does not equal</li>
 <li>`exist`: Exists</li>
 <li>`notexist`: Does not exist</li>
