@@ -45,6 +45,8 @@
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillSummaryByRegionResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerBillDetailRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerBillDetailResponse.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerBillDownloadUrlRequest.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerBillDownloadUrlResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerBillSummaryRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerBillSummaryResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerInfoRequest.h>
@@ -128,6 +130,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeCustomerBillDetailResponse> DescribeCustomerBillDetailOutcome;
                 typedef std::future<DescribeCustomerBillDetailOutcome> DescribeCustomerBillDetailOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::DescribeCustomerBillDetailRequest&, DescribeCustomerBillDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCustomerBillDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCustomerBillDownloadUrlResponse> DescribeCustomerBillDownloadUrlOutcome;
+                typedef std::future<DescribeCustomerBillDownloadUrlOutcome> DescribeCustomerBillDownloadUrlOutcomeCallable;
+                typedef std::function<void(const IntlpartnersmgtClient*, const Model::DescribeCustomerBillDownloadUrlRequest&, DescribeCustomerBillDownloadUrlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCustomerBillDownloadUrlAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeCustomerBillSummaryResponse> DescribeCustomerBillSummaryOutcome;
                 typedef std::future<DescribeCustomerBillSummaryOutcome> DescribeCustomerBillSummaryOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::DescribeCustomerBillSummaryRequest&, DescribeCustomerBillSummaryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCustomerBillSummaryAsyncHandler;
@@ -295,6 +300,17 @@ Note:This API is used to manually send the invitation link to the customer if th
                 DescribeCustomerBillDetailOutcome DescribeCustomerBillDetail(const Model::DescribeCustomerBillDetailRequest &request);
                 void DescribeCustomerBillDetailAsync(const Model::DescribeCustomerBillDetailRequest& request, const DescribeCustomerBillDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeCustomerBillDetailOutcomeCallable DescribeCustomerBillDetailCallable(const Model::DescribeCustomerBillDetailRequest& request);
+
+                /**
+                 *This API is used to get the URL for downloading the customer bill file by reseller. The download conditions are as follows:
+1. Detailed bills (billDetail and billDetailPack) can be downloaded starting from June 2022; resource bills (billResource and billResourcePack) can be downloaded starting from November 2023.
+2. Bill packages (billDetailPack and billResourcePack) can only be downloaded after billing.
+                 * @param req DescribeCustomerBillDownloadUrlRequest
+                 * @return DescribeCustomerBillDownloadUrlOutcome
+                 */
+                DescribeCustomerBillDownloadUrlOutcome DescribeCustomerBillDownloadUrl(const Model::DescribeCustomerBillDownloadUrlRequest &request);
+                void DescribeCustomerBillDownloadUrlAsync(const Model::DescribeCustomerBillDownloadUrlRequest& request, const DescribeCustomerBillDownloadUrlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCustomerBillDownloadUrlOutcomeCallable DescribeCustomerBillDownloadUrlCallable(const Model::DescribeCustomerBillDownloadUrlRequest& request);
 
                 /**
                  *This API is used to query the total amount of customer bills.

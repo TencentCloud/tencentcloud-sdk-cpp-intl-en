@@ -41,6 +41,7 @@ set(intlpartnersmgt_public_header_model
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillSummaryByRegionResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerBillSummaryResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryCustomersCreditRequest.h
+  include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerBillDownloadUrlResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryPolicyProductListByCodeRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillDetailRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/CreateAndSendClientInvitationMailResponse.h
@@ -52,6 +53,7 @@ set(intlpartnersmgt_public_header_model
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryCreditByUinListResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerInfoResponse.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/QueryVoucherAmountByUinResponse.h
+  include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerBillDownloadUrlRequest.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/BusinessSummaryOverviewItem.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerUinData.h
   include/tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerUinResponse.h
@@ -122,6 +124,7 @@ set(intlpartnersmgt_src
   src/v20220928/model/DescribeBillSummaryByRegionResponse.cpp
   src/v20220928/model/DescribeCustomerBillSummaryResponse.cpp
   src/v20220928/model/QueryCustomersCreditRequest.cpp
+  src/v20220928/model/DescribeCustomerBillDownloadUrlResponse.cpp
   src/v20220928/model/QueryPolicyProductListByCodeRequest.cpp
   src/v20220928/model/DescribeBillDetailRequest.cpp
   src/v20220928/model/CreateAndSendClientInvitationMailResponse.cpp
@@ -133,6 +136,7 @@ set(intlpartnersmgt_src
   src/v20220928/model/QueryCreditByUinListResponse.cpp
   src/v20220928/model/DescribeCustomerInfoResponse.cpp
   src/v20220928/model/QueryVoucherAmountByUinResponse.cpp
+  src/v20220928/model/DescribeCustomerBillDownloadUrlRequest.cpp
   src/v20220928/model/BusinessSummaryOverviewItem.cpp
   src/v20220928/model/DescribeCustomerUinData.cpp
   src/v20220928/model/DescribeCustomerUinResponse.cpp
