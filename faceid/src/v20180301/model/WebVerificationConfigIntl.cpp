@@ -32,7 +32,8 @@ WebVerificationConfigIntl::WebVerificationConfigIntl() :
     m_themeColorHasBeenSet(false),
     m_languageHasBeenSet(false),
     m_autoDowngradeHasBeenSet(false),
-    m_actionListHasBeenSet(false)
+    m_actionListHasBeenSet(false),
+    m_livenessRetryLimitHasBeenSet(false)
 {
 }
 
@@ -161,6 +162,16 @@ CoreInternalOutcome WebVerificationConfigIntl::Deserialize(const rapidjson::Valu
         m_actionListHasBeenSet = true;
     }
 
+    if (value.HasMember("LivenessRetryLimit") && !value["LivenessRetryLimit"].IsNull())
+    {
+        if (!value["LivenessRetryLimit"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `WebVerificationConfigIntl.LivenessRetryLimit` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_livenessRetryLimit = value["LivenessRetryLimit"].GetInt64();
+        m_livenessRetryLimitHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -262,6 +273,14 @@ void WebVerificationConfigIntl::ToJsonObject(rapidjson::Value &value, rapidjson:
         string key = "ActionList";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_actionList.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_livenessRetryLimitHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "LivenessRetryLimit";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_livenessRetryLimit, allocator);
     }
 
 }
@@ -457,5 +476,21 @@ void WebVerificationConfigIntl::SetActionList(const string& _actionList)
 bool WebVerificationConfigIntl::ActionListHasBeenSet() const
 {
     return m_actionListHasBeenSet;
+}
+
+int64_t WebVerificationConfigIntl::GetLivenessRetryLimit() const
+{
+    return m_livenessRetryLimit;
+}
+
+void WebVerificationConfigIntl::SetLivenessRetryLimit(const int64_t& _livenessRetryLimit)
+{
+    m_livenessRetryLimit = _livenessRetryLimit;
+    m_livenessRetryLimitHasBeenSet = true;
+}
+
+bool WebVerificationConfigIntl::LivenessRetryLimitHasBeenSet() const
+{
+    return m_livenessRetryLimitHasBeenSet;
 }
 

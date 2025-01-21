@@ -73,6 +73,8 @@
 #include <tencentcloud/ocr/v20181119/model/RecognizeTableAccurateOCRResponse.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizeThaiIDCardOCRRequest.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizeThaiIDCardOCRResponse.h>
+#include <tencentcloud/ocr/v20181119/model/RecognizeThaiPinkCardRequest.h>
+#include <tencentcloud/ocr/v20181119/model/RecognizeThaiPinkCardResponse.h>
 #include <tencentcloud/ocr/v20181119/model/SealOCRRequest.h>
 #include <tencentcloud/ocr/v20181119/model/SealOCRResponse.h>
 #include <tencentcloud/ocr/v20181119/model/SmartStructuralOCRV2Request.h>
@@ -172,6 +174,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::RecognizeThaiIDCardOCRResponse> RecognizeThaiIDCardOCROutcome;
                 typedef std::future<RecognizeThaiIDCardOCROutcome> RecognizeThaiIDCardOCROutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::RecognizeThaiIDCardOCRRequest&, RecognizeThaiIDCardOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> RecognizeThaiIDCardOCRAsyncHandler;
+                typedef Outcome<Core::Error, Model::RecognizeThaiPinkCardResponse> RecognizeThaiPinkCardOutcome;
+                typedef std::future<RecognizeThaiPinkCardOutcome> RecognizeThaiPinkCardOutcomeCallable;
+                typedef std::function<void(const OcrClient*, const Model::RecognizeThaiPinkCardRequest&, RecognizeThaiPinkCardOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RecognizeThaiPinkCardAsyncHandler;
                 typedef Outcome<Core::Error, Model::SealOCRResponse> SealOCROutcome;
                 typedef std::future<SealOCROutcome> SealOCROutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::SealOCRRequest&, SealOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> SealOCRAsyncHandler;
@@ -627,6 +632,18 @@ A maximum of 10 requests can be initiated per second for this API.
                 RecognizeThaiIDCardOCROutcome RecognizeThaiIDCardOCR(const Model::RecognizeThaiIDCardOCRRequest &request);
                 void RecognizeThaiIDCardOCRAsync(const Model::RecognizeThaiIDCardOCRRequest& request, const RecognizeThaiIDCardOCRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 RecognizeThaiIDCardOCROutcomeCallable RecognizeThaiIDCardOCRCallable(const Model::RecognizeThaiIDCardOCRRequest& request);
+
+                /**
+                 *This API is used to recognize the fields on a Thai identity card, including name in Thai, name in English, address, date of birth, identification number, date of issue, and date of expiry.
+Currently, this API is not generally available. For more information, please [contact your sales rep](https://intl.cloud.tencent.com/about/connect?from_cn_redirect=1).
+
+A maximum of 5 requests can be initiated per second for this API.
+                 * @param req RecognizeThaiPinkCardRequest
+                 * @return RecognizeThaiPinkCardOutcome
+                 */
+                RecognizeThaiPinkCardOutcome RecognizeThaiPinkCard(const Model::RecognizeThaiPinkCardRequest &request);
+                void RecognizeThaiPinkCardAsync(const Model::RecognizeThaiPinkCardRequest& request, const RecognizeThaiPinkCardAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RecognizeThaiPinkCardOutcomeCallable RecognizeThaiPinkCardCallable(const Model::RecognizeThaiPinkCardRequest& request);
 
                 /**
                  *This API is used to recognize various types of seals, including invoice seals and finance seals. It is suitable for scenarios such as official document and invoice/ticket OCR.

@@ -446,6 +446,27 @@ The default value is blink. The different action types passed in this parameter 
                      */
                     bool ActionListHasBeenSet() const;
 
+                    /**
+                     * 获取Control liveness retry number.The value range is 1-99.
+                     * @return LivenessRetryLimit Control liveness retry number.The value range is 1-99.
+                     * 
+                     */
+                    int64_t GetLivenessRetryLimit() const;
+
+                    /**
+                     * 设置Control liveness retry number.The value range is 1-99.
+                     * @param _livenessRetryLimit Control liveness retry number.The value range is 1-99.
+                     * 
+                     */
+                    void SetLivenessRetryLimit(const int64_t& _livenessRetryLimit);
+
+                    /**
+                     * 判断参数 LivenessRetryLimit 是否已赋值
+                     * @return LivenessRetryLimit 是否已赋值
+                     * 
+                     */
+                    bool LivenessRetryLimitHasBeenSet() const;
+
                 private:
 
                     /**
@@ -556,6 +577,12 @@ The default value is blink. The different action types passed in this parameter 
                      */
                     std::string m_actionList;
                     bool m_actionListHasBeenSet;
+
+                    /**
+                     * Control liveness retry number.The value range is 1-99.
+                     */
+                    int64_t m_livenessRetryLimit;
+                    bool m_livenessRetryLimitHasBeenSet;
 
                 };
             }

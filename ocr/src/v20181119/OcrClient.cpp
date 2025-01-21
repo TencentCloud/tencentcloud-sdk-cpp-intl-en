@@ -1115,6 +1115,49 @@ OcrClient::RecognizeThaiIDCardOCROutcomeCallable OcrClient::RecognizeThaiIDCardO
     return task->get_future();
 }
 
+OcrClient::RecognizeThaiPinkCardOutcome OcrClient::RecognizeThaiPinkCard(const RecognizeThaiPinkCardRequest &request)
+{
+    auto outcome = MakeRequest(request, "RecognizeThaiPinkCard");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RecognizeThaiPinkCardResponse rsp = RecognizeThaiPinkCardResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RecognizeThaiPinkCardOutcome(rsp);
+        else
+            return RecognizeThaiPinkCardOutcome(o.GetError());
+    }
+    else
+    {
+        return RecognizeThaiPinkCardOutcome(outcome.GetError());
+    }
+}
+
+void OcrClient::RecognizeThaiPinkCardAsync(const RecognizeThaiPinkCardRequest& request, const RecognizeThaiPinkCardAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->RecognizeThaiPinkCard(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OcrClient::RecognizeThaiPinkCardOutcomeCallable OcrClient::RecognizeThaiPinkCardCallable(const RecognizeThaiPinkCardRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<RecognizeThaiPinkCardOutcome()>>(
+        [this, request]()
+        {
+            return this->RecognizeThaiPinkCard(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 OcrClient::SealOCROutcome OcrClient::SealOCR(const SealOCRRequest &request)
 {
     auto outcome = MakeRequest(request, "SealOCR");

@@ -123,7 +123,9 @@ set(ocr_public_header_model
   include/tencentcloud/ocr/v20181119/model/VinOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/MLIDCardOCRResponse.h
   include/tencentcloud/ocr/v20181119/model/RecognizePhilippinesTinIDOCRRequest.h
+  include/tencentcloud/ocr/v20181119/model/RecognizeThaiPinkCardRequest.h
   include/tencentcloud/ocr/v20181119/model/BankCardOCRResponse.h
+  include/tencentcloud/ocr/v20181119/model/RecognizeThaiPinkCardResponse.h
   include/tencentcloud/ocr/v20181119/model/RecognizePhilippinesUMIDOCRRequest.h
   )
 
@@ -233,7 +235,9 @@ set(ocr_src
   src/v20181119/model/VinOCRRequest.cpp
   src/v20181119/model/MLIDCardOCRResponse.cpp
   src/v20181119/model/RecognizePhilippinesTinIDOCRRequest.cpp
+  src/v20181119/model/RecognizeThaiPinkCardRequest.cpp
   src/v20181119/model/BankCardOCRResponse.cpp
+  src/v20181119/model/RecognizeThaiPinkCardResponse.cpp
   src/v20181119/model/RecognizePhilippinesUMIDOCRRequest.cpp
   )
 
