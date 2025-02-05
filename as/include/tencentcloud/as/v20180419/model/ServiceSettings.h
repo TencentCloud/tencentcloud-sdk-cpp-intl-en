@@ -158,6 +158,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ReplaceModeHasBeenSet() const;
 
+                    /**
+                     * 获取Automatic instance tag update. The default value is false. If this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (This feature takes effect for tag creation and editing but not tag deletion.) The update does not take effect immediately due to certain latency.
+                     * @return AutoUpdateInstanceTags Automatic instance tag update. The default value is false. If this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (This feature takes effect for tag creation and editing but not tag deletion.) The update does not take effect immediately due to certain latency.
+                     * 
+                     */
+                    bool GetAutoUpdateInstanceTags() const;
+
+                    /**
+                     * 设置Automatic instance tag update. The default value is false. If this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (This feature takes effect for tag creation and editing but not tag deletion.) The update does not take effect immediately due to certain latency.
+                     * @param _autoUpdateInstanceTags Automatic instance tag update. The default value is false. If this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (This feature takes effect for tag creation and editing but not tag deletion.) The update does not take effect immediately due to certain latency.
+                     * 
+                     */
+                    void SetAutoUpdateInstanceTags(const bool& _autoUpdateInstanceTags);
+
+                    /**
+                     * 判断参数 AutoUpdateInstanceTags 是否已赋值
+                     * @return AutoUpdateInstanceTags 是否已赋值
+                     * 
+                     */
+                    bool AutoUpdateInstanceTagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -190,6 +211,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_replaceMode;
                     bool m_replaceModeHasBeenSet;
+
+                    /**
+                     * Automatic instance tag update. The default value is false. If this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (This feature takes effect for tag creation and editing but not tag deletion.) The update does not take effect immediately due to certain latency.
+                     */
+                    bool m_autoUpdateInstanceTags;
+                    bool m_autoUpdateInstanceTagsHasBeenSet;
 
                 };
             }

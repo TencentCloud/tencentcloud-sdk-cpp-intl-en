@@ -115,18 +115,18 @@ Setting it to `true` will clear the hostname settings, which means that CVM newl
 
                     /**
                      * 获取Whether to clear the CVM instance name settings. This parameter is optional and the default value is `false`.
-Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the “as-{{AutoScalingGroupName}} format.
+Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the as-{{AutoScalingGroupName}} format.
                      * @return ClearInstanceNameSettings Whether to clear the CVM instance name settings. This parameter is optional and the default value is `false`.
-Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the “as-{{AutoScalingGroupName}} format.
+Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the as-{{AutoScalingGroupName}} format.
                      * 
                      */
                     bool GetClearInstanceNameSettings() const;
 
                     /**
                      * 设置Whether to clear the CVM instance name settings. This parameter is optional and the default value is `false`.
-Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the “as-{{AutoScalingGroupName}} format.
+Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the as-{{AutoScalingGroupName}} format.
                      * @param _clearInstanceNameSettings Whether to clear the CVM instance name settings. This parameter is optional and the default value is `false`.
-Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the “as-{{AutoScalingGroupName}} format.
+Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the as-{{AutoScalingGroupName}} format.
                      * 
                      */
                     void SetClearInstanceNameSettings(const bool& _clearInstanceNameSettings);
@@ -188,6 +188,27 @@ If true is filled in, it indicates that the instance tag list should be cleared.
                      */
                     bool ClearInstanceTagsHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to clear metadata, optional, defaults to false. Setting it to true will clear metadata, the CVMs created based on this will not be associated with custom metadata.
+                     * @return ClearMetadata Whether to clear metadata, optional, defaults to false. Setting it to true will clear metadata, the CVMs created based on this will not be associated with custom metadata.
+                     * 
+                     */
+                    bool GetClearMetadata() const;
+
+                    /**
+                     * 设置Whether to clear metadata, optional, defaults to false. Setting it to true will clear metadata, the CVMs created based on this will not be associated with custom metadata.
+                     * @param _clearMetadata Whether to clear metadata, optional, defaults to false. Setting it to true will clear metadata, the CVMs created based on this will not be associated with custom metadata.
+                     * 
+                     */
+                    void SetClearMetadata(const bool& _clearMetadata);
+
+                    /**
+                     * 判断参数 ClearMetadata 是否已赋值
+                     * @return ClearMetadata 是否已赋值
+                     * 
+                     */
+                    bool ClearMetadataHasBeenSet() const;
+
                 private:
 
                     /**
@@ -212,7 +233,7 @@ Setting it to `true` will clear the hostname settings, which means that CVM newl
 
                     /**
                      * Whether to clear the CVM instance name settings. This parameter is optional and the default value is `false`.
-Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the “as-{{AutoScalingGroupName}} format.
+Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the as-{{AutoScalingGroupName}} format.
                      */
                     bool m_clearInstanceNameSettings;
                     bool m_clearInstanceNameSettingsHasBeenSet;
@@ -230,6 +251,12 @@ If true is filled in, it indicates that the instance tag list should be cleared.
                      */
                     bool m_clearInstanceTags;
                     bool m_clearInstanceTagsHasBeenSet;
+
+                    /**
+                     * Whether to clear metadata, optional, defaults to false. Setting it to true will clear metadata, the CVMs created based on this will not be associated with custom metadata.
+                     */
+                    bool m_clearMetadata;
+                    bool m_clearMetadataHasBeenSet;
 
                 };
             }

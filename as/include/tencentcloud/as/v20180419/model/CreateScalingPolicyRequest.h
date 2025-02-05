@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool ScalingPolicyTypeHasBeenSet() const;
 
                     /**
-                     * 获取The method to adjust the desired capacity after the alarm is triggered. It’s only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
-                     * @return AdjustmentType The method to adjust the desired capacity after the alarm is triggered. It’s only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
+                     * 获取The method to adjust the desired capacity after the alarm is triggered. It is only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
+                     * @return AdjustmentType The method to adjust the desired capacity after the alarm is triggered. It is only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
                      * 
                      */
                     std::string GetAdjustmentType() const;
 
                     /**
-                     * 设置The method to adjust the desired capacity after the alarm is triggered. It’s only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
-                     * @param _adjustmentType The method to adjust the desired capacity after the alarm is triggered. It’s only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
+                     * 设置The method to adjust the desired capacity after the alarm is triggered. It is only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
+                     * @param _adjustmentType The method to adjust the desired capacity after the alarm is triggered. It is only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
                      * 
                      */
                     void SetAdjustmentType(const std::string& _adjustmentType);
@@ -182,15 +182,15 @@ namespace TencentCloud
                     bool CooldownHasBeenSet() const;
 
                     /**
-                     * 获取Alarm monitoring metric. It’s only available when `ScalingPolicyType` is `Simple`.
-                     * @return MetricAlarm Alarm monitoring metric. It’s only available when `ScalingPolicyType` is `Simple`.
+                     * 获取Alarm monitoring metric. It is only available when `ScalingPolicyType` is `Simple`.
+                     * @return MetricAlarm Alarm monitoring metric. It is only available when `ScalingPolicyType` is `Simple`.
                      * 
                      */
                     MetricAlarm GetMetricAlarm() const;
 
                     /**
-                     * 设置Alarm monitoring metric. It’s only available when `ScalingPolicyType` is `Simple`.
-                     * @param _metricAlarm Alarm monitoring metric. It’s only available when `ScalingPolicyType` is `Simple`.
+                     * 设置Alarm monitoring metric. It is only available when `ScalingPolicyType` is `Simple`.
+                     * @param _metricAlarm Alarm monitoring metric. It is only available when `ScalingPolicyType` is `Simple`.
                      * 
                      */
                     void SetMetricAlarm(const MetricAlarm& _metricAlarm);
@@ -203,35 +203,35 @@ namespace TencentCloud
                     bool MetricAlarmHasBeenSet() const;
 
                     /**
-                     * 获取Predefined monitoring item, which is applicable only to target tracking policies. Valid values:
-<li>ASG_AVG_CPU_UTILIZATION: average CPU utilization.</li>
-<li>ASG_AVG_LAN_TRAFFIC_OUT: average outbound private network bandwidth.</li>
-<li>ASG_AVG_LAN_TRAFFIC_IN: average inbound private network bandwidth.</li>
-<li>ASG_AVG_WAN_TRAFFIC_OUT: average outbound public network bandwidth.</li>
-<li>ASG_AVG_WAN_TRAFFIC_IN: average inbound public network bandwidth.</li>
-                     * @return PredefinedMetricType Predefined monitoring item, which is applicable only to target tracking policies. Valid values:
-<li>ASG_AVG_CPU_UTILIZATION: average CPU utilization.</li>
-<li>ASG_AVG_LAN_TRAFFIC_OUT: average outbound private network bandwidth.</li>
-<li>ASG_AVG_LAN_TRAFFIC_IN: average inbound private network bandwidth.</li>
-<li>ASG_AVG_WAN_TRAFFIC_OUT: average outbound public network bandwidth.</li>
-<li>ASG_AVG_WAN_TRAFFIC_IN: average inbound public network bandwidth.</li>
+                     * 获取Predefined monitoring item, applicable only to target tracking policies. Valid values:
+<li>ASG_AVG_CPU_UTILIZATION: average CPU utilization</li>
+<li>ASG_AVG_LAN_TRAFFIC_OUT: average outbound private network bandwidth</li>
+<li>ASG_AVG_LAN_TRAFFIC_IN: average inbound private network bandwidth</li>
+<li>ASG_AVG_WAN_TRAFFIC_OUT: average outbound public network bandwidth</li>
+<li>ASG_AVG_WAN_TRAFFIC_IN: average inbound public network bandwidth</li>
+                     * @return PredefinedMetricType Predefined monitoring item, applicable only to target tracking policies. Valid values:
+<li>ASG_AVG_CPU_UTILIZATION: average CPU utilization</li>
+<li>ASG_AVG_LAN_TRAFFIC_OUT: average outbound private network bandwidth</li>
+<li>ASG_AVG_LAN_TRAFFIC_IN: average inbound private network bandwidth</li>
+<li>ASG_AVG_WAN_TRAFFIC_OUT: average outbound public network bandwidth</li>
+<li>ASG_AVG_WAN_TRAFFIC_IN: average inbound public network bandwidth</li>
                      * 
                      */
                     std::string GetPredefinedMetricType() const;
 
                     /**
-                     * 设置Predefined monitoring item, which is applicable only to target tracking policies. Valid values:
-<li>ASG_AVG_CPU_UTILIZATION: average CPU utilization.</li>
-<li>ASG_AVG_LAN_TRAFFIC_OUT: average outbound private network bandwidth.</li>
-<li>ASG_AVG_LAN_TRAFFIC_IN: average inbound private network bandwidth.</li>
-<li>ASG_AVG_WAN_TRAFFIC_OUT: average outbound public network bandwidth.</li>
-<li>ASG_AVG_WAN_TRAFFIC_IN: average inbound public network bandwidth.</li>
-                     * @param _predefinedMetricType Predefined monitoring item, which is applicable only to target tracking policies. Valid values:
-<li>ASG_AVG_CPU_UTILIZATION: average CPU utilization.</li>
-<li>ASG_AVG_LAN_TRAFFIC_OUT: average outbound private network bandwidth.</li>
-<li>ASG_AVG_LAN_TRAFFIC_IN: average inbound private network bandwidth.</li>
-<li>ASG_AVG_WAN_TRAFFIC_OUT: average outbound public network bandwidth.</li>
-<li>ASG_AVG_WAN_TRAFFIC_IN: average inbound public network bandwidth.</li>
+                     * 设置Predefined monitoring item, applicable only to target tracking policies. Valid values:
+<li>ASG_AVG_CPU_UTILIZATION: average CPU utilization</li>
+<li>ASG_AVG_LAN_TRAFFIC_OUT: average outbound private network bandwidth</li>
+<li>ASG_AVG_LAN_TRAFFIC_IN: average inbound private network bandwidth</li>
+<li>ASG_AVG_WAN_TRAFFIC_OUT: average outbound public network bandwidth</li>
+<li>ASG_AVG_WAN_TRAFFIC_IN: average inbound public network bandwidth</li>
+                     * @param _predefinedMetricType Predefined monitoring item, applicable only to target tracking policies. Valid values:
+<li>ASG_AVG_CPU_UTILIZATION: average CPU utilization</li>
+<li>ASG_AVG_LAN_TRAFFIC_OUT: average outbound private network bandwidth</li>
+<li>ASG_AVG_LAN_TRAFFIC_IN: average inbound private network bandwidth</li>
+<li>ASG_AVG_WAN_TRAFFIC_OUT: average outbound public network bandwidth</li>
+<li>ASG_AVG_WAN_TRAFFIC_IN: average inbound public network bandwidth</li>
                      * 
                      */
                     void SetPredefinedMetricType(const std::string& _predefinedMetricType);
@@ -285,15 +285,15 @@ namespace TencentCloud
                     bool TargetValueHasBeenSet() const;
 
                     /**
-                     * 获取Instance warm-up period (in seconds). It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value range: 0-3600. Default value: 300.
-                     * @return EstimatedInstanceWarmup Instance warm-up period (in seconds). It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value range: 0-3600. Default value: 300.
+                     * 获取Instance warm-up period (in seconds). It is only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value range: 0-3600. Default value: 300.
+                     * @return EstimatedInstanceWarmup Instance warm-up period (in seconds). It is only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value range: 0-3600. Default value: 300.
                      * 
                      */
                     uint64_t GetEstimatedInstanceWarmup() const;
 
                     /**
-                     * 设置Instance warm-up period (in seconds). It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value range: 0-3600. Default value: 300.
-                     * @param _estimatedInstanceWarmup Instance warm-up period (in seconds). It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value range: 0-3600. Default value: 300.
+                     * 设置Instance warm-up period (in seconds). It is only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value range: 0-3600. Default value: 300.
+                     * @param _estimatedInstanceWarmup Instance warm-up period (in seconds). It is only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value range: 0-3600. Default value: 300.
                      * 
                      */
                     void SetEstimatedInstanceWarmup(const uint64_t& _estimatedInstanceWarmup);
@@ -380,7 +380,7 @@ Notification group ID, which is the set of user group IDs.
                     bool m_scalingPolicyTypeHasBeenSet;
 
                     /**
-                     * The method to adjust the desired capacity after the alarm is triggered. It’s only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
+                     * The method to adjust the desired capacity after the alarm is triggered. It is only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
                      */
                     std::string m_adjustmentType;
                     bool m_adjustmentTypeHasBeenSet;
@@ -401,18 +401,18 @@ Notification group ID, which is the set of user group IDs.
                     bool m_cooldownHasBeenSet;
 
                     /**
-                     * Alarm monitoring metric. It’s only available when `ScalingPolicyType` is `Simple`.
+                     * Alarm monitoring metric. It is only available when `ScalingPolicyType` is `Simple`.
                      */
                     MetricAlarm m_metricAlarm;
                     bool m_metricAlarmHasBeenSet;
 
                     /**
-                     * Predefined monitoring item, which is applicable only to target tracking policies. Valid values:
-<li>ASG_AVG_CPU_UTILIZATION: average CPU utilization.</li>
-<li>ASG_AVG_LAN_TRAFFIC_OUT: average outbound private network bandwidth.</li>
-<li>ASG_AVG_LAN_TRAFFIC_IN: average inbound private network bandwidth.</li>
-<li>ASG_AVG_WAN_TRAFFIC_OUT: average outbound public network bandwidth.</li>
-<li>ASG_AVG_WAN_TRAFFIC_IN: average inbound public network bandwidth.</li>
+                     * Predefined monitoring item, applicable only to target tracking policies. Valid values:
+<li>ASG_AVG_CPU_UTILIZATION: average CPU utilization</li>
+<li>ASG_AVG_LAN_TRAFFIC_OUT: average outbound private network bandwidth</li>
+<li>ASG_AVG_LAN_TRAFFIC_IN: average inbound private network bandwidth</li>
+<li>ASG_AVG_WAN_TRAFFIC_OUT: average outbound public network bandwidth</li>
+<li>ASG_AVG_WAN_TRAFFIC_IN: average inbound public network bandwidth</li>
                      */
                     std::string m_predefinedMetricType;
                     bool m_predefinedMetricTypeHasBeenSet;
@@ -429,7 +429,7 @@ Notification group ID, which is the set of user group IDs.
                     bool m_targetValueHasBeenSet;
 
                     /**
-                     * Instance warm-up period (in seconds). It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value range: 0-3600. Default value: 300.
+                     * Instance warm-up period (in seconds). It is only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value range: 0-3600. Default value: 300.
                      */
                     uint64_t m_estimatedInstanceWarmup;
                     bool m_estimatedInstanceWarmupHasBeenSet;

@@ -228,31 +228,39 @@ Note: When resolution adaption is enabled, `Width` cannot be smaller than `Heigh
                     bool ResolutionAdaptiveHasBeenSet() const;
 
                     /**
-                     * 获取Maximum value of the width (or long side) of a video stream in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-                     * @return Width Maximum value of the width (or long side) of a video stream in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
+                     * 获取Maximum value of the video stream width (or long edge) in px. Value range: 0 and [128, 4096].
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+Note: If Codec is set to MV-HEVC, the maximum value can be 7680.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return Width Maximum value of the video stream width (or long edge) in px. Value range: 0 and [128, 4096].
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+Note: If Codec is set to MV-HEVC, the maximum value can be 7680.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     uint64_t GetWidth() const;
 
                     /**
-                     * 设置Maximum value of the width (or long side) of a video stream in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-                     * @param _width Maximum value of the width (or long side) of a video stream in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
+                     * 设置Maximum value of the video stream width (or long edge) in px. Value range: 0 and [128, 4096].
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+Note: If Codec is set to MV-HEVC, the maximum value can be 7680.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _width Maximum value of the video stream width (or long edge) in px. Value range: 0 and [128, 4096].
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+Note: If Codec is set to MV-HEVC, the maximum value can be 7680.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetWidth(const uint64_t& _width);
@@ -265,15 +273,23 @@ Note: When resolution adaption is enabled, `Width` cannot be smaller than `Heigh
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取Maximum value of the height (or short side) of a video stream in px. Value range: 0 and [128, 4,096].
-                     * @return Height Maximum value of the height (or short side) of a video stream in px. Value range: 0 and [128, 4,096].
+                     * 获取Maximum value of the video stream height (or short edge) in px. Value range: 0 and [128, 4,096].
+Note: If Codec is set to MV-HEVC, the maximum value can be 7680.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return Height Maximum value of the video stream height (or short edge) in px. Value range: 0 and [128, 4,096].
+Note: If Codec is set to MV-HEVC, the maximum value can be 7680.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     uint64_t GetHeight() const;
 
                     /**
-                     * 设置Maximum value of the height (or short side) of a video stream in px. Value range: 0 and [128, 4,096].
-                     * @param _height Maximum value of the height (or short side) of a video stream in px. Value range: 0 and [128, 4,096].
+                     * 设置Maximum value of the video stream height (or short edge) in px. Value range: 0 and [128, 4,096].
+Note: If Codec is set to MV-HEVC, the maximum value can be 7680.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _height Maximum value of the video stream height (or short edge) in px. Value range: 0 and [128, 4,096].
+Note: If Codec is set to MV-HEVC, the maximum value can be 7680.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetHeight(const uint64_t& _height);
@@ -1194,17 +1210,21 @@ Note: When resolution adaption is enabled, `Width` cannot be smaller than `Heigh
                     bool m_resolutionAdaptiveHasBeenSet;
 
                     /**
-                     * Maximum value of the width (or long side) of a video stream in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
+                     * Maximum value of the video stream width (or long edge) in px. Value range: 0 and [128, 4096].
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+Note: If Codec is set to MV-HEVC, the maximum value can be 7680.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     uint64_t m_width;
                     bool m_widthHasBeenSet;
 
                     /**
-                     * Maximum value of the height (or short side) of a video stream in px. Value range: 0 and [128, 4,096].
+                     * Maximum value of the video stream height (or short edge) in px. Value range: 0 and [128, 4,096].
+Note: If Codec is set to MV-HEVC, the maximum value can be 7680.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     uint64_t m_height;
                     bool m_heightHasBeenSet;

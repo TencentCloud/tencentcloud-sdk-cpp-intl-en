@@ -1975,6 +1975,49 @@ MpsClient::DescribeSnapshotByTimeOffsetTemplatesOutcomeCallable MpsClient::Descr
     return task->get_future();
 }
 
+MpsClient::DescribeStreamLinkSecurityGroupOutcome MpsClient::DescribeStreamLinkSecurityGroup(const DescribeStreamLinkSecurityGroupRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeStreamLinkSecurityGroup");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeStreamLinkSecurityGroupResponse rsp = DescribeStreamLinkSecurityGroupResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeStreamLinkSecurityGroupOutcome(rsp);
+        else
+            return DescribeStreamLinkSecurityGroupOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeStreamLinkSecurityGroupOutcome(outcome.GetError());
+    }
+}
+
+void MpsClient::DescribeStreamLinkSecurityGroupAsync(const DescribeStreamLinkSecurityGroupRequest& request, const DescribeStreamLinkSecurityGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeStreamLinkSecurityGroup(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MpsClient::DescribeStreamLinkSecurityGroupOutcomeCallable MpsClient::DescribeStreamLinkSecurityGroupCallable(const DescribeStreamLinkSecurityGroupRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeStreamLinkSecurityGroupOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeStreamLinkSecurityGroup(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 MpsClient::DescribeTaskDetailOutcome MpsClient::DescribeTaskDetail(const DescribeTaskDetailRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeTaskDetail");

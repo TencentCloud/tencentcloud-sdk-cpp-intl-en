@@ -32,6 +32,7 @@
 #include <tencentcloud/as/v20180419/model/IPv6InternetAccessible.h>
 #include <tencentcloud/as/v20180419/model/LoginSettings.h>
 #include <tencentcloud/as/v20180419/model/InstanceTag.h>
+#include <tencentcloud/as/v20180419/model/Metadata.h>
 
 
 namespace TencentCloud
@@ -678,6 +679,27 @@ This parameter will overwrite the original instance tag list. To add new tags, y
                      */
                     bool DedicatedClusterIdHasBeenSet() const;
 
+                    /**
+                     * 获取Custom metadata.
+                     * @return Metadata Custom metadata.
+                     * 
+                     */
+                    Metadata GetMetadata() const;
+
+                    /**
+                     * 设置Custom metadata.
+                     * @param _metadata Custom metadata.
+                     * 
+                     */
+                    void SetMetadata(const Metadata& _metadata);
+
+                    /**
+                     * 判断参数 Metadata 是否已赋值
+                     * @return Metadata 是否已赋值
+                     * 
+                     */
+                    bool MetadataHasBeenSet() const;
+
                 private:
 
                     /**
@@ -854,6 +876,12 @@ This parameter will overwrite the original instance tag list. To add new tags, y
                      */
                     std::string m_dedicatedClusterId;
                     bool m_dedicatedClusterIdHasBeenSet;
+
+                    /**
+                     * Custom metadata.
+                     */
+                    Metadata m_metadata;
+                    bool m_metadataHasBeenSet;
 
                 };
             }

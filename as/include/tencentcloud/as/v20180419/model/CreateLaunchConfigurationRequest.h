@@ -33,6 +33,7 @@
 #include <tencentcloud/as/v20180419/model/InstanceNameSettings.h>
 #include <tencentcloud/as/v20180419/model/InstanceChargePrepaid.h>
 #include <tencentcloud/as/v20180419/model/IPv6InternetAccessible.h>
+#include <tencentcloud/as/v20180419/model/Metadata.h>
 
 
 namespace TencentCloud
@@ -97,18 +98,18 @@ namespace TencentCloud
                     bool ImageIdHasBeenSet() const;
 
                     /**
-                     * 获取Project ID of the launch configuration. The default project is used if it’s left blank.
+                     * 获取Project ID of the launch configuration. The default project is used if it is left blank.
 Note that this project ID is not the same as the project ID of the scaling group. 
-                     * @return ProjectId Project ID of the launch configuration. The default project is used if it’s left blank.
+                     * @return ProjectId Project ID of the launch configuration. The default project is used if it is left blank.
 Note that this project ID is not the same as the project ID of the scaling group. 
                      * 
                      */
                     uint64_t GetProjectId() const;
 
                     /**
-                     * 设置Project ID of the launch configuration. The default project is used if it’s left blank.
+                     * 设置Project ID of the launch configuration. The default project is used if it is left blank.
 Note that this project ID is not the same as the project ID of the scaling group. 
-                     * @param _projectId Project ID of the launch configuration. The default project is used if it’s left blank.
+                     * @param _projectId Project ID of the launch configuration. The default project is used if it is left blank.
 Note that this project ID is not the same as the project ID of the scaling group. 
                      * 
                      */
@@ -677,6 +678,27 @@ Note: This field is default to empty
                      */
                     bool DedicatedClusterIdHasBeenSet() const;
 
+                    /**
+                     * 获取Custom metadata.
+                     * @return Metadata Custom metadata.
+                     * 
+                     */
+                    Metadata GetMetadata() const;
+
+                    /**
+                     * 设置Custom metadata.
+                     * @param _metadata Custom metadata.
+                     * 
+                     */
+                    void SetMetadata(const Metadata& _metadata);
+
+                    /**
+                     * 判断参数 Metadata 是否已赋值
+                     * @return Metadata 是否已赋值
+                     * 
+                     */
+                    bool MetadataHasBeenSet() const;
+
                 private:
 
                     /**
@@ -692,7 +714,7 @@ Note: This field is default to empty
                     bool m_imageIdHasBeenSet;
 
                     /**
-                     * Project ID of the launch configuration. The default project is used if it’s left blank.
+                     * Project ID of the launch configuration. The default project is used if it is left blank.
 Note that this project ID is not the same as the project ID of the scaling group. 
                      */
                     uint64_t m_projectId;
@@ -854,6 +876,12 @@ Note: This field is default to empty
                      */
                     std::string m_dedicatedClusterId;
                     bool m_dedicatedClusterIdHasBeenSet;
+
+                    /**
+                     * Custom metadata.
+                     */
+                    Metadata m_metadata;
+                    bool m_metadataHasBeenSet;
 
                 };
             }

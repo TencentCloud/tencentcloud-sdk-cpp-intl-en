@@ -113,6 +113,8 @@
 #include <tencentcloud/mps/v20190612/model/DescribeSchedulesResponse.h>
 #include <tencentcloud/mps/v20190612/model/DescribeSnapshotByTimeOffsetTemplatesRequest.h>
 #include <tencentcloud/mps/v20190612/model/DescribeSnapshotByTimeOffsetTemplatesResponse.h>
+#include <tencentcloud/mps/v20190612/model/DescribeStreamLinkSecurityGroupRequest.h>
+#include <tencentcloud/mps/v20190612/model/DescribeStreamLinkSecurityGroupResponse.h>
 #include <tencentcloud/mps/v20190612/model/DescribeTaskDetailRequest.h>
 #include <tencentcloud/mps/v20190612/model/DescribeTaskDetailResponse.h>
 #include <tencentcloud/mps/v20190612/model/DescribeTasksRequest.h>
@@ -330,6 +332,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeSnapshotByTimeOffsetTemplatesResponse> DescribeSnapshotByTimeOffsetTemplatesOutcome;
                 typedef std::future<DescribeSnapshotByTimeOffsetTemplatesOutcome> DescribeSnapshotByTimeOffsetTemplatesOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::DescribeSnapshotByTimeOffsetTemplatesRequest&, DescribeSnapshotByTimeOffsetTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSnapshotByTimeOffsetTemplatesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeStreamLinkSecurityGroupResponse> DescribeStreamLinkSecurityGroupOutcome;
+                typedef std::future<DescribeStreamLinkSecurityGroupOutcome> DescribeStreamLinkSecurityGroupOutcomeCallable;
+                typedef std::function<void(const MpsClient*, const Model::DescribeStreamLinkSecurityGroupRequest&, DescribeStreamLinkSecurityGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStreamLinkSecurityGroupAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeTaskDetailResponse> DescribeTaskDetailOutcome;
                 typedef std::future<DescribeTaskDetailOutcome> DescribeTaskDetailOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::DescribeTaskDetailRequest&, DescribeTaskDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTaskDetailAsyncHandler;
@@ -863,6 +868,15 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DescribeSnapshotByTimeOffsetTemplatesOutcome DescribeSnapshotByTimeOffsetTemplates(const Model::DescribeSnapshotByTimeOffsetTemplatesRequest &request);
                 void DescribeSnapshotByTimeOffsetTemplatesAsync(const Model::DescribeSnapshotByTimeOffsetTemplatesRequest& request, const DescribeSnapshotByTimeOffsetTemplatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeSnapshotByTimeOffsetTemplatesOutcomeCallable DescribeSnapshotByTimeOffsetTemplatesCallable(const Model::DescribeSnapshotByTimeOffsetTemplatesRequest& request);
+
+                /**
+                 *This API is used to query a security group.
+                 * @param req DescribeStreamLinkSecurityGroupRequest
+                 * @return DescribeStreamLinkSecurityGroupOutcome
+                 */
+                DescribeStreamLinkSecurityGroupOutcome DescribeStreamLinkSecurityGroup(const Model::DescribeStreamLinkSecurityGroupRequest &request);
+                void DescribeStreamLinkSecurityGroupAsync(const Model::DescribeStreamLinkSecurityGroupRequest& request, const DescribeStreamLinkSecurityGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeStreamLinkSecurityGroupOutcomeCallable DescribeStreamLinkSecurityGroupCallable(const Model::DescribeStreamLinkSecurityGroupRequest& request);
 
                 /**
                  *This API is used to query the details of execution status and result of a task submitted in the last 3 days by task ID.

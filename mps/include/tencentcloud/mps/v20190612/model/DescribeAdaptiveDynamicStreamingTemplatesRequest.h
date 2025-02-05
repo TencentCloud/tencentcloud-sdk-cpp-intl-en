@@ -136,14 +136,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Whether it is an audio-only template. 0: video template. 1: audio-only template.
+
+Default value: 0
                      * @return PureAudio Whether it is an audio-only template. 0: video template. 1: audio-only template.
+
+Default value: 0
                      * 
                      */
                     uint64_t GetPureAudio() const;
 
                     /**
                      * 设置Whether it is an audio-only template. 0: video template. 1: audio-only template.
+
+Default value: 0
                      * @param _pureAudio Whether it is an audio-only template. 0: video template. 1: audio-only template.
+
+Default value: 0
                      * 
                      */
                     void SetPureAudio(const uint64_t& _pureAudio);
@@ -206,6 +214,8 @@ namespace TencentCloud
 
                     /**
                      * Whether it is an audio-only template. 0: video template. 1: audio-only template.
+
+Default value: 0
                      */
                     uint64_t m_pureAudio;
                     bool m_pureAudioHasBeenSet;
