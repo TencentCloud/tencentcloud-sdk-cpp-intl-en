@@ -1,0 +1,398 @@
+#
+# Copyright (c) 2017-2019 THL A29 Limited, a Tencent company. All Rights Reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+set(tcsas_public_header
+  include/tencentcloud/tcsas/v20250106/TcsasClient.h
+  )
+
+set(tcsas_public_header_model
+  include/tencentcloud/tcsas/v20250106/model/CreatePresetKeyResponse.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeTeamMemberListRequest.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPAllStageVersionsRequest.h
+  include/tencentcloud/tcsas/v20250106/model/ModifyApplicationRequest.h
+  include/tencentcloud/tcsas/v20250106/model/DeleteUserRequest.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPCategoryResponse.h
+  include/tencentcloud/tcsas/v20250106/model/CreateApplicationSensitiveAPIReq.h
+  include/tencentcloud/tcsas/v20250106/model/CreateMNPApprovalRequest.h
+  include/tencentcloud/tcsas/v20250106/model/RemoveMNPRequest.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPPreviewResponse.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPListResp.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPPreviewResp.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPVersionResponse.h
+  include/tencentcloud/tcsas/v20250106/model/ModifyApplicationResponse.h
+  include/tencentcloud/tcsas/v20250106/model/EnableApplicationSensitiveAPIResponse.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPListResponse.h
+  include/tencentcloud/tcsas/v20250106/model/ProcessMNPApprovalResponse.h
+  include/tencentcloud/tcsas/v20250106/model/DeleteTeamResponse.h
+  include/tencentcloud/tcsas/v20250106/model/RemoveMNPResponse.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPSensitiveAPIPermissionApprovalRequest.h
+  include/tencentcloud/tcsas/v20250106/model/ModifyUserResponse.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeTeamMemberInfoResp.h
+  include/tencentcloud/tcsas/v20250106/model/ConfigureMNPPreviewResponse.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPSensitiveAPIPermissionApprovalListData.h
+  include/tencentcloud/tcsas/v20250106/model/DeleteMNPResponse.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMPAllStageVersionsResp.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPSensitiveAPIPermissionListRequest.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeApplicationListRequest.h
+  include/tencentcloud/tcsas/v20250106/model/DeleteTeamRequest.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeRoleListRequest.h
+  include/tencentcloud/tcsas/v20250106/model/ModifyTeamMemberResponse.h
+  include/tencentcloud/tcsas/v20250106/model/DeleteApplicationResponse.h
+  include/tencentcloud/tcsas/v20250106/model/ProcessMNPSensitiveAPIPermissionApprovalResponse.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeApplicationResp.h
+  include/tencentcloud/tcsas/v20250106/model/ModifyGlobalDomainResponse.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeRoleListResp.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeTeamListInfoResp.h
+  include/tencentcloud/tcsas/v20250106/model/CreateMNPSensitiveAPIPermissionApprovalRequest.h
+  include/tencentcloud/tcsas/v20250106/model/DeleteMNPRequest.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeTeamListResponse.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPAllStageVersionsResponse.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeUserListResp.h
+  include/tencentcloud/tcsas/v20250106/model/ApprovalItem.h
+  include/tencentcloud/tcsas/v20250106/model/QueryOnlineVersionResp.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeApplicationListData.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeRoleListResponse.h
+  include/tencentcloud/tcsas/v20250106/model/CreateMNPVersionRequest.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPListData.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeApplicationListResponse.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPApprovalListRequest.h
+  include/tencentcloud/tcsas/v20250106/model/ModifyMNPDomainRequest.h
+  include/tencentcloud/tcsas/v20250106/model/ModifyTeamRequest.h
+  include/tencentcloud/tcsas/v20250106/model/CreateTeamMemberInfoReq.h
+  include/tencentcloud/tcsas/v20250106/model/DownloadApplicationConfigResp.h
+  include/tencentcloud/tcsas/v20250106/model/CreateUserResponse.h
+  include/tencentcloud/tcsas/v20250106/model/ModifyMNPDomainResponse.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeApplicationConfigFileRequest.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeUserListRequest.h
+  include/tencentcloud/tcsas/v20250106/model/DeleteUserResponse.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeApplicationResponse.h
+  include/tencentcloud/tcsas/v20250106/model/CreateMNPVersionResp.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeDomainInfoParam.h
+  include/tencentcloud/tcsas/v20250106/model/CreateMNPApprovalResponse.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPApprovalListData.h
+  include/tencentcloud/tcsas/v20250106/model/ResourceIdInfo.h
+  include/tencentcloud/tcsas/v20250106/model/DeleteTeamMemberResponse.h
+  include/tencentcloud/tcsas/v20250106/model/ProcessMNPApprovalRequest.h
+  include/tencentcloud/tcsas/v20250106/model/ModifyUserRequest.h
+  include/tencentcloud/tcsas/v20250106/model/CreateMNPResponse.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPSensitiveAPIPermissionApprovalListResp.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPDomainACLRequest.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeUserListResponse.h
+  include/tencentcloud/tcsas/v20250106/model/DeleteTeamMemberRequest.h
+  include/tencentcloud/tcsas/v20250106/model/CreateGlobalDomainACLResponse.h
+  include/tencentcloud/tcsas/v20250106/model/RollbackMNPVersionRequest.h
+  include/tencentcloud/tcsas/v20250106/model/ProcessMNPSensitiveAPIPermissionApprovalRequest.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPSensitiveAPIPermissionListData.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPOfflinePackageURLResponse.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeUserResponse.h
+  include/tencentcloud/tcsas/v20250106/model/CreateApplicationSensitiveAPIResponse.h
+  include/tencentcloud/tcsas/v20250106/model/GlobalDomainModifyRespResp.h
+  include/tencentcloud/tcsas/v20250106/model/DisableApplicationSensitiveAPIRequest.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeApplicationSensitiveAPIListResponse.h
+  include/tencentcloud/tcsas/v20250106/model/DeleteApplicationRequest.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeUserRequest.h
+  include/tencentcloud/tcsas/v20250106/model/ModifyGlobalDomainRequest.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeUserDetailResp.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPReleasedVersionHistoryRequest.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPSensitiveAPIPermissionListResponse.h
+  include/tencentcloud/tcsas/v20250106/model/AddTeamMemberResponse.h
+  include/tencentcloud/tcsas/v20250106/model/CreateTeamResponse.h
+  include/tencentcloud/tcsas/v20250106/model/CreateMNPSensitiveAPIPermissionApprovalResponse.h
+  include/tencentcloud/tcsas/v20250106/model/ModifyMNPRequest.h
+  include/tencentcloud/tcsas/v20250106/model/CreateMNPDomainACLRequest.h
+  include/tencentcloud/tcsas/v20250106/model/RollbackMNPVersionResponse.h
+  include/tencentcloud/tcsas/v20250106/model/CreateTeamRequest.h
+  include/tencentcloud/tcsas/v20250106/model/CreateApplicationSensitiveAPIRequest.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPSensitiveAPIPermissionListResp.h
+  include/tencentcloud/tcsas/v20250106/model/ReleaseMNPVersionRequest.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeRoleListData.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPResponse.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeGlobalDomainsResp.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeRevertOnlineVersionPageResp.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPApprovalListResp.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPSensitiveAPIPermissionApprovalData.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPSensitiveAPIPermissionApprovalListResponse.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPSensitiveAPIPermissionApprovalListRequest.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeApplicationListResp.h
+  include/tencentcloud/tcsas/v20250106/model/AddTeamMemberRequest.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPOfflinePackageURLRequest.h
+  include/tencentcloud/tcsas/v20250106/model/CreateMNPRequest.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeTeamRequest.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPRequest.h
+  include/tencentcloud/tcsas/v20250106/model/CreateUserRequest.h
+  include/tencentcloud/tcsas/v20250106/model/ModifyTeamResponse.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPSensitiveAPIPermissionApprovalResponse.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeTempSecret4UploadFile2CosRequest.h
+  include/tencentcloud/tcsas/v20250106/model/ModifyTeamMemberRequest.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeGlobalDomainsListData.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPManagerDetailData.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeUserListData.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeTeamResponse.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeApplicationRequest.h
+  include/tencentcloud/tcsas/v20250106/model/CreateMNPVersionResponse.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPDomainACLResponse.h
+  include/tencentcloud/tcsas/v20250106/model/ReleaseMNPVersionResponse.h
+  include/tencentcloud/tcsas/v20250106/model/ResourceIdStringInfo.h
+  include/tencentcloud/tcsas/v20250106/model/CreateDomainParam.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeTeamPageResp.h
+  include/tencentcloud/tcsas/v20250106/model/ModifyMNPResponse.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPVersionResp.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeApplicationConfigFileResponse.h
+  include/tencentcloud/tcsas/v20250106/model/BooleanInfo.h
+  include/tencentcloud/tcsas/v20250106/model/DisableApplicationSensitiveAPIResponse.h
+  include/tencentcloud/tcsas/v20250106/model/UploadFileTempSecret.h
+  include/tencentcloud/tcsas/v20250106/model/CreateMNPDomainACLResponse.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeTeamListRequest.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPApprovalListResponse.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPVersionRequest.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeGlobalDomainACLRequest.h
+  include/tencentcloud/tcsas/v20250106/model/CreateApplicationRequest.h
+  include/tencentcloud/tcsas/v20250106/model/MNPTypeDefine.h
+  include/tencentcloud/tcsas/v20250106/model/StringData.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeTempSecret4UploadFile2CosResponse.h
+  include/tencentcloud/tcsas/v20250106/model/ConfigureMNPPreviewRequest.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPReleasedVersionHistoryResponse.h
+  include/tencentcloud/tcsas/v20250106/model/DeleteApplicationSensitiveAPIRequest.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeApplicationSensitiveAPIListData.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeApplicationSensitiveAPIListResp.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeTeamDetailResp.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeGlobalDomainACLResponse.h
+  include/tencentcloud/tcsas/v20250106/model/CreatePresetKeyRequest.h
+  include/tencentcloud/tcsas/v20250106/model/PresetResp.h
+  include/tencentcloud/tcsas/v20250106/model/CreateApplicationResponse.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPCategoryRequest.h
+  include/tencentcloud/tcsas/v20250106/model/DeleteApplicationSensitiveAPIResponse.h
+  include/tencentcloud/tcsas/v20250106/model/EnableApplicationSensitiveAPIRequest.h
+  include/tencentcloud/tcsas/v20250106/model/DeleteGlobalDomainRequest.h
+  include/tencentcloud/tcsas/v20250106/model/GlobalDomainDeleteResp.h
+  include/tencentcloud/tcsas/v20250106/model/DeleteGlobalDomainResponse.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPListRequest.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPPreviewRequest.h
+  include/tencentcloud/tcsas/v20250106/model/CreateGlobalDomainResp.h
+  include/tencentcloud/tcsas/v20250106/model/CreateGlobalDomainACLRequest.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeApplicationSensitiveAPIListRequest.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeTeamMemberListResponse.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeTeamMemberListPageResp.h
+  )
+
+set(tcsas_src
+  src/v20250106/TcsasClient.cpp
+  src/v20250106/model/CreatePresetKeyResponse.cpp
+  src/v20250106/model/DescribeTeamMemberListRequest.cpp
+  src/v20250106/model/DescribeMNPAllStageVersionsRequest.cpp
+  src/v20250106/model/ModifyApplicationRequest.cpp
+  src/v20250106/model/DeleteUserRequest.cpp
+  src/v20250106/model/DescribeMNPCategoryResponse.cpp
+  src/v20250106/model/CreateApplicationSensitiveAPIReq.cpp
+  src/v20250106/model/CreateMNPApprovalRequest.cpp
+  src/v20250106/model/RemoveMNPRequest.cpp
+  src/v20250106/model/DescribeMNPPreviewResponse.cpp
+  src/v20250106/model/DescribeMNPListResp.cpp
+  src/v20250106/model/DescribeMNPPreviewResp.cpp
+  src/v20250106/model/DescribeMNPVersionResponse.cpp
+  src/v20250106/model/ModifyApplicationResponse.cpp
+  src/v20250106/model/EnableApplicationSensitiveAPIResponse.cpp
+  src/v20250106/model/DescribeMNPListResponse.cpp
+  src/v20250106/model/ProcessMNPApprovalResponse.cpp
+  src/v20250106/model/DeleteTeamResponse.cpp
+  src/v20250106/model/RemoveMNPResponse.cpp
+  src/v20250106/model/DescribeMNPSensitiveAPIPermissionApprovalRequest.cpp
+  src/v20250106/model/ModifyUserResponse.cpp
+  src/v20250106/model/DescribeTeamMemberInfoResp.cpp
+  src/v20250106/model/ConfigureMNPPreviewResponse.cpp
+  src/v20250106/model/DescribeMNPSensitiveAPIPermissionApprovalListData.cpp
+  src/v20250106/model/DeleteMNPResponse.cpp
+  src/v20250106/model/DescribeMPAllStageVersionsResp.cpp
+  src/v20250106/model/DescribeMNPSensitiveAPIPermissionListRequest.cpp
+  src/v20250106/model/DescribeApplicationListRequest.cpp
+  src/v20250106/model/DeleteTeamRequest.cpp
+  src/v20250106/model/DescribeRoleListRequest.cpp
+  src/v20250106/model/ModifyTeamMemberResponse.cpp
+  src/v20250106/model/DeleteApplicationResponse.cpp
+  src/v20250106/model/ProcessMNPSensitiveAPIPermissionApprovalResponse.cpp
+  src/v20250106/model/DescribeApplicationResp.cpp
+  src/v20250106/model/ModifyGlobalDomainResponse.cpp
+  src/v20250106/model/DescribeRoleListResp.cpp
+  src/v20250106/model/DescribeTeamListInfoResp.cpp
+  src/v20250106/model/CreateMNPSensitiveAPIPermissionApprovalRequest.cpp
+  src/v20250106/model/DeleteMNPRequest.cpp
+  src/v20250106/model/DescribeTeamListResponse.cpp
+  src/v20250106/model/DescribeMNPAllStageVersionsResponse.cpp
+  src/v20250106/model/DescribeUserListResp.cpp
+  src/v20250106/model/ApprovalItem.cpp
+  src/v20250106/model/QueryOnlineVersionResp.cpp
+  src/v20250106/model/DescribeApplicationListData.cpp
+  src/v20250106/model/DescribeRoleListResponse.cpp
+  src/v20250106/model/CreateMNPVersionRequest.cpp
+  src/v20250106/model/DescribeMNPListData.cpp
+  src/v20250106/model/DescribeApplicationListResponse.cpp
+  src/v20250106/model/DescribeMNPApprovalListRequest.cpp
+  src/v20250106/model/ModifyMNPDomainRequest.cpp
+  src/v20250106/model/ModifyTeamRequest.cpp
+  src/v20250106/model/CreateTeamMemberInfoReq.cpp
+  src/v20250106/model/DownloadApplicationConfigResp.cpp
+  src/v20250106/model/CreateUserResponse.cpp
+  src/v20250106/model/ModifyMNPDomainResponse.cpp
+  src/v20250106/model/DescribeApplicationConfigFileRequest.cpp
+  src/v20250106/model/DescribeUserListRequest.cpp
+  src/v20250106/model/DeleteUserResponse.cpp
+  src/v20250106/model/DescribeApplicationResponse.cpp
+  src/v20250106/model/CreateMNPVersionResp.cpp
+  src/v20250106/model/DescribeDomainInfoParam.cpp
+  src/v20250106/model/CreateMNPApprovalResponse.cpp
+  src/v20250106/model/DescribeMNPApprovalListData.cpp
+  src/v20250106/model/ResourceIdInfo.cpp
+  src/v20250106/model/DeleteTeamMemberResponse.cpp
+  src/v20250106/model/ProcessMNPApprovalRequest.cpp
+  src/v20250106/model/ModifyUserRequest.cpp
+  src/v20250106/model/CreateMNPResponse.cpp
+  src/v20250106/model/DescribeMNPSensitiveAPIPermissionApprovalListResp.cpp
+  src/v20250106/model/DescribeMNPDomainACLRequest.cpp
+  src/v20250106/model/DescribeUserListResponse.cpp
+  src/v20250106/model/DeleteTeamMemberRequest.cpp
+  src/v20250106/model/CreateGlobalDomainACLResponse.cpp
+  src/v20250106/model/RollbackMNPVersionRequest.cpp
+  src/v20250106/model/ProcessMNPSensitiveAPIPermissionApprovalRequest.cpp
+  src/v20250106/model/DescribeMNPSensitiveAPIPermissionListData.cpp
+  src/v20250106/model/DescribeMNPOfflinePackageURLResponse.cpp
+  src/v20250106/model/DescribeUserResponse.cpp
+  src/v20250106/model/CreateApplicationSensitiveAPIResponse.cpp
+  src/v20250106/model/GlobalDomainModifyRespResp.cpp
+  src/v20250106/model/DisableApplicationSensitiveAPIRequest.cpp
+  src/v20250106/model/DescribeApplicationSensitiveAPIListResponse.cpp
+  src/v20250106/model/DeleteApplicationRequest.cpp
+  src/v20250106/model/DescribeUserRequest.cpp
+  src/v20250106/model/ModifyGlobalDomainRequest.cpp
+  src/v20250106/model/DescribeUserDetailResp.cpp
+  src/v20250106/model/DescribeMNPReleasedVersionHistoryRequest.cpp
+  src/v20250106/model/DescribeMNPSensitiveAPIPermissionListResponse.cpp
+  src/v20250106/model/AddTeamMemberResponse.cpp
+  src/v20250106/model/CreateTeamResponse.cpp
+  src/v20250106/model/CreateMNPSensitiveAPIPermissionApprovalResponse.cpp
+  src/v20250106/model/ModifyMNPRequest.cpp
+  src/v20250106/model/CreateMNPDomainACLRequest.cpp
+  src/v20250106/model/RollbackMNPVersionResponse.cpp
+  src/v20250106/model/CreateTeamRequest.cpp
+  src/v20250106/model/CreateApplicationSensitiveAPIRequest.cpp
+  src/v20250106/model/DescribeMNPSensitiveAPIPermissionListResp.cpp
+  src/v20250106/model/ReleaseMNPVersionRequest.cpp
+  src/v20250106/model/DescribeRoleListData.cpp
+  src/v20250106/model/DescribeMNPResponse.cpp
+  src/v20250106/model/DescribeGlobalDomainsResp.cpp
+  src/v20250106/model/DescribeRevertOnlineVersionPageResp.cpp
+  src/v20250106/model/DescribeMNPApprovalListResp.cpp
+  src/v20250106/model/DescribeMNPSensitiveAPIPermissionApprovalData.cpp
+  src/v20250106/model/DescribeMNPSensitiveAPIPermissionApprovalListResponse.cpp
+  src/v20250106/model/DescribeMNPSensitiveAPIPermissionApprovalListRequest.cpp
+  src/v20250106/model/DescribeApplicationListResp.cpp
+  src/v20250106/model/AddTeamMemberRequest.cpp
+  src/v20250106/model/DescribeMNPOfflinePackageURLRequest.cpp
+  src/v20250106/model/CreateMNPRequest.cpp
+  src/v20250106/model/DescribeTeamRequest.cpp
+  src/v20250106/model/DescribeMNPRequest.cpp
+  src/v20250106/model/CreateUserRequest.cpp
+  src/v20250106/model/ModifyTeamResponse.cpp
+  src/v20250106/model/DescribeMNPSensitiveAPIPermissionApprovalResponse.cpp
+  src/v20250106/model/DescribeTempSecret4UploadFile2CosRequest.cpp
+  src/v20250106/model/ModifyTeamMemberRequest.cpp
+  src/v20250106/model/DescribeGlobalDomainsListData.cpp
+  src/v20250106/model/DescribeMNPManagerDetailData.cpp
+  src/v20250106/model/DescribeUserListData.cpp
+  src/v20250106/model/DescribeTeamResponse.cpp
+  src/v20250106/model/DescribeApplicationRequest.cpp
+  src/v20250106/model/CreateMNPVersionResponse.cpp
+  src/v20250106/model/DescribeMNPDomainACLResponse.cpp
+  src/v20250106/model/ReleaseMNPVersionResponse.cpp
+  src/v20250106/model/ResourceIdStringInfo.cpp
+  src/v20250106/model/CreateDomainParam.cpp
+  src/v20250106/model/DescribeTeamPageResp.cpp
+  src/v20250106/model/ModifyMNPResponse.cpp
+  src/v20250106/model/DescribeMNPVersionResp.cpp
+  src/v20250106/model/DescribeApplicationConfigFileResponse.cpp
+  src/v20250106/model/BooleanInfo.cpp
+  src/v20250106/model/DisableApplicationSensitiveAPIResponse.cpp
+  src/v20250106/model/UploadFileTempSecret.cpp
+  src/v20250106/model/CreateMNPDomainACLResponse.cpp
+  src/v20250106/model/DescribeTeamListRequest.cpp
+  src/v20250106/model/DescribeMNPApprovalListResponse.cpp
+  src/v20250106/model/DescribeMNPVersionRequest.cpp
+  src/v20250106/model/DescribeGlobalDomainACLRequest.cpp
+  src/v20250106/model/CreateApplicationRequest.cpp
+  src/v20250106/model/MNPTypeDefine.cpp
+  src/v20250106/model/StringData.cpp
+  src/v20250106/model/DescribeTempSecret4UploadFile2CosResponse.cpp
+  src/v20250106/model/ConfigureMNPPreviewRequest.cpp
+  src/v20250106/model/DescribeMNPReleasedVersionHistoryResponse.cpp
+  src/v20250106/model/DeleteApplicationSensitiveAPIRequest.cpp
+  src/v20250106/model/DescribeApplicationSensitiveAPIListData.cpp
+  src/v20250106/model/DescribeApplicationSensitiveAPIListResp.cpp
+  src/v20250106/model/DescribeTeamDetailResp.cpp
+  src/v20250106/model/DescribeGlobalDomainACLResponse.cpp
+  src/v20250106/model/CreatePresetKeyRequest.cpp
+  src/v20250106/model/PresetResp.cpp
+  src/v20250106/model/CreateApplicationResponse.cpp
+  src/v20250106/model/DescribeMNPCategoryRequest.cpp
+  src/v20250106/model/DeleteApplicationSensitiveAPIResponse.cpp
+  src/v20250106/model/EnableApplicationSensitiveAPIRequest.cpp
+  src/v20250106/model/DeleteGlobalDomainRequest.cpp
+  src/v20250106/model/GlobalDomainDeleteResp.cpp
+  src/v20250106/model/DeleteGlobalDomainResponse.cpp
+  src/v20250106/model/DescribeMNPListRequest.cpp
+  src/v20250106/model/DescribeMNPPreviewRequest.cpp
+  src/v20250106/model/CreateGlobalDomainResp.cpp
+  src/v20250106/model/CreateGlobalDomainACLRequest.cpp
+  src/v20250106/model/DescribeApplicationSensitiveAPIListRequest.cpp
+  src/v20250106/model/DescribeTeamMemberListResponse.cpp
+  src/v20250106/model/DescribeTeamMemberListPageResp.cpp
+  )
+
+set(tcsas_include
+    include/tencentcloud/tcsas
+  )
+
+add_library(tcsas ${LIB_TYPE}
+  ${tcsas_public_header}
+  ${tcsas_public_header_model}
+  ${tcsas_src})
+
+set_target_properties(tcsas
+  PROPERTIES
+  LINKER_LANGUAGE CXX
+  ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib
+  LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib
+  RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin
+  OUTPUT_NAME ${TARGET_OUTPUT_NAME_PREFIX}tcsas
+  )
+
+target_include_directories(tcsas
+  PRIVATE include
+    ${CMAKE_SOURCE_DIR}/core/include
+  )
+target_link_libraries(tcsas
+  core)
+
+#install(FILES ${tcsas_public_header}
+#  DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/tencentcloud/tcsas/v20250106)
+#install(FILES ${tcsas_public_header_model}
+#  DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/tencentcloud/tcsas/v20250106/model)
+install(DIRECTORY ${tcsas_include}
+  DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/tencentcloud)
+
+install(TARGETS tcsas
+  ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+  LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+  RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+  )
