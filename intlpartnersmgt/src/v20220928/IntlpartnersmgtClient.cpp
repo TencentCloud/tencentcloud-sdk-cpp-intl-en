@@ -126,6 +126,49 @@ IntlpartnersmgtClient::AllocateCustomerCreditOutcomeCallable IntlpartnersmgtClie
     return task->get_future();
 }
 
+IntlpartnersmgtClient::ApproveClientApplyOutcome IntlpartnersmgtClient::ApproveClientApply(const ApproveClientApplyRequest &request)
+{
+    auto outcome = MakeRequest(request, "ApproveClientApply");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ApproveClientApplyResponse rsp = ApproveClientApplyResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ApproveClientApplyOutcome(rsp);
+        else
+            return ApproveClientApplyOutcome(o.GetError());
+    }
+    else
+    {
+        return ApproveClientApplyOutcome(outcome.GetError());
+    }
+}
+
+void IntlpartnersmgtClient::ApproveClientApplyAsync(const ApproveClientApplyRequest& request, const ApproveClientApplyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ApproveClientApply(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+IntlpartnersmgtClient::ApproveClientApplyOutcomeCallable IntlpartnersmgtClient::ApproveClientApplyCallable(const ApproveClientApplyRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ApproveClientApplyOutcome()>>(
+        [this, request]()
+        {
+            return this->ApproveClientApply(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 IntlpartnersmgtClient::CreateAccountOutcome IntlpartnersmgtClient::CreateAccount(const CreateAccountRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateAccount");
@@ -1108,6 +1151,49 @@ IntlpartnersmgtClient::QueryPartnerCreditOutcomeCallable IntlpartnersmgtClient::
         [this, request]()
         {
             return this->QueryPartnerCredit(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+IntlpartnersmgtClient::QueryPendingClientsV2Outcome IntlpartnersmgtClient::QueryPendingClientsV2(const QueryPendingClientsV2Request &request)
+{
+    auto outcome = MakeRequest(request, "QueryPendingClientsV2");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        QueryPendingClientsV2Response rsp = QueryPendingClientsV2Response();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return QueryPendingClientsV2Outcome(rsp);
+        else
+            return QueryPendingClientsV2Outcome(o.GetError());
+    }
+    else
+    {
+        return QueryPendingClientsV2Outcome(outcome.GetError());
+    }
+}
+
+void IntlpartnersmgtClient::QueryPendingClientsV2Async(const QueryPendingClientsV2Request& request, const QueryPendingClientsV2AsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->QueryPendingClientsV2(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+IntlpartnersmgtClient::QueryPendingClientsV2OutcomeCallable IntlpartnersmgtClient::QueryPendingClientsV2Callable(const QueryPendingClientsV2Request &request)
+{
+    auto task = std::make_shared<std::packaged_task<QueryPendingClientsV2Outcome()>>(
+        [this, request]()
+        {
+            return this->QueryPendingClientsV2(request);
         }
     );
 

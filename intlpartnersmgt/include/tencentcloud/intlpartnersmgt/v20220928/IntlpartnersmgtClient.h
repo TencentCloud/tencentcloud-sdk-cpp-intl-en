@@ -27,6 +27,8 @@
 #include <tencentcloud/intlpartnersmgt/v20220928/model/AllocateCreditPoolResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/AllocateCustomerCreditRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/AllocateCustomerCreditResponse.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/ApproveClientApplyRequest.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/ApproveClientApplyResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/CreateAccountRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/CreateAccountResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/CreateAndSendClientInvitationMailRequest.h>
@@ -73,6 +75,8 @@
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryDirectCustomersCreditResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryPartnerCreditRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryPartnerCreditResponse.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/QueryPendingClientsV2Request.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/QueryPendingClientsV2Response.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryPolicyProductListByCodeRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryPolicyProductListByCodeResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryVoucherAmountByUinRequest.h>
@@ -103,6 +107,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::AllocateCustomerCreditResponse> AllocateCustomerCreditOutcome;
                 typedef std::future<AllocateCustomerCreditOutcome> AllocateCustomerCreditOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::AllocateCustomerCreditRequest&, AllocateCustomerCreditOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AllocateCustomerCreditAsyncHandler;
+                typedef Outcome<Core::Error, Model::ApproveClientApplyResponse> ApproveClientApplyOutcome;
+                typedef std::future<ApproveClientApplyOutcome> ApproveClientApplyOutcomeCallable;
+                typedef std::function<void(const IntlpartnersmgtClient*, const Model::ApproveClientApplyRequest&, ApproveClientApplyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ApproveClientApplyAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateAccountResponse> CreateAccountOutcome;
                 typedef std::future<CreateAccountOutcome> CreateAccountOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::CreateAccountRequest&, CreateAccountOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAccountAsyncHandler;
@@ -172,6 +179,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::QueryPartnerCreditResponse> QueryPartnerCreditOutcome;
                 typedef std::future<QueryPartnerCreditOutcome> QueryPartnerCreditOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::QueryPartnerCreditRequest&, QueryPartnerCreditOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryPartnerCreditAsyncHandler;
+                typedef Outcome<Core::Error, Model::QueryPendingClientsV2Response> QueryPendingClientsV2Outcome;
+                typedef std::future<QueryPendingClientsV2Outcome> QueryPendingClientsV2OutcomeCallable;
+                typedef std::function<void(const IntlpartnersmgtClient*, const Model::QueryPendingClientsV2Request&, QueryPendingClientsV2Outcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryPendingClientsV2AsyncHandler;
                 typedef Outcome<Core::Error, Model::QueryPolicyProductListByCodeResponse> QueryPolicyProductListByCodeOutcome;
                 typedef std::future<QueryPolicyProductListByCodeOutcome> QueryPolicyProductListByCodeOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::QueryPolicyProductListByCodeRequest&, QueryPolicyProductListByCodeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryPolicyProductListByCodeAsyncHandler;
@@ -211,6 +221,17 @@ namespace TencentCloud
                 AllocateCustomerCreditOutcome AllocateCustomerCredit(const Model::AllocateCustomerCreditRequest &request);
                 void AllocateCustomerCreditAsync(const Model::AllocateCustomerCreditRequest& request, const AllocateCustomerCreditAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 AllocateCustomerCreditOutcomeCallable AllocateCustomerCreditCallable(const Model::AllocateCustomerCreditRequest& request);
+
+                /**
+                 *Description: This API is used by resellers to review applications to become sub-customers. Note: This API is used to apply for the allowlist. If needed, please contact your business representative.
+
+Callable roles: Reseller, Distributer, Second-level reseller
+                 * @param req ApproveClientApplyRequest
+                 * @return ApproveClientApplyOutcome
+                 */
+                ApproveClientApplyOutcome ApproveClientApply(const Model::ApproveClientApplyRequest &request);
+                void ApproveClientApplyAsync(const Model::ApproveClientApplyRequest& request, const ApproveClientApplyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ApproveClientApplyOutcomeCallable ApproveClientApplyCallable(const Model::ApproveClientApplyRequest& request);
 
                 /**
                  *This API is used to create Tencent Cloud customer accounts for distributor/second-level resellers.After the account is created, it will be automatically bound to the partner account.Note:
@@ -429,6 +450,17 @@ Note:Reseller need to be allowlisted to use the API, please contact your busines
                 QueryPartnerCreditOutcome QueryPartnerCredit(const Model::QueryPartnerCreditRequest &request);
                 void QueryPartnerCreditAsync(const Model::QueryPartnerCreditRequest& request, const QueryPartnerCreditAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 QueryPartnerCreditOutcomeCallable QueryPartnerCreditCallable(const Model::QueryPartnerCreditRequest& request);
+
+                /**
+                 *Description: This API is used by resellers to query the list of sub-customers pending review. Note: This API is used to apply for the allowlist. If needed, please contact your business representative.
+
+Callable roles: Reseller, Distributer, Second-level reseller
+                 * @param req QueryPendingClientsV2Request
+                 * @return QueryPendingClientsV2Outcome
+                 */
+                QueryPendingClientsV2Outcome QueryPendingClientsV2(const Model::QueryPendingClientsV2Request &request);
+                void QueryPendingClientsV2Async(const Model::QueryPendingClientsV2Request& request, const QueryPendingClientsV2AsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                QueryPendingClientsV2OutcomeCallable QueryPendingClientsV2Callable(const Model::QueryPendingClientsV2Request& request);
 
                 /**
                  *This API is used to query the product list information within the specified policy range. To call this API, contact your account manager to add it to the allowlist.
