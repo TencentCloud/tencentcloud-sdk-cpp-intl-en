@@ -69,6 +69,8 @@
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryCreditByUinListResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryCreditQuotaRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryCreditQuotaResponse.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/QueryCustomerBillingQuotaRequest.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/QueryCustomerBillingQuotaResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryCustomersCreditRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryCustomersCreditResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryDirectCustomersCreditRequest.h>
@@ -170,6 +172,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::QueryCreditQuotaResponse> QueryCreditQuotaOutcome;
                 typedef std::future<QueryCreditQuotaOutcome> QueryCreditQuotaOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::QueryCreditQuotaRequest&, QueryCreditQuotaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryCreditQuotaAsyncHandler;
+                typedef Outcome<Core::Error, Model::QueryCustomerBillingQuotaResponse> QueryCustomerBillingQuotaOutcome;
+                typedef std::future<QueryCustomerBillingQuotaOutcome> QueryCustomerBillingQuotaOutcomeCallable;
+                typedef std::function<void(const IntlpartnersmgtClient*, const Model::QueryCustomerBillingQuotaRequest&, QueryCustomerBillingQuotaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryCustomerBillingQuotaAsyncHandler;
                 typedef Outcome<Core::Error, Model::QueryCustomersCreditResponse> QueryCustomersCreditOutcome;
                 typedef std::future<QueryCustomersCreditOutcome> QueryCustomersCreditOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::QueryCustomersCreditRequest&, QueryCustomersCreditOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryCustomersCreditAsyncHandler;
@@ -423,6 +428,17 @@ Note:Reseller need to be allowlisted to use the API, please contact your busines
                 QueryCreditQuotaOutcome QueryCreditQuota(const Model::QueryCreditQuotaRequest &request);
                 void QueryCreditQuotaAsync(const Model::QueryCreditQuotaRequest& request, const QueryCreditQuotaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 QueryCreditQuotaOutcomeCallable QueryCreditQuotaCallable(const Model::QueryCreditQuotaRequest& request);
+
+                /**
+                 *Description: This API is used for a sub-customer to real-time query its own total credit and remaining credit in USD.
+
+Callable roles: Sub-customer
+                 * @param req QueryCustomerBillingQuotaRequest
+                 * @return QueryCustomerBillingQuotaOutcome
+                 */
+                QueryCustomerBillingQuotaOutcome QueryCustomerBillingQuota(const Model::QueryCustomerBillingQuotaRequest &request);
+                void QueryCustomerBillingQuotaAsync(const Model::QueryCustomerBillingQuotaRequest& request, const QueryCustomerBillingQuotaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                QueryCustomerBillingQuotaOutcomeCallable QueryCustomerBillingQuotaCallable(const Model::QueryCustomerBillingQuotaRequest& request);
 
                 /**
                  *This API is used for a partner to the credits and basic information of cutomers.

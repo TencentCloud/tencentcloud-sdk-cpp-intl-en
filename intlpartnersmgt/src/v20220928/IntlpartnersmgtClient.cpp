@@ -1029,6 +1029,49 @@ IntlpartnersmgtClient::QueryCreditQuotaOutcomeCallable IntlpartnersmgtClient::Qu
     return task->get_future();
 }
 
+IntlpartnersmgtClient::QueryCustomerBillingQuotaOutcome IntlpartnersmgtClient::QueryCustomerBillingQuota(const QueryCustomerBillingQuotaRequest &request)
+{
+    auto outcome = MakeRequest(request, "QueryCustomerBillingQuota");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        QueryCustomerBillingQuotaResponse rsp = QueryCustomerBillingQuotaResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return QueryCustomerBillingQuotaOutcome(rsp);
+        else
+            return QueryCustomerBillingQuotaOutcome(o.GetError());
+    }
+    else
+    {
+        return QueryCustomerBillingQuotaOutcome(outcome.GetError());
+    }
+}
+
+void IntlpartnersmgtClient::QueryCustomerBillingQuotaAsync(const QueryCustomerBillingQuotaRequest& request, const QueryCustomerBillingQuotaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->QueryCustomerBillingQuota(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+IntlpartnersmgtClient::QueryCustomerBillingQuotaOutcomeCallable IntlpartnersmgtClient::QueryCustomerBillingQuotaCallable(const QueryCustomerBillingQuotaRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<QueryCustomerBillingQuotaOutcome()>>(
+        [this, request]()
+        {
+            return this->QueryCustomerBillingQuota(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 IntlpartnersmgtClient::QueryCustomersCreditOutcome IntlpartnersmgtClient::QueryCustomersCredit(const QueryCustomersCreditRequest &request)
 {
     auto outcome = MakeRequest(request, "QueryCustomersCredit");
