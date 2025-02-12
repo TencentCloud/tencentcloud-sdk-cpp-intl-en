@@ -35,6 +35,8 @@
 #include <tencentcloud/mdp/v20200527/model/CreateStreamPackageLinearAssemblyChannelResponse.h>
 #include <tencentcloud/mdp/v20200527/model/CreateStreamPackageLinearAssemblyProgramRequest.h>
 #include <tencentcloud/mdp/v20200527/model/CreateStreamPackageLinearAssemblyProgramResponse.h>
+#include <tencentcloud/mdp/v20200527/model/CreateStreamPackageSSAIChannelRequest.h>
+#include <tencentcloud/mdp/v20200527/model/CreateStreamPackageSSAIChannelResponse.h>
 #include <tencentcloud/mdp/v20200527/model/CreateStreamPackageSourceRequest.h>
 #include <tencentcloud/mdp/v20200527/model/CreateStreamPackageSourceResponse.h>
 #include <tencentcloud/mdp/v20200527/model/CreateStreamPackageSourceLocationRequest.h>
@@ -55,6 +57,8 @@
 #include <tencentcloud/mdp/v20200527/model/DeleteStreamPackageLinearAssemblyProgramResponse.h>
 #include <tencentcloud/mdp/v20200527/model/DeleteStreamPackageLinearAssemblyProgramsRequest.h>
 #include <tencentcloud/mdp/v20200527/model/DeleteStreamPackageLinearAssemblyProgramsResponse.h>
+#include <tencentcloud/mdp/v20200527/model/DeleteStreamPackageSSAIChannelRequest.h>
+#include <tencentcloud/mdp/v20200527/model/DeleteStreamPackageSSAIChannelResponse.h>
 #include <tencentcloud/mdp/v20200527/model/DeleteStreamPackageSourceRequest.h>
 #include <tencentcloud/mdp/v20200527/model/DeleteStreamPackageSourceResponse.h>
 #include <tencentcloud/mdp/v20200527/model/DeleteStreamPackageSourceLocationRequest.h>
@@ -79,6 +83,10 @@
 #include <tencentcloud/mdp/v20200527/model/DescribeStreamPackageLinearAssemblyProgramSchedulesResponse.h>
 #include <tencentcloud/mdp/v20200527/model/DescribeStreamPackageLinearAssemblyProgramsRequest.h>
 #include <tencentcloud/mdp/v20200527/model/DescribeStreamPackageLinearAssemblyProgramsResponse.h>
+#include <tencentcloud/mdp/v20200527/model/DescribeStreamPackageSSAIChannelRequest.h>
+#include <tencentcloud/mdp/v20200527/model/DescribeStreamPackageSSAIChannelResponse.h>
+#include <tencentcloud/mdp/v20200527/model/DescribeStreamPackageSSAIChannelsRequest.h>
+#include <tencentcloud/mdp/v20200527/model/DescribeStreamPackageSSAIChannelsResponse.h>
 #include <tencentcloud/mdp/v20200527/model/DescribeStreamPackageSourceRequest.h>
 #include <tencentcloud/mdp/v20200527/model/DescribeStreamPackageSourceResponse.h>
 #include <tencentcloud/mdp/v20200527/model/DescribeStreamPackageSourceAlertsRequest.h>
@@ -101,6 +109,8 @@
 #include <tencentcloud/mdp/v20200527/model/ModifyStreamPackageLinearAssemblyChannelResponse.h>
 #include <tencentcloud/mdp/v20200527/model/ModifyStreamPackageLinearAssemblyProgramRequest.h>
 #include <tencentcloud/mdp/v20200527/model/ModifyStreamPackageLinearAssemblyProgramResponse.h>
+#include <tencentcloud/mdp/v20200527/model/ModifyStreamPackageSSAIChannelRequest.h>
+#include <tencentcloud/mdp/v20200527/model/ModifyStreamPackageSSAIChannelResponse.h>
 #include <tencentcloud/mdp/v20200527/model/ModifyStreamPackageSourceRequest.h>
 #include <tencentcloud/mdp/v20200527/model/ModifyStreamPackageSourceResponse.h>
 #include <tencentcloud/mdp/v20200527/model/ModifyStreamPackageSourceLocationRequest.h>
@@ -143,6 +153,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateStreamPackageLinearAssemblyProgramResponse> CreateStreamPackageLinearAssemblyProgramOutcome;
                 typedef std::future<CreateStreamPackageLinearAssemblyProgramOutcome> CreateStreamPackageLinearAssemblyProgramOutcomeCallable;
                 typedef std::function<void(const MdpClient*, const Model::CreateStreamPackageLinearAssemblyProgramRequest&, CreateStreamPackageLinearAssemblyProgramOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateStreamPackageLinearAssemblyProgramAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateStreamPackageSSAIChannelResponse> CreateStreamPackageSSAIChannelOutcome;
+                typedef std::future<CreateStreamPackageSSAIChannelOutcome> CreateStreamPackageSSAIChannelOutcomeCallable;
+                typedef std::function<void(const MdpClient*, const Model::CreateStreamPackageSSAIChannelRequest&, CreateStreamPackageSSAIChannelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateStreamPackageSSAIChannelAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateStreamPackageSourceResponse> CreateStreamPackageSourceOutcome;
                 typedef std::future<CreateStreamPackageSourceOutcome> CreateStreamPackageSourceOutcomeCallable;
                 typedef std::function<void(const MdpClient*, const Model::CreateStreamPackageSourceRequest&, CreateStreamPackageSourceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateStreamPackageSourceAsyncHandler;
@@ -173,6 +186,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteStreamPackageLinearAssemblyProgramsResponse> DeleteStreamPackageLinearAssemblyProgramsOutcome;
                 typedef std::future<DeleteStreamPackageLinearAssemblyProgramsOutcome> DeleteStreamPackageLinearAssemblyProgramsOutcomeCallable;
                 typedef std::function<void(const MdpClient*, const Model::DeleteStreamPackageLinearAssemblyProgramsRequest&, DeleteStreamPackageLinearAssemblyProgramsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteStreamPackageLinearAssemblyProgramsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteStreamPackageSSAIChannelResponse> DeleteStreamPackageSSAIChannelOutcome;
+                typedef std::future<DeleteStreamPackageSSAIChannelOutcome> DeleteStreamPackageSSAIChannelOutcomeCallable;
+                typedef std::function<void(const MdpClient*, const Model::DeleteStreamPackageSSAIChannelRequest&, DeleteStreamPackageSSAIChannelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteStreamPackageSSAIChannelAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteStreamPackageSourceResponse> DeleteStreamPackageSourceOutcome;
                 typedef std::future<DeleteStreamPackageSourceOutcome> DeleteStreamPackageSourceOutcomeCallable;
                 typedef std::function<void(const MdpClient*, const Model::DeleteStreamPackageSourceRequest&, DeleteStreamPackageSourceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteStreamPackageSourceAsyncHandler;
@@ -209,6 +225,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeStreamPackageLinearAssemblyProgramsResponse> DescribeStreamPackageLinearAssemblyProgramsOutcome;
                 typedef std::future<DescribeStreamPackageLinearAssemblyProgramsOutcome> DescribeStreamPackageLinearAssemblyProgramsOutcomeCallable;
                 typedef std::function<void(const MdpClient*, const Model::DescribeStreamPackageLinearAssemblyProgramsRequest&, DescribeStreamPackageLinearAssemblyProgramsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStreamPackageLinearAssemblyProgramsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeStreamPackageSSAIChannelResponse> DescribeStreamPackageSSAIChannelOutcome;
+                typedef std::future<DescribeStreamPackageSSAIChannelOutcome> DescribeStreamPackageSSAIChannelOutcomeCallable;
+                typedef std::function<void(const MdpClient*, const Model::DescribeStreamPackageSSAIChannelRequest&, DescribeStreamPackageSSAIChannelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStreamPackageSSAIChannelAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeStreamPackageSSAIChannelsResponse> DescribeStreamPackageSSAIChannelsOutcome;
+                typedef std::future<DescribeStreamPackageSSAIChannelsOutcome> DescribeStreamPackageSSAIChannelsOutcomeCallable;
+                typedef std::function<void(const MdpClient*, const Model::DescribeStreamPackageSSAIChannelsRequest&, DescribeStreamPackageSSAIChannelsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStreamPackageSSAIChannelsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeStreamPackageSourceResponse> DescribeStreamPackageSourceOutcome;
                 typedef std::future<DescribeStreamPackageSourceOutcome> DescribeStreamPackageSourceOutcomeCallable;
                 typedef std::function<void(const MdpClient*, const Model::DescribeStreamPackageSourceRequest&, DescribeStreamPackageSourceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStreamPackageSourceAsyncHandler;
@@ -242,6 +264,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyStreamPackageLinearAssemblyProgramResponse> ModifyStreamPackageLinearAssemblyProgramOutcome;
                 typedef std::future<ModifyStreamPackageLinearAssemblyProgramOutcome> ModifyStreamPackageLinearAssemblyProgramOutcomeCallable;
                 typedef std::function<void(const MdpClient*, const Model::ModifyStreamPackageLinearAssemblyProgramRequest&, ModifyStreamPackageLinearAssemblyProgramOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyStreamPackageLinearAssemblyProgramAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyStreamPackageSSAIChannelResponse> ModifyStreamPackageSSAIChannelOutcome;
+                typedef std::future<ModifyStreamPackageSSAIChannelOutcome> ModifyStreamPackageSSAIChannelOutcomeCallable;
+                typedef std::function<void(const MdpClient*, const Model::ModifyStreamPackageSSAIChannelRequest&, ModifyStreamPackageSSAIChannelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyStreamPackageSSAIChannelAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyStreamPackageSourceResponse> ModifyStreamPackageSourceOutcome;
                 typedef std::future<ModifyStreamPackageSourceOutcome> ModifyStreamPackageSourceOutcomeCallable;
                 typedef std::function<void(const MdpClient*, const Model::ModifyStreamPackageSourceRequest&, ModifyStreamPackageSourceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyStreamPackageSourceAsyncHandler;
@@ -313,6 +338,15 @@ namespace TencentCloud
                 CreateStreamPackageLinearAssemblyProgramOutcome CreateStreamPackageLinearAssemblyProgram(const Model::CreateStreamPackageLinearAssemblyProgramRequest &request);
                 void CreateStreamPackageLinearAssemblyProgramAsync(const Model::CreateStreamPackageLinearAssemblyProgramRequest& request, const CreateStreamPackageLinearAssemblyProgramAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateStreamPackageLinearAssemblyProgramOutcomeCallable CreateStreamPackageLinearAssemblyProgramCallable(const Model::CreateStreamPackageLinearAssemblyProgramRequest& request);
+
+                /**
+                 *CreateStreamPackageSSAIChannel
+                 * @param req CreateStreamPackageSSAIChannelRequest
+                 * @return CreateStreamPackageSSAIChannelOutcome
+                 */
+                CreateStreamPackageSSAIChannelOutcome CreateStreamPackageSSAIChannel(const Model::CreateStreamPackageSSAIChannelRequest &request);
+                void CreateStreamPackageSSAIChannelAsync(const Model::CreateStreamPackageSSAIChannelRequest& request, const CreateStreamPackageSSAIChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateStreamPackageSSAIChannelOutcomeCallable CreateStreamPackageSSAIChannelCallable(const Model::CreateStreamPackageSSAIChannelRequest& request);
 
                 /**
                  *Create channel linear assembly Source.
@@ -403,6 +437,15 @@ namespace TencentCloud
                 DeleteStreamPackageLinearAssemblyProgramsOutcome DeleteStreamPackageLinearAssemblyPrograms(const Model::DeleteStreamPackageLinearAssemblyProgramsRequest &request);
                 void DeleteStreamPackageLinearAssemblyProgramsAsync(const Model::DeleteStreamPackageLinearAssemblyProgramsRequest& request, const DeleteStreamPackageLinearAssemblyProgramsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteStreamPackageLinearAssemblyProgramsOutcomeCallable DeleteStreamPackageLinearAssemblyProgramsCallable(const Model::DeleteStreamPackageLinearAssemblyProgramsRequest& request);
+
+                /**
+                 *DeleteStreamPackageSSAIChannel
+                 * @param req DeleteStreamPackageSSAIChannelRequest
+                 * @return DeleteStreamPackageSSAIChannelOutcome
+                 */
+                DeleteStreamPackageSSAIChannelOutcome DeleteStreamPackageSSAIChannel(const Model::DeleteStreamPackageSSAIChannelRequest &request);
+                void DeleteStreamPackageSSAIChannelAsync(const Model::DeleteStreamPackageSSAIChannelRequest& request, const DeleteStreamPackageSSAIChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteStreamPackageSSAIChannelOutcomeCallable DeleteStreamPackageSSAIChannelCallable(const Model::DeleteStreamPackageSSAIChannelRequest& request);
 
                 /**
                  *Delete channel linear assembly Source.
@@ -513,6 +556,24 @@ namespace TencentCloud
                 DescribeStreamPackageLinearAssemblyProgramsOutcomeCallable DescribeStreamPackageLinearAssemblyProgramsCallable(const Model::DescribeStreamPackageLinearAssemblyProgramsRequest& request);
 
                 /**
+                 *DescribeStreamPackageSSAIChannel
+                 * @param req DescribeStreamPackageSSAIChannelRequest
+                 * @return DescribeStreamPackageSSAIChannelOutcome
+                 */
+                DescribeStreamPackageSSAIChannelOutcome DescribeStreamPackageSSAIChannel(const Model::DescribeStreamPackageSSAIChannelRequest &request);
+                void DescribeStreamPackageSSAIChannelAsync(const Model::DescribeStreamPackageSSAIChannelRequest& request, const DescribeStreamPackageSSAIChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeStreamPackageSSAIChannelOutcomeCallable DescribeStreamPackageSSAIChannelCallable(const Model::DescribeStreamPackageSSAIChannelRequest& request);
+
+                /**
+                 *DescribeStreamPackageSSAIChannels
+                 * @param req DescribeStreamPackageSSAIChannelsRequest
+                 * @return DescribeStreamPackageSSAIChannelsOutcome
+                 */
+                DescribeStreamPackageSSAIChannelsOutcome DescribeStreamPackageSSAIChannels(const Model::DescribeStreamPackageSSAIChannelsRequest &request);
+                void DescribeStreamPackageSSAIChannelsAsync(const Model::DescribeStreamPackageSSAIChannelsRequest& request, const DescribeStreamPackageSSAIChannelsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeStreamPackageSSAIChannelsOutcomeCallable DescribeStreamPackageSSAIChannelsCallable(const Model::DescribeStreamPackageSSAIChannelsRequest& request);
+
+                /**
                  *Query channel linear assembly Source information.
                  * @param req DescribeStreamPackageSourceRequest
                  * @return DescribeStreamPackageSourceOutcome
@@ -610,6 +671,15 @@ namespace TencentCloud
                 ModifyStreamPackageLinearAssemblyProgramOutcome ModifyStreamPackageLinearAssemblyProgram(const Model::ModifyStreamPackageLinearAssemblyProgramRequest &request);
                 void ModifyStreamPackageLinearAssemblyProgramAsync(const Model::ModifyStreamPackageLinearAssemblyProgramRequest& request, const ModifyStreamPackageLinearAssemblyProgramAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyStreamPackageLinearAssemblyProgramOutcomeCallable ModifyStreamPackageLinearAssemblyProgramCallable(const Model::ModifyStreamPackageLinearAssemblyProgramRequest& request);
+
+                /**
+                 *ModifyStreamPackageSSAIChannel
+                 * @param req ModifyStreamPackageSSAIChannelRequest
+                 * @return ModifyStreamPackageSSAIChannelOutcome
+                 */
+                ModifyStreamPackageSSAIChannelOutcome ModifyStreamPackageSSAIChannel(const Model::ModifyStreamPackageSSAIChannelRequest &request);
+                void ModifyStreamPackageSSAIChannelAsync(const Model::ModifyStreamPackageSSAIChannelRequest& request, const ModifyStreamPackageSSAIChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyStreamPackageSSAIChannelOutcomeCallable ModifyStreamPackageSSAIChannelCallable(const Model::ModifyStreamPackageSSAIChannelRequest& request);
 
                 /**
                  *Modify channel linear assembly Source configuration.

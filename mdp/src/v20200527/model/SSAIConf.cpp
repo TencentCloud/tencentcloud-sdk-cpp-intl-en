@@ -23,13 +23,15 @@ using namespace std;
 SSAIConf::SSAIConf() :
     m_adsUrlHasBeenSet(false),
     m_configAliasesHasBeenSet(false),
+    m_adMarkerPassthroughHasBeenSet(false),
+    m_sCTE35AdTypeHasBeenSet(false),
     m_slateAdHasBeenSet(false),
     m_thresholdHasBeenSet(false),
     m_dashMPDLocationHasBeenSet(false),
-    m_adMarkerPassthroughHasBeenSet(false),
-    m_sCTE35AdTypeHasBeenSet(false),
     m_adTriggersHasBeenSet(false),
-    m_deliveryRestrictionsHasBeenSet(false)
+    m_deliveryRestrictionsHasBeenSet(false),
+    m_sourceCDNPrefixHasBeenSet(false),
+    m_adCDNPrefixHasBeenSet(false)
 {
 }
 
@@ -68,6 +70,26 @@ CoreInternalOutcome SSAIConf::Deserialize(const rapidjson::Value &value)
         m_configAliasesHasBeenSet = true;
     }
 
+    if (value.HasMember("AdMarkerPassthrough") && !value["AdMarkerPassthrough"].IsNull())
+    {
+        if (!value["AdMarkerPassthrough"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `SSAIConf.AdMarkerPassthrough` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_adMarkerPassthrough = value["AdMarkerPassthrough"].GetBool();
+        m_adMarkerPassthroughHasBeenSet = true;
+    }
+
+    if (value.HasMember("SCTE35AdType") && !value["SCTE35AdType"].IsNull())
+    {
+        if (!value["SCTE35AdType"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `SSAIConf.SCTE35AdType` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_sCTE35AdType = value["SCTE35AdType"].GetUint64();
+        m_sCTE35AdTypeHasBeenSet = true;
+    }
+
     if (value.HasMember("SlateAd") && !value["SlateAd"].IsNull())
     {
         if (!value["SlateAd"].IsString())
@@ -98,26 +120,6 @@ CoreInternalOutcome SSAIConf::Deserialize(const rapidjson::Value &value)
         m_dashMPDLocationHasBeenSet = true;
     }
 
-    if (value.HasMember("AdMarkerPassthrough") && !value["AdMarkerPassthrough"].IsNull())
-    {
-        if (!value["AdMarkerPassthrough"].IsBool())
-        {
-            return CoreInternalOutcome(Core::Error("response `SSAIConf.AdMarkerPassthrough` IsBool=false incorrectly").SetRequestId(requestId));
-        }
-        m_adMarkerPassthrough = value["AdMarkerPassthrough"].GetBool();
-        m_adMarkerPassthroughHasBeenSet = true;
-    }
-
-    if (value.HasMember("SCTE35AdType") && !value["SCTE35AdType"].IsNull())
-    {
-        if (!value["SCTE35AdType"].IsUint64())
-        {
-            return CoreInternalOutcome(Core::Error("response `SSAIConf.SCTE35AdType` IsUint64=false incorrectly").SetRequestId(requestId));
-        }
-        m_sCTE35AdType = value["SCTE35AdType"].GetUint64();
-        m_sCTE35AdTypeHasBeenSet = true;
-    }
-
     if (value.HasMember("AdTriggers") && !value["AdTriggers"].IsNull())
     {
         if (!value["AdTriggers"].IsArray())
@@ -139,6 +141,26 @@ CoreInternalOutcome SSAIConf::Deserialize(const rapidjson::Value &value)
         }
         m_deliveryRestrictions = value["DeliveryRestrictions"].GetUint64();
         m_deliveryRestrictionsHasBeenSet = true;
+    }
+
+    if (value.HasMember("SourceCDNPrefix") && !value["SourceCDNPrefix"].IsNull())
+    {
+        if (!value["SourceCDNPrefix"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `SSAIConf.SourceCDNPrefix` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_sourceCDNPrefix = string(value["SourceCDNPrefix"].GetString());
+        m_sourceCDNPrefixHasBeenSet = true;
+    }
+
+    if (value.HasMember("AdCDNPrefix") && !value["AdCDNPrefix"].IsNull())
+    {
+        if (!value["AdCDNPrefix"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `SSAIConf.AdCDNPrefix` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_adCDNPrefix = string(value["AdCDNPrefix"].GetString());
+        m_adCDNPrefixHasBeenSet = true;
     }
 
 
@@ -171,6 +193,22 @@ void SSAIConf::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Alloca
         }
     }
 
+    if (m_adMarkerPassthroughHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AdMarkerPassthrough";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_adMarkerPassthrough, allocator);
+    }
+
+    if (m_sCTE35AdTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SCTE35AdType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_sCTE35AdType, allocator);
+    }
+
     if (m_slateAdHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -195,22 +233,6 @@ void SSAIConf::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Alloca
         value.AddMember(iKey, m_dashMPDLocation, allocator);
     }
 
-    if (m_adMarkerPassthroughHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "AdMarkerPassthrough";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_adMarkerPassthrough, allocator);
-    }
-
-    if (m_sCTE35AdTypeHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "SCTE35AdType";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_sCTE35AdType, allocator);
-    }
-
     if (m_adTriggersHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -230,6 +252,22 @@ void SSAIConf::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Alloca
         string key = "DeliveryRestrictions";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_deliveryRestrictions, allocator);
+    }
+
+    if (m_sourceCDNPrefixHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SourceCDNPrefix";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_sourceCDNPrefix.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_adCDNPrefixHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AdCDNPrefix";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_adCDNPrefix.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -265,6 +303,38 @@ void SSAIConf::SetConfigAliases(const vector<ConfigAliasesInfo>& _configAliases)
 bool SSAIConf::ConfigAliasesHasBeenSet() const
 {
     return m_configAliasesHasBeenSet;
+}
+
+bool SSAIConf::GetAdMarkerPassthrough() const
+{
+    return m_adMarkerPassthrough;
+}
+
+void SSAIConf::SetAdMarkerPassthrough(const bool& _adMarkerPassthrough)
+{
+    m_adMarkerPassthrough = _adMarkerPassthrough;
+    m_adMarkerPassthroughHasBeenSet = true;
+}
+
+bool SSAIConf::AdMarkerPassthroughHasBeenSet() const
+{
+    return m_adMarkerPassthroughHasBeenSet;
+}
+
+uint64_t SSAIConf::GetSCTE35AdType() const
+{
+    return m_sCTE35AdType;
+}
+
+void SSAIConf::SetSCTE35AdType(const uint64_t& _sCTE35AdType)
+{
+    m_sCTE35AdType = _sCTE35AdType;
+    m_sCTE35AdTypeHasBeenSet = true;
+}
+
+bool SSAIConf::SCTE35AdTypeHasBeenSet() const
+{
+    return m_sCTE35AdTypeHasBeenSet;
 }
 
 string SSAIConf::GetSlateAd() const
@@ -315,38 +385,6 @@ bool SSAIConf::DashMPDLocationHasBeenSet() const
     return m_dashMPDLocationHasBeenSet;
 }
 
-bool SSAIConf::GetAdMarkerPassthrough() const
-{
-    return m_adMarkerPassthrough;
-}
-
-void SSAIConf::SetAdMarkerPassthrough(const bool& _adMarkerPassthrough)
-{
-    m_adMarkerPassthrough = _adMarkerPassthrough;
-    m_adMarkerPassthroughHasBeenSet = true;
-}
-
-bool SSAIConf::AdMarkerPassthroughHasBeenSet() const
-{
-    return m_adMarkerPassthroughHasBeenSet;
-}
-
-uint64_t SSAIConf::GetSCTE35AdType() const
-{
-    return m_sCTE35AdType;
-}
-
-void SSAIConf::SetSCTE35AdType(const uint64_t& _sCTE35AdType)
-{
-    m_sCTE35AdType = _sCTE35AdType;
-    m_sCTE35AdTypeHasBeenSet = true;
-}
-
-bool SSAIConf::SCTE35AdTypeHasBeenSet() const
-{
-    return m_sCTE35AdTypeHasBeenSet;
-}
-
 vector<uint64_t> SSAIConf::GetAdTriggers() const
 {
     return m_adTriggers;
@@ -377,5 +415,37 @@ void SSAIConf::SetDeliveryRestrictions(const uint64_t& _deliveryRestrictions)
 bool SSAIConf::DeliveryRestrictionsHasBeenSet() const
 {
     return m_deliveryRestrictionsHasBeenSet;
+}
+
+string SSAIConf::GetSourceCDNPrefix() const
+{
+    return m_sourceCDNPrefix;
+}
+
+void SSAIConf::SetSourceCDNPrefix(const string& _sourceCDNPrefix)
+{
+    m_sourceCDNPrefix = _sourceCDNPrefix;
+    m_sourceCDNPrefixHasBeenSet = true;
+}
+
+bool SSAIConf::SourceCDNPrefixHasBeenSet() const
+{
+    return m_sourceCDNPrefixHasBeenSet;
+}
+
+string SSAIConf::GetAdCDNPrefix() const
+{
+    return m_adCDNPrefix;
+}
+
+void SSAIConf::SetAdCDNPrefix(const string& _adCDNPrefix)
+{
+    m_adCDNPrefix = _adCDNPrefix;
+    m_adCDNPrefixHasBeenSet = true;
+}
+
+bool SSAIConf::AdCDNPrefixHasBeenSet() const
+{
+    return m_adCDNPrefixHasBeenSet;
 }
 

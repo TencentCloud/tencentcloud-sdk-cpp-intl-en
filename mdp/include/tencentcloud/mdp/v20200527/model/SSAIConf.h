@@ -90,6 +90,56 @@ namespace TencentCloud
                     bool ConfigAliasesHasBeenSet() const;
 
                     /**
+                     * 获取Whether to enable transparent transmission of advertising tags.
+                     * @return AdMarkerPassthrough Whether to enable transparent transmission of advertising tags.
+                     * 
+                     */
+                    bool GetAdMarkerPassthrough() const;
+
+                    /**
+                     * 设置Whether to enable transparent transmission of advertising tags.
+                     * @param _adMarkerPassthrough Whether to enable transparent transmission of advertising tags.
+                     * 
+                     */
+                    void SetAdMarkerPassthrough(const bool& _adMarkerPassthrough);
+
+                    /**
+                     * 判断参数 AdMarkerPassthrough 是否已赋值
+                     * @return AdMarkerPassthrough 是否已赋值
+                     * 
+                     */
+                    bool AdMarkerPassthroughHasBeenSet() const;
+
+                    /**
+                     * 获取How to process tags in advertisements, optional values: [1,2] 
+1: Process all SCTE-35 type tags - all (default) 
+2: SCTE-35enhanced, parse some types.
+                     * @return SCTE35AdType How to process tags in advertisements, optional values: [1,2] 
+1: Process all SCTE-35 type tags - all (default) 
+2: SCTE-35enhanced, parse some types.
+                     * 
+                     */
+                    uint64_t GetSCTE35AdType() const;
+
+                    /**
+                     * 设置How to process tags in advertisements, optional values: [1,2] 
+1: Process all SCTE-35 type tags - all (default) 
+2: SCTE-35enhanced, parse some types.
+                     * @param _sCTE35AdType How to process tags in advertisements, optional values: [1,2] 
+1: Process all SCTE-35 type tags - all (default) 
+2: SCTE-35enhanced, parse some types.
+                     * 
+                     */
+                    void SetSCTE35AdType(const uint64_t& _sCTE35AdType);
+
+                    /**
+                     * 判断参数 SCTE35AdType 是否已赋值
+                     * @return SCTE35AdType 是否已赋值
+                     * 
+                     */
+                    bool SCTE35AdTypeHasBeenSet() const;
+
+                    /**
                      * 获取Default advertising url.
                      * @return SlateAd Default advertising url.
                      * 
@@ -151,56 +201,6 @@ namespace TencentCloud
                      * 
                      */
                     bool DashMPDLocationHasBeenSet() const;
-
-                    /**
-                     * 获取Whether to enable transparent transmission of advertising tags.
-                     * @return AdMarkerPassthrough Whether to enable transparent transmission of advertising tags.
-                     * 
-                     */
-                    bool GetAdMarkerPassthrough() const;
-
-                    /**
-                     * 设置Whether to enable transparent transmission of advertising tags.
-                     * @param _adMarkerPassthrough Whether to enable transparent transmission of advertising tags.
-                     * 
-                     */
-                    void SetAdMarkerPassthrough(const bool& _adMarkerPassthrough);
-
-                    /**
-                     * 判断参数 AdMarkerPassthrough 是否已赋值
-                     * @return AdMarkerPassthrough 是否已赋值
-                     * 
-                     */
-                    bool AdMarkerPassthroughHasBeenSet() const;
-
-                    /**
-                     * 获取How to process tags in advertisements, optional values: [1,2] 
-1: Process all SCTE-35 type tags - all (default) 
-2: SCTE-35enhanced, parse some types.
-                     * @return SCTE35AdType How to process tags in advertisements, optional values: [1,2] 
-1: Process all SCTE-35 type tags - all (default) 
-2: SCTE-35enhanced, parse some types.
-                     * 
-                     */
-                    uint64_t GetSCTE35AdType() const;
-
-                    /**
-                     * 设置How to process tags in advertisements, optional values: [1,2] 
-1: Process all SCTE-35 type tags - all (default) 
-2: SCTE-35enhanced, parse some types.
-                     * @param _sCTE35AdType How to process tags in advertisements, optional values: [1,2] 
-1: Process all SCTE-35 type tags - all (default) 
-2: SCTE-35enhanced, parse some types.
-                     * 
-                     */
-                    void SetSCTE35AdType(const uint64_t& _sCTE35AdType);
-
-                    /**
-                     * 判断参数 SCTE35AdType 是否已赋值
-                     * @return SCTE35AdType 是否已赋值
-                     * 
-                     */
-                    bool SCTE35AdTypeHasBeenSet() const;
 
                     /**
                      * 获取The type of tag that is regarded as an advertisement, optional values: [1,8]
@@ -292,6 +292,48 @@ namespace TencentCloud
                      */
                     bool DeliveryRestrictionsHasBeenSet() const;
 
+                    /**
+                     * 获取Source CDN prefix, needs to start with http:// or https://
+                     * @return SourceCDNPrefix Source CDN prefix, needs to start with http:// or https://
+                     * 
+                     */
+                    std::string GetSourceCDNPrefix() const;
+
+                    /**
+                     * 设置Source CDN prefix, needs to start with http:// or https://
+                     * @param _sourceCDNPrefix Source CDN prefix, needs to start with http:// or https://
+                     * 
+                     */
+                    void SetSourceCDNPrefix(const std::string& _sourceCDNPrefix);
+
+                    /**
+                     * 判断参数 SourceCDNPrefix 是否已赋值
+                     * @return SourceCDNPrefix 是否已赋值
+                     * 
+                     */
+                    bool SourceCDNPrefixHasBeenSet() const;
+
+                    /**
+                     * 获取Advertising CDN prefix needs to start with http:// or https://
+                     * @return AdCDNPrefix Advertising CDN prefix needs to start with http:// or https://
+                     * 
+                     */
+                    std::string GetAdCDNPrefix() const;
+
+                    /**
+                     * 设置Advertising CDN prefix needs to start with http:// or https://
+                     * @param _adCDNPrefix Advertising CDN prefix needs to start with http:// or https://
+                     * 
+                     */
+                    void SetAdCDNPrefix(const std::string& _adCDNPrefix);
+
+                    /**
+                     * 判断参数 AdCDNPrefix 是否已赋值
+                     * @return AdCDNPrefix 是否已赋值
+                     * 
+                     */
+                    bool AdCDNPrefixHasBeenSet() const;
+
                 private:
 
                     /**
@@ -305,6 +347,20 @@ namespace TencentCloud
                      */
                     std::vector<ConfigAliasesInfo> m_configAliases;
                     bool m_configAliasesHasBeenSet;
+
+                    /**
+                     * Whether to enable transparent transmission of advertising tags.
+                     */
+                    bool m_adMarkerPassthrough;
+                    bool m_adMarkerPassthroughHasBeenSet;
+
+                    /**
+                     * How to process tags in advertisements, optional values: [1,2] 
+1: Process all SCTE-35 type tags - all (default) 
+2: SCTE-35enhanced, parse some types.
+                     */
+                    uint64_t m_sCTE35AdType;
+                    bool m_sCTE35AdTypeHasBeenSet;
 
                     /**
                      * Default advertising url.
@@ -323,20 +379,6 @@ namespace TencentCloud
                      */
                     bool m_dashMPDLocation;
                     bool m_dashMPDLocationHasBeenSet;
-
-                    /**
-                     * Whether to enable transparent transmission of advertising tags.
-                     */
-                    bool m_adMarkerPassthrough;
-                    bool m_adMarkerPassthroughHasBeenSet;
-
-                    /**
-                     * How to process tags in advertisements, optional values: [1,2] 
-1: Process all SCTE-35 type tags - all (default) 
-2: SCTE-35enhanced, parse some types.
-                     */
-                    uint64_t m_sCTE35AdType;
-                    bool m_sCTE35AdTypeHasBeenSet;
 
                     /**
                      * The type of tag that is regarded as an advertisement, optional values: [1,8]
@@ -361,6 +403,18 @@ namespace TencentCloud
                      */
                     uint64_t m_deliveryRestrictions;
                     bool m_deliveryRestrictionsHasBeenSet;
+
+                    /**
+                     * Source CDN prefix, needs to start with http:// or https://
+                     */
+                    std::string m_sourceCDNPrefix;
+                    bool m_sourceCDNPrefixHasBeenSet;
+
+                    /**
+                     * Advertising CDN prefix needs to start with http:// or https://
+                     */
+                    std::string m_adCDNPrefix;
+                    bool m_adCDNPrefixHasBeenSet;
 
                 };
             }
